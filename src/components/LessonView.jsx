@@ -90,9 +90,12 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
 
   // Reset state when lesson changes (new module loads)
   useEffect(() => {
-    setShowIntro(true);
+    // Skip EVERYTHING for reading comprehension - go straight to exercises
+    const isReading = lesson.skipStudyMode || lesson.isReadingComprehension;
+
+    setShowIntro(!isReading);  // No intro for reading
     setIsStudying(false);
-    setStudyCompleted(false);
+    setStudyCompleted(isReading); // Mark as "studied" so exercises show
     setShowExam(false);
     setModuleCompleted(false);
     setCurrentExerciseIndex(0);
@@ -127,7 +130,7 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
         </div>
       </div>
 
-      {showIntro ? (
+      {showIntro && !lesson.isReadingComprehension ? (
         <div className="intro-container">
           <div className="intro-skip">
             <button className="btn-skip" onClick={handleSkipIntro}>
@@ -184,6 +187,31 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
             onFinishStudying={handleFinishStudying}
           />
         </div>
+      ) : lesson.isReadingComprehension ? (
+        <div className="reading-module-layout">
+          {allExercisesComplete && (
+            <div className="ready-for-exam">
+              <div className="exam-ready-message">
+                🎓 You've completed all exercises! Ready for the final exam?
+              </div>
+              <button className="btn-primary btn-exam" onClick={handleTakeExam}>
+                Take Final Exam
+              </button>
+            </div>
+          )}
+
+          <ExercisePane
+            exercise={currentExercise}
+            onNext={handleNext}
+            onPrevious={handlePrevious}
+            isFirstExercise={currentExerciseIndex === 0}
+            isLastExercise={isLastExercise}
+            isCompleted={completedExercises.has(currentExercise.id)}
+            onComplete={onExerciseComplete}
+            studyCompleted={studyCompleted}
+            readingPassage={lesson.readingPassage}
+          />
+        </div>
       ) : (
         <div className="lesson-content">
           <div className="left-pane">
@@ -217,6 +245,7 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
               isCompleted={completedExercises.has(currentExercise.id)}
               onComplete={onExerciseComplete}
               studyCompleted={studyCompleted}
+              readingPassage={lesson.readingPassage}
             />
           </div>
         </div>

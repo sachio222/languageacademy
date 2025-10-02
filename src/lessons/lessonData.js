@@ -20,12 +20,14 @@ import { module4_avoir } from "./modules/avoir.js";
 import { articles } from "./modules/articles.js";
 import { basicNouns } from "./modules/basic-nouns.js";
 import { plurals } from "./modules/plurals.js";
+import { reading1 } from "./modules/reading-1.js";
 import { module2_demonstratives } from "./modules/demonstratives.js";
 import { caSurvival } from "./modules/ca-survival.js";
 import { determinersWithNouns } from "./modules/determiners-with-nouns.js";
 import { module5_vouloir_pouvoir } from "./modules/vouloir-pouvoir.js";
 import { module6_questions } from "./modules/questions.js";
 import { module7_object_pronouns } from "./modules/object-pronouns.js";
+import { reading2 } from "./modules/reading-2.js";
 import { module8_possessive_adjectives } from "./modules/possessive-adjectives.js";
 import { module9_possessive_pronouns } from "./modules/possessive-pronouns.js";
 import { module10_combining } from "./modules/combining.js";
@@ -46,24 +48,27 @@ const moduleConfigs = [
   basicNouns, // 6. Nouns - COMBO: "j'ai un chat", "il est un homme"
   plurals, // 7. Plurals - COMBO: "j'ai des chats", "nous avons les livres"
 
+  // === FIRST MILESTONE - You can READ French! ===
+  reading1, // 8. READING TEST - Full paragraph! (uses M1-7 only)
+
   // === COMPOSITION LAYER - Functional programming! ===
-  module2_demonstratives, // 8. ça, ce, cette, ces - learn ALL demonstratives
-  caSurvival, // 9. ça practice - COMBO: "c'est ça", "ça va?", "j'ai ça"
-  determinersWithNouns, // 10. COMPOSITION: "j'ai ce livre", "elle a cette maison"
+  module2_demonstratives, // 9. ça, ce, cette, ces - learn ALL demonstratives
+  caSurvival, // 10. ça practice - COMBO: "c'est ça", "ça va?", "j'ai ça"
+  determinersWithNouns, // 11. COMPOSITION: "j'ai ce livre", "elle a cette maison"
 
   // === ACTION LAYER - More essential verbs ===
-  module5_vouloir_pouvoir, // 11. want/can (ranks 18-19) - COMBO: "je veux ça", "je veux le livre"
+  module5_vouloir_pouvoir, // 12. want/can (ranks 18-19) - COMBO: "je veux ça", "je veux le livre"
 
   // === COMMUNICATION LAYER - Questions ===
-  module6_questions, // 12. Questions (26-32) - COMBO: "où est le chat?", "qu'est-ce que c'est?"
+  module6_questions, // 13. Questions (26-32) - COMBO: "où est le chat?", "qu'est-ce que c'est?"
 
   // === ADVANCED LAYER - Complex pronouns ===
-  module7_object_pronouns, // 13. le, la, les - COMBO: "je le veux", "il l'a"
-  module8_possessive_adjectives, // 14. mon, ton, son - COMBO: "mon chat", "sa maison"
-  module9_possessive_pronouns, // 15. le mien, le tien - COMBO: "c'est le mien"
+  module7_object_pronouns, // 14. le, la, les - COMBO: "je le veux", "il l'a"
+  module8_possessive_adjectives, // 15. mon, ton, son - COMBO: "mon chat", "sa maison"
+  module9_possessive_pronouns, // 16. le mien, le tien - COMBO: "c'est le mien"
 
   // === MASTERY LAYER - Everything together ===
-  module10_combining, // 16. FULL SENTENCES: "il a mon livre", "est-ce le sien?"
+  module10_combining, // 17. FULL SENTENCES: "il a mon livre", "est-ce le sien?"
 ];
 
 // Build all lessons from configs

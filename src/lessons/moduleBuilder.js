@@ -151,11 +151,15 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
     // id is set dynamically in lessonData.js
     title: titleWithNumber,
     description: moduleConfig.description,
-    concepts: moduleConfig.concepts,
-    vocabularyReference: moduleConfig.vocabularyReference,
+    concepts: moduleConfig.concepts || [],
+    vocabularyReference: moduleConfig.vocabularyReference || [],
     exercises: buildExercises(
       moduleConfig.id || 0,
       moduleConfig.exerciseConfig
     ),
+    // Pass through special flags for reading comprehension
+    skipStudyMode: moduleConfig.skipStudyMode || false,
+    isReadingComprehension: moduleConfig.isReadingComprehension || false,
+    readingPassage: moduleConfig.readingPassage || null,
   };
 }
