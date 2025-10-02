@@ -1,0 +1,264 @@
+/* Concept Introduction Styles */
+
+.intro-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.intro-skip {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.concept-intro {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.intro-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.intro-header h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Intro Sections */
+.intro-section {
+  background: #f9fafb;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.intro-section-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.intro-section-header:hover {
+  opacity: 0.9;
+}
+
+.intro-section-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.intro-section-header .toggle-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Vocabulary Table */
+.vocab-intro-table {
+  padding: 1.5rem;
+}
+
+.vocab-intro-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vocab-intro-table th {
+  background: #667eea;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vocab-intro-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.vocab-intro-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.vocab-french-intro {
+  color: #667eea;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Courier New", monospace;
+}
+
+.vocab-french-intro.feminine {
+  color: #ec4899;
+}
+
+.vocab-french-intro.masculine {
+  color: #3b82f6;
+}
+
+.vocab-english-intro {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.vocab-note-intro {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Concepts Grid */
+.concepts-intro-grid {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.concept-intro-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.concept-intro-card h4 {
+  color: #667eea;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.concept-intro-definition {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.concept-intro-example {
+  background: #f3f4f6;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.concept-intro-example code {
+  color: #667eea;
+  font-weight: 600;
+  font-family: "Courier New", monospace;
+}
+
+/* Learning Tip */
+.learning-tip {
+  padding: 2rem;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-radius: 8px;
+  border: 2px solid #fbbf24;
+}
+
+.learning-tip h4 {
+  color: #92400e;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.learning-tip ol {
+  color: #78350f;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.learning-tip li {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+}
+
+.learning-tip strong {
+  color: #92400e;
+}
+
+.tip-note {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #78350f;
+  margin-top: 1rem;
+  border-left: 4px solid #fbbf24;
+}
+
+.tip-note strong {
+  color: #92400e;
+}
+
+/* Actions */
+.intro-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.intro-actions .btn-large {
+  font-size: 1.3rem;
+  padding: 1.25rem 2.5rem;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.intro-actions .btn-large:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .concept-intro {
+    padding: 2rem 1.5rem;
+  }
+
+  .intro-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .concepts-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vocab-intro-table {
+    overflow-x: auto;
+  }
+}

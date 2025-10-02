@@ -1,0 +1,269 @@
+/* Study Mode Styles */
+
+.study-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.study-intro {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.btn-skip {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border: 1px solid #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-skip:hover {
+  background: #667eea;
+  color: white;
+}
+
+.study-mode {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.study-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.study-header h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.study-header p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.study-progress-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem auto;
+  max-width: 400px;
+}
+
+.study-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.study-progress-text {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Flashcard */
+.flashcard {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 3rem;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.flashcard-front,
+.flashcard-back {
+  width: 100%;
+}
+
+.flashcard-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.flashcard-content h2,
+.flashcard-answer h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.flashcard-article {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  font-family: "Courier New", monospace;
+}
+
+.reveal-btn {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reveal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard-hint,
+.flashcard-instruction {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.flashcard-hint {
+  border-left: 4px solid #fbbf24;
+}
+
+.flashcard-instruction {
+  border-left: 4px solid #60a5fa;
+}
+
+/* Study Navigation */
+.study-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.study-navigation .btn-nav {
+  flex: 1;
+  max-width: 200px;
+}
+
+/* Vocabulary Reference */
+.vocab-reference {
+  background: white;
+  border-radius: 8px;
+  margin: 1rem 1.5rem;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.vocab-header {
+  background: #f9fafb;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s;
+}
+
+.vocab-header:hover {
+  background: #f3f4f6;
+}
+
+.vocab-header h4 {
+  margin: 0;
+  color: #667eea;
+  font-size: 0.95rem;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.vocab-table {
+  overflow-x: auto;
+}
+
+.vocab-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vocab-table th {
+  background: #f9fafb;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.vocab-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.9rem;
+}
+
+.vocab-french {
+  color: #667eea;
+  font-weight: 600;
+  font-family: "Courier New", monospace;
+}
+
+.vocab-french.feminine {
+  color: #ec4899;
+  font-weight: 700;
+}
+
+.vocab-french.masculine {
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+.vocab-english {
+  color: #333;
+}
+
+.vocab-note {
+  color: #999;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .flashcard {
+    padding: 2rem;
+    min-height: 300px;
+  }
+
+  .flashcard-content h2,
+  .flashcard-answer h2 {
+    font-size: 2rem;
+  }
+}
