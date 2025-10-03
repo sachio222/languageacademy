@@ -8,7 +8,8 @@ function ConceptPane({ concepts }) {
             <h4>{concept.term}</h4>
             <p className="concept-definition">{concept.definition}</p>
             <div className="concept-example">
-              <strong>Example:</strong> <code>{concept.example}</code>
+              <strong>Example</strong>
+              <code>{concept.example}</code>
             </div>
           </div>
         ))}

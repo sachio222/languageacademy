@@ -161,5 +161,8 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
     skipStudyMode: moduleConfig.skipStudyMode || false,
     isReadingComprehension: moduleConfig.isReadingComprehension || false,
     readingPassage: moduleConfig.readingPassage || null,
+    // Pass through unit exam flags
+    isUnitExam: moduleConfig.isUnitExam || false,
+    unitNumber: moduleConfig.unitNumber || null,
   };
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SpeakButton from './SpeakButton';
 
 /**
  * Vocabulary Reference - Always-visible cheat sheet
@@ -47,7 +48,12 @@ function VocabularyReference({ vocabulary, title }) {
                 const genderClass = getGenderClass(item.note);
                 return (
                   <tr key={idx}>
-                    <td className={`vocab-french ${genderClass}`}>{item.french}</td>
+                    <td className={`vocab-french ${genderClass}`}>
+                      <div className="vocab-with-audio">
+                        {item.french}
+                        <SpeakButton text={item.french} language="fr-FR" size="small" />
+                      </div>
+                    </td>
                     <td className="vocab-english">{item.english}</td>
                     <td className="vocab-note">{item.note || '—'}</td>
                   </tr>

@@ -3,38 +3,41 @@
 .intro-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 .intro-skip {
   text-align: right;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .concept-intro {
-  background: white;
-  border-radius: 16px;
+  background: #ffffff;
+  border-radius: 8px;
   padding: 3rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
 }
 
 .intro-header {
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .intro-header h2 {
-  color: #333;
+  color: #1e293b;
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
 }
 
 .intro-description {
-  color: #666;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  color: #64748b;
+  font-size: 1.0625rem;
+  line-height: 1.7;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -47,40 +50,42 @@
 
 /* Intro Sections */
 .intro-section {
-  background: #f9fafb;
-  border-radius: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
 }
 
 .intro-section-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #ffffff;
+  color: #1e293b;
   padding: 1.25rem 1.5rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: opacity 0.2s;
+  transition: background 0.2s;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .intro-section-header:hover {
-  opacity: 0.9;
+  background: #f8fafc;
 }
 
 .intro-section-header h3 {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 .intro-section-header .toggle-btn {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  background: transparent;
+  color: #64748b;
   border: none;
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   cursor: pointer;
 }
 
@@ -92,135 +97,185 @@
 .vocab-intro-table table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
-  border-radius: 8px;
+  background: #ffffff;
+  border-radius: 6px;
   overflow: hidden;
+  border: 1px solid #e2e8f0;
 }
 
 .vocab-intro-table th {
-  background: #667eea;
-  color: white;
-  padding: 1rem;
+  background: #f8fafc;
+  color: #1e293b;
+  padding: 1rem 1.25rem;
   text-align: left;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .vocab-intro-table td {
-  padding: 1rem;
-  border-bottom: 1px solid #f3f4f6;
+  padding: 1.125rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
 }
 
 .vocab-intro-table tbody tr:hover {
-  background: #f9fafb;
+  background: #f8fafc;
 }
 
 .vocab-french-intro {
-  color: #667eea;
+  color: #2563eb;
   font-weight: 700;
-  font-size: 1.2rem;
-  font-family: "Courier New", monospace;
+  font-size: 1.1875rem;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
 }
 
 .vocab-french-intro.feminine {
-  color: #ec4899;
+  color: #be185d;
 }
 
 .vocab-french-intro.masculine {
-  color: #3b82f6;
+  color: #2563eb;
 }
 
 .vocab-english-intro {
-  color: #333;
-  font-size: 1.1rem;
+  color: #64748b;
+  font-size: 1.0625rem;
 }
 
 .vocab-note-intro {
-  color: #666;
-  font-size: 0.9rem;
+  color: #94a3b8;
+  font-size: 0.9375rem;
   font-style: italic;
 }
 
-/* Concepts Grid */
+/* Concepts Grid - Professional Design */
 .concepts-intro-grid {
   padding: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 1.5rem;
 }
 
 .concept-intro-card {
-  background: white;
-  padding: 1.5rem;
+  background: #ffffff;
   border-radius: 8px;
-  border-left: 4px solid #667eea;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.concept-intro-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.concept-card-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .concept-intro-card h4 {
-  color: #667eea;
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
+  color: #1e293b;
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.concept-card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .concept-intro-definition {
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 0.9375rem;
+  margin: 0;
 }
 
 .concept-intro-example {
-  background: #f3f4f6;
-  padding: 0.75rem;
+  background: #fafafa;
+  padding: 1rem 1.125rem;
   border-radius: 6px;
-  font-size: 0.9rem;
-  color: #666;
+  border-left: 3px solid #e2e8f0;
+  margin-top: auto;
+}
+
+.concept-intro-example strong {
+  color: #64748b;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.625rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .concept-intro-example code {
-  color: #667eea;
-  font-weight: 600;
-  font-family: "Courier New", monospace;
+  color: #475569;
+  font-weight: 400;
+  font-family: inherit;
+  display: block;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  font-style: italic;
 }
 
 /* Learning Tip */
 .learning-tip {
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-  border-radius: 8px;
-  border: 2px solid #fbbf24;
-}
-
-.learning-tip h4 {
-  color: #92400e;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
 }
 
 .learning-tip ol {
   color: #78350f;
   margin-left: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  counter-reset: item;
+  list-style: none;
 }
 
 .learning-tip li {
-  margin: 0.75rem 0;
-  line-height: 1.6;
+  margin: 1rem 0;
+  line-height: 1.7;
+  font-size: 1rem;
+  counter-increment: item;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.learning-tip li::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: -1.5rem;
+  font-weight: 700;
+  color: #92400e;
 }
 
 .learning-tip strong {
   color: #92400e;
+  font-weight: 600;
 }
 
 .tip-note {
-  background: white;
-  padding: 1rem;
+  background: #ffffff;
+  padding: 1.125rem 1.25rem;
   border-radius: 6px;
   color: #78350f;
-  margin-top: 1rem;
-  border-left: 4px solid #fbbf24;
+  margin-top: 1.25rem;
+  border-left: 3px solid #f59e0b;
+  line-height: 1.6;
+  font-size: 0.9375rem;
 }
 
 .tip-note strong {
@@ -229,29 +284,54 @@
 
 /* Actions */
 .intro-actions {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .intro-actions .btn-large {
-  font-size: 1.3rem;
-  padding: 1.25rem 2.5rem;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  font-size: 1.125rem;
+  padding: 1.125rem 2.25rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+  transition: all 0.2s ease;
 }
 
 .intro-actions .btn-large:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-help-link {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.btn-help-link:hover {
+  color: #1e293b;
 }
 
 /* Responsive */
 @media (max-width: 968px) {
+  .intro-container {
+    padding: 1.75rem;
+  }
+
   .concept-intro {
     padding: 2rem 1.5rem;
   }
 
   .intro-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
   }
 
   .concepts-intro-grid {
@@ -260,5 +340,9 @@
 
   .vocab-intro-table {
     overflow-x: auto;
+  }
+
+  .learning-tip {
+    padding: 1.5rem;
   }
 }

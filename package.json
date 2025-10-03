@@ -17,6 +17,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "edge-tts-client": "^1.0.2",
+    "lucide-react": "^0.544.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -25,4 +27,3 @@
     "vite": "^4.3.9"
   }
 }
-

@@ -51,12 +51,7 @@ function TestOutput({ results, expectedAnswer }) {
           <h5>Tests:</h5>
           {testResults.map((test, idx) => (
             <div key={idx} className={`test-result ${test.passed ? 'pass' : 'fail'}`}>
-              <div className="test-status">
-                {test.passed ? '✓' : '✗'}
-              </div>
-              <div className="test-details">
-                <div className="test-message">{test.message}</div>
-              </div>
+              <div className="test-message">{test.message}</div>
             </div>
           ))}
         </div>

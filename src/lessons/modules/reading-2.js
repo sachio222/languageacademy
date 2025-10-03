@@ -1,71 +1,59 @@
 /**
  * Reading Comprehension 2
- * Advanced paragraph using vocabulary from Modules 1-13
- * Shows progression from Reading 1!
+ * More complex paragraph using vocabulary from modules 1-15
+ * Includes: questions, ça, demonstratives, vouloir/pouvoir, prepositions, adjectives
  */
 
 export const reading2 = {
   // id and module number are set dynamically
   title: "Reading Comprehension 2 - Conversation!",
   description:
-    "See your progress! Read a real French conversation using everything you've learned so far.",
-  
+    "A conversation between friends! See how much you've progressed since Reading 1.",
+
   skipStudyMode: true,
   isReadingComprehension: true,
   concepts: [],
 
   readingPassage: {
     title: "Au Café (At the Café)",
-    text: `Bonjour! Je veux un café, s'il vous plaît.
+    text: `**Marie:** Bonjour! Comment ça va?
 
-Oui. Voilà le café.
+**Paul:** Ça va très bien, merci. Tu veux un bon café avec moi?
 
-Merci! Où est le livre? Je veux le livre.
+**Marie:** Oui! Je veux un petit café avec toi. Tu es avec un ami aussi?
 
-Il est là. C'est ce livre. Tu le veux?
+**Paul:** Oui. Je suis avec lui. Il a des vieux livres dans la grande maison. Il a des chats aussi!
 
-Oui, je le veux. C'est bon. Qu'est-ce que c'est? C'est une chose.
+**Marie:** Qu'est-ce que c'est? Ce livre est pour moi?
 
-C'est ça. Elle a cette chose. Elle veut ça.
+**Paul:** Non, ce vieux livre est pour lui. Mais tu veux ce livre aussi?
 
-Où est la femme? Elle a le chat?
+**Marie:** Non merci. Mais je veux ce petit chat! Où est le chat?
 
-Oui, elle l'a. Le chat est bon. Elle a des chats. Ils sont les chats.
+**Paul:** Le petit chat est sur la nouvelle voiture. Il est très beau. Voilà! Il est pour toi!
 
-Je peux avoir des chiens?
+**Marie:** Pour moi? Merci! J'ai le beau chat. Au revoir!
 
-Oui, tu peux. Nous avons des chiens. Ils sont bons. Tu veux ces chiens?
+**Paul:** Au revoir! Salut!`,
+    translation: `**Marie:** Hello! How's it going?
 
-Non, merci. J'ai un chien. C'est mon chien.
+**Paul:** It's going very well, thank you. Do you want a good coffee with me?
 
-Bon! Au revoir!
+**Marie:** Yes! I want a small coffee with you. Are you with a friend too?
 
-Au revoir! Merci!`,
-    translation: `Hello! I want a coffee, please.
+**Paul:** Yes. I am with him. He has old books in the big house. He has cats too!
 
-Yes. Here is the coffee.
+**Marie:** What is that? Is this book for me?
 
-Thank you! Where is the book? I want the book.
+**Paul:** No, this old book is for him. But do you want this book too?
 
-It is there. It's this book. Do you want it?
+**Marie:** No thank you. But I want this small cat! Where is the cat?
 
-Yes, I want it. It's good. What is it? It's a thing.
+**Paul:** The small cat is on the new car. It's very beautiful. There it is! It's for you!
 
-That's it. She has this thing. She wants that.
+**Marie:** For me? Thank you! I have the beautiful cat. Goodbye!
 
-Where is the woman? Does she have the cat?
-
-Yes, she has it. The cat is good. She has cats. They are the cats.
-
-Can I have dogs?
-
-Yes, you can. We have dogs. They are good. Do you want these dogs?
-
-No, thank you. I have a dog. It's my dog.
-
-Good! Goodbye!
-
-Goodbye! Thank you!`,
+**Paul:** Goodbye! Bye!`,
   },
 
   vocabularyReference: [],
@@ -74,98 +62,133 @@ Goodbye! Thank you!`,
     type: "custom",
     items: [
       {
-        instruction: "What does the first person want to order?",
-        prompt: "What do they want?",
-        hint: "First line - 'je veux ___'",
-        expectedAnswer: "un café",
+        instruction: "What does Marie want instead of the book?",
+        prompt: "Marie wants...",
+        hint: "Look for 'je veux ce ___'",
+        expectedAnswer: "ce petit chat",
+        acceptableAnswers: ["ce chat", "le chat"],
         wrongAnswers: [
-          { answer: "le livre", feedback: "That's mentioned later, not the first thing ordered" },
+          {
+            answer: "un livre",
+            feedback: "She wants the cat, not the book",
+          },
         ],
       },
       {
-        instruction: "How does the waiter present the coffee?",
-        prompt: "What does the waiter say when bringing coffee?",
-        hint: "Second line - common French expression",
-        expectedAnswer: "voilà le café",
+        instruction: "Where is the cat?",
+        prompt: "The cat is...",
+        hint: "Look for 'le petit chat est ___ la voiture'",
+        expectedAnswer: "sur la nouvelle voiture",
+        acceptableAnswers: ["sur la voiture"],
         wrongAnswers: [
-          { answer: "c'est le café", feedback: "Close! But waiter says 'voilà'" },
+          {
+            answer: "dans la grande maison",
+            feedback: "That's where the books are, not the cat",
+          },
         ],
       },
       {
-        instruction: "After getting coffee, what does the person look for?",
-        prompt: "What are they looking for?",
-        hint: "Look for 'où est ___?'",
-        expectedAnswer: "le livre",
+        instruction: "What phrase does Paul use to invite Marie for coffee?",
+        prompt: "Do you want coffee ___ ___?",
+        hint: "Look for 'avec ___' - which stressed pronoun?",
+        expectedAnswer: "avec moi",
         wrongAnswers: [
-          { answer: "le chat", feedback: "That's mentioned later in conversation" },
+          {
+            answer: "avec toi",
+            feedback:
+              "Paul is inviting Marie, so he says 'with me' not 'with you'",
+          },
         ],
       },
       {
-        instruction: "How is the book offered? (using object pronoun)",
-        prompt: "How do they ask about wanting the book?",
-        hint: "Using object pronoun 'le' - 'tu ___ veux?'",
-        expectedAnswer: "tu le veux",
+        instruction: "How does Marie respond about having coffee together?",
+        prompt: "Marie says she wants coffee ___ ___",
+        hint: "Look for 'avec ___' in Marie's response - stressed pronoun for 'you'",
+        expectedAnswer: "avec toi",
         wrongAnswers: [
-          { answer: "tu veux le livre", feedback: "They use object pronoun 'le', not full noun" },
+          {
+            answer: "avec moi",
+            feedback: "Marie says 'with you' not 'with me'",
+          },
+          {
+            answer: "avec tu",
+            feedback: "Use stressed pronoun 'toi' not subject pronoun 'tu'",
+          },
         ],
       },
       {
-        instruction: "How does the person accept the book? (using object pronoun)",
-        prompt: "How do they say they want it?",
-        hint: "Using object pronoun - 'je ___ veux'",
-        expectedAnswer: "je le veux",
+        instruction: "Who is Paul with?",
+        prompt: "Paul says 'je suis avec ___'",
+        hint: "Look for stressed pronoun after 'avec' - meaning 'him'",
+        expectedAnswer: "lui",
         wrongAnswers: [
-          { answer: "je veux le livre", feedback: "They use object pronoun 'le'" },
-          { answer: "oui", feedback: "More specific - how do they say 'I want it'?" },
+          {
+            answer: "il",
+            feedback: "Use stressed pronoun 'lui' not subject pronoun 'il'",
+          },
+          {
+            answer: "un ami",
+            feedback: "True, but what PRONOUN does he use? Look for 'avec ___'",
+          },
         ],
       },
       {
-        instruction: "Who has the cat?",
-        prompt: "Who has the cat?",
-        hint: "Look for 'elle a le chat' or 'elle l'a'",
-        expectedAnswer: "elle",
+        instruction: "Who is the old book for?",
+        prompt: "The book is for ___",
+        hint: "Look for 'pour ___' - stressed pronoun for 'him'",
+        expectedAnswer: "lui",
         wrongAnswers: [
-          { answer: "je", feedback: "The narrator asks about it, doesn't have it" },
+          {
+            answer: "moi",
+            feedback: "Marie asks if it's for her, but Paul says it's for HIM",
+          },
+          {
+            answer: "pour moi",
+            feedback: "Just the pronoun! It's for 'lui' (him)",
+          },
         ],
       },
       {
-        instruction: "How is it confirmed she has the cat? (concise form)",
-        prompt: "Concise way to say 'she has it'",
-        hint: "Using object pronoun contraction - elle ___",
-        expectedAnswer: "elle l'a",
+        instruction: "Who does Paul say the cat is for at the end?",
+        prompt: "The cat is for ___",
+        hint: "Look for 'il est pour ___!' - stressed pronoun for 'you'",
+        expectedAnswer: "toi",
         wrongAnswers: [
-          { answer: "elle a le chat", feedback: "Look for the concise form with object pronoun" },
+          {
+            answer: "moi",
+            feedback: "Paul is giving it TO Marie, so 'for you' (toi)",
+          },
+          {
+            answer: "tu",
+            feedback: "Use stressed pronoun 'toi' not subject pronoun 'tu'",
+          },
         ],
       },
       {
-        instruction: "Can the person have dogs?",
-        prompt: "What's the response to 'je peux avoir des chiens?'",
-        hint: "First word of the response",
-        expectedAnswer: "oui",
+        instruction: "What word is used when presenting the cat?",
+        prompt: "Word meaning 'there it is'",
+        hint: "Famous French expression of presentation",
+        expectedAnswer: "voilà",
         wrongAnswers: [
-          { answer: "non", feedback: "Read the response - they say yes!" },
+          {
+            answer: "ici",
+            feedback: "That means location 'here', not presentation",
+          },
         ],
       },
       {
-        instruction: "Whose dog is mentioned at the end?",
-        prompt: "Whose dog? (possessive)",
-        hint: "Last mention - 'c'est ___ chien'",
-        expectedAnswer: "mon chien",
+        instruction: "What is the final farewell used?",
+        prompt: "Last word of the conversation",
+        hint: "Informal goodbye",
+        expectedAnswer: "salut",
         wrongAnswers: [
-          { answer: "un chien", feedback: "Not just 'a dog' - whose dog is it?" },
-          { answer: "le chien", feedback: "Look for possessive - 'my dog'" },
-        ],
-      },
-      {
-        instruction: "What are the last two words of the conversation?",
-        prompt: "Final farewell words",
-        hint: "How does the second person end the conversation?",
-        expectedAnswer: "au revoir",
-        wrongAnswers: [
-          { answer: "merci", feedback: "That comes before - what's after 'merci'?" },
+          {
+            answer: "au revoir",
+            feedback: "That comes before - what's the LAST word?",
+          },
+          { answer: "merci", feedback: "That's earlier in the conversation" },
         ],
       },
     ],
   },
 };
-

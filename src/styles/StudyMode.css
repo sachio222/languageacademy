@@ -1,88 +1,112 @@
 /* Study Mode Styles */
 
 .study-container {
-  padding: 2rem;
+  padding: 2.5rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .study-intro {
-  text-align: right;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
 }
 
 .btn-skip {
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
-  border: 1px solid #667eea;
-  padding: 0.5rem 1rem;
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  padding: 0.625rem 1.25rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   transition: all 0.2s;
+  font-weight: 500;
 }
 
 .btn-skip:hover {
-  background: #667eea;
-  color: white;
+  background: #f8fafc;
+  border-color: #cbd5e1;
 }
 
 .study-mode {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
 }
 
 .study-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn-back-to-concepts {
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  padding: 0.625rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.btn-back-to-concepts:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
 }
 
 .study-header h3 {
-  color: #333;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .study-header p {
-  color: #666;
-  margin-bottom: 1rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
 }
 
 .study-progress-bar {
-  height: 8px;
-  background: #e5e7eb;
-  border-radius: 4px;
+  height: 3px;
+  background: #e2e8f0;
+  border-radius: 2px;
   overflow: hidden;
-  margin: 1rem auto;
+  margin: 1.25rem auto;
   max-width: 400px;
 }
 
 .study-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: #3b82f6;
   transition: width 0.3s ease;
 }
 
 .study-progress-text {
-  color: #666;
-  font-size: 0.9rem;
+  color: #64748b;
+  font-size: 0.9375rem;
 }
 
 /* Flashcard */
 .flashcard {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 16px;
-  padding: 3rem;
-  min-height: 350px;
+  background: #1e293b;
+  border-radius: 8px;
+  padding: 3.5rem;
+  min-height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 2rem;
-  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  margin-bottom: 2.5rem;
+  border: 1px solid #334155;
 }
 
 .flashcard-front,
@@ -91,117 +115,123 @@
 }
 
 .flashcard-label {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
+  color: #94a3b8;
+  font-size: 0.8125rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
 }
 
 .flashcard-content h2,
 .flashcard-answer h2 {
-  color: white;
-  font-size: 2.5rem;
+  color: #ffffff;
+  font-size: 2.75rem;
   margin: 0;
   font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .flashcard-article {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  padding: 0.75rem;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  font-family: "Courier New", monospace;
+  color: #e2e8f0;
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .reveal-btn {
-  background: white;
-  color: #667eea;
+  background: #ffffff;
+  color: #1e293b;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  border-radius: 6px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   margin-top: 2rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.15s;
 }
 
 .reveal-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #f1f5f9;
 }
 
 .flashcard-hint,
 .flashcard-instruction {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 1.5rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  padding: 1.25rem;
+  border-radius: 6px;
+  margin-top: 1.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .flashcard-hint {
-  border-left: 4px solid #fbbf24;
+  border-left: 3px solid #fbbf24;
 }
 
 .flashcard-instruction {
-  border-left: 4px solid #60a5fa;
+  border-left: 3px solid #64748b;
 }
 
 /* Study Navigation */
 .study-navigation {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .study-navigation .btn-nav {
   flex: 1;
-  max-width: 200px;
+  max-width: 220px;
+  padding: 0.875rem 1.5rem;
 }
 
 /* Vocabulary Reference */
 .vocab-reference {
-  background: white;
-  border-radius: 8px;
-  margin: 1rem 1.5rem;
+  background: #ffffff;
+  border-radius: 6px;
+  margin: 1.25rem 1.75rem;
   overflow: hidden;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
 }
 
 .vocab-header {
-  background: #f9fafb;
-  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  padding: 1rem 1.25rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e2e8f0;
   transition: background 0.2s;
 }
 
 .vocab-header:hover {
-  background: #f3f4f6;
+  background: #f1f5f9;
 }
 
 .vocab-header h4 {
   margin: 0;
-  color: #667eea;
-  font-size: 0.95rem;
+  color: #1e293b;
+  font-size: 0.9375rem;
+  font-weight: 600;
 }
 
 .toggle-btn {
   background: none;
   border: none;
-  color: #667eea;
-  font-size: 0.9rem;
+  color: #64748b;
+  font-size: 0.9375rem;
   cursor: pointer;
-  padding: 0;
+  padding: 0.25rem;
 }
 
 .vocab-table {
@@ -214,56 +244,60 @@
 }
 
 .vocab-table th {
-  background: #f9fafb;
-  padding: 0.75rem;
+  background: #f8fafc;
+  padding: 1rem;
   text-align: left;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  color: #666;
-  border-bottom: 2px solid #e5e7eb;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .vocab-table td {
-  padding: 0.75rem;
-  border-bottom: 1px solid #f3f4f6;
-  font-size: 0.9rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9375rem;
 }
 
 .vocab-french {
-  color: #667eea;
+  color: #2563eb;
   font-weight: 600;
-  font-family: "Courier New", monospace;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
 }
 
 .vocab-french.feminine {
-  color: #ec4899;
+  color: #be185d;
   font-weight: 700;
 }
 
 .vocab-french.masculine {
-  color: #3b82f6;
+  color: #2563eb;
   font-weight: 700;
 }
 
 .vocab-english {
-  color: #333;
+  color: #64748b;
 }
 
 .vocab-note {
-  color: #999;
-  font-size: 0.85rem;
+  color: #94a3b8;
+  font-size: 0.875rem;
   font-style: italic;
 }
 
 /* Responsive */
 @media (max-width: 968px) {
+  .study-container {
+    padding: 1.75rem;
+  }
+
   .flashcard {
-    padding: 2rem;
-    min-height: 300px;
+    padding: 2.5rem 1.5rem;
+    min-height: 320px;
   }
 
   .flashcard-content h2,
   .flashcard-answer h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }

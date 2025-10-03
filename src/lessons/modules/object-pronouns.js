@@ -52,80 +52,97 @@ export const module7_object_pronouns = {
     type: "custom",
     items: [
       {
-        instruction:
-          "Someone wants to see you. Which object pronoun means 'me'?",
-        prompt: "me",
-        hint: "First person object pronoun",
-        expectedAnswer: "me",
+        instruction: "Fill in the blank with the correct object pronoun",
+        prompt: "il ___ voit (he sees me)",
+        hint: "Object pronouns go BEFORE the verb. Which pronoun means 'me'?",
+        expectedAnswer: "il me voit",
         wrongAnswers: [
-          { answer: "te", feedback: "That's 'you', not 'me'" },
-          { answer: "le", feedback: "That's 'him/it', not 'me'" },
+          { answer: "il te voit", feedback: "That's 'you', not 'me'" },
+          { answer: "il le voit", feedback: "That's 'him/it', not 'me'" },
         ],
       },
       {
-        instruction:
-          "You want to see your friend (informal). Which object pronoun for 'you'?",
-        prompt: "you (informal)",
-        hint: "Informal second person object",
-        expectedAnswer: "te",
+        instruction: "Fill in the blank with the correct object pronoun",
+        prompt: "je ___ veux (I want you - informal)",
+        hint: "Object pronoun for 'you' (informal) goes before 'veux'",
+        expectedAnswer: "je te veux",
         wrongAnswers: [
-          { answer: "me", feedback: "That's 'me', not 'you'" },
-          { answer: "le", feedback: "That's 'him/it', not 'you'" },
+          { answer: "je me veux", feedback: "That's 'me', not 'you'" },
+          {
+            answer: "je vous veux",
+            feedback: "That's formal 'you', need informal 'te'",
+          },
         ],
       },
       {
-        instruction:
-          "You see a man or masculine object. Which object pronoun for 'him/it'?",
-        prompt: "him/it (masculine)",
-        hint: "Masculine third person object",
-        expectedAnswer: "le",
+        instruction: "Fill in the blank with the correct object pronoun",
+        prompt: "elle ___ a (she has him/it - masculine)",
+        hint: "Masculine object pronoun goes before 'a'. Remember: contracts to l'!",
+        expectedAnswer: "elle l'a",
         wrongAnswers: [
-          { answer: "la", feedback: "That's feminine 'her/it'" },
-          { answer: "les", feedback: "That's plural 'them'" },
+          {
+            answer: "elle la a",
+            feedback: "That's feminine. Need masculine 'le' (contracts to l'a)",
+          },
+          {
+            answer: "elle les a",
+            feedback: "That's plural 'them', not singular 'him/it'",
+          },
         ],
       },
       {
-        instruction:
-          "You see a woman or feminine object. Which object pronoun for 'her/it'?",
-        prompt: "her/it (feminine)",
-        hint: "Feminine third person object",
-        expectedAnswer: "la",
+        instruction: "Fill in the blank with the correct object pronoun",
+        prompt: "nous ___ avons (we have her/it - feminine)",
+        hint: "Feminine object pronoun goes before 'avons'. Contracts to l'!",
+        expectedAnswer: "nous l'avons",
         wrongAnswers: [
-          { answer: "le", feedback: "That's masculine 'him/it'" },
-          { answer: "les", feedback: "That's plural 'them'" },
+          {
+            answer: "nous le avons",
+            feedback: "That's masculine. Need feminine 'la' (contracts to l')",
+          },
+          {
+            answer: "nous les avons",
+            feedback: "That's plural 'them', not singular 'her/it'",
+          },
         ],
       },
       {
-        instruction:
-          "Someone wants to see you and your group. Which object pronoun for 'us'?",
-        prompt: "us",
-        hint: "First person plural object",
-        expectedAnswer: "nous",
+        instruction: "Fill in the blank with the correct object pronoun",
+        prompt: "tu ___ vois (you see us)",
+        hint: "Object pronoun for 'us' goes before 'vois'",
+        expectedAnswer: "tu nous vois",
         wrongAnswers: [
-          { answer: "vous", feedback: "That's 'you', not 'us'" },
-          { answer: "les", feedback: "That's 'them', not 'us'" },
+          { answer: "tu vous vois", feedback: "That's 'you', not 'us'" },
+          { answer: "tu les vois", feedback: "That's 'them', not 'us'" },
         ],
       },
       {
-        instruction:
-          "You want to see a group (formal). Which object pronoun for 'you'?",
-        prompt: "you (formal or plural)",
-        hint: "Formal/plural second person object",
-        expectedAnswer: "vous",
+        instruction: "Fill in the blank with the correct object pronoun",
+        prompt: "il ___ veut (he wants you - formal/plural)",
+        hint: "Formal/plural object pronoun for 'you' goes before 'veut'",
+        expectedAnswer: "il vous veut",
         wrongAnswers: [
-          { answer: "nous", feedback: "That's 'us', not 'you'" },
-          { answer: "les", feedback: "That's 'them', not 'you'" },
+          { answer: "il nous veut", feedback: "That's 'us', not 'you'" },
+          {
+            answer: "il te veut",
+            feedback: "That's informal 'you', need formal 'vous'",
+          },
         ],
       },
       {
-        instruction:
-          "You see multiple people or objects. Which object pronoun for 'them'?",
-        prompt: "them",
-        hint: "Third person plural object - any gender",
-        expectedAnswer: "les",
+        instruction: "Fill in the blank with the correct object pronoun",
+        prompt: "je ___ ai (I have them)",
+        hint: "Plural object pronoun 'them' goes before 'ai'",
+        expectedAnswer: "je les ai",
         wrongAnswers: [
-          { answer: "le", feedback: "That's singular 'him/it'" },
-          { answer: "la", feedback: "That's singular 'her/it'" },
+          {
+            answer: "je le ai",
+            feedback: "That's singular masculine 'him/it'. Need plural 'les'",
+          },
+          {
+            answer: "je la ai",
+            feedback: "That's singular feminine 'her/it'. Need plural 'les'",
+          },
         ],
       },
     ],

@@ -310,10 +310,12 @@ const sentencePatterns = [
 export function lintFrench(
   sentence,
   expectedTense = null,
-  expectedVerb = null
+  expectedVerb = null,
+  options = {}
 ) {
   const errors = [];
   const warnings = [];
+  const { skipPunctuation = false } = options;
 
   // Normalize sentence
   const normalized = sentence.trim().toLowerCase();
@@ -376,7 +378,7 @@ export function lintFrench(
 
   // Check for missing punctuation (only for longer sentences)
   const wordCount = normalized.split(/\s+/).length;
-  if (wordCount > 3 && !sentence.trim().match(/[.!?]$/)) {
+  if (!skipPunctuation && wordCount > 3 && !sentence.trim().match(/[.!?]$/)) {
     warnings.push({
       type: "PunctuationWarning",
       message: "Sentence should end with punctuation (.!?)",

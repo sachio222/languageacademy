@@ -71,8 +71,7 @@ export const module2_demonstratives = {
     type: "custom",
     items: [
       {
-        instruction:
-          "Point to something nearby. Use the most common word for 'that/it'",
+        instruction: "Point to something nearby in conversation",
         prompt: "that/it (informal - most common!)",
         hint: "Informal, versatile - 2 letters",
         expectedAnswer: "ça",
@@ -83,69 +82,153 @@ export const module2_demonstratives = {
       },
       {
         instruction:
-          "You want to say 'this book'. Which word before a masculine noun starting with a consonant?",
-        prompt: "this/that (masc + consonant)",
-        hint: "Masculine demonstrative before consonant sounds",
-        expectedAnswer: "ce",
+          "Point to a book on the table. Say 'this book' (le livre - masc)",
+        prompt: "this book",
+        hint: "Masculine noun starting with consonant: ce + livre",
+        expectedAnswer: "ce livre",
         wrongAnswers: [
-          { answer: "cet", feedback: "Use cet only before vowel sounds" },
-          { answer: "cette", feedback: "That's feminine, not masculine" },
-        ],
-      },
-      {
-        instruction:
-          "You want to say 'this man'. Which word before a masculine noun starting with silent h?",
-        prompt: "this/that (masc + vowel)",
-        hint: "Masculine demonstrative before vowel sounds or silent h",
-        expectedAnswer: "cet",
-        wrongAnswers: [
-          { answer: "ce", feedback: "Use cet before vowel sounds/silent h" },
-          { answer: "cette", feedback: "That's feminine, not masculine" },
-        ],
-      },
-      {
-        instruction:
-          "You want to say 'this house'. Which word before a feminine noun?",
-        prompt: "this/that (feminine)",
-        hint: "Feminine demonstrative",
-        expectedAnswer: "cette",
-        wrongAnswers: [
-          { answer: "ce", feedback: "That's masculine, not feminine" },
           {
-            answer: "cet",
-            feedback: "That's masculine before vowels, not feminine",
+            answer: "cet livre",
+            feedback: "Use ce before consonants (not cet)",
+          },
+          {
+            answer: "cette livre",
+            feedback: "That's feminine - livre is masculine",
+          },
+        ],
+      },
+      {
+        instruction: "Point to a cat nearby. Say 'this cat' (le chat - masc)",
+        prompt: "this cat",
+        hint: "Masculine noun starting with consonant: ce + chat",
+        expectedAnswer: "ce chat",
+        wrongAnswers: [
+          {
+            answer: "cet chat",
+            feedback: "Use ce before consonants (not cet)",
+          },
+          {
+            answer: "cette chat",
+            feedback: "That's feminine - chat is masculine",
           },
         ],
       },
       {
         instruction:
-          "You want to say 'these cats'. Which word before plural nouns?",
-        prompt: "these/those (plural)",
-        hint: "Plural demonstrative - works for any gender",
-        expectedAnswer: "ces",
+          "Point to a man across the room. Say 'this man' (l'homme - masc, silent h)",
+        prompt: "this man",
+        hint: "Masculine noun with silent h (vowel sound): cet + homme",
+        expectedAnswer: "cet homme",
         wrongAnswers: [
-          { answer: "ce", feedback: "That's singular masculine, not plural" },
-          { answer: "cette", feedback: "That's singular feminine, not plural" },
+          {
+            answer: "ce homme",
+            feedback: "Use cet before vowel sounds/silent h",
+          },
+          {
+            answer: "cette homme",
+            feedback: "That's feminine - homme is masculine",
+          },
         ],
       },
       {
-        instruction: "In formal writing, refer to 'this' (formal/rare)",
-        prompt: "this (formal)",
-        hint: "Formal demonstrative for 'this'",
-        expectedAnswer: "ceci",
+        instruction:
+          "Point to a house on the street. Say 'this house' (la maison - fem)",
+        prompt: "this house",
+        hint: "Feminine noun: cette + maison",
+        expectedAnswer: "cette maison",
         wrongAnswers: [
-          { answer: "cela", feedback: "That's formal 'that', not 'this'" },
-          { answer: "ca", feedback: "That's informal - this is formal" },
+          {
+            answer: "ce maison",
+            feedback: "That's masculine - maison is feminine",
+          },
+          {
+            answer: "cet maison",
+            feedback: "That's masculine - maison is feminine",
+          },
         ],
       },
       {
-        instruction: "In formal writing, refer to 'that' (formal/rare)",
-        prompt: "that (formal)",
-        hint: "Formal demonstrative for 'that'",
-        expectedAnswer: "cela",
+        instruction:
+          "Point to a woman standing there. Say 'this woman' (la femme - fem)",
+        prompt: "this woman",
+        hint: "Feminine noun: cette + femme",
+        expectedAnswer: "cette femme",
         wrongAnswers: [
-          { answer: "ceci", feedback: "That's formal 'this', not 'that'" },
-          { answer: "ca", feedback: "That's informal - this is formal" },
+          {
+            answer: "ce femme",
+            feedback: "That's masculine - femme is feminine",
+          },
+          {
+            answer: "cet femme",
+            feedback: "That's masculine - femme is feminine",
+          },
+        ],
+      },
+      {
+        instruction:
+          "Point to multiple cats. Say 'these cats' (les chats - plural)",
+        prompt: "these cats",
+        hint: "Plural noun: ces + chats",
+        expectedAnswer: "ces chats",
+        wrongAnswers: [
+          {
+            answer: "ce chats",
+            feedback: "That's singular - use ces for plural",
+          },
+          {
+            answer: "cette chats",
+            feedback: "That's singular - use ces for plural",
+          },
+        ],
+      },
+      {
+        instruction:
+          "Point to several books. Say 'these books' (les livres - plural)",
+        prompt: "these books",
+        hint: "Plural noun: ces + livres",
+        expectedAnswer: "ces livres",
+        wrongAnswers: [
+          {
+            answer: "ce livres",
+            feedback: "That's singular - use ces for plural",
+          },
+          {
+            answer: "cet livres",
+            feedback: "That's singular - use ces for plural",
+          },
+        ],
+      },
+      {
+        instruction:
+          "Point to multiple houses. Say 'these houses' (les maisons - plural)",
+        prompt: "these houses",
+        hint: "Plural noun: ces + maisons",
+        expectedAnswer: "ces maisons",
+        wrongAnswers: [
+          {
+            answer: "cette maisons",
+            feedback: "That's singular - use ces for plural",
+          },
+          {
+            answer: "ce maisons",
+            feedback: "That's singular - use ces for plural",
+          },
+        ],
+      },
+      {
+        instruction: "Point to a dog nearby. Say 'this dog' (le chien - masc)",
+        prompt: "this dog",
+        hint: "Masculine noun starting with consonant: ce + chien",
+        expectedAnswer: "ce chien",
+        wrongAnswers: [
+          {
+            answer: "cet chien",
+            feedback: "Use ce before consonants (not cet)",
+          },
+          {
+            answer: "cette chien",
+            feedback: "That's feminine - chien is masculine",
+          },
         ],
       },
     ],

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SpeakButton from './SpeakButton';
 
 /**
  * Concept Introduction - Initial exposure phase
@@ -10,6 +11,11 @@ function ConceptIntro({ lesson, onStartStudying }) {
   const [showConcepts, setShowConcepts] = useState(true);
 
   const vocabularyItems = lesson.vocabularyReference || [];
+  const isFirstLesson = lesson.id === 1;
+
+  // Show help section by default on first lesson
+  const [helpRequested, setHelpRequested] = useState(isFirstLesson);
+  const [showHelp, setShowHelp] = useState(isFirstLesson);
 
   return (
     <div className="concept-intro">
@@ -53,7 +59,12 @@ function ConceptIntro({ lesson, onStartStudying }) {
 
                       return (
                         <tr key={idx}>
-                          <td className={`vocab-french-intro ${genderClass}`}>{item.french}</td>
+                          <td className={`vocab-french-intro ${genderClass}`}>
+                            <div className="vocab-with-audio">
+                              {item.french}
+                              <SpeakButton text={item.french} language="fr-FR" size="small" />
+                            </div>
+                          </td>
                           <td className="vocab-english-intro">{item.english}</td>
                           <td className="vocab-note-intro">{item.note || '—'}</td>
                         </tr>
@@ -81,12 +92,17 @@ function ConceptIntro({ lesson, onStartStudying }) {
               <div className="concepts-intro-grid">
                 {lesson.concepts.map((concept, idx) => (
                   <div key={idx} className="concept-intro-card">
-                    <h4>{concept.term}</h4>
-                    <p className="concept-intro-definition">
-                      {concept.definition}
-                    </p>
-                    <div className="concept-intro-example">
-                      <strong>Example:</strong> <code>{concept.example}</code>
+                    <div className="concept-card-header">
+                      <h4>{concept.term}</h4>
+                    </div>
+                    <div className="concept-card-body">
+                      <p className="concept-intro-definition">
+                        {concept.definition}
+                      </p>
+                      <div className="concept-intro-example">
+                        <strong>Example</strong>
+                        <code>{concept.example}</code>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -95,37 +111,59 @@ function ConceptIntro({ lesson, onStartStudying }) {
           </div>
         )}
 
-        {/* Learning Tips */}
-        <div className="intro-section">
-          <div className="learning-tip">
-            <h4>🎯 How This Module Works:</h4>
-            <ol>
-              <li>
-                <strong>Review this page</strong> - Get familiar with what
-                you'll learn
-              </li>
-              <li>
-                <strong>Study Mode</strong> - See questions and answers
-                (flashcards)
-              </li>
-              <li>
-                <strong>Practice</strong> - Try it yourself with support
-              </li>
-              <li>
-                <strong>Final Exam</strong> - Test your knowledge (80% to pass)
-              </li>
-            </ol>
-            <p className="tip-note">
-              💡 <strong>Tip:</strong> Take your time reviewing this page.
-              Exposure is the first step to learning!
-            </p>
+        {/* Learning Tips - Only show on first lesson, or if user requests help */}
+        {(isFirstLesson || helpRequested) && (
+          <div className="intro-section">
+            <div
+              className="intro-section-header"
+              onClick={() => setShowHelp(!showHelp)}
+            >
+              <h3>ℹ️ How This Module Works</h3>
+              <button className="toggle-btn">{showHelp ? '▼' : '▶'}</button>
+            </div>
+
+            {showHelp && (
+              <div className="learning-tip">
+                <ol>
+                  <li>
+                    <strong>Review this page</strong> - Get familiar with what
+                    you'll learn
+                  </li>
+                  <li>
+                    <strong>Study Mode</strong> - See questions and answers
+                    (flashcards)
+                  </li>
+                  <li>
+                    <strong>Practice</strong> - Try it yourself with support
+                  </li>
+                  <li>
+                    <strong>Final Exam</strong> - Test your knowledge (80% to pass)
+                  </li>
+                </ol>
+                <p className="tip-note">
+                  💡 <strong>Tip:</strong> Take your time reviewing this page.
+                  Exposure is the first step to learning!
+                </p>
+              </div>
+            )}
           </div>
-        </div>
+        )}
       </div>
 
       <div className="intro-actions">
+        {!isFirstLesson && !helpRequested && (
+          <button
+            className="btn-help-link"
+            onClick={() => {
+              setHelpRequested(true);
+              setShowHelp(true);
+            }}
+          >
+            Not sure what to do? Click here
+          </button>
+        )}
         <button className="btn-primary btn-large" onClick={onStartStudying}>
-          I'm Ready - Start Study Mode →
+          Start Studying →
         </button>
       </div>
     </div>

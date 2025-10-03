@@ -2,26 +2,27 @@
 
 .reading-module-layout {
   padding: 0;
-  background: white;
+  background: #ffffff;
 }
 
 .reading-exercise-container {
-  background: white;
+  background: #ffffff;
+  padding-bottom: 6rem; /* Extra space for sticky navigation */
 }
 
 .reading-article-wrapper {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 4rem 2rem 3rem 2rem;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 4rem 2.5rem 3.5rem 2.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .reading-quiz-section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 2rem;
-  background: #fafafa;
+  padding: 3.5rem 2.5rem;
+  background: #f8fafc;
 }
 
 .reading-passage {
@@ -32,34 +33,34 @@
 .passage-header {
   margin-bottom: 3.5rem;
   text-align: left;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 
 .passage-meta {
-  color: #667eea;
+  color: #64748b;
   font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .passage-header h1 {
-  color: #111827;
-  margin: 0 0 2rem 0;
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.1;
+  color: #1e293b;
+  margin: 0 0 2.5rem 0;
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.15;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
     sans-serif;
   letter-spacing: -0.03em;
 }
 
 .btn-translation {
-  background: white;
-  color: #6b7280;
-  border: 1px solid #d1d5db;
-  padding: 0.5rem 1.25rem;
+  background: #ffffff;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  padding: 0.625rem 1.25rem;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.875rem;
@@ -68,43 +69,92 @@
 }
 
 .btn-translation:hover {
-  background: #f9fafb;
-  border-color: #9ca3af;
-  color: #111827;
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #1e293b;
 }
 
 .passage-content {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Audio header above first paragraph */
+.passage-audio-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.audio-label {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .passage-french {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .paragraph-block {
-  margin: 2rem 0;
+  margin: 2.25rem 0;
+}
+
+/* Paragraph with hover audio button */
+.paragraph-with-audio {
+  position: relative;
+  padding-right: 3rem;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.paragraph-with-audio:hover {
+  background-color: rgba(59, 130, 246, 0.03);
+}
+
+/* Per-paragraph audio button - hidden by default, shown on hover */
+.paragraph-audio-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.paragraph-with-audio:hover .paragraph-audio-btn {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .french-text {
   font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif;
   font-size: 1.25rem;
   line-height: 1.8;
-  color: #1f2937;
+  color: #1e293b;
   font-weight: 400;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 1rem 0;
   letter-spacing: -0.011em;
+}
+
+.speaker-label {
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .english-translation {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
-  color: #6b7280;
+  line-height: 1.7;
+  color: #64748b;
   font-weight: 400;
   margin: 0;
   font-style: italic;
   padding-left: 1.5rem;
-  border-left: 3px solid #d1d5db;
+  border-left: 2px solid #e2e8f0;
 }
 
 .interactive-word {
@@ -116,7 +166,14 @@
 }
 
 .interactive-word:hover {
-  background-color: rgba(102, 126, 234, 0.1);
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 3px;
+}
+
+.missing-translation {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-bottom: 1px dotted #ef4444;
+  cursor: help;
 }
 
 .word-tooltip {
@@ -124,17 +181,17 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #1f2937;
-  color: white;
-  padding: 0.375rem 0.75rem;
+  background: #1e293b;
+  color: #ffffff;
+  padding: 0.5rem 0.875rem;
   border-radius: 6px;
   font-size: 0.8125rem;
   white-space: nowrap;
-  margin-bottom: 0.375rem;
+  margin-bottom: 0.5rem;
   z-index: 10;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 500;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .word-tooltip::after {
@@ -144,21 +201,21 @@
   left: 50%;
   transform: translateX(-50%);
   border: 5px solid transparent;
-  border-top-color: #1f2937;
+  border-top-color: #1e293b;
 }
 
 /* Translation styles handled inline now */
 
 .passage-instructions {
-  background: #fef3c7;
-  border-left: 3px solid #f59e0b;
+  background: #fffbeb;
+  border-left: 3px solid #fbbf24;
   padding: 1.25rem 1.5rem;
   color: #78350f;
   font-size: 0.9375rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  border-radius: 4px;
+  margin-top: 1.75rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  border-radius: 6px;
 }
 
 .passage-instructions strong {
@@ -168,13 +225,13 @@
 
 /* Reading quiz section styling */
 .reading-quiz-section .exercise-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .reading-quiz-section .exercise-instruction {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
   padding: 1.5rem;
 }
 

@@ -8,7 +8,7 @@ import { lintFrench, checkAnswer } from "../linter/frenchLinter.js";
 /**
  * Run tests for a specific exercise
  */
-export function runTests(exercise, userAnswer) {
+export function runTests(exercise, userAnswer, isReadingComprehension = false) {
   const results = {
     passed: 0,
     failed: 0,
@@ -18,7 +18,10 @@ export function runTests(exercise, userAnswer) {
   };
 
   // First, lint the user's answer
-  const lintResults = lintFrench(userAnswer, exercise.tense, exercise.verb);
+  // Skip punctuation checks for reading comprehension exercises
+  const lintResults = lintFrench(userAnswer, exercise.tense, exercise.verb, {
+    skipPunctuation: isReadingComprehension,
+  });
 
   results.lintResults = lintResults;
 
@@ -37,10 +40,20 @@ export function runTests(exercise, userAnswer) {
   }
 
   // Check if user answer matches expected answer
-  const matchesExpected = checkAnswer(userAnswer, exercise.expectedAnswer, {
+  let matchesExpected = checkAnswer(userAnswer, exercise.expectedAnswer, {
     caseSensitive: false,
     exactMatch: false,
   });
+
+  // Also check acceptable alternative answers
+  if (!matchesExpected && exercise.acceptableAnswers) {
+    matchesExpected = exercise.acceptableAnswers.some((acceptable) =>
+      checkAnswer(userAnswer, acceptable, {
+        caseSensitive: false,
+        exactMatch: false,
+      })
+    );
+  }
 
   // NEW APPROACH: Check against the correct answer and known wrong answers
   if (matchesExpected) {

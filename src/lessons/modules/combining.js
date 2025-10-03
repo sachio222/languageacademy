@@ -30,9 +30,24 @@ export const module10_combining = {
   ],
 
   vocabularyReference: [
-    { french: "il l'a", english: "he has it", note: "l' = le/la" },
-    { french: "elle l'a", english: "she has it", note: "l' = le/la" },
-    { french: "ils les ont", english: "they have them", note: "plural" },
+    { french: "il l'a", english: "he has it", note: "l' = le/la (avoir)" },
+    { french: "elle l'a", english: "she has it", note: "l' = le/la (avoir)" },
+    {
+      french: "ils les ont",
+      english: "they have them",
+      note: "plural (avoir)",
+    },
+    { french: "je le veux", english: "I want it", note: "vouloir + object" },
+    {
+      french: "tu viens avec moi",
+      english: "you come with me",
+      note: "venir + preposition",
+    },
+    {
+      french: "il va partir",
+      english: "he's going to leave",
+      note: "aller + infinitive",
+    },
     { french: "c'est le mien", english: "it's mine", note: "masculine thing" },
     {
       french: "c'est le sien",
@@ -45,7 +60,6 @@ export const module10_combining = {
       note: "masculine thing",
     },
     { french: "est-ce le tien", english: "is it yours?", note: "question" },
-    { french: "est-ce le sien", english: "is it his/hers?", note: "question" },
   ],
 
   exerciseConfig: {
@@ -144,6 +158,51 @@ export const module10_combining = {
         hint: "Question form: est-ce + possessive pronoun for his/her",
         expectedAnswer: "est-ce le sien",
         wrongAnswers: [],
+      },
+      {
+        instruction:
+          "Say you want something using object pronoun (vouloir + object)",
+        prompt: "I want it",
+        hint: "Combine vouloir from M12 + object pronoun BEFORE verb",
+        expectedAnswer: "je le veux",
+        wrongAnswers: [
+          {
+            answer: "je veux le",
+            feedback: "Object pronoun goes BEFORE: je LE veux",
+          },
+          {
+            answer: "je veux ça",
+            feedback: "Use object pronoun 'le', not ça",
+          },
+        ],
+      },
+      {
+        instruction: "Tell your friend to come with you (venir + preposition)",
+        prompt: "you come with me (informal)",
+        hint: "Combine venir (M17) + avec (M14) + moi",
+        expectedAnswer: "tu viens avec moi",
+        wrongAnswers: [
+          {
+            answer: "tu vas avec moi",
+            feedback: "Use venir (come), not aller (go)",
+          },
+        ],
+      },
+      {
+        instruction: "Say he's going to leave (aller + infinitive)",
+        prompt: "he's going to leave",
+        hint: "Combine aller (M18) + partir infinitive (M19) - future construction!",
+        expectedAnswer: "il va partir",
+        wrongAnswers: [
+          {
+            answer: "il part",
+            feedback: "Use 'va partir' to express future intention",
+          },
+          {
+            answer: "il vient partir",
+            feedback: "Use aller (va), not venir",
+          },
+        ],
       },
     ],
   },

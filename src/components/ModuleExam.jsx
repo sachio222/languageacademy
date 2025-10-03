@@ -42,7 +42,7 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson }) {
     // Grade all answers
     const examResults = examQuestions.map((exercise) => {
       const userAnswer = answers[exercise.id] || '';
-      const testResult = runTests(exercise, userAnswer);
+      const testResult = runTests(exercise, userAnswer, false);
       return {
         exercise,
         userAnswer,
@@ -194,6 +194,12 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson }) {
         )}
       </div>
 
+      {!allAnswered && currentQuestionIndex === examQuestions.length - 1 && (
+        <div className="exam-warning">
+          ⚠️ Please answer all questions before submitting
+        </div>
+      )}
+
       <div className="exam-navigation">
         <button
           className="btn-nav"
@@ -225,12 +231,6 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson }) {
           </button>
         )}
       </div>
-
-      {!allAnswered && currentQuestionIndex === examQuestions.length - 1 && (
-        <div className="exam-warning">
-          ⚠️ Please answer all questions before submitting
-        </div>
-      )}
     </div>
   );
 }

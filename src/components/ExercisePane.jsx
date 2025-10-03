@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { runTests, isExerciseComplete } from '../lessons/testRunner';
 import TestOutput from './TestOutput';
 import ReadingPassage from './ReadingPassage';
@@ -11,11 +11,13 @@ function ExercisePane({
   isLastExercise,
   isCompleted,
   onComplete,
-  readingPassage
+  readingPassage,
+  onBackToLesson
 }) {
   const [userAnswer, setUserAnswer] = useState('');
   const [testResults, setTestResults] = useState(null);
   const [showHint, setShowHint] = useState(false);
+  const textareaRef = useRef(null);
 
   const handleSubmit = () => {
     if (!userAnswer.trim()) {
@@ -23,7 +25,14 @@ function ExercisePane({
       return;
     }
 
-    const results = runTests(exercise, userAnswer);
+    // Blur the textarea so arrow keys work for navigation
+    if (document.activeElement && document.activeElement.tagName === 'TEXTAREA') {
+      document.activeElement.blur();
+    }
+
+    // If there's a reading passage, this is a reading comprehension exercise
+    const isReadingComprehension = !!readingPassage;
+    const results = runTests(exercise, userAnswer, isReadingComprehension);
     setTestResults(results);
 
     if (isExerciseComplete(results)) {
@@ -39,11 +48,18 @@ function ExercisePane({
     }
   };
 
-  // Reset when exercise changes
+  // Reset when exercise changes and focus textarea
   useEffect(() => {
     setUserAnswer('');
     setTestResults(null);
     setShowHint(false);
+
+    // Focus the textarea after a brief delay to ensure it's rendered
+    setTimeout(() => {
+      if (textareaRef.current) {
+        textareaRef.current.focus();
+      }
+    }, 0);
   }, [exercise.id]);
 
   const handleReset = () => {
@@ -59,6 +75,29 @@ function ExercisePane({
 
   const canProceed = testResults && isExerciseComplete(testResults);
 
+  // Global keyboard shortcuts for navigation
+  useEffect(() => {
+    const handleGlobalKeyDown = (e) => {
+      // Don't trigger if user is typing in textarea
+      if (e.target.tagName === 'TEXTAREA') return;
+
+      // Left arrow for Previous
+      if (e.key === 'ArrowLeft' && !isFirstExercise) {
+        e.preventDefault();
+        onPrevious();
+      }
+
+      // Right arrow for Next (only if tests passed)
+      if (e.key === 'ArrowRight' && !isLastExercise && canProceed) {
+        e.preventDefault();
+        handleNextExercise();
+      }
+    };
+
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, [isFirstExercise, isLastExercise, canProceed, onPrevious, handleNextExercise]);
+
   const isReadingModule = !!readingPassage;
 
   return (
@@ -72,8 +111,17 @@ function ExercisePane({
 
       <div className={isReadingModule ? "reading-quiz-section" : ""}>
         <div className="exercise-header">
-          <h3>{isReadingModule ? '📖' : '✏️'} Exercise {exercise.id}</h3>
-          {isCompleted && <span className="badge-done">✓ Done</span>}
+          {onBackToLesson && (
+            <div className="exercise-header-left">
+              <button className="btn-back-to-lesson" onClick={onBackToLesson}>
+                ← Back to Lesson
+              </button>
+            </div>
+          )}
+          <div className="exercise-title-row">
+            <h3>{isReadingModule ? '📖' : '✏️'} Exercise {exercise.id}</h3>
+            {isCompleted && <span className="badge-done">✓ Done</span>}
+          </div>
         </div>
 
         <div className="exercise-instruction">
@@ -89,6 +137,7 @@ function ExercisePane({
             <span className="editor-shortcut">⌘/Ctrl + Enter to submit</span>
           </div>
           <textarea
+            ref={textareaRef}
             className="code-input"
             value={userAnswer}
             onChange={(e) => setUserAnswer(e.target.value)}
@@ -118,6 +167,7 @@ function ExercisePane({
               className="btn-primary"
               onClick={handleSubmit}
             >
+              <span className="keyboard-shortcut">⌘ Enter</span>
               Submit
             </button>
           </div>
@@ -150,6 +200,7 @@ function ExercisePane({
             disabled={isFirstExercise}
           >
             ← Previous
+            {!isFirstExercise && <span className="keyboard-shortcut-nav">←</span>}
           </button>
 
           <button
@@ -158,6 +209,7 @@ function ExercisePane({
             disabled={isLastExercise || !canProceed}
           >
             Next →
+            {!isLastExercise && canProceed && <span className="keyboard-shortcut-nav">→</span>}
           </button>
         </div>
       </div>

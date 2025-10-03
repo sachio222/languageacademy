@@ -192,6 +192,66 @@ export const avoirConjugations = {
   },
 };
 
+// Verb faire (to do/make) conjugations
+export const faireConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "fais",
+    combined: "je fais",
+    english: "I do/make",
+    englishFull: "I do / I make / I am doing",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "fais",
+    combined: "tu fais",
+    english: "you do/make (informal)",
+    englishFull: "you do / you make (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "fait",
+    combined: "il fait",
+    english: "he does/makes",
+    englishFull: "he does / he makes",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "fait",
+    combined: "elle fait",
+    english: "she does/makes",
+    englishFull: "she does / she makes",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "faisons",
+    combined: "nous faisons",
+    english: "we do/make",
+    englishFull: "we do / we make",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "faites",
+    combined: "vous faites",
+    english: "you do/make (formal/plural)",
+    englishFull: "you do / you make (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "font",
+    combined: "ils font",
+    english: "they do/make (masculine)",
+    englishFull: "they do / they make (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "font",
+    combined: "elles font",
+    english: "they do/make (feminine)",
+    englishFull: "they do / they make (all feminine)",
+  },
+};
+
 // Verb vouloir (to want) conjugations
 export const vouloirConjugations = {
   je: {
@@ -309,6 +369,367 @@ export const pouvoirConjugations = {
     combined: "elles peuvent",
     english: "they can (feminine)",
     englishFull: "they can (all feminine)",
+  },
+};
+
+// Verb aller (to go) conjugations
+export const allerConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "vais",
+    combined: "je vais",
+    english: "I go",
+    englishFull: "I go / I am going",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "vas",
+    combined: "tu vas",
+    english: "you go (informal)",
+    englishFull: "you go / you are going (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "va",
+    combined: "il va",
+    english: "he goes",
+    englishFull: "he goes / he is going",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "va",
+    combined: "elle va",
+    english: "she goes",
+    englishFull: "she goes / she is going",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "allons",
+    combined: "nous allons",
+    english: "we go",
+    englishFull: "we go / we are going",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "allez",
+    combined: "vous allez",
+    english: "you go (formal/plural)",
+    englishFull: "you go / you are going (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "vont",
+    combined: "ils vont",
+    english: "they go (masculine)",
+    englishFull: "they go / they are going (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "vont",
+    combined: "elles vont",
+    english: "they go (feminine)",
+    englishFull: "they go / they are going (all feminine)",
+  },
+};
+
+// Verb venir (to come) conjugations
+export const venirConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "viens",
+    combined: "je viens",
+    english: "I come",
+    englishFull: "I come / I am coming",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "viens",
+    combined: "tu viens",
+    english: "you come (informal)",
+    englishFull: "you come / you are coming (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "vient",
+    combined: "il vient",
+    english: "he comes",
+    englishFull: "he comes / he is coming",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "vient",
+    combined: "elle vient",
+    english: "she comes",
+    englishFull: "she comes / she is coming",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "venons",
+    combined: "nous venons",
+    english: "we come",
+    englishFull: "we come / we are coming",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "venez",
+    combined: "vous venez",
+    english: "you come (formal/plural)",
+    englishFull: "you come / you are coming (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "viennent",
+    combined: "ils viennent",
+    english: "they come (masculine)",
+    englishFull: "they come / they are coming (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "viennent",
+    combined: "elles viennent",
+    english: "they come (feminine)",
+    englishFull: "they come / they are coming (all feminine)",
+  },
+};
+
+// Verb partir (to leave) conjugations
+export const partirConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "pars",
+    combined: "je pars",
+    english: "I leave",
+    englishFull: "I leave / I am leaving",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "pars",
+    combined: "tu pars",
+    english: "you leave (informal)",
+    englishFull: "you leave / you are leaving (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "part",
+    combined: "il part",
+    english: "he leaves",
+    englishFull: "he leaves / he is leaving",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "part",
+    combined: "elle part",
+    english: "she leaves",
+    englishFull: "she leaves / she is leaving",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "partons",
+    combined: "nous partons",
+    english: "we leave",
+    englishFull: "we leave / we are leaving",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "partez",
+    combined: "vous partez",
+    english: "you leave (formal/plural)",
+    englishFull: "you leave / you are leaving (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "partent",
+    combined: "ils partent",
+    english: "they leave (masculine)",
+    englishFull: "they leave / they are leaving (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "partent",
+    combined: "elles partent",
+    english: "they leave (feminine)",
+    englishFull: "they leave / they are leaving (all feminine)",
+  },
+};
+
+// Verb arriver (to arrive) conjugations
+export const arriverConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "arrive",
+    combined: "j'arrive",
+    english: "I arrive",
+    englishFull: "I arrive / I am arriving",
+    note: "j' before vowel",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "arrives",
+    combined: "tu arrives",
+    english: "you arrive (informal)",
+    englishFull: "you arrive / you are arriving (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "arrive",
+    combined: "il arrive",
+    english: "he arrives",
+    englishFull: "he arrives / he is arriving",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "arrive",
+    combined: "elle arrive",
+    english: "she arrives",
+    englishFull: "she arrives / she is arriving",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "arrivons",
+    combined: "nous arrivons",
+    english: "we arrive",
+    englishFull: "we arrive / we are arriving",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "arrivez",
+    combined: "vous arrivez",
+    english: "you arrive (formal/plural)",
+    englishFull: "you arrive / you are arriving (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "arrivent",
+    combined: "ils arrivent",
+    english: "they arrive (masculine)",
+    englishFull: "they arrive / they are arriving (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "arrivent",
+    combined: "elles arrivent",
+    english: "they arrive (feminine)",
+    englishFull: "they arrive / they are arriving (all feminine)",
+  },
+};
+
+// Verb rester (to stay) conjugations
+export const resterConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "reste",
+    combined: "je reste",
+    english: "I stay",
+    englishFull: "I stay / I am staying",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "restes",
+    combined: "tu restes",
+    english: "you stay (informal)",
+    englishFull: "you stay / you are staying (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "reste",
+    combined: "il reste",
+    english: "he stays",
+    englishFull: "he stays / he is staying",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "reste",
+    combined: "elle reste",
+    english: "she stays",
+    englishFull: "she stays / she is staying",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "restons",
+    combined: "nous restons",
+    english: "we stay",
+    englishFull: "we stay / we are staying",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "restez",
+    combined: "vous restez",
+    english: "you stay (formal/plural)",
+    englishFull: "you stay / you are staying (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "restent",
+    combined: "ils restent",
+    english: "they stay (masculine)",
+    englishFull: "they stay / they are staying (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "restent",
+    combined: "elles restent",
+    english: "they stay (feminine)",
+    englishFull: "they stay / they are staying (all feminine)",
+  },
+};
+
+// Verb voir (to see) conjugations
+export const voirConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "vois",
+    combined: "je vois",
+    english: "I see",
+    englishFull: "I see / I am seeing",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "vois",
+    combined: "tu vois",
+    english: "you see (informal)",
+    englishFull: "you see / you are seeing (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "voit",
+    combined: "il voit",
+    english: "he sees",
+    englishFull: "he sees / he is seeing",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "voit",
+    combined: "elle voit",
+    english: "she sees",
+    englishFull: "she sees / she is seeing",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "voyons",
+    combined: "nous voyons",
+    english: "we see",
+    englishFull: "we see / we are seeing",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "voyez",
+    combined: "vous voyez",
+    english: "you see (formal/plural)",
+    englishFull: "you see / you are seeing (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "voient",
+    combined: "ils voient",
+    english: "they see (masculine)",
+    englishFull: "they see / they are seeing (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "voient",
+    combined: "elles voient",
+    english: "they see (feminine)",
+    englishFull: "they see / they are seeing (all feminine)",
   },
 };
 
@@ -793,6 +1214,123 @@ export const commonNouns = {
     englishFull: "day",
     gender: "masculine",
     article: "un jour / le jour",
+  },
+};
+
+// Common Adjectives - Essential descriptive words from top 100
+export const commonAdjectives = {
+  bon: {
+    french: "bon",
+    englishMasc: "good (masculine)",
+    englishFem: "good (feminine)",
+    femForm: "bonne",
+    example: "un bon livre / une bonne maison",
+    note: "very common, doubles n in feminine",
+  },
+  grand: {
+    french: "grand",
+    englishMasc: "big/tall (masculine)",
+    englishFem: "big/tall (feminine)",
+    femForm: "grande",
+    example: "un grand homme / une grande femme",
+    note: "can mean big or tall",
+  },
+  petit: {
+    french: "petit",
+    englishMasc: "small (masculine)",
+    englishFem: "small (feminine)",
+    femForm: "petite",
+    example: "un petit chat / une petite maison",
+    note: "very common",
+  },
+  nouveau: {
+    french: "nouveau",
+    englishMasc: "new (masculine)",
+    englishFem: "new (feminine)",
+    femForm: "nouvelle",
+    example: "un nouveau livre / une nouvelle voiture",
+    note: "irregular feminine form",
+  },
+  vieux: {
+    french: "vieux",
+    englishMasc: "old (masculine)",
+    englishFem: "old (feminine)",
+    femForm: "vieille",
+    example: "un vieux chat / une vieille maison",
+    note: "irregular feminine form",
+  },
+  jeune: {
+    french: "jeune",
+    englishMasc: "young",
+    englishFem: "young",
+    femForm: "jeune",
+    example: "un jeune homme / une jeune femme",
+    note: "same form both genders",
+  },
+  beau: {
+    french: "beau",
+    englishMasc: "beautiful (masculine)",
+    englishFem: "beautiful (feminine)",
+    femForm: "belle",
+    example: "un beau livre / une belle maison",
+    note: "irregular feminine form",
+  },
+  autre: {
+    french: "autre",
+    englishMasc: "other",
+    englishFem: "other",
+    femForm: "autre",
+    example: "un autre livre / une autre maison",
+    note: "same form both genders",
+  },
+};
+
+// Connectors and Simple Modifiers - "and, but, or, also, very"
+export const connectors = {
+  et: {
+    french: "et",
+    english: "and",
+    englishFull: "and",
+    type: "connector",
+    category: "conjunction",
+    example: "un chat et un chien",
+    note: "most common connector",
+  },
+  mais: {
+    french: "mais",
+    english: "but",
+    englishFull: "but",
+    type: "connector",
+    category: "conjunction",
+    example: "je veux un chat, mais j'ai un chien",
+    note: "shows contrast",
+  },
+  ou: {
+    french: "ou",
+    english: "or",
+    englishFull: "or",
+    type: "connector",
+    category: "conjunction",
+    example: "un chat ou un chien?",
+    note: "presents a choice",
+  },
+  aussi: {
+    french: "aussi",
+    english: "also/too",
+    englishFull: "also / too",
+    type: "adverb",
+    category: "addition",
+    example: "j'ai un chat aussi",
+    note: "rank 92 - very common!",
+  },
+  très: {
+    french: "très",
+    english: "very",
+    englishFull: "very",
+    type: "adverb",
+    category: "intensity",
+    example: "très bon",
+    note: "rank 88 - super simple modifier",
   },
 };
 

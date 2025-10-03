@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import SpeakButton from './SpeakButton';
+import { detectLanguage } from '../hooks/useSpeech';
 
 /**
  * Study Mode - Learn before you test
@@ -45,6 +47,12 @@ function StudyMode({ exercises, onFinishStudying }) {
           <div className="flashcard-label">Question:</div>
           <div className="flashcard-content">
             <h2>{currentExercise.prompt}</h2>
+            <SpeakButton
+              text={currentExercise.prompt}
+              language={detectLanguage(currentExercise.prompt)}
+              size="large"
+              className="flashcard-speaker"
+            />
           </div>
         </div>
 
@@ -60,6 +68,12 @@ function StudyMode({ exercises, onFinishStudying }) {
             <div className="flashcard-label">Answer:</div>
             <div className="flashcard-answer">
               <h2>{currentExercise.expectedAnswer}</h2>
+              <SpeakButton
+                text={currentExercise.expectedAnswer}
+                language="fr-FR"
+                size="large"
+                className="flashcard-speaker"
+              />
               {currentExercise.article && (
                 <div className="flashcard-article">
                   with article: {currentExercise.article}
