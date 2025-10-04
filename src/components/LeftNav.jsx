@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { unitStructure } from '../lessons/lessonData';
 import '../styles/LeftNav.css';
 
-function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises }) {
+function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, isCollapsed, onToggleCollapse }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [collapsedUnits, setCollapsedUnits] = useState(new Set());
   const [activeTab, setActiveTab] = useState('tree'); // 'tree' or 'vocab'
@@ -112,146 +112,176 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises })
   };
 
   return (
-    <aside className="left-nav">
-      {/* Search Bar */}
-      <div className="nav-search">
-        <div className="search-input-wrapper">
-          <span className="search-icon">🔍</span>
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search modules, vocab..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          {searchQuery && (
+    <aside className={`left-nav ${isCollapsed ? 'collapsed' : ''}`}>
+      {!isCollapsed && (
+        <>
+          {/* Search Bar */}
+          <div className="nav-search">
+            <div className="search-input-wrapper">
+              <span className="search-icon">🔍</span>
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Search modules, vocab..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              {searchQuery && (
+                <button
+                  className="search-clear"
+                  onClick={() => setSearchQuery('')}
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+            <kbd className="search-kbd">⌘K</kbd>
+          </div>
+
+          {/* Tabs */}
+          <div className="nav-tabs">
             <button
-              className="search-clear"
-              onClick={() => setSearchQuery('')}
+              className={`nav-tab ${activeTab === 'tree' ? 'active' : ''}`}
+              onClick={() => setActiveTab('tree')}
             >
-              ✕
+              Modules
             </button>
-          )}
-        </div>
-        <kbd className="search-kbd">⌘K</kbd>
-      </div>
+            <button
+              className={`nav-tab ${activeTab === 'vocab' ? 'active' : ''}`}
+              onClick={() => setActiveTab('vocab')}
+            >
+              Vocabulary
+            </button>
+          </div>
 
-      {/* Tabs */}
-      <div className="nav-tabs">
-        <button
-          className={`nav-tab ${activeTab === 'tree' ? 'active' : ''}`}
-          onClick={() => setActiveTab('tree')}
-        >
-          📚 Modules
-        </button>
-        <button
-          className={`nav-tab ${activeTab === 'vocab' ? 'active' : ''}`}
-          onClick={() => setActiveTab('vocab')}
-        >
-          🏷️ Vocabulary
-        </button>
-      </div>
+          {/* Content */}
+          <div className="nav-content">
+            {activeTab === 'tree' ? (
+              // Module Tree View
+              <div className="nav-tree">
+                {filteredUnits.length === 0 ? (
+                  <div className="nav-empty">
+                    No modules found for "{searchQuery}"
+                  </div>
+                ) : (
+                  filteredUnits.map(unit => {
+                    const isCollapsed = collapsedUnits.has(unit.id);
+                    const unitLessons = unit.lessons;
 
-      {/* Content */}
-      <div className="nav-content">
-        {activeTab === 'tree' ? (
-          // Module Tree View
-          <div className="nav-tree">
-            {filteredUnits.length === 0 ? (
-              <div className="nav-empty">
-                No modules found for "{searchQuery}"
-              </div>
-            ) : (
-              filteredUnits.map(unit => {
-                const isCollapsed = collapsedUnits.has(unit.id);
-                const unitLessons = unit.lessons;
+                    return (
+                      <div key={unit.id} className="nav-unit">
+                        <div
+                          className="nav-unit-header"
+                          onClick={() => toggleUnit(unit.id)}
+                        >
+                          <span className="nav-unit-icon">{unit.icon}</span>
+                          <span className="nav-unit-title">{unit.title}</span>
+                          <span className={`nav-unit-chevron ${isCollapsed ? 'collapsed' : ''}`}>
+                            ▼
+                          </span>
+                        </div>
 
-                return (
-                  <div key={unit.id} className="nav-unit">
-                    <div
-                      className="nav-unit-header"
-                      onClick={() => toggleUnit(unit.id)}
-                    >
-                      <span className="nav-unit-icon">{unit.icon}</span>
-                      <span className="nav-unit-title">{unit.title}</span>
-                      <span className={`nav-unit-chevron ${isCollapsed ? 'collapsed' : ''}`}>
-                        ▼
-                      </span>
-                    </div>
+                        {!isCollapsed && (
+                          <div className="nav-unit-lessons">
+                            {unitLessons.map(lesson => {
+                              const isActive = currentLesson === lesson.id;
+                              const completion = getLessonCompletion(lesson);
+                              const isComplete = completion === 100;
 
-                    {!isCollapsed && (
-                      <div className="nav-unit-lessons">
-                        {unitLessons.map(lesson => {
-                          const isActive = currentLesson === lesson.id;
-                          const completion = getLessonCompletion(lesson);
-                          const isComplete = completion === 100;
-
-                          return (
-                            <div
-                              key={lesson.id}
-                              className={`nav-lesson ${isActive ? 'active' : ''} ${isComplete ? 'complete' : ''}`}
-                              onClick={() => onLessonSelect(lesson.id)}
-                            >
-                              <div className="nav-lesson-main">
-                                <span className="nav-lesson-number">
-                                  {lesson.id}
-                                </span>
-                                <span className="nav-lesson-title">
-                                  {lesson.title}
-                                </span>
-                                {isComplete && (
-                                  <span className="nav-lesson-check">✓</span>
-                                )}
-                              </div>
-                              {!isComplete && completion > 0 && (
-                                <div className="nav-lesson-progress">
-                                  <div
-                                    className="nav-lesson-progress-bar"
-                                    style={{ width: `${completion}%` }}
-                                  />
+                              return (
+                                <div
+                                  key={lesson.id}
+                                  className={`nav-lesson ${isActive ? 'active' : ''} ${isComplete ? 'complete' : ''}`}
+                                  onClick={() => onLessonSelect(lesson.id)}
+                                >
+                                  <div className="nav-lesson-main">
+                                    <span className="nav-lesson-number">
+                                      {lesson.id}
+                                    </span>
+                                    <span className="nav-lesson-title">
+                                      {lesson.title}
+                                    </span>
+                                    {isComplete && (
+                                      <span className="nav-lesson-check">✓</span>
+                                    )}
+                                  </div>
+                                  {!isComplete && completion > 0 && (
+                                    <div className="nav-lesson-progress">
+                                      <div
+                                        className="nav-lesson-progress-bar"
+                                        style={{ width: `${completion}%` }}
+                                      />
+                                    </div>
+                                  )}
                                 </div>
-                              )}
-                            </div>
-                          );
-                        })}
+                              );
+                            })}
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </div>
-                );
-              })
-            )}
-          </div>
-        ) : (
-          // Vocabulary Index View
-          <div className="nav-vocab">
-            {filteredVocab.length === 0 ? (
-              <div className="nav-empty">
-                No vocabulary found for "{searchQuery}"
+                    );
+                  })
+                )}
               </div>
             ) : (
-              filteredVocab.map((vocab, idx) => (
-                <div key={idx} className="nav-vocab-item">
-                  <div className="nav-vocab-word">
-                    <span className="nav-vocab-french">{vocab.french}</span>
-                    <span className="nav-vocab-english">{vocab.english}</span>
+              // Vocabulary Index View
+              <div className="nav-vocab">
+                {filteredVocab.length === 0 ? (
+                  <div className="nav-empty">
+                    No vocabulary found for "{searchQuery}"
                   </div>
-                  <div className="nav-vocab-lessons">
-                    {vocab.lessons.map(lesson => (
-                      <button
-                        key={lesson.id}
-                        className="nav-vocab-lesson-link"
-                        onClick={() => onLessonSelect(lesson.id)}
-                      >
-                        #{lesson.id}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              ))
+                ) : (
+                  filteredVocab.map((vocab, idx) => (
+                    <div key={idx} className="nav-vocab-item">
+                      <div className="nav-vocab-word">
+                        <span className="nav-vocab-french">{vocab.french}</span>
+                        <span className="nav-vocab-english">{vocab.english}</span>
+                      </div>
+                      <div className="nav-vocab-lessons">
+                        {vocab.lessons.map(lesson => (
+                          <button
+                            key={lesson.id}
+                            className="nav-vocab-lesson-link"
+                            onClick={() => onLessonSelect(lesson.id)}
+                          >
+                            #{lesson.id}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
             )}
           </div>
-        )}
-      </div>
+        </>
+      )}
+
+      {/* Collapsed state - show unit icons */}
+      {isCollapsed && (
+        <div className="nav-collapsed-content">
+          {unitStructure.map(unit => {
+            const unitLessons = getLessonsForUnit(unit);
+            const completed = unitLessons.filter(lesson =>
+              lesson.exercises.every(ex => completedExercises.has(ex.id))
+            ).length;
+            const total = unitLessons.length;
+            const progress = Math.round((completed / total) * 100);
+
+            return (
+              <div
+                key={unit.id}
+                className="nav-collapsed-unit"
+                onClick={onToggleCollapse}
+                title={`${unit.title}: ${completed}/${total} complete`}
+              >
+                <span className="collapsed-unit-icon">{unit.icon}</span>
+                <span className="collapsed-unit-progress">{progress}%</span>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </aside>
   );
 }

@@ -7,6 +7,7 @@ import './styles/App.css';
 function App() {
   const [currentLesson, setCurrentLesson] = useState(null);
   const [completedExercises, setCompletedExercises] = useState(new Set());
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   const handleLessonSelect = (lessonId) => {
     setCurrentLesson(lessonId);
@@ -47,7 +48,14 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <div className="header-content">
+        <div className="header-left">
+          <button
+            className="sidebar-toggle"
+            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+            title={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+          >
+            {sidebarCollapsed ? '›' : '☰'}
+          </button>
           <h1>🎓 Language Academy</h1>
         </div>
       </header>
@@ -57,13 +65,28 @@ function App() {
         currentLesson={currentLesson}
         onLessonSelect={handleLessonSelect}
         completedExercises={completedExercises}
+        isCollapsed={sidebarCollapsed}
+        onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
       />
 
       <main className="app-main">
         {!currentLesson ? (
           <div className="welcome-screen">
+            <div className="welcome-icon">📚</div>
             <h2>Welcome to Language Academy</h2>
-            <p>Select a module from the sidebar to begin learning French</p>
+            <p className="welcome-subtitle">Master French through structured, test-driven learning</p>
+
+            <div className="welcome-actions">
+              <div className="welcome-tip">
+                <span className="tip-icon">←</span>
+                <span>Select a module from the sidebar to begin</span>
+              </div>
+              <div className="welcome-tip">
+                <span className="tip-icon">⌘K</span>
+                <span>Quick search modules and vocabulary</span>
+              </div>
+            </div>
+
             <div className="welcome-stats">
               <div className="stat-card">
                 <span className="stat-number">{lessons.length}</span>
@@ -72,6 +95,10 @@ function App() {
               <div className="stat-card">
                 <span className="stat-number">{lessons.reduce((sum, l) => sum + l.exercises.length, 0)}</span>
                 <span className="stat-label">Exercises</span>
+              </div>
+              <div className="stat-card">
+                <span className="stat-number">{completedExercises.size}</span>
+                <span className="stat-label">Completed</span>
               </div>
             </div>
           </div>

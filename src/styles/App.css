@@ -28,14 +28,14 @@ body {
   min-height: 100vh;
 }
 
-/* Header - Static and Compact */
+/* Header - Full Width, Above Sidebar */
 .app-header {
   background: #ffffff;
-  padding: 1rem 2rem;
+  padding: 0 1.5rem;
   border-bottom: 1px solid #e2e8f0;
   position: fixed;
   top: 0;
-  left: 280px; /* Offset for sidebar */
+  left: 0;
   right: 0;
   height: 60px;
   z-index: 100;
@@ -44,12 +44,35 @@ body {
   align-items: center;
 }
 
-.header-content {
+.header-left {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
-.header-content h1 {
+.sidebar-toggle {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 6px;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.sidebar-toggle:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.app-header h1 {
   font-size: 1.25rem;
   color: #1e293b;
   font-weight: 600;
@@ -60,9 +83,15 @@ body {
 .app-main {
   flex: 1;
   margin-left: 280px; /* Sidebar width */
-  padding: 2rem;
-  padding-top: calc(2rem + 60px); /* Account for fixed header height */
+  padding: 0.5rem;
+  padding-top: calc(0.5rem + 60px); /* Account for fixed header height */
   min-height: calc(100vh - 60px);
+  transition: margin-left 0.2s ease;
+}
+
+/* Adjust main content when sidebar is collapsed */
+body:has(.left-nav.collapsed) .app-main {
+  margin-left: 64px;
 }
 
 /* Footer */
@@ -74,57 +103,116 @@ body {
   font-size: 0.875rem;
   border-top: 1px solid #e2e8f0;
   margin-left: 280px; /* Offset for sidebar */
+  transition: margin-left 0.2s ease;
 }
 
-/* Welcome Screen */
+/* Adjust footer when sidebar is collapsed */
+body:has(.left-nav.collapsed) .app-footer {
+  margin-left: 64px;
+}
+
+/* Welcome Screen - Empty State */
 .welcome-screen {
-  max-width: 800px;
-  margin: 4rem auto;
+  max-width: 700px;
+  margin: 6rem auto 4rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
 }
 
 .welcome-screen h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
   color: #1e293b;
   font-weight: 600;
+  letter-spacing: -0.025em;
 }
 
-.welcome-screen p {
-  font-size: 1.25rem;
+.welcome-subtitle {
+  font-size: 1.0625rem;
   color: #64748b;
   margin-bottom: 3rem;
+  line-height: 1.6;
 }
 
+/* Quick Actions / Tips */
+.welcome-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.welcome-tip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  color: #475569;
+  text-align: left;
+}
+
+.tip-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Stats Cards */
 .welcome-stats {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
+  width: 100%;
 }
 
 .stat-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 2rem 3rem;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  max-width: 160px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .stat-number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #3b82f6;
+  line-height: 1;
 }
 
 .stat-label {
-  font-size: 1rem;
+  font-size: 0.8125rem;
   color: #64748b;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-weight: 500;
 }
 
 /* Error Screen */
@@ -300,7 +388,7 @@ body {
 .lesson-header {
   background: #ffffff;
   color: #1e293b;
-  padding: 1.5rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -308,7 +396,7 @@ body {
 }
 
 .lesson-header h2 {
-  font-size: 1.5rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: -0.015em;
   color: #1e293b;
@@ -335,7 +423,7 @@ body {
   background: #f8fafc;
   border-right: 1px solid #e2e8f0;
   overflow-y: auto;
-  max-height: calc(100vh - 200px);
+  max-height: calc(100vh);
 }
 
 /* Concept Pane */
@@ -1016,21 +1104,39 @@ button:disabled {
     flex-wrap: wrap;
   }
 
-  .welcome-screen h2 {
-    font-size: 2rem;
+  .welcome-screen {
+    margin: 3rem auto 2rem;
   }
 
-  .welcome-screen p {
-    font-size: 1rem;
+  .welcome-icon {
+    font-size: 3rem;
+  }
+
+  .welcome-screen h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+  }
+
+  .welcome-actions {
+    margin-bottom: 2rem;
   }
 
   .welcome-stats {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    gap: 0.75rem;
   }
 
   .stat-card {
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
+    max-width: none;
+  }
+
+  .stat-number {
+    font-size: 2rem;
   }
 }
 
