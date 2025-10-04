@@ -76,6 +76,17 @@ function ExercisePane({
 
   const canProceed = testResults && isExerciseComplete(testResults);
 
+  // Calculate editor status
+  const getEditorStatus = () => {
+    if (!testResults) return '';
+    return canProceed ? 'success' : 'error';
+  };
+
+  const getFailedCount = () => {
+    if (!testResults) return 0;
+    return testResults.tests?.filter(t => !t.passed).length || 0;
+  };
+
   // Global keyboard shortcuts for navigation
   useEffect(() => {
     const handleGlobalKeyDown = (e) => {
@@ -132,16 +143,30 @@ function ExercisePane({
         </div>
 
         <div className="code-editor">
-          <div className="editor-header">
+          <div className={`editor-header ${getEditorStatus()}`}>
             <span>answer.fr</span>
             <span className="editor-language">French</span>
-            <span className="editor-shortcut">⌘/Ctrl + Enter to submit</span>
+
+            {!testResults ? (
+              <span className="editor-shortcut">⌘/Ctrl + Enter to submit</span>
+            ) : canProceed ? (
+              <span className="editor-status editor-status-success">
+                ✓ All tests passed
+              </span>
+            ) : (
+              <span className="editor-status editor-status-error">
+                ✗ {getFailedCount()} test{getFailedCount() > 1 ? 's' : ''} failed
+              </span>
+            )}
           </div>
           <textarea
             ref={textareaRef}
             className="code-input"
             value={userAnswer}
-            onChange={(e) => setUserAnswer(e.target.value)}
+            onChange={(e) => {
+              setUserAnswer(e.target.value);
+              if (testResults) setTestResults(null); // Clear status when editing
+            }}
             onKeyDown={handleKeyDown}
             placeholder="Type your French sentence here..."
             spellCheck="false"

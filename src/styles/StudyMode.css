@@ -1,7 +1,7 @@
 /* Study Mode Styles */
 
 .study-container {
-  padding: 2.5rem;
+  padding: 1rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -198,7 +198,7 @@
 .vocab-reference {
   background: #ffffff;
   border-radius: 6px;
-  margin: 1.25rem 1.75rem;
+  /* margin: 1.25rem 1.75rem; */
   overflow: hidden;
   border: 1px solid #e2e8f0;
 }

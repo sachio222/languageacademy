@@ -48,7 +48,7 @@ function TestOutput({ results, expectedAnswer }) {
       {/* Test Results */}
       {lintResults && lintResults.valid && (
         <div className="tests-section">
-          <h5>Tests:</h5>
+          {/* <h5>Tests:</h5> */}
           {testResults.map((test, idx) => (
             <div key={idx} className={`test-result ${test.passed ? (test.hasAccentWarning ? 'pass-warning' : 'pass') : 'fail'}`}>
               <div className="test-message">{test.message}</div>

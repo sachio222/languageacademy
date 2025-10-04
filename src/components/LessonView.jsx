@@ -9,7 +9,7 @@ import UnitExam from './UnitExam';
 import ModuleCompleteModal from './ModuleCompleteModal';
 import FillInTheBlank from './FillInTheBlank';
 
-function LessonView({ lesson, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
+function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [showIntro, setShowIntro] = useState(true);
   const [isStudying, setIsStudying] = useState(false);
@@ -146,12 +146,15 @@ function LessonView({ lesson, completedExercises, onExerciseComplete, onModuleCo
         <ModuleCompleteModal
           lesson={lesson}
           onNextModule={handleNextModule}
-          onBackToModules={() => { }} // No-op since sidebar handles navigation
+          onBackToModules={onBack}
           totalModules={totalModules}
         />
       )}
 
       <div className="lesson-header">
+        <button className="btn-back" onClick={onBack}>
+          ← Back to Modules
+        </button>
         <h2>{lesson.title}</h2>
         <div className="exercise-progress">
           {showIntro ? (
@@ -197,7 +200,7 @@ function LessonView({ lesson, completedExercises, onExerciseComplete, onModuleCo
           <UnitExam
             unitNumber={lesson.unitNumber}
             onPassExam={() => handleNextModule()}
-            onRetryUnit={() => { }} // User can select from sidebar
+            onRetryUnit={onBack}
           />
         </div>
       ) : showExam ? (
@@ -239,16 +242,6 @@ function LessonView({ lesson, completedExercises, onExerciseComplete, onModuleCo
       ) : (
         <div className="lesson-content">
           <div className="left-pane">
-            <ConceptPane concepts={lesson.concepts} />
-            {vocabularyItems.length > 0 && (
-              <VocabularyReference
-                vocabulary={vocabularyItems}
-                title="Quick Reference"
-              />
-            )}
-          </div>
-
-          <div className="right-pane">
             <ExercisePane
               exercise={currentExercise}
               onNext={handleNext}
@@ -261,6 +254,16 @@ function LessonView({ lesson, completedExercises, onExerciseComplete, onModuleCo
               readingPassage={lesson.readingPassage}
               onBackToLesson={lesson.isReadingComprehension ? null : handleBackToLesson}
             />
+          </div>
+
+          <div className="right-pane">
+            <ConceptPane concepts={lesson.concepts} />
+            {vocabularyItems.length > 0 && (
+              <VocabularyReference
+                vocabulary={vocabularyItems}
+                title="Quick Reference"
+              />
+            )}
           </div>
         </div>
       )}

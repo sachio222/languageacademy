@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import LeftNav from './components/LeftNav';
+import LessonList from './components/LessonList';
 import LessonView from './components/LessonView';
 import { lessons } from './lessons/lessonData';
 import './styles/App.css';
@@ -12,6 +13,10 @@ function App() {
   const handleLessonSelect = (lessonId) => {
     setCurrentLesson(lessonId);
     window.scrollTo(0, 0);
+  };
+
+  const handleBack = () => {
+    setCurrentLesson(null);
   };
 
   const handleExerciseComplete = (exerciseId) => {
@@ -71,37 +76,11 @@ function App() {
 
       <main className="app-main">
         {!currentLesson ? (
-          <div className="welcome-screen">
-            <div className="welcome-icon">📚</div>
-            <h2>Welcome to Language Academy</h2>
-            <p className="welcome-subtitle">Master French through structured, test-driven learning</p>
-
-            <div className="welcome-actions">
-              <div className="welcome-tip">
-                <span className="tip-icon">←</span>
-                <span>Select a module from the sidebar to begin</span>
-              </div>
-              <div className="welcome-tip">
-                <span className="tip-icon">⌘K</span>
-                <span>Quick search modules and vocabulary</span>
-              </div>
-            </div>
-
-            <div className="welcome-stats">
-              <div className="stat-card">
-                <span className="stat-number">{lessons.length}</span>
-                <span className="stat-label">Modules</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-number">{lessons.reduce((sum, l) => sum + l.exercises.length, 0)}</span>
-                <span className="stat-label">Exercises</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-number">{completedExercises.size}</span>
-                <span className="stat-label">Completed</span>
-              </div>
-            </div>
-          </div>
+          <LessonList
+            lessons={lessons}
+            onLessonSelect={handleLessonSelect}
+            completedExercises={completedExercises}
+          />
         ) : (
           (() => {
             const lesson = lessons.find(l => l.id === currentLesson);
@@ -116,6 +95,7 @@ function App() {
             return (
               <LessonView
                 lesson={lesson}
+                onBack={handleBack}
                 completedExercises={completedExercises}
                 onExerciseComplete={handleExerciseComplete}
                 onModuleComplete={handleModuleComplete}
