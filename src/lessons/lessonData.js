@@ -38,6 +38,7 @@ import { allerModule } from "./modules/aller.js";
 import { partirModule } from "./modules/partir.js";
 import { voirModule } from "./modules/voir.js";
 import { reading2 } from "./modules/reading-2.js";
+import { unit2Practice } from "./modules/unit-2-practice.js";
 import { unit2Exam } from "./modules/unit-2-exam.js";
 import { contractions } from "./modules/contractions.js";
 import { module7_object_pronouns } from "./modules/object-pronouns.js";
@@ -45,6 +46,7 @@ import { module8_possessive_adjectives } from "./modules/possessive-adjectives.j
 import { module9_possessive_pronouns } from "./modules/possessive-pronouns.js";
 import { reading3 } from "./modules/reading-3.js";
 import { module10_combining } from "./modules/combining.js";
+import { unit3Practice } from "./modules/unit-3-practice.js";
 import { unit3Exam } from "./modules/unit-3-exam.js";
 import { survivalPhrases } from "./modules/survival-phrases.js";
 import { faireModule } from "./modules/faire.js";
@@ -56,7 +58,15 @@ import { locationAdverbs } from "./modules/location-adverbs.js";
 import { negation2 } from "./modules/negation-2.js";
 import { everydayNouns } from "./modules/everyday-nouns.js";
 import { reading4 } from "./modules/reading-4.js";
+import { unit4Practice } from "./modules/unit-4-practice.js";
 import { unit4Exam } from "./modules/unit-4-exam.js";
+import { comparisons } from "./modules/comparisons.js";
+import { conditionals } from "./modules/conditionals.js";
+import { wouldConditionals } from "./modules/would-conditionals.js";
+import { aimerModule } from "./modules/aimer.js";
+import { etrePast } from "./modules/etre-past.js";
+import { avoirPast } from "./modules/avoir-past.js";
+import { foodNouns } from "./modules/food-nouns.js";
 
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
@@ -101,65 +111,97 @@ const moduleConfigs = [
 
   // === SECOND MILESTONE - See your progress! ===
   reading2, // 21. READING TEST 2 - Dialogue! Uses questions, ça, vouloir, prepositions, adjectives, stressed pronouns!
-  unit2Exam, // 22. UNIT 2 FINAL EXAM - Test everything from Unit 2!
+  unit2Practice, // 22. PRACTICE - Fill in the blanks with Unit 2 vocabulary!
+  unit2Exam, // 23. UNIT 2 FINAL EXAM - Test everything from Unit 2!
 
   // ============================================
   // UNIT 3: EXPANSION - Complex Structures
   // ============================================
 
   // === CONTRACTIONS - Easy transition into Unit 3! ===
-  contractions, // 23. du, au, de la, à la - combining prepositions with articles!
+  contractions, // 24. du, au, de la, à la - combining prepositions with articles!
 
   // === MOTION LAYER - Essential movement verbs ===
-  venirModule, // 24. venir - "je viens", "tu viens", "il vient"
-  allerModule, // 25. aller - "je vais", "tu vas", "il va" - MOST COMMON!
-  partirModule, // 26. partir - "je pars", "tu pars", "il part"
+  venirModule, // 25. venir - "je viens", "tu viens", "il vient"
+  allerModule, // 26. aller - "je vais", "tu vas", "il va" - MOST COMMON!
+  partirModule, // 27. partir - "je pars", "tu pars", "il part"
 
   // === PERCEPTION LAYER - Essential perception verb ===
-  voirModule, // 27. voir - "je vois", "tu vois", "il voit" - NEEDED for object pronouns!
+  voirModule, // 28. voir - "je vois", "tu vois", "il voit" - NEEDED for object pronouns!
 
   // === ADVANCED LAYER - Complex pronouns ===
-  module7_object_pronouns, // 28. le, la, les - COMBO: "je le vois", "il l'a" (builds on voir, vouloir, avoir)
-  module8_possessive_adjectives, // 29. mon, ton, son - COMBO: "mon chat", "sa maison"
-  module9_possessive_pronouns, // 30. le mien, le tien - COMBO: "c'est le mien"
+  module7_object_pronouns, // 29. le, la, les - COMBO: "je le vois", "il l'a" (builds on voir, vouloir, avoir)
+  module8_possessive_adjectives, // 30. mon, ton, son - COMBO: "mon chat", "sa maison"
+  module9_possessive_pronouns, // 31. le mien, le tien - COMBO: "c'est le mien"
 
   // === MASTERY LAYER - Practice writing complex sentences ===
-  module10_combining, // 31. FULL SENTENCES: "il a mon livre", "est-ce le sien?"
+  module10_combining, // 32. FULL SENTENCES: "il a mon livre", "est-ce le sien?"
 
   // === THIRD MILESTONE - Test your reading comprehension! ===
-  reading3, // 32. READING TEST 3 - Conversation! Uses everything from Unit 3!
-  unit3Exam, // 33. UNIT 3 FINAL EXAM - Test everything from Unit 3!
+  reading3, // 33. READING TEST 3 - Conversation! Uses everything from Unit 3!
+  unit3Practice, // 34. PRACTICE - Fill in the blanks with Unit 3 vocabulary!
+  unit3Exam, // 35. UNIT 3 FINAL EXAM - Test everything from Unit 3!
 
   // ============================================
   // UNIT 4: EXPRESSION - Real-World Communication
   // ============================================
 
   // === SURVIVAL PHRASES - Function in France! ===
-  survivalPhrases, // 34. je voudrais, s'il vous plaît, c'est combien?, excusez-moi - practical phrases!
+  survivalPhrases, // 36. je voudrais, s'il vous plaît, c'est combien?, excusez-moi - practical phrases!
 
   // === ESSENTIAL VERBS - More modal verbs and communication! ===
-  faireModule, // 35. faire (to do/make) - je fais, tu fais, il fait
-  devoirModule, // 36. devoir (must/have to) - je dois, tu dois, il doit
-  parlerModule, // 37. parler (to speak) - je parle, tu parles, il parle - first regular -ER verb!
+  faireModule, // 37. faire (to do/make) - je fais, tu fais, il fait
+  devoirModule, // 38. devoir (must/have to) - je dois, tu dois, il doit
+  parlerModule, // 39. parler (to speak) - je parle, tu parles, il parle - first regular -ER verb!
 
   // === NEGATION - Say what you DON'T do! ===
-  negation, // 38. ne...pas - "je ne veux pas", "tu n'as pas"
+  negation, // 40. ne...pas - "je ne veux pas", "tu n'as pas"
 
   // === TIME & FREQUENCY - When and how often! ===
-  timeAdverbs, // 39. maintenant, toujours, jamais, aujourd'hui, demain, hier - essential time words!
+  timeAdverbs, // 41. maintenant, toujours, jamais, aujourd'hui, demain, hier - essential time words!
 
   // === NEGATION PART 2 - Modal verbs & never ===
-  negation2, // 40. je ne peux pas (I can't), je ne vais jamais (I never go), il ne fait jamais - expand negation!
+  negation2, // 42. je ne peux pas (I can't), je ne vais jamais (I never go), il ne fait jamais - expand negation!
 
   // === LOCATION - Where things are! ===
-  locationAdverbs, // 41. ici, là, là-bas, partout, quelque part, nulle part - express location!
+  locationAdverbs, // 43. ici, là, là-bas, partout, quelque part, nulle part - express location!
 
   // === EVERYDAY NOUNS - Essential vocabulary for real conversations! ===
-  everydayNouns, // 42. High-frequency nouns: le temps, la vie, le monde, l'eau, le pain, l'argent - practical vocabulary!
+  everydayNouns, // 44. High-frequency nouns: le temps, la vie, le monde, l'eau, le pain, l'argent - practical vocabulary!
 
   // === FOURTH MILESTONE - Real-world French! ===
-  reading4, // 43. READING TEST 4 - Conversation! Uses all Unit 4 vocabulary!
-  unit4Exam, // 44. UNIT 4 FINAL EXAM - Test everything from Unit 4!
+  reading4, // 45. READING TEST 4 - Conversation! Uses all Unit 4 vocabulary!
+  unit4Practice, // 46. PRACTICE - Fill in the blanks with Unit 4 vocabulary!
+  unit4Exam, // 47. UNIT 4 FINAL EXAM - Test everything from Unit 4!
+
+  // ============================================
+  // UNIT 5: SOPHISTICATION - Past Tense & Nuance
+  // ============================================
+
+  // === COMPARISON & INTENSITY - Express nuance! ===
+  comparisons, // 48. Comparisons - plus, moins, meilleur, pire, trop, tout, même - express comparisons and intensity!
+
+  // === CONDITIONAL MOOD - Should & Could ===
+  conditionals, // 49. Should & Could - je devrais (I should), je pourrais (I could) - in couplets!
+
+  // === CONDITIONAL MOOD - Would Forms ===
+  wouldConditionals, // 50. Would Forms - je voudrais (I would like), j'irais (I would go), je ferais (I would do)
+
+  // === ESSENTIAL VERBS - High-frequency emotion verb ===
+  aimerModule, // 51. aimer - to like/love - j'aime le café, je t'aime!
+
+  // === PAST TENSE - Talk about the past! ===
+  etrePast, // 52. être past tense - j'étais (I was), tu étais (you were), il était (he was)
+  avoirPast, // 53. avoir past tense - j'avais (I had), tu avais (you had), il avait (he had)
+
+  // === EVERYDAY VOCABULARY - Essential nouns ===
+  foodNouns, // 54. Food nouns - le pain, l'eau, le café, la viande, les légumes - everyday essentials!
+
+  // TO BE ADDED:
+  // 55. comprendre - to understand
+  // 56. READING TEST 5
+  // 57. PRACTICE
+  // 58. UNIT 5 EXAM
 ];
 
 // Build all lessons from configs
@@ -196,7 +238,7 @@ export const unitStructure = [
     title: "Unit 2: Composition",
     description:
       "Functional combinations - demonstratives, questions, prepositions, and adjectives",
-    lessonRange: [12, 22], // Lessons 12-21 + Unit 2 Exam (ID 22)
+    lessonRange: [12, 23], // Lessons 12-21 + Practice + Unit 2 Exam (ID 23)
     icon: "🧩",
     color: "#8b5cf6",
   },
@@ -205,7 +247,7 @@ export const unitStructure = [
     title: "Unit 3: Expansion",
     description:
       "Advanced pronouns and contractions - master 'I see it', 'it's mine', 'to the café', and motion verbs",
-    lessonRange: [23, 33], // Lessons 23-32 + Unit 3 Exam (ID 33)
+    lessonRange: [24, 35], // Lessons 24-33 + Practice + Unit 3 Exam (ID 35)
     icon: "🎯",
     color: "#06b6d4",
   },
@@ -214,9 +256,18 @@ export const unitStructure = [
     title: "Unit 4: Expression",
     description:
       "Say more with less - negation, daily verbs, and real-world communication",
-    lessonRange: [34, 44], // Lessons 34-42 + Reading 4 + Unit 4 Exam
+    lessonRange: [36, 47], // Lessons 36-45 + Unit 4 Practice (46) + Unit 4 Exam (47)
     icon: "💬",
     color: "#f59e0b",
+  },
+  {
+    id: 5,
+    title: "Unit 5: Sophistication",
+    description:
+      "Past tense and nuance - comparisons, conditionals, and essential verbs (was, had, like, understand)",
+    lessonRange: [48, 58], // Lessons 48-56 + Reading 5 + Practice + Unit 5 Exam (TO BE COMPLETED)
+    icon: "⏳",
+    color: "#ec4899",
   },
 ];
 

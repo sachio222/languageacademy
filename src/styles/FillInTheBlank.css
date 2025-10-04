@@ -2,6 +2,7 @@
 
 .fill-in-blank-container {
   min-height: 80vh;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
@@ -331,7 +332,8 @@
 
 /* Results Screen */
 .fill-in-blank-results {
-  min-height: 100vh;
+  min-height: 80vh;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

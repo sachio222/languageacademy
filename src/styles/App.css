@@ -140,10 +140,11 @@ body {
 .lesson-card-header h3 {
   color: #1e293b;
   font-size: 1.0625rem;
-  font-weight: 600;
+  font-weight: 900;
   flex: 1;
   line-height: 1.4;
   letter-spacing: -0.015em;
+  /* font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif; */
 }
 
 .badge-complete {
@@ -834,10 +835,11 @@ button:disabled {
 
 .unit-title {
   color: #1e293b;
-  font-size: 1.375rem;
-  font-weight: 600;
+  font-size: 1.475rem;
+  font-weight: 700;
   margin: 0;
   letter-spacing: -0.02em;
+  font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif;
 }
 
 .unit-badge-complete {
@@ -894,9 +896,11 @@ button:disabled {
 }
 
 .lesson-card-header h3 {
+  color: rgb(23, 29, 55);
   padding-right: 0;
   font-size: 1.0625rem;
   font-weight: 600;
+  /* font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif; */
 }
 
 /* Reading Milestone */

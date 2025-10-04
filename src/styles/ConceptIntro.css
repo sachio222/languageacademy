@@ -32,6 +32,7 @@
   margin-bottom: 1rem;
   font-weight: 600;
   letter-spacing: -0.025em;
+  font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif;
 }
 
 .intro-description {
@@ -75,8 +76,9 @@
 .intro-section-header h3 {
   margin: 0;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: -0.015em;
+  /* font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif; */
 }
 
 .intro-section-header .toggle-btn {
@@ -132,7 +134,7 @@
 }
 
 .vocab-french-intro.feminine {
-  color: #be185d;
+  color: #f4438d;
 }
 
 .vocab-french-intro.masculine {

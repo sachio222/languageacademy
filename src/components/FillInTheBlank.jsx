@@ -274,7 +274,7 @@ function FillInTheBlank({ module, onComplete }) {
               className={passed ? "btn-continue" : "btn-back"}
               onClick={handleFinish}
             >
-              {passed ? '✨ Continue' : '← Back to Menu'}
+              {passed ? 'Continue' : '← Back to Modules'}
             </button>
           </div>
         </div>

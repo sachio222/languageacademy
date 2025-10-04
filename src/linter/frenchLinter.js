@@ -425,9 +425,16 @@ export function checkAnswer(userAnswer, expectedAnswer, options = {}) {
     expected = expected.toLowerCase();
   }
 
-  // Remove punctuation for comparison
-  const userNoPunct = user.replace(/[.!?;,]/g, "");
-  const expectedNoPunct = expected.replace(/[.!?;,]/g, "");
+  // Remove punctuation and apostrophes for comparison
+  // Also normalize spaces (so "j'aime" and "j aime" match)
+  const userNoPunct = user
+    .replace(/[.!?;,']/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const expectedNoPunct = expected
+    .replace(/[.!?;,']/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 
   if (exactMatch) {
     return {
@@ -444,18 +451,15 @@ export function checkAnswer(userAnswer, expectedAnswer, options = {}) {
     };
   }
 
-  // Check if it matches without accents
+  // Check if it matches without accents - ACCEPT WITHOUT WARNING
   const userNoAccents = removeAccents(userNoPunct);
   const expectedNoAccents = removeAccents(expectedNoPunct);
 
   if (userNoAccents === expectedNoAccents) {
-    // Match without accents - accept but warn
+    // Match without accents - fully accept (no warning)
     return {
       isMatch: true,
-      hasAccentWarning: true,
-      warningMessage:
-        "⚠️ Correct, but missing accent(s). Proper spelling: " +
-        expectedNoPunct,
+      hasAccentWarning: false,
     };
   }
 
