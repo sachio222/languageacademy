@@ -67,6 +67,12 @@ import { aimerModule } from "./modules/aimer.js";
 import { etrePast } from "./modules/etre-past.js";
 import { avoirPast } from "./modules/avoir-past.js";
 import { foodNouns } from "./modules/food-nouns.js";
+import { mangerModule } from "./modules/manger.js";
+import { boireModule } from "./modules/boire.js";
+import { comparisonsSlang } from "./modules/comparisons-slang.js";
+import { reading5 } from "./modules/reading-5.js";
+import { unit5Practice } from "./modules/unit-5-practice.js";
+import { unit5Exam } from "./modules/unit-5-exam.js";
 
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
@@ -180,28 +186,32 @@ const moduleConfigs = [
 
   // === COMPARISON & INTENSITY - Express nuance! ===
   comparisons, // 48. Comparisons - plus, moins, meilleur, pire, trop, tout, même - express comparisons and intensity!
+  comparisonsSlang, // 49. Slang - c'est ouf! 🇫🇷 c'est malade! 🇨🇦 c'est gnama! 🌍 Real street French from France, Quebec & Africa!
 
   // === CONDITIONAL MOOD - Should & Could ===
-  conditionals, // 49. Should & Could - je devrais (I should), je pourrais (I could) - in couplets!
+  conditionals, // 50. Should & Could - je devrais (I should), je pourrais (I could) - in couplets!
 
   // === CONDITIONAL MOOD - Would Forms ===
-  wouldConditionals, // 50. Would Forms - je voudrais (I would like), j'irais (I would go), je ferais (I would do)
+  wouldConditionals, // 51. Would Forms - je voudrais (I would like), j'irais (I would go), je ferais (I would do)
 
   // === ESSENTIAL VERBS - High-frequency emotion verb ===
-  aimerModule, // 51. aimer - to like/love - j'aime le café, je t'aime!
+  aimerModule, // 52. aimer - to like/love - j'aime le café, je t'aime!
 
   // === PAST TENSE - Talk about the past! ===
-  etrePast, // 52. être past tense - j'étais (I was), tu étais (you were), il était (he was)
-  avoirPast, // 53. avoir past tense - j'avais (I had), tu avais (you had), il avait (he had)
+  etrePast, // 53. être past tense - j'étais (I was), tu étais (you were), il était (he was)
+  avoirPast, // 54. avoir past tense - j'avais (I had), tu avais (you had), il avait (he had)
 
   // === EVERYDAY VOCABULARY - Essential nouns ===
-  foodNouns, // 54. Food nouns - le pain, l'eau, le café, la viande, les légumes - everyday essentials!
+  foodNouns, // 55. Food nouns - le pain, l'eau, le café, la viande, les légumes - everyday essentials!
 
-  // TO BE ADDED:
-  // 55. comprendre - to understand
-  // 56. READING TEST 5
-  // 57. PRACTICE
-  // 58. UNIT 5 EXAM
+  // === ESSENTIAL DAILY VERBS - Eating and drinking ===
+  mangerModule, // 56. manger - to eat - je mange du pain, j'ai mangé (I ate) - with passé composé!
+  boireModule, // 57. boire - to drink - je bois du café, j'ai bu (I drank - irregular!) - with passé composé!
+
+  // === FIFTH MILESTONE - Restaurant story with past tense! ===
+  reading5, // 58. READING TEST 5 - Restaurant article! Uses comparisons, slang, conditionals, past tense, food vocab!
+  unit5Practice, // 59. PRACTICE - Fill in the blanks with Unit 5 vocabulary!
+  unit5Exam, // 60. UNIT 5 FINAL EXAM - Test everything from Unit 5!
 ];
 
 // Build all lessons from configs
@@ -264,8 +274,8 @@ export const unitStructure = [
     id: 5,
     title: "Unit 5: Sophistication",
     description:
-      "Past tense and nuance - comparisons, conditionals, and essential verbs (was, had, like, understand)",
-    lessonRange: [48, 58], // Lessons 48-56 + Reading 5 + Practice + Unit 5 Exam (TO BE COMPLETED)
+      "Past tense and nuance - comparisons, slang, conditionals, and essential verbs (was, had, like, eat, drink, understand)",
+    lessonRange: [48, 60], // Lessons 48-58 + Reading 5 (58) + Practice (59) + Unit 5 Exam (60 - TO BE COMPLETED)
     icon: "⏳",
     color: "#ec4899",
   },

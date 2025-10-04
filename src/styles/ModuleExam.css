@@ -613,6 +613,72 @@
   line-height: 1.5;
 }
 
+/* French Character Picker in Exam Contexts */
+.module-exam .french-character-picker,
+.unit-exam .french-character-picker,
+.exam-question-card .french-character-picker,
+.code-editor .french-character-picker {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(59, 130, 246, 0.04);
+  border-radius: 6px;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.module-exam .character-picker-label,
+.unit-exam .character-picker-label,
+.exam-question-card .character-picker-label,
+.code-editor .character-picker-label {
+  color: #6f7a8a;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.module-exam .character-btn,
+.unit-exam .character-btn,
+.exam-question-card .character-btn,
+.code-editor .character-btn {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #454c55;
+  font-weight: 400;
+}
+
+.module-exam .character-btn:hover,
+.unit-exam .character-btn:hover,
+.exam-question-card .character-btn:hover,
+.code-editor .character-btn:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+}
+
+.module-exam .character-btn:active,
+.unit-exam .character-btn:active,
+.exam-question-card .character-btn:active,
+.code-editor .character-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(59, 130, 246, 0.2);
+}
+
+.module-exam .character-btn:focus,
+.unit-exam .character-btn:focus,
+.exam-question-card .character-btn:focus,
+.code-editor .character-btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
 /* Section Results */
 .section-results {
   background: #ffffff;
