@@ -1,6 +1,6 @@
 /**
  * Module: partir (to leave)
- * Essential motion verb for departures - rank 68 in top 100
+ * Essential motion verb for departures
  * Regular -ir verb pattern
  */
 

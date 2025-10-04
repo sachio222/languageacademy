@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { checkAnswer } from '../linter/frenchLinter';
+import FrenchCharacterPicker from './FrenchCharacterPicker';
 
 /**
  * Unit Exam - Comprehensive test covering an entire unit
@@ -9,6 +11,7 @@ function UnitExam({ unitNumber, onPassExam, onRetryUnit }) {
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [results, setResults] = useState(null);
+  const inputRefs = useRef({});
 
   // Unit 1 Exam - Cover lessons 1-9
   const examData = {
@@ -221,14 +224,18 @@ function UnitExam({ unitNumber, onPassExam, onRetryUnit }) {
     // Grade all answers
     const gradedResults = examData.sections.map((section) => {
       const questionResults = section.questions.map((question) => {
-        const userAnswer = normalizeAnswer(answers[question.id] || '');
-        const expectedAnswer = normalizeAnswer(question.expectedAnswer);
-        const isCorrect = userAnswer === expectedAnswer;
+        const userAnswer = answers[question.id] || '';
+        const matchResult = checkAnswer(userAnswer, question.expectedAnswer, {
+          caseSensitive: false,
+          exactMatch: false,
+        });
 
         return {
           question,
-          userAnswer: answers[question.id] || '',
-          isCorrect,
+          userAnswer: userAnswer,
+          isCorrect: matchResult.isMatch,
+          hasAccentWarning: matchResult.hasAccentWarning,
+          warningMessage: matchResult.warningMessage,
         };
       });
 
@@ -355,6 +362,11 @@ function UnitExam({ unitNumber, onPassExam, onRetryUnit }) {
                         <strong>Your answer:</strong>{' '}
                         {result.userAnswer || '(no answer)'}
                       </div>
+                      {result.hasAccentWarning && (
+                        <div className="exam-item-warning">
+                          {result.warningMessage}
+                        </div>
+                      )}
                       {!result.isCorrect && (
                         <div className="exam-item-correct">
                           <strong>Correct answer:</strong>{' '}
@@ -440,11 +452,16 @@ function UnitExam({ unitNumber, onPassExam, onRetryUnit }) {
 
               <div className="answer-input">
                 <input
+                  ref={(el) => inputRefs.current[question.id] = el}
                   type="text"
                   value={answers[question.id] || ''}
                   onChange={(e) => handleAnswerChange(question.id, e.target.value)}
                   placeholder="Type your French answer here..."
                   className={answers[question.id]?.trim() ? 'answered' : ''}
+                />
+                <FrenchCharacterPicker
+                  inputRef={{ current: inputRefs.current[question.id] }}
+                  onCharacterClick={(value) => handleAnswerChange(question.id, value)}
                 />
               </div>
 

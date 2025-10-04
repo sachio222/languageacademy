@@ -1,6 +1,6 @@
 /**
  * Module: voir (to see)
- * Essential perception verb - rank 22 in top 100
+ * Essential perception verb
  * Irregular conjugation pattern
  */
 

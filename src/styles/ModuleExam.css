@@ -315,6 +315,16 @@
   font-size: 0.9375rem;
 }
 
+.exam-item-warning {
+  color: #d97706;
+  background: #fef3c7;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.625rem;
+  font-size: 0.9375rem;
+  border-left: 3px solid #f59e0b;
+}
+
 /* Module Complete Screen */
 .module-complete-screen {
   max-width: 700px;

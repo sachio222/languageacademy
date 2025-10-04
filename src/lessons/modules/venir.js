@@ -1,6 +1,6 @@
 /**
  * Module: venir (to come)
- * Essential motion verb - rank 17 in top 100
+ * Essential motion verb
  * Irregular conjugation pattern
  */
 

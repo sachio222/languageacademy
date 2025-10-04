@@ -72,9 +72,22 @@ export const unit2Exam = {
       },
       {
         instruction: "Translate to French",
+        prompt: "how much / how many",
+        hint: "Question word for quantity and price",
+        expectedAnswer: "combien",
+      },
+      {
+        instruction: "Translate to French",
         prompt: "where is the cat?",
         hint: "Question word + est + definite article + noun",
         expectedAnswer: "où est le chat",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "how much is it?",
+        hint: "Question word for price + est-ce",
+        expectedAnswer: "combien est-ce",
+        acceptableAnswers: ["c'est combien"],
       },
 
       // Section 3: Stressed Pronouns

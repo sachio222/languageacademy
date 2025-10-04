@@ -395,7 +395,24 @@ export function lintFrench(
 }
 
 /**
+ * Remove accents from French text for comparison
+ */
+function removeAccents(text) {
+  return text
+    .replace(/[àâä]/g, "a")
+    .replace(/[éèêë]/g, "e")
+    .replace(/[îï]/g, "i")
+    .replace(/[ôö]/g, "o")
+    .replace(/[ùûü]/g, "u")
+    .replace(/[ÿ]/g, "y")
+    .replace(/[ç]/g, "c")
+    .replace(/[æ]/g, "ae")
+    .replace(/[œ]/g, "oe");
+}
+
+/**
  * Check if a sentence matches expected answer
+ * Returns an object with match status and optional warning
  */
 export function checkAnswer(userAnswer, expectedAnswer, options = {}) {
   const { caseSensitive = false, exactMatch = false } = options;
@@ -408,15 +425,45 @@ export function checkAnswer(userAnswer, expectedAnswer, options = {}) {
     expected = expected.toLowerCase();
   }
 
+  // Remove punctuation for comparison
+  const userNoPunct = user.replace(/[.!?;,]/g, "");
+  const expectedNoPunct = expected.replace(/[.!?;,]/g, "");
+
   if (exactMatch) {
-    return user === expected;
+    return {
+      isMatch: userNoPunct === expectedNoPunct,
+      hasAccentWarning: false,
+    };
   }
 
-  // Remove punctuation for comparison
-  user = user.replace(/[.!?;,]/g, "");
-  expected = expected.replace(/[.!?;,]/g, "");
+  // First check for exact match
+  if (userNoPunct === expectedNoPunct) {
+    return {
+      isMatch: true,
+      hasAccentWarning: false,
+    };
+  }
 
-  return user === expected;
+  // Check if it matches without accents
+  const userNoAccents = removeAccents(userNoPunct);
+  const expectedNoAccents = removeAccents(expectedNoPunct);
+
+  if (userNoAccents === expectedNoAccents) {
+    // Match without accents - accept but warn
+    return {
+      isMatch: true,
+      hasAccentWarning: true,
+      warningMessage:
+        "⚠️ Correct, but missing accent(s). Proper spelling: " +
+        expectedNoPunct,
+    };
+  }
+
+  // No match at all
+  return {
+    isMatch: false,
+    hasAccentWarning: false,
+  };
 }
 
 /**

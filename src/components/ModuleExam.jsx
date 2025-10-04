@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { runTests, isExerciseComplete } from '../lessons/testRunner';
+import FrenchCharacterPicker from './FrenchCharacterPicker';
 
 /**
  * Module Exam - Comprehensive test to solidify learning
@@ -10,6 +11,7 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson }) {
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [results, setResults] = useState(null);
+  const inputRef = useRef(null);
 
   // Randomize exercises for the exam
   const [examQuestions] = useState(() => {
@@ -179,11 +181,16 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson }) {
         <div className="answer-input">
           <label>Your Answer:</label>
           <input
+            ref={inputRef}
             type="text"
             value={answers[currentQuestion.id] || ''}
             onChange={(e) => handleAnswerChange(e.target.value)}
             placeholder="Type your French answer here..."
             autoFocus
+          />
+          <FrenchCharacterPicker
+            inputRef={inputRef}
+            onCharacterClick={handleAnswerChange}
           />
         </div>
 

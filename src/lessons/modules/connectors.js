@@ -21,7 +21,7 @@ export const connectors = {
       term: "mais = but",
       definition: "Show contrast between two ideas",
       example:
-        "je veux un chat, mais j'ai un chien (I want a cat, but I have a dog)",
+        "il est un homme, mais elle est une femme (he is a man, but she is a woman)",
     },
     {
       term: "ou = or",
@@ -94,13 +94,13 @@ export const connectors = {
         ],
       },
       {
-        instruction: "Say 'I want a cat, but I have a dog'",
-        prompt: "I want a cat, but I have a dog",
+        instruction: "Say 'he is a man, but she is a woman'",
+        prompt: "he is a man, but she is a woman",
         hint: "Show contrast with 'mais'",
-        expectedAnswer: "je veux un chat, mais j'ai un chien",
+        expectedAnswer: "il est un homme, mais elle est une femme",
         wrongAnswers: [
           {
-            answer: "je veux un chat et j'ai un chien",
+            answer: "il est un homme et elle est une femme",
             feedback: "Use 'mais' (but) to show contrast",
           },
         ],

@@ -1,7 +1,7 @@
 /**
  * Time & Frequency Adverbs
  * Essential words: now, always, never, today, tomorrow, yesterday
- * Ranks 93-98 in top 100 words!
+ * Critical for expressing when things happen!
  */
 
 export const timeAdverbs = {

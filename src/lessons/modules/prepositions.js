@@ -1,7 +1,7 @@
 /**
  * Prepositions Module
- * Essential prepositions from top 100 words (ranks 36-42)
- * avec, dans, sur, à, de, pour
+ * Essential prepositions: avec, dans, sur, à, de, pour
+ * Critical connectors for real French sentences
  */
 
 export const prepositions = {
@@ -25,7 +25,7 @@ export const prepositions = {
     },
     {
       term: "High Frequency",
-      definition: "These 6 prepositions are ranks 36-42 in the top 100 words!",
+      definition: "These 6 prepositions are extremely common!",
       example: "You'll use these in almost every sentence",
     },
     {

@@ -1,6 +1,6 @@
 /**
  * Module: aller (to go)
- * THE most essential motion verb - rank 16 in top 100
+ * THE most essential motion verb
  * Completely irregular conjugation - must memorize!
  */
 

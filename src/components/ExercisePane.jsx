@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { runTests, isExerciseComplete } from '../lessons/testRunner';
 import TestOutput from './TestOutput';
 import ReadingPassage from './ReadingPassage';
+import FrenchCharacterPicker from './FrenchCharacterPicker';
 
 function ExercisePane({
   exercise,
@@ -145,6 +146,10 @@ function ExercisePane({
             placeholder="Type your French sentence here..."
             spellCheck="false"
             autoFocus
+          />
+          <FrenchCharacterPicker
+            inputRef={textareaRef}
+            onCharacterClick={setUserAnswer}
           />
         </div>
 

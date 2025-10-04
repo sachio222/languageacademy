@@ -1,7 +1,7 @@
 /**
  * Negation - ne...pas (not)
  * Essential for saying what you DON'T do/have/want
- * Rank 35 in top 100 words - CRITICAL!
+ * CRITICAL negation structure!
  */
 
 export const negation = {

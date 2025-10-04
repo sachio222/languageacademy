@@ -40,32 +40,43 @@ export function runTests(exercise, userAnswer, isReadingComprehension = false) {
   }
 
   // Check if user answer matches expected answer
-  let matchesExpected = checkAnswer(userAnswer, exercise.expectedAnswer, {
+  let matchResult = checkAnswer(userAnswer, exercise.expectedAnswer, {
     caseSensitive: false,
     exactMatch: false,
   });
 
   // Also check acceptable alternative answers
-  if (!matchesExpected && exercise.acceptableAnswers) {
-    matchesExpected = exercise.acceptableAnswers.some((acceptable) =>
-      checkAnswer(userAnswer, acceptable, {
+  if (!matchResult.isMatch && exercise.acceptableAnswers) {
+    for (const acceptable of exercise.acceptableAnswers) {
+      const altResult = checkAnswer(userAnswer, acceptable, {
         caseSensitive: false,
         exactMatch: false,
-      })
-    );
+      });
+      if (altResult.isMatch) {
+        matchResult = altResult;
+        break;
+      }
+    }
   }
 
   // NEW APPROACH: Check against the correct answer and known wrong answers
-  if (matchesExpected) {
+  if (matchResult.isMatch) {
     // User got it right!
     results.total = 1;
     results.passed = 1;
+
+    let message = "✓ Correct answer!";
+    if (matchResult.hasAccentWarning) {
+      message = matchResult.warningMessage;
+    }
+
     results.testResults.push({
       input: userAnswer,
       expected: true,
       actual: true,
       passed: true,
-      message: "✓ Correct answer!",
+      message: message,
+      hasAccentWarning: matchResult.hasAccentWarning,
     });
   } else {
     // User got it wrong - check if it's a known wrong answer with specific feedback
@@ -77,12 +88,12 @@ export function runTests(exercise, userAnswer, isReadingComprehension = false) {
     // Check if the wrong answer matches any known wrong answers
     if (exercise.wrongAnswers && exercise.wrongAnswers.length > 0) {
       for (const wrongAnswer of exercise.wrongAnswers) {
-        const matchesWrongAnswer = checkAnswer(userAnswer, wrongAnswer.answer, {
+        const wrongMatchResult = checkAnswer(userAnswer, wrongAnswer.answer, {
           caseSensitive: false,
           exactMatch: false,
         });
 
-        if (matchesWrongAnswer) {
+        if (wrongMatchResult.isMatch) {
           feedbackMessage = `✗ ${wrongAnswer.feedback}`;
           break;
         }
@@ -106,10 +117,12 @@ export function runTests(exercise, userAnswer, isReadingComprehension = false) {
     results.testResults = [];
 
     exercise.tests.forEach((test) => {
-      const isUserAnswer = checkAnswer(userAnswer, test.input, {
+      const testMatchResult = checkAnswer(userAnswer, test.input, {
         caseSensitive: false,
         exactMatch: false,
       });
+
+      const isUserAnswer = testMatchResult.isMatch;
 
       const passed =
         (isUserAnswer && test.shouldPass) ||
@@ -121,12 +134,18 @@ export function runTests(exercise, userAnswer, isReadingComprehension = false) {
         results.failed++;
       }
 
+      let message = test.error || (passed ? "✓ Test passed" : "✗ Test failed");
+      if (passed && testMatchResult.hasAccentWarning) {
+        message = testMatchResult.warningMessage;
+      }
+
       results.testResults.push({
         input: test.input,
         expected: test.shouldPass,
         actual: isUserAnswer,
         passed,
-        message: test.error || (passed ? "✓ Test passed" : "✗ Test failed"),
+        message: message,
+        hasAccentWarning: testMatchResult.hasAccentWarning,
       });
     });
   }

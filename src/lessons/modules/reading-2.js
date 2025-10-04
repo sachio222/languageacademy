@@ -20,9 +20,13 @@ export const reading2 = {
 
 **Paul:** Ça va très bien, merci. Tu veux un bon café avec moi?
 
-**Marie:** Oui! Je veux un petit café avec toi. Tu es avec un ami aussi?
+**Marie:** Oui! C'est combien pour le café?
 
-**Paul:** Oui. Je suis avec lui. Il a des vieux livres dans la grande maison. Il a des chats aussi!
+**Paul:** Un café. Je veux un petit café avec toi. Tu es avec un ami aussi?
+
+**Marie:** Non, mais combien de chats as-tu?
+
+**Paul:** Moi? Je suis avec lui. Il a des vieux livres dans la grande maison. Il a des chats aussi!
 
 **Marie:** Qu'est-ce que c'est? Ce livre est pour moi?
 
@@ -32,16 +36,24 @@ export const reading2 = {
 
 **Paul:** Le petit chat est sur la nouvelle voiture. Il est très beau. Voilà! Il est pour toi!
 
-**Marie:** Pour moi? Merci! J'ai le beau chat. Au revoir!
+**Marie:** Pour moi? Combien est-ce?
+
+**Paul:** C'est pour toi! Le chat est bon!
+
+**Marie:** Merci! J'ai le beau chat. Au revoir!
 
 **Paul:** Au revoir! Salut!`,
     translation: `**Marie:** Hello! How's it going?
 
 **Paul:** It's going very well, thank you. Do you want a good coffee with me?
 
-**Marie:** Yes! I want a small coffee with you. Are you with a friend too?
+**Marie:** Yes! How much is it for the coffee?
 
-**Paul:** Yes. I am with him. He has old books in the big house. He has cats too!
+**Paul:** One coffee. I want a small coffee with you. Are you with a friend too?
+
+**Marie:** No, but how many cats do you have?
+
+**Paul:** Me? I am with him. He has old books in the big house. He has cats too!
 
 **Marie:** What is that? Is this book for me?
 
@@ -51,7 +63,11 @@ export const reading2 = {
 
 **Paul:** The small cat is on the new car. It's very beautiful. There it is! It's for you!
 
-**Marie:** For me? Thank you! I have the beautiful cat. Goodbye!
+**Marie:** For me? How much is it?
+
+**Paul:** It's for you! The cat is good!
+
+**Marie:** Thank you! I have the beautiful cat. Goodbye!
 
 **Paul:** Goodbye! Bye!`,
   },
@@ -173,6 +189,32 @@ export const reading2 = {
           {
             answer: "ici",
             feedback: "That means location 'here', not presentation",
+          },
+        ],
+      },
+      {
+        instruction:
+          "What question does Marie ask about the price of the coffee?",
+        prompt: "How much is it for ___?",
+        hint: "Look for 'c'est combien pour ___'",
+        expectedAnswer: "le café",
+        acceptableAnswers: ["le café"],
+        wrongAnswers: [
+          {
+            answer: "le chat",
+            feedback: "She asks about the coffee first, not the cat",
+          },
+        ],
+      },
+      {
+        instruction: "What question does Marie ask Paul about quantity?",
+        prompt: "How many ___ do you have?",
+        hint: "Look for 'combien de ___ as-tu?'",
+        expectedAnswer: "chats",
+        wrongAnswers: [
+          {
+            answer: "livres",
+            feedback: "Paul's friend has books, Marie asks about cats",
           },
         ],
       },

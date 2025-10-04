@@ -153,10 +153,9 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
     description: moduleConfig.description,
     concepts: moduleConfig.concepts || [],
     vocabularyReference: moduleConfig.vocabularyReference || [],
-    exercises: buildExercises(
-      moduleConfig.id || 0,
-      moduleConfig.exerciseConfig
-    ),
+    exercises: moduleConfig.exerciseConfig
+      ? buildExercises(moduleConfig.id || 0, moduleConfig.exerciseConfig)
+      : moduleConfig.exercises || [],
     // Pass through special flags for reading comprehension
     skipStudyMode: moduleConfig.skipStudyMode || false,
     isReadingComprehension: moduleConfig.isReadingComprehension || false,
@@ -164,5 +163,8 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
     // Pass through unit exam flags
     isUnitExam: moduleConfig.isUnitExam || false,
     unitNumber: moduleConfig.unitNumber || null,
+    // Pass through fill-in-the-blank flags
+    isFillInTheBlank: moduleConfig.isFillInTheBlank || false,
+    sentences: moduleConfig.sentences || null,
   };
 }

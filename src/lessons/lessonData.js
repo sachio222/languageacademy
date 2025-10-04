@@ -22,6 +22,7 @@ import { basicNouns } from "./modules/basic-nouns.js";
 import { plurals } from "./modules/plurals.js";
 import { connectors } from "./modules/connectors.js";
 import { reading1 } from "./modules/reading-1.js";
+import { unit1Practice } from "./modules/unit-1-practice.js";
 import { unit1Exam } from "./modules/unit-1-exam.js";
 import { module2_demonstratives } from "./modules/demonstratives.js";
 import { caSurvival } from "./modules/ca-survival.js";
@@ -47,10 +48,15 @@ import { module10_combining } from "./modules/combining.js";
 import { unit3Exam } from "./modules/unit-3-exam.js";
 import { survivalPhrases } from "./modules/survival-phrases.js";
 import { faireModule } from "./modules/faire.js";
+import { devoirModule } from "./modules/devoir.js";
+import { parlerModule } from "./modules/parler.js";
 import { negation } from "./modules/negation.js";
 import { timeAdverbs } from "./modules/time-adverbs.js";
 import { locationAdverbs } from "./modules/location-adverbs.js";
 import { negation2 } from "./modules/negation-2.js";
+import { everydayNouns } from "./modules/everyday-nouns.js";
+import { reading4 } from "./modules/reading-4.js";
+import { unit4Exam } from "./modules/unit-4-exam.js";
 
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
@@ -59,9 +65,9 @@ const moduleConfigs = [
   famousWords, // 1. Greetings & famous words - bonjour, merci, café (may recognize some!)
 
   // === FOUNDATION LAYER - Core building blocks ===
-  module1, // 2. Pronouns (ranks 1-8) - je, tu, il, elle
-  module3_etre, // 3. être (rank 13) - COMBO: "je suis", "tu es", "il est"
-  module4_avoir, // 4. avoir (rank 14) - COMBO: "j'ai", "tu as", "il a"
+  module1, // 2. Pronouns - je, tu, il, elle
+  module3_etre, // 3. être - COMBO: "je suis", "tu es", "il est"
+  module4_avoir, // 4. avoir - COMBO: "j'ai", "tu as", "il a"
 
   // === NOUN LAYER - Vocabulary building ===
   articles, // 5. Articles - un/une, le/la/les, des
@@ -73,77 +79,87 @@ const moduleConfigs = [
 
   // === FIRST MILESTONE - You can READ French! ===
   reading1, // 9. READING TEST - Full paragraph! (uses M1-8 including 'et'!)
-  unit1Exam, // 10. UNIT 1 FINAL EXAM - Test everything from Unit 1!
+  unit1Practice, // 10. PRACTICE - Fill in the blanks with Unit 1 vocabulary!
+  unit1Exam, // 11. UNIT 1 FINAL EXAM - Test everything from Unit 1!
 
   // === COMPOSITION LAYER - Functional programming! ===
-  module2_demonstratives, // 11. ça, ce, cette, ces - learn ALL demonstratives
-  caSurvival, // 12. ça practice - COMBO: "c'est ça", "ça va?", "j'ai ça"
-  determinersWithNouns, // 13. COMPOSITION: "j'ai ce livre", "elle a cette maison"
+  module2_demonstratives, // 12. ça, ce, cette, ces - learn ALL demonstratives
+  caSurvival, // 13. ça practice - COMBO: "c'est ça", "ça va?", "j'ai ça"
+  determinersWithNouns, // 14. COMPOSITION: "j'ai ce livre", "elle a cette maison"
 
   // === ACTION LAYER - More essential verbs ===
-  vouloirModule, // 14. vouloir (to want) - "je veux ça", "tu veux le livre"
-  pouvoirModule, // 15. pouvoir (can) - "je peux", "tu peux ça"
+  vouloirModule, // 15. vouloir (to want) - "je veux ça", "tu veux le livre"
+  pouvoirModule, // 16. pouvoir (can) - "je peux", "tu peux ça"
 
   // === COMMUNICATION LAYER - Questions ===
-  module6_questions, // 16. Questions (26-32) - COMBO: "où est le chat?", "qu'est-ce que c'est?"
+  module6_questions, // 17. Questions (26-32) - COMBO: "où est le chat?", "qu'est-ce que c'est?"
 
   // === EXPANSION LAYER - Pronouns, Prepositions & Descriptors ===
-  stressedPronouns, // 17. moi, toi, lui, elle, nous, vous, eux, elles - for use with prepositions!
-  prepositions, // 18. avec, dans, sur, à, de (ranks 36-42) - "avec moi", "dans la maison", "pour toi"
-  adjectives, // 19. bon, grand, petit, nouveau, vieux, etc. (ranks 77-85) - "un bon livre", "une belle maison"
+  stressedPronouns, // 18. moi, toi, lui, elle, nous, vous, eux, elles - for use with prepositions!
+  prepositions, // 19. avec, dans, sur, à, de - "avec moi", "dans la maison", "pour toi"
+  adjectives, // 20. bon, grand, petit, nouveau, vieux, etc. - "un bon livre", "une belle maison"
 
   // === SECOND MILESTONE - See your progress! ===
-  reading2, // 20. READING TEST 2 - Dialogue! Uses questions, ça, vouloir, prepositions, adjectives, stressed pronouns!
-  unit2Exam, // 21. UNIT 2 FINAL EXAM - Test everything from Unit 2!
+  reading2, // 21. READING TEST 2 - Dialogue! Uses questions, ça, vouloir, prepositions, adjectives, stressed pronouns!
+  unit2Exam, // 22. UNIT 2 FINAL EXAM - Test everything from Unit 2!
 
   // ============================================
   // UNIT 3: EXPANSION - Complex Structures
   // ============================================
 
   // === CONTRACTIONS - Easy transition into Unit 3! ===
-  contractions, // 22. du, au, de la, à la - combining prepositions with articles!
+  contractions, // 23. du, au, de la, à la - combining prepositions with articles!
 
   // === MOTION LAYER - Essential movement verbs ===
-  venirModule, // 23. venir (rank 17) - "je viens", "tu viens", "il vient"
-  allerModule, // 24. aller (rank 16) - "je vais", "tu vas", "il va" - MOST COMMON!
-  partirModule, // 25. partir (rank 68) - "je pars", "tu pars", "il part"
+  venirModule, // 24. venir - "je viens", "tu viens", "il vient"
+  allerModule, // 25. aller - "je vais", "tu vas", "il va" - MOST COMMON!
+  partirModule, // 26. partir - "je pars", "tu pars", "il part"
 
   // === PERCEPTION LAYER - Essential perception verb ===
-  voirModule, // 26. voir (rank 22) - "je vois", "tu vois", "il voit" - NEEDED for object pronouns!
+  voirModule, // 27. voir - "je vois", "tu vois", "il voit" - NEEDED for object pronouns!
 
   // === ADVANCED LAYER - Complex pronouns ===
-  module7_object_pronouns, // 27. le, la, les - COMBO: "je le vois", "il l'a" (builds on voir, vouloir, avoir)
-  module8_possessive_adjectives, // 28. mon, ton, son - COMBO: "mon chat", "sa maison"
-  module9_possessive_pronouns, // 29. le mien, le tien - COMBO: "c'est le mien"
+  module7_object_pronouns, // 28. le, la, les - COMBO: "je le vois", "il l'a" (builds on voir, vouloir, avoir)
+  module8_possessive_adjectives, // 29. mon, ton, son - COMBO: "mon chat", "sa maison"
+  module9_possessive_pronouns, // 30. le mien, le tien - COMBO: "c'est le mien"
 
   // === MASTERY LAYER - Practice writing complex sentences ===
-  module10_combining, // 30. FULL SENTENCES: "il a mon livre", "est-ce le sien?"
+  module10_combining, // 31. FULL SENTENCES: "il a mon livre", "est-ce le sien?"
 
   // === THIRD MILESTONE - Test your reading comprehension! ===
-  reading3, // 31. READING TEST 3 - Conversation! Uses everything from Unit 3!
-  unit3Exam, // 32. UNIT 3 FINAL EXAM - Test everything from Unit 3!
+  reading3, // 32. READING TEST 3 - Conversation! Uses everything from Unit 3!
+  unit3Exam, // 33. UNIT 3 FINAL EXAM - Test everything from Unit 3!
 
   // ============================================
   // UNIT 4: EXPRESSION - Real-World Communication
   // ============================================
 
   // === SURVIVAL PHRASES - Function in France! ===
-  survivalPhrases, // 33. je voudrais, s'il vous plaît, c'est combien?, excusez-moi - practical phrases!
+  survivalPhrases, // 34. je voudrais, s'il vous plaît, c'est combien?, excusez-moi - practical phrases!
 
-  // === ESSENTIAL VERB - One of the top 15! ===
-  faireModule, // 34. faire (to do/make) - je fais, tu fais, il fait - rank 15!
+  // === ESSENTIAL VERBS - More modal verbs and communication! ===
+  faireModule, // 35. faire (to do/make) - je fais, tu fais, il fait
+  devoirModule, // 36. devoir (must/have to) - je dois, tu dois, il doit
+  parlerModule, // 37. parler (to speak) - je parle, tu parles, il parle - first regular -ER verb!
 
   // === NEGATION - Say what you DON'T do! ===
-  negation, // 35. ne...pas - "je ne veux pas", "tu n'as pas" - rank 35!
+  negation, // 38. ne...pas - "je ne veux pas", "tu n'as pas"
 
   // === TIME & FREQUENCY - When and how often! ===
-  timeAdverbs, // 36. maintenant, toujours, jamais, aujourd'hui, demain, hier - essential time words!
+  timeAdverbs, // 39. maintenant, toujours, jamais, aujourd'hui, demain, hier - essential time words!
 
   // === NEGATION PART 2 - Modal verbs & never ===
-  negation2, // 37. je ne peux pas (I can't), je ne vais jamais (I never go), il ne fait jamais - expand negation!
+  negation2, // 40. je ne peux pas (I can't), je ne vais jamais (I never go), il ne fait jamais - expand negation!
 
   // === LOCATION - Where things are! ===
-  locationAdverbs, // 38. ici, là, là-bas, partout, quelque part, nulle part - express location!
+  locationAdverbs, // 41. ici, là, là-bas, partout, quelque part, nulle part - express location!
+
+  // === EVERYDAY NOUNS - Essential vocabulary for real conversations! ===
+  everydayNouns, // 42. High-frequency nouns: le temps, la vie, le monde, l'eau, le pain, l'argent - practical vocabulary!
+
+  // === FOURTH MILESTONE - Real-world French! ===
+  reading4, // 43. READING TEST 4 - Conversation! Uses all Unit 4 vocabulary!
+  unit4Exam, // 44. UNIT 4 FINAL EXAM - Test everything from Unit 4!
 ];
 
 // Build all lessons from configs
@@ -171,7 +187,7 @@ export const unitStructure = [
     title: "Unit 1: Foundation",
     description:
       "Core building blocks - pronouns, verbs, nouns, and connectors",
-    lessonRange: [1, 10], // Lessons 1-9 + Unit 1 Exam
+    lessonRange: [1, 11], // Lessons 1-9 + Practice + Unit 1 Exam
     icon: "🏗️",
     color: "#3b82f6",
   },
@@ -180,7 +196,7 @@ export const unitStructure = [
     title: "Unit 2: Composition",
     description:
       "Functional combinations - demonstratives, questions, prepositions, and adjectives",
-    lessonRange: [11, 21], // Lessons 11-20 + Unit 2 Exam (ID 21)
+    lessonRange: [12, 22], // Lessons 12-21 + Unit 2 Exam (ID 22)
     icon: "🧩",
     color: "#8b5cf6",
   },
@@ -189,7 +205,7 @@ export const unitStructure = [
     title: "Unit 3: Expansion",
     description:
       "Advanced pronouns and contractions - master 'I see it', 'it's mine', 'to the café', and motion verbs",
-    lessonRange: [20, 32], // Lessons 20-31 + Unit 3 Exam (ID 32)
+    lessonRange: [23, 33], // Lessons 23-32 + Unit 3 Exam (ID 33)
     icon: "🎯",
     color: "#06b6d4",
   },
@@ -198,7 +214,7 @@ export const unitStructure = [
     title: "Unit 4: Expression",
     description:
       "Say more with less - negation, daily verbs, and real-world communication",
-    lessonRange: [33, 40], // TBD - will adjust as we add modules
+    lessonRange: [34, 44], // Lessons 34-42 + Reading 4 + Unit 4 Exam
     icon: "💬",
     color: "#f59e0b",
   },

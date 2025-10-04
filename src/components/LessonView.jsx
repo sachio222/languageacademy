@@ -6,6 +6,8 @@ import StudyMode from './StudyMode';
 import VocabularyReference from './VocabularyReference';
 import ModuleExam from './ModuleExam';
 import UnitExam from './UnitExam';
+import ModuleCompleteModal from './ModuleCompleteModal';
+import FillInTheBlank from './FillInTheBlank';
 
 function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
@@ -27,6 +29,14 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
   const allExercisesComplete = lesson.exercises?.every(ex =>
     completedExercises.has(ex.id)
   ) || false;
+
+  // Debug logging for exercise completion
+  if (lesson.exercises) {
+    const completed = lesson.exercises.filter(ex => completedExercises.has(ex.id)).length;
+    const total = lesson.exercises.length;
+    console.log(`Module ${lesson.id} completion: ${completed}/${total} exercises complete`);
+    console.log('All exercises complete?', allExercisesComplete);
+  }
 
   const handleNext = () => {
     if (!isLastExercise) {
@@ -96,34 +106,51 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
 
   const handleNextModule = () => {
     console.log('handleNextModule called for lesson', lesson.id);
+    console.log('Lesson title:', lesson.title);
+    console.log('Requesting navigation to module:', lesson.id + 1);
     if (onModuleComplete) {
       onModuleComplete(lesson.id, true); // true = go to next module
+    } else {
+      console.error('onModuleComplete callback not provided!');
     }
   };
 
   // Reset state when lesson changes (new module loads)
   useEffect(() => {
-    // Skip EVERYTHING for reading comprehension or unit exams - go straight to exercises
+    // Skip EVERYTHING for reading comprehension, unit exams, or fill-in-blank - go straight to exercises
     const isReading = lesson.skipStudyMode || lesson.isReadingComprehension;
     const isUnitExam = lesson.isUnitExam;
+    const isFillInBlank = lesson.isFillInTheBlank;
 
-    setShowIntro(!isReading && !isUnitExam);  // No intro for reading or unit exams
+    setShowIntro(!isReading && !isUnitExam && !isFillInBlank);  // No intro for special module types
     setIsStudying(false);
-    setStudyCompleted(isReading || isUnitExam); // Mark as "studied" so exercises show
+    setStudyCompleted(isReading || isUnitExam || isFillInBlank); // Mark as "studied" so exercises show
     setShowExam(false);
     setModuleCompleted(false);
     setCurrentExerciseIndex(0);
   }, [lesson.id]);
 
-  // Auto-show exam option when all exercises complete
+  // Auto-show modal when all exercises complete
   useEffect(() => {
-    if (allExercisesComplete && !showExam && !moduleCompleted) {
-      // User completed all exercises, ready for exam
+    // Don't auto-show modal for fill-in-blank modules (they handle completion internally)
+    if (allExercisesComplete && !showExam && !moduleCompleted && studyCompleted && !lesson.isFillInTheBlank) {
+      // User completed all exercises, show completion modal
+      setModuleCompleted(true);
     }
-  }, [allExercisesComplete, showExam, moduleCompleted]);
+  }, [allExercisesComplete, showExam, moduleCompleted, studyCompleted, lesson.isFillInTheBlank]);
 
   return (
     <div className="lesson-view">
+      {/* Module Complete Modal */}
+      {moduleCompleted && (
+        <ModuleCompleteModal
+          lesson={lesson}
+          onNextModule={handleNextModule}
+          onBackToModules={onBack}
+          totalModules={totalModules}
+        />
+      )}
+
       <div className="lesson-header">
         <button className="btn-back" onClick={onBack}>
           ← Back to Modules
@@ -144,7 +171,7 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
         </div>
       </div>
 
-      {showIntro && !lesson.isReadingComprehension && !lesson.isUnitExam ? (
+      {showIntro && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (
         <div className="intro-container">
           <div className="intro-skip">
             <button className="btn-skip" onClick={handleSkipIntro}>
@@ -156,6 +183,19 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
             onStartStudying={handleStartStudying}
           />
         </div>
+      ) : lesson.isFillInTheBlank ? (
+        <div className="fill-in-blank-container">
+          <FillInTheBlank
+            module={lesson}
+            onComplete={(passed) => {
+              if (passed) {
+                handleNextModule();
+              } else {
+                onBack();
+              }
+            }}
+          />
+        </div>
       ) : lesson.isUnitExam ? (
         <div className="unit-exam-container">
           <UnitExam
@@ -163,33 +203,6 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
             onPassExam={() => handleNextModule()}
             onRetryUnit={onBack}
           />
-        </div>
-      ) : moduleCompleted ? (
-        <div className="module-complete-screen">
-          <div className="completion-celebration">
-            <h2>🎉 Module Complete!</h2>
-            <p>You've mastered {lesson.title}</p>
-            <div className="completion-stats">
-              <div className="stat">
-                <div className="stat-number">{lesson.exercises.length}</div>
-                <div className="stat-label">Exercises Completed</div>
-              </div>
-              <div className="stat">
-                <div className="stat-number">✓</div>
-                <div className="stat-label">Exam Passed</div>
-              </div>
-            </div>
-          </div>
-          <div className="completion-actions">
-            {lesson.id < totalModules && (
-              <button className="btn-primary btn-large" onClick={handleNextModule}>
-                Next Module →
-              </button>
-            )}
-            <button className="btn-secondary" onClick={onBack}>
-              Back to Modules
-            </button>
-          </div>
         </div>
       ) : showExam ? (
         <ModuleExam
@@ -214,17 +227,6 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
         </div>
       ) : lesson.isReadingComprehension ? (
         <div className="reading-module-layout">
-          {allExercisesComplete && (
-            <div className="ready-for-exam">
-              <div className="exam-ready-message">
-                🎉 Reading comprehension complete! You've mastered this passage!
-              </div>
-              <button className="btn-primary btn-exam" onClick={handleNextModule}>
-                Continue to Next Module →
-              </button>
-            </div>
-          )}
-
           <ExercisePane
             exercise={currentExercise}
             onNext={handleNext}
@@ -251,17 +253,6 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
           </div>
 
           <div className="right-pane">
-            {allExercisesComplete && !lesson.isReadingComprehension && (
-              <div className="ready-for-exam">
-                <div className="exam-ready-message">
-                  🎉 Module complete! You've mastered all exercises!
-                </div>
-                <button className="btn-primary btn-exam" onClick={handleNextModule}>
-                  Continue to Next Module →
-                </button>
-              </div>
-            )}
-
             <ExercisePane
               exercise={currentExercise}
               onNext={handleNext}

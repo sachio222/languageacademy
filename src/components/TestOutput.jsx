@@ -50,7 +50,7 @@ function TestOutput({ results, expectedAnswer }) {
         <div className="tests-section">
           <h5>Tests:</h5>
           {testResults.map((test, idx) => (
-            <div key={idx} className={`test-result ${test.passed ? 'pass' : 'fail'}`}>
+            <div key={idx} className={`test-result ${test.passed ? (test.hasAccentWarning ? 'pass-warning' : 'pass') : 'fail'}`}>
               <div className="test-message">{test.message}</div>
             </div>
           ))}

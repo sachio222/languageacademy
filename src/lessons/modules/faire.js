@@ -1,6 +1,6 @@
 /**
  * faire (to do/make)
- * Rank 15 - One of the most essential French verbs
+ * One of the most essential French verbs
  * Super irregular but extremely useful!
  */
 

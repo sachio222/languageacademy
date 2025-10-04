@@ -70,18 +70,23 @@ function App() {
 
   const handleModuleComplete = (moduleId, goToNext = false) => {
     console.log('Module complete:', moduleId, 'goToNext:', goToNext);
+    console.log('Total lessons available:', lessons.length);
 
     if (goToNext) {
       // Go to next module
       const nextModuleId = moduleId + 1;
       const nextModule = lessons.find(l => l.id === nextModuleId);
       console.log('Looking for module', nextModuleId, 'found:', nextModule);
+      console.log('Next module title:', nextModule?.title);
+      console.log('Next module exercises:', nextModule?.exercises?.length);
 
       if (nextModule) {
+        console.log('Setting currentLesson to:', nextModuleId);
         setCurrentLesson(nextModuleId);
         window.scrollTo(0, 0);
       } else {
         // No more modules - go back to module list
+        console.log('No next module found - completed all modules!');
         alert('Congratulations! You\'ve completed all modules!');
         setCurrentLesson(null);
         window.scrollTo(0, 0);
@@ -107,14 +112,33 @@ function App() {
             completedExercises={completedExercises}
           />
         ) : (
-          <LessonView
-            lesson={lessons.find(l => l.id === currentLesson)}
-            onBack={handleBack}
-            completedExercises={completedExercises}
-            onExerciseComplete={handleExerciseComplete}
-            onModuleComplete={handleModuleComplete}
-            totalModules={lessons.length}
-          />
+          (() => {
+            const lesson = lessons.find(l => l.id === currentLesson);
+            console.log('Rendering LessonView for ID:', currentLesson, 'Found:', lesson?.title || 'NOT FOUND');
+            if (!lesson) {
+              console.error('LESSON NOT FOUND for ID:', currentLesson);
+              console.log('Available lesson IDs:', lessons.map(l => l.id));
+              return (
+                <div style={{ padding: '2rem', textAlign: 'center' }}>
+                  <h2>⚠️ Module Not Found</h2>
+                  <p>Could not find module with ID: {currentLesson}</p>
+                  <button className="btn-primary" onClick={handleBack}>
+                    Back to Modules
+                  </button>
+                </div>
+              );
+            }
+            return (
+              <LessonView
+                lesson={lesson}
+                onBack={handleBack}
+                completedExercises={completedExercises}
+                onExerciseComplete={handleExerciseComplete}
+                onModuleComplete={handleModuleComplete}
+                totalModules={lessons.length}
+              />
+            );
+          })()
         )}
       </main>
 

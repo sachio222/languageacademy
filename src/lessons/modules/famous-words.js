@@ -37,8 +37,8 @@ export const famousWords = {
       note: "greeting (literally: good day)",
     },
     { french: "merci", english: "thank you", note: "gratitude" },
-    { french: "oui", english: "yes", note: "affirmative (rank 33)" },
-    { french: "non", english: "no", note: "negative (rank 34)" },
+    { french: "oui", english: "yes", note: "affirmative" },
+    { french: "non", english: "no", note: "negative" },
     { french: "s'il vous plaît", english: "please", note: "formal politeness" },
     { french: "pardon", english: "excuse me / sorry", note: "apology" },
     {
@@ -56,8 +56,8 @@ export const famousWords = {
       english: "coffee",
       note: "cognate - same in many languages",
     },
-    { french: "bon", english: "good", note: "used in many phrases (rank 77)" },
-    { french: "bien", english: "well", note: "adverb (rank 86)" },
+    { french: "bon", english: "good", note: "used in many phrases" },
+    { french: "bien", english: "well", note: "adverb" },
     { french: "salut", english: "hi / bye", note: "informal greeting" },
   ],
 
