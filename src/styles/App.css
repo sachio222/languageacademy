@@ -3,6 +3,7 @@
 @import "./ConceptIntro.css";
 @import "./Reading.css";
 @import "./ModuleCompleteModal.css";
+@import "./LeftNav.css";
 
 * {
   margin: 0;
@@ -27,50 +28,41 @@ body {
   min-height: 100vh;
 }
 
-/* Header */
+/* Header - Static and Compact */
 .app-header {
   background: #ffffff;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   border-bottom: 1px solid #e2e8f0;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 280px; /* Offset for sidebar */
   right: 0;
+  height: 60px;
   z-index: 100;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
-.app-header.header-visible {
-  transform: translateY(0);
-}
-
-.app-header.header-hidden {
-  transform: translateY(-100%);
+.header-content {
+  display: flex;
+  align-items: center;
 }
 
 .header-content h1 {
-  font-size: 1.625rem;
+  font-size: 1.25rem;
   color: #1e293b;
-  margin-bottom: 0.25rem;
   font-weight: 600;
   letter-spacing: -0.025em;
 }
 
-.tagline {
-  color: #64748b;
-  font-size: 0.9375rem;
-  font-weight: 400;
-}
-
-/* Main Content */
+/* Main Content - Offset for Sidebar */
 .app-main {
   flex: 1;
-  padding: 3rem 2rem;
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: calc(3rem + 90px); /* Account for fixed header height */
+  margin-left: 280px; /* Sidebar width */
+  padding: 2rem;
+  padding-top: calc(2rem + 60px); /* Account for fixed header height */
+  min-height: calc(100vh - 60px);
 }
 
 /* Footer */
@@ -81,6 +73,78 @@ body {
   text-align: center;
   font-size: 0.875rem;
   border-top: 1px solid #e2e8f0;
+  margin-left: 280px; /* Offset for sidebar */
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.welcome-screen h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.welcome-screen p {
+  font-size: 1.25rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+.welcome-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Error Screen */
+.error-screen {
+  max-width: 600px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+}
+
+.error-screen h2 {
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.error-screen p {
+  color: #991b1b;
 }
 
 /* Lesson List */
@@ -243,30 +307,11 @@ body {
   border-bottom: 1px solid #e2e8f0;
 }
 
-.btn-back {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  color: #64748b;
-  padding: 0.625rem 1.25rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9375rem;
-  transition: all 0.2s;
-  font-weight: 500;
-}
-
-.btn-back:hover {
-  background: #f8fafc;
-  color: #1e293b;
-  border-color: #cbd5e1;
-}
-
 .lesson-header h2 {
-  flex: 1;
-  text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.015em;
+  color: #1e293b;
 }
 
 .exercise-progress {
@@ -909,6 +954,33 @@ button:disabled {
 }
 
 /* Responsive */
+/* Mobile Responsive - Sidebar Layout */
+@media (max-width: 768px) {
+  /* Header adjustments for mobile */
+  .app-header {
+    left: 0;
+    padding: 1rem;
+  }
+
+  .header-content h1 {
+    font-size: 1rem;
+  }
+
+  /* Main content takes full width */
+  .app-main {
+    margin-left: 0;
+    padding: 1.5rem 1rem;
+    padding-top: calc(1.5rem + 60px);
+  }
+
+  /* Footer no margin */
+  .app-footer {
+    margin-left: 0;
+  }
+
+  /* Sidebar becomes overlay - handled in LeftNav.css */
+}
+
 @media (max-width: 968px) {
   .app-main {
     padding: 2rem 1.5rem;
@@ -942,6 +1014,23 @@ button:disabled {
   .navigation-buttons {
     padding: 1rem;
     flex-wrap: wrap;
+  }
+
+  .welcome-screen h2 {
+    font-size: 2rem;
+  }
+
+  .welcome-screen p {
+    font-size: 1rem;
+  }
+
+  .welcome-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 2rem;
   }
 }
 
