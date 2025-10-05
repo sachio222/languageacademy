@@ -558,7 +558,9 @@ body:has(.left-nav.collapsed) .app-footer {
 
 .exercise-instruction {
   background: #f8fafc;
-  padding: 1.5rem;
+  padding: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   border-radius: 6px;
   margin-bottom: 1.75rem;
   border: 1px solid #e2e8f0;

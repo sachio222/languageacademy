@@ -785,6 +785,165 @@ const wordTranslations = {
   'des hommes': 'men',
   'femmes': 'women',
   'des femmes': 'women',
+
+  // ===== READING 6: Un Voyage en Famille =====
+  // Unit 6 - Progressive tenses, communication verbs, and top 200 nouns
+  'suis en train de': 'am in the process of',
+  'en train de': 'in the process of',
+  'en train': 'in the process / on the train',
+  'train': 'train',
+  'en': 'in / by / while',
+  'prendre': 'to take',
+  'prends': 'take (I/you)',
+  'prend': 'takes / take',
+  'comprends': 'understand (I/you)',
+  'comprend': 'understands',
+  'apprendre': 'to learn',
+  'apprends': 'learn (I/you)',
+  "d'apprendre": 'to learn / of learning',
+  'mettre': 'to put',
+  'mets': 'put (I/you)',
+  'met': 'puts',
+  'demander': 'to ask',
+  'demande': 'ask (I)',
+  'dire': 'to say / to tell',
+  'dis': 'say / tell (I/you)',
+  'dit': 'says / tells',
+  'finir': 'to finish',
+  "j'ai besoin de": 'I need',
+  'besoin': 'need',
+  'ai besoin de': 'need / have need of',
+  'as besoin de': 'need (you have need of)',
+  'tu as besoin de': 'you need',
+  'avoir besoin de': 'to need',
+  'allons partir': 'are going to leave',
+  'vais prendre': 'am going to take',
+  'vas prendre': 'are going to take',
+  'va venir': 'is going to come',
+  'va faire': 'are going to do',
+  'allons manger': 'are going to eat',
+  'allons voir': 'are going to see',
+  'allons avoir': 'are going to have',
+  'vais': 'go / am going',
+  'vas': 'go / are going',
+  'famille': 'family',
+  'père': 'father',
+  'mère': 'mother',
+  'frère': 'brother',
+  'semaine': 'week',
+  'question': 'question',
+  'moment': 'moment',
+  'fois': 'time / occasion',
+  'première fois': 'first time',
+  'première': 'first (fem)',
+  'année': 'year',
+  'monde': 'world',
+  'ville': 'city',
+  'mots': 'words',
+  'mot': 'word',
+  'papa': 'dad',
+  'maman': 'mom',
+  'fais': 'do / make (you)',
+  "qu'est-ce": 'what is',
+  "qu'est": 'what is / that is',
+  'le train': 'the train',
+  'super': 'great / super',
+  'manteau': 'coat',
+  'ton manteau': 'your coat',
+  'mon livre': 'my book',
+  'tes livres': 'your books',
+  'ses livres': 'his/her books',
+  'trois livres': 'three books',
+  'livre de français': 'French book',
+  'mon livre de français': 'my French book',
+  'bien sûr': 'of course',
+  'sûr': 'sure / certain',
+  'trois': 'three',
+  'trois heures': 'three hours',
+  'heure': 'hour',
+  "est-ce qu'on": 'are we',
+  "qu'on": 'that we',
+  'quelque chose': 'something',
+  'quelque': 'some',
+  'du pain': 'bread / some bread',
+  'du fromage': 'cheese / some cheese',
+  'fromage': 'cheese',
+  'prix': 'price',
+  'le prix': 'the price',
+  'toujours': 'always',
+  'vrai': 'true',
+  "c'est vrai": "that's true / it's true",
+  'voir': 'to see',
+  'venir': 'to come',
+  'toute': 'all / whole (fem)',
+  'toute la famille': 'the whole family',
+  'en ce moment': 'right now / at this moment',
+  'ce moment': 'this moment',
+  'faire': 'to do / to make',
+  'manger': 'to eat',
+  'restaurants': 'restaurants',
+  'de bons restaurants': 'good restaurants',
+  'beaucoup': 'a lot / much',
+  'parler': 'to speak',
+  'parler français': 'to speak French',
+  'en français': 'in French',
+  'quelques': 'some / a few',
+  'avant': 'before',
+  'avant de': 'before (doing)',
+  'partir': 'to leave',
+  'avant de partir': 'before leaving',
+  'déjà': 'already',
+  'parles': 'speak (you)',
+  'très bien': 'very well',
+  'idée': 'idea',
+  'bonne idée': 'good idea',
+  'maintenant': 'now',
+  'avoir': 'to have',
+  'belle': 'beautiful (fem)',
+  'plus belle': 'most beautiful',
+  'la plus belle': 'the most beautiful',
+  'paris': 'Paris - Capital of France',
+  'Paris': 'Paris - Capital of France',
+  'la Tour Eiffel': 'The Eiffel Tower - 324m tall',
+  'Tour Eiffel': 'Eiffel Tower - Iconic landmark',
+  'Tour': 'Tower',
+  'Eiffel': 'Eiffel',
+  'pour': 'for',
+  'contente': 'happy (fem)',
+  'très contente': 'very happy',
+  'mon frère': 'my brother',
+  'ça prend': 'it takes',
+  'tu me dis': 'you tell me',
+  'me dis': 'tell me',
+  'me': 'me',
+};
+
+// Special Wikipedia entries for proper nouns with images
+const wikipediaEntries = {
+  'paris': {
+    name: 'Paris',
+    description: 'Capital and largest city of France',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/300px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg',
+    url: 'https://en.wikipedia.org/wiki/Paris'
+  },
+  'Paris': {
+    name: 'Paris',
+    description: 'Capital and largest city of France',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/300px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg',
+    url: 'https://en.wikipedia.org/wiki/Paris'
+  },
+  'la Tour Eiffel': {
+    name: 'La Tour Eiffel',
+    description: 'Wrought-iron lattice tower, built 1887-1889, 330m tall',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/240px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg',
+    url: 'https://en.wikipedia.org/wiki/Eiffel_Tower'
+  },
+  'Tour Eiffel': {
+    name: 'Tour Eiffel',
+    description: 'Wrought-iron lattice tower, built 1887-1889, 330m tall',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/240px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg',
+    url: 'https://en.wikipedia.org/wiki/Eiffel_Tower'
+  }
 };
 
 function ReadingPassage({ passage }) {
@@ -1013,6 +1172,8 @@ function ReadingPassage({ passage }) {
         if (remainingText.toLowerCase().startsWith(phrase.toLowerCase())) {
           const matchedText = remainingText.slice(0, phrase.length);
           const uniqueKey = `p${paragraphIndex}-c${charPosition}`;
+          const wikiEntry = wikipediaEntries[matchedText] || wikipediaEntries[matchedText.toLowerCase()];
+
           elements.push(
             <span
               key={uniqueKey}
@@ -1023,7 +1184,21 @@ function ReadingPassage({ passage }) {
               style={{ cursor: 'pointer' }}
             >
               {matchedText}
-              {hoveredWord === uniqueKey && (
+              {hoveredWord === uniqueKey && wikiEntry && (
+                <span className="word-tooltip wiki-tooltip">
+                  <div className="wiki-content">
+                    <img src={wikiEntry.image} alt={wikiEntry.name} className="wiki-image" />
+                    <div className="wiki-text">
+                      <strong>{wikiEntry.name}</strong>
+                      <p>{wikiEntry.description}</p>
+                      <a href={wikiEntry.url} target="_blank" rel="noopener noreferrer" className="wiki-link">
+                        📖 Wikipedia
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              )}
+              {hoveredWord === uniqueKey && !wikiEntry && (
                 <span className="word-tooltip">{translation}</span>
               )}
             </span>
@@ -1046,6 +1221,8 @@ function ReadingPassage({ passage }) {
         const uniqueKey = `p${paragraphIndex}-c${charPosition}`;
 
         if (translation) {
+          const wikiEntry = wikipediaEntries[word] || wikipediaEntries[cleanWord];
+
           elements.push(
             <span
               key={uniqueKey}
@@ -1056,7 +1233,21 @@ function ReadingPassage({ passage }) {
               style={{ cursor: 'pointer' }}
             >
               {word}
-              {hoveredWord === uniqueKey && (
+              {hoveredWord === uniqueKey && wikiEntry && (
+                <span className="word-tooltip wiki-tooltip">
+                  <div className="wiki-content">
+                    <img src={wikiEntry.image} alt={wikiEntry.name} className="wiki-image" />
+                    <div className="wiki-text">
+                      <strong>{wikiEntry.name}</strong>
+                      <p>{wikiEntry.description}</p>
+                      <a href={wikiEntry.url} target="_blank" rel="noopener noreferrer" className="wiki-link">
+                        📖 Wikipedia
+                      </a>
+                    </div>
+                  </div>
+                </span>
+              )}
+              {hoveredWord === uniqueKey && !wikiEntry && (
                 <span className="word-tooltip">{translation}</span>
               )}
             </span>

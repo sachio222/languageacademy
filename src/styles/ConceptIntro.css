@@ -13,30 +13,29 @@
 
 .concept-intro {
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 3rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e2e8f0;
+  box-shadow: none;
+  border: none;
 }
 
 .intro-header {
   text-align: center;
   margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .intro-header h2 {
-  color: #1e293b;
+  color: #1a1a1a;
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  letter-spacing: -0.025em;
-  font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif;
+  letter-spacing: -0.04em;
 }
 
 .intro-description {
-  color: #64748b;
+  color: #666666;
   font-size: 1.0625rem;
   line-height: 1.7;
   max-width: 700px;
@@ -46,184 +45,205 @@
 .intro-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 /* Intro Sections */
 .intro-section {
-  background: #f8fafc;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #e2e8f0;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  border: none;
 }
 
 .intro-section-header {
-  background: #ffffff;
-  color: #1e293b;
-  padding: 1.25rem 1.5rem;
+  background: transparent;
+  color: #1a1a1a;
+  padding: 0 0 1rem 0;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background 0.2s;
-  border-bottom: 1px solid #e2e8f0;
+  transition: opacity 0.15s;
+  border-bottom: none;
 }
 
 .intro-section-header:hover {
-  background: #f8fafc;
+  opacity: 0.7;
 }
 
 .intro-section-header h3 {
   margin: 0;
   font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: -0.015em;
-  /* font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif; */
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 .intro-section-header .toggle-btn {
   background: transparent;
-  color: #64748b;
+  color: #999999;
   border: none;
   padding: 0.5rem 0.75rem;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 0.9375rem;
   cursor: pointer;
+  transition: all 0.15s;
+}
+
+.intro-section-header .toggle-btn:hover {
+  background: #f7f9fc;
+  color: #666666;
 }
 
 /* Vocabulary Table */
 .vocab-intro-table {
-  padding: 1.5rem;
+  padding: 1.5rem 0 0 0;
 }
 
 .vocab-intro-table table {
   width: 100%;
   border-collapse: collapse;
-  background: #ffffff;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid #e2e8f0;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  border: none;
 }
 
 .vocab-intro-table th {
-  background: #f8fafc;
-  color: #1e293b;
-  padding: 1rem 1.25rem;
+  background: transparent;
+  color: #666666;
+  padding: 0 1.25rem 1rem 0;
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .vocab-intro-table td {
-  padding: 1.125rem 1.25rem;
-  border-bottom: 1px solid #f1f5f9;
+  padding: 1.25rem 1.25rem 1.25rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.vocab-intro-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.vocab-intro-table tbody tr {
+  transition: all 0.15s;
 }
 
 .vocab-intro-table tbody tr:hover {
-  background: #f8fafc;
+  background: transparent;
+}
+
+.vocab-intro-table tbody tr:hover td {
+  padding-left: 0.5rem;
 }
 
 .vocab-french-intro {
   color: #2563eb;
-  font-weight: 700;
-  font-size: 1.1875rem;
-  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-weight: 600;
+  font-size: 1.0625rem;
 }
 
 .vocab-french-intro.feminine {
-  color: #f4438d;
+  color: #ec4899;
 }
 
 .vocab-french-intro.masculine {
   color: #2563eb;
 }
 
+.vocab-with-audio {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .vocab-english-intro {
-  color: #64748b;
-  font-size: 1.0625rem;
+  color: #1a1a1a;
+  font-size: 1rem;
 }
 
 .vocab-note-intro {
-  color: #94a3b8;
+  color: #999999;
   font-size: 0.9375rem;
   font-style: italic;
 }
 
 /* Concepts Grid - Professional Design */
 .concepts-intro-grid {
-  padding: 1.5rem;
+  padding: 1.5rem 0 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .concept-intro-card {
-  background: #ffffff;
+  background: #fafbfc;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border: none;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   display: flex;
   flex-direction: column;
 }
 
 .concept-intro-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-color: #cbd5e1;
+  background: #f7f9fc;
 }
 
 .concept-card-header {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  background: transparent;
+  padding: 1.5rem 1.5rem 0.5rem;
+  border-bottom: none;
 }
 
 .concept-intro-card h4 {
-  color: #1e293b;
+  color: #1a1a1a;
   margin: 0;
   font-size: 1.0625rem;
   font-weight: 600;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .concept-card-body {
-  padding: 1.5rem;
+  padding: 0.5rem 1.5rem 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .concept-intro-definition {
-  color: #64748b;
+  color: #666666;
   line-height: 1.7;
   font-size: 0.9375rem;
   margin: 0;
 }
 
 .concept-intro-example {
-  background: #fafafa;
-  padding: 1rem 1.125rem;
+  background: #ffffff;
+  padding: 1rem 1.25rem;
   border-radius: 6px;
-  border-left: 3px solid #e2e8f0;
+  border-left: none;
   margin-top: auto;
 }
 
 .concept-intro-example strong {
-  color: #64748b;
-  font-weight: 600;
+  color: #999999;
+  font-weight: 500;
   display: block;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .concept-intro-example code {
-  color: #475569;
+  color: #1a1a1a;
   font-weight: 400;
   font-family: inherit;
   display: block;
@@ -235,20 +255,20 @@
 
 /* Learning Tip */
 .learning-tip {
-  padding: 2rem 1.5rem;
-  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  padding: 2rem 0 0.5rem;
+  background: transparent;
 }
 
 .learning-tip ol {
-  color: #78350f;
+  color: #1a1a1a;
   margin-left: 1.5rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   counter-reset: item;
   list-style: none;
 }
 
 .learning-tip li {
-  margin: 1rem 0;
+  margin: 1.25rem 0;
   line-height: 1.7;
   font-size: 1rem;
   counter-increment: item;
@@ -260,33 +280,35 @@
   content: counter(item) ".";
   position: absolute;
   left: -1.5rem;
-  font-weight: 700;
-  color: #92400e;
+  font-weight: 600;
+  color: #666666;
 }
 
 .learning-tip strong {
-  color: #92400e;
+  color: #1a1a1a;
   font-weight: 600;
 }
 
 .tip-note {
-  background: #ffffff;
-  padding: 1.125rem 1.25rem;
-  border-radius: 6px;
-  color: #78350f;
-  margin-top: 1.25rem;
-  border-left: 3px solid #f59e0b;
-  line-height: 1.6;
+  background: #fafbfc;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  color: #666666;
+  margin-top: 1.5rem;
+  border-left: none;
+  line-height: 1.7;
   font-size: 0.9375rem;
 }
 
 .tip-note strong {
-  color: #92400e;
+  color: #1a1a1a;
 }
 
 /* Actions */
 .intro-actions {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #f0f0f0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -295,56 +317,78 @@
 }
 
 .intro-actions .btn-large {
-  font-size: 1.125rem;
-  padding: 1.125rem 2.25rem;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
-  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: none;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
 }
 
 .intro-actions .btn-large:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  opacity: 0.9;
 }
 
 .btn-help-link {
   background: none;
   border: none;
-  color: #64748b;
+  color: #666666;
   font-size: 0.9375rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
   text-decoration: underline;
   text-underline-offset: 2px;
-  transition: color 0.2s;
+  transition: color 0.15s;
 }
 
 .btn-help-link:hover {
-  color: #1e293b;
+  color: #1a1a1a;
 }
 
 /* Responsive */
 @media (max-width: 968px) {
   .intro-container {
-    padding: 1.75rem;
+    padding: 1.5rem;
   }
 
   .concept-intro {
     padding: 2rem 1.5rem;
   }
 
+  .intro-header {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .intro-header h2 {
-    font-size: 1.625rem;
+    font-size: 1.75rem;
+  }
+
+  .intro-content {
+    gap: 2.5rem;
   }
 
   .concepts-intro-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .vocab-intro-table {
     overflow-x: auto;
   }
 
+  .vocab-intro-table th,
+  .vocab-intro-table td {
+    padding-right: 1rem;
+  }
+
   .learning-tip {
-    padding: 1.5rem;
+    padding: 1.5rem 0 0;
+  }
+
+  .intro-actions {
+    margin-top: 2rem;
+    padding-top: 2rem;
   }
 }

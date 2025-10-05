@@ -73,6 +73,17 @@ import { comparisonsSlang } from "./modules/comparisons-slang.js";
 import { reading5 } from "./modules/reading-5.js";
 import { unit5Practice } from "./modules/unit-5-practice.js";
 import { unit5Exam } from "./modules/unit-5-exam.js";
+import { progressiveTenses } from "./modules/progressive-tenses.js";
+import { direModule } from "./modules/dire.js";
+import { prendreModule } from "./modules/prendre.js";
+import { mettreModule } from "./modules/mettre.js";
+import { demanderModule } from "./modules/demander.js";
+import { commanderModule } from "./modules/commander.js";
+import { besoinModule } from "./modules/besoin.js";
+import { top200Nouns } from "./modules/top-200-nouns.js";
+import { reading6 } from "./modules/reading-6.js";
+import { unit6Practice } from "./modules/unit-6-practice.js";
+import { unit6Exam } from "./modules/unit-6-exam.js";
 
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
@@ -212,6 +223,31 @@ const moduleConfigs = [
   reading5, // 58. READING TEST 5 - Restaurant article! Uses comparisons, slang, conditionals, past tense, food vocab!
   unit5Practice, // 59. PRACTICE - Fill in the blanks with Unit 5 vocabulary!
   unit5Exam, // 60. UNIT 5 FINAL EXAM - Test everything from Unit 5!
+
+  // ============================================
+  // UNIT 6: COMMUNICATION - Advanced Expression & High-Frequency Words
+  // ============================================
+
+  // === PROGRESSIVE & FUTURE - Express time and intention ===
+  progressiveTenses, // 61. Progressive & Future - en train de, aller + inf, future tense, negative modals
+
+  // === ESSENTIAL COMMUNICATION VERBS - Top 100 words! ===
+  direModule, // 62. dire (to say/tell) - rank 64 - je dis, tu dis, il dit (irregular!)
+  prendreModule, // 63. prendre (to take) - rank 23 - also teaches comprendre (rank 61!) & apprendre
+  mettreModule, // 64. mettre (to put/set) - mettre la table, mettre un pantalon
+  demanderModule, // 65. demander (to ask) - rank 63 - demander de l'aide
+  commanderModule, // 66. commander (to order) - restaurants & shopping
+
+  // === EXPRESSING NEEDS ===
+  besoinModule, // 67. avoir besoin de (to need) - j'ai besoin d'aide, j'ai besoin de manger
+
+  // === HIGH-FREQUENCY NOUNS - Complete top 200! ===
+  top200Nouns, // 68. Top 200 nouns - année, fois, personne, famille, cœur, histoire, problème, question
+
+  // === SIXTH MILESTONE - Family trip to Paris! ===
+  reading6, // 69. READING TEST 6 - Un Voyage en Famille - Uses progressive, communication verbs, and top 200 nouns!
+  unit6Practice, // 70. PRACTICE - Fill in the blanks with Unit 6 vocabulary!
+  unit6Exam, // 71. UNIT 6 FINAL EXAM - Test everything from Unit 6!
 ];
 
 // Build all lessons from configs
@@ -275,9 +311,18 @@ export const unitStructure = [
     title: "Unit 5: Sophistication",
     description:
       "Past tense and nuance - comparisons, slang, conditionals, and essential verbs (was, had, like, eat, drink, understand)",
-    lessonRange: [48, 60], // Lessons 48-58 + Reading 5 (58) + Practice (59) + Unit 5 Exam (60 - TO BE COMPLETED)
+    lessonRange: [48, 60], // Lessons 48-58 + Reading 5 (58) + Practice (59) + Unit 5 Exam (60)
     icon: "⏳",
     color: "#ec4899",
+  },
+  {
+    id: 6,
+    title: "Unit 6: Communication",
+    description:
+      "Advanced expression and high-frequency words - progressive tenses, essential verbs (say, take, put, ask, order), expressing needs, and top 200 nouns",
+    lessonRange: [61, 71], // Lessons 61-68 + Reading 6 (69) + Practice (70) + Unit 6 Exam (71)
+    icon: "💬",
+    color: "#10b981",
   },
 ];
 
