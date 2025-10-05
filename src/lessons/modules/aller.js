@@ -38,6 +38,7 @@ export const allerModule = {
   ],
 
   vocabularyReference: [
+    { french: "aller", english: "to go", note: "infinitive form" },
     {
       french: "je vais",
       english: "I go / I'm going",

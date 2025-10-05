@@ -36,6 +36,7 @@ export const devoirModule = {
   ],
 
   vocabularyReference: [
+    { french: "devoir", english: "to have to / must", note: "infinitive form" },
     { french: "je dois", english: "I must", note: "irregular form" },
     {
       french: "tu dois",
@@ -112,5 +113,3 @@ export const devoirModule = {
     ],
   },
 };
-
-

@@ -1,6 +1,16 @@
 import { useState, useMemo } from 'react';
+import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { unitStructure } from '../lessons/lessonData';
+import SpeakButton from './SpeakButton';
 import '../styles/LeftNav.css';
+
+// Normalize text for search (remove diacritics/accents)
+const normalizeText = (text) => {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, ''); // Remove diacritical marks
+};
 
 function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, isCollapsed, onToggleCollapse }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -35,27 +45,27 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
       }));
     }
 
-    const query = searchQuery.toLowerCase();
+    const query = normalizeText(searchQuery);
 
     return unitStructure.map(unit => {
       const unitLessons = getLessonsForUnit(unit);
       const filtered = unitLessons.filter(lesson => {
         // Search in title
-        if (lesson.title.toLowerCase().includes(query)) return true;
+        if (normalizeText(lesson.title).includes(query)) return true;
 
         // Search in description
-        if (lesson.description?.toLowerCase().includes(query)) return true;
+        if (lesson.description && normalizeText(lesson.description).includes(query)) return true;
 
         // Search in concepts
         if (lesson.concepts?.some(c =>
-          c.term?.toLowerCase().includes(query) ||
-          c.explanation?.toLowerCase().includes(query)
+          (c.term && normalizeText(c.term).includes(query)) ||
+          (c.explanation && normalizeText(c.explanation).includes(query))
         )) return true;
 
         // Search in vocabulary
         if (lesson.vocabularyReference?.some(v =>
-          v.french?.toLowerCase().includes(query) ||
-          v.english?.toLowerCase().includes(query)
+          (v.french && normalizeText(v.french).includes(query)) ||
+          (v.english && normalizeText(v.english).includes(query))
         )) return true;
 
         return false;
@@ -95,10 +105,10 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
   const filteredVocab = useMemo(() => {
     if (!searchQuery.trim()) return vocabularyIndex;
 
-    const query = searchQuery.toLowerCase();
+    const query = normalizeText(searchQuery);
     return vocabularyIndex.filter(v =>
-      v.french.toLowerCase().includes(query) ||
-      v.english.toLowerCase().includes(query)
+      normalizeText(v.french).includes(query) ||
+      normalizeText(v.english).includes(query)
     );
   }, [vocabularyIndex, searchQuery]);
 
@@ -135,7 +145,13 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                 </button>
               )}
             </div>
-            <kbd className="search-kbd">⌘K</kbd>
+            <button
+              className="nav-collapse-btn"
+              onClick={onToggleCollapse}
+              title="Collapse sidebar"
+            >
+              <ChevronLeft size={18} />
+            </button>
           </div>
 
           {/* Tabs */}
@@ -176,9 +192,10 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                         >
                           <span className="nav-unit-icon">{unit.icon}</span>
                           <span className="nav-unit-title">{unit.title}</span>
-                          <span className={`nav-unit-chevron ${isCollapsed ? 'collapsed' : ''}`}>
-                            ▼
-                          </span>
+                          <ChevronDown
+                            size={14}
+                            className={`nav-unit-chevron ${isCollapsed ? 'collapsed' : ''}`}
+                          />
                         </div>
 
                         {!isCollapsed && (
@@ -231,25 +248,56 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                     No vocabulary found for "{searchQuery}"
                   </div>
                 ) : (
-                  filteredVocab.map((vocab, idx) => (
-                    <div key={idx} className="nav-vocab-item">
-                      <div className="nav-vocab-word">
-                        <span className="nav-vocab-french">{vocab.french}</span>
-                        <span className="nav-vocab-english">{vocab.english}</span>
+                  filteredVocab.map((vocab, idx) => {
+                    const handleSpeak = () => {
+                      if ('speechSynthesis' in window) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(vocab.french);
+                        utterance.lang = 'fr-FR';
+                        utterance.rate = 0.9;
+                        window.speechSynthesis.speak(utterance);
+                      }
+                    };
+
+                    return (
+                      <div key={idx} className="nav-vocab-item">
+                        <div
+                          className="nav-vocab-word"
+                          onClick={handleSpeak}
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              handleSpeak();
+                            }
+                          }}
+                        >
+                          <div className="nav-vocab-text">
+                            <span className="nav-vocab-french">{vocab.french}</span>
+                            <span className="nav-vocab-english">{vocab.english}</span>
+                          </div>
+                          <SpeakButton
+                            text={vocab.french}
+                            language="fr-FR"
+                            size="medium"
+                            className="nav-vocab-speaker"
+                          />
+                        </div>
+                        <div className="nav-vocab-lessons">
+                          {vocab.lessons.map(lesson => (
+                            <button
+                              key={lesson.id}
+                              className="nav-vocab-lesson-link"
+                              onClick={() => onLessonSelect(lesson.id)}
+                            >
+                              #{lesson.id}
+                            </button>
+                          ))}
+                        </div>
                       </div>
-                      <div className="nav-vocab-lessons">
-                        {vocab.lessons.map(lesson => (
-                          <button
-                            key={lesson.id}
-                            className="nav-vocab-lesson-link"
-                            onClick={() => onLessonSelect(lesson.id)}
-                          >
-                            #{lesson.id}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  ))
+                    );
+                  })
                 )}
               </div>
             )}
@@ -260,6 +308,13 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
       {/* Collapsed state - show unit icons */}
       {isCollapsed && (
         <div className="nav-collapsed-content">
+          <button
+            className="nav-collapse-btn nav-expand-btn"
+            onClick={onToggleCollapse}
+            title="Expand sidebar"
+          >
+            <ChevronRight size={18} />
+          </button>
           {unitStructure.map(unit => {
             const unitLessons = getLessonsForUnit(unit);
             const completed = unitLessons.filter(lesson =>

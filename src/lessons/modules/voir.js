@@ -37,6 +37,7 @@ export const voirModule = {
   ],
 
   vocabularyReference: [
+    { french: "voir", english: "to see", note: "infinitive form" },
     { french: "je vois", english: "I see", note: "voir - irregular" },
     { french: "tu vois", english: "you see (informal)", note: "same as je!" },
     { french: "il voit", english: "he sees", note: "different ending" },

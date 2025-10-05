@@ -30,6 +30,7 @@ export const faireModule = {
   ],
 
   vocabularyReference: [
+    { french: "faire", english: "to do / to make", note: "infinitive form" },
     { french: "je fais", english: "I do/make", note: "irregular form" },
     {
       french: "tu fais",

@@ -33,6 +33,7 @@ export const module4_avoir = {
   ],
 
   vocabularyReference: [
+    { french: "avoir", english: "to have", note: "infinitive form" },
     { french: "j'ai", english: "I have", note: "use apostrophe!" },
     { french: "tu as", english: "you have (informal)", note: "singular" },
     { french: "il a", english: "he has", note: "masculine" },

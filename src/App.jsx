@@ -53,16 +53,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <div className="header-left">
-          <button
-            className="sidebar-toggle"
-            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-            title={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-          >
-            {sidebarCollapsed ? '›' : '☰'}
-          </button>
-          <h1>🎓 Language Academy</h1>
-        </div>
+        <h1>🎓 Language Academy</h1>
       </header>
 
       <LeftNav

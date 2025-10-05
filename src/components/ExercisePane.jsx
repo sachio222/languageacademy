@@ -3,6 +3,7 @@ import { runTests, isExerciseComplete } from '../lessons/testRunner';
 import TestOutput from './TestOutput';
 import ReadingPassage from './ReadingPassage';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
+import { ArrowBigLeft } from 'lucide-react';
 
 function ExercisePane({
   exercise,
@@ -179,12 +180,24 @@ function ExercisePane({
         </div>
 
         <div className="exercise-actions">
-          <button
-            className="btn-hint"
-            onClick={() => setShowHint(!showHint)}
-          >
-            💡 {showHint ? 'Hide' : 'Show'} Hint
-          </button>
+          <div className="left-actions">
+            <button
+              className="btn-secondary"
+              onClick={onPrevious}
+              disabled={isFirstExercise}
+              title="Previous"
+            >
+              <span className="">
+                ←
+              </span>
+            </button>
+            <button
+              className="btn-hint"
+              onClick={() => setShowHint(!showHint)}
+            >
+              💡 {showHint ? 'Hide' : 'Show'} Hint
+            </button>
+          </div>
 
           <div className="action-buttons">
             <button
@@ -193,13 +206,24 @@ function ExercisePane({
             >
               Reset
             </button>
-            <button
-              className="btn-primary"
-              onClick={handleSubmit}
-            >
-              <span className="keyboard-shortcut">⌘ Enter</span>
-              Submit
-            </button>
+            {canProceed ? (
+              <button
+                className="btn-primary"
+                onClick={handleNextExercise}
+                disabled={isLastExercise}
+              >
+                <span className="keyboard-shortcut">→</span>
+                Next
+              </button>
+            ) : (
+              <button
+                className="btn-primary"
+                onClick={handleSubmit}
+              >
+                <span className="keyboard-shortcut">⌘ Enter</span>
+                Submit
+              </button>
+            )}
           </div>
         </div>
 
@@ -222,26 +246,6 @@ function ExercisePane({
             <p>You've successfully completed this exercise.</p>
           </div>
         )}
-
-        <div className="navigation-buttons">
-          <button
-            className="btn-nav"
-            onClick={onPrevious}
-            disabled={isFirstExercise}
-          >
-            ← Previous
-            {!isFirstExercise && <span className="keyboard-shortcut-nav">←</span>}
-          </button>
-
-          <button
-            className="btn-nav"
-            onClick={handleNextExercise}
-            disabled={isLastExercise || !canProceed}
-          >
-            Next →
-            {!isLastExercise && canProceed && <span className="keyboard-shortcut-nav">→</span>}
-          </button>
-        </div>
       </div>
     </div>
   );

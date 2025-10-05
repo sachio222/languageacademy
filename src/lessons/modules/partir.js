@@ -38,6 +38,11 @@ export const partirModule = {
   ],
 
   vocabularyReference: [
+    {
+      french: "partir",
+      english: "to leave / to depart",
+      note: "infinitive form",
+    },
     { french: "je pars", english: "I leave / I'm leaving", note: "partir" },
     { french: "tu pars", english: "you leave (informal)", note: "same as je!" },
     { french: "il part", english: "he leaves", note: "drops -s" },

@@ -32,6 +32,7 @@ export const venirModule = {
   ],
 
   vocabularyReference: [
+    { french: "venir", english: "to come", note: "infinitive form" },
     { french: "je viens", english: "I come / I'm coming", note: "venir" },
     { french: "tu viens", english: "you come (informal)", note: "same as je!" },
     { french: "il vient", english: "he comes", note: "different ending" },

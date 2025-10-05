@@ -57,8 +57,8 @@ function TestOutput({ results, expectedAnswer }) {
         </div>
       )}
 
-      {/* Show expected answer if all tests failed */}
-      {failed === total && lintResults && lintResults.valid && (
+      {/* Show expected answer */}
+      {lintResults && lintResults.valid && (
         <div className="expected-answer">
           <strong>Expected answer:</strong> <code>{expectedAnswer}</code>
         </div>

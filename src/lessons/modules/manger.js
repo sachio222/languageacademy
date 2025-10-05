@@ -43,6 +43,11 @@ export const mangerModule = {
   ],
 
   vocabularyReference: [
+    {
+      french: "manger",
+      english: "to eat",
+      note: "infinitive form - regular -ER verb",
+    },
     // Present tense
     {
       french: "je mange",

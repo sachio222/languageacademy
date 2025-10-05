@@ -29,6 +29,11 @@ export const pouvoirModule = {
   ],
 
   vocabularyReference: [
+    {
+      french: "pouvoir",
+      english: "to be able to / can",
+      note: "infinitive form",
+    },
     { french: "je peux", english: "I can", note: "irregular form" },
     {
       french: "tu peux",

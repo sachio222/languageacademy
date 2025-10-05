@@ -43,6 +43,11 @@ export const boireModule = {
   ],
 
   vocabularyReference: [
+    {
+      french: "boire",
+      english: "to drink",
+      note: "infinitive form - irregular",
+    },
     // Present tense
     {
       french: "je bois",

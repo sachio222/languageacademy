@@ -47,6 +47,11 @@ export const parlerModule = {
 
   vocabularyReference: [
     {
+      french: "parler",
+      english: "to speak / to talk",
+      note: "infinitive form - regular -ER verb",
+    },
+    {
       french: "je parle",
       english: "I speak",
       note: "drop -er, add -e (silent)",
@@ -142,5 +147,3 @@ export const parlerModule = {
     ],
   },
 };
-
-

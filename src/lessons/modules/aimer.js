@@ -42,6 +42,11 @@ export const aimerModule = {
 
   vocabularyReference: [
     {
+      french: "aimer",
+      english: "to like / to love",
+      note: "infinitive form - regular -ER verb",
+    },
+    {
       french: "j'aime",
       english: "I like / I love",
       note: "j' before vowel",

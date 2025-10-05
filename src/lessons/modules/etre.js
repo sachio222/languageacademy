@@ -32,6 +32,7 @@ export const module3_etre = {
   ],
 
   vocabularyReference: [
+    { french: "être", english: "to be", note: "infinitive form" },
     { french: "je suis", english: "I am", note: "être conjugated" },
     { french: "tu es", english: "you are (informal)", note: "singular" },
     { french: "il est", english: "he is", note: "masculine" },

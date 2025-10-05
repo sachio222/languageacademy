@@ -31,6 +31,7 @@ export const vouloirModule = {
   ],
 
   vocabularyReference: [
+    { french: "vouloir", english: "to want", note: "infinitive form" },
     { french: "je veux", english: "I want", note: "irregular form" },
     {
       french: "tu veux",
