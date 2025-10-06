@@ -50,32 +50,27 @@ export const pastTenseCompositionModule = {
     {
       french: "donc",
       english: "so, therefore",
-      usage: "consequence/result",
-      example: "Il faisait beau donc je suis sorti",
+      note: "⭐ consequence connector",
     },
     {
       french: "alors",
       english: "so, then",
-      usage: "consequence",
-      example: "J'avais faim, alors j'ai mangé",
+      note: "⭐ result/consequence connector",
     },
     {
       french: "c'était",
       english: "it was",
-      usage: "description (always imparfait!)",
-      example: "C'était super! C'était difficile.",
+      note: "⭐ description - always IMP!",
     },
     {
       french: "il y avait",
       english: "there was/were",
-      usage: "description (always imparfait!)",
-      example: "Il y avait beaucoup de monde",
+      note: "⭐ description - always IMP!",
     },
     {
       french: "j'ai décidé de",
       english: "I decided to",
-      usage: "+ infinitive",
-      example: "J'ai décidé d'aller au café",
+      note: "PC decision + infinitive",
     },
   ],
 

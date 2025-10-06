@@ -58,20 +58,34 @@ export function useSpeech() {
         v.name.toLowerCase().includes("karen") ||
         v.name.toLowerCase().includes("fiona") ||
         v.name.toLowerCase().includes("amelie") ||
-        v.name.toLowerCase().includes("paulina")
+        v.name.toLowerCase().includes("paulina") ||
+        v.name.toLowerCase().includes("marie") ||
+        v.name.toLowerCase().includes("celine") ||
+        v.name.toLowerCase().includes("audrey") ||
+        v.name.toLowerCase().includes("aurelie")
     );
     if (femaleVoice) return femaleVoice;
 
-    // Priority 4: Avoid "Alex" and other robotic-sounding voices
-    const nonRoboticVoice = matchingVoices.find(
+    // Priority 4: Avoid male and robotic-sounding voices
+    const nonMaleVoice = matchingVoices.find(
       (v) =>
         !v.name.toLowerCase().includes("alex") &&
         !v.name.toLowerCase().includes("fred") &&
-        !v.name.toLowerCase().includes("ralph")
+        !v.name.toLowerCase().includes("ralph") &&
+        !v.name.toLowerCase().includes("thomas") &&
+        !v.name.toLowerCase().includes("male") &&
+        !v.name.toLowerCase().includes("daniel")
     );
-    if (nonRoboticVoice) return nonRoboticVoice;
+    if (nonMaleVoice) return nonMaleVoice;
 
-    // Fallback: Return first matching voice
+    // Fallback: Prefer any voice with specific characteristics over generic first match
+    // Look for voices that don't have "male" in the name
+    const nonMaleGeneric = matchingVoices.find(
+      (v) => !v.name.toLowerCase().includes("male")
+    );
+    if (nonMaleGeneric) return nonMaleGeneric;
+
+    // Last resort: Return first matching voice
     return matchingVoices[0];
   }, []);
 

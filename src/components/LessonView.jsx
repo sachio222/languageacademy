@@ -157,7 +157,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         </button>
         <div className="lesson-title-container">
           {unitInfo && !unitInfo.isReference && (
-            <div className="unit-badge" style={{ backgroundColor: unitInfo.color }}>
+            <div className="unit-badge" style={{ borderColor: unitInfo.color, color: unitInfo.color }}>
               {unitInfo.icon} Unit {unitInfo.id}
             </div>
           )}

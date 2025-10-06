@@ -1,0 +1,138 @@
+/**
+ * Adverbs - Time and Location adverbs
+ */
+
+// Time Adverbs - Essential for talking about when
+export const timeAdverbs = {
+  maintenant: {
+    french: "maintenant",
+    english: "now",
+    englishFull: "now",
+    type: "adverb",
+    category: "time",
+    example: "je veux manger maintenant",
+    note: "present moment",
+  },
+  toujours: {
+    french: "toujours",
+    english: "always",
+    englishFull: "always",
+    type: "adverb",
+    category: "frequency",
+    example: "je parle toujours français",
+    note: "100% of the time",
+  },
+  jamais: {
+    french: "jamais",
+    english: "never",
+    englishFull: "never",
+    type: "adverb",
+    category: "frequency",
+    example: "je ne vais jamais là-bas",
+    note: "used with 'ne' for negation",
+  },
+  aujourdhui: {
+    french: "aujourd'hui",
+    english: "today",
+    englishFull: "today",
+    type: "adverb",
+    category: "time",
+    example: "aujourd'hui je suis ici",
+    note: "this day",
+  },
+  demain: {
+    french: "demain",
+    english: "tomorrow",
+    englishFull: "tomorrow",
+    type: "adverb",
+    category: "time",
+    example: "je vais partir demain",
+    note: "next day",
+  },
+  hier: {
+    french: "hier",
+    english: "yesterday",
+    englishFull: "yesterday",
+    type: "adverb",
+    category: "time",
+    example: "hier j'ai vu le film",
+    note: "previous day",
+  },
+  souvent: {
+    french: "souvent",
+    english: "often",
+    englishFull: "often",
+    type: "adverb",
+    category: "frequency",
+    example: "je vais souvent au restaurant",
+    note: "frequently",
+  },
+  parfois: {
+    french: "parfois",
+    english: "sometimes",
+    englishFull: "sometimes",
+    type: "adverb",
+    category: "frequency",
+    example: "parfois je mange du pain",
+    note: "occasionally",
+  },
+};
+
+// Location Adverbs - Essential for talking about where
+export const locationAdverbs = {
+  ici: {
+    french: "ici",
+    english: "here",
+    englishFull: "here",
+    type: "adverb",
+    category: "location",
+    example: "je suis ici maintenant",
+    note: "at this place",
+  },
+  la: {
+    french: "là",
+    english: "there",
+    englishFull: "there",
+    type: "adverb",
+    category: "location",
+    example: "il est là",
+    note: "at that place",
+  },
+  laBas: {
+    french: "là-bas",
+    english: "over there",
+    englishFull: "over there",
+    type: "adverb",
+    category: "location",
+    example: "le restaurant est là-bas",
+    note: "at a distant place",
+  },
+  partout: {
+    french: "partout",
+    english: "everywhere",
+    englishFull: "everywhere",
+    type: "adverb",
+    category: "location",
+    example: "je vois des gens partout",
+    note: "in all places",
+  },
+  quelquePart: {
+    french: "quelque part",
+    english: "somewhere",
+    englishFull: "somewhere",
+    type: "adverb",
+    category: "location",
+    example: "il est quelque part dans la ville",
+    note: "in an unspecified place",
+  },
+  nullePart: {
+    french: "nulle part",
+    english: "nowhere",
+    englishFull: "nowhere",
+    type: "adverb",
+    category: "location",
+    example: "je ne vais nulle part",
+    note: "in no place, used with 'ne'",
+  },
+};
+

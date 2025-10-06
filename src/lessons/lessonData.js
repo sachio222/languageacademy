@@ -137,6 +137,26 @@ import { imparfaitAllVerbsModule } from "./modules/imparfait-all-verbs.js";
 import { pcVsImparfaitModule } from "./modules/pc-vs-imparfait.js";
 import { pastTenseCompositionModule } from "./modules/past-tense-composition.js";
 import { reading9 } from "./modules/reading-9.js";
+import { unit9Practice } from "./modules/unit-9-practice.js";
+import { unit9Exam } from "./modules/unit-9-exam.js";
+
+// Unit 10: Mastery & Nuance - PRACTICAL PHRASES
+import { commonSpecialForms1Module } from "./modules/common-special-forms-1.js";
+import { commonSpecialForms2Module } from "./modules/common-special-forms-2.js";
+import { necessityPhrasesModule } from "./modules/necessity-phrases.js";
+import { wishPhrasesModule } from "./modules/wish-phrases.js";
+import { emotionPhrasesModule } from "./modules/emotion-phrases.js";
+import { opinionPhrasesModule } from "./modules/opinion-phrases.js";
+import { hypotheticalPhrasesModule } from "./modules/hypothetical-phrases.js";
+import { pastRegretPhrasesModule } from "./modules/past-regret-phrases.js";
+import { hadAlreadyPhrasesModule } from "./modules/had-already-phrases.js";
+import { commonAdverbsModule } from "./modules/common-adverbs.js";
+import { whileDoingPhrasesModule } from "./modules/while-doing-phrases.js";
+import { servicePhrasesModule } from "./modules/service-phrases.js";
+import { beforePhrasesModule } from "./modules/before-phrases.js";
+import { soThatPhrasesModule } from "./modules/so-that-phrases.js";
+import { althoughPhrasesModule } from "./modules/although-phrases.js";
+import { possibilityPhrasesModule } from "./modules/possibility-phrases.js";
 
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
@@ -395,18 +415,44 @@ const moduleConfigs = [
 
   // === NINTH MILESTONE - Complete past tense story! ===
   reading9, // 112. READING TEST 9 - Une Histoire du Passé - A memorable day with PC, IMP, causal, spatial!
+  unit9Practice, // 113. PRACTICE - Fill in the blanks with Unit 9 vocabulary!
+  unit9Exam, // 114. UNIT 9 FINAL EXAM - Test everything from Unit 9!
+
+  // ============================================
+  // UNIT 10: MASTERY & NUANCE - Practical Phrases for B2!
+  // ============================================
+
+  // === FOUNDATION: SPECIAL FORMS - Learn these first! ===
+  commonSpecialForms1Module, // 115. Common Special Forms Part 1 - sois, ait, aille, fasse
+  commonSpecialForms2Module, // 116. Common Special Forms Part 2 - vienne, parte, puisse, sache, comprenne
+
+  // === TOP PRACTICAL PHRASES - Real-world expressions! ===
+  necessityPhrasesModule, // 117. Il faut que... - Necessity Phrases
+  wishPhrasesModule, // 118. Je veux que... - Wish Phrases
+  emotionPhrasesModule, // 119. Je suis content que... - Emotion Phrases
+  opinionPhrasesModule, // 120. Je pense que... - Opinion Phrases
+  hypotheticalPhrasesModule, // 121. Si j'étais... - Hypothetical Phrases (Daydreams)
+  pastRegretPhrasesModule, // 122. Si j'avais su... - Past Regret Phrases
+  hadAlreadyPhrasesModule, // 123. J'avais déjà... - Had Already Phrases
+  commonAdverbsModule, // 124. vraiment, sérieusement... - Common Adverbs
+  whileDoingPhrasesModule, // 125. En mangeant... - While Doing Phrases
+  servicePhrasesModule, // 126. Je me fais couper... - Service Phrases
+  beforePhrasesModule, // 127. Avant que... - Before Phrases
+  soThatPhrasesModule, // 128. Pour que... - So That Phrases
+  althoughPhrasesModule, // 129. Bien que... - Although Phrases
+  possibilityPhrasesModule, // 130. Il est possible que... - Possibility Phrases
 
   // ============================================
   // REFERENCE UNIT - Essential Reference Materials
   // ============================================
 
   // === REFERENCE MATERIALS - Always available for quick lookup! ===
-  alphabetModule, // 113. L'Alphabet - French alphabet with pronunciation
-  numbersModule, // 114. Les Nombres - Numbers from 0 to infinity
-  daysMonthsModule, // 115. Jours et Mois - Days of the week and months
-  holidaysModule, // 116. Les Fêtes - French holidays and celebrations
-  frenchCountriesModule, // 117. La Francophonie - French-speaking countries worldwide
-  languageStatsModule, // 118. Le Français en Chiffres - Fascinating language statistics
+  alphabetModule, // 131. L'Alphabet - French alphabet with pronunciation
+  numbersModule, // 132. Les Nombres - Numbers from 0 to infinity
+  daysMonthsModule, // 133. Jours et Mois - Days of the week and months
+  holidaysModule, // 134. Les Fêtes - French holidays and celebrations
+  frenchCountriesModule, // 135. La Francophonie - French-speaking countries worldwide
+  languageStatsModule, // 136. Le Français en Chiffres - Fascinating language statistics
 ];
 
 // Build all lessons from configs
@@ -415,12 +461,12 @@ const allLessons = moduleConfigs.map((config, index) => {
   const moduleId = index + 1;
   const lesson = buildLesson(config, moduleId); // Pass module number
 
-  // Override titles for reference modules (113-118) to use Roman numerals
+  // Override titles for reference modules (131-136) to use Roman numerals
   const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
   let finalTitle = lesson.title;
 
-  if (moduleId >= 113 && moduleId <= 118) {
-    const romanIndex = moduleId - 113;
+  if (moduleId >= 131 && moduleId <= 136) {
+    const romanIndex = moduleId - 131;
     finalTitle = `Reference ${romanNumerals[romanIndex]}: ${config.title}`;
   }
 
@@ -516,16 +562,25 @@ export const unitStructure = [
     title: "Unit 9: Discourse & Past Tense",
     description:
       "Complete storytelling mastery: causal/spatial words (parce que, près de), passé composé (j'ai mangé, je suis allé), imparfait (j'étais, il faisait), and the critical PC vs IMP distinction",
-    lessonRange: [101, 112], // Modules 101-111 + Reading 9 (112)
+    lessonRange: [101, 114], // Modules 101-111 + Reading 9 (112) + Practice (113) + Unit 9 Exam (114)
     icon: "📖",
     color: "#ef4444",
   },
   {
     id: 10,
+    title: "Unit 10: Mastery & Nuance",
+    description:
+      "B2 Level Phrases! Learn special verb forms, then use them in top practical expressions: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su), services (je me fais couper), and more!",
+    lessonRange: [115, 130], // Modules 115-130 (16 modules: 2 intro + 14 phrase modules)
+    icon: "🎓",
+    color: "#8b5cf6",
+  },
+  {
+    id: 11,
     title: "Reference",
     description:
       "Essential reference materials - alphabet, numbers, dates, holidays, French-speaking countries, and language facts",
-    lessonRange: [113, 118], // Reference modules 113-118
+    lessonRange: [131, 136], // Reference modules 131-136
     icon: "📚",
     color: "#6366f1",
     isReference: true, // Flag to indicate this is not a numbered unit

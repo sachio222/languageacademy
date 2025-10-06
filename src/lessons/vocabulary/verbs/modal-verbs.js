@@ -1,0 +1,388 @@
+/**
+ * Modal Verbs - vouloir, pouvoir, devoir (Present and Conditional)
+ */
+
+// Verb vouloir (to want) conjugations - Present
+export const vouloirConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "veux",
+    combined: "je veux",
+    english: "I want",
+    englishFull: "I want",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "veux",
+    combined: "tu veux",
+    english: "you want (informal)",
+    englishFull: "you want (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "veut",
+    combined: "il veut",
+    english: "he wants",
+    englishFull: "he wants",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "veut",
+    combined: "elle veut",
+    english: "she wants",
+    englishFull: "she wants",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "voulons",
+    combined: "nous voulons",
+    english: "we want",
+    englishFull: "we want",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "voulez",
+    combined: "vous voulez",
+    english: "you want (formal/plural)",
+    englishFull: "you want (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "veulent",
+    combined: "ils veulent",
+    english: "they want (masculine)",
+    englishFull: "they want (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "veulent",
+    combined: "elles veulent",
+    english: "they want (feminine)",
+    englishFull: "they want (all feminine)",
+  },
+};
+
+// Conditional Forms - vouloir (would like)
+export const vouloirConditionalConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "voudrais",
+    combined: "je voudrais",
+    english: "I would like",
+    englishFull: "I would like / I would want",
+    note: "conditional mood - polite!",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "voudrais",
+    combined: "tu voudrais",
+    english: "you would like (informal)",
+    englishFull: "you would like / you would want (informal)",
+    note: "conditional mood",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "voudrait",
+    combined: "il voudrait",
+    english: "he would like",
+    englishFull: "he would like / he would want",
+    note: "conditional mood",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "voudrait",
+    combined: "elle voudrait",
+    english: "she would like",
+    englishFull: "she would like / she would want",
+    note: "conditional mood",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "voudrions",
+    combined: "nous voudrions",
+    english: "we would like",
+    englishFull: "we would like / we would want",
+    note: "conditional mood",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "voudriez",
+    combined: "vous voudriez",
+    english: "you would like (formal/plural)",
+    englishFull: "you would like / you would want (formal or plural)",
+    note: "conditional mood",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "voudraient",
+    combined: "ils voudraient",
+    english: "they would like (masculine)",
+    englishFull: "they would like / they would want (masculine or mixed)",
+    note: "conditional mood",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "voudraient",
+    combined: "elles voudraient",
+    english: "they would like (feminine)",
+    englishFull: "they would like / they would want (all feminine)",
+    note: "conditional mood",
+  },
+};
+
+// Verb pouvoir (can) conjugations - Present
+export const pouvoirConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "peux",
+    combined: "je peux",
+    english: "I can",
+    englishFull: "I can",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "peux",
+    combined: "tu peux",
+    english: "you can (informal)",
+    englishFull: "you can (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "peut",
+    combined: "il peut",
+    english: "he can",
+    englishFull: "he can",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "peut",
+    combined: "elle peut",
+    english: "she can",
+    englishFull: "she can",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "pouvons",
+    combined: "nous pouvons",
+    english: "we can",
+    englishFull: "we can",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "pouvez",
+    combined: "vous pouvez",
+    english: "you can (formal/plural)",
+    englishFull: "you can (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "peuvent",
+    combined: "ils peuvent",
+    english: "they can (masculine)",
+    englishFull: "they can (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "peuvent",
+    combined: "elles peuvent",
+    english: "they can (feminine)",
+    englishFull: "they can (all feminine)",
+  },
+};
+
+// Conditional Forms - pouvoir (could)
+export const pouvoirConditionalConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "pourrais",
+    combined: "je pourrais",
+    english: "I could",
+    englishFull: "I could / I would be able to",
+    note: "conditional mood",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "pourrais",
+    combined: "tu pourrais",
+    english: "you could (informal)",
+    englishFull: "you could / you would be able to (informal)",
+    note: "conditional mood",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "pourrait",
+    combined: "il pourrait",
+    english: "he could",
+    englishFull: "he could / he would be able to",
+    note: "conditional mood",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "pourrait",
+    combined: "elle pourrait",
+    english: "she could",
+    englishFull: "she could / she would be able to",
+    note: "conditional mood",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "pourrions",
+    combined: "nous pourrions",
+    english: "we could",
+    englishFull: "we could / we would be able to",
+    note: "conditional mood",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "pourriez",
+    combined: "vous pourriez",
+    english: "you could (formal/plural)",
+    englishFull: "you could / you would be able to (formal or plural)",
+    note: "conditional mood",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "pourraient",
+    combined: "ils pourraient",
+    english: "they could (masculine)",
+    englishFull: "they could / they would be able to (masculine or mixed)",
+    note: "conditional mood",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "pourraient",
+    combined: "elles pourraient",
+    english: "they could (feminine)",
+    englishFull: "they could / they would be able to (all feminine)",
+    note: "conditional mood",
+  },
+};
+
+// Verb devoir (must/to have to) conjugations - Present
+export const devoirConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "dois",
+    combined: "je dois",
+    english: "I must",
+    englishFull: "I must / I have to",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "dois",
+    combined: "tu dois",
+    english: "you must (informal)",
+    englishFull: "you must / you have to (informal)",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "doit",
+    combined: "il doit",
+    english: "he must",
+    englishFull: "he must / he has to",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "doit",
+    combined: "elle doit",
+    english: "she must",
+    englishFull: "she must / she has to",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "devons",
+    combined: "nous devons",
+    english: "we must",
+    englishFull: "we must / we have to",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "devez",
+    combined: "vous devez",
+    english: "you must (formal/plural)",
+    englishFull: "you must / you have to (formal or plural)",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "doivent",
+    combined: "ils doivent",
+    english: "they must (masculine)",
+    englishFull: "they must / they have to (masculine or mixed)",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "doivent",
+    combined: "elles doivent",
+    english: "they must (feminine)",
+    englishFull: "they must / they have to (all feminine)",
+  },
+};
+
+// Conditional Forms - devoir (should)
+export const devoirConditionalConjugations = {
+  je: {
+    pronoun: "je",
+    conjugation: "devrais",
+    combined: "je devrais",
+    english: "I should",
+    englishFull: "I should / I ought to",
+    note: "conditional mood",
+  },
+  tu: {
+    pronoun: "tu",
+    conjugation: "devrais",
+    combined: "tu devrais",
+    english: "you should (informal)",
+    englishFull: "you should / you ought to (informal)",
+    note: "conditional mood",
+  },
+  il: {
+    pronoun: "il",
+    conjugation: "devrait",
+    combined: "il devrait",
+    english: "he should",
+    englishFull: "he should / he ought to",
+    note: "conditional mood",
+  },
+  elle: {
+    pronoun: "elle",
+    conjugation: "devrait",
+    combined: "elle devrait",
+    english: "she should",
+    englishFull: "she should / she ought to",
+    note: "conditional mood",
+  },
+  nous: {
+    pronoun: "nous",
+    conjugation: "devrions",
+    combined: "nous devrions",
+    english: "we should",
+    englishFull: "we should / we ought to",
+    note: "conditional mood",
+  },
+  vous: {
+    pronoun: "vous",
+    conjugation: "devriez",
+    combined: "vous devriez",
+    english: "you should (formal/plural)",
+    englishFull: "you should / you ought to (formal or plural)",
+    note: "conditional mood",
+  },
+  ils: {
+    pronoun: "ils",
+    conjugation: "devraient",
+    combined: "ils devraient",
+    english: "they should (masculine)",
+    englishFull: "they should / they ought to (masculine or mixed)",
+    note: "conditional mood",
+  },
+  elles: {
+    pronoun: "elles",
+    conjugation: "devraient",
+    combined: "elles devraient",
+    english: "they should (feminine)",
+    englishFull: "they should / they ought to (all feminine)",
+    note: "conditional mood",
+  },
+};
+
