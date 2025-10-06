@@ -84,6 +84,45 @@ import { top200Nouns } from "./modules/top-200-nouns.js";
 import { reading6 } from "./modules/reading-6.js";
 import { unit6Practice } from "./modules/unit-6-practice.js";
 import { unit6Exam } from "./modules/unit-6-exam.js";
+import { alphabetModule } from "./modules/alphabet.js";
+import { numbersModule } from "./modules/numbers.js";
+import { daysMonthsModule } from "./modules/days-months.js";
+import { holidaysModule } from "./modules/holidays.js";
+import { frenchCountriesModule } from "./modules/french-countries.js";
+import { languageStatsModule } from "./modules/language-stats.js";
+
+// Unit 7: Knowledge & Learning
+import { onAndPeopleModule } from "./modules/on-and-people.js";
+import { comprendreModule } from "./modules/comprendre.js";
+import { penserModule } from "./modules/penser.js";
+import { savoirModule } from "./modules/savoir.js";
+import { connaitreModule } from "./modules/connaitre.js";
+import { croireModule } from "./modules/croire.js";
+import { learningVerbsModule } from "./modules/learning-verbs.js";
+import { studyingVerbsModule } from "./modules/studying-verbs.js";
+import { knowledgeNounsModule } from "./modules/knowledge-nouns.js";
+import { discourseMarkersModule } from "./modules/discourse-markers.js";
+import { comparisonModifiersModule } from "./modules/comparison-modifiers.js";
+import { reading7 } from "./modules/reading-7.js";
+import { unit7Practice } from "./modules/unit-7-practice.js";
+import { unit7Exam } from "./modules/unit-7-exam.js";
+
+// Unit 8: Daily Life & Actions
+import { temporalWordsModule } from "./modules/temporal-words.js";
+import { reflexivePronounsModule } from "./modules/reflexive-pronouns.js";
+import { sAppelerModule } from "./modules/s-appeler.js";
+import { morningRoutineModule } from "./modules/morning-routine.js";
+import { gettingReadyModule } from "./modules/getting-ready.js";
+import { dailyReflexivesModule } from "./modules/daily-reflexives.js";
+import { reflexivePastModule } from "./modules/reflexive-past.js";
+import { reciprocalReflexivesModule } from "./modules/reciprocal-reflexives.js";
+import { commandsTuModule } from "./modules/commands-tu.js";
+import { commandsVousModule } from "./modules/commands-vous.js";
+import { irregularCommandsModule } from "./modules/irregular-commands.js";
+import { commandsPronounsModule } from "./modules/commands-pronouns.js";
+import { reading8 } from "./modules/reading-8.js";
+import { unit8Practice } from "./modules/unit-8-practice.js";
+import { unit8Exam } from "./modules/unit-8-exam.js";
 
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
@@ -248,6 +287,88 @@ const moduleConfigs = [
   reading6, // 69. READING TEST 6 - Un Voyage en Famille - Uses progressive, communication verbs, and top 200 nouns!
   unit6Practice, // 70. PRACTICE - Fill in the blanks with Unit 6 vocabulary!
   unit6Exam, // 71. UNIT 6 FINAL EXAM - Test everything from Unit 6!
+
+  // ============================================
+  // UNIT 7: KNOWLEDGE & LEARNING - Following Natural Cognitive Flow
+  // ============================================
+  // Flow: on (people) → Study → Learn → Understand → Know → Recognize → Think → Believe
+
+  // === FOUNDATION: TALKING ABOUT PEOPLE IN GENERAL ===
+  onAndPeopleModule, // 72. on (we/one/people) + les gens, tout le monde - CRITICAL for general statements!
+
+  // === STEP 1: STUDYING - The action you take ===
+  studyingVerbsModule, // 73. étudier (study) & réviser (review) - where learning begins!
+
+  // === STEP 2: LEARNING - What results from studying ===
+  learningVerbsModule, // 74. apprendre (learn) & enseigner (teach) - acquiring knowledge
+
+  // === STEP 3: UNDERSTANDING - Deeper comprehension ===
+  comprendreModule, // 75. comprendre (to understand) - rank 61, follows prendre pattern
+
+  // === STEP 4: KNOWING FACTS - What you've acquired ===
+  savoirModule, // 76. savoir (to know facts/skills) - rank 21 ⭐ "je ne sais pas"!
+
+  // === STEP 5: RECOGNIZING - Familiarity with people/places ===
+  connaitreModule, // 77. connaître (to know people/places) - rank 62, completes savoir distinction
+
+  // === STEP 6: THINKING - Forming opinions ===
+  penserModule, // 78. penser (to think) - rank 59, express opinions based on knowledge
+
+  // === STEP 7: BELIEVING - Softer convictions ===
+  croireModule, // 79. croire (to believe) - rank 60, tentative opinions
+
+  // === KNOWLEDGE VOCABULARY - Nouns for learning ===
+  knowledgeNounsModule, // 80. Essential learning nouns - question, réponse, idée, cours, école
+
+  // === DISCOURSE MARKERS - Sound like a native! ===
+  discourseMarkersModule, // 81. donc, en fait, bah, quoi - natural speech flow
+
+  // === COMPARISON COMPLETION - Modifiers ===
+  comparisonModifiersModule, // 82. tout, même, mal - completes comparison words
+
+  // === SEVENTH MILESTONE - Philosophical reading about learning! ===
+  reading7, // 83. READING TEST 7 - L'Art d'Apprendre - Meta! Reading about learning while learning!
+  unit7Practice, // 84. PRACTICE - Fill in the blanks with Unit 7 vocabulary!
+  unit7Exam, // 85. UNIT 7 FINAL EXAM - Test everything from Unit 7!
+
+  // ============================================
+  // UNIT 8: DAILY LIFE & ACTIONS - Temporal Words + Reflexive Verbs + Commands
+  // ============================================
+
+  // === TEMPORAL FOUNDATION - Sequence actions in time! ===
+  temporalWordsModule, // 86. pendant, avant, après, d'abord, ensuite, finalement - FINALLY formally taught!
+
+  // === REFLEXIVE VERBS - Describe daily routines! ===
+  reflexivePronounsModule, // 87. me, te, se, nous, vous - foundation for reflexive verbs
+  sAppelerModule, // 88. s'appeler (to be called) - FINALLY! "Je m'appelle..."
+  morningRoutineModule, // 89. se réveiller (wake up), se lever (get up) - morning sequence
+  gettingReadyModule, // 90. se laver (wash), s'habiller (dress), se préparer (get ready) - complete morning!
+  dailyReflexivesModule, // 91. se souvenir (remember), s'amuser (have fun), se dépêcher (hurry) - daily actions
+  reflexivePastModule, // 92. Reflexive verbs in past tense - je me suis réveillé(e), elle s'est levée
+  reciprocalReflexivesModule, // 93. Reciprocal reflexives - nous nous aimons, on se voit, ils se parlent
+
+  // === IMPERATIVE MOOD - Give commands! ===
+  commandsTuModule, // 94. Commands tu form - Mange! Parle! Écoute!
+  commandsVousModule, // 95. Commands vous form - Mangez! Parlez! Écoutez!
+  irregularCommandsModule, // 96. Irregular commands - Sois! Aie! Va! Fais! + Vas-y!
+  commandsPronounsModule, // 97. Commands with pronouns - Donne-le-moi! Regarde-moi! Ne le fais pas!
+
+  // === EIGHTH MILESTONE - Daily routine story! ===
+  reading8, // 98. READING TEST 8 - Ma Journée - A typical day with routines, commands, temporal words!
+  unit8Practice, // 99. PRACTICE - Fill in the blanks with Unit 8 vocabulary!
+  unit8Exam, // 100. UNIT 8 FINAL EXAM - Test everything from Unit 8!
+
+  // ============================================
+  // REFERENCE UNIT - Essential Reference Materials
+  // ============================================
+
+  // === REFERENCE MATERIALS - Always available for quick lookup! ===
+  alphabetModule, // 101. L'Alphabet - French alphabet with pronunciation
+  numbersModule, // 102. Les Nombres - Numbers from 0 to infinity
+  daysMonthsModule, // 103. Jours et Mois - Days of the week and months
+  holidaysModule, // 104. Les Fêtes - French holidays and celebrations
+  frenchCountriesModule, // 105. La Francophonie - French-speaking countries worldwide
+  languageStatsModule, // 106. Le Français en Chiffres - Fascinating language statistics
 ];
 
 // Build all lessons from configs
@@ -256,10 +377,20 @@ const allLessons = moduleConfigs.map((config, index) => {
   const moduleId = index + 1;
   const lesson = buildLesson(config, moduleId); // Pass module number
 
+  // Override titles for reference modules (101-106) to use Roman numerals
+  const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
+  let finalTitle = lesson.title;
+
+  if (moduleId >= 101 && moduleId <= 106) {
+    const romanIndex = moduleId - 101;
+    finalTitle = `Reference ${romanNumerals[romanIndex]}: ${config.title}`;
+  }
+
   // Set dynamic ID and update exercise IDs to match
   return {
     ...lesson,
     id: moduleId,
+    title: finalTitle,
     exercises: lesson.exercises.map((ex, exIdx) => ({
       ...ex,
       id: `${moduleId}.${exIdx + 1}`,
@@ -272,57 +403,85 @@ const allLessons = moduleConfigs.map((config, index) => {
 export const unitStructure = [
   {
     id: 1,
-    title: "Unit 1: Foundation",
+    title: "Unit 1: Essential Grammar",
     description:
-      "Core building blocks - pronouns, verbs, nouns, and connectors",
+      "Master pronouns (I, you, he), être (to be), avoir (to have), articles, basic nouns, and connectors",
     lessonRange: [1, 11], // Lessons 1-9 + Practice + Unit 1 Exam
     icon: "🏗️",
     color: "#3b82f6",
   },
   {
     id: 2,
-    title: "Unit 2: Composition",
+    title: "Unit 2: Asking & Describing",
     description:
-      "Functional combinations - demonstratives, questions, prepositions, and adjectives",
+      "Ask questions, use demonstratives (this/that), add descriptions with adjectives and prepositions",
     lessonRange: [12, 23], // Lessons 12-21 + Practice + Unit 2 Exam (ID 23)
     icon: "🧩",
     color: "#8b5cf6",
   },
   {
     id: 3,
-    title: "Unit 3: Expansion",
+    title: "Unit 3: Movement & Possession",
     description:
-      "Advanced pronouns and contractions - master 'I see it', 'it's mine', 'to the café', and motion verbs",
+      "Master motion verbs (go, come, leave, see), object pronouns (it/them), and possessives (mine, yours)",
     lessonRange: [24, 35], // Lessons 24-33 + Practice + Unit 3 Exam (ID 35)
     icon: "🎯",
     color: "#06b6d4",
   },
   {
     id: 4,
-    title: "Unit 4: Expression",
+    title: "Unit 4: Everyday Communication",
     description:
-      "Say more with less - negation, daily verbs, and real-world communication",
+      "Survival phrases, negation (I don't), time & location words, and essential daily verbs",
     lessonRange: [36, 47], // Lessons 36-45 + Unit 4 Practice (46) + Unit 4 Exam (47)
     icon: "💬",
     color: "#f59e0b",
   },
   {
     id: 5,
-    title: "Unit 5: Sophistication",
+    title: "Unit 5: Time & Taste",
     description:
-      "Past tense and nuance - comparisons, slang, conditionals, and essential verbs (was, had, like, eat, drink, understand)",
+      "Talk about the past (I was, I had), express preferences and opinions, order food, and add nuance with conditionals",
     lessonRange: [48, 60], // Lessons 48-58 + Reading 5 (58) + Practice (59) + Unit 5 Exam (60)
     icon: "⏳",
     color: "#ec4899",
   },
   {
     id: 6,
-    title: "Unit 6: Communication",
+    title: "Unit 6: Fluency & Mastery",
     description:
-      "Advanced expression and high-frequency words - progressive tenses, essential verbs (say, take, put, ask, order), expressing needs, and top 200 nouns",
+      "Advanced communication verbs (say, take, put, ask), progressive tenses, expressing needs, and comprehensive vocabulary",
     lessonRange: [61, 71], // Lessons 61-68 + Reading 6 (69) + Practice (70) + Unit 6 Exam (71)
     icon: "💬",
     color: "#10b981",
+  },
+  {
+    id: 7,
+    title: "Unit 7: Knowledge & Learning",
+    description:
+      "Express understanding, thinking, and learning: comprendre (understand), savoir (know), penser (think), plus discourse markers for natural speech",
+    lessonRange: [72, 85], // Lessons 72-82 + Reading 7 (83) + Practice (84) + Unit 7 Exam (85)
+    icon: "🧠",
+    color: "#f97316",
+  },
+  {
+    id: 8,
+    title: "Unit 8: Daily Life & Actions",
+    description:
+      "Sequence actions in time, describe routines, introduce yourself properly: temporal words, reflexive verbs (s'appeler, se lever, se laver), and commands",
+    lessonRange: [86, 100], // Lessons 86-97 + Reading 8 (98) + Practice (99) + Unit 8 Exam (100)
+    icon: "🌅",
+    color: "#8b5cf6",
+  },
+  {
+    id: 9,
+    title: "Reference",
+    description:
+      "Essential reference materials - alphabet, numbers, dates, holidays, French-speaking countries, and language facts",
+    lessonRange: [101, 106], // Reference modules 101-106
+    icon: "📚",
+    color: "#6366f1",
+    isReference: true, // Flag to indicate this is not a numbered unit
   },
 ];
 

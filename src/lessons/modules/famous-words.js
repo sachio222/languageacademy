@@ -26,7 +26,7 @@ export const famousWords = {
     {
       term: "Building Your Foundation",
       definition: "Starting with common, useful words builds confidence",
-      example: "These high-frequency words appear in daily conversation",
+      example: "These common words appear in daily conversation",
     },
   ],
 

@@ -5,7 +5,7 @@
  */
 
 export const top200Nouns = {
-  title: "High-Frequency Nouns - Time, People & Abstract Concepts",
+  title: "Essential Vocabulary - Time, People & Ideas",
   description:
     "Master essential nouns: l'année (year), la fois (time), la personne (person), la famille (family), le cœur (heart), l'histoire (story)",
 

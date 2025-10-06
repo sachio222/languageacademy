@@ -7,7 +7,7 @@
 export const unit6Practice = {
   title: "Unit 6 Practice - Fill in the Blanks",
   description:
-    "Complete sentences using progressive tenses, communication verbs, and high-frequency nouns from Unit 6!",
+    "Complete sentences using progressive tenses, communication verbs, and essential vocabulary from Unit 6!",
 
   // Special flags - REQUIRED for fill-in-blank modules
   isFillInTheBlank: true,

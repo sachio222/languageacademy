@@ -124,17 +124,15 @@ function ExercisePane({
 
       <div className={isReadingModule ? "reading-quiz-section" : ""}>
         <div className="exercise-header">
-          {onBackToLesson && (
-            <div className="exercise-header-left">
-              <button className="btn-back-to-lesson" onClick={onBackToLesson}>
-                ← Back to Lesson
-              </button>
-            </div>
-          )}
           <div className="exercise-title-row">
             <h3>{isReadingModule ? '📖' : '✏️'} Exercise {exercise.id}</h3>
             {isCompleted && <span className="badge-done">✓ Done</span>}
           </div>
+          {onBackToLesson && (
+            <button className="btn-back-to-lesson" onClick={onBackToLesson}>
+              ← Back to Lesson
+            </button>
+          )}
         </div>
 
         <div className="exercise-instruction">

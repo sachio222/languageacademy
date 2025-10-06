@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ChevronDown, ChevronRight } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 
 /**
@@ -29,7 +30,7 @@ function VocabularyReference({ vocabulary, title }) {
       >
         <h4>📖 {title || 'Vocabulary Reference'}</h4>
         <button className="toggle-btn">
-          {isExpanded ? '▼' : '▶'}
+          {isExpanded ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
         </button>
       </div>
 

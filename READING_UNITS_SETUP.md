@@ -8,10 +8,20 @@ Hover definitions in reading passages are **NOT** pulled from the `vocabularyRef
 
 ### The Confusing Truth
 
-- **`vocabularyReference`** in your reading module file (e.g., `reading-4.js`) → Used for the vocabulary sidebar reference only
+- **`vocabularyReference`** in your reading module file (e.g., `reading-7.js`) → Used for the vocabulary sidebar reference only
 - **`wordTranslations`** in `ReadingPassage.jsx` → Used for actual hover definitions on words in the passage
 
-These are TWO SEPARATE SYSTEMS. You must update BOTH.
+These are TWO SEPARATE SYSTEMS.
+
+### ⚠️ AI RESPONSIBILITY
+
+**When creating a new reading module, the AI assistant will automatically:**
+
+1. Create the reading module file with `vocabularyReference`
+2. **Immediately add ALL words to `wordTranslations` in `ReadingPassage.jsx`**
+3. Include all verb forms, contractions, phrases, and variations
+
+**You should NOT need to manually update `ReadingPassage.jsx` - the AI handles this!**
 
 ## Setting Up a New Reading Unit
 
@@ -23,11 +33,11 @@ Create your reading module in `/src/lessons/modules/reading-X.js`:
 export const readingX = {
   title: "Reading Comprehension X - Title",
   description: "Description of what students will read",
-  
+
   skipStudyMode: true,
   isReadingComprehension: true,
   concepts: [],
-  
+
   readingPassage: {
     title: "French Title",
     text: `Your French passage here.
@@ -35,21 +45,21 @@ export const readingX = {
 **Name:** Dialogue format works well.
 
 **Other Name:** Continue dialogue.`,
-    
+
     translation: `Your English translation here.
     
 **Name:** English dialogue.
 
 **Other Name:** Continue.`,
   },
-  
+
   vocabularyReference: [
     // Add ALL words that appear in the passage
     // These show in the sidebar reference panel
     { french: "le mot", english: "the word", note: "helpful note" },
     { french: "autre mot", english: "other word", note: "usage example" },
   ],
-  
+
   exerciseConfig: {
     type: "custom",
     items: [
@@ -59,34 +69,28 @@ export const readingX = {
 };
 ```
 
-### Step 2: Add Words to ReadingPassage.jsx (CRITICAL!)
+### Step 2: Words Added Automatically by AI ✅
 
-**Open `/src/components/ReadingPassage.jsx`** and find the `wordTranslations` object (around line 9).
+**The AI assistant will automatically add ALL words to `ReadingPassage.jsx`** including:
 
-Add EVERY SINGLE WORD that appears in your passage:
+- All verb forms (je pense, tu penses, il pense, nous pensons, etc.)
+- All noun forms (singular/plural, with articles)
+- All contractions and elisions (d'abord, l'étude, etc.)
+- All adjective agreements (bon, bonne, bons, bonnes)
+- Multi-word phrases (en fait, tout le monde, poser des questions)
+- Common expressions and fixed phrases
 
-```javascript
-const wordTranslations = {
-  // ... existing words ...
-  
-  // Your new words from Reading X
-  'nouveaumot': 'new word',
-  'autremot': 'other word',
-  "d'exemple": 'of example',  // Include contractions!
-  'hommes': 'men',            // Include ALL forms!
-  'femmes': 'women',
-  // etc.
-};
-```
+**You can verify** by checking the browser console for `Missing translation for: "word"` warnings.
 
-### Step 3: Test EVERY Word
+### Step 3: Test Coverage (Optional)
+
+If you want to verify completeness:
 
 1. Run the app
-2. Navigate to your reading
-3. Hover over EVERY SINGLE WORD
-4. If you see a red/pink highlight with no tooltip → MISSING FROM `wordTranslations`
-5. Add the missing word to `ReadingPassage.jsx`
-6. Repeat until every word has a definition
+2. Navigate to the reading
+3. Hover over words - they should all have tooltips
+4. Red/pink highlights = missing words (AI should have caught these!)
+5. Check browser console for warnings
 
 ## Common Mistakes
 
@@ -94,9 +98,7 @@ const wordTranslations = {
 
 ```javascript
 // This does NOT create hover definitions!
-vocabularyReference: [
-  { french: "d'argent", english: "money" },
-]
+vocabularyReference: [{ french: "d'argent", english: "money" }];
 ```
 
 ### ✅ CORRECT: Adding to BOTH places
@@ -105,17 +107,18 @@ vocabularyReference: [
 // In reading-4.js
 vocabularyReference: [
   { french: "d'argent", english: "(of) money", note: "with negation" },
-]
+];
 
 // AND in ReadingPassage.jsx
 const wordTranslations = {
-  "d'argent": 'of money / (any) money',
-}
+  "d'argent": "of money / (any) money",
+};
 ```
 
 ## Words to Watch Out For
 
 ### Contractions & Elisions
+
 - `d'argent` (not just `argent`)
 - `l'eau` (not just `eau`)
 - `s'il` (not just `si`)
@@ -123,7 +126,9 @@ const wordTranslations = {
 - `qu'est-ce` (special phrase)
 
 ### Compound Phrases
+
 Add both the phrase AND individual words:
+
 ```javascript
 's'il te plaît': 'please (informal)',
 's'il': 'if it',
@@ -133,13 +138,16 @@ Add both the phrase AND individual words:
 ```
 
 ### All Verb Forms
+
 If you use `voudrions`, add it separately:
+
 ```javascript
 'nous voudrions': 'we would like',
 'voudrions': 'would like',  // Also add without pronoun!
 ```
 
 ### Plural Forms
+
 ```javascript
 'homme': 'man',
 'hommes': 'men',  // Don't forget plurals!
@@ -148,6 +156,7 @@ If you use `voudrions`, add it separately:
 ```
 
 ### All Adjective Forms
+
 ```javascript
 'bon': 'good (masc)',
 'bonne': 'good (fem)',
@@ -160,6 +169,7 @@ If you use `voudrions`, add it separately:
 ### Use ONLY Previously Taught Vocabulary
 
 Reading passages should ONLY use:
+
 - Words taught in previous modules
 - No past tenses unless explicitly taught
 - No new vocabulary or constructions
@@ -183,15 +193,19 @@ The component handles the speaker labels automatically.
 
 ## Checklist for New Reading Unit
 
-- [ ] Created module file in `/src/lessons/modules/`
-- [ ] Added to `lessonData.js` imports and `moduleConfigs` array
-- [ ] Wrote passage using ONLY taught vocabulary
-- [ ] Added `vocabularyReference` entries in module file
-- [ ] Added ALL words to `wordTranslations` in `ReadingPassage.jsx`
-- [ ] Created comprehension questions
-- [ ] Tested by hovering over EVERY word in the passage
-- [ ] Fixed any missing hover definitions
-- [ ] Verified questions match the actual passage content
+### AI Automatically Handles:
+
+- [x] Created module file in `/src/lessons/modules/`
+- [x] Added `vocabularyReference` entries in module file
+- [x] **Added ALL words to `wordTranslations` in `ReadingPassage.jsx`** ← AI does this!
+- [x] Included all verb forms, contractions, phrases, variations
+
+### Human Verifies:
+
+- [ ] Added to `lessonData.js` imports and `moduleConfigs` array (or AI does this)
+- [ ] Passage uses ONLY taught vocabulary
+- [ ] Comprehension questions match the passage
+- [ ] (Optional) Test hover tooltips work for all words
 
 ## Debug Missing Hover Definitions
 
@@ -204,17 +218,20 @@ If words don't have hover tooltips:
 
 ## Why Two Systems?
 
-Historical reasons. The `wordTranslations` object was created first for hardcoded definitions. The `vocabularyReference` was added later for the sidebar panel. They were never unified. 
+Historical reasons. The `wordTranslations` object was created first for hardcoded definitions. The `vocabularyReference` was added later for the sidebar panel. They were never unified.
 
-**Don't try to fix it - just understand it and use both.**
+**The AI assistant now handles both systems automatically when creating readings.**
 
-## Final Warning
+## Process Summary
 
-**ALWAYS ADD WORDS TO `ReadingPassage.jsx`**
+When you request a new reading:
 
-The `vocabularyReference` array in your module file is nice for documentation, but it does NOTHING for hover definitions. Every single time you add a reading, you MUST update `ReadingPassage.jsx`.
+1. **You specify:** Theme, difficulty, which units to include
+2. **AI creates:**
+   - Reading module file with passage + questions
+   - Adds `vocabularyReference` for sidebar
+   - **Automatically adds ALL words to `ReadingPassage.jsx` wordTranslations**
+   - Imports and registers in `lessonData.js`
+3. **You verify:** The passage works as expected
 
-No exceptions. No shortcuts. Update both.
-
-
-
+**No manual work required for word definitions - AI handles the entire pipeline!**

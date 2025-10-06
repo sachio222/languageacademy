@@ -112,7 +112,7 @@
 .vocab-intro-table th {
   background: transparent;
   color: #666666;
-  padding: 0 1.25rem 1rem 0;
+  padding: 0 1.25rem 1rem 0.75rem;
   text-align: left;
   font-weight: 500;
   font-size: 0.875rem;
@@ -122,7 +122,7 @@
 }
 
 .vocab-intro-table td {
-  padding: 1.25rem 1.25rem 1.25rem 0;
+  padding: 1.25rem 1.25rem 1.25rem 0.75rem;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -131,15 +131,12 @@
 }
 
 .vocab-intro-table tbody tr {
-  transition: all 0.15s;
+  transition: background-color 0.15s;
+  border-radius: 4px;
 }
 
 .vocab-intro-table tbody tr:hover {
-  background: transparent;
-}
-
-.vocab-intro-table tbody tr:hover td {
-  padding-left: 0.5rem;
+  background: #fafbfc;
 }
 
 .vocab-french-intro {

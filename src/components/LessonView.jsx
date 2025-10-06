@@ -198,6 +198,7 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
       ) : lesson.isUnitExam ? (
         <div className="unit-exam-container">
           <UnitExam
+            lesson={lesson}
             unitNumber={lesson.unitNumber}
             onPassExam={() => handleNextModule()}
             onRetryUnit={onBack}

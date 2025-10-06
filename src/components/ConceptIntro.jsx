@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ChevronDown, ChevronRight } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 
 /**
@@ -33,7 +34,9 @@ function ConceptIntro({ lesson, onStartStudying }) {
               onClick={() => setShowVocab(!showVocab)}
             >
               <h3>📚 Vocabulary You'll Learn</h3>
-              <button className="toggle-btn">{showVocab ? '▼' : '▶'}</button>
+              <button className="toggle-btn">
+                {showVocab ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+              </button>
             </div>
 
             {showVocab && (
@@ -85,7 +88,9 @@ function ConceptIntro({ lesson, onStartStudying }) {
               onClick={() => setShowConcepts(!showConcepts)}
             >
               <h3>💡 Key Concepts</h3>
-              <button className="toggle-btn">{showConcepts ? '▼' : '▶'}</button>
+              <button className="toggle-btn">
+                {showConcepts ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+              </button>
             </div>
 
             {showConcepts && (
@@ -119,7 +124,9 @@ function ConceptIntro({ lesson, onStartStudying }) {
               onClick={() => setShowHelp(!showHelp)}
             >
               <h3>ℹ️ How This Module Works</h3>
-              <button className="toggle-btn">{showHelp ? '▼' : '▶'}</button>
+              <button className="toggle-btn">
+                {showHelp ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+              </button>
             </div>
 
             {showHelp && (

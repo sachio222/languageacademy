@@ -6,15 +6,33 @@ import FrenchCharacterPicker from './FrenchCharacterPicker';
  * Unit Exam - Comprehensive test covering an entire unit
  * Tests ability to write complete French sentences from scratch
  */
-function UnitExam({ unitNumber, onPassExam, onRetryUnit }) {
+function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
   const [currentSection, setCurrentSection] = useState(0);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [results, setResults] = useState(null);
   const inputRefs = useRef({});
 
-  // Unit 1 Exam - Cover lessons 1-9
-  const examData = {
+  // Use lesson exercises if provided (Units 2+), otherwise use hardcoded Unit 1
+  const examData = lesson ? {
+    title: lesson.title,
+    description: lesson.description,
+    passingScore: 0.8, // 80%
+    sections: [
+      {
+        title: `Unit ${unitNumber} Comprehensive Test`,
+        subtitle: "All concepts from this unit",
+        questions: lesson.exercises.map(ex => ({
+          id: ex.id,
+          prompt: ex.prompt,
+          expectedAnswer: ex.expectedAnswer,
+          hint: ex.hint,
+          acceptableAnswers: ex.acceptableAnswers || [],
+        })),
+      },
+    ],
+  } : {
+    // Fallback: Unit 1 Exam - Cover lessons 1-9
     title: "Unit 1: Foundation Exam",
     description: "Test your ability to write basic French sentences",
     passingScore: 0.8, // 80%
@@ -290,15 +308,14 @@ function UnitExam({ unitNumber, onPassExam, onRetryUnit }) {
                   correct.
                 </p>
                 <p>
-                  You've mastered Unit 1: Foundation! You can now form basic French
-                  sentences with pronouns, verbs, nouns, and connectors.
+                  You've mastered Unit {unitNumber}! Ready for the next challenge.
                 </p>
               </div>
               <button
                 className="btn-primary btn-large"
                 onClick={() => onPassExam(unitNumber)}
               >
-                Continue to Unit 2 →
+                Continue to Unit {unitNumber + 1} →
               </button>
             </div>
           ) : (

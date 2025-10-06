@@ -7,7 +7,7 @@
 export const everydayNouns = {
   title: "Everyday Nouns - Life & World",
   description:
-    "Essential high-frequency nouns for real conversations: le monde (world), la vie (life), l'eau (water), le pain (bread)",
+    "Essential nouns for everyday conversations: le monde (world), la vie (life), l'eau (water), le pain (bread)",
 
   concepts: [
     {

@@ -14,132 +14,134 @@
 }
 
 .btn-skip {
-  background: #ffffff;
-  color: #1e293b;
-  border: 1px solid #e2e8f0;
+  background: transparent;
+  color: #222222;
+  border: 1px solid #ebebeb;
   padding: 0.625rem 1.25rem;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 0.9375rem;
-  transition: all 0.2s;
+  transition: all 0.15s;
   font-weight: 500;
 }
 
 .btn-skip:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;
+  background: #fafbfc;
 }
 
 .study-mode {
   background: #ffffff;
-  border-radius: 8px;
-  padding: 2.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  border: none;
 }
 
 .study-header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .btn-back-to-concepts {
-  background: #ffffff;
-  color: #1e293b;
-  border: 1px solid #e2e8f0;
+  background: transparent;
+  color: #222222;
+  border: 1px solid #ebebeb;
   padding: 0.625rem 1.25rem;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 0.9375rem;
-  transition: all 0.2s;
+  transition: all 0.15s;
   font-weight: 500;
 }
 
 .btn-back-to-concepts:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;
+  background: #fafbfc;
 }
 
 .study-header h3 {
-  color: #1e293b;
-  margin-bottom: 0.75rem;
-  font-size: 1.375rem;
-  font-weight: 600;
+  color: #222222;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   letter-spacing: -0.02em;
 }
 
 .study-header p {
-  color: #64748b;
-  margin-bottom: 1.25rem;
-  font-size: 1rem;
+  color: #717171;
+  margin-bottom: 2rem;
+  font-size: 0.9375rem;
 }
 
 .study-progress-bar {
-  height: 3px;
-  background: #e2e8f0;
-  border-radius: 2px;
+  height: 2px;
+  background: #ebebeb;
+  border-radius: 1px;
   overflow: hidden;
-  margin: 1.25rem auto;
-  max-width: 400px;
+  margin: 1.5rem auto;
+  max-width: 300px;
 }
 
 .study-progress-fill {
   height: 100%;
-  background: #3b82f6;
+  background: linear-gradient(90deg, #3b82f6 0%, #10b981 100%);
   transition: width 0.3s ease;
 }
 
 .study-progress-text {
-  color: #64748b;
-  font-size: 0.9375rem;
+  color: #b0b0b0;
+  font-size: 0.8125rem;
+  font-weight: 400;
 }
 
 /* Flashcard */
 .flashcard {
-  background: #1e293b;
-  border-radius: 8px;
-  padding: 3.5rem;
-  min-height: 380px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 16px;
+  padding: 5rem 3rem;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 2.5rem;
-  border: 1px solid #334155;
+  margin-bottom: 3rem;
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .flashcard-front,
 .flashcard-back {
   width: 100%;
+  max-width: 600px;
 }
 
 .flashcard-label {
   color: #94a3b8;
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 1.25rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 2rem;
   font-weight: 600;
 }
 
 .flashcard-content h2,
 .flashcard-answer h2 {
   color: #ffffff;
-  font-size: 2.75rem;
+  font-size: 3.5rem;
   margin: 0;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 .flashcard-article {
   color: #e2e8f0;
-  font-size: 1.25rem;
-  margin-top: 1.25rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
   font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -148,88 +150,106 @@
   background: #ffffff;
   color: #1e293b;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 6px;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 3rem;
   transition: all 0.15s;
+  letter-spacing: -0.01em;
 }
 
 .reveal-btn:hover {
   background: #f1f5f9;
+  transform: scale(1.02);
 }
 
 .flashcard-hint,
 .flashcard-instruction {
-  background: rgba(255, 255, 255, 0.1);
-  color: #e2e8f0;
-  padding: 1.25rem;
-  border-radius: 6px;
-  margin-top: 1.75rem;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  padding: 0.5rem 0.875rem;
+  border-radius: 20px;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  max-width: 90%;
 }
 
-.flashcard-hint {
-  border-left: 3px solid #fbbf24;
-}
-
-.flashcard-instruction {
-  border-left: 3px solid #64748b;
+.flashcard-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Study Navigation */
 .study-navigation {
   display: flex;
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .study-navigation .btn-nav {
   flex: 1;
-  max-width: 220px;
+  max-width: 200px;
   padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.study-navigation .btn-nav:not(.btn-primary) {
+  background: transparent;
+  color: #222222;
+  border: 1px solid #ebebeb;
+}
+
+.study-navigation .btn-nav:not(.btn-primary):hover {
+  background: #fafbfc;
 }
 
 /* Vocabulary Reference */
 .vocab-reference {
-  background: #ffffff;
-  border-radius: 6px;
-  /* margin: 1.25rem 1.75rem; */
+  /* background: #fafbfc; */
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #e2e8f0;
+  border: none;
+  margin-top: 1.5rem;
 }
 
 .vocab-header {
-  background: #f8fafc;
-  padding: 1rem 1.25rem;
+  background: transparent;
+  padding: 1rem 0 0.75rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e2e8f0;
-  transition: background 0.2s;
+  border-bottom: 1px solid #ebebeb;
+  transition: opacity 0.15s;
 }
 
 .vocab-header:hover {
-  background: #f1f5f9;
+  opacity: 0.7;
 }
 
 .vocab-header h4 {
   margin: 0;
-  color: #1e293b;
-  font-size: 0.9375rem;
+  color: #b0b0b0;
+  font-size: 0.6875rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .toggle-btn {
   background: none;
   border: none;
-  color: #64748b;
-  font-size: 0.9375rem;
+  color: #b0b0b0;
+  font-size: 0.8125rem;
   cursor: pointer;
   padding: 0.25rem;
 }
@@ -244,60 +264,80 @@
 }
 
 .vocab-table th {
-  background: #f8fafc;
-  padding: 1rem;
+  background: transparent;
+  padding: 0.75rem 0;
   text-align: left;
-  font-size: 0.875rem;
+  font-size: 0.625rem;
   font-weight: 600;
-  color: #64748b;
-  border-bottom: 1px solid #e2e8f0;
+  color: #b0b0b0;
+  border-bottom: 1px solid #ebebeb;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .vocab-table td {
-  padding: 1rem;
-  border-bottom: 1px solid #f1f5f9;
-  font-size: 0.9375rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.8125rem;
+}
+
+.vocab-table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 .vocab-french {
   color: #2563eb;
   font-weight: 600;
   font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 0.8125rem;
 }
 
 .vocab-french.feminine {
-  color: #be185d;
-  font-weight: 700;
+  color: #ec4899;
+  font-weight: 600;
 }
 
 .vocab-french.masculine {
   color: #2563eb;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .vocab-english {
-  color: #64748b;
+  color: #222222;
+  font-size: 0.8125rem;
 }
 
 .vocab-note {
-  color: #94a3b8;
-  font-size: 0.875rem;
+  color: #b0b0b0;
+  font-size: 0.75rem;
   font-style: italic;
 }
 
 /* Responsive */
 @media (max-width: 968px) {
   .study-container {
-    padding: 1.75rem;
+    padding: 1.5rem;
+  }
+
+  .study-mode {
+    padding: 2rem 1.5rem;
   }
 
   .flashcard {
-    padding: 2.5rem 1.5rem;
+    padding: 3rem 1.5rem;
     min-height: 320px;
   }
 
   .flashcard-content h2,
   .flashcard-answer h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
+  }
+
+  .study-navigation {
+    flex-direction: column;
+  }
+
+  .study-navigation .btn-nav {
+    max-width: none;
   }
 }

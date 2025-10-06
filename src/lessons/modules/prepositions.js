@@ -1,14 +1,14 @@
 /**
  * Prepositions Module
- * Essential prepositions: avec, dans, sur, à, de, pour
+ * Essential prepositions: avec, dans, sur, sous, devant, derrière, entre, à, de, pour
  * Critical connectors for real French sentences
  */
 
 export const prepositions = {
   // id and module number are set dynamically
-  title: "Prepositions - With, In, On, To",
+  title: "Prepositions - Spatial & Relational Words",
   description:
-    "Connect words together! Combine with stressed pronouns: 'avec moi' (with me), 'pour toi' (for you) - essential for real sentences.",
+    "Connect words together! avec (with), dans (in), sur (on), sous (under), devant (in front), derrière (behind), entre (between), à (to/at), de (of/from), pour (for)",
 
   concepts: [
     {
@@ -16,7 +16,20 @@ export const prepositions = {
       definition:
         "Small words that show relationships between nouns and pronouns",
       example:
-        "avec moi (with me), dans la maison (in the house), pour toi (for you)",
+        "avec moi (with me), dans la maison (in the house), sous la table (under the table)",
+    },
+    {
+      term: "Spatial Prepositions",
+      definition:
+        "Describe physical location: in, on, under, in front, behind, between",
+      example:
+        "sur la table (on the table), sous le livre (under the book), devant la maison (in front of the house)",
+    },
+    {
+      term: "Relational Prepositions",
+      definition: "Show relationships: with, for, to, at, of, from",
+      example:
+        "avec toi (with you), pour moi (for me), à Paris (to/at Paris), de France (from France)",
     },
     {
       term: "Use with Stressed Pronouns!",
@@ -24,21 +37,29 @@ export const prepositions = {
       example: "avec moi ✓ (not avec je ✗), pour toi ✓ (not pour tu ✗)",
     },
     {
-      term: "High Frequency",
-      definition: "These 6 prepositions are extremely common!",
-      example: "You'll use these in almost every sentence",
-    },
-    {
       term: "Building Real Sentences",
       definition: "Combine with verbs, nouns, and stressed pronouns",
-      example: "je suis avec toi (I am with you), le chat est dans la maison",
+      example:
+        "le chat est sous la table (the cat is under the table), je suis devant la maison (I am in front of the house)",
     },
   ],
 
   vocabularyReference: [
     { french: "avec", english: "with", note: "with friends, with you" },
-    { french: "dans", english: "in", note: "in the house, in the car" },
-    { french: "sur", english: "on", note: "on the table" },
+    {
+      french: "dans",
+      english: "in / inside",
+      note: "in the house, in the car",
+    },
+    { french: "sur", english: "on / on top of", note: "on the table" },
+    { french: "sous", english: "under / beneath", note: "under the table" },
+    {
+      french: "devant",
+      english: "in front of / before",
+      note: "devant la maison",
+    },
+    { french: "derrière", english: "behind", note: "derrière la porte" },
+    { french: "entre", english: "between", note: "entre les deux" },
     { french: "à", english: "to / at", note: "to Paris, at the café" },
     { french: "de", english: "of / from", note: "of the house, from Paris" },
     { french: "pour", english: "for", note: "for you, for friends" },
@@ -153,6 +174,82 @@ export const prepositions = {
               "After 'pour', use stressed pronoun 'toi' not subject pronoun 'tu'",
           },
         ],
+      },
+      {
+        instruction: "Say 'under'",
+        prompt: "under",
+        hint: "Opposite of 'sur' (on) - beneath",
+        expectedAnswer: "sous",
+        wrongAnswers: [
+          {
+            answer: "sur",
+            feedback: "That's 'on', not 'under'!",
+          },
+        ],
+      },
+      {
+        instruction: "Say 'the cat is under the table'",
+        prompt: "the cat is under the table",
+        hint: "le chat + est + sous + la table",
+        expectedAnswer: "le chat est sous la table",
+        wrongAnswers: [
+          {
+            answer: "le chat est sur la table",
+            feedback: "That means 'on the table' - use 'sous' for under!",
+          },
+        ],
+      },
+      {
+        instruction: "Say 'in front of'",
+        prompt: "in front of",
+        hint: "Position - facing something",
+        expectedAnswer: "devant",
+        wrongAnswers: [
+          {
+            answer: "derrière",
+            feedback: "That means 'behind', not 'in front of'!",
+          },
+        ],
+      },
+      {
+        instruction: "Say 'I am in front of the house'",
+        prompt: "I am in front of the house",
+        hint: "je suis + devant + la maison",
+        expectedAnswer: "je suis devant la maison",
+        wrongAnswers: [],
+      },
+      {
+        instruction: "Say 'behind'",
+        prompt: "behind",
+        hint: "Opposite of 'devant' (in front)",
+        expectedAnswer: "derrière",
+        wrongAnswers: [
+          {
+            answer: "devant",
+            feedback: "That means 'in front', not 'behind'!",
+          },
+        ],
+      },
+      {
+        instruction: "Say 'the book is behind the door'",
+        prompt: "the book is behind the door",
+        hint: "le livre + est + derrière + la porte",
+        expectedAnswer: "le livre est derrière la porte",
+        wrongAnswers: [],
+      },
+      {
+        instruction: "Say 'between'",
+        prompt: "between",
+        hint: "Position between two things",
+        expectedAnswer: "entre",
+        wrongAnswers: [],
+      },
+      {
+        instruction: "Say 'I am between friends'",
+        prompt: "I am between friends",
+        hint: "je suis + entre + les amis",
+        expectedAnswer: "je suis entre les amis",
+        wrongAnswers: [],
       },
     ],
   },

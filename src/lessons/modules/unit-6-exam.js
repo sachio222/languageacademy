@@ -6,7 +6,7 @@
 export const unit6Exam = {
   title: "Unit 6 Final Exam - Communication",
   description:
-    "Test everything from Unit 6! Progressive tenses, future forms, communication verbs, and high-frequency nouns.",
+    "Test everything from Unit 6! Progressive tenses, future forms, communication verbs, and essential vocabulary.",
 
   // Special flags
   isUnitExam: true,

@@ -196,7 +196,7 @@
   border-radius: 0;
   border: none;
   border-bottom: 1px solid #f0f0f0;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease;
 }
 
 .vocabulary-summary-item:last-child {
@@ -204,8 +204,7 @@
 }
 
 .vocabulary-summary-item:hover {
-  background: transparent;
-  padding-left: 0.5rem;
+  background: #fafbfc;
 }
 
 .vocab-french {
