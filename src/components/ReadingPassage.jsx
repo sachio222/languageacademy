@@ -15,6 +15,7 @@ const wordTranslations = {
   'non': 'no',
   'pardon': 'excuse me',
   'salut': 'hi/bye',
+  'au revoir': 'goodbye',
   'voilà': 'there it is',
   'café': 'coffee',
   'bon': 'good',
@@ -50,7 +51,9 @@ const wordTranslations = {
   "j'ai": 'I have',
   "n'as": "don't have",
   'as': 'have',
+  'as-tu': 'do you have',
   'a': 'has',
+  'a-t-il': 'does he have',
   'avons': 'have',
   'avez': 'have',
   'ont': 'have',
@@ -77,8 +80,15 @@ const wordTranslations = {
   'amie': 'friend (fem)',
   'homme': 'man',
   'femme': 'woman',
+  'garçon': 'boy',
+  'fille': 'girl',
   'enfant': 'child',
   'enfants': 'children',
+  "d'enfants": 'of children / (any) children',
+  'animal': 'animal',
+  'animaux': 'animals',
+  'des animaux': 'animals / some animals',
+  'les animaux': 'the animals',
   'chose': 'thing',
   'choses': 'things',
   'jour': 'day',
@@ -163,6 +173,7 @@ const wordTranslations = {
   // Common contractions/phrases
   "c'est": "it's",
   'ça': 'that/it',
+  'ça va': "it's going / how are you",
   'ce': 'this/that',
   'cette': 'this/that (fem)',
   'ces': 'these/those',
@@ -783,6 +794,7 @@ const wordTranslations = {
   'paie': 'pay',
   'je paie': 'I pay',
   'moi aussi': 'me too',
+  'content': 'happy (masc)',
   'contents': 'happy (plural)',
   'que': 'than/that',
   'hommes': 'men',
@@ -911,6 +923,9 @@ const wordTranslations = {
   'la plus belle': 'the most beautiful',
   'paris': 'Paris - Capital of France',
   'Paris': 'Paris - Capital of France',
+  'Jardin des Tuileries': 'Tuileries Garden',
+  'le Jardin des Tuileries': 'the Tuileries Garden',
+  'au Jardin des Tuileries': 'at the Tuileries Garden',
   'la Tour Eiffel': 'The Eiffel Tower - 324m tall',
   'Tour Eiffel': 'Eiffel Tower - Iconic landmark',
   'voir la Tour Eiffel': 'to see the Eiffel Tower',
@@ -1473,20 +1488,38 @@ const wikipediaEntries = {
   'la sorbonne': {
     name: 'La Sorbonne',
     description: 'Historic university in Paris, founded 1257, one of the world\'s oldest and most prestigious universities',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg/320px-P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Coat_of_arms_of_the_University_of_Paris.svg/330px-Coat_of_arms_of_the_University_of_Paris.svg.png',
     url: 'https://en.wikipedia.org/wiki/University_of_Paris'
   },
   'La Sorbonne': {
     name: 'La Sorbonne',
     description: 'Historic university in Paris, founded 1257, one of the world\'s oldest and most prestigious universities',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg/320px-P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Coat_of_arms_of_the_University_of_Paris.svg/330px-Coat_of_arms_of_the_University_of_Paris.svg.png',
     url: 'https://en.wikipedia.org/wiki/University_of_Paris'
   },
   'Sorbonne': {
     name: 'La Sorbonne',
     description: 'Historic university in Paris, founded 1257, one of the world\'s oldest and most prestigious universities',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg/320px-P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Coat_of_arms_of_the_University_of_Paris.svg/330px-Coat_of_arms_of_the_University_of_Paris.svg.png',
     url: 'https://en.wikipedia.org/wiki/University_of_Paris'
+  },
+  'Jardin des Tuileries': {
+    name: 'Jardin des Tuileries',
+    description: 'Historic public garden in Paris, created in 1564, located between the Louvre and Place de la Concorde',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/320px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg',
+    url: 'https://en.wikipedia.org/wiki/Tuileries_Garden'
+  },
+  'le Jardin des Tuileries': {
+    name: 'Jardin des Tuileries',
+    description: 'Historic public garden in Paris, created in 1564, located between the Louvre and Place de la Concorde',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/320px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg',
+    url: 'https://en.wikipedia.org/wiki/Tuileries_Garden'
+  },
+  'au Jardin des Tuileries': {
+    name: 'Jardin des Tuileries',
+    description: 'Historic public garden in Paris, created in 1564, located between the Louvre and Place de la Concorde',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/320px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg',
+    url: 'https://en.wikipedia.org/wiki/Tuileries_Garden'
   }
 };
 
@@ -1541,6 +1574,7 @@ function ReadingPassage({ passage }) {
       { phrase: "s'il te plait", translation: "please (informal)" },
       { phrase: "excusez-moi", translation: "excuse me" },
       { phrase: "merci beaucoup", translation: "thank you very much" },
+      { phrase: "merci à toi", translation: "thank you (to you)" },
       { phrase: "c'est combien", translation: "how much is it?" },
       { phrase: "combien est-ce", translation: "how much is it?" },
       { phrase: "est-ce que", translation: "question marker" },
@@ -1560,6 +1594,9 @@ function ReadingPassage({ passage }) {
       { phrase: "nulle part", translation: "nowhere" },
 
       // Proper nouns - multi-word
+      { phrase: "Jardin des Tuileries", translation: "Tuileries Garden" },
+      { phrase: "le Jardin des Tuileries", translation: "the Tuileries Garden" },
+      { phrase: "au Jardin des Tuileries", translation: "at the Tuileries Garden" },
       { phrase: "la Tour Eiffel", translation: "the Eiffel Tower" },
       { phrase: "Tour Eiffel", translation: "Eiffel Tower" },
       { phrase: "la Sorbonne", translation: "the Sorbonne" },

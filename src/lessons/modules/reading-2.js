@@ -15,61 +15,89 @@ export const reading2 = {
   concepts: [],
 
   readingPassage: {
-    title: "Au Café (At the Café)",
-    text: `**Marie:** Bonjour! Comment ça va?
+    title: "Les Amis au Café (Friends at the Café)",
+    text: `**Paul:** Bonjour Marie! Comment ça va?
 
-**Paul:** Ça va très bien, merci. Tu veux un bon café avec moi?
+**Marie:** Ça va bien, merci! Et toi?
 
-**Marie:** Oui! C'est combien pour le café?
+**Paul:** Très bien! Tu veux un café avec moi?
 
-**Paul:** Un café. Je veux un petit café avec toi. Tu es avec un ami aussi?
+**Marie:** Oui, je veux un café. Qu'est-ce que c'est, ça?
 
-**Marie:** Non, mais combien de chats as-tu?
+**Paul:** Ça? C'est un livre pour mon ami Pierre.
 
-**Paul:** Moi? Je suis avec lui. Il a des vieux livres dans la grande maison. Il a des chats aussi!
+**Marie:** Ce livre est pour lui? C'est un bon livre?
 
-**Marie:** Qu'est-ce que c'est? Ce livre est pour moi?
+**Paul:** Oui, c'est un très bon livre! Pierre a une grande maison avec beaucoup de livres.
 
-**Paul:** Non, ce vieux livre est pour lui. Mais tu veux ce livre aussi?
+**Marie:** Où est la maison de Pierre?
 
-**Marie:** Non merci. Mais je veux ce petit chat! Où est le chat?
+**Paul:** Elle est dans la ville. C'est une nouvelle maison. Tu peux voir la maison avec moi?
 
-**Paul:** Le petit chat est sur la nouvelle voiture. Il est très beau. Voilà! Il est pour toi!
+**Marie:** Oui! Je veux voir cette maison. Mais où est Pierre?
 
-**Marie:** Pour moi? Combien est-ce?
+**Paul:** Il est avec les enfants. Les enfants sont au Jardin des Tuileries.
 
-**Paul:** C'est pour toi! Le chat est bon!
+**Marie:** Il a combien d'enfants?
 
-**Marie:** Merci! J'ai le beau chat. Au revoir!
+**Paul:** Il a deux enfants. Un grand garçon et une petite fille. Ils sont très bon!
 
-**Paul:** Au revoir! Salut!`,
-    translation: `**Marie:** Hello! How's it going?
+**Marie:** Oh! J'ai un chat dans ma voiture. Les enfants peuvent voir le chat?
 
-**Paul:** It's going very well, thank you. Do you want a good coffee with me?
+**Paul:** Oui! Pierre et les enfants veulent voir ton chat. Où est ta voiture?
 
-**Marie:** Yes! How much is it for the coffee?
+**Marie:** Elle est là! Voilà ma voiture. Le chat est petit mais très beau.
 
-**Paul:** One coffee. I want a small coffee with you. Are you with a friend too?
+**Paul:** Il est très beau! Et moi, j'ai un chien aussi.
 
-**Marie:** No, but how many cats do you have?
+**Marie:** Tu as un chien? Où est le chien?
 
-**Paul:** Me? I am with him. He has old books in the big house. He has cats too!
+**Paul:** Il est avec moi dans cette voiture. C'est un vieux chien, mais il est bon.
 
-**Marie:** What is that? Is this book for me?
+**Marie:** Bon! Nous pouvons aller chez Pierre avec les animaux!
 
-**Paul:** No, this old book is for him. But do you want this book too?
+**Paul:** Oui! Allons-y! Pierre va être très content!`,
+    translation: `**Paul:** Hello Marie! How's it going?
 
-**Marie:** No thank you. But I want this small cat! Where is the cat?
+**Marie:** It's going well, thank you! And you?
 
-**Paul:** The small cat is on the new car. It's very beautiful. There it is! It's for you!
+**Paul:** Very well! Do you want a coffee with me?
 
-**Marie:** For me? How much is it?
+**Marie:** Yes, I want a coffee. What is that?
 
-**Paul:** It's for you! The cat is good!
+**Paul:** That? It's a book for my friend Pierre.
 
-**Marie:** Thank you! I have the beautiful cat. Goodbye!
+**Marie:** This book is for him? Is it a good book?
 
-**Paul:** Goodbye! Bye!`,
+**Paul:** Yes, it's a very good book! Pierre has a big house with many books.
+
+**Marie:** Where is Pierre's house?
+
+**Paul:** It's in the city. It's a new house. Can you see the house with me?
+
+**Marie:** Yes! I want to see this house. But where is Pierre?
+
+**Paul:** He's with the children. The children are at the Tuileries Garden.
+
+**Marie:** How many children does he have?
+
+**Paul:** He has two children. A big boy and a small girl. They are very good!
+
+**Marie:** Oh! I have a cat in my car. Can the children see the cat?
+
+**Paul:** Yes! Pierre and the children want to see your cat. Where is your car?
+
+**Marie:** It's there! There's my car. The cat is small but very beautiful.
+
+**Paul:** It's very beautiful! And me, I have a dog too.
+
+**Marie:** You have a dog? Where is the dog?
+
+**Paul:** He's with me in this car. It's an old dog, but he's good.
+
+**Marie:** Good! We can go to Pierre's with the animals!
+
+**Paul:** Yes! Let's go! Pierre is going to be very happy!`,
   },
 
   vocabularyReference: [],
@@ -78,35 +106,9 @@ export const reading2 = {
     type: "custom",
     items: [
       {
-        instruction: "What does Marie want instead of the book?",
-        prompt: "Marie wants...",
-        hint: "Look for 'je veux ce ___'",
-        expectedAnswer: "ce petit chat",
-        acceptableAnswers: ["ce chat", "le chat"],
-        wrongAnswers: [
-          {
-            answer: "un livre",
-            feedback: "She wants the cat, not the book",
-          },
-        ],
-      },
-      {
-        instruction: "Where is the cat?",
-        prompt: "The cat is...",
-        hint: "Look for 'le petit chat est ___ la voiture'",
-        expectedAnswer: "sur la nouvelle voiture",
-        acceptableAnswers: ["sur la voiture"],
-        wrongAnswers: [
-          {
-            answer: "dans la grande maison",
-            feedback: "That's where the books are, not the cat",
-          },
-        ],
-      },
-      {
-        instruction: "What phrase does Paul use to invite Marie for coffee?",
-        prompt: "Do you want coffee ___ ___?",
-        hint: "Look for 'avec ___' - which stressed pronoun?",
+        instruction: "How does Paul invite Marie for coffee?",
+        prompt: "Tu veux un café ___ ___?",
+        hint: "Look for 'avec ___' - which stressed pronoun for 'me'?",
         expectedAnswer: "avec moi",
         wrongAnswers: [
           {
@@ -117,25 +119,39 @@ export const reading2 = {
         ],
       },
       {
-        instruction: "How does Marie respond about having coffee together?",
-        prompt: "Marie says she wants coffee ___ ___",
-        hint: "Look for 'avec ___' in Marie's response - stressed pronoun for 'you'",
-        expectedAnswer: "avec toi",
+        instruction: "What is Paul's friend's name?",
+        prompt: "The friend is named ___",
+        hint: "Look for 'mon ami ___'",
+        expectedAnswer: "Pierre",
         wrongAnswers: [
           {
-            answer: "avec moi",
-            feedback: "Marie says 'with you' not 'with me'",
+            answer: "Paul",
+            feedback: "Paul is talking, the friend is Pierre",
           },
           {
-            answer: "avec tu",
-            feedback: "Use stressed pronoun 'toi' not subject pronoun 'tu'",
+            answer: "Marie",
+            feedback: "Marie is listening, the friend is Pierre",
           },
         ],
       },
       {
-        instruction: "Who is Paul with?",
-        prompt: "Paul says 'je suis avec ___'",
-        hint: "Look for stressed pronoun after 'avec' - meaning 'him'",
+        instruction: "What does Marie ask about?",
+        prompt: "___ ___ ___ c'est?",
+        hint: "Look for the question phrase meaning 'what is that'",
+        expectedAnswer: "qu'est-ce que",
+        acceptableAnswers: ["qu'est-ce que c'est"],
+        wrongAnswers: [
+          {
+            answer: "où est",
+            feedback: "That means 'where is', not 'what is'",
+          },
+        ],
+      },
+      {
+        instruction:
+          "What stressed pronoun does Marie use to ask about the book?",
+        prompt: "Ce livre est pour ___?",
+        hint: "Stressed pronoun meaning 'him'",
         expectedAnswer: "lui",
         wrongAnswers: [
           {
@@ -143,92 +159,164 @@ export const reading2 = {
             feedback: "Use stressed pronoun 'lui' not subject pronoun 'il'",
           },
           {
-            answer: "un ami",
-            feedback: "True, but what PRONOUN does he use? Look for 'avec ___'",
+            answer: "moi",
+            feedback: "The book is for Pierre (lui), not for Marie (moi)",
           },
         ],
       },
       {
-        instruction: "Who is the old book for?",
-        prompt: "The book is for ___",
-        hint: "Look for 'pour ___' - stressed pronoun for 'him'",
-        expectedAnswer: "lui",
+        instruction: "Who is the book for?",
+        prompt: "Ce livre est pour ___ ___",
+        hint: "Look for 'pour ___ ami' - possessive adjective meaning 'my'",
+        expectedAnswer: "mon ami",
+        acceptableAnswers: ["son ami"],
         wrongAnswers: [
           {
-            answer: "moi",
-            feedback: "Marie asks if it's for her, but Paul says it's for HIM",
-          },
-          {
-            answer: "pour moi",
-            feedback: "Just the pronoun! It's for 'lui' (him)",
+            answer: "toi",
+            feedback: "The book is for Paul's friend, not for Marie",
           },
         ],
       },
       {
-        instruction: "Who does Paul say the cat is for at the end?",
-        prompt: "The cat is for ___",
-        hint: "Look for 'il est pour ___!' - stressed pronoun for 'you'",
-        expectedAnswer: "toi",
+        instruction: "Where is Pierre's house?",
+        prompt: "Elle est ___ ___ ___",
+        hint: "Look for 'elle est ___ la ville'",
+        expectedAnswer: "dans la ville",
         wrongAnswers: [
           {
-            answer: "moi",
-            feedback: "Paul is giving it TO Marie, so 'for you' (toi)",
-          },
-          {
-            answer: "tu",
-            feedback: "Use stressed pronoun 'toi' not subject pronoun 'tu'",
+            answer: "dans le parc",
+            feedback: "The children are in the park, the house is in the city",
           },
         ],
       },
       {
-        instruction: "What word is used when presenting the cat?",
-        prompt: "Word meaning 'there it is'",
-        hint: "Famous French expression of presentation",
+        instruction: "What demonstrative does Marie use for the house?",
+        prompt: "Je veux voir ___ maison",
+        hint: "Demonstrative for feminine singular noun",
+        expectedAnswer: "cette",
+        wrongAnswers: [
+          {
+            answer: "ce",
+            feedback: "Use 'cette' for feminine nouns, 'ce' is masculine",
+          },
+          {
+            answer: "ces",
+            feedback: "Use 'cette' for singular, 'ces' is plural",
+          },
+        ],
+      },
+      {
+        instruction: "Where is Pierre?",
+        prompt: "Il est ___ ___ ___",
+        hint: "Look for 'il est ___ les enfants'",
+        expectedAnswer: "avec les enfants",
+        wrongAnswers: [
+          {
+            answer: "dans la voiture",
+            feedback: "Pierre is with the children at the garden",
+          },
+        ],
+      },
+      {
+        instruction: "Where are the children?",
+        prompt: "Les enfants sont ___ Jardin des Tuileries",
+        hint: "Look for the preposition - contraction of à + le",
+        expectedAnswer: "au",
+        wrongAnswers: [
+          {
+            answer: "dans",
+            feedback:
+              "Use 'au' (à + le) for 'at the' with masculine place names",
+          },
+        ],
+      },
+      {
+        instruction: "What question does Marie ask about quantity?",
+        prompt: "Il a ___ d'enfants?",
+        hint: "Question word for 'how many'",
+        expectedAnswer: "combien",
+        wrongAnswers: [
+          {
+            answer: "où",
+            feedback: "That means 'where', not 'how many'",
+          },
+        ],
+      },
+      {
+        instruction: "What can the children do?",
+        prompt: "Les enfants peuvent ___ le chat",
+        hint: "Look for 'peuvent ___ le chat'",
+        expectedAnswer: "voir",
+        wrongAnswers: [
+          {
+            answer: "veulent",
+            feedback: "That's 'want', not what they CAN do",
+          },
+        ],
+      },
+      {
+        instruction: "What possessive adjective does Paul ask about?",
+        prompt: "Où est ___ voiture?",
+        hint: "Possessive adjective meaning 'your' (feminine)",
+        expectedAnswer: "ta",
+        wrongAnswers: [
+          {
+            answer: "ton",
+            feedback: "'voiture' is feminine, use 'ta' not 'ton'",
+          },
+          {
+            answer: "toi",
+            feedback:
+              "Use possessive adjective 'ta' not stressed pronoun 'toi'",
+          },
+        ],
+      },
+      {
+        instruction: "What word does Marie use to show her car?",
+        prompt: "___ ma voiture!",
+        hint: "Presentation expression meaning 'there is'",
         expectedAnswer: "voilà",
         wrongAnswers: [
           {
-            answer: "ici",
-            feedback: "That means location 'here', not presentation",
+            answer: "où",
+            feedback: "That's a question word, not a presentation word",
           },
         ],
       },
       {
-        instruction:
-          "What question does Marie ask about the price of the coffee?",
-        prompt: "How much is it for ___?",
-        hint: "Look for 'c'est combien pour ___'",
-        expectedAnswer: "le café",
-        acceptableAnswers: ["le café"],
+        instruction: "What animal does Paul have?",
+        prompt: "J'ai un ___ aussi",
+        hint: "Look for what Paul says he has",
+        expectedAnswer: "chien",
         wrongAnswers: [
           {
-            answer: "le chat",
-            feedback: "She asks about the coffee first, not the cat",
+            answer: "chat",
+            feedback: "Marie has the cat, Paul has the dog",
           },
         ],
       },
       {
-        instruction: "What question does Marie ask Paul about quantity?",
-        prompt: "How many ___ do you have?",
-        hint: "Look for 'combien de ___ as-tu?'",
-        expectedAnswer: "chats",
+        instruction: "What demonstrative does Paul use for his car?",
+        prompt: "Il est avec moi dans ___ voiture",
+        hint: "Demonstrative for feminine singular",
+        expectedAnswer: "cette",
         wrongAnswers: [
           {
-            answer: "livres",
-            feedback: "Paul's friend has books, Marie asks about cats",
+            answer: "ce",
+            feedback: "'voiture' is feminine, use 'cette' not 'ce'",
           },
         ],
       },
       {
-        instruction: "What is the final farewell used?",
-        prompt: "Last word of the conversation",
-        hint: "Informal goodbye",
-        expectedAnswer: "salut",
+        instruction: "Where do they decide to go at the end?",
+        prompt: "Nous pouvons ___ chez Pierre",
+        hint: "Verb meaning 'to go'",
+        expectedAnswer: "aller",
         wrongAnswers: [
           {
-            answer: "au revoir",
-            feedback: "That comes before - what's the LAST word?",
+            answer: "voir",
+            feedback: "They will GO (aller) to Pierre's, not see (voir)",
           },
-          { answer: "merci", feedback: "That's earlier in the conversation" },
         ],
       },
     ],
