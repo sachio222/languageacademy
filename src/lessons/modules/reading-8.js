@@ -16,17 +16,15 @@ export const reading8 = {
 
   readingPassage: {
     title: "Ma Journée",
-    text: `**Ma Journée**
-
-Je m'appelle Marie. Voici ma journée typique.
+    text: `Je m'appelle Marie. Voici ma journée typique.
 
 D'abord, je me réveille à sept heures. Je ne me lève pas tout de suite. Je pense à ma journée pendant quelques minutes.
 
 Ensuite, je me lève. Je vais dans la cuisine. Je prends mon café. Avant le café, je ne peux pas penser bien!
 
-Après le café, je me lave et je m'habille. Je me prépare pour l'université. Je dois me dépêcher parce que mon cours est à neuf heures.
+Après le café, je me lave et je m'habille. Je me prépare pour la Sorbonne. Je dois me dépêcher parce que mon cours est à neuf heures.
 
-À l'université, j'étudie le français. J'aime mes cours. Je comprends bien maintenant. Avant, je ne comprenais pas tout, mais maintenant, je sais beaucoup de choses. Mon professeur me dit: "Écoute bien! Pense en français! Parle avec tes amis!"
+À la Sorbonne, j'étudie le français. J'aime mes cours. Je comprends bien maintenant. Avant, je ne comprenais pas tout, mais maintenant, je sais beaucoup de choses. Mon professeur me dit: "Écoute bien! Pense en français! Parle avec tes amis!"
 
 Pendant le cours, on apprend des mots nouveaux. On se pose des questions. On s'amuse aussi. Les étudiants s'aident. Nous nous comprenons bien.
 
@@ -44,9 +42,9 @@ First, I wake up at seven o'clock. I don't get up right away. I think about my d
 
 Then, I get up. I go to the kitchen. I have my coffee. Before coffee, I can't think well!
 
-After coffee, I wash and get dressed. I get ready for university. I must hurry because my class is at nine o'clock.
+After coffee, I wash and get dressed. I get ready for the Sorbonne. I must hurry because my class is at nine o'clock.
 
-At university, I study French. I like my classes. I understand well now. Before, I didn't understand everything, but now, I know many things. My teacher tells me: "Listen well! Think in French! Speak with your friends!"
+At the Sorbonne, I study French. I like my classes. I understand well now. Before, I didn't understand everything, but now, I know many things. My teacher tells me: "Listen well! Think in French! Speak with your friends!"
 
 During class, we learn new words. We ask ourselves questions. We have fun too. The students help each other. We understand each other well.
 
@@ -103,6 +101,13 @@ That's my day. And you, how is your day?`,
     { french: "Écoute bien!", english: "Listen well!", note: "command" },
     { french: "Pense!", english: "Think!", note: "command" },
     { french: "Parle!", english: "Speak!", note: "command" },
+
+    // Proper nouns
+    {
+      french: "la Sorbonne",
+      english: "the Sorbonne",
+      note: "⭐ historic Paris university, founded 1257",
+    },
 
     // Other vocabulary
     { french: "journée", english: "day", note: "feminine" },

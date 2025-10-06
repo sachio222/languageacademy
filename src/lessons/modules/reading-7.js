@@ -24,7 +24,7 @@ Mais étudier, ce n'est pas la même chose qu'apprendre. Je peux étudier pendan
 
 Alors, comment est-ce qu'on apprend bien? Voici mes pensées:
 
-D'abord, on doit demander des questions. Si on ne demande pas de questions, on ne pense pas. Et si on ne pense pas, on ne comprend pas.
+D'abord, on doit demander des questions. Socrate pense que les questions sont essentielles. Si on ne demande pas de questions, on ne pense pas. Et si on ne pense pas, on ne comprend pas.
 
 Ensuite, on doit étudier bien. On ne peut pas apprendre si on étudie mal. L'étude demande du temps.
 
@@ -50,7 +50,7 @@ But studying isn't the same thing as learning. I can study for hours, but if I d
 
 So, how do we learn well? Here are my thoughts:
 
-First, we must ask questions. If we don't ask questions, we don't think. And if we don't think, we don't understand.
+First, we must ask questions. Socrates thinks that questions are essential. If we don't ask questions, we don't think. And if we don't think, we don't understand.
 
 Next, we must study well. We can't learn if we study poorly. Study requires time.
 
@@ -132,6 +132,13 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
     { french: "tout le monde", english: "everyone", note: "fixed expression" },
     { french: "même", english: "even / same", note: "modifier" },
     { french: "mal", english: "badly / poorly", note: "adverb" },
+
+    // Proper nouns
+    {
+      french: "Socrate",
+      english: "Socrates",
+      note: "⭐ Greek philosopher - Socratic method",
+    },
 
     // Previously taught (Units 1-6)
     { french: "pendant", english: "during / for", note: "preposition" },

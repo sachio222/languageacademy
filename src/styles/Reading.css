@@ -272,6 +272,24 @@
 
 /* Translation styles handled inline now */
 
+/* Image blocks in reading passages */
+.paragraph-image {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.reading-image {
+  max-width: 100%;
+  height: auto;
+  /* Use filter drop-shadow instead of box-shadow to respect transparency */
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+  transition: filter 0.2s;
+}
+
+.reading-image:hover {
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.15));
+}
+
 .passage-instructions {
   background: #fffbeb;
   border-left: 3px solid #fbbf24;

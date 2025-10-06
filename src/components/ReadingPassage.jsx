@@ -1082,6 +1082,13 @@ const wordTranslations = {
   'entre les': 'between the',
   'soi': 'oneself',
   'en soi': 'in oneself',
+  'socrate': 'Socrates',
+  'Socrate': 'Socrates',
+  'socrate pense': 'Socrates thinks',
+  'socrate pense que': 'Socrates thinks that',
+  'essentielles': 'essential (fem plural)',
+  'sont essentielles': 'are essential',
+  'les questions sont essentielles': 'questions are essential',
   'certains': 'some (people)',
   'méthode': 'method',
   'la méthode': 'the method',
@@ -1210,8 +1217,16 @@ const wordTranslations = {
   'je me prépare pour': 'I get ready for',
   'me prépare pour': 'get ready for',
   'pour l\'université': 'for university',
+  'pour la Sorbonne': 'for the Sorbonne',
+  'pour la sorbonne': 'for the Sorbonne',
   'l\'université': 'the university / university',
   'université': 'university',
+  'la Sorbonne': 'the Sorbonne',
+  'la sorbonne': 'the Sorbonne',
+  'Sorbonne': 'Sorbonne',
+  'sorbonne': 'Sorbonne',
+  'à la Sorbonne': 'at the Sorbonne',
+  'à la sorbonne': 'at the Sorbonne',
   'je me dépêche': 'I hurry',
   'me dépêche': 'hurry',
   'dépêche': 'hurry / hurries',
@@ -1442,6 +1457,36 @@ const wikipediaEntries = {
     description: 'Wrought-iron lattice tower, built 1887-1889, 330m tall',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/240px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg',
     url: 'https://en.wikipedia.org/wiki/Eiffel_Tower'
+  },
+  'socrate': {
+    name: 'Socrate (Socrates)',
+    description: 'Ancient Greek philosopher (470-399 BC), father of Western philosophy, famous for Socratic method of questioning',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Socrates_Louvre.jpg/260px-Socrates_Louvre.jpg',
+    url: 'https://en.wikipedia.org/wiki/Socrates'
+  },
+  'Socrate': {
+    name: 'Socrate (Socrates)',
+    description: 'Ancient Greek philosopher (470-399 BC), father of Western philosophy, famous for Socratic method of questioning',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Socrates_Louvre.jpg/260px-Socrates_Louvre.jpg',
+    url: 'https://en.wikipedia.org/wiki/Socrates'
+  },
+  'la sorbonne': {
+    name: 'La Sorbonne',
+    description: 'Historic university in Paris, founded 1257, one of the world\'s oldest and most prestigious universities',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg/320px-P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg',
+    url: 'https://en.wikipedia.org/wiki/University_of_Paris'
+  },
+  'La Sorbonne': {
+    name: 'La Sorbonne',
+    description: 'Historic university in Paris, founded 1257, one of the world\'s oldest and most prestigious universities',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg/320px-P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg',
+    url: 'https://en.wikipedia.org/wiki/University_of_Paris'
+  },
+  'Sorbonne': {
+    name: 'La Sorbonne',
+    description: 'Historic university in Paris, founded 1257, one of the world\'s oldest and most prestigious universities',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg/320px-P1160690_Paris_V_Chapelle_Sainte-Ursule_de_la_Sorbonne_rwk.jpg',
+    url: 'https://en.wikipedia.org/wiki/University_of_Paris'
   }
 };
 
@@ -1452,9 +1497,12 @@ function ReadingPassage({ passage }) {
 
   if (!passage) return null;
 
-  // Strip markdown formatting for TTS
+  // Strip markdown formatting and image markers for TTS
   const stripMarkdown = (text) => {
-    return text.replace(/\*\*/g, '');
+    return text
+      .replace(/\*\*/g, '')
+      .replace(/!\[.*?\]/g, '')  // Remove image markers
+      .replace(/\n\n+/g, '\n\n'); // Clean up extra newlines
   };
 
   // Make words interactive - use paragraph index for truly unique keys
@@ -1514,6 +1562,8 @@ function ReadingPassage({ passage }) {
       // Proper nouns - multi-word
       { phrase: "la Tour Eiffel", translation: "the Eiffel Tower" },
       { phrase: "Tour Eiffel", translation: "Eiffel Tower" },
+      { phrase: "la Sorbonne", translation: "the Sorbonne" },
+      { phrase: "La Sorbonne", translation: "the Sorbonne" },
 
       // Unit 4 - Everyday nouns phrases
       { phrase: "tout le monde", translation: "everybody/everyone" },
@@ -1788,6 +1838,37 @@ function ReadingPassage({ passage }) {
   const frenchParagraphs = passage.text.split('\n\n');
   const englishParagraphs = passage.translation.split('\n\n');
 
+  // Helper to check if a paragraph is an image marker
+  const isImageMarker = (text) => {
+    return /^!\[(.+?)\]$/.test(text.trim());
+  };
+
+  // Helper to extract image path and optional size from marker
+  // Syntax: ![path] or ![path|maxWidth:400px] or ![path|400px]
+  const extractImageInfo = (text) => {
+    const match = text.trim().match(/^!\[(.+?)\]$/);
+    if (!match) return null;
+
+    const content = match[1];
+    const parts = content.split('|');
+    const path = parts[0].trim();
+
+    let style = {};
+    if (parts[1]) {
+      const size = parts[1].trim();
+      // If it's just a number with px/%, treat it as maxWidth
+      if (/^\d+(%|px)$/.test(size)) {
+        style.maxWidth = size;
+      } else if (size.includes(':')) {
+        // Parse CSS-like syntax: maxWidth:400px
+        const [prop, value] = size.split(':');
+        style[prop.trim()] = value.trim();
+      }
+    }
+
+    return { path, style };
+  };
+
   return (
     <div className="reading-passage">
       <div className="passage-header">
@@ -1816,25 +1897,45 @@ function ReadingPassage({ passage }) {
         </div>
 
         <div className="passage-french">
-          {frenchParagraphs.map((paragraph, pIdx) => (
-            <div key={pIdx} className="paragraph-block paragraph-with-audio">
-              <p className="french-text">
-                {renderInteractiveText(paragraph, pIdx)}
-              </p>
-              {/* Per-paragraph speaker button - appears on hover */}
-              <div className="paragraph-audio-btn">
-                <SpeakButton
-                  text={stripMarkdown(paragraph)}
-                  language="fr-FR"
-                  size="small"
-                  ariaLabel={`Read paragraph ${pIdx + 1}`}
-                />
+          {frenchParagraphs.map((paragraph, pIdx) => {
+            // Check if this paragraph is an image marker
+            if (isImageMarker(paragraph)) {
+              const imageInfo = extractImageInfo(paragraph);
+              if (!imageInfo) return null;
+
+              return (
+                <div key={pIdx} className="paragraph-block paragraph-image">
+                  <img
+                    src={`/${imageInfo.path}`}
+                    alt={`Reading illustration ${pIdx + 1}`}
+                    className="reading-image"
+                    style={imageInfo.style}
+                  />
+                </div>
+              );
+            }
+
+            // Regular paragraph
+            return (
+              <div key={pIdx} className="paragraph-block paragraph-with-audio">
+                <p className="french-text">
+                  {renderInteractiveText(paragraph, pIdx)}
+                </p>
+                {/* Per-paragraph speaker button - appears on hover */}
+                <div className="paragraph-audio-btn">
+                  <SpeakButton
+                    text={stripMarkdown(paragraph)}
+                    language="fr-FR"
+                    size="small"
+                    ariaLabel={`Read paragraph ${pIdx + 1}`}
+                  />
+                </div>
+                {showTranslation && (
+                  <p className="english-translation">{englishParagraphs[pIdx]}</p>
+                )}
               </div>
-              {showTranslation && (
-                <p className="english-translation">{englishParagraphs[pIdx]}</p>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
