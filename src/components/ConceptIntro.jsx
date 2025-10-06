@@ -60,8 +60,34 @@ function ConceptIntro({ lesson, onStartStudying }) {
                       };
                       const genderClass = getGenderClass(item.note);
 
+                      const handleRowClick = () => {
+                        if (!item.french) return;
+
+                        if ('speechSynthesis' in window) {
+                          window.speechSynthesis.cancel();
+                          const utterance = new SpeechSynthesisUtterance(item.french);
+                          utterance.lang = 'fr-FR';
+                          utterance.rate = 0.9;
+                          utterance.pitch = 1.0;
+                          utterance.volume = 1.0;
+                          window.speechSynthesis.speak(utterance);
+                        }
+                      };
+
                       return (
-                        <tr key={idx}>
+                        <tr
+                          key={idx}
+                          onClick={handleRowClick}
+                          className="vocab-row-clickable"
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              handleRowClick();
+                            }
+                          }}
+                        >
                           <td className={`vocab-french-intro ${genderClass}`}>
                             <div className="vocab-with-audio">
                               {item.french}

@@ -2,13 +2,21 @@ import { useState } from 'react';
 import LeftNav from './components/LeftNav';
 import LessonList from './components/LessonList';
 import LessonView from './components/LessonView';
-import { lessons } from './lessons/lessonData';
+import { lessons, unitStructure } from './lessons/lessonData';
 import './styles/App.css';
 
 function App() {
   const [currentLesson, setCurrentLesson] = useState(null);
   const [completedExercises, setCompletedExercises] = useState(new Set());
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
+  // Helper function to get unit info for a lesson
+  const getUnitForLesson = (lessonId) => {
+    return unitStructure.find(unit => {
+      const [start, end] = unit.lessonRange;
+      return lessonId >= start && lessonId <= end;
+    });
+  };
 
   const handleLessonSelect = (lessonId) => {
     setCurrentLesson(lessonId);
@@ -83,9 +91,11 @@ function App() {
                 </div>
               );
             }
+            const unitInfo = getUnitForLesson(lesson.id);
             return (
               <LessonView
                 lesson={lesson}
+                unitInfo={unitInfo}
                 onBack={handleBack}
                 completedExercises={completedExercises}
                 onExerciseComplete={handleExerciseComplete}

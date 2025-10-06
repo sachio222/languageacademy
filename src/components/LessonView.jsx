@@ -9,7 +9,7 @@ import UnitExam from './UnitExam';
 import ModuleCompleteModal from './ModuleCompleteModal';
 import FillInTheBlank from './FillInTheBlank';
 
-function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
+function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [showIntro, setShowIntro] = useState(true);
   const [isStudying, setIsStudying] = useState(false);
@@ -155,7 +155,14 @@ function LessonView({ lesson, onBack, completedExercises, onExerciseComplete, on
         <button className="btn-back" onClick={onBack}>
           ← Back to Modules
         </button>
-        <h2>{lesson.title}</h2>
+        <div className="lesson-title-container">
+          {unitInfo && !unitInfo.isReference && (
+            <div className="unit-badge" style={{ backgroundColor: unitInfo.color }}>
+              {unitInfo.icon} Unit {unitInfo.id}
+            </div>
+          )}
+          <h2>{lesson.title}</h2>
+        </div>
         <div className="exercise-progress">
           {showIntro ? (
             <span>📖 Introduction</span>

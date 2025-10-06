@@ -463,6 +463,45 @@ export function checkAnswer(userAnswer, expectedAnswer, options = {}) {
     };
   }
 
+  // Check for order-independent matching when both contain "et" (and)
+  // This allows "des chats et des livres" to match "des livres et des chats"
+  if (userNoPunct.includes(" et ") && expectedNoPunct.includes(" et ")) {
+    const userParts = userNoPunct
+      .split(" et ")
+      .map((p) => p.trim())
+      .sort();
+    const expectedParts = expectedNoPunct
+      .split(" et ")
+      .map((p) => p.trim())
+      .sort();
+
+    if (
+      userParts.length === expectedParts.length &&
+      userParts.every((part, idx) => part === expectedParts[idx])
+    ) {
+      return {
+        isMatch: true,
+        hasAccentWarning: false,
+      };
+    }
+
+    // Also check without accents for order-independent match
+    const userPartsNoAccents = userParts.map((p) => removeAccents(p));
+    const expectedPartsNoAccents = expectedParts.map((p) => removeAccents(p));
+
+    if (
+      userPartsNoAccents.length === expectedPartsNoAccents.length &&
+      userPartsNoAccents.every(
+        (part, idx) => part === expectedPartsNoAccents[idx]
+      )
+    ) {
+      return {
+        isMatch: true,
+        hasAccentWarning: false,
+      };
+    }
+  }
+
   // No match at all
   return {
     isMatch: false,

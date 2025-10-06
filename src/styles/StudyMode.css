@@ -285,6 +285,22 @@
   border-bottom: none;
 }
 
+.vocab-table tbody tr.vocab-row-clickable {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.vocab-table tbody tr.vocab-row-clickable:hover {
+  background-color: #fafbfc;
+}
+
+/* Show speaker button hover state when row is hovered */
+.vocab-table tbody tr.vocab-row-clickable:hover .speak-btn {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  transform: scale(1.05);
+}
+
 .vocab-french {
   color: #2563eb;
   font-weight: 600;
