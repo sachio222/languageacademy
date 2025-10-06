@@ -200,10 +200,21 @@
   cursor: pointer;
   user-select: none;
   transition: background 0.15s;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 10;
+  border-bottom: 1px solid transparent;
 }
 
 .nav-unit-header:hover {
   background: #f8fafc;
+}
+
+/* Enhanced styling when header is sticky (at the top) */
+.nav-unit-header.sticky {
+  border-bottom-color: #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .nav-unit-icon {

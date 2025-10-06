@@ -124,6 +124,20 @@ import { reading8 } from "./modules/reading-8.js";
 import { unit8Practice } from "./modules/unit-8-practice.js";
 import { unit8Exam } from "./modules/unit-8-exam.js";
 
+// Unit 9: Discourse & Past Tense
+import { causalWordsModule } from "./modules/causal-words.js";
+import { spatialPrepositionsModule } from "./modules/spatial-prepositions.js";
+import { moreSpatialRelationsModule } from "./modules/more-spatial-relations.js";
+import { passeComposeERModule } from "./modules/passe-compose-er.js";
+import { passeComposeIrregular1Module } from "./modules/passe-compose-irregular-1.js";
+import { passeComposeIrregular2Module } from "./modules/passe-compose-irregular-2.js";
+import { passeComposeEtreModule } from "./modules/passe-compose-etre.js";
+import { passeComposeAgreementModule } from "./modules/passe-compose-agreement.js";
+import { imparfaitAllVerbsModule } from "./modules/imparfait-all-verbs.js";
+import { pcVsImparfaitModule } from "./modules/pc-vs-imparfait.js";
+import { pastTenseCompositionModule } from "./modules/past-tense-composition.js";
+import { reading9 } from "./modules/reading-9.js";
+
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
 const moduleConfigs = [
@@ -359,16 +373,40 @@ const moduleConfigs = [
   unit8Exam, // 100. UNIT 8 FINAL EXAM - Test everything from Unit 8!
 
   // ============================================
+  // UNIT 9: DISCOURSE & PAST TENSE - Complete Storytelling Enabled!
+  // ============================================
+
+  // === PHASE 1: DISCOURSE FOUNDATION - Explain WHY and WHERE! ===
+  causalWordsModule, // 101. Causal & Reason Words - parce que, car, puisque, comme, grâce à, à cause de
+  spatialPrepositionsModule, // 102. Spatial Prepositions - devant, derrière, entre, au-dessus, au-dessous, parmi
+  moreSpatialRelationsModule, // 103. More Spatial Relations - près de, loin de, à côté de, en face de, autour de
+
+  // === PHASE 2: PASSÉ COMPOSÉ SYSTEM - Talk about completed actions! ===
+  passeComposeERModule, // 104. Passé Composé Foundation - Regular -ER verbs (j'ai parlé, j'ai mangé)
+  passeComposeIrregular1Module, // 105. Irregular Past Participles Set 1 - avoir→eu, être→été, faire→fait, voir→vu
+  passeComposeIrregular2Module, // 106. Irregular Past Participles Set 2 - vouloir→voulu, pouvoir→pu, devoir→dû, dire→dit, prendre→pris
+  passeComposeEtreModule, // 107. être verbs - DR & MRS VANDERTRAMP (je suis allé, je suis venu, je suis parti)
+  passeComposeAgreementModule, // 108. Past Participle Agreement - elle est allée, ils sont allés, elles sont allées
+
+  // === PHASE 3: IMPARFAIT & THE KEY DISTINCTION - Complete past tense mastery! ===
+  imparfaitAllVerbsModule, // 109. Imparfait Formation - All Verbs (je parlais, il faisait, on allait)
+  pcVsImparfaitModule, // 110. Passé Composé vs Imparfait ⭐⭐⭐ THE GOLDEN RULE - Event vs Description
+  pastTenseCompositionModule, // 111. Past Tense Composition - Complex Narratives with all elements
+
+  // === NINTH MILESTONE - Complete past tense story! ===
+  reading9, // 112. READING TEST 9 - Une Histoire du Passé - A memorable day with PC, IMP, causal, spatial!
+
+  // ============================================
   // REFERENCE UNIT - Essential Reference Materials
   // ============================================
 
   // === REFERENCE MATERIALS - Always available for quick lookup! ===
-  alphabetModule, // 101. L'Alphabet - French alphabet with pronunciation
-  numbersModule, // 102. Les Nombres - Numbers from 0 to infinity
-  daysMonthsModule, // 103. Jours et Mois - Days of the week and months
-  holidaysModule, // 104. Les Fêtes - French holidays and celebrations
-  frenchCountriesModule, // 105. La Francophonie - French-speaking countries worldwide
-  languageStatsModule, // 106. Le Français en Chiffres - Fascinating language statistics
+  alphabetModule, // 113. L'Alphabet - French alphabet with pronunciation
+  numbersModule, // 114. Les Nombres - Numbers from 0 to infinity
+  daysMonthsModule, // 115. Jours et Mois - Days of the week and months
+  holidaysModule, // 116. Les Fêtes - French holidays and celebrations
+  frenchCountriesModule, // 117. La Francophonie - French-speaking countries worldwide
+  languageStatsModule, // 118. Le Français en Chiffres - Fascinating language statistics
 ];
 
 // Build all lessons from configs
@@ -377,12 +415,12 @@ const allLessons = moduleConfigs.map((config, index) => {
   const moduleId = index + 1;
   const lesson = buildLesson(config, moduleId); // Pass module number
 
-  // Override titles for reference modules (101-106) to use Roman numerals
+  // Override titles for reference modules (113-118) to use Roman numerals
   const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
   let finalTitle = lesson.title;
 
-  if (moduleId >= 101 && moduleId <= 106) {
-    const romanIndex = moduleId - 101;
+  if (moduleId >= 113 && moduleId <= 118) {
+    const romanIndex = moduleId - 113;
     finalTitle = `Reference ${romanNumerals[romanIndex]}: ${config.title}`;
   }
 
@@ -475,10 +513,19 @@ export const unitStructure = [
   },
   {
     id: 9,
+    title: "Unit 9: Discourse & Past Tense",
+    description:
+      "Complete storytelling mastery: causal/spatial words (parce que, près de), passé composé (j'ai mangé, je suis allé), imparfait (j'étais, il faisait), and the critical PC vs IMP distinction",
+    lessonRange: [101, 112], // Modules 101-111 + Reading 9 (112)
+    icon: "📖",
+    color: "#ef4444",
+  },
+  {
+    id: 10,
     title: "Reference",
     description:
       "Essential reference materials - alphabet, numbers, dates, holidays, French-speaking countries, and language facts",
-    lessonRange: [101, 106], // Reference modules 101-106
+    lessonRange: [113, 118], // Reference modules 113-118
     icon: "📚",
     color: "#6366f1",
     isReference: true, // Flag to indicate this is not a numbered unit

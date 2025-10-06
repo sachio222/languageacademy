@@ -34,9 +34,7 @@ Finalement, je rentre chez moi. Je suis contente. Je pense: "Aujourd'hui, j'ai b
 
 Voilà ma journée. Et vous, comment est votre journée?`,
 
-    translation: `**My Day**
-
-My name is Marie. Here is my typical day.
+    translation: `My name is Marie. Here is my typical day.
 
 First, I wake up at seven o'clock. I don't get up right away. I think about my day for a few minutes.
 

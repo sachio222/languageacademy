@@ -139,17 +139,12 @@ export function buildExercises(moduleId, exerciseConfig) {
 
 /**
  * Build complete lesson from module config
- * Note: id and module number in title will be set dynamically in lessonData.js
+ * Note: id will be set dynamically in lessonData.js
  */
 export function buildLesson(moduleConfig, moduleNumber = null) {
-  // Add module number to title if not already present
-  const titleWithNumber = moduleNumber
-    ? `Module ${moduleNumber}: ${moduleConfig.title}`
-    : moduleConfig.title;
-
   return {
     // id is set dynamically in lessonData.js
-    title: titleWithNumber,
+    title: moduleConfig.title,
     description: moduleConfig.description,
     concepts: moduleConfig.concepts || [],
     vocabularyReference: moduleConfig.vocabularyReference || [],

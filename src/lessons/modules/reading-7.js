@@ -40,9 +40,7 @@ Donc, l'apprentissage est un voyage. On veut une réponse. On étudie. On cherch
 
 En fait, vous êtes en train d'apprendre maintenant. Vous comprenez mes idées. C'est la preuve que vous pouvez apprendre. Vous le faites déjà!`,
 
-    translation: `**The Art of Learning**
-
-What is learning? Actually, it's a big question. Everyone studies, but does everyone learn well?
+    translation: `What is learning? Actually, it's a big question. Everyone studies, but does everyone learn well?
 
 Well, I think that learning goes with a question. When we have a question, we want to study. We look for an answer. So, questions are very good for learning.
 

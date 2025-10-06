@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { unitStructure } from '../lessons/lessonData';
 import SpeakButton from './SpeakButton';
@@ -14,18 +14,32 @@ const normalizeText = (text) => {
 
 function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, isCollapsed, onToggleCollapse }) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [collapsedUnits, setCollapsedUnits] = useState(new Set());
+  // Initialize all units as collapsed (accordion starts closed)
+  const [collapsedUnits, setCollapsedUnits] = useState(new Set(unitStructure.map(unit => unit.id)));
   const [activeTab, setActiveTab] = useState('tree'); // 'tree' or 'vocab'
+  const [stickyHeaders, setStickyHeaders] = useState(new Set());
+  const navContentRef = useRef(null);
 
-  // Toggle unit collapse
+  // Toggle unit collapse (accordion behavior - only one open at a time)
   const toggleUnit = (unitId) => {
     setCollapsedUnits(prev => {
-      const next = new Set(prev);
-      if (next.has(unitId)) {
-        next.delete(unitId);
+      const next = new Set();
+
+      // If the clicked unit is currently collapsed, open it and close all others
+      if (prev.has(unitId)) {
+        // Add all unit IDs except the one being opened
+        unitStructure.forEach(unit => {
+          if (unit.id !== unitId) {
+            next.add(unit.id);
+          }
+        });
       } else {
-        next.add(unitId);
+        // If the clicked unit is open, close it (and keep all others closed)
+        unitStructure.forEach(unit => {
+          next.add(unit.id);
+        });
       }
+
       return next;
     });
   };
@@ -74,6 +88,43 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
       return filtered.length > 0 ? { ...unit, lessons: filtered } : null;
     }).filter(Boolean);
   }, [searchQuery, lessons]);
+
+  // Set up intersection observer to detect sticky headers
+  useEffect(() => {
+    if (!navContentRef.current || isCollapsed || activeTab !== 'tree') return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        setStickyHeaders(prev => {
+          const next = new Set(prev);
+          entries.forEach(entry => {
+            const unitId = entry.target.dataset.unitId;
+            if (unitId) {
+              if (entry.intersectionRatio < 1 && entry.boundingClientRect.top < entry.rootBounds.top) {
+                // Header is sticky (partially visible at top)
+                next.add(unitId);
+              } else {
+                // Header is not sticky
+                next.delete(unitId);
+              }
+            }
+          });
+          return next;
+        });
+      },
+      {
+        root: navContentRef.current,
+        threshold: [0, 1],
+        rootMargin: '-1px 0px 0px 0px'
+      }
+    );
+
+    // Observe all unit headers
+    const headers = navContentRef.current.querySelectorAll('.nav-unit-header');
+    headers.forEach(header => observer.observe(header));
+
+    return () => observer.disconnect();
+  }, [isCollapsed, activeTab, filteredUnits]);
 
   // Build vocabulary index
   const vocabularyIndex = useMemo(() => {
@@ -171,7 +222,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
           </div>
 
           {/* Content */}
-          <div className="nav-content">
+          <div className="nav-content" ref={navContentRef}>
             {activeTab === 'tree' ? (
               // Module Tree View
               <div className="nav-tree">
@@ -187,8 +238,9 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                     return (
                       <div key={unit.id} className="nav-unit">
                         <div
-                          className="nav-unit-header"
+                          className={`nav-unit-header ${stickyHeaders.has(unit.id) ? 'sticky' : ''}`}
                           onClick={() => toggleUnit(unit.id)}
+                          data-unit-id={unit.id}
                         >
                           <span className="nav-unit-icon">{unit.icon}</span>
                           <span className="nav-unit-title">{unit.title}</span>
