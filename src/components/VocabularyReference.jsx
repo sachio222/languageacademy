@@ -22,6 +22,26 @@ function VocabularyReference({ vocabulary, title }) {
     return '';
   };
 
+  // Helper to detect if this is the start of a new verb/concept section
+  const isNewSection = (item, index, vocabularyArray) => {
+    if (index === 0) return false; // First item never needs divider
+
+    // Detect new verb by:
+    // 1. Contains a rank (⭐ Rank X) = new verb
+    // 2. Is infinitive form (ends with -er, -ir, -re, -oir)
+    // 3. Note contains "infinitive" or "rank"
+    const note = (item.note || '').toLowerCase();
+    const french = (item.french || '').toLowerCase();
+
+    // Check if this is a new base verb
+    const isBaseVerb = note.includes('rank') ||
+      note.includes('infinitive') ||
+      french.match(/[aeiou]r$/) || // ends with -er, -ir, -re, -oir
+      french.match(/^[a-z]+$/) && french.length > 3; // simple base word
+
+    return isBaseVerb;
+  };
+
   return (
     <div className="vocab-reference">
       <div
@@ -47,6 +67,7 @@ function VocabularyReference({ vocabulary, title }) {
             <tbody>
               {vocabulary.map((item, idx) => {
                 const genderClass = getGenderClass(item.note);
+                const needsDivider = isNewSection(item, idx, vocabulary);
 
                 const handleRowClick = () => {
                   if (!item.french) return;
@@ -63,28 +84,37 @@ function VocabularyReference({ vocabulary, title }) {
                 };
 
                 return (
-                  <tr
-                    key={idx}
-                    onClick={handleRowClick}
-                    className="vocab-row-clickable"
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleRowClick();
-                      }
-                    }}
-                  >
-                    <td className={`vocab-french ${genderClass}`}>
-                      <div className="vocab-with-audio">
-                        {item.french}
-                        <SpeakButton text={item.french} language="fr-FR" size="small" />
-                      </div>
-                    </td>
-                    <td className="vocab-english">{item.english}</td>
-                    <td className="vocab-note">{item.note || '—'}</td>
-                  </tr>
+                  <>
+                    {needsDivider && (
+                      <tr key={`divider-${idx}`} className="vocab-divider">
+                        <td colSpan={3}>
+                          <div className="vocab-section-break"></div>
+                        </td>
+                      </tr>
+                    )}
+                    <tr
+                      key={idx}
+                      onClick={handleRowClick}
+                      className="vocab-row-clickable"
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          handleRowClick();
+                        }
+                      }}
+                    >
+                      <td className={`vocab-french ${genderClass}`}>
+                        <div className="vocab-with-audio">
+                          {item.french}
+                          <SpeakButton text={item.french} language="fr-FR" size="small" />
+                        </div>
+                      </td>
+                      <td className="vocab-english">{item.english}</td>
+                      <td className="vocab-note">{item.note || '—'}</td>
+                    </tr>
+                  </>
                 );
               })}
             </tbody>

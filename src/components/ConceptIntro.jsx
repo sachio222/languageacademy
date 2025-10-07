@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 
 /**
@@ -10,6 +10,7 @@ import SpeakButton from './SpeakButton';
 function ConceptIntro({ lesson, onStartStudying }) {
   const [showVocab, setShowVocab] = useState(true);
   const [showConcepts, setShowConcepts] = useState(true);
+  const [understoodConcepts, setUnderstoodConcepts] = useState(new Set());
 
   const vocabularyItems = lesson.vocabularyReference || [];
   const isFirstLesson = lesson.id === 1;
@@ -17,6 +18,32 @@ function ConceptIntro({ lesson, onStartStudying }) {
   // Show help section by default on first lesson
   const [helpRequested, setHelpRequested] = useState(isFirstLesson);
   const [showHelp, setShowHelp] = useState(isFirstLesson);
+
+  // Reset understood state when lesson changes
+  useEffect(() => {
+    setUnderstoodConcepts(new Set());
+  }, [lesson.id]);
+
+  // Functions for managing understood concepts
+  const toggleUnderstood = (conceptIndex) => {
+    setUnderstoodConcepts(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(conceptIndex)) {
+        newSet.delete(conceptIndex);
+      } else {
+        newSet.add(conceptIndex);
+      }
+      return newSet;
+    });
+  };
+
+  const getProgressStats = () => {
+    if (!lesson.concepts || lesson.concepts.length === 0) return { understood: 0, total: 0, percentage: 0 };
+    const total = lesson.concepts.length;
+    const understood = understoodConcepts.size;
+    const percentage = Math.round((understood / total) * 100);
+    return { understood, total, percentage };
+  };
 
   return (
     <div className="concept-intro">
@@ -113,7 +140,12 @@ function ConceptIntro({ lesson, onStartStudying }) {
               className="intro-section-header"
               onClick={() => setShowConcepts(!showConcepts)}
             >
-              <h3>💡 Key Concepts</h3>
+              <div className="concepts-header-content">
+                <h3>💡 Key Concepts</h3>
+                <div className="concepts-progress">
+                  {getProgressStats().understood}/{getProgressStats().total} understood ({getProgressStats().percentage}%)
+                </div>
+              </div>
               <button className="toggle-btn">
                 {showConcepts ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
               </button>
@@ -121,22 +153,39 @@ function ConceptIntro({ lesson, onStartStudying }) {
 
             {showConcepts && (
               <div className="concepts-intro-grid">
-                {lesson.concepts.map((concept, idx) => (
-                  <div key={idx} className="concept-intro-card">
-                    <div className="concept-card-header">
-                      <h4>{concept.term}</h4>
-                    </div>
-                    <div className="concept-card-body">
-                      <p className="concept-intro-definition">
-                        {concept.definition}
-                      </p>
-                      <div className="concept-intro-example">
-                        <strong>Example</strong>
-                        <code>{concept.example}</code>
+                {lesson.concepts.map((concept, idx) => {
+                  const isUnderstood = understoodConcepts.has(idx);
+                  return (
+                    <div key={idx} className={`concept-intro-card ${isUnderstood ? 'understood' : ''}`}>
+                      <div className="concept-card-header">
+                        <h4>{concept.term}</h4>
+                        {isUnderstood && (
+                          <div className="concept-check">
+                            <Check size={20} />
+                          </div>
+                        )}
+                      </div>
+                      <div className="concept-card-body">
+                        <p className="concept-intro-definition">
+                          {concept.definition}
+                        </p>
+                        <div className="concept-intro-example">
+                          <strong>Example</strong>
+                          <code>{concept.example}</code>
+                        </div>
+                        <button
+                          className={`understood-btn ${isUnderstood ? 'understood' : ''}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleUnderstood(idx);
+                          }}
+                        >
+                          Understood
+                        </button>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
           </div>

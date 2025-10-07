@@ -197,16 +197,29 @@
   transition: all 0.15s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .concept-intro-card:hover {
   background: #f7f9fc;
 }
 
+.concept-intro-card.understood {
+  background: #f7f9fc;
+  border: 1px solid #e0e0e0;
+}
+
+.concept-intro-card.understood:hover {
+  background: #fafbfc;
+}
+
 .concept-card-header {
   background: transparent;
   padding: 1.5rem 1.5rem 0.5rem;
   border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .concept-intro-card h4 {
@@ -215,6 +228,20 @@
   font-size: 1.0625rem;
   font-weight: 600;
   letter-spacing: -0.02em;
+  flex: 1;
+}
+
+.concept-check {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  flex-shrink: 0;
 }
 
 .concept-card-body {
@@ -259,6 +286,52 @@
   line-height: 1.8;
   white-space: pre-wrap;
   font-style: italic;
+}
+
+/* Understood Button */
+.understood-btn {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  color: #666666;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 1rem;
+  align-self: flex-end;
+}
+
+.understood-btn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background: #f7f9fc;
+}
+
+.understood-btn.understood {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.understood-btn.understood:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Concepts Header with Progress */
+.concepts-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.concepts-progress {
+  color: #666666;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 /* Learning Tip */

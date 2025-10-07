@@ -106,10 +106,11 @@ export const reading2 = {
     type: "custom",
     items: [
       {
-        instruction: "How does Paul invite Marie for coffee?",
+        instruction: "Complete Paul's invitation:",
         prompt: "Tu veux un café ___ ___?",
         hint: "Look for 'avec ___' - which stressed pronoun for 'me'?",
         expectedAnswer: "avec moi",
+        acceptableAnswers: ["avec moi"],
         wrongAnswers: [
           {
             answer: "avec toi",

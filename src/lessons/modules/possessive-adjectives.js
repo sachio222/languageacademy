@@ -32,25 +32,73 @@ export const module8_possessive_adjectives = {
   ],
 
   vocabularyReference: [
-    { french: "mon", english: "my (masculine)", note: "mon livre" },
-    { french: "ma", english: "my (feminine)", note: "ma maison" },
-    { french: "mes", english: "my (plural)", note: "mes chats" },
-    { french: "ton", english: "your (masc, informal)", note: "ton chat" },
-    { french: "ta", english: "your (fem, informal)", note: "ta voiture" },
-    { french: "tes", english: "your (plural, informal)", note: "tes amis" },
-    { french: "son", english: "his/her (masculine)", note: "son livre" },
-    { french: "sa", english: "his/her (feminine)", note: "sa maison" },
-    { french: "ses", english: "his/her (plural)", note: "ses chats" },
-    { french: "notre", english: "our (singular)", note: "notre maison" },
-    { french: "nos", english: "our (plural)", note: "nos chats" },
+    {
+      french: "mon",
+      english: "my (masculine)",
+      note: "masculine form - mon livre",
+    },
+    {
+      french: "ma",
+      english: "my (feminine)",
+      note: "feminine form - ma maison",
+    },
+    { french: "mes", english: "my (plural)", note: "plural form - mes chats" },
+    {
+      french: "ton",
+      english: "your (masc, informal)",
+      note: "masculine form - ton chat",
+    },
+    {
+      french: "ta",
+      english: "your (fem, informal)",
+      note: "feminine form - ta voiture",
+    },
+    {
+      french: "tes",
+      english: "your (plural, informal)",
+      note: "plural form - tes amis",
+    },
+    {
+      french: "son",
+      english: "his/her (masculine)",
+      note: "masculine form - son livre",
+    },
+    {
+      french: "sa",
+      english: "his/her (feminine)",
+      note: "feminine form - sa maison",
+    },
+    {
+      french: "ses",
+      english: "his/her (plural)",
+      note: "plural form - ses chats",
+    },
+    {
+      french: "notre",
+      english: "our (singular)",
+      note: "singular form - notre maison",
+    },
+    { french: "nos", english: "our (plural)", note: "plural form - nos chats" },
     {
       french: "votre",
       english: "your (singular, formal)",
-      note: "votre livre",
+      note: "singular form - votre livre",
     },
-    { french: "vos", english: "your (plural, formal)", note: "vos livres" },
-    { french: "leur", english: "their (singular)", note: "leur chat" },
-    { french: "leurs", english: "their (plural)", note: "leurs chats" },
+    {
+      french: "vos",
+      english: "your (plural, formal)",
+      note: "plural form - vos livres",
+    },
+    {
+      french: "leur",
+      english: "their (singular)",
+      note: "singular form - leur chat",
+    },
+    {
+      french: "leurs",
+      english: "their (plural)",
+      note: "plural form - leurs chats",
+    },
   ],
 
   exerciseConfig: {

@@ -158,6 +158,20 @@ import { soThatPhrasesModule } from "./modules/so-that-phrases.js";
 import { althoughPhrasesModule } from "./modules/although-phrases.js";
 import { possibilityPhrasesModule } from "./modules/possibility-phrases.js";
 import { reading10 } from "./modules/reading-10.js";
+import { unit10Practice } from "./modules/unit-10-practice.js";
+import { unit10Exam } from "./modules/unit-10-exam.js";
+
+// Unit 11: Daily Essentials & Practical Communication
+import { agePersonalInfoModule } from "./modules/age-personal-info.js";
+import { donnerModule } from "./modules/donner.js";
+import { dailyActions1Module } from "./modules/daily-actions-1.js";
+import { searchAndFindModule } from "./modules/search-and-find.js";
+import { perceptionVerbsModule } from "./modules/perception-verbs.js";
+import { socialSituationsModule } from "./modules/social-situations.js";
+import { directionsNavigationModule } from "./modules/directions-navigation.js";
+import { reading11 } from "./modules/reading-11.js";
+import { unit11Practice } from "./modules/unit-11-practice.js";
+import { unit11Exam } from "./modules/unit-11-exam.js";
 
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
@@ -445,18 +459,42 @@ const moduleConfigs = [
 
   // === TENTH MILESTONE - Dreams and ambitions! ===
   reading10, // 131. READING TEST 10 - Mes Rêves et Mes Espoirs - Dreams using wishes, emotions, hypotheticals!
+  unit10Practice, // 132. PRACTICE - Fill in the blanks with Unit 10 vocabulary!
+  unit10Exam, // 133. UNIT 10 FINAL EXAM - Test everything from Unit 10!
+
+  // ============================================
+  // UNIT 11: DAILY ESSENTIALS & PRACTICAL COMMUNICATION - Complete Top 100!
+  // ============================================
+
+  // === ESSENTIAL LIFE SKILLS - Finally complete what should have been in Unit 1! ===
+  agePersonalInfoModule, // 134. Age & Personal Information - J'ai 25 ans, Quel âge?
+
+  // === TOP 100 COMPLETION - Missing high-frequency verbs ===
+  donnerModule, // 135. donner (to give) - Rank 24, CRITICAL frequency
+  dailyActions1Module, // 136. Daily Actions - dormir, travailler, vivre (ranks 54-56)
+  searchAndFindModule, // 137. Search & Find - chercher, trouver (ranks 57-58)
+  perceptionVerbsModule, // 138. Perception - écouter, regarder full conjugations (ranks 65-66)
+  socialSituationsModule, // 139. Social Situations - attendre, arriver, rester (ranks 67,69,70)
+
+  // === PRACTICAL SKILLS - Navigation and directions ===
+  directionsNavigationModule, // 140. Directions & Navigation - Essential travel skills
+
+  // === ELEVENTH MILESTONE - Real-world French mastery! ===
+  reading11, // 141. READING TEST 11 - La France Moderne - Official exposition demonstrating B2+ reading ability!
+  unit11Practice, // 142. PRACTICE - Fill in the blanks with Unit 11 vocabulary!
+  unit11Exam, // 143. UNIT 11 FINAL EXAM - Test everything from Unit 11!
 
   // ============================================
   // REFERENCE UNIT - Essential Reference Materials
   // ============================================
 
   // === REFERENCE MATERIALS - Always available for quick lookup! ===
-  alphabetModule, // 132. L'Alphabet - French alphabet with pronunciation
-  numbersModule, // 133. Les Nombres - Numbers from 0 to infinity
-  daysMonthsModule, // 134. Jours et Mois - Days of the week and months
-  holidaysModule, // 135. Les Fêtes - French holidays and celebrations
-  frenchCountriesModule, // 136. La Francophonie - French-speaking countries worldwide
-  languageStatsModule, // 137. Le Français en Chiffres - Fascinating language statistics
+  alphabetModule, // 144. L'Alphabet - French alphabet with pronunciation
+  numbersModule, // 145. Les Nombres - Numbers from 0 to infinity
+  daysMonthsModule, // 146. Jours et Mois - Days of the week and months
+  holidaysModule, // 147. Les Fêtes - French holidays and celebrations
+  frenchCountriesModule, // 148. La Francophonie - French-speaking countries worldwide
+  languageStatsModule, // 149. Le Français en Chiffres - Fascinating language statistics
 ];
 
 // Build all lessons from configs
@@ -465,12 +503,12 @@ const allLessons = moduleConfigs.map((config, index) => {
   const moduleId = index + 1;
   const lesson = buildLesson(config, moduleId); // Pass module number
 
-  // Override titles for reference modules (132-137) to use Roman numerals
+  // Override titles for reference modules (144-149) to use Roman numerals
   const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
   let finalTitle = lesson.title;
 
-  if (moduleId >= 132 && moduleId <= 137) {
-    const romanIndex = moduleId - 132;
+  if (moduleId >= 144 && moduleId <= 149) {
+    const romanIndex = moduleId - 144;
     finalTitle = `Reference ${romanNumerals[romanIndex]}: ${config.title}`;
   }
 
@@ -575,16 +613,25 @@ export const unitStructure = [
     title: "Unit 10: Mastery & Nuance",
     description:
       "B2 Level Phrases! Learn special verb forms, then use them in top practical expressions: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su), services (je me fais couper), and more!",
-    lessonRange: [115, 131], // Modules 115-130 (phrase modules) + Reading 10 (131)
+    lessonRange: [115, 133], // Modules 115-130 (phrase modules) + Reading 10 (131) + Practice (132) + Unit 10 Exam (133)
     icon: "🎓",
     color: "#8b5cf6",
   },
   {
     id: 11,
+    title: "Unit 11: Daily Essentials",
+    description:
+      "Complete the top 100! Essential life skills: age expressions, high-frequency verbs (give, sleep, work, live, search, find, listen, watch, wait, arrive, stay), and directions. Perfect 100% top 100 coverage!",
+    lessonRange: [134, 143], // Modules 134-140 (core) + Reading 11 (141) + Practice (142) + Unit 11 Exam (143)
+    icon: "🌟",
+    color: "#f59e0b",
+  },
+  {
+    id: 12,
     title: "Reference",
     description:
       "Essential reference materials - alphabet, numbers, dates, holidays, French-speaking countries, and language facts",
-    lessonRange: [132, 137], // Reference modules 132-137
+    lessonRange: [144, 149], // Reference modules 144-149
     icon: "📚",
     color: "#6366f1",
     isReference: true, // Flag to indicate this is not a numbered unit

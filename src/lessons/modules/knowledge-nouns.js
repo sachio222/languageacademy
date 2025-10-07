@@ -60,7 +60,7 @@ export const knowledgeNounsModule = {
     {
       french: "la leçon",
       english: "lesson",
-      note: "⭐ what you're doing now!",
+      note: "feminine noun ⭐ what you're doing now!",
     },
     {
       french: "le cours",
@@ -85,7 +85,7 @@ export const knowledgeNounsModule = {
     {
       french: "l'idée (f)",
       english: "idea",
-      note: "⭐ very common!",
+      note: "feminine noun ⭐ very common!",
     },
     {
       french: "la question",
@@ -96,6 +96,11 @@ export const knowledgeNounsModule = {
       french: "la réponse",
       english: "answer",
       note: "feminine noun",
+    },
+    {
+      french: "Allons-y!",
+      english: "Let's go!",
+      note: "imperative phrase ⭐ very common expression",
     },
   ],
 

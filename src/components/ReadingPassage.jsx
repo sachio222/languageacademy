@@ -25,13 +25,13 @@ const wikipediaEntries = {
   'la Tour Eiffel': {
     name: 'La Tour Eiffel',
     description: 'Wrought-iron lattice tower, built 1887-1889, 330m tall',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/240px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/2013_Fireworks_on_Eiffel_Tower_11.jpg/500px-2013_Fireworks_on_Eiffel_Tower_11.jpg',
     url: 'https://en.wikipedia.org/wiki/Eiffel_Tower'
   },
   'Tour Eiffel': {
     name: 'Tour Eiffel',
     description: 'Wrought-iron lattice tower, built 1887-1889, 330m tall',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/240px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/2013_Fireworks_on_Eiffel_Tower_11.jpg/500px-2013_Fireworks_on_Eiffel_Tower_11.jpg',
     url: 'https://en.wikipedia.org/wiki/Eiffel_Tower'
   },
   'socrate': {
@@ -49,19 +49,19 @@ const wikipediaEntries = {
   'la sorbonne': {
     name: 'La Sorbonne',
     description: 'Historic university in Paris, founded 1257, one of the world\'s oldest and most prestigious universities',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Coat_of_arms_of_the_University_of_Paris.svg/330px-Coat_of_arms_of_the_University_of_Paris.svg.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Front_of_the_Sorbonne.jpg/500px-Front_of_the_Sorbonne.jpg',
     url: 'https://en.wikipedia.org/wiki/University_of_Paris'
   },
   'La Sorbonne': {
     name: 'La Sorbonne',
     description: 'Historic university in Paris, founded 1257, one of the world\'s oldest and most prestigious universities',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Coat_of_arms_of_the_University_of_Paris.svg/330px-Coat_of_arms_of_the_University_of_Paris.svg.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Front_of_the_Sorbonne.jpg/500px-Front_of_the_Sorbonne.jpg',
     url: 'https://en.wikipedia.org/wiki/University_of_Paris'
   },
   'Sorbonne': {
     name: 'La Sorbonne',
     description: 'Historic university in Paris, founded 1257, one of the world\'s oldest and most prestigious universities',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Coat_of_arms_of_the_University_of_Paris.svg/330px-Coat_of_arms_of_the_University_of_Paris.svg.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Front_of_the_Sorbonne.jpg/500px-Front_of_the_Sorbonne.jpg',
     url: 'https://en.wikipedia.org/wiki/University_of_Paris'
   },
   'Jardin des Tuileries': {
@@ -223,19 +223,19 @@ const wikipediaEntries = {
   'nice': {
     name: 'Nice',
     description: 'Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Castle_Hill%2C_Nice%2C_France.jpg/300px-Castle_Hill%2C_Nice%2C_France.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CollineDuChateau_NiceFrance2022.png/500px-CollineDuChateau_NiceFrance2022.png',
     url: 'https://en.wikipedia.org/wiki/Nice'
   },
   'Nice': {
     name: 'Nice',
     description: 'Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Castle_Hill%2C_Nice%2C_France.jpg/300px-Castle_Hill%2C_Nice%2C_France.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CollineDuChateau_NiceFrance2022.png/500px-CollineDuChateau_NiceFrance2022.png',
     url: 'https://en.wikipedia.org/wiki/Nice'
   },
   'à Nice': {
     name: 'Nice',
     description: 'Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Castle_Hill%2C_Nice%2C_France.jpg/300px-Castle_Hill%2C_Nice%2C_France.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CollineDuChateau_NiceFrance2022.png/500px-CollineDuChateau_NiceFrance2022.png',
     url: 'https://en.wikipedia.org/wiki/Nice'
   },
   'bordeaux': {
@@ -283,26 +283,224 @@ const wikipediaEntries = {
   'seine': {
     name: 'Seine River',
     description: '777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city\'s history',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Seine_by_Eiffel.jpg/500px-Seine_by_Eiffel.jpg',
     url: 'https://en.wikipedia.org/wiki/Seine'
   },
   'Seine': {
     name: 'Seine River',
     description: '777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city\'s history',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Seine_by_Eiffel.jpg/500px-Seine_by_Eiffel.jpg',
     url: 'https://en.wikipedia.org/wiki/Seine'
   },
   'la Seine': {
     name: 'Seine River',
     description: '777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city\'s history',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Seine_by_Eiffel.jpg/500px-Seine_by_Eiffel.jpg',
     url: 'https://en.wikipedia.org/wiki/Seine'
   },
   'vers la Seine': {
     name: 'Seine River',
     description: '777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city\'s history',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Seine_by_Eiffel.jpg/500px-Seine_by_Eiffel.jpg',
     url: 'https://en.wikipedia.org/wiki/Seine'
+  },
+  'marseille': {
+    name: 'Marseille',
+    description: 'France\'s second-largest city, major Mediterranean port, founded by Greeks 600 BC, cultural capital of Europe 2013',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Marseille-corniche.jpg/500px-Marseille-corniche.jpg',
+    url: 'https://en.wikipedia.org/wiki/Marseille'
+  },
+  'Marseille': {
+    name: 'Marseille',
+    description: 'France\'s second-largest city, major Mediterranean port, founded by Greeks 600 BC, cultural capital of Europe 2013',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Marseille-corniche.jpg/500px-Marseille-corniche.jpg',
+    url: 'https://en.wikipedia.org/wiki/Marseille'
+  },
+  'monet': {
+    name: 'Claude Monet',
+    description: 'French Impressionist painter (1840-1926), founder of Impressionism, famous for Water Lilies and Rouen Cathedral series',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Monet_-_Seerosen5.jpg/500px-Monet_-_Seerosen5.jpg',
+    url: 'https://en.wikipedia.org/wiki/Claude_Monet'
+  },
+  'Monet': {
+    name: 'Claude Monet',
+    description: 'French Impressionist painter (1840-1926), founder of Impressionism, famous for Water Lilies and Rouen Cathedral series',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Monet_-_Seerosen5.jpg/500px-Monet_-_Seerosen5.jpg',
+    url: 'https://en.wikipedia.org/wiki/Claude_Monet'
+  },
+  'Claude Monet': {
+    name: 'Claude Monet',
+    description: 'French Impressionist painter (1840-1926), founder of Impressionism, famous for Water Lilies and Rouen Cathedral series',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Monet_-_Seerosen5.jpg/500px-Monet_-_Seerosen5.jpg',
+    url: 'https://en.wikipedia.org/wiki/Claude_Monet'
+  },
+  'van gogh': {
+    name: 'Vincent van Gogh',
+    description: 'Dutch Post-Impressionist painter (1853-1890), lived in France, famous for Starry Night and Sunflowers',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/260px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg',
+    url: 'https://en.wikipedia.org/wiki/Vincent_van_Gogh'
+  },
+  'Van Gogh': {
+    name: 'Vincent van Gogh',
+    description: 'Dutch Post-Impressionist painter (1853-1890), lived in France, famous for Starry Night and Sunflowers',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/260px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg',
+    url: 'https://en.wikipedia.org/wiki/Vincent_van_Gogh'
+  },
+  'Vincent van Gogh': {
+    name: 'Vincent van Gogh',
+    description: 'Dutch Post-Impressionist painter (1853-1890), lived in France, famous for Starry Night and Sunflowers',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/260px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg',
+    url: 'https://en.wikipedia.org/wiki/Vincent_van_Gogh'
+  },
+  'renoir': {
+    name: 'Auguste Renoir',
+    description: 'French Impressionist painter (1841-1919), famous for vibrant light and saturated color, painted people in intimate settings',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pierre-Auguste_Renoir%2C_uncropped_image.jpg/260px-Pierre-Auguste_Renoir%2C_uncropped_image.jpg',
+    url: 'https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir'
+  },
+  'Renoir': {
+    name: 'Auguste Renoir',
+    description: 'French Impressionist painter (1841-1919), famous for vibrant light and saturated color, painted people in intimate settings',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pierre-Auguste_Renoir%2C_uncropped_image.jpg/260px-Pierre-Auguste_Renoir%2C_uncropped_image.jpg',
+    url: 'https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir'
+  },
+  'moulin rouge': {
+    name: 'Moulin Rouge',
+    description: 'Famous cabaret built 1889 in Montmartre, birthplace of modern can-can dance, iconic red windmill',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Moulin_Rouge%2C_17_April_2011.jpg/960px-Moulin_Rouge%2C_17_April_2011.jpg',
+    url: 'https://en.wikipedia.org/wiki/Moulin_Rouge'
+  },
+  'Moulin Rouge': {
+    name: 'Moulin Rouge',
+    description: 'Famous cabaret built 1889 in Montmartre, birthplace of modern can-can dance, iconic red windmill',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Moulin_Rouge%2C_17_April_2011.jpg/960px-Moulin_Rouge%2C_17_April_2011.jpg',
+    url: 'https://en.wikipedia.org/wiki/Moulin_Rouge'
+  },
+  'champs-élysées': {
+    name: 'Champs-Élysées',
+    description: 'Most famous avenue in Paris, 1.9km long, connects Arc de Triomphe to Place de la Concorde',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg/960px-Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg',
+    url: 'https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es'
+  },
+  'Champs-Élysées': {
+    name: 'Champs-Élysées',
+    description: 'Most famous avenue in Paris, 1.9km long, connects Arc de Triomphe to Place de la Concorde',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg/960px-Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg',
+    url: 'https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es'
+  },
+  'versailles': {
+    name: 'Palace of Versailles',
+    description: 'Royal château 12 miles southwest of Paris, symbol of absolute monarchy, Hall of Mirrors, UNESCO World Heritage',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg',
+    url: 'https://en.wikipedia.org/wiki/Palace_of_Versailles'
+  },
+  'Versailles': {
+    name: 'Palace of Versailles',
+    description: 'Royal château 12 miles southwest of Paris, symbol of absolute monarchy, Hall of Mirrors, UNESCO World Heritage',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg',
+    url: 'https://en.wikipedia.org/wiki/Palace_of_Versailles'
+  },
+  'coq au vin': {
+    name: 'Coq au Vin',
+    description: 'Classic French dish of chicken braised in wine, traditionally Burgundy wine, with mushrooms and onions',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Coq_au_vin_at_The_Swan_at_the_Globe%2C_London.jpg/500px-Coq_au_vin_at_The_Swan_at_the_Globe%2C_London.jpg',
+    url: 'https://en.wikipedia.org/wiki/Coq_au_vin'
+  },
+  'ratatouille': {
+    name: 'Ratatouille',
+    description: 'Traditional French vegetable stew from Provence, made with tomatoes, eggplant, zucchini, peppers, and herbs',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Confit_byaldi_2.jpg/500px-Confit_byaldi_2.jpg',
+    url: 'https://en.wikipedia.org/wiki/Ratatouille'
+  },
+  'bouillabaisse': {
+    name: 'Bouillabaisse',
+    description: 'Traditional fish stew from Marseille, made with Mediterranean fish, saffron, and served with rouille sauce',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Bullabessa.jpg/500px-Bullabessa.jpg',
+    url: 'https://en.wikipedia.org/wiki/Bouillabaisse'
+  },
+  'bouillabaisse de marseille': {
+    name: 'Bouillabaisse',
+    description: 'Traditional fish stew from Marseille, made with Mediterranean fish, saffron, and served with rouille sauce',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Bullabessa.jpg/500px-Bullabessa.jpg',
+    url: 'https://en.wikipedia.org/wiki/Bouillabaisse'
+  },
+  'arc de triomphe': {
+    name: 'Arc de Triomphe',
+    description: 'Triumphal arch built 1806-1836, honors French military victories, tomb of unknown soldier, center of Place Charles de Gaulle',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arc_de_Triomphe%2C_Paris_21_October_2010.jpg/300px-Arc_de_Triomphe%2C_Paris_21_October_2010.jpg',
+    url: 'https://en.wikipedia.org/wiki/Arc_de_Triomphe'
+  },
+  'Arc de Triomphe': {
+    name: 'Arc de Triomphe',
+    description: 'Triumphal arch built 1806-1836, honors French military victories, tomb of unknown soldier, center of Place Charles de Gaulle',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arc_de_Triomphe%2C_Paris_21_October_2010.jpg/300px-Arc_de_Triomphe%2C_Paris_21_October_2010.jpg',
+    url: 'https://en.wikipedia.org/wiki/Arc_de_Triomphe'
+  },
+  'l\'Arc de Triomphe': {
+    name: 'Arc de Triomphe',
+    description: 'Triumphal arch built 1806-1836, honors French military victories, tomb of unknown soldier, center of Place Charles de Gaulle',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arc_de_Triomphe%2C_Paris_21_October_2010.jpg/300px-Arc_de_Triomphe%2C_Paris_21_October_2010.jpg',
+    url: 'https://en.wikipedia.org/wiki/Arc_de_Triomphe'
+  },
+  'auguste renoir': {
+    name: 'Auguste Renoir',
+    description: 'French Impressionist painter (1841-1919), famous for vibrant light and saturated color, painted people in intimate settings',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg/500px-Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg',
+    url: 'https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir'
+  },
+  'Auguste Renoir': {
+    name: 'Auguste Renoir',
+    description: 'French Impressionist painter (1841-1919), famous for vibrant light and saturated color, painted people in intimate settings',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg/500px-Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg',
+    url: 'https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir'
+  },
+  'méditerranée': {
+    name: 'Mediterranean Sea',
+    description: 'Sea between Europe, Africa and Asia, 2.5 million km², cradle of Western civilization, connects to Atlantic via Gibraltar',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ionian_sea_islands%2C_pic1.JPG/500px-Ionian_sea_islands%2C_pic1.JPG',
+    url: 'https://en.wikipedia.org/wiki/Mediterranean_Sea'
+  },
+  'Méditerranée': {
+    name: 'Mediterranean Sea',
+    description: 'Sea between Europe, Africa and Asia, 2.5 million km², cradle of Western civilization, connects to Atlantic via Gibraltar',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ionian_sea_islands%2C_pic1.JPG/500px-Ionian_sea_islands%2C_pic1.JPG',
+    url: 'https://en.wikipedia.org/wiki/Mediterranean_Sea'
+  },
+  'mer Méditerranée': {
+    name: 'Mediterranean Sea',
+    description: 'Sea between Europe, Africa and Asia, 2.5 million km², cradle of Western civilization, connects to Atlantic via Gibraltar',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ionian_sea_islands%2C_pic1.JPG/500px-Ionian_sea_islands%2C_pic1.JPG',
+    url: 'https://en.wikipedia.org/wiki/Mediterranean_Sea'
+  },
+  'cannes': {
+    name: 'Cannes',
+    description: 'Resort city on French Riviera, famous for Cannes Film Festival since 1946, luxury shopping and beaches',
+    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG/500px-H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG',
+    url: 'https://en.wikipedia.org/wiki/Cannes'
+  },
+  'Cannes': {
+    name: 'Cannes',
+    description: 'Resort city on French Riviera, famous for Cannes Film Festival since 1946, luxury shopping and beaches',
+    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG/500px-H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG',
+    url: 'https://en.wikipedia.org/wiki/Cannes'
+  },
+  'bouillabaisse': {
+    name: 'Bouillabaisse',
+    description: 'Traditional fish stew from Marseille, made with Mediterranean fish, saffron, and served with rouille sauce',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Bullabessa.jpg/500px-Bullabessa.jpg',
+    url: 'https://en.wikipedia.org/wiki/Bouillabaisse'
+  },
+  'château de versailles': {
+    name: 'Palace of Versailles',
+    description: 'Royal château built for Louis XIV, symbol of absolute monarchy, Hall of Mirrors, 2,300 rooms, UNESCO World Heritage Site',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg',
+    url: 'https://en.wikipedia.org/wiki/Palace_of_Versailles'
+  },
+  'Château de Versailles': {
+    name: 'Palace of Versailles',
+    description: 'Royal château built for Louis XIV, symbol of absolute monarchy, Hall of Mirrors, 2,300 rooms, UNESCO World Heritage Site',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg',
+    url: 'https://en.wikipedia.org/wiki/Palace_of_Versailles'
   }
 };
 
@@ -379,6 +577,7 @@ function ReadingPassage({ passage }) {
       { phrase: "grâce à", translation: "thanks to" },
       { phrase: "à cause de", translation: "because of" },
       { phrase: "parce que", translation: "because" },
+      { phrase: "au-delà", translation: "beyond" },
 
       // Subjunctive forms that get tokenized incorrectly
       { phrase: "j'aie", translation: "I have (subjunctive)" },
@@ -408,6 +607,19 @@ function ReadingPassage({ passage }) {
       { phrase: "au Louvre", translation: "at the Louvre" },
       { phrase: "la Seine", translation: "the Seine River" },
       { phrase: "vers la Seine", translation: "towards the Seine" },
+      { phrase: "Claude Monet", translation: "Claude Monet (Impressionist painter)" },
+      { phrase: "Auguste Renoir", translation: "Auguste Renoir (Impressionist painter)" },
+      { phrase: "Vincent van Gogh", translation: "Vincent van Gogh (Post-Impressionist painter)" },
+      { phrase: "Moulin Rouge", translation: "Moulin Rouge (famous cabaret)" },
+      { phrase: "Arc de Triomphe", translation: "Arc de Triomphe (triumphal arch)" },
+      { phrase: "l'Arc de Triomphe", translation: "the Arc de Triomphe" },
+      { phrase: "Champs-Élysées", translation: "Champs-Élysées (famous avenue)" },
+      { phrase: "château de Versailles", translation: "Palace of Versailles" },
+      { phrase: "mer Méditerranée", translation: "Mediterranean Sea" },
+      { phrase: "coq au vin", translation: "Coq au Vin (classic French dish)" },
+      { phrase: "bouillabaisse", translation: "bouillabaisse (Marseille fish stew)" },
+      { phrase: "bouillabaisse de Marseille", translation: "bouillabaisse from Marseille" },
+      { phrase: "soixante-huit millions", translation: "sixty-eight million" },
       { phrase: "Quelle surprise!", translation: "What a surprise!" },
       { phrase: "\"Quelle surprise!\"", translation: "\"What a surprise!\"" },
 

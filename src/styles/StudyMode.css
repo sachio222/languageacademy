@@ -213,6 +213,18 @@
 }
 
 /* Vocabulary Reference */
+/* Vocabulary Reference Dividers */
+.vocab-divider {
+  height: 1rem;
+}
+
+.vocab-section-break {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 0.75rem 0;
+  opacity: 0.6;
+}
+
 .vocab-reference {
   /* background: #fafbfc; */
   border-radius: 8px;

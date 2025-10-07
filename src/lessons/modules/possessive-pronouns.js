@@ -39,7 +39,7 @@ export const module9_possessive_pronouns = {
     {
       french: "la mienne",
       english: "mine (fem thing)",
-      note: "la voiture est la mienne",
+      note: "feminine - la voiture est la mienne",
     },
     {
       french: "le tien",
@@ -69,7 +69,7 @@ export const module9_possessive_pronouns = {
     {
       french: "la nôtre",
       english: "ours (fem thing)",
-      note: "with circumflex",
+      note: "feminine - with circumflex",
     },
     {
       french: "le vôtre",
@@ -79,7 +79,7 @@ export const module9_possessive_pronouns = {
     {
       french: "la vôtre",
       english: "yours formal (fem)",
-      note: "with circumflex",
+      note: "feminine - with circumflex",
     },
     {
       french: "le leur",
