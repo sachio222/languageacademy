@@ -138,19 +138,62 @@ export function buildExercises(moduleId, exerciseConfig) {
 }
 
 /**
+ * Build exercises from vocabularyReference for reference modules
+ */
+function buildVocabularyExercises(moduleId, vocabularyReference) {
+  if (!vocabularyReference || vocabularyReference.length === 0) {
+    return [];
+  }
+
+  return vocabularyReference.map((item, index) => {
+    const exerciseNumber = index + 1;
+    return {
+      id: `${moduleId}.${exerciseNumber}`,
+      instruction: `Translate "${item.english}" to French`,
+      prompt: item.english,
+      hint: item.note || `The French word/phrase for "${item.english}"`,
+      expectedAnswer: item.french,
+      article: null,
+      tense: null,
+      verb: null,
+      vocabulary: item.french,
+      wrongAnswers: [], // Reference modules focus on learning, not testing wrong answers
+    };
+  });
+}
+
+/**
  * Build complete lesson from module config
  * Note: id will be set dynamically in lessonData.js
  */
 export function buildLesson(moduleConfig, moduleNumber = null) {
+  // Generate exercises
+  let exercises = [];
+  if (moduleConfig.exerciseConfig) {
+    exercises = buildExercises(
+      moduleConfig.id || 0,
+      moduleConfig.exerciseConfig
+    );
+  } else if (moduleConfig.exercises && moduleConfig.exercises.length > 0) {
+    exercises = moduleConfig.exercises;
+  } else if (
+    moduleConfig.vocabularyReference &&
+    moduleConfig.vocabularyReference.length > 0
+  ) {
+    // Generate exercises from vocabularyReference for reference modules
+    exercises = buildVocabularyExercises(
+      moduleConfig.id || 0,
+      moduleConfig.vocabularyReference
+    );
+  }
+
   return {
     // id is set dynamically in lessonData.js
     title: moduleConfig.title,
     description: moduleConfig.description,
     concepts: moduleConfig.concepts || [],
     vocabularyReference: moduleConfig.vocabularyReference || [],
-    exercises: moduleConfig.exerciseConfig
-      ? buildExercises(moduleConfig.id || 0, moduleConfig.exerciseConfig)
-      : moduleConfig.exercises || [],
+    exercises: exercises,
     // Pass through special flags for reading comprehension
     skipStudyMode: moduleConfig.skipStudyMode || false,
     isReadingComprehension: moduleConfig.isReadingComprehension || false,

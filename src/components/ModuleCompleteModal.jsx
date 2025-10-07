@@ -1,6 +1,6 @@
 import '../styles/ModuleCompleteModal.css';
 
-function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, totalModules }) {
+function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam, totalModules }) {
   if (!lesson) return null;
 
   const hasNextModule = lesson.id < totalModules;
@@ -76,6 +76,12 @@ function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, totalModul
         </div>
 
         <div className="modal-footer">
+          {/* Practice Exam Button - especially useful for reference modules */}
+          {lesson.exercises && lesson.exercises.length > 0 && onTakeExam && (
+            <button className="btn-secondary btn-large" onClick={onTakeExam}>
+              📝 Take Practice Exam
+            </button>
+          )}
           {hasNextModule && (
             <button className="btn-primary btn-large" onClick={onNextModule}>
               Continue to Next Module →

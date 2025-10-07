@@ -83,6 +83,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   };
 
   const handleTakeExam = () => {
+    setModuleCompleted(false); // Close completion modal
     setShowExam(true);
   };
 
@@ -147,6 +148,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           lesson={lesson}
           onNextModule={handleNextModule}
           onBackToModules={onBack}
+          onTakeExam={handleTakeExam}
           totalModules={totalModules}
         />
       )}

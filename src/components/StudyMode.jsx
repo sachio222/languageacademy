@@ -10,6 +10,23 @@ function StudyMode({ exercises, onFinishStudying }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
 
+  // Safety check for empty exercises
+  if (!exercises || exercises.length === 0) {
+    return (
+      <div className="study-mode">
+        <div className="study-header">
+          <h3>📚 Study Mode</h3>
+          <p>No exercises available for this module.</p>
+        </div>
+        <div className="study-navigation">
+          <button className="btn-nav btn-primary" onClick={onFinishStudying}>
+            Continue
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   const currentExercise = exercises[currentIndex];
   const progress = ((currentIndex + 1) / exercises.length) * 100;
 
