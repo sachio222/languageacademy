@@ -1,103 +1,87 @@
 /**
- * Reading Comprehension 2
- * More complex paragraph using vocabulary from modules 1-15
- * Includes: questions, ça, demonstratives, vouloir/pouvoir, prepositions, adjectives
+ * Reading Comprehension 2 - Normandy Adventure
+ * Engaging story set in Norman towns using ONLY vocabulary from Units 1-2
+ * Includes: demonstratives, questions, vouloir/pouvoir, prepositions, adjectives from Units 1-2
  */
 
 export const reading2 = {
   // id and module number are set dynamically
-  title: "Reading Comprehension 2 - Conversation!",
+  title: "Reading Comprehension 2 - Normandy Adventure!",
   description:
-    "A conversation between friends! See how much you've progressed since Reading 1.",
+    "An exciting trip through beautiful Normandy! Explore famous places using vocabulary from Units 1 & 2.",
 
   skipStudyMode: true,
   isReadingComprehension: true,
   concepts: [],
 
   readingPassage: {
-    title: "Les Amis au Café (Friends at the Café)",
-    text: `**Paul:** Bonjour Marie! Comment ça va?
+    title: "Une Aventure en Normandie (An Adventure in Normandy)",
+    text: `**Marie:** Bonjour Sophie! Comment ça va?
 
-**Marie:** Ça va bien, merci! Et toi?
+**Sophie:** Ça va bien! Je suis à Caen avec un ami Thomas. Et toi, où es-tu?
 
-**Paul:** Très bien! Tu veux un café avec moi?
+**Marie:** Je suis à Honfleur! J'ai une nouvelle voiture et je veux voir Bayeux aussi.
 
-**Marie:** Oui, je veux un café. Qu'est-ce que c'est, ça?
+**Sophie:** Qu'est-ce que c'est, ça? Cette chose dans la voiture?
 
-**Paul:** Ça? C'est un livre pour mon ami Pierre.
+**Marie:** Ça? C'est un livre sur la Normandie! Il y a Mont-Saint-Michel, Rouen... Ces choses sont très belles!
 
-**Marie:** Ce livre est pour lui? C'est un bon livre?
+**Thomas:** Je veux voir Mont-Saint-Michel! Où est-ce?
 
-**Paul:** Oui, c'est un très bon livre! Pierre a une grande maison avec beaucoup de livres.
+**Marie:** C'est ça! Tu peux voir cette vieille et belle chose. Elle est très grande aussi.
 
-**Marie:** Où est la maison de Pierre?
+**Sophie:** Et Bayeux? Qu'est-ce qu'il y a à Bayeux?
 
-**Paul:** Elle est dans la ville. C'est une nouvelle maison. Tu peux voir la maison avec moi?
+**Marie:** Il y a une grande maison avec de belles choses vieilles! Nous pouvons voir cette maison.
 
-**Marie:** Oui! Je veux voir cette maison. Mais où est Pierre?
+**Thomas:** Oui! Et nous pouvons voir Rouen. Un ami Pierre est à Rouen.
 
-**Paul:** Il est avec les enfants. Les enfants sont au Jardin des Tuileries.
+**Sophie:** Pierre? Il a une maison à Rouen?
 
-**Marie:** Il a combien d'enfants?
+**Thomas:** Oui! Il a une petite mais très belle maison. Elle est dans Rouen.
 
-**Paul:** Il a deux enfants. Un grand garçon et une petite fille. Ils sont très bon!
+**Marie:** Une maison à Rouen? C'est bon ça! J'ai le chien dans la voiture. Il peut voir Rouen aussi?
 
-**Marie:** Oh! J'ai un chat dans ma voiture. Les enfants peuvent voir le chat?
+**Sophie:** Oui! Les chiens peuvent être avec nous! Et le chat est dans la voiture aussi.
 
-**Paul:** Oui! Pierre et les enfants veulent voir ton chat. Où est ta voiture?
+**Marie:** Tu as un chat? Je veux voir ce chat! Nous pouvons voir ces choses en un jour?
 
-**Marie:** Elle est là! Voilà ma voiture. Le chat est petit mais très beau.
+**Thomas:** Non, c'est très bon! Mais nous avons deux jours. Un jour pour Mont-Saint-Michel et Bayeux, un autre jour pour Rouen et Honfleur.
 
-**Paul:** Il est très beau! Et moi, j'ai un chien aussi.
+**Sophie:** Très bien! Voilà! Nous pouvons voir ces belles choses! Au revoir!`,
+    translation: `**Marie:** Hello Sophie! How's it going?
 
-**Marie:** Tu as un chien? Où est le chien?
+**Sophie:** It's going well! I am in Caen with a friend Thomas. And you, where are you?
 
-**Paul:** Il est avec moi dans cette voiture. C'est un vieux chien, mais il est bon.
+**Marie:** I am in Honfleur! I have a new car and I want to see Bayeux too.
 
-**Marie:** Bon! Nous pouvons aller chez Pierre avec les animaux!
+**Sophie:** What is that? That thing in the car?
 
-**Paul:** Oui! Allons-y! Pierre va être très content!`,
-    translation: `**Paul:** Hello Marie! How's it going?
+**Marie:** That? It's a book about Normandy! There's Mont-Saint-Michel, Rouen... These things are very beautiful!
 
-**Marie:** It's going well, thank you! And you?
+**Thomas:** I want to see Mont-Saint-Michel! Where is it?
 
-**Paul:** Very well! Do you want a coffee with me?
+**Marie:** It's that! You can see this old and beautiful thing. It is very big too.
 
-**Marie:** Yes, I want a coffee. What is that?
+**Sophie:** And Bayeux? What is there in Bayeux?
 
-**Paul:** That? It's a book for my friend Pierre.
+**Marie:** There is a big house with beautiful old things! We can see this house.
 
-**Marie:** This book is for him? Is it a good book?
+**Thomas:** Yes! And we can see Rouen. A friend Pierre is in Rouen.
 
-**Paul:** Yes, it's a very good book! Pierre has a big house with many books.
+**Sophie:** Pierre? Does he have a house in Rouen?
 
-**Marie:** Where is Pierre's house?
+**Thomas:** Yes! He has a small but very beautiful house. It is in Rouen.
 
-**Paul:** It's in the city. It's a new house. Can you see the house with me?
+**Marie:** A house in Rouen? That's good! I have the dog in the car. Can he see Rouen too?
 
-**Marie:** Yes! I want to see this house. But where is Pierre?
+**Sophie:** Yes! Dogs can be with us! And the cat is in the car too.
 
-**Paul:** He's with the children. The children are at the Tuileries Garden.
+**Marie:** You have a cat? I want to see this cat! Can we see these things in one day?
 
-**Marie:** How many children does he have?
+**Thomas:** No, it's very good! But we have two days. One day for Mont-Saint-Michel and Bayeux, another day for Rouen and Honfleur.
 
-**Paul:** He has two children. A big boy and a small girl. They are very good!
-
-**Marie:** Oh! I have a cat in my car. Can the children see the cat?
-
-**Paul:** Yes! Pierre and the children want to see your cat. Where is your car?
-
-**Marie:** It's there! There's my car. The cat is small but very beautiful.
-
-**Paul:** It's very beautiful! And me, I have a dog too.
-
-**Marie:** You have a dog? Where is the dog?
-
-**Paul:** He's with me in this car. It's an old dog, but he's good.
-
-**Marie:** Good! We can go to Pierre's with the animals!
-
-**Paul:** Yes! Let's go! Pierre is going to be very happy!`,
+**Sophie:** Very good! There! We can see these beautiful things! Goodbye!`,
   },
 
   vocabularyReference: [],
@@ -106,217 +90,235 @@ export const reading2 = {
     type: "custom",
     items: [
       {
-        instruction: "Complete Paul's invitation:",
-        prompt: "Tu veux un café ___ ___?",
-        hint: "Look for 'avec ___' - which stressed pronoun for 'me'?",
-        expectedAnswer: "avec moi",
-        acceptableAnswers: ["avec moi"],
+        instruction: "Where is Sophie in the story?",
+        prompt: "Sophie is in ___",
+        hint: "Look for the Norman city where Sophie is located",
+        expectedAnswer: "Caen",
         wrongAnswers: [
           {
-            answer: "avec toi",
-            feedback:
-              "Paul is inviting Marie, so he says 'with me' not 'with you'",
+            answer: "Honfleur",
+            feedback: "That's where Marie is, Sophie is in Caen",
+          },
+          {
+            answer: "Rouen",
+            feedback: "That's where Pierre is, Sophie is in Caen",
           },
         ],
       },
       {
-        instruction: "What is Paul's friend's name?",
-        prompt: "The friend is named ___",
-        hint: "Look for 'mon ami ___'",
-        expectedAnswer: "Pierre",
+        instruction: "Who is with Sophie?",
+        prompt: "Sophie is with her friend ___",
+        hint: "Look for 'un ami ___'",
+        expectedAnswer: "Thomas",
         wrongAnswers: [
           {
-            answer: "Paul",
-            feedback: "Paul is talking, the friend is Pierre",
+            answer: "Pierre",
+            feedback: "Pierre is in Rouen, Thomas is with Sophie",
           },
           {
             answer: "Marie",
-            feedback: "Marie is listening, the friend is Pierre",
+            feedback: "Marie is talking to them, Thomas is with Sophie",
           },
         ],
       },
       {
-        instruction: "What does Marie ask about?",
-        prompt: "___ ___ ___ c'est?",
+        instruction: "What does Sophie ask about?",
+        prompt: "___ ___ ___ c'est, ça?",
         hint: "Look for the question phrase meaning 'what is that'",
         expectedAnswer: "qu'est-ce que",
-        acceptableAnswers: ["qu'est-ce que c'est"],
         wrongAnswers: [
           {
             answer: "où est",
             feedback: "That means 'where is', not 'what is'",
           },
+          {
+            answer: "qui est",
+            feedback: "That means 'who is', not 'what is'",
+          },
+        ],
+      },
+      {
+        instruction: "What thing does Marie have in her car?",
+        prompt: "Marie has a ___ in her car",
+        hint: "It's about Normandy - something you can read",
+        expectedAnswer: "livre",
+        wrongAnswers: [
+          {
+            answer: "chien",
+            feedback: "The dog is mentioned later, the book is in the car",
+          },
+          {
+            answer: "chat",
+            feedback: "The cat is Sophie's, Marie has a book",
+          },
+        ],
+      },
+      {
+        instruction: "What does Thomas want to see?",
+        prompt: "Thomas wants to see ___",
+        hint: "Famous Norman abbey on an island",
+        expectedAnswer: "Mont-Saint-Michel",
+        wrongAnswers: [
+          {
+            answer: "Bayeux",
+            feedback: "He wants Mont-Saint-Michel, others mention Bayeux",
+          },
+          {
+            answer: "Rouen",
+            feedback: "He wants Mont-Saint-Michel, Rouen comes later",
+          },
+        ],
+      },
+      {
+        instruction: "Who has a friend in Rouen?",
+        prompt: "___ has a friend in Rouen",
+        hint: "Look for 'mon ami ___ est là'",
+        expectedAnswer: "Thomas",
+        wrongAnswers: [
+          {
+            answer: "Sophie",
+            feedback: "It's Thomas who has a friend Pierre in Rouen",
+          },
+          {
+            answer: "Marie",
+            feedback: "It's Thomas who has a friend Pierre in Rouen",
+          },
+        ],
+      },
+      {
+        instruction: "What animals do they have?",
+        prompt: "Marie has a ___ and Sophie has a ___",
+        hint: "Two different pets mentioned in the conversation",
+        expectedAnswer: "chien, chat",
+        acceptableAnswers: ["chien et chat"],
+        wrongAnswers: [
+          {
+            answer: "chat, chien",
+            feedback: "Switch them: Marie has the dog, Sophie has the cat",
+          },
+        ],
+      },
+      {
+        instruction: "How many days do they have for their trip?",
+        prompt: "They have ___ days",
+        hint: "Look for the number Thomas mentions",
+        expectedAnswer: "deux",
+        acceptableAnswers: ["2"],
+        wrongAnswers: [
+          {
+            answer: "un",
+            feedback: "They have two days, not one",
+          },
+          {
+            answer: "trois",
+            feedback: "They have two days, not three",
+          },
+        ],
+      },
+      {
+        instruction: "Complete Marie's response about her dog:",
+        prompt: "J'ai mon chien ___ ma voiture",
+        hint: "Preposition meaning 'in'",
+        expectedAnswer: "dans",
+        wrongAnswers: [
+          {
+            answer: "sur",
+            feedback: "Use 'dans' (in), not 'sur' (on)",
+          },
+          {
+            answer: "avec",
+            feedback: "Use 'dans' (in), not 'avec' (with)",
+          },
         ],
       },
       {
         instruction:
-          "What stressed pronoun does Marie use to ask about the book?",
-        prompt: "Ce livre est pour ___?",
-        hint: "Stressed pronoun meaning 'him'",
-        expectedAnswer: "lui",
-        wrongAnswers: [
-          {
-            answer: "il",
-            feedback: "Use stressed pronoun 'lui' not subject pronoun 'il'",
-          },
-          {
-            answer: "moi",
-            feedback: "The book is for Pierre (lui), not for Marie (moi)",
-          },
-        ],
-      },
-      {
-        instruction: "Who is the book for?",
-        prompt: "Ce livre est pour ___ ___",
-        hint: "Look for 'pour ___ ami' - possessive adjective meaning 'my'",
-        expectedAnswer: "mon ami",
-        acceptableAnswers: ["son ami"],
-        wrongAnswers: [
-          {
-            answer: "toi",
-            feedback: "The book is for Paul's friend, not for Marie",
-          },
-        ],
-      },
-      {
-        instruction: "Where is Pierre's house?",
-        prompt: "Elle est ___ ___ ___",
-        hint: "Look for 'elle est ___ la ville'",
-        expectedAnswer: "dans la ville",
-        wrongAnswers: [
-          {
-            answer: "dans le parc",
-            feedback: "The children are in the park, the house is in the city",
-          },
-        ],
-      },
-      {
-        instruction: "What demonstrative does Marie use for the house?",
-        prompt: "Je veux voir ___ maison",
-        hint: "Demonstrative for feminine singular noun",
-        expectedAnswer: "cette",
+          "What demonstrative does Sophie use about things in Normandy?",
+        prompt: "Nous pouvons aller à ___ belles choses!",
+        hint: "Demonstrative for 'these' with plural noun",
+        expectedAnswer: "ces",
         wrongAnswers: [
           {
             answer: "ce",
-            feedback: "Use 'cette' for feminine nouns, 'ce' is masculine",
+            feedback: "Use 'ces' for plural, not 'ce' for singular masculine",
           },
           {
-            answer: "ces",
-            feedback: "Use 'cette' for singular, 'ces' is plural",
-          },
-        ],
-      },
-      {
-        instruction: "Where is Pierre?",
-        prompt: "Il est ___ ___ ___",
-        hint: "Look for 'il est ___ les enfants'",
-        expectedAnswer: "avec les enfants",
-        wrongAnswers: [
-          {
-            answer: "dans la voiture",
-            feedback: "Pierre is with the children at the garden",
+            answer: "cette",
+            feedback: "Use 'ces' for plural, not 'cette' for singular feminine",
           },
         ],
       },
       {
-        instruction: "Where are the children?",
-        prompt: "Les enfants sont ___ Jardin des Tuileries",
-        hint: "Look for the preposition - contraction of à + le",
-        expectedAnswer: "au",
+        instruction: "How does Marie describe her new car?",
+        prompt: "J'ai une ___ voiture",
+        hint: "Adjective meaning 'new'",
+        expectedAnswer: "nouvelle",
         wrongAnswers: [
           {
-            answer: "dans",
+            answer: "nouveau",
             feedback:
-              "Use 'au' (à + le) for 'at the' with masculine place names",
+              "Use feminine form 'nouvelle' with feminine noun 'voiture'",
+          },
+          {
+            answer: "vieille",
+            feedback: "She says it's new (nouvelle), not old (vieille)",
           },
         ],
       },
       {
-        instruction: "What question does Marie ask about quantity?",
-        prompt: "Il a ___ d'enfants?",
-        hint: "Question word for 'how many'",
-        expectedAnswer: "combien",
+        instruction:
+          "What question word does Thomas use about Mont-Saint-Michel?",
+        prompt: "___ est-ce?",
+        hint: "Question word asking about location",
+        expectedAnswer: "où",
         wrongAnswers: [
           {
-            answer: "où",
-            feedback: "That means 'where', not 'how many'",
+            answer: "que",
+            feedback: "He's asking 'where' (où), not 'what' (que)",
+          },
+          {
+            answer: "qui",
+            feedback: "He's asking 'where' (où), not 'who' (qui)",
           },
         ],
       },
       {
-        instruction: "What can the children do?",
-        prompt: "Les enfants peuvent ___ le chat",
-        hint: "Look for 'peuvent ___ le chat'",
-        expectedAnswer: "voir",
+        instruction: "What preposition shows where Thomas's friend's house is?",
+        prompt: "Elle est ___ Rouen",
+        hint: "Preposition meaning 'in'",
+        expectedAnswer: "dans",
         wrongAnswers: [
           {
-            answer: "veulent",
-            feedback: "That's 'want', not what they CAN do",
+            answer: "sur",
+            feedback: "Use 'dans' (in), not 'sur' (on) for cities",
           },
         ],
       },
       {
-        instruction: "What possessive adjective does Paul ask about?",
-        prompt: "Où est ___ voiture?",
-        hint: "Possessive adjective meaning 'your' (feminine)",
-        expectedAnswer: "ta",
+        instruction: "How do they describe Mont-Saint-Michel?",
+        prompt: "C'est un très ___ et très beau chose",
+        hint: "Adjective meaning 'old'",
+        expectedAnswer: "vieux",
         wrongAnswers: [
           {
-            answer: "ton",
-            feedback: "'voiture' is feminine, use 'ta' not 'ton'",
+            answer: "nouveau",
+            feedback: "They say it's old (vieux), not new (nouveau)",
           },
           {
-            answer: "toi",
-            feedback:
-              "Use possessive adjective 'ta' not stressed pronoun 'toi'",
+            answer: "jeune",
+            feedback: "They say it's old (vieux), not young (jeune)",
           },
         ],
       },
       {
-        instruction: "What word does Marie use to show her car?",
-        prompt: "___ ma voiture!",
-        hint: "Presentation expression meaning 'there is'",
-        expectedAnswer: "voilà",
-        wrongAnswers: [
-          {
-            answer: "où",
-            feedback: "That's a question word, not a presentation word",
-          },
-        ],
-      },
-      {
-        instruction: "What animal does Paul have?",
-        prompt: "J'ai un ___ aussi",
-        hint: "Look for what Paul says he has",
-        expectedAnswer: "chien",
-        wrongAnswers: [
-          {
-            answer: "chat",
-            feedback: "Marie has the cat, Paul has the dog",
-          },
-        ],
-      },
-      {
-        instruction: "What demonstrative does Paul use for his car?",
-        prompt: "Il est avec moi dans ___ voiture",
-        hint: "Demonstrative for feminine singular",
-        expectedAnswer: "cette",
-        wrongAnswers: [
-          {
-            answer: "ce",
-            feedback: "'voiture' is feminine, use 'cette' not 'ce'",
-          },
-        ],
-      },
-      {
-        instruction: "Where do they decide to go at the end?",
-        prompt: "Nous pouvons ___ chez Pierre",
+        instruction: "What can they do with the animals?",
+        prompt: "Les chiens peuvent ___ avec nous!",
         hint: "Verb meaning 'to go'",
         expectedAnswer: "aller",
         wrongAnswers: [
           {
             answer: "voir",
-            feedback: "They will GO (aller) to Pierre's, not see (voir)",
+            feedback: "The dogs can GO (aller) with them, not see (voir)",
           },
         ],
       },

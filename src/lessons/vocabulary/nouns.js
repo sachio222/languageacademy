@@ -503,4 +503,3 @@ export const foodNouns = {
     article: "le chocolat / du chocolat",
   },
 };
-

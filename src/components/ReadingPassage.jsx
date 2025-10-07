@@ -10,6 +10,81 @@ import { readingVocabulary as wordTranslations } from './readingVocabulary';
 // Word translations now imported from readingVocabulary.js (deduplicated, 1752 unique entries)
 
 const wikipediaEntries = {
+  // Normandy locations for Reading 2 - All variations for proper hover functionality
+  'Normandie': {
+    name: 'Normandie (Normandy)',
+    description: 'Historical region in northern France, famous for D-Day landings and Norman architecture',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Falaises_Etretat_2012.jpg/500px-Falaises_Etretat_2012.jpg',
+    url: 'https://en.wikipedia.org/wiki/Normandy'
+  },
+  'normandie': {
+    name: 'Normandie (Normandy)',
+    description: 'Historical region in northern France, famous for D-Day landings and Norman architecture',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Falaises_Etretat_2012.jpg/500px-Falaises_Etretat_2012.jpg',
+    url: 'https://en.wikipedia.org/wiki/Normandy'
+  },
+  'Caen': {
+    name: 'Caen',
+    description: 'Historic capital of Lower Normandy, home to medieval castles and abbeys',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Mairie_de_Caen_7.JPG/960px-Mairie_de_Caen_7.JPG',
+    url: 'https://en.wikipedia.org/wiki/Caen'
+  },
+  'caen': {
+    name: 'Caen',
+    description: 'Historic capital of Lower Normandy, home to medieval castles and abbeys',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Mairie_de_Caen_7.JPG/960px-Mairie_de_Caen_7.JPG',
+    url: 'https://en.wikipedia.org/wiki/Caen'
+  },
+  'Honfleur': {
+    name: 'Honfleur',
+    description: 'Picturesque port town famous for its old harbor and historic wooden church',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/PShonfleur4326tonemapped.jpg/960px-PShonfleur4326tonemapped.jpg',
+    url: 'https://en.wikipedia.org/wiki/Honfleur'
+  },
+  'honfleur': {
+    name: 'Honfleur',
+    description: 'Picturesque port town famous for its old harbor and historic wooden church',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/PShonfleur4326tonemapped.jpg/960px-PShonfleur4326tonemapped.jpg',
+    url: 'https://en.wikipedia.org/wiki/Honfleur'
+  },
+  'Bayeux': {
+    name: 'Bayeux',
+    description: 'Medieval town famous for the Bayeux Tapestry depicting the Norman Conquest of 1066',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bayeux_centre.jpg/960px-Bayeux_centre.jpg',
+    url: 'https://en.wikipedia.org/wiki/Bayeux'
+  },
+  'bayeux': {
+    name: 'Bayeux',
+    description: 'Medieval town famous for the Bayeux Tapestry depicting the Norman Conquest of 1066',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bayeux_centre.jpg/960px-Bayeux_centre.jpg',
+    url: 'https://en.wikipedia.org/wiki/Bayeux'
+  },
+  'Mont-Saint-Michel': {
+    name: 'Mont-Saint-Michel',
+    description: 'Iconic tidal island abbey, UNESCO World Heritage site and medieval marvel',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Mont_Saint-Michel_vue_a%C3%A9rienne.jpg/300px-Mont_Saint-Michel_vue_a%C3%A9rienne.jpg',
+    url: 'https://en.wikipedia.org/wiki/Mont-Saint-Michel'
+  },
+  'mont-saint-michel': {
+    name: 'Mont-Saint-Michel',
+    description: 'Iconic tidal island abbey, UNESCO World Heritage site and medieval marvel',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Mont_Saint-Michel_vue_a%C3%A9rienne.jpg/300px-Mont_Saint-Michel_vue_a%C3%A9rienne.jpg',
+    url: 'https://en.wikipedia.org/wiki/Mont-Saint-Michel'
+  },
+  'Rouen': {
+    name: 'Rouen',
+    description: 'Historic capital of Upper Normandy, famous for its Gothic cathedral and Joan of Arc history',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cath%C3%A9drale_de_Rouen_vue_de_l%27Op%C3%A9ra.JPG/500px-Cath%C3%A9drale_de_Rouen_vue_de_l%27Op%C3%A9ra.JPG',
+    url: 'https://en.wikipedia.org/wiki/Rouen'
+  },
+  'rouen': {
+    name: 'Rouen',
+    description: 'Historic capital of Upper Normandy, famous for its Gothic cathedral and Joan of Arc history',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cath%C3%A9drale_de_Rouen_vue_de_l%27Op%C3%A9ra.JPG/500px-Cath%C3%A9drale_de_Rouen_vue_de_l%27Op%C3%A9ra.JPG',
+    url: 'https://en.wikipedia.org/wiki/Rouen'
+  },
+
+  // Original Paris locations  
   'paris': {
     name: 'Paris',
     description: 'Capital and largest city of France',
