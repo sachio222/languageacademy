@@ -59,16 +59,16 @@ const wikipediaEntries = {
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bayeux_centre.jpg/960px-Bayeux_centre.jpg',
     url: 'https://en.wikipedia.org/wiki/Bayeux'
   },
-  'Mont-Saint-Michel': {
-    name: 'Mont-Saint-Michel',
-    description: 'Iconic tidal island abbey, UNESCO World Heritage site and medieval marvel',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Mont_Saint-Michel_vue_a%C3%A9rienne.jpg/300px-Mont_Saint-Michel_vue_a%C3%A9rienne.jpg',
-    url: 'https://en.wikipedia.org/wiki/Mont-Saint-Michel'
-  },
   'mont-saint-michel': {
     name: 'Mont-Saint-Michel',
     description: 'Iconic tidal island abbey, UNESCO World Heritage site and medieval marvel',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Mont_Saint-Michel_vue_a%C3%A9rienne.jpg/300px-Mont_Saint-Michel_vue_a%C3%A9rienne.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mont-Saint-Michel_vu_du_ciel.jpg/960px-Mont-Saint-Michel_vu_du_ciel.jpg',
+    url: 'https://en.wikipedia.org/wiki/Mont-Saint-Michel'
+  },
+  'Mont-Saint-Michel': {
+    name: 'Mont-Saint-Michel',
+    description: 'Iconic tidal island abbey, UNESCO World Heritage site and medieval marvel',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mont-Saint-Michel_vu_du_ciel.jpg/960px-Mont-Saint-Michel_vu_du_ciel.jpg',
     url: 'https://en.wikipedia.org/wiki/Mont-Saint-Michel'
   },
   'Rouen': {
@@ -678,6 +678,7 @@ function ReadingPassage({ passage }) {
       { phrase: "La Sorbonne", translation: "the Sorbonne" },
       { phrase: "à la Sorbonne", translation: "at the Sorbonne" },
       { phrase: "Notre-Dame", translation: "Notre-Dame Cathedral" },
+      { phrase: "Mont-Saint-Michel", translation: "Mont-Saint-Michel Abbey" },
       { phrase: "le Louvre", translation: "the Louvre Museum" },
       { phrase: "au Louvre", translation: "at the Louvre" },
       { phrase: "la Seine", translation: "the Seine River" },

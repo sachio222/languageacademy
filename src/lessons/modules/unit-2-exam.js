@@ -1,12 +1,12 @@
 /**
  * Unit 2 Exam - Comprehensive test for Composition unit
- * Tests demonstratives, questions, stressed pronouns, prepositions, and adjectives
+ * Tests demonstratives, questions, vouloir/pouvoir/voir, stressed pronouns, prepositions, and adjectives
  */
 
 export const unit2Exam = {
   title: "Unit 2 Final Exam - Composition",
   description:
-    "Test everything from Unit 2! Demonstratives, questions, stressed pronouns, prepositions, and descriptive sentences.",
+    "Test everything from Unit 2! Demonstratives, essential verbs (vouloir/pouvoir/voir), questions, stressed pronouns, prepositions, and descriptive sentences.",
 
   // Special flags
   isUnitExam: true,
@@ -184,6 +184,44 @@ export const unit2Exam = {
         prompt: "where is the big cat?",
         hint: "où + est + article + adjective + noun",
         expectedAnswer: "où est le grand chat",
+      },
+
+      // Section 6: Essential Verbs - vouloir, pouvoir, voir
+      {
+        instruction: "Translate to French",
+        prompt: "I want",
+        hint: "vouloir conjugated for je",
+        expectedAnswer: "je veux",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "you can (informal)",
+        hint: "pouvoir conjugated for tu",
+        expectedAnswer: "tu peux",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "I see",
+        hint: "voir conjugated for je",
+        expectedAnswer: "je vois",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "she sees",
+        hint: "voir conjugated for elle",
+        expectedAnswer: "elle voit",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "I want to see this",
+        hint: "je veux + infinitive + demonstrative",
+        expectedAnswer: "je veux voir ça",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "you can see the house",
+        hint: "tu peux + infinitive + article + noun",
+        expectedAnswer: "tu peux voir la maison",
       },
     ],
   },

@@ -1,7 +1,7 @@
 /**
  * Reading Comprehension 2 - Normandy Adventure
  * Engaging story set in Norman towns using ONLY vocabulary from Units 1-2
- * Includes: demonstratives, questions, vouloir/pouvoir, prepositions, adjectives from Units 1-2
+ * Includes: demonstratives, questions, vouloir/pouvoir/voir, prepositions, adjectives from Units 1-2
  */
 
 export const reading2 = {

@@ -1,7 +1,7 @@
 /**
  * Reading Comprehension 4
  * Unit 4 vocabulary: survival phrases, faire/devoir/parler, negation, time/location adverbs, everyday nouns
- * ONLY uses vocabulary from modules 1-41!
+ * ONLY uses vocabulary from modules 1-42!
  */
 
 export const reading4 = {
@@ -380,5 +380,3 @@ export const reading4 = {
     ],
   },
 };
-
-

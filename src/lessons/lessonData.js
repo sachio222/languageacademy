@@ -205,34 +205,32 @@ const moduleConfigs = [
   // === ACTION LAYER - More essential verbs ===
   vouloirModule, // 15. vouloir (to want) - "je veux ça", "tu veux le livre"
   pouvoirModule, // 16. pouvoir (can) - "je peux", "tu peux ça"
+  voirModule, // 17. voir (to see) - "je vois Mont-Saint-Michel", "tu vois cette maison"
 
   // === COMMUNICATION LAYER - Questions ===
-  module6_questions, // 17. Questions (26-32) - COMBO: "où est le chat?", "qu'est-ce que c'est?"
+  module6_questions, // 18. Questions (26-32) - COMBO: "où est le chat?", "qu'est-ce que c'est?"
 
   // === EXPANSION LAYER - Pronouns, Prepositions & Descriptors ===
-  stressedPronouns, // 18. moi, toi, lui, elle, nous, vous, eux, elles - for use with prepositions!
-  prepositions, // 19. avec, dans, sur, à, de - "avec moi", "dans la maison", "pour toi"
-  adjectives, // 20. bon, grand, petit, nouveau, vieux, etc. - "un bon livre", "une belle maison"
+  stressedPronouns, // 19. moi, toi, lui, elle, nous, vous, eux, elles - for use with prepositions!
+  prepositions, // 20. avec, dans, sur, à, de - "avec moi", "dans la maison", "pour toi"
+  adjectives, // 21. bon, grand, petit, nouveau, vieux, etc. - "un bon livre", "une belle maison"
 
   // === SECOND MILESTONE - See your progress! ===
-  reading2, // 21. READING TEST 2 - Dialogue! Uses questions, ça, vouloir, prepositions, adjectives, stressed pronouns!
-  unit2Practice, // 22. PRACTICE - Fill in the blanks with Unit 2 vocabulary!
-  unit2Exam, // 23. UNIT 2 FINAL EXAM - Test everything from Unit 2!
+  reading2, // 22. READING TEST 2 - Normandy Adventure! Uses questions, ça, vouloir/pouvoir/voir, prepositions, adjectives, stressed pronouns!
+  unit2Practice, // 23. PRACTICE - Fill in the blanks with Unit 2 vocabulary!
+  unit2Exam, // 24. UNIT 2 FINAL EXAM - Test everything from Unit 2!
 
   // ============================================
   // UNIT 3: EXPANSION - Complex Structures
   // ============================================
 
   // === CONTRACTIONS - Easy transition into Unit 3! ===
-  contractions, // 24. du, au, de la, à la - combining prepositions with articles!
+  contractions, // 25. du, au, de la, à la - combining prepositions with articles!
 
   // === MOTION LAYER - Essential movement verbs ===
-  venirModule, // 25. venir - "je viens", "tu viens", "il vient"
-  allerModule, // 26. aller - "je vais", "tu vas", "il va" - MOST COMMON!
-  partirModule, // 27. partir - "je pars", "tu pars", "il part"
-
-  // === PERCEPTION LAYER - Essential perception verb ===
-  voirModule, // 28. voir - "je vois", "tu vois", "il voit" - NEEDED for object pronouns!
+  venirModule, // 26. venir - "je viens", "tu viens", "il vient"
+  allerModule, // 27. aller - "je vais", "tu vas", "il va" - MOST COMMON!
+  partirModule, // 28. partir - "je pars", "tu pars", "il part"
 
   // === ADVANCED LAYER - Complex pronouns ===
   module7_object_pronouns, // 29. le, la, les - COMBO: "je le vois", "il l'a" (builds on voir, vouloir, avoir)
@@ -284,33 +282,33 @@ const moduleConfigs = [
   // ============================================
 
   // === COMPARISON & INTENSITY - Express nuance! ===
-  comparisons, // 48. Comparisons - plus, moins, meilleur, pire, trop, tout, même - express comparisons and intensity!
-  comparisonsSlang, // 49. Slang - c'est ouf! 🇫🇷 c'est malade! 🇨🇦 c'est gnama! 🌍 Real street French from France, Quebec & Africa!
+  comparisons, // 37. Comparisons - plus, moins, meilleur, pire, trop, tout, même - express comparisons and intensity!
+  comparisonsSlang, // 38. Slang - c'est ouf! 🇫🇷 c'est malade! 🇨🇦 c'est gnama! 🌍 Real street French from France, Quebec & Africa!
 
   // === CONDITIONAL MOOD - Should & Could ===
-  conditionals, // 50. Should & Could - je devrais (I should), je pourrais (I could) - in couplets!
+  conditionals, // 39. Should & Could - je devrais (I should), je pourrais (I could) - in couplets!
 
   // === CONDITIONAL MOOD - Would Forms ===
-  wouldConditionals, // 51. Would Forms - je voudrais (I would like), j'irais (I would go), je ferais (I would do)
+  wouldConditionals, // 40. Would Forms - je voudrais (I would like), j'irais (I would go), je ferais (I would do)
 
   // === ESSENTIAL VERBS - High-frequency emotion verb ===
-  aimerModule, // 52. aimer - to like/love - j'aime le café, je t'aime!
+  aimerModule, // 41. aimer - to like/love - j'aime le café, je t'aime!
 
   // === PAST TENSE - Talk about the past! ===
-  etrePast, // 53. être past tense - j'étais (I was), tu étais (you were), il était (he was)
-  avoirPast, // 54. avoir past tense - j'avais (I had), tu avais (you had), il avait (he had)
+  etrePast, // 42. être past tense - j'étais (I was), tu étais (you were), il était (he was)
+  avoirPast, // 43. avoir past tense - j'avais (I had), tu avais (you had), il avait (he had)
 
   // === EVERYDAY VOCABULARY - Essential nouns ===
-  foodNouns, // 55. Food nouns - le pain, l'eau, le café, la viande, les légumes - everyday essentials!
+  foodNouns, // 44. Food nouns - le pain, l'eau, le café, la viande, les légumes - everyday essentials!
 
   // === ESSENTIAL DAILY VERBS - Eating and drinking ===
-  mangerModule, // 56. manger - to eat - je mange du pain, j'ai mangé (I ate) - with passé composé!
-  boireModule, // 57. boire - to drink - je bois du café, j'ai bu (I drank - irregular!) - with passé composé!
+  mangerModule, // 45. manger - to eat - je mange du pain, j'ai mangé (I ate) - with passé composé!
+  boireModule, // 46. boire - to drink - je bois du café, j'ai bu (I drank - irregular!) - with passé composé!
 
   // === FIFTH MILESTONE - Restaurant story with past tense! ===
-  reading5, // 58. READING TEST 5 - Restaurant article! Uses comparisons, slang, conditionals, past tense, food vocab!
-  unit5Practice, // 59. PRACTICE - Fill in the blanks with Unit 5 vocabulary!
-  unit5Exam, // 60. UNIT 5 FINAL EXAM - Test everything from Unit 5!
+  reading5, // 47. READING TEST 5 - Restaurant article! Uses comparisons, slang, conditionals, past tense, food vocab!
+  unit5Practice, // 48. PRACTICE - Fill in the blanks with Unit 5 vocabulary!
+  unit5Exam, // 49. UNIT 5 FINAL EXAM - Test everything from Unit 5!
 
   // ============================================
   // UNIT 6: COMMUNICATION - Advanced Expression & High-Frequency Words
@@ -503,13 +501,18 @@ const allLessons = moduleConfigs.map((config, index) => {
   const moduleId = index + 1;
   const lesson = buildLesson(config, moduleId); // Pass module number
 
+  // Add "Module ##:" prefix for regular modules (1-143)
   // Override titles for reference modules (144-149) to use Roman numerals
   const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
   let finalTitle = lesson.title;
 
   if (moduleId >= 144 && moduleId <= 149) {
+    // Reference modules use Roman numerals
     const romanIndex = moduleId - 144;
     finalTitle = `Reference ${romanNumerals[romanIndex]}: ${config.title}`;
+  } else {
+    // Regular modules get "Module ##:" prefix
+    finalTitle = `Module ${moduleId}: ${lesson.title}`;
   }
 
   // Set dynamic ID and update exercise IDs to match
@@ -540,8 +543,8 @@ export const unitStructure = [
     id: 2,
     title: "Unit 2: Asking & Describing",
     description:
-      "Ask questions, use demonstratives (this/that), add descriptions with adjectives and prepositions",
-    lessonRange: [12, 23], // Lessons 12-21 + Practice + Unit 2 Exam (ID 23)
+      "Ask questions, use demonstratives (this/that), essential verbs (want/can/see), add descriptions with adjectives and prepositions",
+    lessonRange: [12, 24], // Lessons 12-22 + Practice + Unit 2 Exam (ID 24)
     icon: "🧩",
     color: "#8b5cf6",
   },
@@ -549,8 +552,8 @@ export const unitStructure = [
     id: 3,
     title: "Unit 3: Movement & Possession",
     description:
-      "Master motion verbs (go, come, leave, see), object pronouns (it/them), and possessives (mine, yours)",
-    lessonRange: [24, 35], // Lessons 24-33 + Practice + Unit 3 Exam (ID 35)
+      "Master motion verbs (go, come, leave), object pronouns (it/them), and possessives (mine, yours)",
+    lessonRange: [25, 35], // Lessons 25-32 + Reading3 (33) + Practice (34) + Unit 3 Exam (35)
     icon: "🎯",
     color: "#06b6d4",
   },

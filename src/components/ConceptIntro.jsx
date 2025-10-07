@@ -7,6 +7,22 @@ import SpeakButton from './SpeakButton';
  * Shows all vocabulary and concepts before study mode
  * Based on cognitive science: exposure → encoding → retrieval
  */
+
+// Helper function to split module title
+const splitTitle = (title) => {
+  const moduleMatch = title.match(/^(Module \d+|Reference [IVX]+):\s*(.*)$/);
+  if (moduleMatch) {
+    return {
+      modulePrefix: moduleMatch[1],
+      mainTitle: moduleMatch[2]
+    };
+  }
+  return {
+    modulePrefix: null,
+    mainTitle: title
+  };
+};
+
 function ConceptIntro({ lesson, onStartStudying }) {
   const [showVocab, setShowVocab] = useState(true);
   const [showConcepts, setShowConcepts] = useState(true);
@@ -45,10 +61,17 @@ function ConceptIntro({ lesson, onStartStudying }) {
     return { understood, total, percentage };
   };
 
+  const { modulePrefix, mainTitle } = splitTitle(lesson.title);
+
   return (
     <div className="concept-intro">
       <div className="intro-header">
-        <h2>📖 {lesson.title}</h2>
+        {modulePrefix && (
+          <div className="module-prefix">
+            {modulePrefix}
+          </div>
+        )}
+        <h2>📖 {mainTitle}</h2>
         <p className="intro-description">{lesson.description}</p>
       </div>
 

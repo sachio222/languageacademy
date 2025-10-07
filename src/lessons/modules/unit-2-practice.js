@@ -236,6 +236,62 @@ export const unit2Practice = {
         },
       ],
     },
+
+    // Voir conjugations
+    {
+      text: "Je  le chat.",
+      instruction: "Complete: 'I see the cat'",
+      blanks: [
+        {
+          position: 3,
+          answer: "vois",
+          hint: "voir conjugated for je",
+        },
+      ],
+    },
+
+    {
+      text: "Elle  cette maison.",
+      instruction: "Complete: 'She sees this house'",
+      blanks: [
+        {
+          position: 5,
+          answer: "voit",
+          hint: "voir conjugated for elle",
+        },
+      ],
+    },
+
+    // Complex: vouloir + voir infinitive
+    {
+      text: "Nous voulons  Mont-Saint-Michel.",
+      instruction: "Complete: 'We want to see Mont-Saint-Michel'",
+      blanks: [
+        {
+          position: 13,
+          answer: "voir",
+          hint: "infinitive meaning 'to see'",
+        },
+      ],
+    },
+
+    // Complex: pouvoir + voir + demonstrative
+    {
+      text: "Tu peux   chose.",
+      instruction: "Complete: 'You can see this thing'",
+      blanks: [
+        {
+          position: 8,
+          answer: "voir",
+          hint: "infinitive meaning 'to see'",
+        },
+        {
+          position: 13,
+          answer: "cette",
+          hint: "demonstrative for feminine singular",
+        },
+      ],
+    },
   ],
 
   // Empty exercises array - not used for fill-in-blank

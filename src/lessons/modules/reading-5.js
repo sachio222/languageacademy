@@ -1,7 +1,7 @@
 /**
  * Reading Comprehension 5
  * Unit 5 vocabulary: comparisons, slang, conditionals, past tense, food, aimer, manger, boire
- * ONLY uses vocabulary from modules 1-57!
+ * ONLY uses vocabulary from modules 1-58!
  */
 
 export const reading5 = {

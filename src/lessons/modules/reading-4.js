@@ -1,7 +1,7 @@
 /**
  * Reading Comprehension 4
  * Unit 4 vocabulary: survival phrases, faire/devoir/parler, negation, time/location adverbs, everyday nouns
- * ONLY uses vocabulary from modules 1-41!
+ * ONLY uses vocabulary from modules 1-42!
  */
 
 export const reading4 = {
@@ -156,9 +156,21 @@ export const reading4 = {
   },
 
   vocabularyReference: [
-    { french: "comment ça va", english: "how are you", note: "common greeting" },
-    { french: "ça va bien", english: "I'm good / it's going well", note: "response" },
-    { french: "je ne peux pas", english: "I can't", note: "pouvoir + negation" },
+    {
+      french: "comment ça va",
+      english: "how are you",
+      note: "common greeting",
+    },
+    {
+      french: "ça va bien",
+      english: "I'm good / it's going well",
+      note: "response",
+    },
+    {
+      french: "je ne peux pas",
+      english: "I can't",
+      note: "pouvoir + negation",
+    },
     { french: "maintenant", english: "now", note: "time adverb" },
     { french: "je dois", english: "I must", note: "from devoir" },
     { french: "le travail", english: "work", note: "everyday noun" },
@@ -166,16 +178,36 @@ export const reading4 = {
     { french: "demain", english: "tomorrow", note: "time adverb" },
     { french: "toujours", english: "always", note: "frequency adverb" },
     { french: "le matin", english: "the morning", note: "time expression" },
-    { french: "ce soir", english: "this evening / tonight", note: "time expression" },
+    {
+      french: "ce soir",
+      english: "this evening / tonight",
+      note: "time expression",
+    },
     { french: "venir", english: "to come", note: "verb" },
     { french: "le problème", english: "problem", note: "noun" },
-    { french: "d'argent", english: "money / (any) money", note: "with negation" },
-    { french: "avec moi", english: "with me", note: "preposition + stressed pronoun" },
-    { french: "la carte de crédit", english: "credit card", note: "compound noun" },
+    {
+      french: "d'argent",
+      english: "money / (any) money",
+      note: "with negation",
+    },
+    {
+      french: "avec moi",
+      english: "with me",
+      note: "preposition + stressed pronoun",
+    },
+    {
+      french: "la carte de crédit",
+      english: "credit card",
+      note: "compound noun",
+    },
     { french: "dans ma maison", english: "in my house", note: "location" },
     { french: "là-bas", english: "over there", note: "location adverb" },
     { french: "je paie", english: "I pay", note: "from payer" },
-    { french: "tu ne dois pas", english: "you don't have to / you mustn't", note: "devoir + negation" },
+    {
+      french: "tu ne dois pas",
+      english: "you don't have to / you mustn't",
+      note: "devoir + negation",
+    },
     { french: "où", english: "where", note: "question word" },
     { french: "la place", english: "square / place", note: "everyday noun" },
     { french: "je la vois", english: "I see it (fem)", note: "object pronoun" },
@@ -183,14 +215,34 @@ export const reading4 = {
     { french: "tout le monde", english: "everybody", note: "expression" },
     { french: "partir", english: "to leave", note: "verb" },
     { french: "au revoir", english: "goodbye", note: "farewell" },
-    { french: "à ce soir", english: "see you this evening", note: "expression" },
-    { french: "tu es là", english: "you're here / you're there", note: "être + location" },
+    {
+      french: "à ce soir",
+      english: "see you this evening",
+      note: "expression",
+    },
+    {
+      french: "tu es là",
+      english: "you're here / you're there",
+      note: "être + location",
+    },
     { french: "viens", english: "come", note: "imperative from venir" },
-    { french: "qu'est-ce que vous voulez", english: "what do you want", note: "polite question" },
-    { french: "nous voudrions", english: "we would like", note: "polite request" },
+    {
+      french: "qu'est-ce que vous voulez",
+      english: "what do you want",
+      note: "polite question",
+    },
+    {
+      french: "nous voudrions",
+      english: "we would like",
+      note: "polite request",
+    },
     { french: "le pain", english: "bread", note: "everyday noun" },
     { french: "l'eau", english: "water", note: "everyday noun" },
-    { french: "s'il vous plaît", english: "please (formal)", note: "survival phrase" },
+    {
+      french: "s'il vous plaît",
+      english: "please (formal)",
+      note: "survival phrase",
+    },
     { french: "voilà", english: "there you go", note: "presentation" },
     { french: "jamais", english: "never", note: "with ne" },
     { french: "autres", english: "other / others", note: "adjective" },
@@ -201,10 +253,18 @@ export const reading4 = {
     { french: "la ville", english: "city", note: "everyday noun" },
     { french: "personne", english: "nobody", note: "with ne" },
     { french: "mon ami", english: "my friend", note: "possessive + noun" },
-    { french: "nous sommes amis", english: "we are friends", note: "statement" },
+    {
+      french: "nous sommes amis",
+      english: "we are friends",
+      note: "statement",
+    },
     { french: "la vie", english: "life", note: "everyday noun" },
     { french: "j'aime", english: "I love / I like", note: "from aimer" },
-    { french: "cette ville", english: "this city", note: "demonstrative + noun" },
+    {
+      french: "cette ville",
+      english: "this city",
+      note: "demonstrative + noun",
+    },
     { french: "manger", english: "to eat", note: "verb" },
   ],
 
@@ -310,7 +370,8 @@ export const reading4 = {
         wrongAnswers: [],
       },
       {
-        instruction: "How do they greet at the end of the morning conversation?",
+        instruction:
+          "How do they greet at the end of the morning conversation?",
         prompt: "___ ce soir",
         hint: "See you this evening",
         expectedAnswer: "à",
@@ -319,4 +380,3 @@ export const reading4 = {
     ],
   },
 };
-

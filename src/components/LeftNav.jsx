@@ -12,6 +12,12 @@ const normalizeText = (text) => {
     .replace(/[\u0300-\u036f]/g, ''); // Remove diacritical marks
 };
 
+// Strip "Module ##:" prefix from titles for navigation display only
+const getNavTitle = (title) => {
+  // Remove "Module ##:" prefix (e.g., "Module 1: Famous Words" -> "Famous Words")
+  return title.replace(/^Module \d+:\s*/, '');
+};
+
 function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, isCollapsed, onToggleCollapse }) {
   const [searchQuery, setSearchQuery] = useState('');
   // Initialize all units as collapsed (accordion starts closed)
@@ -142,7 +148,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
         }
         index.get(word).lessons.push({
           id: lesson.id,
-          title: lesson.title
+          title: getNavTitle(lesson.title)
         });
       });
     });
@@ -268,7 +274,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                                       {lesson.id}
                                     </span>
                                     <span className="nav-lesson-title">
-                                      {lesson.title}
+                                      {getNavTitle(lesson.title)}
                                     </span>
                                     {isComplete && (
                                       <span className="nav-lesson-check">✓</span>
