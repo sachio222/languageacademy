@@ -157,6 +157,7 @@ import { beforePhrasesModule } from "./modules/before-phrases.js";
 import { soThatPhrasesModule } from "./modules/so-that-phrases.js";
 import { althoughPhrasesModule } from "./modules/although-phrases.js";
 import { possibilityPhrasesModule } from "./modules/possibility-phrases.js";
+import { reading10 } from "./modules/reading-10.js";
 
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
@@ -442,17 +443,20 @@ const moduleConfigs = [
   althoughPhrasesModule, // 129. Bien que... - Although Phrases
   possibilityPhrasesModule, // 130. Il est possible que... - Possibility Phrases
 
+  // === TENTH MILESTONE - Dreams and ambitions! ===
+  reading10, // 131. READING TEST 10 - Mes Rêves et Mes Espoirs - Dreams using wishes, emotions, hypotheticals!
+
   // ============================================
   // REFERENCE UNIT - Essential Reference Materials
   // ============================================
 
   // === REFERENCE MATERIALS - Always available for quick lookup! ===
-  alphabetModule, // 131. L'Alphabet - French alphabet with pronunciation
-  numbersModule, // 132. Les Nombres - Numbers from 0 to infinity
-  daysMonthsModule, // 133. Jours et Mois - Days of the week and months
-  holidaysModule, // 134. Les Fêtes - French holidays and celebrations
-  frenchCountriesModule, // 135. La Francophonie - French-speaking countries worldwide
-  languageStatsModule, // 136. Le Français en Chiffres - Fascinating language statistics
+  alphabetModule, // 132. L'Alphabet - French alphabet with pronunciation
+  numbersModule, // 133. Les Nombres - Numbers from 0 to infinity
+  daysMonthsModule, // 134. Jours et Mois - Days of the week and months
+  holidaysModule, // 135. Les Fêtes - French holidays and celebrations
+  frenchCountriesModule, // 136. La Francophonie - French-speaking countries worldwide
+  languageStatsModule, // 137. Le Français en Chiffres - Fascinating language statistics
 ];
 
 // Build all lessons from configs
@@ -461,12 +465,12 @@ const allLessons = moduleConfigs.map((config, index) => {
   const moduleId = index + 1;
   const lesson = buildLesson(config, moduleId); // Pass module number
 
-  // Override titles for reference modules (131-136) to use Roman numerals
+  // Override titles for reference modules (132-137) to use Roman numerals
   const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
   let finalTitle = lesson.title;
 
-  if (moduleId >= 131 && moduleId <= 136) {
-    const romanIndex = moduleId - 131;
+  if (moduleId >= 132 && moduleId <= 137) {
+    const romanIndex = moduleId - 132;
     finalTitle = `Reference ${romanNumerals[romanIndex]}: ${config.title}`;
   }
 
@@ -571,7 +575,7 @@ export const unitStructure = [
     title: "Unit 10: Mastery & Nuance",
     description:
       "B2 Level Phrases! Learn special verb forms, then use them in top practical expressions: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su), services (je me fais couper), and more!",
-    lessonRange: [115, 130], // Modules 115-130 (16 modules: 2 intro + 14 phrase modules)
+    lessonRange: [115, 131], // Modules 115-130 (phrase modules) + Reading 10 (131)
     icon: "🎓",
     color: "#8b5cf6",
   },
@@ -580,7 +584,7 @@ export const unitStructure = [
     title: "Reference",
     description:
       "Essential reference materials - alphabet, numbers, dates, holidays, French-speaking countries, and language facts",
-    lessonRange: [131, 136], // Reference modules 131-136
+    lessonRange: [132, 137], // Reference modules 132-137
     icon: "📚",
     color: "#6366f1",
     isReference: true, // Flag to indicate this is not a numbered unit

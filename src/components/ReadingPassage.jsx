@@ -189,6 +189,120 @@ const wikipediaEntries = {
     description: 'Oldest café in Paris, opened 1686, historic meeting place for Voltaire, Rousseau, Victor Hugo, and many writers',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Le_Procope_1%2C_Paris_2010.jpg/500px-Le_Procope_1%2C_Paris_2010.jpg',
     url: 'https://en.wikipedia.org/wiki/Caf%C3%A9_Procope'
+  },
+  'notre-dame': {
+    name: 'Notre-Dame de Paris',
+    description: 'Medieval Catholic cathedral built 1163-1345, Gothic architecture masterpiece on Île de la Cité',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg/500px-Notre-Dame_de_Paris%2C_4_October_2017.jpg',
+    url: 'https://en.wikipedia.org/wiki/Notre-Dame_de_Paris'
+  },
+  'Notre-Dame': {
+    name: 'Notre-Dame de Paris',
+    description: 'Medieval Catholic cathedral built 1163-1345, Gothic architecture masterpiece on Île de la Cité',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg/500px-Notre-Dame_de_Paris%2C_4_October_2017.jpg',
+    url: 'https://en.wikipedia.org/wiki/Notre-Dame_de_Paris'
+  },
+  'montmartre': {
+    name: 'Montmartre',
+    description: 'Historic hilltop neighborhood famous for artists, Sacré-Cœur Basilica, and bohemian culture since 1800s',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg',
+    url: 'https://en.wikipedia.org/wiki/Montmartre'
+  },
+  'Montmartre': {
+    name: 'Montmartre',
+    description: 'Historic hilltop neighborhood famous for artists, Sacré-Cœur Basilica, and bohemian culture since 1800s',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg',
+    url: 'https://en.wikipedia.org/wiki/Montmartre'
+  },
+  'à Montmartre': {
+    name: 'Montmartre',
+    description: 'Historic hilltop neighborhood famous for artists, Sacré-Cœur Basilica, and bohemian culture since 1800s',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg',
+    url: 'https://en.wikipedia.org/wiki/Montmartre'
+  },
+  'nice': {
+    name: 'Nice',
+    description: 'Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Castle_Hill%2C_Nice%2C_France.jpg/300px-Castle_Hill%2C_Nice%2C_France.jpg',
+    url: 'https://en.wikipedia.org/wiki/Nice'
+  },
+  'Nice': {
+    name: 'Nice',
+    description: 'Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Castle_Hill%2C_Nice%2C_France.jpg/300px-Castle_Hill%2C_Nice%2C_France.jpg',
+    url: 'https://en.wikipedia.org/wiki/Nice'
+  },
+  'à Nice': {
+    name: 'Nice',
+    description: 'Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Castle_Hill%2C_Nice%2C_France.jpg/300px-Castle_Hill%2C_Nice%2C_France.jpg',
+    url: 'https://en.wikipedia.org/wiki/Nice'
+  },
+  'bordeaux': {
+    name: 'Bordeaux',
+    description: 'Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Bordeaux_Place_de_la_Bourse_de_nuit.jpg/960px-Bordeaux_Place_de_la_Bourse_de_nuit.jpg',
+    url: 'https://en.wikipedia.org/wiki/Bordeaux'
+  },
+  'Bordeaux': {
+    name: 'Bordeaux',
+    description: 'Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Bordeaux_Place_de_la_Bourse_de_nuit.jpg/960px-Bordeaux_Place_de_la_Bourse_de_nuit.jpg',
+    url: 'https://en.wikipedia.org/wiki/Bordeaux'
+  },
+  'à Bordeaux': {
+    name: 'Bordeaux',
+    description: 'Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Bordeaux_Place_de_la_Bourse_de_nuit.jpg/960px-Bordeaux_Place_de_la_Bourse_de_nuit.jpg',
+    url: 'https://en.wikipedia.org/wiki/Bordeaux'
+  },
+  'louvre': {
+    name: 'Louvre Museum',
+    description: 'World\'s largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg',
+    url: 'https://en.wikipedia.org/wiki/Louvre'
+  },
+  'Louvre': {
+    name: 'Louvre Museum',
+    description: 'World\'s largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg',
+    url: 'https://en.wikipedia.org/wiki/Louvre'
+  },
+  'le Louvre': {
+    name: 'Louvre Museum',
+    description: 'World\'s largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg',
+    url: 'https://en.wikipedia.org/wiki/Louvre'
+  },
+  'au Louvre': {
+    name: 'Louvre Museum',
+    description: 'World\'s largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg',
+    url: 'https://en.wikipedia.org/wiki/Louvre'
+  },
+  'seine': {
+    name: 'Seine River',
+    description: '777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city\'s history',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    url: 'https://en.wikipedia.org/wiki/Seine'
+  },
+  'Seine': {
+    name: 'Seine River',
+    description: '777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city\'s history',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    url: 'https://en.wikipedia.org/wiki/Seine'
+  },
+  'la Seine': {
+    name: 'Seine River',
+    description: '777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city\'s history',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    url: 'https://en.wikipedia.org/wiki/Seine'
+  },
+  'vers la Seine': {
+    name: 'Seine River',
+    description: '777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city\'s history',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    url: 'https://en.wikipedia.org/wiki/Seine'
   }
 };
 
@@ -266,6 +380,11 @@ function ReadingPassage({ passage }) {
       { phrase: "à cause de", translation: "because of" },
       { phrase: "parce que", translation: "because" },
 
+      // Subjunctive forms that get tokenized incorrectly
+      { phrase: "j'aie", translation: "I have (subjunctive)" },
+      { phrase: "que j'aie", translation: "that I have (subjunctive)" },
+      { phrase: "que j'aie perdu", translation: "that I lost/have lost" },
+
       // Proper nouns - multi-word
       { phrase: "Jardin des Tuileries", translation: "Tuileries Garden" },
       { phrase: "le Jardin des Tuileries", translation: "the Tuileries Garden" },
@@ -284,6 +403,11 @@ function ReadingPassage({ passage }) {
       { phrase: "la Sorbonne", translation: "the Sorbonne" },
       { phrase: "La Sorbonne", translation: "the Sorbonne" },
       { phrase: "à la Sorbonne", translation: "at the Sorbonne" },
+      { phrase: "Notre-Dame", translation: "Notre-Dame Cathedral" },
+      { phrase: "le Louvre", translation: "the Louvre Museum" },
+      { phrase: "au Louvre", translation: "at the Louvre" },
+      { phrase: "la Seine", translation: "the Seine River" },
+      { phrase: "vers la Seine", translation: "towards the Seine" },
       { phrase: "Quelle surprise!", translation: "What a surprise!" },
       { phrase: "\"Quelle surprise!\"", translation: "\"What a surprise!\"" },
 

@@ -4,24 +4,27 @@
 
 **THE MOST IMPORTANT THING TO UNDERSTAND:**
 
-Hover definitions in reading passages are **NOT** pulled from the `vocabularyReference` array in your lesson file. They are **HARDCODED** in `/src/components/ReadingPassage.jsx` in the `wordTranslations` object.
+Hover definitions in reading passages are **NOT** pulled from the `vocabularyReference` array in your lesson file. They come from a **centralized vocabulary file** at `/src/components/readingVocabulary.js`.
 
-### The Confusing Truth
+### The System Architecture (Updated 2025)
 
-- **`vocabularyReference`** in your reading module file (e.g., `reading-7.js`) → Used for the vocabulary sidebar reference only
-- **`wordTranslations`** in `ReadingPassage.jsx` → Used for actual hover definitions on words in the passage
+- **`vocabularyReference`** in your reading module file (e.g., `reading-10.js`) → Used for the vocabulary sidebar reference only
+- **`readingVocabulary`** in `/src/components/readingVocabulary.js` → Used for actual hover definitions on ALL reading passages
+- **ReadingPassage component** imports vocabulary from the separate file
 
-These are TWO SEPARATE SYSTEMS.
+These are TWO SEPARATE SYSTEMS (but vocabulary is now centralized and maintainable).
 
 ### ⚠️ AI RESPONSIBILITY
 
 **When creating a new reading module, the AI assistant will automatically:**
 
 1. Create the reading module file with `vocabularyReference`
-2. **Immediately add ALL words to `wordTranslations` in `ReadingPassage.jsx`**
-3. Include all verb forms, contractions, phrases, and variations
+2. **Extract all unique words from the passage**
+3. **Add missing words to `/src/components/readingVocabulary.js`**
+4. **Run `npm run vocab:sort` to alphabetize**
+5. Include all verb forms, contractions, phrases, and variations
 
-**You should NOT need to manually update `ReadingPassage.jsx` - the AI handles this!**
+**You should NOT need to manually update vocabulary - the AI handles this!**
 
 ## Setting Up a New Reading Unit
 
@@ -71,7 +74,7 @@ export const readingX = {
 
 ### Step 2: Words Added Automatically by AI ✅
 
-**The AI assistant will automatically add ALL words to `ReadingPassage.jsx`** including:
+**The AI assistant will automatically add ALL words to `/src/components/readingVocabulary.js`** including:
 
 - All verb forms (je pense, tu penses, il pense, nous pensons, etc.)
 - All noun forms (singular/plural, with articles)
@@ -80,7 +83,14 @@ export const readingX = {
 - Multi-word phrases (en fait, tout le monde, poser des questions)
 - Common expressions and fixed phrases
 
-**You can verify** by checking the browser console for `Missing translation for: "word"` warnings.
+**After adding words, AI runs:**
+
+```bash
+npm run vocab:sort      # Alphabetize the vocabulary
+npm run vocab:validate  # Ensure no errors
+```
+
+**You can verify** by checking the browser console for `Missing translation for: "word"` warnings, or by looking for red/pink highlighted words in the reading passage.
 
 ### Step 3: Test Coverage (Optional)
 
@@ -91,6 +101,55 @@ If you want to verify completeness:
 3. Hover over words - they should all have tooltips
 4. Red/pink highlights = missing words (AI should have caught these!)
 5. Check browser console for warnings
+
+## The Vocabulary System (New Architecture)
+
+### Centralized & Alphabetized
+
+All vocabulary is now in **one place**: `/src/components/readingVocabulary.js`
+
+**Benefits:**
+
+- ✅ **2,161 entries** alphabetically sorted
+- ✅ **Easy to find words** - Just Cmd+F
+- ✅ **No duplicates** - Automated validation prevents them
+- ✅ **Maintainable** - One file, clear rules
+
+### Available Commands
+
+**Sort vocabulary:**
+
+```bash
+npm run vocab:sort
+```
+
+**Validate vocabulary:**
+
+```bash
+npm run vocab:validate
+```
+
+### How to Add Words Manually
+
+If you need to add words yourself (though AI usually handles this):
+
+1. Open `/src/components/readingVocabulary.js`
+2. Search (Cmd+F) to check if word exists
+3. Add anywhere in the file (format: `'french': 'english',`)
+4. Run `npm run vocab:sort` to alphabetize
+5. (Optional) Run `npm run vocab:validate` to check
+
+**Example:**
+
+```javascript
+// Add anywhere:
+'nouveau-mot': 'new word',
+
+// Then run:
+npm run vocab:sort
+```
+
+The header comment in the file has full instructions.
 
 ## Common Mistakes
 
@@ -104,16 +163,20 @@ vocabularyReference: [{ french: "d'argent", english: "money" }];
 ### ✅ CORRECT: Adding to BOTH places
 
 ```javascript
-// In reading-4.js
+// In reading-10.js
 vocabularyReference: [
   { french: "d'argent", english: "(of) money", note: "with negation" },
 ];
 
-// AND in ReadingPassage.jsx
-const wordTranslations = {
+// AND in /src/components/readingVocabulary.js
+export const readingVocabulary = {
+  // ... (alphabetically sorted)
   "d'argent": "of money / (any) money",
+  // ...
 };
 ```
+
+**Note:** AI handles adding to readingVocabulary.js automatically when creating readings.
 
 ## Words to Watch Out For
 
@@ -197,15 +260,17 @@ The component handles the speaker labels automatically.
 
 - [x] Created module file in `/src/lessons/modules/`
 - [x] Added `vocabularyReference` entries in module file
-- [x] **Added ALL words to `wordTranslations` in `ReadingPassage.jsx`** ← AI does this!
+- [x] **Added ALL words to `/src/components/readingVocabulary.js`** ← AI does this!
 - [x] Included all verb forms, contractions, phrases, variations
+- [x] Ran `npm run vocab:sort` to alphabetize
+- [x] Ran `npm run vocab:validate` to check for errors
+- [x] Added to `lessonData.js` imports and `moduleConfigs` array
 
 ### Human Verifies:
 
-- [ ] Added to `lessonData.js` imports and `moduleConfigs` array (or AI does this)
 - [ ] Passage uses ONLY taught vocabulary
 - [ ] Comprehension questions match the passage
-- [ ] (Optional) Test hover tooltips work for all words
+- [ ] (Optional) Test hover tooltips work for all words (check for red/pink highlights)
 
 ## Debug Missing Hover Definitions
 
@@ -213,14 +278,73 @@ If words don't have hover tooltips:
 
 1. Check browser console for: `Missing translation for: "word"`
 2. Words without definitions show with pink/red highlight
-3. Add the exact word (including accents, apostrophes) to `wordTranslations`
-4. Remember: case-insensitive matching, but exact text matters
+3. Add the exact word (including accents, apostrophes) to `/src/components/readingVocabulary.js`
+4. Run `npm run vocab:sort` to alphabetize
+5. Remember: case-insensitive matching, but exact text matters
+
+**Quick fix:**
+
+```bash
+# Add words to readingVocabulary.js, then:
+npm run vocab:sort
+npm run vocab:validate
+```
 
 ## Why Two Systems?
 
-Historical reasons. The `wordTranslations` object was created first for hardcoded definitions. The `vocabularyReference` was added later for the sidebar panel. They were never unified.
+Historical reasons. The vocabulary was originally hardcoded in `ReadingPassage.jsx` for hover definitions. The `vocabularyReference` was added later for the sidebar panel.
+
+**2025 Refactor:** Vocabulary was extracted to `/src/components/readingVocabulary.js`:
+
+- **Before:** 3,184 lines in ReadingPassage.jsx with 595 duplicates
+- **After:** 673 lines in ReadingPassage.jsx + 2,161 unique entries in readingVocabulary.js
+- **Result:** Zero duplicate warnings, alphabetized, validated, maintainable
 
 **The AI assistant now handles both systems automatically when creating readings.**
+
+## Vocabulary Management Scripts
+
+### `npm run vocab:sort`
+
+Alphabetizes all vocabulary entries using French locale rules.
+
+**When to run:**
+
+- After adding new words
+- Before committing changes
+- When entries are out of order
+
+### `npm run vocab:validate`
+
+Validates vocabulary integrity:
+
+- ✅ No duplicate keys
+- ✅ Alphabetical order
+- ✅ No empty translations
+- ✅ Format correctness
+
+**Exit codes:**
+
+- `0` = Validation passed
+- `1` = Validation failed (for CI/git hooks)
+
+### Vocabulary File Structure
+
+```javascript
+// /src/components/readingVocabulary.js
+export const readingVocabulary = {
+  a: "has / have",
+  à: "to / at",
+  // ... 2,161 entries alphabetically sorted
+  y: "there / to it",
+};
+```
+
+**Header includes:**
+
+- Instructions for adding new words
+- Format rules and examples
+- Commands to run (sort, validate)
 
 ## Process Summary
 
@@ -228,10 +352,55 @@ When you request a new reading:
 
 1. **You specify:** Theme, difficulty, which units to include
 2. **AI creates:**
-   - Reading module file with passage + questions
-   - Adds `vocabularyReference` for sidebar
-   - **Automatically adds ALL words to `ReadingPassage.jsx` wordTranslations**
+   - Reading module file with passage + questions + `vocabularyReference`
+   - Extracts all unique words from the passage
+   - **Adds ALL missing words to `/src/components/readingVocabulary.js`**
+   - Runs `npm run vocab:sort` to alphabetize (2,161+ entries)
+   - Runs `npm run vocab:validate` to ensure no errors
    - Imports and registers in `lessonData.js`
-3. **You verify:** The passage works as expected
+3. **You verify:** The passage works as expected (no red highlights)
 
 **No manual work required for word definitions - AI handles the entire pipeline!**
+
+## Maintainability: The "Where Do I Add This Word?" Problem
+
+### The Solution: One File, Alphabetical
+
+**Question:** "I need to add 'peut-être' - where does it go?"
+
+**Answer:** Open `/src/components/readingVocabulary.js`, add it anywhere, run `npm run vocab:sort`. Done.
+
+### Workflow (30 seconds)
+
+```bash
+1. Open src/components/readingVocabulary.js
+2. Cmd+F to search for the word - exists? Use it. Not found? Continue.
+3. Add anywhere: 'peut-être': 'perhaps / maybe',
+4. Save and run: npm run vocab:sort
+5. Done! Ready to commit.
+```
+
+### Why Alphabetical Beats Categories
+
+**Search is instant:**
+
+- Finding "depuis" in 2,161 words: Cmd+F = 0.1 seconds
+- Finding "depuis" in 15 category files: Which file? 2-5 minutes
+
+**No categorization debates:**
+
+- Is "maintenant" a time word or adverb?
+- Who cares? Just add it alphabetically.
+
+**One place, one rule:**
+
+- No mental model needed
+- New developers productive immediately
+- Merge conflicts resolve themselves
+
+### Current Stats
+
+- **2,161 unique entries** (as of Reading 10)
+- **Alphabetically sorted** using French locale
+- **Zero duplicates** (validated automatically)
+- **One file** - easy to maintain
