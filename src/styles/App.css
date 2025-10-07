@@ -213,6 +213,7 @@ body:has(.left-nav.collapsed) .app-footer {
   margin-bottom: 3rem;
   padding-bottom: 0;
   border-bottom: none;
+  padding: 2rem;
 }
 
 .lesson-list-header h2 {
