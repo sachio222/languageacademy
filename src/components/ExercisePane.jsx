@@ -4,6 +4,7 @@ import TestOutput from './TestOutput';
 import ReadingPassage from './ReadingPassage';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
 import { ArrowBigLeft } from 'lucide-react';
+import { extractModuleId, extractUnitId } from '../utils/progressSync';
 
 function ExercisePane({
   exercise,
@@ -14,14 +15,17 @@ function ExercisePane({
   isCompleted,
   onComplete,
   readingPassage,
-  onBackToLesson
+  onBackToLesson,
+  moduleId,
+  unitId
 }) {
   const [userAnswer, setUserAnswer] = useState('');
   const [testResults, setTestResults] = useState(null);
   const [showHint, setShowHint] = useState(false);
+  const [startTime, setStartTime] = useState(null);
   const textareaRef = useRef(null);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!userAnswer.trim()) {
       alert('Please enter an answer first!');
       return;
@@ -32,13 +36,27 @@ function ExercisePane({
       document.activeElement.blur();
     }
 
+    // Calculate time spent
+    const timeSpent = startTime ? Math.round((Date.now() - startTime) / 1000) : 0;
+
     // If there's a reading passage, this is a reading comprehension exercise
     const isReadingComprehension = !!readingPassage;
     const results = runTests(exercise, userAnswer, isReadingComprehension);
     setTestResults(results);
 
-    if (isExerciseComplete(results)) {
-      onComplete(exercise.id);
+    const isCorrect = isExerciseComplete(results);
+    
+    // Call the completion handler with all required analytics data
+    if (onComplete) {
+      await onComplete(
+        exercise.id,
+        moduleId || 'unknown',
+        unitId || 'unknown', 
+        userAnswer,
+        exercise.expectedAnswer,
+        timeSpent,
+        showHint
+      );
     }
   };
 
@@ -55,6 +73,7 @@ function ExercisePane({
     setUserAnswer('');
     setTestResults(null);
     setShowHint(false);
+    setStartTime(Date.now()); // Start timing the exercise
 
     // Focus the textarea after a brief delay to ensure it's rendered
     setTimeout(() => {
@@ -68,6 +87,7 @@ function ExercisePane({
     setUserAnswer('');
     setTestResults(null);
     setShowHint(false);
+    setStartTime(Date.now()); // Restart timing
   };
 
   const handleNextExercise = () => {

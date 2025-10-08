@@ -1,8 +1,22 @@
 import { Volume2 } from "lucide-react";
 
 /**
+ * Detect if user is on Safari
+ */
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
+/**
+ * Check if user might benefit from better TTS setup
+ */
+function shouldShowTTSImprovement() {
+  return isSafari() && window.speechSynthesis && window.speechSynthesis.getVoices().length > 0;
+}
+
+/**
  * Select the best available voice for a given language
- * Prioritizes: Google/natural voices > female voices > any available voice
+ * Prioritizes: Google/natural voices > Safari enhanced voices > female voices > any available voice
  */
 function selectBestVoice(voices, language) {
   const langCode = language.split("-")[0];
@@ -10,20 +24,39 @@ function selectBestVoice(voices, language) {
 
   if (matchingVoices.length === 0) return null;
 
-  // Priority 1: Google voices (usually highest quality)
+  // Priority 1: Google voices (Chrome - usually highest quality)
   const googleVoice = matchingVoices.find((v) => v.name.includes("Google"));
   if (googleVoice) return googleVoice;
 
-  // Priority 2: Voices with "enhanced" or "premium" in the name
+  // Priority 2: Safari/macOS enhanced voices (look for specific high-quality French voices)
+  if (langCode === 'fr') {
+    // These are higher-quality French voices available on macOS/iOS
+    const safariEnhancedVoice = matchingVoices.find((v) => {
+      const nameLower = v.name.toLowerCase();
+      return nameLower.includes("amélie") ||
+        nameLower.includes("amelie") ||
+        nameLower.includes("thomas") ||  // Thomas (French) is actually good quality
+        nameLower.includes("audrey") ||
+        nameLower.includes("marie") ||
+        nameLower.includes("enhanced") ||
+        nameLower.includes("premium") ||
+        nameLower.includes("neural") ||
+        (nameLower.includes("compact") && nameLower.includes("fr"));
+    });
+    if (safariEnhancedVoice) return safariEnhancedVoice;
+  }
+
+  // Priority 3: General enhanced voices
   const enhancedVoice = matchingVoices.find(
     (v) =>
       v.name.toLowerCase().includes("enhanced") ||
       v.name.toLowerCase().includes("premium") ||
-      v.name.toLowerCase().includes("neural")
+      v.name.toLowerCase().includes("neural") ||
+      v.name.toLowerCase().includes("compact")  // Compact voices are often better quality
   );
   if (enhancedVoice) return enhancedVoice;
 
-  // Priority 3: Female voices (often sound more natural)
+  // Priority 4: Female voices (often sound more natural)
   const femaleVoice = matchingVoices.find(
     (v) =>
       v.name.toLowerCase().includes("female") ||
@@ -31,32 +64,28 @@ function selectBestVoice(voices, language) {
       v.name.toLowerCase().includes("karen") ||
       v.name.toLowerCase().includes("fiona") ||
       v.name.toLowerCase().includes("amelie") ||
+      v.name.toLowerCase().includes("amélie") ||
       v.name.toLowerCase().includes("paulina") ||
       v.name.toLowerCase().includes("marie") ||
       v.name.toLowerCase().includes("celine") ||
+      v.name.toLowerCase().includes("céline") ||
       v.name.toLowerCase().includes("audrey") ||
-      v.name.toLowerCase().includes("aurelie")
+      v.name.toLowerCase().includes("aurelie") ||
+      v.name.toLowerCase().includes("aurélie")
   );
   if (femaleVoice) return femaleVoice;
 
-  // Priority 4: Avoid male and robotic-sounding voices
-  const nonMaleVoice = matchingVoices.find(
+  // Priority 5: Avoid low-quality voices
+  const decentVoice = matchingVoices.find(
     (v) =>
       !v.name.toLowerCase().includes("alex") &&
       !v.name.toLowerCase().includes("fred") &&
       !v.name.toLowerCase().includes("ralph") &&
-      !v.name.toLowerCase().includes("thomas") &&
       !v.name.toLowerCase().includes("male") &&
-      !v.name.toLowerCase().includes("daniel")
+      !v.name.toLowerCase().includes("daniel") &&
+      !v.name.toLowerCase().includes("junior")  // Avoid junior/basic voices
   );
-  if (nonMaleVoice) return nonMaleVoice;
-
-  // Fallback: Prefer any voice with specific characteristics over generic first match
-  // Look for voices that don't have "male" in the name
-  const nonMaleGeneric = matchingVoices.find(
-    (v) => !v.name.toLowerCase().includes("male")
-  );
-  if (nonMaleGeneric) return nonMaleGeneric;
+  if (decentVoice) return decentVoice;
 
   // Last resort: Return first matching voice
   return matchingVoices[0];
@@ -99,6 +128,13 @@ function SpeakButton({
           if (bestVoice) {
             utterance.voice = bestVoice;
             console.log(`Using voice: ${bestVoice.name} (${bestVoice.lang})`);
+
+            // Show helpful tip for Safari users with basic voices
+            if (isSafari() && !bestVoice.name.toLowerCase().includes('enhanced') &&
+              !bestVoice.name.toLowerCase().includes('premium') &&
+              !bestVoice.name.toLowerCase().includes('compact')) {
+              console.log(`💡 Safari TTS Tip: For better French pronunciation, go to System Settings > Accessibility > Spoken Content > System Voice and download enhanced French voices like "Amélie" or "Thomas (French)"`);
+            }
           }
           window.speechSynthesis.speak(utterance);
         });
@@ -107,6 +143,13 @@ function SpeakButton({
         if (bestVoice) {
           utterance.voice = bestVoice;
           console.log(`Using voice: ${bestVoice.name} (${bestVoice.lang})`);
+
+          // Show helpful tip for Safari users with basic voices
+          if (isSafari() && !bestVoice.name.toLowerCase().includes('enhanced') &&
+            !bestVoice.name.toLowerCase().includes('premium') &&
+            !bestVoice.name.toLowerCase().includes('compact')) {
+            console.log(`💡 Safari TTS Tip: For better French pronunciation, go to System Settings > Accessibility > Spoken Content > System Voice and download enhanced French voices like "Amélie" or "Thomas (French)"`);
+          }
         }
         window.speechSynthesis.speak(utterance);
       }

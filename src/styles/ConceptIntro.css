@@ -442,11 +442,11 @@
 /* Responsive */
 @media (max-width: 968px) {
   .intro-container {
-    padding: 1.5rem;
+    padding: 0.5rem;
   }
 
   .concept-intro {
-    padding: 2rem 1.5rem;
+    padding: 2rem 0.5rem;
   }
 
   .intro-header {

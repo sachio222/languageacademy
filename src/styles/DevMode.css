@@ -1,0 +1,92 @@
+/* Development Mode Styles */
+
+.dev-mode-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease-out;
+  height: 52px; /* Fixed height for consistent spacing */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.dev-mode-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.dev-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.dev-message {
+  flex: 1;
+  opacity: 0.95;
+}
+
+.dev-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: background 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.dev-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Push app content down when dev banner is visible */
+.dev-mode-wrapper {
+  padding-top: 52px; /* Match banner height */
+}
+
+.dev-mode-wrapper .app {
+  min-height: calc(100vh - 52px);
+}
+
+@media (max-width: 640px) {
+  .dev-mode-banner {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .dev-mode-content {
+    font-size: 0.8125rem;
+  }
+
+  .dev-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+}

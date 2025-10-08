@@ -19,6 +19,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@clerk/clerk-react": "^5.51.0",
+    "@supabase/supabase-js": "^2.74.0",
     "edge-tts-client": "^1.0.2",
     "lucide-react": "^0.544.0",
     "react": "^18.2.0",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
+    "dotenv": "^17.2.3",
     "vite": "^4.3.9"
   }
 }

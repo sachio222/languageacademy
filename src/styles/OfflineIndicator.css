@@ -1,0 +1,160 @@
+/* Offline Indicator Styles */
+
+.offline-indicator {
+  position: fixed;
+  top: 60px;
+  right: 1rem;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+
+.offline-indicator.offline {
+  background: rgba(251, 146, 60, 0.95);
+  border-color: #f97316;
+  color: #9a3412;
+}
+
+.offline-indicator.online {
+  background: rgba(34, 197, 94, 0.95);
+  border-color: #22c55e;
+  color: #166534;
+}
+
+.offline-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.status-icon {
+  font-size: 1rem;
+}
+
+.status-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.pending-count {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.offline-details {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  background: white;
+  border-radius: 0 0 8px 8px;
+  min-width: 250px;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.detail-header h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.close-details {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-details:hover {
+  color: #374151;
+}
+
+.detail-content p {
+  margin: 0.5rem 0;
+  font-size: 0.8125rem;
+  color: #374151;
+}
+
+.btn-sync {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  transition: background 0.2s;
+}
+
+.btn-sync:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.btn-sync:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.last-sync {
+  color: #6b7280 !important;
+  font-size: 0.75rem !important;
+}
+
+.offline-explanation {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.offline-explanation small {
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Animation for sync icon */
+.offline-indicator.online .status-icon {
+  animation: none;
+}
+
+.offline-indicator .status-icon:has-text('🔄') {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .offline-indicator {
+    top: 50px;
+    right: 0.5rem;
+    font-size: 0.8125rem;
+  }
+  
+  .offline-details {
+    min-width: 200px;
+  }
+}

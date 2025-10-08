@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
+import { useSupabaseProgress } from '../hooks/useSupabaseProgress';
+import { extractModuleId } from '../utils/progressSync';
 
 /**
  * Concept Introduction - Initial exposure phase
@@ -27,30 +29,91 @@ function ConceptIntro({ lesson, onStartStudying }) {
   const [showVocab, setShowVocab] = useState(true);
   const [showConcepts, setShowConcepts] = useState(true);
   const [understoodConcepts, setUnderstoodConcepts] = useState(new Set());
+  const [loading, setLoading] = useState(true);
 
   const vocabularyItems = lesson.vocabularyReference || [];
   const isFirstLesson = lesson.id === 1;
+  const moduleId = extractModuleId(lesson);
 
   // Show help section by default on first lesson
   const [helpRequested, setHelpRequested] = useState(isFirstLesson);
   const [showHelp, setShowHelp] = useState(isFirstLesson);
 
-  // Reset understood state when lesson changes
+  // Get Supabase progress functions
+  const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = useSupabaseProgress();
+
+  // Load understood concepts from database when module loads
   useEffect(() => {
-    setUnderstoodConcepts(new Set());
-  }, [lesson.id]);
+    const loadUnderstoodConcepts = async () => {
+      if (!isAuthenticated || !supabaseUser || !moduleId) {
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const { data, error } = await supabaseClient
+          .from('concept_understanding')
+          .select('concept_index')
+          .eq('user_id', supabaseUser.id)
+          .eq('module_id', moduleId);
+
+        if (error) throw error;
+
+        const understoodSet = new Set(data.map(c => c.concept_index));
+        setUnderstoodConcepts(understoodSet);
+        console.log('ConceptIntro loaded understood concepts:', understoodSet);
+      } catch (error) {
+        console.error('Error loading understood concepts:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadUnderstoodConcepts();
+  }, [lesson.id, moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
   // Functions for managing understood concepts
-  const toggleUnderstood = (conceptIndex) => {
+  const toggleUnderstood = async (conceptIndex) => {
+    console.log('ConceptIntro: toggleUnderstood called', conceptIndex);
+    const isCurrentlyUnderstood = understoodConcepts.has(conceptIndex);
+    const newUnderstood = !isCurrentlyUnderstood;
+
+    // Optimistic update
     setUnderstoodConcepts(prev => {
       const newSet = new Set(prev);
-      if (newSet.has(conceptIndex)) {
-        newSet.delete(conceptIndex);
-      } else {
+      if (newUnderstood) {
         newSet.add(conceptIndex);
+      } else {
+        newSet.delete(conceptIndex);
       }
       return newSet;
     });
+
+    // Save to Supabase
+    if (isAuthenticated && moduleId && lesson.concepts[conceptIndex]) {
+      try {
+        console.log('ConceptIntro: Saving to Supabase...');
+        await updateConceptUnderstanding(
+          moduleId,
+          conceptIndex,
+          lesson.concepts[conceptIndex].term,
+          newUnderstood
+        );
+        console.log('ConceptIntro: Saved successfully');
+      } catch (error) {
+        console.error('ConceptIntro: Error saving:', error);
+        // Revert on error
+        setUnderstoodConcepts(prev => {
+          const newSet = new Set(prev);
+          if (isCurrentlyUnderstood) {
+            newSet.add(conceptIndex);
+          } else {
+            newSet.delete(conceptIndex);
+          }
+          return newSet;
+        });
+      }
+    }
   };
 
   const getProgressStats = () => {
@@ -110,17 +173,47 @@ function ConceptIntro({ lesson, onStartStudying }) {
                       };
                       const genderClass = getGenderClass(item.note);
 
-                      const handleRowClick = () => {
+                      const handleRowClick = (e) => {
                         if (!item.french) return;
 
+                        // Ensure this is treated as a direct user interaction for Chrome
                         if ('speechSynthesis' in window) {
                           window.speechSynthesis.cancel();
+
                           const utterance = new SpeechSynthesisUtterance(item.french);
                           utterance.lang = 'fr-FR';
                           utterance.rate = 0.9;
                           utterance.pitch = 1.0;
                           utterance.volume = 1.0;
-                          window.speechSynthesis.speak(utterance);
+
+                          // Handle voice selection like SpeakButton does
+                          let voices = window.speechSynthesis.getVoices();
+
+                          // Handle async voice loading (Chrome requirement)
+                          if (voices.length === 0) {
+                            window.speechSynthesis.addEventListener("voiceschanged", () => {
+                              voices = window.speechSynthesis.getVoices();
+                              const frenchVoices = voices.filter(v => v.lang.startsWith('fr'));
+                              if (frenchVoices.length > 0) {
+                                // Prefer Google or enhanced voices
+                                const bestVoice = frenchVoices.find(v => v.name.includes('Google')) ||
+                                  frenchVoices.find(v => v.name.toLowerCase().includes('enhanced')) ||
+                                  frenchVoices[0];
+                                utterance.voice = bestVoice;
+                              }
+                              window.speechSynthesis.speak(utterance);
+                            });
+                          } else {
+                            const frenchVoices = voices.filter(v => v.lang.startsWith('fr'));
+                            if (frenchVoices.length > 0) {
+                              // Prefer Google or enhanced voices
+                              const bestVoice = frenchVoices.find(v => v.name.includes('Google')) ||
+                                frenchVoices.find(v => v.name.toLowerCase().includes('enhanced')) ||
+                                frenchVoices[0];
+                              utterance.voice = bestVoice;
+                            }
+                            window.speechSynthesis.speak(utterance);
+                          }
                         }
                       };
 
@@ -134,7 +227,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
                           onKeyDown={(e) => {
                             if (e.key === 'Enter' || e.key === ' ') {
                               e.preventDefault();
-                              handleRowClick();
+                              handleRowClick(e);
                             }
                           }}
                         >

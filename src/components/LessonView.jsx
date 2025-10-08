@@ -8,6 +8,7 @@ import ModuleExam from './ModuleExam';
 import UnitExam from './UnitExam';
 import ModuleCompleteModal from './ModuleCompleteModal';
 import FillInTheBlank from './FillInTheBlank';
+import { extractModuleId, extractUnitId } from '../utils/progressSync';
 
 function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
@@ -29,14 +30,6 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const allExercisesComplete = lesson.exercises?.every(ex =>
     completedExercises.has(ex.id)
   ) || false;
-
-  // Debug logging for exercise completion
-  if (lesson.exercises) {
-    const completed = lesson.exercises.filter(ex => completedExercises.has(ex.id)).length;
-    const total = lesson.exercises.length;
-    console.log(`Module ${lesson.id} completion: ${completed}/${total} exercises complete`);
-    console.log('All exercises complete?', allExercisesComplete);
-  }
 
   const handleNext = () => {
     if (!isLastExercise) {
@@ -87,15 +80,14 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     setShowExam(true);
   };
 
-  const handlePassExam = (goToNextImmediately = false) => {
-    if (goToNextImmediately) {
-      // Go directly to next module without showing completion screen
-      if (onModuleComplete) {
-        onModuleComplete(lesson.id, true);
-      }
-    } else {
-      // Show completion screen first
-      setModuleCompleted(true);
+  const handlePassExam = (examScore, timeSpent) => {
+    // Module exam passed! Show completion screen
+    setModuleCompleted(true);
+    setShowExam(false);
+
+    // Update database with exam score and time
+    if (onModuleComplete) {
+      onModuleComplete(lesson.id, examScore, timeSpent, false);
     }
   };
 
@@ -110,7 +102,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     console.log('Lesson title:', lesson.title);
     console.log('Requesting navigation to module:', lesson.id + 1);
     if (onModuleComplete) {
-      onModuleComplete(lesson.id, true); // true = go to next module
+      // For special modules (reading, unit exams), pass null for score/time
+      onModuleComplete(lesson.id, 100, 0, true); // Go to next module
     } else {
       console.error('onModuleComplete callback not provided!');
     }
@@ -218,6 +211,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           lesson={lesson}
           onPassExam={handlePassExam}
           onRetryLesson={handleRetryLesson}
+          unitInfo={unitInfo}
         />
       ) : isStudying ? (
         <div className="study-container">
@@ -247,6 +241,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
             studyCompleted={studyCompleted}
             readingPassage={lesson.readingPassage}
             onBackToLesson={lesson.isReadingComprehension ? null : handleBackToLesson}
+            moduleId={extractModuleId(lesson)}
+            unitId={extractUnitId(unitInfo)}
           />
         </div>
       ) : (
@@ -263,11 +259,16 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
               studyCompleted={studyCompleted}
               readingPassage={lesson.readingPassage}
               onBackToLesson={lesson.isReadingComprehension ? null : handleBackToLesson}
+              moduleId={extractModuleId(lesson)}
+              unitId={extractUnitId(unitInfo)}
             />
           </div>
 
           <div className="right-pane">
-            <ConceptPane concepts={lesson.concepts} />
+            <ConceptPane
+              concepts={lesson.concepts}
+              moduleId={extractModuleId(lesson)}
+            />
             {vocabularyItems.length > 0 && (
               <VocabularyReference
                 vocabulary={vocabularyItems}

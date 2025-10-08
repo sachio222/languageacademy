@@ -1,22 +1,32 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { runTests, isExerciseComplete } from '../lessons/testRunner';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
+import { useSupabaseProgress } from '../hooks/useSupabaseProgress';
+import { extractModuleId, extractUnitId } from '../utils/progressSync';
 
 /**
  * Module Exam - Comprehensive test to solidify learning
  * Tests all exercises from the module in random order
  */
-function ModuleExam({ lesson, onPassExam, onRetryLesson }) {
+function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [results, setResults] = useState(null);
+  const [startTime, setStartTime] = useState(null);
   const inputRef = useRef(null);
+  
+  const { recordExamAttempt, isAuthenticated } = useSupabaseProgress();
 
-  // Randomize exercises for the exam
+  // Randomize exercises for the exam and start timing
   const [examQuestions] = useState(() => {
     return [...lesson.exercises].sort(() => Math.random() - 0.5);
   });
+
+  // Start timing when exam begins
+  useEffect(() => {
+    setStartTime(Date.now());
+  }, []);
 
   const currentQuestion = examQuestions[currentQuestionIndex];
   const progress = ((currentQuestionIndex + 1) / examQuestions.length) * 100;
@@ -40,7 +50,10 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson }) {
     }
   };
 
-  const handleSubmitExam = () => {
+  const handleSubmitExam = async () => {
+    // Calculate time spent
+    const timeSpent = startTime ? Math.round((Date.now() - startTime) / 1000) : 0;
+
     // Grade all answers
     const examResults = examQuestions.map((exercise) => {
       const userAnswer = answers[exercise.id] || '';
@@ -55,15 +68,53 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson }) {
 
     const totalCorrect = examResults.filter((r) => r.passed).length;
     const passingScore = Math.ceil(examQuestions.length * 0.8); // 80% to pass
+    const passed = totalCorrect >= passingScore;
+    const percentage = Math.round((totalCorrect / examQuestions.length) * 100);
 
-    setResults({
+    const examData = {
       examResults,
       totalCorrect,
       totalQuestions: examQuestions.length,
-      passed: totalCorrect >= passingScore,
+      passed,
       passingScore,
-    });
+    };
+
+    setResults(examData);
     setSubmitted(true);
+
+    // Record exam attempt in Supabase
+    if (isAuthenticated) {
+      try {
+        const answersData = {};
+        examResults.forEach(result => {
+          answersData[result.exercise.id] = {
+            userAnswer: result.userAnswer,
+            correctAnswer: result.exercise.expectedAnswer,
+            isCorrect: result.passed
+          };
+        });
+
+        await recordExamAttempt(
+          'module',
+          extractModuleId(lesson),
+          examQuestions.length,
+          totalCorrect,
+          percentage,
+          timeSpent,
+          answersData,
+          passed
+        );
+      } catch (error) {
+        console.error('Error recording exam attempt:', error);
+      }
+    }
+
+    // If passed, notify parent with score and time
+    if (passed) {
+      setTimeout(() => {
+        onPassExam(percentage, timeSpent);
+      }, 2000);
+    }
   };
 
   if (submitted && results) {

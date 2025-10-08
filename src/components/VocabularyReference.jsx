@@ -69,17 +69,47 @@ function VocabularyReference({ vocabulary, title }) {
                 const genderClass = getGenderClass(item.note);
                 const needsDivider = isNewSection(item, idx, vocabulary);
 
-                const handleRowClick = () => {
+                const handleRowClick = (e) => {
                   if (!item.french) return;
 
+                  // Ensure this is treated as a direct user interaction for Chrome
                   if ('speechSynthesis' in window) {
                     window.speechSynthesis.cancel();
+
                     const utterance = new SpeechSynthesisUtterance(item.french);
                     utterance.lang = 'fr-FR';
                     utterance.rate = 0.9;
                     utterance.pitch = 1.0;
                     utterance.volume = 1.0;
-                    window.speechSynthesis.speak(utterance);
+
+                    // Handle voice selection like SpeakButton does
+                    let voices = window.speechSynthesis.getVoices();
+
+                    // Handle async voice loading (Chrome requirement)
+                    if (voices.length === 0) {
+                      window.speechSynthesis.addEventListener("voiceschanged", () => {
+                        voices = window.speechSynthesis.getVoices();
+                        const frenchVoices = voices.filter(v => v.lang.startsWith('fr'));
+                        if (frenchVoices.length > 0) {
+                          // Prefer Google or enhanced voices
+                          const bestVoice = frenchVoices.find(v => v.name.includes('Google')) ||
+                            frenchVoices.find(v => v.name.toLowerCase().includes('enhanced')) ||
+                            frenchVoices[0];
+                          utterance.voice = bestVoice;
+                        }
+                        window.speechSynthesis.speak(utterance);
+                      });
+                    } else {
+                      const frenchVoices = voices.filter(v => v.lang.startsWith('fr'));
+                      if (frenchVoices.length > 0) {
+                        // Prefer Google or enhanced voices
+                        const bestVoice = frenchVoices.find(v => v.name.includes('Google')) ||
+                          frenchVoices.find(v => v.name.toLowerCase().includes('enhanced')) ||
+                          frenchVoices[0];
+                        utterance.voice = bestVoice;
+                      }
+                      window.speechSynthesis.speak(utterance);
+                    }
                   }
                 };
 
@@ -101,7 +131,7 @@ function VocabularyReference({ vocabulary, title }) {
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault();
-                          handleRowClick();
+                          handleRowClick(e);
                         }
                       }}
                     >
