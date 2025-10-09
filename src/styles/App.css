@@ -51,6 +51,144 @@ body {
   letter-spacing: -0.025em;
 }
 
+/* Main Content Wrapper */
+.main-content-wrapper,
+.lesson-content-wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+/* Floating Action Button for Feedback */
+.feedback-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  transition: all 0.15s ease;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.feedback-fab:hover {
+  background: #2563eb;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.feedback-fab:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Mobile Responsive FAB */
+@media (max-width: 768px) {
+  .feedback-fab {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 52px;
+    height: 52px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Adjust FAB position when sidebar is collapsed */
+body:has(.left-nav.collapsed) .feedback-fab {
+  right: calc(1.5rem + 64px);
+}
+
+@media (max-width: 768px) {
+  body:has(.left-nav.collapsed) .feedback-fab {
+    right: 1.5rem;
+  }
+}
+
+/* Admin Button */
+.admin-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: calc(2rem + 70px); /* Position next to FAB */
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  transition: all 0.15s ease;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.admin-btn:hover {
+  background: #059669;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px);
+}
+
+.admin-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Admin Close Button */
+.admin-close-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #6b7280;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  z-index: 300;
+}
+
+.admin-close-btn:hover {
+  background: #4b5563;
+}
+
+/* Mobile Responsive Admin Button */
+@media (max-width: 768px) {
+  .admin-btn {
+    bottom: 1.5rem;
+    right: calc(1.5rem + 60px);
+    width: 52px;
+    height: 52px;
+    font-size: 1rem;
+  }
+}
+
+/* Adjust admin button position when sidebar is collapsed */
+body:has(.left-nav.collapsed) .admin-btn {
+  right: calc(1.5rem + 70px + 64px);
+}
+
+@media (max-width: 768px) {
+  body:has(.left-nav.collapsed) .admin-btn {
+    right: calc(1.5rem + 60px);
+  }
+}
+
 /* Main Content - Offset for Sidebar */
 .app-main {
   flex: 1;
