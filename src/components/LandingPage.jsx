@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reading11Preview from './Reading11Preview'
 import '../styles/Landing.css'
 
 function LandingPage({ onGetStarted }) {
@@ -21,7 +22,7 @@ function LandingPage({ onGetStarted }) {
             functional composition
           </h1>
           <p className="hero-subtitle">
-            Not gamification. Not phrase memorization. A cognitive science approach
+            No childish games. Not tourism focused. A cognitive science approach
             that teaches <strong>core competence</strong> for advanced comprehension—fast.
           </p>
           <button className="cta-primary" onClick={onGetStarted}>
@@ -30,6 +31,13 @@ function LandingPage({ onGetStarted }) {
           <p className="hero-caption">
             Limited free access • No credit card required
           </p>
+        </div>
+      </section>
+
+      {/* Your Goal - Reading 11 Preview (Show outcome first!) */}
+      <section className="landing-section">
+        <div className="landing-container">
+          <Reading11Preview />
         </div>
       </section>
 
@@ -200,9 +208,9 @@ function LandingPage({ onGetStarted }) {
             </div>
 
             <div className="stat-item">
-              <div className="stat-number">Reading 11</div>
-              <div className="stat-label">authentic French passages</div>
-              <div className="stat-caption">you can read by completion</div>
+              <div className="stat-number">400+</div>
+              <div className="stat-label">word passages</div>
+              <div className="stat-caption">like Reading 11 below</div>
             </div>
           </div>
 
@@ -229,34 +237,11 @@ function LandingPage({ onGetStarted }) {
         </div>
       </section>
 
-      {/* Preview */}
-      <section className="landing-section">
-        <div className="landing-container">
-          <h2 className="section-title">See it in action</h2>
-          <p className="section-intro">
-            Every module follows the same structure. Here's what the learning
-            experience actually looks like.
-          </p>
-
-          <div className="preview-box">
-            <img 
-              src="/img/reading1a.svg" 
-              alt="Language Academy interface preview" 
-              className="preview-image"
-            />
-            <p className="preview-caption">
-              Clean interface. Clear structure. No distracting animations or gamification.
-              Just focused learning designed for retention.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Who it's for */}
       <section className="landing-section bg-subtle">
         <div className="landing-container">
           <h2 className="section-title">Built for analytical learners</h2>
-          
+
           <div className="audience-content">
             <div className="audience-col">
               <h3>You'll love this if you:</h3>
@@ -304,7 +289,7 @@ function LandingPage({ onGetStarted }) {
       {/* Footer */}
       <footer className="landing-footer">
         <div className="landing-container">
-          <p>Built with React • Inspired by cognitive science research</p>
+          <p>Built with love • Inspired by cognitive science research</p>
         </div>
       </footer>
     </div>

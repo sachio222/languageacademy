@@ -115,3 +115,4 @@ For a language learning app, the current implementation provides a good balance 
 - **Cross-browser compatibility**
 
 If budget allows, integrating Google Cloud TTS for Safari users would provide the ultimate experience, but the current solution significantly improves Safari TTS quality without ongoing costs.
+

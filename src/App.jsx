@@ -201,7 +201,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>Built with React • Inspired by cognitive science research  • Grammar Linting Enabled</p>
+        <p>Built with love • Inspired by cognitive science research  • Grammar Linting Enabled</p>
       </footer>
 
       <SafariTTSHelper />

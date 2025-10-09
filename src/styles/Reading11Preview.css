@@ -1,0 +1,417 @@
+/* Reading 11 Preview - Following DESIGN_PRINCIPLES.md */
+
+.reading-preview-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.preview-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.preview-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #f7f9fc;
+  color: #666666;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.preview-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.preview-header p {
+  font-size: 0.9375rem;
+  color: #666666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.reading-sample {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.reading-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 2rem 2rem 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.reading-subtitle {
+  font-size: 0.875rem;
+  color: #999999;
+  text-align: center;
+  padding: 0 2rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.reading-content-wrapper {
+  position: relative;
+  padding: 2.5rem;
+  background: #fafbfc;
+  min-height: 450px;
+}
+
+.reading-text-container {
+  position: relative;
+  max-width: 580px;
+}
+
+.reading-text {
+  position: relative;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+  max-height: 400px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.reading-text p {
+  margin: 0 0 1.5rem;
+}
+
+.reading-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tooltip words */
+.tooltip-word {
+  position: relative;
+  color: #3b82f6;
+  font-weight: 500;
+  padding: 0.125rem 0.25rem;
+  margin: 0 0.125rem;
+  border-radius: 4px;
+  background-color: rgba(59, 130, 246, 0.08);
+  transition: background-color 0.15s ease;
+}
+
+/* Simple tooltip bubble */
+.tooltip-bubble {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: #1a1a1a;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip-bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #1a1a1a;
+}
+
+/* Tooltip Examples Showcase - Static Stack */
+.tooltip-examples {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.tooltip-example-card {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.tooltip-example-card.front {
+  z-index: 10;
+}
+
+.tooltip-example-card.back {
+  z-index: 5;
+  opacity: 0.75;
+  filter: blur(0.5px);
+}
+
+/* Simple Tooltip Demo */
+.simple-tooltip-demo {
+  background: #1a1a1a;
+  color: white;
+  padding: 0.625rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  letter-spacing: -0.01em;
+}
+
+.tooltip-pointer-line {
+  width: 1px;
+  height: 24px;
+  background: linear-gradient(to bottom, #cccccc, transparent);
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+/* Wikipedia Tooltip Demo Cards */
+.wiki-tooltip-demo {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.wiki-tooltip-demo.partial {
+  width: 280px;
+}
+
+.wiki-tooltip-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.wiki-tooltip-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05));
+}
+
+.wiki-tooltip-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wiki-tooltip-content {
+  padding: 1.25rem;
+}
+
+.wiki-tooltip-title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.625rem;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+.wiki-tooltip-description {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 0.875rem;
+}
+
+.wiki-tooltip-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: #8b5cf6;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+.wiki-tooltip-link svg {
+  opacity: 0.6;
+}
+
+/* Fade overlay at bottom */
+.fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, white);
+  pointer-events: none;
+}
+
+/* Reading stats */
+.reading-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+}
+
+.stat-group {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.03em;
+}
+
+.stat-label {
+  font-size: 0.8125rem;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: #e0e0e0;
+}
+
+/* Reading caption */
+.reading-caption {
+  padding: 1.5rem 2rem;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.reading-caption strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Preview note */
+.preview-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem 2rem;
+  background: #f7f9fc;
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.preview-note svg {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.preview-note strong {
+  font-weight: 600;
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .reading-content-wrapper {
+    padding: 1.5rem;
+  }
+
+  /* Hide tooltip showcase on tablets/mobile, too cramped */
+  .tooltip-examples {
+    display: none;
+  }
+
+  .reading-text-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .preview-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .reading-title {
+    font-size: 1.25rem;
+    padding: 1.5rem 1.5rem 0.5rem;
+  }
+
+  .reading-subtitle {
+    font-size: 0.8125rem;
+    padding: 0 1.5rem 1rem;
+  }
+
+  .reading-content-wrapper {
+    padding: 1.5rem;
+  }
+
+  .reading-text {
+    padding: 1.5rem;
+    font-size: 1rem;
+    max-height: 350px;
+  }
+
+  .reading-stats {
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .reading-caption {
+    padding: 1.25rem 1.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .preview-note {
+    padding: 1rem 1.5rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Hover effect for showcase cards on desktop */
+@media (min-width: 901px) {
+  .tooltip-example-card.back:hover {
+    transform: translateY(-6px) translateX(-4px);
+    opacity: 0.95;
+    filter: blur(0px);
+  }
+
+  .tooltip-example-card.front:hover {
+    transform: translateY(-2px);
+  }
+}
