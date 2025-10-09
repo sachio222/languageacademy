@@ -18,8 +18,28 @@
 
 /* Hero Section */
 .landing-hero {
+  position: relative;
   padding: 5rem 0 6rem;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.04;
+  z-index: 0;
+}
+
+.landing-hero .landing-container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-badge {
@@ -222,7 +242,7 @@
   background: #f7f9fc;
   padding: 1rem;
   border-radius: 8px;
-  font-family: 'Monaco', 'Courier New', monospace;
+  font-family: "Monaco", "Courier New", monospace;
   font-size: 0.875rem;
   color: #1a1a1a;
   border: 1px solid #e0e0e0;
@@ -391,12 +411,30 @@
 }
 
 /* Audience Section */
+.audience-layout {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.audience-image-container {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.audience-image {
+  width: 100%;
+  max-width: 700px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.92;
+}
+
 .audience-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .audience-col h3 {
@@ -505,6 +543,10 @@
     gap: 1rem;
   }
 
+  .audience-image {
+    height: 240px;
+  }
+
   .audience-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -548,6 +590,15 @@
     font-size: 2rem;
   }
 
+  .audience-image {
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .audience-image-container {
+    margin-bottom: 2rem;
+  }
+
   .cta-title {
     font-size: 1.75rem;
   }
@@ -557,4 +608,3 @@
     font-size: 1rem;
   }
 }
-

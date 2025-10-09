@@ -15,6 +15,7 @@ function LandingPage({ onGetStarted }) {
     <div className="landing-page">
       {/* Hero Section */}
       <section className="landing-hero">
+        <div className="hero-background"></div>
         <div className="landing-container">
           <div className="hero-badge">For serious learners</div>
           <h1 className="hero-title">
@@ -250,28 +251,38 @@ function LandingPage({ onGetStarted }) {
         <div className="landing-container">
           <h2 className="section-title">Built for analytical learners</h2>
 
-          <div className="audience-content">
-            <div className="audience-col">
-              <h3>You'll love this if you:</h3>
-              <ul className="audience-list">
-                <li>Have a technical or coding background</li>
-                <li>Want to understand structure, not just memorize</li>
-                <li>Prefer comprehension before production</li>
-                <li>Value cognitive science over gamification</li>
-                <li>Learn best through composition and patterns</li>
-                <li>Are serious about functional fluency</li>
-              </ul>
+          <div className="audience-layout">
+            <div className="audience-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
+                alt="Focused learner studying"
+                className="audience-image"
+              />
             </div>
 
-            <div className="audience-col">
-              <h3>This isn't for you if you:</h3>
-              <ul className="audience-list muted">
-                <li>Want a casual, game-like experience</li>
-                <li>Prefer random discovery over structured learning</li>
-                <li>Need constant external motivation (streaks, points)</li>
-                <li>Want to "just memorize phrases"</li>
-                <li>Expect instant fluency without understanding</li>
-              </ul>
+            <div className="audience-content">
+              <div className="audience-col">
+                <h3>You'll love this if you:</h3>
+                <ul className="audience-list">
+                  <li>Have a technical or coding background</li>
+                  <li>Want to understand structure, not just memorize</li>
+                  <li>Prefer comprehension before production</li>
+                  <li>Value cognitive science over gamification</li>
+                  <li>Learn best through composition and patterns</li>
+                  <li>Are serious about functional fluency</li>
+                </ul>
+              </div>
+
+              <div className="audience-col">
+                <h3>This isn't for you if you:</h3>
+                <ul className="audience-list muted">
+                  <li>Want a casual, game-like experience</li>
+                  <li>Prefer random discovery over structured learning</li>
+                  <li>Need constant external motivation (streaks, points)</li>
+                  <li>Want to "just memorize phrases"</li>
+                  <li>Expect instant fluency without understanding</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
