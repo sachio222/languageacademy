@@ -1,0 +1,188 @@
+/* Exercise Preview - Matching actual FillInTheBlank style */
+
+.exercise-preview-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exercise-preview-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.exercise-preview-header .preview-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #f7f9fc;
+  color: #666666;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.exercise-preview-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.exercise-preview-header p {
+  font-size: 0.9375rem;
+  color: #666666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Isometric Exercise Card - Matching FillInTheBlank gradient */
+.exercise-card-isometric {
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exercise-card-isometric:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+/* Exercise Prompt */
+.exercise-prompt {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.prompt-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.prompt-text {
+  display: block;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Sentence Display - Matching actual component */
+.sentence-display {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.sentence-text {
+  display: inline;
+  white-space: pre;
+}
+
+.blank-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 0.25rem;
+}
+
+.blank-input {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  padding-bottom: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-bottom: 3px solid white;
+  color: white;
+  border-radius: 4px 4px 0 0;
+  min-width: 120px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.blank-hint {
+  position: absolute;
+  bottom: -1.75rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .exercise-card-isometric {
+    transform: none;
+    padding: 2rem;
+    min-height: 300px;
+  }
+
+  .exercise-card-isometric:hover {
+    transform: none;
+  }
+
+  .sentence-display {
+    font-size: 1.5rem;
+  }
+
+  .blank-input {
+    font-size: 1.5rem;
+    padding: 0.4rem 1rem;
+    min-width: 100px;
+  }
+
+  .blank-hint {
+    font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .exercise-preview-header {
+    margin-bottom: 2rem;
+  }
+
+  .exercise-preview-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .exercise-card-isometric {
+    padding: 1.5rem;
+  }
+
+  .sentence-display {
+    font-size: 1.25rem;
+  }
+
+  .blank-input {
+    font-size: 1.25rem;
+    padding: 0.3rem 0.75rem;
+    min-width: 80px;
+  }
+
+  .prompt-text {
+    font-size: 0.875rem;
+  }
+}

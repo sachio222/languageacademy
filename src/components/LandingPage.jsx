@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Reading11Preview from './Reading11Preview'
+import ExercisePreview from './ExercisePreview'
 import '../styles/Landing.css'
 
 function LandingPage({ onGetStarted }) {
@@ -73,6 +74,13 @@ function LandingPage({ onGetStarted }) {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Exercise Preview - Show composition in action */}
+      <section className="landing-section">
+        <div className="landing-container">
+          <ExercisePreview />
         </div>
       </section>
 
@@ -215,22 +223,22 @@ function LandingPage({ onGetStarted }) {
           </div>
 
           <div className="utility-examples">
-            <h3>Practical from day one</h3>
+            <h3>Immediate utility that compounds</h3>
             <div className="utility-grid">
               <div className="utility-card">
                 <div className="utility-module">Module 4</div>
                 <div className="utility-phrase">"Ça va?"</div>
-                <div className="utility-desc">Greet people and respond</div>
+                <div className="utility-desc">How's it going?</div>
               </div>
               <div className="utility-card">
                 <div className="utility-module">Module 10</div>
                 <div className="utility-phrase">"Je veux ça"</div>
-                <div className="utility-desc">Express wants and needs</div>
+                <div className="utility-desc">I want that</div>
               </div>
               <div className="utility-card">
-                <div className="utility-module">Module 11</div>
-                <div className="utility-phrase">"Où est...?"</div>
-                <div className="utility-desc">Ask location questions</div>
+                <div className="utility-module">Advanced</div>
+                <div className="utility-phrase">"C'est pour ça que..."</div>
+                <div className="utility-desc">That's why... (causal reasoning)</div>
               </div>
             </div>
           </div>

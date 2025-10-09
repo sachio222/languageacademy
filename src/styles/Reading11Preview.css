@@ -85,6 +85,13 @@
   max-height: 400px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.reading-text:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
 }
 
 .reading-text p {
@@ -181,7 +188,7 @@
   margin-top: 0.5rem;
 }
 
-/* Wikipedia Tooltip Demo Cards */
+/* Wikipedia Tooltip Demo Cards - Isometric */
 .wiki-tooltip-demo {
   background: white;
   border: 1px solid #e0e0e0;
@@ -189,10 +196,14 @@
   width: 300px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
   overflow: hidden;
+  transform: perspective(1000px) rotateX(2deg) rotateY(-3deg);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
 }
 
 .wiki-tooltip-demo.partial {
   width: 280px;
+  transform: perspective(1000px) rotateX(3deg) rotateY(-4deg);
 }
 
 .wiki-tooltip-image {
@@ -352,6 +363,15 @@
   .reading-text-container {
     max-width: 100%;
   }
+
+  /* Remove isometric on mobile */
+  .reading-text {
+    transform: none;
+  }
+
+  .reading-text:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -411,7 +431,15 @@
     filter: blur(0px);
   }
 
+  .tooltip-example-card.back:hover .wiki-tooltip-demo {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  }
+
   .tooltip-example-card.front:hover {
     transform: translateY(-2px);
+  }
+
+  .tooltip-example-card.front:hover .wiki-tooltip-demo {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
   }
 }
