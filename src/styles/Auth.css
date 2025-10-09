@@ -14,7 +14,7 @@
 }
 
 .loading-spinner p {
-  color: #666666;
+  color: #665665;
   font-size: 0.9375rem;
 }
 
@@ -48,10 +48,10 @@
 
 .auth-content {
   background: white;
-  border-radius: 16px;
-  padding: 3rem;
+  /* border-radius: 16px; */
+  /* padding: 3rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    0 10px 10px -5px rgba(0, 0, 0, 0.04); */
   max-width: 500px;
   width: 100%;
 }
@@ -70,7 +70,7 @@
 }
 
 .auth-header p {
-  color: #666666;
+  color: #665665;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -92,6 +92,7 @@
   font-weight: 500;
   transition: all 0.2s;
   cursor: pointer;
+  font-size: 0.9rem !important;
 }
 
 .auth-toggle button.active {
@@ -138,7 +139,7 @@
   margin-top: 1.5rem;
   background: transparent;
   border: none;
-  color: #666666;
+  color: #665665;
   font-size: 0.9375rem;
   cursor: pointer;
   transition: color 0.15s ease;

@@ -14,7 +14,7 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   background: #f7f9fc;
-  color: #666666;
+  color: #665665;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -33,7 +33,7 @@
 
 .exercise-preview-header p {
   font-size: 0.9375rem;
-  color: #666666;
+  color: #665665;
   margin: 0;
   line-height: 1.6;
 }

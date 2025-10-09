@@ -14,7 +14,7 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   background: #f7f9fc;
-  color: #666666;
+  color: #665665;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -33,7 +33,7 @@
 
 .preview-header p {
   font-size: 0.9375rem;
-  color: #666666;
+  color: #665665;
   margin: 0;
   line-height: 1.6;
 }
@@ -246,7 +246,7 @@
 .wiki-tooltip-description {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: #666666;
+  color: #665665;
   margin-bottom: 0.875rem;
 }
 
@@ -320,7 +320,7 @@
   border-top: 1px solid #f0f0f0;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: #666666;
+  color: #665665;
 }
 
 .reading-caption strong {
@@ -336,7 +336,7 @@
   padding: 1.25rem 2rem;
   background: #f7f9fc;
   font-size: 0.875rem;
-  color: #666666;
+  color: #665665;
   line-height: 1.6;
 }
 

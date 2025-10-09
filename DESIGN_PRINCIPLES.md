@@ -36,7 +36,7 @@ This document outlines the design principles for Language Academy, inspired by m
 Use a near-zero color approach with mostly grayscale:
 
 - **Primary text**: `#1a1a1a` (not #1e293b)
-- **Secondary text**: `#666666` (not #64748b)
+- **Secondary text**: `#665665` (not #64748b)
 - **Tertiary text**: `#999999`
 - **Borders/dividers**: `#f0f0f0` (subtle)
 - **Light borders**: `#e0e0e0`
@@ -128,7 +128,7 @@ Modern apps use 2-3x more spacing than traditional designs.
 #### Secondary Button (Ghost Style)
 
 - **Background**: Transparent
-- **Color**: `#666666`
+- **Color**: `#665665`
 - **Border**: None or subtle 1px
 - **Hover**: Subtle background (`#f7f9fc`)
 
@@ -235,7 +235,7 @@ Keep minimal and unobtrusive:
 
 - Ensure minimum 4.5:1 contrast ratio
 - Primary text on white: `#1a1a1a` ✓
-- Secondary text on white: `#666666` ✓
+- Secondary text on white: `#665665` ✓
 
 ### Focus States
 

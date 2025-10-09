@@ -475,7 +475,7 @@ body:has(.left-nav.collapsed) .app-footer {
 }
 
 .concepts-progress {
-  color: #666666;
+  color: #665665;
   font-size: 0.75rem;
   font-weight: 500;
 }
@@ -535,7 +535,7 @@ body:has(.left-nav.collapsed) .app-footer {
 .concept-item .understood-btn {
   background: transparent;
   border: 1px solid #e0e0e0;
-  color: #666666;
+  color: #665665;
   padding: 0.375rem 0.75rem;
   border-radius: 8px;
   font-size: 0.75rem;
@@ -623,7 +623,7 @@ body:has(.left-nav.collapsed) .app-footer {
 
 .btn-back-to-lesson {
   background: transparent;
-  color: #666666;
+  color: #665665;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -855,7 +855,7 @@ button {
 
 .btn-secondary {
   background: #f7f9fc;
-  color: #666666;
+  color: #665665;
   border: none;
 }
 
@@ -866,7 +866,7 @@ button {
 
 .btn-hint {
   background: #fafbfc;
-  color: #666666;
+  color: #665665;
   border: none;
 }
 
@@ -887,7 +887,7 @@ button:disabled {
   padding: 1.5rem 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-  color: #666666;
+  color: #665665;
   font-size: 0.9375rem;
   line-height: 1.7;
 }
@@ -939,7 +939,7 @@ button:disabled {
 }
 
 .test-summary .total {
-  color: #666666;
+  color: #665665;
 }
 
 /* Lint Section */

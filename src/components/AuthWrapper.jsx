@@ -29,7 +29,7 @@ function AuthWrapper({ children }) {
     // Show auth forms after "Get Started" clicked
     return (
       <div className="auth-container">
-        <div className="auth-content">
+        <div className="">
           <div className="auth-header">
             <h1>🎓 Language Academy</h1>
             <p>Create your account to start learning</p>
@@ -74,7 +74,7 @@ function AuthWrapper({ children }) {
             )}
           </div>
 
-          <button 
+          <button
             className="auth-back-link"
             onClick={() => setShowAuthForms(false)}
           >

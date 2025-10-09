@@ -114,7 +114,7 @@
 
 .stat-label {
   font-size: 0.875rem;
-  color: #666666;
+  color: #665665;
   font-weight: 500;
   text-transform: capitalize;
   letter-spacing: 0;
@@ -175,7 +175,7 @@
 }
 
 .concept-definition {
-  color: #666666;
+  color: #665665;
   font-size: 0.875rem;
   line-height: 1.6;
 }
@@ -222,7 +222,7 @@
 }
 
 .vocab-english {
-  color: #666666;
+  color: #665665;
   font-size: 0.9375rem;
   line-height: 1.6;
 }
@@ -255,7 +255,7 @@
   font-weight: 500;
   padding: 0.875rem 1.5rem;
   background: transparent;
-  color: #666666;
+  color: #665665;
   border: none;
   border-radius: 10px;
 }
