@@ -1,6 +1,6 @@
 # 🎓 Language Academy
 
-An interactive French learning platform inspired by Codecademy, treating French grammar as a functional language with syntax rules, linting, and test validation.
+An interactive French learning platform inspired by cognitive science research, treating French grammar as a functional language with syntax rules, linting, and test validation.
 
 ## Features
 

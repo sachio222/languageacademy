@@ -1,0 +1,315 @@
+import { useState } from 'react'
+import '../styles/Landing.css'
+
+function LandingPage({ onGetStarted }) {
+  const [email, setEmail] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    onGetStarted()
+  }
+
+  return (
+    <div className="landing-page">
+      {/* Hero Section */}
+      <section className="landing-hero">
+        <div className="landing-container">
+          <div className="hero-badge">For serious learners</div>
+          <h1 className="hero-title">
+            Learn French through
+            <br />
+            functional composition
+          </h1>
+          <p className="hero-subtitle">
+            Not gamification. Not phrase memorization. A cognitive science approach
+            that teaches <strong>core competence</strong> for advanced comprehension—fast.
+          </p>
+          <button className="cta-primary" onClick={onGetStarted}>
+            Start Free Trial
+          </button>
+          <p className="hero-caption">
+            Limited free access • No credit card required
+          </p>
+        </div>
+      </section>
+
+      {/* The Problem */}
+      <section className="landing-section">
+        <div className="landing-container">
+          <h2 className="section-title">Language learning isn't a game</h2>
+          <p className="section-intro">
+            Most apps teach you to chase points and streaks. You memorize phrases
+            without understanding structure. After months, you still can't hold a conversation.
+          </p>
+
+          <div className="comparison-grid">
+            <div className="comparison-card">
+              <div className="comparison-label bad">Gamified Apps</div>
+              <ul className="comparison-list">
+                <li>Test before exposure (anxiety-inducing)</li>
+                <li>Random vocabulary order</li>
+                <li>Phrase memorization without structure</li>
+                <li>Dopamine from points, not competence</li>
+                <li>Forget everything the next day</li>
+              </ul>
+            </div>
+
+            <div className="comparison-card">
+              <div className="comparison-label good">Language Academy</div>
+              <ul className="comparison-list">
+                <li>Schema formation before testing</li>
+                <li>Frequency-first (top 100 words priority)</li>
+                <li>Functional composition like coding</li>
+                <li>Understanding through structure</li>
+                <li>Durable, interleaved retention</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Method */}
+      <section className="landing-section bg-subtle">
+        <div className="landing-container">
+          <h2 className="section-title">Built like you learned to code</h2>
+          <p className="section-intro">
+            If you understand functions and composition, you already understand
+            how Language Academy teaches French.
+          </p>
+
+          <div className="method-visual">
+            <div className="method-step">
+              <div className="method-number">1</div>
+              <div className="method-content">
+                <h3>Learn discrete chunks</h3>
+                <code className="code-block">
+                  Module 1: pronouns = [je, tu, il, elle...]
+                </code>
+              </div>
+            </div>
+
+            <div className="method-arrow">→</div>
+
+            <div className="method-step">
+              <div className="method-number">2</div>
+              <div className="method-content">
+                <h3>Learn operations</h3>
+                <code className="code-block">
+                  Module 2: être = [suis, es, est...]
+                </code>
+              </div>
+            </div>
+
+            <div className="method-arrow">→</div>
+
+            <div className="method-step">
+              <div className="method-number">3</div>
+              <div className="method-content">
+                <h3>Compose them</h3>
+                <code className="code-block">
+                  Module 3: je + suis → "je suis"
+                </code>
+              </div>
+            </div>
+          </div>
+
+          <p className="method-caption">
+            Each module is a pure function. Master one, compose it with others,
+            build infinite combinations from finite pieces.
+          </p>
+        </div>
+      </section>
+
+      {/* 4-Phase Learning */}
+      <section className="landing-section">
+        <div className="landing-container">
+          <h2 className="section-title">Designed around how memory works</h2>
+          <p className="section-intro">
+            70+ years of cognitive science research, applied. Every lesson follows
+            a 4-phase cascade optimized for long-term retention.
+          </p>
+
+          <div className="phases-list">
+            <div className="phase-item">
+              <div className="phase-icon">👁️</div>
+              <div className="phase-content">
+                <h3>Concept Introduction</h3>
+                <p>
+                  See the full pattern first. Schema formation before testing reduces
+                  anxiety and enables encoding.
+                </p>
+              </div>
+            </div>
+
+            <div className="phase-item">
+              <div className="phase-icon">📚</div>
+              <div className="phase-content">
+                <h3>Study Mode</h3>
+                <p>
+                  Active recall without pressure. Self-paced flashcards build confidence
+                  and test the retrieval pathway.
+                </p>
+              </div>
+            </div>
+
+            <div className="phase-item">
+              <div className="phase-icon">✍️</div>
+              <div className="phase-content">
+                <h3>Practice</h3>
+                <p>
+                  Apply with scaffolding. Reference table available so you focus on
+                  composition, not lookup. Training wheels you naturally stop using.
+                </p>
+              </div>
+            </div>
+
+            <div className="phase-item">
+              <div className="phase-icon">🎯</div>
+              <div className="phase-content">
+                <h3>Exam</h3>
+                <p>
+                  Interleaved, randomized retrieval. Forces discrimination, builds
+                  durable memory. 80% to pass ensures competence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results / Stats */}
+      <section className="landing-section bg-subtle">
+        <div className="landing-container">
+          <h2 className="section-title">Fast path to comprehension</h2>
+          <p className="section-intro">
+            Frequency-first approach means you learn the words that matter most,
+            in the order that maximizes real-world utility.
+          </p>
+
+          <div className="stats-row">
+            <div className="stat-item">
+              <div className="stat-number">72%</div>
+              <div className="stat-label">of top 100 French words</div>
+              <div className="stat-caption">by Unit 6</div>
+            </div>
+
+            <div className="stat-item">
+              <div className="stat-number">~50%</div>
+              <div className="stat-label">real conversation comprehension</div>
+              <div className="stat-caption">after 71 modules</div>
+            </div>
+
+            <div className="stat-item">
+              <div className="stat-number">Reading 11</div>
+              <div className="stat-label">authentic French passages</div>
+              <div className="stat-caption">you can read by completion</div>
+            </div>
+          </div>
+
+          <div className="utility-examples">
+            <h3>Practical from day one</h3>
+            <div className="utility-grid">
+              <div className="utility-card">
+                <div className="utility-module">Module 4</div>
+                <div className="utility-phrase">"Ça va?"</div>
+                <div className="utility-desc">Greet people and respond</div>
+              </div>
+              <div className="utility-card">
+                <div className="utility-module">Module 10</div>
+                <div className="utility-phrase">"Je veux ça"</div>
+                <div className="utility-desc">Express wants and needs</div>
+              </div>
+              <div className="utility-card">
+                <div className="utility-module">Module 11</div>
+                <div className="utility-phrase">"Où est...?"</div>
+                <div className="utility-desc">Ask location questions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Preview */}
+      <section className="landing-section">
+        <div className="landing-container">
+          <h2 className="section-title">See it in action</h2>
+          <p className="section-intro">
+            Every module follows the same structure. Here's what the learning
+            experience actually looks like.
+          </p>
+
+          <div className="preview-box">
+            <img 
+              src="/img/reading1a.svg" 
+              alt="Language Academy interface preview" 
+              className="preview-image"
+            />
+            <p className="preview-caption">
+              Clean interface. Clear structure. No distracting animations or gamification.
+              Just focused learning designed for retention.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who it's for */}
+      <section className="landing-section bg-subtle">
+        <div className="landing-container">
+          <h2 className="section-title">Built for analytical learners</h2>
+          
+          <div className="audience-content">
+            <div className="audience-col">
+              <h3>You'll love this if you:</h3>
+              <ul className="audience-list">
+                <li>Have a technical or coding background</li>
+                <li>Want to understand structure, not just memorize</li>
+                <li>Prefer comprehension before production</li>
+                <li>Value cognitive science over gamification</li>
+                <li>Learn best through composition and patterns</li>
+                <li>Are serious about functional fluency</li>
+              </ul>
+            </div>
+
+            <div className="audience-col">
+              <h3>This isn't for you if you:</h3>
+              <ul className="audience-list muted">
+                <li>Want a casual, game-like experience</li>
+                <li>Prefer random discovery over structured learning</li>
+                <li>Need constant external motivation (streaks, points)</li>
+                <li>Want to "just memorize phrases"</li>
+                <li>Expect instant fluency without understanding</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="landing-cta-section">
+        <div className="landing-container">
+          <h2 className="cta-title">Start learning structurally</h2>
+          <p className="cta-subtitle">
+            Limited free access to experience the full method.
+            See if the cognitive science approach works for you.
+          </p>
+          <button className="cta-primary large" onClick={onGetStarted}>
+            Get Started Free
+          </button>
+          <p className="cta-note">
+            No credit card required • Access first unit free
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="landing-footer">
+        <div className="landing-container">
+          <p>Built with React • Inspired by cognitive science research</p>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+export default LandingPage
+

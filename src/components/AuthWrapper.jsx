@@ -1,10 +1,13 @@
 import { SignIn, SignUp, UserButton, useUser } from '@clerk/clerk-react'
 import { useState } from 'react'
 import { useAuth } from '../hooks/useAuth'
+import LandingPage from './LandingPage'
+import '../styles/Landing.css'
 
 function AuthWrapper({ children }) {
   const { isAuthenticated, loading } = useAuth()
   const [showSignUp, setShowSignUp] = useState(false)
+  const [showAuthForms, setShowAuthForms] = useState(false)
 
   if (loading) {
     return (
@@ -18,22 +21,28 @@ function AuthWrapper({ children }) {
   }
 
   if (!isAuthenticated) {
+    // Show landing page first, then auth forms
+    if (!showAuthForms) {
+      return <LandingPage onGetStarted={() => setShowAuthForms(true)} />
+    }
+
+    // Show auth forms after "Get Started" clicked
     return (
       <div className="auth-container">
         <div className="auth-content">
           <div className="auth-header">
             <h1>🎓 Language Academy</h1>
-            <p>Master French through interactive lessons and real-time progress tracking.</p>
+            <p>Create your account to start learning</p>
           </div>
 
           <div className="auth-toggle">
-            <button 
+            <button
               onClick={() => setShowSignUp(false)}
               className={!showSignUp ? 'active' : ''}
             >
               Sign In
             </button>
-            <button 
+            <button
               onClick={() => setShowSignUp(true)}
               className={showSignUp ? 'active' : ''}
             >
@@ -43,7 +52,7 @@ function AuthWrapper({ children }) {
 
           <div className="auth-form">
             {showSignUp ? (
-              <SignUp 
+              <SignUp
                 appearance={{
                   elements: {
                     rootBox: "mx-auto",
@@ -53,7 +62,7 @@ function AuthWrapper({ children }) {
                 afterSignUpUrl="/"
               />
             ) : (
-              <SignIn 
+              <SignIn
                 appearance={{
                   elements: {
                     rootBox: "mx-auto",
@@ -65,16 +74,12 @@ function AuthWrapper({ children }) {
             )}
           </div>
 
-          <div className="auth-features">
-            <h3>Why create an account?</h3>
-            <ul>
-              <li>✅ Save your progress across devices</li>
-              <li>📊 Track your learning analytics</li>
-              <li>🔥 Maintain your study streak</li>
-              <li>🎯 Get personalized recommendations</li>
-              <li>📱 Access on mobile and desktop</li>
-            </ul>
-          </div>
+          <button 
+            className="auth-back-link"
+            onClick={() => setShowAuthForms(false)}
+          >
+            ← Back to landing page
+          </button>
         </div>
       </div>
     )
@@ -83,7 +88,7 @@ function AuthWrapper({ children }) {
   return (
     <div className="authenticated-app">
       <div className="auth-header-bar">
-        <UserButton 
+        <UserButton
           appearance={{
             elements: {
               avatarBox: "w-8 h-8"
