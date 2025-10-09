@@ -24,21 +24,21 @@ export const reading1 = {
 
 Tu es Marie. Tu es une femme. Tu as une maison et une voiture. La maison est très bonne!
 
-![img/reading1a.svg]
+![img/reading1a.png]
 
 Il est un ami. Il a des livres. Elle est une amie aussi. Elle a des chats et des livres aussi.
 
 Nous sommes les amis. Nous avons des enfants et des chiens. Les chiens sont très bon, mais les chats sont bon aussi.
 
-![img/reading1b.svg]
+![img/reading1b.png]
 
 C'est un très bon jour! Nous sommes très bon.
 
-![img/reading1c2.svg|320px]
+![img/reading1c2.png|320px]
 
 Merci et au revoir!
 
-![img/reading1d.svg]`,
+![img/reading1d.png]`,
     translation: `Hello! I am Paul. I am a man. I have a cat and a dog too.
 
 You are Marie. You are a woman. You have a house and a car. The house is very good!

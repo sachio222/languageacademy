@@ -69,7 +69,7 @@ function LandingPage({ onGetStarted }) {
               <ul className="comparison-list">
                 <li>Schema formation before testing</li>
                 <li>Frequency-first (top 100 words priority)</li>
-                <li>Functional composition like coding</li>
+                <li>Systematic composition of building blocks</li>
                 <li>Understanding through structure</li>
                 <li>Durable, interleaved retention</li>
               </ul>
@@ -88,10 +88,10 @@ function LandingPage({ onGetStarted }) {
       {/* The Method */}
       <section className="landing-section bg-subtle">
         <div className="landing-container">
-          <h2 className="section-title">Built like you learned to code</h2>
+          <h2 className="section-title">Build understanding through composition</h2>
           <p className="section-intro">
-            If you understand functions and composition, you already understand
-            how Language Academy teaches French.
+            Start with simple building blocks. Combine them systematically.
+            Create infinite expressions from finite pieces.
           </p>
 
           <div className="method-visual">
@@ -99,9 +99,9 @@ function LandingPage({ onGetStarted }) {
               <div className="method-number">1</div>
               <div className="method-content">
                 <h3>Learn discrete chunks</h3>
-                <code className="code-block">
-                  Module 1: pronouns = [je, tu, il, elle...]
-                </code>
+                <div className="method-example">
+                  Module 1: pronouns → je, tu, il, elle...
+                </div>
               </div>
             </div>
 
@@ -111,9 +111,9 @@ function LandingPage({ onGetStarted }) {
               <div className="method-number">2</div>
               <div className="method-content">
                 <h3>Learn operations</h3>
-                <code className="code-block">
-                  Module 2: être = [suis, es, est...]
-                </code>
+                <div className="method-example">
+                  Module 2: être (to be) → suis, es, est...
+                </div>
               </div>
             </div>
 
@@ -123,15 +123,15 @@ function LandingPage({ onGetStarted }) {
               <div className="method-number">3</div>
               <div className="method-content">
                 <h3>Compose them</h3>
-                <code className="code-block">
-                  Module 3: je + suis → "je suis"
-                </code>
+                <div className="method-example">
+                  Module 3: je + suis → "je suis" (I am)
+                </div>
               </div>
             </div>
           </div>
 
           <p className="method-caption">
-            Each module is a pure function. Master one, compose it with others,
+            Each module is self-contained. Master one, combine it with others,
             build infinite combinations from finite pieces.
           </p>
         </div>
@@ -254,7 +254,7 @@ function LandingPage({ onGetStarted }) {
           <div className="audience-layout">
             <div className="audience-image-container">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
+                src="https://images.unsplash.com/photo-1714974528757-f63c72154a1b?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Focused learner studying"
                 className="audience-image"
               />
@@ -264,11 +264,11 @@ function LandingPage({ onGetStarted }) {
               <div className="audience-col">
                 <h3>You'll love this if you:</h3>
                 <ul className="audience-list">
-                  <li>Have a technical or coding background</li>
                   <li>Want to understand structure, not just memorize</li>
                   <li>Prefer comprehension before production</li>
+                  <li>Learn best through patterns and building blocks</li>
                   <li>Value cognitive science over gamification</li>
-                  <li>Learn best through composition and patterns</li>
+                  <li>Think systematically (technical minds love this)</li>
                   <li>Are serious about functional fluency</li>
                 </ul>
               </div>

@@ -237,15 +237,15 @@
   color: #1a1a1a;
 }
 
-.code-block {
+.method-example {
   display: block;
   background: #f7f9fc;
   padding: 1rem;
   border-radius: 8px;
-  font-family: "Monaco", "Courier New", monospace;
-  font-size: 0.875rem;
-  color: #1a1a1a;
+  font-size: 0.9375rem;
+  color: #333;
   border: 1px solid #e0e0e0;
+  line-height: 1.5;
 }
 
 .method-arrow {
