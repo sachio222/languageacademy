@@ -280,7 +280,6 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
                   <li>Want to understand structure, not just memorize</li>
                   <li>Prefer comprehension before production</li>
                   <li>Learn best through patterns and building blocks</li>
-                  <li>Value cognitive science over gamification</li>
                   <li>Think systematically (technical minds love this)</li>
                   <li>Are serious about functional fluency</li>
                 </ul>
