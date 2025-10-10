@@ -205,47 +205,67 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
   // Auto-show modal when all exercises complete
   useEffect(() => {
+    // If modal is already showing but exercises are no longer all complete (due to revert), hide it
+    if (moduleCompleted && !allExercisesComplete) {
+      setModuleCompleted(false);
+      return;
+    }
+
     // Don't auto-show modal for fill-in-blank modules (they handle completion internally)
     if (allExercisesComplete && !showExam && !moduleCompleted && studyCompleted && !lesson.isFillInTheBlank) {
-      // Load time from database if available
-      const loadModuleTime = async () => {
-        if (isAuthenticated && supabaseClient && supabaseUser) {
-          try {
-            const modId = extractModuleId(lesson);
+      // Delay to allow optimistic updates to be reverted if answer was incorrect
+      const timeoutId = setTimeout(() => {
+        // Re-check if all exercises are still complete after a brief delay
+        const stillAllComplete = lesson.exercises?.every(ex =>
+          completedExercises.has(ex.id)
+        ) || false;
 
-            // Try to get from module_progress first
-            const { data: moduleData } = await supabaseClient
-              .from('module_progress')
-              .select('time_spent_seconds')
-              .eq('user_id', supabaseUser.id)
-              .eq('module_id', modId)
-              .single();
+        if (!stillAllComplete) {
+          return; // Don't show modal if exercises were reverted
+        }
 
-            if (moduleData?.time_spent_seconds) {
-              setModuleTimeSpent(moduleData.time_spent_seconds);
-            } else {
-              // Sum up time from individual exercise completions
-              const { data: exerciseData } = await supabaseClient
-                .from('exercise_completions')
+        // Load time from database if available
+        const loadModuleTime = async () => {
+          if (isAuthenticated && supabaseClient && supabaseUser) {
+            try {
+              const modId = extractModuleId(lesson);
+
+              // Try to get from module_progress first
+              const { data: moduleData } = await supabaseClient
+                .from('module_progress')
                 .select('time_spent_seconds')
                 .eq('user_id', supabaseUser.id)
                 .eq('module_id', modId)
-                .eq('is_correct', true);
+                .single();
 
-              if (exerciseData && exerciseData.length > 0) {
-                const totalTime = exerciseData.reduce((sum, ex) => sum + (ex.time_spent_seconds || 0), 0);
-                setModuleTimeSpent(totalTime);
+              if (moduleData?.time_spent_seconds) {
+                setModuleTimeSpent(moduleData.time_spent_seconds);
+              } else {
+                // Sum up time from individual exercise completions
+                const { data: exerciseData } = await supabaseClient
+                  .from('exercise_completions')
+                  .select('time_spent_seconds')
+                  .eq('user_id', supabaseUser.id)
+                  .eq('module_id', modId)
+                  .eq('is_correct', true);
+
+                if (exerciseData && exerciseData.length > 0) {
+                  const totalTime = exerciseData.reduce((sum, ex) => sum + (ex.time_spent_seconds || 0), 0);
+                  setModuleTimeSpent(totalTime);
+                }
               }
+            } catch (err) {
+              // No time data, that's okay
             }
-          } catch (err) {
-            // No time data, that's okay
           }
-        }
-        setModuleCompleted(true);
-      };
-      loadModuleTime();
+          setModuleCompleted(true);
+        };
+        loadModuleTime();
+      }, 100); // Small delay to allow revert to complete
+
+      return () => clearTimeout(timeoutId);
     }
-  }, [allExercisesComplete, showExam, moduleCompleted, studyCompleted, lesson.isFillInTheBlank, isAuthenticated, supabaseClient, supabaseUser, lesson]);
+  }, [allExercisesComplete, showExam, moduleCompleted, studyCompleted, lesson.isFillInTheBlank, isAuthenticated, supabaseClient, supabaseUser, lesson, completedExercises]);
 
   return (
     <div className="lesson-view">
