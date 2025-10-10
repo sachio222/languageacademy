@@ -38,20 +38,17 @@
 }
 
 .auth-container {
-  min-height: 100vh;
-  background: #fafbfc;
+  height: 100vh;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  margin: 0;
 }
 
 .auth-content {
-  background: white;
-  /* border-radius: 16px; */
-  /* padding: 3rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04); */
+  background: transparent;
   max-width: 500px;
   width: 100%;
 }
@@ -107,6 +104,8 @@
 
 .auth-form {
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .auth-features {
