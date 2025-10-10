@@ -9,6 +9,8 @@ import UnitExam from './UnitExam';
 import ModuleCompleteModal from './ModuleCompleteModal';
 import FillInTheBlank from './FillInTheBlank';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
+import { RotateCcw } from 'lucide-react';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 
 function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
@@ -17,6 +19,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const [studyCompleted, setStudyCompleted] = useState(false);
   const [showExam, setShowExam] = useState(false);
   const [moduleCompleted, setModuleCompleted] = useState(false);
+  const [resetting, setResetting] = useState(false);
+
+  const { supabaseClient, supabaseUser, isAuthenticated } = useSupabaseProgress();
 
   if (!lesson) return null;
 
@@ -97,6 +102,37 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     setCurrentExerciseIndex(0);
   };
 
+  const handleRetakeExercises = async () => {
+    if (!isAuthenticated || !supabaseUser || !supabaseClient) {
+      alert('You must be signed in to reset progress');
+      return;
+    }
+
+    const confirmed = window.confirm(
+      'Reset all answers for this module? You\'ll start fresh and can see the exercises again.'
+    );
+
+    if (!confirmed) return;
+
+    try {
+      const modId = extractModuleId(lesson);
+      // Delete all exercise completions for this module
+      const { error } = await supabaseClient
+        .from('exercise_completions')
+        .delete()
+        .eq('user_id', supabaseUser.id)
+        .eq('module_id', modId);
+
+      if (error) throw error;
+
+      // Reload page to refresh state
+      window.location.reload();
+    } catch (err) {
+      console.error('Error resetting module:', err);
+      alert('Failed to reset module. Please try again.');
+    }
+  };
+
   const handleNextModule = () => {
     console.log('handleNextModule called for lesson', lesson.id);
     console.log('Lesson title:', lesson.title);
@@ -106,6 +142,40 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       onModuleComplete(lesson.id, 100, 0, true); // Go to next module
     } else {
       console.error('onModuleComplete callback not provided!');
+    }
+  };
+
+  const handleResetModule = async () => {
+    if (!isAuthenticated || !supabaseUser || !supabaseClient) {
+      alert('You must be signed in to reset progress');
+      return;
+    }
+
+    const confirmed = window.confirm(
+      'Reset all progress for this module? This will delete all your answers and you\'ll start fresh.'
+    );
+
+    if (!confirmed) return;
+
+    setResetting(true);
+    try {
+      const modId = extractModuleId(lesson);
+      // Delete all exercise completions for this module
+      const { error } = await supabaseClient
+        .from('exercise_completions')
+        .delete()
+        .eq('user_id', supabaseUser.id)
+        .eq('module_id', modId);
+
+      if (error) throw error;
+
+      // Reload page to refresh state
+      window.location.reload();
+    } catch (err) {
+      console.error('Error resetting module:', err);
+      alert('Failed to reset module. Please try again.');
+    } finally {
+      setResetting(false);
     }
   };
 
@@ -142,7 +212,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           onNextModule={handleNextModule}
           onBackToModules={onBack}
           onTakeExam={handleTakeExam}
+          onRetakeExercises={handleRetakeExercises}
           totalModules={totalModules}
+          hasNextModule={lesson.id < totalModules}
         />
       )}
 
@@ -158,6 +230,17 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           )}
           <h2>{lesson.title}</h2>
         </div>
+        {isAuthenticated && (
+          <button
+            className="btn-reset-module"
+            onClick={handleResetModule}
+            disabled={resetting}
+            title="Reset all progress for this module"
+          >
+            <RotateCcw size={14} />
+            {resetting ? 'Resetting...' : 'Reset'}
+          </button>
+        )}
         <div className="exercise-progress">
           {showIntro ? (
             <span>📖 Introduction</span>

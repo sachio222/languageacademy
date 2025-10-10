@@ -6,6 +6,7 @@ import FrenchCharacterPicker from './FrenchCharacterPicker';
 import { ArrowBigLeft } from 'lucide-react';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { useTextTracking } from '../hooks/useTextTracking';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 
 function ExercisePane({
   exercise,
@@ -24,7 +25,10 @@ function ExercisePane({
   const [testResults, setTestResults] = useState(null);
   const [showHint, setShowHint] = useState(false);
   const [startTime, setStartTime] = useState(null);
+  const [loadingPreviousAnswer, setLoadingPreviousAnswer] = useState(true);
   const textareaRef = useRef(null);
+
+  const { supabaseClient, supabaseUser, isAuthenticated } = useSupabaseProgress();
 
   // Text tracking hook
   const {
@@ -38,39 +42,53 @@ function ExercisePane({
     trackSubmit
   } = useTextTracking();
 
-  // Start text tracking when component mounts
+  // Load previous answer if exercise was already completed
   useEffect(() => {
-    if (exercise?.id && moduleId && unitId) {
-      startTracking(exercise.id, moduleId, unitId);
-    }
+    const loadPreviousAnswer = async () => {
+      if (!isAuthenticated || !supabaseUser || !supabaseClient || !exercise?.id) {
+        setLoadingPreviousAnswer(false);
+        return;
+      }
 
-    return () => {
-      stopTracking();
+      try {
+        // Get the user's most recent correct answer for this exercise
+        const { data, error } = await supabaseClient
+          .from('exercise_completions')
+          .select('user_answer')
+          .eq('user_id', supabaseUser.id)
+          .eq('exercise_id', exercise.id)
+          .eq('is_correct', true)
+          .order('completed_at', { ascending: false })
+          .limit(1)
+          .single();
+
+        if (!error && data?.user_answer) {
+          setUserAnswer(data.user_answer);
+        }
+      } catch (err) {
+        // No previous answer found, that's okay
+      } finally {
+        setLoadingPreviousAnswer(false);
+      }
     };
-  }, [exercise?.id, moduleId, unitId, startTracking, stopTracking]);
 
-  // Debounced text tracking to avoid too many database calls
+    setUserAnswer(''); // Reset answer when exercise changes
+    setLoadingPreviousAnswer(true);
+    loadPreviousAnswer();
+  }, [exercise?.id, supabaseClient, supabaseUser, isAuthenticated]);
+
+  // Text tracking disabled - too aggressive
   const debouncedTrackTyping = useRef(null);
   const handleTextChange = (newValue, cursorPosition) => {
     setUserAnswer(newValue);
     if (testResults) setTestResults(null); // Clear status when editing
-
-    // Clear existing timeout
-    if (debouncedTrackTyping.current) {
-      clearTimeout(debouncedTrackTyping.current);
-    }
-
-    // Set new timeout for tracking
-    debouncedTrackTyping.current = setTimeout(() => {
-      trackTyping(newValue, cursorPosition);
-    }, 500); // 500ms debounce
   };
 
   const handleKeyDown = (e) => {
-    // Track delete events
-    if (e.key === 'Backspace' || e.key === 'Delete') {
-      trackDelete(userAnswer, e.target.selectionStart);
-    }
+    // Text tracking disabled
+    // if (e.key === 'Backspace' || e.key === 'Delete') {
+    //   trackDelete(userAnswer, e.target.selectionStart);
+    // }
 
     // Cmd+Enter (Mac) or Ctrl+Enter (Windows/Linux)
     if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
@@ -84,19 +102,17 @@ function ExercisePane({
   };
 
   const handleFocus = () => {
-    trackFocus(userAnswer, textareaRef.current?.selectionStart || 0);
+    // Text tracking disabled - too aggressive
+    // trackFocus(userAnswer, textareaRef.current?.selectionStart || 0);
   };
 
   const handleBlur = () => {
-    trackBlur(userAnswer, textareaRef.current?.selectionStart || 0);
+    // Text tracking disabled - too aggressive
+    // trackBlur(userAnswer, textareaRef.current?.selectionStart || 0);
   };
 
   const handlePaste = (e) => {
-    // Let the paste happen first, then track it
-    setTimeout(() => {
-      const newValue = e.target.value;
-      trackPaste(newValue, e.target.selectionStart);
-    }, 0);
+    // Text tracking disabled
   };
 
   const handleSubmit = async () => {
@@ -132,7 +148,8 @@ function ExercisePane({
         userAnswer,
         exercise.expectedAnswer,
         timeSpent,
-        showHint
+        showHint,
+        isCorrect  // Pass the test runner's result
       );
     }
   };

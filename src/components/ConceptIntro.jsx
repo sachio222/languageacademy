@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
-import { useSupabaseProgress } from '../hooks/useSupabaseProgress';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 
 /**
@@ -40,7 +40,8 @@ function ConceptIntro({ lesson, onStartStudying }) {
   const [showHelp, setShowHelp] = useState(isFirstLesson);
 
   // Get Supabase progress functions
-  const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = useSupabaseProgress();
+  const supabaseProgress = useSupabaseProgress();
+  const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
 
   // Load understood concepts from database when module loads
   useEffect(() => {
@@ -61,7 +62,6 @@ function ConceptIntro({ lesson, onStartStudying }) {
 
         const understoodSet = new Set(data.map(c => c.concept_index));
         setUnderstoodConcepts(understoodSet);
-        console.log('ConceptIntro loaded understood concepts:', understoodSet);
       } catch (error) {
         console.error('Error loading understood concepts:', error);
       } finally {

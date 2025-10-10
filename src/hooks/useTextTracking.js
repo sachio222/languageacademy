@@ -6,7 +6,12 @@ import { useAuth } from "./useAuth";
  * Captures typing, pasting, deleting, and other text input events
  */
 export const useTextTracking = () => {
-  const { supabaseUser, supabaseClient, isAuthenticated } = useAuth();
+  const {
+    supabaseUser,
+    supabaseClient,
+    isAuthenticated,
+    loading: authLoading,
+  } = useAuth();
   const trackingState = useRef({
     isTracking: false,
     exerciseId: null,
@@ -19,7 +24,7 @@ export const useTextTracking = () => {
   // Start tracking text entries for an exercise
   const startTracking = useCallback(
     (exerciseId, moduleId, unitId, attemptNumber = 1) => {
-      if (!isAuthenticated || !supabaseUser) return;
+      if (authLoading || !isAuthenticated || !supabaseUser) return;
 
       trackingState.current = {
         isTracking: true,
@@ -30,7 +35,7 @@ export const useTextTracking = () => {
         lastEntry: null,
       };
     },
-    [isAuthenticated, supabaseUser]
+    [authLoading, isAuthenticated, supabaseUser]
   );
 
   // Stop tracking text entries
@@ -48,6 +53,7 @@ export const useTextTracking = () => {
       selectionEnd = 0
     ) => {
       if (
+        authLoading ||
         !trackingState.current.isTracking ||
         !supabaseUser ||
         !supabaseClient
@@ -84,7 +90,7 @@ export const useTextTracking = () => {
         console.error("Error tracking text entry:", error);
       }
     },
-    [supabaseUser, supabaseClient]
+    [authLoading, supabaseUser, supabaseClient]
   );
 
   // Track typing events (with debouncing)

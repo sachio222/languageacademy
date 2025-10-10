@@ -9,6 +9,7 @@ export const useAuth = () => {
   const { signOut } = useClerk();
   const [supabaseUser, setSupabaseUser] = useState(null);
   const [supabaseClient, setSupabaseClient] = useState(supabase);
+  const [clientReady, setClientReady] = useState(false);
   const [loading, setLoading] = useState(true);
 
   // Create Supabase client with Clerk session token (OFFICIAL METHOD)
@@ -16,13 +17,21 @@ export const useAuth = () => {
     if (session) {
       const client = createClerkSupabaseClient(session);
       setSupabaseClient(client);
-      console.log("Supabase client configured with Clerk session");
+      setClientReady(true);
+    } else {
+      setClientReady(false);
     }
   }, [session]);
 
   // Sync Clerk user with Supabase user_profiles table
   useEffect(() => {
     const syncUserProfile = async () => {
+      // Don't sync until Clerk is fully loaded
+      if (!isDevMode && !userLoaded) {
+        setLoading(false);
+        return;
+      }
+
       // Dev mode: Sign in with dev account using Supabase Auth
       if (isDevMode) {
         try {
@@ -106,9 +115,8 @@ console.log('Dev account created:', data);
         return;
       }
 
-      if (!userLoaded) return;
-
-      if (isSignedIn && user) {
+      // Production: only sync if user is signed in AND client is ready with token
+      if (isSignedIn && user && clientReady) {
         try {
           // Check if user profile exists in Supabase
           const { data: existingProfile, error: fetchError } =
@@ -169,7 +177,7 @@ console.log('Dev account created:', data);
     };
 
     syncUserProfile();
-  }, [user, isSignedIn, userLoaded, isDevMode, supabaseClient]);
+  }, [user, isSignedIn, userLoaded, isDevMode, supabaseClient, clientReady]);
 
   const handleSignOut = async () => {
     try {

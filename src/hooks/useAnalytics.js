@@ -3,14 +3,19 @@ import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
 
 export const useAnalytics = () => {
-  const { supabaseUser, supabaseClient, isAuthenticated } = useAuth();
+  const {
+    supabaseUser,
+    supabaseClient,
+    isAuthenticated,
+    loading: authLoading,
+  } = useAuth();
   const [currentSession, setCurrentSession] = useState(null);
   const sessionRef = useRef(null);
   const activityTimerRef = useRef(null);
 
   // Start a new session when user logs in
   useEffect(() => {
-    if (!isAuthenticated || !supabaseUser) return;
+    if (authLoading || !isAuthenticated || !supabaseUser) return;
 
     const startSession = async () => {
       try {
@@ -57,7 +62,7 @@ export const useAnalytics = () => {
       }
       endSession();
     };
-  }, [isAuthenticated, supabaseUser, supabaseClient]);
+  }, [authLoading, isAuthenticated, supabaseUser, supabaseClient]);
 
   // End session when component unmounts or user logs out
   const endSession = useCallback(async () => {

@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ClerkProvider } from '@clerk/clerk-react'
+import { SupabaseProgressProvider } from './contexts/SupabaseProgressContext'
 import App from './App.jsx'
 import { initializePerformanceMonitoring } from './utils/performanceMonitor'
 
@@ -14,12 +15,19 @@ if (!PUBLISHABLE_KEY) {
 // Initialize performance monitoring
 initializePerformanceMonitoring()
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+// Always wrap with provider - the hook inside handles auth timing
+function AppWithProviders() {
+  return (
+    <SupabaseProgressProvider>
       <App />
-    </ClerkProvider>
-  </React.StrictMode>,
+    </SupabaseProgressProvider>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+    <AppWithProviders />
+  </ClerkProvider>
 )
 
 

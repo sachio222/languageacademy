@@ -8,7 +8,7 @@ import SafariTTSHelper from './components/SafariTTSHelper';
 import OfflineIndicator from './components/OfflineIndicator';
 import FeedbackForm from './components/FeedbackForm';
 import FeedbackAdmin from './components/FeedbackAdmin';
-import { useSupabaseProgress } from './hooks/useSupabaseProgress';
+import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useAnalytics } from './hooks/useAnalytics';
 import { useOfflineSync } from './hooks/useOfflineSync';
 import { lessons, unitStructure } from './lessons/lessonData';
@@ -33,9 +33,9 @@ function App() {
   const analytics = useAnalytics();
   const offlineSync = useOfflineSync();
 
-  // Use Supabase data in both modes
-  const completedExercises = supabaseProgress.completedExercises;
-  const isAuthenticated = supabaseProgress.isAuthenticated;
+  // Use Supabase data in both modes (with safe defaults)
+  const completedExercises = supabaseProgress?.completedExercises || new Set();
+  const isAuthenticated = supabaseProgress?.isAuthenticated || false;
 
   // Helper function to get unit info for a lesson
   const getUnitForLesson = (lessonId) => {
@@ -63,7 +63,7 @@ function App() {
     setCurrentLesson(null);
   };
 
-  const handleExerciseComplete = async (exerciseId, moduleId, unitId, userAnswer, correctAnswer, timeSpent = 0, hintUsed = false) => {
+  const handleExerciseComplete = async (exerciseId, moduleId, unitId, userAnswer, correctAnswer, timeSpent = 0, hintUsed = false, isCorrect = null) => {
     if (!isAuthenticated) {
       console.log('Exercise completed but user not authenticated');
       return;
@@ -71,24 +71,26 @@ function App() {
 
     try {
       // Complete exercise in Supabase (works in both dev and production mode)
-      const isCorrect = await supabaseProgress.completeExercise(
+      if (!supabaseProgress) return false;
+      const result = await supabaseProgress.completeExercise(
         exerciseId,
         moduleId,
         unitId,
         userAnswer,
         correctAnswer,
         timeSpent,
-        hintUsed
+        hintUsed,
+        isCorrect  // Pass through the test runner's result
       );
 
       // Track analytics
-      await analytics.trackExerciseAttempt(exerciseId, isCorrect);
+      await analytics.trackExerciseAttempt(exerciseId, result);
 
       if (timeSpent > 0) {
         await analytics.updateStudyTime(timeSpent);
       }
 
-      return isCorrect;
+      return result;
     } catch (error) {
       console.error('Error completing exercise:', error);
       return false;
@@ -98,7 +100,7 @@ function App() {
   const handleModuleComplete = async (moduleId, examScore, timeSpent, goToNext = false) => {
     console.log('Module complete:', moduleId, 'score:', examScore, 'goToNext:', goToNext);
 
-    if (isAuthenticated) {
+    if (isAuthenticated && supabaseProgress) {
       try {
         const lesson = lessons.find(l => l.id === moduleId);
         const unitInfo = getUnitForLesson(moduleId);
@@ -139,19 +141,30 @@ function App() {
     }
 
     if (goToNext) {
-      // Go to next module
-      const nextModuleId = moduleId + 1;
-      const nextModule = lessons.find(l => l.id === nextModuleId);
-      console.log('Looking for module', nextModuleId, 'found:', nextModule);
+      // Go to next module - find the next lesson in sequence
+      const currentIndex = lessons.findIndex(l => l.id === moduleId);
+
+      if (currentIndex === -1) {
+        console.error('Current module not found in lessons array:', moduleId);
+        setCurrentLesson(null);
+        return;
+      }
+
+      const nextModule = lessons[currentIndex + 1];
 
       if (nextModule) {
-        console.log('Setting currentLesson to:', nextModuleId);
-        setCurrentLesson(nextModuleId);
+        console.log('Navigating from module', moduleId, 'to', nextModule.id);
+        setCurrentLesson(nextModule.id);
         window.scrollTo(0, 0);
+
+        // Track analytics for new module
+        if (isAuthenticated) {
+          analytics.trackModuleVisit(extractModuleId(nextModule));
+        }
       } else {
-        // No more modules - go back to module list
-        console.log('No next module found - completed all modules!');
-        alert('Congratulations! You\'ve completed all modules!');
+        // No more modules - completed all!
+        console.log('Completed all modules!');
+        alert('🎉 Congratulations! You\'ve completed all available modules!');
         setCurrentLesson(null);
         window.scrollTo(0, 0);
       }

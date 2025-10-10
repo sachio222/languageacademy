@@ -14,23 +14,6 @@ export const createClerkSupabaseClient = (session) => {
   return createClient(supabaseUrl, supabaseAnonKey, {
     accessToken: async () => {
       const token = await session?.getToken();
-
-      if (token) {
-        // Decode JWT to see what's inside
-        try {
-          const payload = JSON.parse(atob(token.split(".")[1]));
-          console.log("JWT Payload:", payload);
-          console.log("Has role claim?", payload.role);
-          console.log("Has aud claim?", payload.aud);
-          console.log("Issuer:", payload.iss);
-          console.log("Subject (user ID):", payload.sub);
-        } catch (e) {
-          console.error("Could not decode JWT:", e);
-        }
-      } else {
-        console.log("NO TOKEN FROM CLERK");
-      }
-
       return token ?? null;
     },
   });

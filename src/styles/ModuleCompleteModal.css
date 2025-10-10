@@ -55,6 +55,25 @@
   border-bottom: none;
   background: #ffffff;
   flex-shrink: 0;
+  position: relative;
+}
+
+.reset-exercises-link {
+  position: absolute;
+  top: calc(3rem + 0.5rem);
+  right: 3rem;
+  background: none;
+  border: none;
+  color: #999999;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease;
+  font-weight: 400;
+}
+
+.reset-exercises-link:hover {
+  color: #3b82f6;
 }
 
 .modal-header h2 {
@@ -278,6 +297,11 @@
 
   .module-complete-modal .modal-header {
     padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .reset-exercises-link {
+    top: calc(2rem + 0.5rem);
+    right: 1.5rem;
   }
 
   .modal-header h2 {

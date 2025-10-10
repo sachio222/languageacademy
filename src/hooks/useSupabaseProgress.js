@@ -3,7 +3,12 @@ import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
 
 export const useSupabaseProgress = () => {
-  const { supabaseUser, supabaseClient, isAuthenticated } = useAuth();
+  const {
+    supabaseUser,
+    supabaseClient,
+    isAuthenticated,
+    loading: authLoading,
+  } = useAuth();
   const [completedExercises, setCompletedExercises] = useState(new Set());
   const [moduleProgress, setModuleProgress] = useState({});
   const [unitProgress, setUnitProgress] = useState({});
@@ -12,6 +17,11 @@ export const useSupabaseProgress = () => {
 
   // Load initial progress data
   useEffect(() => {
+    // Don't load anything until auth is completely ready
+    if (authLoading) {
+      return;
+    }
+
     if (!isAuthenticated || !supabaseUser) {
       setLoading(false);
       return;
@@ -75,11 +85,11 @@ export const useSupabaseProgress = () => {
     };
 
     loadProgressData();
-  }, [isAuthenticated, supabaseUser, supabaseClient]);
+  }, [isAuthenticated, supabaseUser, supabaseClient, authLoading]);
 
   // Real-time subscriptions for progress updates
   useEffect(() => {
-    if (!isAuthenticated || !supabaseUser) return;
+    if (authLoading || !isAuthenticated || !supabaseUser) return;
 
     const exerciseSubscription = supabaseClient
       .channel("exercise_completions")
@@ -129,7 +139,7 @@ export const useSupabaseProgress = () => {
       exerciseSubscription.unsubscribe();
       moduleSubscription.unsubscribe();
     };
-  }, [isAuthenticated, supabaseUser, supabaseClient]);
+  }, [isAuthenticated, supabaseUser, supabaseClient, authLoading]);
 
   // Complete an exercise
   const completeExercise = useCallback(
@@ -140,7 +150,8 @@ export const useSupabaseProgress = () => {
       userAnswer,
       correctAnswer,
       timeSpent = 0,
-      hintUsed = false
+      hintUsed = false,
+      isCorrect = null
     ) => {
       if (!supabaseUser) return;
 
@@ -164,9 +175,13 @@ export const useSupabaseProgress = () => {
           existingAttempts.length > 0
             ? existingAttempts[0].attempt_number + 1
             : 1;
-        const isCorrect =
-          userAnswer.trim().toLowerCase() ===
-          correctAnswer.trim().toLowerCase();
+
+        // Use the passed isCorrect result from test runner, or fallback to strict comparison
+        const correct =
+          isCorrect !== null
+            ? isCorrect
+            : userAnswer.trim().toLowerCase() ===
+              correctAnswer.trim().toLowerCase();
 
         // Insert exercise completion
         const { error: insertError } = await supabaseClient
@@ -177,7 +192,7 @@ export const useSupabaseProgress = () => {
             module_id: moduleId,
             unit_id: unitId,
             attempt_number: attemptNumber,
-            is_correct: isCorrect,
+            is_correct: correct,
             user_answer: userAnswer,
             correct_answer: correctAnswer,
             time_spent_seconds: timeSpent,
@@ -187,7 +202,7 @@ export const useSupabaseProgress = () => {
         if (insertError) throw insertError;
 
         // If incorrect, revert optimistic update
-        if (!isCorrect) {
+        if (!correct) {
           setCompletedExercises((prev) => {
             const newSet = new Set(prev);
             newSet.delete(exerciseId);
@@ -195,7 +210,7 @@ export const useSupabaseProgress = () => {
           });
         }
 
-        return isCorrect;
+        return correct;
       } catch (err) {
         console.error("Error completing exercise:", err);
         // Revert optimistic update on error
@@ -259,7 +274,7 @@ export const useSupabaseProgress = () => {
         throw err;
       }
     },
-    [supabaseUser]
+    [supabaseUser, supabaseClient]
   );
 
   // Update unit progress
@@ -307,28 +322,17 @@ export const useSupabaseProgress = () => {
         throw err;
       }
     },
-    [supabaseUser]
+    [supabaseUser, supabaseClient]
   );
 
   // Mark concept as understood
   const updateConceptUnderstanding = useCallback(
     async (moduleId, conceptIndex, conceptTerm, understood = true) => {
-      if (!supabaseUser) {
-        console.log("No supabaseUser, cannot save concept understanding");
-        return;
-      }
-
-      console.log("updateConceptUnderstanding called:", {
-        moduleId,
-        conceptIndex,
-        conceptTerm,
-        understood,
-        userId: supabaseUser.id,
-      });
+      if (!supabaseUser) return;
 
       try {
         if (understood) {
-          const { data, error } = await supabaseClient
+          const { error } = await supabaseClient
             .from(TABLES.CONCEPT_UNDERSTANDING)
             .upsert({
               user_id: supabaseUser.id,
@@ -338,10 +342,9 @@ export const useSupabaseProgress = () => {
             })
             .select();
 
-          console.log("Concept upsert result:", { data, error });
           if (error) throw error;
         } else {
-          const { data, error } = await supabaseClient
+          const { error } = await supabaseClient
             .from(TABLES.CONCEPT_UNDERSTANDING)
             .delete()
             .eq("user_id", supabaseUser.id)
@@ -349,7 +352,6 @@ export const useSupabaseProgress = () => {
             .eq("concept_index", conceptIndex)
             .select();
 
-          console.log("Concept delete result:", { data, error });
           if (error) throw error;
         }
       } catch (err) {
@@ -418,7 +420,7 @@ export const useSupabaseProgress = () => {
         throw err;
       }
     },
-    [supabaseUser]
+    [supabaseUser, supabaseClient]
   );
 
   return {

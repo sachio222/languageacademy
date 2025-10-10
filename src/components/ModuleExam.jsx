@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { runTests, isExerciseComplete } from '../lessons/testRunner';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
-import { useSupabaseProgress } from '../hooks/useSupabaseProgress';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 
 /**
@@ -15,8 +15,9 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
   const [results, setResults] = useState(null);
   const [startTime, setStartTime] = useState(null);
   const inputRef = useRef(null);
-  
-  const { recordExamAttempt, isAuthenticated } = useSupabaseProgress();
+
+  const supabaseProgress = useSupabaseProgress();
+  const { recordExamAttempt, isAuthenticated } = supabaseProgress || {};
 
   // Randomize exercises for the exam and start timing
   const [examQuestions] = useState(() => {

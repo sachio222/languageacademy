@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 
@@ -114,16 +114,15 @@ function VocabularyReference({ vocabulary, title }) {
                 };
 
                 return (
-                  <>
+                  <Fragment key={`vocab-${idx}`}>
                     {needsDivider && (
-                      <tr key={`divider-${idx}`} className="vocab-divider">
+                      <tr className="vocab-divider">
                         <td colSpan={3}>
                           <div className="vocab-section-break"></div>
                         </td>
                       </tr>
                     )}
                     <tr
-                      key={idx}
                       onClick={handleRowClick}
                       className="vocab-row-clickable"
                       role="button"
@@ -144,7 +143,7 @@ function VocabularyReference({ vocabulary, title }) {
                       <td className="vocab-english">{item.english}</td>
                       <td className="vocab-note">{item.note || '—'}</td>
                     </tr>
-                  </>
+                  </Fragment>
                 );
               })}
             </tbody>

@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Check } from 'lucide-react';
-import { useSupabaseProgress } from '../hooks/useSupabaseProgress';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 
 function ConceptPane({ concepts, moduleId }) {
   const [understoodConcepts, setUnderstoodConcepts] = useState(new Set());
   const [loading, setLoading] = useState(true);
-  const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = useSupabaseProgress();
+  const supabaseProgress = useSupabaseProgress();
+  const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
 
   // Load understood concepts from database when module loads
   useEffect(() => {
@@ -27,7 +28,6 @@ function ConceptPane({ concepts, moduleId }) {
 
         const understoodSet = new Set(data.map(c => c.concept_index));
         setUnderstoodConcepts(understoodSet);
-        console.log('Loaded understood concepts:', understoodSet);
       } catch (error) {
         console.error('Error loading understood concepts:', error);
       } finally {
@@ -39,10 +39,8 @@ function ConceptPane({ concepts, moduleId }) {
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
   const toggleUnderstood = async (conceptIndex) => {
-    console.log('===== TOGGLE UNDERSTOOD CALLED =====', conceptIndex);
     const isCurrentlyUnderstood = understoodConcepts.has(conceptIndex);
     const newUnderstood = !isCurrentlyUnderstood;
-    console.log('Currently understood?', isCurrentlyUnderstood, '→ New:', newUnderstood);
 
     // Optimistic update
     setUnderstoodConcepts(prev => {
@@ -56,25 +54,14 @@ function ConceptPane({ concepts, moduleId }) {
     });
 
     // Sync with Supabase if authenticated
-    console.log('Auth check:', { isAuthenticated, hasModuleId: !!moduleId, hasConcept: !!concepts[conceptIndex] });
-
-    if (isAuthenticated && moduleId && concepts[conceptIndex]) {
+    if (isAuthenticated && moduleId && concepts[conceptIndex] && updateConceptUnderstanding) {
       try {
-        console.log('Saving concept understanding:', {
-          moduleId,
-          conceptIndex,
-          term: concepts[conceptIndex].term,
-          understood: newUnderstood
-        });
-
         await updateConceptUnderstanding(
           moduleId,
           conceptIndex,
           concepts[conceptIndex].term,
           newUnderstood
         );
-
-        console.log('Concept understanding saved successfully');
       } catch (error) {
         console.error('Error updating concept understanding:', error);
         // Revert optimistic update on error

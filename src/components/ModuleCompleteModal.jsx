@@ -1,9 +1,10 @@
 import '../styles/ModuleCompleteModal.css';
 
-function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam, totalModules }) {
+function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam, onRetakeExercises, totalModules, hasNextModule }) {
   if (!lesson) return null;
 
-  const hasNextModule = lesson.id < totalModules;
+  // Use prop if provided, otherwise fallback to ID comparison
+  const showNextButton = hasNextModule !== undefined ? hasNextModule : lesson.id < totalModules;
   const vocabularyItems = lesson.vocabularyReference || [];
   const concepts = lesson.concepts || [];
 
@@ -17,6 +18,11 @@ function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam
       <div className="modal-content module-complete-modal">
         <div className="modal-header">
           <h3>🎉 Module Complete</h3>
+          {lesson.exercises && lesson.exercises.length > 0 && onRetakeExercises && (
+            <button className="reset-exercises-link" onClick={onRetakeExercises}>
+              Reset exercises
+            </button>
+          )}
         </div>
 
         <div className="modal-body">
@@ -76,19 +82,13 @@ function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam
         </div>
 
         <div className="modal-footer">
-          {/* Practice Exam Button - especially useful for reference modules */}
-          {lesson.exercises && lesson.exercises.length > 0 && onTakeExam && (
-            <button className="btn-secondary btn-large" onClick={onTakeExam}>
-              📝 Take Practice Exam
-            </button>
-          )}
-          {hasNextModule && (
+          {showNextButton && (
             <button className="btn-primary btn-large" onClick={onNextModule}>
               Continue to Next Module →
             </button>
           )}
           <button
-            className={hasNextModule ? "btn-secondary" : "btn-primary"}
+            className={showNextButton ? "btn-secondary" : "btn-primary"}
             onClick={onBackToModules}
           >
             Back to Modules
