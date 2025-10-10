@@ -4,10 +4,20 @@ import { useAuth } from '../hooks/useAuth'
 import LandingPage from './LandingPage'
 import '../styles/Landing.css'
 
-function AuthWrapper({ children }) {
+function AuthWrapper({ children, onBackToLanding }) {
   const { isAuthenticated, loading } = useAuth()
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
+  const [showLanding, setShowLanding] = useState(!isAuthenticated)
+
+  // Handle navigation back to landing page
+  const handleBackToLanding = () => {
+    setShowLanding(true)
+    setShowAuthForms(false)
+    if (onBackToLanding) {
+      onBackToLanding()
+    }
+  }
 
   if (loading) {
     return (
@@ -20,7 +30,7 @@ function AuthWrapper({ children }) {
     )
   }
 
-  if (!isAuthenticated) {
+  if (!isAuthenticated || showLanding) {
     // Show landing page first, then auth forms
     if (!showAuthForms) {
       return <LandingPage onGetStarted={() => setShowAuthForms(true)} />
@@ -29,7 +39,7 @@ function AuthWrapper({ children }) {
     // Show auth forms after "Get Started" clicked
     return (
       <div className="auth-container">
-        <div className="">
+        <div className="auth-content">
           <div className="auth-header">
             <h1>🎓 Language Academy</h1>
             <p>Create your account to start learning</p>

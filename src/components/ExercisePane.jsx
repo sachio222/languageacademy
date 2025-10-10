@@ -5,6 +5,7 @@ import ReadingPassage from './ReadingPassage';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
 import { ArrowBigLeft } from 'lucide-react';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
+import { useTextTracking } from '../hooks/useTextTracking';
 
 function ExercisePane({
   exercise,
@@ -25,11 +26,87 @@ function ExercisePane({
   const [startTime, setStartTime] = useState(null);
   const textareaRef = useRef(null);
 
+  // Text tracking hook
+  const {
+    startTracking,
+    stopTracking,
+    trackTyping,
+    trackPaste,
+    trackDelete,
+    trackFocus,
+    trackBlur,
+    trackSubmit
+  } = useTextTracking();
+
+  // Start text tracking when component mounts
+  useEffect(() => {
+    if (exercise?.id && moduleId && unitId) {
+      startTracking(exercise.id, moduleId, unitId);
+    }
+
+    return () => {
+      stopTracking();
+    };
+  }, [exercise?.id, moduleId, unitId, startTracking, stopTracking]);
+
+  // Debounced text tracking to avoid too many database calls
+  const debouncedTrackTyping = useRef(null);
+  const handleTextChange = (newValue, cursorPosition) => {
+    setUserAnswer(newValue);
+    if (testResults) setTestResults(null); // Clear status when editing
+
+    // Clear existing timeout
+    if (debouncedTrackTyping.current) {
+      clearTimeout(debouncedTrackTyping.current);
+    }
+
+    // Set new timeout for tracking
+    debouncedTrackTyping.current = setTimeout(() => {
+      trackTyping(newValue, cursorPosition);
+    }, 500); // 500ms debounce
+  };
+
+  const handleKeyDown = (e) => {
+    // Track delete events
+    if (e.key === 'Backspace' || e.key === 'Delete') {
+      trackDelete(userAnswer, e.target.selectionStart);
+    }
+
+    // Cmd+Enter (Mac) or Ctrl+Enter (Windows/Linux)
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+      e.preventDefault();
+      handleSubmit();
+    } else if (e.key === 'ArrowUp' && isFirstExercise) {
+      e.preventDefault();
+    } else if (e.key === 'ArrowDown' && isLastExercise) {
+      e.preventDefault();
+    }
+  };
+
+  const handleFocus = () => {
+    trackFocus(userAnswer, textareaRef.current?.selectionStart || 0);
+  };
+
+  const handleBlur = () => {
+    trackBlur(userAnswer, textareaRef.current?.selectionStart || 0);
+  };
+
+  const handlePaste = (e) => {
+    // Let the paste happen first, then track it
+    setTimeout(() => {
+      const newValue = e.target.value;
+      trackPaste(newValue, e.target.selectionStart);
+    }, 0);
+  };
+
   const handleSubmit = async () => {
     if (!userAnswer.trim()) {
       alert('Please enter an answer first!');
       return;
     }
+
+    // Track the submit event
+    await trackSubmit(userAnswer);
 
     // Blur the textarea so arrow keys work for navigation
     if (document.activeElement && document.activeElement.tagName === 'TEXTAREA') {
@@ -45,13 +122,13 @@ function ExercisePane({
     setTestResults(results);
 
     const isCorrect = isExerciseComplete(results);
-    
+
     // Call the completion handler with all required analytics data
     if (onComplete) {
       await onComplete(
         exercise.id,
         moduleId || 'unknown',
-        unitId || 'unknown', 
+        unitId || 'unknown',
         userAnswer,
         exercise.expectedAnswer,
         timeSpent,
@@ -60,13 +137,6 @@ function ExercisePane({
     }
   };
 
-  const handleKeyDown = (e) => {
-    // Cmd+Enter (Mac) or Ctrl+Enter (Windows/Linux)
-    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
-      e.preventDefault();
-      handleSubmit();
-    }
-  };
 
   // Reset when exercise changes and focus textarea
   useEffect(() => {
@@ -183,17 +253,22 @@ function ExercisePane({
             className="code-input"
             value={userAnswer}
             onChange={(e) => {
-              setUserAnswer(e.target.value);
-              if (testResults) setTestResults(null); // Clear status when editing
+              handleTextChange(e.target.value, e.target.selectionStart);
             }}
             onKeyDown={handleKeyDown}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            onPaste={handlePaste}
             placeholder="Type your French sentence here..."
             spellCheck="false"
             autoFocus
           />
           <FrenchCharacterPicker
             inputRef={textareaRef}
-            onCharacterClick={setUserAnswer}
+            onCharacterClick={(value) => {
+              const newValue = userAnswer + value;
+              handleTextChange(newValue, newValue.length);
+            }}
           />
         </div>
 

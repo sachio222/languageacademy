@@ -23,6 +23,7 @@ function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [showFeedbackAdmin, setShowFeedbackAdmin] = useState(false);
+  const [showLanding, setShowLanding] = useState(false);
 
   // Check if we're in dev mode
   const isDevMode = import.meta.env.VITE_DEV_MODE === 'true';
@@ -55,6 +56,11 @@ function App() {
   };
 
   const handleBack = () => {
+    setCurrentLesson(null);
+  };
+
+  const handleBackToLanding = () => {
+    setShowLanding(true);
     setCurrentLesson(null);
   };
 
@@ -158,7 +164,14 @@ function App() {
   const content = (
     <div className="app">
       <header className="app-header">
-        <h1>🎓 Language Academy</h1>
+        <h1
+          className="app-logo"
+          onClick={handleBackToLanding}
+          style={{ cursor: 'pointer' }}
+          title="Back to landing page"
+        >
+          🎓 Language Academy
+        </h1>
       </header>
 
       <LeftNav
@@ -264,7 +277,7 @@ function App() {
   return isDevMode ? (
     <DevModeWrapper>{content}</DevModeWrapper>
   ) : (
-    <AuthWrapper>{content}</AuthWrapper>
+    <AuthWrapper onBackToLanding={handleBackToLanding}>{content}</AuthWrapper>
   );
 }
 
