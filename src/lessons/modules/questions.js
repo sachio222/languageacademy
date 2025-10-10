@@ -60,7 +60,7 @@ export const module6_questions = {
       term: "Common Question Phrases - Memorize These!",
       definition: "Some questions are used so often they become fixed phrases",
       example:
-        "qu'est-ce que c'est? (what is it?), comment ça va? (how's it going?), ça va? (you good?)",
+        "qu'est-ce que c'est? (what is it?), comment ça va? (how's it going?), ça va? (you good?), qu'est-ce que tu veux? (what do you want?), est-ce que tu peux? (can you?)",
     },
   ],
 
@@ -92,6 +92,16 @@ export const module6_questions = {
       note: "informal greeting",
     },
     { french: "ça va?", english: "you good?", note: "super informal" },
+    {
+      french: "qu'est-ce que tu veux",
+      english: "what do you want?",
+      note: "essential question",
+    },
+    {
+      french: "est-ce que tu peux",
+      english: "can you?",
+      note: "asking for ability/permission",
+    },
   ],
 
   // Custom exercises for question words
