@@ -18,7 +18,7 @@ const getNavTitle = (title) => {
   return title.replace(/^Module \d+:\s*/, '');
 };
 
-function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, isCollapsed, onToggleCollapse }) {
+function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, isCollapsed, onToggleCollapse, mobileNavOpen, onCloseMobileNav }) {
   const [searchQuery, setSearchQuery] = useState('');
   // Initialize all units as collapsed (accordion starts closed)
   const [collapsedUnits, setCollapsedUnits] = useState(new Set(unitStructure.map(unit => unit.id)));
@@ -179,9 +179,20 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
   };
 
   return (
-    <aside className={`left-nav ${isCollapsed ? 'collapsed' : ''}`}>
+    <aside className={`left-nav ${isCollapsed ? 'collapsed' : ''} ${mobileNavOpen ? 'open' : ''}`}>
       {!isCollapsed && (
         <>
+          {/* Mobile Close Button */}
+          {mobileNavOpen && (
+            <button
+              className="mobile-close-btn"
+              onClick={onCloseMobileNav}
+              title="Close navigation"
+            >
+              ✕
+            </button>
+          )}
+
           {/* Search Bar */}
           <div className="nav-search">
             <div className="search-input-wrapper">
@@ -267,7 +278,12 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                                 <div
                                   key={lesson.id}
                                   className={`nav-lesson ${isActive ? 'active' : ''} ${isComplete ? 'complete' : ''}`}
-                                  onClick={() => onLessonSelect(lesson.id)}
+                                  onClick={() => {
+                                    onLessonSelect(lesson.id);
+                                    if (mobileNavOpen) {
+                                      onCloseMobileNav();
+                                    }
+                                  }}
                                 >
                                   <div className="nav-lesson-main">
                                     <span className="nav-lesson-number">
@@ -378,7 +394,12 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                             <button
                               key={lesson.id}
                               className="nav-vocab-lesson-link"
-                              onClick={() => onLessonSelect(lesson.id)}
+                              onClick={() => {
+                                onLessonSelect(lesson.id);
+                                if (mobileNavOpen) {
+                                  onCloseMobileNav();
+                                }
+                              }}
                             >
                               #{lesson.id}
                             </button>
