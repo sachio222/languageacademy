@@ -23,7 +23,6 @@ function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [showFeedbackAdmin, setShowFeedbackAdmin] = useState(false);
-  const [showLanding, setShowLanding] = useState(false);
 
   // Check if we're in dev mode
   const isDevMode = import.meta.env.VITE_DEV_MODE === 'true';
@@ -60,7 +59,6 @@ function App() {
   };
 
   const handleBackToLanding = () => {
-    setShowLanding(true);
     setCurrentLesson(null);
   };
 

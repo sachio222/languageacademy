@@ -8,7 +8,7 @@ function AuthWrapper({ children, onBackToLanding }) {
   const { isAuthenticated, loading } = useAuth()
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
-  const [showLanding, setShowLanding] = useState(!isAuthenticated)
+  const [showLanding, setShowLanding] = useState(false)
 
   // Handle navigation back to landing page
   const handleBackToLanding = () => {
@@ -30,10 +30,15 @@ function AuthWrapper({ children, onBackToLanding }) {
     )
   }
 
+  // Show landing page if user is not authenticated OR if they explicitly want to see it
   if (!isAuthenticated || showLanding) {
     // Show landing page first, then auth forms
     if (!showAuthForms) {
-      return <LandingPage onGetStarted={() => setShowAuthForms(true)} />
+      return <LandingPage
+        onGetStarted={() => setShowAuthForms(true)}
+        isAuthenticated={isAuthenticated}
+        onBackToApp={() => setShowLanding(false)}
+      />
     }
 
     // Show auth forms after "Get Started" clicked

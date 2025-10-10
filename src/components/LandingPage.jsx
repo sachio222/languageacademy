@@ -3,7 +3,7 @@ import Reading11Preview from './Reading11Preview'
 import ExercisePreview from './ExercisePreview'
 import '../styles/Landing.css'
 
-function LandingPage({ onGetStarted }) {
+function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
   const [email, setEmail] = useState('')
 
   const handleSubmit = (e) => {
@@ -27,12 +27,25 @@ function LandingPage({ onGetStarted }) {
             No childish games. Not tourism focused. A cognitive science approach
             that teaches <strong>core competence</strong> for advanced comprehension—fast.
           </p>
-          <button className="cta-primary" onClick={onGetStarted}>
-            Start Free Trial
-          </button>
-          <p className="hero-caption">
-            Limited free access • No credit card required
-          </p>
+          {isAuthenticated ? (
+            <>
+              <button className="cta-primary" onClick={onBackToApp}>
+                Continue Learning
+              </button>
+              <p className="hero-caption">
+                Welcome back! Ready to continue your French journey?
+              </p>
+            </>
+          ) : (
+            <>
+              <button className="cta-primary" onClick={onGetStarted}>
+                Start Free Trial
+              </button>
+              <p className="hero-caption">
+                Limited free access • No credit card required
+              </p>
+            </>
+          )}
         </div>
       </section>
 
@@ -296,12 +309,25 @@ function LandingPage({ onGetStarted }) {
             Limited free access to experience the full method.
             See if the cognitive science approach works for you.
           </p>
-          <button className="cta-primary large" onClick={onGetStarted}>
-            Get Started Free
-          </button>
-          <p className="cta-note">
-            No credit card required • Access first unit free
-          </p>
+          {isAuthenticated ? (
+            <>
+              <button className="cta-primary large" onClick={onBackToApp}>
+                Back to Learning
+              </button>
+              <p className="cta-note">
+                Continue where you left off
+              </p>
+            </>
+          ) : (
+            <>
+              <button className="cta-primary large" onClick={onGetStarted}>
+                Get Started Free
+              </button>
+              <p className="cta-note">
+                No credit card required • Access first unit free
+              </p>
+            </>
+          )}
         </div>
       </section>
 
