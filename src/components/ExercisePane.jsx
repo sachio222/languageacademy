@@ -282,9 +282,9 @@ function ExercisePane({
           />
           <FrenchCharacterPicker
             inputRef={textareaRef}
-            onCharacterClick={(value) => {
-              const newValue = userAnswer + value;
-              handleTextChange(newValue, newValue.length);
+            onCharacterClick={(newValue) => {
+              setUserAnswer(newValue);
+              if (testResults) setTestResults(null);
             }}
           />
         </div>
