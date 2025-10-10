@@ -78,6 +78,8 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
       totalQuestions: examQuestions.length,
       passed,
       passingScore,
+      percentage,
+      timeSpent,
     };
 
     setResults(examData);
@@ -142,7 +144,7 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
               </p>
               <p>You've mastered this module and solidified the concepts!</p>
             </div>
-            <button className="btn-primary btn-large" onClick={() => onPassExam(true)}>
+            <button className="btn-primary btn-large" onClick={() => onPassExam(results.percentage, results.timeSpent)}>
               Continue to Next Module →
             </button>
           </div>

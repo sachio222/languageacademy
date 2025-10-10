@@ -98,7 +98,12 @@ function App() {
   };
 
   const handleModuleComplete = async (moduleId, examScore, timeSpent, goToNext = false) => {
-    console.log('Module complete:', moduleId, 'score:', examScore, 'goToNext:', goToNext);
+    console.log('Module complete - moduleId:', moduleId, 'type:', typeof moduleId, 'score:', examScore, 'goToNext:', goToNext);
+
+    if (!moduleId) {
+      console.error('handleModuleComplete called with null/undefined moduleId');
+      return;
+    }
 
     if (isAuthenticated && supabaseProgress) {
       try {
@@ -141,19 +146,25 @@ function App() {
     }
 
     if (goToNext) {
+      console.log('goToNext is true, finding next module after:', moduleId);
+
       // Go to next module - find the next lesson in sequence
       const currentIndex = lessons.findIndex(l => l.id === moduleId);
+      console.log('Current module index in lessons array:', currentIndex, 'Total lessons:', lessons.length);
 
       if (currentIndex === -1) {
-        console.error('Current module not found in lessons array:', moduleId);
+        console.error('Current module not found in lessons array. moduleId:', moduleId, 'Type:', typeof moduleId);
+        console.error('Available lesson IDs:', lessons.map(l => l.id));
+        alert('Error: Could not find current module. Returning to module list.');
         setCurrentLesson(null);
         return;
       }
 
       const nextModule = lessons[currentIndex + 1];
+      console.log('Next module:', nextModule ? `ID ${nextModule.id} - ${nextModule.title}` : 'NONE (end of lessons)');
 
-      if (nextModule) {
-        console.log('Navigating from module', moduleId, 'to', nextModule.id);
+      if (nextModule && nextModule.id) {
+        console.log('✓ Navigating from module', moduleId, 'to', nextModule.id);
         setCurrentLesson(nextModule.id);
         window.scrollTo(0, 0);
 

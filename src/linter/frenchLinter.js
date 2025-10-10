@@ -362,7 +362,11 @@ export function lintFrench(
           .slice(1, 1 + conjugationWords.length)
           .join(" ");
 
-        if (sentenceSnippet !== expectedConjugation) {
+        // Compare with accent tolerance
+        const snippetNoAccents = removeAccents(sentenceSnippet);
+        const expectedNoAccents = removeAccents(expectedConjugation);
+
+        if (snippetNoAccents !== expectedNoAccents) {
           errors.push({
             type: "ConjugationError",
             message: `Incorrect conjugation of "${expectedVerb}" in ${expectedTense}. Expected "${subject} ${expectedConjugation}" but got "${subject} ${sentenceSnippet}"`,

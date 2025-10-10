@@ -20,8 +20,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const [showExam, setShowExam] = useState(false);
   const [moduleCompleted, setModuleCompleted] = useState(false);
   const [resetting, setResetting] = useState(false);
+  const [moduleTimeSpent, setModuleTimeSpent] = useState(0);
 
-  const { supabaseClient, supabaseUser, isAuthenticated } = useSupabaseProgress();
+  const { supabaseClient, supabaseUser, isAuthenticated, moduleProgress } = useSupabaseProgress();
 
   if (!lesson) return null;
 
@@ -89,6 +90,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     // Module exam passed! Show completion screen
     setModuleCompleted(true);
     setShowExam(false);
+    setModuleTimeSpent(timeSpent);
 
     // Update database with exam score and time
     if (onModuleComplete) {
@@ -134,15 +136,22 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   };
 
   const handleNextModule = () => {
-    console.log('handleNextModule called for lesson', lesson.id);
-    console.log('Lesson title:', lesson.title);
-    console.log('Requesting navigation to module:', lesson.id + 1);
-    if (onModuleComplete) {
-      // For special modules (reading, unit exams), pass null for score/time
-      onModuleComplete(lesson.id, 100, 0, true); // Go to next module
-    } else {
-      console.error('onModuleComplete callback not provided!');
+    if (!lesson || !lesson.id) {
+      console.error('No lesson or lesson ID available');
+      return;
     }
+
+    console.log('handleNextModule - Current lesson ID:', lesson.id, 'Title:', lesson.title);
+
+    if (!onModuleComplete) {
+      console.error('onModuleComplete callback not provided!');
+      return;
+    }
+
+    // Pass lesson.id explicitly, with goToNext flag
+    const currentModuleId = lesson.id;
+    console.log('Calling onModuleComplete with moduleId:', currentModuleId);
+    onModuleComplete(currentModuleId, 100, moduleTimeSpent || 0, true);
   };
 
   const handleResetModule = async () => {
@@ -198,10 +207,45 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   useEffect(() => {
     // Don't auto-show modal for fill-in-blank modules (they handle completion internally)
     if (allExercisesComplete && !showExam && !moduleCompleted && studyCompleted && !lesson.isFillInTheBlank) {
-      // User completed all exercises, show completion modal
-      setModuleCompleted(true);
+      // Load time from database if available
+      const loadModuleTime = async () => {
+        if (isAuthenticated && supabaseClient && supabaseUser) {
+          try {
+            const modId = extractModuleId(lesson);
+
+            // Try to get from module_progress first
+            const { data: moduleData } = await supabaseClient
+              .from('module_progress')
+              .select('time_spent_seconds')
+              .eq('user_id', supabaseUser.id)
+              .eq('module_id', modId)
+              .single();
+
+            if (moduleData?.time_spent_seconds) {
+              setModuleTimeSpent(moduleData.time_spent_seconds);
+            } else {
+              // Sum up time from individual exercise completions
+              const { data: exerciseData } = await supabaseClient
+                .from('exercise_completions')
+                .select('time_spent_seconds')
+                .eq('user_id', supabaseUser.id)
+                .eq('module_id', modId)
+                .eq('is_correct', true);
+
+              if (exerciseData && exerciseData.length > 0) {
+                const totalTime = exerciseData.reduce((sum, ex) => sum + (ex.time_spent_seconds || 0), 0);
+                setModuleTimeSpent(totalTime);
+              }
+            }
+          } catch (err) {
+            // No time data, that's okay
+          }
+        }
+        setModuleCompleted(true);
+      };
+      loadModuleTime();
     }
-  }, [allExercisesComplete, showExam, moduleCompleted, studyCompleted, lesson.isFillInTheBlank]);
+  }, [allExercisesComplete, showExam, moduleCompleted, studyCompleted, lesson.isFillInTheBlank, isAuthenticated, supabaseClient, supabaseUser, lesson]);
 
   return (
     <div className="lesson-view">
@@ -215,6 +259,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           onRetakeExercises={handleRetakeExercises}
           totalModules={totalModules}
           hasNextModule={lesson.id < totalModules}
+          timeSpent={moduleTimeSpent}
         />
       )}
 

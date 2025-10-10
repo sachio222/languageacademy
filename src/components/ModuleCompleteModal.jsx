@@ -1,12 +1,20 @@
 import '../styles/ModuleCompleteModal.css';
 
-function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam, onRetakeExercises, totalModules, hasNextModule }) {
+function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam, onRetakeExercises, totalModules, hasNextModule, timeSpent = 0 }) {
   if (!lesson) return null;
 
   // Use prop if provided, otherwise fallback to ID comparison
   const showNextButton = hasNextModule !== undefined ? hasNextModule : lesson.id < totalModules;
   const vocabularyItems = lesson.vocabularyReference || [];
   const concepts = lesson.concepts || [];
+
+  // Format time spent
+  const formatTime = (seconds) => {
+    if (seconds < 60) return `${seconds}s`;
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return secs > 0 ? `${minutes}m ${secs}s` : `${minutes}m`;
+  };
 
   return (
     <div className="modal-overlay" onClick={(e) => {
@@ -40,11 +48,11 @@ function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam
                 <div className="stat-label">Words</div>
               </div>
             )}
-            {concepts.length > 0 && (
+            {timeSpent > 0 && (
               <div className="stat-card">
-                <div className="stat-icon">💡</div>
-                <div className="stat-value">{concepts.length}</div>
-                <div className="stat-label">Concepts</div>
+                <div className="stat-icon">⏱️</div>
+                <div className="stat-value">{formatTime(timeSpent)}</div>
+                <div className="stat-label">Time</div>
               </div>
             )}
           </div>

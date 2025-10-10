@@ -97,7 +97,7 @@
 .completion-stats {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid #f0f0f0;
@@ -129,6 +129,7 @@
   margin-bottom: 0.5rem;
   letter-spacing: -0.04em;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .stat-label {
