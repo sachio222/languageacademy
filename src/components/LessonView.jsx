@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import ExercisePane from './ExercisePane';
 import ConceptPane from './ConceptPane';
 import ConceptIntro from './ConceptIntro';
@@ -21,6 +21,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const [moduleCompleted, setModuleCompleted] = useState(false);
   const [resetting, setResetting] = useState(false);
   const [moduleTimeSpent, setModuleTimeSpent] = useState(0);
+
+  // Track if module was already complete when first loaded (to prevent auto-showing modal)
+  const wasCompleteOnLoadRef = useRef(false);
 
   const { supabaseClient, supabaseUser, isAuthenticated, moduleProgress } = useSupabaseProgress();
 
@@ -199,9 +202,14 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     setIsStudying(false);
     setStudyCompleted(isReading || isUnitExam || isFillInBlank); // Mark as "studied" so exercises show
     setShowExam(false);
+
+    // Track if module is already complete on load to prevent auto-showing modal
+    const isAlreadyComplete = lesson.exercises?.every(ex => completedExercises.has(ex.id));
+    wasCompleteOnLoadRef.current = isAlreadyComplete;
     setModuleCompleted(false);
+
     setCurrentExerciseIndex(0);
-  }, [lesson.id]);
+  }, [lesson.id, lesson.exercises, completedExercises]);
 
   // Auto-show modal when all exercises complete
   useEffect(() => {
@@ -212,7 +220,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     }
 
     // Don't auto-show modal for fill-in-blank modules (they handle completion internally)
-    if (allExercisesComplete && !showExam && !moduleCompleted && studyCompleted && !lesson.isFillInTheBlank) {
+    // Also don't auto-show if module was already complete when we loaded it (navigation vs. completion)
+    if (allExercisesComplete && !showExam && !moduleCompleted && studyCompleted && !lesson.isFillInTheBlank && !wasCompleteOnLoadRef.current) {
       // Delay to allow optimistic updates to be reverted if answer was incorrect
       const timeoutId = setTimeout(() => {
         // Re-check if all exercises are still complete after a brief delay
