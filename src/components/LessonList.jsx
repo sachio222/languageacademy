@@ -1,6 +1,6 @@
 import { calculateLessonProgress } from '../lessons/testRunner';
 import { unitStructure } from '../lessons/lessonData';
-import { Award, BookOpen, PenLine } from 'lucide-react';
+import { Award, BookOpen, TextCursorInput } from 'lucide-react';
 
 function LessonList({ lessons, onLessonSelect, completedExercises }) {
   // Group lessons by pedagogical unit
@@ -80,7 +80,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises }) {
                         <BookOpen size={20} className="lesson-reading-icon" />
                       )}
                       {lesson.isFillInTheBlank && (
-                        <PenLine size={20} className="lesson-practice-icon" />
+                        <TextCursorInput size={20} className="lesson-practice-icon" />
                       )}
                       <h3>{lesson.title}</h3>
                       {isComplete && <span className="badge-complete">✓</span>}

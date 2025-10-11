@@ -463,21 +463,21 @@ body:has(.left-nav.collapsed) .app-footer {
 .lesson-exam-icon {
   color: #f59e0b;
   flex-shrink: 0;
-  margin-right: 0.75rem;
+  margin-right: 1rem;
   stroke-width: 2;
 }
 
 .lesson-reading-icon {
   color: #3b82f6;
   flex-shrink: 0;
-  margin-right: 0.75rem;
+  margin-right: 1rem;
   stroke-width: 2;
 }
 
 .lesson-practice-icon {
   color: #8b5cf6;
   flex-shrink: 0;
-  margin-right: 0.75rem;
+  margin-right: 1rem;
   stroke-width: 2;
 }
 

@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, ChevronDown, Award, BookOpen, PenLine } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown, Award, BookOpen, TextCursorInput } from 'lucide-react';
 import { unitStructure } from '../lessons/lessonData';
 import SpeakButton from './SpeakButton';
 import '../styles/LeftNav.css';
@@ -296,7 +296,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                                       </span>
                                     ) : lesson.isFillInTheBlank ? (
                                       <span className="nav-lesson-practice-icon">
-                                        <PenLine size={16} />
+                                        <TextCursorInput size={16} />
                                       </span>
                                     ) : (
                                       <span className="nav-lesson-number">
