@@ -26,6 +26,30 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
   const [stickyHeaders, setStickyHeaders] = useState(new Set());
   const navContentRef = useRef(null);
 
+  // Auto-expand unit containing current lesson
+  useEffect(() => {
+    if (currentLesson) {
+      // Find which unit contains the current lesson
+      const currentUnit = unitStructure.find(unit => {
+        const [start, end] = unit.lessonRange;
+        return currentLesson >= start && currentLesson <= end;
+      });
+
+      if (currentUnit) {
+        // Expand this unit, collapse all others
+        setCollapsedUnits(prev => {
+          const next = new Set();
+          unitStructure.forEach(unit => {
+            if (unit.id !== currentUnit.id) {
+              next.add(unit.id);
+            }
+          });
+          return next;
+        });
+      }
+    }
+  }, [currentLesson]);
+
   // Toggle unit collapse (accordion behavior - only one open at a time)
   const toggleUnit = (unitId) => {
     setCollapsedUnits(prev => {
