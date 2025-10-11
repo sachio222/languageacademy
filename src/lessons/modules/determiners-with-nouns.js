@@ -207,18 +207,6 @@ export const determinersWithNouns = {
         ],
       },
       {
-        instruction: 'Say "you want this car"',
-        prompt: "you want this car (informal)",
-        hint: "Combine: you want + demonstrative + car (feminine)",
-        expectedAnswer: "tu veux cette voiture",
-        wrongAnswers: [
-          {
-            answer: "tu veux ce voiture",
-            feedback: "voiture is feminine, use 'cette' not 'ce'",
-          },
-        ],
-      },
-      {
         instruction: 'Say "it\'s this book"',
         prompt: "it's this book",
         hint: "Combine: it is + demonstrative + book",
