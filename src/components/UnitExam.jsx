@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { checkAnswer } from '../linter/frenchLinter';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
+import { Award } from 'lucide-react';
 
 /**
  * Unit Exam - Comprehensive test covering an entire unit
@@ -409,7 +410,10 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
   return (
     <div className="unit-exam">
       <div className="exam-header">
-        <h2>📝 {examData.title}</h2>
+        <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Award size={24} style={{ color: '#f59e0b' }} />
+          {examData.title}
+        </h2>
         <p className="exam-description">{examData.description}</p>
 
         {/* Overall progress */}

@@ -1,5 +1,6 @@
 import { calculateLessonProgress } from '../lessons/testRunner';
 import { unitStructure } from '../lessons/lessonData';
+import { Award, BookOpen, PenLine } from 'lucide-react';
 
 function LessonList({ lessons, onLessonSelect, completedExercises }) {
   // Group lessons by pedagogical unit
@@ -68,10 +69,19 @@ function LessonList({ lessons, onLessonSelect, completedExercises }) {
                 return (
                   <div
                     key={lesson.id}
-                    className={`lesson-card ${isComplete ? 'complete' : ''} ${lesson.isReadingComprehension ? 'reading-milestone' : ''}`}
+                    className={`lesson-card ${isComplete ? 'complete' : ''} ${lesson.isReadingComprehension ? 'reading-milestone' : ''} ${lesson.isUnitExam ? 'final-exam' : ''} ${lesson.isFillInTheBlank ? 'fill-in-blank' : ''}`}
                     onClick={() => onLessonSelect(lesson.id)}
                   >
                     <div className="lesson-card-header">
+                      {lesson.isUnitExam && (
+                        <Award size={20} className="lesson-exam-icon" />
+                      )}
+                      {lesson.isReadingComprehension && (
+                        <BookOpen size={20} className="lesson-reading-icon" />
+                      )}
+                      {lesson.isFillInTheBlank && (
+                        <PenLine size={20} className="lesson-practice-icon" />
+                      )}
                       <h3>{lesson.title}</h3>
                       {isComplete && <span className="badge-complete">✓</span>}
                     </div>

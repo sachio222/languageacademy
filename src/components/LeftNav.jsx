@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown, Award, BookOpen, PenLine } from 'lucide-react';
 import { unitStructure } from '../lessons/lessonData';
 import SpeakButton from './SpeakButton';
 import '../styles/LeftNav.css';
@@ -286,9 +286,23 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                                   }}
                                 >
                                   <div className="nav-lesson-main">
-                                    <span className="nav-lesson-number">
-                                      {lesson.id}
-                                    </span>
+                                    {lesson.isUnitExam ? (
+                                      <span className="nav-lesson-exam-icon">
+                                        <Award size={16} />
+                                      </span>
+                                    ) : lesson.isReadingComprehension ? (
+                                      <span className="nav-lesson-reading-icon">
+                                        <BookOpen size={16} />
+                                      </span>
+                                    ) : lesson.isFillInTheBlank ? (
+                                      <span className="nav-lesson-practice-icon">
+                                        <PenLine size={16} />
+                                      </span>
+                                    ) : (
+                                      <span className="nav-lesson-number">
+                                        {lesson.id}
+                                      </span>
+                                    )}
                                     <span className="nav-lesson-title">
                                       {getNavTitle(lesson.title)}
                                     </span>

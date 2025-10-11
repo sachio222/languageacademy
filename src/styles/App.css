@@ -460,6 +460,27 @@ body:has(.left-nav.collapsed) .app-footer {
   letter-spacing: -0.01em;
 }
 
+.lesson-exam-icon {
+  color: #f59e0b;
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+  stroke-width: 2;
+}
+
+.lesson-reading-icon {
+  color: #3b82f6;
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+  stroke-width: 2;
+}
+
+.lesson-practice-icon {
+  color: #8b5cf6;
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+  stroke-width: 2;
+}
+
 .badge-complete {
   color: #10b981;
   font-size: 1.125rem;
@@ -1468,10 +1489,40 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   box-shadow: 0 6px 16px rgba(59, 130, 246, 0.15);
 }
 
+/* Final Exam Card */
+.lesson-card.final-exam {
+  border-left: 3px solid #f59e0b;
+  padding-left: 1.875rem;
+  background: linear-gradient(to right, #fffbeb 0%, #ffffff 2rem);
+}
+
+.lesson-card.final-exam:hover {
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.12);
+  border-left-color: #d97706;
+}
+
 /* Reading Milestone */
 .lesson-card.reading-milestone {
   border-left: 3px solid #3b82f6;
   padding-left: 1.875rem;
+  background: linear-gradient(to right, #eff6ff 0%, #ffffff 2rem);
+}
+
+.lesson-card.reading-milestone:hover {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+  border-left-color: #2563eb;
+}
+
+/* Fill in the Blank Practice */
+.lesson-card.fill-in-blank {
+  border-left: 3px solid #8b5cf6;
+  padding-left: 1.875rem;
+  background: linear-gradient(to right, #f5f3ff 0%, #ffffff 2rem);
+}
+
+.lesson-card.fill-in-blank:hover {
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.12);
+  border-left-color: #7c3aed;
 }
 
 /* Responsive */

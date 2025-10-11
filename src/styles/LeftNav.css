@@ -285,6 +285,54 @@
   color: #3b82f6;
 }
 
+.nav-lesson-exam-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f59e0b;
+  min-width: 1.5rem;
+}
+
+.nav-lesson.active .nav-lesson-exam-icon {
+  color: #f59e0b;
+}
+
+.nav-lesson-exam-icon svg {
+  stroke-width: 2;
+}
+
+.nav-lesson-reading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  min-width: 1.5rem;
+}
+
+.nav-lesson.active .nav-lesson-reading-icon {
+  color: #3b82f6;
+}
+
+.nav-lesson-reading-icon svg {
+  stroke-width: 2;
+}
+
+.nav-lesson-practice-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b5cf6;
+  min-width: 1.5rem;
+}
+
+.nav-lesson.active .nav-lesson-practice-icon {
+  color: #8b5cf6;
+}
+
+.nav-lesson-practice-icon svg {
+  stroke-width: 2;
+}
+
 .nav-lesson-title {
   flex: 1;
   font-size: 0.875rem;

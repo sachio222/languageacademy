@@ -3,6 +3,7 @@ import { runTests, isExerciseComplete } from '../lessons/testRunner';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
+import { Award } from 'lucide-react';
 
 /**
  * Module Exam - Comprehensive test to solidify learning
@@ -215,7 +216,10 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
   return (
     <div className="module-exam">
       <div className="exam-header">
-        <h2>📝 Module Final Exam</h2>
+        <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Award size={24} style={{ color: '#f59e0b' }} />
+          Module Final Exam
+        </h2>
         <p>Test your knowledge! You need 80% to pass and move on.</p>
         <div className="exam-progress-bar">
           <div className="exam-progress-fill" style={{ width: `${progress}%` }} />

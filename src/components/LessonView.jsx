@@ -9,7 +9,7 @@ import UnitExam from './UnitExam';
 import ModuleCompleteModal from './ModuleCompleteModal';
 import FillInTheBlank from './FillInTheBlank';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 
 function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
@@ -312,7 +312,10 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           ) : isStudying ? (
             <span>📚 Study Mode</span>
           ) : showExam ? (
-            <span>📝 Final Exam</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Award size={18} style={{ color: '#f59e0b' }} />
+              Final Exam
+            </span>
           ) : moduleCompleted ? (
             <span>✅ Module Complete!</span>
           ) : (
