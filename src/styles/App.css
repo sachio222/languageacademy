@@ -1493,7 +1493,7 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 .lesson-card.final-exam {
   border-left: 3px solid #f59e0b;
   padding-left: 1.875rem;
-  background: linear-gradient(to right, #fffbeb 0%, #ffffff 2rem);
+  background: linear-gradient(to right, #fffef7 0%, #ffffff 2rem);
 }
 
 .lesson-card.final-exam:hover {
@@ -1505,7 +1505,7 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 .lesson-card.reading-milestone {
   border-left: 3px solid #3b82f6;
   padding-left: 1.875rem;
-  background: linear-gradient(to right, #eff6ff 0%, #ffffff 2rem);
+  background: linear-gradient(to right, #f9fbff 0%, #ffffff 2rem);
 }
 
 .lesson-card.reading-milestone:hover {
@@ -1517,7 +1517,7 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 .lesson-card.fill-in-blank {
   border-left: 3px solid #8b5cf6;
   padding-left: 1.875rem;
-  background: linear-gradient(to right, #f5f3ff 0%, #ffffff 2rem);
+  background: linear-gradient(to right, #fbfaff 0%, #ffffff 2rem);
 }
 
 .lesson-card.fill-in-blank:hover {
