@@ -264,7 +264,7 @@ function App() {
                 onClick={() => setShowFeedbackAdmin(true)}
                 title="View Feedback Admin"
               >
-                📊 Admin
+                📊
               </button>
             )}
           </div>
