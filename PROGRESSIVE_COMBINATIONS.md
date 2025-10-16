@@ -100,7 +100,7 @@
 **Combinations:**
 
 - j'ai un chat (I have a cat) ← avoir + article + noun
-- il est un homme (he is a man) ← être + article + noun
+- je suis un homme (I am a man) ← être + article + noun
 - c'est un livre (it's a book) ← c'est + article + noun
 
 **Complexity Level:** 3-word phrases

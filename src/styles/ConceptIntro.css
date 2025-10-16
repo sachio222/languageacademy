@@ -300,6 +300,16 @@
   font-style: italic;
 }
 
+/* Warning concept styling for grammar errors */
+.concept-intro-card h4:has-text("⚠️"),
+.concept-intro-card h4:contains("⚠️") {
+  color: #dc2626;
+}
+
+.concept-intro-example code {
+  font-style: normal;
+}
+
 /* Understood Button */
 .understood-btn {
   background: transparent;

@@ -140,8 +140,8 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
           },
           {
             id: "2.8",
-            prompt: "she is a woman",
-            expectedAnswer: "elle est une femme",
+            prompt: "you are a woman (informal)",
+            expectedAnswer: "tu es une femme",
             hint: "être + indefinite article + noun",
           },
         ],
@@ -164,8 +164,8 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
           },
           {
             id: "3.3",
-            prompt: "he is a man but she is a woman",
-            expectedAnswer: "il est un homme mais elle est une femme",
+            prompt: "I am a man but she is a woman",
+            expectedAnswer: "je suis un homme mais tu es une femme",
             hint: "Use 'mais' (but) to connect two statements",
           },
           {

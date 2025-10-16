@@ -114,9 +114,9 @@ export const unit1Exam = {
       },
       {
         instruction: "Translate to French",
-        prompt: "she is a woman",
+        prompt: "you are a woman (informal)",
         hint: "être + indefinite article + noun",
-        expectedAnswer: "elle est une femme",
+        expectedAnswer: "tu es une femme",
       },
 
       // Section 3: Connectors & Full Sentences
@@ -134,9 +134,9 @@ export const unit1Exam = {
       },
       {
         instruction: "Translate to French",
-        prompt: "he is a man but she is a woman",
+        prompt: "I am a man but she is a woman",
         hint: "Use 'mais' (but) to connect two statements",
-        expectedAnswer: "il est un homme mais elle est une femme",
+        expectedAnswer: "je suis un homme mais tu es une femme",
       },
       {
         instruction: "Translate to French",

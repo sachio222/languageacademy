@@ -21,7 +21,7 @@ export const connectors = {
       term: "mais = but",
       definition: "Show contrast between two ideas",
       example:
-        "il est un homme, mais elle est une femme (he is a man, but she is a woman)",
+        "je suis un homme, mais tu es une femme (I am a man, but you are a woman)",
     },
     {
       term: "ou = or",
@@ -82,25 +82,30 @@ export const connectors = {
         ],
       },
       {
-        instruction: "Say 'she is a woman and a friend'",
-        prompt: "she is a woman and a friend",
-        hint: "Combine: elle est + une femme + connector + une amie",
-        expectedAnswer: "elle est une femme et une amie",
+        instruction: "Say 'we are women and friends'",
+        prompt: "we are women and friends",
+        hint: "Combine: nous sommes + des femmes + connector + des amies",
+        expectedAnswer: "nous sommes des femmes et des amies",
         wrongAnswers: [
           {
-            answer: "elle est une femme ou une amie",
+            answer: "nous sommes des femmes ou des amies",
             feedback: "Use 'et' (and), not 'ou' (or)",
+          },
+          {
+            answer: "elle est une femme et une amie",
+            feedback:
+              "WRONG GRAMMAR! Don't use 'elle est une' for identity. Use plural 'nous sommes des'",
           },
         ],
       },
       {
-        instruction: "Say 'he is a man, but she is a woman'",
-        prompt: "he is a man, but she is a woman",
+        instruction: "Say 'I am a man, but you are a woman'",
+        prompt: "I am a man, but you are a woman",
         hint: "Show contrast with 'mais'",
-        expectedAnswer: "il est un homme, mais elle est une femme",
+        expectedAnswer: "je suis un homme, mais tu es une femme",
         wrongAnswers: [
           {
-            answer: "il est un homme et elle est une femme",
+            answer: "je suis un homme et tu es une femme",
             feedback: "Use 'mais' (but) to show contrast",
           },
         ],

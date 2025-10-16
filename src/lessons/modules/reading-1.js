@@ -26,7 +26,7 @@ Tu es Marie. Tu es une femme. Tu as une maison et une voiture. La maison est tr√
 
 ![img/reading1a.png]
 
-Il est un ami. Il a des livres. Elle est une amie aussi. Elle a des chats et des livres aussi.
+J'ai un ami. Il a des livres. J'ai une amie aussi. Elle a des chats et des livres aussi.
 
 Nous sommes les amis. Nous avons des enfants et des chiens. Les chiens sont tr√®s bon, mais les chats sont bon aussi.
 
@@ -43,7 +43,7 @@ Merci et au revoir!
 
 You are Marie. You are a woman. You have a house and a car. The house is very good!
 
-He is a friend. He has books. She is a friend too. She has cats and books too.
+I have a friend. He has books. I have a friend too. She has cats and books too.
 
 We are the friends. We have children and dogs. The dogs are very good, but the cats are good too.
 
@@ -105,14 +105,14 @@ Thank you and goodbye!`,
         wrongAnswers: [],
       },
       {
-        instruction: "What does 'il' (he - the friend) have?",
-        prompt: "The friend has...",
+        instruction: "What does Paul's male friend have?",
+        prompt: "The male friend has...",
         hint: "Third paragraph - 'il a ___'",
         expectedAnswer: "des livres",
         wrongAnswers: [{ answer: "un chat", feedback: "That's what Paul has" }],
       },
       {
-        instruction: "What does 'elle' (she - the female friend) have?",
+        instruction: "What does Paul's female friend have?",
         prompt: "Find the answer in the passage above",
         hint: "Look for 'elle a ___' - she has two things connected by 'et'",
         expectedAnswer: "des chats et des livres",

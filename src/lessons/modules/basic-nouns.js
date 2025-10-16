@@ -29,6 +29,20 @@ export const basicNouns = {
         "Every exercise uses être or avoir - reinforcing what you learned!",
       example: "Learn nouns WHILE practicing your verbs",
     },
+    {
+      term: "❌ DON'T: il/elle est un/une for identity",
+      definition:
+        "Don't use 'il/elle est un/une' to say what someone IS (profession, role, identity)",
+      example:
+        "❌ il est un homme (identity)\n❌ elle est une amie (role)\n❌ il est un professeur (profession)",
+    },
+    {
+      term: "✅ DO: Use il/elle est un/une with adjectives",
+      definition:
+        "You CAN use 'il/elle est un/une' when describing WITH adjectives",
+      example:
+        "✅ il est un homme grand (he is a tall man)\n✅ elle est une amie fidèle (she is a loyal friend)\n✅ For identity alone: c'est un homme (Unit 2)",
+    },
   ],
 
   vocabularyReference: [
@@ -153,50 +167,70 @@ export const basicNouns = {
         ],
       },
       {
-        instruction: 'Say "he is a friend"',
-        prompt: "he is a friend",
-        hint: "Combine: he is + article + friend (masculine)",
-        expectedAnswer: "il est un ami",
+        instruction: 'Say "I have a friend" (male)',
+        prompt: "I have a friend (male)",
+        hint: "Combine: I have + article + friend (masculine)",
+        expectedAnswer: "j'ai un ami",
         wrongAnswers: [
           {
-            answer: "il est une amie",
+            answer: "j'ai une amie",
             feedback: "For masculine friend, use 'un ami'",
           },
+          {
+            answer: "il est un ami",
+            feedback:
+              "WRONG GRAMMAR! Don't use 'il est un ami' for identity. Use 'j'ai un ami'",
+          },
         ],
       },
       {
-        instruction: 'Say "she is a friend"',
-        prompt: "she is a friend",
-        hint: "Combine: she is + article + friend (feminine)",
-        expectedAnswer: "elle est une amie",
+        instruction: 'Say "she has a friend" (female)',
+        prompt: "she has a friend (female)",
+        hint: "Combine: she has + article + friend (feminine)",
+        expectedAnswer: "elle a une amie",
         wrongAnswers: [
           {
-            answer: "elle est un ami",
+            answer: "elle a un ami",
             feedback: "For feminine friend, use 'une amie'",
           },
-        ],
-      },
-      {
-        instruction: 'Say "he is a man"',
-        prompt: "he is a man",
-        hint: "Combine: he is + article + man (silent h)",
-        expectedAnswer: "il est un homme",
-        wrongAnswers: [
           {
-            answer: "il est une homme",
-            feedback: "homme is masculine, use 'un' not 'une'",
+            answer: "elle est une amie",
+            feedback:
+              "WRONG GRAMMAR! Don't use 'elle est une amie' for identity. Use 'elle a une amie'",
           },
         ],
       },
       {
-        instruction: 'Say "she is a woman"',
-        prompt: "she is a woman",
-        hint: "Combine: she is + article + woman",
-        expectedAnswer: "elle est une femme",
+        instruction: 'Say "I am a man"',
+        prompt: "I am a man",
+        hint: "Combine: I am + article + man (silent h)",
+        expectedAnswer: "je suis un homme",
         wrongAnswers: [
           {
-            answer: "elle est un femme",
+            answer: "je suis une homme",
+            feedback: "homme is masculine, use 'un' not 'une'",
+          },
+          {
+            answer: "il est un homme",
+            feedback:
+              "WRONG GRAMMAR! Don't use 'il est un homme' for identity. Use 'je suis un homme' or 'c'est un homme'",
+          },
+        ],
+      },
+      {
+        instruction: 'Say "you are a woman" (informal)',
+        prompt: "you are a woman (informal)",
+        hint: "Combine: you are + article + woman",
+        expectedAnswer: "tu es une femme",
+        wrongAnswers: [
+          {
+            answer: "tu es un femme",
             feedback: "femme is feminine, use 'une' not 'un'",
+          },
+          {
+            answer: "elle est une femme",
+            feedback:
+              "WRONG GRAMMAR! Don't use 'elle est une femme' for identity. Use 'tu es une femme' or 'c'est une femme'",
           },
         ],
       },
