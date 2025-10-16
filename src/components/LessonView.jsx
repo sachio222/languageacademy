@@ -202,14 +202,13 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     setIsStudying(false);
     setStudyCompleted(isReading || isUnitExam || isFillInBlank); // Mark as "studied" so exercises show
     setShowExam(false);
+    setModuleCompleted(false);
+    setCurrentExerciseIndex(0);
 
     // Track if module is already complete on load to prevent auto-showing modal
     const isAlreadyComplete = lesson.exercises?.every(ex => completedExercises.has(ex.id));
     wasCompleteOnLoadRef.current = isAlreadyComplete;
-    setModuleCompleted(false);
-
-    setCurrentExerciseIndex(0);
-  }, [lesson.id, lesson.exercises, completedExercises]);
+  }, [lesson.id]); // Only run when lesson changes, not when exercises are completed
 
   // Auto-show modal when all exercises complete
   useEffect(() => {

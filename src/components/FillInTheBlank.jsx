@@ -282,6 +282,10 @@ function FillInTheBlank({ module, onComplete }) {
     );
   }
 
+  // Calculate how many sentences are completed (all blanks correct)
+  const completedSentences = sentenceResults.filter(Boolean).length;
+  const progressPercentage = sentences.length > 0 ? (completedSentences / sentences.length) * 100 : 0;
+
   return (
     <div className="fill-in-blank-container">
       <div className="fill-in-blank-header">
@@ -289,6 +293,12 @@ function FillInTheBlank({ module, onComplete }) {
           <span className="current-number">{currentSentenceIndex + 1}</span>
           <span className="progress-separator">/</span>
           <span className="total-number">{sentences.length}</span>
+        </div>
+        <div className="fill-in-progress-bar">
+          <div className="fill-in-progress-fill" style={{ width: `${progressPercentage}%` }} />
+        </div>
+        <div className="fill-in-progress-text">
+          {completedSentences} of {sentences.length} completed
         </div>
       </div>
 

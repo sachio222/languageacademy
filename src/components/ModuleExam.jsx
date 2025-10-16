@@ -31,7 +31,10 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
   }, []);
 
   const currentQuestion = examQuestions[currentQuestionIndex];
-  const progress = ((currentQuestionIndex + 1) / examQuestions.length) * 100;
+
+  // Calculate progress based on answered questions
+  const answeredCount = examQuestions.filter(q => answers[q.id]?.trim()).length;
+  const progress = (answeredCount / examQuestions.length) * 100;
 
   const handleAnswerChange = (value) => {
     setAnswers({
@@ -225,7 +228,7 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
           <div className="exam-progress-fill" style={{ width: `${progress}%` }} />
         </div>
         <span className="exam-progress-text">
-          Question {currentQuestionIndex + 1} of {examQuestions.length}
+          {answeredCount} of {examQuestions.length} answered (viewing question {currentQuestionIndex + 1})
         </span>
       </div>
 
