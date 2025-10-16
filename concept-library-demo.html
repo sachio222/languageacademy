@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Academy - Concept Page with Library Background</title>
+    <style>
+      /* Base styles following DESIGN_PRINCIPLES.md */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #1a1a1a;
+        line-height: 1.6;
+        min-height: 100vh;
+        /* Classic Library Background */
+        background: linear-gradient(
+            rgba(248, 250, 252, 0.4),
+            rgba(248, 250, 252, 0.4)
+          ),
+          url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      /* App Layout */
+      .app {
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 280px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 2rem 1.5rem;
+        overflow-y: auto;
+      }
+
+      .sidebar h3 {
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #b0b0b0;
+        margin-bottom: 1.5rem;
+      }
+
+      .concept-item {
+        background: #fafbfc;
+        padding: 1.25rem;
+        border-radius: 8px;
+        margin-bottom: 0.75rem;
+        border: none;
+        transition: all 0.15s;
+      }
+
+      .concept-item:hover {
+        background: #f7f9fc;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .concept-item.understood {
+        background: #f7f9fc;
+        border: 1px solid #e0e0e0;
+      }
+
+      .concept-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+      }
+
+      .concept-item h4 {
+        color: #222222;
+        margin: 0;
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        flex: 1;
+      }
+
+      .concept-check {
+        color: #3b82f6;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.75rem;
+        flex-shrink: 0;
+      }
+
+      .concept-definition {
+        color: #717171;
+        font-size: 0.8125rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+      }
+
+      .concept-example {
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid #ebebeb;
+      }
+
+      .concept-example strong {
+        color: #b0b0b0;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.625rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .concept-example code {
+        display: block;
+        background: transparent;
+        padding: 0;
+        color: #717171;
+        font-family: inherit;
+        font-size: 0.8125rem;
+        line-height: 1.6;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      /* Main Content */
+      .main-content {
+        flex: 1;
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        margin: 2rem;
+        margin-left: 0;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+
+      /* Header */
+      .lesson-header {
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .lesson-header h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+        color: #1a1a1a;
+      }
+
+      .lesson-subtitle {
+        color: #665665;
+        font-size: 1.125rem;
+        line-height: 1.6;
+      }
+
+      /* Concept Introduction */
+      .concept-intro {
+        background: #fafbfc;
+        padding: 2.5rem;
+        border-radius: 12px;
+        margin-bottom: 2.5rem;
+        border: none;
+      }
+
+      .concept-intro h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: #1a1a1a;
+        letter-spacing: -0.025em;
+      }
+
+      .concept-intro p {
+        color: #665665;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+
+      .concept-intro p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Conjugation Table */
+      .conjugation-table {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 2rem 0;
+        border: 1px solid #f0f0f0;
+      }
+
+      .table-header {
+        background: #f7f9fc;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #f0f0f0;
+        font-weight: 600;
+        color: #1a1a1a;
+        font-size: 0.9375rem;
+      }
+
+      .table-row {
+        display: flex;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #f8fafc;
+      }
+
+      .table-row:last-child {
+        border-bottom: none;
+      }
+
+      .table-row:hover {
+        background: #fafbfc;
+      }
+
+      .pronoun {
+        flex: 1;
+        font-weight: 500;
+        color: #1a1a1a;
+      }
+
+      .conjugation {
+        flex: 1;
+        color: #3b82f6;
+        font-weight: 600;
+      }
+
+      .translation {
+        flex: 2;
+        color: #665665;
+        font-size: 0.9375rem;
+      }
+
+      /* Navigation */
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.15s;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-secondary {
+        background: #f7f9fc;
+        color: #665665;
+      }
+
+      .btn-secondary:hover {
+        background: #f0f0f0;
+        color: #1a1a1a;
+      }
+
+      .btn-primary {
+        background: #3b82f6;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        opacity: 0.9;
+      }
+
+      /* Progress indicator */
+      .progress-bar {
+        height: 4px;
+        background: #f0f0f0;
+        border-radius: 2px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: #3b82f6;
+        width: 25%;
+        transition: width 0.3s;
+      }
+
+      /* Mobile responsive */
+      @media (max-width: 968px) {
+        .app {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+          padding: 1.5rem;
+        }
+
+        .main-content {
+          margin: 1rem;
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Sidebar with Key Concepts -->
+      <div class="sidebar">
+        <h3>Key Concepts</h3>
+
+        <div class="concept-item understood">
+          <div class="concept-item-header">
+            <h4>First Person Singular</h4>
+            <div class="concept-check">✓</div>
+          </div>
+          <div class="concept-definition">je suis - I am</div>
+          <div class="concept-example">
+            <strong>Example</strong>
+            <code>Je suis étudiant.</code>
+          </div>
+        </div>
+
+        <div class="concept-item">
+          <div class="concept-item-header">
+            <h4>Second Person Singular</h4>
+          </div>
+          <div class="concept-definition">tu es - you are (informal)</div>
+          <div class="concept-example">
+            <strong>Example</strong>
+            <code>Tu es professeur.</code>
+          </div>
+        </div>
+
+        <div class="concept-item">
+          <div class="concept-item-header">
+            <h4>Third Person Singular</h4>
+          </div>
+          <div class="concept-definition">il/elle est - he/she is</div>
+          <div class="concept-example">
+            <strong>Example</strong>
+            <code>Elle est française.</code>
+          </div>
+        </div>
+
+        <div class="concept-item">
+          <div class="concept-item-header">
+            <h4>First Person Plural</h4>
+          </div>
+          <div class="concept-definition">nous sommes - we are</div>
+          <div class="concept-example">
+            <strong>Example</strong>
+            <code>Nous sommes amis.</code>
+          </div>
+        </div>
+
+        <div class="concept-item">
+          <div class="concept-item-header">
+            <h4>Second Person Plural</h4>
+          </div>
+          <div class="concept-definition">
+            vous êtes - you are (formal/plural)
+          </div>
+          <div class="concept-example">
+            <strong>Example</strong>
+            <code>Vous êtes intelligents.</code>
+          </div>
+        </div>
+
+        <div class="concept-item">
+          <div class="concept-item-header">
+            <h4>Third Person Plural</h4>
+          </div>
+          <div class="concept-definition">ils/elles sont - they are</div>
+          <div class="concept-example">
+            <strong>Example</strong>
+            <code>Ils sont contents.</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+
+        <div class="lesson-header">
+          <h1>Module 3: Être (To Be)</h1>
+          <p class="lesson-subtitle">
+            Learn the most fundamental verb in French - the building block for
+            countless expressions
+          </p>
+        </div>
+
+        <div class="concept-intro">
+          <h2>👁️ Concept Introduction</h2>
+          <p>
+            The verb <strong>être</strong> (to be) is the foundation of French
+            grammar. Before we practice, let's understand the complete pattern.
+            This systematic approach reduces anxiety and helps your brain encode
+            the information more effectively.
+          </p>
+          <p>
+            Notice how each form has its own unique sound and spelling. French
+            speakers use these forms automatically, but as learners, we benefit
+            from seeing the complete system first.
+          </p>
+        </div>
+
+        <div class="conjugation-table">
+          <div class="table-header">Complete Conjugation of Être</div>
+          <div class="table-row">
+            <div class="pronoun">je</div>
+            <div class="conjugation">suis</div>
+            <div class="translation">I am</div>
+          </div>
+          <div class="table-row">
+            <div class="pronoun">tu</div>
+            <div class="conjugation">es</div>
+            <div class="translation">you are (informal)</div>
+          </div>
+          <div class="table-row">
+            <div class="pronoun">il/elle</div>
+            <div class="conjugation">est</div>
+            <div class="translation">he/she is</div>
+          </div>
+          <div class="table-row">
+            <div class="pronoun">nous</div>
+            <div class="conjugation">sommes</div>
+            <div class="translation">we are</div>
+          </div>
+          <div class="table-row">
+            <div class="pronoun">vous</div>
+            <div class="conjugation">êtes</div>
+            <div class="translation">you are (formal/plural)</div>
+          </div>
+          <div class="table-row">
+            <div class="pronoun">ils/elles</div>
+            <div class="conjugation">sont</div>
+            <div class="translation">they are</div>
+          </div>
+        </div>
+
+        <div class="concept-intro">
+          <h2>🧠 Why This Matters</h2>
+          <p>
+            <strong>Être</strong> appears in countless French expressions. Once
+            you master these six forms, you'll be able to:
+          </p>
+          <p>
+            • Describe yourself and others: <em>"Je suis professeur"</em><br />
+            • Express location: <em>"Nous sommes à Paris"</em><br />
+            • Form the passé composé: <em>"Elle est arrivée"</em><br />
+            • Create complex sentences with confidence
+          </p>
+        </div>
+
+        <div class="nav-buttons">
+          <a href="#" class="btn btn-secondary">← Back to Modules</a>
+          <a href="#" class="btn btn-primary">Continue to Study Mode →</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

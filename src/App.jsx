@@ -11,6 +11,7 @@ import FeedbackAdmin from './components/FeedbackAdmin';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useAnalytics } from './hooks/useAnalytics';
 import { useOfflineSync } from './hooks/useOfflineSync';
+import { useAuth } from './hooks/useAuth';
 import { lessons, unitStructure } from './lessons/lessonData';
 import { extractModuleId, extractUnitId, LocalStorageManager } from './utils/progressSync';
 import './styles/App.css';
@@ -28,6 +29,9 @@ function App() {
   // Check if we're in dev mode
   const isDevMode = import.meta.env.VITE_DEV_MODE === 'true';
 
+  // Get auth info for admin access control
+  const { user, supabaseUser } = useAuth();
+
   // Supabase progress tracking (works in both dev and production mode)
   const supabaseProgress = useSupabaseProgress();
   const analytics = useAnalytics();
@@ -36,6 +40,12 @@ function App() {
   // Use Supabase data in both modes (with safe defaults)
   const completedExercises = supabaseProgress?.completedExercises || new Set();
   const isAuthenticated = supabaseProgress?.isAuthenticated || false;
+
+  // Admin access control - only allow specific user
+  const ADMIN_CLERK_USER_ID = 'user_33nSyBPwjQvGcy5w9GJgCyK5KY0';
+  const ADMIN_SUPABASE_USER_ID = '35e33bec-de10-4d70-86a3-c992fc7655dc';
+
+  const isAdmin = user?.id === ADMIN_CLERK_USER_ID || supabaseUser?.id === ADMIN_SUPABASE_USER_ID;
 
   // Helper function to get unit info for a lesson
   const getUnitForLesson = (lessonId) => {
@@ -248,13 +258,15 @@ function App() {
             >
               💬
             </button>
-            <button
-              className="admin-btn"
-              onClick={() => setShowFeedbackAdmin(true)}
-              title="View Feedback Admin"
-            >
-              📊 Admin
-            </button>
+            {isAdmin && (
+              <button
+                className="admin-btn"
+                onClick={() => setShowFeedbackAdmin(true)}
+                title="View Feedback Admin"
+              >
+                📊 Admin
+              </button>
+            )}
           </div>
         ) : (
           (() => {
