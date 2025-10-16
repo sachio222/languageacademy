@@ -94,7 +94,7 @@ export const connectors = {
           {
             answer: "elle est une femme et une amie",
             feedback:
-              "WRONG GRAMMAR! Don't use 'elle est une' for identity. Use plural 'nous sommes des'",
+              "That's singular 'she is'. The question asks for plural 'we are' - use 'nous sommes des'",
           },
         ],
       },
