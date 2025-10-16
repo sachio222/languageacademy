@@ -19,13 +19,13 @@ export const unit2Practice = {
   sentences: [
     // Demonstratives - ça
     {
-      text: "Qu'est-ce que c'est ?  est un livre.",
-      instruction: "Complete: 'What is it? That is a book'",
+      text: "Qu'est-ce que c'est ? 'est un livre.",
+      instruction: "Complete: 'What is it? It is a book'",
       blanks: [
         {
           position: 21,
-          answer: "ça",
-          hint: "demonstrative meaning 'that/it'",
+          answer: "c",
+          hint: "contraction of 'ce' - use with être",
         },
       ],
     },
