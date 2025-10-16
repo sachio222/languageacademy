@@ -26,6 +26,7 @@ function ExercisePane({
   const [showHint, setShowHint] = useState(false);
   const [startTime, setStartTime] = useState(null);
   const [loadingPreviousAnswer, setLoadingPreviousAnswer] = useState(true);
+  const [showTooltip, setShowTooltip] = useState(false);
   const textareaRef = useRef(null);
 
   const { supabaseClient, supabaseUser, isAuthenticated } = useSupabaseProgress();
@@ -90,10 +91,16 @@ function ExercisePane({
     //   trackDelete(userAnswer, e.target.selectionStart);
     // }
 
-    // Cmd+Enter (Mac) or Ctrl+Enter (Windows/Linux)
-    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
-      e.preventDefault();
-      handleSubmit();
+    // Shift+Enter creates a new line, Enter submits
+    if (e.key === 'Enter') {
+      if (e.shiftKey) {
+        // Allow default behavior for Shift+Enter (new line)
+        return;
+      } else {
+        // Enter without Shift submits
+        e.preventDefault();
+        handleSubmit();
+      }
     } else if (e.key === 'ArrowUp' && isFirstExercise) {
       e.preventDefault();
     } else if (e.key === 'ArrowDown' && isLastExercise) {
@@ -254,7 +261,19 @@ function ExercisePane({
             <span className="editor-language">French</span>
 
             {!testResults ? (
-              <span className="editor-shortcut">⌘/Ctrl + Enter to submit</span>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.5rem', minWidth: '240px' }}>
+                <span className="editor-shortcut">
+                  {showTooltip ? 'Shift+Enter: new line' : 'Enter to submit'}
+                </span>
+                <span
+                  className="keyboard-help"
+                  onMouseEnter={() => setShowTooltip(true)}
+                  onMouseLeave={() => setShowTooltip(false)}
+                  style={{ cursor: 'help' }}
+                >
+                  ?
+                </span>
+              </div>
             ) : canProceed ? (
               <span className="editor-status editor-status-success">
                 ✓ All tests passed
@@ -330,7 +349,7 @@ function ExercisePane({
                 className="btn-primary"
                 onClick={handleSubmit}
               >
-                <span className="keyboard-shortcut">⌘ Enter</span>
+                <span className="keyboard-shortcut">Enter</span>
                 Submit
               </button>
             )}

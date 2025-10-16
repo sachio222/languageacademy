@@ -39,10 +39,10 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
           ) : (
             <>
               <button className="cta-primary" onClick={onGetStarted}>
-                Start Free Trial
+                Get Early Access
               </button>
               <p className="hero-caption">
-                Limited free access • No credit card required
+                Early access • No credit card required
               </p>
             </>
           )}
@@ -113,7 +113,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
               <div className="method-content">
                 <h3>Learn discrete chunks</h3>
                 <div className="method-example">
-                  Module 1: pronouns → je, tu, il, elle...
+                  pronouns → je, tu, il, elle...
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
               <div className="method-content">
                 <h3>Learn operations</h3>
                 <div className="method-example">
-                  Module 2: être (to be) → suis, es, est...
+                  être (to be) → suis, es, est...
                 </div>
               </div>
             </div>
@@ -137,7 +137,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
               <div className="method-content">
                 <h3>Compose them</h3>
                 <div className="method-example">
-                  Module 3: je + suis → "je suis" (I am)
+                  je + suis → "je suis" (I am)
                 </div>
               </div>
             </div>
@@ -240,12 +240,12 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
             <h3>Immediate utility that compounds</h3>
             <div className="utility-grid">
               <div className="utility-card">
-                <div className="utility-module">Module 4</div>
+                <div className="utility-module">Basic</div>
                 <div className="utility-phrase">"Ça va?"</div>
                 <div className="utility-desc">How's it going?</div>
               </div>
               <div className="utility-card">
-                <div className="utility-module">Module 10</div>
+                <div className="utility-module">Advanced</div>
                 <div className="utility-phrase">"Je veux ça"</div>
                 <div className="utility-desc">I want that</div>
               </div>
@@ -305,7 +305,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
         <div className="landing-container">
           <h2 className="cta-title">Start learning structurally</h2>
           <p className="cta-subtitle">
-            Limited free access to experience the full method.
+            Get early access to experience the full method.
             See if the cognitive science approach works for you.
           </p>
           {isAuthenticated ? (
@@ -320,10 +320,10 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
           ) : (
             <>
               <button className="cta-primary large" onClick={onGetStarted}>
-                Get Started Free
+                Get Early Access
               </button>
               <p className="cta-note">
-                No credit card required • Access first unit free
+                No credit card required • Early access available
               </p>
             </>
           )}
