@@ -30,18 +30,11 @@ export const basicNouns = {
       example: "Learn nouns WHILE practicing your verbs",
     },
     {
-      term: "❌ DON'T: il/elle est un/une for identity",
+      term: "Rule: Identifying vs. Profession",
       definition:
-        "Don't use 'il/elle est un/une' to say what someone IS (profession, role, identity)",
+        "When you identify someone with a noun (like 'man' or 'friend'), you MUST use an article (un, une). NOTE: A special rule for professions and nationalities will be taught later.",
       example:
-        "❌ il est un homme (identity)\n❌ elle est une amie (role)\n❌ il est un professeur (profession)",
-    },
-    {
-      term: "✅ DO: Use il/elle est un/une with adjectives",
-      definition:
-        "You CAN use 'il/elle est un/une' when describing WITH adjectives",
-      example:
-        "✅ il est un homme grand (he is a tall man)\n✅ elle est une amie fidèle (she is a loyal friend)\n✅ For identity alone: c'est un homme (Unit 2)",
+        "Correct for now: 'elle est une amie'. Future rule: 'elle est avocate' (she is a lawyer).",
     },
   ],
 
@@ -178,8 +171,7 @@ export const basicNouns = {
           },
           {
             answer: "il est un ami",
-            feedback:
-              "WRONG GRAMMAR! Don't use 'il est un ami' for identity. Use 'j'ai un ami'",
+            feedback: "That means 'he is a friend'. The question asks for 'he has a friend'.",
           },
         ],
       },
@@ -195,8 +187,7 @@ export const basicNouns = {
           },
           {
             answer: "elle est une amie",
-            feedback:
-              "WRONG GRAMMAR! Don't use 'elle est une amie' for identity. Use 'elle a une amie'",
+            feedback: "That means 'she is a friend'. The question asks for 'she has a friend'.",
           },
         ],
       },
@@ -212,8 +203,7 @@ export const basicNouns = {
           },
           {
             answer: "il est un homme",
-            feedback:
-              "WRONG GRAMMAR! Don't use 'il est un homme' for identity. Use 'je suis un homme' or 'c'est un homme'",
+            feedback: "That means 'he is a man'. The question asks for 'I am a man'.",
           },
         ],
       },
@@ -229,8 +219,7 @@ export const basicNouns = {
           },
           {
             answer: "elle est une femme",
-            feedback:
-              "WRONG GRAMMAR! Don't use 'elle est une femme' for identity. Use 'tu es une femme' or 'c'est une femme'",
+            feedback: "That means 'she is a woman'. The question asks for 'you are a woman'.",
           },
         ],
       },

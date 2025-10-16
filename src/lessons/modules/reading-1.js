@@ -28,13 +28,13 @@ Tu es Marie. Tu es une femme. Tu as une maison et une voiture. La maison est tr�
 
 J'ai un ami. Il a des livres. J'ai une amie aussi. Elle a des chats et des livres aussi.
 
-Nous sommes les amis. Nous avons des enfants et des chiens. Les chiens sont très bon, mais les chats sont bon aussi.
+Nous sommes les amis. Nous avons des enfants et des chiens. Les chiens sont très bons, mais les chats sont bons aussi.
 
-![img/reading1b.png]
 
-C'est un très bon jour! Nous sommes très bon.
 
-![img/reading1c2.png|320px]
+C'est un très bon jour! Nous sommes très bons.
+
+
 
 Merci et au revoir!
 
