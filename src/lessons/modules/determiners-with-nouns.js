@@ -56,9 +56,9 @@ export const determinersWithNouns = {
       note: "avoir + ces",
     },
     {
-      french: "il est cet homme",
-      english: "he is this man",
-      note: "être + cet",
+      french: "c'est cet homme",
+      english: "it's this man",
+      note: "c'est + cet",
     },
     {
       french: "j'ai ces enfants",
@@ -149,14 +149,18 @@ export const determinersWithNouns = {
         ],
       },
       {
-        instruction: 'Say "he is this man"',
-        prompt: "he is this man",
-        hint: "Combine: he is + demonstrative (vowel form) + man",
-        expectedAnswer: "il est cet homme",
+        instruction: 'Say "it\'s this man"',
+        prompt: "it's this man",
+        hint: "Combine: it is + demonstrative (vowel form) + man",
+        expectedAnswer: "c'est cet homme",
         wrongAnswers: [
           {
-            answer: "il est ce homme",
+            answer: "c'est ce homme",
             feedback: "homme has silent h, use 'cet' like before vowels",
+          },
+          {
+            answer: "il est cet homme",
+            feedback: "For identification, use 'c'est cet homme'",
           },
         ],
       },
