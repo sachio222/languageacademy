@@ -14,7 +14,29 @@ export const unit8Practice = {
   skipStudyMode: true,
 
   // Leave empty - not used for fill-in-blank
-  concepts: [],
+  concepts: [
+    {
+      term: "Daily Life Practice",
+      definition:
+        "Interactive exercises to master temporal expressions, reflexive verbs, and daily routines",
+      example:
+        "Practice avant le travail, après le dîner, je me lève, tu te couches, nous nous aimons, vous vous connaissez",
+    },
+    {
+      term: "Temporal Fluency",
+      definition:
+        "Build automaticity with temporal words through varied daily contexts",
+      example:
+        "avant (before) + après (after) + pendant (during) + depuis (since) in real-life situations",
+    },
+    {
+      term: "Reflexive Mastery",
+      definition:
+        "Learn to use reflexive verbs naturally in daily routines and self-directed actions",
+      example:
+        "se lever (get up) + se coucher (go to bed) + s'habiller (get dressed) + se laver (wash up)",
+    },
+  ],
   vocabularyReference: [],
   exercises: [],
 

@@ -11,7 +11,29 @@ export const reading3 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Advanced Reading Milestone",
+      definition:
+        "You can now read complex French stories that combine all previous units with advanced structures",
+      example:
+        "Story featuring contractions (au, du), motion verbs (venir, aller, partir), object pronouns (le, la, les, me, te), and possessive forms (mon, ma, mes, ton, ta)",
+    },
+    {
+      term: "Natural French Flow",
+      definition:
+        "Experience how contractions and pronouns create the natural rhythm of spoken French",
+      example:
+        "au café, du livre, je viens avec toi, tu le vois, c'est mon ami - authentic French conversation patterns",
+    },
+    {
+      term: "Complex Relationships",
+      definition:
+        "Learn to express sophisticated relationships between people, places, and objects",
+      example:
+        "Marc and Sophie's friendship, their shared experiences, possessions, and movements through Paris",
+    },
+  ],
 
   readingPassage: {
     title: "Une Journée Spéciale (A Special Day)",

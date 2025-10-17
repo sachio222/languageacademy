@@ -14,8 +14,29 @@ export const reading1 = {
   skipStudyMode: true, // Flag to skip study mode and intro
   isReadingComprehension: true, // Flag for special handling
 
-  // No concepts - reading modules don't have concept screens
-  concepts: [],
+  concepts: [
+    {
+      term: "First Reading Milestone",
+      definition:
+        "You can now read complete French paragraphs using only foundational vocabulary",
+      example:
+        "Story featuring pronouns (je, tu, il, elle), être/avoir conjugations, articles (un, une, le, la, les), basic nouns (chat, chien, livre, maison), and connectors (et, mais, aussi, très)",
+    },
+    {
+      term: "Comprehension Achievement",
+      definition:
+        "Demonstrates that foundational building blocks enable real French comprehension",
+      example:
+        "Read about friends (Paul, Marie) describing themselves, their possessions, and daily life using only Unit 1 vocabulary",
+    },
+    {
+      term: "Functional Literacy",
+      definition:
+        "You've achieved basic French literacy - the foundation for all future learning",
+      example:
+        "Can understand simple French text, recognize sentence patterns, and follow basic conversations",
+    },
+  ],
 
   // The reading passage - uses ONLY vocabulary from modules 1-8
   readingPassage: {

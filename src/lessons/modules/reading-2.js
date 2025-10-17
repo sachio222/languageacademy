@@ -12,7 +12,29 @@ export const reading2 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Adventure Reading Milestone",
+      definition:
+        "You can now read engaging stories that combine Unit 1 foundations with Unit 2 composition skills",
+      example:
+        "Normandy adventure story featuring demonstratives (ça, ce, cette), questions (comment, où, qu'est-ce que), motion verbs (venir, aller, partir), and descriptive language",
+    },
+    {
+      term: "Conversational French",
+      definition:
+        "Experience natural French dialogue patterns and conversational flow",
+      example:
+        "Marie and Sophie discussing their Normandy trip, asking questions, describing places, and expressing preferences",
+    },
+    {
+      term: "Cultural Context",
+      definition:
+        "Learn French through cultural content - famous places, travel, and real-world scenarios",
+      example:
+        "Mont-Saint-Michel, Normandy, French geography, travel vocabulary, and cultural references",
+    },
+  ],
 
   readingPassage: {
     title: "Une Aventure en Normandie (An Adventure in Normandy)",

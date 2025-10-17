@@ -15,7 +15,29 @@ export const unit10Practice = {
   skipStudyMode: true,
 
   // Leave empty - not used for fill-in-blank
-  concepts: [],
+  concepts: [
+    {
+      term: "Mastery Practice",
+      definition:
+        "Interactive exercises to master the most sophisticated French structures for complex expression",
+      example:
+        "Practice le livre que je lis, la personne qui parle, il faut que je vienne, quelqu'un, personne, rien, quelque chose",
+    },
+    {
+      term: "Relative Pronoun Mastery",
+      definition:
+        "Build fluency with relative pronouns through varied complex contexts",
+      example:
+        "qui (who/which) + que (whom/which) + où (where) + dont (whose/which) + ce que (what) + ce qui (what - subject)",
+    },
+    {
+      term: "Subjunctive Integration",
+      definition:
+        "Learn to use subjunctive mood naturally in complex hypothetical and emotional contexts",
+      example:
+        "il faut que (I must) + je veux que (I want) + il est possible que (it's possible) + bien que (although)",
+    },
+  ],
   vocabularyReference: [],
   exercises: [],
 

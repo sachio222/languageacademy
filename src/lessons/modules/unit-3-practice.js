@@ -12,7 +12,29 @@ export const unit3Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Expansion Practice",
+      definition:
+        "Interactive exercises to master advanced French structures through contextual application",
+      example:
+        "Practice au café, je viens, tu vas, je le vois, mon livre, c'est le tien in real sentence contexts",
+    },
+    {
+      term: "Motion Verb Fluency",
+      definition:
+        "Build automaticity with the three essential motion verbs through varied practice",
+      example:
+        "venir (come) + aller (go) + partir (leave) in different contexts: je viens au café, tu vas à la maison, il part maintenant",
+    },
+    {
+      term: "Pronoun Mastery",
+      definition:
+        "Learn to use object pronouns and possessives naturally in conversation",
+      example:
+        "Object pronouns (le, la, les, me, te) + possessive adjectives (mon, ma, mes, ton, ta) + possessive pronouns (le mien, la tienne)",
+    },
+  ],
   vocabularyReference: [],
 
   // Sentences with blanks to fill in

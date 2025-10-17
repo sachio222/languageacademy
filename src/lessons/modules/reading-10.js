@@ -12,7 +12,29 @@ export const reading10 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Expertise Reading Milestone",
+      definition:
+        "You can now read the most sophisticated French texts featuring complex grammar and nuanced expression",
+      example:
+        "Story featuring relative pronouns (qui, que, où, dont), subjunctive mood, indefinite pronouns (quelqu'un, personne, quelque chose), and hypothetical scenarios",
+    },
+    {
+      term: "Sophisticated Discourse",
+      definition:
+        "Experience how French people express complex ideas, relationships, and hypothetical situations",
+      example:
+        "Professional discussions, academic discourse, complex relationships, and sophisticated argumentation",
+    },
+    {
+      term: "Mastery Integration",
+      definition:
+        "See how all previous units combine with advanced structures to create truly sophisticated French",
+      example:
+        "Complex sentences combining relative pronouns, subjunctive mood, past tenses, and discourse markers in authentic contexts",
+    },
+  ],
 
   readingPassage: {
     title: "Un Rêve à Paris",

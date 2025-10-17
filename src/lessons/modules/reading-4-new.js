@@ -11,7 +11,15 @@ export const reading4 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Reading Milestone",
+      definition:
+        "Unit 4 café conversation with everyday vocabulary (alternate version)",
+      example:
+        "Dialogue using survival phrases, action verbs, negation, time/location adverbs, and everyday nouns in a café setting",
+    },
+  ],
 
   readingPassage: {
     title: "Le Café (The Café)",

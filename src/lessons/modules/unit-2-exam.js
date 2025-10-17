@@ -13,7 +13,36 @@ export const unit2Exam = {
   unitNumber: 2,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Composition Layer Mastery",
+      definition:
+        "You've learned to compose more complex French sentences using demonstratives, essential verbs, and descriptive language",
+      example:
+        "ça va?, je veux ça, tu peux voir, où est le livre?, avec moi, dans la maison, très bon",
+    },
+    {
+      term: "Essential Communication Verbs",
+      definition:
+        "Master the three most important verbs for expressing wants, abilities, and perception",
+      example:
+        "vouloir (je veux, tu veux, il veut), pouvoir (je peux, tu peux, il peut), voir (je vois, tu vois, il voit)",
+    },
+    {
+      term: "Question Formation",
+      definition:
+        "Learn to ask the most common questions in French using question words and structures",
+      example:
+        "Comment ça va?, Où est le chat?, Qu'est-ce que c'est?, Avec qui?, Dans quoi?",
+    },
+    {
+      term: "Descriptive Language",
+      definition:
+        "Add adjectives and prepositions to describe people, places, and relationships",
+      example:
+        "un bon livre, une grande maison, avec toi, dans la voiture, sur la table",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

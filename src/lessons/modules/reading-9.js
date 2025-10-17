@@ -12,7 +12,29 @@ export const reading9 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Narrative Reading Milestone",
+      definition:
+        "You can now read complex French narratives featuring multiple past tenses and sophisticated discourse",
+      example:
+        "Story featuring imparfait/imperfect tense, passé composé contrast, plus-que-parfait, discourse markers (alors, donc, en fait), and opinion verbs",
+    },
+    {
+      term: "Past Tense Narrative",
+      definition:
+        "Experience how French people tell stories using the full range of past tenses",
+      example:
+        "Childhood memories, past experiences, historical narratives, and complex temporal relationships",
+    },
+    {
+      term: "Discourse Integration",
+      definition:
+        "See how discourse markers create natural flow in French storytelling and opinion expression",
+      example:
+        "Complex narratives combining multiple past tenses, discourse markers, and opinion verbs in authentic contexts",
+    },
+  ],
 
   readingPassage: {
     title: "Un Samedi à Paris",

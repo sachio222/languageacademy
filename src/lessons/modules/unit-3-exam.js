@@ -13,7 +13,42 @@ export const unit3Exam = {
   unitNumber: 3,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Expansion Layer Mastery",
+      definition:
+        "You've learned advanced French structures that enable more sophisticated communication and expression",
+      example:
+        "au café, du livre, je viens, tu vas, il part, je le vois, c'est le mien, mon livre, ton ami",
+    },
+    {
+      term: "Motion and Movement",
+      definition:
+        "Master the three essential motion verbs that describe coming, going, and leaving",
+      example:
+        "venir (je viens, tu viens, il vient), aller (je vais, tu vas, il va), partir (je pars, tu pars, il part)",
+    },
+    {
+      term: "Object Pronouns",
+      definition:
+        "Learn to replace nouns with pronouns to avoid repetition and create more natural French",
+      example:
+        "je le vois (I see it), tu la prends (you take it), nous les avons (we have them)",
+    },
+    {
+      term: "Possession and Ownership",
+      definition:
+        "Express ownership and relationships using possessive adjectives and pronouns",
+      example:
+        "mon livre (my book), ton ami (your friend), son chien (his/her dog), c'est le mien (it's mine)",
+    },
+    {
+      term: "Contractions",
+      definition:
+        "Master French contractions that make speech more natural and fluid",
+      example: "au (à + le), du (de + le), dans le → dans l' (before vowel)",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

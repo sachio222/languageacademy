@@ -13,7 +13,43 @@ export const unit5Exam = {
   unitNumber: 5,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Time and Taste Mastery",
+      definition:
+        "You've learned to express preferences, make comparisons, and talk about past experiences with food and time",
+      example:
+        "j'aime le pain, c'est plus bon, si tu veux, j'ai mangé, nous avons bu, hier, aujourd'hui, demain",
+    },
+    {
+      term: "Past Tense Foundation",
+      definition:
+        "Master the passé composé with both auxiliary verbs - the foundation of French past tense",
+      example:
+        "j'ai mangé (I ate), tu as bu (you drank), il est venu (he came), nous avons fait (we did)",
+    },
+    {
+      term: "Comparisons and Preferences",
+      definition:
+        "Learn to express preferences and make comparisons using comparative structures",
+      example:
+        "plus bon que (better than), moins cher que (cheaper than), aussi bon que (as good as), j'aime, j'adore",
+    },
+    {
+      term: "Conditional Thinking",
+      definition:
+        "Master basic conditional structures for expressing hypothetical situations",
+      example:
+        "si tu veux (if you want), si c'est possible (if it's possible), si j'ai le temps (if I have time)",
+    },
+    {
+      term: "Food and Time Vocabulary",
+      definition:
+        "Learn essential vocabulary for food, meals, and temporal expressions",
+      example:
+        "pain, fromage, vin, manger, boire, hier, aujourd'hui, demain, matin, soir, nuit",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

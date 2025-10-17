@@ -14,7 +14,43 @@ export const unit10Exam = {
   unitNumber: 10,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Mastery and Nuance Achievement",
+      definition:
+        "You've mastered the most sophisticated French structures for expressing complex relationships and hypothetical situations",
+      example:
+        "le livre que je lis, la personne qui parle, l'endroit où je vais, la chose dont je parle, il faut que je vienne, quelqu'un, personne, rien",
+    },
+    {
+      term: "Relative Pronouns Mastery",
+      definition:
+        "Learn to create complex sentences using relative pronouns for sophisticated expression",
+      example:
+        "qui (who/which - subject), que (whom/which - object), où (where), dont (whose/which - possession), ce que (what), ce qui (what - subject)",
+    },
+    {
+      term: "Subjunctive Mood",
+      definition:
+        "Master the subjunctive mood for expressing doubt, emotion, necessity, and hypothetical situations",
+      example:
+        "il faut que je vienne (I must come), je veux que tu viennes (I want you to come), il est possible que (it's possible that), bien que (although)",
+    },
+    {
+      term: "Indefinite Pronouns",
+      definition:
+        "Learn to express indefinite quantities and existence using sophisticated pronouns",
+      example:
+        "quelqu'un (someone), personne (no one), rien (nothing), quelque chose (something), quelqu'un d'autre (someone else), personne d'autre (no one else)",
+    },
+    {
+      term: "Advanced Hypotheticals",
+      definition:
+        "Master complex hypothetical structures for sophisticated French expression",
+      example:
+        "si j'avais le temps (if I had time), il faudrait que (it would be necessary that), il serait possible que (it would be possible that)",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

@@ -14,7 +14,29 @@ export const unit7Practice = {
   skipStudyMode: true,
 
   // Leave empty - not used for fill-in-blank
-  concepts: [],
+  concepts: [
+    {
+      term: "Cognitive Practice",
+      definition:
+        "Interactive exercises to master the essential verbs for expressing knowledge, understanding, and learning",
+      example:
+        "Practice on comprend, je pense, tu sais, il connaît, nous apprenons, vous enseignez, ils étudient",
+    },
+    {
+      term: "Knowledge Verb Mastery",
+      definition:
+        "Build fluency with the cognitive verbs through varied learning contexts",
+      example:
+        "comprendre (understand) + penser (think) + savoir (know facts) + connaître (know people) in academic and cultural contexts",
+    },
+    {
+      term: "Learning Context Integration",
+      definition:
+        "Learn to use cognitive verbs naturally in educational and cultural situations",
+      example:
+        "on apprend le français, nous comprenons la culture, je sais que, tu connais le professeur, il pense à l'examen",
+    },
+  ],
   vocabularyReference: [],
   exercises: [],
 

@@ -14,7 +14,29 @@ export const unit6Practice = {
   skipStudyMode: true,
 
   // Leave empty - not used for fill-in-blank
-  concepts: [],
+  concepts: [
+    {
+      term: "Fluency Practice",
+      definition:
+        "Interactive exercises to master advanced French structures for sophisticated communication",
+      example:
+        "Practice je suis en train de manger, je dis, tu prends, il met, nous demandons, j'ai besoin de",
+    },
+    {
+      term: "Progressive Tense Mastery",
+      definition:
+        "Build fluency with être en train de for expressing ongoing actions naturally",
+      example:
+        "je suis en train de manger, tu es en train de parler, il est en train de travailler - authentic ongoing action expressions",
+    },
+    {
+      term: "Communication Verb Fluency",
+      definition:
+        "Master the five essential communication verbs through varied contexts",
+      example:
+        "dire (say) + prendre (take) + mettre (put) + demander (ask) + commander (order) in real situations",
+    },
+  ],
   vocabularyReference: [],
   exercises: [],
 

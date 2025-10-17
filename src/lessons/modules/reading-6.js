@@ -11,7 +11,29 @@ export const reading6 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Advanced Communication Milestone",
+      definition:
+        "You can now read complex French stories featuring ongoing actions, communication, and sophisticated vocabulary",
+      example:
+        "Story featuring progressive tenses (être en train de), communication verbs (dire, prendre, mettre, demander, commander), and expressing needs (avoir besoin de)",
+    },
+    {
+      term: "Real-World Scenarios",
+      definition:
+        "Experience authentic French communication in professional and social contexts",
+      example:
+        "Restaurant ordering, workplace communication, social interactions, and problem-solving situations",
+    },
+    {
+      term: "Fluency Integration",
+      definition:
+        "See how all previous units combine to create natural, flowing French communication",
+      example:
+        "Complex sentences combining past tense, progressive actions, communication verbs, and extensive vocabulary",
+    },
+  ],
 
   readingPassage: {
     title: "Un Voyage en Famille",

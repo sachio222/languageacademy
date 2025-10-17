@@ -13,7 +13,29 @@ export const unit1Exam = {
   unitNumber: 1,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Foundation Layer Complete",
+      definition:
+        "You've mastered the 8 essential building blocks of French - the core that makes everything else possible",
+      example:
+        "Pronouns (je, tu, il, elle, nous, vous, ils, elles) + être/avoir conjugations + articles (un/une, le/la/les, des) + basic nouns + plurals + connectors (et, mais, ou, aussi, très)",
+    },
+    {
+      term: "Functional Composition",
+      definition:
+        "You can now combine these building blocks to create infinite French sentences",
+      example:
+        "je suis un homme, tu as une maison, nous avons les livres, ils sont très bons",
+    },
+    {
+      term: "Immediate Utility",
+      definition:
+        "You can have real conversations using only these foundational elements",
+      example:
+        "Greet people (bonjour), introduce yourself (je suis...), express possession (j'ai...), describe things (c'est...), and connect ideas (et, mais)",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

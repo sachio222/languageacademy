@@ -13,7 +13,43 @@ export const unit9Exam = {
   unitNumber: 9,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Past Tenses and Discourse Mastery",
+      definition:
+        "You've mastered the complex past tense system and discourse markers essential for sophisticated French communication",
+      example:
+        "j'étais, tu étais, il était, j'avais, nous avions, alors, donc, en fait, d'ailleurs, je crois, il semble",
+    },
+    {
+      term: "Imparfait Mastery",
+      definition:
+        "Learn the imperfect tense for expressing ongoing past actions, descriptions, and habitual actions",
+      example:
+        "j'étais (I was), tu étais (you were), il était (he was), j'avais (I had), nous avions (we had), ils faisaient (they were doing)",
+    },
+    {
+      term: "Past Tense Contrast",
+      definition:
+        "Master the distinction between passé composé and imparfait for precise past tense expression",
+      example:
+        "passé composé (j'ai mangé - I ate) vs imparfait (je mangeais - I was eating), j'ai fait (I did) vs je faisais (I was doing)",
+    },
+    {
+      term: "Plus-que-parfait",
+      definition:
+        "Learn the pluperfect tense for expressing actions that occurred before other past actions",
+      example:
+        "j'avais mangé (I had eaten), tu étais venu (you had come), il avait fait (he had done), nous avions parlé (we had spoken)",
+    },
+    {
+      term: "Discourse Markers",
+      definition:
+        "Master essential discourse markers for connecting ideas and expressing opinions",
+      example:
+        "alors (so/then), donc (therefore), en fait (actually), d'ailleurs (besides), je crois (I believe), il semble (it seems)",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {
@@ -279,4 +315,3 @@ export const unit9Exam = {
     ],
   },
 };
-

@@ -13,7 +13,43 @@ export const unit6Exam = {
   unitNumber: 6,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Fluency and Mastery Achievement",
+      definition:
+        "You've mastered advanced French structures that enable sophisticated communication and expression",
+      example:
+        "je suis en train de manger, je dis, tu prends, il met, nous demandons, vous commandez, j'ai besoin de",
+    },
+    {
+      term: "Progressive Tenses",
+      definition:
+        "Master the être en train de structure for expressing ongoing actions and current activities",
+      example:
+        "je suis en train de manger (I'm eating), tu es en train de parler (you're speaking), il est en train de travailler (he's working)",
+    },
+    {
+      term: "Essential Communication Verbs",
+      definition:
+        "Learn the five most important verbs for expressing communication and interaction",
+      example:
+        "dire (je dis, tu dis, il dit), prendre (je prends, tu prends, il prend), mettre (je mets, tu mets, il met), demander (je demande, tu demandes, il demande), commander (je commande, tu commandes, il commande)",
+    },
+    {
+      term: "Expressing Needs and Wants",
+      definition:
+        "Master the avoir besoin de structure for expressing needs and requirements",
+      example:
+        "j'ai besoin de (I need), tu as besoin de (you need), il a besoin de (he needs), nous avons besoin de (we need)",
+    },
+    {
+      term: "Extensive Vocabulary",
+      definition:
+        "Learn comprehensive vocabulary for daily situations and complex communication",
+      example:
+        "restaurant, commande, serveur, client, besoin, problème, solution, travail, temps, argent, famille, amis",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

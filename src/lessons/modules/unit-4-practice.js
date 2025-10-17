@@ -12,7 +12,29 @@ export const unit4Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Survival French Practice",
+      definition:
+        "Interactive exercises to master essential phrases and verbs for daily French communication",
+      example:
+        "Practice s'il vous plaît, excusez-moi, je fais, tu dois, il parle, je ne sais pas, maintenant, ici, là",
+    },
+    {
+      term: "Action Verb Mastery",
+      definition:
+        "Build fluency with the three essential action verbs through real-world contexts",
+      example:
+        "faire (do/make) + devoir (must/have to) + parler (speak) in practical situations: je fais le travail, tu dois venir, il parle français",
+    },
+    {
+      term: "Negation and Politeness",
+      definition:
+        "Learn to express negation naturally and use polite French phrases",
+      example:
+        "ne...pas (je ne sais pas), ne...jamais (je ne viens jamais), s'il vous plaît, excusez-moi, merci beaucoup",
+    },
+  ],
   vocabularyReference: [],
 
   // Sentences with blanks to fill in

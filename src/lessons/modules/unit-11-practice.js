@@ -15,7 +15,29 @@ export const unit11Practice = {
   skipStudyMode: true,
 
   // Leave empty - not used for fill-in-blank
-  concepts: [],
+  concepts: [
+    {
+      term: "Advanced Structures Practice",
+      definition:
+        "Interactive exercises to master the most advanced French structures for sophisticated expression",
+      example:
+        "Practice je viendrai, tu seras, il aura fait, je viendrais, tu serais, il aurait fait, je suis aimé, il fait construire, en parlant, d'abord, ensuite, puis, enfin",
+    },
+    {
+      term: "Future and Conditional Mastery",
+      definition:
+        "Build fluency with future and conditional tenses through varied advanced contexts",
+      example:
+        "Future simple (je viendrai) + Future anterior (il aura fait) + Conditional (je viendrais) + Conditional perfect (il aurait fait)",
+    },
+    {
+      term: "Passive and Causative Integration",
+      definition:
+        "Learn to use passive voice and causative faire naturally in complex contexts",
+      example:
+        "Passive voice (je suis aimé) + Causative faire (il fait construire) + Gerunds (en parlant) + Transitions (d'abord, ensuite, puis, enfin)",
+    },
+  ],
   vocabularyReference: [],
   exercises: [],
 

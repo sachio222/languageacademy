@@ -2,7 +2,7 @@
 
 .offline-indicator {
   position: fixed;
-  top: 60px;
+  top: 68px;
   right: 1rem;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
@@ -137,13 +137,17 @@
   animation: none;
 }
 
-.offline-indicator .status-icon:has-text('🔄') {
+.offline-indicator .status-icon:has-text("🔄") {
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive design */
@@ -153,7 +157,7 @@
     right: 0.5rem;
     font-size: 0.8125rem;
   }
-  
+
   .offline-details {
     min-width: 200px;
   }

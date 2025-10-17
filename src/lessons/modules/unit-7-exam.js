@@ -13,7 +13,43 @@ export const unit7Exam = {
   unitNumber: 7,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Knowledge and Learning Mastery",
+      definition:
+        "You've mastered the cognitive verbs and structures essential for expressing knowledge, understanding, and learning",
+      example:
+        "on comprend, je pense, tu sais, il connaît, nous apprenons, vous enseignez, ils étudient",
+    },
+    {
+      term: "Cognitive Verb Mastery",
+      definition:
+        "Learn the essential verbs for expressing mental processes and knowledge acquisition",
+      example:
+        "comprendre (je comprends, tu comprends, il comprend), penser (je pense, tu penses, il pense), savoir (je sais, tu sais, il sait), connaître (je connais, tu connais, il connaît)",
+    },
+    {
+      term: "Learning and Teaching",
+      definition:
+        "Master verbs for expressing learning, teaching, and studying activities",
+      example:
+        "apprendre (je apprends, tu apprends, il apprend), enseigner (j'enseigne, tu enseignes, il enseigne), étudier (j'étudie, tu étudies, il étudie)",
+    },
+    {
+      term: "On vs Nous Usage",
+      definition:
+        "Learn the subtle but important distinction between on and nous in French conversation",
+      example:
+        "on comprend (we understand - informal), nous comprenons (we understand - formal), on apprend (we learn - general), nous apprenons (we learn - specific group)",
+    },
+    {
+      term: "Cultural and Academic Vocabulary",
+      definition:
+        "Learn essential vocabulary for education, culture, and intellectual discourse",
+      example:
+        "école, université, professeur, étudiant, culture, langue, français, anglais, mathématiques, histoire, science",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

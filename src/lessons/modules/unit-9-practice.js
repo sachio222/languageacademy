@@ -14,7 +14,29 @@ export const unit9Practice = {
   skipStudyMode: true,
 
   // Leave empty - not used for fill-in-blank
-  concepts: [],
+  concepts: [
+    {
+      term: "Past Tense Practice",
+      definition:
+        "Interactive exercises to master the complex French past tense system and discourse markers",
+      example:
+        "Practice j'étais, tu étais, il était, j'avais, nous avions, alors, donc, en fait, d'ailleurs, je crois, il semble",
+    },
+    {
+      term: "Imparfait Mastery",
+      definition:
+        "Build fluency with the imperfect tense through varied past contexts",
+      example:
+        "j'étais (I was) + tu étais (you were) + il était (he was) + j'avais (I had) + nous avions (we had) in narrative contexts",
+    },
+    {
+      term: "Discourse Integration",
+      definition:
+        "Learn to use discourse markers naturally in past tense narratives and opinions",
+      example:
+        "alors (so) + donc (therefore) + en fait (actually) + d'ailleurs (besides) + je crois (I believe) + il semble (it seems)",
+    },
+  ],
   vocabularyReference: [],
   exercises: [],
 
@@ -299,4 +321,3 @@ export const unit9Practice = {
     },
   ],
 };
-

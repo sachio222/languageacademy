@@ -14,7 +14,50 @@ export const unit11Exam = {
   unitNumber: 11,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Advanced Structures Mastery",
+      definition:
+        "You've mastered the most advanced French structures for expressing future, hypothetical, and complex relationships",
+      example:
+        "je viendrai, tu seras, il aura fait, je viendrais, tu serais, il aurait fait, je suis aimé, il fait construire, en parlant, d'abord, ensuite, puis, enfin",
+    },
+    {
+      term: "Future Tense Mastery",
+      definition:
+        "Learn the future simple and future anterior for expressing future actions and completed future actions",
+      example:
+        "je viendrai (I will come), tu seras (you will be), il aura fait (he will have done), nous aurons parlé (we will have spoken)",
+    },
+    {
+      term: "Conditional Mood",
+      definition:
+        "Master the conditional mood for expressing hypothetical situations and polite requests",
+      example:
+        "je viendrais (I would come), tu serais (you would be), il aurait fait (he would have done), nous aurions parlé (we would have spoken)",
+    },
+    {
+      term: "Passive Voice",
+      definition:
+        "Learn to express passive actions and relationships using être + past participle",
+      example:
+        "je suis aimé (I am loved), tu es respecté (you are respected), il est compris (he is understood), nous sommes aidés (we are helped)",
+    },
+    {
+      term: "Causative Faire",
+      definition:
+        "Master the causative faire structure for expressing actions done by others",
+      example:
+        "je fais construire (I have built), tu fais réparer (you have repaired), il fait nettoyer (he has cleaned), nous faisons préparer (we have prepared)",
+    },
+    {
+      term: "Gerunds and Transitions",
+      definition:
+        "Learn to use gerunds and sequence transitions for sophisticated French expression",
+      example:
+        "en parlant (while speaking), en travaillant (while working), d'abord (first), ensuite (then), puis (then), enfin (finally)",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

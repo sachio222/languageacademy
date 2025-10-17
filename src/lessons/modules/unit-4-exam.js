@@ -13,7 +13,43 @@ export const unit4Exam = {
   unitNumber: 4,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Everyday Communication Mastery",
+      definition:
+        "You've learned essential survival French for daily interactions and practical situations",
+      example:
+        "s'il vous plaît, excusez-moi, je fais, tu dois, il parle, je ne sais pas, maintenant, ici, là",
+    },
+    {
+      term: "Essential Action Verbs",
+      definition:
+        "Master the three most important action verbs for expressing doing, obligation, and speaking",
+      example:
+        "faire (je fais, tu fais, il fait), devoir (je dois, tu dois, il doit), parler (je parle, tu parles, il parle)",
+    },
+    {
+      term: "Negation and Politeness",
+      definition:
+        "Learn to express negation and use polite phrases essential for French social interaction",
+      example:
+        "ne...pas (je ne sais pas), ne...jamais (je ne viens jamais), s'il vous plaît, excusez-moi, merci",
+    },
+    {
+      term: "Time and Space Orientation",
+      definition:
+        "Master temporal and spatial adverbs to express when and where things happen",
+      example:
+        "maintenant (now), aujourd'hui (today), ici (here), là (there), toujours (always), jamais (never)",
+    },
+    {
+      term: "Daily Life Vocabulary",
+      definition:
+        "Learn essential nouns and phrases for everyday situations and survival French",
+      example:
+        "café, restaurant, travail, maison, voiture, argent, temps, problème, solution",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

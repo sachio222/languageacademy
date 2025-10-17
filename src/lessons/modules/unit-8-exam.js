@@ -13,7 +13,43 @@ export const unit8Exam = {
   unitNumber: 8,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Daily Life and Actions Mastery",
+      definition:
+        "You've mastered the essential structures for expressing daily routines, temporal relationships, and reflexive actions",
+      example:
+        "avant le travail, après le dîner, pendant la journée, depuis hier, je me lève, tu te couches, nous nous aimons",
+    },
+    {
+      term: "Temporal Mastery",
+      definition:
+        "Learn essential temporal words for expressing time relationships and sequences",
+      example:
+        "avant (before), après (after), pendant (during), depuis (since), toujours (always), jamais (never), souvent (often)",
+    },
+    {
+      term: "Reflexive Verbs",
+      definition:
+        "Master reflexive verbs for expressing daily routines and self-directed actions",
+      example:
+        "se lever (je me lève, tu te lèves, il se lève), se coucher (je me couche, tu te couches, il se couche), s'habiller (je m'habille, tu t'habilles, il s'habille)",
+    },
+    {
+      term: "Routine and Commands",
+      definition:
+        "Learn verbs for daily activities and imperative forms for giving commands",
+      example:
+        "habiter (je habite, tu habites, il habite), travailler (je travaille, tu travailles, il travaille), chercher (je cherche, tu cherches, il cherche)",
+    },
+    {
+      term: "Reciprocal Actions",
+      definition:
+        "Master expressing mutual actions and relationships between people",
+      example:
+        "nous nous aimons (we love each other), vous vous connaissez (you know each other), ils se parlent (they talk to each other)",
+    },
+  ],
   vocabularyReference: [],
 
   exerciseConfig: {

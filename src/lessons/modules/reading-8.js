@@ -12,7 +12,29 @@ export const reading8 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Daily Life Reading Milestone",
+      definition:
+        "You can now read complex French texts about daily routines, temporal relationships, and social interactions",
+      example:
+        "Story featuring temporal words (avant, après, pendant, depuis), reflexive verbs (se lever, se coucher), routine verbs (habiter, travailler, chercher), and reciprocal actions",
+    },
+    {
+      term: "Routine and Relationships",
+      definition:
+        "Experience how French people discuss daily life, family relationships, and social interactions",
+      example:
+        "Family routines, work schedules, social relationships, and the rhythm of daily French life",
+    },
+    {
+      term: "Temporal Narrative Integration",
+      definition:
+        "See how temporal expressions combine with reflexive verbs to create natural French narratives",
+      example:
+        "Complex sentences combining time markers, reflexive actions, and daily activities in authentic contexts",
+    },
+  ],
 
   readingPassage: {
     title: "Ma Journée",

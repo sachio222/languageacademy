@@ -12,7 +12,29 @@ export const unit1Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Foundation Reinforcement",
+      definition:
+        "Interactive practice to solidify the 8 essential building blocks through active recall",
+      example:
+        "Complete sentences using pronouns + être/avoir + articles + nouns + connectors to build fluency",
+    },
+    {
+      term: "Composition Practice",
+      definition:
+        "Learn to combine foundational elements into meaningful French sentences",
+      example:
+        "je suis + un homme, tu as + une maison, nous avons + les livres, ils sont + très bons",
+    },
+    {
+      term: "Scaffolded Learning",
+      definition:
+        "Practice with hints and reference tables to build confidence before testing",
+      example:
+        "Fill in blanks with vocabulary reference visible, immediate feedback on errors, progressive difficulty",
+    },
+  ],
   vocabularyReference: [],
 
   // Sentences with blanks to fill in

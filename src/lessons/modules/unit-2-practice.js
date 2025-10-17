@@ -12,7 +12,29 @@ export const unit2Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
-  concepts: [],
+  concepts: [
+    {
+      term: "Composition Practice",
+      definition:
+        "Interactive exercises to master combining demonstratives with essential verbs and descriptive language",
+      example:
+        "Practice ça va?, je veux ce livre, tu peux voir la maison, où est le chat?, avec moi, très bon",
+    },
+    {
+      term: "Essential Verb Mastery",
+      definition:
+        "Build fluency with the three most important French verbs through contextual practice",
+      example:
+        "vouloir (want) + pouvoir (can) + voir (see) in real sentence contexts with proper conjugations",
+    },
+    {
+      term: "Question Building",
+      definition:
+        "Learn to construct natural French questions using question words and proper word order",
+      example:
+        "Comment + ça va?, Où + est + le livre?, Qu'est-ce que + c'est?, Avec + qui?",
+    },
+  ],
   vocabularyReference: [],
 
   // Sentences with blanks to fill in

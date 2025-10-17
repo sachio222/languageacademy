@@ -161,6 +161,9 @@
   backdrop-filter: blur(10px);
   border-radius: 8px;
   padding: 0.5rem;
+}
+
+.auth-header-bar:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -177,6 +180,9 @@
   .auth-header-bar {
     padding: 0.375rem;
     right: 0.75rem;
+  }
+  .auth-header-bar:hover {
+    box-shadow: none;
   }
 }
 

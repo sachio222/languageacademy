@@ -12,7 +12,29 @@ export const reading7 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Academic Reading Milestone",
+      definition:
+        "You can now read complex French texts about education, learning, and cultural understanding",
+      example:
+        "Story featuring on/nous usage, comprendre/understand, penser/think, savoir/know facts, connaître/know people, and academic vocabulary",
+    },
+    {
+      term: "Educational Context",
+      definition:
+        "Experience how French people discuss learning, education, and cultural exchange",
+      example:
+        "University life, language learning, cultural understanding, academic discussions, and intellectual discourse",
+    },
+    {
+      term: "Cognitive Language Integration",
+      definition:
+        "See how cognitive verbs combine with previous units to create sophisticated academic French",
+      example:
+        "Complex sentences combining knowledge verbs, past tense, progressive actions, and cultural vocabulary",
+    },
+  ],
 
   readingPassage: {
     title: "L'Art d'Apprendre",

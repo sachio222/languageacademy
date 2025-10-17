@@ -11,7 +11,29 @@ export const reading4 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Café Conversation Milestone",
+      definition:
+        "You can now follow authentic French café conversations using everyday vocabulary and survival phrases",
+      example:
+        "Dialogue featuring survival phrases (s'il vous plaît, excusez-moi), action verbs (faire, devoir, parler), negation (ne...pas), and time/location adverbs (maintenant, ici, là)",
+    },
+    {
+      term: "Real-World French",
+      definition:
+        "Experience authentic French social interaction patterns and cultural norms",
+      example:
+        "Café ordering, polite requests, expressing needs, asking for help, and navigating daily situations",
+    },
+    {
+      term: "Cultural Integration",
+      definition:
+        "Learn French through cultural context - café culture, social interactions, and daily life",
+      example:
+        "French café etiquette, social norms, common phrases, and practical communication strategies",
+    },
+  ],
 
   readingPassage: {
     title: "Le Café (The Café)",

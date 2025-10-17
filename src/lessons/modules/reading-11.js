@@ -13,7 +13,29 @@ export const reading11 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Final Reading Milestone",
+      definition:
+        "You can now read the most sophisticated French texts featuring all advanced grammar structures",
+      example:
+        "Story featuring future tenses, conditional forms, passive voice, causative faire, gerunds, sequence transitions, and multi-clause question structures",
+    },
+    {
+      term: "Complete French Mastery",
+      definition:
+        "Experience how all French grammar structures combine to create truly sophisticated expression",
+      example:
+        "Complex narratives combining future tense, conditionals, passive voice, causative constructions, and advanced transitions",
+    },
+    {
+      term: "B2+ Level Achievement",
+      definition:
+        "You've reached advanced French proficiency with mastery of all major grammar structures",
+      example:
+        "Professional discourse, academic writing, complex narratives, and sophisticated argumentation using all learned structures",
+    },
+  ],
 
   readingPassage: {
     title: "La France d'Aujourd'hui : Un Pays en Mouvement",

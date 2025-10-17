@@ -14,7 +14,29 @@ export const unit5Practice = {
   skipStudyMode: true,
 
   // Leave empty - not used for fill-in-blank
-  concepts: [],
+  concepts: [
+    {
+      term: "Taste and Time Practice",
+      definition:
+        "Interactive exercises to master expressing preferences, comparisons, and past experiences",
+      example:
+        "Practice j'aime le pain, c'est plus bon, si tu veux, j'ai mangé, nous avons bu, hier, aujourd'hui",
+    },
+    {
+      term: "Past Tense Mastery",
+      definition:
+        "Build fluency with passé composé using both auxiliary verbs in real contexts",
+      example:
+        "avoir (j'ai mangé, tu as bu) + être (je suis venu, tu es allé) in food and time contexts",
+    },
+    {
+      term: "Comparative Language",
+      definition:
+        "Learn to express preferences and make comparisons naturally in French",
+      example:
+        "plus bon que, moins cher que, aussi bon que, j'aime, j'adore, je préfère",
+    },
+  ],
   vocabularyReference: [],
   exercises: [],
 

@@ -11,7 +11,29 @@ export const reading5 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
-  concepts: [],
+  concepts: [
+    {
+      term: "Food and Memory Milestone",
+      definition:
+        "You can now read complex French stories about food, past experiences, and cultural memories",
+      example:
+        "Story featuring comparisons (plus...que, moins...que), conditionals (si), aimer verb, past tense (passé composé), and food vocabulary",
+    },
+    {
+      term: "Cultural Memory",
+      definition:
+        "Experience how French people talk about food, family, and shared experiences",
+      example:
+        "Grandmother's cooking, family traditions, food preferences, and nostalgic memories",
+    },
+    {
+      term: "Past Tense Narrative",
+      definition:
+        "Learn to follow and understand French stories that use past tense naturally",
+      example:
+        "j'ai mangé, nous avons bu, il est venu, elle a fait - authentic past tense usage in context",
+    },
+  ],
 
   readingPassage: {
     title: "Le Meilleur Restaurant de Paris (The Best Restaurant in Paris)",
