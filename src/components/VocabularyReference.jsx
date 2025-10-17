@@ -102,20 +102,20 @@ function VocabularyReference({ vocabulary, title }) {
   const isNewSection = (item, index, vocabularyArray) => {
     if (index === 0) return false; // First item never needs divider
 
-    // Detect new verb by:
-    // 1. Contains a rank (⭐ Rank X) = new verb
-    // 2. Is infinitive form (ends with -er, -ir, -re, -oir)
-    // 3. Note contains "infinitive" or "rank"
     const note = (item.note || '').toLowerCase();
     const french = (item.french || '').toLowerCase();
 
-    // Check if this is a new base verb
-    const isBaseVerb = note.includes('rank') ||
-      note.includes('infinitive') ||
-      french.match(/[aeiou]r$/) || // ends with -er, -ir, -re, -oir
-      french.match(/^[a-z]+$/) && french.length > 3; // simple base word
+    // Detect new verb/section by checking note for verb type patterns
+    const isNewVerb = note.includes('rank') ||
+      note.includes('-er verb') ||  // Catches "regular -ER verb" etc.
+      note.includes('-ir verb') ||  // Catches "regular -IR verb" etc.
+      note.includes('-re verb') ||
+      note.includes('irregular verb') ||
+      note.includes('impersonal') ||  // For verbs like pleuvoir
+      note.includes('causative') ||    // For rendre
+      (french.match(/er$|ir$|re$|oir$/) && !french.includes(' ') && french.length > 3);
 
-    return isBaseVerb;
+    return isNewVerb;
   };
 
   return (

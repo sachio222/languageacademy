@@ -90,6 +90,7 @@ import { daysMonthsModule } from "./modules/days-months.js";
 import { holidaysModule } from "./modules/holidays.js";
 import { frenchCountriesModule } from "./modules/french-countries.js";
 import { languageStatsModule } from "./modules/language-stats.js";
+import { colorsModule } from "./modules/colors.js";
 
 // Unit 7: Knowledge & Learning
 import { onAndPeopleModule } from "./modules/on-and-people.js";
@@ -172,6 +173,19 @@ import { directionsNavigationModule } from "./modules/directions-navigation.js";
 import { reading11 } from "./modules/reading-11.js";
 import { unit11Practice } from "./modules/unit-11-practice.js";
 import { unit11Exam } from "./modules/unit-11-exam.js";
+
+// Unit 12: Curiosity & Complex Questions
+import { natureAnimalsModule } from "./modules/nature-animals.js";
+import { movementVerbsModule } from "./modules/movement-verbs.js";
+import { naturalPhenomenaModule } from "./modules/natural-phenomena-verbs.js";
+import { questceQuiQueModule } from "./modules/questce-qui-que.js";
+import { pourquoiComplexModule } from "./modules/pourquoi-complex.js";
+import { commentComplexModule } from "./modules/comment-complex.js";
+import { quiestQuiQueModule } from "./modules/quiest-qui-que.js";
+import { inversionQuestionsModule } from "./modules/inversion-questions.js";
+import { embeddedQuestionsModule } from "./modules/embedded-questions.js";
+import { rhetoricalNegativeModule } from "./modules/rhetorical-negative-questions.js";
+import { multiClauseQuestionsModule } from "./modules/multi-clause-questions.js";
 
 // Module configurations in PEDAGOGICAL order
 // Order matters! Each module builds on previous ones
@@ -483,16 +497,38 @@ const moduleConfigs = [
   unit11Exam, // 143. UNIT 11 FINAL EXAM - Test everything from Unit 11!
 
   // ============================================
+  // UNIT 12: CURIOSITY & COMPLEX QUESTIONS - Ask Anything!
+  // ============================================
+
+  // === VOCABULARY FOUNDATION - Animals, nature, movement ===
+  natureAnimalsModule, // 151. Nature & Animals - Curiosity vocabulary
+  movementVerbsModule, // 152. Movement Verbs - nager, sauter, voler, courir
+  naturalPhenomenaModule, // 153. Natural Phenomena - briller, pousser, rendre (causative!)
+
+  // === CORE QUESTION STRUCTURES - Master discrimination ===
+  questceQuiQueModule, // 154. qu'est-ce qui vs que - CRITICAL subject/object distinction
+  pourquoiComplexModule, // 155. Complex pourquoi - Ask why about any process
+  commentComplexModule, // 156. Complex comment - Ask how things work
+  quiestQuiQueModule, // 157. qui est-ce qui vs que - Who questions (subject/object)
+
+  // === ADVANCED REFINEMENT - Native sophistication ===
+  inversionQuestionsModule, // 158. Inversion Questions - Formal register
+  embeddedQuestionsModule, // 159. Embedded Questions - Polite indirect questions
+  rhetoricalNegativeModule, // 160. Rhetorical & Negative - Advanced style
+  multiClauseQuestionsModule, // 161. Multi-Clause Questions - Full complexity
+
+  // ============================================
   // REFERENCE UNIT - Essential Reference Materials
   // ============================================
 
   // === REFERENCE MATERIALS - Always available for quick lookup! ===
-  alphabetModule, // 144. L'Alphabet - French alphabet with pronunciation
-  numbersModule, // 145. Les Nombres - Numbers from 0 to infinity
-  daysMonthsModule, // 146. Jours et Mois - Days of the week and months
-  holidaysModule, // 147. Les Fêtes - French holidays and celebrations
-  frenchCountriesModule, // 148. La Francophonie - French-speaking countries worldwide
-  languageStatsModule, // 149. Le Français en Chiffres - Fascinating language statistics
+  alphabetModule, // 155. L'Alphabet - French alphabet with pronunciation
+  numbersModule, // 156. Les Nombres - Numbers from 0 to infinity
+  daysMonthsModule, // 157. Jours et Mois - Days of the week and months
+  holidaysModule, // 158. Les Fêtes - French holidays and celebrations
+  colorsModule, // 159. Les Couleurs - Colors with agreement rules and nature vocabulary
+  frenchCountriesModule, // 160. La Francophonie - French-speaking countries worldwide
+  languageStatsModule, // 161. Le Français en Chiffres - Fascinating language statistics
 ];
 
 // Build all lessons from configs
@@ -501,14 +537,14 @@ const allLessons = moduleConfigs.map((config, index) => {
   const moduleId = index + 1;
   const lesson = buildLesson(config, moduleId); // Pass module number
 
-  // Add "Module ##:" prefix for regular modules (1-143)
-  // Override titles for reference modules (144-149) to use Roman numerals
-  const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
+  // Add "Module ##:" prefix for regular modules (1-154)
+  // Override titles for reference modules (155-161) to use Roman numerals
+  const romanNumerals = ["I", "II", "III", "IV", "V", "VI", "VII"];
   let finalTitle = lesson.title;
 
-  if (moduleId >= 144 && moduleId <= 149) {
+  if (moduleId >= 155 && moduleId <= 161) {
     // Reference modules use Roman numerals
-    const romanIndex = moduleId - 144;
+    const romanIndex = moduleId - 155;
     finalTitle = `Reference ${romanNumerals[romanIndex]}: ${config.title}`;
   } else {
     // Regular modules get "Module ##:" prefix
@@ -631,10 +667,19 @@ export const unitStructure = [
   },
   {
     id: 12,
+    title: "Unit 12: Curiosity & Questions",
+    description:
+      "Ask ANY question in French! Learn nature vocabulary, then master all question structures: qu'est-ce qui/que distinction, complex pourquoi/comment, formal inversion, embedded questions, and native-level complexity.",
+    lessonRange: [144, 154], // Modules 144-154 (11 modules, stopping before reading)
+    icon: "❓",
+    color: "#06b6d4",
+  },
+  {
+    id: 13,
     title: "Reference",
     description:
-      "Essential reference materials - alphabet, numbers, dates, holidays, French-speaking countries, and language facts",
-    lessonRange: [144, 149], // Reference modules 144-149
+      "Essential reference materials - alphabet, numbers, dates, holidays, French-speaking countries, language facts, and colors",
+    lessonRange: [155, 161], // Reference modules 155-161
     icon: "📚",
     color: "#6366f1",
     isReference: true, // Flag to indicate this is not a numbered unit

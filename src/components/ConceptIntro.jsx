@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
@@ -249,6 +249,22 @@ function ConceptIntro({ lesson, onStartStudying }) {
                       };
                       const genderClass = getGenderClass(item.note);
 
+                      // Detect if this is the start of a new verb/section
+                      const isNewSection = (item, index) => {
+                        if (index === 0) return false;
+                        const note = (item.note || '').toLowerCase();
+                        const french = (item.french || '').toLowerCase();
+                        return note.includes('rank') ||
+                          note.includes('-er verb') ||
+                          note.includes('-ir verb') ||
+                          note.includes('-re verb') ||
+                          note.includes('irregular verb') ||
+                          note.includes('impersonal') ||
+                          note.includes('causative') ||
+                          (french.match(/er$|ir$|re$|oir$/) && !french.includes(' ') && french.length > 3);
+                      };
+                      const needsDivider = isNewSection(item, idx);
+
                       const handleRowClick = (e) => {
                         if (!item.french) return;
 
@@ -287,28 +303,36 @@ function ConceptIntro({ lesson, onStartStudying }) {
                       };
 
                       return (
-                        <tr
-                          key={idx}
-                          onClick={handleRowClick}
-                          className="vocab-row-clickable"
-                          role="button"
-                          tabIndex={0}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                              e.preventDefault();
-                              handleRowClick(e);
-                            }
-                          }}
-                        >
-                          <td className={`vocab-french-intro ${genderClass}`}>
-                            <div className="vocab-with-audio">
-                              {item.french}
-                              <SpeakButton text={item.french} language="fr-FR" size="small" />
-                            </div>
-                          </td>
-                          <td className="vocab-english-intro">{item.english}</td>
-                          <td className="vocab-note-intro">{item.note || '—'}</td>
-                        </tr>
+                        <Fragment key={`vocab-${idx}`}>
+                          {needsDivider && (
+                            <tr className="vocab-divider">
+                              <td colSpan={3}>
+                                <div className="vocab-section-break"></div>
+                              </td>
+                            </tr>
+                          )}
+                          <tr
+                            onClick={handleRowClick}
+                            className="vocab-row-clickable"
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                handleRowClick(e);
+                              }
+                            }}
+                          >
+                            <td className={`vocab-french-intro ${genderClass}`}>
+                              <div className="vocab-with-audio">
+                                {item.french}
+                                <SpeakButton text={item.french} language="fr-FR" size="small" />
+                              </div>
+                            </td>
+                            <td className="vocab-english-intro">{item.english}</td>
+                            <td className="vocab-note-intro">{item.note || '—'}</td>
+                          </tr>
+                        </Fragment>
                       );
                     })}
                   </tbody>

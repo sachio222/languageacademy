@@ -1832,6 +1832,1052 @@ language quickly if we use the right tools.)
 
 ---
 
-**Document Status:** ✅ **IMPLEMENTATION COMPLETE**  
-**Achievement:** Full B2 French competency system with 139 modules
-**Next Action:** Maintain and enhance based on user feedback
+## 🔮 UNIT 12: Curiosity & Complex Questions (PLANNED)
+
+**Goal:** Enable asking ANY question + express curiosity about the world  
+**Philosophy:** Questions as compositional functions - combine existing knowledge into infinite queries  
+**Utility Boost:** Students can ask sophisticated "why/how/what" questions about nature, processes, and causation  
+**Planned Modules:** ~12 modules (151-162)  
+**Theme:** Curiosity, natural phenomena, causative reasoning
+
+### 🎯 Core Insight: Questions Are Function Composition
+
+```javascript
+// Current capability after Unit 11:
+Students can: Make statements, tell stories, express emotions, describe routines
+
+// Unit 12 unlocks:
+Statement → Question transformation for ANY content
+askQuestion(word, subject, verb, complements) → sophisticated queries
+```
+
+### 📊 Vocabulary Gap Analysis
+
+**From target questions students want to ask:**
+
+```
+✅ Pourquoi est-ce que le ciel est bleu? → Have: ciel (colors), bleu (colors)
+✅ Pourquoi l'herbe est verte? → Have: herbe (colors), vert (colors)
+✗ Comment une tortue nage? → Missing: tortue, nager
+✗ Comment un écureuil saute? → Missing: écureuil, sauter
+✓ Qu'est-ce qui fait que le soleil brille? → Have: soleil (reading 11), need: briller
+✗ Qu'est-ce qui rend l'herbe verte? → Need: rendre (causative)
+```
+
+**Missing Vocabulary Categories:**
+
+1. **Animals** (for "how does X do Y?" questions)
+
+   - un oiseau (bird) - top 200 range
+   - une tortue (turtle) - specific but pedagogically perfect
+   - un écureuil (squirrel) - specific but pedagogically perfect
+   - un lapin (rabbit)
+   - un papillon (butterfly)
+   - une abeille (bee)
+
+2. **Movement/Action Verbs** (high-frequency actions)
+
+   - nager (to swim)
+   - sauter (to jump)
+   - voler (to fly)
+   - courir (to run) - common
+   - marcher (to walk) - very common
+   - grimper (to climb)
+
+3. **Natural Phenomena Verbs**
+
+   - briller (to shine)
+   - pousser (to grow/push)
+   - tomber (to fall) - already taught
+   - souffler (to blow - wind)
+   - pleuvoir (to rain) - weather verb
+
+4. **Causative Verbs** (express "what makes X do Y")
+   - rendre (to make/render) + adjective
+   - faire que (to make so that)
+   - causer (to cause)
+
+---
+
+### Phase 1: Nature & Movement Vocabulary (Build the Nouns & Verbs)
+
+#### Module 151: Nature & Animals - Curiosity Vocabulary 🦋
+
+**Why FIRST:**
+
+- Need nouns BEFORE asking questions about them (progressive disclosure!)
+- Animals are universally interesting (dopamine from curiosity!)
+- Sets up for "Comment est-ce qu'un X fait Y?" questions
+- Many from top 200 range (frequency-first!)
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "J'aime les oiseaux" (I like birds)
+                  "Une tortue nage lentement" (A turtle swims slowly)
+                  "Un écureuil saute d'arbre en arbre" (A squirrel jumps tree to tree)
+```
+
+**Chunking:**
+
+- EIGHT animals: oiseau, tortue, écureuil, lapin, papillon, abeille, poisson (review), chat (review)
+- FIVE nature elements: un arbre (tree - review from colors), une plante (plant), une fleur (flower - review), le vent (wind), la pluie (rain)
+- ONE category: natural world vocabulary
+
+**Vocabulary:**
+
+**Animals:**
+
+- **un oiseau** (bird) - masculine, silent 's'
+- **une tortue** (turtle) - feminine, slow movement example
+- **un écureuil** (squirrel) - masculine, fast movement example
+- **un lapin** (rabbit) - masculine, hopping example
+- **un papillon** (butterfly) - masculine, flying example
+- **une abeille** (bee) - feminine, buzzing example
+- **un poisson** (fish - review from food)
+- **un chat** (cat - review from basic nouns)
+
+**Nature Elements:**
+
+- **un arbre** (tree) - review from colors module
+- **une plante** (plant) - feminine
+- **une fleur** (flower) - review from colors
+- **le vent** (wind) - masculine, for "souffler"
+- **la pluie** (rain) - feminine, for "pleuvoir"
+- **la nature** (nature) - feminine, abstract
+
+**Composition:**
+
+```javascript
+// Already have: colors, verbs, questions
+Animals + colors → "un oiseau bleu" (a blue bird)
+Animals + être → "la tortue est lente" (the turtle is slow)
+Animals + avoir → "l'abeille a des ailes" (the bee has wings)
+// Sets up movement questions next!
+```
+
+**Why This Is Essential:**
+
+```
+Without: Can't ask questions about the natural world
+With: "Je vois un oiseau. Comment est-ce qu'il vole?" (I see a bird. How does it fly?)
+```
+
+---
+
+#### Module 152: Movement Verbs - Actions in Nature 🏃
+
+**Why NOW:**
+
+- Have the animals, need the verbs they perform!
+- Natural progression: nouns → verbs → questions about them
+- All regular -ER verbs (low cognitive load after animals)
+- Enables "Comment est-ce que X fait Y?" pattern
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Je nage dans la mer" (I swim in the sea)
+                  "Tu cours vite!" (You run fast!)
+                  "Un oiseau vole" (A bird flies)
+```
+
+**Chunking:**
+
+- SIX movement verbs: nager, sauter, voler, courir, marcher, grimper
+- ONE pattern: all -ER verbs (except courir - regular -IR)
+- ONE function: describe physical movement
+
+**Vocabulary:**
+
+**Movement Verbs:**
+
+- **nager** (to swim) - regular -ER, aquatic movement
+- **sauter** (to jump) - regular -ER, vertical movement
+- **voler** (to fly) - regular -ER, aerial movement
+- **courir** (to run) - irregular -IR, fast ground movement
+- **marcher** (to walk) - regular -ER, slow ground movement
+- **grimper** (to climb) - regular -ER, upward movement
+
+**Composition:**
+
+```javascript
+// Combine animals + movement verbs:
+tortue + nager → "La tortue nage" (The turtle swims)
+écureuil + sauter → "L'écureuil saute" (The squirrel jumps)
+oiseau + voler → "L'oiseau vole" (The bird flies)
+lapin + sauter → "Le lapin saute" (The rabbit jumps)
+
+// Add to any subject:
+je nage, tu cours, il marche, nous grimpons
+// Question setup complete!
+```
+
+**Context-Rich Prompts:**
+
+- "Describe how a turtle moves" → "Une tortue nage"
+- "What does a squirrel do?" → "Un écureuil saute"
+- "How do you get to work?" → "Je marche" or "Je cours"
+
+**Special Note:**
+
+```javascript
+// These verbs work in ALL tenses already learned:
+Present: "Je nage"
+Past: "J'ai nagé" (I swam)
+Imparfait: "Je nageais" (I was swimming)
+Commands: "Nage!" (Swim!)
+// Maximum composition value!
+```
+
+**Milestone Unlocked:** 🎉 **Can describe ALL basic movements!**
+
+---
+
+#### Module 153: Natural Phenomena Verbs - How Nature Works 🌞
+
+**Why NOW:**
+
+- Have animals + movement, now need nature verbs
+- Enables questions about "what makes X happen?"
+- Includes causative patterns
+- Unlocks sophisticated curiosity questions
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Le soleil brille" (The sun shines)
+                  "Les plantes poussent" (Plants grow)
+                  "Il pleut" (It's raining)
+                  "Le vent souffle" (The wind blows)
+```
+
+**Chunking:**
+
+- FIVE nature verbs: briller, pousser, pleuvoir, souffler, tomber (review)
+- TWO irregular patterns: pleuvoir (impersonal), tomber (être verb)
+- ONE function: describe natural processes
+
+**Vocabulary:**
+
+**Natural Phenomena Verbs:**
+
+- **briller** (to shine) - regular -ER, light emission
+- **pousser** (to grow/push) - regular -ER, plant growth
+- **pleuvoir** (to rain) - irregular, impersonal (il pleut only)
+- **souffler** (to blow) - regular -ER, wind action
+- **tomber** (to fall) - regular -ER, uses être in past (review)
+
+**Causative Verb:**
+
+- **rendre** (to make/render) - irregular like prendre
+  - Pattern: rendre + adjective → "rendre X [adjective]"
+  - "Le soleil rend l'herbe verte" (The sun makes the grass green)
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Qu'est-ce qui fait briller le soleil?" (What makes the sun shine?)
+                  "Qu'est-ce qui rend l'herbe verte?" (What makes grass green?)
+                  "Le soleil rend l'eau chaude" (The sun makes water warm)
+```
+
+**Composition:**
+
+```javascript
+// Causative pattern unlocked:
+rendre + noun + adjective → "Le soleil rend l'herbe verte"
+                          → "La pluie rend la terre humide"
+                          → "Le froid rend l'eau glacée"
+
+// Natural phenomena descriptions:
+"Le soleil brille dans le ciel" (The sun shines in the sky)
+"Les plantes poussent au printemps" (Plants grow in spring)
+"Il pleut beaucoup" (It rains a lot)
+"Le vent souffle fort" (The wind blows hard)
+
+// PERFECT for questions:
+"Pourquoi est-ce que le soleil brille?" (Why does the sun shine?)
+"Comment est-ce que les plantes poussent?" (How do plants grow?)
+```
+
+**Special Pattern - rendre:**
+
+```javascript
+// rendre is CRITICAL for causative questions:
+"Qu'est-ce qui rend X [adjective]?"
+→ "What makes X [adjective]?"
+
+Examples:
+"Qu'est-ce qui rend l'herbe verte?" (What makes grass green?)
+"Qu'est-ce qui rend le ciel bleu?" (What makes the sky blue?)
+"Qu'est-ce qui rend les nuages blancs?" (What makes clouds white?)
+
+// Pattern: causative question construction!
+```
+
+**Milestone Unlocked:** 🎉 **Can describe natural processes AND ask causative questions!**
+
+---
+
+### Phase 2: Advanced Question Structures (The Core Skill)
+
+#### Module 154: qu'est-ce qui vs qu'est-ce que - Subject vs Object Questions ⭐⭐⭐
+
+**Why FIRST in question series:**
+
+- BIGGEST confusion point in French questions!
+- Discrimination is key (error-driven learning!)
+- Once mastered, unlocks infinite question variants
+- Uses ALL vocabulary already taught
+
+**The Critical Distinction:**
+
+```
+qu'est-ce qui → What DOES something (subject)
+qu'est-ce que → What DO you verb (object)
+```
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Qu'est-ce qui brille?" (What shines? - subject)
+                  "Qu'est-ce qui fait du bruit?" (What makes noise?)
+                  "Qu'est-ce que tu vois?" (What do you see? - object)
+                  "Qu'est-ce que tu manges?" (What are you eating?)
+```
+
+**Chunking:**
+
+- TWO question patterns: qui (subject) vs que (object)
+- ONE key distinction: Does something vs Do to something
+- Visual pattern recognition
+
+**Error-Driven Learning (CRITICAL!):**
+
+```javascript
+wrongAnswers: [
+  {
+    answer: "Qu'est-ce que brille?",
+    feedback:
+      "Use 'qu'est-ce QUI' when asking what DOES something (subject). 'Brille' has no object! The thing itself shines. Use QUI for subjects, QUE for objects.",
+  },
+  {
+    answer: "Qu'est-ce qui tu manges?",
+    feedback:
+      "Use 'qu'est-ce QUE' when asking what you DO to something (object). You eat SOMETHING. That something is the object. QUI = subject, QUE = object.",
+  },
+  {
+    answer: "Qu'est-ce qui fait que le soleil brille?",
+    feedback:
+      "Perfect! 'Qu'est-ce qui fait' = What does (subject). The subject is doing the action of 'making shine'.",
+  },
+];
+```
+
+**Examples with Nature Vocabulary:**
+
+```javascript
+// Subject questions (qu'est-ce qui):
+"Qu'est-ce qui brille dans le ciel?" (What shines in the sky?)
+→ Answer: "Le soleil brille" (The sun shines)
+
+"Qu'est-ce qui fait que les plantes poussent?" (What makes plants grow?)
+→ Answer: "Le soleil et l'eau font pousser les plantes"
+
+"Qu'est-ce qui rend l'herbe verte?" (What makes grass green?)
+→ Answer: "La chlorophylle rend l'herbe verte"
+
+// Object questions (qu'est-ce que):
+"Qu'est-ce que les oiseaux mangent?" (What do birds eat?)
+→ Answer: "Ils mangent des insectes"
+
+"Qu'est-ce que tu vois dans le ciel?" (What do you see in the sky?)
+→ Answer: "Je vois des nuages"
+
+"Qu'est-ce que le soleil fait?" (What does the sun do?)
+→ Answer: "Il brille et il rend chaud"
+```
+
+**Visual Pattern Recognition:**
+
+```
+Does the verb have a subject but NO object?
+→ qu'est-ce qui
+
+Pattern: [qu'est-ce qui] + [VERB]
+Example: "Qu'est-ce qui tombe?" (What falls?)
+
+Does the verb have a subject AND an object?
+→ qu'est-ce que
+
+Pattern: [qu'est-ce que] + [SUBJECT] + [VERB]
+Example: "Qu'est-ce que tu vois?" (What do you see?)
+```
+
+**Composition:**
+
+```javascript
+// Can now transform ANY statement into a question:
+Statement: "Le soleil brille"
+Question: "Qu'est-ce qui brille?" (What shines?)
+
+Statement: "Je vois un oiseau"
+Question: "Qu'est-ce que tu vois?" (What do you see?)
+
+Statement: "La pluie fait pousser les plantes"
+Question: "Qu'est-ce qui fait pousser les plantes?" (What makes plants grow?)
+
+// INFINITE QUESTIONS UNLOCKED!
+```
+
+**Milestone Unlocked:** 🎉 **Can ask WHAT questions about anything!**
+
+---
+
+#### Module 155: Complex pourquoi Questions - Asking Why About Processes 🤔
+
+**Why NOW:**
+
+- Have subject/object distinction mastered
+- pourquoi already learned (Unit 2), now COMPOSE with complex structures
+- Students desperate to ask "why" about everything!
+- Uses ALL tenses and structures learned
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Pourquoi est-ce que le ciel est bleu?" (Why is the sky blue?)
+                  "Pourquoi est-ce que les oiseaux volent?" (Why do birds fly?)
+                  "Pourquoi est-ce qu'il pleut?" (Why does it rain?)
+                  "Pourquoi est-ce qu'il est en train de courir?" (Why is he running?)
+```
+
+**Chunking:**
+
+- ONE question word: pourquoi (already learned!)
+- INFINITE combinations: pourquoi + ANY structure from Units 1-11
+- ONE pattern: pourquoi est-ce que + [statement]
+
+**Composition Power:**
+
+```javascript
+// Pourquoi works with EVERYTHING learned:
+
+// With être:
+"Pourquoi est-ce que c'est comme ça?" (Why is it like that?)
+"Pourquoi est-ce que les nuages sont blancs?" (Why are clouds white?)
+
+// With avoir:
+"Pourquoi est-ce qu'il a ça?" (Why does he have that?)
+"Pourquoi est-ce que les oiseaux ont des ailes?" (Why do birds have wings?)
+
+// With action verbs:
+"Pourquoi est-ce qu'il fait ça?" (Why does he do that?)
+"Pourquoi est-ce que les plantes poussent?" (Why do plants grow?)
+
+// With progressive (en train de):
+"Pourquoi est-ce qu'il est en train de faire ça?" (Why is he doing that?)
+"Pourquoi est-ce que tu es en train de courir?" (Why are you running?)
+
+// With past tense:
+"Pourquoi est-ce que tu as fait ça?" (Why did you do that?)
+"Pourquoi est-ce que le soleil a brillé hier?" (Why did the sun shine yesterday?)
+
+// With reflexive verbs:
+"Pourquoi est-ce que tu te dépêches?" (Why are you hurrying?)
+
+// With modal verbs:
+"Pourquoi est-ce que je dois faire ça?" (Why do I have to do that?)
+"Pourquoi est-ce qu'on peut voir le soleil?" (Why can we see the sun?)
+```
+
+**Nature Curiosity Questions:**
+
+```javascript
+// Perfect for natural phenomena:
+"Pourquoi est-ce que le ciel est bleu?" (Why is the sky blue?)
+"Pourquoi est-ce que l'herbe est verte?" (Why is grass green?)
+"Pourquoi est-ce que le soleil brille?" (Why does the sun shine?)
+"Pourquoi est-ce que les oiseaux volent vers le sud?" (Why do birds fly south?)
+"Pourquoi est-ce qu'il pleut en automne?" (Why does it rain in autumn?)
+"Pourquoi est-ce que les plantes ont besoin d'eau?" (Why do plants need water?)
+```
+
+**Context-Rich:**
+
+- "Ask why the sky is blue" → "Pourquoi est-ce que le ciel est bleu?"
+- "Ask why birds fly" → "Pourquoi est-ce que les oiseaux volent?"
+- "Ask why someone is doing something" → "Pourquoi est-ce que tu fais ça?"
+
+**Milestone Unlocked:** 🎉 **Can ask WHY about any process or action!**
+
+---
+
+#### Module 156: Complex comment Questions - Asking How Processes Work 🔧
+
+**Why NOW:**
+
+- Parallel to pourquoi module
+- comment already learned, now compose with complex subjects
+- "How does X do Y?" = universal curiosity pattern
+- Enables process understanding questions
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Comment est-ce qu'une tortue nage?" (How does a turtle swim?)
+                  "Comment est-ce qu'un écureuil saute?" (How does a squirrel jump?)
+                  "Comment est-ce qu'on fait ça?" (How do we do that?)
+                  "Comment est-ce que les plantes poussent?" (How do plants grow?)
+```
+
+**Chunking:**
+
+- ONE question word: comment (already learned!)
+- ONE pattern: comment est-ce que + [subject] + [verb]
+- INFINITE subjects: any noun + any verb
+
+**Composition Examples:**
+
+```javascript
+// With animals + movement:
+"Comment est-ce qu'une tortue nage?" (How does a turtle swim?)
+"Comment est-ce qu'un oiseau vole?" (How does a bird fly?)
+"Comment est-ce qu'un écureuil grimpe?" (How does a squirrel climb?)
+"Comment est-ce qu'un lapin saute?" (How does a rabbit jump?)
+
+// With natural processes:
+"Comment est-ce que les plantes poussent?" (How do plants grow?)
+"Comment est-ce que le soleil brille?" (How does the sun shine?)
+"Comment est-ce que la pluie tombe?" (How does rain fall?)
+
+// With people:
+"Comment est-ce qu'on fait ça?" (How do we do that?)
+"Comment est-ce que tu nages?" (How do you swim?)
+"Comment est-ce qu'il court si vite?" (How does he run so fast?)
+
+// With causative:
+"Comment est-ce que ça rend l'herbe verte?" (How does that make grass green?)
+```
+
+**Special Pattern - Inversion (Formal):**
+
+```javascript
+// Introduce formal inversion for sophistication:
+"Comment nage une tortue?" (How does a turtle swim? - formal)
+"Comment vole un oiseau?" (How does a bird fly? - formal)
+
+// But keep est-ce que as primary (easier)
+"Comment est-ce qu'une tortue nage?" (same meaning, easier)
+```
+
+**Milestone Unlocked:** 🎉 **Can ask HOW about any process!**
+
+---
+
+#### Module 157: qui est-ce qui vs qui est-ce que - Who Questions (Subject vs Object) 👥
+
+**Why NOW:**
+
+- Parallel pattern to qu'est-ce qui/que (transfer learning!)
+- Same discrimination: subject vs object
+- Completes the subject/object question system
+- Lower cognitive load (already know the pattern!)
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Qui est-ce qui fait ça?" (Who does that? - subject)
+                  "Qui est-ce que tu vois?" (Who do you see? - object)
+                  "Qui est-ce qui parle français?" (Who speaks French?)
+```
+
+**Chunking:**
+
+- TWO patterns: qui (subject) vs que (object)
+- ONE key insight: SAME as qu'est-ce qui/que but for PEOPLE
+- Transfer learning from Module 154
+
+**Pattern Recognition:**
+
+```
+Same pattern as before, just change what to who:
+
+qu'est-ce qui (what - subject) → qui est-ce qui (who - subject)
+qu'est-ce que (what - object) → qui est-ce que (who - object)
+```
+
+**Examples:**
+
+```javascript
+// Subject questions (qui est-ce qui):
+"Qui est-ce qui nage?" (Who swims?)
+"Qui est-ce qui parle français?" (Who speaks French?)
+"Qui est-ce qui a fait ça?" (Who did that?)
+
+// Object questions (qui est-ce que):
+"Qui est-ce que tu vois?" (Who do you see?)
+"Qui est-ce que tu aimes?" (Who do you like?)
+"Qui est-ce que je dois appeler?" (Who should I call?)
+```
+
+**Error-Driven Learning:**
+
+```javascript
+wrongAnswers: [
+  {
+    answer: "Qui est-ce que parle?",
+    feedback:
+      "Use 'qui est-ce QUI' for who DOES something (subject). Same rule as qu'est-ce qui/que!",
+  },
+  {
+    answer: "Qui est-ce qui tu vois?",
+    feedback:
+      "Use 'qui est-ce QUE' for who you DO something to (object). You see WHOM.",
+  },
+];
+```
+
+**Milestone Unlocked:** 🎉 **Complete subject/object question mastery for both WHAT and WHO!**
+
+---
+
+### Phase 3: Advanced Question Refinement (Native-Level Polish)
+
+#### Module 158: Inversion Questions - Formal Register 🎩
+
+**Why NOW:**
+
+- Students have est-ce que mastered
+- Ready for formal/written French
+- Adds stylistic range
+- Common in reading and formal speech
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Pourquoi les nuages sont-ils blancs?" (Why are clouds white? - formal)
+                  "Comment fait-on ça?" (How does one do that? - formal)
+                  "Où vas-tu?" (Where are you going? - formal)
+```
+
+**Chunking:**
+
+- ONE concept: inversion for questions
+- ONE rule: verb-subject with hyphen
+- ONE trick: add -t- for liaison (il/elle with vowel-ending verbs)
+
+**Pattern:**
+
+```javascript
+// Regular inversion:
+est-ce que: "Comment est-ce que tu fais ça?"
+inversion: "Comment fais-tu ça?"
+
+est-ce que: "Pourquoi est-ce qu'il court?"
+inversion: "Pourquoi court-il?"
+
+// Liaison trick with -t-:
+"Pourquoi est-ce qu'il a ça?" → "Pourquoi a-t-il ça?"
+"Où est-ce qu'elle va?" → "Où va-t-elle?"
+```
+
+**Examples with Nature Questions:**
+
+```javascript
+"Pourquoi les nuages sont-ils blancs?" (Why are clouds white?)
+"Comment nage une tortue?" (How does a turtle swim?)
+"Où vont les oiseaux en hiver?" (Where do birds go in winter?)
+"Quand fleurissent les plantes?" (When do plants bloom?)
+```
+
+**Special Note:**
+
+```javascript
+// Inversion is MORE common with:
+- Questions words (où, quand, comment, pourquoi)
+- Formal writing
+- Literature
+
+// Less common with:
+- Casual conversation
+- "What" questions (prefer qu'est-ce que)
+
+// Both are correct, students choose based on register!
+```
+
+---
+
+#### Module 159: Embedded Questions - Indirect Questions 💬
+
+**Why NOW:**
+
+- Makes questions softer, more polite
+- Common in conversation
+- Adds native-like sophistication
+- Uses question structures already learned
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Je me demande pourquoi c'est comme ça" (I wonder why it's like that)
+                  "Je ne sais pas comment on fait ça" (I don't know how we do that)
+                  "Peux-tu me dire où est la gare?" (Can you tell me where the station is?)
+```
+
+**Chunking:**
+
+- ONE concept: questions inside statements
+- THREE starters: "je me demande", "je ne sais pas", "peux-tu me dire"
+- ONE rule: no inversion after these phrases
+
+**Pattern:**
+
+```javascript
+// Direct question:
+"Pourquoi est-ce que le ciel est bleu?" (Why is the sky blue?)
+
+// Embedded question:
+"Je me demande pourquoi le ciel est bleu" (I wonder why the sky is blue)
+// NOTE: No "est-ce que" needed! Just statement order.
+
+// More examples:
+Direct: "Comment est-ce qu'une tortue nage?"
+Embedded: "Je ne sais pas comment une tortue nage"
+
+Direct: "Où est-ce que tu vas?"
+Embedded: "Peux-tu me dire où tu vas?"
+```
+
+**Context-Rich:**
+
+```javascript
+// Makes questions more polite:
+"Tu sais pourquoi il fait ça?" (Do you know why he does that?)
+"Je me demande comment ça marche" (I wonder how that works)
+"On ne comprend pas pourquoi c'est comme ça" (We don't understand why it's like that)
+
+// Natural conversation flow!
+```
+
+---
+
+#### Module 160: Rhetorical & Negative Questions - Advanced Style ✨
+
+**Why NOW:**
+
+- Adds native sophistication
+- Express opinion through questions
+- Common in persuasive speech
+- Final polish on question skills
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "N'est-ce pas vrai?" (Isn't that true? - seeking agreement)
+                  "Comment ne pas aimer ça?" (How can you not love that? - rhetorical)
+                  "Qui ne voudrait pas ça?" (Who wouldn't want that? - rhetorical)
+```
+
+**Chunking:**
+
+- TWO types: negative questions (seeking agreement) & rhetorical (expressing opinion)
+- ONE function: persuasion and emphasis
+- Stylistic refinement
+
+**Examples:**
+
+```javascript
+// Negative questions:
+"N'est-ce pas magnifique?" (Isn't that magnificent?)
+"Ne veux-tu pas essayer?" (Don't you want to try?)
+"N'as-tu pas faim?" (Aren't you hungry?)
+
+// Rhetorical questions:
+"Comment ne pas aimer le soleil?" (How can one not love the sun?)
+"Qui ne voudrait pas apprendre le français?" (Who wouldn't want to learn French?)
+"Pourquoi ne pas essayer?" (Why not try?)
+```
+
+---
+
+#### Module 161: Questions with Multiple Clauses - Full Complexity 🌟
+
+**Why NOW:**
+
+- Final module combines EVERYTHING
+- Can ask about subjunctive/conditional structures (Unit 10!)
+- Maximum compositional power
+- Native-level question complexity
+
+**Immediate Utility:**
+
+```
+After 30 minutes: "Pourquoi est-ce que tu veux que je fasse ça?"
+                  (Why do you want me to do that? - using subjunctive!)
+                  "Comment est-ce que tu penses qu'on devrait faire ça?"
+                  (How do you think we should do that?)
+```
+
+**Composition:**
+
+```javascript
+// Questions + Unit 10 subjunctive phrases:
+"Pourquoi est-ce qu'il faut que je fasse ça?"
+(Why do I have to do that? - necessity + question)
+
+"Comment est-ce que tu veux que je le fasse?"
+(How do you want me to do it? - wish + question)
+
+"Pourquoi est-ce que tu penses que c'est comme ça?"
+(Why do you think it's like that? - opinion + question)
+
+// Questions + causative + conditional:
+"Qu'est-ce qui rendrait l'herbe plus verte?"
+(What would make grass greener? - conditional question)
+
+"Pourquoi est-ce que ça ne marche pas?"
+(Why doesn't it work? - negative question + process)
+```
+
+**Milestone Unlocked:** 🎉 **Can ask ANY question in French - from simple to native-level complex!**
+
+---
+
+### Phase 4: Integration & Practice
+
+#### Module 162: Reading 12 - "La Curiosité" (Curiosity) 🧠
+
+**Theme:** A philosophical passage about curiosity exploring the natural world
+
+**Uses ALL Unit 12 vocabulary:**
+
+- Nature vocabulary (animals, plants, sky, sun)
+- Movement verbs (nager, voler, sauter)
+- Question structures (pourquoi, comment, qu'est-ce qui)
+- Causative reasoning (rendre, faire que)
+
+**Example excerpt:**
+
+```
+"Pourquoi est-ce que le ciel est bleu? Qu'est-ce qui rend l'herbe verte?
+Comment est-ce qu'une tortue nage si lentement? Ce sont les questions
+qu'un enfant pose. La curiosité est naturelle. Quand on se demande
+comment les choses marchent, on apprend. Les oiseaux volent, les
+écureuils sautent, les plantes poussent - tout a une raison. On doit
+toujours poser des questions, car c'est comme ça qu'on comprend le monde."
+
+(Why is the sky blue? What makes grass green? How does a turtle swim
+so slowly? These are questions a child asks. Curiosity is natural.
+When we wonder how things work, we learn. Birds fly, squirrels jump,
+plants grow - everything has a reason. We must always ask questions,
+because that's how we understand the world.)
+```
+
+**Demonstrates:**
+
+- ✅ All question types from Unit 12
+- ✅ Nature/animal vocabulary
+- ✅ Embedded questions ("on se demande...")
+- ✅ Causative reasoning
+- ✅ Philosophical tone about learning
+
+---
+
+#### Module 163: Unit 12 Practice - Fill in the Blanks
+
+**Interleaved practice with:**
+
+- Animal/nature vocabulary
+- Movement verbs in all tenses
+- All question structures (qu'est-ce qui/que, qui/que, pourquoi, comment)
+- Causative patterns (rendre + adjective)
+
+---
+
+#### Module 164: Unit 12 Final Exam - Question Construction Mastery
+
+**Comprehensive test with 40 questions:**
+
+- Vocabulary recall (animals, nature, movement verbs)
+- Question transformation (statement → question)
+- Subject vs object discrimination (qui/que distinction)
+- Complex question construction (embedded, rhetorical)
+- Causative reasoning (rendre patterns)
+
+**Randomized for interleaving!**
+
+---
+
+## 🎯 Unit 12 Achievement Summary
+
+### What Students Can NOW Do:
+
+**Before Unit 12:**
+
+- ✅ Could make statements about everything
+- ✅ Could tell complex stories
+- ✅ Could express emotions and hypotheticals
+- ❌ Limited question-asking ability (basic questions only)
+
+**After Unit 12:**
+
+- ✅ Can ask WHY about any process: "Pourquoi est-ce que le ciel est bleu?"
+- ✅ Can ask HOW about any action: "Comment est-ce qu'une tortue nage?"
+- ✅ Can ask WHAT causes things: "Qu'est-ce qui rend l'herbe verte?"
+- ✅ Can ask WHO does things: "Qui est-ce qui fait ça?"
+- ✅ Can use formal register: "Pourquoi les nuages sont-ils blancs?"
+- ✅ Can ask polite questions: "Je me demande comment ça marche"
+- ✅ Can ask complex questions: "Pourquoi est-ce que tu veux que je fasse ça?"
+
+### Compositional Power:
+
+```javascript
+// Unit 12 unlocks infinite curiosity:
+Any vocabulary × Any question word × Any tense = Infinite questions
+
+Example transformations:
+"Le soleil brille" → "Pourquoi est-ce que le soleil brille?"
+"Les oiseaux volent" → "Comment est-ce que les oiseaux volent?"
+"Le froid rend l'eau glacée" → "Qu'est-ce qui rend l'eau glacée?"
+
+// Can ask about ANYTHING learned in Units 1-11!
+```
+
+### Metrics:
+
+- **Modules:** 14 (151-164)
+- **New Vocabulary:** ~40 words (animals, movement verbs, nature)
+- **New Structures:** 6 question patterns (qui/que distinction mastered)
+- **Utility Score:** 10/10 ⭐ - Curiosity is universal!
+- **CEFR Level:** B2+ (Native-like questioning ability)
+- **Time Estimate:** ~7 hours (14 modules × 30 min)
+
+### The Final Capability:
+
+**Students can now express ANY thought in French:**
+
+- ✅ Statements (Units 1-11)
+- ✅ Questions (Unit 12)
+- ✅ Past/Present/Future (All tenses)
+- ✅ Emotions/Wishes/Hypotheticals (Unit 10)
+- ✅ Commands (Unit 8)
+- ✅ Stories (Unit 9)
+
+**= COMPLETE FRENCH COMPETENCY! 🎓🎉**
+
+---
+
+## 🎉 Final System Achievement
+
+**Total Modules:** 164 (158 learning + 6 reference)  
+**Total Units:** 12 complete pedagogical units + Reference  
+**CEFR Level:** B2+ (Complete competency + native-level questioning)  
+**Top 200 Words:** ~190/200 (95%)  
+**Student Capability:** Can discuss, narrate, question, command, and express anything
+
+### The Beautiful Arc:
+
+```
+Unit 1-6:   Foundation → Can communicate basics
+Unit 7:     Knowledge → Can discuss learning
+Unit 8:     Daily Life → Can describe routines
+Unit 9:     Storytelling → Can narrate past events
+Unit 10:    Mastery → Can express sophisticated thoughts
+Unit 11:    Essentials → Can handle practical situations
+Unit 12:    Curiosity → Can ask about ANYTHING
+
+= COMPLETE LINGUISTIC AUTONOMY ACHIEVED ✨
+```
+
+---
+
+## 🚨 CRITICAL: How Module Numbering Actually Works
+
+### THE RULE YOU MUST NEVER FORGET:
+
+**Module numbers are assigned SEQUENTIALLY based on position in the `moduleConfigs` array!**
+
+```javascript
+// In lessonData.js:
+const moduleConfigs = [
+  famousWords, // Position 0 → Module 1
+  module1, // Position 1 → Module 2
+  module3_etre, // Position 2 → Module 3
+  // ... continues sequentially ...
+  unit11Exam, // Position 142 → Module 143
+
+  // Add new modules HERE:
+  natureAnimalsModule, // Position 143 → Module 144 (NOT 151!)
+  movementVerbsModule, // Position 144 → Module 145 (NOT 152!)
+  // ...
+];
+
+// Module IDs are set dynamically:
+const allLessons = moduleConfigs.map((config, index) => {
+  const moduleId = index + 1; // ← Array index + 1 = module number!
+  // ...
+});
+```
+
+### THE MISTAKE YOU KEEP MAKING:
+
+❌ **WRONG:** Thinking you can "skip" numbers 144-150 and start at 151  
+❌ **WRONG:** Using comment numbers as actual module positions  
+❌ **WRONG:** Setting lessonRange to imaginary positions
+
+✅ **RIGHT:** Module numbers = array position + 1, ALWAYS  
+✅ **RIGHT:** Comments are documentation, not reality  
+✅ **RIGHT:** Set lessonRange to ACTUAL array positions
+
+### How to Add a New Unit:
+
+1. **Find the last module's position:**
+   - Last learning module before reference: `unit11Exam` at position 142 → Module 143
+2. **Add your modules AFTER it in the array:**
+   - Insert 11 modules → They become modules 144-154 automatically
+3. **Update unitStructure with ACTUAL positions:**
+
+   ```javascript
+   {
+     id: 12,
+     lessonRange: [144, 154],  // Use ACTUAL positions, not wished numbers!
+   }
+   ```
+
+4. **Update reference module range:**
+
+   - Reference modules shift down by 11 positions
+   - Were [144, 150] → Now [155, 161]
+
+5. **Update the conditional for reference titles:**
+   ```javascript
+   if (moduleId >= 155 && moduleId <= 161) {
+     // Use ACTUAL positions!
+     const romanIndex = moduleId - 155; // Subtract the START position!
+   }
+   ```
+
+### Verification Command:
+
+```bash
+node -e "import('./src/lessons/lessonData.js').then(m => {
+  console.log('Total:', m.lessons.length);
+  console.log('First of Unit 12:', m.lessons[143]?.title);
+  console.log('Last of Unit 12:', m.lessons[153]?.title);
+  console.log('First Reference:', m.lessons[154]?.title);
+})"
+```
+
+### WHY This Happens:
+
+The `moduleConfigs` array is **position-based**, not **ID-based**. When you add modules, they don't magically jump to a specific number - they take the NEXT available sequential position.
+
+**Never assume module numbers. Always count array positions.**
+
+---
+
+**Document Status:** ✅ **IMPLEMENTATION COMPLETE** + ✅ **UNIT 12 MODULES 144-154 IMPLEMENTED**  
+**Achievement:** Full B2+ French competency system with 161 modules  
+**Next Action:** Create Reading 12, Practice, and Exam modules

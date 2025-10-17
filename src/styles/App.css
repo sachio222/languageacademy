@@ -83,6 +83,16 @@ body {
 .lesson-content-wrapper {
   position: relative;
   min-height: 100%;
+  animation: fadeInContent 0.2s ease-out;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Floating Action Button for Feedback */
@@ -557,6 +567,18 @@ body:has(.left-nav.collapsed) .app-footer {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  animation: slideUpFadeIn 0.25s ease-out;
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .lesson-view:has(.reading-module-layout) {
