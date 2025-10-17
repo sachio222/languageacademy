@@ -344,15 +344,15 @@
 /* Responsive */
 @media (max-width: 968px) {
   .study-container {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 
   .study-mode {
-    padding: 2rem 1rem;
+    padding: 2rem 0.75rem;
   }
 
   .flashcard {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
     min-height: 320px;
   }
 
@@ -372,11 +372,11 @@
 
 @media (max-width: 768px) {
   .study-container {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .study-mode {
-    padding: 1.5rem 0.75rem;
+    padding: 1.5rem 0.5rem;
   }
 
   .study-header {
@@ -392,7 +392,7 @@
   }
 
   .flashcard {
-    padding: 2.5rem 1.25rem;
+    padding: 2.5rem 0.75rem;
     min-height: 300px;
     margin-bottom: 2rem;
   }
@@ -425,11 +425,11 @@
 
 @media (max-width: 640px) {
   .study-container {
-    padding: 0.5rem;
+    padding: 0.25rem;
   }
 
   .study-mode {
-    padding: 1.25rem 0.5rem;
+    padding: 1.25rem 0.25rem;
     border-radius: 8px;
   }
 
@@ -456,7 +456,7 @@
   }
 
   .flashcard {
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
     min-height: 280px;
     margin-bottom: 1.5rem;
     border-radius: 12px;
