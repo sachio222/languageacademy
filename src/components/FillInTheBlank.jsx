@@ -7,7 +7,7 @@ import { checkAnswer } from '../linter/frenchLinter';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
 import '../styles/FillInTheBlank.css';
 
-function FillInTheBlank({ module, onComplete }) {
+function FillInTheBlank({ module, onComplete, onBack }) {
   // Helper to get initial sentence index from URL (1-based to 0-based) with validation
   const getInitialSentenceIndex = () => {
     const params = new URLSearchParams(window.location.search);
@@ -212,8 +212,13 @@ function FillInTheBlank({ module, onComplete }) {
   };
 
   const handleFinish = () => {
-    if (onComplete) {
+    if (passed && onComplete) {
       onComplete(passed);
+    } else if (!passed && onBack) {
+      onBack();
+    } else {
+      // Fallback: navigate back to modules if no handlers
+      window.history.back();
     }
   };
 

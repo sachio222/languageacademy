@@ -566,6 +566,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
               }
               // User can select another module from sidebar
             }}
+            onBack={onBack}
           />
         </div>
       ) : lesson.isUnitExam ? (
