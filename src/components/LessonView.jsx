@@ -8,6 +8,7 @@ import ModuleExam from './ModuleExam';
 import UnitExam from './UnitExam';
 import ModuleCompleteModal from './ModuleCompleteModal';
 import FillInTheBlank from './FillInTheBlank';
+import PhonicsView from './PhonicsView';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
@@ -43,8 +44,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     const isReading = lesson.skipStudyMode || lesson.isReadingComprehension;
     const isUnitExam = lesson.isUnitExam;
     const isFillInBlank = lesson.isFillInTheBlank;
+    const isPhonics = lesson.isPhonicsReference;
 
-    if (isReading || isUnitExam || isFillInBlank) {
+    if (isReading || isUnitExam || isFillInBlank || isPhonics) {
       // Special modules don't use view parameter - clear it if present
       if (view) {
         const url = new URL(window.location);
@@ -337,6 +339,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         const isReading = lesson.skipStudyMode || lesson.isReadingComprehension;
         const isUnitExam = lesson.isUnitExam;
         const isFillInBlank = lesson.isFillInTheBlank;
+        const isPhonics = lesson.isPhonicsReference;
 
         // Restore exercise index (convert 1-based to 0-based) with validation
         if (exerciseParam) {
@@ -356,7 +359,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         }
 
         // Skip view changes for special module types
-        if (isReading || isUnitExam || isFillInBlank) return;
+        if (isReading || isUnitExam || isFillInBlank || isPhonics) return;
 
         // Update view state based on URL
         switch (view) {
@@ -399,10 +402,11 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
   // Reset state when lesson changes (new module loads)
   useEffect(() => {
-    // Skip EVERYTHING for reading comprehension, unit exams, or fill-in-blank - go straight to exercises
+    // Skip EVERYTHING for reading comprehension, unit exams, fill-in-blank, or phonics - go straight to content
     const isReading = lesson.skipStudyMode || lesson.isReadingComprehension;
     const isUnitExam = lesson.isUnitExam;
     const isFillInBlank = lesson.isFillInTheBlank;
+    const isPhonics = lesson.isPhonicsReference;
 
     // Get the view from URL to determine initial state
     const params = new URLSearchParams(window.location.search);
@@ -419,7 +423,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     }
 
     // For special module types, always go straight to practice
-    if (isReading || isUnitExam || isFillInBlank) {
+    if (isReading || isUnitExam || isFillInBlank || isPhonics) {
       setShowIntro(false);
       setIsStudying(false);
       setStudyCompleted(true);
@@ -544,7 +548,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         </div>
       </div>
 
-      {showIntro && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (
+      {lesson.isPhonicsReference ? (
+        <PhonicsView />
+      ) : showIntro && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (
         <div className="intro-container">
           <div className="intro-skip">
             <button className="btn-skip" onClick={handleSkipIntro}>

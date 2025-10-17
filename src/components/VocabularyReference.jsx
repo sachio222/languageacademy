@@ -103,17 +103,14 @@ function VocabularyReference({ vocabulary, title }) {
     if (index === 0) return false; // First item never needs divider
 
     const note = (item.note || '').toLowerCase();
-    const french = (item.french || '').toLowerCase();
 
-    // Detect new verb/section by checking note for verb type patterns
-    const isNewVerb = note.includes('rank') ||
-      note.includes('-er verb') ||  // Catches "regular -ER verb" etc.
-      note.includes('-ir verb') ||  // Catches "regular -IR verb" etc.
-      note.includes('-re verb') ||
+    // ONLY check note field for explicit verb markers - don't guess from french word!
+    const isNewVerb = note.includes('regular -er verb') ||
+      note.includes('regular -ir verb') ||
+      note.includes('irregular -ir verb') ||
       note.includes('irregular verb') ||
-      note.includes('impersonal') ||  // For verbs like pleuvoir
-      note.includes('causative') ||    // For rendre
-      (french.match(/er$|ir$|re$|oir$/) && !french.includes(' ') && french.length > 3);
+      note.includes('impersonal') ||
+      note.includes('causative');
 
     return isNewVerb;
   };

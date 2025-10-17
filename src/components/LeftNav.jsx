@@ -324,7 +324,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
     <>
       {/* Mobile Overlay */}
       {mobileNavOpen && (
-        <div 
+        <div
           className="nav-overlay"
           onClick={onCloseMobileNav}
           aria-hidden="true"
@@ -345,269 +345,269 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
               </button>
             )}
 
-          {/* Search Bar */}
-          <div className="nav-search">
-            <div className="search-input-wrapper">
-              <span className="search-icon">🔍</span>
-              <input
-                type="text"
-                className="search-input"
-                placeholder="Search modules, vocab..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              {searchQuery && (
-                <button
-                  className="search-clear"
-                  onClick={() => setSearchQuery('')}
-                >
-                  ✕
-                </button>
-              )}
-            </div>
-            <button
-              className="nav-collapse-btn"
-              onClick={onToggleCollapse}
-              title="Collapse sidebar"
-            >
-              <ChevronLeft size={18} />
-            </button>
-          </div>
-
-          {/* Tabs */}
-          <div className="nav-tabs">
-            <button
-              className={`nav-tab ${activeTab === 'tree' ? 'active' : ''}`}
-              onClick={() => setActiveTab('tree')}
-            >
-              Modules
-            </button>
-            <button
-              className={`nav-tab ${activeTab === 'vocab' ? 'active' : ''}`}
-              onClick={() => setActiveTab('vocab')}
-            >
-              Vocabulary
-            </button>
-          </div>
-
-          {/* Content */}
-          <div className="nav-content" ref={navContentRef}>
-            {activeTab === 'tree' ? (
-              // Module Tree View
-              <div className="nav-tree">
-                {filteredUnits.length === 0 ? (
-                  <div className="nav-empty">
-                    No modules found for "{searchQuery}"
-                  </div>
-                ) : (
-                  filteredUnits.map(unit => {
-                    const isCollapsed = collapsedUnits.has(unit.id);
-                    const unitLessons = unit.lessons;
-
-                    return (
-                      <div key={unit.id} className="nav-unit">
-                        <div
-                          className={`nav-unit-header ${stickyHeaders.has(unit.id) ? 'sticky' : ''}`}
-                          onClick={() => toggleUnit(unit.id)}
-                          data-unit-id={unit.id}
-                        >
-                          <span className="nav-unit-icon">{unit.icon}</span>
-                          <span className="nav-unit-title">{unit.title}</span>
-                          <ChevronDown
-                            size={14}
-                            className={`nav-unit-chevron ${isCollapsed ? 'collapsed' : ''}`}
-                          />
-                        </div>
-
-                        {!isCollapsed && (
-                          <div className="nav-unit-lessons">
-                            {unitLessons.map(lesson => {
-                              const isActive = currentLesson === lesson.id;
-                              const completion = getLessonCompletion(lesson);
-                              const isComplete = completion === 100;
-
-                              return (
-                                <div
-                                  key={lesson.id}
-                                  className={`nav-lesson ${isActive ? 'active' : ''} ${isComplete ? 'complete' : ''}`}
-                                  onClick={() => {
-                                    onLessonSelect(lesson.id);
-                                    if (mobileNavOpen) {
-                                      onCloseMobileNav();
-                                    }
-                                  }}
-                                >
-                                  <div className="nav-lesson-main">
-                                    {lesson.isUnitExam ? (
-                                      <span className="nav-lesson-exam-icon">
-                                        <Award size={16} />
-                                      </span>
-                                    ) : lesson.isReadingComprehension ? (
-                                      <span className="nav-lesson-reading-icon">
-                                        <BookOpen size={16} />
-                                      </span>
-                                    ) : lesson.isFillInTheBlank ? (
-                                      <span className="nav-lesson-practice-icon">
-                                        <TextCursorInput size={16} />
-                                      </span>
-                                    ) : (
-                                      <span className="nav-lesson-number">
-                                        {lesson.id}
-                                      </span>
-                                    )}
-                                    <span className="nav-lesson-title">
-                                      {getNavTitle(lesson.title)}
-                                    </span>
-                                    {isComplete && (
-                                      <span className="nav-lesson-check">✓</span>
-                                    )}
-                                  </div>
-                                  {!isComplete && completion > 0 && (
-                                    <div className="nav-lesson-progress">
-                                      <div
-                                        className="nav-lesson-progress-bar"
-                                        style={{ width: `${completion}%` }}
-                                      />
-                                    </div>
-                                  )}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })
+            {/* Search Bar */}
+            <div className="nav-search">
+              <div className="search-input-wrapper">
+                <span className="search-icon">🔍</span>
+                <input
+                  type="text"
+                  className="search-input"
+                  placeholder="Search modules, vocab..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                {searchQuery && (
+                  <button
+                    className="search-clear"
+                    onClick={() => setSearchQuery('')}
+                  >
+                    ✕
+                  </button>
                 )}
               </div>
-            ) : (
-              // Vocabulary Index View
-              <div className="nav-vocab">
-                {filteredVocab.length === 0 ? (
-                  <div className="nav-empty">
-                    No vocabulary found for "{searchQuery}"
-                  </div>
-                ) : (
-                  filteredVocab.map((vocab, idx) => {
-                    const handleSpeak = (e) => {
-                      if ('speechSynthesis' in window) {
-                        window.speechSynthesis.cancel();
+              <button
+                className="nav-collapse-btn"
+                onClick={onToggleCollapse}
+                title="Collapse sidebar"
+              >
+                <ChevronLeft size={18} />
+              </button>
+            </div>
 
-                        const utterance = new SpeechSynthesisUtterance(vocab.french);
-                        utterance.lang = 'fr-FR';
-                        utterance.rate = 0.9;
-                        utterance.pitch = 1.0;
-                        utterance.volume = 1.0;
+            {/* Tabs */}
+            <div className="nav-tabs">
+              <button
+                className={`nav-tab ${activeTab === 'tree' ? 'active' : ''}`}
+                onClick={() => setActiveTab('tree')}
+              >
+                Modules
+              </button>
+              <button
+                className={`nav-tab ${activeTab === 'vocab' ? 'active' : ''}`}
+                onClick={() => setActiveTab('vocab')}
+              >
+                Vocabulary
+              </button>
+            </div>
 
-                        let voices = window.speechSynthesis.getVoices();
+            {/* Content */}
+            <div className="nav-content" ref={navContentRef}>
+              {activeTab === 'tree' ? (
+                // Module Tree View
+                <div className="nav-tree">
+                  {filteredUnits.length === 0 ? (
+                    <div className="nav-empty">
+                      No modules found for "{searchQuery}"
+                    </div>
+                  ) : (
+                    filteredUnits.map(unit => {
+                      const isCollapsed = collapsedUnits.has(unit.id);
+                      const unitLessons = unit.lessons;
 
-                        // Handle async voice loading (some browsers load voices asynchronously)
-                        if (voices.length === 0) {
-                          window.speechSynthesis.addEventListener("voiceschanged", () => {
-                            voices = window.speechSynthesis.getVoices();
+                      return (
+                        <div key={unit.id} className="nav-unit">
+                          <div
+                            className={`nav-unit-header ${stickyHeaders.has(unit.id) ? 'sticky' : ''}`}
+                            onClick={() => toggleUnit(unit.id)}
+                            data-unit-id={unit.id}
+                          >
+                            <span className="nav-unit-icon">{unit.icon}</span>
+                            <span className="nav-unit-title">{unit.title}</span>
+                            <ChevronDown
+                              size={14}
+                              className={`nav-unit-chevron ${isCollapsed ? 'collapsed' : ''}`}
+                            />
+                          </div>
+
+                          {!isCollapsed && (
+                            <div className="nav-unit-lessons">
+                              {unitLessons.map(lesson => {
+                                const isActive = currentLesson === lesson.id;
+                                const completion = getLessonCompletion(lesson);
+                                const isComplete = completion === 100;
+
+                                return (
+                                  <div
+                                    key={lesson.id}
+                                    className={`nav-lesson ${isActive ? 'active' : ''} ${isComplete ? 'complete' : ''}`}
+                                    onClick={() => {
+                                      onLessonSelect(lesson.id);
+                                      if (mobileNavOpen) {
+                                        onCloseMobileNav();
+                                      }
+                                    }}
+                                  >
+                                    <div className="nav-lesson-main">
+                                      {lesson.isUnitExam ? (
+                                        <span className="nav-lesson-exam-icon">
+                                          <Award size={16} />
+                                        </span>
+                                      ) : lesson.isReadingComprehension ? (
+                                        <span className="nav-lesson-reading-icon">
+                                          <BookOpen size={16} />
+                                        </span>
+                                      ) : lesson.isFillInTheBlank ? (
+                                        <span className="nav-lesson-practice-icon">
+                                          <TextCursorInput size={16} />
+                                        </span>
+                                      ) : (
+                                        <span className="nav-lesson-number">
+                                          {lesson.id}
+                                        </span>
+                                      )}
+                                      <span className="nav-lesson-title">
+                                        {getNavTitle(lesson.title)}
+                                      </span>
+                                      {isComplete && (
+                                        <span className="nav-lesson-check">✓</span>
+                                      )}
+                                    </div>
+                                    {!isComplete && completion > 0 && (
+                                      <div className="nav-lesson-progress">
+                                        <div
+                                          className="nav-lesson-progress-bar"
+                                          style={{ width: `${completion}%` }}
+                                        />
+                                      </div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+              ) : (
+                // Vocabulary Index View
+                <div className="nav-vocab">
+                  {filteredVocab.length === 0 ? (
+                    <div className="nav-empty">
+                      No vocabulary found for "{searchQuery}"
+                    </div>
+                  ) : (
+                    filteredVocab.map((vocab, idx) => {
+                      const handleSpeak = (e) => {
+                        if ('speechSynthesis' in window) {
+                          window.speechSynthesis.cancel();
+
+                          const utterance = new SpeechSynthesisUtterance(vocab.french);
+                          utterance.lang = 'fr-FR';
+                          utterance.rate = 0.9;
+                          utterance.pitch = 1.0;
+                          utterance.volume = 1.0;
+
+                          let voices = window.speechSynthesis.getVoices();
+
+                          // Handle async voice loading (some browsers load voices asynchronously)
+                          if (voices.length === 0) {
+                            window.speechSynthesis.addEventListener("voiceschanged", () => {
+                              voices = window.speechSynthesis.getVoices();
+                              const bestVoice = selectBestVoice(voices, utterance.lang);
+                              if (bestVoice) {
+                                utterance.voice = bestVoice;
+                                console.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
+                              }
+                              window.speechSynthesis.speak(utterance);
+                            });
+                          } else {
                             const bestVoice = selectBestVoice(voices, utterance.lang);
                             if (bestVoice) {
                               utterance.voice = bestVoice;
                               console.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
                             }
                             window.speechSynthesis.speak(utterance);
-                          });
-                        } else {
-                          const bestVoice = selectBestVoice(voices, utterance.lang);
-                          if (bestVoice) {
-                            utterance.voice = bestVoice;
-                            console.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
                           }
-                          window.speechSynthesis.speak(utterance);
                         }
-                      }
-                    };
+                      };
 
-                    return (
-                      <div key={idx} className="nav-vocab-item">
-                        <div
-                          className="nav-vocab-word"
-                          onClick={handleSpeak}
-                          role="button"
-                          tabIndex={0}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                              e.preventDefault();
-                              handleSpeak();
-                            }
-                          }}
-                        >
-                          <div className="nav-vocab-text">
-                            <span className="nav-vocab-french">{vocab.french}</span>
-                            <span className="nav-vocab-english">{vocab.english}</span>
+                      return (
+                        <div key={idx} className="nav-vocab-item">
+                          <div
+                            className="nav-vocab-word"
+                            onClick={handleSpeak}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                handleSpeak();
+                              }
+                            }}
+                          >
+                            <div className="nav-vocab-text">
+                              <span className="nav-vocab-french">{vocab.french}</span>
+                              <span className="nav-vocab-english">{vocab.english}</span>
+                            </div>
+                            <SpeakButton
+                              text={vocab.french}
+                              language="fr-FR"
+                              size="medium"
+                              className="nav-vocab-speaker"
+                            />
                           </div>
-                          <SpeakButton
-                            text={vocab.french}
-                            language="fr-FR"
-                            size="medium"
-                            className="nav-vocab-speaker"
-                          />
+                          <div className="nav-vocab-lessons">
+                            {vocab.lessons.map(lesson => (
+                              <button
+                                key={lesson.id}
+                                className="nav-vocab-lesson-link"
+                                onClick={() => {
+                                  onLessonSelect(lesson.id);
+                                  if (mobileNavOpen) {
+                                    onCloseMobileNav();
+                                  }
+                                }}
+                              >
+                                #{lesson.id}
+                              </button>
+                            ))}
+                          </div>
                         </div>
-                        <div className="nav-vocab-lessons">
-                          {vocab.lessons.map(lesson => (
-                            <button
-                              key={lesson.id}
-                              className="nav-vocab-lesson-link"
-                              onClick={() => {
-                                onLessonSelect(lesson.id);
-                                if (mobileNavOpen) {
-                                  onCloseMobileNav();
-                                }
-                              }}
-                            >
-                              #{lesson.id}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    );
-                  })
-                )}
-              </div>
-            )}
+                      );
+                    })
+                  )}
+                </div>
+              )}
+            </div>
+          </>
+        )}
+
+        {/* Collapsed state - show unit icons */}
+        {isCollapsed && (
+          <div className="nav-collapsed-content">
+            <button
+              className="nav-collapse-btn nav-expand-btn"
+              onClick={onToggleCollapse}
+              title="Expand sidebar"
+            >
+              <ChevronRight size={18} />
+            </button>
+            {unitStructure.map(unit => {
+              const unitLessons = getLessonsForUnit(unit);
+              const completed = unitLessons.filter(lesson => {
+                const completedCount = getCompletedCount(lesson);
+                const totalCount = getExerciseCount(lesson);
+                return completedCount === totalCount && totalCount > 0;
+              }).length;
+              const total = unitLessons.length;
+              const progress = Math.round((completed / total) * 100);
+
+              return (
+                <div
+                  key={unit.id}
+                  className="nav-collapsed-unit"
+                  onClick={onToggleCollapse}
+                  title={`${unit.title}: ${completed}/${total} complete`}
+                >
+                  <span className="collapsed-unit-icon">{unit.icon}</span>
+                  <span className="collapsed-unit-progress">{progress}%</span>
+                </div>
+              );
+            })}
           </div>
-        </>
-      )}
-
-      {/* Collapsed state - show unit icons */}
-      {isCollapsed && (
-        <div className="nav-collapsed-content">
-          <button
-            className="nav-collapse-btn nav-expand-btn"
-            onClick={onToggleCollapse}
-            title="Expand sidebar"
-          >
-            <ChevronRight size={18} />
-          </button>
-          {unitStructure.map(unit => {
-            const unitLessons = getLessonsForUnit(unit);
-            const completed = unitLessons.filter(lesson => {
-              const completedCount = getCompletedCount(lesson);
-              const totalCount = getExerciseCount(lesson);
-              return completedCount === totalCount && totalCount > 0;
-            }).length;
-            const total = unitLessons.length;
-            const progress = Math.round((completed / total) * 100);
-
-            return (
-              <div
-                key={unit.id}
-                className="nav-collapsed-unit"
-                onClick={onToggleCollapse}
-                title={`${unit.title}: ${completed}/${total} complete`}
-              >
-                <span className="collapsed-unit-icon">{unit.icon}</span>
-                <span className="collapsed-unit-progress">{progress}%</span>
-              </div>
-            );
-          })}
-        </div>
-      )}
+        )}
       </aside>
     </>
   );

@@ -253,15 +253,13 @@ function ConceptIntro({ lesson, onStartStudying }) {
                       const isNewSection = (item, index) => {
                         if (index === 0) return false;
                         const note = (item.note || '').toLowerCase();
-                        const french = (item.french || '').toLowerCase();
-                        return note.includes('rank') ||
-                          note.includes('-er verb') ||
-                          note.includes('-ir verb') ||
-                          note.includes('-re verb') ||
+                        // ONLY check note field - don't guess from french word!
+                        return note.includes('regular -er verb') ||
+                          note.includes('regular -ir verb') ||
+                          note.includes('irregular -ir verb') ||
                           note.includes('irregular verb') ||
                           note.includes('impersonal') ||
-                          note.includes('causative') ||
-                          (french.match(/er$|ir$|re$|oir$/) && !french.includes(' ') && french.length > 3);
+                          note.includes('causative');
                       };
                       const needsDivider = isNewSection(item, idx);
 

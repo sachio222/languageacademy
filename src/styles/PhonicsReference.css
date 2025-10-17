@@ -1,0 +1,287 @@
+/**
+ * PhonicsReference Styles
+ * Following DESIGN_PRINCIPLES.md: generous spacing, clean typography, minimal borders
+ */
+
+.phonics-reference {
+  padding: 0;
+  width: 100%;
+}
+
+/* Intro Section */
+.phonics-intro {
+  padding: 1.5rem 1rem;
+  background: #fafbfc;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.phonics-intro h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.015em;
+}
+
+.phonics-intro p {
+  font-size: 0.9375rem;
+  color: #665665;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Category Section */
+.phonics-category {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.phonics-category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fafbfc;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+
+.phonics-category-header:hover {
+  background: #f0f0f0;
+}
+
+.phonics-category-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.phonics-category-title {
+  flex: 1;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.phonics-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #665665;
+  transition: color 0.15s ease;
+}
+
+.phonics-toggle-btn:hover {
+  color: #1a1a1a;
+}
+
+/* Patterns Container */
+.phonics-patterns {
+  padding: 1rem;
+}
+
+/* Individual Pattern */
+.phonics-pattern {
+  margin-bottom: 2rem;
+}
+
+.phonics-pattern:last-child {
+  margin-bottom: 0;
+}
+
+/* Sound Header */
+.phonics-sound-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.phonics-sound-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.phonics-sound {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: "Courier New", monospace;
+  letter-spacing: -0.015em;
+}
+
+.phonics-description {
+  font-size: 0.9375rem;
+  color: #665665;
+  font-style: italic;
+}
+
+/* Spellings Container */
+.phonics-spellings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual Spelling */
+.phonics-spelling {
+  padding: 0.75rem 1rem;
+  background: #fafbfc;
+  border-radius: 6px;
+}
+
+.phonics-spelling-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.625rem;
+  flex-wrap: wrap;
+}
+
+.phonics-spelling-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3b82f6;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.01em;
+}
+
+.phonics-spelling-notes {
+  font-size: 0.875rem;
+  color: #665665;
+  font-style: italic;
+}
+
+/* Examples */
+.phonics-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.phonics-example {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.phonics-example:hover {
+  background: #f7f9fc;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.phonics-example-text {
+  font-size: 0.9375rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.phonics-example-speaker {
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.phonics-example:hover .phonics-example-speaker {
+  opacity: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .phonics-intro {
+    padding: 1.25rem 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phonics-intro h3 {
+    font-size: 1.0625rem;
+  }
+
+  .phonics-intro p {
+    font-size: 0.875rem;
+  }
+
+  .phonics-category-header {
+    padding: 0.875rem;
+  }
+
+  .phonics-category-title {
+    font-size: 1rem;
+  }
+
+  .phonics-patterns {
+    padding: 0.875rem;
+  }
+
+  .phonics-pattern {
+    margin-bottom: 1.5rem;
+  }
+
+  .phonics-sound {
+    font-size: 1.0625rem;
+  }
+
+  .phonics-description {
+    font-size: 0.875rem;
+  }
+
+  .phonics-spelling {
+    padding: 0.625rem 0.875rem;
+  }
+
+  .phonics-spelling-text {
+    font-size: 0.9375rem;
+  }
+
+  .phonics-spelling-notes {
+    font-size: 0.8125rem;
+  }
+
+  .phonics-example {
+    padding: 0.3125rem 0.625rem;
+  }
+
+  .phonics-example-text {
+    font-size: 0.875rem;
+  }
+}
+
+/* Accessibility */
+.phonics-example:focus,
+.phonics-category-header:focus,
+.phonics-toggle-btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .phonics-example-speaker,
+  .phonics-toggle-btn {
+    display: none;
+  }
+
+  .phonics-category {
+    page-break-inside: avoid;
+  }
+
+  .phonics-patterns {
+    display: block !important;
+  }
+}

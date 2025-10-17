@@ -204,5 +204,7 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
     // Pass through fill-in-the-blank flags
     isFillInTheBlank: moduleConfig.isFillInTheBlank || false,
     sentences: moduleConfig.sentences || null,
+    // Pass through phonics reference flag
+    isPhonicsReference: moduleConfig.isPhonicsReference || false,
   };
 }

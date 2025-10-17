@@ -529,6 +529,16 @@ const moduleConfigs = [
   colorsModule, // 159. Les Couleurs - Colors with agreement rules and nature vocabulary
   frenchCountriesModule, // 160. La Francophonie - French-speaking countries worldwide
   languageStatsModule, // 161. Le Français en Chiffres - Fascinating language statistics
+
+  // 162. French Spelling Patterns - Phonics reference
+  {
+    title: "French Spelling Patterns",
+    description: "Complete guide to French sound-to-spelling correspondences",
+    isPhonicsReference: true,
+    concepts: [],
+    exercises: [],
+    vocabularyReference: [],
+  },
 ];
 
 // Build all lessons from configs
@@ -678,8 +688,8 @@ export const unitStructure = [
     id: 13,
     title: "Reference",
     description:
-      "Essential reference materials - alphabet, numbers, dates, holidays, French-speaking countries, language facts, and colors",
-    lessonRange: [155, 161], // Reference modules 155-161
+      "Essential reference materials - alphabet, numbers, dates, holidays, French-speaking countries, language facts, colors, and spelling patterns",
+    lessonRange: [155, 162], // Reference modules 155-162
     icon: "📚",
     color: "#6366f1",
     isReference: true, // Flag to indicate this is not a numbered unit

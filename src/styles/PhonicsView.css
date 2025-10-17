@@ -1,0 +1,667 @@
+/**
+ * PhonicsView Styles
+ * Novel full-page layout for French spelling patterns reference
+ * Following DESIGN_PRINCIPLES.md: generous spacing, clean typography, minimal borders
+ */
+
+.phonics-view {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  min-height: 100vh;
+  scroll-padding-top: var(
+    --category-sticky-top,
+    160px
+  ); /* Dynamic based on sticky bar */
+}
+
+/* Header Section */
+.phonics-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.phonics-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.phonics-subtitle {
+  font-size: 0.9375rem;
+  color: #665665;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sticky Search & Quick Links Bar */
+.phonics-sticky-bar {
+  position: sticky;
+  top: 60px; /* Stick below app header (60px height) */
+  z-index: 50; /* Below app header (z-index: 100) but above content */
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0.875rem 0;
+  margin: 0 -2rem 1.5rem -2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.phonics-sticky-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Search Bar */
+.phonics-search {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 0.75rem auto;
+}
+
+.phonics-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999999;
+  pointer-events: none;
+}
+
+.phonics-search-input {
+  width: 100%;
+  padding: 0.625rem 3rem 0.625rem 3rem;
+  font-size: 0.9375rem;
+  color: #1a1a1a;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.phonics-search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+}
+
+.phonics-search-input::placeholder {
+  color: #999999;
+}
+
+.phonics-search-clear {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #665665;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  transition: color 0.15s ease;
+}
+
+.phonics-search-clear:hover {
+  color: #1a1a1a;
+}
+
+/* Quick Links */
+.phonics-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.phonics-quick-link {
+  padding: 0.25rem 0.625rem;
+  background: #fafbfc;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #665665;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.phonics-quick-link:hover {
+  background: #f0f0f0;
+  border-color: #3b82f6;
+  color: #1a1a1a;
+}
+
+/* Content Section */
+.phonics-content {
+  margin-top: 1rem;
+}
+
+.phonics-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #665665;
+  font-size: 0.9375rem;
+}
+
+/* Category Section */
+.phonics-category {
+  margin-bottom: 1.25rem;
+  background: transparent;
+  border-radius: 8px;
+  overflow: visible; /* Allow sticky header to work */
+  border: none;
+  scroll-margin-top: var(
+    --category-sticky-top,
+    160px
+  ); /* Dynamic based on sticky bar */
+}
+
+.phonics-category:not(:first-child) {
+  margin-top: 0.5rem; /* Small gap between categories for sticky headers */
+}
+
+/* Sticky wrapper for category header */
+.phonics-category-sticky-wrapper {
+  position: sticky;
+  top: var(
+    --category-sticky-top,
+    160px
+  ); /* Dynamic position calculated by JS */
+  z-index: 40; /* Below sticky search bar but above content */
+  background: #f8fafc; /* Match app background */
+  padding-top: 0.5rem; /* Gap above header to hide content */
+  margin-top: -0.5rem; /* Negative margin to pull up and overlap */
+}
+
+.phonics-category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  background: #fafbfc;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.phonics-category-header:hover {
+  background: #f0f0f0;
+}
+
+/* When category is collapsed, round all corners */
+.phonics-category.collapsed .phonics-category-header {
+  border-radius: 8px;
+}
+
+.phonics-category-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.phonics-category-title {
+  flex: 1;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.phonics-category-count {
+  font-size: 0.875rem;
+  color: #665665;
+  font-weight: 500;
+}
+
+.phonics-category-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #665665;
+  transition: color 0.15s ease;
+}
+
+.phonics-category-toggle:hover {
+  color: #1a1a1a;
+}
+
+/* Patterns Container */
+.phonics-patterns {
+  padding: 1rem 1.25rem;
+  border-radius: 0 0 8px 8px;
+  background: white;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Individual Pattern */
+.phonics-pattern {
+  margin-bottom: 1.5rem;
+}
+
+.phonics-pattern:last-child {
+  margin-bottom: 0;
+}
+
+/* Pattern Header */
+.phonics-pattern-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.875rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.phonics-sound {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: "Courier New", monospace;
+  letter-spacing: -0.015em;
+}
+
+.phonics-description {
+  font-size: 0.875rem;
+  color: #665665;
+  font-style: italic;
+}
+
+/* Spellings Grid - More compact */
+.phonics-spellings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+/* Spelling Card - Much more compact */
+.phonics-spelling-card {
+  background: #fafbfc;
+  border-radius: 6px;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  transition: all 0.15s ease;
+}
+
+.phonics-spelling-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.1);
+}
+
+.phonics-spelling-label {
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.phonics-spelling-text {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3b82f6;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.phonics-spelling-note {
+  display: block;
+  font-size: 0.8125rem;
+  color: #665665;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Examples List */
+.phonics-examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.phonics-example-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3125rem 0.625rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.phonics-example-btn:hover {
+  background: #f7f9fc;
+  border-color: #3b82f6;
+  box-shadow: 0 1px 3px rgba(59, 130, 246, 0.15);
+}
+
+.phonics-example-text {
+  font-size: 0.875rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.phonics-example-speaker {
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.phonics-example-btn:hover .phonics-example-speaker {
+  opacity: 1;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .phonics-view {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .phonics-title {
+    font-size: 1.5rem;
+  }
+
+  .phonics-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .phonics-spellings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.625rem;
+  }
+
+  .phonics-category-header {
+    padding: 0.75rem 1rem;
+    border-radius: 8px 8px 0 0; /* Maintain rounded corners on tablet */
+  }
+
+  .phonics-category.collapsed .phonics-category-header {
+    border-radius: 8px;
+  }
+
+  .phonics-patterns {
+    padding: 0.875rem 1rem;
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners on tablet */
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .phonics-view {
+    padding: 0.5rem;
+  }
+
+  .phonics-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .phonics-title {
+    font-size: 1.25rem;
+  }
+
+  .phonics-subtitle {
+    font-size: 0.8125rem;
+    display: none; /* Hide subtitle on mobile to save space */
+  }
+
+  .phonics-sticky-bar {
+    margin: 0 -0.5rem 0.75rem -0.5rem;
+    padding: 0.5rem 0;
+    top: 56px; /* Mobile header is slightly shorter */
+  }
+
+  .phonics-sticky-container {
+    padding: 0 0.5rem;
+  }
+
+  .phonics-search {
+    margin-bottom: 0.5rem;
+  }
+
+  .phonics-search-icon {
+    left: 0.75rem;
+  }
+
+  .phonics-search-clear {
+    right: 0.75rem;
+  }
+
+  .phonics-search-input {
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    font-size: 0.875rem;
+    border-radius: 6px;
+  }
+
+  .phonics-quick-links {
+    gap: 0.25rem;
+  }
+
+  .phonics-quick-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .phonics-content {
+    margin-top: 0.5rem;
+  }
+
+  .phonics-category {
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .phonics-category-sticky-wrapper {
+    padding-top: 0.375rem; /* Smaller gap on mobile */
+    margin-top: -0.375rem;
+  }
+
+  .phonics-category-header {
+    padding: 0.625rem 0.75rem;
+    gap: 0.5rem;
+    border-radius: 6px 6px 0 0; /* Rounded top corners on mobile */
+  }
+
+  .phonics-category.collapsed .phonics-category-header {
+    border-radius: 6px;
+  }
+
+  .phonics-category-icon {
+    font-size: 1rem;
+  }
+
+  .phonics-category-title {
+    font-size: 0.9375rem;
+  }
+
+  .phonics-category-count {
+    font-size: 0.75rem;
+  }
+
+  .phonics-patterns {
+    padding: 0.75rem;
+    border-radius: 0 0 6px 6px; /* Rounded bottom corners on mobile */
+  }
+
+  .phonics-pattern {
+    margin-bottom: 1rem;
+  }
+
+  .phonics-pattern:last-child {
+    margin-bottom: 0;
+  }
+
+  .phonics-pattern-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    margin-bottom: 0.625rem;
+    padding-bottom: 0.375rem;
+  }
+
+  .phonics-sound {
+    font-size: 0.9375rem;
+  }
+
+  .phonics-description {
+    font-size: 0.75rem;
+  }
+
+  .phonics-spellings-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .phonics-spelling-card {
+    padding: 0.625rem;
+    border-radius: 4px;
+  }
+
+  .phonics-spelling-label {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.375rem;
+  }
+
+  .phonics-spelling-text {
+    font-size: 0.875rem;
+    margin-bottom: 0.1875rem;
+  }
+
+  .phonics-spelling-note {
+    font-size: 0.6875rem;
+    line-height: 1.3;
+  }
+
+  .phonics-examples-list {
+    gap: 0.25rem;
+  }
+
+  .phonics-example-btn {
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .phonics-example-text {
+    font-size: 0.75rem;
+  }
+
+  .phonics-empty {
+    padding: 1.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Extra small screens (very narrow phones) */
+@media (max-width: 400px) {
+  .phonics-view {
+    padding: 0.375rem;
+  }
+
+  .phonics-title {
+    font-size: 1.125rem;
+  }
+
+  .phonics-sticky-bar {
+    margin: 0 -0.375rem 0.5rem -0.375rem;
+    padding: 0.375rem 0;
+  }
+
+  .phonics-sticky-container {
+    padding: 0 0.375rem;
+  }
+
+  .phonics-search-icon {
+    left: 0.625rem;
+  }
+
+  .phonics-search-clear {
+    right: 0.625rem;
+  }
+
+  .phonics-search-input {
+    padding: 0.4375rem 2.25rem 0.4375rem 2.25rem;
+    font-size: 0.8125rem;
+  }
+
+  .phonics-category-sticky-wrapper {
+    padding-top: 0.375rem;
+    margin-top: -0.375rem;
+  }
+
+  .phonics-category-header {
+    padding: 0.5rem 0.625rem;
+  }
+
+  .phonics-category.collapsed .phonics-category-header {
+    border-radius: 6px;
+  }
+
+  .phonics-patterns {
+    padding: 0.625rem;
+  }
+
+  .phonics-spelling-card {
+    padding: 0.5rem;
+  }
+}
+
+/* Accessibility */
+.phonics-example-btn:focus,
+.phonics-category-header:focus,
+.phonics-category-toggle:focus,
+.phonics-search-input:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .phonics-search {
+    display: none;
+  }
+
+  .phonics-example-speaker,
+  .phonics-category-toggle {
+    display: none;
+  }
+
+  .phonics-view {
+    padding: 1rem;
+  }
+
+  .phonics-category {
+    page-break-inside: avoid;
+    border: 1px solid #e0e0e0;
+  }
+
+  .phonics-patterns {
+    display: block !important;
+  }
+
+  .phonics-example-btn {
+    border: 1px solid #e0e0e0;
+  }
+}

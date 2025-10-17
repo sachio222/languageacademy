@@ -570,6 +570,13 @@ body:has(.left-nav.collapsed) .app-footer {
   animation: slideUpFadeIn 0.25s ease-out;
 }
 
+/* Phonics view needs visible overflow for sticky positioning */
+.lesson-view:has(.phonics-view) {
+  overflow: visible;
+  box-shadow: none;
+  background: transparent;
+}
+
 @keyframes slideUpFadeIn {
   from {
     opacity: 0;
