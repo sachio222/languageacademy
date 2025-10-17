@@ -2,7 +2,7 @@
  * Reading Passage Component
  * Displays a reading passage with translation toggle and interactive word tooltips
  */
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import SpeakButton from './SpeakButton';
 import { useSpeech } from '../hooks/useSpeech';
 import { readingVocabulary as wordTranslations } from './readingVocabulary';
@@ -582,7 +582,66 @@ const wikipediaEntries = {
 function ReadingPassage({ passage }) {
   const [showTranslation, setShowTranslation] = useState(false);
   const [hoveredWord, setHoveredWord] = useState(null);
+  const [tooltipPosition, setTooltipPosition] = useState({ shift: 0, arrowShift: 0 });
+  const wordRefs = useRef({});
   const { speak } = useSpeech();
+
+  // Calculate tooltip position on mobile to prevent viewport overflow
+  useEffect(() => {
+    if (!hoveredWord) {
+      setTooltipPosition({ shift: 0, arrowShift: 0 });
+      return;
+    }
+
+    // Only calculate on mobile screens
+    const isMobile = window.innerWidth <= 640;
+    if (!isMobile) {
+      setTooltipPosition({ shift: 0, arrowShift: 0 });
+      return;
+    }
+
+    const wordElement = wordRefs.current[hoveredWord];
+    if (!wordElement) return;
+
+    // Small delay to ensure tooltip is rendered
+    setTimeout(() => {
+      const tooltipElement = wordElement.querySelector('.wiki-tooltip');
+      if (!tooltipElement) return;
+
+      const wordRect = wordElement.getBoundingClientRect();
+      const tooltipRect = tooltipElement.getBoundingClientRect();
+      const viewportWidth = window.innerWidth;
+      const safeMargin = 8; // 8px margin from edge
+
+      // Calculate word center position
+      const wordCenter = wordRect.left + wordRect.width / 2;
+
+      // Calculate where tooltip would be positioned (centered on word)
+      const tooltipLeft = wordCenter - tooltipRect.width / 2;
+      const tooltipRight = wordCenter + tooltipRect.width / 2;
+
+      let shift = 0;
+
+      // Would overflow left edge?
+      if (tooltipLeft < safeMargin) {
+        shift = safeMargin - tooltipLeft;
+      }
+      // Would overflow right edge?
+      else if (tooltipRight > viewportWidth - safeMargin) {
+        shift = (viewportWidth - safeMargin) - tooltipRight;
+      }
+
+      // Update position if needed
+      if (shift !== 0) {
+        setTooltipPosition({
+          shift: shift,
+          arrowShift: -shift // Arrow moves opposite to keep pointing at word
+        });
+      } else {
+        setTooltipPosition({ shift: 0, arrowShift: 0 });
+      }
+    }, 10);
+  }, [hoveredWord]);
 
   if (!passage) return null;
 
@@ -864,6 +923,7 @@ function ReadingPassage({ passage }) {
           elements.push(
             <span
               key={uniqueKey}
+              ref={el => { if (el) wordRefs.current[uniqueKey] = el; }}
               className="interactive-word"
               onMouseEnter={() => setHoveredWord(uniqueKey)}
               onMouseLeave={() => setHoveredWord(null)}
@@ -872,7 +932,13 @@ function ReadingPassage({ passage }) {
             >
               {matchedText}
               {hoveredWord === uniqueKey && wikiEntry && (
-                <span className="word-tooltip wiki-tooltip">
+                <span
+                  className="word-tooltip wiki-tooltip"
+                  style={{
+                    '--tooltip-shift': `${tooltipPosition.shift}px`,
+                    '--arrow-shift': `${tooltipPosition.arrowShift}px`
+                  }}
+                >
                   <div className="wiki-content">
                     <img src={wikiEntry.image} alt={wikiEntry.name} className="wiki-image" />
                     <div className="wiki-text">
@@ -913,6 +979,7 @@ function ReadingPassage({ passage }) {
           elements.push(
             <span
               key={uniqueKey}
+              ref={el => { if (el) wordRefs.current[uniqueKey] = el; }}
               className="interactive-word"
               onMouseEnter={() => setHoveredWord(uniqueKey)}
               onMouseLeave={() => setHoveredWord(null)}
@@ -921,7 +988,13 @@ function ReadingPassage({ passage }) {
             >
               {word}
               {hoveredWord === uniqueKey && wikiEntry && (
-                <span className="word-tooltip wiki-tooltip">
+                <span
+                  className="word-tooltip wiki-tooltip"
+                  style={{
+                    '--tooltip-shift': `${tooltipPosition.shift}px`,
+                    '--arrow-shift': `${tooltipPosition.arrowShift}px`
+                  }}
+                >
                   <div className="wiki-content">
                     <img src={wikiEntry.image} alt={wikiEntry.name} className="wiki-image" />
                     <div className="wiki-text">
