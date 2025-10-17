@@ -188,7 +188,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, transparent, #3b82f6, transparent);
   border-radius: 2px;
 }
@@ -237,7 +237,7 @@
 .comparison-card:last-child {
   background: #f8faff;
   border: 1px solid #3b82f6;
-  border-width: 2px;
+  border-width: 0.5px;
 }
 
 .comparison-card:last-child:hover {
@@ -421,8 +421,8 @@
 }
 
 .phase-item:hover .phase-icon {
-  background: #3b82f6;
-  border-color: #3b82f6;
+  background: #3b83f67e;
+  border-color: #3b83f67e;
   transform: scale(1.1);
 }
 
