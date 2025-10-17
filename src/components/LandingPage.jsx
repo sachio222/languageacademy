@@ -39,7 +39,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
           ) : (
             <>
               <button className="cta-primary" onClick={onGetStarted}>
-                Get Early Access
+                Get Early Access Free
               </button>
               <p className="hero-caption">
                 Early access • No credit card required
