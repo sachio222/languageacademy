@@ -718,8 +718,17 @@
 @media (max-width: 968px) {
   .module-exam,
   .unit-exam {
-    padding: 1.75rem;
-    padding-bottom: 6rem; /* Keep space for sticky nav */
+    padding: 1.5rem 1rem;
+    padding-bottom: 6rem;
+    margin: 2rem auto;
+  }
+
+  .exam-header {
+    margin-bottom: 2rem;
+  }
+
+  .exam-header h2 {
+    font-size: 1.5rem;
   }
 
   .exam-question {
@@ -728,6 +737,16 @@
 
   .exam-section {
     padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .section-header h3 {
+    font-size: 1.5rem;
   }
 
   .exam-navigation {
@@ -743,8 +762,7 @@
   }
 
   .completion-stats {
-    flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .exam-actions {
@@ -767,5 +785,479 @@
 
   .exam-question-card {
     padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .module-exam,
+  .unit-exam {
+    padding: 1rem 0.75rem;
+    padding-bottom: 5rem;
+    margin: 1rem auto;
+  }
+
+  .exam-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .exam-header h2 {
+    font-size: 1.375rem;
+  }
+
+  .exam-header p {
+    font-size: 0.9375rem;
+  }
+
+  .exam-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .exam-progress-bar {
+    max-width: 100%;
+  }
+
+  .exam-overall-progress {
+    margin: 1.5rem 0;
+  }
+
+  .section-indicators {
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .section-indicator {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .exam-section {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .section-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .exam-questions {
+    gap: 1.25rem;
+  }
+
+  .exam-question {
+    padding: 1.25rem 1rem;
+  }
+
+  .exam-question-card {
+    padding: 1rem;
+  }
+
+  .exam-question-card .question-prompt {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .exam-question-card .answer-input input {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9375rem;
+  }
+
+  .question-english {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .answer-input input {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+
+  .exam-navigation {
+    padding: 0.875rem 0.75rem;
+    gap: 0.625rem;
+    flex-direction: column;
+  }
+
+  .exam-nav-center {
+    order: -1;
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 0.8125rem;
+  }
+
+  .exam-navigation > button {
+    width: 100%;
+  }
+
+  .btn-submit,
+  .btn-large {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .completion-stats {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0.75rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.8125rem;
+  }
+
+  .completion-celebration {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .completion-celebration h2 {
+    font-size: 1.75rem;
+  }
+
+  .completion-celebration > p {
+    font-size: 1.0625rem;
+  }
+
+  .exam-results {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .exam-results-header {
+    margin-bottom: 2rem;
+  }
+
+  .exam-results-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .score {
+    font-size: 3rem;
+  }
+
+  .exam-passed,
+  .exam-failed {
+    padding: 2rem 1.5rem;
+  }
+
+  .exam-message h3 {
+    font-size: 1.25rem;
+  }
+
+  .exam-message p {
+    font-size: 1rem;
+  }
+
+  .exam-item {
+    padding: 1rem;
+  }
+
+  .french-character-picker {
+    padding: 0.625rem;
+  }
+
+  .character-btn {
+    min-width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .module-exam,
+  .unit-exam {
+    padding: 0.75rem 0.5rem;
+    padding-bottom: 5rem;
+    margin: 0.75rem auto;
+  }
+
+  .exam-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .exam-header h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .exam-header p {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .exam-description {
+    font-size: 0.9375rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .exam-overall-progress {
+    margin: 1.25rem 0;
+  }
+
+  .exam-overall-progress .progress-text {
+    font-size: 0.875rem;
+  }
+
+  .section-indicators {
+    margin-top: 1.25rem;
+    gap: 0.375rem;
+  }
+
+  .section-indicator {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .exam-section {
+    padding: 1.25rem 0.75rem;
+    margin: 1.25rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .section-header h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .section-progress {
+    font-size: 0.875rem;
+  }
+
+  .exam-questions {
+    gap: 1rem;
+  }
+
+  .exam-question {
+    padding: 1rem 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .exam-question-card {
+    padding: 0.875rem;
+  }
+
+  .exam-question-card .question-number {
+    font-size: 0.75rem;
+  }
+
+  .exam-question-card .question-prompt,
+  .question-english {
+    font-size: 1.0625rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .question-prompt {
+    font-size: 1rem;
+  }
+
+  .exam-question-card .answer-input input,
+  .answer-input input {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9375rem;
+  }
+
+  .question-hint,
+  .exam-question-card .question-hint {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .exam-navigation {
+    padding: 0.75rem 0.5rem;
+    gap: 0.625rem;
+    flex-direction: column;
+  }
+
+  .exam-nav-center {
+    order: -1;
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+  }
+
+  .answered-indicator,
+  .unanswered-indicator {
+    font-size: 0.75rem;
+  }
+
+  .exam-navigation > button {
+    width: 100%;
+  }
+
+  .btn-submit,
+  .btn-large {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .completion-celebration {
+    padding: 1.5rem 1rem;
+  }
+
+  .completion-celebration h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .completion-celebration > p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .completion-stats {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .exam-actions {
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .exam-actions button {
+    width: 100%;
+  }
+
+  .exam-results {
+    padding: 1rem 0.75rem;
+    margin: 1rem auto;
+  }
+
+  .exam-results-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .exam-results-header h2 {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+  }
+
+  .score {
+    font-size: 2.5rem;
+  }
+
+  .exam-passed,
+  .exam-failed {
+    padding: 1.75rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .exam-message h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .exam-message p {
+    font-size: 0.9375rem;
+  }
+
+  .exam-breakdown {
+    margin-top: 2rem;
+  }
+
+  .exam-breakdown h4 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .exam-item {
+    padding: 0.875rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .exam-item-header {
+    margin-bottom: 0.625rem;
+  }
+
+  .exam-item-number,
+  .exam-item-prompt {
+    font-size: 0.875rem;
+  }
+
+  .exam-item-details {
+    font-size: 0.875rem;
+  }
+
+  .exam-item-correct,
+  .exam-item-warning {
+    font-size: 0.8125rem;
+  }
+
+  .section-results {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-results-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.875rem;
+  }
+
+  .section-results-header h5 {
+    font-size: 1.0625rem;
+  }
+
+  .section-score {
+    font-size: 1rem;
+  }
+
+  .french-character-picker {
+    padding: 0.5rem;
+  }
+
+  .character-picker-label {
+    font-size: 0.6875rem;
+  }
+
+  .character-btn {
+    min-width: 2rem;
+    height: 2rem;
+    font-size: 0.9375rem;
+    padding: 0.375rem;
+  }
+
+  .exam-warning {
+    padding: 0.875rem;
+    font-size: 0.875rem;
+  }
+
+  .ready-for-exam {
+    padding: 1.5rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .exam-ready-message {
+    font-size: 1.0625rem;
+    margin-bottom: 1rem;
   }
 }
