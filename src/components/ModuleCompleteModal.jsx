@@ -37,10 +37,13 @@ function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onClose, o
     }}>
       <div className="modal-content module-complete-modal">
         <div className="modal-header">
+          <button className="modal-close-btn" onClick={onClose} title="Close">
+            ×
+          </button>
           <h3>🎉 Module Complete</h3>
           {lesson.exercises && lesson.exercises.length > 0 && onRetakeExercises && (
             <button className="reset-exercises-link" onClick={onRetakeExercises}>
-              Reset exercises
+              Clear progress
             </button>
           )}
         </div>

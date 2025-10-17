@@ -322,3 +322,179 @@
 .reading-quiz-section .code-editor {
   max-width: 600px;
 }
+
+/* Mobile Responsive - Medium.com inspired */
+@media (max-width: 768px) {
+  .reading-article-wrapper {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .reading-quiz-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .passage-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .passage-header h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .passage-meta {
+    font-size: 0.75rem;
+  }
+
+  .french-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  .paragraph-block {
+    margin: 1.75rem 0;
+  }
+
+  .english-translation {
+    font-size: 0.9375rem;
+    padding-left: 1rem;
+  }
+
+  .passage-audio-header {
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .reading-article-wrapper {
+    padding: 1.5rem 1rem 1.5rem;
+    order: 0 !important;
+  }
+
+  .reading-quiz-section {
+    padding: 1.5rem 1rem;
+    order: 1 !important;
+  }
+
+  .passage-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .passage-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .passage-meta {
+    font-size: 0.6875rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .btn-translation {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  .passage-content {
+    margin-bottom: 2.5rem;
+  }
+
+  .french-text {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    margin-bottom: 0.875rem;
+  }
+
+  .speaker-label {
+    font-size: 1rem;
+  }
+
+  .paragraph-block {
+    margin: 1.5rem 0;
+  }
+
+  .paragraph-with-audio {
+    padding-right: 2.5rem;
+  }
+
+  .paragraph-audio-btn {
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+
+  .english-translation {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    padding-left: 0.875rem;
+    margin-top: 0.625rem;
+  }
+
+  .passage-audio-header {
+    padding-bottom: 1rem;
+    gap: 0.625rem;
+  }
+
+  .audio-label {
+    font-size: 0.8125rem;
+  }
+
+  .passage-instructions {
+    padding: 1rem 1.25rem;
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .paragraph-image {
+    margin: 2rem 0;
+  }
+
+  .word-tooltip {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .wiki-tooltip {
+    min-width: 260px;
+    max-width: 280px;
+  }
+
+  .wiki-image {
+    height: 120px;
+  }
+
+  .wiki-text {
+    padding: 0.875rem 1rem 1rem;
+  }
+
+  .wiki-text strong {
+    font-size: 0.875rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .wiki-text p {
+    font-size: 0.75rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .wiki-link {
+    font-size: 0.75rem;
+  }
+
+  .reading-quiz-section .exercise-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .reading-quiz-section .exercise-instruction {
+    padding: 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .reading-exercise-container {
+    padding-bottom: 5rem;
+  }
+}

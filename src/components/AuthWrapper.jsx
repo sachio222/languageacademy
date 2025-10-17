@@ -1,5 +1,5 @@
 import { SignIn, SignUp, UserButton, useUser } from '@clerk/clerk-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import LandingPage from './LandingPage'
 import '../styles/Landing.css'
@@ -9,6 +9,7 @@ function AuthWrapper({ children, onBackToLanding }) {
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
 
   // Handle navigation back to landing page
   const handleBackToLanding = () => {
@@ -18,6 +19,16 @@ function AuthWrapper({ children, onBackToLanding }) {
       onBackToLanding()
     }
   }
+
+  // Handle window resize for responsive username display
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   if (loading) {
     return (
@@ -109,7 +120,7 @@ function AuthWrapper({ children, onBackToLanding }) {
               avatarBox: "w-8 h-8"
             }
           }}
-          showName={true}
+          showName={!isMobile}
           afterSignOutUrl="/"
         />
       </div>

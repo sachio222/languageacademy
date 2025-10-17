@@ -164,6 +164,22 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+/* Hide username text on mobile to prevent covering app name */
+@media (max-width: 768px) {
+  /* Target Clerk's UserButton name element */
+  .auth-header-bar [class*="cl-userButtonText"],
+  .auth-header-bar
+    [class*="cl-userButton"]
+    > div:not([class*="avatarBox"]):not([class*="userButtonTrigger"]) {
+    display: none !important;
+  }
+
+  .auth-header-bar {
+    padding: 0.375rem;
+    right: 0.75rem;
+  }
+}
+
 /* Responsive design */
 @media (max-width: 640px) {
   .auth-container {
@@ -176,5 +192,11 @@
 
   .auth-header h1 {
     font-size: 2rem;
+  }
+
+  .auth-header-bar {
+    padding: 0.25rem;
+    right: 0.5rem;
+    top: 0.5rem;
   }
 }

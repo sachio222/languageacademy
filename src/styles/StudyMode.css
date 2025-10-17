@@ -344,11 +344,11 @@
 /* Responsive */
 @media (max-width: 968px) {
   .study-container {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .study-mode {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
   }
 
   .flashcard {
@@ -367,5 +367,168 @@
 
   .study-navigation .btn-nav {
     max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .study-container {
+    padding: 0.75rem;
+  }
+
+  .study-mode {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .study-header {
+    margin-bottom: 2rem;
+  }
+
+  .study-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .study-header p {
+    margin-bottom: 1.5rem;
+  }
+
+  .flashcard {
+    padding: 2.5rem 1.25rem;
+    min-height: 300px;
+    margin-bottom: 2rem;
+  }
+
+  .flashcard-content h2,
+  .flashcard-answer h2 {
+    font-size: 2rem;
+  }
+
+  .flashcard-label {
+    margin-bottom: 1.5rem;
+  }
+
+  .flashcard-article {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .reveal-btn {
+    margin-top: 2rem;
+    padding: 0.875rem 2rem;
+    font-size: 0.9375rem;
+  }
+
+  .study-navigation .btn-nav {
+    padding: 0.875rem 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .study-container {
+    padding: 0.5rem;
+  }
+
+  .study-mode {
+    padding: 1.25rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .study-intro {
+    margin-bottom: 1rem;
+  }
+
+  .study-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .study-header h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .study-header p {
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .study-progress-bar {
+    margin: 1.25rem auto;
+  }
+
+  .flashcard {
+    padding: 2rem 1rem;
+    min-height: 280px;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .flashcard-content h2,
+  .flashcard-answer h2 {
+    font-size: 1.75rem;
+  }
+
+  .flashcard-label {
+    margin-bottom: 1.25rem;
+    font-size: 0.625rem;
+  }
+
+  .flashcard-article {
+    margin-top: 1.25rem;
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .reveal-btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.875rem;
+  }
+
+  .flashcard-hint,
+  .flashcard-instruction {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.6875rem;
+    margin-top: 0.625rem;
+  }
+
+  .study-navigation {
+    gap: 0.75rem;
+  }
+
+  .study-navigation .btn-nav {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-skip,
+  .btn-back-to-concepts {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .vocab-reference {
+    margin-top: 1.25rem;
+  }
+
+  .vocab-header {
+    padding: 0.875rem 0 0.625rem;
+  }
+
+  .vocab-table th,
+  .vocab-table td {
+    padding: 0.625rem 0;
+    font-size: 0.75rem;
+  }
+
+  .vocab-french {
+    font-size: 0.75rem;
+  }
+
+  .vocab-english {
+    font-size: 0.75rem;
+  }
+
+  .vocab-note {
+    font-size: 0.6875rem;
   }
 }

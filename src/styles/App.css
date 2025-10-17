@@ -1010,6 +1010,7 @@ body:has(.left-nav.collapsed) .app-footer {
   flex: 1;
   text-align: center;
   font-weight: 500;
+  margin-left: 10px;
 }
 
 .editor-shortcut {
@@ -1661,6 +1662,25 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   .welcome-screen {
     margin: 3rem auto 2rem;
   }
+
+  /* Exercise Pane - Tablet */
+  .exercise-pane {
+    padding: 2rem 1rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .exercise-header {
+    margin-bottom: 2rem;
+  }
+
+  .exercise-header h3 {
+    font-size: 1.375rem;
+  }
+
+  .exercise-instruction {
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Mobile styles for smaller screens */
@@ -1736,12 +1756,14 @@ body:has(.left-nav.collapsed) .navigation-buttons {
     padding: 1rem 0.75rem;
     flex-direction: column;
     gap: 0.75rem;
+    align-items: stretch;
   }
 
   .btn-nav {
     width: 100%;
     padding: 0.875rem 1.25rem;
     font-size: 0.9375rem;
+    text-align: center;
   }
 
   /* Show mobile header, hide desktop header */
@@ -1751,6 +1773,135 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 
   .lesson-header-mobile {
     display: flex;
+  }
+
+  /* Exercise Pane Mobile */
+  .exercise-pane {
+    padding: 1rem 0.75rem;
+    padding-bottom: 5rem;
+  }
+
+  /* The inner wrapper div needs to be flex container for ordering */
+  .exercise-pane > div,
+  .reading-quiz-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Reading exercise container also needs flex for ordering */
+  .reading-exercise-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exercise-header {
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    order: 1 !important;
+  }
+
+  .exercise-header h3 {
+    font-size: 1.125rem;
+  }
+
+  .exercise-instruction {
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    order: 2 !important;
+  }
+
+  .exercise-instruction p {
+    font-size: 0.9375rem;
+    margin: 0.625rem 0;
+  }
+
+  /* Code editor */
+  .code-editor {
+    order: 3 !important;
+    margin-bottom: 1rem;
+  }
+
+  /* Move hint-box before exercise-actions visually */
+  .hint-box {
+    order: 4 !important; /* Appears before buttons */
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .exercise-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    order: 5 !important; /* Buttons appear after hint */
+  }
+
+  /* Use display: contents to break out children to parent grid */
+  .action-buttons,
+  .left-actions {
+    display: contents;
+  }
+
+  /* Row 1: Submit button - spans both columns */
+  .action-buttons .btn-primary {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  /* Row 2: Hint button - spans both columns */
+  .left-actions .btn-hint {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  /* Row 3: Previous button - left column */
+  .left-actions .btn-secondary {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  /* Row 3: Reset button - right column (ghost style) */
+  .action-buttons .btn-secondary {
+    grid-column: 2;
+    grid-row: 3;
+    background: transparent;
+    color: #665665;
+    border: 1px solid #e2e8f0;
+  }
+
+  .action-buttons .btn-secondary:hover {
+    background: #f8fafc;
+    color: #1a1a1a;
+  }
+
+  .test-output {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.8125rem;
+    order: 6 !important; /* Appears after exercise-actions */
+  }
+
+  .success-message {
+    order: 6 !important; /* Appears after exercise-actions */
+  }
+
+  .code-input {
+    padding: 1rem;
+    font-size: 0.9375rem;
+    min-height: 140px;
+  }
+
+  .editor-header {
+    padding: 0.75rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  /* FrenchCharacterPicker should stay with code-editor */
+  .french-character-picker {
+    order: 3 !important;
   }
 }
 
