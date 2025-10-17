@@ -448,8 +448,37 @@
   font-size: 0.875rem;
 }
 
+/* Mobile Navigation Overlay */
+.nav-overlay {
+  display: none;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  /* Overlay to block background interaction */
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 89;
+    animation: fadeIn 0.2s ease;
+    touch-action: none;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   .left-nav {
     width: 85vw;
     max-width: 380px;
@@ -457,6 +486,9 @@
     transition: transform 0.2s ease;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
     top: 60px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
   }
 
   .left-nav.open {
@@ -510,6 +542,13 @@
   .search-icon {
     left: 0.625rem;
     font-size: 0.8125rem;
+  }
+
+  /* Scrollable content - enable proper touch scrolling */
+  .nav-content {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
   }
 
   /* Tabs - better touch targets */

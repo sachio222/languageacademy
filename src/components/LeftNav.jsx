@@ -235,6 +235,22 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
     return () => observer.disconnect();
   }, [isCollapsed, activeTab, filteredUnits]);
 
+  // Lock body scroll when mobile nav is open
+  useEffect(() => {
+    if (mobileNavOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    };
+  }, [mobileNavOpen]);
+
   // Build vocabulary index
   const vocabularyIndex = useMemo(() => {
     const index = new Map();
@@ -305,19 +321,29 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
   };
 
   return (
-    <aside className={`left-nav ${isCollapsed ? 'collapsed' : ''} ${mobileNavOpen ? 'open' : ''}`}>
-      {!isCollapsed && (
-        <>
-          {/* Mobile Close Button */}
-          {mobileNavOpen && (
-            <button
-              className="mobile-close-btn"
-              onClick={onCloseMobileNav}
-              title="Close navigation"
-            >
-              ✕
-            </button>
-          )}
+    <>
+      {/* Mobile Overlay */}
+      {mobileNavOpen && (
+        <div 
+          className="nav-overlay"
+          onClick={onCloseMobileNav}
+          aria-hidden="true"
+        />
+      )}
+
+      <aside className={`left-nav ${isCollapsed ? 'collapsed' : ''} ${mobileNavOpen ? 'open' : ''}`}>
+        {!isCollapsed && (
+          <>
+            {/* Mobile Close Button */}
+            {mobileNavOpen && (
+              <button
+                className="mobile-close-btn"
+                onClick={onCloseMobileNav}
+                title="Close navigation"
+              >
+                ✕
+              </button>
+            )}
 
           {/* Search Bar */}
           <div className="nav-search">
@@ -582,7 +608,8 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
           })}
         </div>
       )}
-    </aside>
+      </aside>
+    </>
   );
 }
 
