@@ -172,13 +172,18 @@ function ExercisePane({
     setShowHint(false);
     setStartTime(Date.now()); // Start timing the exercise
 
-    // Focus the textarea after a brief delay to ensure it's rendered
-    setTimeout(() => {
-      if (textareaRef.current) {
-        textareaRef.current.focus();
-      }
-    }, 0);
-  }, [exercise.id]);
+    // For reading passages, scroll to top instead of focusing input
+    if (readingPassage) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Focus the textarea after a brief delay to ensure it's rendered
+      setTimeout(() => {
+        if (textareaRef.current) {
+          textareaRef.current.focus();
+        }
+      }, 0);
+    }
+  }, [exercise.id, readingPassage]);
 
   const handleReset = () => {
     setUserAnswer('');
@@ -300,7 +305,7 @@ function ExercisePane({
             onPaste={handlePaste}
             placeholder="Type your French sentence here..."
             spellCheck="false"
-            autoFocus
+            autoFocus={!readingPassage}
           />
           <FrenchCharacterPicker
             inputRef={textareaRef}
