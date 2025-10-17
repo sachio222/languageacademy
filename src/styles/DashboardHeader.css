@@ -331,10 +331,6 @@
   .dashboard-right {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .stat-box.stat-progress {
-    grid-column: span 2;
-  }
 }
 
 @media (max-width: 768px) {

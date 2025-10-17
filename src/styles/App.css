@@ -1561,14 +1561,19 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 
   /* Main content takes full width */
   .app-main {
-    margin-left: 0;
+    margin-left: 0 !important;
     padding: 1.5rem 1rem;
     padding-top: calc(1.5rem + 60px);
   }
 
   /* Footer no margin */
   .app-footer {
-    margin-left: 0;
+    margin-left: 0 !important;
+  }
+
+  /* Navigation buttons start at left edge */
+  .navigation-buttons {
+    left: 0 !important;
   }
 
   /* Sidebar becomes overlay - handled in LeftNav.css */
@@ -1577,6 +1582,7 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 @media (max-width: 968px) {
   .app-main {
     padding: 2rem 0.5rem;
+    padding-top: calc(2rem + 60px); /* Account for fixed header */
   }
 
   .lesson-content {
@@ -1712,7 +1718,7 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   }
 
   .navigation-buttons {
-    left: 0;
+    left: 0 !important;
     padding: 1rem 0.75rem;
     flex-direction: column;
     gap: 0.75rem;
