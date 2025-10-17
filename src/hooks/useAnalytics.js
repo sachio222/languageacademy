@@ -12,34 +12,112 @@ export const useAnalytics = () => {
   const [currentSession, setCurrentSession] = useState(null);
   const sessionRef = useRef(null);
   const activityTimerRef = useRef(null);
+  const isCalculatingStreak = useRef(false);
+
+  // Fallback: Calculate streak client-side if database function doesn't exist
+  const calculateStreakClientSide = useCallback(async () => {
+    const oneYearAgo = new Date(
+      Date.now() - 365 * 24 * 60 * 60 * 1000
+    ).toISOString();
+    const { data: sessions, error: fetchError } = await supabaseClient
+      .from(TABLES.USER_SESSIONS)
+      .select("session_start")
+      .eq("user_id", supabaseUser.id)
+      .gte("session_start", oneYearAgo)
+      .order("session_start", { ascending: false })
+      .limit(5000); // Explicit limit
+
+    if (fetchError) throw fetchError;
+
+    const getLocalDateString = (date) => {
+      const d = new Date(date);
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, "0");
+      const day = String(d.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
+    };
+
+    const sessionDates = sessions.map((s) =>
+      getLocalDateString(s.session_start)
+    );
+    const uniqueDates = [...new Set(sessionDates)];
+
+    console.log("Streak calculation (client-side fallback):", {
+      totalSessions: sessions.length,
+      uniqueDatesCount: uniqueDates.length,
+      uniqueDates: uniqueDates.slice(0, 10),
+      now: new Date().toISOString(),
+    });
+
+    let streak = 0;
+    for (let i = 0; i < 365; i++) {
+      const checkDate = new Date();
+      checkDate.setDate(checkDate.getDate() - i);
+      const expectedDate = getLocalDateString(checkDate);
+      if (uniqueDates.includes(expectedDate)) {
+        streak++;
+      } else {
+        break;
+      }
+    }
+
+    console.log("Streak calculated:", streak);
+
+    await supabaseClient
+      .from("user_profiles")
+      .update({ streak_days: streak })
+      .eq("id", supabaseUser.id);
+
+    return streak;
+  }, [supabaseUser, supabaseClient]);
 
   // Calculate and update streak
   const updateStreak = useCallback(async () => {
-    if (!supabaseUser) return;
+    if (!supabaseUser || isCalculatingStreak.current) return;
+
+    isCalculatingStreak.current = true;
 
     try {
-      // Get user's session history to calculate streak
-      const { data: sessions, error: fetchError } = await supabaseClient
-        .from(TABLES.USER_SESSIONS)
-        .select("session_start")
-        .eq("user_id", supabaseUser.id)
-        .order("session_start", { ascending: false });
-
-      if (fetchError) throw fetchError;
-
-      // Calculate streak days
-      const sessionDates = sessions.map((s) =>
-        new Date(s.session_start).toDateString()
+      // Use RPC call to calculate unique session dates in the database
+      // This is much more efficient than fetching all sessions
+      const { data: dateData, error: dateError } = await supabaseClient.rpc(
+        "get_session_dates",
+        {
+          p_user_id: supabaseUser.id,
+        }
       );
-      const uniqueDates = [...new Set(sessionDates)];
+
+      if (dateError) {
+        console.log(
+          "RPC not available, falling back to client-side calculation"
+        );
+        // Fallback to client-side calculation if RPC doesn't exist yet
+        return await calculateStreakClientSide();
+      }
+
+      // dateData should be array of date strings like ["2025-10-17", "2025-10-16", ...]
+      const uniqueDates = dateData.map((row) => row.session_date);
+
+      console.log("Streak calculation (database):", {
+        uniqueDatesCount: uniqueDates.length,
+        uniqueDates: uniqueDates.slice(0, 10), // Show first 10
+        now: new Date().toISOString(),
+      });
 
       let streak = 0;
-      const today = new Date().toDateString();
+      const getLocalDateString = (date) => {
+        const d = new Date(date);
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+      };
 
-      for (let i = 0; i < uniqueDates.length; i++) {
-        const currentDate = new Date();
-        currentDate.setDate(currentDate.getDate() - i);
-        const expectedDate = currentDate.toDateString();
+      // Check consecutive days going backwards from today
+      for (let i = 0; i < 365; i++) {
+        const checkDate = new Date();
+        checkDate.setDate(checkDate.getDate() - i);
+        const expectedDate = getLocalDateString(checkDate);
 
         if (uniqueDates.includes(expectedDate)) {
           streak++;
@@ -47,6 +125,8 @@ export const useAnalytics = () => {
           break;
         }
       }
+
+      console.log("Streak calculated:", streak);
 
       // Update user profile with new streak
       const { error: updateError } = await supabaseClient
@@ -60,15 +140,49 @@ export const useAnalytics = () => {
     } catch (err) {
       console.error("Error updating streak:", err);
       return 0;
+    } finally {
+      isCalculatingStreak.current = false;
     }
-  }, [supabaseUser, supabaseClient]);
+  }, [supabaseUser, supabaseClient, calculateStreakClientSide]);
 
   // Start a new session when user logs in
   useEffect(() => {
     if (authLoading || !isAuthenticated || !supabaseUser) return;
 
+    // Prevent duplicate session creation
+    if (sessionRef.current) return;
+
     const startSession = async () => {
       try {
+        // Check if there's a recent session (within last hour)
+        const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+        const { data: recentSessions, error: fetchError } = await supabaseClient
+          .from(TABLES.USER_SESSIONS)
+          .select("id, session_start")
+          .eq("user_id", supabaseUser.id)
+          .gte("session_start", oneHourAgo)
+          .order("session_start", { ascending: false })
+          .limit(1);
+
+        if (fetchError) throw fetchError;
+
+        // If there's a session within the last hour, reuse it
+        if (recentSessions && recentSessions.length > 0) {
+          console.log(
+            "Reusing existing session from",
+            recentSessions[0].session_start
+          );
+          setCurrentSession(recentSessions[0]);
+          sessionRef.current = recentSessions[0];
+
+          // Still update streak (but it should be cached now)
+          setTimeout(() => {
+            updateStreak();
+          }, 500);
+          return;
+        }
+
+        // Otherwise create a new session
         const { data, error } = await supabaseClient
           .from(TABLES.USER_SESSIONS)
           .insert({
@@ -81,11 +195,14 @@ export const useAnalytics = () => {
 
         if (error) throw error;
 
+        console.log("Created new session");
         setCurrentSession(data);
         sessionRef.current = data;
 
-        // Update streak after starting session
-        updateStreak();
+        // Wait a bit to ensure session is committed, then update streak
+        setTimeout(() => {
+          updateStreak();
+        }, 500);
       } catch (err) {
         console.error("Error starting session:", err);
       }
