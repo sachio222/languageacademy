@@ -577,7 +577,7 @@
   .btn-check-answer,
   .btn-skip-sentence {
     width: 100%;
-    padding: 0.875rem 1.5rem;
+    padding: 0.875rem 1.25rem;
     font-size: 1rem;
   }
 
@@ -588,12 +588,12 @@
 
   /* Results */
   .fill-in-blank-results {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.75rem;
     min-height: calc(100vh - 60px);
   }
 
   .results-score {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
     border-radius: 16px;
   }
 
@@ -660,7 +660,7 @@
 
   .blank-input {
     font-size: 1.25rem;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.5rem;
     padding-bottom: 0.5rem;
   }
 
@@ -693,11 +693,11 @@
   }
 
   .fill-in-blank-results {
-    padding: 1rem 0.75rem;
+    padding: 1rem 0.5rem;
   }
 
   .results-score {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.75rem;
   }
 
   .score-circle {

@@ -452,11 +452,11 @@
 /* Responsive */
 @media (max-width: 968px) {
   .intro-container {
-    padding: 0.5rem;
+    padding: 0.5rem 0.25rem;
   }
 
   .concept-intro {
-    padding: 2rem 0.5rem;
+    padding: 2rem 0.75rem;
   }
 
   .intro-header {
@@ -498,11 +498,11 @@
 
 @media (max-width: 768px) {
   .intro-container {
-    padding: 0.75rem;
+    padding: 0.5rem 0.25rem;
   }
 
   .concept-intro {
-    padding: 1.5rem 0.75rem;
+    padding: 1.5rem 0.5rem;
   }
 
   .intro-header {
@@ -527,11 +527,11 @@
   }
 
   .concept-card-header {
-    padding: 1.25rem 1.25rem 0.5rem;
+    padding: 1.25rem 1rem 0.5rem;
   }
 
   .concept-card-body {
-    padding: 0.5rem 1.25rem 1.25rem;
+    padding: 0.5rem 1rem 1.25rem;
     gap: 1.25rem;
   }
 
@@ -539,7 +539,7 @@
     width: 28px;
     height: 28px;
     top: 1.25rem;
-    right: 1.25rem;
+    right: 1rem;
   }
 
   .vocab-intro-table th,
@@ -560,11 +560,11 @@
 
 @media (max-width: 640px) {
   .intro-container {
-    padding: 0.5rem;
+    padding: 0.25rem;
   }
 
   .concept-intro {
-    padding: 1.25rem 0.5rem;
+    padding: 1.25rem 0.25rem;
   }
 
   .intro-header {
@@ -589,11 +589,11 @@
   }
 
   .concept-card-header {
-    padding: 1rem 1rem 0.5rem;
+    padding: 1rem 0.75rem 0.5rem;
   }
 
   .concept-card-body {
-    padding: 0.5rem 1rem 1rem;
+    padding: 0.5rem 0.75rem 1rem;
     gap: 1rem;
   }
 
@@ -601,7 +601,7 @@
     width: 24px;
     height: 24px;
     top: 1rem;
-    right: 1rem;
+    right: 0.75rem;
   }
 
   .concept-intro-card h4 {
@@ -613,7 +613,7 @@
   }
 
   .concept-intro-example {
-    padding: 0.875rem 1rem;
+    padding: 0.875rem 0.75rem;
   }
 
   .concept-intro-example code {
@@ -647,7 +647,7 @@
   }
 
   .tip-note {
-    padding: 1rem 1.25rem;
+    padding: 1rem;
     font-size: 0.875rem;
   }
 

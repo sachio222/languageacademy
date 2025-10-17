@@ -34,6 +34,7 @@ function FillInTheBlank({ module, onComplete }) {
   const [feedback, setFeedback] = useState({});
   const [isCorrect, setIsCorrect] = useState({});
   const [showResults, setShowResults] = useState(false);
+  const [shakeKey, setShakeKey] = useState({}); // Track animation replays
   const inputRefs = useRef({});
 
   const sentences = module.sentences || [];
@@ -119,12 +120,6 @@ function FillInTheBlank({ module, onComplete }) {
   const handleAnswerChange = (sentenceIdx, blankIdx, value) => {
     const key = `${sentenceIdx}-${blankIdx}`;
     setAnswers(prev => ({ ...prev, [key]: value }));
-
-    // Clear feedback AND isCorrect when user starts typing again
-    if (feedback[key]) {
-      setFeedback(prev => ({ ...prev, [key]: null }));
-      setIsCorrect(prev => ({ ...prev, [key]: undefined }));
-    }
   };
 
   const handleCheckAnswer = () => {
@@ -133,6 +128,7 @@ function FillInTheBlank({ module, onComplete }) {
     // Check each blank
     const newFeedback = {};
     const newIsCorrect = {};
+    const newShakeKey = {};
     let allCorrect = true;
 
     currentSentence.blanks.forEach((blank, idx) => {
@@ -141,16 +137,19 @@ function FillInTheBlank({ module, onComplete }) {
 
       const result = checkAnswer(userAnswer, blank.answer);
 
-      newFeedback[key] = result.feedback;
+      newFeedback[key] = result.isMatch ? 'checked' : 'checked';
       newIsCorrect[key] = result.isMatch;
 
       if (!result.isMatch) {
         allCorrect = false;
+        // Increment shake counter to replay animation
+        newShakeKey[key] = (shakeKey[key] || 0) + 1;
       }
     });
 
     setFeedback(prev => ({ ...prev, ...newFeedback }));
     setIsCorrect(prev => ({ ...prev, ...newIsCorrect }));
+    setShakeKey(prev => ({ ...prev, ...newShakeKey }));
 
     // If all correct and not last sentence, auto-advance after short delay
     if (allCorrect && !isLastSentence) {
@@ -207,6 +206,7 @@ function FillInTheBlank({ module, onComplete }) {
     setAnswers({});
     setFeedback({});
     setIsCorrect({});
+    setShakeKey({});
     setShowResults(false);
     updateSentenceInUrl(0);
   };
@@ -239,10 +239,12 @@ function FillInTheBlank({ module, onComplete }) {
       const hasAnswer = answers[key] && answers[key].trim().length > 0;
       const inputIsCorrect = isCorrect[key];
       const inputFeedback = feedback[key];
+      const currentShakeKey = shakeKey[key] || 0; // Get shake counter for this input
 
       parts.push(
         <span key={`blank-${blankIdx}`} className="blank-wrapper">
           <input
+            key={`${key}-${currentShakeKey}`} // Force re-mount to replay animation
             ref={el => {
               if (el) {
                 inputRefs.current[key] = el;
@@ -250,7 +252,7 @@ function FillInTheBlank({ module, onComplete }) {
               }
             }}
             type="text"
-            className={`blank-input ${hasAnswer && inputIsCorrect === true ? 'correct' : ''} ${hasAnswer && inputIsCorrect === false ? 'incorrect' : ''}`}
+            className={`blank-input ${hasAnswer && inputIsCorrect === true ? 'correct' : ''} ${inputIsCorrect === false && inputFeedback ? 'incorrect' : ''}`}
             value={answers[key] || ''}
             onChange={(e) => handleAnswerChange(sentenceIdx, blankIdx, e.target.value)}
             onKeyDown={(e) => handleKeyDown(e, sentenceIdx, blankIdx)}
@@ -271,11 +273,7 @@ function FillInTheBlank({ module, onComplete }) {
           {blank.hint && (
             <span className="blank-hint">({blank.hint})</span>
           )}
-          {inputFeedback && (
-            <div className={`blank-feedback ${inputIsCorrect ? 'correct' : 'incorrect'}`}>
-              {inputIsCorrect ? '✓ Correct!' : `✗ ${inputFeedback}`}
-            </div>
-          )}
+          {/* No feedback message - styling only */}
         </span>
       );
 

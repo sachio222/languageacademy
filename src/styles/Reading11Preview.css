@@ -352,7 +352,7 @@
 /* Mobile responsive */
 @media (max-width: 900px) {
   .reading-content-wrapper {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   /* Hide tooltip showcase on tablets/mobile, too cramped */
@@ -381,27 +381,27 @@
 
   .reading-title {
     font-size: 1.25rem;
-    padding: 1.5rem 1.5rem 0.5rem;
+    padding: 1.5rem 1rem 0.5rem;
   }
 
   .reading-subtitle {
     font-size: 0.8125rem;
-    padding: 0 1.5rem 1rem;
+    padding: 0 1rem 1rem;
   }
 
   .reading-content-wrapper {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   .reading-text {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     font-size: 1rem;
     max-height: 350px;
   }
 
   .reading-stats {
     gap: 1rem;
-    padding: 1.25rem 1.5rem;
+    padding: 1.25rem 1rem;
   }
 
   .stat-value {
@@ -413,12 +413,12 @@
   }
 
   .reading-caption {
-    padding: 1.25rem 1.5rem;
+    padding: 1.25rem 1rem;
     font-size: 0.8125rem;
   }
 
   .preview-note {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     font-size: 0.8125rem;
   }
 }

@@ -326,11 +326,11 @@
 /* Mobile Responsive - Medium.com inspired */
 @media (max-width: 768px) {
   .reading-article-wrapper {
-    padding: 2.5rem 1.5rem 2rem;
+    padding: 2.5rem 1rem 2rem;
   }
 
   .reading-quiz-section {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
   }
 
   .passage-header {
@@ -368,12 +368,12 @@
 
 @media (max-width: 640px) {
   .reading-article-wrapper {
-    padding: 1.5rem 1rem 1.5rem;
+    padding: 1.5rem 0.75rem 1.5rem;
     order: 0 !important;
   }
 
   .reading-quiz-section {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.75rem;
     order: 1 !important;
   }
 
@@ -442,7 +442,7 @@
   }
 
   .passage-instructions {
-    padding: 1rem 1.25rem;
+    padding: 1rem;
     font-size: 0.875rem;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
@@ -468,7 +468,7 @@
   }
 
   .wiki-text {
-    padding: 0.875rem 1rem 1rem;
+    padding: 0.875rem 0.875rem 1rem;
   }
 
   .wiki-text strong {
@@ -490,7 +490,7 @@
   }
 
   .reading-quiz-section .exercise-instruction {
-    padding: 1.25rem;
+    padding: 1.25rem 1rem;
     font-size: 0.875rem;
   }
 

@@ -1598,10 +1598,14 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   .right-pane {
     border-left: none;
     border-top: 1px solid #e2e8f0;
-    padding: 1.5rem;
+    padding: 1.5rem 0.75rem;
     max-height: none;
     overflow-y: visible;
     order: 2;
+  }
+
+  .concept-item {
+    padding: 1.25rem 1rem;
   }
 
   .lessons-grid {
@@ -1745,7 +1749,11 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   }
 
   .right-pane {
-    padding: 1.25rem 0.75rem;
+    padding: 1.25rem 0.5rem;
+  }
+
+  .concept-item {
+    padding: 1rem 0.75rem;
   }
 
   .navigation-buttons {
