@@ -582,29 +582,33 @@ const wikipediaEntries = {
 function ReadingPassage({ passage }) {
   const [showTranslation, setShowTranslation] = useState(false);
   const [hoveredWord, setHoveredWord] = useState(null);
-  const [tooltipPosition, setTooltipPosition] = useState({ shift: 0, arrowShift: 0 });
+  const [tooltipPosition, setTooltipPosition] = useState({ shift: 0, arrowShift: 0, isVisible: false });
   const wordRefs = useRef({});
   const { speak } = useSpeech();
 
   // Calculate tooltip position on mobile to prevent viewport overflow
   useEffect(() => {
     if (!hoveredWord) {
-      setTooltipPosition({ shift: 0, arrowShift: 0 });
+      setTooltipPosition({ shift: 0, arrowShift: 0, isVisible: false });
       return;
     }
 
     // Only calculate on mobile screens
     const isMobile = window.innerWidth <= 640;
     if (!isMobile) {
-      setTooltipPosition({ shift: 0, arrowShift: 0 });
+      // Desktop: show immediately, no calculation needed
+      setTooltipPosition({ shift: 0, arrowShift: 0, isVisible: true });
       return;
     }
 
     const wordElement = wordRefs.current[hoveredWord];
     if (!wordElement) return;
 
-    // Small delay to ensure tooltip is rendered
-    setTimeout(() => {
+    // Start with hidden tooltip so we can measure it
+    setTooltipPosition({ shift: 0, arrowShift: 0, isVisible: false });
+
+    // Use requestAnimationFrame to measure in next frame
+    requestAnimationFrame(() => {
       const tooltipElement = wordElement.querySelector('.wiki-tooltip');
       if (!tooltipElement) return;
 
@@ -631,16 +635,13 @@ function ReadingPassage({ passage }) {
         shift = (viewportWidth - safeMargin) - tooltipRight;
       }
 
-      // Update position if needed
-      if (shift !== 0) {
-        setTooltipPosition({
-          shift: shift,
-          arrowShift: -shift // Arrow moves opposite to keep pointing at word
-        });
-      } else {
-        setTooltipPosition({ shift: 0, arrowShift: 0 });
-      }
-    }, 10);
+      // Update position and make visible
+      setTooltipPosition({
+        shift: shift,
+        arrowShift: -shift, // Arrow moves opposite to keep pointing at word
+        isVisible: true
+      });
+    });
   }, [hoveredWord]);
 
   if (!passage) return null;
@@ -936,7 +937,8 @@ function ReadingPassage({ passage }) {
                   className="word-tooltip wiki-tooltip"
                   style={{
                     '--tooltip-shift': `${tooltipPosition.shift}px`,
-                    '--arrow-shift': `${tooltipPosition.arrowShift}px`
+                    '--arrow-shift': `${tooltipPosition.arrowShift}px`,
+                    visibility: tooltipPosition.isVisible ? 'visible' : 'hidden'
                   }}
                 >
                   <div className="wiki-content">
@@ -992,7 +994,8 @@ function ReadingPassage({ passage }) {
                   className="word-tooltip wiki-tooltip"
                   style={{
                     '--tooltip-shift': `${tooltipPosition.shift}px`,
-                    '--arrow-shift': `${tooltipPosition.arrowShift}px`
+                    '--arrow-shift': `${tooltipPosition.arrowShift}px`,
+                    visibility: tooltipPosition.isVisible ? 'visible' : 'hidden'
                   }}
                 >
                   <div className="wiki-content">
