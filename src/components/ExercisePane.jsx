@@ -65,15 +65,18 @@ function ExercisePane({
 
         if (!error && data?.user_answer) {
           setUserAnswer(data.user_answer);
+        } else {
+          // Only clear if no previous answer found
+          setUserAnswer('');
         }
       } catch (err) {
-        // No previous answer found, that's okay
+        // No previous answer found, clear it
+        setUserAnswer('');
       } finally {
         setLoadingPreviousAnswer(false);
       }
     };
 
-    setUserAnswer(''); // Reset answer when exercise changes
     setLoadingPreviousAnswer(true);
     loadPreviousAnswer();
   }, [exercise?.id, supabaseClient, supabaseUser, isAuthenticated]);
@@ -164,7 +167,7 @@ function ExercisePane({
 
   // Reset when exercise changes and focus textarea
   useEffect(() => {
-    setUserAnswer('');
+    // Don't clear userAnswer here - it's handled by loadPreviousAnswer effect
     setTestResults(null);
     setShowHint(false);
     setStartTime(Date.now()); // Start timing the exercise
