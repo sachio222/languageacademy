@@ -458,31 +458,41 @@
     margin-bottom: 0.375rem;
   }
 
+  /* Optimized Wikipedia card for mobile - maximize image & content */
   .wiki-tooltip {
-    min-width: 260px;
-    max-width: 280px;
+    min-width: 300px;
+    max-width: min(340px, 92vw);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    padding: 0;
+    overflow: hidden;
   }
 
   .wiki-image {
-    height: 120px;
+    height: 160px;
+    border-radius: 0;
+    margin: 0;
+    display: block;
   }
 
   .wiki-text {
-    padding: 0.875rem 0.875rem 1rem;
+    padding: 0.875rem 1rem 0.875rem;
   }
 
   .wiki-text strong {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     margin-bottom: 0.375rem;
+    letter-spacing: -0.015em;
   }
 
   .wiki-text p {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
+    line-height: 1.5;
     margin-bottom: 0.625rem;
+    color: #665665;
   }
 
   .wiki-link {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
   }
 
   .reading-quiz-section .exercise-header {
@@ -496,5 +506,38 @@
 
   .reading-exercise-container {
     padding-bottom: 5rem;
+  }
+}
+
+/* Extra small mobile devices - maximize Wikipedia card */
+@media (max-width: 400px) {
+  .wiki-tooltip {
+    min-width: 280px;
+    max-width: min(320px, 94vw);
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .wiki-image {
+    height: 140px;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .wiki-text {
+    padding: 0.75rem 0.875rem 0.75rem;
+  }
+
+  .wiki-text strong {
+    font-size: 0.875rem;
+  }
+
+  .wiki-text p {
+    font-size: 0.75rem;
+  }
+
+  .wiki-link {
+    font-size: 0.75rem;
   }
 }
