@@ -10,7 +10,28 @@ import { Award } from 'lucide-react';
  * Tests all exercises from the module in random order
  */
 function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  // Helper to get initial question index from URL (1-based to 0-based) with validation
+  const getInitialQuestionIndex = () => {
+    const params = new URLSearchParams(window.location.search);
+    const questionParam = params.get('question');
+    if (questionParam) {
+      const questionNum = parseInt(questionParam, 10);
+      // Note: examQuestions is built below, so we can't validate max here yet
+      // Will validate in a useEffect after examQuestions is available
+      if (!isNaN(questionNum) && questionNum >= 1) {
+        return questionNum - 1; // Convert 1-based to 0-based
+      }
+      // Invalid question - clear from URL
+      if (isNaN(questionNum) || questionNum < 1) {
+        const url = new URL(window.location);
+        url.searchParams.delete('question');
+        window.history.replaceState({}, '', url);
+      }
+    }
+    return 0;
+  };
+
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(getInitialQuestionIndex);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [results, setResults] = useState(null);
@@ -36,6 +57,55 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
   const answeredCount = examQuestions.filter(q => answers[q.id]?.trim()).length;
   const progress = (answeredCount / examQuestions.length) * 100;
 
+  // Helper to update question index in URL (0-based to 1-based)
+  const updateQuestionInUrl = (questionIndex) => {
+    const url = new URL(window.location);
+    const questionNum = questionIndex + 1; // Convert 0-based to 1-based
+    url.searchParams.set('question', questionNum);
+    window.history.pushState({}, '', url);
+  };
+
+  // Validate initial question index once examQuestions is available
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const questionParam = params.get('question');
+    if (questionParam) {
+      const questionNum = parseInt(questionParam, 10);
+      // If question is out of bounds, reset to 0
+      if (questionNum > examQuestions.length || questionNum < 1) {
+        setCurrentQuestionIndex(0);
+        const url = new URL(window.location);
+        url.searchParams.delete('question');
+        window.history.replaceState({}, '', url);
+      }
+    }
+  }, []); // Run once on mount
+
+  // Handle browser back/forward navigation with validation
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const questionParam = params.get('question');
+      if (questionParam) {
+        const questionNum = parseInt(questionParam, 10);
+        if (!isNaN(questionNum) && questionNum >= 1 && questionNum <= examQuestions.length) {
+          setCurrentQuestionIndex(questionNum - 1); // Convert 1-based to 0-based
+        } else {
+          // Invalid question - reset to 0
+          setCurrentQuestionIndex(0);
+          const url = new URL(window.location);
+          url.searchParams.delete('question');
+          window.history.replaceState({}, '', url);
+        }
+      } else {
+        setCurrentQuestionIndex(0);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [examQuestions.length]);
+
   const handleAnswerChange = (value) => {
     setAnswers({
       ...answers,
@@ -45,13 +115,17 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
 
   const handleNext = () => {
     if (currentQuestionIndex < examQuestions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      const newIndex = currentQuestionIndex + 1;
+      setCurrentQuestionIndex(newIndex);
+      updateQuestionInUrl(newIndex);
     }
   };
 
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(currentQuestionIndex - 1);
+      const newIndex = currentQuestionIndex - 1;
+      setCurrentQuestionIndex(newIndex);
+      updateQuestionInUrl(newIndex);
     }
   };
 

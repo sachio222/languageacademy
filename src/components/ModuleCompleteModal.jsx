@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import '../styles/ModuleCompleteModal.css';
 
-function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam, onRetakeExercises, totalModules, hasNextModule, timeSpent = 0 }) {
+function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onClose, onTakeExam, onRetakeExercises, totalModules, hasNextModule, timeSpent = 0 }) {
   if (!lesson) return null;
 
   // Use prop if provided, otherwise fallback to ID comparison
@@ -16,11 +17,22 @@ function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onTakeExam
     return secs > 0 ? `${minutes}m ${secs}s` : `${minutes}m`;
   };
 
+  // Close on ESC key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [onClose]);
+
   return (
     <div className="modal-overlay" onClick={(e) => {
-      // Close on backdrop click
+      // Close on backdrop click without navigating
       if (e.target.className === 'modal-overlay') {
-        onBackToModules();
+        onClose();
       }
     }}>
       <div className="modal-content module-complete-modal">

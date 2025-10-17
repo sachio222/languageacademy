@@ -2,6 +2,8 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ChevronDown, Award, BookOpen, TextCursorInput } from 'lucide-react';
 import { unitStructure } from '../lessons/lessonData';
 import SpeakButton from './SpeakButton';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { extractModuleId } from '../utils/progressSync';
 import '../styles/LeftNav.css';
 
 // Normalize text for search (remove diacritics/accents)
@@ -19,6 +21,7 @@ const getNavTitle = (title) => {
 };
 
 function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, isCollapsed, onToggleCollapse, mobileNavOpen, onCloseMobileNav }) {
+  const { moduleProgress } = useSupabaseProgress();
   const [searchQuery, setSearchQuery] = useState('');
   // Initialize all units as collapsed (accordion starts closed)
   const [collapsedUnits, setCollapsedUnits] = useState(new Set(unitStructure.map(unit => unit.id)));
@@ -193,13 +196,36 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
     );
   }, [vocabularyIndex, searchQuery]);
 
+  // Helper to get exercise count for different module types
+  const getExerciseCount = (lesson) => {
+    if (lesson.isFillInTheBlank && lesson.sentences) {
+      return lesson.sentences.length;
+    }
+    if (lesson.isUnitExam && lesson.exerciseConfig?.items) {
+      return lesson.exerciseConfig.items.length;
+    }
+    return lesson.exercises?.length || 0;
+  };
+
+  // Helper to get completed exercise count
+  const getCompletedCount = (lesson) => {
+    // For fill-in-blank and exams, check module_progress table
+    if (lesson.isFillInTheBlank || lesson.isUnitExam) {
+      const modId = extractModuleId(lesson);
+      const modProgress = moduleProgress?.[modId];
+      // If module is marked complete, return total count
+      return modProgress?.completed_at ? getExerciseCount(lesson) : 0;
+    }
+    // Normal modules: count individual exercises
+    return lesson.exercises?.filter(ex => completedExercises.has(ex.id)).length || 0;
+  };
+
   // Calculate completion for a lesson
   const getLessonCompletion = (lesson) => {
-    if (!lesson.exercises) return 0;
-    const completed = lesson.exercises.filter(ex =>
-      completedExercises.has(ex.id)
-    ).length;
-    return Math.round((completed / lesson.exercises.length) * 100);
+    const total = getExerciseCount(lesson);
+    if (total === 0) return 0;
+    const completed = getCompletedCount(lesson);
+    return Math.round((completed / total) * 100);
   };
 
   return (
@@ -465,9 +491,11 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
           </button>
           {unitStructure.map(unit => {
             const unitLessons = getLessonsForUnit(unit);
-            const completed = unitLessons.filter(lesson =>
-              lesson.exercises.every(ex => completedExercises.has(ex.id))
-            ).length;
+            const completed = unitLessons.filter(lesson => {
+              const completedCount = getCompletedCount(lesson);
+              const totalCount = getExerciseCount(lesson);
+              return completedCount === totalCount && totalCount > 0;
+            }).length;
             const total = unitLessons.length;
             const progress = Math.round((completed / total) * 100);
 

@@ -13,6 +13,56 @@ export const useAnalytics = () => {
   const sessionRef = useRef(null);
   const activityTimerRef = useRef(null);
 
+  // Calculate and update streak
+  const updateStreak = useCallback(async () => {
+    if (!supabaseUser) return;
+
+    try {
+      // Get user's session history to calculate streak
+      const { data: sessions, error: fetchError } = await supabaseClient
+        .from(TABLES.USER_SESSIONS)
+        .select("session_start")
+        .eq("user_id", supabaseUser.id)
+        .order("session_start", { ascending: false });
+
+      if (fetchError) throw fetchError;
+
+      // Calculate streak days
+      const sessionDates = sessions.map((s) =>
+        new Date(s.session_start).toDateString()
+      );
+      const uniqueDates = [...new Set(sessionDates)];
+
+      let streak = 0;
+      const today = new Date().toDateString();
+
+      for (let i = 0; i < uniqueDates.length; i++) {
+        const currentDate = new Date();
+        currentDate.setDate(currentDate.getDate() - i);
+        const expectedDate = currentDate.toDateString();
+
+        if (uniqueDates.includes(expectedDate)) {
+          streak++;
+        } else {
+          break;
+        }
+      }
+
+      // Update user profile with new streak
+      const { error: updateError } = await supabaseClient
+        .from("user_profiles")
+        .update({ streak_days: streak })
+        .eq("id", supabaseUser.id);
+
+      if (updateError) throw updateError;
+
+      return streak;
+    } catch (err) {
+      console.error("Error updating streak:", err);
+      return 0;
+    }
+  }, [supabaseUser, supabaseClient]);
+
   // Start a new session when user logs in
   useEffect(() => {
     if (authLoading || !isAuthenticated || !supabaseUser) return;
@@ -33,6 +83,9 @@ export const useAnalytics = () => {
 
         setCurrentSession(data);
         sessionRef.current = data;
+
+        // Update streak after starting session
+        updateStreak();
       } catch (err) {
         console.error("Error starting session:", err);
       }
@@ -62,7 +115,13 @@ export const useAnalytics = () => {
       }
       endSession();
     };
-  }, [authLoading, isAuthenticated, supabaseUser, supabaseClient]);
+  }, [
+    authLoading,
+    isAuthenticated,
+    supabaseUser,
+    supabaseClient,
+    updateStreak,
+  ]);
 
   // End session when component unmounts or user logs out
   const endSession = useCallback(async () => {
@@ -188,56 +247,6 @@ export const useAnalytics = () => {
     },
     [supabaseUser, supabaseClient]
   );
-
-  // Calculate and update streak
-  const updateStreak = useCallback(async () => {
-    if (!supabaseUser) return;
-
-    try {
-      // Get user's session history to calculate streak
-      const { data: sessions, error: fetchError } = await supabaseClient
-        .from(TABLES.USER_SESSIONS)
-        .select("session_start")
-        .eq("user_id", supabaseUser.id)
-        .order("session_start", { ascending: false });
-
-      if (fetchError) throw fetchError;
-
-      // Calculate streak days
-      const sessionDates = sessions.map((s) =>
-        new Date(s.session_start).toDateString()
-      );
-      const uniqueDates = [...new Set(sessionDates)];
-
-      let streak = 0;
-      const today = new Date().toDateString();
-
-      for (let i = 0; i < uniqueDates.length; i++) {
-        const currentDate = new Date();
-        currentDate.setDate(currentDate.getDate() - i);
-        const expectedDate = currentDate.toDateString();
-
-        if (uniqueDates.includes(expectedDate)) {
-          streak++;
-        } else {
-          break;
-        }
-      }
-
-      // Update user profile with new streak
-      const { error: updateError } = await supabaseClient
-        .from("user_profiles")
-        .update({ streak_days: streak })
-        .eq("id", supabaseUser.id);
-
-      if (updateError) throw updateError;
-
-      return streak;
-    } catch (err) {
-      console.error("Error updating streak:", err);
-      return 0;
-    }
-  }, [supabaseUser, supabaseClient]);
 
   // Get user analytics summary
   const getAnalyticsSummary = useCallback(async () => {

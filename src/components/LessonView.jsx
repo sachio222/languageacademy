@@ -13,17 +13,91 @@ import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 
 function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
-  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
-  const [showIntro, setShowIntro] = useState(true);
-  const [isStudying, setIsStudying] = useState(false);
-  const [studyCompleted, setStudyCompleted] = useState(false);
-  const [showExam, setShowExam] = useState(false);
+  // Helper to get initial exercise index from URL (1-based to 0-based) with validation
+  const getInitialExerciseIndex = () => {
+    const params = new URLSearchParams(window.location.search);
+    const exerciseParam = params.get('exercise');
+    if (exerciseParam) {
+      const exerciseNum = parseInt(exerciseParam, 10);
+      const maxExercises = lesson.exercises?.length || 0;
+      // Validate: must be valid number, >= 1, and within bounds
+      if (!isNaN(exerciseNum) && exerciseNum >= 1 && exerciseNum <= maxExercises) {
+        return exerciseNum - 1; // Convert 1-based to 0-based
+      }
+      // Invalid exercise - clear from URL
+      if (exerciseNum < 1 || exerciseNum > maxExercises) {
+        const url = new URL(window.location);
+        url.searchParams.delete('exercise');
+        window.history.replaceState({}, '', url);
+      }
+    }
+    return 0;
+  };
+
+  // Helper to get initial view state from URL with validation
+  const getInitialViewState = () => {
+    const params = new URLSearchParams(window.location.search);
+    const view = params.get('view');
+
+    // Check if this is a special module type that skips intro/study
+    const isReading = lesson.skipStudyMode || lesson.isReadingComprehension;
+    const isUnitExam = lesson.isUnitExam;
+    const isFillInBlank = lesson.isFillInTheBlank;
+
+    if (isReading || isUnitExam || isFillInBlank) {
+      // Special modules don't use view parameter - clear it if present
+      if (view) {
+        const url = new URL(window.location);
+        url.searchParams.delete('view');
+        window.history.replaceState({}, '', url);
+      }
+      return {
+        showIntro: false,
+        isStudying: false,
+        studyCompleted: true,
+        showExam: false
+      };
+    }
+
+    // Normal modules: validate view parameter
+    const validViews = ['intro', 'study', 'practice', 'exam'];
+
+    // If view is invalid, clear it and default to intro
+    if (view && !validViews.includes(view)) {
+      const url = new URL(window.location);
+      url.searchParams.delete('view');
+      window.history.replaceState({}, '', url);
+      return { showIntro: true, isStudying: false, studyCompleted: false, showExam: false };
+    }
+
+    // Valid views
+    switch (view) {
+      case 'intro':
+        return { showIntro: true, isStudying: false, studyCompleted: false, showExam: false };
+      case 'study':
+        return { showIntro: false, isStudying: true, studyCompleted: false, showExam: false };
+      case 'practice':
+        return { showIntro: false, isStudying: false, studyCompleted: true, showExam: false };
+      case 'exam':
+        return { showIntro: false, isStudying: false, studyCompleted: true, showExam: true };
+      default:
+        // Default to intro for normal modules
+        return { showIntro: true, isStudying: false, studyCompleted: false, showExam: false };
+    }
+  };
+
+  const initialState = getInitialViewState();
+  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(getInitialExerciseIndex);
+  const [showIntro, setShowIntro] = useState(initialState.showIntro);
+  const [isStudying, setIsStudying] = useState(initialState.isStudying);
+  const [studyCompleted, setStudyCompleted] = useState(initialState.studyCompleted);
+  const [showExam, setShowExam] = useState(initialState.showExam);
   const [moduleCompleted, setModuleCompleted] = useState(false);
   const [resetting, setResetting] = useState(false);
   const [moduleTimeSpent, setModuleTimeSpent] = useState(0);
 
-  // Track if module was already complete when first loaded (to prevent auto-showing modal)
-  const wasCompleteOnLoadRef = useRef(false);
+  // Track time spent on module
+  const moduleStartTimeRef = useRef(Date.now());
 
   const { supabaseClient, supabaseUser, isAuthenticated, moduleProgress } = useSupabaseProgress();
 
@@ -35,58 +109,112 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   // Generate vocabulary reference from lesson
   const vocabularyItems = lesson.vocabularyReference || [];
 
-  // Check if all exercises in this lesson are completed
-  const allExercisesComplete = lesson.exercises?.every(ex =>
-    completedExercises.has(ex.id)
-  ) || false;
+  // Helper to update URL view parameter
+  const updateViewInUrl = (view) => {
+    const url = new URL(window.location);
+    if (view) {
+      url.searchParams.set('view', view);
+    } else {
+      url.searchParams.delete('view');
+    }
+    window.history.pushState({}, '', url);
+  };
+
+  // Helper to update exercise index in URL (0-based to 1-based)
+  const updateExerciseInUrl = (exerciseIndex) => {
+    const url = new URL(window.location);
+    const exerciseNum = exerciseIndex + 1; // Convert 0-based to 1-based
+    url.searchParams.set('exercise', exerciseNum);
+    window.history.pushState({}, '', url);
+  };
+
+  // Wrapper for exercise completion that shows modal when last exercise is completed
+  const handleExerciseCompleteWrapper = async (exerciseId, moduleId, unitId, userAnswer, correctAnswer, timeSpent = 0, hintUsed = false, isCorrect = null) => {
+    // Call the original completion handler from App
+    const wasSuccessful = await onExerciseComplete(exerciseId, moduleId, unitId, userAnswer, correctAnswer, timeSpent, hintUsed, isCorrect);
+
+    // If this was the last exercise AND it was completed successfully, show modal
+    if (isLastExercise && wasSuccessful && studyCompleted && !lesson.isFillInTheBlank) {
+      // Calculate time spent
+      const timeSpentOnModule = Math.round((Date.now() - moduleStartTimeRef.current) / 1000);
+      setModuleTimeSpent(timeSpentOnModule);
+      setModuleCompleted(true);
+    }
+
+    return wasSuccessful;
+  };
 
   const handleNext = () => {
     if (!isLastExercise) {
-      setCurrentExerciseIndex(prev => prev + 1);
+      const newIndex = currentExerciseIndex + 1;
+      setCurrentExerciseIndex(newIndex);
+      updateExerciseInUrl(newIndex);
     }
   };
 
   const handlePrevious = () => {
     if (currentExerciseIndex > 0) {
-      setCurrentExerciseIndex(prev => prev - 1);
+      const newIndex = currentExerciseIndex - 1;
+      setCurrentExerciseIndex(newIndex);
+      updateExerciseInUrl(newIndex);
     }
   };
 
   const handleStartStudying = () => {
     setShowIntro(false);
     setIsStudying(true);
+    setCurrentExerciseIndex(0);
+    updateViewInUrl('study');
+    updateExerciseInUrl(0);
   };
 
   const handleFinishStudying = () => {
     setIsStudying(false);
     setStudyCompleted(true);
+    setCurrentExerciseIndex(0);
+    updateViewInUrl('practice');
+    updateExerciseInUrl(0);
   };
 
   const handleSkipStudy = () => {
     setIsStudying(false);
     setStudyCompleted(true);
+    setCurrentExerciseIndex(0);
+    updateViewInUrl('practice');
+    updateExerciseInUrl(0);
   };
 
   const handleSkipIntro = () => {
     setShowIntro(false);
     setIsStudying(false);
     setStudyCompleted(true);
+    setCurrentExerciseIndex(0);
+    updateViewInUrl('practice');
+    updateExerciseInUrl(0);
   };
 
   const handleBackToLesson = () => {
     setIsStudying(true);
     setStudyCompleted(false);
+    setCurrentExerciseIndex(0);
+    updateViewInUrl('study');
+    updateExerciseInUrl(0);
   };
 
   const handleBackToConcepts = () => {
     setShowIntro(true);
     setIsStudying(false);
     setStudyCompleted(false);
+    setCurrentExerciseIndex(0);
+    updateViewInUrl('intro');
+    updateExerciseInUrl(0);
   };
 
   const handleTakeExam = () => {
     setModuleCompleted(false); // Close completion modal
     setShowExam(true);
+    updateViewInUrl('exam');
+    updateExerciseInUrl(0);
   };
 
   const handlePassExam = (examScore, timeSpent) => {
@@ -94,6 +222,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     setModuleCompleted(true);
     setShowExam(false);
     setModuleTimeSpent(timeSpent);
+    updateViewInUrl(null); // Clear view when showing completion modal
+    updateExerciseInUrl(0);
 
     // Update database with exam score and time
     if (onModuleComplete) {
@@ -105,6 +235,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     setShowExam(false);
     setIsStudying(true);
     setCurrentExerciseIndex(0);
+    updateViewInUrl('study');
+    updateExerciseInUrl(0);
   };
 
   const handleRetakeExercises = async () => {
@@ -191,6 +323,80 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     }
   };
 
+  // Handle browser back/forward for view changes within same module
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const view = params.get('view');
+      const moduleParam = params.get('module');
+      const exerciseParam = params.get('exercise');
+      const currentModuleId = parseInt(moduleParam, 10);
+
+      // Only handle view changes for current module
+      if (currentModuleId === lesson.id) {
+        const isReading = lesson.skipStudyMode || lesson.isReadingComprehension;
+        const isUnitExam = lesson.isUnitExam;
+        const isFillInBlank = lesson.isFillInTheBlank;
+
+        // Restore exercise index (convert 1-based to 0-based) with validation
+        if (exerciseParam) {
+          const exerciseNum = parseInt(exerciseParam, 10);
+          const maxExercises = lesson.exercises?.length || 0;
+          if (!isNaN(exerciseNum) && exerciseNum >= 1 && exerciseNum <= maxExercises) {
+            setCurrentExerciseIndex(exerciseNum - 1);
+          } else {
+            // Invalid exercise number - reset to 0
+            setCurrentExerciseIndex(0);
+            const url = new URL(window.location);
+            url.searchParams.delete('exercise');
+            window.history.replaceState({}, '', url);
+          }
+        } else {
+          setCurrentExerciseIndex(0);
+        }
+
+        // Skip view changes for special module types
+        if (isReading || isUnitExam || isFillInBlank) return;
+
+        // Update view state based on URL
+        switch (view) {
+          case 'intro':
+            setShowIntro(true);
+            setIsStudying(false);
+            setStudyCompleted(false);
+            setShowExam(false);
+            break;
+          case 'study':
+            setShowIntro(false);
+            setIsStudying(true);
+            setStudyCompleted(false);
+            setShowExam(false);
+            break;
+          case 'practice':
+            setShowIntro(false);
+            setIsStudying(false);
+            setStudyCompleted(true);
+            setShowExam(false);
+            break;
+          case 'exam':
+            setShowIntro(false);
+            setIsStudying(false);
+            setStudyCompleted(true);
+            setShowExam(true);
+            break;
+          default:
+            setShowIntro(true);
+            setIsStudying(false);
+            setStudyCompleted(false);
+            setShowExam(false);
+        }
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [lesson.id]);
+
   // Reset state when lesson changes (new module loads)
   useEffect(() => {
     // Skip EVERYTHING for reading comprehension, unit exams, or fill-in-blank - go straight to exercises
@@ -198,82 +404,77 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     const isUnitExam = lesson.isUnitExam;
     const isFillInBlank = lesson.isFillInTheBlank;
 
-    setShowIntro(!isReading && !isUnitExam && !isFillInBlank);  // No intro for special module types
-    setIsStudying(false);
-    setStudyCompleted(isReading || isUnitExam || isFillInBlank); // Mark as "studied" so exercises show
-    setShowExam(false);
-    setModuleCompleted(false);
-    setCurrentExerciseIndex(0);
+    // Get the view from URL to determine initial state
+    const params = new URLSearchParams(window.location.search);
+    const urlView = params.get('view');
+    const urlExercise = params.get('exercise');
 
-    // Track if module is already complete on load to prevent auto-showing modal
-    const isAlreadyComplete = lesson.exercises?.every(ex => completedExercises.has(ex.id));
-    wasCompleteOnLoadRef.current = isAlreadyComplete;
-  }, [lesson.id]); // Only run when lesson changes, not when exercises are completed
+    // Determine exercise index from URL (only reset to 0 if not specified)
+    let exerciseIndex = 0;
+    if (urlExercise) {
+      const exerciseNum = parseInt(urlExercise, 10);
+      if (!isNaN(exerciseNum) && exerciseNum >= 1) {
+        exerciseIndex = exerciseNum - 1; // Convert 1-based to 0-based
+      }
+    }
 
-  // Auto-show modal when all exercises complete
-  useEffect(() => {
-    // If modal is already showing but exercises are no longer all complete (due to revert), hide it
-    if (moduleCompleted && !allExercisesComplete) {
+    // For special module types, always go straight to practice
+    if (isReading || isUnitExam || isFillInBlank) {
+      setShowIntro(false);
+      setIsStudying(false);
+      setStudyCompleted(true);
+      setShowExam(false);
       setModuleCompleted(false);
-      return;
+      setCurrentExerciseIndex(exerciseIndex);
+      // Don't update URL for special modules - they don't have views
+    } else {
+      // Normal modules: use URL view or default to intro
+      switch (urlView) {
+        case 'intro':
+          setShowIntro(true);
+          setIsStudying(false);
+          setStudyCompleted(false);
+          setShowExam(false);
+          break;
+        case 'study':
+          setShowIntro(false);
+          setIsStudying(true);
+          setStudyCompleted(false);
+          setShowExam(false);
+          break;
+        case 'practice':
+          setShowIntro(false);
+          setIsStudying(false);
+          setStudyCompleted(true);
+          setShowExam(false);
+          break;
+        case 'exam':
+          setShowIntro(false);
+          setIsStudying(false);
+          setStudyCompleted(true);
+          setShowExam(true);
+          break;
+        default:
+          // Default to intro
+          setShowIntro(true);
+          setIsStudying(false);
+          setStudyCompleted(false);
+          setShowExam(false);
+          // Set URL to intro as default
+          updateViewInUrl('intro');
+      }
+      setModuleCompleted(false);
+      setCurrentExerciseIndex(exerciseIndex);
     }
 
-    // Don't auto-show modal for fill-in-blank modules (they handle completion internally)
-    // Also don't auto-show if module was already complete when we loaded it (navigation vs. completion)
-    if (allExercisesComplete && !showExam && !moduleCompleted && studyCompleted && !lesson.isFillInTheBlank && !wasCompleteOnLoadRef.current) {
-      // Delay to allow optimistic updates to be reverted if answer was incorrect
-      const timeoutId = setTimeout(() => {
-        // Re-check if all exercises are still complete after a brief delay
-        const stillAllComplete = lesson.exercises?.every(ex =>
-          completedExercises.has(ex.id)
-        ) || false;
+    // Reset module start time when lesson changes
+    moduleStartTimeRef.current = Date.now();
+  }, [lesson.id]); // Only run when lesson changes
 
-        if (!stillAllComplete) {
-          return; // Don't show modal if exercises were reverted
-        }
-
-        // Load time from database if available
-        const loadModuleTime = async () => {
-          if (isAuthenticated && supabaseClient && supabaseUser) {
-            try {
-              const modId = extractModuleId(lesson);
-
-              // Try to get from module_progress first
-              const { data: moduleData } = await supabaseClient
-                .from('module_progress')
-                .select('time_spent_seconds')
-                .eq('user_id', supabaseUser.id)
-                .eq('module_id', modId)
-                .single();
-
-              if (moduleData?.time_spent_seconds) {
-                setModuleTimeSpent(moduleData.time_spent_seconds);
-              } else {
-                // Sum up time from individual exercise completions
-                const { data: exerciseData } = await supabaseClient
-                  .from('exercise_completions')
-                  .select('time_spent_seconds')
-                  .eq('user_id', supabaseUser.id)
-                  .eq('module_id', modId)
-                  .eq('is_correct', true);
-
-                if (exerciseData && exerciseData.length > 0) {
-                  const totalTime = exerciseData.reduce((sum, ex) => sum + (ex.time_spent_seconds || 0), 0);
-                  setModuleTimeSpent(totalTime);
-                }
-              }
-            } catch (err) {
-              // No time data, that's okay
-            }
-          }
-          setModuleCompleted(true);
-        };
-        loadModuleTime();
-      }, 100); // Small delay to allow revert to complete
-
-      return () => clearTimeout(timeoutId);
-    }
-  }, [allExercisesComplete, showExam, moduleCompleted, studyCompleted, lesson.isFillInTheBlank, isAuthenticated, supabaseClient, supabaseUser, lesson, completedExercises]);
+  // Close modal without navigating
+  const handleCloseModal = () => {
+    setModuleCompleted(false);
+  };
 
   return (
     <div className="lesson-view">
@@ -283,6 +484,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           lesson={lesson}
           onNextModule={handleNextModule}
           onBackToModules={onBack}
+          onClose={handleCloseModal}
           onTakeExam={handleTakeExam}
           onRetakeExercises={handleRetakeExercises}
           totalModules={totalModules}
@@ -406,7 +608,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
             isFirstExercise={currentExerciseIndex === 0}
             isLastExercise={isLastExercise}
             isCompleted={completedExercises.has(currentExercise.id)}
-            onComplete={onExerciseComplete}
+            onComplete={handleExerciseCompleteWrapper}
             studyCompleted={studyCompleted}
             readingPassage={lesson.readingPassage}
             onBackToLesson={lesson.isReadingComprehension ? null : handleBackToLesson}
@@ -424,7 +626,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
               isFirstExercise={currentExerciseIndex === 0}
               isLastExercise={isLastExercise}
               isCompleted={completedExercises.has(currentExercise.id)}
-              onComplete={onExerciseComplete}
+              onComplete={handleExerciseCompleteWrapper}
               studyCompleted={studyCompleted}
               readingPassage={lesson.readingPassage}
               onBackToLesson={lesson.isReadingComprehension ? null : handleBackToLesson}

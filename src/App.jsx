@@ -18,9 +18,33 @@ import './styles/App.css';
 import './styles/Auth.css';
 import './styles/OfflineIndicator.css';
 import './styles/DevMode.css';
+import './styles/DashboardHeader.css';
 
 function App() {
-  const [currentLesson, setCurrentLesson] = useState(null);
+  // Initialize currentLesson from URL query string with validation
+  const getInitialLesson = () => {
+    const params = new URLSearchParams(window.location.search);
+    const moduleParam = params.get('module');
+    if (moduleParam) {
+      const moduleId = parseInt(moduleParam, 10);
+      // Validate: must be a valid number and module must exist
+      if (!isNaN(moduleId) && moduleId > 0 && lessons.find(l => l.id === moduleId)) {
+        return moduleId;
+      }
+      // Invalid module param - clean slate
+      const url = new URL(window.location);
+      url.searchParams.delete('module');
+      url.searchParams.delete('view');
+      url.searchParams.delete('exercise');
+      url.searchParams.delete('sentence');
+      url.searchParams.delete('question');
+      url.searchParams.delete('section');
+      window.history.replaceState({}, '', url);
+    }
+    return null;
+  };
+
+  const [currentLesson, setCurrentLesson] = useState(getInitialLesson);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [showFeedbackAdmin, setShowFeedbackAdmin] = useState(false);
@@ -47,6 +71,37 @@ function App() {
 
   const isAdmin = user?.id === ADMIN_CLERK_USER_ID || supabaseUser?.id === ADMIN_SUPABASE_USER_ID;
 
+  // Handle browser back/forward buttons with validation
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const moduleParam = params.get('module');
+      if (moduleParam) {
+        const moduleId = parseInt(moduleParam, 10);
+        // Validate module exists
+        if (!isNaN(moduleId) && moduleId > 0 && lessons.find(l => l.id === moduleId)) {
+          setCurrentLesson(moduleId);
+        } else {
+          // Invalid module - go to module list and clean slate
+          setCurrentLesson(null);
+          const url = new URL(window.location);
+          url.searchParams.delete('module');
+          url.searchParams.delete('view');
+          url.searchParams.delete('exercise');
+          url.searchParams.delete('sentence');
+          url.searchParams.delete('question');
+          url.searchParams.delete('section');
+          window.history.replaceState({}, '', url);
+        }
+      } else {
+        setCurrentLesson(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   // Helper function to get unit info for a lesson
   const getUnitForLesson = (lessonId) => {
     return unitStructure.find(unit => {
@@ -57,6 +112,17 @@ function App() {
 
   const handleLessonSelect = (lessonId) => {
     setCurrentLesson(lessonId);
+
+    // Clean slate: set new module and clear all module-specific params
+    const url = new URL(window.location);
+    url.searchParams.set('module', lessonId);
+    url.searchParams.delete('view');
+    url.searchParams.delete('exercise');
+    url.searchParams.delete('sentence');   // fill-in-blank
+    url.searchParams.delete('question');   // module exam
+    url.searchParams.delete('section');    // unit exam
+    window.history.pushState({}, '', url);
+
     window.scrollTo(0, 0);
 
     // Track module visit for analytics
@@ -67,10 +133,30 @@ function App() {
 
   const handleBack = () => {
     setCurrentLesson(null);
+
+    // Clean slate: clear all query params when returning to module list
+    const url = new URL(window.location);
+    url.searchParams.delete('module');
+    url.searchParams.delete('view');
+    url.searchParams.delete('exercise');
+    url.searchParams.delete('sentence');
+    url.searchParams.delete('question');
+    url.searchParams.delete('section');
+    window.history.pushState({}, '', url);
   };
 
   const handleBackToLanding = () => {
     setCurrentLesson(null);
+
+    // Clean slate: clear all query params when returning to module list
+    const url = new URL(window.location);
+    url.searchParams.delete('module');
+    url.searchParams.delete('view');
+    url.searchParams.delete('exercise');
+    url.searchParams.delete('sentence');
+    url.searchParams.delete('question');
+    url.searchParams.delete('section');
+    window.history.pushState({}, '', url);
   };
 
   const handleExerciseComplete = async (exerciseId, moduleId, unitId, userAnswer, correctAnswer, timeSpent = 0, hintUsed = false, isCorrect = null) => {
@@ -167,6 +253,17 @@ function App() {
         console.error('Available lesson IDs:', lessons.map(l => l.id));
         alert('Error: Could not find current module. Returning to module list.');
         setCurrentLesson(null);
+
+        // Clean slate: clear all params
+        const url = new URL(window.location);
+        url.searchParams.delete('module');
+        url.searchParams.delete('view');
+        url.searchParams.delete('exercise');
+        url.searchParams.delete('sentence');
+        url.searchParams.delete('question');
+        url.searchParams.delete('section');
+        window.history.pushState({}, '', url);
+
         return;
       }
 
@@ -176,6 +273,17 @@ function App() {
       if (nextModule && nextModule.id) {
         console.log('✓ Navigating from module', moduleId, 'to', nextModule.id);
         setCurrentLesson(nextModule.id);
+
+        // Clean slate: set new module and clear all module-specific params
+        const url = new URL(window.location);
+        url.searchParams.set('module', nextModule.id);
+        url.searchParams.delete('view');
+        url.searchParams.delete('exercise');
+        url.searchParams.delete('sentence');
+        url.searchParams.delete('question');
+        url.searchParams.delete('section');
+        window.history.pushState({}, '', url);
+
         window.scrollTo(0, 0);
 
         // Track analytics for new module
@@ -187,6 +295,17 @@ function App() {
         console.log('Completed all modules!');
         alert('🎉 Congratulations! You\'ve completed all available modules!');
         setCurrentLesson(null);
+
+        // Clean slate: clear all params
+        const url = new URL(window.location);
+        url.searchParams.delete('module');
+        url.searchParams.delete('view');
+        url.searchParams.delete('exercise');
+        url.searchParams.delete('sentence');
+        url.searchParams.delete('question');
+        url.searchParams.delete('section');
+        window.history.pushState({}, '', url);
+
         window.scrollTo(0, 0);
       }
     }
@@ -283,6 +402,7 @@ function App() {
             return (
               <div className="lesson-content-wrapper">
                 <LessonView
+                  key={lesson.id}
                   lesson={lesson}
                   unitInfo={unitInfo}
                   onBack={handleBack}

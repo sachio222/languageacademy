@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { checkAnswer } from '../linter/frenchLinter';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
 import { Award } from 'lucide-react';
@@ -8,7 +8,28 @@ import { Award } from 'lucide-react';
  * Tests ability to write complete French sentences from scratch
  */
 function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
-  const [currentSection, setCurrentSection] = useState(0);
+  // Helper to get initial section index from URL (1-based to 0-based) with validation
+  const getInitialSectionIndex = () => {
+    const params = new URLSearchParams(window.location.search);
+    const sectionParam = params.get('section');
+    if (sectionParam) {
+      const sectionNum = parseInt(sectionParam, 10);
+      // Note: examData is built below, so we can't validate max here yet
+      // Will validate in the popstate handler instead
+      if (!isNaN(sectionNum) && sectionNum >= 1) {
+        return sectionNum - 1; // Convert 1-based to 0-based
+      }
+      // Invalid section - clear from URL
+      if (isNaN(sectionNum) || sectionNum < 1) {
+        const url = new URL(window.location);
+        url.searchParams.delete('section');
+        window.history.replaceState({}, '', url);
+      }
+    }
+    return 0;
+  };
+
+  const [currentSection, setCurrentSection] = useState(getInitialSectionIndex);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [results, setResults] = useState(null);
@@ -210,6 +231,55 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
   ).length;
   const totalAnswered = allQuestions.filter((q) => answers[q.id]?.trim()).length;
 
+  // Helper to update section index in URL (0-based to 1-based)
+  const updateSectionInUrl = (sectionIndex) => {
+    const url = new URL(window.location);
+    const sectionNum = sectionIndex + 1; // Convert 0-based to 1-based
+    url.searchParams.set('section', sectionNum);
+    window.history.pushState({}, '', url);
+  };
+
+  // Validate initial section index once examData is available
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const sectionParam = params.get('section');
+    if (sectionParam) {
+      const sectionNum = parseInt(sectionParam, 10);
+      // If section is out of bounds, reset to 0
+      if (sectionNum > examData.sections.length || sectionNum < 1) {
+        setCurrentSection(0);
+        const url = new URL(window.location);
+        url.searchParams.delete('section');
+        window.history.replaceState({}, '', url);
+      }
+    }
+  }, []); // Run once on mount
+
+  // Handle browser back/forward navigation with validation
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const sectionParam = params.get('section');
+      if (sectionParam) {
+        const sectionNum = parseInt(sectionParam, 10);
+        if (!isNaN(sectionNum) && sectionNum >= 1 && sectionNum <= examData.sections.length) {
+          setCurrentSection(sectionNum - 1); // Convert 1-based to 0-based
+        } else {
+          // Invalid section - reset to 0
+          setCurrentSection(0);
+          const url = new URL(window.location);
+          url.searchParams.delete('section');
+          window.history.replaceState({}, '', url);
+        }
+      } else {
+        setCurrentSection(0);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [examData.sections.length]);
+
   const handleAnswerChange = (questionId, value) => {
     setAnswers({
       ...answers,
@@ -227,14 +297,18 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
 
   const handleNextSection = () => {
     if (currentSection < examData.sections.length - 1) {
-      setCurrentSection(currentSection + 1);
+      const newSection = currentSection + 1;
+      setCurrentSection(newSection);
+      updateSectionInUrl(newSection);
       window.scrollTo(0, 0);
     }
   };
 
   const handlePreviousSection = () => {
     if (currentSection > 0) {
-      setCurrentSection(currentSection - 1);
+      const newSection = currentSection - 1;
+      setCurrentSection(newSection);
+      updateSectionInUrl(newSection);
       window.scrollTo(0, 0);
     }
   };
@@ -341,6 +415,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
                     setAnswers({});
                     setCurrentSection(0);
                     setResults(null);
+                    updateSectionInUrl(0);
                   }}
                 >
                   Retake Exam

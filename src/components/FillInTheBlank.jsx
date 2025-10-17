@@ -8,7 +8,28 @@ import FrenchCharacterPicker from './FrenchCharacterPicker';
 import '../styles/FillInTheBlank.css';
 
 function FillInTheBlank({ module, onComplete }) {
-  const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
+  // Helper to get initial sentence index from URL (1-based to 0-based) with validation
+  const getInitialSentenceIndex = () => {
+    const params = new URLSearchParams(window.location.search);
+    const sentenceParam = params.get('sentence');
+    if (sentenceParam) {
+      const sentenceNum = parseInt(sentenceParam, 10);
+      const maxSentences = module.sentences?.length || 0;
+      // Validate: must be valid number, >= 1, and within bounds
+      if (!isNaN(sentenceNum) && sentenceNum >= 1 && sentenceNum <= maxSentences) {
+        return sentenceNum - 1; // Convert 1-based to 0-based
+      }
+      // Invalid sentence - clear from URL
+      if (sentenceNum < 1 || sentenceNum > maxSentences) {
+        const url = new URL(window.location);
+        url.searchParams.delete('sentence');
+        window.history.replaceState({}, '', url);
+      }
+    }
+    return 0;
+  };
+
+  const [currentSentenceIndex, setCurrentSentenceIndex] = useState(getInitialSentenceIndex);
   const [answers, setAnswers] = useState({});
   const [feedback, setFeedback] = useState({});
   const [isCorrect, setIsCorrect] = useState({});
@@ -18,6 +39,14 @@ function FillInTheBlank({ module, onComplete }) {
   const sentences = module.sentences || [];
   const currentSentence = sentences[currentSentenceIndex];
   const isLastSentence = currentSentenceIndex === sentences.length - 1;
+
+  // Helper to update sentence index in URL (0-based to 1-based)
+  const updateSentenceInUrl = (sentenceIndex) => {
+    const url = new URL(window.location);
+    const sentenceNum = sentenceIndex + 1; // Convert 0-based to 1-based
+    url.searchParams.set('sentence', sentenceNum);
+    window.history.pushState({}, '', url);
+  };
 
   // Calculate score by sentence (not by blank)
   const sentenceResults = sentences.map((sentence, idx) => {
@@ -43,6 +72,25 @@ function FillInTheBlank({ module, onComplete }) {
     }
   }, [currentSentenceIndex, currentSentence]);
 
+  // Handle browser back/forward navigation
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const sentenceParam = params.get('sentence');
+      if (sentenceParam) {
+        const sentenceNum = parseInt(sentenceParam, 10);
+        if (!isNaN(sentenceNum) && sentenceNum >= 1 && sentenceNum <= sentences.length) {
+          setCurrentSentenceIndex(sentenceNum - 1); // Convert 1-based to 0-based
+        }
+      } else {
+        setCurrentSentenceIndex(0);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [sentences.length]);
+
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyboardNav = (e) => {
@@ -53,10 +101,14 @@ function FillInTheBlank({ module, onComplete }) {
 
       if (e.key === 'ArrowLeft' && currentSentenceIndex > 0) {
         e.preventDefault();
-        setCurrentSentenceIndex(prev => prev - 1);
+        const newIndex = currentSentenceIndex - 1;
+        setCurrentSentenceIndex(newIndex);
+        updateSentenceInUrl(newIndex);
       } else if (e.key === 'ArrowRight' && currentSentenceIndex < sentences.length - 1) {
         e.preventDefault();
-        setCurrentSentenceIndex(prev => prev + 1);
+        const newIndex = currentSentenceIndex + 1;
+        setCurrentSentenceIndex(newIndex);
+        updateSentenceInUrl(newIndex);
       }
     };
 
@@ -103,7 +155,9 @@ function FillInTheBlank({ module, onComplete }) {
     // If all correct and not last sentence, auto-advance after short delay
     if (allCorrect && !isLastSentence) {
       setTimeout(() => {
-        setCurrentSentenceIndex(prev => prev + 1);
+        const newIndex = currentSentenceIndex + 1;
+        setCurrentSentenceIndex(newIndex);
+        updateSentenceInUrl(newIndex);
       }, 1200);
     } else if (allCorrect && isLastSentence) {
       // Show results
@@ -154,6 +208,7 @@ function FillInTheBlank({ module, onComplete }) {
     setFeedback({});
     setIsCorrect({});
     setShowResults(false);
+    updateSentenceInUrl(0);
   };
 
   const handleFinish = () => {
@@ -311,7 +366,11 @@ function FillInTheBlank({ module, onComplete }) {
                 {currentSentenceIndex > 0 && (
                   <button
                     className="nav-btn nav-btn-prev"
-                    onClick={() => setCurrentSentenceIndex(prev => prev - 1)}
+                    onClick={() => {
+                      const newIndex = currentSentenceIndex - 1;
+                      setCurrentSentenceIndex(newIndex);
+                      updateSentenceInUrl(newIndex);
+                    }}
                     aria-label="Previous sentence"
                   >
                     ←
@@ -335,7 +394,11 @@ function FillInTheBlank({ module, onComplete }) {
                 {currentSentenceIndex < sentences.length - 1 && (
                   <button
                     className="nav-btn nav-btn-next"
-                    onClick={() => setCurrentSentenceIndex(prev => prev + 1)}
+                    onClick={() => {
+                      const newIndex = currentSentenceIndex + 1;
+                      setCurrentSentenceIndex(newIndex);
+                      updateSentenceInUrl(newIndex);
+                    }}
                     aria-label="Next sentence"
                   >
                     →

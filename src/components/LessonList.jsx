@@ -1,8 +1,37 @@
 import { calculateLessonProgress } from '../lessons/testRunner';
 import { unitStructure } from '../lessons/lessonData';
 import { Award, BookOpen, TextCursorInput } from 'lucide-react';
+import DashboardHeader from './DashboardHeader';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { extractModuleId } from '../utils/progressSync';
 
 function LessonList({ lessons, onLessonSelect, completedExercises }) {
+  const { moduleProgress } = useSupabaseProgress();
+
+  // Helper to get exercise count for different module types
+  const getExerciseCount = (lesson) => {
+    if (lesson.isFillInTheBlank && lesson.sentences) {
+      return lesson.sentences.length;
+    }
+    if (lesson.isUnitExam && lesson.exerciseConfig?.items) {
+      return lesson.exerciseConfig.items.length;
+    }
+    return lesson.exercises?.length || 0;
+  };
+
+  // Helper to get completed exercise count
+  const getCompletedCount = (lesson) => {
+    // For fill-in-blank and exams, check module_progress table
+    if (lesson.isFillInTheBlank || lesson.isUnitExam) {
+      const modId = extractModuleId(lesson);
+      const modProgress = moduleProgress?.[modId];
+      // If module is marked complete, return total count
+      return modProgress?.completed_at ? getExerciseCount(lesson) : 0;
+    }
+    // Normal modules: count individual exercises
+    return lesson.exercises?.filter(ex => completedExercises.has(ex.id)).length || 0;
+  };
+
   // Group lessons by pedagogical unit
   const getLessonsForUnit = (unitInfo) => {
     const [start, end] = unitInfo.lessonRange;
@@ -12,18 +41,23 @@ function LessonList({ lessons, onLessonSelect, completedExercises }) {
   const getUnitProgress = (unitInfo) => {
     const unitLessons = getLessonsForUnit(unitInfo);
     const completedLessons = unitLessons.filter(lesson => {
-      const completed = lesson.exercises.filter(ex =>
-        completedExercises.has(ex.id)
-      ).length;
-      return completed === lesson.exercises.length;
+      const completed = getCompletedCount(lesson);
+      const total = getExerciseCount(lesson);
+      return completed === total && total > 0;
     }).length;
     return { completed: completedLessons, total: unitLessons.length };
   };
 
   return (
     <div className="lesson-list">
+      {/* Dashboard Header */}
+      <DashboardHeader
+        completedExercises={completedExercises}
+        onLessonSelect={onLessonSelect}
+      />
+
       <div className="lesson-list-header">
-        <h2>Choose Your Lesson</h2>
+        <h2>All Lessons</h2>
         <p>Each unit ends with a reading comprehension milestone</p>
       </div>
 
@@ -59,10 +93,8 @@ function LessonList({ lessons, onLessonSelect, completedExercises }) {
 
             <div className="lessons-grid">
               {unitLessons.map((lesson) => {
-                const completed = lesson.exercises.filter(ex =>
-                  completedExercises.has(ex.id)
-                ).length;
-                const total = lesson.exercises.length;
+                const completed = getCompletedCount(lesson);
+                const total = getExerciseCount(lesson);
                 const progress = calculateLessonProgress(completed, total);
                 const isComplete = progress === 100;
 
