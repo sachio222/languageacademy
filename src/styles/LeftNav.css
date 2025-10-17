@@ -468,24 +468,26 @@
     display: none !important;
   }
 
-  /* Mobile close button styling */
+  /* Mobile close button styling - clean and minimal */
   .mobile-close-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     border: none;
     color: #64748b;
     font-size: 1.5rem;
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
     z-index: 20;
     border-radius: 6px;
     transition: all 0.15s;
+    line-height: 1;
+    padding: 0;
   }
 
   .mobile-close-btn:hover {
@@ -496,7 +498,7 @@
   /* Tighten search bar */
   .nav-search {
     padding: 0.75rem;
-    padding-right: 3.5rem; /* Make room for close button */
+    padding-right: 3rem; /* Make room for close button */
     gap: 0.375rem;
   }
 
