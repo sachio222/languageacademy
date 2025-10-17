@@ -42,7 +42,7 @@
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible; /* Allow tooltip stack to overflow */
 }
 
 .reading-title {
@@ -67,6 +67,7 @@
   padding: 2.5rem;
   background: #fafbfc;
   min-height: 450px;
+  overflow: visible; /* Allow tooltip stack to overflow */
 }
 
 .reading-text-container {
@@ -146,10 +147,10 @@
 .tooltip-examples {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -20px; /* Push out to overflow container */
   width: 360px;
   height: 100%;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .tooltip-example-card {
@@ -194,7 +195,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   width: 300px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transform: perspective(1000px) rotateX(2deg) rotateY(-3deg);
   transform-style: preserve-3d;
@@ -425,18 +426,12 @@
 
 /* Hover effect for showcase cards on desktop */
 @media (min-width: 901px) {
-  .tooltip-example-card.back:hover {
-    transform: translateY(-6px) translateX(-4px);
-    opacity: 0.95;
-    filter: blur(0px);
-  }
-
   .tooltip-example-card.back:hover .wiki-tooltip-demo {
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
   }
 
   .tooltip-example-card.front:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.01);
   }
 
   .tooltip-example-card.front:hover .wiki-tooltip-demo {
