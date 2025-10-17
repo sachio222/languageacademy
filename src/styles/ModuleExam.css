@@ -718,7 +718,7 @@
 @media (max-width: 968px) {
   .module-exam,
   .unit-exam {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.75rem;
     padding-bottom: 6rem;
     margin: 2rem auto;
   }
@@ -732,11 +732,11 @@
   }
 
   .exam-question {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   .exam-section {
-    padding: 1.75rem;
+    padding: 1.75rem 1.25rem;
     margin: 2rem 0;
   }
 
@@ -784,14 +784,14 @@
   }
 
   .exam-question-card {
-    padding: 1.25rem;
+    padding: 1.25rem 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .module-exam,
   .unit-exam {
-    padding: 1rem 0.75rem;
+    padding: 1rem 0.5rem;
     padding-bottom: 5rem;
     margin: 1rem auto;
   }
@@ -832,7 +832,7 @@
   }
 
   .exam-section {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.75rem;
     margin: 1.5rem 0;
   }
 
@@ -854,11 +854,11 @@
   }
 
   .exam-question {
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 0.75rem;
   }
 
   .exam-question-card {
-    padding: 1rem;
+    padding: 1rem 0.75rem;
   }
 
   .exam-question-card .question-prompt {
@@ -931,7 +931,7 @@
   }
 
   .exam-results {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.75rem;
     margin: 1.5rem auto;
   }
 
@@ -949,7 +949,7 @@
 
   .exam-passed,
   .exam-failed {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
   }
 
   .exam-message h3 {
@@ -978,7 +978,7 @@
 @media (max-width: 640px) {
   .module-exam,
   .unit-exam {
-    padding: 0.75rem 0.5rem;
+    padding: 0.75rem 0.25rem;
     padding-bottom: 5rem;
     margin: 0.75rem auto;
   }
@@ -1021,7 +1021,7 @@
   }
 
   .exam-section {
-    padding: 1.25rem 0.75rem;
+    padding: 1.25rem 0.5rem;
     margin: 1.25rem 0;
   }
 
@@ -1049,12 +1049,12 @@
   }
 
   .exam-question {
-    padding: 1rem 0.875rem;
+    padding: 1rem 0.5rem;
     margin-bottom: 1rem;
   }
 
   .exam-question-card {
-    padding: 0.875rem;
+    padding: 0.875rem 0.5rem;
   }
 
   .exam-question-card .question-number {
@@ -1112,7 +1112,7 @@
   }
 
   .completion-celebration {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.75rem;
   }
 
   .completion-celebration h2 {
@@ -1149,7 +1149,7 @@
   }
 
   .exam-results {
-    padding: 1rem 0.75rem;
+    padding: 1rem 0.5rem;
     margin: 1rem auto;
   }
 
@@ -1168,7 +1168,7 @@
 
   .exam-passed,
   .exam-failed {
-    padding: 1.75rem 1.25rem;
+    padding: 1.75rem 1rem;
     margin-bottom: 2rem;
   }
 

@@ -487,7 +487,7 @@
 /* Responsive Design - Typeform-inspired */
 @media (max-width: 768px) {
   .fill-in-blank-container {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.75rem;
     min-height: calc(100vh - 60px);
     border-radius: 0;
   }
@@ -628,7 +628,7 @@
 
 @media (max-width: 640px) {
   .fill-in-blank-container {
-    padding: 1rem 0.75rem;
+    padding: 1rem 0.5rem;
   }
 
   .fill-in-blank-header {

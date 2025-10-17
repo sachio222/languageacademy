@@ -1658,7 +1658,7 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 
   /* Exercise Pane - Tablet */
   .exercise-pane {
-    padding: 2rem 1rem;
+    padding: 2rem 0.75rem;
     padding-bottom: 5.5rem;
   }
 
@@ -1774,7 +1774,7 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 
   /* Exercise Pane Mobile */
   .exercise-pane {
-    padding: 1rem 0.75rem;
+    padding: 1rem 0.5rem;
     padding-bottom: 5rem;
   }
 
