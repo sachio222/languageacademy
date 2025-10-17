@@ -43,6 +43,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
+  cursor: default;
 }
 
 .passage-header h1 {
@@ -54,6 +55,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
     sans-serif;
   letter-spacing: -0.03em;
+  cursor: default;
 }
 
 .btn-translation {
@@ -91,6 +93,7 @@
   color: #64748b;
   font-size: 0.875rem;
   font-weight: 500;
+  cursor: default;
 }
 
 .passage-french {
@@ -99,6 +102,7 @@
 
 .paragraph-block {
   margin: 2.25rem 0;
+  cursor: default;
 }
 
 /* Paragraph with hover audio button */
@@ -136,6 +140,7 @@
   font-weight: 400;
   margin: 0 0 1rem 0;
   letter-spacing: -0.011em;
+  cursor: default;
 }
 
 .speaker-label {
@@ -143,6 +148,7 @@
   font-weight: 700;
   font-size: 1.0625rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: default;
 }
 
 .english-translation {
@@ -155,6 +161,7 @@
   font-style: italic;
   padding-left: 1.5rem;
   border-left: 2px solid #e2e8f0;
+  cursor: default;
 }
 
 .interactive-word {
@@ -306,6 +313,7 @@
   margin-bottom: 2.5rem;
   line-height: 1.7;
   border-radius: 6px;
+  cursor: default;
 }
 
 .passage-instructions strong {

@@ -244,7 +244,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises }) {
                           {!lesson.isUnitExam && !lesson.isReadingComprehension && !lesson.isFillInTheBlank && (
                             <span className="split-lesson-number">{lesson.id}</span>
                           )}
-                          <span className="split-lesson-title">{lesson.title}</span>
+                          <span className="split-lesson-title">{lesson.title.replace(/^Module \d+:\s*/, '')}</span>
                         </div>
                         <div className="split-lesson-progress-bar">
                           <div
@@ -286,7 +286,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises }) {
                           {!lesson.isUnitExam && !lesson.isReadingComprehension && !lesson.isFillInTheBlank && (
                             <span className="split-lesson-number">{lesson.id}</span>
                           )}
-                          <span className="split-lesson-title">{lesson.title}</span>
+                          <span className="split-lesson-title">{lesson.title.replace(/^Module \d+:\s*/, '')}</span>
                           <span className="split-lesson-check">✓</span>
                         </div>
                         <div className="split-lesson-progress-bar">

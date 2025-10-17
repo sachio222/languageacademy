@@ -208,7 +208,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
       </section>
 
       {/* Results / Stats */}
-      <section className="landing-section bg-subtle">
+      <section className="landing-section bg-subtle-alt">
         <div className="landing-container">
           <h2 className="section-title">Fast path to comprehension</h2>
           <p className="section-intro">
@@ -262,7 +262,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
       {/* Who it's for */}
       <section className="landing-section bg-subtle">
         <div className="landing-container">
-          <h2 className="section-title">Built for analytical learners</h2>
+          <h2 className="section-title secondary">Built for analytical learners</h2>
 
           <div className="audience-layout">
             <div className="audience-image-container">
