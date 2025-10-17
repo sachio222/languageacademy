@@ -1584,13 +1584,24 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 
   .lesson-content {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-pane {
+    max-height: none;
+    overflow-y: visible;
+    order: 1;
   }
 
   .right-pane {
     border-left: none;
     border-top: 1px solid #e2e8f0;
-    padding-top: 1.5rem;
+    padding: 1.5rem;
+    max-height: none;
+    overflow-y: visible;
+    order: 2;
   }
 
   .lessons-grid {
@@ -1731,6 +1742,10 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 
   .welcome-icon {
     font-size: 3rem;
+  }
+
+  .right-pane {
+    padding: 1.25rem 0.75rem;
   }
 
   .navigation-buttons {
@@ -1879,6 +1894,14 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   .editor-header {
     padding: 0.75rem 1rem;
     font-size: 0.8125rem;
+  }
+
+  /* Hide ALL keyboard-related UI on mobile - no physical keyboard */
+  .keyboard-help,
+  .editor-shortcut,
+  .keyboard-shortcut,
+  .keyboard-shortcut-nav {
+    display: none !important;
   }
 
   /* FrenchCharacterPicker should stay with code-editor */
