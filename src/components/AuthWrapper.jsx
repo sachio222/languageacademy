@@ -11,7 +11,12 @@ function AuthWrapper({ children, onBackToLanding }) {
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
   const [showWelcome, setShowWelcome] = useState(() => {
-    // Check if user has seen the welcome page before
+    // Check URL parameter first
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('welcome') === 'true') {
+      return true
+    }
+    // Otherwise check if user has seen the welcome page before
     return !localStorage.getItem('hasSeenWelcome')
   })
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
@@ -35,6 +40,21 @@ function AuthWrapper({ children, onBackToLanding }) {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  // Handle browser back/forward for welcome page
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search)
+      if (params.get('welcome') === 'true') {
+        setShowWelcome(true)
+      } else {
+        setShowWelcome(false)
+      }
+    }
+
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
+
   if (loading) {
     return (
       <div className="auth-loading">
@@ -48,10 +68,25 @@ function AuthWrapper({ children, onBackToLanding }) {
 
   // Show welcome page for first-time visitors (both authenticated and unauthenticated)
   if (showWelcome) {
+    // Update URL to show welcome parameter
+    const currentUrl = new URL(window.location)
+    if (currentUrl.searchParams.get('welcome') !== 'true') {
+      currentUrl.searchParams.set('welcome', 'true')
+      window.history.replaceState({}, '', currentUrl)
+    }
+
     return <WelcomePage
       onContinue={() => {
         localStorage.setItem('hasSeenWelcome', 'true')
         setShowWelcome(false)
+
+        // Remove welcome parameter from URL
+        const url = new URL(window.location)
+        url.searchParams.delete('welcome')
+        window.history.replaceState({}, '', url)
+
+        // Scroll to top when leaving welcome page
+        window.scrollTo(0, 0)
       }}
     />
   }

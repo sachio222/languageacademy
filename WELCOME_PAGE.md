@@ -13,6 +13,9 @@ First Visit:
 Returning Visitors:
   Landing Page → Sign Up/Sign In → App
   (Welcome Page is skipped)
+
+Direct Access via URL:
+  /?welcome=true → Welcome Page
 ```
 
 ## Content Sections
@@ -90,13 +93,28 @@ Follows DESIGN_PRINCIPLES.md:
 - Set to `'true'` when user clicks "Get Started"
 - Persists across sessions
 
+**URL Access:**
+
+- Welcome page adds `?welcome=true` to URL when displayed
+- Can be accessed directly at `/?welcome=true` at any time
+- URL parameter is removed when user clicks "Get Started"
+- Browser back/forward buttons work correctly with welcome page
+
 **Props:**
 
 - `onContinue`: Callback when user clicks "Get Started" button
 
-## Reset for Testing
+## Access the Welcome Page
 
-To see the welcome page again, run in browser console:
+**Method 1: Direct URL**
+
+```
+https://yourdomain.com/?welcome=true
+```
+
+**Method 2: Reset localStorage**
+
+Run in browser console:
 
 ```javascript
 localStorage.removeItem("hasSeenWelcome");

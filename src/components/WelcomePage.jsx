@@ -221,15 +221,25 @@ function WelcomePage({ onContinue }) {
               <h3>Liaison & Enchainement</h3>
               <p className="spacing-below">
                 French syllables flow into each other. When a word <strong>ending in a consonant
-                  meets a word starting with a vowel</strong>, they connect: <em>les amis</em> sounds
-                like "lay-za-mee," not "lay ah-mee," as opposed to the "s" being silent in other phrases such as <em>Les Misérables</em> ("lay mis-er-ables").
-                Important rules like these preserve audible rhythm, and help create French's characteristic smooth flow.
+                  meets a word starting with a vowel</strong>, they connect:{' '}
+                <span className="inline-phrase-audio">
+                  <em>les amis</em>
+                  <SpeakButton text="les amis" language="fr-FR" />
+                </span>{' '}
+                sounds like "lay-za-mee," not "lay ah-mee." Conversely, the "s" remains silent when the rule is not met, such as in{' '}
+                <span className="inline-phrase-audio">
+                  <em>Les Misérables</em>
+                  <SpeakButton text="Les Misérables" language="fr-FR" />
+                </span>{' '}
+                ("lay mis-er-ables").
+                <br /><br />
+                Basic rules like these preserve French's audible rhythm, and help create its characteristic smooth flow.&nbsp;
+                <strong>Don't worry, it becomes second nature quite quickly!</strong>
               </p>
               <p className="feature-note">
-                French speakers produce 7-8 syllables per second as opposed to English's 5-6 per second,
-                but with lower information density per syllable—so both languages end up communicating
-                at similar speeds. This rapid-fire delivery creates a quick, fluid sound, and you should
-                mentally prepare yourself to think in a rapid, steady rhythm as you learn and speak French.
+                French speakers produce 7-8 syllables per second as opposed to English's 5-6 per second.
+                This rapid-fire delivery creates a quick, fluid sound, and you should
+                mentally prepare yourself to think in a steady, rhythmic pace as you learn to speak and read French.
               </p>
             </div>
           </div>
