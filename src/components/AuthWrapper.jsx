@@ -1,12 +1,14 @@
 import { SignIn, SignUp, UserButton, useUser } from '@clerk/clerk-react'
 import { useState, useEffect } from 'react'
 import { useAuth } from '../hooks/useAuth'
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext'
 import LandingPage from './LandingPage'
 import WelcomePage from './WelcomePage'
 import '../styles/Landing.css'
 
 function AuthWrapper({ children, onBackToLanding }) {
-  const { isAuthenticated, loading } = useAuth()
+  const { isAuthenticated, loading, supabaseUser } = useAuth()
+  const { markWelcomeAsSeen } = useSupabaseProgress()
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
@@ -32,10 +34,10 @@ function AuthWrapper({ children, onBackToLanding }) {
 
   // Handle authentication state change to show welcome page
   useEffect(() => {
-    if (isAuthenticated && !localStorage.getItem('hasSeenWelcome')) {
+    if (isAuthenticated && supabaseUser && !supabaseUser.has_seen_welcome) {
       setShowWelcome(true)
     }
-  }, [isAuthenticated])
+  }, [isAuthenticated, supabaseUser])
 
   // Handle window resize for responsive username display
   useEffect(() => {
@@ -83,8 +85,9 @@ function AuthWrapper({ children, onBackToLanding }) {
     }
 
     return <WelcomePage
-      onContinue={() => {
-        localStorage.setItem('hasSeenWelcome', 'true')
+      onContinue={async () => {
+        // Mark welcome as seen in database
+        await markWelcomeAsSeen()
         setShowWelcome(false)
 
         // Remove welcome parameter from URL

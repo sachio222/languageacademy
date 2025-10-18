@@ -423,6 +423,24 @@ export const useSupabaseProgress = () => {
     [supabaseUser, supabaseClient]
   );
 
+  // Mark welcome page as seen
+  const markWelcomeAsSeen = useCallback(async () => {
+    if (!isAuthenticated || !supabaseUser) return false;
+
+    try {
+      const { error } = await supabaseClient
+        .from("user_profiles")
+        .update({ has_seen_welcome: true })
+        .eq("clerk_user_id", supabaseUser.clerk_user_id);
+
+      if (error) throw error;
+      return true;
+    } catch (err) {
+      console.error("Error marking welcome as seen:", err);
+      return false;
+    }
+  }, [isAuthenticated, supabaseUser, supabaseClient]);
+
   return {
     // State
     completedExercises,
@@ -437,6 +455,7 @@ export const useSupabaseProgress = () => {
     updateUnitProgress,
     updateConceptUnderstanding,
     recordExamAttempt,
+    markWelcomeAsSeen,
 
     // Computed values
     isAuthenticated,
