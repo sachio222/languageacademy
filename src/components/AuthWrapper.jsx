@@ -2,6 +2,7 @@ import { SignIn, SignUp, UserButton, useUser } from '@clerk/clerk-react'
 import { useState, useEffect } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import LandingPage from './LandingPage'
+import WelcomePage from './WelcomePage'
 import '../styles/Landing.css'
 
 function AuthWrapper({ children, onBackToLanding }) {
@@ -9,6 +10,10 @@ function AuthWrapper({ children, onBackToLanding }) {
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
+  const [showWelcome, setShowWelcome] = useState(() => {
+    // Check if user has seen the welcome page before
+    return !localStorage.getItem('hasSeenWelcome')
+  })
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
 
   // Handle navigation back to landing page
@@ -43,6 +48,16 @@ function AuthWrapper({ children, onBackToLanding }) {
 
   // Show landing page if user is not authenticated OR if they explicitly want to see it
   if (!isAuthenticated || showLanding) {
+    // Show welcome page for first-time visitors
+    if (showWelcome) {
+      return <WelcomePage
+        onContinue={() => {
+          localStorage.setItem('hasSeenWelcome', 'true')
+          setShowWelcome(false)
+        }}
+      />
+    }
+
     // Show landing page first, then auth forms
     if (!showAuthForms) {
       return <LandingPage
