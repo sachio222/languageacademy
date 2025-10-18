@@ -605,7 +605,7 @@ body:has(.left-nav.collapsed) .app-footer {
 /* Split View Layout */
 .split-view-container {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   min-height: 600px;
 }
 
@@ -834,7 +834,7 @@ body:has(.left-nav.collapsed) .app-footer {
 .split-detail-header h2 {
   flex: 1;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #1a1a1a;
   letter-spacing: -0.02em;
   margin: 0;

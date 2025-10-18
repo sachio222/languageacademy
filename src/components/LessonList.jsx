@@ -10,6 +10,33 @@ function LessonList({ lessons, onLessonSelect, completedExercises }) {
   const { moduleProgress } = useSupabaseProgress();
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'split'
   const [selectedModuleId, setSelectedModuleId] = useState(null);
+
+  // Function to find the next incomplete lesson
+  const findNextIncompleteLesson = () => {
+    for (const unitInfo of unitStructure) {
+      const unitLessons = getLessonsForUnit(unitInfo);
+      for (const lesson of unitLessons) {
+        const completed = getCompletedCount(lesson);
+        const total = getExerciseCount(lesson);
+        const progress = calculateLessonProgress(completed, total);
+        if (progress < 100) {
+          return lesson.id;
+        }
+      }
+    }
+    return null; // All lessons complete
+  };
+
+  // Handle view mode change and auto-select next lesson
+  const handleViewModeChange = (newViewMode) => {
+    setViewMode(newViewMode);
+    if (newViewMode === 'split' && !selectedModuleId) {
+      const nextLessonId = findNextIncompleteLesson();
+      if (nextLessonId) {
+        setSelectedModuleId(nextLessonId);
+      }
+    }
+  };
   // Track which units have collapsed completed modules (by default, all are collapsed)
   const [collapsedCompletedInUnits, setCollapsedCompletedInUnits] = useState(
     new Set(unitStructure.map(unit => unit.id))
@@ -85,14 +112,14 @@ function LessonList({ lessons, onLessonSelect, completedExercises }) {
           <div className="view-toggle">
             <button
               className={`view-toggle-btn ${viewMode === 'grid' ? 'active' : ''}`}
-              onClick={() => setViewMode('grid')}
+              onClick={() => handleViewModeChange('grid')}
               title="Grid view"
             >
               <Grid3x3 size={18} />
             </button>
             <button
               className={`view-toggle-btn ${viewMode === 'split' ? 'active' : ''}`}
-              onClick={() => setViewMode('split')}
+              onClick={() => handleViewModeChange('split')}
               title="Split view"
             >
               <List size={18} />
