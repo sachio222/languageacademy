@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { useAuth } from '../hooks/useAuth';
 import { lessons } from '../lessons/lessonData';
-import { Flame, Target, Clock, BookOpen } from 'lucide-react';
+import { Flame, CheckCircle, Clock, BookOpen } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import '../styles/DashboardHeader.css';
@@ -270,6 +270,13 @@ function DashboardHeader({ completedExercises, onLessonSelect }) {
 
           {/* Progress with Lessons Combined */}
           <div className="stat-box stat-progress">
+            <div className="stat-icon-wrapper">
+              <CheckCircle size={20} strokeWidth={2} />
+            </div>
+            <div className="stat-info">
+              <div className="stat-value-small">{stats.lessonsCompleted}/{stats.totalLessons}</div>
+              <div className="stat-label">Lessons Complete</div>
+            </div>
             <div className="progress-circle-container">
               <svg className="progress-circle" width="60" height="60" viewBox="0 0 60 60">
                 <circle
@@ -294,10 +301,6 @@ function DashboardHeader({ completedExercises, onLessonSelect }) {
                 />
               </svg>
               <div className="progress-circle-text">{progressPercentage}%</div>
-            </div>
-            <div className="stat-info">
-              <div className="stat-value-small">{stats.lessonsCompleted}/{stats.totalLessons}</div>
-              <div className="stat-label">Lessons Complete</div>
             </div>
           </div>
 

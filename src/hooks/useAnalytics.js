@@ -50,7 +50,14 @@ export const useAnalytics = () => {
     });
 
     let streak = 0;
-    for (let i = 0; i < 365; i++) {
+    // Grace period: Start from yesterday if user hasn't studied today yet
+    let startDay = 0;
+    const today = getLocalDateString(new Date());
+    if (!uniqueDates.includes(today)) {
+      startDay = 1;
+    }
+
+    for (let i = startDay; i < 365; i++) {
       const checkDate = new Date();
       checkDate.setDate(checkDate.getDate() - i);
       const expectedDate = getLocalDateString(checkDate);
@@ -114,7 +121,16 @@ export const useAnalytics = () => {
       };
 
       // Check consecutive days going backwards from today
-      for (let i = 0; i < 365; i++) {
+      // Grace period: Start from yesterday if user hasn't studied today yet
+      // This prevents streak from resetting at midnight
+      let startDay = 0;
+      const today = getLocalDateString(new Date());
+      if (!uniqueDates.includes(today)) {
+        // User hasn't studied today yet, check if they studied yesterday
+        startDay = 1;
+      }
+
+      for (let i = startDay; i < 365; i++) {
         const checkDate = new Date();
         checkDate.setDate(checkDate.getDate() - i);
         const expectedDate = getLocalDateString(checkDate);

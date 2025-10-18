@@ -276,12 +276,25 @@
   align-items: center;
   gap: 1rem;
   padding: 1.25rem;
+  position: relative;
+}
+
+/* Hide icon on desktop, show circle first */
+.stat-box.stat-progress .stat-icon-wrapper {
+  display: none;
+}
+
+.stat-box.stat-progress .stat-info {
+  flex: 1;
+  min-width: 0;
 }
 
 .progress-circle-container {
   position: relative;
   width: 60px;
   height: 60px;
+  flex-shrink: 0;
+  order: -1; /* Move circle to the left on desktop */
 }
 
 .progress-circle {
@@ -298,11 +311,6 @@
   font-weight: 600;
   color: #1a1a1a;
   letter-spacing: -0.01em;
-}
-
-.stat-progress .stat-info {
-  align-items: flex-start;
-  text-align: left;
 }
 
 /* Animation */
@@ -356,15 +364,11 @@
   }
 
   .stat-box {
-    padding: 0.875rem;
+    padding: 0.75rem;
   }
 
   .stat-value {
     font-size: 1.25rem;
-  }
-
-  .stat-box.stat-progress {
-    padding: 0.875rem 1rem;
   }
 }
 
@@ -402,6 +406,19 @@
     gap: 0.625rem;
   }
 
+  .stat-box.stat-progress {
+    padding: 0.75rem;
+  }
+
+  /* Show icon on mobile, remove circle order */
+  .stat-box.stat-progress .stat-icon-wrapper {
+    display: flex;
+  }
+
+  .stat-box.stat-progress .progress-circle-container {
+    order: 0; /* Reset order for mobile - circle goes to the right */
+  }
+
   .stat-icon-wrapper {
     width: 32px;
     height: 32px;
@@ -418,11 +435,6 @@
 
   .stat-label {
     font-size: 0.75rem;
-  }
-
-  /* Progress stat in single column on mobile */
-  .stat-box.stat-progress {
-    grid-column: span 1;
   }
 
   .progress-circle-container {
