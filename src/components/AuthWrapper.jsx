@@ -46,17 +46,18 @@ function AuthWrapper({ children, onBackToLanding }) {
     )
   }
 
+  // Show welcome page for first-time visitors (both authenticated and unauthenticated)
+  if (showWelcome) {
+    return <WelcomePage
+      onContinue={() => {
+        localStorage.setItem('hasSeenWelcome', 'true')
+        setShowWelcome(false)
+      }}
+    />
+  }
+
   // Show landing page if user is not authenticated OR if they explicitly want to see it
   if (!isAuthenticated || showLanding) {
-    // Show welcome page for first-time visitors
-    if (showWelcome) {
-      return <WelcomePage
-        onContinue={() => {
-          localStorage.setItem('hasSeenWelcome', 'true')
-          setShowWelcome(false)
-        }}
-      />
-    }
 
     // Show landing page first, then auth forms
     if (!showAuthForms) {

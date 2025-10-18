@@ -1,3 +1,4 @@
+import SpeakButton from './SpeakButton'
 import '../styles/WelcomePage.css'
 
 function WelcomePage({ onContinue }) {
@@ -7,9 +8,9 @@ function WelcomePage({ onContinue }) {
       <section className="welcome-hero">
         <div className="welcome-container">
           <h2 className="app-logo" title="Back to landing page">🎓 Language Academy</h2>
-          <h1 className="welcome-title">Welcome to Learning French</h1>
+          <h1 className="welcome-title">Welcome to French: Part I</h1>
           <p className="welcome-subtitle">
-            A 1,000-year journey from Latin to the language of 300 million speakers worldwide
+            A 1,000-year journey from Latin to the language of over 300 million speakers worldwide
           </p>
         </div>
       </section>
@@ -52,7 +53,7 @@ function WelcomePage({ onContinue }) {
                 <div className="fact-text">
                   French has its roots in Vulgar Latin, and evolved around 1100 years ago in what is modern-day France.
                   As a <strong>Romance language</strong>, it shares ancestry with Spanish, Italian,
-                  Portuguese, and Romanian—all descendants of the Latin spoken across the Roman Empire.
+                  Portuguese, and Romanian—all descendants of the daily Latin spoken across the Roman Empire.
                 </div>
                 <div className="fact-image">
                   <a
@@ -176,7 +177,7 @@ function WelcomePage({ onContinue }) {
       {/* How French Works */}
       <section className="welcome-section bg-subtle">
         <div className="welcome-container">
-          <h2 className="welcome-section-title">How French Works</h2>
+          <h2 className="welcome-section-title">What You Should Know</h2>
 
           <div className="welcome-linguistic-features">
             <div className="linguistic-feature">
@@ -190,14 +191,22 @@ function WelcomePage({ onContinue }) {
                 <div className="comparison-example">
                   <div className="lang-label">English (stress-timed)</div>
                   <div className="pronunciation">
-                    "I'm GO-ing to the STORE to-DAY"<br />
+                    <span className="phrase-with-audio">
+                      "I'm GO-ing to the STORE to-DAY"
+                      <SpeakButton text="I'm going to the store today" language="en-US" />
+                    </span>
+                    <br />
                     <span className="subtle">Strong beats on stressed syllables</span>
                   </div>
                 </div>
                 <div className="comparison-example">
                   <div className="lang-label">French (syllable-timed)</div>
                   <div className="pronunciation">
-                    "je vais au ma-ga-sin au-jour-d'hui"<br />
+                    <span className="phrase-with-audio">
+                      "je vais au ma-ga-sin au-jour-d'hui"
+                      <SpeakButton text="je vais au magasin aujourd'hui" language="fr-FR" />
+                    </span>
+                    <br />
                     <span className="subtle">Each syllable evenly spaced, like a metronome</span>
                   </div>
                 </div>
@@ -210,10 +219,17 @@ function WelcomePage({ onContinue }) {
 
             <div className="linguistic-feature">
               <h3>Liaison & Enchainement</h3>
-              <p>
-                French syllables flow into each other. When a word ending in a consonant
-                meets a word starting with a vowel, they connect: <em>les amis</em> sounds
-                like "lay-za-mee," not "lay ah-mee." This creates French's characteristic smooth flow.
+              <p className="spacing-below">
+                French syllables flow into each other. When a word <strong>ending in a consonant
+                  meets a word starting with a vowel</strong>, they connect: <em>les amis</em> sounds
+                like "lay-za-mee," not "lay ah-mee," as opposed to the "s" being silent in other phrases such as <em>Les Misérables</em> ("lay mis-er-ables").
+                Important rules like these preserve audible rhythm, and help create French's characteristic smooth flow.
+              </p>
+              <p className="feature-note">
+                French speakers produce 7-8 syllables per second as opposed to English's 5-6 per second,
+                but with lower information density per syllable—so both languages end up communicating
+                at similar speeds. This rapid-fire delivery creates a quick, fluid sound, and you should
+                mentally prepare yourself to think in a rapid, steady rhythm as you learn and speak French.
               </p>
             </div>
           </div>
@@ -240,7 +256,7 @@ function WelcomePage({ onContinue }) {
                 from finite pieces.
               </p>
               <div className="pedagogy-example">
-                je + être → je suis → je suis un homme
+                je + suis(être) → je suis → je suis un homme
               </div>
             </div>
 
@@ -249,7 +265,7 @@ function WelcomePage({ onContinue }) {
               <h3>Frequency-First Vocabulary</h3>
               <p>
                 The top 100 most common French words account for ~50% of all spoken French.
-                By Unit 6, you'll know <strong>72% of these words</strong>, giving you
+                As early as Unit 6, you'll know <strong>70% of these words</strong>, giving you
                 real comprehension fast. No time wasted on rare vocabulary.
               </p>
             </div>
@@ -259,7 +275,7 @@ function WelcomePage({ onContinue }) {
               <h3>Four-Phase Learning Cascade</h3>
               <p>
                 Every lesson follows how memory actually works: <strong>Concept Introduction</strong>
-                (schema formation) → <strong>Study Mode</strong> (active recall without pressure) →
+                (schema formation) → <strong>Study Mode</strong> (active recall without pressure) →&nbsp;
                 <strong>Practice</strong> (with scaffolding) → <strong>Exam</strong> (interleaved
                 retrieval for durable memory).
               </p>
@@ -269,9 +285,9 @@ function WelcomePage({ onContinue }) {
               <div className="pedagogy-number">4</div>
               <h3>Immediate Utility</h3>
               <p>
-                Module 4 teaches "ça va?"—you can have a real conversation after
+                Module 4 teaches "ça va?"—you can have a basic conversation after
                 30 minutes. Module 10: "je veux ça" (I want that). Every module
-                builds toward practical competence, not abstract grammar.
+                builds toward practical competence, skipping emphasis on abstract grammar rules (you're learning how to speak, not teach it).
               </p>
             </div>
 
@@ -299,9 +315,28 @@ function WelcomePage({ onContinue }) {
           <div className="research-note">
             <p>
               <strong>Grounded in research:</strong> This approach synthesizes findings
-              from cognitive load theory (Sweller), testing effect (Roediger),
-              desirable difficulties (Bjork), interleaving (Rohrer), and chunking theory (Miller).
-              It's not guesswork—it's 70+ years of learning science, applied.
+              from{' '}
+              <a href="https://en.wikipedia.org/wiki/Cognitive_load" target="_blank" rel="noopener noreferrer" className="research-link">
+                cognitive load theory
+              </a>{' '}
+              (Sweller),{' '}
+              <a href="https://en.wikipedia.org/wiki/Testing_effect" target="_blank" rel="noopener noreferrer" className="research-link">
+                testing effect
+              </a>{' '}
+              (Roediger),{' '}
+              <a href="https://en.wikipedia.org/wiki/Desirable_difficulty" target="_blank" rel="noopener noreferrer" className="research-link">
+                desirable difficulties
+              </a>{' '}
+              (Bjork),{' '}
+              <a href="https://en.wikipedia.org/wiki/Interleaved_practice" target="_blank" rel="noopener noreferrer" className="research-link">
+                interleaving
+              </a>{' '}
+              (Rohrer), and{' '}
+              <a href="https://en.wikipedia.org/wiki/Chunking_(psychology)" target="_blank" rel="noopener noreferrer" className="research-link">
+                chunking theory
+              </a>{' '}
+              (Miller).
+              Over 70 years of learning science, applied.
             </p>
           </div>
         </div>
@@ -310,7 +345,7 @@ function WelcomePage({ onContinue }) {
       {/* What to Expect */}
       <section className="welcome-section bg-subtle">
         <div className="welcome-container">
-          <h2 className="welcome-section-title">What to Expect</h2>
+          <h2 className="welcome-section-title">What to Expect from Language Academy</h2>
 
           <div className="expectations">
             <div className="expectation-item">
@@ -318,7 +353,7 @@ function WelcomePage({ onContinue }) {
               <div className="expectation-content">
                 <h3>Comprehension Before Production</h3>
                 <p>
-                  You'll understand far more than you can speak at first—this is natural
+                  Unlike certain language learning apps, you'll understand far more than you can speak at first—this is natural
                   and intentional. Reading and listening comprehension develop first,
                   giving you a foundation for eventual speaking and writing.
                 </p>
@@ -331,9 +366,8 @@ function WelcomePage({ onContinue }) {
                 <h3>Structure Over Phrases</h3>
                 <p>
                   Rather than memorizing "Where is the bathroom?", you'll learn
-                  "où" (where), "est" (is), and how they compose. This takes slightly
-                  longer upfront but gives you generative power—infinite expressions
-                  instead of fixed phrases.
+                  "où" (where), "est" (is), and how they compose. This gives you generative power—infinite expressions
+                  instead of fixed phrases, and nouns you will learn to use in context.
                 </p>
               </div>
             </div>
@@ -343,9 +377,9 @@ function WelcomePage({ onContinue }) {
               <div className="expectation-content">
                 <h3>Fast Progress to Real Content</h3>
                 <p>
-                  By Unit 8, you'll be reading 400+ word passages adapted from French
+                  By Unit 8, you'll be reading 400+ word passages simulating excerpts from French
                   literature and news articles. This isn't "practice French"—it's
-                  real French that native speakers read.
+                  real French that native speakers might read.
                 </p>
               </div>
             </div>
@@ -355,9 +389,8 @@ function WelcomePage({ onContinue }) {
               <div className="expectation-content">
                 <h3>Analytical, Not Casual</h3>
                 <p>
-                  There are no points, streaks, or cartoon characters. This is designed
-                  for serious learners who want to understand how French works, not
-                  gamify language acquisition. If you're analytical and systematic,
+                  There are no points, games, or cartoon characters. This is designed
+                  for serious learners who want to understand French, not just play around. If you're analytical and systematic,
                   you'll love this approach.
                 </p>
               </div>
@@ -369,6 +402,8 @@ function WelcomePage({ onContinue }) {
       {/* CTA */}
       <section className="welcome-cta-section">
         <div className="welcome-container">
+          <h3 className="app-logo" title="Back to landing page">🎓 Language Academy</h3>
+          <br />
           <h2 className="welcome-cta-title">Ready to Begin?</h2>
           <p className="welcome-cta-subtitle">
             Start with Module 1 and experience the compositional approach to French.
