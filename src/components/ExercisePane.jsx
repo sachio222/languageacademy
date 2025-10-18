@@ -172,10 +172,10 @@ function ExercisePane({
     setShowHint(false);
     setStartTime(Date.now()); // Start timing the exercise
 
-    // For reading passages, scroll to top instead of focusing input
-    if (readingPassage) {
+    // For reading passages, scroll to top ONLY on first question
+    if (readingPassage && isFirstExercise) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
+    } else if (!readingPassage) {
       // Focus the textarea after a brief delay to ensure it's rendered
       setTimeout(() => {
         if (textareaRef.current) {
@@ -183,7 +183,7 @@ function ExercisePane({
         }
       }, 0);
     }
-  }, [exercise.id, readingPassage]);
+  }, [exercise.id, readingPassage, isFirstExercise]);
 
   const handleReset = () => {
     setUserAnswer('');

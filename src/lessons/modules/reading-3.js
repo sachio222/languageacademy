@@ -91,6 +91,7 @@ export const reading3 = {
         prompt: "Sophie invites Marc ___ ___",
         hint: "Look for 'tu viens ___ ___' - contraction needed!",
         expectedAnswer: "au café",
+        acceptableAnswers: ["café"],
         wrongAnswers: [
           {
             answer: "à le café",
@@ -107,6 +108,7 @@ export const reading3 = {
         prompt: "with ___",
         hint: "Look for 'avec ___' - stressed pronoun for 'me'",
         expectedAnswer: "moi",
+        acceptableAnswers: ["avec moi"],
         wrongAnswers: [
           {
             answer: "je",
@@ -119,6 +121,7 @@ export const reading3 = {
         prompt: "I ___ it",
         hint: "Object pronoun BEFORE voir - 'je ___ vois'",
         expectedAnswer: "je le vois",
+        acceptableAnswers: ["il le voit"],
         wrongAnswers: [
           {
             answer: "je vois le",
@@ -131,6 +134,7 @@ export const reading3 = {
         prompt: "Is it ___? (yours, informal, masculine thing)",
         hint: "c'est + possessive pronoun for 'yours' informal",
         expectedAnswer: "c'est le tien",
+        acceptableAnswers: ["le tien", "oui"],
         wrongAnswers: [
           {
             answer: "c'est ton",
@@ -143,6 +147,7 @@ export const reading3 = {
         prompt: "It's ___ (mine, masculine thing)",
         hint: "c'est + possessive pronoun for 'mine'",
         expectedAnswer: "c'est le mien",
+        acceptableAnswers: ["le mien", "oui"],
         wrongAnswers: [
           {
             answer: "c'est mon",
@@ -155,6 +160,7 @@ export const reading3 = {
         prompt: "He leaves/goes ___ ___ ___",
         hint: "Look for 'il part ___ la maison' - which preposition + contraction?",
         expectedAnswer: "à la maison",
+        acceptableAnswers: ["la maison", "maison"],
         wrongAnswers: [
           {
             answer: "au maison",
@@ -167,6 +173,7 @@ export const reading3 = {
         prompt: "he ___ it",
         hint: "Object pronoun before voir - 'il ___ voit'",
         expectedAnswer: "il le voit",
+        acceptableAnswers: ["le voit"],
         wrongAnswers: [
           {
             answer: "il voit le",
@@ -179,6 +186,7 @@ export const reading3 = {
         prompt: "my books",
         hint: "Possessive adjective for 'my' + plural noun",
         expectedAnswer: "mes livres",
+        acceptableAnswers: ["mes", "livres", "ses livres"],
         wrongAnswers: [
           {
             answer: "mon livres",
@@ -191,6 +199,7 @@ export const reading3 = {
         prompt: "I ___ them",
         hint: "Plural object pronoun before avoir - 'je ___ ai'",
         expectedAnswer: "je les ai",
+        acceptableAnswers: ["il les a"],
         wrongAnswers: [
           {
             answer: "je ai les",
@@ -203,6 +212,7 @@ export const reading3 = {
         prompt: "The books are for ___",
         hint: "Look for 'pour ___' - stressed pronoun for 'you'",
         expectedAnswer: "toi",
+        acceptableAnswers: ["pour toi", "Sophie"],
         wrongAnswers: [
           {
             answer: "tu",
@@ -214,8 +224,13 @@ export const reading3 = {
         instruction: "What motion verb do they use to say 'we're going'?",
         prompt: "we ___",
         hint: "Look for 'nous ___ au café' - which verb means 'go'?",
-        expectedAnswer: "allons",
-        acceptableAnswers: ["nous allons"],
+        expectedAnswer: "nous allons",
+        acceptableAnswers: [
+          "allons",
+          "nous allons au café",
+          "ils vont",
+          "ils vont au café",
+        ],
         wrongAnswers: [
           {
             answer: "venons",

@@ -126,6 +126,7 @@ export function buildExercises(moduleId, exerciseConfig) {
         prompt: item.prompt,
         hint: item.hint,
         expectedAnswer: item.expectedAnswer,
+        acceptableAnswers: item.acceptableAnswers || [],
         tense: item.tense || null,
         verb: item.verb || null,
         wrongAnswers: item.wrongAnswers || [],

@@ -116,6 +116,7 @@ export const reading2 = {
         prompt: "Sophie is in ___",
         hint: "Look for the Norman city where Sophie is located",
         expectedAnswer: "Caen",
+        acceptableAnswers: ["à Caen"],
         wrongAnswers: [
           {
             answer: "Honfleur",
@@ -163,7 +164,8 @@ export const reading2 = {
         instruction: "What thing does Marie have in her car?",
         prompt: "Marie has a ___ in her car",
         hint: "It's about Normandy - something you can read",
-        expectedAnswer: "livre",
+        expectedAnswer: "un livre",
+        acceptableAnswers: ["livre"],
         wrongAnswers: [
           {
             answer: "chien",
@@ -180,6 +182,10 @@ export const reading2 = {
         prompt: "Thomas wants to see ___",
         hint: "Famous Norman abbey on an island",
         expectedAnswer: "Mont-Saint-Michel",
+        acceptableAnswers: [
+          "il veut voir Mont-Saint-Michel",
+          "je veux voir Mont-Saint-Michel",
+        ],
         wrongAnswers: [
           {
             answer: "Bayeux",
@@ -196,6 +202,7 @@ export const reading2 = {
         prompt: "___ has a friend in Rouen",
         hint: "Look for 'mon ami ___ est là'",
         expectedAnswer: "Thomas",
+        acceptableAnswers: ["un ami Pierre"],
         wrongAnswers: [
           {
             answer: "Sophie",
@@ -211,8 +218,12 @@ export const reading2 = {
         instruction: "What animals do they have?",
         prompt: "Marie has a ___ and Sophie has a ___",
         hint: "Two different pets mentioned in the conversation",
-        expectedAnswer: "chien, chat",
-        acceptableAnswers: ["chien et chat"],
+        expectedAnswer: "un chien et un chat",
+        acceptableAnswers: [
+          "chien et chat",
+          "chien, chat",
+          "le chien et le chat",
+        ],
         wrongAnswers: [
           {
             answer: "chat, chien",
@@ -224,8 +235,8 @@ export const reading2 = {
         instruction: "How many days do they have for their trip?",
         prompt: "They have ___ days",
         hint: "Look for the number Thomas mentions",
-        expectedAnswer: "deux",
-        acceptableAnswers: ["2"],
+        expectedAnswer: "deux jours",
+        acceptableAnswers: ["2", "deux", "2 jours"],
         wrongAnswers: [
           {
             answer: "un",
@@ -241,7 +252,13 @@ export const reading2 = {
         instruction: "Complete Marie's response about her dog:",
         prompt: "J'ai mon chien ___ ma voiture",
         hint: "Preposition meaning 'in'",
-        expectedAnswer: "dans",
+        expectedAnswer: "dans ma voiture",
+        acceptableAnswers: [
+          "dans",
+          "dans la voiture",
+          "dans sa voiture",
+          "elle a son chien dans sa voiture",
+        ],
         wrongAnswers: [
           {
             answer: "sur",
@@ -259,6 +276,7 @@ export const reading2 = {
         prompt: "Nous pouvons aller à ___ belles choses!",
         hint: "Demonstrative for 'these' with plural noun",
         expectedAnswer: "ces",
+        acceptableAnswers: ["ces belles choses"],
         wrongAnswers: [
           {
             answer: "ce",
@@ -275,6 +293,11 @@ export const reading2 = {
         prompt: "J'ai une ___ voiture",
         hint: "Adjective meaning 'new'",
         expectedAnswer: "nouvelle",
+        acceptableAnswers: [
+          "une nouvelle voiture",
+          "nouvelle voiture",
+          "elle a une nouvelle voiture",
+        ],
         wrongAnswers: [
           {
             answer: "nouveau",
@@ -293,6 +316,7 @@ export const reading2 = {
         prompt: "___ est-ce?",
         hint: "Question word asking about location",
         expectedAnswer: "où",
+        acceptableAnswers: ["où est-ce"],
         wrongAnswers: [
           {
             answer: "que",
@@ -309,18 +333,15 @@ export const reading2 = {
         prompt: "Elle est ___ Rouen",
         hint: "Preposition meaning 'in'",
         expectedAnswer: "dans",
-        wrongAnswers: [
-          {
-            answer: "sur",
-            feedback: "Use 'dans' (in), not 'sur' (on) for cities",
-          },
-        ],
+        acceptableAnswers: ["dans Rouen", "à Rouen"],
+        wrongAnswers: [],
       },
       {
         instruction: "How do they describe Mont-Saint-Michel?",
         prompt: "C'est un très ___ et très beau chose",
         hint: "Adjective meaning 'old'",
         expectedAnswer: "vieux",
+        acceptableAnswers: ["vieille", "vieille et belle"],
         wrongAnswers: [
           {
             answer: "nouveau",
@@ -336,7 +357,8 @@ export const reading2 = {
         instruction: "What can they do with the animals?",
         prompt: "Les chiens peuvent ___ avec nous!",
         hint: "Verb meaning 'to go'",
-        expectedAnswer: "aller",
+        expectedAnswer: "être avec nous",
+        acceptableAnswers: ["aller", "être", "venir"],
         wrongAnswers: [
           {
             answer: "voir",

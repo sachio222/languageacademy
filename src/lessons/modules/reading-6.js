@@ -431,10 +431,11 @@ export const reading6 = {
         instruction: "What is Marie's brother doing right now?",
         prompt: "What is the brother doing now?",
         hint: "Mother says 'en ce moment'",
-        expectedAnswer: "packing his bag",
+        expectedAnswer: "getting his books",
         acceptableAnswers: [
           "getting his books",
           "taking his books",
+          "packing his bag",
           "packing",
           "prendre ses livres",
         ],

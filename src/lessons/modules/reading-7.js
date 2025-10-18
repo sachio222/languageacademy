@@ -212,6 +212,7 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         prompt: "Learning begins with...",
         hint: "First paragraph mentions this",
         expectedAnswer: "une question",
+        acceptableAnswers: ["question", "des questions"],
         wrongAnswers: [
           {
             answer: "un livre",
@@ -231,6 +232,11 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         prompt: "Learning is when you...",
         hint: "Third paragraph explains this",
         expectedAnswer: "comprends",
+        acceptableAnswers: [
+          "je comprends",
+          "quand je comprends",
+          "on comprend",
+        ],
         wrongAnswers: [
           {
             answer: "étudies",
@@ -245,6 +251,7 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         prompt: "First, we must...",
         hint: "Look for 'D'abord'",
         expectedAnswer: "demander des questions",
+        acceptableAnswers: ["demander", "questions", "poser des questions"],
         wrongAnswers: [
           {
             answer: "réviser",
@@ -258,6 +265,7 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         prompt: "When we review, we understand...",
         hint: "The text says 'on comprend...'",
         expectedAnswer: "mieux",
+        acceptableAnswers: ["on comprend mieux"],
         wrongAnswers: [
           {
             answer: "beaucoup",
@@ -272,6 +280,7 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         prompt: "We must believe in...",
         hint: "Look for 'croire en...'",
         expectedAnswer: "soi",
+        acceptableAnswers: ["croire en soi", "en soi"],
         wrongAnswers: [
           {
             answer: "le professeur",
@@ -284,7 +293,12 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         instruction: "According to the author, can everyone learn?",
         prompt: "Everyone can learn because...",
         hint: "Look for 'tout le monde peut...'",
-        expectedAnswer: "c'est une question de méthode",
+        expectedAnswer: "oui",
+        acceptableAnswers: [
+          "c'est une question de méthode",
+          "question de méthode",
+          "méthode",
+        ],
         wrongAnswers: [
           {
             answer: "c'est facile",
@@ -299,6 +313,7 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         prompt: "Things are...",
         hint: "Look for 'même les choses sont...'",
         expectedAnswer: "meilleures",
+        acceptableAnswers: ["meilleures avec le temps"],
         wrongAnswers: [
           {
             answer: "bonnes",
@@ -312,7 +327,8 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         instruction: "What is learning described as?",
         prompt: "Learning is a...",
         hint: "Near the end: 'l'apprentissage est un...'",
-        expectedAnswer: "voyage",
+        expectedAnswer: "un voyage",
+        acceptableAnswers: ["voyage"],
         wrongAnswers: [
           {
             answer: "problème",
@@ -326,7 +342,14 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         instruction: "What is the proof that you can learn?",
         prompt: "The proof is that you...",
         hint: "Last paragraph: 'C'est la preuve que...'",
-        expectedAnswer: "comprenez mes idées",
+        expectedAnswer: "vous comprenez mes idées",
+        acceptableAnswers: [
+          "comprenez mes idées",
+          "comprenez les idées",
+          "vous comprenez",
+          "je comprends mes idées",
+          "je comprends les idées",
+        ],
         wrongAnswers: [
           {
             answer: "parlez français",
@@ -340,6 +363,11 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
         prompt: "You are...",
         hint: "Last paragraph: 'vous êtes en train de...'",
         expectedAnswer: "apprendre",
+        acceptableAnswers: [
+          "vous êtes en train d'apprendre",
+          "en train d'apprendre",
+          "je suis en train d'apprendre",
+        ],
         wrongAnswers: [
           {
             answer: "étudier seulement",
