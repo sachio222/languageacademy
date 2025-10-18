@@ -229,7 +229,7 @@ body:has(.left-nav.collapsed) .admin-btn {
 /* Main Content - Offset for Sidebar */
 .app-main {
   flex: 1;
-  margin-left: 280px; /* Sidebar width */
+  margin-left: 320px; /* Sidebar width */
   padding: 0.5rem;
   padding-top: calc(0.5rem + 60px); /* Account for fixed header height */
   min-height: calc(100vh - 60px);
@@ -249,7 +249,7 @@ body:has(.left-nav.collapsed) .app-main {
   text-align: center;
   font-size: 0.875rem;
   border-top: 1px solid #e2e8f0;
-  margin-left: 280px; /* Offset for sidebar */
+  margin-left: 320px; /* Offset for sidebar */
   transition: margin-left 0.2s ease;
 }
 
