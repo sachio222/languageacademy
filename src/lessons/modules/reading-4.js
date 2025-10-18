@@ -306,7 +306,7 @@ export const reading4 = {
         prompt: "Je n'ai pas d'___",
         hint: "Money",
         expectedAnswer: "argent",
-        acceptableAnswers: ["d'argent", "de l'argent", "d argent"],
+        acceptableAnswers: ["d'argent", "de l'argent"],
         wrongAnswers: [],
       },
       {
@@ -398,11 +398,7 @@ export const reading4 = {
         prompt: "Je suis ___ dans la ville",
         hint: "New (feminine form)",
         expectedAnswer: "oui",
-        acceptableAnswers: [
-          "nouvelle",
-          "elle est nouvelle",
-          "je suis nouvelle",
-        ],
+        acceptableAnswers: ["elle est nouvelle"],
         wrongAnswers: [],
       },
       {
@@ -418,7 +414,14 @@ export const reading4 = {
         prompt: "J'aime cette ___",
         hint: "This city",
         expectedAnswer: "cette ville",
-        acceptableAnswers: ["ville", "la ville"],
+        acceptableAnswers: [
+          "ville",
+          "la ville",
+          "Marie aime cette ville",
+          "elle aime cette ville",
+          "Marie aime la ville",
+          "elle aime la ville",
+        ],
         wrongAnswers: [],
       },
       {
@@ -428,6 +431,7 @@ export const reading4 = {
         expectedAnswer: "non",
         acceptableAnswers: [
           "jamais",
+          "non, jamias",
           "je ne vais jamais partir",
           "elle ne va jamais partir",
         ],
