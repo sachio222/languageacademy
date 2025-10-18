@@ -11,13 +11,13 @@ function AuthWrapper({ children, onBackToLanding }) {
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
   const [showWelcome, setShowWelcome] = useState(() => {
-    // Check URL parameter first
+    // Only show welcome page if user is authenticated AND hasn't seen it before
     const params = new URLSearchParams(window.location.search)
     if (params.get('welcome') === 'true') {
       return true
     }
-    // Otherwise check if user has seen the welcome page before
-    return !localStorage.getItem('hasSeenWelcome')
+    // Only show welcome if authenticated and hasn't seen it
+    return isAuthenticated && !localStorage.getItem('hasSeenWelcome')
   })
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
 
@@ -66,8 +66,8 @@ function AuthWrapper({ children, onBackToLanding }) {
     )
   }
 
-  // Show welcome page for first-time visitors (both authenticated and unauthenticated)
-  if (showWelcome) {
+  // Show welcome page only for authenticated users who haven't seen it
+  if (isAuthenticated && showWelcome) {
     // Update URL to show welcome parameter
     const currentUrl = new URL(window.location)
     if (currentUrl.searchParams.get('welcome') !== 'true') {
