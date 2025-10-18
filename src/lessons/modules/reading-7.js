@@ -261,18 +261,16 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
       },
       {
         id: "reading-7.4",
-        instruction: "Why is review good?",
+        instruction: "What happens when we review?",
         prompt: "When we review, we understand...",
         hint: "The text says 'on comprend...'",
-        expectedAnswer: "mieux",
-        acceptableAnswers: ["on comprend mieux"],
-        wrongAnswers: [
-          {
-            answer: "beaucoup",
-            feedback:
-              "The text says we understand 'better' (mieux), not just 'a lot'",
-          },
+        expectedAnswer: "on comprend mieux",
+        acceptableAnswers: [
+          "nous comprenons mieux",
+          "mieux",
+          "on voit les choses entre les idées",
         ],
+        wrongAnswers: [],
       },
       {
         id: "reading-7.5",
@@ -309,18 +307,16 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
       },
       {
         id: "reading-7.7",
-        instruction: "What happens with time?",
+        instruction: "Things do what over time according to the text?",
         prompt: "Things are...",
         hint: "Look for 'même les choses sont...'",
-        expectedAnswer: "meilleures",
-        acceptableAnswers: ["meilleures avec le temps"],
-        wrongAnswers: [
-          {
-            answer: "bonnes",
-            feedback:
-              "The text says things are 'better' (meilleures) with time",
-          },
+        expectedAnswer: "les choses sont meilleures avec le temps",
+        acceptableAnswers: [
+          "meilleures",
+          "meilleures avec le temps",
+          "elles sont meilleures",
         ],
+        wrongAnswers: [],
       },
       {
         id: "reading-7.8",
@@ -349,6 +345,7 @@ Actually, you're learning right now. You understand my ideas. That's proof that 
           "vous comprenez",
           "je comprends mes idées",
           "je comprends les idées",
+          "vous comprendez les idées",
         ],
         wrongAnswers: [
           {
