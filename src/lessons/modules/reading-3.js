@@ -98,6 +98,10 @@ export const reading3 = {
             feedback: "à + le must contract to 'au'",
           },
           {
+            answer: "à la café",
+            feedback: "café is masculine, use 'au' not 'à la'",
+          },
+          {
             answer: "à la maison",
             feedback: "She invites him to the café, not the house",
           },
@@ -134,7 +138,7 @@ export const reading3 = {
         prompt: "Is it ___? (yours, informal, masculine thing)",
         hint: "c'est + possessive pronoun for 'yours' informal",
         expectedAnswer: "c'est le tien",
-        acceptableAnswers: ["le tien", "oui"],
+        acceptableAnswers: ["le tien", "oui", "c'est le tien?"],
         wrongAnswers: [
           {
             answer: "c'est ton",
@@ -186,7 +190,7 @@ export const reading3 = {
         prompt: "my books",
         hint: "Possessive adjective for 'my' + plural noun",
         expectedAnswer: "mes livres",
-        acceptableAnswers: ["mes", "livres", "ses livres"],
+        acceptableAnswers: ["mes"],
         wrongAnswers: [
           {
             answer: "mon livres",
@@ -199,7 +203,7 @@ export const reading3 = {
         prompt: "I ___ them",
         hint: "Plural object pronoun before avoir - 'je ___ ai'",
         expectedAnswer: "je les ai",
-        acceptableAnswers: ["il les a"],
+        acceptableAnswers: [],
         wrongAnswers: [
           {
             answer: "je ai les",
@@ -212,7 +216,12 @@ export const reading3 = {
         prompt: "The books are for ___",
         hint: "Look for 'pour ___' - stressed pronoun for 'you'",
         expectedAnswer: "toi",
-        acceptableAnswers: ["pour toi", "Sophie"],
+        acceptableAnswers: [
+          "pour toi",
+          "Sophie",
+          "les livres sont pour toi",
+          "les livres sont pour Sophie",
+        ],
         wrongAnswers: [
           {
             answer: "tu",
@@ -225,12 +234,7 @@ export const reading3 = {
         prompt: "we ___",
         hint: "Look for 'nous ___ au café' - which verb means 'go'?",
         expectedAnswer: "nous allons",
-        acceptableAnswers: [
-          "allons",
-          "nous allons au café",
-          "ils vont",
-          "ils vont au café",
-        ],
+        acceptableAnswers: ["allons", "nous allons au café"],
         wrongAnswers: [
           {
             answer: "venons",

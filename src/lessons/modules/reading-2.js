@@ -116,7 +116,12 @@ export const reading2 = {
         prompt: "Sophie is in ___",
         hint: "Look for the Norman city where Sophie is located",
         expectedAnswer: "Caen",
-        acceptableAnswers: ["à Caen"],
+        acceptableAnswers: [
+          "à Caen",
+          "Sophie est à Caen",
+          "Elle est à Caen",
+          "à Caen avec un ami Thomas",
+        ],
         wrongAnswers: [
           {
             answer: "Honfleur",
@@ -148,17 +153,15 @@ export const reading2 = {
         instruction: "What does Sophie ask about?",
         prompt: "___ ___ ___ c'est, ça?",
         hint: "Look for the question phrase meaning 'what is that'",
-        expectedAnswer: "qu'est-ce que",
-        wrongAnswers: [
-          {
-            answer: "où est",
-            feedback: "That means 'where is', not 'what is'",
-          },
-          {
-            answer: "qui est",
-            feedback: "That means 'who is', not 'what is'",
-          },
+        expectedAnswer: "cette chose dans la voiture",
+        acceptableAnswers: [
+          "un livre",
+          "le livre",
+          "la chose",
+          "ça",
+          "cette chose",
         ],
+        wrongAnswers: [],
       },
       {
         instruction: "What thing does Marie have in her car?",
@@ -202,7 +205,7 @@ export const reading2 = {
         prompt: "___ has a friend in Rouen",
         hint: "Look for 'mon ami ___ est là'",
         expectedAnswer: "Thomas",
-        acceptableAnswers: ["un ami Pierre"],
+        acceptableAnswers: [],
         wrongAnswers: [
           {
             answer: "Sophie",
@@ -221,6 +224,8 @@ export const reading2 = {
         expectedAnswer: "un chien et un chat",
         acceptableAnswers: [
           "chien et chat",
+          "un chat et un chien",
+          "chat et chien",
           "chien, chat",
           "le chien et le chat",
         ],
@@ -249,44 +254,31 @@ export const reading2 = {
         ],
       },
       {
-        instruction: "Complete Marie's response about her dog:",
+        instruction: "Where is Marie's dog?",
         prompt: "J'ai mon chien ___ ma voiture",
         hint: "Preposition meaning 'in'",
-        expectedAnswer: "dans ma voiture",
+        expectedAnswer: "dans sa voiture",
         acceptableAnswers: [
+          "dans ma voiture",
           "dans",
           "dans la voiture",
-          "dans sa voiture",
-          "elle a son chien dans sa voiture",
+          "voiture",
+          "la voiture",
         ],
-        wrongAnswers: [
-          {
-            answer: "sur",
-            feedback: "Use 'dans' (in), not 'sur' (on)",
-          },
-          {
-            answer: "avec",
-            feedback: "Use 'dans' (in), not 'avec' (with)",
-          },
-        ],
+        wrongAnswers: [],
       },
       {
-        instruction:
-          "What demonstrative does Sophie use about things in Normandy?",
+        instruction: "What does Sophie say they can see in Normandy?",
         prompt: "Nous pouvons aller à ___ belles choses!",
         hint: "Demonstrative for 'these' with plural noun",
-        expectedAnswer: "ces",
-        acceptableAnswers: ["ces belles choses"],
-        wrongAnswers: [
-          {
-            answer: "ce",
-            feedback: "Use 'ces' for plural, not 'ce' for singular masculine",
-          },
-          {
-            answer: "cette",
-            feedback: "Use 'ces' for plural, not 'cette' for singular feminine",
-          },
+        expectedAnswer: "ces belles choses",
+        acceptableAnswers: [
+          "belles choses",
+          "ces belles choses",
+          "ces belles choses en Normandie",
+          "nous pouvons voir ces belles choses",
         ],
+        wrongAnswers: [],
       },
       {
         instruction: "How does Marie describe her new car?",
@@ -341,7 +333,7 @@ export const reading2 = {
         prompt: "C'est un très ___ et très beau chose",
         hint: "Adjective meaning 'old'",
         expectedAnswer: "vieux",
-        acceptableAnswers: ["vieille", "vieille et belle"],
+        acceptableAnswers: ["vieille", "vieille et belle", "vieux et beau"],
         wrongAnswers: [
           {
             answer: "nouveau",
@@ -354,17 +346,16 @@ export const reading2 = {
         ],
       },
       {
-        instruction: "What can they do with the animals?",
+        instruction: "Can the dogs come with them on the trip?",
         prompt: "Les chiens peuvent ___ avec nous!",
         hint: "Verb meaning 'to go'",
-        expectedAnswer: "être avec nous",
-        acceptableAnswers: ["aller", "être", "venir"],
-        wrongAnswers: [
-          {
-            answer: "voir",
-            feedback: "The dogs can GO (aller) with them, not see (voir)",
-          },
+        expectedAnswer: "oui",
+        acceptableAnswers: [
+          "les chiens peuvent être avec nous",
+          "ils peuvent être avec nous",
+          "être avec nous",
         ],
+        wrongAnswers: [],
       },
     ],
   },
