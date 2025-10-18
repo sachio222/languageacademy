@@ -247,7 +247,7 @@ function WelcomePage({ onContinue }) {
       </section>
 
       {/* How You'll Learn */}
-      <section className="welcome-section">
+      {/* <section className="welcome-section">
         <div className="welcome-container">
           <h2 className="welcome-section-title">How This App Works</h2>
           <p className="welcome-intro">
@@ -350,7 +350,7 @@ function WelcomePage({ onContinue }) {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* What to Expect */}
       <section className="welcome-section bg-subtle">
@@ -363,7 +363,7 @@ function WelcomePage({ onContinue }) {
               <div className="expectation-content">
                 <h3>Comprehension Before Production</h3>
                 <p>
-                  Unlike certain language learning apps, you'll understand far more than you can speak at first—this is natural
+                  You'll understand far more than you can speak at first—this is natural
                   and intentional. Reading and listening comprehension develop first,
                   giving you a foundation for eventual speaking and writing.
                 </p>
@@ -376,8 +376,7 @@ function WelcomePage({ onContinue }) {
                 <h3>Structure Over Phrases</h3>
                 <p>
                   Rather than memorizing "Where is the bathroom?", you'll learn
-                  "où" (where), "est" (is), and how they compose. This gives you generative power—infinite expressions
-                  instead of fixed phrases, and nouns you will learn to use in context.
+                  "où" (where), "est" (is), and how they compose. This gives you generative power that you will learn to use in context.
                 </p>
               </div>
             </div>
@@ -387,9 +386,8 @@ function WelcomePage({ onContinue }) {
               <div className="expectation-content">
                 <h3>Fast Progress to Real Content</h3>
                 <p>
-                  By Unit 8, you'll be reading 400+ word passages simulating excerpts from French
-                  literature and news articles. This isn't "practice French"—it's
-                  real French that native speakers might read.
+                  You'll be reading 400+ word passages simulating excerpts from French
+                  literature and news articles—real French that native speakers might read.
                 </p>
               </div>
             </div>
@@ -399,8 +397,7 @@ function WelcomePage({ onContinue }) {
               <div className="expectation-content">
                 <h3>Analytical, Not Casual</h3>
                 <p>
-                  There are no points, games, or cartoon characters. This is designed
-                  for serious learners who want to understand French, not just play around. If you're analytical and systematic,
+                  This is designed for serious learners who want to understand French, not just play around. If you expect results,
                   you'll love this approach.
                 </p>
               </div>
