@@ -605,11 +605,11 @@ export const unitStructure = [
   },
   {
     id: 4,
-    title: "Unit 4: Everyday Communication",
+    title: "Unit 4: Everyday Words",
     description:
       "Survival phrases, negation (I don't), time & location words, and essential daily verbs",
     lessonRange: [36, 47], // Lessons 36-45 + Unit 4 Practice (46) + Unit 4 Exam (47)
-    icon: "💬",
+    icon: "🥖",
     color: "#f59e0b",
   },
   {
@@ -623,7 +623,7 @@ export const unitStructure = [
   },
   {
     id: 6,
-    title: "Unit 6: Fluency & Mastery",
+    title: "Unit 6: Basic Fluency",
     description:
       "Advanced communication verbs (say, take, put, ask), progressive tenses, expressing needs, and comprehensive vocabulary",
     lessonRange: [61, 71], // Lessons 61-68 + Reading 6 (69) + Practice (70) + Unit 6 Exam (71)
