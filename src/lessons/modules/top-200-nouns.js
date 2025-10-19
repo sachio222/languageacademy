@@ -203,7 +203,26 @@ export const top200Nouns = {
         hint: "une...",
         expectedAnswer: "une année",
         acceptableAnswers: ["une année", "une annee"],
-        wrongAnswers: ["un année", "un an", "l'année"],
+        wrongAnswers: [
+          {
+            answer: "un année",
+            feedback: "Use feminine article: une année (not un)",
+          },
+          {
+            answer: "un an",
+            feedback:
+              "That's 'a year' for age/duration. Use 'une année' for general 'a year'",
+          },
+          {
+            answer: "l'année",
+            feedback: "That's 'the year'. Use 'une année' for 'a year'",
+          },
+          {
+            answer: "un ane",
+            feedback: "Close! Use feminine 'une' and add accents: une année",
+          },
+          { answer: "une ane", feedback: "Almost! Add the accents: une année" },
+        ],
         explanation: "feminine: une année (a year) - for duration, use 'un an'",
       },
       {
