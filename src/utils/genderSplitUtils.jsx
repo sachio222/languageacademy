@@ -42,6 +42,21 @@ export function hasGenderSplit(frenchText, note = "") {
   // Check for common masculine/feminine adjective patterns (slash format)
   if (slashPattern.test(frenchText)) {
     const parts = frenchText.split(/\s*\/\s*/);
+
+    // Handle special multi-part cases like "tout / toute / tous / toutes"
+    if (parts.length === 4) {
+      const [masc_sing, fem_sing, masc_plur, fem_plur] = parts.map(p => p.trim().toLowerCase());
+
+      // Check for "tout" pattern specifically
+      if (masc_sing === 'tout' && fem_sing === 'toute' &&
+        masc_plur === 'tous' && fem_plur === 'toutes') {
+        return true;
+      }
+
+      // Could add other 4-part patterns here in the future
+    }
+
+    // Handle standard 2-part patterns
     if (parts.length === 2) {
       const [first, second] = parts.map((p) => p.trim().toLowerCase());
 
@@ -111,26 +126,45 @@ export function renderGenderSplitText(frenchText, note = "") {
     );
   }
 
-  // Handle slash pattern like "bon / bonne"
+  // Handle slash patterns
   const parts = frenchText.split(/\s*\/\s*/);
 
-  if (parts.length !== 2) {
-    return frenchText; // Fallback for unexpected formats
+  // Handle 4-part pattern like "tout / toute / tous / toutes"
+  if (parts.length === 4) {
+    const [masc_sing, fem_sing, masc_plur, fem_plur] = parts;
+
+    return React.createElement(
+      "span",
+      null,
+      React.createElement("span", { className: "gender-masculine" }, masc_sing),
+      React.createElement("span", { className: "gender-separator" }, " / "),
+      React.createElement("span", { className: "gender-feminine" }, fem_sing),
+      React.createElement("span", { className: "gender-separator" }, " / "),
+      React.createElement("span", { className: "gender-masculine" }, masc_plur),
+      React.createElement("span", { className: "gender-separator" }, " / "),
+      React.createElement("span", { className: "gender-feminine" }, fem_plur)
+    );
   }
 
-  const [masculinePart, femininePart] = parts;
+  // Handle 2-part pattern like "bon / bonne"
+  if (parts.length === 2) {
+    const [masculinePart, femininePart] = parts;
 
-  return React.createElement(
-    "span",
-    null,
-    React.createElement(
+    return React.createElement(
       "span",
-      { className: "gender-masculine" },
-      masculinePart
-    ),
-    React.createElement("span", { className: "gender-separator" }, " / "),
-    React.createElement("span", { className: "gender-feminine" }, femininePart)
-  );
+      null,
+      React.createElement(
+        "span",
+        { className: "gender-masculine" },
+        masculinePart
+      ),
+      React.createElement("span", { className: "gender-separator" }, " / "),
+      React.createElement("span", { className: "gender-feminine" }, femininePart)
+    );
+  }
+
+  // Fallback for unexpected formats
+  return frenchText;
 }
 
 /**
