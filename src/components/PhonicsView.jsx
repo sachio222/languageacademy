@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import { ChevronDown, ChevronRight, Search } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { frenchPhonics } from '../data/frenchPhonics';
+import { getTTSText } from '../utils/ttsUtils';
 import '../styles/PhonicsView.css';
 
 /**
@@ -183,7 +184,8 @@ function PhonicsView() {
 
     window.speechSynthesis.cancel();
 
-    const utterance = new SpeechSynthesisUtterance(text);
+    const speechText = getTTSText(text);
+    const utterance = new SpeechSynthesisUtterance(speechText);
     utterance.lang = 'fr-FR';
     utterance.rate = 0.9;
     utterance.pitch = 1.0;

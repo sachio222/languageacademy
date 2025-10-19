@@ -6,6 +6,7 @@ import { useState, useRef, useEffect } from 'react';
 import SpeakButton from './SpeakButton';
 import { useSpeech } from '../hooks/useSpeech';
 import { readingVocabulary as wordTranslations } from './readingVocabulary';
+import { getTTSText } from '../utils/ttsUtils';
 
 // Word translations now imported from readingVocabulary.js (deduplicated, 1752 unique entries)
 
@@ -586,6 +587,8 @@ function ReadingPassage({ passage }) {
   const wordRefs = useRef({});
   const { speak } = useSpeech();
 
+  // Use centralized TTS utility (no need for local function)
+
   // Calculate tooltip position on mobile to prevent viewport overflow
   useEffect(() => {
     if (!hoveredWord) {
@@ -928,7 +931,7 @@ function ReadingPassage({ passage }) {
               className="interactive-word"
               onMouseEnter={() => setHoveredWord(uniqueKey)}
               onMouseLeave={() => setHoveredWord(null)}
-              onClick={() => speak(matchedText, 'fr-FR')}
+              onClick={() => speak(getTTSText(matchedText), 'fr-FR')}
               style={{ cursor: 'pointer' }}
             >
               {matchedText}
@@ -985,7 +988,7 @@ function ReadingPassage({ passage }) {
               className="interactive-word"
               onMouseEnter={() => setHoveredWord(uniqueKey)}
               onMouseLeave={() => setHoveredWord(null)}
-              onClick={() => speak(word, 'fr-FR')}
+              onClick={() => speak(getTTSText(word), 'fr-FR')}
               style={{ cursor: 'pointer' }}
             >
               {word}

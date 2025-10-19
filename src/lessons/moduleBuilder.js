@@ -154,6 +154,7 @@ function buildVocabularyExercises(moduleId, vocabularyReference) {
       prompt: item.english,
       hint: item.note || `The French word/phrase for "${item.english}"`,
       expectedAnswer: item.french,
+      ttsText: item.ttsText, // Copy TTS override for pronunciation
       article: null,
       tense: null,
       verb: null,

@@ -1,4 +1,5 @@
 import { Volume2 } from "lucide-react";
+import { getTTSText } from "../utils/ttsUtils";
 
 /**
  * Detect if user is on Safari
@@ -97,6 +98,7 @@ function selectBestVoice(voices, language) {
  */
 function SpeakButton({
   text,
+  ttsText, // Optional: override text for TTS pronunciation
   language,
   size = "medium",
   className = "",
@@ -107,11 +109,14 @@ function SpeakButton({
 
     if (!text) return;
 
+    // Use ttsText if provided, otherwise apply global TTS corrections
+    const speechText = ttsText || getTTSText(text);
+
     // Use Web Speech API directly
     if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
 
-      const utterance = new SpeechSynthesisUtterance(text);
+      const utterance = new SpeechSynthesisUtterance(speechText);
       utterance.lang = language || "fr-FR";
       utterance.rate = 0.9; // Slightly slower for learning
       utterance.pitch = 1.0;

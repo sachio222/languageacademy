@@ -84,6 +84,7 @@ export const prepositions = {
     type: "preposition",
     example: "à Paris, à la maison",
     note: "location or direction",
+    ttsText: "a", // Pronounce as the word "a" not "a accent grave"
   },
   de: {
     french: "de",
@@ -118,4 +119,3 @@ export const prepositions = {
     note: "absence or lack",
   },
 };
-

@@ -3,6 +3,7 @@ import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
+import { getTTSText } from '../utils/ttsUtils';
 
 /**
  * Select the best available voice for a given language
@@ -266,11 +267,14 @@ function ConceptIntro({ lesson, onStartStudying }) {
                       const handleRowClick = (e) => {
                         if (!item.french) return;
 
+                        // Use ttsText if available, otherwise apply global TTS corrections
+                        const speechText = item.ttsText || getTTSText(item.french);
+
                         // Use same high-quality voice selection as SpeakButton
                         if ('speechSynthesis' in window) {
                           window.speechSynthesis.cancel();
 
-                          const utterance = new SpeechSynthesisUtterance(item.french);
+                          const utterance = new SpeechSynthesisUtterance(speechText);
                           utterance.lang = 'fr-FR';
                           utterance.rate = 0.9;
                           utterance.pitch = 1.0;
@@ -324,7 +328,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
                             <td className={`vocab-french-intro ${genderClass}`}>
                               <div className="vocab-with-audio">
                                 {item.french}
-                                <SpeakButton text={item.french} language="fr-FR" size="small" />
+                                <SpeakButton text={item.french} ttsText={item.ttsText} language="fr-FR" size="small" />
                               </div>
                             </td>
                             <td className="vocab-english-intro">{item.english}</td>

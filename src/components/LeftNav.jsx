@@ -4,6 +4,7 @@ import { unitStructure } from '../lessons/lessonData';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
+import { getTTSText } from '../utils/ttsUtils';
 import '../styles/LeftNav.css';
 
 /**
@@ -493,7 +494,8 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                         if ('speechSynthesis' in window) {
                           window.speechSynthesis.cancel();
 
-                          const utterance = new SpeechSynthesisUtterance(vocab.french);
+                          const speechText = getTTSText(vocab.french);
+                          const utterance = new SpeechSynthesisUtterance(speechText);
                           utterance.lang = 'fr-FR';
                           utterance.rate = 0.9;
                           utterance.pitch = 1.0;

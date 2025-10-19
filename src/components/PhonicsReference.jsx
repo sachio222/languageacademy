@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import SpeakButton from './SpeakButton';
+import { getTTSText } from '../utils/ttsUtils';
 import '../styles/PhonicsReference.css';
 
 /**
@@ -106,7 +107,8 @@ function PhonicsReference({ phonicsData }) {
 
     window.speechSynthesis.cancel();
 
-    const utterance = new SpeechSynthesisUtterance(text);
+    const speechText = getTTSText(text);
+    const utterance = new SpeechSynthesisUtterance(speechText);
     utterance.lang = 'fr-FR';
     utterance.rate = 0.9;
     utterance.pitch = 1.0;

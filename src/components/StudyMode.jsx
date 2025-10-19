@@ -87,6 +87,7 @@ function StudyMode({ exercises, onFinishStudying }) {
               <h2>{currentExercise.expectedAnswer}</h2>
               <SpeakButton
                 text={currentExercise.expectedAnswer}
+                ttsText={currentExercise.ttsText}
                 language="fr-FR"
                 size="large"
                 className="flashcard-speaker"

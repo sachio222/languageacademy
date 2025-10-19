@@ -60,7 +60,12 @@ export const prepositions = {
     },
     { french: "derrière", english: "behind", note: "derrière la porte" },
     { french: "entre", english: "between", note: "entre les deux" },
-    { french: "à", english: "to / at", note: "to Paris, at the café" },
+    {
+      french: "à",
+      english: "to / at",
+      note: "to Paris, at the café",
+      ttsText: "a",
+    },
     { french: "de", english: "of / from", note: "of the house, from Paris" },
     { french: "pour", english: "for", note: "for you, for friends" },
   ],
@@ -103,6 +108,7 @@ export const prepositions = {
         prompt: "to / at",
         hint: "Single letter - shows direction or location",
         expectedAnswer: "à",
+        ttsText: "a", // Pronounce as "a" not "a accent grave"
         wrongAnswers: [
           { answer: "de", feedback: "That means 'of/from', not 'to/at'" },
         ],

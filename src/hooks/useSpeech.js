@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef } from "react";
+import { getTTSText } from "../utils/ttsUtils";
 
 /**
  * Custom hook for text-to-speech functionality
@@ -120,7 +121,8 @@ export function useSpeech() {
       // Cancel any ongoing speech
       synthRef.current.cancel();
 
-      const utterance = new SpeechSynthesisUtterance(text);
+      const speechText = getTTSText(text);
+      const utterance = new SpeechSynthesisUtterance(speechText);
       utterance.lang = lang;
 
       // Set options
