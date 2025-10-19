@@ -39,7 +39,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
           ) : (
             <>
               <button className="cta-primary" onClick={onGetStarted}>
-                Get Early Access Free
+                Start Free Trial
               </button>
               <p className="hero-caption">
                 Early access • No credit card required
@@ -320,7 +320,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
           ) : (
             <>
               <button className="cta-primary large" onClick={onGetStarted}>
-                Get Early Access
+                Start Free Trial
               </button>
               <p className="cta-note">
                 No credit card required • Early access available
