@@ -10,7 +10,7 @@ const ReferenceModules = ({ onModuleSelect, onBack }) => {
       title: "L'Alphabet",
       description: "French alphabet with pronunciation guide",
       icon: Type,
-      image: "https://images.unsplash.com/photo-1699192676418-7a1eba1dc104?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
+      image: "https://images.unsplash.com/photo-1645897938945-7b1b53239ea6?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
       category: "Language Basics"
     },
     {
@@ -58,7 +58,7 @@ const ReferenceModules = ({ onModuleSelect, onBack }) => {
       title: "Le Français en Chiffres",
       description: "Fascinating language statistics",
       icon: Hash,
-      image: "https://images.unsplash.com/photo-1586448911804-9fc613f60e15?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
+      image: "https://images.unsplash.com/photo-1642516303080-431f6681f864?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
       category: "Culture"
     },
     {
