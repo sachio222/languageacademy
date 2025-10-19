@@ -363,7 +363,7 @@
   }
 
   .study-navigation {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .study-navigation .btn-nav {

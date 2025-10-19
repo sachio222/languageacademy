@@ -4,6 +4,7 @@ import DevModeWrapper from './components/DevModeWrapper';
 import LeftNav from './components/LeftNav';
 import LessonList from './components/LessonList';
 import LessonView from './components/LessonView';
+import ReferenceModules from './components/ReferenceModules';
 import SafariTTSHelper from './components/SafariTTSHelper';
 import OfflineIndicator from './components/OfflineIndicator';
 import FeedbackForm from './components/FeedbackForm';
@@ -19,12 +20,19 @@ import './styles/Auth.css';
 import './styles/OfflineIndicator.css';
 import './styles/DevMode.css';
 import './styles/DashboardHeader.css';
+import './styles/ReferenceModules.css';
 
 function App() {
   // Initialize currentLesson from URL query string with validation
   const getInitialLesson = () => {
     const params = new URLSearchParams(window.location.search);
     const moduleParam = params.get('module');
+    const referenceParam = params.get('reference');
+
+    if (referenceParam === 'true') {
+      return 'reference';
+    }
+
     if (moduleParam) {
       const moduleId = parseInt(moduleParam, 10);
       // Validate: must be a valid number and module must exist
@@ -39,6 +47,7 @@ function App() {
       url.searchParams.delete('sentence');
       url.searchParams.delete('question');
       url.searchParams.delete('section');
+      url.searchParams.delete('reference');
       window.history.replaceState({}, '', url);
     }
     return null;
@@ -49,6 +58,7 @@ function App() {
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [showFeedbackAdmin, setShowFeedbackAdmin] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [showReferenceModules, setShowReferenceModules] = useState(false);
 
   // Check if we're in dev mode
   const isDevMode = import.meta.env.VITE_DEV_MODE === 'true';
@@ -76,7 +86,11 @@ function App() {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
       const moduleParam = params.get('module');
-      if (moduleParam) {
+      const referenceParam = params.get('reference');
+
+      if (referenceParam === 'true') {
+        setCurrentLesson('reference');
+      } else if (moduleParam) {
         const moduleId = parseInt(moduleParam, 10);
         // Validate module exists
         if (!isNaN(moduleId) && moduleId > 0 && lessons.find(l => l.id === moduleId)) {
@@ -91,6 +105,7 @@ function App() {
           url.searchParams.delete('sentence');
           url.searchParams.delete('question');
           url.searchParams.delete('section');
+          url.searchParams.delete('reference');
           window.history.replaceState({}, '', url);
         }
       } else {
@@ -136,6 +151,20 @@ function App() {
 
     // Clean slate: clear all query params when returning to module list
     const url = new URL(window.location);
+    url.searchParams.delete('module');
+    url.searchParams.delete('view');
+    url.searchParams.delete('exercise');
+    url.searchParams.delete('sentence');
+    url.searchParams.delete('question');
+    url.searchParams.delete('section');
+    url.searchParams.delete('reference');
+    window.history.pushState({}, '', url);
+  };
+
+  const handleShowReferenceModules = () => {
+    setCurrentLesson('reference');
+    const url = new URL(window.location);
+    url.searchParams.set('reference', 'true');
     url.searchParams.delete('module');
     url.searchParams.delete('view');
     url.searchParams.delete('exercise');
@@ -363,12 +392,36 @@ function App() {
               ← Back to Lessons
             </button>
           </div>
+        ) : currentLesson === 'reference' ? (
+          <div className="main-content-wrapper">
+            <ReferenceModules
+              onModuleSelect={handleLessonSelect}
+              onBack={handleBack}
+            />
+            <button
+              className="feedback-fab"
+              onClick={() => setShowFeedbackForm(true)}
+              title="Give Early Feedback"
+            >
+              💬
+            </button>
+            {isAdmin && (
+              <button
+                className="admin-btn"
+                onClick={() => setShowFeedbackAdmin(true)}
+                title="View Feedback Admin"
+              >
+                📊
+              </button>
+            )}
+          </div>
         ) : !currentLesson ? (
           <div className="main-content-wrapper">
             <LessonList
               lessons={lessons}
               onLessonSelect={handleLessonSelect}
               completedExercises={completedExercises}
+              onShowReferenceModules={handleShowReferenceModules}
             />
             <button
               className="feedback-fab"

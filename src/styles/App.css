@@ -602,6 +602,30 @@ body:has(.left-nav.collapsed) .app-footer {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+/* Reference Modules Button */
+.reference-modules-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+
+.reference-modules-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
 /* Split View Layout */
 .split-view-container {
   display: flex;
@@ -1002,6 +1026,11 @@ body:has(.left-nav.collapsed) .app-footer {
 
   .view-toggle-btn {
     flex: 1;
+  }
+
+  .reference-modules-btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .split-view-list {

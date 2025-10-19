@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { useAuth } from '../hooks/useAuth';
 import { lessons } from '../lessons/lessonData';
-import { Flame, CheckCircle, Clock, BookOpen } from 'lucide-react';
+import { Flame, CheckCircle, Clock, BookOpen, BookMarked } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import '../styles/DashboardHeader.css';
 
-function DashboardHeader({ completedExercises, onLessonSelect }) {
+function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules }) {
   const { supabaseClient, supabaseUser } = useAuth();
   const analytics = useAnalytics();
   const { moduleProgress } = useSupabaseProgress();
@@ -257,74 +257,84 @@ function DashboardHeader({ completedExercises, onLessonSelect }) {
 
         {/* Right Side: Stats Grid */}
         <div className="dashboard-right">
-          {/* Streak */}
-          <div className={`stat-box stat-streak ${isStreakActive ? 'active' : ''}`}>
-            <div className="stat-icon-wrapper">
-              <Flame size={20} className="stat-icon-flame" strokeWidth={2.5} />
+          <div className="stats-grid">
+            {/* Streak */}
+            <div className={`stat-box stat-streak ${isStreakActive ? 'active' : ''}`}>
+              <div className="stat-icon-wrapper">
+                <Flame size={20} className="stat-icon-flame" strokeWidth={2.5} />
+              </div>
+              <div className="stat-info">
+                <div className="stat-value">{stats.streakDays}</div>
+                <div className="stat-label">Day Streak</div>
+              </div>
             </div>
-            <div className="stat-info">
-              <div className="stat-value">{stats.streakDays}</div>
-              <div className="stat-label">Day Streak</div>
+
+            {/* Progress with Lessons Combined */}
+            <div className="stat-box stat-progress">
+              <div className="stat-icon-wrapper">
+                <CheckCircle size={20} strokeWidth={2} />
+              </div>
+              <div className="stat-info">
+                <div className="stat-value-small">{stats.lessonsCompleted}/{stats.totalLessons}</div>
+                <div className="stat-label">Lessons Complete</div>
+              </div>
+              <div className="progress-circle-container">
+                <svg className="progress-circle" width="60" height="60" viewBox="0 0 60 60">
+                  <circle
+                    cx="30"
+                    cy="30"
+                    r="26"
+                    fill="none"
+                    stroke="#f0f0f0"
+                    strokeWidth="6"
+                  />
+                  <circle
+                    cx="30"
+                    cy="30"
+                    r="26"
+                    fill="none"
+                    stroke="#3b82f6"
+                    strokeWidth="6"
+                    strokeLinecap="round"
+                    strokeDasharray={`${2 * Math.PI * 26}`}
+                    strokeDashoffset={`${2 * Math.PI * 26 * (1 - progressPercentage / 100)}`}
+                    transform="rotate(-90 30 30)"
+                  />
+                </svg>
+                <div className="progress-circle-text">{progressPercentage}%</div>
+              </div>
+            </div>
+
+            {/* Study Time */}
+            <div className="stat-box">
+              <div className="stat-icon-wrapper">
+                <Clock size={20} strokeWidth={2} />
+              </div>
+              <div className="stat-info">
+                <div className="stat-value">{formatDuration(stats.totalStudyTime)}</div>
+                <div className="stat-label">Study Time</div>
+              </div>
+            </div>
+
+            {/* Words Learned */}
+            <div className="stat-box">
+              <div className="stat-icon-wrapper">
+                <BookOpen size={20} strokeWidth={2} />
+              </div>
+              <div className="stat-info">
+                <div className="stat-value">{stats.wordsLearned}</div>
+                <div className="stat-label">Words Learned</div>
+              </div>
             </div>
           </div>
 
-          {/* Progress with Lessons Combined */}
-          <div className="stat-box stat-progress">
-            <div className="stat-icon-wrapper">
-              <CheckCircle size={20} strokeWidth={2} />
-            </div>
-            <div className="stat-info">
-              <div className="stat-value-small">{stats.lessonsCompleted}/{stats.totalLessons}</div>
-              <div className="stat-label">Lessons Complete</div>
-            </div>
-            <div className="progress-circle-container">
-              <svg className="progress-circle" width="60" height="60" viewBox="0 0 60 60">
-                <circle
-                  cx="30"
-                  cy="30"
-                  r="26"
-                  fill="none"
-                  stroke="#f0f0f0"
-                  strokeWidth="6"
-                />
-                <circle
-                  cx="30"
-                  cy="30"
-                  r="26"
-                  fill="none"
-                  stroke="#3b82f6"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeDasharray={`${2 * Math.PI * 26}`}
-                  strokeDashoffset={`${2 * Math.PI * 26 * (1 - progressPercentage / 100)}`}
-                  transform="rotate(-90 30 30)"
-                />
-              </svg>
-              <div className="progress-circle-text">{progressPercentage}%</div>
-            </div>
-          </div>
-
-          {/* Study Time */}
-          <div className="stat-box">
-            <div className="stat-icon-wrapper">
-              <Clock size={20} strokeWidth={2} />
-            </div>
-            <div className="stat-info">
-              <div className="stat-value">{formatDuration(stats.totalStudyTime)}</div>
-              <div className="stat-label">Study Time</div>
-            </div>
-          </div>
-
-          {/* Words Learned */}
-          <div className="stat-box">
-            <div className="stat-icon-wrapper">
-              <BookOpen size={20} strokeWidth={2} />
-            </div>
-            <div className="stat-info">
-              <div className="stat-value">{stats.wordsLearned}</div>
-              <div className="stat-label">Words Learned</div>
-            </div>
-          </div>
+          {/* Reference Link */}
+          {onShowReferenceModules && (
+            <button className="reference-link" onClick={onShowReferenceModules}>
+              <BookMarked size={18} strokeWidth={2} />
+              <span>Reference Materials</span>
+            </button>
+          )}
         </div>
       </div>
     </div>
