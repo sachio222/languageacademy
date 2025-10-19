@@ -88,13 +88,21 @@ export function runTests(exercise, userAnswer, isReadingComprehension = false) {
     // Check if the wrong answer matches any known wrong answers
     if (exercise.wrongAnswers && exercise.wrongAnswers.length > 0) {
       for (const wrongAnswer of exercise.wrongAnswers) {
-        const wrongMatchResult = checkAnswer(userAnswer, wrongAnswer.answer, {
+        // Handle both string format and object format
+        const answerText =
+          typeof wrongAnswer === "string" ? wrongAnswer : wrongAnswer.answer;
+        const feedbackText =
+          typeof wrongAnswer === "string"
+            ? `Expected: "${exercise.expectedAnswer}"`
+            : wrongAnswer.feedback;
+
+        const wrongMatchResult = checkAnswer(userAnswer, answerText, {
           caseSensitive: false,
           exactMatch: false,
         });
 
         if (wrongMatchResult.isMatch) {
-          feedbackMessage = `✗ ${wrongAnswer.feedback}`;
+          feedbackMessage = `✗ ${feedbackText}`;
           break;
         }
       }

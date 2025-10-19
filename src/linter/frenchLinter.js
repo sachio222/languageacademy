@@ -421,6 +421,14 @@ function removeAccents(text) {
 export function checkAnswer(userAnswer, expectedAnswer, options = {}) {
   const { caseSensitive = false, exactMatch = false } = options;
 
+  // Safety check for undefined values
+  if (userAnswer == null || expectedAnswer == null) {
+    return {
+      isMatch: false,
+      hasAccentWarning: false,
+    };
+  }
+
   let user = userAnswer.trim();
   let expected = expectedAnswer.trim();
 
