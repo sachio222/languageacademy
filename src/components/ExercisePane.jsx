@@ -43,10 +43,19 @@ function ExercisePane({
     trackSubmit
   } = useTextTracking();
 
-  // Load previous answer if exercise was already completed
+  // Load previous answer if exercise was already completed (only on initial load)
+  const [hasLoadedInitialAnswer, setHasLoadedInitialAnswer] = useState(false);
+  
   useEffect(() => {
     const loadPreviousAnswer = async () => {
       if (!isAuthenticated || !supabaseUser || !supabaseClient || !exercise?.id) {
+        setLoadingPreviousAnswer(false);
+        return;
+      }
+
+      // Only load previous answer if we haven't loaded one yet for this exercise
+      // This prevents overwriting user's current input
+      if (hasLoadedInitialAnswer) {
         setLoadingPreviousAnswer(false);
         return;
       }
@@ -69,9 +78,12 @@ function ExercisePane({
           // Only clear if no previous answer found
           setUserAnswer('');
         }
+        
+        setHasLoadedInitialAnswer(true);
       } catch (err) {
         // No previous answer found, clear it
         setUserAnswer('');
+        setHasLoadedInitialAnswer(true);
       } finally {
         setLoadingPreviousAnswer(false);
       }
@@ -79,7 +91,7 @@ function ExercisePane({
 
     setLoadingPreviousAnswer(true);
     loadPreviousAnswer();
-  }, [exercise?.id, supabaseClient, supabaseUser, isAuthenticated]);
+  }, [exercise?.id, supabaseClient, supabaseUser, isAuthenticated, hasLoadedInitialAnswer]);
 
   // Text tracking disabled - too aggressive
   const debouncedTrackTyping = useRef(null);
@@ -167,6 +179,8 @@ function ExercisePane({
 
   // Reset when exercise changes and focus textarea
   useEffect(() => {
+    // Reset the flag so we can load previous answer for the new exercise
+    setHasLoadedInitialAnswer(false);
     // Don't clear userAnswer here - it's handled by loadPreviousAnswer effect
     setTestResults(null);
     setShowHint(false);

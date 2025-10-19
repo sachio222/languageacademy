@@ -4,6 +4,7 @@ import ConceptPane from './ConceptPane';
 import ConceptIntro from './ConceptIntro';
 import StudyMode from './StudyMode';
 import VocabularyReference from './VocabularyReference';
+import RightSidebar from './RightSidebar';
 import ModuleExam from './ModuleExam';
 import UnitExam from './UnitExam';
 import ModuleCompleteModal from './ModuleCompleteModal';
@@ -643,16 +644,11 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           </div>
 
           <div className="right-pane">
-            <ConceptPane
+            <RightSidebar
               concepts={lesson.concepts}
+              vocabulary={vocabularyItems}
               moduleId={extractModuleId(lesson)}
             />
-            {vocabularyItems.length > 0 && (
-              <VocabularyReference
-                vocabulary={vocabularyItems}
-                title="Quick Reference"
-              />
-            )}
           </div>
         </div>
       )}

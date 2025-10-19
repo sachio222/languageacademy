@@ -1,0 +1,105 @@
+/* Right Sidebar with Tabs */
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Tab Navigation */
+.sidebar-tabs {
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: #665665;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button:hover {
+  color: #1a1a1a;
+  background: #fafbfc;
+}
+
+.tab-button.active {
+  color: #1a1a1a;
+  font-weight: 600;
+  border-bottom-color: #3b82f6;
+}
+
+.tab-button:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #3b82f6;
+  border-radius: 4px;
+}
+
+/* Tab Content */
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem; /* Space for scrollbar */
+}
+
+/* Ensure content components fit well in tabs */
+.tab-content .concept-pane,
+.tab-content .vocabulary-reference {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove top padding from first elements in tab content */
+.tab-content > *:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .sidebar-tabs {
+    margin-bottom: 1rem;
+  }
+
+  .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-sidebar {
+    display: none; /* Hide on mobile - content shown elsewhere */
+  }
+}
+
+/* Scrollbar styling for tab content */
+.tab-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tab-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tab-content::-webkit-scrollbar-thumb {
+  background: #dddddd;
+  border-radius: 3px;
+}
+
+.tab-content::-webkit-scrollbar-thumb:hover {
+  background: #bbbbbb;
+}
