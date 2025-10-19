@@ -185,6 +185,12 @@
 
 /* Right Side: Stats Grid - True 2x2 */
 .dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -336,7 +342,7 @@
     gap: 1.5rem;
   }
 
-  .dashboard-right {
+  .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -359,7 +365,7 @@
     font-size: 1.25rem;
   }
 
-  .dashboard-right {
+  .stats-grid {
     gap: 0.625rem;
   }
 
@@ -369,6 +375,11 @@
 
   .stat-value {
     font-size: 1.25rem;
+  }
+
+  .reference-link {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -396,9 +407,13 @@
     font-size: 0.875rem;
   }
 
-  .dashboard-right {
+  .stats-grid {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+
+  .dashboard-right {
+    gap: 1rem;
   }
 
   .stat-box {
@@ -450,11 +465,60 @@
   .progress-circle-text {
     font-size: 0.75rem;
   }
+
+  .reference-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+  }
 }
 
 /* Focus states for accessibility */
 .next-lesson-card:focus-visible,
 .stat-box:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Reference Link - Below Stats Grid */
+.reference-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #f0f0f0;
+  color: #1a1a1a;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  width: 100%;
+}
+
+.reference-link:hover {
+  background: #e0e0e0;
+  border-color: #d0d0d0;
+  transform: translateY(-1px);
+}
+
+.reference-link svg {
+  color: #3b82f6;
+}
+
+.reference-link:active {
+  transform: translateY(0);
+}
+
+.reference-link svg {
+  flex-shrink: 0;
+}
+
+.reference-link:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
