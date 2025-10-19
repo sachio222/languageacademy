@@ -4,6 +4,7 @@ import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { getTTSText } from '../utils/ttsUtils';
+import { renderGenderSplitText, getGenderClass, hasGenderSplit } from '../utils/genderSplitUtils.jsx';
 
 /**
  * Select the best available voice for a given language
@@ -241,14 +242,8 @@ function ConceptIntro({ lesson, onStartStudying }) {
                   </thead>
                   <tbody>
                     {vocabularyItems.map((item, idx) => {
-                      const getGenderClass = (note) => {
-                        if (!note) return '';
-                        const noteLower = note.toLowerCase();
-                        if (noteLower.includes('feminine')) return 'feminine';
-                        if (noteLower.includes('masculine')) return 'masculine';
-                        return '';
-                      };
-                      const genderClass = getGenderClass(item.note);
+                      const isSplitWord = hasGenderSplit(item.french, item.note);
+                      const genderClass = getGenderClass(item.note, isSplitWord);
 
                       // Detect if this is the start of a new verb/section
                       const isNewSection = (item, index) => {
@@ -327,7 +322,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
                           >
                             <td className={`vocab-french-intro ${genderClass}`}>
                               <div className="vocab-with-audio">
-                                {item.french}
+                                {renderGenderSplitText(item.french, item.note)}
                                 <SpeakButton text={item.french} ttsText={item.ttsText} language="fr-FR" size="small" />
                               </div>
                             </td>

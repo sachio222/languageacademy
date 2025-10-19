@@ -2,6 +2,7 @@ import { useState, Fragment } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { getTTSText } from '../utils/ttsUtils';
+import { renderGenderSplitText, getGenderClass, hasGenderSplit } from '../utils/genderSplitUtils.jsx';
 
 /**
  * Select the best available voice for a given language
@@ -90,14 +91,7 @@ function VocabularyReference({ vocabulary, title }) {
     return null;
   }
 
-  // Helper to get gender class for color coding
-  const getGenderClass = (note) => {
-    if (!note) return '';
-    const noteLower = note.toLowerCase();
-    if (noteLower.includes('feminine')) return 'feminine';
-    if (noteLower.includes('masculine')) return 'masculine';
-    return '';
-  };
+  // Use centralized gender class helper
 
   // Helper to detect if this is the start of a new verb/concept section
   const isNewSection = (item, index, vocabularyArray) => {
@@ -140,7 +134,8 @@ function VocabularyReference({ vocabulary, title }) {
             </thead>
             <tbody>
               {vocabulary.map((item, idx) => {
-                const genderClass = getGenderClass(item.note);
+                const isSplitWord = hasGenderSplit(item.french, item.note);
+                const genderClass = getGenderClass(item.note, isSplitWord);
                 const needsDivider = isNewSection(item, idx, vocabulary);
 
                 const handleRowClick = (e) => {
@@ -206,7 +201,7 @@ function VocabularyReference({ vocabulary, title }) {
                     >
                       <td className={`vocab-french ${genderClass}`}>
                         <div className="vocab-with-audio">
-                          {item.french}
+                          {renderGenderSplitText(item.french, item.note)}
                           <SpeakButton text={item.french} ttsText={item.ttsText} language="fr-FR" size="small" />
                         </div>
                       </td>

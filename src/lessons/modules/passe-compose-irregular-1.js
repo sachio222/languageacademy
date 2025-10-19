@@ -91,7 +91,7 @@ export const passeComposeIrregular1Module = {
     {
       french: "la chance",
       english: "luck",
-      note: "avoir de la chance = to be lucky",
+      note: "feminine noun - avoir de la chance = to be lucky",
       example: "J'ai eu de la chance",
     },
     {

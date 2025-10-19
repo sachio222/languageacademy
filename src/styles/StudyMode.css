@@ -331,6 +331,22 @@
   font-weight: 600;
 }
 
+/* Gender split coloring for masculine/feminine pairs */
+.gender-masculine {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.gender-feminine {
+  color: #ec4899;
+  font-weight: 600;
+}
+
+.gender-separator {
+  color: #666;
+  font-weight: normal;
+}
+
 .vocab-english {
   color: #222222;
   font-size: 0.8125rem;
