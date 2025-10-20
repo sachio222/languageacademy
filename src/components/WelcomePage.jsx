@@ -419,6 +419,35 @@ function WelcomePage({ onContinue }) {
         </div>
       </section>
 
+      {/* French Impressionist Art */}
+      <section className="welcome-art-section">
+        <div className="welcome-container">
+          <div className="art-container">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Mus%C3%A9e_d%27Orsay_RF_2739_%28derivative_work_-_AutoContrast_edit_in_LCH_space%29.jpg/960px-Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Mus%C3%A9e_d%27Orsay_RF_2739_%28derivative_work_-_AutoContrast_edit_in_LCH_space%29.jpg"
+              alt="Bal du moulin de la Galette by Auguste Renoir"
+              className="art-image"
+              loading="lazy"
+              width="960"
+              height="640"
+              decoding="async"
+            />
+            <p className="art-caption">
+              <a
+                href="https://en.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="art-link"
+              >
+                <em>Bal du moulin de la Galette</em>
+              </a>{' '}
+              by Auguste Renoir, 1876 — Learning French unlocks centuries of literature, art, and
+              culture that shaped the modern world. Your journey starts here.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="welcome-cta-section">
         <div className="welcome-container">
@@ -429,7 +458,7 @@ function WelcomePage({ onContinue }) {
             Start with Module 1 and experience the compositional approach to French.
           </p>
           <button className="welcome-cta-button" onClick={onContinue}>
-            Get Started
+            Start Learning
           </button>
         </div>
       </section>
