@@ -255,15 +255,26 @@ const FeedbackAdmin = ({ onFeedbackChange }) => {
                   </>
                 )}
                 {item.status === 'reviewed' && (
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      updateStatus(item.id, 'resolved');
-                    }}
-                    className="action-btn resolve-btn"
-                  >
-                    Mark Resolved
-                  </button>
+                  <>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        updateStatus(item.id, 'resolved');
+                      }}
+                      className="action-btn resolve-btn"
+                    >
+                      Mark Resolved
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        updateStatus(item.id, 'dismissed');
+                      }}
+                      className="action-btn dismiss-btn"
+                    >
+                      Dismiss
+                    </button>
+                  </>
                 )}
                 {item.status === 'resolved' && (
                   <button
