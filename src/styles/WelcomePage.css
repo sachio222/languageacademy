@@ -488,7 +488,33 @@
   color: #665665;
 }
 
-/* Pedagogy Grid */
+.feature-note-with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-note-image {
+  flex-shrink: 0;
+  width: 280px;
+}
+
+.robot-clock-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-note-with-image .feature-note {
+  margin-top: 0;
+  flex: 1;
+}
+
 .pedagogy-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -837,6 +863,17 @@
   .welcome-cta-subtitle {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+  }
+
+  .feature-note-with-image {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .feature-note-image {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
   }
 }
 

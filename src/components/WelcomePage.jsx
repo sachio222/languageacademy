@@ -236,11 +236,24 @@ function WelcomePage({ onContinue }) {
                 Basic rules like these preserve French's audible rhythm, and help create its characteristic smooth flow.&nbsp;
                 <strong>Don't worry, it becomes second nature quite quickly!</strong>
               </p>
-              <p className="feature-note">
-                French speakers produce 7-8 syllables per second as opposed to English's 5-6 per second.
-                This rapid-fire delivery creates a quick, fluid sound, and you should
-                mentally prepare yourself to think in a steady, rhythmic pace as you learn to speak and read French.
-              </p>
+              <div className="feature-note-with-image">
+                <div className="feature-note-image">
+                  <img
+                    src="https://images.pexels.com/photos/7412042/pexels-photo-7412042.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+                    alt="Vintage clock illustration"
+                    className="robot-clock-image"
+                    loading="lazy"
+                    width="600"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <p className="feature-note">
+                  French speakers produce 7-8 syllables per second as opposed to English's 5-6 per second.
+                  This rapid-fire delivery creates a quick, fluid sound, and it will help to
+                  mentally prepare yourself to think in a quick, steady rhythm as you learn to speak and read French.
+                </p>
+              </div>
             </div>
           </div>
         </div>
