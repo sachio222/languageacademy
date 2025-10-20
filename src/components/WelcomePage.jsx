@@ -441,7 +441,7 @@ function WelcomePage({ onContinue }) {
               >
                 <em>Bal du moulin de la Galette</em>
               </a>{' '}
-              by Auguste Renoir, 1876 — Learning French unlocks centuries of literature, art, and
+              by Auguste Renoir, 1876 — Learning French unlocks centuries of literature, philosophy, and
               culture that shaped the modern world. Your journey starts here.
             </p>
           </div>
