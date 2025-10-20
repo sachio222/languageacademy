@@ -5,6 +5,7 @@ import './FeedbackAdmin.css';
 const FeedbackAdmin = () => {
   const { supabaseClient } = useAuth();
   const [feedback, setFeedback] = useState([]);
+  const [allFeedback, setAllFeedback] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all');
   const [selectedFeedback, setSelectedFeedback] = useState(null);
@@ -16,19 +17,24 @@ const FeedbackAdmin = () => {
     (async () => {
       setLoading(true);
       try {
-        let query = supabaseClient
+        // Always fetch all feedback for counts
+        const { data: allData, error: allError } = await supabaseClient
           .from('feedback')
           .select('*')
           .order('created_at', { ascending: false });
 
-        if (filter !== 'all') {
-          query = query.eq('status', filter);
+        if (allError) throw allError;
+
+        if (!cancelled) {
+          setAllFeedback(allData || []);
+
+          // Filter for display
+          const filteredData = filter === 'all'
+            ? allData
+            : (allData || []).filter(f => f.status === filter);
+
+          setFeedback(filteredData || []);
         }
-
-        const { data, error } = await query;
-        if (error) throw error;
-
-        if (!cancelled) setFeedback(data || []);
       } catch (error) {
         if (!cancelled) console.error('Error fetching feedback:', error);
       } finally {
@@ -44,19 +50,23 @@ const FeedbackAdmin = () => {
 
     try {
       setLoading(true);
-      let query = supabaseClient
+
+      // Always fetch all feedback for counts
+      const { data: allData, error: allError } = await supabaseClient
         .from('feedback')
         .select('*')
         .order('created_at', { ascending: false });
 
-      if (filter !== 'all') {
-        query = query.eq('status', filter);
-      }
+      if (allError) throw allError;
 
-      const { data, error } = await query;
+      setAllFeedback(allData || []);
 
-      if (error) throw error;
-      setFeedback(data || []);
+      // Filter for display
+      const filteredData = filter === 'all'
+        ? allData
+        : (allData || []).filter(f => f.status === filter);
+
+      setFeedback(filteredData || []);
     } catch (error) {
       console.error('Error fetching feedback:', error);
     } finally {
@@ -127,25 +137,25 @@ const FeedbackAdmin = () => {
             className={filter === 'all' ? 'active' : ''}
             onClick={() => setFilter('all')}
           >
-            All ({feedback.length})
+            All ({allFeedback.length})
           </button>
           <button
             className={filter === 'new' ? 'active' : ''}
             onClick={() => setFilter('new')}
           >
-            New ({feedback.filter(f => f.status === 'new').length})
+            New ({allFeedback.filter(f => f.status === 'new').length})
           </button>
           <button
             className={filter === 'reviewed' ? 'active' : ''}
             onClick={() => setFilter('reviewed')}
           >
-            Reviewed ({feedback.filter(f => f.status === 'reviewed').length})
+            Reviewed ({allFeedback.filter(f => f.status === 'reviewed').length})
           </button>
           <button
             className={filter === 'resolved' ? 'active' : ''}
             onClick={() => setFilter('resolved')}
           >
-            Resolved ({feedback.filter(f => f.status === 'resolved').length})
+            Resolved ({allFeedback.filter(f => f.status === 'resolved').length})
           </button>
         </div>
       </div>
