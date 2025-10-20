@@ -64,12 +64,15 @@ function App() {
   const isDevMode = import.meta.env.VITE_DEV_MODE === 'true';
 
   // Get auth info for admin access control
-  const { user, supabaseUser } = useAuth();
+  const { user, supabaseUser, supabaseClient } = useAuth();
 
   // Supabase progress tracking (works in both dev and production mode)
   const supabaseProgress = useSupabaseProgress();
   const analytics = useAnalytics();
   const offlineSync = useOfflineSync();
+
+  // Track new feedback count for admin badge
+  const [newFeedbackCount, setNewFeedbackCount] = useState(0);
 
   // Use Supabase data in both modes (with safe defaults)
   const completedExercises = supabaseProgress?.completedExercises || new Set();
@@ -80,6 +83,27 @@ function App() {
   const ADMIN_SUPABASE_USER_ID = '35e33bec-de10-4d70-86a3-c992fc7655dc';
 
   const isAdmin = user?.id === ADMIN_CLERK_USER_ID || supabaseUser?.id === ADMIN_SUPABASE_USER_ID;
+
+  // Fetch new feedback count for admin badge
+  useEffect(() => {
+    if (isAdmin && supabaseClient) {
+      const fetchNewFeedbackCount = async () => {
+        const { count, error } = await supabaseClient
+          .from('feedback')
+          .select('*', { count: 'exact', head: true })
+          .eq('status', 'new');
+
+        if (!error) {
+          setNewFeedbackCount(count || 0);
+        }
+      };
+
+      fetchNewFeedbackCount();
+      // Refresh count every 30 seconds
+      const interval = setInterval(fetchNewFeedbackCount, 30000);
+      return () => clearInterval(interval);
+    }
+  }, [isAdmin, supabaseClient]);
 
   // Handle browser back/forward buttons with validation
   useEffect(() => {
@@ -444,6 +468,9 @@ function App() {
                 title="View Feedback Admin"
               >
                 📊
+                {newFeedbackCount > 0 && (
+                  <span className="admin-badge">{newFeedbackCount}</span>
+                )}
               </button>
             )}
           </div>
@@ -469,6 +496,9 @@ function App() {
                 title="View Feedback Admin"
               >
                 📊
+                {newFeedbackCount > 0 && (
+                  <span className="admin-badge">{newFeedbackCount}</span>
+                )}
               </button>
             )}
           </div>

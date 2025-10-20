@@ -1,21 +1,26 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../lib/supabase';
+import { useAuth } from '../hooks/useAuth';
 import './FeedbackAdmin.css';
 
 const FeedbackAdmin = () => {
+  const { supabaseClient } = useAuth();
   const [feedback, setFeedback] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all');
   const [selectedFeedback, setSelectedFeedback] = useState(null);
 
   useEffect(() => {
-    fetchFeedback();
-  }, [filter]);
+    if (supabaseClient) {
+      fetchFeedback();
+    }
+  }, [filter, supabaseClient]);
 
   const fetchFeedback = async () => {
+    if (!supabaseClient) return;
+
     try {
       setLoading(true);
-      let query = supabase
+      let query = supabaseClient
         .from('feedback')
         .select('*')
         .order('created_at', { ascending: false });
@@ -37,7 +42,7 @@ const FeedbackAdmin = () => {
 
   const updateStatus = async (id, newStatus) => {
     try {
-      const { error } = await supabase
+      const { error } = await supabaseClient
         .from('feedback')
         .update({ status: newStatus })
         .eq('id', id);
