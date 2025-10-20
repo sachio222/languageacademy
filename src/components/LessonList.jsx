@@ -1,6 +1,6 @@
 import { calculateLessonProgress } from '../lessons/testRunner';
 import { unitStructure } from '../lessons/lessonData';
-import { Award, BookOpen, TextCursorInput, Grid3x3, List, ChevronDown, ChevronUp } from 'lucide-react';
+import { Award, BookOpen, TextCursorInput, Grid3x3, List, ChevronDown, ChevronUp, BadgeCheck } from 'lucide-react';
 import DashboardHeader from './DashboardHeader';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
@@ -194,7 +194,12 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                 <div className="unit-content">
                   <div className="unit-title-row">
                     <h3 className="unit-title">{unitInfo.title}</h3>
-                    {unitComplete && <span className="unit-badge-complete">✓ Complete</span>}
+                    {unitComplete && (
+                      <span className="unit-badge-complete">
+                        <BadgeCheck size={16} strokeWidth={2} />
+                        <span>Complete</span>
+                      </span>
+                    )}
                   </div>
                   {!isCollapsed && <p className="unit-description">{unitInfo.description}</p>}
                   {isCollapsed && (
