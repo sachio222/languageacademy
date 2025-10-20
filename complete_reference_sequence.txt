@@ -1,0 +1,182 @@
+📋 COMPLETE REFERENCE SEQUENCE WITH VERB PATTERNS ADDED:
+============================================================
+
+  1: famousWords
+  2: module1
+  3: module3_etre
+  4: module4_avoir
+  5: articles
+  6: basicNouns
+  7: plurals
+  8: connectors
+  9: reading1
+ 10: unit1Practice
+ 11: unit1Exam
+ 12: module2_demonstratives
+ 13: caSurvival
+ 14: determinersWithNouns
+ 15: vouloirModule
+ 16: pouvoirModule
+ 17: voirModule
+ 18: module6_questions
+ 19: stressedPronouns
+ 20: prepositions
+ 21: adjectives
+ 22: reading2
+ 23: unit2Practice
+ 24: unit2Exam
+ 25: contractions
+ 26: venirModule
+ 27: allerModule
+ 28: verbPatternHelp
+ 29: partirModule
+ 30: module7_object_pronouns
+ 31: module8_possessive_adjectives
+ 32: module9_possessive_pronouns
+ 33: module10_combining
+ 34: reading3
+ 35: unit3Practice
+ 36: unit3Exam
+ 37: survivalPhrases
+ 38: faireModule
+ 39: devoirModule
+ 40: parlerModule
+ 41: negation
+ 42: timeAdverbs
+ 43: negation2
+ 44: locationAdverbs
+ 45: everydayNouns
+ 46: reading4
+ 47: unit4Practice
+ 48: unit4Exam
+ 49: comparisons
+ 50: comparisonsSlang
+ 51: conditionals
+ 52: wouldConditionals
+ 53: aimerModule
+ 54: etrePast
+ 55: avoirPast
+ 56: foodNouns
+ 57: mangerModule
+ 58: boireModule
+ 59: reading5
+ 60: unit5Practice
+ 61: unit5Exam
+ 62: progressiveTenses
+ 63: direModule
+ 64: prendreModule
+ 65: mettreModule
+ 66: demanderModule
+ 67: commanderModule
+ 68: besoinModule
+ 69: top200Nouns
+ 70: reading6
+ 71: unit6Practice
+ 72: unit6Exam
+ 73: onAndPeopleModule
+ 74: studyingVerbsModule
+ 75: learningVerbsModule
+ 76: comprendreModule
+ 77: savoirModule
+ 78: connaitreModule
+ 79: penserModule
+ 80: croireModule
+ 81: knowledgeNounsModule
+ 82: discourseMarkersModule
+ 83: comparisonModifiersModule
+ 84: reading7
+ 85: unit7Practice
+ 86: unit7Exam
+ 87: temporalWordsModule
+ 88: reflexivePronounsModule
+ 89: sAppelerModule
+ 90: morningRoutineModule
+ 91: gettingReadyModule
+ 92: dailyReflexivesModule
+ 93: reflexivePastModule
+ 94: reciprocalReflexivesModule
+ 95: commandsTuModule
+ 96: commandsVousModule
+ 97: irregularCommandsModule
+ 98: commandsPronounsModule
+ 99: reading8
+100: unit8Practice
+101: unit8Exam
+102: causalWordsModule
+103: spatialPrepositionsModule
+104: moreSpatialRelationsModule
+105: passeComposeERModule
+106: passeComposeIrregular1Module
+107: passeComposeIrregular2Module
+108: passeComposeEtreModule
+109: passeComposeAgreementModule
+110: imparfaitAllVerbsModule
+111: pcVsImparfaitModule
+112: pastTenseCompositionModule
+113: reading9
+114: unit9Practice
+115: unit9Exam
+116: commonSpecialForms1Module
+117: commonSpecialForms2Module
+118: necessityPhrasesModule
+119: wishPhrasesModule
+120: emotionPhrasesModule
+121: opinionPhrasesModule
+122: hypotheticalPhrasesModule
+123: pastRegretPhrasesModule
+124: hadAlreadyPhrasesModule
+125: commonAdverbsModule
+126: whileDoingPhrasesModule
+127: servicePhrasesModule
+128: beforePhrasesModule
+129: soThatPhrasesModule
+130: althoughPhrasesModule
+131: possibilityPhrasesModule
+132: reading10
+133: unit10Practice
+134: unit10Exam
+135: agePersonalInfoModule
+136: donnerModule
+137: dailyActions1Module
+138: searchAndFindModule
+139: perceptionVerbsModule
+140: socialSituationsModule
+141: directionsNavigationModule
+142: reading11
+143: unit11Practice
+144: unit11Exam
+145: natureAnimalsModule
+146: movementVerbsModule
+147: naturalPhenomenaModule
+148: questceQuiQueModule
+149: pourquoiComplexModule
+150: commentComplexModule
+151: quiestQuiQueModule
+152: inversionQuestionsModule
+153: embeddedQuestionsModule
+154: rhetoricalNegativeModule
+155: multiClauseQuestionsModule
+156: alphabetModule
+157: numbersModule
+158: daysMonthsModule
+159: holidaysModule
+160: colorsModule
+161: frenchCountriesModule
+162: languageStatsModule
+
+Total modules: 162
+
+📝 UNIT BOUNDARIES:
+Unit 1: 1-11 (11 modules)
+Unit 2: 12-24 (13 modules)
+Unit 3: 25-36 (12 modules) - includes verbPatternHelp at 28
+Unit 4: 37-48 (12 modules)
+Unit 5: 49-61 (13 modules)
+Unit 6: 62-72 (11 modules)
+Unit 7: 73-86 (14 modules)
+Unit 8: 87-101 (15 modules)
+Unit 9: 102-116 (15 modules)
+Unit 10: 117-135 (19 modules)
+Unit 11: 136-145 (10 modules)
+Unit 12: 146-156 (11 modules)
+Reference: 157-163 (7 modules)

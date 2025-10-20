@@ -1,0 +1,20 @@
+// Unit 10: Mastery & Nuance - Export all modules
+export { commonSpecialForms1Module } from "./common-special-forms-1.js";
+export { commonSpecialForms2Module } from "./common-special-forms-2.js";
+export { necessityPhrasesModule } from "./necessity-phrases.js";
+export { wishPhrasesModule } from "./wish-phrases.js";
+export { emotionPhrasesModule } from "./emotion-phrases.js";
+export { opinionPhrasesModule } from "./opinion-phrases.js";
+export { hypotheticalPhrasesModule } from "./hypothetical-phrases.js";
+export { pastRegretPhrasesModule } from "./past-regret-phrases.js";
+export { servicePhrasesModule } from "./service-phrases.js";
+export { soThatPhrasesModule } from "./so-that-phrases.js";
+export { whileDoingPhrasesModule } from "./while-doing-phrases.js";
+export { beforePhrasesModule } from "./before-phrases.js";
+export { althoughPhrasesModule } from "./although-phrases.js";
+export { hadAlreadyPhrasesModule } from "./had-already-phrases.js";
+export { commonAdverbsModule } from "./common-adverbs.js";
+export { possibilityPhrasesModule } from "./possibility-phrases.js";
+export { reading10 } from "./reading-10.js";
+export { unit10Practice } from "./unit-10-practice.js";
+export { unit10Exam } from "./unit-10-exam.js";

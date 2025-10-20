@@ -1,75 +1,62 @@
 import React from 'react';
 import { BookOpen, Calculator, Calendar, Globe, Palette, Hash, Type, Award, ArrowLeft } from 'lucide-react';
+import { lessons, unitStructure } from '../lessons/lessonData';
 import '../styles/ReferenceModules.css';
 
+// Helper function to get icon for each reference module
+const getIconForModule = (lesson) => {
+  const title = lesson.title.toLowerCase();
+  if (title.includes('alphabet')) return Type;
+  if (title.includes('nombre')) return Calculator;
+  if (title.includes('jours') || title.includes('mois')) return Calendar;
+  if (title.includes('fête')) return Award;
+  if (title.includes('couleur')) return Palette;
+  if (title.includes('francophonie')) return Globe;
+  if (title.includes('chiffre')) return Hash;
+  if (title.includes('spelling') || title.includes('pattern')) return BookOpen;
+  return BookOpen; // default
+};
+
+// Helper function to get image for each reference module
+const getImageForModule = (lesson) => {
+  const title = lesson.title.toLowerCase();
+  if (title.includes('alphabet')) return "https://images.unsplash.com/photo-1645897938945-7b1b53239ea6?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('nombre')) return "https://images.unsplash.com/photo-1603290989627-5155a7f83dac?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('jours') || title.includes('mois')) return "https://images.unsplash.com/photo-1540317700647-ec69694d70d0?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('fête')) return "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('couleur')) return "https://images.unsplash.com/photo-1558470598-a5dda9640f68?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('francophonie')) return "https://images.unsplash.com/photo-1662009868204-4128942c9835?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('chiffre')) return "https://images.unsplash.com/photo-1642516303080-431f6681f864?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('spelling') || title.includes('pattern')) return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80"; // default
+};
+
+// Helper function to get category for each reference module
+const getCategoryForModule = (lesson) => {
+  const title = lesson.title.toLowerCase();
+  if (title.includes('alphabet') || title.includes('nombre') || title.includes('spelling')) return "Language Basics";
+  if (title.includes('jours') || title.includes('mois')) return "Time & Dates";
+  if (title.includes('fête') || title.includes('francophonie') || title.includes('chiffre')) return "Culture";
+  if (title.includes('couleur')) return "Vocabulary";
+  return "Reference";
+};
+
 const ReferenceModules = ({ onModuleSelect, onBack }) => {
-  // Reference modules data with optimized Unsplash images
-  const referenceModules = [
-    {
-      id: 155,
-      title: "L'Alphabet",
-      description: "French alphabet with pronunciation guide",
-      icon: Type,
-      image: "https://images.unsplash.com/photo-1645897938945-7b1b53239ea6?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
-      category: "Language Basics"
-    },
-    {
-      id: 156,
-      title: "Les Nombres",
-      description: "Numbers from 0 to infinity - including the unique 70s, 80s, and 90s!",
-      icon: Calculator,
-      image: "https://images.unsplash.com/photo-1603290989627-5155a7f83dac?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
-      category: "Language Basics"
-    },
-    {
-      id: 157,
-      title: "Jours et Mois",
-      description: "Days of the week and months in French",
-      icon: Calendar,
-      image: "https://images.unsplash.com/photo-1540317700647-ec69694d70d0?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
-      category: "Time & Dates"
-    },
-    {
-      id: 158,
-      title: "Les Fêtes",
-      description: "French holidays and celebrations",
-      icon: Award,
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
-      category: "Culture"
-    },
-    {
-      id: 159,
-      title: "Les Couleurs",
-      description: "Colors with agreement rules and nature vocabulary",
-      icon: Palette,
-      image: "https://images.unsplash.com/photo-1558470598-a5dda9640f68?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
-      category: "Vocabulary"
-    },
-    {
-      id: 160,
-      title: "La Francophonie",
-      description: "French-speaking countries worldwide",
-      icon: Globe,
-      image: "https://images.unsplash.com/photo-1662009868204-4128942c9835?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
-      category: "Culture"
-    },
-    {
-      id: 161,
-      title: "Le Français en Chiffres",
-      description: "Fascinating language statistics",
-      icon: Hash,
-      image: "https://images.unsplash.com/photo-1642516303080-431f6681f864?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
-      category: "Culture"
-    },
-    {
-      id: 162,
-      title: "French Spelling Patterns",
-      description: "Complete guide to French sound-to-spelling correspondences",
-      icon: BookOpen,
-      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80",
-      category: "Language Basics"
-    }
-  ];
+  // Get reference lessons dynamically from the lesson system
+  const referenceUnit = unitStructure.find(u => u.isReference);
+  const referenceLessons = lessons.filter(l => 
+    referenceUnit && l.id >= referenceUnit.lessonRange[0] && l.id <= referenceUnit.lessonRange[1]
+  );
+
+  // Map lessons to display format with icons/images
+  const referenceModules = referenceLessons.map(lesson => ({
+    id: lesson.id,
+    title: lesson.title.replace(/^Reference [IVX]+: /, ''), // Remove "Reference I:" prefix
+    description: lesson.description,
+    icon: getIconForModule(lesson),
+    image: getImageForModule(lesson),
+    category: getCategoryForModule(lesson)
+  }));
 
   const handleModuleClick = (moduleId) => {
     if (onModuleSelect) {

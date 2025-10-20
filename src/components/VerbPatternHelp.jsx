@@ -1111,7 +1111,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
 
       <div className="help-content">
         <div className="help-section">
-          <h2>Don't be intimidated!</h2>
+          <h2>It makes learning easier!</h2>
           <div className="benefits-list">
             <div className="benefit-item">
               <span className="benefit-icon">🔊</span>
@@ -1124,7 +1124,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
 
             <div className="benefit-item">
               <span className="benefit-icon">🎯</span>
-              <span className="benefit-text"><strong>Most verbs will be even more predictable</strong> — Keep an eye out for patterns as you continue to learn. Around 80% of French verbs follow even simpler patterns (as you'll soon discover)!</span>
+              <span className="benefit-text"><strong>Most verbs will be even more predictable</strong> — It makes learning seem less like memorizing and more like pattern recognition! Just wait till you learn the next verb coming up!</span>
             </div>
 
           </div>
