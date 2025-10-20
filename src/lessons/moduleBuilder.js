@@ -234,6 +234,8 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
     sentences: moduleConfig.sentences || null,
     // Pass through phonics reference flag
     isPhonicsReference: moduleConfig.isPhonicsReference || false,
+    // Pass through help module flag
+    isHelpModule: moduleConfig.isHelpModule || false,
   };
 
   // Debug logging for unit exams

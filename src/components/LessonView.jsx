@@ -10,6 +10,7 @@ import UnitExam from './UnitExam';
 import ModuleCompleteModal from './ModuleCompleteModal';
 import FillInTheBlank from './FillInTheBlank';
 import PhonicsView from './PhonicsView';
+import VerbPatternHelp from './VerbPatternHelp';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
@@ -46,8 +47,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     const isUnitExam = lesson.isUnitExam;
     const isFillInBlank = lesson.isFillInTheBlank;
     const isPhonics = lesson.isPhonicsReference;
+    const isHelpModule = lesson.isHelpModule;
 
-    if (isReading || isUnitExam || isFillInBlank || isPhonics) {
+    if (isReading || isUnitExam || isFillInBlank || isPhonics || isHelpModule) {
       // Special modules don't use view parameter - clear it if present
       if (view) {
         const url = new URL(window.location);
@@ -317,9 +319,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
       if (error) throw error;
 
-      // For unit exams, also clear the module_progress completion
-      if (lesson.isUnitExam) {
-        console.log('[DEBUG] Clearing unit exam completion from module_progress');
+      // For unit exams, help modules, and fill-in-blank, also clear the module_progress completion
+      if (lesson.isUnitExam || lesson.isHelpModule || lesson.isFillInTheBlank) {
+        console.log('[DEBUG] Clearing module completion from module_progress');
         const { error: progressError } = await supabaseClient
           .from('module_progress')
           .delete()
@@ -327,6 +329,18 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           .eq('module_id', modId);
 
         if (progressError) throw progressError;
+      }
+
+      // For help modules, also clear concept understanding (the "Understood" checkmarks)
+      if (lesson.isHelpModule) {
+        console.log('[DEBUG] Clearing concept understanding for help module');
+        const { error: conceptError } = await supabaseClient
+          .from('concept_understanding')
+          .delete()
+          .eq('user_id', supabaseUser.id)
+          .eq('module_id', modId);
+
+        if (conceptError) throw conceptError;
       }
 
       // Reload page to refresh state
@@ -416,11 +430,12 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
   // Reset state when lesson changes (new module loads)
   useEffect(() => {
-    // Skip EVERYTHING for reading comprehension, unit exams, fill-in-blank, or phonics - go straight to content
+    // Skip EVERYTHING for reading comprehension, unit exams, fill-in-blank, phonics, or help - go straight to content
     const isReading = lesson.skipStudyMode || lesson.isReadingComprehension;
     const isUnitExam = lesson.isUnitExam;
     const isFillInBlank = lesson.isFillInTheBlank;
     const isPhonics = lesson.isPhonicsReference;
+    const isHelpModule = lesson.isHelpModule;
 
     // Get the view from URL to determine initial state
     const params = new URLSearchParams(window.location.search);
@@ -437,7 +452,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     }
 
     // For special module types, always go straight to practice
-    if (isReading || isUnitExam || isFillInBlank || isPhonics) {
+    if (isReading || isUnitExam || isFillInBlank || isPhonics || isHelpModule) {
       setShowIntro(false);
       setIsStudying(false);
       setStudyCompleted(true);
@@ -546,6 +561,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
             </span>
           ) : moduleCompleted ? (
             <span>✅ Module Complete!</span>
+          ) : lesson.isHelpModule ? (
+            <span>📚 Help Module</span>
           ) : (
             <span>Exercise {currentExerciseIndex + 1} of {lesson.exercises.length}</span>
           )}
@@ -562,7 +579,14 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         </div>
       </div>
 
-      {lesson.isPhonicsReference ? (
+      {lesson.isHelpModule ? (
+        <VerbPatternHelp
+          onComplete={handleNextModule}
+          moduleId={lesson.id}
+          lesson={lesson}
+          onModuleComplete={onModuleComplete}
+        />
+      ) : lesson.isPhonicsReference ? (
         <PhonicsView />
       ) : showIntro && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (
         <div className="intro-container">

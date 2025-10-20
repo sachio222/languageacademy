@@ -35,6 +35,7 @@ import { prepositions } from "./modules/prepositions.js";
 import { adjectives } from "./modules/adjectives.js";
 import { venirModule } from "./modules/venir.js";
 import { allerModule } from "./modules/aller.js";
+import { verbPatternHelp } from "./modules/verb-pattern-help.js";
 import { partirModule } from "./modules/partir.js";
 import { voirModule } from "./modules/voir.js";
 import { reading2 } from "./modules/reading-2.js";
@@ -244,12 +245,13 @@ const moduleConfigs = [
   // === MOTION LAYER - Essential movement verbs ===
   venirModule, // 26. venir - "je viens", "tu viens", "il vient"
   allerModule, // 27. aller - "je vais", "tu vas", "il va" - MOST COMMON!
-  partirModule, // 28. partir - "je pars", "tu pars", "il part"
+  verbPatternHelp, // 28. HELP: Understanding Verb Patterns - Educational interstitial
+  partirModule, // 29. partir - "je pars", "tu pars", "il part"
 
   // === ADVANCED LAYER - Complex pronouns ===
-  module7_object_pronouns, // 29. le, la, les - COMBO: "je le vois", "il l'a" (builds on voir, vouloir, avoir)
-  module8_possessive_adjectives, // 30. mon, ton, son - COMBO: "mon chat", "sa maison"
-  module9_possessive_pronouns, // 31. le mien, le tien - COMBO: "c'est le mien"
+  module7_object_pronouns, // 30. le, la, les - COMBO: "je le vois", "il l'a" (builds on voir, vouloir, avoir)
+  module8_possessive_adjectives, // 31. mon, ton, son - COMBO: "mon chat", "sa maison"
+  module9_possessive_pronouns, // 32. le mien, le tien - COMBO: "c'est le mien"
 
   // === MASTERY LAYER - Practice writing complex sentences ===
   module10_combining, // 32. FULL SENTENCES: "il a mon livre", "est-ce le sien?"

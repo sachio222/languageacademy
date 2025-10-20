@@ -30,13 +30,17 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
     if (lesson.isUnitExam && lesson.exerciseConfig?.items) {
       return lesson.exerciseConfig.items.length;
     }
+    if (lesson.isHelpModule) {
+      // Help modules are considered "1 exercise" for completion purposes
+      return 1;
+    }
     return lesson.exercises?.length || 0;
   };
 
   // Helper to get completed exercise count
   const getCompletedCount = (lesson) => {
-    // For fill-in-blank and exams, check module_progress table
-    if (lesson.isFillInTheBlank || lesson.isUnitExam) {
+    // For fill-in-blank, exams, and help modules, check module_progress table
+    if (lesson.isFillInTheBlank || lesson.isUnitExam || lesson.isHelpModule) {
       const modId = extractModuleId(lesson);
       const modProgress = moduleProgress?.[modId];
       // If module is marked complete, return total count

@@ -246,17 +246,22 @@ export const useSupabaseProgress = () => {
 
         const { data, error } = await supabaseClient
           .from(TABLES.MODULE_PROGRESS)
-          .upsert({
-            user_id: supabaseUser.id,
-            module_id: moduleId,
-            unit_id: unitId,
-            total_exercises: totalExercises,
-            completed_exercises: completedCount,
-            study_mode_completed: studyCompleted,
-            exam_score: examScore,
-            time_spent_seconds: timeSpent,
-            completed_at: isCompleted ? new Date().toISOString() : null,
-          })
+          .upsert(
+            {
+              user_id: supabaseUser.id,
+              module_id: moduleId,
+              unit_id: unitId,
+              total_exercises: totalExercises,
+              completed_exercises: completedCount,
+              study_mode_completed: studyCompleted,
+              exam_score: examScore,
+              time_spent_seconds: timeSpent,
+              completed_at: isCompleted ? new Date().toISOString() : null,
+            },
+            {
+              onConflict: "user_id,module_id",
+            }
+          )
           .select()
           .single();
 
@@ -295,16 +300,21 @@ export const useSupabaseProgress = () => {
 
         const { data, error } = await supabaseClient
           .from(TABLES.UNIT_PROGRESS)
-          .upsert({
-            user_id: supabaseUser.id,
-            unit_id: unitId,
-            unit_name: unitName,
-            total_modules: totalModules,
-            completed_modules: completedCount,
-            unit_exam_score: examScore,
-            time_spent_seconds: timeSpent,
-            completed_at: isCompleted ? new Date().toISOString() : null,
-          })
+          .upsert(
+            {
+              user_id: supabaseUser.id,
+              unit_id: unitId,
+              unit_name: unitName,
+              total_modules: totalModules,
+              completed_modules: completedCount,
+              unit_exam_score: examScore,
+              time_spent_seconds: timeSpent,
+              completed_at: isCompleted ? new Date().toISOString() : null,
+            },
+            {
+              onConflict: "user_id,unit_id",
+            }
+          )
           .select()
           .single();
 

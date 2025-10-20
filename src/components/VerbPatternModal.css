@@ -1,0 +1,568 @@
+/* Verb Pattern Modal - Following Airbnb Design Principles */
+
+/* Modal Backdrop */
+.verb-pattern-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 1rem;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Container */
+.verb-pattern-modal {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.2);
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.25s ease;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Modal Header */
+.verb-pattern-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 3rem 0 3rem;
+  flex-shrink: 0;
+}
+
+.verb-pattern-modal-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.04em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.verb-pattern-close-btn {
+  background: transparent;
+  border: none;
+  color: #999999;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.15s ease;
+  line-height: 1;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verb-pattern-close-btn:hover {
+  background: #f7f9fc;
+  color: #1a1a1a;
+}
+
+/* Modal Content */
+.verb-pattern-modal-content {
+  padding: 2rem 3rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.pattern-intro {
+  margin-bottom: 2.5rem;
+}
+
+.pattern-intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #665665;
+  margin: 0;
+}
+
+/* Pattern Sections */
+.pattern-section {
+  margin-bottom: 2.5rem;
+}
+
+.pattern-section:last-child {
+  margin-bottom: 0;
+}
+
+.pattern-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.3;
+}
+
+.pattern-section h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+/* Verb Comparison Grid */
+.verb-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.verb-column {
+  background: #fafbfc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #f0f0f0;
+}
+
+.verb-column h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  letter-spacing: -0.015em;
+}
+
+.verb-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.verb-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.verb-form.clickable {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.verb-form.clickable:hover {
+  background: #f7f9fc;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.verb-form .pronoun {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #665665;
+  min-width: 60px;
+}
+
+.verb-form .conjugation {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-style: italic;
+}
+
+.sound-explanation {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: #f0f9ff;
+  border-radius: 8px;
+  border: 1px solid #bae6fd;
+}
+
+/* Pronunciation Notes */
+.pronunciation-notes {
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.sound-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.sound-pair {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.french-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  min-width: 80px;
+}
+
+.pronunciation {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #665665;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+  background: #f0f0f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.sound-note {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #665665;
+  margin: 1rem 0 0 0;
+  font-style: italic;
+}
+
+/* Polite Forms */
+.polite-forms {
+  background: #f0f9ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #bae6fd;
+}
+
+.polite-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.polite-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0f2fe;
+}
+
+.polite-pronoun {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  min-width: 60px;
+}
+
+.polite-ending {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0369a1;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+  min-width: 60px;
+}
+
+.polite-note {
+  font-size: 0.9375rem;
+  color: #665665;
+  font-style: italic;
+}
+
+.polite-explanation {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #0369a1;
+  margin: 0;
+}
+
+.polite-explanation strong {
+  font-weight: 600;
+}
+
+/* Verb Groups Explanation */
+.verb-groups-explanation {
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.verb-groups-explanation p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 0 0 1.5rem 0;
+}
+
+.group-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.group-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.group-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #3b82f6;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+  min-width: 80px;
+}
+
+.group-desc {
+  font-size: 0.9375rem;
+  color: #665665;
+  font-style: italic;
+}
+
+/* Consistent Endings */
+.consistent-endings {
+  background: #f0f9ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #bae6fd;
+}
+
+.consistency-note {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #0369a1;
+  margin: 0 0 1.5rem 0;
+}
+
+.ending-examples-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ending-example-column h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0369a1;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  letter-spacing: -0.015em;
+}
+
+.ending-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ending-example {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0f2fe;
+}
+
+.ending-example.clickable {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ending-example.clickable:hover {
+  background: #f7f9fc;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.ending-example .example-verb {
+  flex: 1;
+}
+
+.ending-example .example-english {
+  flex: 1;
+}
+
+.example-verb {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-style: italic;
+}
+
+.example-english {
+  font-size: 0.875rem;
+  color: #665665;
+}
+
+.reliability-note {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #0369a1;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Benefits List */
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #fafbfc;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.benefit-icon {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.benefit-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Modal Footer */
+.verb-pattern-modal-footer {
+  padding: 0 3rem 3rem 3rem;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.verb-pattern-modal-footer .btn-primary {
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-width: 200px;
+}
+
+.verb-pattern-modal-footer .btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .verb-pattern-modal {
+    max-width: 95vw;
+    margin: 1rem;
+  }
+
+  .verb-pattern-modal-header,
+  .verb-pattern-modal-content,
+  .verb-pattern-modal-footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .verb-pattern-modal-header {
+    padding-top: 2rem;
+  }
+
+  .verb-pattern-modal-content {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .verb-pattern-modal-footer {
+    padding-bottom: 2rem;
+  }
+
+  .verb-pattern-modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .verb-comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .sound-pair {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .polite-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .ending-examples-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .group-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .group-label {
+    min-width: auto;
+  }
+}

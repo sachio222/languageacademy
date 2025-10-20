@@ -251,10 +251,18 @@ function App() {
           }
 
           // For unit exams, use the actual exercise count from exerciseConfig if exercises array is empty
+          // For help modules, use 1 as the exercise count for completion purposes
           const isUnitExam = lesson.isUnitExam;
-          const actualExerciseCount = isUnitExam && (!lesson.exercises || lesson.exercises.length === 0) ?
-            lesson.exerciseConfig?.items?.length || 0 :
-            lesson.exercises?.length || 0;
+          const isHelpModule = lesson.isHelpModule;
+
+          let actualExerciseCount;
+          if (isHelpModule) {
+            actualExerciseCount = 1; // Help modules are considered "1 exercise" for completion
+          } else if (isUnitExam && (!lesson.exercises || lesson.exercises.length === 0)) {
+            actualExerciseCount = lesson.exerciseConfig?.items?.length || 0;
+          } else {
+            actualExerciseCount = lesson.exercises?.length || 0;
+          }
 
           if (lesson.isUnitExam) {
             console.log(`[DEBUG] Using actualExerciseCount: ${actualExerciseCount}`);
