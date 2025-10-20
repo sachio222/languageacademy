@@ -139,16 +139,7 @@ body {
   }
 }
 
-/* Adjust FAB position when sidebar is collapsed */
-body:has(.left-nav.collapsed) .feedback-fab {
-  right: calc(1.5rem + 64px);
-}
-
-@media (max-width: 768px) {
-  body:has(.left-nav.collapsed) .feedback-fab {
-    right: 1.5rem;
-  }
-}
+/* FAB position is now independent of sidebar state */
 
 /* Admin Button */
 .admin-btn {
@@ -234,16 +225,7 @@ body:has(.left-nav.collapsed) .feedback-fab {
   }
 }
 
-/* Adjust admin button position when sidebar is collapsed */
-body:has(.left-nav.collapsed) .admin-btn {
-  right: calc(1.5rem + 70px + 64px);
-}
-
-@media (max-width: 768px) {
-  body:has(.left-nav.collapsed) .admin-btn {
-    right: calc(1.5rem + 60px);
-  }
-}
+/* Admin button position is now independent of sidebar state */
 
 /* Main Content - Offset for Sidebar */
 .app-main {
