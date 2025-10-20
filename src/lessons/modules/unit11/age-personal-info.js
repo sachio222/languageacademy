@@ -4,6 +4,7 @@
  */
 
 export const agePersonalInfoModule = {
+  moduleKey: "2024-02-08-age-personal-info", // Permanent identifier - never changes
   title: "Age & Personal Information",
   description:
     "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information. Finally complete what should have been in Unit 1!",

@@ -5,6 +5,7 @@
  */
 
 export const reflexivePastModule = {
+  moduleKey: "2024-06-07-reflexive-past", // Permanent identifier - never changes
   title: "Reflexive Verbs in Past Tense",
   description:
     "Tell stories about your routine in the past: je me suis réveillé(e) (I woke up), elle s'est levée (she got up)",

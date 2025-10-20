@@ -4,6 +4,7 @@
  */
 
 export const module10_combining = {
+  moduleKey: "2024-02-02-combining", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Putting It Together - Real Conversations!",
   description:

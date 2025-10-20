@@ -4,6 +4,7 @@
  */
 
 export const directionsNavigationModule = {
+  moduleKey: "2024-02-09-directions-navigation", // Permanent identifier - never changes
   title: "Directions & Navigation",
   description:
     "Essential navigation skills! North/south/east/west, turn left/right, give directions. Perfect for traveling and helping tourists!",

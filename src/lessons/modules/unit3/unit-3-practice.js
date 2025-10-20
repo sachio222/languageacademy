@@ -4,6 +4,7 @@
  */
 
 export const unit3Practice = {
+  moduleKey: "2024-02-04-unit3-practice", // Permanent identifier - never changes
   title: "Unit 3 Practice - Fill in the Blanks",
   description:
     "Master contractions, motion verbs, object pronouns, and possessive forms from Unit 3!",

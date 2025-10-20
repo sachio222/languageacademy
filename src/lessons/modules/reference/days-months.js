@@ -4,6 +4,7 @@
  */
 
 export const daysMonthsModule = {
+  moduleKey: "2024-04-03-days-months", // Permanent identifier - never changes
   id: "days-months",
   title: "Jours et Mois",
   description:

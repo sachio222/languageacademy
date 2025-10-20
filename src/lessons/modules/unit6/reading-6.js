@@ -5,6 +5,7 @@
  */
 
 export const reading6 = {
+  moduleKey: "2024-04-24-reading-6", // Permanent identifier - never changes
   title: "Reading Comprehension 6 - Un Voyage en Famille",
   description:
     "A family plans a trip to Paris. Uses Unit 6 vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin.",

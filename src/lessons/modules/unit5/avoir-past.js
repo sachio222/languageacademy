@@ -5,6 +5,7 @@
  */
 
 export const avoirPast = {
+  moduleKey: "2024-04-05-avoir-past", // Permanent identifier - never changes
   title: "avoir - Past Tense (had)",
   description:
     "Talk about what you had in the past: j'avais (I had), tu avais (you had), il avait (he had)",

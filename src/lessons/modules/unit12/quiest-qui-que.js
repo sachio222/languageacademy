@@ -1,9 +1,13 @@
 /**
- * Module 157: qui est-ce qui vs qui est-ce que - Who Questions (Subject vs Object)
+ * qui est-ce qui vs qui est-ce que - Who Questions (Subject vs Object)
  * Unit 12 - Parallel pattern to qu'est-ce qui/que but for PEOPLE
+ * Module ID: Dynamic (assigned automatically based on pedagogical position)
  */
 
+import { getModuleRef } from "../../moduleIdResolver.js";
+
 export const quiestQuiQueModule = {
+  moduleKey: "2024-03-16-quiest-qui-que", // Permanent identifier - never changes
   title: "qui est-ce qui vs qui est-ce que - Master 'Who' Questions",
   description:
     "Same pattern as WHAT questions, but for WHO! qui est-ce qui (who DOES - subject) vs qui est-ce que (who DO you - object). Transfer learning!",
@@ -13,7 +17,7 @@ export const quiestQuiQueModule = {
     {
       term: "Same Pattern as qu'est-ce qui/que!",
       definition:
-        "You already know this pattern from Module 154 - just change WHAT to WHO!",
+        "You already know this pattern from the qu'est-ce qui module - just change WHAT to WHO!",
       example:
         "qu'est-ce qui → qui est-ce qui (what DOES → who DOES), qu'est-ce que → qui est-ce que (what DO you → who DO you)",
     },
@@ -32,7 +36,7 @@ export const quiestQuiQueModule = {
         "Qui est-ce que tu vois? (Who do you see?), Qui est-ce que tu aimes? (Who do you like?), Qui est-ce que je dois appeler? (Who should I call?)",
     },
     {
-      term: "Transfer Learning from Module 154",
+      term: "Transfer Learning from qu'est-ce qui Module",
       definition:
         "You mastered qu'est-ce qui/que discrimination - same rule applies here!",
       example:

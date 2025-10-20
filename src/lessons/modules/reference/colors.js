@@ -4,6 +4,7 @@
  */
 
 export const colorsModule = {
+  moduleKey: "2024-04-05-colors", // Permanent identifier - never changes
   id: "colors",
   title: "Les Couleurs",
   description:

@@ -4,6 +4,7 @@
  */
 
 export const unit4Exam = {
+  moduleKey: "2024-04-02-unit-4-exam", // Permanent identifier - never changes
   title: "Unit 4 Final Exam - Expression",
   description:
     "Test everything from Unit 4! Survival phrases, essential verbs, negation, and expressing time and place.",

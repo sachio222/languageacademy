@@ -5,6 +5,7 @@
  */
 
 export const reciprocalReflexivesModule = {
+  moduleKey: "2024-06-06-reciprocal-reflexives", // Permanent identifier - never changes
   title: "Reciprocal Reflexives - Each Other",
   description:
     "Express mutual actions: nous nous aimons (we love each other), ils se parlent (they talk to each other), on se voit (we see each other)",

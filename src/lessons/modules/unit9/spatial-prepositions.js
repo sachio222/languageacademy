@@ -5,6 +5,7 @@
  */
 
 export const spatialPrepositionsModule = {
+  moduleKey: "2024-06-08-spatial-prepositions", // Permanent identifier - never changes
   title: "Spatial Prepositions - Position & Location",
   description:
     "Learn to describe where things are: devant (in front of), derrière (behind), entre (between), au-dessus (above), au-dessous (below)",

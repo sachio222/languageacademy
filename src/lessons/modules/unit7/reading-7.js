@@ -6,6 +6,7 @@
  */
 
 export const reading7 = {
+  moduleKey: "2024-05-07-reading-7", // Permanent identifier - never changes
   title: "Reading 7 - L'Art d'Apprendre",
   description:
     "A philosophical article about learning and education. Uses all cognitive verbs from Unit 7!",

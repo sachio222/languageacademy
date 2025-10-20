@@ -5,6 +5,7 @@
  */
 
 export const discourseMarkersModule = {
+  moduleKey: "2024-05-02-discourse-markers", // Permanent identifier - never changes
   title: "Discourse Markers - Sound Like a Native",
   description:
     "Essential connectors for natural speech: donc (so), en fait (actually), bah (well), quoi (like/you know)",

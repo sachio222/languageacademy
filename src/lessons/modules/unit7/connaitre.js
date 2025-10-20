@@ -7,6 +7,7 @@
 import { connaitreConjugations } from "../../vocabularyData.js";
 
 export const connaitreModule = {
+  moduleKey: "2024-04-30-connaitre", // Permanent identifier - never changes
   title: "connaître - To Know (People/Places)",
   description:
     "Express knowledge of people and places: je connais Marie (I know Marie), tu connais Paris? (do you know Paris?)",

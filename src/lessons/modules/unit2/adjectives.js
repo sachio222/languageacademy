@@ -7,6 +7,7 @@
 import { commonAdjectives } from "../../vocabularyData.js";
 
 export const adjectives = {
+  moduleKey: "2024-01-21-adjectives", // Permanent identifier - never changes
   title: "Common Adjectives - Describing Things",
   description:
     "Learn essential adjectives WITH gender agreement: un bon livre (a good book), une grande maison (a big house)",

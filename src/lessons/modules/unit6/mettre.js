@@ -5,6 +5,7 @@
  */
 
 export const mettreModule = {
+  moduleKey: "2024-04-21-mettre", // Permanent identifier - never changes
   title: "mettre - To Put / To Set",
   description:
     "Express putting and setting: je mets (I put), mettre la table (to set the table), mettre un pantalon (to put on pants)",

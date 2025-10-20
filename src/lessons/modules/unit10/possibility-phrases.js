@@ -4,6 +4,7 @@
  */
 
 export const possibilityPhrasesModule = {
+  moduleKey: "2024-01-31-possibility-phrases", // Permanent identifier - never changes
   title: "Il est possible que... - Possibility Phrases",
   description:
     "Express possibilities and uncertainties! 'Il est possible qu'il vienne' (It's possible he'll come), 'Peut-être qu'il viendra' (Maybe he'll come). Useful for planning!",

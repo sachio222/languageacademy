@@ -5,6 +5,7 @@
  */
 
 export const timeAdverbs = {
+  moduleKey: "2024-04-01-time-adverbs", // Permanent identifier - never changes
   title: "Time & Frequency - now, always, never, today",
   description:
     "Express when and how often! Add time context to everything you've learned.",

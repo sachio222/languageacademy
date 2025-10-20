@@ -4,6 +4,7 @@
  */
 
 export const commentComplexModule = {
+  moduleKey: "2024-03-20-comment-complex", // Permanent identifier - never changes
   title: "Complex comment Questions - Ask How Things Work",
   description:
     "Master asking 'how' about processes: Comment est-ce qu'une tortue nage? Comment est-ce qu'un écureuil saute? Comment est-ce qu'on fait ça?",

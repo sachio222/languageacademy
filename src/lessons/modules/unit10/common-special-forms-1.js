@@ -5,6 +5,7 @@
  */
 
 export const commonSpecialForms1Module = {
+  moduleKey: "2024-01-23-common-special-forms-1", // Permanent identifier - never changes
   title: "Forms Used After 'il faut que' and 'je veux que'",
   description:
     "Learn verb forms that appear after 'il faut que...' and 'je veux que...' phrases. sois (be), ait (have), aille (go), fasse (do). Essential for telling people what you want them to do!",

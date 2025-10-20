@@ -4,6 +4,7 @@
  */
 
 export const alphabetModule = {
+  moduleKey: "2024-04-01-alphabet", // Permanent identifier - never changes
   id: "alphabet",
   title: "L'Alphabet",
   description:

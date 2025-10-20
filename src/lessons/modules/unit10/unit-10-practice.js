@@ -6,6 +6,7 @@
  */
 
 export const unit10Practice = {
+  moduleKey: "2024-02-05-unit-10-practice", // Permanent identifier - never changes
   title: "Unit 10 Practice - Fill in the Blanks",
   description:
     "Complete sentences using Unit 10's B2 level phrases: necessity, wishes, emotions, hypotheticals, and more!",

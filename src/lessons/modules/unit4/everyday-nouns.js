@@ -5,6 +5,7 @@
  */
 
 export const everydayNouns = {
+  moduleKey: "2024-03-24-everyday-nouns", // Permanent identifier - never changes
   title: "Everyday Nouns - Life & World",
   description:
     "Essential nouns for everyday conversations: le monde (world), la vie (life), l'eau (water), le pain (bread)",

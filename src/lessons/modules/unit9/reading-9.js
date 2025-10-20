@@ -5,6 +5,7 @@
  */
 
 export const reading9 = {
+  moduleKey: "2024-06-05-reading-9", // Permanent identifier - never changes
   title: "Reading 9 - Une Histoire du Passé",
   description:
     "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of Unit 9",

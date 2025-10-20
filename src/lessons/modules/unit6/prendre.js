@@ -6,6 +6,7 @@
  */
 
 export const prendreModule = {
+  moduleKey: "2024-04-22-prendre", // Permanent identifier - never changes
   title: "prendre - To Take",
   description:
     "Express taking, learning, and understanding: je prends (I take), j'apprends (I learn), je comprends (I understand)",

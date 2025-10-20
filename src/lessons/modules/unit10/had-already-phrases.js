@@ -4,6 +4,7 @@
  */
 
 export const hadAlreadyPhrasesModule = {
+  moduleKey: "2024-01-26-had-already-phrases", // Permanent identifier - never changes
   title: "J'avais déjà... - Had Already Done Phrases",
   description:
     "Add depth to stories! 'J'avais déjà mangé' (I had already eaten), 'J'étais déjà parti' (I had already left). Show what happened FIRST in a story.",

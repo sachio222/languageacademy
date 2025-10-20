@@ -4,6 +4,7 @@
  */
 
 export const pastRegretPhrasesModule = {
+  moduleKey: "2024-01-30-past-regret-phrases", // Permanent identifier - never changes
   title: "Si j'avais su... - Past Regret Phrases",
   description:
     "Express regrets about the past! 'Si j'avais su, je serais venu' (If I'd known, I'd have come), 'Si j'avais étudié...' (If I'd studied...). Universal human experience!",

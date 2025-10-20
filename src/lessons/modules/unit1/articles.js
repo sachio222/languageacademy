@@ -4,6 +4,7 @@
  */
 
 export const articles = {
+  moduleKey: "2024-01-05-articles", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Articles - The, A, An",
   description:

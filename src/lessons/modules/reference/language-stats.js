@@ -4,6 +4,7 @@
  */
 
 export const languageStatsModule = {
+  moduleKey: "2024-04-07-language-stats", // Permanent identifier - never changes
   id: "language-stats",
   title: "Le Français en Chiffres",
   description:

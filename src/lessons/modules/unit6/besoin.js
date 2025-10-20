@@ -5,6 +5,7 @@
  */
 
 export const besoinModule = {
+  moduleKey: "2024-04-17-besoin", // Permanent identifier - never changes
   title: "avoir besoin de - To Need",
   description:
     "Express what you need: j'ai besoin de (I need), avoir besoin d'aide (to need help), avoir besoin de manger (to need to eat)",

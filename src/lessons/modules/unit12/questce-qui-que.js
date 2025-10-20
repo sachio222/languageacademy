@@ -4,6 +4,7 @@
  */
 
 export const questceQuiQueModule = {
+  moduleKey: "2024-03-15-questce-qui-que", // Permanent identifier - never changes
   title: "qu'est-ce qui vs qu'est-ce que - Master 'What' Questions",
   description:
     "THE BIGGEST distinction in French questions: qu'est-ce qui (what DOES - subject) vs qu'est-ce que (what DO you - object). Master this, ask anything!",

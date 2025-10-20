@@ -5,6 +5,7 @@
  */
 
 export const causalWordsModule = {
+  moduleKey: "2024-05-26-causal-words", // Permanent identifier - never changes
   title: "Causal & Reason Words - Explaining Why",
   description:
     "Learn to explain reasons and causes: parce que (because), car (for), puisque (since), comme (as), grâce à (thanks to), à cause de (because of)",

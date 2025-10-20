@@ -4,6 +4,7 @@
  */
 
 export const dailyActions1Module = {
+  moduleKey: "2024-05-15-daily-actions-1", // Permanent identifier - never changes
   title: "Daily Life Essentials - Sleep, Work, Live",
   description:
     "Three essential daily verbs: dormir (to sleep), travailler (to work), vivre (to live). Complete your ability to describe daily life and existence!",

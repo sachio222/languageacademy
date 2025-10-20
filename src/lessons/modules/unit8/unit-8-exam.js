@@ -4,6 +4,7 @@
  */
 
 export const unit8Exam = {
+  moduleKey: "2024-05-24-unit-8-exam", // Permanent identifier - never changes
   title: "Unit 8 Final Exam - Daily Life & Actions",
   description:
     "Test everything from Unit 8! Temporal words, reflexive verbs (introductions, routines), commands, and reciprocal actions.",

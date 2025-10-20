@@ -5,6 +5,7 @@
  */
 
 export const perceptionVerbsModule = {
+  moduleKey: "2024-02-11-perception-verbs", // Permanent identifier - never changes
   title: "Perception Verbs - écouter, regarder",
   description:
     "Beyond commands! Full conjugations of écouter (to listen) and regarder (to watch/look at). 'J'écoute de la musique' (I listen to music), 'Je regarde la télé' (I watch TV).",

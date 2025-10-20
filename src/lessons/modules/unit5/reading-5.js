@@ -5,6 +5,7 @@
  */
 
 export const reading5 = {
+  moduleKey: "2024-04-13-reading-5", // Permanent identifier - never changes
   title: "Reading Comprehension 5 - Le Meilleur Restaurant",
   description:
     "Unit 5 mastery! An article about a restaurant experience using comparisons, past tense, and food vocabulary.",

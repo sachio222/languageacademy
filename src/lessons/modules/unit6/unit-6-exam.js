@@ -4,6 +4,7 @@
  */
 
 export const unit6Exam = {
+  moduleKey: "2024-04-26-unit-6-exam", // Permanent identifier - never changes
   title: "Unit 6 Final Exam - Communication",
   description:
     "Test everything from Unit 6! Progressive tenses, future forms, communication verbs, and essential vocabulary.",

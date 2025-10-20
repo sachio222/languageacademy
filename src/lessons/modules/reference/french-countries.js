@@ -4,6 +4,7 @@
  */
 
 export const frenchCountriesModule = {
+  moduleKey: "2024-04-06-french-countries", // Permanent identifier - never changes
   id: "french-countries",
   title: "La Francophonie",
   description:

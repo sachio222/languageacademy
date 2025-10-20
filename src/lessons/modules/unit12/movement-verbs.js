@@ -4,6 +4,7 @@
  */
 
 export const movementVerbsModule = {
+  moduleKey: "2024-03-16-movement-verbs", // Permanent identifier - never changes
   title: "Movement Verbs - Actions in Nature",
   description:
     "Learn how things move: nager (to swim), sauter (to jump), voler (to fly), courir (to run), marcher (to walk), grimper (to climb)",

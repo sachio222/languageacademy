@@ -5,6 +5,7 @@
  */
 
 export const reading2 = {
+  moduleKey: "2024-01-22-reading2", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Reading Comprehension 2 - Normandy Adventure!",
   description:

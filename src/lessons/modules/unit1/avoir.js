@@ -6,6 +6,7 @@
 import { avoirConjugations } from "../../vocabularyData.js";
 
 export const module4_avoir = {
+  moduleKey: "2024-01-04-avoir", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Essential Verb - avoir (to have)",
   description:

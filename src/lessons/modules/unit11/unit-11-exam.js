@@ -5,6 +5,7 @@
  */
 
 export const unit11Exam = {
+  moduleKey: "2024-02-15-unit-11-exam", // Permanent identifier - never changes
   title: "Unit 11 Final Exam - Daily Essentials & Practical Communication",
   description:
     "Final test for Unit 11! Demonstrate mastery of age expressions, all missing top 100 verbs (give, sleep, work, live, search, find, listen, watch, wait, arrive, stay), directions, and practical communication. Achieve complete French foundation!",

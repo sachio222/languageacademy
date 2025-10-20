@@ -5,6 +5,7 @@
  */
 
 export const moreSpatialRelationsModule = {
+  moduleKey: "2024-05-28-more-spatial-relations", // Permanent identifier - never changes
   title: "More Spatial Relations - Distance & Proximity",
   description:
     "Learn to describe distance and proximity: près de (near), loin de (far from), à côté de (next to), en face de (across from), autour de (around)",

@@ -5,6 +5,7 @@
  */
 
 export const demanderModule = {
+  moduleKey: "2024-04-19-demander", // Permanent identifier - never changes
   title: "demander - To Ask",
   description:
     "Ask for things and information: je demande (I ask), demander de l'aide (to ask for help), demander à quelqu'un (to ask someone)",

@@ -4,6 +4,7 @@
  */
 
 export const unit4Practice = {
+  moduleKey: "2024-04-03-unit-4-practice", // Permanent identifier - never changes
   title: "Unit 4 Practice - Fill in the Blanks",
   description:
     "Practice survival phrases, negation, time/location adverbs, and essential verbs from Unit 4!",

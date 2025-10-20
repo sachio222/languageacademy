@@ -7,6 +7,7 @@
 import { venirConjugations } from "../../vocabularyData.js";
 
 export const venirModule = {
+  moduleKey: "2024-01-26-venir", // Permanent identifier - never changes
   title: "Essential Verb - venir (to come)",
   description:
     "Essential motion verb: je viens (I come), tu viens (you come), il vient (he comes)",

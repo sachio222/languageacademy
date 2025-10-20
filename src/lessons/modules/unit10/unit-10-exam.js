@@ -5,6 +5,7 @@
  */
 
 export const unit10Exam = {
+  moduleKey: "2024-02-04-unit-10-exam", // Permanent identifier - never changes
   title: "Unit 10 Final Exam - Mastery & Nuance",
   description:
     "Test everything from Unit 10! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions.",

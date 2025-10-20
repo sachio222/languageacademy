@@ -5,6 +5,7 @@
  */
 
 export const commandsTuModule = {
+  moduleKey: "2024-05-13-commands-tu", // Permanent identifier - never changes
   title: "Commands - tu form (Informal)",
   description:
     "Give informal commands: Mange! (Eat!), Parle! (Speak!), Fais attention! (Be careful!)",

@@ -5,6 +5,7 @@
  */
 
 export const negation = {
+  moduleKey: "2024-03-28-negation", // Permanent identifier - never changes
   title: "Negation - ne...pas (not)",
   description:
     "Say what you DON'T want, DON'T have, or DON'T do! Simple pattern: wrap your verb with ne...pas.",

@@ -4,6 +4,7 @@
  */
 
 export const wishPhrasesModule = {
+  moduleKey: "2024-02-07-wish-phrases", // Permanent identifier - never changes
   title: "Je veux que... - Expressing Wishes",
   description:
     "Say what you want OTHERS to do! 'Je veux que tu viennes' (I want you to come), 'Je veux qu'il parte' (I want him to leave). Essential for relationships and work.",

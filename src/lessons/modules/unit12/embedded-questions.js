@@ -4,6 +4,7 @@
  */
 
 export const embeddedQuestionsModule = {
+  moduleKey: "2024-03-23-embedded-questions", // Permanent identifier - never changes
   title: "Embedded Questions - Polite Indirect Questions",
   description:
     "Soften questions by embedding them: Je me demande pourquoi c'est comme ça. Je ne sais pas comment on fait ça. Natural conversation flow!",

@@ -6,6 +6,7 @@
 import { demonstratives } from "../../vocabularyData.js";
 
 export const module2_demonstratives = {
+  moduleKey: "2024-01-12-demonstratives", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Demonstratives - It, That, This",
   description:

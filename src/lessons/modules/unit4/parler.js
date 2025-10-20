@@ -7,6 +7,7 @@
 import { parlerConjugations } from "../../vocabularyData.js";
 
 export const parlerModule = {
+  moduleKey: "2024-03-29-parler", // Permanent identifier - never changes
   title: "Essential Verb - parler (to speak)",
   description:
     "Express communication! Say what languages you speak and who you talk to. Perfect example of regular -ER verbs!",

@@ -5,6 +5,7 @@
  */
 
 export const pcVsImparfaitModule = {
+  moduleKey: "2024-06-04-pc-vs-imparfait", // Permanent identifier - never changes
   title: "Passé Composé vs Imparfait - The Golden Rule",
   description:
     "Learn when to use each past tense: Passé composé for specific events (J'ai mangé - I ate), Imparfait for descriptions/habits (Il faisait beau - It was nice, Je mangeais tous les jours - I used to eat every day)",

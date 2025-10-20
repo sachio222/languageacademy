@@ -4,6 +4,7 @@
  */
 
 export const inversionQuestionsModule = {
+  moduleKey: "2024-03-22-inversion-questions", // Permanent identifier - never changes
   title: "Inversion Questions - Formal Register",
   description:
     "Master formal French questions with inversion: Pourquoi les nuages sont-ils blancs? Comment fait-on ça? Où vas-tu? Add stylistic range!",

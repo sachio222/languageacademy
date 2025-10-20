@@ -6,6 +6,7 @@
 import { possessivePronouns } from "../../vocabularyData.js";
 
 export const module9_possessive_pronouns = {
+  moduleKey: "2024-02-01-possessive-pronouns", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Possessive Pronouns - Mine, Yours, Theirs",
   description:

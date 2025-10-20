@@ -6,6 +6,7 @@
  */
 
 export const temporalWordsModule = {
+  moduleKey: "2024-05-23-temporal-words", // Permanent identifier - never changes
   title: "Temporal & Sequential Words - Time & Order",
   description:
     "Organize actions in time: pendant (during), avant (before), après (after), d'abord (first), ensuite (then), finalement (finally)",

@@ -4,6 +4,7 @@
  */
 
 export const unit1Exam = {
+  moduleKey: "2024-01-11-unit1-exam", // Permanent identifier - never changes
   title: "Unit 1 Final Exam - Foundation",
   description:
     "Test everything you've learned! Write basic French sentences covering pronouns, verbs, nouns, and connectors.",

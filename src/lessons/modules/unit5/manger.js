@@ -5,6 +5,7 @@
  */
 
 export const mangerModule = {
+  moduleKey: "2024-04-12-manger", // Permanent identifier - never changes
   title: "manger - To Eat (Present & Past)",
   description:
     "Express what you eat: je mange du pain (I eat bread), j'ai mangé (I ate/have eaten)",

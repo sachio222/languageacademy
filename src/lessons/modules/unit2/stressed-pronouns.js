@@ -4,6 +4,7 @@
  */
 
 export const stressedPronouns = {
+  moduleKey: "2024-01-19-stressed-pronouns", // Permanent identifier - never changes
   title: "Stressed Pronouns - moi, toi, lui...",
   description:
     "Learn the special pronouns used after words like 'with', 'for', 'without' - different from subject pronouns!",

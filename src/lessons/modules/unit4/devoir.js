@@ -6,6 +6,7 @@
 import { devoirConjugations } from "../../vocabularyData.js";
 
 export const devoirModule = {
+  moduleKey: "2024-03-23-devoir", // Permanent identifier - never changes
   title: "Essential Verb - devoir (must)",
   description:
     "Express what you must do! Talk about obligations, duties, and what you have to do.",

@@ -5,6 +5,7 @@
  */
 
 export const aimerModule = {
+  moduleKey: "2024-04-04-aimer", // Permanent identifier - never changes
   title: "aimer - To Like / To Love",
   description:
     "Express what you like and love: j'aime le café (I like coffee), j'aime bien (I like), je t'aime (I love you)",

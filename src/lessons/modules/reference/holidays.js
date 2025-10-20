@@ -4,6 +4,7 @@
  */
 
 export const holidaysModule = {
+  moduleKey: "2024-04-04-holidays", // Permanent identifier - never changes
   id: "holidays",
   title: "Les Fêtes",
   description:

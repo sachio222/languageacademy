@@ -5,6 +5,7 @@
  */
 
 export const reading10 = {
+  moduleKey: "2024-02-01-reading-10", // Permanent identifier - never changes
   title: "Reading 10 - Mes Rêves et Mes Espoirs",
   description:
     "A story about dreams and ambitions using Unit 10's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more",

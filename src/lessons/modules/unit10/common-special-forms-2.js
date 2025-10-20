@@ -5,6 +5,7 @@
  */
 
 export const commonSpecialForms2Module = {
+  moduleKey: "2024-01-24-common-special-forms-2", // Permanent identifier - never changes
   title: "More Forms for 'il faut que' and 'je veux que' Phrases",
   description:
     "More verb forms that appear after 'il faut que...' and 'je veux que...' phrases. vienne (come), parte (leave), puisse (can), sache (know), comprenne (understand). Essential for wishes and commands!",

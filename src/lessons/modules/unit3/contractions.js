@@ -5,6 +5,7 @@
  */
 
 export const contractions = {
+  moduleKey: "2024-01-25-contractions", // Permanent identifier - never changes
   title: "Contractions - du, au, de la, à la",
   description:
     "Learn how 'de' and 'à' combine with articles! Simple rules that make French flow naturally.",

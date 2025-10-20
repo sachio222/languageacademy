@@ -5,6 +5,7 @@
  */
 
 export const reading3 = {
+  moduleKey: "2024-02-03-reading3", // Permanent identifier - never changes
   title: "Reading Comprehension 3 - A Day Out!",
   description:
     "See how much you've mastered! Motion, possession, and complex pronouns in action.",

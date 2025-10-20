@@ -4,6 +4,7 @@
  */
 
 export const hypotheticalPhrasesModule = {
+  moduleKey: "2024-01-27-hypothetical-phrases", // Permanent identifier - never changes
   title: "Si j'étais... - Daydreaming & Hypotheticals",
   description:
     "Talk about fantasies and what-ifs! 'Si j'étais riche, j'achèterais...' (If I were rich, I'd buy...), 'Si j'avais le temps, je voyagerais' (If I had time, I'd travel). Everyone loves daydreaming!",

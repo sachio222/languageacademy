@@ -5,6 +5,7 @@
  */
 
 export const gettingReadyModule = {
+  moduleKey: "2024-05-17-getting-ready", // Permanent identifier - never changes
   title: "Getting Ready - se laver, s'habiller, se préparer",
   description:
     "Complete your morning routine: je me lave (I wash), je m'habille (I get dressed), je me prépare (I get ready)",

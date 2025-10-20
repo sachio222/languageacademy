@@ -5,6 +5,7 @@
  */
 
 export const irregularCommandsModule = {
+  moduleKey: "2024-05-18-irregular-commands", // Permanent identifier - never changes
   title: "Irregular Commands - être, avoir, aller, faire",
   description:
     "Essential irregular commands: Sois! (Be!), Aie! (Have!), Va! (Go!), Fais! (Do/Make!)",

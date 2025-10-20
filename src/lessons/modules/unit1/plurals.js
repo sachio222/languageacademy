@@ -4,6 +4,7 @@
  */
 
 export const plurals = {
+  moduleKey: "2024-01-07-plurals", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Plurals - More Than One",
   description:

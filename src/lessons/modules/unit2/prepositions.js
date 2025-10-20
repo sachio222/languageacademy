@@ -5,6 +5,7 @@
  */
 
 export const prepositions = {
+  moduleKey: "2024-01-20-prepositions", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Prepositions - Spatial & Relational Words",
   description:

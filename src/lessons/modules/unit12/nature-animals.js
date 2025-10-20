@@ -4,6 +4,7 @@
  */
 
 export const natureAnimalsModule = {
+  moduleKey: "2024-03-15-nature-animals", // Permanent identifier - never changes
   title: "Nature & Animals - Curiosity Vocabulary",
   description:
     "Learn animals and nature vocabulary to ask curious questions about the world: un oiseau (bird), une tortue (turtle), un écureuil (squirrel), le vent (wind), la pluie (rain)",

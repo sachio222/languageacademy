@@ -5,6 +5,7 @@
  */
 
 export const passeComposeAgreementModule = {
+  moduleKey: "2024-05-29-passe-compose-agreement", // Permanent identifier - never changes
   title: "Past Participle Agreement with être",
   description:
     "Learn agreement rules: il est allé (he went) vs elle est allée (she went - add e), ils sont allés (they went - add s) vs elles sont allées (add es)",

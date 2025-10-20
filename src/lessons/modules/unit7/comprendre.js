@@ -8,6 +8,7 @@
 import { comprendreConjugations } from "../../vocabularyData.js";
 
 export const comprendreModule = {
+  moduleKey: "2024-04-29-comprendre", // Permanent identifier - never changes
   title: "comprendre - To Understand",
   description:
     "Express understanding: je comprends (I understand), tu comprends? (do you understand?), je ne comprends pas (I don't understand)",

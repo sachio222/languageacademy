@@ -4,6 +4,7 @@
  */
 
 export const unit3Exam = {
+  moduleKey: "2024-02-05-unit3-exam", // Permanent identifier - never changes
   title: "Unit 3 Final Exam - Expansion",
   description:
     "Test everything from Unit 3! Motion verbs, object pronouns, possessives, and complex sentence combinations.",

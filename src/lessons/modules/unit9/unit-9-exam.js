@@ -4,6 +4,7 @@
  */
 
 export const unit9Exam = {
+  moduleKey: "2024-06-09-unit-9-exam", // Permanent identifier - never changes
   title: "Unit 9 Final Exam - Discourse & Past Tense",
   description:
     "Test everything from Unit 9! Causal words, spatial prepositions, passé composé, imparfait, and the critical PC vs IMP distinction for complete storytelling mastery.",

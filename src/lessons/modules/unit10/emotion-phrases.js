@@ -4,6 +4,7 @@
  */
 
 export const emotionPhrasesModule = {
+  moduleKey: "2024-01-25-emotion-phrases", // Permanent identifier - never changes
   title: "Je suis content que... - Emotion Phrases",
   description:
     "Express how you feel about what OTHERS do! 'Je suis content que tu sois là' (I'm happy you're here), 'J'ai peur qu'il parte' (I'm afraid he'll leave). Real relationship language!",

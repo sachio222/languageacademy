@@ -5,6 +5,7 @@
  */
 
 export const dailyReflexivesModule = {
+  moduleKey: "2024-05-16-daily-reflexives", // Permanent identifier - never changes
   title: "Daily Actions - se souvenir, s'amuser, se dépêcher",
   description:
     "Essential reflexive verbs: je me souviens (I remember), je m'amuse (I'm having fun), je me dépêche (I'm hurrying)",

@@ -5,6 +5,7 @@
  */
 
 export const learningVerbsModule = {
+  moduleKey: "2024-05-04-learning-verbs", // Permanent identifier - never changes
   title: "Learning & Teaching - apprendre & enseigner",
   description:
     "Express learning and teaching: j'apprends le français (I'm learning French), tu m'enseignes? (are you teaching me?)",

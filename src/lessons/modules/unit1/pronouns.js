@@ -6,7 +6,7 @@
 import { pronouns } from "../../vocabularyData.js";
 
 export const module1 = {
-  // id and module number are set dynamically based on array position
+  moduleKey: "2024-01-01-pronouns", // Permanent identifier - never changes
   title: "Core Pronouns - The Building Blocks",
   description:
     "Master the 8 most essential words in French. These are your foundation - like variables in programming.",

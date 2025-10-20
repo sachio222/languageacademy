@@ -4,6 +4,7 @@
  */
 
 export const numbersModule = {
+  moduleKey: "2024-04-02-numbers", // Permanent identifier - never changes
   id: "numbers",
   title: "Les Nombres",
   description:

@@ -5,6 +5,7 @@
  */
 
 export const pastTenseCompositionModule = {
+  moduleKey: "2024-06-03-past-tense-composition", // Permanent identifier - never changes
   title: "Past Tense Composition - Building Complete Stories",
   description:
     "Practice combining everything: passé composé, imparfait, causal words, spatial prepositions for rich storytelling",

@@ -4,6 +4,7 @@
  */
 
 export const beforePhrasesModule = {
+  moduleKey: "2024-01-21-before-phrases", // Permanent identifier - never changes
   title: "Avant que... - Before Phrases",
   description:
     "Talk about timing! 'Avant que tu partes' (Before you leave), 'Appelle-moi avant qu'il arrive' (Call me before he arrives). Sequence your actions!",

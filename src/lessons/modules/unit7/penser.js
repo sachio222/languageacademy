@@ -7,6 +7,7 @@
 import { penserConjugations } from "../../vocabularyData.js";
 
 export const penserModule = {
+  moduleKey: "2024-05-06-penser", // Permanent identifier - never changes
   title: "penser - To Think",
   description:
     "Express thoughts and opinions: je pense que oui (I think so), qu'est-ce que tu penses? (what do you think?)",

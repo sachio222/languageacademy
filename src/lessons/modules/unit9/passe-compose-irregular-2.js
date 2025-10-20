@@ -5,6 +5,7 @@
  */
 
 export const passeComposeIrregular2Module = {
+  moduleKey: "2024-06-02-passe-compose-irregular-2", // Permanent identifier - never changes
   title: "Irregular Past Participles - Set 2 (wanted, could, had to, said)",
   description:
     "Learn modal verbs and -RE verbs in past tense: vouloir → voulu (wanted), pouvoir → pu (could), devoir → dû (had to), dire → dit (said), prendre → pris (took)",

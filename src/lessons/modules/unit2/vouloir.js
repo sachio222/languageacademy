@@ -6,6 +6,7 @@
 import { vouloirConjugations } from "../../vocabularyData.js";
 
 export const vouloirModule = {
+  moduleKey: "2024-01-15-vouloir", // Permanent identifier - never changes
   title: "Essential Verb - vouloir (to want)",
   description:
     "Express what you want! Combine with everything you've learned to make real requests.",

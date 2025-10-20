@@ -4,6 +4,7 @@
  */
 
 export const unit2Exam = {
+  moduleKey: "2024-01-24-unit2-exam", // Permanent identifier - never changes
   title: "Unit 2 Final Exam - Composition",
   description:
     "Test everything from Unit 2! Demonstratives, essential verbs (vouloir/pouvoir/voir), questions, stressed pronouns, prepositions, and descriptive sentences.",

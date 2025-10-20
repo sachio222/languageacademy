@@ -4,6 +4,7 @@
  */
 
 export const opinionPhrasesModule = {
+  moduleKey: "2024-01-29-opinion-phrases", // Permanent identifier - never changes
   title: "Je pense que... - Opinion Phrases",
   description:
     "Express opinions diplomatically! 'Je pense qu'il vient' (I think he's coming - belief), 'Je ne pense pas qu'il vienne' (I don't think he's coming - doubt). Sound sophisticated!",

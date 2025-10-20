@@ -4,6 +4,7 @@
  */
 
 export const negation2 = {
+  moduleKey: "2024-03-27-negation-2", // Permanent identifier - never changes
   title: "Negation Part 2 - I can't, I won't, I never",
   description:
     "Negate modal verbs and use 'ne...jamais' (never). Express what you can't or won't do!",

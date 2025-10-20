@@ -5,6 +5,7 @@
  */
 
 export const comparisonsSlang = {
+  moduleKey: "2024-04-07-comparisons-slang", // Permanent identifier - never changes
   title: "Slang - Comparisons & Intensity",
   description:
     "Real-world slang from France, Quebec, and Africa: c'est ouf (crazy), c'est génial (awesome), c'est nul (it sucks), c'est malade (sick)",

@@ -5,6 +5,7 @@
  */
 
 export const reading4 = {
+  moduleKey: "2024-03-30-reading-4", // Permanent identifier - never changes
   title: "Reading Comprehension 4 - Le Café",
   description:
     "Unit 4 mastery! A natural conversation using all your vocabulary.",

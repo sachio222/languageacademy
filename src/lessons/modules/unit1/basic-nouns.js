@@ -6,6 +6,7 @@
 import { commonNouns } from "../../vocabularyData.js";
 
 export const basicNouns = {
+  moduleKey: "2024-01-06-basic-nouns", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Basic Nouns - People & Things",
   description:

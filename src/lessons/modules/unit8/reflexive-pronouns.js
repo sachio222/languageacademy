@@ -5,6 +5,7 @@
  */
 
 export const reflexivePronounsModule = {
+  moduleKey: "2024-05-21-reflexive-pronouns", // Permanent identifier - never changes
   title: "Reflexive Pronouns - me, te, se, nous, vous",
   description:
     "Learn reflexive pronouns for daily actions: je me lave (I wash myself), tu te lèves (you get up), il se prépare (he gets ready)",

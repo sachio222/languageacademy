@@ -5,6 +5,7 @@
  */
 
 export const knowledgeNounsModule = {
+  moduleKey: "2024-05-03-knowledge-nouns", // Permanent identifier - never changes
   title: "Knowledge & Learning - Essential Nouns",
   description:
     "Essential nouns for learning: la question (question), la réponse (answer), l'idée (idea), le cours (class)",

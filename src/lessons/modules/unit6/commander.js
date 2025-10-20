@@ -5,6 +5,7 @@
  */
 
 export const commanderModule = {
+  moduleKey: "2024-04-18-commander", // Permanent identifier - never changes
   title: "commander - To Order",
   description:
     "Order food, drinks, and products: je commande (I order), commander un café (to order a coffee), commander en ligne (to order online)",

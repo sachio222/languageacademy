@@ -5,6 +5,7 @@
  */
 
 export const comparisonModifiersModule = {
+  moduleKey: "2024-04-28-comparison-modifiers", // Permanent identifier - never changes
   title: "Modifiers - tout, même, mal",
   description:
     "Complete your comparison words: tout le monde (everyone), c'est la même chose (it's the same thing), je comprends mal (I understand poorly)",

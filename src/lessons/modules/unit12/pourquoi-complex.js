@@ -4,6 +4,7 @@
  */
 
 export const pourquoiComplexModule = {
+  moduleKey: "2024-03-19-pourquoi-complex", // Permanent identifier - never changes
   title: "Complex pourquoi Questions - Ask Why About Anything",
   description:
     "Master asking 'why' about ANY process: Pourquoi est-ce que le ciel est bleu? Pourquoi est-ce que les oiseaux volent? Combine pourquoi with all tenses and structures!",

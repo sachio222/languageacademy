@@ -6,6 +6,7 @@
 import { objectPronouns } from "../../vocabularyData.js";
 
 export const module7_object_pronouns = {
+  moduleKey: "2024-01-30-object-pronouns", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Object Pronouns - Him, Her, It, Them",
   description:

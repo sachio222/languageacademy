@@ -5,6 +5,7 @@
  */
 
 export const famousWords = {
+  moduleKey: "2024-01-01-famous-words", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Famous Words & Greetings",
   description:

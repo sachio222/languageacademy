@@ -4,6 +4,7 @@
  */
 
 export const caSurvival = {
+  moduleKey: "2024-01-13-ca-survival", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "ça - Survival Phrases",
   description:

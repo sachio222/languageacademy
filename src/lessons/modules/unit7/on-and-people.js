@@ -6,6 +6,7 @@
  */
 
 export const onAndPeopleModule = {
+  moduleKey: "2024-05-05-on-and-people", // Permanent identifier - never changes
   title: "Talking About People in General",
   description:
     "Learn 'on' (we/one/people) and general people vocabulary: on dit (people say), les gens (people), tout le monde (everyone)",

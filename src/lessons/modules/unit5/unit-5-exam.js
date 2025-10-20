@@ -4,6 +4,7 @@
  */
 
 export const unit5Exam = {
+  moduleKey: "2024-04-14-unit-5-exam", // Permanent identifier - never changes
   title: "Unit 5 Final Exam - Sophistication",
   description:
     "Test everything from Unit 5! Comparisons, slang, past tense, conditionals, and food vocabulary.",

@@ -5,6 +5,7 @@
  */
 
 export const boireModule = {
+  moduleKey: "2024-04-06-boire", // Permanent identifier - never changes
   title: "boire - To Drink (Present & Past)",
   description:
     "Express what you drink: je bois du café (I drink coffee), j'ai bu (I drank/have drunk)",

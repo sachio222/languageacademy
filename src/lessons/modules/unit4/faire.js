@@ -7,6 +7,7 @@
 import { faireConjugations } from "../../vocabularyData.js";
 
 export const faireModule = {
+  moduleKey: "2024-03-25-faire", // Permanent identifier - never changes
   title: "Essential Verb - faire (to do/make)",
   description:
     "One of the most useful verbs in French! Express what you do, make, and experience.",

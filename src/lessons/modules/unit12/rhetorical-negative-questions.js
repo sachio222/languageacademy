@@ -4,6 +4,7 @@
  */
 
 export const rhetoricalNegativeModule = {
+  moduleKey: "2024-03-24-rhetorical-negative", // Permanent identifier - never changes
   title: "Rhetorical & Negative Questions - Advanced Style",
   description:
     "Add native sophistication: N'est-ce pas vrai? (Isn't that true?), Comment ne pas aimer ça? (How can you not love that?), Qui ne voudrait pas ça? (Who wouldn't want that?)",

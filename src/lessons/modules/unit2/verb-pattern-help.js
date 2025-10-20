@@ -5,6 +5,7 @@
  */
 
 export const verbPatternHelp = {
+  moduleKey: "2024-01-28-verb-pattern-help", // Permanent identifier - never changes
   title: "Understanding Verb Patterns",
   description: "Learn the patterns that make French verbs predictable",
 

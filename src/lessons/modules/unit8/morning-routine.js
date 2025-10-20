@@ -5,6 +5,7 @@
  */
 
 export const morningRoutineModule = {
+  moduleKey: "2024-05-19-morning-routine", // Permanent identifier - never changes
   title: "Morning Routine - se réveiller, se lever",
   description:
     "Describe your morning: je me réveille (I wake up), je me lève (I get up), tu te réveilles à quelle heure? (what time do you wake up?)",

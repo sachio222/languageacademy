@@ -6,6 +6,7 @@
  */
 
 export const sAppelerModule = {
+  moduleKey: "2024-05-22-s-appeler", // Permanent identifier - never changes
   title: "s'appeler - To Be Called (Your Name!)",
   description:
     "Finally learn how to say your name properly! Je m'appelle Marie (My name is Marie), Comment tu t'appelles? (What's your name?)",

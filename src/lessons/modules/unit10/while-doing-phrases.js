@@ -4,6 +4,7 @@
  */
 
 export const whileDoingPhrasesModule = {
+  moduleKey: "2024-02-06-while-doing-phrases", // Permanent identifier - never changes
   title: "En mangeant... - While Doing Phrases",
   description:
     "Describe multitasking! 'En mangeant, je regarde la télé' (While eating, I watch TV), 'On apprend en pratiquant' (We learn by practicing). Natural speech patterns!",

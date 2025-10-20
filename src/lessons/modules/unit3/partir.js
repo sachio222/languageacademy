@@ -7,6 +7,7 @@
 import { partirConjugations } from "../../vocabularyData.js";
 
 export const partirModule = {
+  moduleKey: "2024-01-29-partir", // Permanent identifier - never changes
   title: "Essential Verb - partir (to leave)",
   description:
     "Express departures: je pars (I leave), tu pars (you leave), il part (he leaves)",

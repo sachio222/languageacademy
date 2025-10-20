@@ -7,6 +7,7 @@
 import { voirConjugations } from "../../vocabularyData.js";
 
 export const voirModule = {
+  moduleKey: "2024-01-17-voir", // Permanent identifier - never changes
   title: "Essential Verb - voir (to see)",
   description:
     "Essential perception verb: je vois (I see), tu vois (you see), il voit (he sees)",

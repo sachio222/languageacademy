@@ -5,6 +5,7 @@
  */
 
 export const commandsVousModule = {
+  moduleKey: "2024-05-14-commands-vous", // Permanent identifier - never changes
   title: "Commands - vous form (Formal/Plural)",
   description:
     "Give formal or plural commands: Mangez! (Eat!), Parlez! (Speak!), Écoutez! (Listen!)",

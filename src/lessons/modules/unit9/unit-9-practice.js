@@ -5,6 +5,7 @@
  */
 
 export const unit9Practice = {
+  moduleKey: "2024-06-10-unit-9-practice", // Permanent identifier - never changes
   title: "Unit 9 Practice - Fill in the Blanks",
   description:
     "Complete sentences using causal words, spatial prepositions, and past tenses from Unit 9!",

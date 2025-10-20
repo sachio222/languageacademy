@@ -5,6 +5,7 @@
  */
 
 export const unit6Practice = {
+  moduleKey: "2024-04-27-unit-6-practice", // Permanent identifier - never changes
   title: "Unit 6 Practice - Fill in the Blanks",
   description:
     "Complete sentences using progressive tenses, communication verbs, and essential vocabulary from Unit 6!",

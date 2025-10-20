@@ -5,6 +5,7 @@
  */
 
 export const studyingVerbsModule = {
+  moduleKey: "2024-05-09-studying-verbs", // Permanent identifier - never changes
   title: "Studying & Reviewing - étudier & réviser",
   description:
     "Express studying: j'étudie le français (I'm studying French), je révise mes leçons (I'm reviewing my lessons)",

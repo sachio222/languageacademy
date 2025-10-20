@@ -4,6 +4,7 @@
  */
 
 export const multiClauseQuestionsModule = {
+  moduleKey: "2024-03-25-multi-clause-questions", // Permanent identifier - never changes
   title: "Multi-Clause Questions - Full Complexity",
   description:
     "Peak composition! Combine questions with subjunctive/conditional: Pourquoi est-ce que tu veux que je fasse ça? Comment est-ce que tu penses qu'on devrait faire ça?",

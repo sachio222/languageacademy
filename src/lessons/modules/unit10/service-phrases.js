@@ -4,6 +4,7 @@
  */
 
 export const servicePhrasesModule = {
+  moduleKey: "2024-02-02-service-phrases", // Permanent identifier - never changes
   title: "Je me fais couper... - Service Phrases",
   description:
     "Talk about services and appointments! 'Je me fais couper les cheveux' (I'm getting my hair cut), 'Je fais réparer ma voiture' (I'm having my car repaired). Adult life essentials!",

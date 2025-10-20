@@ -5,6 +5,7 @@
  */
 
 export const locationAdverbs = {
+  moduleKey: "2024-03-26-location-adverbs", // Permanent identifier - never changes
   title: "Location Adverbs - here, there, everywhere",
   description:
     "Express where things are! From 'here' to 'over there' to 'everywhere'.",

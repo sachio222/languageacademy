@@ -5,6 +5,7 @@
  */
 
 export const passeComposeIrregular1Module = {
+  moduleKey: "2024-06-01-passe-compose-irregular-1", // Permanent identifier - never changes
   title: "Irregular Past Participles - Set 1 (had, was, did, saw)",
   description:
     "Learn the 4 most common irregular past participles: avoir → eu (had), être → été (was/been), faire → fait (did/made), voir → vu (saw)",

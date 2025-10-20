@@ -217,6 +217,7 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
 
   const lesson = {
     // id is set dynamically in lessonData.js
+    moduleKey: moduleConfig.moduleKey, // Permanent identifier for cross-references
     title: moduleConfig.title,
     description: moduleConfig.description,
     concepts: moduleConfig.concepts || [],

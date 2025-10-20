@@ -6,7 +6,7 @@
 import { etreConjugations } from "../../vocabularyData.js";
 
 export const module3_etre = {
-  // id and module number are set dynamically
+  moduleKey: "2024-01-02-etre", // Permanent identifier - never changes
   title: "Essential Verb - être (to be)",
   description:
     'Build your first real sentences! "I am", "you are", "he is" - the most useful pattern in French.',

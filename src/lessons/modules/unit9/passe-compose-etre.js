@@ -5,6 +5,7 @@
  */
 
 export const passeComposeEtreModule = {
+  moduleKey: "2024-05-31-passe-compose-etre", // Permanent identifier - never changes
   title: "être Verbs - DR & MRS VANDERTRAMP (went, came, left)",
   description:
     "Learn motion verbs that use 'être' in passé composé: je suis allé (I went), je suis venu (I came), je suis parti (I left), je suis arrivé (I arrived)",

@@ -4,6 +4,7 @@
  */
 
 export const survivalPhrases = {
+  moduleKey: "2024-03-31-survival-phrases", // Permanent identifier - never changes
   title: "Survival Phrases - Real-World Essentials",
   description:
     "Essential phrases for bakeries, cafés, shops, and getting around! These will save you in France.",

@@ -5,6 +5,7 @@
  */
 
 export const comparisons = {
+  moduleKey: "2024-04-08-comparisons", // Permanent identifier - never changes
   title: "Comparisons & Intensity",
   description:
     "Compare things and express intensity: plus (more), moins (less), meilleur (better), pire (worse), trop (too much), tout (all)",

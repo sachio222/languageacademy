@@ -6,6 +6,7 @@
 import { pouvoirConjugations } from "../../vocabularyData.js";
 
 export const pouvoirModule = {
+  moduleKey: "2024-01-16-pouvoir", // Permanent identifier - never changes
   title: "Essential Verb - pouvoir (can)",
   description:
     "Express what you can do! Ask for permission and talk about abilities.",

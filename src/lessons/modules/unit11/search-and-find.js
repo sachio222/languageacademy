@@ -5,6 +5,7 @@
  */
 
 export const searchAndFindModule = {
+  moduleKey: "2024-02-13-search-and-find", // Permanent identifier - never changes
   title: "Search & Find - chercher, trouver",
   description:
     "Perfect action pair! chercher (to look for) + trouver (to find). 'Je cherche mes clés' → 'J'ai trouvé!' Extremely practical for daily life.",

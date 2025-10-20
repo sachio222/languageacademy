@@ -5,6 +5,7 @@
  */
 
 export const determinersWithNouns = {
+  moduleKey: "2024-01-14-determiners-nouns", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Determiners + Nouns - Building Phrases",
   description:

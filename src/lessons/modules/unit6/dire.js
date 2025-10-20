@@ -5,6 +5,7 @@
  */
 
 export const direModule = {
+  moduleKey: "2024-04-20-dire", // Permanent identifier - never changes
   title: "dire - To Say / To Tell",
   description:
     "Express what you say and tell: je dis (I say), tu dis la vérité (you tell the truth), il me dit (he tells me)",

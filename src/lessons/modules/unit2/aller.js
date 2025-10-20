@@ -7,6 +7,7 @@
 import { allerConjugations } from "../../vocabularyData.js";
 
 export const allerModule = {
+  moduleKey: "2024-01-27-aller", // Permanent identifier - never changes
   title: "Essential Verb - aller (to go)",
   description:
     "THE most important motion verb: je vais (I go), tu vas (you go), il va (he goes)",

@@ -5,6 +5,7 @@
  */
 
 export const imparfaitAllVerbsModule = {
+  moduleKey: "2024-05-27-imparfait-all-verbs", // Permanent identifier - never changes
   title: "Imparfait Formation - All Verbs (was doing, used to do)",
   description:
     "Learn to form imparfait for ALL verbs using the 'nous stem' rule: je parlais (I was speaking/used to speak), il faisait beau (it was nice), on allait (we used to go)",

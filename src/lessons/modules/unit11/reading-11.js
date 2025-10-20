@@ -6,6 +6,7 @@
  */
 
 export const reading11 = {
+  moduleKey: "2024-02-12-reading-11", // Permanent identifier - never changes
   title: "Reading 11 - La France Moderne",
   description:
     "Official exposition about modern France. Demonstrates your advanced reading ability with sophisticated, real-world French text using only vocabulary you've learned.",

@@ -4,6 +4,7 @@
  */
 
 export const commonAdverbsModule = {
+  moduleKey: "2024-01-22-common-adverbs", // Permanent identifier - never changes
   title: "vraiment, sérieusement... - Common Adverbs",
   description:
     "Add nuance to EVERYTHING you say! 'vraiment' (really), 'sérieusement' (seriously), 'lentement' (slowly), 'rapidement' (quickly). Make your French sound sophisticated!",

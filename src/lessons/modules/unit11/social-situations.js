@@ -5,6 +5,7 @@
  */
 
 export const socialSituationsModule = {
+  moduleKey: "2024-02-14-social-situations", // Permanent identifier - never changes
   title: "Social Situations - Wait, Arrive, Stay",
   description:
     "Essential social verbs: attendre (to wait), arriver (to arrive), rester (to stay). Perfect for appointments, meetings, and social coordination!",

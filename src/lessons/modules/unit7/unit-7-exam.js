@@ -4,6 +4,7 @@
  */
 
 export const unit7Exam = {
+  moduleKey: "2024-05-10-unit-7-exam", // Permanent identifier - never changes
   title: "Unit 7 Final Exam - Knowledge & Learning",
   description:
     "Test everything from Unit 7! Cognitive verbs (understand, know, think, believe), on pronoun, discourse markers, and modifiers.",

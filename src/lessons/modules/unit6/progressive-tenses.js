@@ -5,6 +5,7 @@
  */
 
 export const progressiveTenses = {
+  moduleKey: "2024-04-23-progressive-tenses", // Permanent identifier - never changes
   title: "Progressive & Future - Expressing Time",
   description:
     "Say what you're doing now, what you're going to do, and what you can't/won't/shouldn't do",

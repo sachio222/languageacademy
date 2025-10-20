@@ -5,6 +5,7 @@
  */
 
 export const etrePast = {
+  moduleKey: "2024-04-10-etre-past", // Permanent identifier - never changes
   title: "être - Past Tense (was / were)",
   description:
     "Talk about how things were in the past: j'étais (I was), tu étais (you were), il était (he was)",

@@ -7,6 +7,7 @@
 import { croireConjugations } from "../../vocabularyData.js";
 
 export const croireModule = {
+  moduleKey: "2024-05-01-croire", // Permanent identifier - never changes
   title: "croire - To Believe",
   description:
     "Express belief and softer opinions: je crois que oui (I believe so), tu crois? (do you believe it?)",

@@ -6,6 +6,7 @@
  */
 
 export const reading8 = {
+  moduleKey: "2024-05-20-reading-8", // Permanent identifier - never changes
   title: "Reading 8 - Ma Journée",
   description:
     "A story about a typical day. Uses temporal words, reflexive verbs, and all Unit 8 vocabulary!",

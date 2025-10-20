@@ -5,6 +5,7 @@
  */
 
 export const foodNouns = {
+  moduleKey: "2024-04-11-food-nouns", // Permanent identifier - never changes
   title: "Everyday Food Nouns",
   description:
     "Essential food vocabulary: une baguette, un croissant, un express (espresso), la pizza, le pain, l'eau, le café, la viande, les légumes",

@@ -6,6 +6,7 @@
 import { possessiveAdjectives } from "../../vocabularyData.js";
 
 export const module8_possessive_adjectives = {
+  moduleKey: "2024-01-31-possessive-adjectives", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Possessive Adjectives - My, Your, His, Her",
   description:

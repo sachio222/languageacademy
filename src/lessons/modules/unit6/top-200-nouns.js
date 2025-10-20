@@ -5,6 +5,7 @@
  */
 
 export const top200Nouns = {
+  moduleKey: "2024-04-25-top-200-nouns", // Permanent identifier - never changes
   title: "Essential Vocabulary - Time, People & Ideas",
   description:
     "Master essential nouns: l'année (year), la fois (time), la personne (person), la famille (family), le cœur (heart), l'histoire (story)",

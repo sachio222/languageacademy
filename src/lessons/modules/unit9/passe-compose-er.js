@@ -5,6 +5,7 @@
  */
 
 export const passeComposeERModule = {
+  moduleKey: "2024-05-30-passe-compose-er", // Permanent identifier - never changes
   title: "Passé Composé - Regular -ER Verbs (I spoke, I ate)",
   description:
     "Learn to talk about completed past actions with regular -ER verbs: j'ai parlé (I spoke), j'ai mangé (I ate), j'ai étudié (I studied)",

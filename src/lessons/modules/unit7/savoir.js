@@ -8,6 +8,7 @@
 import { savoirConjugations } from "../../vocabularyData.js";
 
 export const savoirModule = {
+  moduleKey: "2024-05-08-savoir", // Permanent identifier - never changes
   title: "savoir - To Know (Facts/Skills)",
   description:
     "Express knowledge of facts and skills: je sais (I know), je ne sais pas (I don't know), je sais parler (I know how to speak)",

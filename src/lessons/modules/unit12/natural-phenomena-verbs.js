@@ -4,6 +4,7 @@
  */
 
 export const naturalPhenomenaModule = {
+  moduleKey: "2024-03-17-natural-phenomena", // Permanent identifier - never changes
   title: "Natural Phenomena - How Nature Works",
   description:
     "Learn how nature works: le soleil brille (the sun shines), les plantes poussent (plants grow), il pleut (it rains) + CAUSATIVE: rendre (to make/render)",

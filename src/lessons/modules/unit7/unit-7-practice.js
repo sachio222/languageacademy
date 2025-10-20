@@ -5,6 +5,7 @@
  */
 
 export const unit7Practice = {
+  moduleKey: "2024-05-11-unit-7-practice", // Permanent identifier - never changes
   title: "Unit 7 Practice - Fill in the Blanks",
   description:
     "Complete sentences using cognitive verbs, on, discourse markers, and essential vocabulary from Unit 7!",

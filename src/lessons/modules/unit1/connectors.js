@@ -7,6 +7,7 @@
 import { connectors as connectorsVocab } from "../../vocabularyData.js";
 
 export const connectors = {
+  moduleKey: "2024-01-08-connectors", // Permanent identifier - never changes
   title: "Basic Connectors - et, mais, ou, aussi, très",
   description:
     "Connect your thoughts and add emphasis! Learn 'et' (and), 'mais' (but), 'ou' (or), 'aussi' (also/too), 'très' (very).",

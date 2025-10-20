@@ -5,6 +5,7 @@
  */
 
 export const conditionals = {
+  moduleKey: "2024-04-09-conditionals", // Permanent identifier - never changes
   title: "Should & Could - Advice and Possibility",
   description:
     "Give advice and express possibility: je devrais (I should), je pourrais (I could)",

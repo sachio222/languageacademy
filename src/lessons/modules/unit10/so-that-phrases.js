@@ -4,6 +4,7 @@
  */
 
 export const soThatPhrasesModule = {
+  moduleKey: "2024-02-03-so-that-phrases", // Permanent identifier - never changes
   title: "Pour que... - So That Phrases",
   description:
     "Explain your purpose! 'Pour que tu comprennes' (So that you understand), 'Je t'explique pour que tu saches' (I'm explaining so you know). Goal-oriented communication!",

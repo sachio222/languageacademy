@@ -4,6 +4,7 @@
  */
 
 export const althoughPhrasesModule = {
+  moduleKey: "2024-01-20-although-phrases", // Permanent identifier - never changes
   title: "Bien que... - Although Phrases",
   description:
     "Express contrasts! 'Bien que je sois fatigué' (Although I'm tired), 'Bien qu'il fasse froid' (Even though it's cold). Sophisticated expression!",

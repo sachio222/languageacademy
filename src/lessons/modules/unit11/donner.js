@@ -5,6 +5,7 @@
  */
 
 export const donnerModule = {
+  moduleKey: "2024-02-10-donner", // Permanent identifier - never changes
   title: "donner - To Give",
   description:
     "Express giving! 'Je te donne' (I give you), 'Il me donne' (he gives me). Essential for gifts, help, transactions, and sharing. Rank 24 in top 100 French words!",

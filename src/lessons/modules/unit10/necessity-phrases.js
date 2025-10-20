@@ -4,6 +4,7 @@
  */
 
 export const necessityPhrasesModule = {
+  moduleKey: "2024-01-28-necessity-phrases", // Permanent identifier - never changes
   title: "Il faut que... - Saying What's Necessary",
   description:
     "Learn to tell people what needs to happen! Essential phrases for parents, friends, work. 'Il faut que tu manges' (You need to eat), 'Il faut qu'on parte' (We need to leave).",

@@ -5,6 +5,7 @@
  */
 
 export const commandsPronounsModule = {
+  moduleKey: "2024-05-12-commands-pronouns", // Permanent identifier - never changes
   title: "Commands with Pronouns",
   description:
     "Give commands with objects: Donne-le-moi! (Give it to me!), Regarde-moi! (Look at me!), Ne le fais pas! (Don't do it!)",

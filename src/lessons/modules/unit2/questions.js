@@ -4,6 +4,7 @@
  */
 
 export const module6_questions = {
+  moduleKey: "2024-01-18-questions", // Permanent identifier - never changes
   // id and module number are set dynamically
   title: "Question Words - Ask Anything!",
   description:

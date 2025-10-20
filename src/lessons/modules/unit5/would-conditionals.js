@@ -5,6 +5,7 @@
  */
 
 export const wouldConditionals = {
+  moduleKey: "2024-04-16-would-conditionals", // Permanent identifier - never changes
   title: "Would Forms - Hypotheticals and Desires",
   description:
     "Express hypothetical actions: je voudrais (I would like), j'irais (I would go), je ferais (I would do)",
