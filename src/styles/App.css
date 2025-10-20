@@ -802,7 +802,7 @@ body:has(.left-nav.collapsed) .app-footer {
   border: none;
   border-top: 1px solid #f0f0f0;
   font-size: 0.8125rem;
-  color: #999999;
+  color: #3b82f6;
   cursor: pointer;
   transition: all 0.15s ease;
   text-align: left;
@@ -811,7 +811,7 @@ body:has(.left-nav.collapsed) .app-footer {
 
 .split-unit-show-completed:hover {
   background: #fafbfc;
-  color: #665665;
+  color: #2563eb;
 }
 
 /* Split View - Detail Panel */
