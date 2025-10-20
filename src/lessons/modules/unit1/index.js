@@ -6,6 +6,7 @@ export { module4_avoir } from "./avoir.js";
 export { articles } from "./articles.js";
 export { basicNouns } from "./basic-nouns.js";
 export { plurals } from "./plurals.js";
+export { liaisonHelpModule } from "./liaison-help.js";
 export { connectors } from "./connectors.js";
 export { reading1 } from "./reading-1.js";
 export { unit1Practice } from "./unit-1-practice.js";

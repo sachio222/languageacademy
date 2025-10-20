@@ -45,7 +45,7 @@ function ExercisePane({
 
   // Load previous answer if exercise was already completed (only on initial load)
   const [hasLoadedInitialAnswer, setHasLoadedInitialAnswer] = useState(false);
-  
+
   useEffect(() => {
     const loadPreviousAnswer = async () => {
       if (!isAuthenticated || !supabaseUser || !supabaseClient || !exercise?.id) {
@@ -61,8 +61,8 @@ function ExercisePane({
       }
 
       try {
-        // Get the user's most recent correct answer for this exercise
-        const { data, error } = await supabaseClient
+        // Try to load answer with current exercise ID (moduleKey-based)
+        let { data, error } = await supabaseClient
           .from('exercise_completions')
           .select('user_answer')
           .eq('user_id', supabaseUser.id)
@@ -72,13 +72,16 @@ function ExercisePane({
           .limit(1)
           .single();
 
-        if (!error && data?.user_answer) {
+        // All exercise IDs are now in stable moduleKey format after migration
+        // No fallback logic needed - system is fully future-proof
+
+        if (data?.user_answer) {
           setUserAnswer(data.user_answer);
         } else {
           // Only clear if no previous answer found
           setUserAnswer('');
         }
-        
+
         setHasLoadedInitialAnswer(true);
       } catch (err) {
         // No previous answer found, clear it
@@ -261,7 +264,7 @@ function ExercisePane({
       <div className={isReadingModule ? "reading-quiz-section" : ""}>
         <div className="exercise-header">
           <div className="exercise-title-row">
-            <h3>{isReadingModule ? '📖' : '✏️'} Exercise {exercise.id}</h3>
+            <h3>{isReadingModule ? '📖' : '✏️'} Exercise {moduleId}.{exercise.displayNumber}</h3>
             {isCompleted && <span className="badge-done">✓ Done</span>}
           </div>
           {onBackToLesson && (

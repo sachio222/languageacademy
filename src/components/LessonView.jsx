@@ -11,6 +11,7 @@ import ModuleCompleteModal from './ModuleCompleteModal';
 import FillInTheBlank from './FillInTheBlank';
 import PhonicsView from './PhonicsView';
 import VerbPatternHelp from './VerbPatternHelp';
+import LiaisonHelp from './LiaisonHelp';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
@@ -580,12 +581,21 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       </div>
 
       {lesson.isHelpModule ? (
-        <VerbPatternHelp
-          onComplete={handleNextModule}
-          moduleId={lesson.id}
-          lesson={lesson}
-          onModuleComplete={onModuleComplete}
-        />
+        lesson.moduleKey?.includes('liaison-help') ? (
+          <LiaisonHelp
+            onComplete={handleNextModule}
+            moduleId={lesson.id}
+            lesson={lesson}
+            onModuleComplete={onModuleComplete}
+          />
+        ) : (
+          <VerbPatternHelp
+            onComplete={handleNextModule}
+            moduleId={lesson.id}
+            lesson={lesson}
+            onModuleComplete={onModuleComplete}
+          />
+        )
       ) : lesson.isPhonicsReference ? (
         <PhonicsView />
       ) : showIntro && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (

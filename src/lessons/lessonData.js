@@ -52,7 +52,8 @@ const allLessons = moduleConfigs.map((config, index) => {
     title: finalTitle,
     exercises: lesson.exercises.map((ex, exIdx) => ({
       ...ex,
-      id: `${moduleId}.${exIdx + 1}`,
+      id: `${config.moduleKey}.${exIdx + 1}`, // Use stable moduleKey instead of shifting moduleId
+      displayNumber: exIdx + 1, // User-friendly exercise number (1, 2, 3, etc.)
     })),
   };
 });

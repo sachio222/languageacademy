@@ -142,6 +142,7 @@ export const useSupabaseProgress = () => {
   }, [isAuthenticated, supabaseUser, supabaseClient, authLoading]);
 
   // Complete an exercise
+  // exerciseId is now moduleKey-based (e.g., "2024-01-08-connectors.1") for stability
   const completeExercise = useCallback(
     async (
       exerciseId,

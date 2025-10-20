@@ -39,7 +39,7 @@ function RightSidebar({ concepts, vocabulary, moduleId }) {
           className={`tab-button ${activeTab === 'concepts' ? 'active' : ''}`}
           onClick={() => setActiveTab('concepts')}
         >
-          Lesson Concepts
+          Concepts
         </button>
         <button
           className={`tab-button ${activeTab === 'vocab' ? 'active' : ''}`}

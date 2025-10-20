@@ -10,6 +10,7 @@ import { module4_avoir } from "./avoir.js";
 import { articles } from "./articles.js";
 import { basicNouns } from "./basic-nouns.js";
 import { plurals } from "./plurals.js";
+import { liaisonHelpModule } from "./liaison-help.js";
 import { connectors } from "./connectors.js";
 import { reading1 } from "./reading-1.js";
 import { unit1Practice } from "./unit-1-practice.js";
@@ -32,9 +33,10 @@ export const unit1Config = {
     articles, // 5. Articles - un/une, le/la/les
     basicNouns, // 6. Basic Nouns - Foundation Vocabulary
     plurals, // 7. Plurals - Multiple Things
-    connectors, // 8. Connectors - et, mais, ou, aussi, très
-    reading1, // 9. Reading Comprehension 1
-    unit1Practice, // 10. Unit 1 Practice
-    unit1Exam, // 11. Unit 1 Final Exam
+    liaisonHelpModule, // 8. Liaison Help - French Flow
+    connectors, // 9. Connectors - et, mais, ou, aussi, très
+    reading1, // 10. Reading Comprehension 1
+    unit1Practice, // 11. Unit 1 Practice
+    unit1Exam, // 12. Unit 1 Final Exam
   ],
 };

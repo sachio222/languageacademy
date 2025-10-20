@@ -354,6 +354,133 @@ export const unit12Exam = {
 
 ---
 
+## 📚 **Module Types**
+
+The system supports several specialized module types, each with unique behavior:
+
+### **1. Standard Modules (Default)**
+
+Regular lessons with intro → study → practice → exam flow.
+
+### **2. Reading Comprehension**
+
+```javascript
+export const reading1 = {
+  moduleKey: "2024-01-08-reading1",
+  title: "Reading Comprehension 1",
+  skipStudyMode: true,
+  isReadingComprehension: true,
+  readingPassage: "...",
+  // exercises based on reading
+};
+```
+
+### **3. Fill-in-the-Blank**
+
+```javascript
+export const unit3Practice = {
+  moduleKey: "2024-01-30-unit3-practice",
+  title: "Unit 3 Practice - Fill in the Blanks",
+  isFillInTheBlank: true,
+  sentences: [
+    /* fill-in sentences */
+  ],
+};
+```
+
+### **4. Unit Exams**
+
+```javascript
+export const unit1Exam = {
+  moduleKey: "2024-01-09-unit1-exam",
+  title: "Unit 1 Final Exam",
+  isUnitExam: true,
+  unitNumber: 1,
+  // exam exercises
+};
+```
+
+### **5. Help Modules (AudioInfo)**
+
+Interactive explanation modules with audio-rich content that bypass normal lesson flow.
+
+```javascript
+// Step 1: Create minimal module definition
+export const liaisonHelpModule = {
+  moduleKey: "2024-10-20-liaison-help",
+  title: "French Flow - Liaison Help",
+  description: "Learn how French words connect smoothly",
+
+  // Special flag - bypasses intro/study/practice
+  isHelpModule: true,
+
+  // Minimal structure - content lives in component
+  concepts: [],
+  vocabularyReference: [],
+  exercises: [],
+};
+```
+
+```javascript
+// Step 2: Create custom component (if new type needed)
+// src/components/MyHelp.jsx
+const MyHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
+  return (
+    <div className="verb-pattern-help">{/* Custom interactive content */}</div>
+  );
+};
+```
+
+```javascript
+// Step 3: Register in LessonView.jsx (if new component)
+{lesson.isHelpModule ? (
+  lesson.moduleKey?.includes('my-help') ? (
+    <MyHelp {...props} />
+  ) : lesson.moduleKey?.includes('liaison-help') ? (
+    <LiaisonHelp {...props} />
+  ) : (
+    <VerbPatternHelp {...props} />
+  )
+) : /* other conditions */}
+```
+
+**Help Module Characteristics:**
+
+- ✅ **No intro/study phases** - goes straight to content
+- ✅ **Custom interactive component** - full control over UX
+- ✅ **Audio-first design** - click-to-hear examples
+- ✅ **Progress tracking** - "Understood" checkmarks
+- ✅ **Consistent styling** - reuses VerbPatternHelp.css
+
+**Existing Help Modules:**
+
+- **VerbPatternHelp** - Explains verb conjugation patterns
+- **LiaisonHelp** - Explains French liaison rules
+
+### **6. Reference Modules**
+
+```javascript
+export const alphabetModule = {
+  moduleKey: "2024-04-01-alphabet",
+  title: "L'Alphabet",
+  isPhonicsReference: true, // Special reference type
+  // reference content
+};
+```
+
+### **When to Use Each Type:**
+
+| Type              | Use Case                                 | Example             |
+| ----------------- | ---------------------------------------- | ------------------- |
+| **Standard**      | Regular vocabulary/grammar lessons       | Pronouns, Verbs     |
+| **Reading**       | Text comprehension with exercises        | Reading passages    |
+| **Fill-in-Blank** | Practice/review with sentence completion | Unit practice       |
+| **Unit Exam**     | Assessment at end of unit                | Final exams         |
+| **Help**          | Interactive explanations with audio      | Pattern recognition |
+| **Reference**     | Lookup material and phonics              | Alphabet, Numbers   |
+
+---
+
 ## 🚀 **Advanced Features**
 
 ### **Dynamic Cross-References:**
