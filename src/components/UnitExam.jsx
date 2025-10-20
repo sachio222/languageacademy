@@ -2,12 +2,17 @@ import { useState, useRef, useEffect } from 'react';
 import { checkAnswer } from '../linter/frenchLinter';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
 import { Award } from 'lucide-react';
+import { useAuth } from '../hooks/useAuth';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { extractModuleId, extractUnitId } from '../utils/progressSync';
 
 /**
  * Unit Exam - Comprehensive test covering an entire unit
  * Tests ability to write complete French sentences from scratch
  */
 function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
+  const { isAuthenticated, supabaseUser, supabaseClient } = useAuth();
+  const supabaseProgress = useSupabaseProgress();
   // Helper to get initial section index from URL (1-based to 0-based) with validation
   const getInitialSectionIndex = () => {
     const params = new URLSearchParams(window.location.search);
@@ -33,7 +38,39 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [results, setResults] = useState(null);
+  const [completionCalled, setCompletionCalled] = useState(false);
   const inputRefs = useRef({});
+
+  // Mark exam complete in database when passed (without navigating)
+  useEffect(() => {
+    const markComplete = async () => {
+      if (results && results.passed && !completionCalled && isAuthenticated && supabaseProgress && lesson) {
+        console.log('[DEBUG] Marking unit exam complete in database');
+        setCompletionCalled(true);
+
+        try {
+          const moduleId = extractModuleId(lesson);
+          const actualExerciseCount = lesson.exercises?.length || lesson.exerciseConfig?.items?.length || 0;
+
+          await supabaseProgress.updateModuleProgress(
+            moduleId,
+            unitNumber.toString(),
+            actualExerciseCount,
+            actualExerciseCount,
+            true, // studyCompleted
+            Math.round((results.totalCorrect / results.totalQuestions) * 100), // examScore
+            0 // timeSpent (can be improved later)
+          );
+
+          console.log('[DEBUG] Unit exam marked complete in database');
+        } catch (error) {
+          console.error('Error marking unit exam complete:', error);
+        }
+      }
+    };
+
+    markComplete();
+  }, [results, completionCalled, isAuthenticated, supabaseProgress, lesson, unitNumber]);
 
   // Use lesson exercises if provided (Units 2+), otherwise use hardcoded Unit 1
   const examData = lesson ? {
@@ -410,12 +447,38 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
                 </button>
                 <button
                   className="btn-primary"
-                  onClick={() => {
+                  onClick={async () => {
+                    // Reset local state
                     setSubmitted(false);
                     setAnswers({});
                     setCurrentSection(0);
                     setResults(null);
+                    setCompletionCalled(false);
                     updateSectionInUrl(0);
+
+                    // Reset completion status in database
+                    if (isAuthenticated && supabaseProgress && lesson) {
+                      try {
+                        console.log('[DEBUG] Resetting unit exam completion in database');
+                        const moduleId = extractModuleId(lesson);
+                        const unitInfo = { id: unitNumber }; // Create minimal unitInfo
+
+                        // Clear the completion by setting completed_at to null
+                        await supabaseProgress.updateModuleProgress(
+                          moduleId,
+                          unitNumber.toString(),
+                          0, // totalExercises
+                          0, // completedCount  
+                          false, // studyCompleted
+                          null, // examScore (null = not completed)
+                          0 // timeSpent
+                        );
+
+                        console.log('[DEBUG] Unit exam completion cleared from database');
+                      } catch (error) {
+                        console.error('Error resetting unit exam completion:', error);
+                      }
+                    }
                   }}
                 >
                   Retake Exam

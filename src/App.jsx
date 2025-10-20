@@ -224,6 +224,7 @@ function App() {
 
   const handleModuleComplete = async (moduleId, examScore, timeSpent, goToNext = false) => {
     console.log('Module complete - moduleId:', moduleId, 'type:', typeof moduleId, 'score:', examScore, 'goToNext:', goToNext);
+    console.log('[DEBUG] handleModuleComplete called!');
 
     if (!moduleId) {
       console.error('handleModuleComplete called with null/undefined moduleId');
@@ -235,13 +236,36 @@ function App() {
         const lesson = lessons.find(l => l.id === moduleId);
         const unitInfo = getUnitForLesson(moduleId);
 
+        console.log('[DEBUG] Found lesson:', lesson ? lesson.title : 'NOT FOUND');
+        console.log('[DEBUG] Found unitInfo:', unitInfo ? unitInfo.title : 'NOT FOUND');
+        console.log('[DEBUG] lesson.isUnitExam:', lesson?.isUnitExam);
+
         if (lesson && unitInfo) {
+          // Debug logging for unit exams
+          if (lesson.isUnitExam) {
+            console.log(`[DEBUG] Unit exam completion - moduleId: ${moduleId}`);
+            console.log(`[DEBUG] lesson.exercises?.length:`, lesson.exercises?.length);
+            console.log(`[DEBUG] lesson.exerciseConfig?.items?.length:`, lesson.exerciseConfig?.items?.length);
+            console.log(`[DEBUG] lesson.isUnitExam:`, lesson.isUnitExam);
+            console.log(`[DEBUG] examScore:`, examScore);
+          }
+
+          // For unit exams, use the actual exercise count from exerciseConfig if exercises array is empty
+          const isUnitExam = lesson.isUnitExam;
+          const actualExerciseCount = isUnitExam && (!lesson.exercises || lesson.exercises.length === 0) ?
+            lesson.exerciseConfig?.items?.length || 0 :
+            lesson.exercises?.length || 0;
+
+          if (lesson.isUnitExam) {
+            console.log(`[DEBUG] Using actualExerciseCount: ${actualExerciseCount}`);
+          }
+
           // Update module progress
           await supabaseProgress.updateModuleProgress(
             extractModuleId(lesson),
             extractUnitId(unitInfo),
-            lesson.exercises?.length || 0,
-            lesson.exercises?.length || 0, // All exercises completed
+            actualExerciseCount,
+            actualExerciseCount, // All exercises completed
             true, // Study mode completed
             examScore,
             timeSpent

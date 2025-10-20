@@ -307,6 +307,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     setResetting(true);
     try {
       const modId = extractModuleId(lesson);
+
       // Delete all exercise completions for this module
       const { error } = await supabaseClient
         .from('exercise_completions')
@@ -315,6 +316,18 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         .eq('module_id', modId);
 
       if (error) throw error;
+
+      // For unit exams, also clear the module_progress completion
+      if (lesson.isUnitExam) {
+        console.log('[DEBUG] Clearing unit exam completion from module_progress');
+        const { error: progressError } = await supabaseClient
+          .from('module_progress')
+          .delete()
+          .eq('user_id', supabaseUser.id)
+          .eq('module_id', modId);
+
+        if (progressError) throw progressError;
+      }
 
       // Reload page to refresh state
       window.location.reload();

@@ -1,6 +1,6 @@
 import { calculateLessonProgress } from '../lessons/testRunner';
 import { unitStructure } from '../lessons/lessonData';
-import { Award, BookOpen, TextCursorInput, Grid3x3, List } from 'lucide-react';
+import { Award, BookOpen, TextCursorInput, Grid3x3, List, ChevronDown, ChevronUp } from 'lucide-react';
 import DashboardHeader from './DashboardHeader';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
@@ -42,9 +42,25 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
     new Set(unitStructure.map(unit => unit.id))
   );
 
+  // Track which units are collapsed in grid view (default: all expanded)
+  const [collapsedUnits, setCollapsedUnits] = useState(new Set());
+
   // Toggle showing completed modules for a unit
   const toggleShowCompleted = (unitId) => {
     setCollapsedCompletedInUnits(prev => {
+      const next = new Set(prev);
+      if (next.has(unitId)) {
+        next.delete(unitId);
+      } else {
+        next.add(unitId);
+      }
+      return next;
+    });
+  };
+
+  // Toggle unit accordion in grid view
+  const toggleUnitCollapse = (unitId) => {
+    setCollapsedUnits(prev => {
       const next = new Set(prev);
       if (next.has(unitId)) {
         next.delete(unitId);
@@ -135,87 +151,98 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
           const unitLessons = getLessonsForUnit(unitInfo);
           const { completed, total } = getUnitProgress(unitInfo);
           const unitComplete = completed === total;
+          const isCollapsed = collapsedUnits.has(unitInfo.id);
 
           return (
-            <div key={unitInfo.id} className="unit-section">
-              <div className="unit-header">
+            <div key={unitInfo.id} className={`unit-section ${isCollapsed ? 'unit-collapsed' : ''}`}>
+              <div
+                className="unit-header unit-header-accordion"
+                onClick={() => toggleUnitCollapse(unitInfo.id)}
+              >
                 <div className="unit-icon">{unitInfo.icon}</div>
                 <div className="unit-content">
                   <div className="unit-title-row">
                     <h3 className="unit-title">{unitInfo.title}</h3>
                     {unitComplete && <span className="unit-badge-complete">✓ Complete</span>}
                   </div>
-                  <p className="unit-description">{unitInfo.description}</p>
-                  <div className="unit-progress">
-                    <div className="unit-progress-bar">
-                      <div
-                        className="unit-progress-fill"
-                        style={{
-                          width: `${(completed / total) * 100}%`,
-                          background: unitInfo.color
-                        }}
-                      ></div>
+                  {!isCollapsed && <p className="unit-description">{unitInfo.description}</p>}
+                  {isCollapsed && (
+                    <div className="unit-collapsed-info">
+                      <span className="unit-collapsed-count">{completed}/{total}</span>
+                      <span className="unit-collapsed-separator">•</span>
+                      <span className="unit-collapsed-description">{unitInfo.description}</span>
                     </div>
-                    <span className="unit-progress-text">{completed}/{total} lessons complete</span>
-                  </div>
+                  )}
                 </div>
+                <button
+                  className="unit-accordion-toggle"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleUnitCollapse(unitInfo.id);
+                  }}
+                  aria-label={isCollapsed ? 'Expand unit' : 'Collapse unit'}
+                >
+                  {isCollapsed ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
+                </button>
               </div>
 
-              <div className="lessons-grid">
-                {unitLessons.map((lesson) => {
-                  const completed = getCompletedCount(lesson);
-                  const total = getExerciseCount(lesson);
-                  const progress = calculateLessonProgress(completed, total);
-                  const isComplete = progress === 100;
+              {!isCollapsed && (
+                <div className="lessons-grid">
+                  {unitLessons.map((lesson) => {
+                    const completed = getCompletedCount(lesson);
+                    const total = getExerciseCount(lesson);
+                    const progress = calculateLessonProgress(completed, total);
+                    const isComplete = progress === 100;
 
-                  return (
-                    <div
-                      key={lesson.id}
-                      className={`lesson-card ${isComplete ? 'complete' : ''} ${lesson.isReadingComprehension ? 'reading-milestone' : ''} ${lesson.isUnitExam ? 'final-exam' : ''} ${lesson.isFillInTheBlank ? 'fill-in-blank' : ''}`}
-                      onClick={() => onLessonSelect(lesson.id)}
-                    >
-                      <div className="lesson-card-header">
-                        {lesson.isUnitExam && (
-                          <Award size={20} className="lesson-exam-icon" />
-                        )}
-                        {lesson.isReadingComprehension && (
-                          <BookOpen size={20} className="lesson-reading-icon" />
-                        )}
-                        {lesson.isFillInTheBlank && (
-                          <TextCursorInput size={20} className="lesson-practice-icon" />
-                        )}
-                        <h3>{lesson.title}</h3>
-                        {isComplete && <span className="badge-complete">✓</span>}
-                      </div>
-
-                      <p className="lesson-description">{lesson.description}</p>
-
-                      <div className="lesson-stats">
-                        <div className="progress-bar">
-                          <div
-                            className="progress-fill"
-                            style={{ width: `${progress}%` }}
-                          />
+                    return (
+                      <div
+                        key={lesson.id}
+                        className={`lesson-card ${isComplete ? 'complete' : ''} ${lesson.isReadingComprehension ? 'reading-milestone' : ''} ${lesson.isUnitExam ? 'final-exam' : ''} ${lesson.isFillInTheBlank ? 'fill-in-blank' : ''}`}
+                        onClick={() => onLessonSelect(lesson.id)}
+                      >
+                        <div className="lesson-card-header">
+                          {lesson.isUnitExam && (
+                            <Award size={20} className="lesson-exam-icon" />
+                          )}
+                          {lesson.isReadingComprehension && (
+                            <BookOpen size={20} className="lesson-reading-icon" />
+                          )}
+                          {lesson.isFillInTheBlank && (
+                            <TextCursorInput size={20} className="lesson-practice-icon" />
+                          )}
+                          <h3>{lesson.title}</h3>
+                          {isComplete && <span className="badge-complete">✓</span>}
                         </div>
-                        <span className="progress-text">
-                          {completed}/{total} exercises
-                        </span>
-                      </div>
 
-                      {lesson.concepts.length > 0 && (
-                        <div className="lesson-concepts">
-                          <strong>Concepts:</strong>
-                          <ul>
-                            {lesson.concepts.slice(0, 2).map((concept, idx) => (
-                              <li key={idx}>{concept.term}</li>
-                            ))}
-                          </ul>
+                        <p className="lesson-description">{lesson.description}</p>
+
+                        <div className="lesson-stats">
+                          <div className="progress-bar">
+                            <div
+                              className="progress-fill"
+                              style={{ width: `${progress}%` }}
+                            />
+                          </div>
+                          <span className="progress-text">
+                            {completed}/{total} exercises
+                          </span>
                         </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+
+                        {lesson.concepts.length > 0 && (
+                          <div className="lesson-concepts">
+                            <strong>Concepts:</strong>
+                            <ul>
+                              {lesson.concepts.slice(0, 2).map((concept, idx) => (
+                                <li key={idx}>{concept.term}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           );
         })

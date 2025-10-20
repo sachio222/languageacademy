@@ -118,7 +118,13 @@ export function buildExercises(moduleId, exerciseConfig) {
       exerciseNumber++;
     });
   } else if (exerciseConfig.type === "custom") {
-    // Custom exercises (e.g., question words)
+    // Custom exercises (e.g., question words, unit exams)
+    console.log(
+      `[DEBUG] Processing custom exercises, items count: ${
+        exerciseConfig.items?.length || 0
+      }`
+    );
+
     exerciseConfig.items.forEach((item) => {
       exercises.push({
         id: `${moduleId}.${exerciseNumber}`,
@@ -133,6 +139,8 @@ export function buildExercises(moduleId, exerciseConfig) {
       });
       exerciseNumber++;
     });
+
+    console.log(`[DEBUG] Custom exercises built: ${exercises.length} total`);
   }
 
   return exercises;
@@ -171,11 +179,29 @@ function buildVocabularyExercises(moduleId, vocabularyReference) {
 export function buildLesson(moduleConfig, moduleNumber = null) {
   // Generate exercises
   let exercises = [];
+
+  // Debug logging for unit exams
+  if (moduleConfig.isUnitExam) {
+    console.log(`[DEBUG] Building unit exam: ${moduleConfig.title}`);
+    console.log(`[DEBUG] Has exerciseConfig:`, !!moduleConfig.exerciseConfig);
+    console.log(
+      `[DEBUG] exerciseConfig.items length:`,
+      moduleConfig.exerciseConfig?.items?.length || 0
+    );
+  }
+
   if (moduleConfig.exerciseConfig) {
     exercises = buildExercises(
       moduleConfig.id || 0,
       moduleConfig.exerciseConfig
     );
+
+    // Debug logging for unit exams
+    if (moduleConfig.isUnitExam) {
+      console.log(
+        `[DEBUG] buildExercises returned ${exercises.length} exercises`
+      );
+    }
   } else if (moduleConfig.exercises && moduleConfig.exercises.length > 0) {
     exercises = moduleConfig.exercises;
   } else if (
@@ -189,7 +215,7 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
     );
   }
 
-  return {
+  const lesson = {
     // id is set dynamically in lessonData.js
     title: moduleConfig.title,
     description: moduleConfig.description,
@@ -209,4 +235,14 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
     // Pass through phonics reference flag
     isPhonicsReference: moduleConfig.isPhonicsReference || false,
   };
+
+  // Debug logging for unit exams
+  if (moduleConfig.isUnitExam) {
+    console.log(
+      `[DEBUG] Final lesson exercises length: ${lesson.exercises.length}`
+    );
+    console.log(`[DEBUG] Lesson built successfully for unit exam`);
+  }
+
+  return lesson;
 }
