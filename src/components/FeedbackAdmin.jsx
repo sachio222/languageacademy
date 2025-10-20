@@ -10,9 +10,33 @@ const FeedbackAdmin = () => {
   const [selectedFeedback, setSelectedFeedback] = useState(null);
 
   useEffect(() => {
-    if (supabaseClient) {
-      fetchFeedback();
-    }
+    if (!supabaseClient) return;
+    let cancelled = false;
+
+    (async () => {
+      setLoading(true);
+      try {
+        let query = supabaseClient
+          .from('feedback')
+          .select('*')
+          .order('created_at', { ascending: false });
+
+        if (filter !== 'all') {
+          query = query.eq('status', filter);
+        }
+
+        const { data, error } = await query;
+        if (error) throw error;
+
+        if (!cancelled) setFeedback(data || []);
+      } catch (error) {
+        if (!cancelled) console.error('Error fetching feedback:', error);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+
+    return () => { cancelled = true; };
   }, [filter, supabaseClient]);
 
   const fetchFeedback = async () => {
