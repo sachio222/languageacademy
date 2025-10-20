@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import './FeedbackAdmin.css';
 
-const FeedbackAdmin = () => {
+const FeedbackAdmin = ({ onFeedbackChange }) => {
   const { supabaseClient } = useAuth();
   const [feedback, setFeedback] = useState([]);
   const [allFeedback, setAllFeedback] = useState([]);
@@ -85,6 +85,11 @@ const FeedbackAdmin = () => {
 
       // Refresh the list
       fetchFeedback();
+
+      // Refresh the badge count
+      if (onFeedbackChange) {
+        onFeedbackChange();
+      }
     } catch (error) {
       console.error('Error updating status:', error);
     }
@@ -105,6 +110,11 @@ const FeedbackAdmin = () => {
 
       // Refresh the list
       fetchFeedback();
+
+      // Refresh the badge count
+      if (onFeedbackChange) {
+        onFeedbackChange();
+      }
     } catch (error) {
       console.error('Error deleting feedback:', error);
     }
@@ -253,6 +263,17 @@ const FeedbackAdmin = () => {
                     className="action-btn resolve-btn"
                   >
                     Mark Resolved
+                  </button>
+                )}
+                {item.status === 'resolved' && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      updateStatus(item.id, 'reviewed');
+                    }}
+                    className="action-btn reopen-btn"
+                  >
+                    Reopen
                   </button>
                 )}
                 {item.status === 'dismissed' && (

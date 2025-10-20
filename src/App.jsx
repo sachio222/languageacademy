@@ -56,7 +56,10 @@ function App() {
   const [currentLesson, setCurrentLesson] = useState(getInitialLesson);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
-  const [showFeedbackAdmin, setShowFeedbackAdmin] = useState(false);
+  const [showFeedbackAdmin, setShowFeedbackAdmin] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('admin') === 'true';
+  });
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [showReferenceModules, setShowReferenceModules] = useState(false);
 
@@ -84,25 +87,54 @@ function App() {
 
   const isAdmin = user?.id === ADMIN_CLERK_USER_ID || supabaseUser?.id === ADMIN_SUPABASE_USER_ID;
 
+  // Function to refresh feedback count (can be called from admin panel)
+  const refreshFeedbackCount = async () => {
+    if (!isAdmin || !supabaseClient) return;
+
+    try {
+      const { count, error } = await supabaseClient
+        .from('feedback')
+        .select('*', { count: 'exact', head: true })
+        .eq('status', 'new');
+
+      if (!error) {
+        setNewFeedbackCount(count || 0);
+      }
+    } catch (error) {
+      console.error('Error fetching feedback count:', error);
+    }
+  };
+
   // Fetch new feedback count for admin badge
   useEffect(() => {
-    if (isAdmin && supabaseClient) {
-      const fetchNewFeedbackCount = async () => {
+    if (!isAdmin || !supabaseClient) return;
+    let cancelled = false;
+
+    const fetchNewFeedbackCount = async () => {
+      try {
         const { count, error } = await supabaseClient
           .from('feedback')
           .select('*', { count: 'exact', head: true })
           .eq('status', 'new');
 
-        if (!error) {
+        if (!cancelled && !error) {
           setNewFeedbackCount(count || 0);
         }
-      };
+      } catch (error) {
+        if (!cancelled) {
+          console.error('Error fetching feedback count:', error);
+        }
+      }
+    };
 
-      fetchNewFeedbackCount();
-      // Refresh count every 30 seconds
-      const interval = setInterval(fetchNewFeedbackCount, 30000);
-      return () => clearInterval(interval);
-    }
+    fetchNewFeedbackCount();
+    // Refresh count every 30 seconds
+    const interval = setInterval(fetchNewFeedbackCount, 30000);
+
+    return () => {
+      cancelled = true;
+      clearInterval(interval);
+    };
   }, [isAdmin, supabaseClient]);
 
   // Handle browser back/forward buttons with validation
@@ -111,6 +143,10 @@ function App() {
       const params = new URLSearchParams(window.location.search);
       const moduleParam = params.get('module');
       const referenceParam = params.get('reference');
+      const adminParam = params.get('admin');
+
+      // Handle admin parameter
+      setShowFeedbackAdmin(adminParam === 'true');
 
       if (referenceParam === 'true') {
         setCurrentLesson('reference');
@@ -432,7 +468,7 @@ function App() {
       <main className="app-main">
         {showFeedbackAdmin ? (
           <div className="feedback-admin-wrapper">
-            <FeedbackAdmin />
+            <FeedbackAdmin onFeedbackChange={refreshFeedbackCount} />
             <button
               className="feedback-fab"
               onClick={() => setShowFeedbackForm(true)}
@@ -442,7 +478,12 @@ function App() {
             </button>
             <button
               className="admin-close-btn"
-              onClick={() => setShowFeedbackAdmin(false)}
+              onClick={() => {
+                setShowFeedbackAdmin(false);
+                const url = new URL(window.location);
+                url.searchParams.delete('admin');
+                window.history.pushState({}, '', url);
+              }}
               title="Close Admin"
             >
               ← Back to Lessons
@@ -464,7 +505,12 @@ function App() {
             {isAdmin && (
               <button
                 className="admin-btn"
-                onClick={() => setShowFeedbackAdmin(true)}
+                onClick={() => {
+                  setShowFeedbackAdmin(true);
+                  const url = new URL(window.location);
+                  url.searchParams.set('admin', 'true');
+                  window.history.pushState({}, '', url);
+                }}
                 title="View Feedback Admin"
               >
                 📊
@@ -492,7 +538,12 @@ function App() {
             {isAdmin && (
               <button
                 className="admin-btn"
-                onClick={() => setShowFeedbackAdmin(true)}
+                onClick={() => {
+                  setShowFeedbackAdmin(true);
+                  const url = new URL(window.location);
+                  url.searchParams.set('admin', 'true');
+                  window.history.pushState({}, '', url);
+                }}
                 title="View Feedback Admin"
               >
                 📊
