@@ -1,5 +1,5 @@
 /**
- * Module 8: Possessive Adjectives - my, your, his, her, our, their
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Possessive Adjectives - my, your, his, her, our, their
  * Show ownership: "my book", "his cat", "their house"
  */
 

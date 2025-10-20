@@ -1,5 +1,5 @@
 /**
- * Module 4: ça - The Most Useful Word!
+ * Dynamic Module (ID assigned automatically based on pedagogical position): ça - The Most Useful Word!
  * Learn the single most versatile word in French + survival phrases
  */
 

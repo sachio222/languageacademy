@@ -1,5 +1,5 @@
 /**
- * Module 2: Articles - un/une, le/la/les
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Articles - un/une, le/la/les
  * Essential for using any noun in French
  */
 

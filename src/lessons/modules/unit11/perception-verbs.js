@@ -1,5 +1,5 @@
 /**
- * Module 144: Perception Verbs - écouter, regarder
+ * Module: Dynamic ID (auto-assigned)4: Perception Verbs - écouter, regarder
  * Unit 11 - Full conjugations of listen/watch (beyond just commands)
  * Ranks 65-66 in top 100
  */

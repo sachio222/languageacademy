@@ -1,5 +1,5 @@
 /**
- * Module 6: Determiners + Nouns - Functional Composition
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Determiners + Nouns - Functional Composition
  * Combine demonstratives with nouns: this book, that cat, these dogs
  * Treating language like functional programming: determiner(noun) = phrase
  */

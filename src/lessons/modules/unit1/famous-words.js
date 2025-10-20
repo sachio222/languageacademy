@@ -1,5 +1,5 @@
 /**
- * Module 1: Famous Words & Greetings
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Famous Words & Greetings
  * Start with internationally recognized words and essential phrases
  * Cognates and common expressions - you might recognize some!
  */

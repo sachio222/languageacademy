@@ -1,5 +1,5 @@
 /**
- * Module 110: Passé Composé vs Imparfait - The Key Distinction
+ * Module: Dynamic ID (auto-assigned)0: Passé Composé vs Imparfait - The Key Distinction
  * Unit 9 - Most important past tense concept for storytelling
  * Event vs Description, Action vs Background
  */

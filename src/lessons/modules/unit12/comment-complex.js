@@ -1,5 +1,5 @@
 /**
- * Module 156: Complex comment Questions - Asking How Processes Work
+ * Module: Dynamic ID (auto-assigned)6: Complex comment Questions - Asking How Processes Work
  * Unit 12 - Compose comment with complex subjects and actions
  */
 

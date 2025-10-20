@@ -1,5 +1,5 @@
 /**
- * Module 146: Directions & Navigation
+ * Module: Dynamic ID (auto-assigned)6: Directions & Navigation
  * Unit 11 - Essential for getting around: directions, compass, navigation
  */
 

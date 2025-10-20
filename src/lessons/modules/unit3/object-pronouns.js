@@ -1,5 +1,5 @@
 /**
- * Module 7: Object Pronouns - him, her, it, them
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Object Pronouns - him, her, it, them
  * Use as objects of verbs: "I see him", "She likes it"
  */
 

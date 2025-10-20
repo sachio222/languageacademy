@@ -1,5 +1,5 @@
 /**
- * Module 3: avoir (to have)
+ * Dynamic Module (ID assigned automatically based on pedagogical position): avoir (to have)
  * All 8 conjugations including the tricky j'ai
  */
 

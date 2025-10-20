@@ -1,5 +1,5 @@
 /**
- * Module 103: More Spatial Relations - Distance & Proximity
+ * Module: Dynamic ID (auto-assigned)3: More Spatial Relations - Distance & Proximity
  * Unit 9 - Describe distance and relative positioning
  * Essential for giving directions and nuanced descriptions
  */

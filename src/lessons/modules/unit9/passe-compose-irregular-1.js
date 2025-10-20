@@ -1,5 +1,5 @@
 /**
- * Module 105: Passé Composé - Irregular Past Participles (Set 1)
+ * Module: Dynamic ID (auto-assigned)5: Passé Composé - Irregular Past Participles (Set 1)
  * Unit 9 - Most common irregular verbs in past tense
  * avoir, être, faire, voir - the top 4 most frequent
  */

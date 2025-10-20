@@ -1,5 +1,5 @@
 /**
- * Module 101: Causal & Reason Words - parce que, car, puisque
+ * Module: Dynamic ID (auto-assigned)1: Causal & Reason Words - parce que, car, puisque
  * Unit 9 - Explain WHY and provide reasoning
  * Enables explanation for all actions and decisions
  */

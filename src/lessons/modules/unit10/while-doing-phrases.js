@@ -1,5 +1,5 @@
 /**
- * Module 125: En mangeant... - While Doing Phrases
+ * Module: Dynamic ID (auto-assigned)5: En mangeant... - While Doing Phrases
  * Unit 10 - Describe doing two things at once
  */
 

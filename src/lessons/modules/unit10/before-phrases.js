@@ -1,5 +1,5 @@
 /**
- * Module 127: Avant que... - Before Phrases
+ * Module: Dynamic ID (auto-assigned)7: Avant que... - Before Phrases
  * Unit 10 - Timing and sequence phrases
  */
 

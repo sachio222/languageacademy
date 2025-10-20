@@ -1,5 +1,5 @@
 /**
- * Module 5: Question Words & Common Phrases
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Question Words & Common Phrases
  * Essential question words and useful everyday phrases
  */
 

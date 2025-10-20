@@ -1,5 +1,5 @@
 /**
- * Module 9: Possessive Pronouns - mine, yours, his, hers, ours, theirs
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Possessive Pronouns - mine, yours, his, hers, ours, theirs
  * Stand-alone ownership: "It's mine", "That's hers", "Is it yours?"
  */
 

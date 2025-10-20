@@ -1,5 +1,5 @@
 /**
- * Module 119: Emotion Phrases - Je suis content que...
+ * Module: Dynamic ID (auto-assigned)9: Emotion Phrases - Je suis content que...
  * Unit 10 - Expressing feelings about what others do
  */
 

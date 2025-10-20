@@ -1,5 +1,5 @@
 /**
- * Module 10: Combining Everything - Real Sentences!
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Combining Everything - Real Sentences!
  * Put it all together: "He has it", "It's hers", "Is that his?"
  */
 

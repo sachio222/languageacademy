@@ -1,5 +1,5 @@
 /**
- * Module 106: Passé Composé - Irregular Past Participles (Set 2)
+ * Module: Dynamic ID (auto-assigned)6: Passé Composé - Irregular Past Participles (Set 2)
  * Unit 9 - Modal verbs and common -RE verbs in past tense
  * vouloir, pouvoir, devoir, dire, prendre, mettre, comprendre, apprendre
  */

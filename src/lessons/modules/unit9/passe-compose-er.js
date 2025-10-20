@@ -1,5 +1,5 @@
 /**
- * Module 104: Passé Composé Foundation - Regular -ER Verbs
+ * Module: Dynamic ID (auto-assigned)4: Passé Composé Foundation - Regular -ER Verbs
  * Unit 9 - Talk about completed actions in the past
  * Foundation for all past tense storytelling
  */

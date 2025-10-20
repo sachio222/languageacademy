@@ -1,5 +1,5 @@
 /**
- * Module 1: Core Pronouns
+ * Module: Dynamic ID (auto-assigned): Core Pronouns
  * The 8 essential subject pronouns in French
  */
 

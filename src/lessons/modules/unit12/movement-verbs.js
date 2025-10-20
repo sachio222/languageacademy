@@ -1,5 +1,5 @@
 /**
- * Module 152: Movement Verbs - Actions in Nature
+ * Module: Dynamic ID (auto-assigned)2: Movement Verbs - Actions in Nature
  * Unit 12 - Essential movement verbs for describing how animals and people move
  */
 

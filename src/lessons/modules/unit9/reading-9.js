@@ -1,5 +1,5 @@
 /**
- * Module 112: Reading 9 - Une Histoire du Passé (A Story from the Past)
+ * Module: Dynamic ID (auto-assigned)2: Reading 9 - Une Histoire du Passé (A Story from the Past)
  * Unit 9 - Complete past tense narrative with all elements
  * Integration: PC + IMP + causal + spatial + ONLY taught vocabulary from Units 1-9
  */

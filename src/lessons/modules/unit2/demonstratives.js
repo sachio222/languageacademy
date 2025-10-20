@@ -1,5 +1,5 @@
 /**
- * Module 6: Demonstratives - it, that, this, these, those
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Demonstratives - it, that, this, these, those
  * Essential for pointing and basic communication
  */
 

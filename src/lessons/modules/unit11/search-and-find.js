@@ -1,5 +1,5 @@
 /**
- * Module 143: Search & Find - chercher, trouver
+ * Module: Dynamic ID (auto-assigned)3: Search & Find - chercher, trouver
  * Unit 11 - Perfect verb pair: look for something, then find it!
  * Ranks 57-58 in top 100
  */

@@ -1,5 +1,5 @@
 /**
- * Module 109: Imparfait Formation - All Verbs (Beyond être/avoir)
+ * Module: Dynamic ID (auto-assigned)9: Imparfait Formation - All Verbs (Beyond être/avoir)
  * Unit 9 - Expand imparfait to all verbs using the nous stem rule
  * For descriptions, habits, and ongoing actions in the past
  */

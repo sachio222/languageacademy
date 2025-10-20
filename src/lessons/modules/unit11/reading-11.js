@@ -1,5 +1,5 @@
 /**
- * Module 147: Reading 11 - La France Moderne (Modern France)
+ * Module: Dynamic ID (auto-assigned)7: Reading 11 - La France Moderne (Modern France)
  * Unit 11 - Official exposition demonstrating advanced reading comprehension
  * Format: Educational article (like you'd find in official publications)
  * Uses: ONLY vocabulary taught in Units 1-11, sophisticated sentence structures

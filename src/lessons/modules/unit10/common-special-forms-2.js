@@ -1,5 +1,5 @@
 /**
- * Module 116: Common Special Forms Part 2
+ * Module: Dynamic ID (auto-assigned)6: Common Special Forms Part 2
  * Unit 10 - More essential verb forms for phrases
  * Just vocabulary - these appear in top French phrases!
  */
@@ -15,7 +15,7 @@ export const commonSpecialForms2Module = {
     {
       term: "More Verbs That Change After 'que'",
       definition:
-        "Like Module 115, these verbs change ONLY after phrases with 'que' (il faut que, je veux que, je suis content que, etc.)",
+        "Like the previous special forms module, these verbs change ONLY after phrases with 'que' (il faut que, je veux que, je suis content que, etc.)",
       example:
         "Normal: tu viens (you come) → After 'je veux que': tu viennes. Normal: tu peux (you can) → After 'il faut que': tu puisses",
     },

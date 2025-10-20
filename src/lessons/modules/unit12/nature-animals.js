@@ -1,5 +1,5 @@
 /**
- * Module 151: Nature & Animals - Curiosity Vocabulary
+ * Module: Dynamic ID (auto-assigned)1: Nature & Animals - Curiosity Vocabulary
  * Unit 12 - Animals and nature elements for asking questions about the world
  */
 

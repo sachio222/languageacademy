@@ -1,5 +1,5 @@
 /**
- * Module 107: Passé Composé with être - DR & MRS VANDERTRAMP
+ * Module: Dynamic ID (auto-assigned)7: Passé Composé with être - DR & MRS VANDERTRAMP
  * Unit 9 - Motion and state-change verbs that use être instead of avoir
  * Essential for describing movement and changes
  */

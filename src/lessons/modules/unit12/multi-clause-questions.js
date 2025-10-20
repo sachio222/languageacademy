@@ -1,5 +1,5 @@
 /**
- * Module 161: Questions with Multiple Clauses - Full Complexity
+ * Module: Dynamic ID (auto-assigned)1: Questions with Multiple Clauses - Full Complexity
  * Unit 12 - Combine questions with Unit 10 subjunctive/conditional - native-level complexity
  */
 

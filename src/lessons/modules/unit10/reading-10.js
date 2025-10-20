@@ -1,5 +1,5 @@
 /**
- * Module 130: Reading 10 - Mes Rêves et Mes Espoirs (My Dreams and My Hopes)
+ * Module: Dynamic ID (auto-assigned)0: Reading 10 - Mes Rêves et Mes Espoirs (My Dreams and My Hopes)
  * Unit 10 - Advanced expressions: wishes, emotions, hypotheticals, regrets
  * Integration: All previous tenses + Unit 10 subjunctive/conditional phrases
  */

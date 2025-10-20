@@ -1,5 +1,5 @@
 /**
- * Module 2: être (to be)
+ * Module: Dynamic ID (auto-assigned): être (to be)
  * All 8 conjugations of the most important French verb
  */
 

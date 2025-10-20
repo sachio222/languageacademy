@@ -1,5 +1,5 @@
 /**
- * Module 158: Inversion Questions - Formal Register
+ * Module: Dynamic ID (auto-assigned)8: Inversion Questions - Formal Register
  * Unit 12 - Master formal question structure with verb-subject inversion
  */
 

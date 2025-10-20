@@ -4,7 +4,6 @@
  * Module ID: Dynamic (assigned automatically based on pedagogical position)
  */
 
-import { getModuleRef } from "../../moduleIdResolver.js";
 
 export const quiestQuiQueModule = {
   moduleKey: "2024-03-16-quiest-qui-que", // Permanent identifier - never changes

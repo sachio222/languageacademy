@@ -1,5 +1,5 @@
 /**
- * Module 5: Plurals - Making Things Plural
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Plurals - Making Things Plural
  * Learn plural forms and "des" (some/plural a)
  */
 

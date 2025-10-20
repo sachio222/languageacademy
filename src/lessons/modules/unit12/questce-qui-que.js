@@ -1,7 +1,8 @@
 /**
- * Module 154: qu'est-ce qui vs qu'est-ce que - Subject vs Object Questions
+ * Module: Dynamic ID (auto-assigned): qu'est-ce qui vs qu'est-ce que - Subject vs Object Questions
  * Unit 12 - THE CRITICAL DISCRIMINATION: What DOES something vs What DO you verb
  */
+
 
 export const questceQuiQueModule = {
   moduleKey: "2024-03-15-questce-qui-que", // Permanent identifier - never changes

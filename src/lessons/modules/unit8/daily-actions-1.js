@@ -1,5 +1,5 @@
 /**
- * Module 142: Daily Actions Set 1 - dormir, travailler, vivre
+ * Module: Dynamic ID (auto-assigned)2: Daily Actions Set 1 - dormir, travailler, vivre
  * Unit 11 - Essential daily life verbs from top 100: sleep, work, live
  */
 

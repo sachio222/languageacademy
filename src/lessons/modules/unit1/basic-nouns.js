@@ -1,5 +1,5 @@
 /**
- * Module 6: Basic Nouns
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Basic Nouns
  * Essential nouns from top 100 words - things you'll talk about constantly
  */
 

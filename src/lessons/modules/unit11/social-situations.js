@@ -1,5 +1,5 @@
 /**
- * Module 145: Social Situations - attendre, arriver, rester
+ * Module: Dynamic ID (auto-assigned)5: Social Situations - attendre, arriver, rester
  * Unit 11 - Essential social interaction verbs from top 100
  * Ranks 67, 69, 70
  */

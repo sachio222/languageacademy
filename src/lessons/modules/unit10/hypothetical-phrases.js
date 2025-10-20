@@ -1,5 +1,5 @@
 /**
- * Module 127: Si j'étais... - Hypothetical Phrases (Daydreams)
+ * Module: Dynamic ID (auto-assigned)7: Si j'étais... - Hypothetical Phrases (Daydreams)
  * Unit 10 - Fantasy and "what if" scenarios
  */
 

@@ -1,5 +1,5 @@
 /**
- * Module 111: Past Tense Composition - Complex Narratives
+ * Module: Dynamic ID (auto-assigned)1: Past Tense Composition - Complex Narratives
  * Unit 9 - Practice combining all past tense elements for storytelling
  * Integration of causal/spatial words + PC + IMP
  */

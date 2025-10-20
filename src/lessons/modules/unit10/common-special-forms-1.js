@@ -1,5 +1,5 @@
 /**
- * Module 115: Common Special Forms Part 1
+ * Dynamic Module (ID assigned automatically based on pedagogical position): Common Special Forms Part 1
  * Unit 10 - Essential verb forms for Unit 10 phrases
  * Just vocabulary - these appear in top French phrases!
  */

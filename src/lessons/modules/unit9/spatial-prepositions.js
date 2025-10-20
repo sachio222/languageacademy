@@ -1,5 +1,5 @@
 /**
- * Module 102: Spatial Prepositions - Position & Location
+ * Module: Dynamic ID (auto-assigned)2: Spatial Prepositions - Position & Location
  * Unit 9 - Describe WHERE things are in physical space
  * Essential for scene-setting and physical descriptions
  */

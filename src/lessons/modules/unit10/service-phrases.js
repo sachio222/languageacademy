@@ -1,5 +1,5 @@
 /**
- * Module 126: Je me fais couper les cheveux - Service Phrases
+ * Module: Dynamic ID (auto-assigned)6: Je me fais couper les cheveux - Service Phrases
  * Unit 10 - Getting things done by professionals
  */
 
