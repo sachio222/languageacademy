@@ -90,6 +90,26 @@ const FeedbackAdmin = () => {
     }
   };
 
+  const deleteFeedback = async (id) => {
+    if (!confirm('Are you sure you want to permanently delete this feedback?')) {
+      return;
+    }
+
+    try {
+      const { error } = await supabaseClient
+        .from('feedback')
+        .delete()
+        .eq('id', id);
+
+      if (error) throw error;
+
+      // Refresh the list
+      fetchFeedback();
+    } catch (error) {
+      console.error('Error deleting feedback:', error);
+    }
+  };
+
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -156,6 +176,12 @@ const FeedbackAdmin = () => {
             onClick={() => setFilter('resolved')}
           >
             Resolved ({allFeedback.filter(f => f.status === 'resolved').length})
+          </button>
+          <button
+            className={filter === 'dismissed' ? 'active' : ''}
+            onClick={() => setFilter('dismissed')}
+          >
+            Dismissed ({allFeedback.filter(f => f.status === 'dismissed').length})
           </button>
         </div>
       </div>
@@ -228,6 +254,28 @@ const FeedbackAdmin = () => {
                   >
                     Mark Resolved
                   </button>
+                )}
+                {item.status === 'dismissed' && (
+                  <>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        updateStatus(item.id, 'new');
+                      }}
+                      className="action-btn reopen-btn"
+                    >
+                      Reopen
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        deleteFeedback(item.id);
+                      }}
+                      className="action-btn delete-btn"
+                    >
+                      Delete
+                    </button>
+                  </>
                 )}
               </div>
             </div>

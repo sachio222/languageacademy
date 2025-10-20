@@ -171,6 +171,24 @@
   background: #059669;
 }
 
+.delete-btn {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.reopen-btn {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.reopen-btn:hover {
+  background: #d97706;
+}
+
 .feedback-detail {
   position: fixed;
   top: 0;
