@@ -1254,8 +1254,7 @@ body:has(.left-nav.collapsed) .app-footer {
   border-left: 1px solid #ebebeb;
   overflow-y: auto;
   max-height: calc(100vh);
-  padding: 1.5rem;
-  padding-top: 2.15rem;
+  padding: 0rem;
 }
 
 /* Concept Pane */
@@ -1265,6 +1264,7 @@ body:has(.left-nav.collapsed) .app-footer {
 
 .concept-pane-header {
   margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .concept-pane h3 {
@@ -2257,7 +2257,8 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   .right-pane {
     border-left: none;
     border-top: 1px solid #e2e8f0;
-    padding: 1.5rem 0.75rem;
+    padding-bottom: 0.75rem;
+    padding: 0rem;
     max-height: none;
     overflow-y: visible;
     order: 2;
@@ -2451,7 +2452,8 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   }
 
   .right-pane {
-    padding: 1.25rem 0.5rem;
+    padding: 0rem;
+    padding-bottom: 0.75rem;
   }
 
   .concept-item {

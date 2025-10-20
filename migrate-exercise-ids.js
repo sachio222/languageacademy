@@ -16,8 +16,12 @@ const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY; // Service rol
 
 // Debug: Show what we found
 console.log("🔍 Environment check:");
-console.log(`   VITE_SUPABASE_URL: ${supabaseUrl ? '✅ Found' : '❌ Missing'}`);
-console.log(`   SUPABASE_SERVICE_ROLE_KEY: ${supabaseServiceKey ? '✅ Found' : '❌ Missing'}`);
+console.log(`   VITE_SUPABASE_URL: ${supabaseUrl ? "✅ Found" : "❌ Missing"}`);
+console.log(
+  `   SUPABASE_SERVICE_ROLE_KEY: ${
+    supabaseServiceKey ? "✅ Found" : "❌ Missing"
+  }`
+);
 
 if (!supabaseUrl || !supabaseServiceKey) {
   console.error("\n❌ Missing Supabase credentials.");
@@ -64,7 +68,7 @@ async function migrateExerciseIds() {
       // Convert old ID to new moduleKey format
       const [moduleIdStr, exerciseIndex] = exercise_id.split(".");
       const moduleId = parseInt(moduleIdStr);
-        const moduleKey = completeModuleIdToKeyMapping[moduleId];
+      const moduleKey = completeModuleIdToKeyMapping[moduleId];
 
       if (!moduleKey) {
         console.warn(
