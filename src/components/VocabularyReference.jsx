@@ -105,7 +105,8 @@ function VocabularyReference({ vocabulary, title }) {
       note.includes('irregular -ir verb') ||
       note.includes('irregular verb') ||
       note.includes('impersonal') ||
-      note.includes('causative');
+      note.includes('causative') ||
+      note.includes('section divider');
 
     return isNewVerb;
   };

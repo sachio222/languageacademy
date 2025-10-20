@@ -255,7 +255,8 @@ function ConceptIntro({ lesson, onStartStudying }) {
                           note.includes('irregular -ir verb') ||
                           note.includes('irregular verb') ||
                           note.includes('impersonal') ||
-                          note.includes('causative');
+                          note.includes('causative') ||
+                          note.includes('section divider');
                       };
                       const needsDivider = isNewSection(item, idx);
 

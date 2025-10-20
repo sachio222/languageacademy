@@ -38,14 +38,38 @@ export const contractions = {
   ],
 
   vocabularyReference: [
-    { french: "du", english: "of/from the (masc)", note: "de + le = du" },
-    { french: "de la", english: "of/from the (fem)", note: "no contraction" },
+    {
+      french: "du",
+      english: "of/from the (masc)",
+      note: "de + le = du (masculine)",
+    },
+    {
+      french: "de la",
+      english: "of/from the (fem)",
+      note: "no contraction (feminine)",
+    },
     { french: "de l'", english: "of/from the (vowel)", note: "before vowel" },
-    { french: "des", english: "of/from the (plural)", note: "de + les = des" },
-    { french: "au", english: "to/at the (masc)", note: "à + le = au" },
-    { french: "à la", english: "to/at the (fem)", note: "no contraction" },
+    {
+      french: "des",
+      english: "of/from the (plural)",
+      note: "de + les = des (plural)",
+    },
+    {
+      french: "au",
+      english: "to/at the (masc)",
+      note: "à + le = au (masculine) - section divider",
+    },
+    {
+      french: "à la",
+      english: "to/at the (fem)",
+      note: "no contraction (feminine)",
+    },
     { french: "à l'", english: "to/at the (vowel)", note: "before vowel" },
-    { french: "aux", english: "to/at the (plural)", note: "à + les = aux" },
+    {
+      french: "aux",
+      english: "to/at the (plural)",
+      note: "à + les = aux (plural)",
+    },
   ],
 
   exerciseConfig: {
