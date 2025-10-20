@@ -431,7 +431,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                       className="split-detail-start-btn"
                       onClick={() => onLessonSelect(lesson.id)}
                     >
-                      {isComplete ? 'Review Lesson' : 'Start Lesson'}
+                      {isComplete ? 'Review Lesson' : 'Start'}
                     </button>
                   </div>
 
