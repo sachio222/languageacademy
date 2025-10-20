@@ -210,9 +210,9 @@ export const unit2Exam = {
       },
       {
         instruction: "Translate to French",
-        prompt: "where is the big cat?",
+        prompt: "where is the big dog?",
         hint: "où + est + article + adjective + noun",
-        expectedAnswer: "où est le grand chat",
+        expectedAnswer: "où est le grand chien",
       },
 
       // Section 6: Essential Verbs - vouloir, pouvoir, voir
@@ -248,7 +248,7 @@ export const unit2Exam = {
       },
       {
         instruction: "Translate to French",
-        prompt: "you can see the house",
+        prompt: "you can see the house (informal)",
         hint: "tu peux + infinitive + article + noun",
         expectedAnswer: "tu peux voir la maison",
       },

@@ -172,28 +172,32 @@
 
 /* Exam Results */
 .exam-results {
-  max-width: 900px;
-  margin: 2.5rem auto;
-  padding: 2.5rem;
+  max-width: 650px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
 }
 
 .exam-results-header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .exam-results-header h2 {
-  color: #1e293b;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #666;
 }
 
 .score {
-  font-size: 4rem;
-  font-weight: 700;
-  margin: 1.25rem 0;
-  letter-spacing: -0.03em;
+  font-size: 4.5rem;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
 
 .score.passed {
@@ -207,34 +211,38 @@
 .exam-passed,
 .exam-failed {
   background: #ffffff;
-  border-radius: 8px;
-  padding: 2.5rem;
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
   text-align: center;
-  border: 1px solid #e2e8f0;
 }
 
 .exam-passed {
-  border-top: 3px solid #059669;
+  border-top: none;
 }
 
 .exam-failed {
-  border-top: 3px solid #dc2626;
+  border-top: none;
 }
 
 .exam-message h3 {
-  color: #1e293b;
-  margin-bottom: 1.25rem;
-  font-size: 1.375rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .exam-message p {
-  color: #64748b;
-  margin-bottom: 0.625rem;
+  color: #666;
+  margin-bottom: 0.75rem;
   font-size: 1.0625rem;
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+.exam-message p:last-child {
+  margin-bottom: 0;
 }
 
 .exam-actions {
@@ -246,9 +254,12 @@
 }
 
 .btn-large {
-  font-size: 1.0625rem;
+  font-size: 1rem;
+  font-weight: 600;
   padding: 1rem 2rem;
-  margin-top: 1.25rem;
+  margin: 2rem auto 0;
+  display: inline-block;
+  letter-spacing: -0.01em;
 }
 
 /* Exam Breakdown */
