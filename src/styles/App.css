@@ -2167,6 +2167,27 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   border-left-color: #7c3aed;
 }
 
+/* Next Lesson Indicator - Subtle Airbnb-style */
+.lesson-card.next-lesson {
+  position: relative;
+}
+
+.lesson-card.next-lesson::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 6px;
+  height: 6px;
+  background: #3b82f6;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.lesson-card.next-lesson:hover::before {
+  opacity: 1;
+}
+
 /* Responsive */
 /* Mobile Responsive - Sidebar Layout */
 @media (max-width: 768px) {

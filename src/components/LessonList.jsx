@@ -4,28 +4,13 @@ import { Award, BookOpen, TextCursorInput, Grid3x3, List, ChevronDown, ChevronUp
 import DashboardHeader from './DashboardHeader';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferenceModules }) {
   const { moduleProgress } = useSupabaseProgress();
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'split'
   const [selectedModuleId, setSelectedModuleId] = useState(null);
 
-  // Function to find the next incomplete lesson
-  const findNextIncompleteLesson = () => {
-    for (const unitInfo of unitStructure) {
-      const unitLessons = getLessonsForUnit(unitInfo);
-      for (const lesson of unitLessons) {
-        const completed = getCompletedCount(lesson);
-        const total = getExerciseCount(lesson);
-        const progress = calculateLessonProgress(completed, total);
-        if (progress < 100) {
-          return lesson.id;
-        }
-      }
-    }
-    return null; // All lessons complete
-  };
 
   // Handle view mode change and auto-select next lesson
   const handleViewModeChange = (newViewMode) => {
@@ -37,40 +22,6 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
       }
     }
   };
-  // Track which units have collapsed completed modules (by default, all are collapsed)
-  const [collapsedCompletedInUnits, setCollapsedCompletedInUnits] = useState(
-    new Set(unitStructure.map(unit => unit.id))
-  );
-
-  // Track which units are collapsed in grid view (default: all expanded)
-  const [collapsedUnits, setCollapsedUnits] = useState(new Set());
-
-  // Toggle showing completed modules for a unit
-  const toggleShowCompleted = (unitId) => {
-    setCollapsedCompletedInUnits(prev => {
-      const next = new Set(prev);
-      if (next.has(unitId)) {
-        next.delete(unitId);
-      } else {
-        next.add(unitId);
-      }
-      return next;
-    });
-  };
-
-  // Toggle unit accordion in grid view
-  const toggleUnitCollapse = (unitId) => {
-    setCollapsedUnits(prev => {
-      const next = new Set(prev);
-      if (next.has(unitId)) {
-        next.delete(unitId);
-      } else {
-        next.add(unitId);
-      }
-      return next;
-    });
-  };
-
   // Helper to get exercise count for different module types
   const getExerciseCount = (lesson) => {
     if (lesson.isFillInTheBlank && lesson.sentences) {
@@ -101,6 +52,86 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
     return lessons.filter(lesson => lesson.id >= start && lesson.id <= end);
   };
 
+  // Function to find the next incomplete lesson
+  const findNextIncompleteLesson = () => {
+    for (const unitInfo of unitStructure) {
+      const unitLessons = getLessonsForUnit(unitInfo);
+      for (const lesson of unitLessons) {
+        const completed = getCompletedCount(lesson);
+        const total = getExerciseCount(lesson);
+        const progress = calculateLessonProgress(completed, total);
+        if (progress < 100) {
+          return lesson.id;
+        }
+      }
+    }
+    return null; // All lessons complete
+  };
+
+  // Find which unit contains the next incomplete lesson
+  const findUnitWithNextLesson = () => {
+    for (const unitInfo of unitStructure) {
+      const unitLessons = getLessonsForUnit(unitInfo);
+      for (const lesson of unitLessons) {
+        const completed = getCompletedCount(lesson);
+        const total = getExerciseCount(lesson);
+        const progress = calculateLessonProgress(completed, total);
+        if (progress < 100) {
+          return unitInfo.id;
+        }
+      }
+    }
+    return null; // All lessons complete
+  };
+
+  // Get the next lesson ID for highlighting
+  const nextLessonId = findNextIncompleteLesson();
+
+  // Track which units have collapsed completed modules (by default, all are collapsed)
+  const [collapsedCompletedInUnits, setCollapsedCompletedInUnits] = useState(
+    new Set(unitStructure.map(unit => unit.id))
+  );
+
+  // Track which units are collapsed in grid view (default: all collapsed except current unit)
+  const [collapsedUnits, setCollapsedUnits] = useState(new Set());
+  const [hasInitializedCollapse, setHasInitializedCollapse] = useState(false);
+
+  // Initialize collapsed state once progress data is loaded
+  useEffect(() => {
+    if (!hasInitializedCollapse && moduleProgress && Object.keys(moduleProgress).length > 0) {
+      const currentUnitId = findUnitWithNextLesson();
+      const allUnitIds = unitStructure.map(unit => unit.id);
+      setCollapsedUnits(new Set(allUnitIds.filter(id => id !== currentUnitId)));
+      setHasInitializedCollapse(true);
+    }
+  }, [moduleProgress, completedExercises, hasInitializedCollapse]);
+
+  // Toggle showing completed modules for a unit
+  const toggleShowCompleted = (unitId) => {
+    setCollapsedCompletedInUnits(prev => {
+      const next = new Set(prev);
+      if (next.has(unitId)) {
+        next.delete(unitId);
+      } else {
+        next.add(unitId);
+      }
+      return next;
+    });
+  };
+
+  // Toggle unit accordion in grid view
+  const toggleUnitCollapse = (unitId) => {
+    setCollapsedUnits(prev => {
+      const next = new Set(prev);
+      if (next.has(unitId)) {
+        next.delete(unitId);
+      } else {
+        next.add(unitId);
+      }
+      return next;
+    });
+  };
+
   const getUnitProgress = (unitInfo) => {
     const unitLessons = getLessonsForUnit(unitInfo);
     const completedLessons = unitLessons.filter(lesson => {
@@ -124,7 +155,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
         <div className="lesson-list-header-content">
           <div>
             <h2>All Lessons</h2>
-            <p>Each unit ends with a reading comprehension milestone</p>
+            <p>Master French through guided lessons and real stories</p>
           </div>
           <div className="view-toggle">
             <button
@@ -193,11 +224,12 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                     const total = getExerciseCount(lesson);
                     const progress = calculateLessonProgress(completed, total);
                     const isComplete = progress === 100;
+                    const isNextLesson = lesson.id === nextLessonId;
 
                     return (
                       <div
                         key={lesson.id}
-                        className={`lesson-card ${isComplete ? 'complete' : ''} ${lesson.isReadingComprehension ? 'reading-milestone' : ''} ${lesson.isUnitExam ? 'final-exam' : ''} ${lesson.isFillInTheBlank ? 'fill-in-blank' : ''}`}
+                        className={`lesson-card ${isComplete ? 'complete' : ''} ${lesson.isReadingComprehension ? 'reading-milestone' : ''} ${lesson.isUnitExam ? 'final-exam' : ''} ${lesson.isFillInTheBlank ? 'fill-in-blank' : ''} ${isNextLesson ? 'next-lesson' : ''}`}
                         onClick={() => onLessonSelect(lesson.id)}
                       >
                         <div className="lesson-card-header">
