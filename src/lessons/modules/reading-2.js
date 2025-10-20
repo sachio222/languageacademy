@@ -150,25 +150,18 @@ export const reading2 = {
         ],
       },
       {
-        instruction: "What does Sophie ask about?",
-        prompt: "___ ___ ___ c'est, ça?",
-        hint: "Look for the question phrase meaning 'what is that'",
-        expectedAnswer: "cette chose dans la voiture",
-        acceptableAnswers: [
-          "un livre",
-          "le livre",
-          "la chose",
-          "ça",
-          "cette chose",
-        ],
-        wrongAnswers: [],
-      },
-      {
-        instruction: "What thing does Marie have in her car?",
+        instruction: "What does Marie have in her car?",
         prompt: "Marie has a ___ in her car",
         hint: "It's about Normandy - something you can read",
         expectedAnswer: "un livre",
-        acceptableAnswers: ["livre"],
+        acceptableAnswers: [
+          "livre",
+          "un livre sur la Normandie",
+          "livre sur la Normandie",
+          "le livre",
+          "c'est un livre",
+          "elle a un livre",
+        ],
         wrongAnswers: [
           {
             answer: "chien",
@@ -181,75 +174,124 @@ export const reading2 = {
         ],
       },
       {
-        instruction: "What does Thomas want to see?",
-        prompt: "Thomas wants to see ___",
-        hint: "Famous Norman abbey on an island",
-        expectedAnswer: "Mont-Saint-Michel",
+        instruction: "How does Marie describe her car?",
+        prompt: "J'ai une ___ voiture",
+        hint: "Adjective meaning 'new'",
+        expectedAnswer: "nouvelle",
         acceptableAnswers: [
-          "il veut voir Mont-Saint-Michel",
+          "une nouvelle voiture",
+          "nouvelle voiture",
+          "j'ai une nouvelle voiture",
+          "ma nouvelle voiture",
+        ],
+        wrongAnswers: [
+          {
+            answer: "vieille",
+            feedback: "She says it's new (nouvelle), not old (vieille)",
+          },
+          {
+            answer: "grande",
+            feedback: "She describes it as new (nouvelle), not big (grande)",
+          },
+        ],
+      },
+      {
+        instruction: "How do they describe Mont-Saint-Michel?",
+        prompt: "C'est une chose ___ et ___",
+        hint: "Two adjectives Marie uses to describe it",
+        expectedAnswer: "vieille et belle",
+        acceptableAnswers: [
+          "cette vieille et belle chose",
+          "vieille et belle chose",
+          "très grande",
+          "grande",
+          "belle",
+          "vieille",
+          "c'est vieille et belle",
+          "elle est très grande",
+          "très grande aussi",
+        ],
+        wrongAnswers: [
+          {
+            answer: "nouvelle et belle",
+            feedback: "They say it's old (vieille), not new (nouvelle)",
+          },
+          {
+            answer: "petite et belle",
+            feedback: "They say it's big (grande), not small (petite)",
+          },
+        ],
+      },
+      {
+        instruction: "What does Thomas want to do with Mont-Saint-Michel?",
+        prompt: "Complete: Je ___ voir Mont-Saint-Michel",
+        hint: "Verb meaning 'to want'",
+        expectedAnswer: "veux",
+        acceptableAnswers: [
+          "voir Mont-Saint-Michel",
+          "je veux voir",
+          "il veut voir",
+          "voir",
+          "veux voir",
+          "veut voir Mont-Saint-Michel",
           "je veux voir Mont-Saint-Michel",
         ],
         wrongAnswers: [
           {
-            answer: "Bayeux",
-            feedback: "He wants Mont-Saint-Michel, others mention Bayeux",
+            answer: "peux",
+            feedback: "He wants (veux) to see it, not can (peux)",
+          },
+          {
+            answer: "suis",
+            feedback: "He wants (veux) to see it, not is (suis)",
+          },
+        ],
+      },
+      {
+        instruction: "Where is Pierre's house?",
+        prompt: "Complete: Elle est ___ Rouen",
+        hint: "Preposition meaning 'in'",
+        expectedAnswer: "dans",
+        acceptableAnswers: [
+          "à Rouen",
+          "Rouen",
+          "elle est dans Rouen",
+          "il a une maison à Rouen",
+          "une maison à Rouen",
+          "dans",
+          "Pierre est à Rouen",
+        ],
+        wrongAnswers: [
+          {
+            answer: "sur",
+            feedback: "The house is in (dans) Rouen, not on (sur) Rouen",
+          },
+          {
+            answer: "avec",
+            feedback: "The house is in (dans) Rouen, not with (avec) Rouen",
+          },
+        ],
+      },
+      {
+        instruction: "Where does Marie say she is?",
+        prompt: "Complete: Je suis à ___",
+        hint: "Look for the Norman town where Marie is located",
+        expectedAnswer: "Honfleur",
+        acceptableAnswers: [
+          "à Honfleur",
+          "Honfleur",
+          "je suis à Honfleur",
+          "elle est à Honfleur",
+          "Marie est à Honfleur",
+        ],
+        wrongAnswers: [
+          {
+            answer: "Caen",
+            feedback: "That's where Sophie is, Marie is in Honfleur",
           },
           {
             answer: "Rouen",
-            feedback: "He wants Mont-Saint-Michel, Rouen comes later",
-          },
-        ],
-      },
-      {
-        instruction: "Who has a friend in Rouen?",
-        prompt: "___ has a friend in Rouen",
-        hint: "Look for 'mon ami ___ est là'",
-        expectedAnswer: "Thomas",
-        acceptableAnswers: [],
-        wrongAnswers: [
-          {
-            answer: "Sophie",
-            feedback: "It's Thomas who has a friend Pierre in Rouen",
-          },
-          {
-            answer: "Marie",
-            feedback: "It's Thomas who has a friend Pierre in Rouen",
-          },
-        ],
-      },
-      {
-        instruction: "What animals do they have?",
-        prompt: "Marie has a ___ and Sophie has a ___",
-        hint: "Two different pets mentioned in the conversation",
-        expectedAnswer: "un chien et un chat",
-        acceptableAnswers: [
-          "chien et chat",
-          "un chat et un chien",
-          "chat et chien",
-          "chien, chat",
-          "le chien et le chat",
-        ],
-        wrongAnswers: [
-          {
-            answer: "chat, chien",
-            feedback: "Switch them: Marie has the dog, Sophie has the cat",
-          },
-        ],
-      },
-      {
-        instruction: "How many days do they have for their trip?",
-        prompt: "They have ___ days",
-        hint: "Look for the number Thomas mentions",
-        expectedAnswer: "deux jours",
-        acceptableAnswers: ["2", "deux", "2 jours"],
-        wrongAnswers: [
-          {
-            answer: "un",
-            feedback: "They have two days, not one",
-          },
-          {
-            answer: "trois",
-            feedback: "They have two days, not three",
+            feedback: "That's where Pierre is, Marie is in Honfleur",
           },
         ],
       },
@@ -279,28 +321,6 @@ export const reading2 = {
           "nous pouvons voir ces belles choses",
         ],
         wrongAnswers: [],
-      },
-      {
-        instruction: "How does Marie describe her new car?",
-        prompt: "J'ai une ___ voiture",
-        hint: "Adjective meaning 'new'",
-        expectedAnswer: "nouvelle",
-        acceptableAnswers: [
-          "une nouvelle voiture",
-          "nouvelle voiture",
-          "elle a une nouvelle voiture",
-        ],
-        wrongAnswers: [
-          {
-            answer: "nouveau",
-            feedback:
-              "Use feminine form 'nouvelle' with feminine noun 'voiture'",
-          },
-          {
-            answer: "vieille",
-            feedback: "She says it's new (nouvelle), not old (vieille)",
-          },
-        ],
       },
       {
         instruction:

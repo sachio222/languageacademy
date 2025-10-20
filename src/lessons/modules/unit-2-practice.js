@@ -54,13 +54,13 @@ export const unit2Practice = {
 
     // Demonstratives - ce/cette
     {
-      text: "J'ai  livre.",
-      instruction: "Complete: 'I have this book' (masculine)",
+      text: "J'ai  voiture.",
+      instruction: "Complete: 'I have this car' (feminine)",
       blanks: [
         {
           position: 5,
-          answer: "ce",
-          hint: "demonstrative for masculine singular",
+          answer: "cette",
+          hint: "demonstrative for feminine singular",
         },
       ],
     },
@@ -187,87 +187,87 @@ export const unit2Practice = {
       ],
     },
 
-    // Multiple blanks: preposition + connector
+    // Multiple blanks: preposition + noun
     {
-      text: "Elle est  moi  toi.",
-      instruction: "Complete: 'She is with me and you'",
+      text: "Le chien est  la  .",
+      instruction: "Complete: 'The dog is under the car'",
       blanks: [
         {
-          position: 9,
-          answer: "avec",
-          hint: "preposition meaning 'with'",
+          position: 13,
+          answer: "sous",
+          hint: "preposition meaning 'under'",
         },
         {
-          position: 13,
-          answer: "et",
-          hint: "connector meaning 'and'",
+          position: 18,
+          answer: "voiture",
+          hint: "noun meaning 'car'",
         },
       ],
     },
 
-    // Multiple blanks: question + adjective
+    // Multiple blanks: question phrase
     {
-      text: "  est le  livre ?",
-      instruction: "Complete: 'Where is the good book?'",
+      text: "  veux- ?",
+      instruction: "Complete: 'What do you want?'",
       blanks: [
         {
           position: 0,
-          answer: "où",
-          hint: "question word meaning 'where'",
+          answer: "que",
+          hint: "question word meaning 'what'",
         },
         {
-          position: 9,
-          answer: "bon",
-          hint: "adjective meaning 'good' (masculine)",
+          position: 7,
+          answer: "tu",
+          hint: "pronoun meaning 'you'",
         },
       ],
     },
 
-    // Multiple blanks: pouvoir + preposition + stressed pronoun
+    // Multiple blanks: pouvoir + voir + noun
     {
-      text: "Je  être  lui.",
-      instruction: "Complete: 'I can be with him'",
+      text: "Il  la maison.",
+      instruction: "Complete: 'He can see the house'",
       blanks: [
         {
           position: 3,
-          answer: "peux",
-          hint: "pouvoir conjugated for je",
+          answer: "peut",
+          hint: "pouvoir conjugated for il",
         },
         {
-          position: 9,
-          answer: "avec",
-          hint: "preposition meaning 'with'",
+          position: 3,
+          answer: "voir",
+          hint: "infinitive meaning 'to see'",
         },
       ],
     },
 
     // Complex: demonstrative + adjective + noun
     {
-      text: "Nous voulons  livre mais  chiens.",
-      instruction: "Complete: 'We want this book but these dogs'",
+      text: "Nous avons  livre et   chiens.",
+      instruction: "Complete: 'We have this book and these dogs'",
       blanks: [
         {
-          position: 13,
+          position: 11,
           answer: "ce",
           hint: "demonstrative for masculine singular",
         },
         {
-          position: 25,
+          position: 22,
           answer: "ces",
           hint: "demonstrative for plural",
         },
       ],
     },
 
-    // Voir conjugations
+    // Vouloir conjugations
     {
-      text: "Je  le chat.",
-      instruction: "Complete: 'I see the cat'",
+      text: "Nous  le livre.",
+      instruction: "Complete: 'We want the book'",
       blanks: [
         {
-          position: 3,
-          answer: "vois",
-          hint: "voir conjugated for je",
+          position: 5,
+          answer: "voulons",
+          hint: "vouloir conjugated for nous",
         },
       ],
     },
@@ -299,18 +299,18 @@ export const unit2Practice = {
 
     // Complex: pouvoir + voir + demonstrative
     {
-      text: "Tu peux   chose.",
-      instruction: "Complete: 'You can see this thing'",
+      text: "Tu peux   choses.",
+      instruction: "Complete: 'You can have these things'",
       blanks: [
         {
           position: 8,
-          answer: "voir",
-          hint: "infinitive meaning 'to see'",
+          answer: "avoir",
+          hint: "infinitive meaning 'to have'",
         },
         {
-          position: 13,
-          answer: "cette",
-          hint: "demonstrative for feminine singular",
+          position: 9,
+          answer: "ces",
+          hint: "demonstrative for plural",
         },
       ],
     },

@@ -189,7 +189,7 @@ export const spatialPrepositionsModule = {
     {
       type: "fillblank",
       prompt:
-        "Complete: ___ les étudiants, il y a des français (Among the students, there are French people)",
+        "Complete: ___ les étudiants, il-y-a des français (Among the students, there are French people)",
       answer: "Parmi",
       wrongAnswers: [
         {
@@ -342,7 +342,7 @@ export const spatialPrepositionsModule = {
     {
       type: "fillblank",
       prompt:
-        "Complete: ___ nous, il y a un bon professeur (Among us, there's a good teacher)",
+        "Complete: ___ nous, il-y-a un bon professeur (Among us, there's a good teacher)",
       answer: "Parmi",
       wrongAnswers: [
         {
@@ -429,11 +429,11 @@ export const spatialPrepositionsModule = {
     "Le chat est ___ le sofa (The cat is behind the sofa)",
     "Le café est ___ l'école et le parc (The café is between the school and park)",
     "Le tableau est ___ la table (The painting is above the table)",
-    "___ les étudiants, il y a Marie (Among the students, there's Marie)",
+    "___ les étudiants, il-y-a Marie (Among the students, there's Marie)",
     "Le livre est ___ le sac (The book is in the bag)",
     "Mes clés sont ___ la table (My keys are on the table)",
     "Le chien est ___ la table (The dog is under the table)",
-    "Il y a un jardin ___ la maison (There's a garden behind the house)",
+    "Il-y-a un jardin ___ la maison (There's a garden behind the house)",
     "La lampe est ___ le lit (The lamp is above the bed)",
   ],
 };
