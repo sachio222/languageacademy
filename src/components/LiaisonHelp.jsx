@@ -387,40 +387,76 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
-        {/* Section 3: You Already Know This */}
+        {/* Section 2.5: ils sont vs ils ont comparison */}
         <section className="liaison-section">
-          <h2>You Already Know This!</h2>
+          <h2>A liasion can change meaning</h2>
           <p className="section-intro">
-            <strong>Don't worry about memorizing rules!</strong> You've already been hearing and learning
-            these connections naturally. Your ear is getting used to French flow.
+            It's very important to understand that a liasion can change the meaning of a phrase.
+            For example, "ils sont" means "they are" in English, but "ils ont" means "they have".
           </p>
 
-          <div className="examples-grid">
-            <div className="example-group">
-              <h3>un + vowel</h3>
+          <div className="comparison-layout">
+            <div className="comparison-column wrong">
+              <h3>
+                <X size={18} />
+                No liaison
+              </h3>
               <div className="phrase-list">
-                <div className="phrase-item" onClick={() => speakText("un ami")}>
+                <div className="phrase-item wrong" onClick={() => speakText("ils sont")}>
                   <div className="phrase-content">
-                    <div className="phrase-french">un ami</div>
+                    <div className="phrase-french">ils sont</div>
+                    <div className="phrase-pronunciation">"sont" starts with "s" (consonant)</div>
                   </div>
-                  <SpeakButton text="un ami" language="fr-FR" size="small" />
-                </div>
-
-                <div className="phrase-item" onClick={() => speakText("un enfant")}>
-                  <div className="phrase-content">
-                    <div className="phrase-french">un enfant</div>
-                  </div>
-                  <SpeakButton text="un enfant" language="fr-FR" size="small" />
-                </div>
-
-                <div className="phrase-item" onClick={() => speakText("un homme")}>
-                  <div className="phrase-content">
-                    <div className="phrase-french">un homme</div>
-                  </div>
-                  <SpeakButton text="un homme" language="fr-FR" size="small" />
+                  <SpeakButton text="ils sont" language="fr-FR" size="small" />
                 </div>
               </div>
             </div>
+
+            <div className="comparison-column correct">
+              <h3>
+                <Check size={18} />
+                With liaison
+              </h3>
+              <div className="phrase-list">
+                <div className="phrase-item correct" onClick={() => speakText("ils ont")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">ils ont</div>
+                    <div className="phrase-pronunciation">"ont" starts with "o" (vowel)</div>
+                  </div>
+                  <SpeakButton text="ils ont" language="fr-FR" size="small" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="insight-box">
+            <p>
+              <strong>Did you hear a Z or an S?</strong> The "s" sound in "ils sont" comes from the start of the second word "sont". The "z" in "ils ont" is <em>carried over</em> from the end of the first word "ils".
+            </p>
+          </div>
+
+          <div className="section-footer">
+            <button
+              className={`understood-btn ${understoodSections.has(1) ? 'understood' : ''}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleUnderstood(1);
+              }}
+            >
+              {understoodSections.has(1) && <Check size={16} />}
+              Understood
+            </button>
+          </div>
+        </section>
+
+        {/* Section 3: More examples */}
+        <section className="liaison-section">
+          <h2>More examples</h2>
+          <p className="section-intro">
+          </p>
+
+          <div className="examples-grid">
+
 
             <div className="example-group">
               <h3>ils/elles + vowel</h3>
@@ -439,12 +475,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
                   <SpeakButton text="elles ont" language="fr-FR" size="small" />
                 </div>
 
-                <div className="phrase-item" onClick={() => speakText("ils sont")}>
-                  <div className="phrase-content">
-                    <div className="phrase-french">ils sont</div>
-                  </div>
-                  <SpeakButton text="ils sont" language="fr-FR" size="small" />
-                </div>
+
               </div>
             </div>
 
@@ -458,12 +489,6 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
                   <SpeakButton text="nous avons" language="fr-FR" size="small" />
                 </div>
 
-                <div className="phrase-item" onClick={() => speakText("vous avez")}>
-                  <div className="phrase-content">
-                    <div className="phrase-french">vous avez</div>
-                  </div>
-                  <SpeakButton text="vous avez" language="fr-FR" size="small" />
-                </div>
 
                 <div className="phrase-item" onClick={() => speakText("les enfants")}>
                   <div className="phrase-content">
@@ -477,8 +502,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="key-takeaway">
             <p>
-              <strong>The key takeaway:</strong> French flows like music. Don't stress about the rules -
-              just listen and let your ear guide you. You're already doing great!
+              <strong>The key takeaway:</strong> Don't overthink it. It's fun to let that silent letter come and play! And with just a little bit of practice, you'll get it.
             </p>
           </div>
 
