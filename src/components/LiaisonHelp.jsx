@@ -290,7 +290,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
               <div className="insight-box">
                 <p>
                   <strong>Notice the "z" sound?</strong> The silent "s" at the end of "les", "vous", and "ils"
-                  becomes a "z" sound when the next word starts with a vowel or an "h". This is called <em>liaison</em>!
+                  becomes a "z" sound when the next word starts with a vowel sound. This is called <em>liaison</em>!
                 </p>
               </div>
             </div>
@@ -314,7 +314,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
         <section className="liaison-section">
           <h2>With and without</h2>
           <p className="section-intro">
-            French has a lot of silent letters at the end of words. The liason simply gives a bit of extra audible structure in a language that is already very quick. Compare with and without liaison.
+            French has a lot of silent letters at the end of words. The liason simply gives a bit of extra audible structure in a language that is already very fluid. Compare with and without liaison.
           </p>
 
           <div className="comparison-layout">
@@ -502,7 +502,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="key-takeaway">
             <p>
-              <strong>The key takeaway:</strong> Don't overthink it. It's fun to let that silent letter come and play! And with just a little bit of practice, you'll get it.
+              <strong> Don't overthink it.</strong> It's fun to let that silent letter come out and play! And with just a little bit of practice, you'll get it.
             </p>
           </div>
 
