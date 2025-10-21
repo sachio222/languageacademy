@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Check } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import './VerbPatternHelp.css'; // Reuse the same styles
+import './LiaisonHelp.css';
 
 /**
  * Select the best available voice for French
@@ -223,8 +223,8 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
   if (loading) {
     return (
-      <div className="verb-pattern-help">
-        <div className="verb-pattern-help-container">
+      <div className="liaison-help">
+        <div className="liaison-container">
           <div style={{ padding: '3rem', textAlign: 'center' }}>
             <p>Loading...</p>
           </div>
@@ -234,311 +234,273 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   }
 
   return (
-    <div className="verb-pattern-help">
-      <div className="verb-pattern-help-container">
-        <div className="help-nav">
-          <div className="help-nav-placeholder"></div>
-          <div className="help-page-indicator">
-            <span className="page-current">1</span> of <span className="page-total">1</span>
-          </div>
-        </div>
-
-        <div className="help-header">
-          <div className="module-prefix">
-            Module {moduleId}
-          </div>
+    <div className="liaison-help">
+      <div className="liaison-container">
+        <header className="liaison-header">
+          <div className="module-prefix">Module {moduleId}</div>
           <h1>French Flow - Liaison</h1>
-          <p className="help-subtitle">
-            You've been hearing something special in French - words that flow together smoothly. Let's discover how this works using words you already know!
+          <p className="liaison-subtitle">
+            When words in French flow together smoothly, there are rules that help them connect. Let's discover how this works using words you already know!
           </p>
           <div className="listen-prompt">
             <span className="speaker-icon">🔊</span>
-            <h3>Listen! Use your ears to hear the connections!</h3>
+            <h3>Listen! Use your ears to hear the connections</h3>
           </div>
-        </div>
+        </header>
 
-        <div className="help-content">
-          <div className="help-section">
-            <h2>French Words Connect</h2>
-            <div className="verb-groups-explanation">
-              <p>
-                Unlike English, <strong>French words flow together smoothly</strong> without pauses.
-                When a word ending in a consonant meets a word starting with a vowel, they connect!
-              </p>
-              <p>
-                You've already been hearing this in words you know. Let's listen to some examples:
-              </p>
-            </div>
+        {/* Section 1: The Rules of Liaison */}
+        <section className="liaison-section">
+          <h2>The Rules of Liaison</h2>
+          <p className="section-intro">
+            Where two words meet and the second word <strong>starts with a vowel sound (a, e, i, o, u, or h)</strong>, the <strong>silent, last letter of the first word</ strong> "wakes up" to create a smooth sounding connection!
+          </p>
 
-            <div className="verb-comparison-grid">
-              <div className="verb-column">
-                <h3>Words You Know</h3>
-                <div className="verb-forms">
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("les amis")}
-                  >
-                    <span className="pronoun">les</span>
-                    <span className="conjugation">amis</span>
-                    <SpeakButton text="les amis" language="fr-FR" size="small" />
+          <div className="comparison-layout">
+            <div className="comparison-column">
+              <h3>Words You Know</h3>
+              <div className="phrase-list">
+                <div className="phrase-item" onClick={() => speakText("les amis")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">les amis</div>
+                    <div className="phrase-pronunciation">lay za-mee</div>
                   </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("vous êtes")}
-                  >
-                    <span className="pronoun">vous</span>
-                    <span className="conjugation">êtes</span>
-                    <SpeakButton text="vous êtes" language="fr-FR" size="small" />
-                  </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("ils ont")}
-                  >
-                    <span className="pronoun">ils</span>
-                    <span className="conjugation">ont</span>
-                    <SpeakButton text="ils ont" language="fr-FR" size="small" />
-                  </div>
+                  <SpeakButton text="les amis" language="fr-FR" size="small" />
                 </div>
-              </div>
 
-              <div className="verb-column">
-                <h3>How They Sound</h3>
-                <div className="verb-forms">
-                  <div className="verb-form">
-                    <span className="pronoun">lay</span>
-                    <span className="conjugation">za-mee</span>
+                <div className="phrase-item" onClick={() => speakText("vous êtes")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">vous êtes</div>
+                    <div className="phrase-pronunciation">voo zet</div>
                   </div>
-                  <div className="verb-form">
-                    <span className="pronoun">voo</span>
-                    <span className="conjugation">zet</span>
+                  <SpeakButton text="vous êtes" language="fr-FR" size="small" />
+                </div>
+
+                <div className="phrase-item" onClick={() => speakText("ils ont")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">ils ont</div>
+                    <div className="phrase-pronunciation">eel zon</div>
                   </div>
-                  <div className="verb-form">
-                    <span className="pronoun">eel</span>
-                    <span className="conjugation">zon</span>
-                  </div>
+                  <SpeakButton text="ils ont" language="fr-FR" size="small" />
                 </div>
               </div>
             </div>
 
-            <div className="sound-explanation">
-              <p className="sound-note">
-                <strong>Notice the "z" sound?</strong> The silent "s" at the end of "les", "vous", and "ils"
-                becomes a "z" sound when the next word starts with a vowel. This is called <em>liaison</em>!
-              </p>
-            </div>
-
-            <div className="section-understood">
-              <button
-                className={`understood-btn ${understoodSections.has(0) ? 'understood' : ''}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleUnderstood(0);
-                }}
-              >
-                {understoodSections.has(0) && <Check size={16} />}
-                Understood
-              </button>
+            <div className="comparison-column">
+              <h3>What's Happening</h3>
+              <div className="insight-box">
+                <p>
+                  <strong>Notice the "z" sound?</strong> The silent "s" at the end of "les", "vous", and "ils"
+                  becomes a "z" sound when the next word starts with a vowel or an "h". This is called <em>liaison</em>!
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="help-section">
-            <h2>Silent Letters Wake Up</h2>
-            <div className="verb-groups-explanation">
-              <p>
-                Some letters that are normally silent become pronounced when the next word starts with a vowel.
-                It's like they "wake up" to help the words flow together!
-              </p>
-            </div>
+          <div className="section-footer">
+            <button
+              className={`understood-btn ${understoodSections.has(0) ? 'understood' : ''}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleUnderstood(0);
+              }}
+            >
+              {understoodSections.has(0) && <Check size={16} />}
+              Understood
+            </button>
+          </div>
+        </section>
 
-            <div className="verb-comparison-grid">
-              <div className="verb-column">
-                <h3>With Consonant</h3>
-                <div className="verb-forms">
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("les chats")}
-                  >
-                    <span className="pronoun">les</span>
-                    <span className="conjugation">chats</span>
-                    <SpeakButton text="les chats" language="fr-FR" size="small" />
+        {/* Section 2: Silent Letters Wake Up */}
+        <section className="liaison-section">
+          <h2>With and without</h2>
+          <p className="section-intro">
+            French has a lot of silent letters at the end of words. The liason simply gives a bit of extra audible structure in a language that is already very quick. Compare with and without liaison.
+          </p>
+
+          <div className="comparison-layout">
+            <div className="comparison-column wrong">
+              <h3>
+                <X size={18} />
+                No liaison
+              </h3>
+              <div className="phrase-list">
+                <div className="phrase-item wrong" onClick={() => speakText("vou avez")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">vous avez</div>
                   </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("vous avez")}
-                  >
-                    <span className="pronoun">vous</span>
-                    <span className="conjugation">avez</span>
-                    <SpeakButton text="vous avez" language="fr-FR" size="small" />
-                  </div>
+                  <SpeakButton text="vous avez" language="fr-FR" size="small" />
                 </div>
-              </div>
 
-              <div className="verb-column">
-                <h3>With Vowel</h3>
-                <div className="verb-forms">
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("les amis")}
-                  >
-                    <span className="pronoun">les</span>
-                    <span className="conjugation">amis</span>
-                    <SpeakButton text="les amis" language="fr-FR" size="small" />
+                <div className="phrase-item wrong" onClick={() => speakText("leh hommes")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">les hommes</div>
                   </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("vous êtes")}
-                  >
-                    <span className="pronoun">vous</span>
-                    <span className="conjugation">êtes</span>
-                    <SpeakButton text="vous êtes" language="fr-FR" size="small" />
-                  </div>
+                  <SpeakButton text="les hommes" language="fr-FR" size="small" />
                 </div>
               </div>
             </div>
 
-            <div className="sound-explanation">
-              <p className="sound-note">
-                <strong>Hear the difference?</strong> With consonants (chats, avez), the "s" stays silent.
-                With vowels (amis, êtes), the "s" becomes a "z" sound to connect the words smoothly.
-              </p>
+            <div className="comparison-column correct">
+              <h3>
+                <Check size={18} />
+                With liaison
+              </h3>
+              <div className="phrase-list">
+                <div className="phrase-item correct" onClick={() => speakText("vous avez")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">vous avez</div>
+                  </div>
+                  <SpeakButton text="vous avez" language="fr-FR" size="small" />
+                </div>
+
+                <div className="phrase-item correct" onClick={() => speakText("les hommes")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">les hommes</div>
+                  </div>
+                  <SpeakButton text="les hommes" language="fr-FR" size="small" />
+                </div>
+              </div>
             </div>
 
-            <div className="section-understood">
-              <button
-                className={`understood-btn ${understoodSections.has(1) ? 'understood' : ''}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleUnderstood(1);
-                }}
-              >
-                {understoodSections.has(1) && <Check size={16} />}
-                Understood
-              </button>
+
+
+
+          </div>
+
+          <div className="insight-box">
+            <p>
+              <strong>Hear the difference?</strong> without the liaison, the words simply blend together, and sound like a single word. With the liaison, the words can be heard as two separate words.
+            </p>
+          </div>
+
+          <div className="section-footer">
+            <button
+              className={`understood-btn ${understoodSections.has(1) ? 'understood' : ''}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleUnderstood(1);
+              }}
+            >
+              {understoodSections.has(1) && <Check size={16} />}
+              Understood
+            </button>
+          </div>
+        </section>
+
+        {/* Section 3: You Already Know This */}
+        <section className="liaison-section">
+          <h2>You Already Know This!</h2>
+          <p className="section-intro">
+            <strong>Don't worry about memorizing rules!</strong> You've already been hearing and learning
+            these connections naturally. Your ear is getting used to French flow.
+          </p>
+
+          <div className="examples-grid">
+            <div className="example-group">
+              <h3>un + vowel</h3>
+              <div className="phrase-list">
+                <div className="phrase-item" onClick={() => speakText("un ami")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">un ami</div>
+                  </div>
+                  <SpeakButton text="un ami" language="fr-FR" size="small" />
+                </div>
+
+                <div className="phrase-item" onClick={() => speakText("un enfant")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">un enfant</div>
+                  </div>
+                  <SpeakButton text="un enfant" language="fr-FR" size="small" />
+                </div>
+
+                <div className="phrase-item" onClick={() => speakText("un homme")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">un homme</div>
+                  </div>
+                  <SpeakButton text="un homme" language="fr-FR" size="small" />
+                </div>
+              </div>
+            </div>
+
+            <div className="example-group">
+              <h3>ils/elles + vowel</h3>
+              <div className="phrase-list">
+                <div className="phrase-item" onClick={() => speakText("ils ont")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">ils ont</div>
+                  </div>
+                  <SpeakButton text="ils ont" language="fr-FR" size="small" />
+                </div>
+
+                <div className="phrase-item" onClick={() => speakText("elles ont")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">elles ont</div>
+                  </div>
+                  <SpeakButton text="elles ont" language="fr-FR" size="small" />
+                </div>
+
+                <div className="phrase-item" onClick={() => speakText("ils sont")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">ils sont</div>
+                  </div>
+                  <SpeakButton text="ils sont" language="fr-FR" size="small" />
+                </div>
+              </div>
+            </div>
+
+            <div className="example-group">
+              <h3>More examples</h3>
+              <div className="phrase-list">
+                <div className="phrase-item" onClick={() => speakText("nous avons")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">nous avons</div>
+                  </div>
+                  <SpeakButton text="nous avons" language="fr-FR" size="small" />
+                </div>
+
+                <div className="phrase-item" onClick={() => speakText("vous avez")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">vous avez</div>
+                  </div>
+                  <SpeakButton text="vous avez" language="fr-FR" size="small" />
+                </div>
+
+                <div className="phrase-item" onClick={() => speakText("les enfants")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">les enfants</div>
+                  </div>
+                  <SpeakButton text="les enfants" language="fr-FR" size="small" />
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="help-section">
-            <h2>You Already Know This!</h2>
-            <div className="verb-groups-explanation">
-              <p>
-                <strong>Don't worry about memorizing rules!</strong> You've already been hearing and learning
-                these connections naturally. Your ear is getting used to French flow.
-              </p>
-              <p>
-                Here are more examples with words you know:
-              </p>
-            </div>
-
-            <div className="verb-comparison-grid verb-grid-3col">
-              <div className="verb-column">
-                <h3>un + vowel</h3>
-                <div className="verb-forms">
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("un ami")}
-                  >
-                    <span className="conjugation">un ami</span>
-                    <SpeakButton text="un ami" language="fr-FR" size="small" />
-                  </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("un enfant")}
-                  >
-                    <span className="conjugation">un enfant</span>
-                    <SpeakButton text="un enfant" language="fr-FR" size="small" />
-                  </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("un homme")}
-                  >
-                    <span className="conjugation">un homme</span>
-                    <SpeakButton text="un homme" language="fr-FR" size="small" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="verb-column">
-                <h3>ils/elles + vowel</h3>
-                <div className="verb-forms">
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("ils ont")}
-                  >
-                    <span className="conjugation">ils ont</span>
-                    <SpeakButton text="ils ont" language="fr-FR" size="small" />
-                  </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("elles ont")}
-                  >
-                    <span className="conjugation">elles ont</span>
-                    <SpeakButton text="elles ont" language="fr-FR" size="small" />
-                  </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("ils sont")}
-                  >
-                    <span className="conjugation">ils sont</span>
-                    <SpeakButton text="ils sont" language="fr-FR" size="small" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="verb-column">
-                <h3>More examples</h3>
-                <div className="verb-forms">
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("nous avons")}
-                  >
-                    <span className="conjugation">nous avons</span>
-                    <SpeakButton text="nous avons" language="fr-FR" size="small" />
-                  </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("vous avez")}
-                  >
-                    <span className="conjugation">vous avez</span>
-                    <SpeakButton text="vous avez" language="fr-FR" size="small" />
-                  </div>
-                  <div
-                    className="verb-form clickable"
-                    onClick={() => speakText("les enfants")}
-                  >
-                    <span className="conjugation">les enfants</span>
-                    <SpeakButton text="les enfants" language="fr-FR" size="small" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="transition-note">
-              <p>
-                <strong>The key takeaway:</strong> French flows like music. Don't stress about the rules -
-                just listen and let your ear guide you. You're already doing great!
-              </p>
-            </div>
-
-            <div className="section-understood">
-              <button
-                className={`understood-btn ${understoodSections.has(2) ? 'understood' : ''}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleUnderstood(2);
-                }}
-              >
-                {understoodSections.has(2) && <Check size={16} />}
-                Understood
-              </button>
-            </div>
+          <div className="key-takeaway">
+            <p>
+              <strong>The key takeaway:</strong> French flows like music. Don't stress about the rules -
+              just listen and let your ear guide you. You're already doing great!
+            </p>
           </div>
-        </div>
 
-        <div className="help-footer">
+          <div className="section-footer">
+            <button
+              className={`understood-btn ${understoodSections.has(2) ? 'understood' : ''}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleUnderstood(2);
+              }}
+            >
+              {understoodSections.has(2) && <Check size={16} />}
+              Understood
+            </button>
+          </div>
+        </section>
+
+        <footer className="liaison-footer">
           <button className="btn-continue" onClick={handleComplete}>
             Continue Learning
           </button>
-        </div>
+        </footer>
       </div>
     </div>
   );
