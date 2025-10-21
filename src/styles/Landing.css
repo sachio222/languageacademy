@@ -203,7 +203,7 @@
   color: #665665;
   text-align: center;
   max-width: 720px;
-  margin: 0 auto 4.5rem;
+  margin: 0 auto 4.5rem auto;
 }
 
 /* Comparison Grid */
