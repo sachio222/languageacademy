@@ -722,7 +722,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
         </div>
         <h1>The Irregular Verbs</h1>
         <p className="help-subtitle">
-          Some of the verbs you've already learned are used so frequently that they actually help form the structure of the language, and therefore don't fit into the most common patterns. These are called "irregular verbs".
+          Some of the verbs you've already learned are used so frequently that they actually help shape the framework of the language itself, and therefore don't fit into common patterns. These are called "irregular verbs".
         </p>
         <div className="listen-prompt">
           <span className="speaker-icon">🔊</span>
@@ -954,14 +954,14 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
           <h2>The Most Irregular: être</h2>
           <div className="consistent-endings">
             <p className="consistency-note">
-              <strong>être</strong> is so irregular it even breaks the reliable -ons/-ez pattern:
+              <strong>être</strong> is breaks the -ons/-ez rule:
             </p>
 
             <div className="verb-conjugation-table">
               <div className="table-header">
                 <div className="header-cell"></div>
-                <div className="header-cell">nous (not -ons!)</div>
-                <div className="header-cell">vous (not -ez!)</div>
+                <div className="header-cell">nous</div>
+                <div className="header-cell">vous</div>
               </div>
 
               <div className="table-row">
@@ -1124,7 +1124,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
 
             <div className="benefit-item">
               <span className="benefit-icon">🎯</span>
-              <span className="benefit-text"><strong>Most verbs will be even more predictable</strong> — It makes learning seem less like memorizing and more like pattern recognition! Just wait till you learn the next verb coming up!</span>
+              <span className="benefit-text"><strong>Most verbs will be even more predictable</strong> — It helps digest those verb conjugation lists much easier. Just wait till you learn the next verb coming up!</span>
             </div>
 
           </div>

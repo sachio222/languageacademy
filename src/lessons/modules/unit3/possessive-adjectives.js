@@ -17,7 +17,7 @@ export const module8_possessive_adjectives = {
       term: "Possessive Adjectives",
       definition: "Words that show ownership before a noun",
       example:
-        "15 forms to learn - 3 forms (masc/fem/plural) for each of 5 owners",
+        "15 forms to learn - 2-3 forms (masc/fem/plural) for each of 6 owners",
     },
     {
       term: "Critical Rule: Agreement",
