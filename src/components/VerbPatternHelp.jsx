@@ -954,7 +954,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
           <h2>The Most Irregular: être</h2>
           <div className="consistent-endings">
             <p className="consistency-note">
-              <strong>être</strong> is breaks the -ons/-ez rule:
+              <strong>être</strong> breaks the -ons/-ez rule:
             </p>
 
             <div className="verb-conjugation-table">
