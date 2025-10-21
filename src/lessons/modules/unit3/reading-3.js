@@ -38,44 +38,40 @@ export const reading3 = {
 
   readingPassage: {
     title: "Une Journée Spéciale (A Special Day)",
-    text: `**Sophie:** Bonjour Marc! Tu viens au café avec moi?
+    text: `**Sophie:** Bonjour Marc! Tu viens au Café de Flore avec moi?
 
-**Marc:** Oui! Je vais au café avec toi. Tu vois mon nouveau livre?
+**Marc:** Oui! Je vais au café avec toi. Tu as le Comte de Monte-Cristo? C'est le livre rouge et jaune.
 
-**Sophie:** Oui, je le vois! Il est très beau. C'est le tien?
+**Sophie:** Oui, je l'ai. Il est très vieux! C'est le tien?
 
-**Marc:** Oui, c'est le mien. Je veux ce livre. Tu veux ce livre aussi?
+**Marc:** Oui, c'est le mien. Tu le veux?
 
-**Sophie:** Non, merci! Où est ton ami Paul? Il vient aussi?
+**Sophie:** Non, merci! J'ai mon livre de Jules Verne. Vingt mille lieues sous les mers. Il est nouveau, tu veux le voir?
 
-**Marc:** Non, il part à la maison. Il a son chat et il le voit à la maison.
+**Marc:** Oui, s'il te plaît, au café.
 
-**Sophie:** Tu as des livres aussi?
+**Sophie:** Où est ton ami Paul? Il vient aussi?
 
-**Marc:** Oui, j'ai mes livres. Ils sont dans ma voiture. Je les ai pour toi!
-
-**Sophie:** Pour moi? Merci! Tu es un bon ami.
+**Marc:** Non, il part à Montmartre. Il a son jeune enfant aujourd'hui et il le voit à la maison.
 
 **Marc:** Merci! Nous allons au café. Tu veux un café avec moi?
 
 **Sophie:** Oui! Je veux un bon café avec toi!`,
-    translation: `**Sophie:** Hello Marc! Are you coming to the café with me?
+    translation: `**Sophie:** Hello Marc! Are you coming to Café de Flore with me?
 
-**Marc:** Yes! I'm going to the café with you. Do you see my new book?
+**Marc:** Yes! I'm going to the café with you. Do you have the Count of Monte Cristo? It's the red and yellow book.
 
-**Sophie:** Yes, I see it! It's very beautiful. Is it yours?
+**Sophie:** Yes, I have it. It's very old! Is it yours?
 
-**Marc:** Yes, it's mine. I want this book. Do you want this book too?
+**Marc:** Yes, it's mine. Do you want it?
 
-**Sophie:** No, thank you! Where is your friend Paul? Is he coming too?
+**Sophie:** No, thank you! I have my Jules Verne book. Twenty Thousand Leagues Under the Sea. It's new, do you want to see it?
 
-**Marc:** No, he's leaving for home. He has his cat and he sees it at home.
+**Marc:** Yes, please, at the café.
 
-**Sophie:** Do you have books too?
+**Sophie:** Where is your friend Paul? Is he coming too?
 
-**Marc:** Yes, I have my books. They are in my car. I have them for you!
-
-**Sophie:** For me? Thank you! You are a good friend.
+**Marc:** No, he's leaving for Montmartre. He has his young child today and he sees him at home.
 
 **Marc:** Thank you! We're going to the café. Do you want a coffee with me?
 
@@ -187,46 +183,41 @@ export const reading3 = {
         ],
       },
       {
-        instruction: "What possessive adjective does Marc use for his books?",
-        prompt: "my books",
-        hint: "Possessive adjective for 'my' + plural noun",
-        expectedAnswer: "mes livres",
-        acceptableAnswers: ["mes"],
+        instruction: "What does Marc ask Sophie about?",
+        prompt: "Do you have the ___ book?",
+        hint: "Look for the color Marc asks about",
+        expectedAnswer: "rouge",
+        acceptableAnswers: ["red", "livre rouge", "le livre rouge"],
         wrongAnswers: [
           {
-            answer: "mon livres",
-            feedback: "For plural, use 'mes' not 'mon'",
+            answer: "vert",
+            feedback: "Marc asks about the red (rouge) book, not green",
           },
         ],
       },
       {
-        instruction: "How does Marc say he has them (the books)?",
-        prompt: "I ___ them",
-        hint: "Plural object pronoun before avoir - 'je ___ ai'",
-        expectedAnswer: "je les ai",
-        acceptableAnswers: [],
+        instruction: "What color is Sophie's book?",
+        prompt: "Sophie's book is ___",
+        hint: "Look for the color Sophie mentions about her book",
+        expectedAnswer: "vert",
+        acceptableAnswers: ["green", "livre vert", "le livre vert"],
         wrongAnswers: [
           {
-            answer: "je ai les",
-            feedback: "Object pronoun goes BEFORE: je LES ai",
+            answer: "rouge",
+            feedback: "Sophie's book is green (vert), not red",
           },
         ],
       },
       {
-        instruction: "Who are the books for?",
-        prompt: "The books are for ___",
-        hint: "Look for 'pour ___' - stressed pronoun for 'you'",
-        expectedAnswer: "toi",
-        acceptableAnswers: [
-          "pour toi",
-          "Sophie",
-          "les livres sont pour toi",
-          "les livres sont pour Sophie",
-        ],
+        instruction: "How does Sophie describe Marc's book?",
+        prompt: "It's very ___",
+        hint: "Look for the adjective Sophie uses to describe the book",
+        expectedAnswer: "vieux",
+        acceptableAnswers: ["old", "très vieux", "very old"],
         wrongAnswers: [
           {
-            answer: "tu",
-            feedback: "Use stressed pronoun 'toi' not subject pronoun 'tu'",
+            answer: "nouveau",
+            feedback: "Sophie says it's very old (vieux), not new",
           },
         ],
       },

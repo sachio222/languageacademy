@@ -336,7 +336,7 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
           {onShowReferenceModules && (
             <button className="reference-link" onClick={onShowReferenceModules}>
               <BookMarked size={18} strokeWidth={2} />
-              <span>Reference Materials</span>
+              <span>La Référence (alphabet, numbers, days, etc.) </span>
             </button>
           )}
         </div>

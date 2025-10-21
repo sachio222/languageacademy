@@ -2,7 +2,7 @@
  * Reading Passage Vocabulary
  * Word translations for interactive reading tooltips
  * Extracted and deduplicated from ReadingPassage.jsx
- * Contains 2465 unique translations
+ * Contains 2469 unique translations
  * ALPHABETICALLY SORTED
  */
 
@@ -303,6 +303,7 @@ export const readingVocabulary = {
   "bien maintenant": "well now",
   "bien sûr": "of course",
   bière: "beer",
+  bleu: "blue",
   bœuf: "beef",
   boire: "to drink",
   bois: "drink",
@@ -1124,6 +1125,7 @@ export const readingVocabulary = {
   "Jardin des Tuileries": "Tuileries Garden",
   "Jardin du": "Garden of",
   "Jardin du Luxembourg": "Jardin du Luxembourg (famous Paris park)",
+  jaune: "yellow",
   je: "I",
   Je: "I",
   "je bois": "I drink",
@@ -2057,6 +2059,7 @@ export const readingVocabulary = {
   rôle: "role",
   rouen: "Rouen - Norman capital city",
   Rouen: "Rouen (Norman capital city)",
+  rouge: "red",
   rue: "street",
   s: "if/oneself",
   "s'aident": "help each other",
@@ -2380,6 +2383,7 @@ export const readingVocabulary = {
   "vers lui et": "towards him and",
   Versailles: "Versailles",
   versailles: "Versailles",
+  vert: "green",
   veulent: "want",
   veut: "wants",
   veux: "want",

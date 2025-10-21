@@ -577,6 +577,54 @@ const wikipediaEntries = {
     description: 'Royal château built for Louis XIV, symbol of absolute monarchy, Hall of Mirrors, 2,300 rooms, UNESCO World Heritage Site',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg',
     url: 'https://en.wikipedia.org/wiki/Palace_of_Versailles'
+  },
+  'Café de Flore': {
+    name: 'Café de Flore',
+    description: 'Historic café in Saint-Germain-des-Prés, famous for intellectuals like Sartre and Beauvoir',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg/500px-Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg',
+    url: 'https://en.wikipedia.org/wiki/Café_de_Flore'
+  },
+  'café de Flore': {
+    name: 'Café de Flore',
+    description: 'Historic café in Saint-Germain-des-Prés, famous for intellectuals like Sartre and Beauvoir',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg/500px-Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg',
+    url: 'https://en.wikipedia.org/wiki/Café_de_Flore'
+  },
+  'Montmartre': {
+    name: 'Montmartre',
+    description: 'Historic hilltop district in Paris, famous for Sacré-Cœur Basilica, artists, and bohemian culture',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg',
+    url: 'https://en.wikipedia.org/wiki/Montmartre'
+  },
+  'montmartre': {
+    name: 'Montmartre',
+    description: 'Historic hilltop district in Paris, famous for Sacré-Cœur Basilica, artists, and bohemian culture',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg',
+    url: 'https://en.wikipedia.org/wiki/Montmartre'
+  },
+  'Comte de Monte-Cristo': {
+    name: 'The Count of Monte Cristo',
+    description: 'Famous French novel by Alexandre Dumas, published 1844-1846, about revenge and justice',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/CC_No_03_Count_of_Monte_Cristo.jpg/500px-CC_No_03_Count_of_Monte_Cristo.jpg',
+    url: 'https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo'
+  },
+  'comte de Monte-Cristo': {
+    name: 'The Count of Monte Cristo',
+    description: 'Famous French novel by Alexandre Dumas, published 1844-1846, about revenge and justice',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/CC_No_03_Count_of_Monte_Cristo.jpg/500px-CC_No_03_Count_of_Monte_Cristo.jpg',
+    url: 'https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo'
+  },
+  'Jules Verne': {
+    name: 'Jules Verne',
+    description: 'French novelist, poet, and playwright (1828-1905), pioneer of science fiction literature',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jules_Verne_by_%C3%89tienne_Carjat.jpg/500px-Jules_Verne_by_%C3%89tienne_Carjat.jpg',
+    url: 'https://en.wikipedia.org/wiki/Jules_Verne'
+  },
+  'Vingt mille lieues sous les mers': {
+    name: 'Twenty Thousand Leagues Under the Sea',
+    description: 'Classic science fiction novel by Jules Verne (1870), featuring Captain Nemo and the submarine Nautilus',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Houghton_FC8_V5946_869ve_-_Verne%2C_frontispiece.jpg/500px-Houghton_FC8_V5946_869ve_-_Verne%2C_frontispiece.jpg',
+    url: 'https://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Seas'
   }
 };
 
@@ -688,6 +736,10 @@ function ReadingPassage({ passage }) {
       { phrase: "qu'est-ce que vous voulez", translation: "what do you want" },
       { phrase: "Qu'est-ce qu'il y a", translation: "What is there" },
       { phrase: "il y a", translation: "there is / there are" },
+      { phrase: "l'ai", translation: "I have it" },
+      { phrase: "Comte de Monte-Cristo", translation: "Count of Monte Cristo" },
+      { phrase: "Jules Verne", translation: "Jules Verne" },
+      { phrase: "Vingt mille lieues sous les mers", translation: "Twenty Thousand Leagues Under the Sea" },
       { phrase: "qu'est-ce que", translation: "what" },
       { phrase: "s'il vous plaît", translation: "please (formal)" },
       { phrase: "s'il vous plait", translation: "please (formal)" },
