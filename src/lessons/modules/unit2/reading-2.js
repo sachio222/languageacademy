@@ -43,25 +43,29 @@ export const reading2 = {
 
 **Sophie:** Ça va bien! Je suis à Caen avec un ami Thomas. Et toi, où es-tu?
 
+![img/reading2-sophiethomas.png|maxWidth:65%]
+
 **Marie:** Je suis à Honfleur! J'ai une nouvelle voiture et je veux voir Bayeux aussi.
 
 **Sophie:** Qu'est-ce que c'est, ça? Cette chose dans la voiture?
 
 **Marie:** Ça? C'est un livre sur la Normandie! Il y a Mont-Saint-Michel, Rouen... Ces choses sont très belles!
 
-**Thomas:** Je veux voir Mont-Saint-Michel! Où est-ce?
+**Thomas:** Je veux voir Mont-Saint-Michel!
 
-**Marie:** C'est ça! Tu peux voir cette vieille et belle chose. Elle est très grande aussi.
+**Marie:** Moi aussi! Elle est très grande. Nous pouvons voir de vieilles et belles choses aussi!
 
 **Sophie:** Et Bayeux? Qu'est-ce qu'il y a à Bayeux?
 
-**Marie:** Il y a une grande maison avec de belles choses vieilles! Nous pouvons voir cette maison.
+**Marie:** Il y a de vieilles et belles maisons! Nous pouvons voir ces maisons.
 
-**Thomas:** Oui! Et nous pouvons voir Rouen. Un ami Pierre est à Rouen.
+![img/ reading2-les-maisons-dans-rouen.png|maxWidth:65%]
+
+**Thomas:** Oui! Et j'ai un ami Pierre à Rouen.
 
 **Sophie:** Pierre? Il a une maison à Rouen?
 
-**Thomas:** Oui! Il a une petite mais très belle maison. Elle est dans Rouen.
+**Thomas:** Oui! Il a une petite mais très belle maison. Elle est à Rouen.
 
 **Marie:** Une maison à Rouen? C'est bon ça! J'ai le chien dans la voiture. Il peut voir Rouen aussi?
 
@@ -69,12 +73,16 @@ export const reading2 = {
 
 **Marie:** Tu as un chat? Je veux voir ce chat! Nous pouvons voir ces choses en un jour?
 
-**Thomas:** Non, c'est très bon! Mais nous avons deux jours. Un jour pour Mont-Saint-Michel et Bayeux, un autre jour pour Rouen et Honfleur.
+**Thomas:** Non! Mais nous avons deux jours. Un jour pour Mont-Saint-Michel et Bayeux, un autre jour pour Rouen et Honfleur.
 
-**Sophie:** Très bien! Voilà! Nous pouvons voir ces belles choses! Au revoir!`,
+**Sophie:** Très bien! Voilà! Nous pouvons voir ces belles choses! Au revoir!
+
+![img/reading2-mont-saint-michele.png|maxWidth:65%]`,
     translation: `**Marie:** Hello Sophie! How's it going?
 
 **Sophie:** It's going well! I am in Caen with a friend Thomas. And you, where are you?
+
+
 
 **Marie:** I am in Honfleur! I have a new car and I want to see Bayeux too.
 
@@ -82,15 +90,17 @@ export const reading2 = {
 
 **Marie:** That? It's a book about Normandy! There's Mont-Saint-Michel, Rouen... These things are very beautiful!
 
-**Thomas:** I want to see Mont-Saint-Michel! Where is it?
+**Thomas:** I want to see Mont-Saint-Michel!
 
-**Marie:** It's that! You can see this old and beautiful thing. It is very big too.
+**Marie:** Me too! It is very big. We can see old and beautiful things too!
 
 **Sophie:** And Bayeux? What is there in Bayeux?
 
-**Marie:** There is a big house with beautiful old things! We can see this house.
+**Marie:** There are old and beautiful houses! We can see these houses.
 
-**Thomas:** Yes! And we can see Rouen. A friend Pierre is in Rouen.
+
+
+**Thomas:** Yes! And I have a friend Pierre in Rouen.
 
 **Sophie:** Pierre? Does he have a house in Rouen?
 
@@ -102,7 +112,7 @@ export const reading2 = {
 
 **Marie:** You have a cat? I want to see this cat! Can we see these things in one day?
 
-**Thomas:** No, it's very good! But we have two days. One day for Mont-Saint-Michel and Bayeux, another day for Rouen and Honfleur.
+**Thomas:** No! But we have two days. One day for Mont-Saint-Michel and Bayeux, another day for Rouen and Honfleur.
 
 **Sophie:** Very good! There! We can see these beautiful things! Goodbye!`,
   },
@@ -251,25 +261,29 @@ export const reading2 = {
       {
         instruction: "Where is Pierre's house?",
         prompt: "Complete: Elle est ___ Rouen",
-        hint: "Preposition meaning 'in'",
-        expectedAnswer: "dans",
+        hint: "Preposition used with cities",
+        expectedAnswer: "à",
         acceptableAnswers: [
           "à Rouen",
           "Rouen",
-          "elle est dans Rouen",
+          "elle est à Rouen",
           "il a une maison à Rouen",
           "une maison à Rouen",
-          "dans",
+          "à",
           "Pierre est à Rouen",
         ],
         wrongAnswers: [
           {
+            answer: "dans",
+            feedback: "Use 'à' with cities, not 'dans'",
+          },
+          {
             answer: "sur",
-            feedback: "The house is in (dans) Rouen, not on (sur) Rouen",
+            feedback: "The house is in (à) Rouen, not on (sur) Rouen",
           },
           {
             answer: "avec",
-            feedback: "The house is in (dans) Rouen, not with (avec) Rouen",
+            feedback: "The house is in (à) Rouen, not with (avec) Rouen",
           },
         ],
       },
@@ -324,45 +338,15 @@ export const reading2 = {
         wrongAnswers: [],
       },
       {
-        instruction:
-          "What question word does Thomas use about Mont-Saint-Michel?",
-        prompt: "___ est-ce?",
-        hint: "Question word asking about location",
-        expectedAnswer: "où",
-        acceptableAnswers: ["où est-ce"],
-        wrongAnswers: [
-          {
-            answer: "que",
-            feedback: "He's asking 'where' (où), not 'what' (que)",
-          },
-          {
-            answer: "qui",
-            feedback: "He's asking 'where' (où), not 'who' (qui)",
-          },
-        ],
-      },
-      {
         instruction: "What preposition shows where Thomas's friend's house is?",
         prompt: "Elle est ___ Rouen",
-        hint: "Preposition meaning 'in'",
-        expectedAnswer: "dans",
-        acceptableAnswers: ["dans Rouen", "à Rouen"],
-        wrongAnswers: [],
-      },
-      {
-        instruction: "How do they describe Mont-Saint-Michel?",
-        prompt: "C'est un très ___ et très beau chose",
-        hint: "Adjective meaning 'old'",
-        expectedAnswer: "vieux",
-        acceptableAnswers: ["vieille", "vieille et belle", "vieux et beau"],
+        hint: "Preposition used with cities",
+        expectedAnswer: "à",
+        acceptableAnswers: ["à Rouen", "à"],
         wrongAnswers: [
           {
-            answer: "nouveau",
-            feedback: "They say it's old (vieux), not new (nouveau)",
-          },
-          {
-            answer: "jeune",
-            feedback: "They say it's old (vieux), not young (jeune)",
+            answer: "dans",
+            feedback: "Use 'à' with cities, not 'dans'",
           },
         ],
       },

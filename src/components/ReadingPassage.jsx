@@ -686,6 +686,8 @@ function ReadingPassage({ passage }) {
     const multiWordPhrases = [
       { phrase: "qu'est-ce que c'est", translation: "what is it?" },
       { phrase: "qu'est-ce que vous voulez", translation: "what do you want" },
+      { phrase: "Qu'est-ce qu'il y a", translation: "What is there" },
+      { phrase: "il y a", translation: "there is / there are" },
       { phrase: "qu'est-ce que", translation: "what" },
       { phrase: "s'il vous plaît", translation: "please (formal)" },
       { phrase: "s'il vous plait", translation: "please (formal)" },

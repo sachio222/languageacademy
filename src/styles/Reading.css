@@ -294,6 +294,7 @@
 .reading-image {
   max-width: 100%;
   height: auto;
+  border-radius: 12px;
   /* Use filter drop-shadow instead of box-shadow to respect transparency */
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
   transition: filter 0.2s;

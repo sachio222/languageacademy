@@ -65,11 +65,17 @@ Merci et au revoir!
 
 You are Marie. You are a woman. You have a house and a car. The house is very good!
 
+
+
 I have a friend. He has books. I have a friend too. She has cats and books too.
 
 We are the friends. We have children and dogs. The dogs are very good, but the cats are good too.
 
+
+
 It's a very good day! We are very good.
+
+
 
 Thank you and goodbye!`,
   },
