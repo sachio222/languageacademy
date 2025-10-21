@@ -175,18 +175,6 @@ const wikipediaEntries = {
   },
 
   // Original Paris locations  
-  'paris': {
-    name: 'Paris',
-    description: 'Capital and largest city of France',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/300px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg',
-    url: 'https://en.wikipedia.org/wiki/Paris'
-  },
-  'Paris': {
-    name: 'Paris',
-    description: 'Capital and largest city of France',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/300px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg',
-    url: 'https://en.wikipedia.org/wiki/Paris'
-  },
   'la Tour Eiffel': {
     name: 'La Tour Eiffel',
     description: 'Wrought-iron lattice tower, built 1887-1889, 330m tall',
@@ -366,12 +354,6 @@ const wikipediaEntries = {
     description: 'Medieval Catholic cathedral built 1163-1345, Gothic architecture masterpiece on Île de la Cité',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg/500px-Notre-Dame_de_Paris%2C_4_October_2017.jpg',
     url: 'https://en.wikipedia.org/wiki/Notre-Dame_de_Paris'
-  },
-  'montmartre': {
-    name: 'Montmartre',
-    description: 'Historic hilltop neighborhood famous for artists, Sacré-Cœur Basilica, and bohemian culture since 1800s',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg',
-    url: 'https://en.wikipedia.org/wiki/Montmartre'
   },
   'Montmartre': {
     name: 'Montmartre',
@@ -649,12 +631,7 @@ const wikipediaEntries = {
     image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG/500px-H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG',
     url: 'https://en.wikipedia.org/wiki/Cannes'
   },
-  'bouillabaisse': {
-    name: 'Bouillabaisse',
-    description: 'Traditional fish stew from Marseille, made with Mediterranean fish, saffron, and served with rouille sauce',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Bullabessa.jpg/500px-Bullabessa.jpg',
-    url: 'https://en.wikipedia.org/wiki/Bouillabaisse'
-  },
+
   'château de versailles': {
     name: 'Palace of Versailles',
     description: 'Royal château built for Louis XIV, symbol of absolute monarchy, Hall of Mirrors, 2,300 rooms, UNESCO World Heritage Site',
@@ -678,18 +655,6 @@ const wikipediaEntries = {
     description: 'Historic café in Paris, located on Place de l\'Opéra, famous for its elegant interior and historic significance',
     image: 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Constant_Korovine_Caf%C3%A9_de_la_paix.jpg',
     url: 'https://en.wikipedia.org/wiki/Caf%C3%A9_de_la_Paix'
-  },
-  'Montmartre': {
-    name: 'Montmartre',
-    description: 'Historic hilltop district in Paris, famous for Sacré-Cœur Basilica, artists, and bohemian culture',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg',
-    url: 'https://en.wikipedia.org/wiki/Montmartre'
-  },
-  'montmartre': {
-    name: 'Montmartre',
-    description: 'Historic hilltop district in Paris, famous for Sacré-Cœur Basilica, artists, and bohemian culture',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg',
-    url: 'https://en.wikipedia.org/wiki/Montmartre'
   },
   'Comte de Monte-Cristo': {
     name: 'The Count of Monte Cristo',
