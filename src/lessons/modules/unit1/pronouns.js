@@ -1,6 +1,6 @@
 /**
  * Module: Dynamic ID (auto-assigned): Core Pronouns
- * The 8 essential subject pronouns in French
+ * The 9 essential subject pronouns in French
  */
 
 import { pronouns } from "../../vocabularyData.js";
@@ -9,14 +9,14 @@ export const module1 = {
   moduleKey: "2024-01-01-pronouns", // Permanent identifier - never changes
   title: "Core Pronouns - The Building Blocks",
   description:
-    "Master the 8 most essential words in French. These are your foundation - like variables in programming.",
+    "Master the 9 most essential words in French. These are your foundation - like variables in programming.",
 
   concepts: [
     {
       term: "Subject Pronouns",
       definition: "Words that replace nouns as the subject of a sentence",
       example:
-        "8 essential words: I, you, he, she, we, you (formal), they (masc), they (fem)",
+        "9 essential words: I, you, he, she, we, you (formal), they (masc), they (fem), on",
     },
     {
       term: "Singular vs Plural",
@@ -29,6 +29,13 @@ export const module1 = {
       definition:
         'French has TWO words for "you" - informal (friends) and formal (strangers/bosses)',
       example: "Friends vs strangers require different pronouns",
+    },
+    {
+      term: "On - The Special Pronoun",
+      definition:
+        "The most common way to say 'we' in French - more natural than 'nous'",
+      example:
+        "On va au café (We're going to the café) - uses il/elle verb forms, not nous forms",
     },
   ],
 
@@ -49,6 +56,11 @@ export const module1 = {
     },
     { french: "ils", english: "they (masculine)", note: "masc or mixed group" },
     { french: "elles", english: "they (feminine)", note: "all feminine group" },
+    {
+      french: "on",
+      english: "we (informal) / one / people",
+      note: "⭐ Uses il/elle verb forms! More common than 'nous'!",
+    },
   ],
 
   // Exercise configuration - simpler to maintain
@@ -150,6 +162,23 @@ export const module1 = {
           {
             answer: "elle",
             feedback: "That's singular 'she', not plural 'they'",
+          },
+        ],
+      },
+      {
+        instruction:
+          "You're talking informally about yourself and others. Use this pronoun",
+        prompt: "we (informal - most common way)",
+        hint: "The most natural way to say 'we' in French - uses il/elle verb forms",
+        expectedAnswer: "on",
+        wrongAnswers: [
+          {
+            answer: "nous",
+            feedback: "That's formal 'we' - on is more common and natural",
+          },
+          {
+            answer: "ils",
+            feedback: "That's 'they', not 'we'",
           },
         ],
       },
