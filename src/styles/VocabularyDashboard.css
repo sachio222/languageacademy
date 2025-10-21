@@ -1,0 +1,290 @@
+/* Vocabulary Dashboard - Modal Popout */
+
+/* Modal Backdrop */
+.vocabulary-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* Modal Container */
+.vocabulary-dashboard {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  animation: modalSlideUp 0.3s ease-out;
+}
+
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.vocabulary-header {
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.vocabulary-header h1 {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vocabulary-stats {
+  display: flex;
+  align-items: center;
+}
+
+.stat-text {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.close-button {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.close-button svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Canvas Controls */
+.canvas-controls {
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 20;
+}
+
+.canvas-controls button {
+  width: 28px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  padding: 0;
+}
+
+.canvas-controls button svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+.canvas-controls button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+/* Force Graph Container - Fill to edges */
+.graph-container {
+  flex: 1;
+  margin: 0;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  background: #0f172a;
+  position: relative;
+}
+
+.graph-container canvas {
+  cursor: grab;
+}
+
+.graph-container canvas:active {
+  cursor: grabbing;
+}
+
+/* Loading and Empty States */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+.no-vocabulary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.no-vocabulary p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vocabulary-modal-backdrop {
+    padding: 10px;
+  }
+
+  .vocabulary-dashboard {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .vocabulary-header {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .vocabulary-header h1 {
+    font-size: 0.875rem;
+  }
+
+  .close-button {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .stat-text {
+    font-size: 0.75rem;
+  }
+
+  .graph-container {
+    margin: 0;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .canvas-controls {
+    top: 3rem;
+    right: 0.75rem;
+  }
+
+  .canvas-controls button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .canvas-controls button svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .vocabulary-header {
+    padding: 0.625rem 0.875rem;
+  }
+
+  .vocabulary-header h1 {
+    font-size: 0.9375rem;
+  }
+
+  .close-button {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+  }
+
+  .canvas-controls {
+    top: 3.5rem;
+    right: 0.875rem;
+  }
+
+  .canvas-controls button {
+    width: 26px;
+    height: 26px;
+  }
+
+  .canvas-controls button svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+/* Focus states for accessibility */
+.close-button:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.8);
+  outline-offset: 2px;
+}
+
+/* Backdrop click to close */
+.vocabulary-modal-backdrop {
+  cursor: pointer;
+}
+
+.vocabulary-dashboard {
+  cursor: default;
+}
+
+/* Custom tooltip styling (applied via inline styles in component) */
+.node-tooltip {
+  pointer-events: none;
+}

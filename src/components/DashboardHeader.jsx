@@ -7,7 +7,7 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import '../styles/DashboardHeader.css';
 
-function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules }) {
+function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard }) {
   const { supabaseClient, supabaseUser } = useAuth();
   const analytics = useAnalytics();
   const { moduleProgress } = useSupabaseProgress();
@@ -321,7 +321,11 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
             </div>
 
             {/* Words Learned */}
-            <div className="stat-box">
+            <div
+              className="stat-box clickable-stat"
+              onClick={onShowVocabularyDashboard}
+              title="Click to view vocabulary dashboard"
+            >
               <div className="stat-icon-wrapper">
                 <BookOpen size={20} strokeWidth={2} />
               </div>

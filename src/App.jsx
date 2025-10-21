@@ -5,6 +5,7 @@ import LeftNav from './components/LeftNav';
 import LessonList from './components/LessonList';
 import LessonView from './components/LessonView';
 import ReferenceModules from './components/ReferenceModules';
+import VocabularyDashboard from './components/VocabularyDashboard';
 import SafariTTSHelper from './components/SafariTTSHelper';
 import OfflineIndicator from './components/OfflineIndicator';
 import FeedbackForm from './components/FeedbackForm';
@@ -28,9 +29,14 @@ function App() {
     const params = new URLSearchParams(window.location.search);
     const moduleParam = params.get('module');
     const referenceParam = params.get('reference');
+    const vocabularyParam = params.get('vocabulary');
 
     if (referenceParam === 'true') {
       return 'reference';
+    }
+
+    if (vocabularyParam === 'true') {
+      return 'vocabulary';
     }
 
     if (moduleParam) {
@@ -231,6 +237,20 @@ function App() {
     url.searchParams.delete('sentence');
     url.searchParams.delete('question');
     url.searchParams.delete('section');
+    window.history.pushState({}, '', url);
+  };
+
+  const handleShowVocabularyDashboard = () => {
+    setCurrentLesson('vocabulary');
+    const url = new URL(window.location);
+    url.searchParams.set('vocabulary', 'true');
+    url.searchParams.delete('module');
+    url.searchParams.delete('view');
+    url.searchParams.delete('exercise');
+    url.searchParams.delete('sentence');
+    url.searchParams.delete('question');
+    url.searchParams.delete('section');
+    url.searchParams.delete('reference');
     window.history.pushState({}, '', url);
   };
 
@@ -505,6 +525,26 @@ function App() {
             {isAdmin && (
               <button
                 className="admin-btn"
+                onClick={() => setShowAdmin(true)}
+                title="Admin Panel"
+              >
+                ⚙️
+              </button>
+            )}
+          </div>
+        ) : currentLesson === 'vocabulary' ? (
+          <div className="main-content-wrapper">
+            <VocabularyDashboard completedExercises={completedExercises} />
+            <button
+              className="feedback-fab"
+              onClick={() => setShowFeedbackForm(true)}
+              title="Give Early Feedback"
+            >
+              💬
+            </button>
+            {isAdmin && (
+              <button
+                className="admin-btn"
                 onClick={() => {
                   setShowFeedbackAdmin(true);
                   const url = new URL(window.location);
@@ -527,6 +567,7 @@ function App() {
               onLessonSelect={handleLessonSelect}
               completedExercises={completedExercises}
               onShowReferenceModules={handleShowReferenceModules}
+              onShowVocabularyDashboard={handleShowVocabularyDashboard}
             />
             <button
               className="feedback-fab"

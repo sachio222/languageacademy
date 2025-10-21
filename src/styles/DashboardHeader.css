@@ -212,6 +212,17 @@
   border-color: #f0f0f0;
 }
 
+.stat-box.clickable-stat {
+  cursor: pointer;
+}
+
+.stat-box.clickable-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
 /* Streak-specific styling */
 .stat-box.stat-streak {
   background: #fafbfc;
