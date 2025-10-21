@@ -6,7 +6,7 @@
 
 export const reading3 = {
   moduleKey: "2024-02-03-reading3", // Permanent identifier - never changes
-  title: "Reading Comprehension 3 - A Day Out!",
+  title: "Reading Comprehension 3 - La Première Page",
   description:
     "See how much you've mastered! Motion, possession, and complex pronouns in action.",
 
@@ -107,22 +107,18 @@ export const reading3 = {
     items: [
       {
         instruction: "Where does Sophie invite Marc?",
-        prompt: "Sophie invites Marc ___ ___",
-        hint: "Look for 'tu viens ___ ___' - contraction needed!",
-        expectedAnswer: "au café",
-        acceptableAnswers: ["café"],
+        prompt: "Sophie invites Marc to ___ ___ ___ ___",
+        hint: "Look for 'tu viens au ___' - what's the full café name?",
+        expectedAnswer: "Café de la Paix",
+        acceptableAnswers: ["café", "au café", "au Café de la Paix"],
         wrongAnswers: [
-          {
-            answer: "à le café",
-            feedback: "à + le must contract to 'au'",
-          },
-          {
-            answer: "à la café",
-            feedback: "café is masculine, use 'au' not 'à la'",
-          },
           {
             answer: "à la maison",
             feedback: "She invites him to the café, not the house",
+          },
+          {
+            answer: "Montmartre",
+            feedback: "That's where Paul goes, not where Sophie invites Marc",
           },
         ],
       },
@@ -140,15 +136,19 @@ export const reading3 = {
         ],
       },
       {
-        instruction: "How does Marc say he sees the book?",
-        prompt: "I ___ it",
-        hint: "Object pronoun BEFORE voir - 'je ___ vois'",
-        expectedAnswer: "je le vois",
-        acceptableAnswers: ["il le voit"],
+        instruction: "What book does Marc ask Sophie about?",
+        prompt: "Tu as ___ ___ ___ ___-___?",
+        hint: "Look for the book title Marc mentions",
+        expectedAnswer: "Le Comte de Monte-Cristo",
+        acceptableAnswers: ["Comte de Monte-Cristo", "Monte-Cristo"],
         wrongAnswers: [
           {
-            answer: "je vois le",
-            feedback: "Object pronoun goes BEFORE the verb",
+            answer: "Jules Verne",
+            feedback: "That's Sophie's book, not the one Marc asks about",
+          },
+          {
+            answer: "Vingt mille lieues",
+            feedback: "That's Sophie's book, not the one Marc asks about",
           },
         ],
       },
@@ -180,27 +180,36 @@ export const reading3 = {
       },
       {
         instruction: "Where does Paul go?",
-        prompt: "He leaves/goes ___ ___ ___",
-        hint: "Look for 'il part ___ la maison' - which preposition + contraction?",
-        expectedAnswer: "à la maison",
-        acceptableAnswers: ["la maison", "maison"],
+        prompt: "il part à ___",
+        hint: "Look for where Marc says Paul is going",
+        expectedAnswer: "Montmartre",
+        acceptableAnswers: ["à Montmartre"],
         wrongAnswers: [
           {
-            answer: "au maison",
-            feedback: "maison is feminine, use 'à la' not 'au'",
+            answer: "café",
+            feedback: "Paul doesn't come to the café, he goes to Montmartre",
+          },
+          {
+            answer: "maison",
+            feedback:
+              "He goes to Montmartre first, then sees his child at home",
           },
         ],
       },
       {
-        instruction: "How does Marc say Paul sees his cat?",
-        prompt: "he ___ it",
-        hint: "Object pronoun before voir - 'il ___ voit'",
-        expectedAnswer: "il le voit",
-        acceptableAnswers: ["le voit"],
+        instruction: "Why can't Paul come to the café?",
+        prompt: "Il a son ___ ___ aujourd'hui",
+        hint: "Look for what Paul has today",
+        expectedAnswer: "son jeune enfant",
+        acceptableAnswers: ["enfant", "jeune enfant", "son enfant"],
         wrongAnswers: [
           {
-            answer: "il voit le",
-            feedback: "Object pronoun goes BEFORE the verb",
+            answer: "chat",
+            feedback: "Paul has his young child, not a cat",
+          },
+          {
+            answer: "livre",
+            feedback: "Paul has his young child, not a book",
           },
         ],
       },
@@ -218,15 +227,20 @@ export const reading3 = {
         ],
       },
       {
-        instruction: "What color is Sophie's book?",
-        prompt: "Sophie's book is ___",
-        hint: "Look for the color Sophie mentions about her book",
-        expectedAnswer: "vert",
-        acceptableAnswers: ["green", "livre vert", "le livre vert"],
+        instruction: "How does Sophie describe her book?",
+        prompt: "Il est ___",
+        hint: "Look for the adjective Sophie uses about her Jules Verne book",
+        expectedAnswer: "nouveau",
+        acceptableAnswers: ["new", "il est nouveau"],
         wrongAnswers: [
           {
+            answer: "vieux",
+            feedback:
+              "Sophie's book is new (nouveau), Marc's book is old (vieux)",
+          },
+          {
             answer: "rouge",
-            feedback: "Sophie's book is green (vert), not red",
+            feedback: "Sophie describes her book as new, not a color",
           },
         ],
       },
@@ -244,15 +258,36 @@ export const reading3 = {
         ],
       },
       {
-        instruction: "What motion verb do they use to say 'we're going'?",
-        prompt: "we ___",
-        hint: "Look for 'nous ___ au café' - which verb means 'go'?",
-        expectedAnswer: "nous allons",
-        acceptableAnswers: ["allons", "nous allons au café"],
+        instruction: "Where does Marc say Paul's books are?",
+        prompt: "ils sont ___ ___ ___",
+        hint: "Look for where Marc keeps the books",
+        expectedAnswer: "dans ma voiture",
+        acceptableAnswers: ["voiture", "ma voiture", "dans la voiture"],
         wrongAnswers: [
           {
-            answer: "venons",
-            feedback: "They're GOING (aller), not coming (venir)",
+            answer: "maison",
+            feedback: "The books are in the car (voiture), not at home",
+          },
+          {
+            answer: "café",
+            feedback: "The books are in the car, not at the café",
+          },
+        ],
+      },
+      {
+        instruction: "What does Sophie say at the end?",
+        prompt: "___ ___!",
+        hint: "Look for Sophie's final response about coffee",
+        expectedAnswer: "Moi aussi",
+        acceptableAnswers: ["oui", "moi aussi"],
+        wrongAnswers: [
+          {
+            answer: "merci",
+            feedback: "She says 'Moi aussi!' (Me too!), not thank you",
+          },
+          {
+            answer: "au revoir",
+            feedback: "She says 'Moi aussi!' (Me too!), not goodbye",
           },
         ],
       },
