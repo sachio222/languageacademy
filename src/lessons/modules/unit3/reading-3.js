@@ -38,25 +38,31 @@ export const reading3 = {
 
   readingPassage: {
     title: "Une Journée Spéciale (A Special Day)",
-    text: `**Sophie:** Bonjour Marc! Tu viens au Café de Flore avec moi?
+    text: `**Sophie:** Bonjour Marc ! Tu viens au Café de Flore avec moi ?
 
-**Marc:** Oui! Je vais au café avec toi. Tu as le Comte de Monte-Cristo? C'est le livre rouge et jaune.
+**Marc:** Oui ! Je vais au café avec toi. Tu as *Le Comte de Monte-Cristo* ? C'est le livre rouge et jaune.
 
-**Sophie:** Oui, je l'ai. Il est très vieux! C'est le tien?
+**Sophie:** Oui, je l'ai. Il est très vieux ! C'est le tien ?
 
-**Marc:** Oui, c'est le mien. Tu le veux?
+**Marc:** Oui, c'est le mien. Tu le veux ?
 
-**Sophie:** Non, merci! J'ai mon livre de Jules Verne. Vingt mille lieues sous les mers. Il est nouveau, tu veux le voir?
+**Sophie:** Non, merci ! J'ai mon livre de Jules Verne, *Vingt mille lieues sous les mers*. Il est nouveau. Tu veux le voir ?
 
 **Marc:** Oui, s'il te plaît, au café.
 
-**Sophie:** Où est ton ami Paul? Il vient aussi?
+**Sophie:** Où est ton ami Paul ? Il vient aussi ?
 
 **Marc:** Non, il part à Montmartre. Il a son jeune enfant aujourd'hui et il le voit à la maison.
 
-**Marc:** Merci! Nous allons au café. Tu veux un café avec moi?
+**Sophie:** C'est bon. Tu as ses livres avec toi aussi ?
 
-**Sophie:** Oui! Je veux un bon café avec toi!`,
+**Marc:** Oui, ils sont dans ma voiture. Et j'ai un nouveau bon livre pour toi aussi !
+
+**Sophie:** Oh ! Pour moi ? Merci ! Allons au café !
+
+**Marc:** Je veux un bon café avec toi.
+
+**Sophie:** Oui ! Moi aussi !`,
     translation: `**Sophie:** Hello Marc! Are you coming to Café de Flore with me?
 
 **Marc:** Yes! I'm going to the café with you. Do you have the Count of Monte Cristo? It's the red and yellow book.
@@ -73,7 +79,13 @@ export const reading3 = {
 
 **Marc:** No, he's leaving for Montmartre. He has his young child today and he sees him at home.
 
-**Marc:** Thank you! We're going to the café. Do you want a coffee with me?
+**Sophie:** That's good. Do you have his books with you also?
+
+**Marc:** Yes, they're in my car. And I have a new good book for you too!
+
+**Sophie:** Oh! For me? Thank you! Let's go to the café!
+
+**Marc:** I want a good coffee with you.
 
 **Sophie:** Yes! I want a good coffee with you!`,
   },

@@ -971,6 +971,24 @@ function ReadingPassage({ passage }) {
     while (remainingText.length > 0) {
       let matched = false;
 
+      // Check for italic formatting first
+      const italicMatch = remainingText.match(/^\*([^*]+)\*/);
+      if (italicMatch) {
+        const italicText = italicMatch[1];
+        const uniqueKey = `p${paragraphIndex}-c${charPosition}-italic`;
+
+        // Render the italic text as interactive words
+        elements.push(
+          <em key={uniqueKey}>
+            {renderWords(italicText, paragraphIndex)}
+          </em>
+        );
+
+        remainingText = remainingText.slice(italicMatch[0].length);
+        charPosition += italicMatch[0].length;
+        continue;
+      }
+
       // Check for multi-word phrases
       for (const { phrase, translation } of multiWordPhrases) {
         if (remainingText.toLowerCase().startsWith(phrase.toLowerCase())) {
