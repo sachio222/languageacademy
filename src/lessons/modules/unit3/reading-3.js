@@ -77,6 +77,8 @@ export const reading3 = {
 
 **Marc:** Yes! I'm going to the café with you. Do you have the Count of Monte Cristo? It's the red and yellow book.
 
+
+
 **Sophie:** Yes, I have it. It's very old! Is it yours?
 
 **Marc:** Yes, it's mine. Do you want it?
@@ -91,7 +93,9 @@ export const reading3 = {
 
 **Sophie:** That's good. Do you have his books with you also?
 
-**Marc:** Yes, they're in my car. And I have a new good book for you too!
+**Marc:** Yes, they're in my carriage (voiture). And I have a new good book for you too!
+
+
 
 **Sophie:** Oh! For me? Thank you! Let's go to the café!
 
@@ -120,18 +124,28 @@ export const reading3 = {
             answer: "Montmartre",
             feedback: "That's where Paul goes, not where Sophie invites Marc",
           },
+          {
+            answer: "à la café",
+            feedback: "café is masculine, use 'au' not 'à la'",
+          },
         ],
       },
       {
-        instruction: "What stressed pronoun does Sophie use with 'avec'?",
-        prompt: "with ___",
-        hint: "Look for 'avec ___' - stressed pronoun for 'me'",
-        expectedAnswer: "moi",
-        acceptableAnswers: ["avec moi"],
+        instruction: "How does Marc respond to Sophie's invitation?",
+        prompt: "___ ! ___ ___ ___ ___ ___ ___",
+        hint: "Marc's complete response to Sophie's invitation",
+        expectedAnswer: "Oui ! Je vais au café avec toi",
+        acceptableAnswers: ["Je vais au café avec toi", "Oui"],
         wrongAnswers: [
           {
-            answer: "je",
-            feedback: "Use stressed pronoun 'moi' not subject pronoun 'je'",
+            answer: "Non merci",
+            feedback:
+              "Marc accepts the invitation - he says 'Oui! Je vais au café avec toi'",
+          },
+          {
+            answer: "Je ne peux pas",
+            feedback:
+              "Marc agrees to go - he says 'Oui! Je vais au café avec toi'",
           },
         ],
       },
@@ -140,7 +154,12 @@ export const reading3 = {
         prompt: "Tu as ___ ___ ___ ___-___?",
         hint: "Look for the book title Marc mentions",
         expectedAnswer: "Le Comte de Monte-Cristo",
-        acceptableAnswers: ["Comte de Monte-Cristo", "Monte-Cristo"],
+        acceptableAnswers: [
+          "Comte de Monte-Cristo",
+          "Monte-Cristo",
+          "le livre rouge et jaune",
+          "son livre",
+        ],
         wrongAnswers: [
           {
             answer: "Jules Verne",
@@ -157,7 +176,7 @@ export const reading3 = {
         prompt: "Is it ___? (yours, informal, masculine thing)",
         hint: "c'est + possessive pronoun for 'yours' informal",
         expectedAnswer: "c'est le tien",
-        acceptableAnswers: ["le tien", "oui", "c'est le tien?"],
+        acceptableAnswers: ["le tien", "c'est le tien?"],
         wrongAnswers: [
           {
             answer: "c'est ton",
@@ -170,7 +189,7 @@ export const reading3 = {
         prompt: "It's ___ (mine, masculine thing)",
         hint: "c'est + possessive pronoun for 'mine'",
         expectedAnswer: "c'est le mien",
-        acceptableAnswers: ["le mien", "oui"],
+        acceptableAnswers: ["le mien", "oui, c'est le mien"],
         wrongAnswers: [
           {
             answer: "c'est mon",
@@ -201,7 +220,14 @@ export const reading3 = {
         prompt: "Il a son ___ ___ aujourd'hui",
         hint: "Look for what Paul has today",
         expectedAnswer: "son jeune enfant",
-        acceptableAnswers: ["enfant", "jeune enfant", "son enfant"],
+        acceptableAnswers: [
+          "enfant",
+          "jeune enfant",
+          "son enfant",
+          "son jeune enfant",
+          "il voit son jeune enfant",
+          "il voit son enfant",
+        ],
         wrongAnswers: [
           {
             answer: "chat",
@@ -214,15 +240,28 @@ export const reading3 = {
         ],
       },
       {
-        instruction: "What does Marc ask Sophie about?",
-        prompt: "Do you have the ___ book?",
-        hint: "Look for the color Marc asks about",
-        expectedAnswer: "rouge",
-        acceptableAnswers: ["red", "livre rouge", "le livre rouge"],
+        instruction: "What does Marc offer to give Sophie?",
+        prompt: "Et j'ai un ___ ___ ___ pour toi aussi !",
+        hint: "Look for what Marc says he has for Sophie",
+        expectedAnswer: "un nouveau bon livre",
+        acceptableAnswers: [
+          "livre",
+          "un livre",
+          "bon livre",
+          "nouveau livre",
+          "un bon livre",
+          "un nouveau bon livre",
+          "un bon nouveau livre",
+          "un nouveau livre",
+        ],
         wrongAnswers: [
           {
-            answer: "vert",
-            feedback: "Marc asks about the red (rouge) book, not green",
+            answer: "vieux livre",
+            feedback: "Marc offers a new (nouveau) book, not an old one",
+          },
+          {
+            answer: "café",
+            feedback: "Marc offers a book (livre), not coffee",
           },
         ],
       },
@@ -230,8 +269,16 @@ export const reading3 = {
         instruction: "How does Sophie describe her book?",
         prompt: "Il est ___",
         hint: "Look for the adjective Sophie uses about her Jules Verne book",
-        expectedAnswer: "nouveau",
-        acceptableAnswers: ["new", "il est nouveau"],
+        expectedAnswer: "il est nouveau",
+        acceptableAnswers: [
+          "il est nouveau",
+          "nouveau",
+          "un nouveau livre",
+          "mon livre de Jules Verne",
+          "un livre de Jules Verne",
+          "un nouveau livre de Jules Verne",
+          "de Jules Verne",
+        ],
         wrongAnswers: [
           {
             answer: "vieux",
@@ -242,6 +289,10 @@ export const reading3 = {
             answer: "rouge",
             feedback: "Sophie describes her book as new, not a color",
           },
+          {
+            answer: "nouvelle",
+            feedback: "a book is masculine, use 'nouveau' not 'nouvelle'",
+          },
         ],
       },
       {
@@ -249,11 +300,15 @@ export const reading3 = {
         prompt: "It's very ___",
         hint: "Look for the adjective Sophie uses to describe the book",
         expectedAnswer: "vieux",
-        acceptableAnswers: ["old", "très vieux", "very old"],
+        acceptableAnswers: ["très vieux", "il est très vieux", "il est vieux"],
         wrongAnswers: [
           {
             answer: "nouveau",
             feedback: "Sophie says it's very old (vieux), not new",
+          },
+          {
+            answer: "vielle",
+            feedback: "Book is masculine, use 'vieux' not 'vielle'",
           },
         ],
       },
@@ -262,7 +317,13 @@ export const reading3 = {
         prompt: "ils sont ___ ___ ___",
         hint: "Look for where Marc keeps the books",
         expectedAnswer: "dans ma voiture",
-        acceptableAnswers: ["voiture", "ma voiture", "dans la voiture"],
+        acceptableAnswers: [
+          "voiture",
+          "ma voiture",
+          "dans la voiture",
+          "sa voiture",
+          "dans sa voiture",
+        ],
         wrongAnswers: [
           {
             answer: "maison",
@@ -275,19 +336,25 @@ export const reading3 = {
         ],
       },
       {
-        instruction: "What does Sophie say at the end?",
-        prompt: "___ ___!",
-        hint: "Look for Sophie's final response about coffee",
-        expectedAnswer: "Moi aussi",
-        acceptableAnswers: ["oui", "moi aussi"],
+        instruction: "How does Sophie react when Marc offers her a book?",
+        prompt: "Oh ! ___ ___ ? ___ !",
+        hint: "Look for Sophie's surprised and grateful response to Marc's offer",
+        expectedAnswer: "Pour moi ? Merci",
+        acceptableAnswers: [
+          "Pour moi",
+          "Merci",
+          "Oh pour moi merci",
+          "Oh! Pour moi? Merci!",
+        ],
         wrongAnswers: [
           {
-            answer: "merci",
-            feedback: "She says 'Moi aussi!' (Me too!), not thank you",
+            answer: "Non merci",
+            feedback:
+              "Sophie is excited and grateful, she says 'Oh! Pour moi? Merci!'",
           },
           {
-            answer: "au revoir",
-            feedback: "She says 'Moi aussi!' (Me too!), not goodbye",
+            answer: "Je ne veux pas",
+            feedback: "Sophie accepts gratefully, she doesn't refuse the gift",
           },
         ],
       },
