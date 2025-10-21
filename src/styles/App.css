@@ -1201,6 +1201,26 @@ body:has(.left-nav.collapsed) .app-footer {
   margin: 0;
 }
 
+/* Responsive title behavior */
+.lesson-title-desktop {
+  display: block;
+}
+
+.lesson-title-compact {
+  display: none;
+}
+
+/* Show compact title when screen gets too small */
+@media (max-width: 1280px) {
+  .lesson-title-desktop {
+    display: none;
+  }
+
+  .lesson-title-compact {
+    display: block;
+  }
+}
+
 .btn-reset-module {
   display: flex;
   align-items: center;

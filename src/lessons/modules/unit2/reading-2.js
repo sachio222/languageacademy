@@ -7,7 +7,7 @@
 export const reading2 = {
   moduleKey: "2024-01-22-reading2", // Permanent identifier - never changes
   // id and module number are set dynamically
-  title: "Reading Comprehension 2 - Normandy Adventure!",
+  title: "Reading Comprehension 2 - Rendez-vous en Normandie",
   description:
     "An exciting trip through beautiful Normandy! Explore famous places using vocabulary from Units 1 & 2.",
 
@@ -38,7 +38,7 @@ export const reading2 = {
   ],
 
   readingPassage: {
-    title: "Une Aventure en Normandie (An Adventure in Normandy)",
+    title: "Rendez-vous en Normandie (The Normandy Meetup)",
     text: `**Marie:** Bonjour Sophie! Comment ça va?
 
 **Sophie:** Ça va bien! Je suis à Caen avec un ami Thomas. Et toi, où es-tu?

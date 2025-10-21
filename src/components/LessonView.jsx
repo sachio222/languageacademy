@@ -537,7 +537,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
               {unitInfo.icon} Unit {unitInfo.id}
             </div>
           )}
-          <h2>{lesson.title}</h2>
+          <h2 className="lesson-title-desktop">{lesson.title}</h2>
+          <h2 className="lesson-title-compact">Module {lesson.id}</h2>
         </div>
         {isAuthenticated && (
           <button
