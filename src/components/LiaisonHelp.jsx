@@ -369,7 +369,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="insight-box">
             <p>
-              <strong>Hear the difference?</strong> without the liaison, the words simply blend together, and sound like a single word. With the liaison, the words can be heard as two separate words.
+              <strong>Hear the difference?</strong> without the liaison, the words simply blend together. They might sound like a single word. With the liaison, each word can be distinctly heard.
             </p>
           </div>
 
