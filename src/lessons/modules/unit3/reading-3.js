@@ -37,10 +37,14 @@ export const reading3 = {
   ],
 
   readingPassage: {
-    title: "Une Journée Spéciale (A Special Day)",
-    text: `**Sophie:** Bonjour Marc ! Tu viens au Café de Flore avec moi ?
+    title: "La Première Page (The First Page)",
+    text: `*Paris, 1871, Belle Époque*
+
+**Sophie:** Bonjour Marc ! Tu viens au Café de la Paix avec moi ?
 
 **Marc:** Oui ! Je vais au café avec toi. Tu as *Le Comte de Monte-Cristo* ? C'est le livre rouge et jaune.
+
+![img/reading3-they-meet-on-the-street.jpg|maxWidth:65%]
 
 **Sophie:** Oui, je l'ai. Il est très vieux ! C'est le tien ?
 
@@ -58,12 +62,18 @@ export const reading3 = {
 
 **Marc:** Oui, ils sont dans ma voiture. Et j'ai un nouveau bon livre pour toi aussi !
 
+![img/reading3-in-front-of-his-voiture.jpg|maxWidth:65%]
+
 **Sophie:** Oh ! Pour moi ? Merci ! Allons au café !
 
 **Marc:** Je veux un bon café avec toi.
 
-**Sophie:** Oui ! Moi aussi !`,
-    translation: `**Sophie:** Hello Marc! Are you coming to Café de Flore with me?
+**Sophie:** Oui ! Moi aussi !
+
+![img/reading3-at-the-cafe.jpg|maxWidth:65%]`,
+    translation: `*Paris, 1871, Belle Époque*
+
+**Sophie:** Hello Marc! Are you coming to Café de la Paix with me?
 
 **Marc:** Yes! I'm going to the café with you. Do you have the Count of Monte Cristo? It's the red and yellow book.
 

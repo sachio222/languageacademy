@@ -43,7 +43,7 @@ export const reading2 = {
 
 **Sophie:** Ça va bien! Je suis à Caen avec un ami Thomas. Et toi, où es-tu?
 
-![img/reading2-sophiethomas.png|maxWidth:65%]
+![img/reading2-sophiethomas.jpg|maxWidth:65%]
 
 **Marie:** Je suis à Honfleur! J'ai une nouvelle voiture et je veux voir Bayeux aussi.
 
@@ -59,7 +59,7 @@ export const reading2 = {
 
 **Marie:** Il y a de vieilles et belles maisons! Nous pouvons voir ces maisons.
 
-![img/ reading2-les-maisons-dans-rouen.png|maxWidth:65%]
+![img/reading2-les-maisons-dans-rouen.jpg|maxWidth:65%]
 
 **Thomas:** Oui! Et j'ai un ami Pierre à Rouen.
 
@@ -77,7 +77,7 @@ export const reading2 = {
 
 **Sophie:** Très bien! Voilà! Nous pouvons voir ces belles choses! Au revoir!
 
-![img/reading2-mont-saint-michele.png|maxWidth:65%]`,
+![img/reading2-mont-saint-michele.jpg|maxWidth:65%]`,
     translation: `**Marie:** Hello Sophie! How's it going?
 
 **Sophie:** It's going well! I am in Caen with a friend Thomas. And you, where are you?

@@ -578,17 +578,17 @@ const wikipediaEntries = {
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg',
     url: 'https://en.wikipedia.org/wiki/Palace_of_Versailles'
   },
-  'Café de Flore': {
-    name: 'Café de Flore',
-    description: 'Historic café in Saint-Germain-des-Prés, famous for intellectuals like Sartre and Beauvoir',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg/500px-Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg',
-    url: 'https://en.wikipedia.org/wiki/Café_de_Flore'
+  'Café de la Paix': {
+    name: 'Café de la Paix',
+    description: 'Historic café in Paris, located on Place de l\'Opéra, famous for its elegant interior and historic significance',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Constant_Korovine_Caf%C3%A9_de_la_paix.jpg',
+    url: 'https://en.wikipedia.org/wiki/Caf%C3%A9_de_la_Paix'
   },
-  'café de Flore': {
-    name: 'Café de Flore',
-    description: 'Historic café in Saint-Germain-des-Prés, famous for intellectuals like Sartre and Beauvoir',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg/500px-Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg',
-    url: 'https://en.wikipedia.org/wiki/Café_de_Flore'
+  'café de la Paix': {
+    name: 'Café de la Paix',
+    description: 'Historic café in Paris, located on Place de l\'Opéra, famous for its elegant interior and historic significance',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Constant_Korovine_Caf%C3%A9_de_la_paix.jpg',
+    url: 'https://en.wikipedia.org/wiki/Caf%C3%A9_de_la_Paix'
   },
   'Montmartre': {
     name: 'Montmartre',
@@ -625,6 +625,30 @@ const wikipediaEntries = {
     description: 'Classic science fiction novel by Jules Verne (1870), featuring Captain Nemo and the submarine Nautilus',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Houghton_FC8_V5946_869ve_-_Verne%2C_frontispiece.jpg/500px-Houghton_FC8_V5946_869ve_-_Verne%2C_frontispiece.jpg',
     url: 'https://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Seas'
+  },
+  'Paris': {
+    name: 'Paris',
+    description: 'Capital and largest city of France, known as the "City of Light" and cultural capital of Europe',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Paris_-_Eiffelturm_und_Marsfeld2.jpg/500px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    url: 'https://en.wikipedia.org/wiki/Paris'
+  },
+  'paris': {
+    name: 'Paris',
+    description: 'Capital and largest city of France, known as the "City of Light" and cultural capital of Europe',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Paris_-_Eiffelturm_und_Marsfeld2.jpg/500px-Paris_-_Eiffelturm_und_Marsfeld2.jpg',
+    url: 'https://en.wikipedia.org/wiki/Paris'
+  },
+  'Belle Époque': {
+    name: 'Belle Époque',
+    description: 'Period of French history from 1871-1914, characterized by peace, prosperity, and cultural flourishing',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg/500px-Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg',
+    url: 'https://en.wikipedia.org/wiki/Belle_%C3%89poque'
+  },
+  'belle époque': {
+    name: 'Belle Époque',
+    description: 'Period of French history from 1871-1914, characterized by peace, prosperity, and cultural flourishing',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg/500px-Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg',
+    url: 'https://en.wikipedia.org/wiki/Belle_%C3%89poque'
   }
 };
 
@@ -740,6 +764,8 @@ function ReadingPassage({ passage }) {
       { phrase: "Comte de Monte-Cristo", translation: "Count of Monte Cristo" },
       { phrase: "Jules Verne", translation: "Jules Verne" },
       { phrase: "Vingt mille lieues sous les mers", translation: "Twenty Thousand Leagues Under the Sea" },
+      { phrase: "Belle Époque", translation: "Belle Époque (Beautiful Era)" },
+      { phrase: "Café de la Paix", translation: "Café de la Paix" },
       { phrase: "qu'est-ce que", translation: "what" },
       { phrase: "s'il vous plaît", translation: "please (formal)" },
       { phrase: "s'il vous plait", translation: "please (formal)" },
