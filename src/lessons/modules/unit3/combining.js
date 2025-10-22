@@ -147,18 +147,39 @@ export const module10_combining = {
         expectedAnswer: "est-ce le tien",
         wrongAnswers: [
           {
-            answer: "c'est le tien",
-            feedback: "For questions, use: est-ce (not c'est)",
+            answer: "c'est le tien ?",
+            feedback:
+              "For questions, use: est-ce (not c'est). However, it is OK to use in spoken french",
           },
         ],
       },
       {
         instruction:
           "Ask if something belongs to a third person (masculine thing)",
-        prompt: "Is that his? (masculine thing)",
+        prompt: "Is it his? (masculine thing)",
         hint: "Question form: est-ce + possessive pronoun for his/her",
         expectedAnswer: "est-ce le sien",
-        wrongAnswers: [],
+        wrongAnswers: [
+          {
+            answer: "c'est le sien ?",
+            feedback:
+              "For questions, use: est-ce (not c'est). However, it is OK to use in spoken french",
+          },
+        ],
+      },
+      {
+        instruction:
+          "Ask if something belongs to a third person (feminine thing)",
+        prompt: "Is that hers? (feminine thing)",
+        hint: "Question form: est-ce possessive pronoun for his/her",
+        expectedAnswer: "est-ce la sienne",
+        wrongAnswers: [
+          {
+            answer: "c'est la sienne ?",
+            feedback:
+              "For questions, use: est-ce (not c'est). However, it is OK to use in spoken french",
+          },
+        ],
       },
       {
         instruction:
@@ -166,20 +187,25 @@ export const module10_combining = {
         prompt: "I want it",
         hint: "Combine vouloir from M12 + object pronoun BEFORE verb",
         expectedAnswer: "je le veux",
+        acceptableAnswers: ["je le veux ?", "je la veux"],
         wrongAnswers: [
           {
             answer: "je veux le",
             feedback: "Object pronoun goes BEFORE: je LE veux",
           },
           {
+            answer: "je veux la",
+            feedback: "Object pronoun goes BEFORE: je LE veux",
+          },
+          {
             answer: "je veux ça",
-            feedback: "Use object pronoun 'le', not ça",
+            feedback: "Use object pronoun 'le' or 'la', not ça",
           },
         ],
       },
       {
         instruction: "Tell your friend to come with you (venir + preposition)",
-        prompt: "you come with me (informal)",
+        prompt: "you are coming with me. (informal)",
         hint: "Combine venir (M17) + avec (M14) + moi",
         expectedAnswer: "tu viens avec moi",
         wrongAnswers: [
