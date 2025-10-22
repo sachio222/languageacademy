@@ -202,12 +202,12 @@ export const unit3Practice = {
       instruction: "Complete: 'You go to the park' (use contraction)",
       blanks: [
         {
-          position: 3,
+          position: 2,
           answer: "vas",
           hint: "aller conjugated for tu",
         },
         {
-          position: 7,
+          position: 3,
           answer: "au",
           hint: "à + le = ?",
         },
