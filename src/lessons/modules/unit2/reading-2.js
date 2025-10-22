@@ -51,7 +51,7 @@ export const reading2 = {
 
 **Marie:** Ça ? C'est un livre sur la Normandie. Il y a Mont-Saint-Michel, Rouen... Ces choses sont très belles !
 
-**Thomas:** Je veux voir Mont-Saint-Michel !
+**Thomas:** Je veux voir le Mont-Saint-Michel !
 
 **Marie:** Moi aussi. Il est très grand. Nous pouvons voir de vieilles et belles choses aussi !
 
