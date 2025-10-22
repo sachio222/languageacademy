@@ -129,6 +129,7 @@ export const readingVocabulary = {
   "allons partir": "are going to leave",
   "allons voir": "are going to see",
   "allons-y": "let's go!",
+  "Allons au café !": "Let's go to the café!",
   alors: "so / then",
   Amélie: "Amélie (famous French film)",
   "Amélie.": "Amélie.",

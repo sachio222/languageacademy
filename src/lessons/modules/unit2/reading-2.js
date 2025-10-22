@@ -39,43 +39,43 @@ export const reading2 = {
 
   readingPassage: {
     title: "Rendez-vous en Normandie (The Normandy Meetup)",
-    text: `**Marie:** Bonjour Sophie! Comment ça va?
+    text: `**Marie:** Bonjour Sophie ! Comment ça va ?
 
-**Sophie:** Ça va bien! Je suis à Caen avec un ami Thomas. Et toi, où es-tu?
+**Sophie:** Ça va bien ! Je suis à Caen avec un ami Thomas. Et toi, où es-tu ?
 
 ![img/reading2-sophiethomas.jpg|maxWidth:65%]
 
-**Marie:** Je suis à Honfleur! J'ai une nouvelle voiture et je veux voir Bayeux aussi.
+**Marie:** Je suis à Honfleur ! J'ai une nouvelle voiture et je veux voir Bayeux aussi.
 
-**Sophie:** Qu'est-ce que c'est, ça? Cette chose dans la voiture?
+**Sophie:** Qu'est-ce que c'est, ça ? Cette chose dans la voiture ?
 
-**Marie:** Ça? C'est un livre sur la Normandie! Il y a Mont-Saint-Michel, Rouen... Ces choses sont très belles!
+**Marie:** Ça? C'est un livre sur la Normandie ! Il y a Mont-Saint-Michel, Rouen... Ces choses sont très belles !
 
-**Thomas:** Je veux voir Mont-Saint-Michel!
+**Thomas:** Je veux voir Mont-Saint-Michel !
 
-**Marie:** Moi aussi! Elle est très grande. Nous pouvons voir de vieilles et belles choses aussi!
+**Marie:** Moi aussi ! Elle est très grande ! Nous pouvons voir de vieilles et belles choses aussi !
 
-**Sophie:** Et Bayeux? Qu'est-ce qu'il y a à Bayeux?
+**Sophie:** Et Bayeux ? Qu'est-ce que c'est à Bayeux ?
 
-**Marie:** Il y a de vieilles et belles maisons! Nous pouvons voir ces maisons.
+**Marie:** La ville a de vieilles et belles maisons. Est-ce que tu veux voir ces maisons ?
 
 ![img/reading2-les-maisons-dans-rouen.jpg|maxWidth:65%]
 
-**Thomas:** Oui! Et j'ai un ami Pierre à Rouen.
+**Thomas:** Oui ! Et j'ai un ami Pierre à Rouen.
 
-**Sophie:** Pierre? Il a une maison à Rouen?
+**Sophie:** Pierre ? Il a une maison à Rouen ?
 
-**Thomas:** Oui! Il a une petite mais très belle maison. Elle est à Rouen.
+**Thomas:** Oui ! Il a une petite mais très belle maison. Elle est à Rouen.
 
-**Marie:** Une maison à Rouen? C'est bon ça! J'ai le chien dans la voiture. Il peut voir Rouen aussi?
+**Marie:** Une maison à Rouen ? C'est bon ça! J'ai le chien dans la voiture. Il peut voir Rouen aussi ?
 
-**Sophie:** Oui! Les chiens peuvent être avec nous! Et le chat est dans la voiture aussi.
+**Sophie:** Oui ! Les chiens peuvent être avec nous ! Et le chat est dans la voiture aussi.
 
-**Marie:** Tu as un chat? Je veux voir ce chat! Nous pouvons voir ces choses en un jour?
+**Marie:** Tu as un chat ? Je veux voir ce chat! Nous pouvons voir ces choses en un jour ?
 
 **Thomas:** Non! Mais nous avons deux jours. Un jour pour Mont-Saint-Michel et Bayeux, un autre jour pour Rouen et Honfleur.
 
-**Sophie:** Très bien! Voilà! Nous pouvons voir ces belles choses! Au revoir!
+**Sophie:** Très bien ! Voilà ! Nous pouvons voir ces belles choses ! Au revoir !
 
 ![img/reading2-mont-saint-michele.jpg|maxWidth:65%]`,
     translation: `**Marie:** Hello Sophie! How's it going?
@@ -96,7 +96,7 @@ export const reading2 = {
 
 **Sophie:** And Bayeux? What is there in Bayeux?
 
-**Marie:** There are old and beautiful houses! We can see these houses.
+**Marie:** The town has old and beautiful houses. Do you want to see these houses?
 
 
 
