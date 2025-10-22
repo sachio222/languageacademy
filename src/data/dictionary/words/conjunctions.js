@@ -397,7 +397,7 @@ export const conjunctions = new Map([
   ]
 ]);
 // Frequency-ordered array for priority loading
-export const conjunctionsByFrequency = ["et-fr", "mais-fr", "ou-fr", "donc-fr", "car-fr", "comme-fr"];
+export const conjunctionsByFrequency = ["et-fr", "mais-fr", "ou-fr", "donc-fr", "car-fr", "comme-fr", "puisque-fr"];
 
 
 export default conjunctions;

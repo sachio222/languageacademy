@@ -235,6 +235,6 @@ export const interjections = new Map([
   ],
 ]);
 // Frequency-ordered array for priority loading
-export const interjectionsByFrequency = [];
+export const interjectionsByFrequency = ["merci-fr", "oui-fr", "non-fr", "voil--fr", "voici-fr", "bah-fr"];
 
 export default interjections;

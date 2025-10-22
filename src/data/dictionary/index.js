@@ -8,11 +8,20 @@ import { nouns, nounsByFrequency, nounsByGender } from "./words/nouns.js";
 import { verbs, verbsByFrequency, verbsByConjugation } from "./words/verbs.js";
 import { adjectives, adjectivesByFrequency } from "./words/adjectives.js";
 import { adverbs, adverbsByFrequency } from "./words/adverbs.js";
-import { pronouns } from "./words/pronouns.js";
-import { articles } from "./words/articles.js";
+import { pronouns, pronounsByFrequency } from "./words/pronouns.js";
+import { articles, articlesByFrequency } from "./words/articles.js";
 import { prepositions, prepositionsByFrequency } from "./words/prepositions.js";
 import { conjunctions, conjunctionsByFrequency } from "./words/conjunctions.js";
-import { expressions } from "./words/expressions.js";
+import {
+  interjections,
+  interjectionsByFrequency,
+} from "./words/interjections.js";
+import {
+  interrogatives,
+  interrogativesByFrequency,
+} from "./words/interrogatives.js";
+import { alphabet, alphabetByFrequency } from "./words/alphabet.js";
+import { expressions, expressionsByFrequency } from "./words/expressions.js";
 
 // Import phrases and relationships
 import { phrases, phrasesByType, phraseComponents } from "./phrases.js";
@@ -30,6 +39,9 @@ export const dictionary = new Map([
   ...articles,
   ...prepositions,
   ...conjunctions,
+  ...interjections,
+  ...interrogatives,
+  ...alphabet,
   ...expressions,
 ]);
 
@@ -47,6 +59,9 @@ export const indices = {
     article: articles,
     preposition: prepositions,
     conjunction: conjunctions,
+    interjection: interjections,
+    interrogative: interrogatives,
+    alphabet: alphabet,
     expression: expressions,
   },
 
@@ -63,8 +78,14 @@ export const indices = {
     ...verbsByFrequency,
     ...adjectivesByFrequency,
     ...adverbsByFrequency,
+    ...pronounsByFrequency,
+    ...articlesByFrequency,
     ...prepositionsByFrequency,
     ...conjunctionsByFrequency,
+    ...interjectionsByFrequency,
+    ...interrogativesByFrequency,
+    ...alphabetByFrequency,
+    ...expressionsByFrequency,
   ],
 
   // Specialized indices
@@ -323,6 +344,9 @@ export class LessonCompatibility {
       article: "Articles",
       preposition: "Prepositions",
       conjunction: "Conjunctions",
+      interjection: "Interjections",
+      interrogative: "Interrogatives",
+      alphabet: "Alphabet",
       expression: "Expressions",
     };
 

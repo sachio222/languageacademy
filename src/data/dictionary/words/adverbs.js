@@ -5779,7 +5779,7 @@ export const adverbs = new Map([
   ]
 ]);
 // Frequency-ordered array for priority loading
-export const adverbsByFrequency = [];
+export const adverbsByFrequency = ["aussi-fr", "vraiment-fr", "s-rieusement-fr", "lentement-fr", "rapidement-fr", "facilement-fr", "compl-tement-fr", "probablement-fr", "toujours-fr", "simplement-fr", "encore-fr", "r-guli-rement-fr", "jamais-fr", "trop-fr", "vachement-fr", "hyper-fr", "plus-fr", "moins-fr", "ainsi-fr", "alors-fr", "ensuite-fr", "finalement-fr", "mieux-fr", "puis-fr", "enfin-fr", "soudain-fr", "dehors-fr", "ensemble-fr", "parfois-fr", "ici-fr", "l--fr", "partout-fr", "merci-fr", "oui-fr", "non-fr", "voil--fr", "voici-fr", "bah-fr", "demain-fr", "hier-fr", "bien-fr", "maintenant-fr", "mal-fr", "beaucoup-fr", "déjà-fr", "très-fr"];
 
 export default adverbs;
 

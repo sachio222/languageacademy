@@ -8392,7 +8392,7 @@ export const adjectives = new Map([
   ]
 ]);
 // Frequency-ordered array for priority loading
-export const adjectivesByFrequency = ["francophone-fr", "tr-s-fr", "historiques-fr", "-ducatif-fr", "entier-fr", "populaire-fr", "public-fr", "rapides-fr", "mon-fr", "ma-fr", "mes-fr", "ton-fr", "ta-fr", "tes-fr", "son-fr", "sa-fr", "ses-fr", "notre-fr", "nos-fr", "votre-fr", "vos-fr", "leurs-fr", "autres-fr", "nouvelle-fr", "contents-fr", "quelques-fr", "belle-fr", "contente-fr", "tous-fr", "bons-fr", "typique-fr", "nouveaux-fr", "proche-fr", "lointain-e--fr"];
+export const adjectivesByFrequency = ["francophone-fr", "historiques-fr", "-ducatif-fr", "entier-fr", "populaire-fr", "public-fr", "rapides-fr", "autres-fr", "nouvelle-fr", "contents-fr", "quelques-fr", "belle-fr", "contente-fr", "tous-fr", "bons-fr", "typique-fr", "nouveaux-fr", "proche-fr", "lointain-e--fr", "rouge-fr", "jaune-fr", "orange-fr", "rose-fr", "marron-fr", "beige-fr", "clair-fr", "fonc--fr", "p-le-fr", "dor--fr", "argent--fr", "multicolore-fr", "bon-fr", "difficile-fr", "rapide-fr", "nouveau-fr", "excellente-fr", "magnifique-fr", "reconnaissante-fr", "quotidienne-fr", "internationales-fr", "europ-ennes-fr", "mondiales-fr", "-conomiques-fr", "politiques-fr", "culturelles-fr", "moderne-fr", "historique-fr", "significatif-fr", "pire-fr", "m-me-fr", "g-nial-fr", "top-fr", "super-fr", "toute-fr", "tout-fr", "toutes-fr", "meilleures-fr", "chaque-fr", "autre-fr", "fran-ais-fr", "excellent-fr", "fran-aise-fr", "d-licieux-fr", "dernier-fr", "fatigu--fr", "parfait-fr", "meilleur-fr", "diff-rente-fr"];
 
 // Gender-based indices
 export const adjectivesByGender = {

@@ -592,18 +592,6 @@ export const prepositions = new Map([
   ]
 ]);
 // Frequency-ordered array for priority loading
-export const prepositionsByFrequency = [
-  "avec-fr",
-  "dans-fr",
-  "sur-fr",
-  "sous-fr",
-  "entre-fr",
-  "--fr",
-  "de-fr",
-  "pour-fr",
-  "moi-fr",
-  "pendant-fr",
-  "avant-fr",
-];
+export const prepositionsByFrequency = ["avec-fr", "dans-fr", "sur-fr", "sous-fr", "entre-fr", "--fr", "de-fr", "pour-fr", "pendant-fr", "avant-fr", "depuis-fr", "devant-fr", "derri-re-fr", "apr-s-fr", "parmi-fr"];
 
 export default prepositions;
