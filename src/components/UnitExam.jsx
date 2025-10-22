@@ -476,6 +476,21 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
               >
                 Continue to Unit {unitNumber + 1} →
               </button>
+              {scorePercentage < 90 && (
+                <button
+                  className="btn-retry-discrete"
+                  onClick={async () => {
+                    // Reset local state
+                    setSubmitted(false);
+                    setResults(null);
+                    setAnswers({});
+                    setCurrentSection(0);
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  Want to improve your score? Try again
+                </button>
+              )}
             </div>
           ) : (
             <div className="exam-failed">

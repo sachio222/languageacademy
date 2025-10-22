@@ -1272,3 +1272,31 @@
     margin-bottom: 1rem;
   }
 }
+
+/* Discrete retry button for Unit exams with passing scores under 90% */
+.btn-retry-discrete {
+  background: transparent;
+  border: none;
+  color: #665665;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  letter-spacing: -0.01em;
+}
+
+.btn-retry-discrete:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.btn-retry-discrete:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

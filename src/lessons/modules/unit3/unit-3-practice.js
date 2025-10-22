@@ -15,7 +15,7 @@ export const unit3Practice = {
 
   concepts: [
     {
-      term: "Expansion Practice",
+      term: "Movement & Possession Practice",
       definition:
         "Interactive exercises to master advanced French structures through contextual application",
       example:

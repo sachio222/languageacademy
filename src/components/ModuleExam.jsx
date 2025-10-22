@@ -225,6 +225,20 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
             <button className="btn-primary btn-large" onClick={() => onPassExam(results.percentage, results.timeSpent)}>
               Continue to Next Module →
             </button>
+            {scorePercentage < 90 && (
+              <button
+                className="btn-retry-discrete"
+                onClick={() => {
+                  setSubmitted(false);
+                  setResults(null);
+                  setAnswers({});
+                  setCurrentQuestionIndex(0);
+                  window.scrollTo(0, 0);
+                }}
+              >
+                Want a better score? Try again
+              </button>
+            )}
           </div>
         ) : (
           <div className="exam-failed">

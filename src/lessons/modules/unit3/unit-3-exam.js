@@ -1,11 +1,11 @@
 /**
- * Unit 3 Exam - Comprehensive test for Expansion unit
+ * Unit 3 Exam - Comprehensive test for Movement & Possession unit
  * Tests motion verbs, object pronouns, possessives, and advanced combinations
  */
 
 export const unit3Exam = {
   moduleKey: "2024-02-05-unit3-exam", // Permanent identifier - never changes
-  title: "Unit 3 Final Exam - Expansion",
+  title: "Unit 3 Final Exam - Movement & Possession",
   description:
     "Test everything from Unit 3! Motion verbs, object pronouns, possessives, and complex sentence combinations.",
 
@@ -16,7 +16,7 @@ export const unit3Exam = {
 
   concepts: [
     {
-      term: "Expansion Layer Mastery",
+      term: "Movement & Possession Mastery",
       definition:
         "You've learned advanced French structures that enable more sophisticated communication and expression",
       example:
