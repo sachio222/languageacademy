@@ -162,17 +162,11 @@ export const prepositions = {
         ],
       },
       {
-        instruction:
-          "Say 'the book is on the table' (you haven't learned 'table' - use 'thing')",
-        prompt: "the book is on the thing",
-        hint: "le livre + est + [on] + la chose",
-        expectedAnswer: "le livre est sur la chose",
-        wrongAnswers: [
-          {
-            answer: "le livre est dans la chose",
-            feedback: "Use 'sur' (on), not 'dans' (in)",
-          },
-        ],
+        instruction: "Say 'the thing is on the book'",
+        prompt: "the thing is on the book",
+        hint: "la chose + est + [on] + le livre",
+        expectedAnswer: "la chose est sur le livre",
+        wrongAnswers: [],
       },
       {
         instruction: "Say 'I want this for you' (informal)",

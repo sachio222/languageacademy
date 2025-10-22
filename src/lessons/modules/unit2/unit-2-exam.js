@@ -165,7 +165,6 @@ export const unit2Exam = {
         hint: "le chat + est + preposition + la maison",
         expectedAnswer: "le chat est dans la maison",
       },
-
       // Section 5: Adjectives & Complex Sentences
       {
         instruction: "Translate to French",
@@ -252,6 +251,19 @@ export const unit2Exam = {
         prompt: "you can see the house (informal)",
         hint: "tu peux + infinitive + article + noun",
         expectedAnswer: "tu peux voir la maison",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "they (feminine) are at Ladurée",
+        hint: "elles sont + chez + Ladurée (famous macaron shop)",
+        expectedAnswer: "elles sont chez Ladurée",
+        wrongAnswers: [
+          {
+            answer: "elles sont à Ladurée",
+            feedback:
+              "That's acceptable but 'chez' is more natural for shops/businesses - use 'chez Ladurée'",
+          },
+        ],
       },
     ],
   },

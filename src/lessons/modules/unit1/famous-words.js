@@ -130,7 +130,7 @@ export const famousWords = {
       },
       {
         instruction: "You're making a request. Add this word to be polite",
-        prompt: "please",
+        prompt: "please (formal)",
         hint: "Literally 'if it pleases you' - makes any request polite",
         expectedAnswer: "s'il vous plaît",
         wrongAnswers: [],

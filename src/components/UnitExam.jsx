@@ -350,6 +350,53 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
     }
   };
 
+  const handleKeyDown = (e, currentQuestionId) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+
+      // Find the next unanswered question in the current section
+      const currentSectionData = examData.sections[currentSection];
+      const currentQuestionIndex = currentSectionData.questions.findIndex(q => q.id === currentQuestionId);
+
+      // Look for next unanswered question in current section
+      let nextQuestionIndex = -1;
+      for (let i = currentQuestionIndex + 1; i < currentSectionData.questions.length; i++) {
+        if (!answers[currentSectionData.questions[i].id]?.trim()) {
+          nextQuestionIndex = i;
+          break;
+        }
+      }
+
+      // If no unanswered question found after current, look from beginning of section
+      if (nextQuestionIndex === -1) {
+        for (let i = 0; i < currentQuestionIndex; i++) {
+          if (!answers[currentSectionData.questions[i].id]?.trim()) {
+            nextQuestionIndex = i;
+            break;
+          }
+        }
+      }
+
+      // If found an unanswered question, scroll to it
+      if (nextQuestionIndex !== -1) {
+        const nextQuestionId = currentSectionData.questions[nextQuestionIndex].id;
+        const nextInput = inputRefs.current[nextQuestionId];
+        if (nextInput) {
+          nextInput.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+          setTimeout(() => nextInput.focus(), 300); // Focus after scroll completes
+        }
+      } else {
+        // All questions in current section are answered, move to next section if available
+        if (currentSection < examData.sections.length - 1) {
+          handleNextSection();
+        }
+      }
+    }
+  };
+
   const handleSubmitExam = () => {
     // Grade all answers
     const gradedResults = examData.sections.map((section) => {
@@ -615,6 +662,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
                   type="text"
                   value={answers[question.id] || ''}
                   onChange={(e) => handleAnswerChange(question.id, e.target.value)}
+                  onKeyDown={(e) => handleKeyDown(e, question.id)}
                   placeholder="Type your French answer here..."
                   className={answers[question.id]?.trim() ? 'answered' : ''}
                 />
