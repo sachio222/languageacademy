@@ -39,7 +39,7 @@ export const reading2 = {
 
   readingPassage: {
     title: "Rendez-vous en Normandie (The Normandy Meetup)",
-    text: `**Marie:** Bonjour Sophie ! Comment ça va ?
+    text: `**Marie:** Salut Sophie ! Comment ça va ?
 
 **Sophie:** Ça va bien ! Je suis à Caen avec un ami Thomas. Et toi, où es-tu ?
 
@@ -49,11 +49,11 @@ export const reading2 = {
 
 **Sophie:** Qu'est-ce que c'est, ça ? Cette chose dans la voiture ?
 
-**Marie:** Ça? C'est un livre sur la Normandie ! Il y a Mont-Saint-Michel, Rouen... Ces choses sont très belles !
+**Marie:** Ça ? C'est un livre sur la Normandie. Il y a Mont-Saint-Michel, Rouen... Ces choses sont très belles !
 
 **Thomas:** Je veux voir Mont-Saint-Michel !
 
-**Marie:** Moi aussi ! Elle est très grande ! Nous pouvons voir de vieilles et belles choses aussi !
+**Marie:** Moi aussi. Il est très grand. Nous pouvons voir de vieilles et belles choses aussi !
 
 **Sophie:** Et Bayeux ? Qu'est-ce que c'est à Bayeux ?
 
@@ -61,7 +61,7 @@ export const reading2 = {
 
 ![img/reading2-les-maisons-dans-rouen.jpg|maxWidth:65%]
 
-**Thomas:** Oui ! Et j'ai un ami Pierre à Rouen.
+**Thomas:** Oui, et j'ai un ami Pierre à Rouen.
 
 **Sophie:** Pierre ? Il a une maison à Rouen ?
 
@@ -73,12 +73,12 @@ export const reading2 = {
 
 **Marie:** Tu as un chat ? Je veux voir ce chat! Nous pouvons voir ces choses en un jour ?
 
-**Thomas:** Non! Mais nous avons deux jours. Un jour pour Mont-Saint-Michel et Bayeux, un autre jour pour Rouen et Honfleur.
+**Thomas:** Non, mais nous avons deux jours. Un jour pour Mont-Saint-Michel et Bayeux, un autre jour pour Rouen et Honfleur.
 
-**Sophie:** Très bien ! Voilà ! Nous pouvons voir ces belles choses ! Au revoir !
+**Sophie:** Très bien ! Voilà ! Nous pouvons voir ces belles choses ! Salut !
 
 ![img/reading2-mont-saint-michele.jpg|maxWidth:65%]`,
-    translation: `**Marie:** Hello Sophie! How's it going?
+    translation: `**Marie:** Hi Sophie! How's it going?
 
 **Sophie:** It's going well! I am in Caen with a friend Thomas. And you, where are you?
 
@@ -88,11 +88,11 @@ export const reading2 = {
 
 **Sophie:** What is that? That thing in the car?
 
-**Marie:** That? It's a book about Normandy! There's Mont-Saint-Michel, Rouen... These things are very beautiful!
+**Marie:** That? It's a book about Normandy. There's Mont-Saint-Michel, Rouen... These things are very beautiful!
 
 **Thomas:** I want to see Mont-Saint-Michel!
 
-**Marie:** Me too! It is very big. We can see old and beautiful things too!
+**Marie:** Me too. It is very big. We can see old and beautiful things too!
 
 **Sophie:** And Bayeux? What is there in Bayeux?
 
@@ -100,7 +100,7 @@ export const reading2 = {
 
 
 
-**Thomas:** Yes! And I have a friend Pierre in Rouen.
+**Thomas:** Yes, and I have a friend Pierre in Rouen.
 
 **Sophie:** Pierre? Does he have a house in Rouen?
 
@@ -112,9 +112,9 @@ export const reading2 = {
 
 **Marie:** You have a cat? I want to see this cat! Can we see these things in one day?
 
-**Thomas:** No! But we have two days. One day for Mont-Saint-Michel and Bayeux, another day for Rouen and Honfleur.
+**Thomas:** No, but we have two days. One day for Mont-Saint-Michel and Bayeux, another day for Rouen and Honfleur.
 
-**Sophie:** Very good! There! We can see these beautiful things! Goodbye!`,
+**Sophie:** Very good! There! We can see these beautiful things! Bye!`,
   },
 
   vocabularyReference: [],
