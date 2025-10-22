@@ -10,7 +10,6 @@ export const reading2 = {
   title: "Reading Comprehension 2 - Rendez-vous en Normandie",
   description:
     "An exciting trip through beautiful Normandy! Explore famous places using vocabulary from Units 1 & 2.",
-
   skipStudyMode: true,
   isReadingComprehension: true,
   concepts: [
@@ -116,9 +115,7 @@ export const reading2 = {
 
 **Sophie:** Very good! There! We can see these beautiful things! Bye!`,
   },
-
   vocabularyReference: [],
-
   exerciseConfig: {
     type: "custom",
     items: [
