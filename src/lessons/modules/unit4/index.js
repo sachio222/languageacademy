@@ -3,6 +3,7 @@ export { survivalPhrases } from "./survival-phrases.js";
 export { faireModule } from "./faire.js";
 export { devoirModule } from "./devoir.js";
 export { parlerModule } from "./parler.js";
+export { searchFindModule } from "./search-find.js";
 export { negation } from "./negation.js";
 export { timeAdverbs } from "./time-adverbs.js";
 export { locationAdverbs } from "./location-adverbs.js";

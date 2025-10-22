@@ -129,6 +129,11 @@ export const prendreModule = {
       english: "I don't understand",
       note: "very useful phrase!",
     },
+    {
+      french: "prends-le, s'il te plaît",
+      english: "take it please",
+      note: "imperative + object pronoun + please",
+    },
   ],
 
   exerciseConfig: {
@@ -425,6 +430,38 @@ export const prendreModule = {
         ],
         explanation:
           "j'ai beaucoup appris - adverb 'beaucoup' before past participle",
+      },
+      {
+        instruction: "Say 'take it' (command form)",
+        prompt: "take it",
+        hint: "Imperative form + object pronoun",
+        expectedAnswer: "prends-le",
+        wrongAnswers: [
+          {
+            answer: "je prends",
+            feedback:
+              "That's 'I take' - use imperative 'prends-le' for 'take it'",
+          },
+          {
+            answer: "tu prends",
+            feedback:
+              "That's 'you take' - use imperative 'prends-le' for 'take it'",
+          },
+        ],
+      },
+      {
+        instruction: "Say 'take it please' (informal)",
+        prompt: "take it please",
+        hint: "prends-le + s'il te plaît",
+        expectedAnswer: "prends-le, s'il te plaît",
+        acceptableAnswers: ["prends-le s'il te plaît"],
+        wrongAnswers: [
+          {
+            answer: "prends-le, s'il vous plaît",
+            feedback:
+              "Use informal 's'il te plaît' to match the informal 'prends'",
+          },
+        ],
       },
     ],
   },

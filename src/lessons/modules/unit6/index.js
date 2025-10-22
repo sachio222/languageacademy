@@ -2,6 +2,7 @@
 export { progressiveTenses } from "./progressive-tenses.js";
 export { direModule } from "./dire.js";
 export { prendreModule } from "./prendre.js";
+export { donnerModule } from "./donner.js";
 export { mettreModule } from "./mettre.js";
 export { demanderModule } from "./demander.js";
 export { commanderModule } from "./commander.js";

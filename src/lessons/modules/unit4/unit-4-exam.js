@@ -171,7 +171,27 @@ export const unit4Exam = {
         acceptableAnswers: ["je parle francais"],
       },
 
-      // Section 5: Negation (5 questions)
+      // Section 5: Essential Verbs - chercher & trouver (3 questions)
+      {
+        instruction: "Translate to French",
+        prompt: "I search / I look for",
+        hint: "Verb chercher conjugated for je",
+        expectedAnswer: "je cherche",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "I find",
+        hint: "Verb trouver conjugated for je",
+        expectedAnswer: "je trouve",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "I'm looking for the book",
+        hint: "je cherche + le livre",
+        expectedAnswer: "je cherche le livre",
+      },
+
+      // Section 6: Negation (5 questions)
       {
         instruction: "Translate to French",
         prompt: "not",
@@ -204,7 +224,7 @@ export const unit4Exam = {
         expectedAnswer: "je ne mange jamais",
       },
 
-      // Section 6: Time & Frequency (5 questions)
+      // Section 7: Time & Frequency (5 questions)
       {
         instruction: "Translate to French",
         prompt: "now",
@@ -236,8 +256,26 @@ export const unit4Exam = {
         hint: "Future time expression",
         expectedAnswer: "demain",
       },
+      {
+        instruction: "Translate to French",
+        prompt: "already",
+        hint: "Time adverb - by now, before this time",
+        expectedAnswer: "déjà",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "still",
+        hint: "Time adverb - continuing, not yet finished",
+        expectedAnswer: "encore",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "sometimes",
+        hint: "Frequency adverb - occasionally",
+        expectedAnswer: "parfois",
+      },
 
-      // Section 7: Location (3 questions)
+      // Section 8: Location (3 questions)
       {
         instruction: "Translate to French",
         prompt: "here",
@@ -259,7 +297,7 @@ export const unit4Exam = {
         acceptableAnswers: ["là bas", "la-bas", "la bas"],
       },
 
-      // Section 8: Complex Sentences (5 questions)
+      // Section 9: Complex Sentences (5 questions)
       {
         instruction: "Translate to French",
         prompt: "I must speak French here",

@@ -5,6 +5,7 @@
 import { progressiveTenses } from "./progressive-tenses.js";
 import { direModule } from "./dire.js";
 import { prendreModule } from "./prendre.js";
+import { donnerModule } from "./donner.js";
 import { mettreModule } from "./mettre.js";
 import { demanderModule } from "./demander.js";
 import { commanderModule } from "./commander.js";
@@ -19,7 +20,7 @@ export const unit6Config = {
     id: 6,
     title: "Unit 6: Basic Fluency",
     description:
-      "Advanced communication verbs (say, take, put, ask), progressive tenses, expressing needs, and comprehensive vocabulary",
+      "Advanced communication verbs (say, take, give, put, ask), progressive tenses, expressing needs, and comprehensive vocabulary",
     icon: "💬",
     color: "#10b981",
   },
@@ -27,6 +28,7 @@ export const unit6Config = {
     progressiveTenses,
     direModule,
     prendreModule,
+    donnerModule,
     mettreModule,
     demanderModule,
     commanderModule,

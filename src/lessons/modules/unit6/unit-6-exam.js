@@ -34,7 +34,7 @@ export const unit6Exam = {
       definition:
         "Learn the five most important verbs for expressing communication and interaction",
       example:
-        "dire (je dis, tu dis, il dit), prendre (je prends, tu prends, il prend), mettre (je mets, tu mets, il met), demander (je demande, tu demandes, il demande), commander (je commande, tu commandes, il commande)",
+        "dire (je dis, tu dis, il dit), prendre (je prends, tu prends, il prend), donner (je donne, tu donnes, il donne), mettre (je mets, tu mets, il met), demander (je demande, tu demandes, il demande), commander (je commande, tu commandes, il commande)",
     },
     {
       term: "Expressing Needs and Wants",
@@ -256,7 +256,28 @@ export const unit6Exam = {
         acceptableAnswers: ["j apprends le français", "j'apprends le francais"],
       },
 
-      // SECTION 6: mettre (to put) (5 questions)
+      // SECTION 6: donner (to give) (3 questions)
+      {
+        instruction: "Translate to French",
+        prompt: "I give",
+        hint: "Regular -ER verb: donner",
+        expectedAnswer: "je donne",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "you give (informal)",
+        hint: "donner for tu",
+        expectedAnswer: "tu donnes",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "give me your hand please",
+        hint: "donne-moi + ta main + s'il te plaît",
+        expectedAnswer: "donne-moi ta main, s'il te plaît",
+        acceptableAnswers: ["donne-moi ta main s'il te plaît"],
+      },
+
+      // SECTION 7: mettre (to put) (5 questions)
       {
         instruction: "Translate to French",
         prompt: "I put",
@@ -288,7 +309,7 @@ export const unit6Exam = {
         expectedAnswer: "je mets un manteau",
       },
 
-      // SECTION 7: demander (to ask) (5 questions)
+      // SECTION 8: demander (to ask) (5 questions)
       {
         instruction: "Translate to French",
         prompt: "I ask",
@@ -321,7 +342,7 @@ export const unit6Exam = {
         expectedAnswer: "il me demande de venir",
       },
 
-      // SECTION 8: commander (to order) (4 questions)
+      // SECTION 9: commander (to order) (4 questions)
       {
         instruction: "Translate to French",
         prompt: "I order",
@@ -348,7 +369,7 @@ export const unit6Exam = {
         expectedAnswer: "je voudrais commander",
       },
 
-      // SECTION 9: avoir besoin de (to need) (6 questions)
+      // SECTION 10: avoir besoin de (to need) (6 questions)
       {
         instruction: "Translate to French",
         prompt: "I need",

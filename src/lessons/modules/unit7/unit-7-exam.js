@@ -370,6 +370,24 @@ export const unit7Exam = {
         hint: "c'est bon + comma + quoi",
         expectedAnswer: "c'est bon, quoi",
       },
+      {
+        instruction: "Translate to French",
+        prompt: "maybe",
+        hint: "Perhaps, possibly - with hyphen",
+        expectedAnswer: "peut-être",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "definitely",
+        hint: "Certainly, for sure",
+        expectedAnswer: "certainement",
+      },
+      {
+        instruction: "Translate to French",
+        prompt: "of course",
+        hint: "Two words - bien + sûr",
+        expectedAnswer: "bien sûr",
+      },
 
       // SECTION 10: Modifiers - tout, même, mal (5 questions)
       {
