@@ -100,7 +100,7 @@ export const unit3Exam = {
       },
       {
         instruction: "Translate to French",
-        prompt: "you come with me (informal)",
+        prompt: "you are coming (you come) with me (informal)",
         hint: "venir + avec + stressed pronoun",
         expectedAnswer: "tu viens avec moi",
       },

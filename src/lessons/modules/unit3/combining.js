@@ -39,16 +39,6 @@ export const module10_combining = {
       note: "plural (avoir)",
     },
     { french: "je le veux", english: "I want it", note: "vouloir + object" },
-    {
-      french: "tu viens avec moi",
-      english: "you come with me",
-      note: "venir + preposition",
-    },
-    {
-      french: "il va partir",
-      english: "he's going to leave",
-      note: "aller + infinitive",
-    },
     { french: "c'est le mien", english: "it's mine", note: "masculine thing" },
     {
       french: "c'est le sien",
@@ -61,6 +51,16 @@ export const module10_combining = {
       note: "masculine thing",
     },
     { french: "est-ce le tien", english: "is it yours?", note: "question" },
+    {
+      french: "tu viens avec moi",
+      english: "you are coming with me",
+      note: "venir + preposition",
+    },
+    {
+      french: "il va partir",
+      english: "he's going to leave",
+      note: "aller + infinitive",
+    },
   ],
 
   exerciseConfig: {
@@ -212,6 +212,11 @@ export const module10_combining = {
           {
             answer: "tu vas avec moi",
             feedback: "Use venir (come), not aller (go)",
+          },
+          {
+            answer: "vous venez avec moi",
+            feedback:
+              "vous is correct for 'you' (formal/plural), not 'tu' (informal)",
           },
         ],
       },
