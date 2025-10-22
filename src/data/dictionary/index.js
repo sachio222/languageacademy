@@ -4,19 +4,19 @@
  */
 
 // Import all word categories
-import { nouns, nounsByFrequency, nounsByGender } from './words/nouns.js';
-import { verbs, verbsByFrequency, verbsByConjugation } from './words/verbs.js';
-import { adjectives, adjectivesByFrequency } from './words/adjectives.js';
-import { adverbs, adverbsByFrequency } from './words/adverbs.js';
-import { pronouns } from './words/pronouns.js';
-import { articles } from './words/articles.js';
-import { prepositions, prepositionsByFrequency } from './words/prepositions.js';
-import { conjunctions, conjunctionsByFrequency } from './words/conjunctions.js';
-import { expressions } from './words/expressions.js';
+import { nouns, nounsByFrequency, nounsByGender } from "./words/nouns.js";
+import { verbs, verbsByFrequency, verbsByConjugation } from "./words/verbs.js";
+import { adjectives, adjectivesByFrequency } from "./words/adjectives.js";
+import { adverbs, adverbsByFrequency } from "./words/adverbs.js";
+import { pronouns } from "./words/pronouns.js";
+import { articles } from "./words/articles.js";
+import { prepositions, prepositionsByFrequency } from "./words/prepositions.js";
+import { conjunctions, conjunctionsByFrequency } from "./words/conjunctions.js";
+import { expressions } from "./words/expressions.js";
 
 // Import phrases and relationships
-import { phrases, phrasesByType, phraseComponents } from './phrases.js';
-import { relationships, relationshipsByType } from './relationships.js';
+import { phrases, phrasesByType, phraseComponents } from "./phrases.js";
+import { relationships, relationshipsByType } from "./relationships.js";
 
 /**
  * Master word dictionary - combines all word categories
@@ -30,7 +30,7 @@ export const dictionary = new Map([
   ...articles,
   ...prepositions,
   ...conjunctions,
-  ...expressions
+  ...expressions,
 ]);
 
 /**
@@ -47,16 +47,16 @@ export const indices = {
     article: articles,
     preposition: prepositions,
     conjunction: conjunctions,
-    expression: expressions
+    expression: expressions,
   },
-  
+
   // By language
   byLanguage: new Map([
-    ['fr', new Map()], // Will be populated during build
-    ['en', new Map()],
-    ['es', new Map()]
+    ["fr", new Map()], // Will be populated during build
+    ["en", new Map()],
+    ["es", new Map()],
   ]),
-  
+
   // By frequency (for priority loading)
   byFrequency: [
     ...nounsByFrequency,
@@ -64,13 +64,13 @@ export const indices = {
     ...adjectivesByFrequency,
     ...adverbsByFrequency,
     ...prepositionsByFrequency,
-    ...conjunctionsByFrequency
+    ...conjunctionsByFrequency,
   ],
-  
+
   // Specialized indices
   nounsByGender,
   verbsByConjugation,
-  phrasesByType
+  phrasesByType,
 };
 
 /**
@@ -83,47 +83,54 @@ export class DictionaryLookup {
   static getWord(id) {
     return dictionary.get(id);
   }
-  
+
   /**
    * Get words by part of speech - O(1) lookup
    */
   static getWordsByPartOfSpeech(partOfSpeech) {
     // Handle plural forms (nouns -> noun)
-    const singularForm = partOfSpeech.replace(/s$/, '');
-    return indices.byPartOfSpeech[partOfSpeech] || indices.byPartOfSpeech[singularForm] || new Map();
+    const singularForm = partOfSpeech.replace(/s$/, "");
+    return (
+      indices.byPartOfSpeech[partOfSpeech] ||
+      indices.byPartOfSpeech[singularForm] ||
+      new Map()
+    );
   }
-  
+
   /**
    * Get words by language - O(1) lookup
    */
   static getWordsByLanguage(language) {
     return indices.byLanguage.get(language) || new Map();
   }
-  
+
   /**
    * Search words by text - optimized for autocomplete
    */
-  static searchWords(query, language = 'fr', limit = 10) {
+  static searchWords(query, language = "fr", limit = 10) {
     const results = [];
     const queryLower = query.toLowerCase();
-    
+
     for (const [id, word] of dictionary) {
-      if (word.language === language && word.word.toLowerCase().startsWith(queryLower)) {
+      if (
+        word.language === language &&
+        word.word.toLowerCase().startsWith(queryLower)
+      ) {
         results.push(word);
         if (results.length >= limit) break;
       }
     }
-    
+
     return results;
   }
-  
+
   /**
    * Get related words - follows relationship graph
    */
   static getRelatedWords(wordId, relationshipType = null) {
     const word = dictionary.get(wordId);
     if (!word) return [];
-    
+
     const related = [];
     for (const rel of word.relationships || []) {
       if (!relationshipType || rel.type === relationshipType) {
@@ -131,35 +138,37 @@ export class DictionaryLookup {
         if (relatedWord) {
           related.push({
             word: relatedWord,
-            relationship: rel
+            relationship: rel,
           });
         }
       }
     }
-    
+
     return related;
   }
-  
+
   /**
    * Get word translations
    */
   static getTranslations(wordId, targetLanguage) {
     const word = dictionary.get(wordId);
     if (!word) return [];
-    
-    return word.translations?.filter(t => t.language === targetLanguage) || [];
+
+    return (
+      word.translations?.filter((t) => t.language === targetLanguage) || []
+    );
   }
-  
+
   /**
    * Get words by frequency range
    */
   static getWordsByFrequency(minRank = 1, maxRank = 100) {
     return indices.byFrequency
       .slice(minRank - 1, maxRank)
-      .map(id => dictionary.get(id))
+      .map((id) => dictionary.get(id))
       .filter(Boolean);
   }
-  
+
   /**
    * Get words by CEFR level
    */
@@ -184,38 +193,40 @@ export class PhraseLookup {
   static getPhrase(id) {
     return phrases.get(id);
   }
-  
+
   /**
    * Get phrases by type
    */
   static getPhrasesByType(type) {
     return phrasesByType.get(type) || [];
   }
-  
+
   /**
    * Get phrases containing a word
    */
   static getPhrasesContaining(wordId) {
     const results = [];
     for (const [id, phrase] of phrases) {
-      if (phrase.components?.some(comp => comp.wordId === wordId)) {
+      if (phrase.components?.some((comp) => comp.wordId === wordId)) {
         results.push(phrase);
       }
     }
     return results;
   }
-  
+
   /**
    * Decompose phrase into components
    */
   static decomposePhrase(phraseId) {
     const phrase = phrases.get(phraseId);
     if (!phrase) return [];
-    
-    return phrase.components?.map(comp => ({
-      component: comp,
-      word: dictionary.get(comp.wordId)
-    })) || [];
+
+    return (
+      phrase.components?.map((comp) => ({
+        component: comp,
+        word: dictionary.get(comp.wordId),
+      })) || []
+    );
   }
 }
 
@@ -229,7 +240,7 @@ export class VocabularyStats {
   static getTotalWords() {
     return dictionary.size;
   }
-  
+
   /**
    * Get word count by part of speech
    */
@@ -240,7 +251,7 @@ export class VocabularyStats {
     }
     return counts;
   }
-  
+
   /**
    * Get word count by language
    */
@@ -251,22 +262,22 @@ export class VocabularyStats {
     }
     return counts;
   }
-  
+
   /**
    * Get coverage statistics for a lesson
    */
   static getLessonCoverage(lessonVocabulary) {
-    const covered = lessonVocabulary.filter(vocab => 
+    const covered = lessonVocabulary.filter((vocab) =>
       dictionary.has(vocab.id || vocab.french)
     );
-    
+
     return {
       total: lessonVocabulary.length,
       covered: covered.length,
       percentage: (covered.length / lessonVocabulary.length) * 100,
-      missing: lessonVocabulary.filter(vocab => 
-        !dictionary.has(vocab.id || vocab.french)
-      )
+      missing: lessonVocabulary.filter(
+        (vocab) => !dictionary.has(vocab.id || vocab.french)
+      ),
     };
   }
 }
@@ -279,43 +290,43 @@ export class LessonCompatibility {
    * Convert old vocabulary format to dictionary lookup
    */
   static convertVocabularyReference(vocabularyReference) {
-    return vocabularyReference.map(vocab => {
+    return vocabularyReference.map((vocab) => {
       const wordId = vocab.id || `${vocab.french}-fr`;
       const dictionaryWord = dictionary.get(wordId);
-      
+
       if (dictionaryWord) {
         return {
           ...vocab,
           id: wordId,
-          dictionaryEntry: dictionaryWord
+          dictionaryEntry: dictionaryWord,
         };
       }
-      
+
       // Fallback for words not yet in dictionary
       return vocab;
     });
   }
-  
+
   /**
    * Get categorization for VocabularyDashboard (replaces runtime categorization)
    */
   static getWordCategory(wordId) {
     const word = dictionary.get(wordId);
-    if (!word) return 'Unknown';
-    
+    if (!word) return "Unknown";
+
     const partOfSpeechMap = {
-      noun: 'Nouns',
-      verb: 'Verbs',
-      adjective: 'Adjectives',
-      adverb: 'Adverbs',
-      pronoun: 'Pronouns',
-      article: 'Articles',
-      preposition: 'Prepositions',
-      conjunction: 'Conjunctions',
-      expression: 'Expressions'
+      noun: "Nouns",
+      verb: "Verbs",
+      adjective: "Adjectives",
+      adverb: "Adverbs",
+      pronoun: "Pronouns",
+      article: "Articles",
+      preposition: "Prepositions",
+      conjunction: "Conjunctions",
+      expression: "Expressions",
     };
-    
-    return partOfSpeechMap[word.partOfSpeech] || 'Other';
+
+    return partOfSpeechMap[word.partOfSpeech] || "Other";
   }
 }
 
@@ -325,7 +336,7 @@ export {
   phrasesByType,
   phraseComponents,
   relationships,
-  relationshipsByType
+  relationshipsByType,
 };
 
 export default {
@@ -334,5 +345,5 @@ export default {
   DictionaryLookup,
   PhraseLookup,
   VocabularyStats,
-  LessonCompatibility
+  LessonCompatibility,
 };
