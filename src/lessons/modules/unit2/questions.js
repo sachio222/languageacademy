@@ -78,6 +78,11 @@ export const module6_questions = {
       note: "ask about quantity/price",
     },
     {
+      french: "quel/quelle",
+      english: "which/what",
+      note: "agrees with noun: quel livre? quelle maison?",
+    },
+    {
       french: "est-ce que",
       english: "question maker",
       note: "put before statement to make question",
@@ -288,6 +293,51 @@ export const module6_questions = {
           {
             answer: "comment est-ce que tu as de livres",
             feedback: "Use 'combien' for counting, not 'comment'",
+          },
+        ],
+      },
+      {
+        instruction: "Ask 'which book?' (masculine noun)",
+        prompt: "which book?",
+        hint: "quel + masculine noun",
+        expectedAnswer: "quel livre",
+        wrongAnswers: [
+          {
+            answer: "quelle livre",
+            feedback: "livre is masculine, use 'quel' not 'quelle'",
+          },
+          {
+            answer: "que livre",
+            feedback: "Use 'quel' for 'which', not 'que'",
+          },
+        ],
+      },
+      {
+        instruction: "Ask 'which house?' (feminine noun)",
+        prompt: "which house?",
+        hint: "quelle + feminine noun",
+        expectedAnswer: "quelle maison",
+        wrongAnswers: [
+          {
+            answer: "quel maison",
+            feedback: "maison is feminine, use 'quelle' not 'quel'",
+          },
+          {
+            answer: "que maison",
+            feedback: "Use 'quelle' for 'which', not 'que'",
+          },
+        ],
+      },
+      {
+        instruction: "Ask 'which cat do you want?' (masculine)",
+        prompt: "which cat do you want?",
+        hint: "quel + chat + est-ce que + tu veux",
+        expectedAnswer: "quel chat est-ce que tu veux",
+        acceptableAnswers: ["quel chat tu veux"],
+        wrongAnswers: [
+          {
+            answer: "quelle chat est-ce que tu veux",
+            feedback: "chat is masculine, use 'quel' not 'quelle'",
           },
         ],
       },

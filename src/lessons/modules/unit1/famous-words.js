@@ -37,6 +37,11 @@ export const famousWords = {
       english: "hello / good day",
       note: "greeting (literally: good day)",
     },
+    {
+      french: "bonsoir",
+      english: "good evening",
+      note: "evening greeting (literally: good evening)",
+    },
     { french: "merci", english: "thank you", note: "gratitude" },
     { french: "oui", english: "yes", note: "affirmative" },
     { french: "non", english: "no", note: "negative" },
@@ -78,6 +83,23 @@ export const famousWords = {
           {
             answer: "salut",
             feedback: "That's informal 'hi' - use bonjour for hello",
+          },
+        ],
+      },
+      {
+        instruction:
+          "You're arriving at a restaurant in the evening. Greet the host",
+        prompt: "good evening",
+        hint: "Evening greeting - literally 'good evening'",
+        expectedAnswer: "bonsoir",
+        wrongAnswers: [
+          {
+            answer: "bonjour",
+            feedback: "That's for daytime - use bonsoir for evening",
+          },
+          {
+            answer: "bon",
+            feedback: "That's just 'good' - need the full evening greeting",
           },
         ],
       },

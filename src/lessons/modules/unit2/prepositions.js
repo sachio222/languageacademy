@@ -69,6 +69,11 @@ export const prepositions = {
     },
     { french: "de", english: "of / from", note: "of the house, from Paris" },
     { french: "pour", english: "for", note: "for you, for friends" },
+    {
+      french: "chez",
+      english: "at (someone's place)",
+      note: "chez Pierre, chez nous",
+    },
   ],
 
   exerciseConfig: {
@@ -257,6 +262,30 @@ export const prepositions = {
         hint: "je suis + entre + les amis",
         expectedAnswer: "je suis entre les amis",
         wrongAnswers: [],
+      },
+      {
+        instruction: "Say 'I am at Pierre's place'",
+        prompt: "I am at Pierre's place",
+        hint: "je suis + chez + Pierre",
+        expectedAnswer: "je suis chez Pierre",
+        wrongAnswers: [
+          {
+            answer: "je suis à Pierre",
+            feedback: "Use 'chez' for people's homes, not 'à'",
+          },
+        ],
+      },
+      {
+        instruction: "Say 'the cat is at the woman's place'",
+        prompt: "the cat is at the woman's place",
+        hint: "le chat + est + chez + la femme",
+        expectedAnswer: "le chat est chez la femme",
+        wrongAnswers: [
+          {
+            answer: "le chat est à la femme",
+            feedback: "Use 'chez' for people's homes, not 'à'",
+          },
+        ],
       },
     ],
   },

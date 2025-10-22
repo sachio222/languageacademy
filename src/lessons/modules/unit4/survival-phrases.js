@@ -32,6 +32,7 @@ export const survivalPhrases = {
   vocabularyReference: [
     { french: "je voudrais", english: "I would like", note: "polite form!" },
     { french: "s'il vous plaît", english: "please", note: "formal politeness" },
+    { french: "s'il te plaît", english: "please", note: "informal politeness" },
     { french: "excusez-moi", english: "excuse me", note: "get attention" },
     { french: "bonne nuit", english: "good night", note: "before bed" },
     {
@@ -59,7 +60,7 @@ export const survivalPhrases = {
     type: "custom",
     items: [
       {
-        instruction: "Politely order a book at a shop",
+        instruction: "Politely order a book at a shop (formal)",
         prompt: "I would like a book, please",
         hint: "je voudrais + un livre + s'il vous plaît",
         expectedAnswer: "je voudrais un livre, s'il vous plaît",
@@ -78,18 +79,6 @@ export const survivalPhrases = {
         expectedAnswer: "je voudrais un café, s'il vous plaît",
         acceptableAnswers: ["je voudrais un café"],
         wrongAnswers: [],
-      },
-      {
-        instruction: "Politely ask for this cat (pointing at something)",
-        prompt: "I would like this cat",
-        hint: "je voudrais + demonstrative + noun",
-        expectedAnswer: "je voudrais ce chat",
-        wrongAnswers: [
-          {
-            answer: "je veux ce chat",
-            feedback: "Use 'je voudrais' to be polite",
-          },
-        ],
       },
       {
         instruction: "Ask how much a book costs",
@@ -113,11 +102,51 @@ export const survivalPhrases = {
         ],
       },
       {
-        instruction: "Say 'please' when asking for something",
+        instruction: "Say 'please' when asking for something (formal)",
         prompt: "please (formal)",
         hint: "Literally 'if it pleases you'",
         expectedAnswer: "s'il vous plaît",
         wrongAnswers: [],
+      },
+      {
+        instruction: "Say 'please' to a friend or family member",
+        prompt: "please (informal)",
+        hint: "Informal version with 'te' instead of 'vous'",
+        expectedAnswer: "s'il te plaît",
+        wrongAnswers: [
+          {
+            answer: "s'il vous plaît",
+            feedback:
+              "That's the formal version - use 's'il te plaît' for friends and family",
+          },
+        ],
+      },
+      {
+        instruction: "Ask your friend for the book politely (to a friend)",
+        prompt: "I want the book, please",
+        hint: "Je veux + le livre + s'il te plaît",
+        expectedAnswer: "je veux le livre, s'il te plaît",
+        acceptableAnswers: ["je veux le livre"],
+        wrongAnswers: [
+          {
+            answer: "je veux le livre, s'il vous plaît",
+            feedback:
+              "Use 's'il te plaît' with friends and family, not 's'il vous plaît'",
+          },
+        ],
+      },
+      {
+        instruction: "Ask your friend for the cat politely (to a friend)",
+        prompt: "I want the cat, please",
+        hint: "Je veux + le chat + s'il te plaît",
+        expectedAnswer: "je veux le chat, s'il te plaît",
+        acceptableAnswers: ["je veux le chat"],
+        wrongAnswers: [
+          {
+            answer: "je veux le chat, s'il vous plaît",
+            feedback: "Use 's'il te plaît' with friends, not 's'il vous plaît'",
+          },
+        ],
       },
       {
         instruction: "Say good night to your host family",

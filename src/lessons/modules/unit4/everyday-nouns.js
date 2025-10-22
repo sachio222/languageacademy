@@ -106,6 +106,16 @@ export const everydayNouns = {
       note: "feminine - often used with 'ne': je ne vois personne",
     },
     {
+      french: "quelqu'un",
+      english: "someone/somebody",
+      note: "masculine - je vois quelqu'un (I see someone)",
+    },
+    {
+      french: "quelque chose",
+      english: "something",
+      note: "masculine - je veux quelque chose (I want something)",
+    },
+    {
       french: "la carte de crédit",
       english: "credit card",
       note: "feminine - essential for shopping!",
@@ -395,6 +405,49 @@ export const everydayNouns = {
             answer: "l'addition, s'il te plaît",
             feedback:
               "Use formal 's'il vous plaît' when asking for the bill in a restaurant",
+          },
+        ],
+      },
+      {
+        instruction: 'Say "I see someone"',
+        prompt: "I see someone",
+        hint: "je vois + quelqu'un",
+        expectedAnswer: "je vois quelqu'un",
+        wrongAnswers: [
+          {
+            answer: "je vois personne",
+            feedback: "That means 'I see nobody' - use 'quelqu'un' for someone",
+          },
+          {
+            answer: "je vois tout le monde",
+            feedback:
+              "That means 'I see everyone' - use 'quelqu'un' for someone",
+          },
+        ],
+      },
+      {
+        instruction: 'Say "I want something"',
+        prompt: "I want something",
+        hint: "je veux + quelque chose",
+        expectedAnswer: "je veux quelque chose",
+        wrongAnswers: [
+          {
+            answer: "je veux quelqu'un",
+            feedback:
+              "That means 'I want someone' - use 'quelque chose' for something",
+          },
+        ],
+      },
+      {
+        instruction: 'Say "someone has the book"',
+        prompt: "someone has the book",
+        hint: "quelqu'un + a + le livre",
+        expectedAnswer: "quelqu'un a le livre",
+        wrongAnswers: [
+          {
+            answer: "personne a le livre",
+            feedback:
+              "That means 'nobody has the book' - use 'quelqu'un' for someone",
           },
         ],
       },
