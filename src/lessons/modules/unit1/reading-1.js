@@ -42,9 +42,9 @@ export const reading1 = {
   // The reading passage - uses ONLY vocabulary from modules 1-8
   readingPassage: {
     title: "Les Amis (The Friends)",
-    text: `Bonjour! Je suis Paul. Je suis un homme. J'ai un chat et un chien aussi.
+    text: `Bonjour ! Je suis Paul. Je suis un homme. J'ai un chat et un chien aussi.
 
-Tu es Marie. Tu es une femme. Tu as une maison et une voiture. La maison est très bonne!
+Tu es Marie. Tu es une femme. Tu as une maison et une voiture. La maison est très bonne !
 
 ![img/reading1a.png]
 
@@ -54,11 +54,11 @@ Nous sommes les amis. Nous avons des enfants et des chiens. Les chiens sont trè
 
 
 
-C'est un très bon jour! Nous sommes très bons.
+C'est un très bon jour ! Nous sommes très bons.
 
 
 
-Merci et au revoir!
+Merci et au revoir !
 
 ![img/reading1d.png]`,
     translation: `Hello! I am Paul. I am a man. I have a cat and a dog too.
