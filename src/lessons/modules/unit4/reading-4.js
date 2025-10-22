@@ -48,9 +48,9 @@ export const reading4 = {
 
 **Marie:** Non, aujourd'hui ! Je vais toujours au travail le matin. Mais ce soir, je ne vais pas au travail.
 
-**Paul:** Ah bon! Ce soir alors ! Tu veux venir à Saint-Germain ce soir avec moi ?
+**Paul:** Ah bon ! Ce soir alors ! Tu veux venir à Saint-Germain ce soir avec moi ?
 
-**Marie:** Oui! Mais j'ai un problème. Je n'ai pas d'argent avec moi.
+**Marie:** Oui ! Mais j'ai un problème. Je n'ai pas d'argent avec moi.
 
 **Paul:** Tu n'as pas d'argent ? Tu as ta carte de crédit ?
 
@@ -58,9 +58,9 @@ export const reading4 = {
 
 ![img/reading4-ils-marchent-dans-la-rue.jpg|maxWidth:88%]
 
-**Paul:** Bon! Moi, je paie ce soir ! Tu ne dois pas payer !
+**Paul:** Bon ! Moi, je paie ce soir ! Tu ne dois pas payer !
 
-**Marie:** Non, non! Je ne veux pas ça. Tu es très bon, mais je vais payer avec ma carte.
+**Marie:** Non, non ! Je ne veux pas ça. Tu es très gentil, mais je vais payer avec ma carte.
 
 **Paul:** Ça va. Alors, ce soir à six heures ?
 
@@ -68,7 +68,7 @@ export const reading4 = {
 
 **Paul:** Les Éditeurs. Il est sur le carrefour de l'Odéon. Tu peux le voir de ta maison.
 
-**Marie:** Bon! Maintenant je dois partir. Au revoir Paul !
+**Marie:** Bon ! Maintenant je dois partir. Au revoir Paul !
 
 **Paul:** Au revoir Marie ! À ce soir !
 
@@ -78,7 +78,7 @@ export const reading4 = {
 
 **Marie:** Bonsoir Paul !
 
-**Paul:** Marie! Tu es là! Viens, viens ! Nous allons voir la femme ici. Excusez-moi madame !
+**Paul:** Marie ! Tu es là ! Viens, viens ! Nous allons voir la femme ici. Excusez-moi madame !
 
 **La femme:** Bonjour ! Qu'est-ce que vous voulez ?
 
@@ -88,7 +88,7 @@ export const reading4 = {
 
 ![img/reading4-pain-et-un-caraffe-d'eau.jpg|maxWidth:88%]
 
-**Marie:** Merci ! Le pain est très bon ici.
+**Marie:** Miam ! Le pain est très bon ici. C'est délicieux !
 
 **Paul:** Oui ! Je viens toujours ici. Je ne vais jamais aux autres cafés. Ce café est le meilleur !
 
@@ -96,11 +96,11 @@ export const reading4 = {
 
 **Paul:** Mais non ! Ton français est très bon ! Tu es nouvelle ici ?
 
-**Marie:** Oui, je suis nouvelle dans la ville. Je ne vois personne ici. Tu es mon ami maintenant !
+**Marie:** Oui, je suis nouvelle dans la ville. Je ne vois personne ici. Tu es mon meilleur ami maintenant !
 
-**Paul:** Oui! Nous sommes amis ! Et tu vas voir, la vie ici est très bonne.
+**Paul:** Oui! Nous pouvons être de bons amis ! Et tu vas voir, la vie ici est très bonne.
 
-**Marie:** J'aime cette ville. Je ne vais jamais partir !
+**Marie:** Mmmh! J'aime cette ville. Je ne vais jamais partir !
 
 ![img/reading4-elle-aimes-cette-ville.jpg|maxWidth:88%]
 
@@ -159,7 +159,7 @@ export const reading4 = {
 
 
 
-**Marie:** Thank you! The bread is very good here.
+**Marie:** Yum! The bread is very good here. It's delicious!
 
 **Paul:** Yes! I always come here. I never go to the other cafés. This café is the best!
 
@@ -167,11 +167,11 @@ export const reading4 = {
 
 **Paul:** But no! Your French is very good! Are you new here?
 
-**Marie:** Yes, I'm new in the city. I see nobody here. You're my friend now!
+**Marie:** Yes, I'm new in the city. I see nobody here. You're my best friend now!
 
-**Paul:** Yes! We're friends! And you'll see, life here is very good.
+**Paul:** Yes! We can be good friends! And you'll see, life here is very good.
 
-**Marie:** I love this city. I'll never leave!
+**Marie:** Mmmh! I love this city. I'll never leave!
 
 
 
