@@ -6,7 +6,7 @@
 
 export const reading4 = {
   moduleKey: "2024-03-30-reading-4", // Permanent identifier - never changes
-  title: "Reading Comprehension 4 - Une Autre Journée Normale",
+  title: "Reading Comprehension 4 - La nouvelle époque de Marie",
   description:
     "Unit 4 mastery! A natural conversation using all your vocabulary.",
 
@@ -37,7 +37,7 @@ export const reading4 = {
   ],
 
   readingPassage: {
-    title: "Une Autre Journée Normale (Another Normal Day)",
+    title: "La nouvelle époque de Marie (Marie's new life)",
     text: `**Paul:** Marie ! Tu veux aller au Jardin du Luxembourg avec moi ?
 
 ![img/reading4-elle-se-maquille.jpg|maxWidth:88%]
