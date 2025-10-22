@@ -1,7 +1,7 @@
 /**
  * Prepositional phrases Dictionary
  * Auto-generated from phrases migration
- * Total entries: 22
+ * Total entries: 29
  */
 
 export const prepositionalphrases = new Map([
@@ -878,10 +878,290 @@ export const prepositionalphrases = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
     "verified": true
 }
+  ],
+  [
+    "de-luniversit-fr",
+    {
+    "id": "de-luniversit-fr",
+    "language": "fr",
+    "word": "de l'université",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "from university",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "de-la-bonne-cuisine-fr",
+    {
+    "id": "de-la-bonne-cuisine-fr",
+    "language": "fr",
+    "word": "de la bonne cuisine",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "good food",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "des-heures-fr",
+    {
+    "id": "des-heures-fr",
+    "language": "fr",
+    "word": "des heures",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "hours",
+            "definition": "time",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
+    "verified": true
+}
+  ],
+  [
+    "des-mots-fr",
+    {
+    "id": "des-mots-fr",
+    "language": "fr",
+    "word": "des mots",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "words",
+            "definition": "noun plural",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
+    "verified": true
+}
+  ],
+  [
+    "des-phrases-fr",
+    {
+    "id": "des-phrases-fr",
+    "language": "fr",
+    "word": "des phrases",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "phrases",
+            "definition": "plural",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
+    "verified": true
+}
+  ],
+  [
+    "des-sandwichs-fr",
+    {
+    "id": "des-sandwichs-fr",
+    "language": "fr",
+    "word": "des sandwichs",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "sandwiches",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "chez-moi-fr",
+    {
+    "id": "chez-moi-fr",
+    "language": "fr",
+    "word": "chez moi",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to my place",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const prepositionalphrasesByFrequency = ["au-dessous-de-fr", "au-dessus-de-fr", "avec-moi-fr", "n----fr", "n--en-fr", "tu-viens-avec-moi-fr", "-cause-de-fr", "-ct-de-fr", "-ct-des-fentres-fr", "au-bout-de-fr", "au-coin-de-fr", "au-milieu-de-fr", "autour-de-fr", "le-long-de-fr", "en-ligne-fr", "pour-quelle-sache-fr", "pour-quil-vienne-fr", "pour-quon-puisse-fr", "pour-que-fr", "pour-que-tu-comprennes-fr", "pour-que-tu-sois-content-fr", "pour-rentrer-fr"];
+export const prepositionalphrasesByFrequency = ["au-dessous-de-fr", "au-dessus-de-fr", "avec-moi-fr", "n----fr", "n--en-fr", "tu-viens-avec-moi-fr", "-cause-de-fr", "-ct-de-fr", "-ct-des-fentres-fr", "au-bout-de-fr", "au-coin-de-fr", "au-milieu-de-fr", "autour-de-fr", "le-long-de-fr", "en-ligne-fr", "pour-quelle-sache-fr", "pour-quil-vienne-fr", "pour-quon-puisse-fr", "pour-que-fr", "pour-que-tu-comprennes-fr", "pour-que-tu-sois-content-fr", "pour-rentrer-fr", "de-luniversit-fr", "de-la-bonne-cuisine-fr", "des-heures-fr", "des-mots-fr", "des-phrases-fr", "des-sandwichs-fr", "chez-moi-fr"];
 
 export default prepositionalphrases;

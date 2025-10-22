@@ -1,7 +1,7 @@
 /**
  * Expressions Dictionary
  * Auto-generated from phrases migration
- * Total entries: 40
+ * Total entries: 49
  */
 
 export const expressions = new Map([
@@ -1603,10 +1603,371 @@ export const expressions = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
     "verified": true
 }
+  ],
+  [
+    "tout-de-suite-fr",
+    {
+    "id": "tout-de-suite-fr",
+    "language": "fr",
+    "word": "tout de suite",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "right away",
+            "definition": "expression",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true
+}
+  ],
+  [
+    "tout-droit-fr",
+    {
+    "id": "tout-droit-fr",
+    "language": "fr",
+    "word": "tout droit",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "straight ahead",
+            "definition": "⭐ keep going forward",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
+    "verified": true
+}
+  ],
+  [
+    "tout-le-monde-fr",
+    {
+    "id": "tout-le-monde-fr",
+    "language": "fr",
+    "word": "tout le monde",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "everyone",
+            "definition": "fixed expression",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.762Z",
+    "updated_at": "2025-10-21T18:56:09.762Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
+    "verified": true
+}
+  ],
+  [
+    "tout-le-monde-sait-fr",
+    {
+    "id": "tout-le-monde-sait-fr",
+    "language": "fr",
+    "word": "tout le monde sait",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "everyone knows",
+            "definition": "singular 'sait' not 'savent'",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.762Z",
+    "updated_at": "2025-10-21T18:56:09.762Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
+    "verified": true
+}
+  ],
+  [
+    "a-prend-fr",
+    {
+    "id": "a-prend-fr",
+    "language": "fr",
+    "word": "ça prend",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it takes (time)",
+            "definition": "impersonal expression",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
+    "verified": true
+}
+  ],
+  [
+    "a-va-bien-fr",
+    {
+    "id": "a-va-bien-fr",
+    "language": "fr",
+    "word": "ça va bien",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm good / it's going well",
+            "definition": "response",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
+    "verified": true
+}
+  ],
+  [
+    "les-gens-disent-fr",
+    {
+    "id": "les-gens-disent-fr",
+    "language": "fr",
+    "word": "les gens disent",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "people say",
+            "definition": "plural verb 'disent'",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.762Z",
+    "updated_at": "2025-10-21T18:56:09.762Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "les-gens-pensent-fr",
+    {
+    "id": "les-gens-pensent-fr",
+    "language": "fr",
+    "word": "les gens pensent",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "people think",
+            "definition": "general opinion",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.762Z",
+    "updated_at": "2025-10-21T18:56:09.762Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
+    "verified": true
+}
+  ],
+  [
+    "ce-que-nous-voulons-faire-fr",
+    {
+    "id": "ce-que-nous-voulons-faire-fr",
+    "language": "fr",
+    "word": "ce que nous voulons faire",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "what we want to do",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const expressionsByFrequency = ["excusez-moi-fr", "s-il-vous-pla-t-fr", "Aie-confiance-fr", "Allons-y-fr", "-pied-fr", "avoir-une-peur-bleue-fr", "Bah-cest-comme-a-fr", "beaucoup-de-gens-fr", "bien-sr-fr", "cest-ben-correct-fr", "Cest-bon-quoi-fr", "cest-a-fr", "cest-capot-fr", "cest-ce-livre-fr", "cest-cet-homme-fr", "cest-chaud-fr", "cest-chelou-fr", "cest-cool-fr", "cest-dingue-fr", "cest-curant-fr", "cest-fort-fr", "cest-gnial-fr", "cest-gnama-fr", "cest-grave-fr", "cest-le-fun-fr", "cest-le-leur-fr", "cest-le-mien-fr", "cest-le-sien-fr", "cest-malade-fr", "cest-mortel-fr", "cest-nul-fr", "en-train-de-fr", "en-fait-fr", "En-fait-je-ne-sais-pas-fr", "Je-pense-donc-je-suis-fr", "cest-ouf-fr", "cest-poche-fr", "cest-pour-a-que-fr", "cest-top-fr", "cest-vrai-fr"];
+export const expressionsByFrequency = ["excusez-moi-fr", "s-il-vous-pla-t-fr", "Aie-confiance-fr", "Allons-y-fr", "-pied-fr", "avoir-une-peur-bleue-fr", "Bah-cest-comme-a-fr", "beaucoup-de-gens-fr", "bien-sr-fr", "cest-ben-correct-fr", "Cest-bon-quoi-fr", "cest-a-fr", "cest-capot-fr", "cest-ce-livre-fr", "cest-cet-homme-fr", "cest-chaud-fr", "cest-chelou-fr", "cest-cool-fr", "cest-dingue-fr", "cest-curant-fr", "cest-fort-fr", "cest-gnial-fr", "cest-gnama-fr", "cest-grave-fr", "cest-le-fun-fr", "cest-le-leur-fr", "cest-le-mien-fr", "cest-le-sien-fr", "cest-malade-fr", "cest-mortel-fr", "cest-nul-fr", "en-train-de-fr", "en-fait-fr", "En-fait-je-ne-sais-pas-fr", "Je-pense-donc-je-suis-fr", "cest-ouf-fr", "cest-poche-fr", "cest-pour-a-que-fr", "cest-top-fr", "cest-vrai-fr", "tout-de-suite-fr", "tout-droit-fr", "tout-le-monde-fr", "tout-le-monde-sait-fr", "a-prend-fr", "a-va-bien-fr", "les-gens-disent-fr", "les-gens-pensent-fr", "ce-que-nous-voulons-faire-fr"];
 
 export default expressions;

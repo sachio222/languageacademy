@@ -1,7 +1,7 @@
 /**
  * Adjective phrases Dictionary
  * Auto-generated from phrases migration
- * Total entries: 5
+ * Total entries: 6
  */
 
 export const adjectivephrases = new Map([
@@ -201,10 +201,51 @@ export const adjectivephrases = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
     "verified": true
 }
+  ],
+  [
+    "tout-petit-fr",
+    {
+    "id": "tout-petit-fr",
+    "language": "fr",
+    "word": "tout petit",
+    "partOfSpeech": "adjective-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "very small",
+            "definition": "adverb use - intensifier",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "adjective-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.760Z",
+    "updated_at": "2025-10-21T18:56:09.760Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const adjectivephrasesByFrequency = ["bonne-id-e-fr", "de-bons-restaurants-fr", "meilleur---meilleure-fr", "si-beau-fr", "le-mme-problme-fr"];
+export const adjectivephrasesByFrequency = ["bonne-id-e-fr", "de-bons-restaurants-fr", "meilleur---meilleure-fr", "si-beau-fr", "le-mme-problme-fr", "tout-petit-fr"];
 
 export default adjectivephrases;

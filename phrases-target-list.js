@@ -71,13 +71,7 @@ const contractedNouns = [
 
 // QUESTIONS - Question phrases and interrogative expressions
 const questions = [
-  "qu'est-ce qu'on va faire",
-  "qu'est-ce que",
-  "qu'est-ce que c'est",
-  "qu'est-ce que tu fais",
-  "qu'est-ce que tu veux",
-  "qu'est-ce que vous voulez",
-  "qu'est-ce qui",
+  // All migrated - array cleared
 ];
 
 // EXPRESSIONS - Common French expressions and idiomatic phrases
@@ -97,19 +91,7 @@ const prepositionalPhrases = [
 
 // VERB PHRASES - Verb conjugations and verb combinations
 const verbPhrases = [
-  "se dépêcher",
-  "se déplacer",
-  "se laver",
-  "se lever",
-  "se préparer",
-  "se réveiller",
-  "se souvenir",
-  "donner de l'aide",
-  "donner de l'argent",
-  "donner l'heure",
-  "donner quelque chose à quelqu'un",
-  "donner raison",
-  "donner rendez-vous",
+  // All migrated - array cleared
 ];
 
 // ADJECTIVE PHRASES - Adjective combinations and comparative forms
@@ -178,7 +160,7 @@ export {
 
 // Summary statistics
 export const summary = {
-  totalPhrases: 20, // Next 20 phrases manually classified for review
+  totalPhrases: 0, // All phrases have been successfully migrated
   breakdown: {
     jePhrases: jePhrases.length,
     tuPhrases: tuPhrases.length,
@@ -206,6 +188,5 @@ export const summary = {
     properNouns: properNouns.length,
     conjunctionPhrases: conjunctionPhrases.length,
   },
-  status:
-    "14 next groups of phrases manually classified for review and migration",
+  status: "All phrases successfully migrated to appropriate categories",
 };
