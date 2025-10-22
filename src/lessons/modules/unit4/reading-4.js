@@ -6,7 +6,7 @@
 
 export const reading4 = {
   moduleKey: "2024-03-30-reading-4", // Permanent identifier - never changes
-  title: "Reading Comprehension 4 - Le Café",
+  title: "Reading Comprehension 4 - Une Autre Journée Normale",
   description:
     "Unit 4 mastery! A natural conversation using all your vocabulary.",
 
@@ -37,12 +37,10 @@ export const reading4 = {
   ],
 
   readingPassage: {
-    title: "Le Café (The Café)",
-    text: `**Marie:** Bonjour Paul! Comment ça va?
+    title: "Une Autre Journée Normale (Another Normal Day)",
+    text: `**Paul:** Marie! Tu veux aller au Jardin du Luxembourg avec moi?
 
-**Paul:** Ça va bien! Tu veux aller au café avec moi?
-
-![img/reading4-elle-se-maquille.png|maxWidth:61%]
+![img/reading4-elle-se-maquille.jpg|maxWidth:61%]
 
 **Marie:** Oui! Mais je ne peux pas maintenant. Je dois aller au travail.
 
@@ -50,15 +48,15 @@ export const reading4 = {
 
 **Marie:** Non, aujourd'hui! Je vais toujours au travail le matin. Mais ce soir, je ne vais pas au travail.
 
-**Paul:** Ah bon! Ce soir alors! Tu veux venir au café ce soir avec moi?
+**Paul:** Ah bon! Ce soir alors! Tu veux venir à Saint-Germain ce soir avec moi?
 
 **Marie:** Oui! Mais j'ai un problème. Je n'ai pas d'argent avec moi.
 
 **Paul:** Tu n'as pas d'argent? Tu as ta carte de crédit?
 
-**Marie:** Oui, j'ai ma carte de crédit dans ma maison. Je vais aller à ma maison et je vais la voir là-bas.
+**Marie:** Oui, j'ai ma carte de crédit chez moi. Je vais la chercher là-bas.
 
-![img/reading4-ils-marchent-dans-la-rue.png|maxWidth:61%]
+![img/reading4-ils-marchent-dans-la-rue.jpg|maxWidth:61%]
 
 **Paul:** Bon! Moi, je paie ce soir! Tu ne dois pas payer!
 
@@ -66,13 +64,9 @@ export const reading4 = {
 
 **Paul:** Ça va. Alors, ce soir à six heures?
 
-**Marie:** Oui! Où est le café?
+**Marie:** Oui! Quel café à Saint-Germain?
 
-**Paul:** Le café est sur la grande place. Tu vois la place de ta maison?
-
-**Marie:** Oui! Je la vois. C'est le petit café là-bas?
-
-**Paul:** Oui, c'est ça! Le petit café. Tout le monde vient à ce café!
+**Paul:** Les Éditeurs. Il est sur le carrefour de l'Odéon. Tu peux le voir de ta maison.
 
 **Marie:** Bon! Maintenant je dois partir. Au revoir Paul!
 
@@ -82,7 +76,7 @@ export const reading4 = {
 
 **Ce soir au café:**
 
-**Marie:** Bonjour Paul!
+**Marie:** Bonsoir Paul!
 
 **Paul:** Marie! Tu es là! Viens, viens! Nous allons voir la femme ici. Excusez-moi madame!
 
@@ -92,7 +86,7 @@ export const reading4 = {
 
 **La femme:** Du pain et de l'eau. Voilà!
 
-![img/reading4-pain-et-un-caraffe-d'eau.png|maxWidth:61%]
+![img/reading4-pain-et-un-caraffe-d'eau.jpg|maxWidth:61%]
 
 **Marie:** Merci! Le pain est très bon ici.
 
@@ -108,16 +102,14 @@ export const reading4 = {
 
 **Marie:** J'aime cette ville. Je ne vais jamais partir!
 
-![img/reading4-elle-aimes-cette-ville.png|maxWidth:61%]
+![img/reading4-elle-aimes-cette-ville.jpg|maxWidth:61%]
 
 **Paul:** Bon! Maintenant tu dois manger ton pain!
 
 **Marie:** Oui! Merci Paul. Tu es un très bon ami.
 
 **Fin.**`,
-    translation: `**Marie:** Hello Paul! How are you?
-
-**Paul:** I'm good! Do you want to go to the café with me?
+    translation: `**Paul:** Marie! Do you want to go to Jardin du Luxembourg with me?
 
 
 
@@ -127,13 +119,13 @@ export const reading4 = {
 
 **Marie:** No, today! I always go to work in the morning. But this evening, I'm not going to work.
 
-**Paul:** Ah good! This evening then! Do you want to come to the café this evening with me?
+**Paul:** Ah good! This evening then! Do you want to come to Saint-Germain this evening with me?
 
 **Marie:** Yes! But I have a problem. I don't have money with me.
 
 **Paul:** You don't have money? Do you have your credit card?
 
-**Marie:** Yes, I have my credit card in my house. I'm going to go to my house and I'm going to see it there.
+**Marie:** Yes, I have my credit card at home. I'm going to look for it there.
 
 
 
@@ -143,13 +135,9 @@ export const reading4 = {
 
 **Paul:** Okay. So, this evening at six o'clock?
 
-**Marie:** Yes! Where is the café?
+**Marie:** Yes! Which café in Saint-Germain?
 
-**Paul:** The café is on the big square. Do you see the square from your house?
-
-**Marie:** Yes! I see it. Is it the small café over there?
-
-**Paul:** Yes, that's it! The small café. Everybody comes to this café!
+**Paul:** Les Éditeurs. It's on Carrefour de l'Odéon. You can see it from your house.
 
 **Marie:** Good! Now I must leave. Goodbye Paul!
 
@@ -159,7 +147,7 @@ export const reading4 = {
 
 **This evening at the café:**
 
-**Marie:** Hello Paul!
+**Marie:** Good evening Paul!
 
 **Paul:** Marie! You're here! Come, come! We're going to see the woman here. Excuse me madam!
 
@@ -195,6 +183,15 @@ export const reading4 = {
   },
 
   vocabularyReference: [
+    // Proper Nouns (Wikipedia links)
+    {
+      french: "Jardin du Luxembourg",
+      english: "Luxembourg Garden (famous Paris park)",
+    },
+    {
+      french: "Saint-Germain",
+      english: "Saint-Germain-des-Prés (trendy Paris neighborhood)",
+    },
     {
       french: "comment ça va",
       english: "how are you",
