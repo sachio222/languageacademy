@@ -1,0 +1,42 @@
+[
+  {
+    "word": "chien",
+    "partOfSpeech": "noun",
+    "translation": "dog",
+    "definition": "domestic canine animal",
+    "cefr": "A1",
+    "difficulty": 1,
+    "gender": "masculine",
+    "source": "example-batch"
+  },
+  {
+    "word": "marcher",
+    "partOfSpeech": "verb",
+    "translation": "to walk",
+    "definition": "move on foot",
+    "cefr": "A1",
+    "difficulty": 2,
+    "gender": "none",
+    "source": "example-batch"
+  },
+  {
+    "word": "grand",
+    "partOfSpeech": "adjective",
+    "translation": "big, large",
+    "definition": "of considerable size",
+    "cefr": "A1",
+    "difficulty": 1,
+    "gender": "none",
+    "source": "example-batch"
+  },
+  {
+    "word": "vite",
+    "partOfSpeech": "adverb",
+    "translation": "quickly, fast",
+    "definition": "at high speed",
+    "cefr": "A1",
+    "difficulty": 2,
+    "gender": "none",
+    "source": "example-batch"
+  }
+]
