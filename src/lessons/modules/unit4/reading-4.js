@@ -38,75 +38,75 @@ export const reading4 = {
 
   readingPassage: {
     title: "Une Autre Journée Normale (Another Normal Day)",
-    text: `**Paul:** Marie! Tu veux aller au Jardin du Luxembourg avec moi?
+    text: `**Paul:** Marie ! Tu veux aller au Jardin du Luxembourg avec moi ?
 
 ![img/reading4-elle-se-maquille.jpg|maxWidth:61%]
 
 **Marie:** Oui! Mais je ne peux pas maintenant. Je dois aller au travail.
 
-**Paul:** Tu vas au travail aujourd'hui? C'est demain ton jour de travail, non?
+**Paul:** Tu vas au travail aujourd'hui ? C'est demain ton jour de travail, non ?
 
-**Marie:** Non, aujourd'hui! Je vais toujours au travail le matin. Mais ce soir, je ne vais pas au travail.
+**Marie:** Non, aujourd'hui ! Je vais toujours au travail le matin. Mais ce soir, je ne vais pas au travail.
 
-**Paul:** Ah bon! Ce soir alors! Tu veux venir à Saint-Germain ce soir avec moi?
+**Paul:** Ah bon! Ce soir alors ! Tu veux venir à Saint-Germain ce soir avec moi ?
 
 **Marie:** Oui! Mais j'ai un problème. Je n'ai pas d'argent avec moi.
 
-**Paul:** Tu n'as pas d'argent? Tu as ta carte de crédit?
+**Paul:** Tu n'as pas d'argent ? Tu as ta carte de crédit ?
 
 **Marie:** Oui, j'ai ma carte de crédit chez moi. Je vais la chercher là-bas.
 
 ![img/reading4-ils-marchent-dans-la-rue.jpg|maxWidth:61%]
 
-**Paul:** Bon! Moi, je paie ce soir! Tu ne dois pas payer!
+**Paul:** Bon! Moi, je paie ce soir ! Tu ne dois pas payer !
 
 **Marie:** Non, non! Je ne veux pas ça. Tu es très bon, mais je vais payer avec ma carte.
 
-**Paul:** Ça va. Alors, ce soir à six heures?
+**Paul:** Ça va. Alors, ce soir à six heures ?
 
-**Marie:** Oui! Quel café à Saint-Germain?
+**Marie:** Oui ! Quel café à Saint-Germain ?
 
 **Paul:** Les Éditeurs. Il est sur le carrefour de l'Odéon. Tu peux le voir de ta maison.
 
-**Marie:** Bon! Maintenant je dois partir. Au revoir Paul!
+**Marie:** Bon! Maintenant je dois partir. Au revoir Paul !
 
-**Paul:** Au revoir Marie! À ce soir!
+**Paul:** Au revoir Marie ! À ce soir !
 
 ---
 
 **Ce soir au café:**
 
-**Marie:** Bonsoir Paul!
+**Marie:** Bonsoir Paul !
 
-**Paul:** Marie! Tu es là! Viens, viens! Nous allons voir la femme ici. Excusez-moi madame!
+**Paul:** Marie! Tu es là! Viens, viens ! Nous allons voir la femme ici. Excusez-moi madame !
 
-**La femme:** Bonjour! Qu'est-ce que vous voulez?
+**La femme:** Bonjour ! Qu'est-ce que vous voulez ?
 
 **Paul:** Nous voudrions du pain et de l'eau, s'il vous plaît.
 
-**La femme:** Du pain et de l'eau. Voilà!
+**La femme:** Du pain et de l'eau. Voilà !
 
 ![img/reading4-pain-et-un-caraffe-d'eau.jpg|maxWidth:61%]
 
-**Marie:** Merci! Le pain est très bon ici.
+**Marie:** Merci ! Le pain est très bon ici.
 
-**Paul:** Oui! Je viens toujours ici. Je ne vais jamais aux autres cafés. Ce café est le meilleur!
+**Paul:** Oui ! Je viens toujours ici. Je ne vais jamais aux autres cafés. Ce café est le meilleur !
 
 **Marie:** Tu parles bien français, Paul. Moi, je ne parle pas toujours bien.
 
-**Paul:** Mais non! Ton français est très bon! Tu es nouvelle ici?
+**Paul:** Mais non ! Ton français est très bon ! Tu es nouvelle ici ?
 
-**Marie:** Oui, je suis nouvelle dans la ville. Je ne vois personne ici. Tu es mon ami maintenant!
+**Marie:** Oui, je suis nouvelle dans la ville. Je ne vois personne ici. Tu es mon ami maintenant !
 
-**Paul:** Oui! Nous sommes amis! Et tu vas voir, la vie ici est très bonne.
+**Paul:** Oui! Nous sommes amis ! Et tu vas voir, la vie ici est très bonne.
 
-**Marie:** J'aime cette ville. Je ne vais jamais partir!
+**Marie:** J'aime cette ville. Je ne vais jamais partir !
 
 ![img/reading4-elle-aimes-cette-ville.jpg|maxWidth:61%]
 
-**Paul:** Bon! Maintenant tu dois manger ton pain!
+**Paul:** Bon ! Maintenant tu dois manger ton pain !
 
-**Marie:** Oui! Merci Paul. Tu es un très bon ami.
+**Marie:** Oui ! Merci Paul. Tu es un très bon ami.
 
 **Fin.**`,
     translation: `**Paul:** Marie! Do you want to go to Jardin du Luxembourg with me?
@@ -308,11 +308,11 @@ export const reading4 = {
     type: "custom",
     items: [
       {
-        instruction: "When can Marie go to the café?",
-        prompt: "___ soir",
-        hint: "This evening",
-        expectedAnswer: "ce soir",
-        acceptableAnswers: ["soir", "le soir"],
+        instruction: "Where does Paul want to go first?",
+        prompt: "Au Jardin du ___",
+        hint: "Luxembourg Garden",
+        expectedAnswer: "Luxembourg",
+        acceptableAnswers: ["jardin du luxembourg", "luxembourg"],
         wrongAnswers: [],
       },
       {
@@ -348,24 +348,19 @@ export const reading4 = {
         wrongAnswers: [],
       },
       {
-        instruction: "Where is the café located?",
-        prompt: "Sur la grande ___",
-        hint: "Square/place",
-        expectedAnswer: "la grande place",
-        acceptableAnswers: ["sur la grande place", "place", "grande place"],
+        instruction: "What café do they go to in Saint-Germain?",
+        prompt: "Les ___",
+        hint: "The name of the café",
+        expectedAnswer: "Éditeurs",
+        acceptableAnswers: ["les éditeurs", "editeurs"],
         wrongAnswers: [],
       },
       {
-        instruction: "Can Marie see the square from her house?",
-        prompt: "Oui, je ___ vois",
-        hint: "Object pronoun for 'la place' (feminine)",
-        expectedAnswer: "oui",
-        acceptableAnswers: [
-          "oui je la vois",
-          "je la vois",
-          "elle la voit",
-          "oui elle la voit",
-        ],
+        instruction: "Where is Les Éditeurs located?",
+        prompt: "Sur le carrefour de ___",
+        hint: "Famous intersection in Saint-Germain",
+        expectedAnswer: "l'Odéon",
+        acceptableAnswers: ["odéon", "l'odéon", "carrefour de l'odéon"],
         wrongAnswers: [],
       },
       {
@@ -460,12 +455,19 @@ export const reading4 = {
         wrongAnswers: [],
       },
       {
-        instruction:
-          "How do they greet at the end of the morning conversation?",
-        prompt: "___ ce soir",
-        hint: "See you this evening",
-        expectedAnswer: "à ce soir",
-        acceptableAnswers: ["au revoir"],
+        instruction: "Which neighborhood do they go to in the evening?",
+        prompt: "À ___",
+        hint: "Trendy Paris neighborhood",
+        expectedAnswer: "Saint-Germain",
+        acceptableAnswers: ["saint-germain", "saint germain"],
+        wrongAnswers: [],
+      },
+      {
+        instruction: "How does Marie greet Paul in the evening?",
+        prompt: "___ Paul!",
+        hint: "Evening greeting",
+        expectedAnswer: "Bonsoir",
+        acceptableAnswers: ["bonsoir paul"],
         wrongAnswers: [],
       },
     ],
