@@ -270,7 +270,7 @@ export const unit3Practice = {
 
     // Multiple blanks: aller + possessive plural
     {
-      text: "Ils  avec  amis.",
+      text: "Ils  avec    amis.",
       instruction: "Complete: 'They go with their friends'",
       blanks: [
         {
@@ -279,7 +279,7 @@ export const unit3Practice = {
           hint: "aller conjugated for ils",
         },
         {
-          position: 14,
+          position: 11,
           answer: "ses",
           hint: "possessive for 'his/her/their' (plural)",
         },
@@ -297,7 +297,7 @@ export const unit3Practice = {
           hint: "object pronoun for masculine singular",
         },
         {
-          position: 11,
+          position: 9,
           answer: "au",
           hint: "à + le = ?",
         },
@@ -306,7 +306,7 @@ export const unit3Practice = {
 
     // Complex: partir + possessive + contraction
     {
-      text: "Tu  avec  livre  restaurant.",
+      text: "Tu  avec   livre   restaurant.",
       instruction: "Complete: 'You leave with your book to the restaurant'",
       blanks: [
         {
@@ -320,7 +320,7 @@ export const unit3Practice = {
           hint: "possessive for 'your' (masculine)",
         },
         {
-          position: 19,
+          position: 18,
           answer: "au",
           hint: "à + le = ?",
         },
