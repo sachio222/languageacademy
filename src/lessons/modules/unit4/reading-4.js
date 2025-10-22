@@ -42,6 +42,8 @@ export const reading4 = {
 
 **Paul:** Ça va bien! Tu veux aller au café avec moi?
 
+![img/reading4-elle-se-maquille.png|maxWidth:61%]
+
 **Marie:** Oui! Mais je ne peux pas maintenant. Je dois aller au travail.
 
 **Paul:** Tu vas au travail aujourd'hui? C'est demain ton jour de travail, non?
@@ -55,6 +57,8 @@ export const reading4 = {
 **Paul:** Tu n'as pas d'argent? Tu as ta carte de crédit?
 
 **Marie:** Oui, j'ai ma carte de crédit dans ma maison. Je vais aller à ma maison et je vais la voir là-bas.
+
+![img/reading4-ils-marchent-dans-la-rue.png|maxWidth:61%]
 
 **Paul:** Bon! Moi, je paie ce soir! Tu ne dois pas payer!
 
@@ -88,6 +92,8 @@ export const reading4 = {
 
 **La femme:** Du pain et de l'eau. Voilà!
 
+![img/reading4-pain-et-un-caraffe-d'eau.png|maxWidth:61%]
+
 **Marie:** Merci! Le pain est très bon ici.
 
 **Paul:** Oui! Je viens toujours ici. Je ne vais jamais aux autres cafés. Ce café est le meilleur!
@@ -102,6 +108,8 @@ export const reading4 = {
 
 **Marie:** J'aime cette ville. Je ne vais jamais partir!
 
+![img/reading4-elle-aimes-cette-ville.png|maxWidth:61%]
+
 **Paul:** Bon! Maintenant tu dois manger ton pain!
 
 **Marie:** Oui! Merci Paul. Tu es un très bon ami.
@@ -110,6 +118,8 @@ export const reading4 = {
     translation: `**Marie:** Hello Paul! How are you?
 
 **Paul:** I'm good! Do you want to go to the café with me?
+
+
 
 **Marie:** Yes! But I can't right now. I must go to work.
 
@@ -124,6 +134,8 @@ export const reading4 = {
 **Paul:** You don't have money? Do you have your credit card?
 
 **Marie:** Yes, I have my credit card in my house. I'm going to go to my house and I'm going to see it there.
+
+
 
 **Paul:** Good! Me, I'm paying this evening! You don't have to pay!
 
@@ -157,6 +169,8 @@ export const reading4 = {
 
 **The woman:** Bread and water. There you go!
 
+
+
 **Marie:** Thank you! The bread is very good here.
 
 **Paul:** Yes! I always come here. I never go to the other cafés. This café is the best!
@@ -170,6 +184,8 @@ export const reading4 = {
 **Paul:** Yes! We're friends! And you'll see, life here is very good.
 
 **Marie:** I love this city. I'll never leave!
+
+
 
 **Paul:** Good! Now you must eat your bread!
 
