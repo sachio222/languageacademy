@@ -40,7 +40,7 @@ export const reading4 = {
     title: "Une Autre Journée Normale (Another Normal Day)",
     text: `**Paul:** Marie ! Tu veux aller au Jardin du Luxembourg avec moi ?
 
-![img/reading4-elle-se-maquille.jpg|maxWidth:61%]
+![img/reading4-elle-se-maquille.jpg|maxWidth:88%]
 
 **Marie:** Oui! Mais je ne peux pas maintenant. Je dois aller au travail.
 
@@ -56,7 +56,7 @@ export const reading4 = {
 
 **Marie:** Oui, j'ai ma carte de crédit chez moi. Je vais la chercher là-bas.
 
-![img/reading4-ils-marchent-dans-la-rue.jpg|maxWidth:61%]
+![img/reading4-ils-marchent-dans-la-rue.jpg|maxWidth:88%]
 
 **Paul:** Bon! Moi, je paie ce soir ! Tu ne dois pas payer !
 
@@ -86,7 +86,7 @@ export const reading4 = {
 
 **La femme:** Du pain et de l'eau. Voilà !
 
-![img/reading4-pain-et-un-caraffe-d'eau.jpg|maxWidth:61%]
+![img/reading4-pain-et-un-caraffe-d'eau.jpg|maxWidth:88%]
 
 **Marie:** Merci ! Le pain est très bon ici.
 
@@ -102,7 +102,7 @@ export const reading4 = {
 
 **Marie:** J'aime cette ville. Je ne vais jamais partir !
 
-![img/reading4-elle-aimes-cette-ville.jpg|maxWidth:61%]
+![img/reading4-elle-aimes-cette-ville.jpg|maxWidth:88%]
 
 **Paul:** Bon ! Maintenant tu dois manger ton pain !
 
