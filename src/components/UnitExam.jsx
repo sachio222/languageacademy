@@ -647,7 +647,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
                 <span className="question-number">
                   Question {idx + 1}
                   {answers[question.id]?.trim() && (
-                    <span className="answered-check">✓</span>
+                    <span className="answered-check">✓ answered</span>
                   )}
                 </span>
               </div>

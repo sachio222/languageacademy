@@ -315,6 +315,24 @@ export const unit2Practice = {
         },
       ],
     },
+
+    // Preposition - chez + stressed pronoun
+    {
+      text: "Est-ce que le chien est      ?",
+      instruction: "Complete: 'Is the dog at your house?'",
+      blanks: [
+        {
+          position: 26,
+          answer: "chez",
+          hint: "preposition meaning 'at (someone's place)'",
+        },
+        {
+          position: 28,
+          answer: "toi",
+          hint: "stressed pronoun meaning 'you' (informal)",
+        },
+      ],
+    },
   ],
 
   // Empty exercises array - not used for fill-in-blank

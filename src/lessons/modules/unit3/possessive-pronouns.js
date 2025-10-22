@@ -144,6 +144,103 @@ export const module9_possessive_pronouns = {
           },
         ],
       },
+      {
+        instruction:
+          "Pointing to a friend's car. Ask 'is it yours?' (feminine, informal)",
+        prompt: "yours (fem, informal)",
+        hint: "Possessive pronoun for 'tu', feminine thing",
+        expectedAnswer: "la tienne",
+        wrongAnswers: [
+          { answer: "le tien", feedback: "That's for masculine things" },
+          { answer: "la sienne", feedback: "That's 'his/hers', not 'yours'" },
+        ],
+      },
+      {
+        instruction:
+          "Pointing to Pierre's book. Say 'it's his' (masculine thing)",
+        prompt: "his (masculine)",
+        hint: "Possessive pronoun for 'he', masculine thing",
+        expectedAnswer: "le sien",
+        wrongAnswers: [
+          { answer: "la sienne", feedback: "That's for feminine things" },
+          { answer: "le tien", feedback: "That's 'yours', not 'his'" },
+        ],
+      },
+      {
+        instruction:
+          "Pointing to Marie's house. Say 'it's hers' (feminine thing)",
+        prompt: "hers (feminine)",
+        hint: "Possessive pronoun for 'she', feminine thing",
+        expectedAnswer: "la sienne",
+        wrongAnswers: [
+          { answer: "le sien", feedback: "That's for masculine things" },
+          { answer: "la tienne", feedback: "That's 'yours', not 'hers'" },
+        ],
+      },
+      {
+        instruction:
+          "Pointing to your group's car. Say 'it's ours' (masculine thing)",
+        prompt: "ours (masculine)",
+        hint: "Possessive pronoun for 'we', masculine thing",
+        expectedAnswer: "le nôtre",
+        wrongAnswers: [
+          { answer: "la nôtre", feedback: "That's for feminine things" },
+          { answer: "le leur", feedback: "That's 'theirs', not 'ours'" },
+        ],
+      },
+      {
+        instruction:
+          "Pointing to your group's house. Say 'it's ours' (feminine thing)",
+        prompt: "ours (feminine)",
+        hint: "Possessive pronoun for 'we', feminine thing",
+        expectedAnswer: "la nôtre",
+        wrongAnswers: [
+          { answer: "le nôtre", feedback: "That's for masculine things" },
+          { answer: "la leur", feedback: "That's 'theirs', not 'ours'" },
+        ],
+      },
+      {
+        instruction:
+          "Politely asking about someone's book. Say 'is it yours?' (masculine, formal)",
+        prompt: "yours (masc, formal)",
+        hint: "Possessive pronoun for 'vous', masculine thing",
+        expectedAnswer: "le vôtre",
+        wrongAnswers: [
+          { answer: "la vôtre", feedback: "That's for feminine things" },
+          {
+            answer: "le tien",
+            feedback: "That's informal 'yours', use formal",
+          },
+        ],
+      },
+      {
+        instruction:
+          "Politely asking about someone's house. Say 'is it yours?' (feminine, formal)",
+        prompt: "yours (fem, formal)",
+        hint: "Possessive pronoun for 'vous', feminine thing",
+        expectedAnswer: "la vôtre",
+        wrongAnswers: [
+          { answer: "le vôtre", feedback: "That's for masculine things" },
+          {
+            answer: "la tienne",
+            feedback: "That's informal 'yours', use formal",
+          },
+        ],
+      },
+      {
+        instruction:
+          "Pointing to their house. Say 'it's theirs' (feminine thing)",
+        prompt: "theirs (feminine)",
+        hint: "Possessive pronoun for 'they', feminine thing",
+        expectedAnswer: "la leur",
+        wrongAnswers: [
+          { answer: "le leur", feedback: "That's for masculine things" },
+          {
+            answer: "la sienne",
+            feedback: "That's singular 'hers', not plural 'theirs'",
+          },
+        ],
+      },
     ],
   },
 };
