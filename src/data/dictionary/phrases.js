@@ -33734,44 +33734,6 @@ export const phrases = new Map([
     },
   ],
   [
-    "a-dit-fr",
-    {
-      id: "a-dit-fr",
-      language: "fr",
-      word: "a dit",
-      partOfSpeech: "noun",
-      translations: [
-        {
-          language: "en",
-          text: "said",
-          definition: "passé composé - dire (NEW!)",
-          context: "general",
-          confidence: 0.95,
-        },
-      ],
-      gender: "none",
-      variants: [],
-      frequency: {
-        rank: 1000,
-        score: 0.5,
-        corpus: "lesson",
-        perMillion: 100,
-        percentile: 50,
-      },
-      difficulty: 2,
-      cefr_level: "A1",
-      examples: [],
-      relationships: [],
-      tags: ["lesson"],
-      semantic_field: "general",
-      created_at: "2025-10-21T18:56:09.757Z",
-      updated_at: "2025-10-21T18:56:09.757Z",
-      source:
-        "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
-      verified: true,
-    },
-  ],
-  [
     "j-ai-dit-fr",
     {
       id: "j-ai-dit-fr",

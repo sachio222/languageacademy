@@ -4,7 +4,7 @@
  */
 
 // Import all word categories
-import { nouns, nounsByFrequency, nounsByGender } from "./words/nouns.js";
+import { nouns, nounsByFrequency } from "./words/nouns.js";
 import { verbs, verbsByFrequency, verbsByConjugation } from "./words/verbs.js";
 import { adjectives, adjectivesByFrequency } from "./words/adjectives.js";
 import { adverbs, adverbsByFrequency } from "./words/adverbs.js";
@@ -24,7 +24,7 @@ import { alphabet, alphabetByFrequency } from "./words/alphabet.js";
 import { expressions, expressionsByFrequency } from "./words/expressions.js";
 
 // Import phrases and relationships
-import { phrases, phrasesByType, phraseComponents } from "./phrases.js";
+import { phrases } from "./phrases.js";
 import { relationships, relationshipsByType } from "./relationships.js";
 
 /**
@@ -89,9 +89,7 @@ export const indices = {
   ],
 
   // Specialized indices
-  nounsByGender,
   verbsByConjugation,
-  phrasesByType,
 };
 
 /**
@@ -355,13 +353,7 @@ export class LessonCompatibility {
 }
 
 // Export everything
-export {
-  phrases,
-  phrasesByType,
-  phraseComponents,
-  relationships,
-  relationshipsByType,
-};
+export { phrases, relationships, relationshipsByType };
 
 export default {
   dictionary,
