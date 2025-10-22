@@ -805,4 +805,36 @@ export const wikipediaEntries = {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg/500px-Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg",
     url: "https://en.wikipedia.org/wiki/Belle_%C3%89poque",
   },
+  "Saint-Germain": {
+    name: "Saint-Germain-des-Prés",
+    description:
+      "Historic Left Bank neighborhood in Paris, famous for its cafés, jazz clubs, and intellectual culture since the 1940s",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Abbaye_de_Saint-Germain-des-Pr%C3%A9s_140131_1.jpg/500px-Abbaye_de_Saint-Germain-des-Pr%C3%A9s_140131_1.jpg",
+    url: "https://en.wikipedia.org/wiki/Saint-Germain-des-Pr%C3%A9s",
+  },
+  "saint-germain": {
+    name: "Saint-Germain-des-Prés",
+    description:
+      "Historic Left Bank neighborhood in Paris, famous for its cafés, jazz clubs, and intellectual culture since the 1940s",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg/500px-Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg",
+    url: "https://en.wikipedia.org/wiki/Saint-Germain-des-Pr%C3%A9s",
+  },
+  "à Saint-Germain": {
+    name: "Saint-Germain-des-Prés",
+    description:
+      "Historic Left Bank neighborhood in Paris, famous for its cafés, jazz clubs, and intellectual culture since the 1940s",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg/500px-Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg",
+    url: "https://en.wikipedia.org/wiki/Saint-Germain-des-Pr%C3%A9s",
+  },
+  "à saint-germain": {
+    name: "Saint-Germain-des-Prés",
+    description:
+      "Historic Left Bank neighborhood in Paris, famous for its cafés, jazz clubs, and intellectual culture since the 1940s",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg/500px-Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg",
+    url: "https://en.wikipedia.org/wiki/Saint-Germain-des-Pr%C3%A9s",
+  },
 };

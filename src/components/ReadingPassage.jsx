@@ -216,6 +216,7 @@ function ReadingPassage({ passage }) {
       { phrase: "Vingt mille lieues sous les mers", translation: "Twenty Thousand Leagues Under the Sea" },
       { phrase: "Belle Époque", translation: "Belle Époque (Beautiful Era)" },
       { phrase: "Café de la Paix", translation: "Café de la Paix" },
+      { phrase: "Saint-Germain", translation: "Saint-Germain-des-Prés (trendy Paris neighborhood)" },
       { phrase: "qu'est-ce que", translation: "what" },
       { phrase: "s'il vous plaît", translation: "please (formal)" },
       { phrase: "s'il vous plait", translation: "please (formal)" },

@@ -2085,8 +2085,6 @@ export const readingVocabulary = {
   "saint-germain": "Saint-Germain-des-Prés (trendy Paris neighborhood)",
   "à Saint-Germain": "to Saint-Germain-des-Prés",
   "à saint-germain": "to Saint-Germain-des-Prés",
-  Germain: "Germain (part of Saint-Germain-des-Prés)",
-  germain: "Germain (part of saint-germain-des-prés)",
   saint: "Saint (saint - part of mont-saint-michel)",
   sais: "know (I)",
   "sais beaucoup": "know a lot",
