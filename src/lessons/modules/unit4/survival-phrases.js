@@ -27,6 +27,12 @@ export const survivalPhrases = {
       definition: "Please, excuse me, good night - essential politeness",
       example: "S'il vous plaît, excusez-moi, bonne nuit",
     },
+    {
+      term: "Restrooms Always Plural",
+      definition:
+        "When asking for restrooms, always use plural 'les toilettes' and 'où sont'",
+      example: "Où + sont + les toilettes? (Never 'où est la toilette')",
+    },
   ],
 
   vocabularyReference: [
@@ -51,7 +57,11 @@ export const survivalPhrases = {
       note: "formal",
     },
     { french: "où sont", english: "where are", note: "où + être plural" },
-    { french: "les toilettes", english: "the restrooms", note: "essential!" },
+    {
+      french: "les toilettes",
+      english: "the restrooms",
+      note: "‼️ always plural for restrooms.",
+    },
     { french: "l'addition", english: "the bill/check", note: "at restaurants" },
     { french: "pardon", english: "pardon/sorry", note: "apology" },
   ],

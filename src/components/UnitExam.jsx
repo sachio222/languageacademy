@@ -488,7 +488,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  Want to improve your score? Try again
+                  Want to improve your abilities? Try again
                 </button>
               )}
             </div>
