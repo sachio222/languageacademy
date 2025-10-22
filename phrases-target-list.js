@@ -1,7 +1,7 @@
 /**
  * Phrases Target List
  * Manual classification of phrases for proper categorization
- * UPDATED: All remaining verb phrases migrated to verb-phrases.js, arrays cleared
+ * UPDATED: All phrases successfully migrated, arrays cleared
  */
 
 // JE PHRASES - Phrases starting with "je " or "j'"
@@ -71,81 +71,32 @@ const contractedNouns = [
 
 // QUESTIONS - Question phrases and interrogative expressions
 const questions = [
-  "Je me demande comment ça marche",
-  "Je me demande pourquoi c'est comme ça",
-  "Je ne comprends pas",
-  "Je ne sais pas",
-  "Je ne sais pas comment on fait ça",
-  "Pourquoi les nuages sont-ils blancs?",
-  "On ne comprend pas comment ça marche",
+  // All migrated - array cleared
 ];
 
 // EXPRESSIONS - Common French expressions and idiomatic phrases
 const expressions = [
-  "en fait",
-  "En fait, je ne sais pas",
-  "en ligne",
-  "Je pense, donc je suis",
+  // All migrated - array cleared
 ];
 
 // GREETINGS - Greetings, farewells, and social interactions
-const greetings = ["Joyeuses Pâques!", "Joyeux Noël!"];
+const greetings = [
+  // All migrated - array cleared
+];
 
 // PREPOSITIONAL PHRASES - Phrases starting with prepositions
-const prepositionalPhrases = ["le long de"];
+const prepositionalPhrases = [
+  // All migrated - array cleared
+];
 
 // VERB PHRASES - Verb conjugations and verb combinations
 const verbPhrases = [
-  "en écoutant",
-  "en mangeant",
-  "en marchant",
-  "en parlant",
-  "en pratiquant",
-  "en train de",
-  "en travaillant",
-  "je crois",
-  "je la vois",
-  "je ne le veux pas",
-  "je ne le vois pas",
-  "je sais",
-  "je te demande",
-  "je te dis",
-  "si j'avais",
-  "si j'avais de l'argent",
-  "si j'avais étudié",
-  "si j'avais fait ça",
-  "si j'avais pu",
-  "si j'avais su",
-  "si j'étais",
-  "si j'étais riche",
-  "si j'étais toi",
-  "si on avait le temps",
-  "si tu étais ici",
-  "le café était",
-  "le cinéma était",
-  "le faites",
-  "le film était excellent",
-  "le soleil brille",
-  "le train arrive",
-  "le vent souffle",
-  "Ne le fais pas!",
-  "Ne me regarde pas!",
-  "Marie a dû partir",
-  "Dépêche-toi!",
-  "Donne-le-moi!",
-  "Écoute bien!",
-  "Écoute-le!",
-  "Fais attention!",
-  "Regarde-moi!",
-  "Sois gentil!",
-  "Vas-y!",
+  // All migrated - array cleared
 ];
 
 // ADJECTIVE PHRASES - Adjective combinations and comparative forms
 const adjectivePhrases = [
-  "si beau",
-  "le meilleur / la meilleure",
-  "le même problème",
+  // All migrated - array cleared
 ];
 
 // ARTICLE PHRASES - Article combinations
@@ -160,26 +111,17 @@ const pronounPhrases = [
 
 // TIME EXPRESSIONS - Time-related phrases
 const timeExpressions = [
-  "en ce moment",
-  "en mille neuf cent quatre-vingt-quinze",
+  // All migrated - array cleared
 ];
 
 // LOCATION PHRASES - Location and place-related phrases
-const locationPhrases = ["en face de", "en face du parc", "en voiture"];
+const locationPhrases = [
+  // All migrated - array cleared
+];
 
 // PROPER NOUNS - Proper nouns and names
 const properNouns = [
-  "Le Procope",
-  "Arc de Triomphe",
-  "Auguste Renoir",
-  "Café de Flore",
-  "Champs-Élysées",
-  "Claude Monet",
-  "Jardin du Luxembourg",
-  "Moulin Rouge",
-  "Notre-Dame",
-  "Tour Eiffel",
-  "Vincent van Gogh",
+  // All migrated - array cleared
 ];
 
 // CONJUNCTION PHRASES - Conjunction combinations
@@ -218,7 +160,7 @@ export {
 
 // Summary statistics
 export const summary = {
-  totalPhrases: 85, // All phrases manually classified for review
+  totalPhrases: 0, // All phrases have been successfully migrated
   breakdown: {
     jePhrases: jePhrases.length,
     tuPhrases: tuPhrases.length,
@@ -246,5 +188,5 @@ export const summary = {
     properNouns: properNouns.length,
     conjunctionPhrases: conjunctionPhrases.length,
   },
-  status: "85 phrases manually classified for review and migration",
+  status: "All phrases successfully migrated to appropriate categories",
 };

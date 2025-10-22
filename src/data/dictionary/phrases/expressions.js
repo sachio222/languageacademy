@@ -1,7 +1,7 @@
 /**
  * Expressions Dictionary
  * Auto-generated from phrases migration
- * Total entries: 31
+ * Total entries: 40
  */
 
 export const expressions = new Map([
@@ -1242,10 +1242,371 @@ export const expressions = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
     "verified": true
 }
+  ],
+  [
+    "en-train-de-fr",
+    {
+    "id": "en-train-de-fr",
+    "language": "fr",
+    "word": "en train de",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "in the process of",
+            "definition": "progressive",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
+    "verified": true
+}
+  ],
+  [
+    "en-fait-fr",
+    {
+    "id": "en-fait-fr",
+    "language": "fr",
+    "word": "en fait",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "actually / in fact",
+            "definition": "discourse marker",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.762Z",
+    "updated_at": "2025-10-21T18:56:09.762Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
+    "verified": true
+}
+  ],
+  [
+    "En-fait-je-ne-sais-pas-fr",
+    {
+    "id": "En-fait-je-ne-sais-pas-fr",
+    "language": "fr",
+    "word": "En fait, je ne sais pas",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Actually, I don't know",
+            "definition": "en fait = clarification",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.761Z",
+    "updated_at": "2025-10-21T18:56:09.761Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
+    "verified": true
+}
+  ],
+  [
+    "Je-pense-donc-je-suis-fr",
+    {
+    "id": "Je-pense-donc-je-suis-fr",
+    "language": "fr",
+    "word": "Je pense, donc je suis",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I think, therefore I am",
+            "definition": "famous Descartes quote!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.761Z",
+    "updated_at": "2025-10-21T18:56:09.761Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "cest-ouf-fr",
+    {
+    "id": "cest-ouf-fr",
+    "language": "fr",
+    "word": "c'est ouf",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it's crazy/insane",
+            "definition": "🇫🇷 France - verlan for 'fou' (crazy)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.756Z",
+    "updated_at": "2025-10-21T18:56:09.756Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
+    "verified": true
+}
+  ],
+  [
+    "cest-poche-fr",
+    {
+    "id": "cest-poche-fr",
+    "language": "fr",
+    "word": "c'est poche",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it sucks/it's bad",
+            "definition": "🇨🇦 Quebec - negative",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.756Z",
+    "updated_at": "2025-10-21T18:56:09.756Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
+    "verified": true
+}
+  ],
+  [
+    "cest-pour-a-que-fr",
+    {
+    "id": "cest-pour-a-que-fr",
+    "language": "fr",
+    "word": "c'est pour ça que",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "that's why",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "cest-top-fr",
+    {
+    "id": "cest-top-fr",
+    "language": "fr",
+    "word": "c'est top",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it's top/the best",
+            "definition": "Universal - borrowed from English",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.756Z",
+    "updated_at": "2025-10-21T18:56:09.756Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
+    "verified": true
+}
+  ],
+  [
+    "cest-vrai-fr",
+    {
+    "id": "cest-vrai-fr",
+    "language": "fr",
+    "word": "c'est vrai",
+    "partOfSpeech": "expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "that's true",
+            "definition": "confirmation phrase",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
+    "verified": true
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const expressionsByFrequency = ["excusez-moi-fr", "s-il-vous-pla-t-fr", "Aie-confiance-fr", "Allons-y-fr", "-pied-fr", "avoir-une-peur-bleue-fr", "Bah-cest-comme-a-fr", "beaucoup-de-gens-fr", "bien-sr-fr", "cest-ben-correct-fr", "Cest-bon-quoi-fr", "cest-a-fr", "cest-capot-fr", "cest-ce-livre-fr", "cest-cet-homme-fr", "cest-chaud-fr", "cest-chelou-fr", "cest-cool-fr", "cest-dingue-fr", "cest-curant-fr", "cest-fort-fr", "cest-gnial-fr", "cest-gnama-fr", "cest-grave-fr", "cest-le-fun-fr", "cest-le-leur-fr", "cest-le-mien-fr", "cest-le-sien-fr", "cest-malade-fr", "cest-mortel-fr", "cest-nul-fr"];
+export const expressionsByFrequency = ["excusez-moi-fr", "s-il-vous-pla-t-fr", "Aie-confiance-fr", "Allons-y-fr", "-pied-fr", "avoir-une-peur-bleue-fr", "Bah-cest-comme-a-fr", "beaucoup-de-gens-fr", "bien-sr-fr", "cest-ben-correct-fr", "Cest-bon-quoi-fr", "cest-a-fr", "cest-capot-fr", "cest-ce-livre-fr", "cest-cet-homme-fr", "cest-chaud-fr", "cest-chelou-fr", "cest-cool-fr", "cest-dingue-fr", "cest-curant-fr", "cest-fort-fr", "cest-gnial-fr", "cest-gnama-fr", "cest-grave-fr", "cest-le-fun-fr", "cest-le-leur-fr", "cest-le-mien-fr", "cest-le-sien-fr", "cest-malade-fr", "cest-mortel-fr", "cest-nul-fr", "en-train-de-fr", "en-fait-fr", "En-fait-je-ne-sais-pas-fr", "Je-pense-donc-je-suis-fr", "cest-ouf-fr", "cest-poche-fr", "cest-pour-a-que-fr", "cest-top-fr", "cest-vrai-fr"];
 
 export default expressions;

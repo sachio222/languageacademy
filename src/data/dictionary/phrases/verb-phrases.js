@@ -1,7 +1,7 @@
 /**
  * Verb phrases Dictionary
  * Auto-generated from phrases migration
- * Total entries: 447
+ * Total entries: 776
  */
 
 export const verbphrases = new Map([
@@ -36057,10 +36057,1370 @@ export const verbphrases = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
     "verified": true
 }
+  ],
+  [
+    "en-coutant-fr",
+    {
+    "id": "en-coutant-fr",
+    "language": "fr",
+    "word": "en écoutant",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "while listening",
+            "definition": "multitasking",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "en-mangeant-fr",
+    {
+    "id": "en-mangeant-fr",
+    "language": "fr",
+    "word": "en mangeant",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "while eating",
+            "definition": "⭐ very common!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "en-marchant-fr",
+    {
+    "id": "en-marchant-fr",
+    "language": "fr",
+    "word": "en marchant",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "while walking",
+            "definition": "walking and talking",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "en-parlant-fr",
+    {
+    "id": "en-parlant-fr",
+    "language": "fr",
+    "word": "en parlant",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "while speaking",
+            "definition": "during conversation",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "en-pratiquant-fr",
+    {
+    "id": "en-pratiquant-fr",
+    "language": "fr",
+    "word": "en pratiquant",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "by practicing",
+            "definition": "method of learning",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "en-travaillant-fr",
+    {
+    "id": "en-travaillant-fr",
+    "language": "fr",
+    "word": "en travaillant",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "while working / by working",
+            "definition": "can mean method or simultaneous",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "si-javais-fr",
+    {
+    "id": "si-javais-fr",
+    "language": "fr",
+    "word": "si j'avais",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if I had",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true
+}
+  ],
+  [
+    "si-javais-de-largent-fr",
+    {
+    "id": "si-javais-de-largent-fr",
+    "language": "fr",
+    "word": "si j'avais de l'argent",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if I had money",
+            "definition": "fantasy scenario",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "si-javais-tudi-fr",
+    {
+    "id": "si-javais-tudi-fr",
+    "language": "fr",
+    "word": "si j'avais étudié",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if I had studied",
+            "definition": "student regret",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "si-javais-fait-a-fr",
+    {
+    "id": "si-javais-fait-a-fr",
+    "language": "fr",
+    "word": "si j'avais fait ça",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if I had done that",
+            "definition": "general regret",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "si-javais-pu-fr",
+    {
+    "id": "si-javais-pu-fr",
+    "language": "fr",
+    "word": "si j'avais pu",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if I could have",
+            "definition": "inability regret",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "si-javais-su-fr",
+    {
+    "id": "si-javais-su-fr",
+    "language": "fr",
+    "word": "si j'avais su",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if I had known",
+            "definition": "⭐ most common regret!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "si-jtais-fr",
+    {
+    "id": "si-jtais-fr",
+    "language": "fr",
+    "word": "si j'étais",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if I were",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true
+}
+  ],
+  [
+    "si-jtais-riche-fr",
+    {
+    "id": "si-jtais-riche-fr",
+    "language": "fr",
+    "word": "si j'étais riche",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if I were rich",
+            "definition": "⭐ daydreaming!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "si-jtais-toi-fr",
+    {
+    "id": "si-jtais-toi-fr",
+    "language": "fr",
+    "word": "si j'étais toi",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if I were you",
+            "definition": "giving advice",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "si-on-avait-le-temps-fr",
+    {
+    "id": "si-on-avait-le-temps-fr",
+    "language": "fr",
+    "word": "si on avait le temps",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if we had time",
+            "definition": "hypothetical plan",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "si-tu-tais-ici-fr",
+    {
+    "id": "si-tu-tais-ici-fr",
+    "language": "fr",
+    "word": "si tu étais ici",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "if you were here",
+            "definition": "wishing someone was present",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "le-caf-tait-fr",
+    {
+    "id": "le-caf-tait-fr",
+    "language": "fr",
+    "word": "le café était",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "the café was",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "le-cinma-tait-fr",
+    {
+    "id": "le-cinma-tait-fr",
+    "language": "fr",
+    "word": "le cinéma était",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "the cinema was",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "le-film-tait-excellent-fr",
+    {
+    "id": "le-film-tait-excellent-fr",
+    "language": "fr",
+    "word": "le film était excellent",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "the film was excellent",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "le-soleil-brille-fr",
+    {
+    "id": "le-soleil-brille-fr",
+    "language": "fr",
+    "word": "le soleil brille",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "the sun shines",
+            "definition": "common phrase",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.749Z",
+    "updated_at": "2025-10-21T18:56:09.749Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
+    "verified": true
+}
+  ],
+  [
+    "le-train-arrive-fr",
+    {
+    "id": "le-train-arrive-fr",
+    "language": "fr",
+    "word": "le train arrive",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "the train is arriving",
+            "definition": "transport arrival",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true
+}
+  ],
+  [
+    "le-vent-souffle-fr",
+    {
+    "id": "le-vent-souffle-fr",
+    "language": "fr",
+    "word": "le vent souffle",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "the wind blows",
+            "definition": "common phrase",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.749Z",
+    "updated_at": "2025-10-21T18:56:09.749Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
+    "verified": true
+}
+  ],
+  [
+    "Ne-le-fais-pas-fr",
+    {
+    "id": "Ne-le-fais-pas-fr",
+    "language": "fr",
+    "word": "Ne le fais pas!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Don't do it!",
+            "definition": "⭐ negative command",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
+    "verified": true
+}
+  ],
+  [
+    "Ne-me-regarde-pas-fr",
+    {
+    "id": "Ne-me-regarde-pas-fr",
+    "language": "fr",
+    "word": "Ne me regarde pas!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Don't look at me!",
+            "definition": "negative with me",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
+    "verified": true
+}
+  ],
+  [
+    "Marie-a-d-partir-fr",
+    {
+    "id": "Marie-a-d-partir-fr",
+    "language": "fr",
+    "word": "Marie a dû partir",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Marie had to leave",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "Dpche-toi-fr",
+    {
+    "id": "Dpche-toi-fr",
+    "language": "fr",
+    "word": "Dépêche-toi!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Hurry up!",
+            "definition": "command form (preview!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
+    "verified": true
+}
+  ],
+  [
+    "Donne-le-moi-fr",
+    {
+    "id": "Donne-le-moi-fr",
+    "language": "fr",
+    "word": "Donne-le-moi!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Give it to me!",
+            "definition": "⭐ command + object + indirect",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
+    "verified": true
+}
+  ],
+  [
+    "coute-bien-fr",
+    {
+    "id": "coute-bien-fr",
+    "language": "fr",
+    "word": "Écoute bien!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Listen well!",
+            "definition": "command",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true
+}
+  ],
+  [
+    "coute-le-fr",
+    {
+    "id": "coute-le-fr",
+    "language": "fr",
+    "word": "Écoute-le!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Listen to him!",
+            "definition": "command + object",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
+    "verified": true
+}
+  ],
+  [
+    "Fais-attention-fr",
+    {
+    "id": "Fais-attention-fr",
+    "language": "fr",
+    "word": "Fais attention!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Pay attention! / Be careful!",
+            "definition": "⭐⭐ safety/warning",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
+    "verified": true
+}
+  ],
+  [
+    "Regarde-moi-fr",
+    {
+    "id": "Regarde-moi-fr",
+    "language": "fr",
+    "word": "Regarde-moi!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Look at me!",
+            "definition": "command + moi",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
+    "verified": true
+}
+  ],
+  [
+    "Sois-gentil-fr",
+    {
+    "id": "Sois-gentil-fr",
+    "language": "fr",
+    "word": "Sois gentil!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Be nice!",
+            "definition": "common command",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
+    "verified": true
+}
+  ],
+  [
+    "Vas-y-fr",
+    {
+    "id": "Vas-y-fr",
+    "language": "fr",
+    "word": "Vas-y!",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Go ahead! / Go for it!",
+            "definition": "⭐⭐⭐ extremely common phrase!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
+    "verified": true
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const verbphrasesByFrequency = ["il-me-dit-fr", "ils-elles-croient-fr", "ils-elles-savent-fr", "j--tudie-fr", "je-crois-fr", "je-la-vois-fr", "je-ne-le-veux-pas-fr", "je-ne-le-vois-pas-fr", "je-sais-fr", "je-te-demande-fr", "je-te-dis-fr", "le-faites-fr", "me-dis-fr", "nous-comprenons-fr", "nous-croyons-fr", "nous-parlons-fr", "nous-prenons-fr", "nous-savons-fr", "vous-croyez-fr", "vous-parlez-fr", "vous-prenez-fr", "vous-savez-fr", "aimer-bien-fr", "aller-mal-fr", "avions-faim-fr", "avions-mang-fr", "avoir-besoin-de-fr", "avoir-faim-fr", "avoir-raison-fr", "bien-dormir-fr", "bien-couter-fr", "je-bois-fr", "je-brille-fr", "je-cherche-fr", "je-commande-fr", "je-comprenais-fr", "je-comprends-fr", "je-connais-fr", "je-cours-fr", "je-demande-fr", "je-devrais-fr", "je-dis-fr", "je-dois-fr", "je-donne-fr", "je-dors-fr", "je-fais-fr", "je-ferais-fr", "je-grimpe-fr", "je-mamuse-fr", "je-mappelle-fr", "je-mhabille-fr", "je-mange-fr", "je-marche-fr", "je-mets-fr", "je-nage-fr", "je-paie-fr", "je-parlais-fr", "je-parle-fr", "je-parlerai-fr", "je-pars-fr", "je-pense-fr", "je-peux-fr", "je-pourrais-fr", "je-pousse-fr", "je-prenais-fr", "je-prends-fr", "je-regarde-fr", "je-rends-fr", "je-reste-fr", "je-rvise-fr", "je-saute-fr", "je-sois-fr", "je-souffle-fr", "je-suis-fr", "je-taime-fr", "je-tombe-fr", "je-travaille-fr", "je-trouve-fr", "je-vais-fr", "je-veux-fr", "je-viens-fr", "je-vis-fr", "je-vois-fr", "je-vole-fr", "je-voudrais-fr", "je-voulais-fr", "tu-aies-fr", "tu-ailles-fr", "tu-aimes-fr", "tu-apprends-fr", "tu-arrives-fr", "tu-as-fr", "tu-attends-fr", "tu-avais-fr", "tu-bois-fr", "tu-brilles-fr", "tu-cherches-fr", "tu-commandes-fr", "tu-comprends-fr", "tu-comprennes-fr", "tu-connais-fr", "tu-cours-fr", "tu-crois-fr", "tu-demandes-fr", "tu-devrais-fr", "tu-dis-fr", "tu-dois-fr", "tu-donnes-fr", "tu-dors-fr", "tu-coutes-fr", "tu-enseignes-fr", "tu-es-fr", "tu-tais-fr", "tu-tudies-fr", "tu-fais-fr", "tu-fasses-fr", "tu-ferais-fr", "tu-grimpes-fr", "tu-irais-fr", "tu-mangeras-fr", "tu-manges-fr", "tu-marches-fr", "tu-mets-fr", "tu-nages-fr", "tu-parles-fr", "tu-pars-fr", "tu-partes-fr", "tu-penses-fr", "tu-peux-fr", "tu-pourrais-fr", "tu-pousses-fr", "tu-prends-fr", "tu-puisses-fr", "tu-regardes-fr", "tu-rends-fr", "tu-restes-fr", "tu-rvises-fr", "tu-saches-fr", "tu-sais-fr", "tu-sautes-fr", "tu-sois-fr", "tu-souffles-fr", "tu-tamuses-fr", "tu-tappelles-fr", "tu-thabilles-fr", "tu-travailles-fr", "tu-trouves-fr", "tu-vas-fr", "tu-veux-fr", "tu-viennes-fr", "tu-viens-fr", "tu-vis-fr", "tu-vois-fr", "tu-voles-fr", "tu-voudrais-fr", "elle-a-fr", "elle-arrive-fr", "elle-attend-fr", "elle-cherche-fr", "elle-doit-fr", "elle-donne-fr", "elle-dort-fr", "elle-coute-fr", "elle-est-fr", "elle-fait-fr", "elle-la-fr", "elle-nage-fr", "elle-parle-fr", "elle-part-fr", "elle-peut-fr", "elle-regarde-fr", "elle-reste-fr", "elle-sappelle-fr", "elle-travaille-fr", "elle-trouve-fr", "elle-va-fr", "elle-veut-fr", "elle-vient-fr", "elle-vit-fr", "elle-voit-fr", "il-a-fr", "il-arrive-fr", "il-attend-fr", "il-brille-fr", "il-cherche-fr", "il-court-fr", "il-doit-fr", "il-donne-fr", "il-dort-fr", "il-coute-fr", "il-est-fr", "il-faisait-fr", "il-fait-fr", "il-grimpe-fr", "il-ira-fr", "il-la-fr", "il-marche-fr", "il-nage-fr", "il-parle-fr", "il-part-fr", "il-peut-fr", "il-pleut-fr", "il-pleuvait-fr", "il-pousse-fr", "il-regarde-fr", "il-rend-fr", "il-reste-fr", "il-sappelle-fr", "il-shabille-fr", "il-saute-fr", "il-souffle-fr", "il-tombe-fr", "il-travaille-fr", "il-trouve-fr", "il-va-fr", "il-veut-fr", "il-vient-fr", "il-vit-fr", "il-voit-fr", "il-vole-fr", "elles-arrivent-fr", "elles-attendent-fr", "elles-cherchent-fr", "elles-doivent-fr", "elles-donnent-fr", "elles-dorment-fr", "elles-coutent-fr", "elles-font-fr", "elles-nagent-fr", "elles-ont-fr", "elles-parlent-fr", "elles-partent-fr", "elles-peuvent-fr", "elles-regardent-fr", "elles-restent-fr", "elles-sappellent-fr", "elles-sont-fr", "elles-travaillent-fr", "elles-trouvent-fr", "elles-veulent-fr", "elles-viennent-fr", "elles-vivent-fr", "elles-voient-fr", "elles-vont-fr", "ils-arrivent-fr", "ils-attendent-fr", "ils-brillent-fr", "ils-cherchent-fr", "ils-courent-fr", "ils-doivent-fr", "ils-donnent-fr", "ils-dorment-fr", "ils-coutent-fr", "ils-font-fr", "ils-grimpent-fr", "ils-marchent-fr", "ils-nagent-fr", "ils-ont-fr", "ils-parlent-fr", "ils-partent-fr", "ils-peuvent-fr", "ils-poussent-fr", "ils-regardent-fr", "ils-rendent-fr", "ils-restent-fr", "ils-sappellent-fr", "ils-sautent-fr", "ils-sont-fr", "ils-soufflent-fr", "ils-travaillent-fr", "ils-trouvent-fr", "ils-veulent-fr", "ils-viennent-fr", "ils-vivent-fr", "ils-voient-fr", "ils-volent-fr", "ils-vont-fr", "nous-aimons-fr", "nous-allons-fr", "nous-apprenons-fr", "nous-arrivons-fr", "nous-attendons-fr", "nous-avions-fr", "nous-avons-fr", "nous-brillons-fr", "nous-buvons-fr", "nous-cherchons-fr", "nous-commandons-fr", "nous-connaissons-fr", "nous-courons-fr", "nous-demandons-fr", "nous-devons-fr", "nous-devrions-fr", "nous-disons-fr", "nous-donnons-fr", "nous-dormons-fr", "nous-coutons-fr", "nous-enseignons-fr", "nous-tions-fr", "nous-tudions-fr", "nous-faisons-fr", "nous-ferions-fr", "nous-grimpons-fr", "nous-irions-fr", "nous-mangeons-fr", "nous-mangions-fr", "nous-marchons-fr", "nous-mettons-fr", "nous-nageons-fr", "nous-partons-fr", "nous-pensons-fr", "nous-pourrions-fr", "nous-poussons-fr", "nous-pouvons-fr", "nous-regardons-fr", "nous-rendons-fr", "nous-restons-fr", "nous-rvisons-fr", "nous-sautons-fr", "nous-sommes-fr", "nous-soufflons-fr", "nous-travaillons-fr", "nous-trouvons-fr", "nous-venons-fr", "nous-vivons-fr", "nous-volons-fr", "nous-voudrions-fr", "nous-voulons-fr", "nous-voyons-fr", "vous-aimez-fr", "vous-allez-fr", "vous-apprenez-fr", "vous-arrivez-fr", "vous-attendez-fr", "vous-avez-fr", "vous-aviez-fr", "vous-brillez-fr", "vous-buvez-fr", "vous-cherchez-fr", "vous-commandez-fr", "vous-comprenez-fr", "vous-connaissez-fr", "vous-courez-fr", "vous-demandez-fr", "vous-devez-fr", "vous-devriez-fr", "vous-dites-fr", "vous-donnez-fr", "vous-dormez-fr", "vous-coutez-fr", "vous-enseignez-fr", "vous-tes-fr", "vous-tiez-fr", "vous-tudiez-fr", "vous-faites-fr", "vous-feriez-fr", "vous-grimpez-fr", "vous-iriez-fr", "vous-mangez-fr", "vous-marchez-fr", "vous-mettez-fr", "vous-nagez-fr", "vous-partez-fr", "vous-pensez-fr", "vous-pourriez-fr", "vous-poussez-fr", "vous-pouvez-fr", "vous-regardez-fr", "vous-rendez-fr", "vous-restez-fr", "vous-rvisez-fr", "vous-sautez-fr", "vous-soufflez-fr", "vous-travaillez-fr", "vous-trouvez-fr", "vous-venez-fr", "vous-vivez-fr", "vous-volez-fr", "vous-voudriez-fr", "vous-voulez-fr", "vous-voyez-fr", "on-a-fr", "on-allait-fr", "on-dit-fr", "on-doit-fr", "on-est-fr", "on-fait-fr", "on-peut-fr", "on-samuse-fr", "on-va-fr", "on-voit-fr", "ilelle-aille-fr", "ilelle-aime-fr", "ilelle-ait-fr", "ilelle-apprend-fr", "ilelle-avait-fr", "ilelle-boit-fr", "ilelle-commande-fr", "ilelle-comprend-fr", "ilelle-comprenne-fr", "ilelle-connat-fr", "ilelle-croit-fr", "ilelle-demande-fr", "ilelle-devrait-fr", "ilelle-dit-fr", "ilelle-enseigne-fr", "ilelle-tait-fr", "ilelle-tudie-fr", "ilelle-fasse-fr", "ilelle-ferait-fr", "ilelle-irait-fr", "ilelle-mange-fr", "ilelle-met-fr", "ilelle-parte-fr", "ilelle-pense-fr", "ilelle-pourrait-fr", "ilelle-prend-fr", "ilelle-puisse-fr", "ilelle-rvise-fr", "ilelle-sache-fr", "ilelle-sait-fr", "ilelle-soit-fr", "ilelle-vienne-fr", "ilelle-voudrait-fr", "ilselles-aiment-fr", "ilselles-apprennent-fr", "ilselles-avaient-fr", "ilselles-boivent-fr", "ilselles-commandent-fr", "ilselles-comprennent-fr", "ilselles-connaissent-fr", "ilselles-demandent-fr", "ilselles-devraient-fr", "ilselles-disent-fr", "ilselles-enseignent-fr", "ilselles-taient-fr", "ilselles-tudient-fr", "ilselles-feraient-fr", "ilselles-iraient-fr", "ilselles-mangent-fr", "ilselles-mettent-fr", "ilselles-pensent-fr", "ilselles-pourraient-fr", "ilselles-prennent-fr", "ilselles-rvisent-fr", "ilselles-voudraient-fr", "jai-fr", "jai--ans-fr", "jai-aim-fr", "jai-appris-fr", "jai-besoin-daide-fr", "jai-besoin-dargent-fr", "jai-besoin-de-fr", "jai-besoin-de-temps-fr", "jai-bu-fr", "jai-a-fr", "jai-ce-livre-fr", "jai-ces-enfants-fr", "jai-cherch-fr", "jai-compris-fr", "jai-dcid-de-fr", "jai-demand-fr", "jai-dit-fr", "jai-d-fr", "jai-cout-fr", "jai-t-fr", "jai-tudi-fr", "jai-eu-fr", "jai-fait-fr", "jai-le-chat-fr", "jai-mang-fr", "jai-mis-fr", "jai-parl-fr", "jai-pens-fr", "jai-peur-quil-parte-fr", "jai-peur-que-fr", "jai-pris-fr", "jai-pu-fr", "jai-regard-fr", "jai-travaill-fr", "jai-trouv-fr", "jai-vingt-ans-fr", "jai-voulu-fr", "jai-vu-fr", "jaie-perdu-fr", "jaime-fr", "jaime-les-samedis-fr", "jaimerais-que-fr", "jaimerais-que-tu-sois-l-fr", "japprends-fr", "japprends-le-franais-fr", "jarrive-fr", "jarrive--fr", "jarrive--8h-fr", "jattends-fr", "jattends-le-bus-fr", "jaurais-continu-fr", "jaurais-russi-fr", "javais-fr", "javais-dj-fr", "javais-dj-mang-fr", "javais-dj-vu-ce-film-fr", "jcoute-fr", "jenseigne-fr", "jtais-fr", "jtais-content-fr", "jtais-dj-parti-fr", "jtais-en-train-de-parler-fr", "jtais-fatigu-fr", "jtudie-le-franais-fr", "jirais-fr", "je-cherche-mes-cls-fr", "je-comprends-bien-fr", "je-comprends-mal-fr", "je-connais-Marie-fr", "je-connais-Paris-fr", "je-crois-que-oui-fr", "je-doute-quelle-sache-fr", "je-doute-que-ce-soit-possible-fr", "je-fais-construire-une-maison-fr", "je-fais-nettoyer-la-maison-fr", "je-fais-rparer-ma-voiture-fr", "je-le-veux-fr", "je-lui-ai-dit-fr", "je-me-demande-fr", "je-me-dpche-fr", "je-me-fais-couper-les-cheveux-fr", "je-me-fais-examiner-fr", "je-me-fais-maquiller-fr", "je-me-lave-fr", "je-me-levais-fr", "je-me-lve-fr", "je-me-prpare-fr", "je-me-rveille-fr", "je-me-souviens-fr", "je-me-suis-rveill-fr", "je-me-suis-rveille-fr", "je-nai-pas-fr", "je-nai-pas-besoin-de-fr", "je-ne-crois-pas-fr", "je-ne-crois-pas-quil-ait-raison-fr", "je-ne-devrais-pas-fr", "je-ne-fais-pas-fr", "je-ne-ferai-pas-fr", "je-ne-pense-pas-quil-vienne-fr", "je-ne-pense-pas-que-ce-soit-vrai-fr", "je-ne-peux-pas-fr", "je-ne-savais-pas-fr", "je-ne-suis-pas-fr", "je-ne-vais-pas-fr", "je-ne-veux-pas-fr", "je-pense--toi-fr", "je-pense-quil-vient-fr", "je-pense-que-non-fr", "je-pense-que-oui-fr", "je-regrette-que-fr", "je-regrette-que-tu-ne-puisses-pas-venir-fr", "je-reste-ici-fr", "je-rvise-mes-leons-fr", "je-sais-parler-fr", "je-serais-venu-fr", "je-suis-all-fr", "je-suis-alle-fr", "je-suis-arrive-fr", "je-suis-content-que-tu-sois-l-fr", "je-suis-contente-que-fr", "je-suis-descendue-fr", "je-suis-dsol-que-tu-sois-malade-fr", "je-suis-devenue-fr", "je-suis-en-train-de-fr", "je-suis-en-train-de-manger-fr", "je-suis-entre-fr", "je-suis-heureuxheureuse-que-fr", "je-suis-monte-fr", "je-suis-n-fr", "je-suis-ne-fr", "je-suis-partie-fr", "je-suis-rentr-fr", "je-suis-rentre-fr", "je-suis-reste-fr", "je-suis-sortie-fr", "je-suis-surpris-que-tu-saches-a-fr", "je-suis-tombe-fr", "je-suis-triste-que-tu-partes-fr", "je-suis-venue-fr", "je-te-donne-fr", "je-travaille--fr", "je-trouve-que-fr", "je-vais-manger-fr", "je-vais-mettre-fr", "je-vais-partir-fr", "je-veux-quelle-sache-fr", "je-veux-quil-parte-fr", "je-veux-quon-aille-ensemble-fr", "je-veux-que-fr", "je-veux-que-tu-comprennes-fr", "je-veux-que-tu-viennes-fr", "je-vis--fr", "je-voudrais-commander-fr", "je-voulais-tre-dehors-fr", "je-voyagerais-le-monde-fr", "tu-as-besoin-de-fr", "tu-as-bu-fr", "tu-as-a-fr", "tu-as-ce-chat-fr", "tu-as-eu-fr", "tu-as-mang-fr", "tu-as-quel-ge-fr", "tu-attends-quelquun-fr", "tu-cherches-quoi-fr", "tu-es-l-fr", "tu-me-donnes-fr", "tu-ne-dois-pas-fr", "tu-ne-peux-pas-fr", "tu-ne-sauras-jamais-fr", "tu-ne-vas-pas-fr", "tu-ne-veux-jamais-fr", "tu-parles-bien-fr", "tu-restes-combien-de-temps-fr", "tu-tes-lev-fr", "tu-te-dpches-fr", "tu-te-laves-fr", "tu-te-lves-fr", "tu-te-prpares-fr", "tu-te-rveilles-fr", "tu-te-souviens-fr", "tu-trouves-a-comment-fr", "elle-a-cette-maison-fr", "elle-a-dit-fr", "elle-a-la-maison-fr", "elle-a-trente-ans-fr", "elle-est-alle-fr", "elle-est-entre-fr", "elle-est-maintenant-fr", "elle-est-venue-fr", "elle-tait-dj-partie-fr", "elle-ne-voit-jamais-fr", "elle-nous-a-vus-fr", "elle-sest-leve-fr", "elle-se-lve-fr", "elle-se-rveille-fr", "il-a-dit-fr", "il-a-fait-fr", "il-a-plu-fr", "il-a-quinze-ans-fr", "il-avait-dj-commenc-fr", "il-est-all-fr", "il-est-possible-quil-vienne-fr", "il-est-possible-quon-parte-fr", "il-tait-assis-fr", "il-faut-quelle-vienne-fr", "il-faut-quon-parte-fr", "il-faut-que-fr", "il-faut-que-jaille-fr", "il-faut-que-tu-fasses-attention-fr", "il-faut-que-tu-manges-fr", "il-faut-que-tu-partes-fr", "il-faut-que-tu-sois-sage-fr", "il-ma-dit-fr", "il-me-demande-fr", "il-me-donne-fr", "il-naimait-pas-fr", "il-ne-fait-jamais-fr", "il-ne-voit-pas-fr", "il-reste-du-pain-fr", "il-sest-lav-fr", "il-se-lve-fr", "il-se-peut-que-fr", "il-se-prpare-fr", "il-se-rveille-fr", "il-se-souvient-fr", "il-va-partir-fr", "il-y-avait-fr", "elles-se-sont-amuses-fr", "elles-sont-alles-fr", "ils-les-ont-fr", "ils-ne-sont-pas-fr", "ils-ont-ces-chats-fr", "ils-ont-t-fr", "ils-ont-les-chiens-fr", "ils-se-connaissent-fr", "ils-se-parlent-fr", "ils-se-sont-amuss-fr", "ils-sont-alls-fr", "nous-allons-partir-fr", "nous-avions-dj-fini-fr", "nous-avions-faim-fr", "nous-avons-beaucoup-aim-fr", "nous-avons-besoin-de-fr", "nous-avons-bu-fr", "nous-avons-ces-livres-fr", "nous-avons-command-fr", "nous-avons-dcid-fr", "nous-avons-dcid-de-manger-fr", "nous-avons-mang-fr", "nous-avons-parl-fr", "nous-avons-parl-de-fr", "nous-avons-pris-fr", "nous-avons-pu-tre-fr", "nous-avons-vu-fr", "nous-avons-vu-Marie-fr", "nous-nallons-pas-fr", "nous-ne-faisons-pas-fr", "nous-ne-lavons-pas-vue-fr", "nous-ne-pouvions-pas-fr", "nous-ne-pouvons-pas-fr", "nous-nous-aimons-fr", "nous-nous-appelons-fr", "nous-nous-comprenons-fr", "nous-nous-levons-fr", "nous-nous-parlons-fr", "nous-nous-rveillons-fr", "nous-nous-sommes-prpars-fr", "nous-sommes-alles-fr", "nous-sommes-alls-fr", "nous-sommes-amis-fr", "vous-avez-besoin-de-fr", "vous-avez-bu-fr", "vous-avez-mang-fr", "vous-tes-all-fr", "vous-tes-alle-fr", "vous-tes-alles-fr", "vous-tes-alls-fr", "vous-tiez-ici-fr", "vous-vous-appelez-fr", "vous-vous-comprenez-fr", "vous-vous-levez-fr", "vous-vous-rveillez-fr", "on-a-commenc--parler-fr", "on-dit-que-fr", "on-reste-ensemble-fr", "on-se-parle-fr", "on-se-pose-des-questions-fr", "on-se-prpare-fr", "on-se-voit-fr", "on-se-voit-demain-fr", "ilelle-a-besoin-de-fr", "ilelle-a-bu-fr", "ilelle-a-mang-fr", "ilselles-ont-besoin-de-fr", "ilselles-ont-bu-fr", "ilselles-ont-mang-fr"];
+export const verbphrasesByFrequency = ["il-me-dit-fr", "ils-elles-croient-fr", "ils-elles-savent-fr", "j--tudie-fr", "je-crois-fr", "je-la-vois-fr", "je-ne-le-veux-pas-fr", "je-ne-le-vois-pas-fr", "je-sais-fr", "je-te-demande-fr", "je-te-dis-fr", "le-faites-fr", "me-dis-fr", "nous-comprenons-fr", "nous-croyons-fr", "nous-parlons-fr", "nous-prenons-fr", "nous-savons-fr", "vous-croyez-fr", "vous-parlez-fr", "vous-prenez-fr", "vous-savez-fr", "aimer-bien-fr", "aller-mal-fr", "avions-faim-fr", "avions-mang-fr", "avoir-besoin-de-fr", "avoir-faim-fr", "avoir-raison-fr", "bien-dormir-fr", "bien-couter-fr", "je-bois-fr", "je-brille-fr", "je-cherche-fr", "je-commande-fr", "je-comprenais-fr", "je-comprends-fr", "je-connais-fr", "je-cours-fr", "je-demande-fr", "je-devrais-fr", "je-dis-fr", "je-dois-fr", "je-donne-fr", "je-dors-fr", "je-fais-fr", "je-ferais-fr", "je-grimpe-fr", "je-mamuse-fr", "je-mappelle-fr", "je-mhabille-fr", "je-mange-fr", "je-marche-fr", "je-mets-fr", "je-nage-fr", "je-paie-fr", "je-parlais-fr", "je-parle-fr", "je-parlerai-fr", "je-pars-fr", "je-pense-fr", "je-peux-fr", "je-pourrais-fr", "je-pousse-fr", "je-prenais-fr", "je-prends-fr", "je-regarde-fr", "je-rends-fr", "je-reste-fr", "je-rvise-fr", "je-saute-fr", "je-sois-fr", "je-souffle-fr", "je-suis-fr", "je-taime-fr", "je-tombe-fr", "je-travaille-fr", "je-trouve-fr", "je-vais-fr", "je-veux-fr", "je-viens-fr", "je-vis-fr", "je-vois-fr", "je-vole-fr", "je-voudrais-fr", "je-voulais-fr", "tu-aies-fr", "tu-ailles-fr", "tu-aimes-fr", "tu-apprends-fr", "tu-arrives-fr", "tu-as-fr", "tu-attends-fr", "tu-avais-fr", "tu-bois-fr", "tu-brilles-fr", "tu-cherches-fr", "tu-commandes-fr", "tu-comprends-fr", "tu-comprennes-fr", "tu-connais-fr", "tu-cours-fr", "tu-crois-fr", "tu-demandes-fr", "tu-devrais-fr", "tu-dis-fr", "tu-dois-fr", "tu-donnes-fr", "tu-dors-fr", "tu-coutes-fr", "tu-enseignes-fr", "tu-es-fr", "tu-tais-fr", "tu-tudies-fr", "tu-fais-fr", "tu-fasses-fr", "tu-ferais-fr", "tu-grimpes-fr", "tu-irais-fr", "tu-mangeras-fr", "tu-manges-fr", "tu-marches-fr", "tu-mets-fr", "tu-nages-fr", "tu-parles-fr", "tu-pars-fr", "tu-partes-fr", "tu-penses-fr", "tu-peux-fr", "tu-pourrais-fr", "tu-pousses-fr", "tu-prends-fr", "tu-puisses-fr", "tu-regardes-fr", "tu-rends-fr", "tu-restes-fr", "tu-rvises-fr", "tu-saches-fr", "tu-sais-fr", "tu-sautes-fr", "tu-sois-fr", "tu-souffles-fr", "tu-tamuses-fr", "tu-tappelles-fr", "tu-thabilles-fr", "tu-travailles-fr", "tu-trouves-fr", "tu-vas-fr", "tu-veux-fr", "tu-viennes-fr", "tu-viens-fr", "tu-vis-fr", "tu-vois-fr", "tu-voles-fr", "tu-voudrais-fr", "elle-a-fr", "elle-arrive-fr", "elle-attend-fr", "elle-cherche-fr", "elle-doit-fr", "elle-donne-fr", "elle-dort-fr", "elle-coute-fr", "elle-est-fr", "elle-fait-fr", "elle-la-fr", "elle-nage-fr", "elle-parle-fr", "elle-part-fr", "elle-peut-fr", "elle-regarde-fr", "elle-reste-fr", "elle-sappelle-fr", "elle-travaille-fr", "elle-trouve-fr", "elle-va-fr", "elle-veut-fr", "elle-vient-fr", "elle-vit-fr", "elle-voit-fr", "il-a-fr", "il-arrive-fr", "il-attend-fr", "il-brille-fr", "il-cherche-fr", "il-court-fr", "il-doit-fr", "il-donne-fr", "il-dort-fr", "il-coute-fr", "il-est-fr", "il-faisait-fr", "il-fait-fr", "il-grimpe-fr", "il-ira-fr", "il-la-fr", "il-marche-fr", "il-nage-fr", "il-parle-fr", "il-part-fr", "il-peut-fr", "il-pleut-fr", "il-pleuvait-fr", "il-pousse-fr", "il-regarde-fr", "il-rend-fr", "il-reste-fr", "il-sappelle-fr", "il-shabille-fr", "il-saute-fr", "il-souffle-fr", "il-tombe-fr", "il-travaille-fr", "il-trouve-fr", "il-va-fr", "il-veut-fr", "il-vient-fr", "il-vit-fr", "il-voit-fr", "il-vole-fr", "elles-arrivent-fr", "elles-attendent-fr", "elles-cherchent-fr", "elles-doivent-fr", "elles-donnent-fr", "elles-dorment-fr", "elles-coutent-fr", "elles-font-fr", "elles-nagent-fr", "elles-ont-fr", "elles-parlent-fr", "elles-partent-fr", "elles-peuvent-fr", "elles-regardent-fr", "elles-restent-fr", "elles-sappellent-fr", "elles-sont-fr", "elles-travaillent-fr", "elles-trouvent-fr", "elles-veulent-fr", "elles-viennent-fr", "elles-vivent-fr", "elles-voient-fr", "elles-vont-fr", "ils-arrivent-fr", "ils-attendent-fr", "ils-brillent-fr", "ils-cherchent-fr", "ils-courent-fr", "ils-doivent-fr", "ils-donnent-fr", "ils-dorment-fr", "ils-coutent-fr", "ils-font-fr", "ils-grimpent-fr", "ils-marchent-fr", "ils-nagent-fr", "ils-ont-fr", "ils-parlent-fr", "ils-partent-fr", "ils-peuvent-fr", "ils-poussent-fr", "ils-regardent-fr", "ils-rendent-fr", "ils-restent-fr", "ils-sappellent-fr", "ils-sautent-fr", "ils-sont-fr", "ils-soufflent-fr", "ils-travaillent-fr", "ils-trouvent-fr", "ils-veulent-fr", "ils-viennent-fr", "ils-vivent-fr", "ils-voient-fr", "ils-volent-fr", "ils-vont-fr", "nous-aimons-fr", "nous-allons-fr", "nous-apprenons-fr", "nous-arrivons-fr", "nous-attendons-fr", "nous-avions-fr", "nous-avons-fr", "nous-brillons-fr", "nous-buvons-fr", "nous-cherchons-fr", "nous-commandons-fr", "nous-connaissons-fr", "nous-courons-fr", "nous-demandons-fr", "nous-devons-fr", "nous-devrions-fr", "nous-disons-fr", "nous-donnons-fr", "nous-dormons-fr", "nous-coutons-fr", "nous-enseignons-fr", "nous-tions-fr", "nous-tudions-fr", "nous-faisons-fr", "nous-ferions-fr", "nous-grimpons-fr", "nous-irions-fr", "nous-mangeons-fr", "nous-mangions-fr", "nous-marchons-fr", "nous-mettons-fr", "nous-nageons-fr", "nous-partons-fr", "nous-pensons-fr", "nous-pourrions-fr", "nous-poussons-fr", "nous-pouvons-fr", "nous-regardons-fr", "nous-rendons-fr", "nous-restons-fr", "nous-rvisons-fr", "nous-sautons-fr", "nous-sommes-fr", "nous-soufflons-fr", "nous-travaillons-fr", "nous-trouvons-fr", "nous-venons-fr", "nous-vivons-fr", "nous-volons-fr", "nous-voudrions-fr", "nous-voulons-fr", "nous-voyons-fr", "vous-aimez-fr", "vous-allez-fr", "vous-apprenez-fr", "vous-arrivez-fr", "vous-attendez-fr", "vous-avez-fr", "vous-aviez-fr", "vous-brillez-fr", "vous-buvez-fr", "vous-cherchez-fr", "vous-commandez-fr", "vous-comprenez-fr", "vous-connaissez-fr", "vous-courez-fr", "vous-demandez-fr", "vous-devez-fr", "vous-devriez-fr", "vous-dites-fr", "vous-donnez-fr", "vous-dormez-fr", "vous-coutez-fr", "vous-enseignez-fr", "vous-tes-fr", "vous-tiez-fr", "vous-tudiez-fr", "vous-faites-fr", "vous-feriez-fr", "vous-grimpez-fr", "vous-iriez-fr", "vous-mangez-fr", "vous-marchez-fr", "vous-mettez-fr", "vous-nagez-fr", "vous-partez-fr", "vous-pensez-fr", "vous-pourriez-fr", "vous-poussez-fr", "vous-pouvez-fr", "vous-regardez-fr", "vous-rendez-fr", "vous-restez-fr", "vous-rvisez-fr", "vous-sautez-fr", "vous-soufflez-fr", "vous-travaillez-fr", "vous-trouvez-fr", "vous-venez-fr", "vous-vivez-fr", "vous-volez-fr", "vous-voudriez-fr", "vous-voulez-fr", "vous-voyez-fr", "on-a-fr", "on-allait-fr", "on-dit-fr", "on-doit-fr", "on-est-fr", "on-fait-fr", "on-peut-fr", "on-samuse-fr", "on-va-fr", "on-voit-fr", "ilelle-aille-fr", "ilelle-aime-fr", "ilelle-ait-fr", "ilelle-apprend-fr", "ilelle-avait-fr", "ilelle-boit-fr", "ilelle-commande-fr", "ilelle-comprend-fr", "ilelle-comprenne-fr", "ilelle-connat-fr", "ilelle-croit-fr", "ilelle-demande-fr", "ilelle-devrait-fr", "ilelle-dit-fr", "ilelle-enseigne-fr", "ilelle-tait-fr", "ilelle-tudie-fr", "ilelle-fasse-fr", "ilelle-ferait-fr", "ilelle-irait-fr", "ilelle-mange-fr", "ilelle-met-fr", "ilelle-parte-fr", "ilelle-pense-fr", "ilelle-pourrait-fr", "ilelle-prend-fr", "ilelle-puisse-fr", "ilelle-rvise-fr", "ilelle-sache-fr", "ilelle-sait-fr", "ilelle-soit-fr", "ilelle-vienne-fr", "ilelle-voudrait-fr", "ilselles-aiment-fr", "ilselles-apprennent-fr", "ilselles-avaient-fr", "ilselles-boivent-fr", "ilselles-commandent-fr", "ilselles-comprennent-fr", "ilselles-connaissent-fr", "ilselles-demandent-fr", "ilselles-devraient-fr", "ilselles-disent-fr", "ilselles-enseignent-fr", "ilselles-taient-fr", "ilselles-tudient-fr", "ilselles-feraient-fr", "ilselles-iraient-fr", "ilselles-mangent-fr", "ilselles-mettent-fr", "ilselles-pensent-fr", "ilselles-pourraient-fr", "ilselles-prennent-fr", "ilselles-rvisent-fr", "ilselles-voudraient-fr", "jai-fr", "jai--ans-fr", "jai-aim-fr", "jai-appris-fr", "jai-besoin-daide-fr", "jai-besoin-dargent-fr", "jai-besoin-de-fr", "jai-besoin-de-temps-fr", "jai-bu-fr", "jai-a-fr", "jai-ce-livre-fr", "jai-ces-enfants-fr", "jai-cherch-fr", "jai-compris-fr", "jai-dcid-de-fr", "jai-demand-fr", "jai-dit-fr", "jai-d-fr", "jai-cout-fr", "jai-t-fr", "jai-tudi-fr", "jai-eu-fr", "jai-fait-fr", "jai-le-chat-fr", "jai-mang-fr", "jai-mis-fr", "jai-parl-fr", "jai-pens-fr", "jai-peur-quil-parte-fr", "jai-peur-que-fr", "jai-pris-fr", "jai-pu-fr", "jai-regard-fr", "jai-travaill-fr", "jai-trouv-fr", "jai-vingt-ans-fr", "jai-voulu-fr", "jai-vu-fr", "jaie-perdu-fr", "jaime-fr", "jaime-les-samedis-fr", "jaimerais-que-fr", "jaimerais-que-tu-sois-l-fr", "japprends-fr", "japprends-le-franais-fr", "jarrive-fr", "jarrive--fr", "jarrive--8h-fr", "jattends-fr", "jattends-le-bus-fr", "jaurais-continu-fr", "jaurais-russi-fr", "javais-fr", "javais-dj-fr", "javais-dj-mang-fr", "javais-dj-vu-ce-film-fr", "jcoute-fr", "jenseigne-fr", "jtais-fr", "jtais-content-fr", "jtais-dj-parti-fr", "jtais-en-train-de-parler-fr", "jtais-fatigu-fr", "jtudie-le-franais-fr", "jirais-fr", "je-cherche-mes-cls-fr", "je-comprends-bien-fr", "je-comprends-mal-fr", "je-connais-Marie-fr", "je-connais-Paris-fr", "je-crois-que-oui-fr", "je-doute-quelle-sache-fr", "je-doute-que-ce-soit-possible-fr", "je-fais-construire-une-maison-fr", "je-fais-nettoyer-la-maison-fr", "je-fais-rparer-ma-voiture-fr", "je-le-veux-fr", "je-lui-ai-dit-fr", "je-me-demande-fr", "je-me-dpche-fr", "je-me-fais-couper-les-cheveux-fr", "je-me-fais-examiner-fr", "je-me-fais-maquiller-fr", "je-me-lave-fr", "je-me-levais-fr", "je-me-lve-fr", "je-me-prpare-fr", "je-me-rveille-fr", "je-me-souviens-fr", "je-me-suis-rveill-fr", "je-me-suis-rveille-fr", "je-nai-pas-fr", "je-nai-pas-besoin-de-fr", "je-ne-crois-pas-fr", "je-ne-crois-pas-quil-ait-raison-fr", "je-ne-devrais-pas-fr", "je-ne-fais-pas-fr", "je-ne-ferai-pas-fr", "je-ne-pense-pas-quil-vienne-fr", "je-ne-pense-pas-que-ce-soit-vrai-fr", "je-ne-peux-pas-fr", "je-ne-savais-pas-fr", "je-ne-suis-pas-fr", "je-ne-vais-pas-fr", "je-ne-veux-pas-fr", "je-pense--toi-fr", "je-pense-quil-vient-fr", "je-pense-que-non-fr", "je-pense-que-oui-fr", "je-regrette-que-fr", "je-regrette-que-tu-ne-puisses-pas-venir-fr", "je-reste-ici-fr", "je-rvise-mes-leons-fr", "je-sais-parler-fr", "je-serais-venu-fr", "je-suis-all-fr", "je-suis-alle-fr", "je-suis-arrive-fr", "je-suis-content-que-tu-sois-l-fr", "je-suis-contente-que-fr", "je-suis-descendue-fr", "je-suis-dsol-que-tu-sois-malade-fr", "je-suis-devenue-fr", "je-suis-en-train-de-fr", "je-suis-en-train-de-manger-fr", "je-suis-entre-fr", "je-suis-heureuxheureuse-que-fr", "je-suis-monte-fr", "je-suis-n-fr", "je-suis-ne-fr", "je-suis-partie-fr", "je-suis-rentr-fr", "je-suis-rentre-fr", "je-suis-reste-fr", "je-suis-sortie-fr", "je-suis-surpris-que-tu-saches-a-fr", "je-suis-tombe-fr", "je-suis-triste-que-tu-partes-fr", "je-suis-venue-fr", "je-te-donne-fr", "je-travaille--fr", "je-trouve-que-fr", "je-vais-manger-fr", "je-vais-mettre-fr", "je-vais-partir-fr", "je-veux-quelle-sache-fr", "je-veux-quil-parte-fr", "je-veux-quon-aille-ensemble-fr", "je-veux-que-fr", "je-veux-que-tu-comprennes-fr", "je-veux-que-tu-viennes-fr", "je-vis--fr", "je-voudrais-commander-fr", "je-voulais-tre-dehors-fr", "je-voyagerais-le-monde-fr", "tu-as-besoin-de-fr", "tu-as-bu-fr", "tu-as-a-fr", "tu-as-ce-chat-fr", "tu-as-eu-fr", "tu-as-mang-fr", "tu-as-quel-ge-fr", "tu-attends-quelquun-fr", "tu-cherches-quoi-fr", "tu-es-l-fr", "tu-me-donnes-fr", "tu-ne-dois-pas-fr", "tu-ne-peux-pas-fr", "tu-ne-sauras-jamais-fr", "tu-ne-vas-pas-fr", "tu-ne-veux-jamais-fr", "tu-parles-bien-fr", "tu-restes-combien-de-temps-fr", "tu-tes-lev-fr", "tu-te-dpches-fr", "tu-te-laves-fr", "tu-te-lves-fr", "tu-te-prpares-fr", "tu-te-rveilles-fr", "tu-te-souviens-fr", "tu-trouves-a-comment-fr", "elle-a-cette-maison-fr", "elle-a-dit-fr", "elle-a-la-maison-fr", "elle-a-trente-ans-fr", "elle-est-alle-fr", "elle-est-entre-fr", "elle-est-maintenant-fr", "elle-est-venue-fr", "elle-tait-dj-partie-fr", "elle-ne-voit-jamais-fr", "elle-nous-a-vus-fr", "elle-sest-leve-fr", "elle-se-lve-fr", "elle-se-rveille-fr", "il-a-dit-fr", "il-a-fait-fr", "il-a-plu-fr", "il-a-quinze-ans-fr", "il-avait-dj-commenc-fr", "il-est-all-fr", "il-est-possible-quil-vienne-fr", "il-est-possible-quon-parte-fr", "il-tait-assis-fr", "il-faut-quelle-vienne-fr", "il-faut-quon-parte-fr", "il-faut-que-fr", "il-faut-que-jaille-fr", "il-faut-que-tu-fasses-attention-fr", "il-faut-que-tu-manges-fr", "il-faut-que-tu-partes-fr", "il-faut-que-tu-sois-sage-fr", "il-ma-dit-fr", "il-me-demande-fr", "il-me-donne-fr", "il-naimait-pas-fr", "il-ne-fait-jamais-fr", "il-ne-voit-pas-fr", "il-reste-du-pain-fr", "il-sest-lav-fr", "il-se-lve-fr", "il-se-peut-que-fr", "il-se-prpare-fr", "il-se-rveille-fr", "il-se-souvient-fr", "il-va-partir-fr", "il-y-avait-fr", "elles-se-sont-amuses-fr", "elles-sont-alles-fr", "ils-les-ont-fr", "ils-ne-sont-pas-fr", "ils-ont-ces-chats-fr", "ils-ont-t-fr", "ils-ont-les-chiens-fr", "ils-se-connaissent-fr", "ils-se-parlent-fr", "ils-se-sont-amuss-fr", "ils-sont-alls-fr", "nous-allons-partir-fr", "nous-avions-dj-fini-fr", "nous-avions-faim-fr", "nous-avons-beaucoup-aim-fr", "nous-avons-besoin-de-fr", "nous-avons-bu-fr", "nous-avons-ces-livres-fr", "nous-avons-command-fr", "nous-avons-dcid-fr", "nous-avons-dcid-de-manger-fr", "nous-avons-mang-fr", "nous-avons-parl-fr", "nous-avons-parl-de-fr", "nous-avons-pris-fr", "nous-avons-pu-tre-fr", "nous-avons-vu-fr", "nous-avons-vu-Marie-fr", "nous-nallons-pas-fr", "nous-ne-faisons-pas-fr", "nous-ne-lavons-pas-vue-fr", "nous-ne-pouvions-pas-fr", "nous-ne-pouvons-pas-fr", "nous-nous-aimons-fr", "nous-nous-appelons-fr", "nous-nous-comprenons-fr", "nous-nous-levons-fr", "nous-nous-parlons-fr", "nous-nous-rveillons-fr", "nous-nous-sommes-prpars-fr", "nous-sommes-alles-fr", "nous-sommes-alls-fr", "nous-sommes-amis-fr", "vous-avez-besoin-de-fr", "vous-avez-bu-fr", "vous-avez-mang-fr", "vous-tes-all-fr", "vous-tes-alle-fr", "vous-tes-alles-fr", "vous-tes-alls-fr", "vous-tiez-ici-fr", "vous-vous-appelez-fr", "vous-vous-comprenez-fr", "vous-vous-levez-fr", "vous-vous-rveillez-fr", "on-a-commenc--parler-fr", "on-dit-que-fr", "on-reste-ensemble-fr", "on-se-parle-fr", "on-se-pose-des-questions-fr", "on-se-prpare-fr", "on-se-voit-fr", "on-se-voit-demain-fr", "ilelle-a-besoin-de-fr", "ilelle-a-bu-fr", "ilelle-a-mang-fr", "ilselles-ont-besoin-de-fr", "ilselles-ont-bu-fr", "ilselles-ont-mang-fr", "en-coutant-fr", "en-mangeant-fr", "en-marchant-fr", "en-parlant-fr", "en-pratiquant-fr", "en-travaillant-fr", "si-javais-fr", "si-javais-de-largent-fr", "si-javais-tudi-fr", "si-javais-fait-a-fr", "si-javais-pu-fr", "si-javais-su-fr", "si-jtais-fr", "si-jtais-riche-fr", "si-jtais-toi-fr", "si-on-avait-le-temps-fr", "si-tu-tais-ici-fr", "le-caf-tait-fr", "le-cinma-tait-fr", "le-film-tait-excellent-fr", "le-soleil-brille-fr", "le-train-arrive-fr", "le-vent-souffle-fr", "Ne-le-fais-pas-fr", "Ne-me-regarde-pas-fr", "Marie-a-d-partir-fr", "Dpche-toi-fr", "Donne-le-moi-fr", "coute-bien-fr", "coute-le-fr", "Fais-attention-fr", "Regarde-moi-fr", "Sois-gentil-fr", "Vas-y-fr"];
 
 export default verbphrases;

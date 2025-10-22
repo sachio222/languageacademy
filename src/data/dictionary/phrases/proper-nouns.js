@@ -1,217 +1,22 @@
 /**
- * Greetings Dictionary
+ * Proper nouns Dictionary
  * Auto-generated from phrases migration
  * Total entries: 11
  */
 
-export const greetings = new Map([
+export const propernouns = new Map([
   [
-    "au-revoir-fr",
+    "Le-Procope-fr",
     {
-    "id": "au-revoir-fr",
+    "id": "Le-Procope-fr",
     "language": "fr",
-    "word": "au revoir",
-    "partOfSpeech": "greeting",
+    "word": "Le Procope",
+    "partOfSpeech": "proper-noun",
     "translations": [
         {
             "language": "en",
-            "text": "goodbye",
-            "definition": "farewell",
-            "context": "general",
-            "confidence": 0.95
-        }
-    ],
-    "gender": "none",
-    "variants": [],
-    "frequency": {
-        "rank": 1000,
-        "score": 0.5,
-        "corpus": "lesson",
-        "perMillion": 100,
-        "percentile": 50
-    },
-    "difficulty": 2,
-    "cefr_level": "A1",
-    "examples": [],
-    "relationships": [],
-    "tags": [
-        "lesson"
-    ],
-    "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.755Z",
-    "updated_at": "2025-10-21T18:56:09.755Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
-    "verified": true
-}
-  ],
-  [
-    "bonne-journ-e-fr",
-    {
-    "id": "bonne-journ-e-fr",
-    "language": "fr",
-    "word": "bonne journée",
-    "partOfSpeech": "greeting",
-    "translations": [
-        {
-            "language": "en",
-            "text": "have a good day",
-            "definition": "daytime farewell",
-            "context": "general",
-            "confidence": 0.95
-        }
-    ],
-    "gender": "none",
-    "variants": [],
-    "frequency": {
-        "rank": 1000,
-        "score": 0.5,
-        "corpus": "lesson",
-        "perMillion": 100,
-        "percentile": 50
-    },
-    "difficulty": 2,
-    "cefr_level": "A1",
-    "examples": [],
-    "relationships": [],
-    "tags": [
-        "lesson"
-    ],
-    "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.755Z",
-    "updated_at": "2025-10-21T18:56:09.755Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/survival-phrases.js",
-    "verified": true
-}
-  ],
-  [
-    "bonne-nuit-fr",
-    {
-    "id": "bonne-nuit-fr",
-    "language": "fr",
-    "word": "bonne nuit",
-    "partOfSpeech": "greeting",
-    "translations": [
-        {
-            "language": "en",
-            "text": "good night",
-            "definition": "before bed",
-            "context": "general",
-            "confidence": 0.95
-        }
-    ],
-    "gender": "none",
-    "variants": [],
-    "frequency": {
-        "rank": 1000,
-        "score": 0.5,
-        "corpus": "lesson",
-        "perMillion": 100,
-        "percentile": 50
-    },
-    "difficulty": 2,
-    "cefr_level": "A1",
-    "examples": [],
-    "relationships": [],
-    "tags": [
-        "lesson"
-    ],
-    "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.755Z",
-    "updated_at": "2025-10-21T18:56:09.755Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/survival-phrases.js",
-    "verified": true
-}
-  ],
-  [
-    "-a-va-fr",
-    {
-    "id": "-a-va-fr",
-    "language": "fr",
-    "word": "ça va",
-    "partOfSpeech": "greeting",
-    "translations": [
-        {
-            "language": "en",
-            "text": "it goes/OK",
-            "definition": "ça + va (être)",
-            "context": "general",
-            "confidence": 0.95
-        }
-    ],
-    "gender": "none",
-    "variants": [],
-    "frequency": {
-        "rank": 1000,
-        "score": 0.5,
-        "corpus": "lesson",
-        "perMillion": 100,
-        "percentile": 50
-    },
-    "difficulty": 2,
-    "cefr_level": "A1",
-    "examples": [],
-    "relationships": [],
-    "tags": [
-        "lesson"
-    ],
-    "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.750Z",
-    "updated_at": "2025-10-21T18:56:09.750Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/ca-survival.js",
-    "verified": true
-}
-  ],
-  [
-    "-a-va--fr",
-    {
-    "id": "-a-va--fr",
-    "language": "fr",
-    "word": "ça va?",
-    "partOfSpeech": "greeting",
-    "translations": [
-        {
-            "language": "en",
-            "text": "you good?",
-            "definition": "super informal",
-            "context": "general",
-            "confidence": 0.95
-        }
-    ],
-    "gender": "none",
-    "variants": [],
-    "frequency": {
-        "rank": 1000,
-        "score": 0.5,
-        "corpus": "lesson",
-        "perMillion": 100,
-        "percentile": 50
-    },
-    "difficulty": 2,
-    "cefr_level": "A1",
-    "examples": [],
-    "relationships": [],
-    "tags": [
-        "lesson"
-    ],
-    "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.751Z",
-    "updated_at": "2025-10-21T18:56:09.751Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
-    "verified": true
-}
-  ],
-  [
-    "-ce-soir-fr",
-    {
-    "id": "-ce-soir-fr",
-    "language": "fr",
-    "word": "à ce soir",
-    "partOfSpeech": "greeting",
-    "translations": [
-        {
-            "language": "en",
-            "text": "see you this evening",
-            "definition": "expression",
+            "text": "Le Procope (oldest café-restaurant in Paris, opened 1686)",
+            "definition": "",
             "context": "general",
             "confidence": 0.95
         }
@@ -231,27 +36,27 @@ export const greetings = new Map([
     "relationships": [],
     "tags": [
         "lesson",
-        "greeting"
+        "proper-noun"
     ],
     "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.755Z",
-    "updated_at": "2025-10-21T18:56:09.755Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
     "verified": true
 }
   ],
   [
-    "Bon-anniversaire-fr",
+    "Arc-de-Triomphe-fr",
     {
-    "id": "Bon-anniversaire-fr",
+    "id": "Arc-de-Triomphe-fr",
     "language": "fr",
-    "word": "Bon anniversaire!",
-    "partOfSpeech": "greeting",
+    "word": "Arc de Triomphe",
+    "partOfSpeech": "proper-noun",
     "translations": [
         {
             "language": "en",
-            "text": "Happy Birthday!",
-            "definition": "birthday greeting",
+            "text": "Arc de Triomphe (triumphal arch)",
+            "definition": "",
             "context": "general",
             "confidence": 0.95
         }
@@ -271,27 +76,27 @@ export const greetings = new Map([
     "relationships": [],
     "tags": [
         "lesson",
-        "greeting"
+        "proper-noun"
     ],
     "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.739Z",
-    "updated_at": "2025-10-21T18:56:09.739Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
+    "created_at": "2025-10-21T18:56:09.746Z",
+    "updated_at": "2025-10-21T18:56:09.746Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
     "verified": true
 }
   ],
   [
-    "Bonne-anne-fr",
+    "Auguste-Renoir-fr",
     {
-    "id": "Bonne-anne-fr",
+    "id": "Auguste-Renoir-fr",
     "language": "fr",
-    "word": "Bonne année!",
-    "partOfSpeech": "greeting",
+    "word": "Auguste Renoir",
+    "partOfSpeech": "proper-noun",
     "translations": [
         {
             "language": "en",
-            "text": "Happy New Year!",
-            "definition": "holiday greeting",
+            "text": "Auguste Renoir (Impressionist painter)",
+            "definition": "",
             "context": "general",
             "confidence": 0.95
         }
@@ -311,27 +116,27 @@ export const greetings = new Map([
     "relationships": [],
     "tags": [
         "lesson",
-        "greeting"
+        "proper-noun"
     ],
     "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.739Z",
-    "updated_at": "2025-10-21T18:56:09.739Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
+    "created_at": "2025-10-21T18:56:09.746Z",
+    "updated_at": "2025-10-21T18:56:09.746Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
     "verified": true
 }
   ],
   [
-    "Bonnes-ftes-fr",
+    "Caf-de-Flore-fr",
     {
-    "id": "Bonnes-ftes-fr",
+    "id": "Caf-de-Flore-fr",
     "language": "fr",
-    "word": "Bonnes fêtes!",
-    "partOfSpeech": "greeting",
+    "word": "Café de Flore",
+    "partOfSpeech": "proper-noun",
     "translations": [
         {
             "language": "en",
-            "text": "Happy Holidays!",
-            "definition": "general greeting",
+            "text": "Café de Flore (famous Parisian café)",
+            "definition": "",
             "context": "general",
             "confidence": 0.95
         }
@@ -351,27 +156,27 @@ export const greetings = new Map([
     "relationships": [],
     "tags": [
         "lesson",
-        "greeting"
+        "proper-noun"
     ],
     "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.739Z",
-    "updated_at": "2025-10-21T18:56:09.739Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
     "verified": true
 }
   ],
   [
-    "Joyeuses-Pques-fr",
+    "Champs-lyses-fr",
     {
-    "id": "Joyeuses-Pques-fr",
+    "id": "Champs-lyses-fr",
     "language": "fr",
-    "word": "Joyeuses Pâques!",
-    "partOfSpeech": "greeting",
+    "word": "Champs-Élysées",
+    "partOfSpeech": "proper-noun",
     "translations": [
         {
             "language": "en",
-            "text": "Happy Easter!",
-            "definition": "holiday greeting",
+            "text": "Champs-Élysées (famous avenue)",
+            "definition": "",
             "context": "general",
             "confidence": 0.95
         }
@@ -391,27 +196,27 @@ export const greetings = new Map([
     "relationships": [],
     "tags": [
         "lesson",
-        "greeting"
+        "proper-noun"
     ],
     "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.739Z",
-    "updated_at": "2025-10-21T18:56:09.739Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
+    "created_at": "2025-10-21T18:56:09.746Z",
+    "updated_at": "2025-10-21T18:56:09.746Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
     "verified": true
 }
   ],
   [
-    "Joyeux-Nol-fr",
+    "Claude-Monet-fr",
     {
-    "id": "Joyeux-Nol-fr",
+    "id": "Claude-Monet-fr",
     "language": "fr",
-    "word": "Joyeux Noël!",
-    "partOfSpeech": "greeting",
+    "word": "Claude Monet",
+    "partOfSpeech": "proper-noun",
     "translations": [
         {
             "language": "en",
-            "text": "Merry Christmas!",
-            "definition": "holiday greeting",
+            "text": "Claude Monet (Impressionist painter)",
+            "definition": "",
             "context": "general",
             "confidence": 0.95
         }
@@ -431,18 +236,218 @@ export const greetings = new Map([
     "relationships": [],
     "tags": [
         "lesson",
-        "greeting"
+        "proper-noun"
     ],
     "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.739Z",
-    "updated_at": "2025-10-21T18:56:09.739Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
+    "created_at": "2025-10-21T18:56:09.746Z",
+    "updated_at": "2025-10-21T18:56:09.746Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
+    "verified": true
+}
+  ],
+  [
+    "Jardin-du-Luxembourg-fr",
+    {
+    "id": "Jardin-du-Luxembourg-fr",
+    "language": "fr",
+    "word": "Jardin du Luxembourg",
+    "partOfSpeech": "proper-noun",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Luxembourg Garden (famous Paris park)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "proper-noun"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "Moulin-Rouge-fr",
+    {
+    "id": "Moulin-Rouge-fr",
+    "language": "fr",
+    "word": "Moulin Rouge",
+    "partOfSpeech": "proper-noun",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Moulin Rouge (famous cabaret)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "proper-noun"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.746Z",
+    "updated_at": "2025-10-21T18:56:09.746Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
+    "verified": true
+}
+  ],
+  [
+    "Notre-Dame-fr",
+    {
+    "id": "Notre-Dame-fr",
+    "language": "fr",
+    "word": "Notre-Dame",
+    "partOfSpeech": "proper-noun",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Notre-Dame Cathedral",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "proper-noun"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.746Z",
+    "updated_at": "2025-10-21T18:56:09.746Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
+    "verified": true
+}
+  ],
+  [
+    "Tour-Eiffel-fr",
+    {
+    "id": "Tour-Eiffel-fr",
+    "language": "fr",
+    "word": "Tour Eiffel",
+    "partOfSpeech": "proper-noun",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Eiffel Tower",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "proper-noun"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.746Z",
+    "updated_at": "2025-10-21T18:56:09.746Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
+    "verified": true
+}
+  ],
+  [
+    "Vincent-van-Gogh-fr",
+    {
+    "id": "Vincent-van-Gogh-fr",
+    "language": "fr",
+    "word": "Vincent van Gogh",
+    "partOfSpeech": "proper-noun",
+    "translations": [
+        {
+            "language": "en",
+            "text": "Vincent van Gogh (Post-Impressionist painter)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "proper-noun"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.746Z",
+    "updated_at": "2025-10-21T18:56:09.746Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
     "verified": true
 }
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const greetingsByFrequency = ["au-revoir-fr", "bonne-journ-e-fr", "bonne-nuit-fr", "-a-va-fr", "-a-va--fr", "-ce-soir-fr", "Bon-anniversaire-fr", "Bonne-anne-fr", "Bonnes-ftes-fr", "Joyeuses-Pques-fr", "Joyeux-Nol-fr"];
+export const propernounsByFrequency = ["Le-Procope-fr", "Arc-de-Triomphe-fr", "Auguste-Renoir-fr", "Caf-de-Flore-fr", "Champs-lyses-fr", "Claude-Monet-fr", "Jardin-du-Luxembourg-fr", "Moulin-Rouge-fr", "Notre-Dame-fr", "Tour-Eiffel-fr", "Vincent-van-Gogh-fr"];
 
-export default greetings;
+export default propernouns;

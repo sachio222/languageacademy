@@ -1,7 +1,7 @@
 /**
  * Questions Dictionary
  * Auto-generated from phrases migration
- * Total entries: 99
+ * Total entries: 105
  */
 
 export const questions = new Map([
@@ -3881,10 +3881,256 @@ export const questions = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/survival-phrases.js",
     "verified": true
 }
+  ],
+  [
+    "Je-me-demande-comment-a-marche-fr",
+    {
+    "id": "Je-me-demande-comment-a-marche-fr",
+    "language": "fr",
+    "word": "Je me demande comment ça marche",
+    "partOfSpeech": "question",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I wonder how that works",
+            "definition": "curiosity expression",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "question"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.748Z",
+    "updated_at": "2025-10-21T18:56:09.748Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "Je-me-demande-pourquoi-cest-comme-a-fr",
+    {
+    "id": "Je-me-demande-pourquoi-cest-comme-a-fr",
+    "language": "fr",
+    "word": "Je me demande pourquoi c'est comme ça",
+    "partOfSpeech": "question",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I wonder why it's like that",
+            "definition": "embedded question - no est-ce que!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "question"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.748Z",
+    "updated_at": "2025-10-21T18:56:09.748Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "Je-ne-comprends-pas-fr",
+    {
+    "id": "Je-ne-comprends-pas-fr",
+    "language": "fr",
+    "word": "Je ne comprends pas",
+    "partOfSpeech": "question",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't understand",
+            "definition": "⭐ MOST IMPORTANT PHRASE!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "question"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.760Z",
+    "updated_at": "2025-10-21T18:56:09.760Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "Je-ne-sais-pas-fr",
+    {
+    "id": "Je-ne-sais-pas-fr",
+    "language": "fr",
+    "word": "Je ne sais pas",
+    "partOfSpeech": "question",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't know",
+            "definition": "⭐⭐⭐ MOST IMPORTANT! Rank 21!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "question"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/savoir.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "Je-ne-sais-pas-comment-on-fait-a-fr",
+    {
+    "id": "Je-ne-sais-pas-comment-on-fait-a-fr",
+    "language": "fr",
+    "word": "Je ne sais pas comment on fait ça",
+    "partOfSpeech": "question",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't know how we do that",
+            "definition": "embedded question - statement order",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "question"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.748Z",
+    "updated_at": "2025-10-21T18:56:09.748Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "On-ne-comprend-pas-comment-a-marche-fr",
+    {
+    "id": "On-ne-comprend-pas-comment-a-marche-fr",
+    "language": "fr",
+    "word": "On ne comprend pas comment ça marche",
+    "partOfSpeech": "question",
+    "translations": [
+        {
+            "language": "en",
+            "text": "We don't understand how that works",
+            "definition": "embedded understanding question",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "question"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.748Z",
+    "updated_at": "2025-10-21T18:56:09.748Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const questionsByFrequency = ["qu-est-ce-que-fr", "qu-est-ce-que-c-est-fr", "pourquoi-les-nuages-sont-ils-blancs--fr", "c-est-loin--fr", "c-est-pr-s--fr", "comment-aller-------fr", "comment--a-s--crit--fr", "comment-est-ce-qu-il-court-si-vite--fr", "comment-est-ce-qu-on-fait--a--fr", "comment-est-ce-qu-un--cureuil-saute--fr", "comment-est-ce-qu-un-lapin-saute--fr", "comment-est-ce-qu-un-oiseau-vole--fr", "comment-est-ce-qu-une-tortue-nage--fr", "comment-est-ce-que-les-plantes-poussent--fr", "comment-est-ce-que-tu-fais--a--fr", "comment-est-ce-que-tu-penses-qu-on-devrait-faire--a--fr", "comment-est-ce-que-tu-veux-que-je-le-fasse--fr", "comment-fais-tu--a--fr", "comment-fait-on--a--fr", "comment-nage-une-tortue--fr", "comment-ne-pas-aimer--a--fr", "comment-ne-pas-aimer-le-soleil--fr", "comment-tu-t-appelles--fr", "comment-tu-trouves--a--fr", "comment-vous-vous-appelez--fr", "de-quelle-couleur-est-----fr", "de-quelle-couleur--fr", "donc--tu-comprends--fr", "excusez-moi--o--est-----fr", "n-as-tu-pas-faim--fr", "n-es-tu-pas-content--fr", "n-est-ce-pas-vrai--fr", "n-est-ce-pas--fr", "ne-veux-tu-pas-essayer--fr", "on-y-va--fr", "o--est-----fr", "o--travaillez-vous--fr", "o--va-t-elle--fr", "o--vas-tu--fr", "o--vont-les-oiseaux-en-hiver--fr", "peux-tu-me-dire-o--est-la-gare--fr", "pourquoi-a-t-il--a--fr", "pourquoi-court-il--fr", "pourquoi-est-ce-qu-il-fait--a--fr", "pourquoi-est-ce-qu-il-faut-que-je-fasse--a--fr", "pourquoi-est-ce-qu-il-faut-que-tu-partes--fr", "pourquoi-est-ce-qu-il-pleut--fr", "pourquoi-est-ce-que-c-est-comme--a--fr", "pourquoi-est-ce-que--a-ne-marche-pas--fr", "pourquoi-est-ce-que-l-herbe-est-verte--fr", "pourquoi-est-ce-que-le-ciel-est-bleu--fr", "pourquoi-est-ce-que-le-soleil-brille--fr", "pourquoi-est-ce-que-les-nuages-sont-blancs--fr", "pourquoi-est-ce-que-les-oiseaux-volent--fr", "pourquoi-est-ce-que-les-plantes-poussent--fr", "pourquoi-est-ce-que-tu-cours--fr", "pourquoi-est-ce-que-tu-ferais--a--fr", "pourquoi-est-ce-que-tu-penses-que-c-est-comme--a--fr", "pourquoi-est-ce-que-tu-veux-que-je-fasse--a--fr", "pourquoi-ne-pas-essayer--fr", "qu-est-ce-que-le-soleil-fait--fr", "qu-est-ce-que-les-oiseaux-mangent--fr", "qu-est-ce-que-tu-cherches--fr", "qu-est-ce-que-tu--coutes--fr", "qu-est-ce-que-tu-manges--fr", "qu-est-ce-que-tu-mets--fr", "qu-est-ce-que-tu-penses--fr", "qu-est-ce-que-tu-regardes--fr", "qu-est-ce-que-tu-vois--fr", "qu-est-ce-qui-brille--fr", "qu-est-ce-qui-fait-du-bruit--fr", "qu-est-ce-qui-rend-l-herbe-verte--fr", "qu-est-ce-qui-rendrait-l-herbe-plus-verte--fr", "qu-est-ce-qui-tombe--fr", "quand-fleurissent-les-plantes--fr", "quel--ge-as-tu--fr", "quel--ge-avez-vous--fr", "quelle-est-votre-date-de-naissance--fr", "qui-est-ce-que-je-dois-appeler--fr", "qui-est-ce-que-tu-aimes--fr", "qui-est-ce-que-tu-connais--fr", "qui-est-ce-que-tu-vois--fr", "qui-est-ce-qui-fait--a--fr", "qui-est-ce-qui-nage--fr", "qui-est-ce-qui-parle-fran-ais--fr", "qui-est-ce-qui-parle--fr", "qui-ne-voudrait-pas--a--fr", "tu-as-quel--ge--fr", "tu-attends-quelqu-un--fr", "tu-cherches-quoi--fr", "tu-comprends--fr", "tu-connais--fr", "tu-crois--fr", "tu-restes-combien-de-temps--fr", "tu-sais-pourquoi-il-fait--a--fr", "tu-sais--fr", "tu-trouves--a-comment--fr", "vous-commandez--fr", "cest-combien-fr"];
+export const questionsByFrequency = ["qu-est-ce-que-fr", "qu-est-ce-que-c-est-fr", "pourquoi-les-nuages-sont-ils-blancs--fr", "c-est-loin--fr", "c-est-pr-s--fr", "comment-aller-------fr", "comment--a-s--crit--fr", "comment-est-ce-qu-il-court-si-vite--fr", "comment-est-ce-qu-on-fait--a--fr", "comment-est-ce-qu-un--cureuil-saute--fr", "comment-est-ce-qu-un-lapin-saute--fr", "comment-est-ce-qu-un-oiseau-vole--fr", "comment-est-ce-qu-une-tortue-nage--fr", "comment-est-ce-que-les-plantes-poussent--fr", "comment-est-ce-que-tu-fais--a--fr", "comment-est-ce-que-tu-penses-qu-on-devrait-faire--a--fr", "comment-est-ce-que-tu-veux-que-je-le-fasse--fr", "comment-fais-tu--a--fr", "comment-fait-on--a--fr", "comment-nage-une-tortue--fr", "comment-ne-pas-aimer--a--fr", "comment-ne-pas-aimer-le-soleil--fr", "comment-tu-t-appelles--fr", "comment-tu-trouves--a--fr", "comment-vous-vous-appelez--fr", "de-quelle-couleur-est-----fr", "de-quelle-couleur--fr", "donc--tu-comprends--fr", "excusez-moi--o--est-----fr", "n-as-tu-pas-faim--fr", "n-es-tu-pas-content--fr", "n-est-ce-pas-vrai--fr", "n-est-ce-pas--fr", "ne-veux-tu-pas-essayer--fr", "on-y-va--fr", "o--est-----fr", "o--travaillez-vous--fr", "o--va-t-elle--fr", "o--vas-tu--fr", "o--vont-les-oiseaux-en-hiver--fr", "peux-tu-me-dire-o--est-la-gare--fr", "pourquoi-a-t-il--a--fr", "pourquoi-court-il--fr", "pourquoi-est-ce-qu-il-fait--a--fr", "pourquoi-est-ce-qu-il-faut-que-je-fasse--a--fr", "pourquoi-est-ce-qu-il-faut-que-tu-partes--fr", "pourquoi-est-ce-qu-il-pleut--fr", "pourquoi-est-ce-que-c-est-comme--a--fr", "pourquoi-est-ce-que--a-ne-marche-pas--fr", "pourquoi-est-ce-que-l-herbe-est-verte--fr", "pourquoi-est-ce-que-le-ciel-est-bleu--fr", "pourquoi-est-ce-que-le-soleil-brille--fr", "pourquoi-est-ce-que-les-nuages-sont-blancs--fr", "pourquoi-est-ce-que-les-oiseaux-volent--fr", "pourquoi-est-ce-que-les-plantes-poussent--fr", "pourquoi-est-ce-que-tu-cours--fr", "pourquoi-est-ce-que-tu-ferais--a--fr", "pourquoi-est-ce-que-tu-penses-que-c-est-comme--a--fr", "pourquoi-est-ce-que-tu-veux-que-je-fasse--a--fr", "pourquoi-ne-pas-essayer--fr", "qu-est-ce-que-le-soleil-fait--fr", "qu-est-ce-que-les-oiseaux-mangent--fr", "qu-est-ce-que-tu-cherches--fr", "qu-est-ce-que-tu--coutes--fr", "qu-est-ce-que-tu-manges--fr", "qu-est-ce-que-tu-mets--fr", "qu-est-ce-que-tu-penses--fr", "qu-est-ce-que-tu-regardes--fr", "qu-est-ce-que-tu-vois--fr", "qu-est-ce-qui-brille--fr", "qu-est-ce-qui-fait-du-bruit--fr", "qu-est-ce-qui-rend-l-herbe-verte--fr", "qu-est-ce-qui-rendrait-l-herbe-plus-verte--fr", "qu-est-ce-qui-tombe--fr", "quand-fleurissent-les-plantes--fr", "quel--ge-as-tu--fr", "quel--ge-avez-vous--fr", "quelle-est-votre-date-de-naissance--fr", "qui-est-ce-que-je-dois-appeler--fr", "qui-est-ce-que-tu-aimes--fr", "qui-est-ce-que-tu-connais--fr", "qui-est-ce-que-tu-vois--fr", "qui-est-ce-qui-fait--a--fr", "qui-est-ce-qui-nage--fr", "qui-est-ce-qui-parle-fran-ais--fr", "qui-est-ce-qui-parle--fr", "qui-ne-voudrait-pas--a--fr", "tu-as-quel--ge--fr", "tu-attends-quelqu-un--fr", "tu-cherches-quoi--fr", "tu-comprends--fr", "tu-connais--fr", "tu-crois--fr", "tu-restes-combien-de-temps--fr", "tu-sais-pourquoi-il-fait--a--fr", "tu-sais--fr", "tu-trouves--a-comment--fr", "vous-commandez--fr", "cest-combien-fr", "Je-me-demande-comment-a-marche-fr", "Je-me-demande-pourquoi-cest-comme-a-fr", "Je-ne-comprends-pas-fr", "Je-ne-sais-pas-fr", "Je-ne-sais-pas-comment-on-fait-a-fr", "On-ne-comprend-pas-comment-a-marche-fr"];
 
 export default questions;

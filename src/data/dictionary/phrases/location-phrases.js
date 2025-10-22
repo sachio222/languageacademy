@@ -1,7 +1,7 @@
 /**
  * Location phrases Dictionary
  * Auto-generated from phrases migration
- * Total entries: 9
+ * Total entries: 14
  */
 
 export const locationphrases = new Map([
@@ -364,10 +364,210 @@ export const locationphrases = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
     "verified": true
 }
+  ],
+  [
+    "en-face-de-fr",
+    {
+    "id": "en-face-de-fr",
+    "language": "fr",
+    "word": "en face de",
+    "partOfSpeech": "location-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "across from",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "location-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "en-face-du-parc-fr",
+    {
+    "id": "en-face-du-parc-fr",
+    "language": "fr",
+    "word": "en face du parc",
+    "partOfSpeech": "location-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "across from the park",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "location-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "en-voiture-fr",
+    {
+    "id": "en-voiture-fr",
+    "language": "fr",
+    "word": "en voiture",
+    "partOfSpeech": "location-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "by car",
+            "definition": "mode of transport",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "location-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
+    "verified": true
+}
+  ],
+  [
+    "cest-par-ici-fr",
+    {
+    "id": "cest-par-ici-fr",
+    "language": "fr",
+    "word": "c'est par ici",
+    "partOfSpeech": "location-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it's this way",
+            "definition": "indicating nearby direction",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "location-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
+    "verified": true
+}
+  ],
+  [
+    "cest-par-l-fr",
+    {
+    "id": "cest-par-l-fr",
+    "language": "fr",
+    "word": "c'est par là",
+    "partOfSpeech": "location-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it's that way",
+            "definition": "pointing in a direction",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "location-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
+    "verified": true
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const locationphrasesByFrequency = ["-droite-fr", "-gauche-fr", "-notre-table-fr", "au-cinma-fr", "au-loin-fr", "au-restaurant-fr", "autour-des-tables-fr", "avec-mes-amis-fr", "avant-que-fr"];
+export const locationphrasesByFrequency = ["-droite-fr", "-gauche-fr", "-notre-table-fr", "au-cinma-fr", "au-loin-fr", "au-restaurant-fr", "autour-des-tables-fr", "avec-mes-amis-fr", "avant-que-fr", "en-face-de-fr", "en-face-du-parc-fr", "en-voiture-fr", "cest-par-ici-fr", "cest-par-l-fr"];
 
 export default locationphrases;

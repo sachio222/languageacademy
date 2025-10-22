@@ -1,7 +1,7 @@
 /**
  * Prepositional phrases Dictionary
  * Auto-generated from phrases migration
- * Total entries: 13
+ * Total entries: 22
  */
 
 export const prepositionalphrases = new Map([
@@ -518,10 +518,370 @@ export const prepositionalphrases = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
     "verified": true
 }
+  ],
+  [
+    "le-long-de-fr",
+    {
+    "id": "le-long-de-fr",
+    "language": "fr",
+    "word": "le long de",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "along",
+            "definition": "following a length/path",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/more-spatial-relations.js",
+    "verified": true
+}
+  ],
+  [
+    "en-ligne-fr",
+    {
+    "id": "en-ligne-fr",
+    "language": "fr",
+    "word": "en ligne",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "online",
+            "definition": "internet context",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.746Z",
+    "updated_at": "2025-10-21T18:56:09.746Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
+    "verified": true
+}
+  ],
+  [
+    "pour-quelle-sache-fr",
+    {
+    "id": "pour-quelle-sache-fr",
+    "language": "fr",
+    "word": "pour qu'elle sache",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "so that she knows",
+            "definition": "sharing information",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "pour-quil-vienne-fr",
+    {
+    "id": "pour-quil-vienne-fr",
+    "language": "fr",
+    "word": "pour qu'il vienne",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "so that he comes",
+            "definition": "invitation purpose",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "pour-quon-puisse-fr",
+    {
+    "id": "pour-quon-puisse-fr",
+    "language": "fr",
+    "word": "pour qu'on puisse",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "so that we can",
+            "definition": "group goal",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "pour-que-fr",
+    {
+    "id": "pour-que-fr",
+    "language": "fr",
+    "word": "pour que",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "so that (someone can)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true
+}
+  ],
+  [
+    "pour-que-tu-comprennes-fr",
+    {
+    "id": "pour-que-tu-comprennes-fr",
+    "language": "fr",
+    "word": "pour que tu comprennes",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "so that you understand",
+            "definition": "⭐ explaining purpose!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "pour-que-tu-sois-content-fr",
+    {
+    "id": "pour-que-tu-sois-content-fr",
+    "language": "fr",
+    "word": "pour que tu sois content",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "so that you're happy",
+            "definition": "pleasing someone",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "pour-rentrer-fr",
+    {
+    "id": "pour-rentrer-fr",
+    "language": "fr",
+    "word": "pour rentrer",
+    "partOfSpeech": "prepositional-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to go home",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "prepositional-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const prepositionalphrasesByFrequency = ["au-dessous-de-fr", "au-dessus-de-fr", "avec-moi-fr", "n----fr", "n--en-fr", "tu-viens-avec-moi-fr", "-cause-de-fr", "-ct-de-fr", "-ct-des-fentres-fr", "au-bout-de-fr", "au-coin-de-fr", "au-milieu-de-fr", "autour-de-fr"];
+export const prepositionalphrasesByFrequency = ["au-dessous-de-fr", "au-dessus-de-fr", "avec-moi-fr", "n----fr", "n--en-fr", "tu-viens-avec-moi-fr", "-cause-de-fr", "-ct-de-fr", "-ct-des-fentres-fr", "au-bout-de-fr", "au-coin-de-fr", "au-milieu-de-fr", "autour-de-fr", "le-long-de-fr", "en-ligne-fr", "pour-quelle-sache-fr", "pour-quil-vienne-fr", "pour-quon-puisse-fr", "pour-que-fr", "pour-que-tu-comprennes-fr", "pour-que-tu-sois-content-fr", "pour-rentrer-fr"];
 
 export default prepositionalphrases;

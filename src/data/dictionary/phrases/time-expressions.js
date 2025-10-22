@@ -1,7 +1,7 @@
 /**
  * Time expressions Dictionary
  * Auto-generated from phrases migration
- * Total entries: 14
+ * Total entries: 17
  */
 
 export const timeexpressions = new Map([
@@ -564,10 +564,130 @@ export const timeexpressions = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
     "verified": true
 }
+  ],
+  [
+    "en-ce-moment-fr",
+    {
+    "id": "en-ce-moment-fr",
+    "language": "fr",
+    "word": "en ce moment",
+    "partOfSpeech": "time-expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "right now/at this moment",
+            "definition": "time expression with Unit 6 moment",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "time-expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
+    "verified": true
+}
+  ],
+  [
+    "en-mille-neuf-cent-quatre-vingt-quinze-fr",
+    {
+    "id": "en-mille-neuf-cent-quatre-vingt-quinze-fr",
+    "language": "fr",
+    "word": "en mille neuf cent quatre-vingt-quinze",
+    "partOfSpeech": "time-expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "in nineteen ninety-five",
+            "definition": "birth year example",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "time-expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
+    "verified": true
+}
+  ],
+  [
+    "pour-laprs-midi-fr",
+    {
+    "id": "pour-laprs-midi-fr",
+    "language": "fr",
+    "word": "pour l'après-midi",
+    "partOfSpeech": "time-expression",
+    "translations": [
+        {
+            "language": "en",
+            "text": "for the afternoon",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "time-expression"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const timeexpressionsByFrequency = ["-ce-moment-l-fr", "-cinq-minutes-fr", "-dix-minutes-fr", "aprs-le-film-fr", "aprs-mon-caf-fr", "aujourdhui-fr", "avant-de-dormir-fr", "avant-de-partir-fr", "avant-quelle-vienne-fr", "avant-quil-arrive-fr", "avant-quil-soit-trop-tard-fr", "avant-quon-parte-fr", "avant-que-tu-partes-fr", "avec-le-temps-fr"];
+export const timeexpressionsByFrequency = ["-ce-moment-l-fr", "-cinq-minutes-fr", "-dix-minutes-fr", "aprs-le-film-fr", "aprs-mon-caf-fr", "aujourdhui-fr", "avant-de-dormir-fr", "avant-de-partir-fr", "avant-quelle-vienne-fr", "avant-quil-arrive-fr", "avant-quil-soit-trop-tard-fr", "avant-quon-parte-fr", "avant-que-tu-partes-fr", "avec-le-temps-fr", "en-ce-moment-fr", "en-mille-neuf-cent-quatre-vingt-quinze-fr", "pour-laprs-midi-fr"];
 
 export default timeexpressions;
