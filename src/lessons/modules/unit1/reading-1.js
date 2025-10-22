@@ -48,7 +48,7 @@ Tu es Marie. Tu es une femme. Tu as une maison et une voiture. La maison est tr√
 
 ![img/reading1a.png]
 
-J'ai un ami. Il a des livres. J'ai une amie aussi. Elle a des chats et des livres aussi.
+Tu as un ami. Il a des livres. J'ai une amie aussi. Elle a des chats et des livres aussi.
 
 Nous sommes les amis. Nous avons des enfants et des chiens. Les chiens sont tr√®s bons, mais les chats sont bons aussi.
 
@@ -67,7 +67,7 @@ You are Marie. You are a woman. You have a house and a car. The house is very go
 
 
 
-I have a friend. He has books. I have a friend too. She has cats and books too.
+You have a friend. He has books. I have a friend too. She has cats and books too.
 
 We are the friends. We have children and dogs. The dogs are very good, but the cats are good too.
 
