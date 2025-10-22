@@ -1,10 +1,10 @@
 /**
- * Verb Phrases Dictionary
- * Verb conjugations, verb + infinitive, verb + object combinations
- * Total entries: 438
+ * Verb phrases Dictionary
+ * Auto-generated from phrases migration
+ * Total entries: 447
  */
 
-export const verbPhrases = new Map([
+export const verbphrases = new Map([
   [
     "il-me-dit-fr",
     {
@@ -864,6 +864,366 @@ export const verbPhrases = new Map([
 }
   ],
   [
+    "aimer-bien-fr",
+    {
+    "id": "aimer-bien-fr",
+    "language": "fr",
+    "word": "aimer bien",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to like (casual)",
+            "definition": "less intense than aimer alone",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/aimer.js",
+    "verified": true
+}
+  ],
+  [
+    "aller-mal-fr",
+    {
+    "id": "aller-mal-fr",
+    "language": "fr",
+    "word": "aller mal",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to go badly / to be unwell",
+            "definition": "Ça va mal (It's going badly)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.760Z",
+    "updated_at": "2025-10-21T18:56:09.760Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
+    "verified": true
+}
+  ],
+  [
+    "avions-faim-fr",
+    {
+    "id": "avions-faim-fr",
+    "language": "fr",
+    "word": "avions faim",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "were hungry",
+            "definition": "avoir faim in past",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
+    "verified": true
+}
+  ],
+  [
+    "avions-mang-fr",
+    {
+    "id": "avions-mang-fr",
+    "language": "fr",
+    "word": "avions mangé",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "had eaten",
+            "definition": "pluperfect",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
+    "verified": true
+}
+  ],
+  [
+    "avoir-besoin-de-fr",
+    {
+    "id": "avoir-besoin-de-fr",
+    "language": "fr",
+    "word": "avoir besoin de",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to need / to have need of",
+            "definition": "essential expression",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
+    "verified": true
+}
+  ],
+  [
+    "avoir-faim-fr",
+    {
+    "id": "avoir-faim-fr",
+    "language": "fr",
+    "word": "avoir faim",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to be hungry",
+            "definition": "literally 'to have hunger'",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
+    "verified": true
+}
+  ],
+  [
+    "avoir-raison-fr",
+    {
+    "id": "avoir-raison-fr",
+    "language": "fr",
+    "word": "avoir raison",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to be right",
+            "definition": "literally 'to have reason'",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
+    "verified": true
+}
+  ],
+  [
+    "bien-dormir-fr",
+    {
+    "id": "bien-dormir-fr",
+    "language": "fr",
+    "word": "bien dormir",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to sleep well",
+            "definition": "je dors bien",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
+    "verified": true
+}
+  ],
+  [
+    "bien-couter-fr",
+    {
+    "id": "bien-couter-fr",
+    "language": "fr",
+    "word": "bien écouter",
+    "partOfSpeech": "verb-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to listen well / carefully",
+            "definition": "quality listening",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "verb-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.745Z",
+    "updated_at": "2025-10-21T18:56:09.745Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
+    "verified": true
+}
+  ],
+  [
     "je-bois-fr",
     {
     "id": "je-bois-fr",
@@ -900,6 +1260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -949,6 +1311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -996,6 +1360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -1045,6 +1411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -1092,6 +1460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -1141,6 +1511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -1188,6 +1560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -1237,6 +1611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -1284,6 +1660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -1333,6 +1711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -1380,6 +1760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -1429,6 +1811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -1476,6 +1860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -1525,6 +1911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -1572,6 +1960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -1621,6 +2011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -1668,6 +2060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -1717,6 +2111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -1764,6 +2160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -1813,6 +2211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -1860,6 +2260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -1909,6 +2311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -1956,6 +2360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2005,6 +2411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -2052,6 +2460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "subjonctif",
         "verb-phrase",
         "subjonctif"
     ],
@@ -2101,6 +2511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -2148,6 +2560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2197,6 +2611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -2244,6 +2660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2293,6 +2711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -2340,6 +2760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2389,6 +2811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -2436,6 +2860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2485,6 +2911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -2532,6 +2960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2581,6 +3011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -2628,6 +3060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2677,6 +3111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -2724,6 +3160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2773,6 +3211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -2820,6 +3260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2869,6 +3311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -2916,6 +3360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -2965,6 +3411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -3012,6 +3460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -3061,6 +3511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -3108,6 +3560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -3157,6 +3611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -3204,6 +3660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -3253,6 +3711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -3300,6 +3760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -3349,6 +3811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -3396,6 +3860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -3445,6 +3911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -3492,6 +3960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -3541,6 +4011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -3588,6 +4060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -3637,6 +4111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -3684,6 +4160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -3733,6 +4211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -3780,6 +4260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -3829,6 +4311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -3876,6 +4360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -3925,6 +4411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -3972,6 +4460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4021,6 +4511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -4068,6 +4560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4117,6 +4611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -4164,6 +4660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4213,6 +4711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -4260,6 +4760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4309,6 +4811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -4356,6 +4860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4405,6 +4911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -4452,6 +4960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4501,6 +5011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -4548,6 +5060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4597,6 +5111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -4644,6 +5160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4693,6 +5211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -4740,6 +5260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4789,6 +5311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -4836,6 +5360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4885,6 +5411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -4932,6 +5460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -4981,6 +5511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -5028,6 +5560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -5077,6 +5611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -5124,6 +5660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -5173,6 +5711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -5220,6 +5760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -5269,6 +5811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -5316,6 +5860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -5365,6 +5911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -5412,6 +5960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -5461,6 +6011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -5508,6 +6060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -5557,6 +6111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -5604,6 +6160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -5653,6 +6211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -5700,6 +6260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -5749,6 +6311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -5796,6 +6360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -5845,6 +6411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -5892,6 +6460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -5941,6 +6511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -5988,6 +6560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6037,6 +6611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -6084,6 +6660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6133,6 +6711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -6180,6 +6760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6229,6 +6811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -6276,6 +6860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6325,6 +6911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -6372,6 +6960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6421,6 +7011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -6468,6 +7060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6517,6 +7111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -6564,6 +7160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6613,6 +7211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -6660,6 +7260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6709,6 +7311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -6756,6 +7360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6805,6 +7411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -6852,6 +7460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6901,6 +7511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -6948,6 +7560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -6997,6 +7611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -7044,6 +7660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7093,6 +7711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -7140,6 +7760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7189,6 +7811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -7236,6 +7860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7285,6 +7911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -7332,6 +7960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7381,6 +8011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -7428,6 +8060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7477,6 +8111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -7524,6 +8160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7573,6 +8211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -7620,6 +8260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7669,6 +8311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -7716,6 +8360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7765,6 +8411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -7812,6 +8460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7861,6 +8511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -7908,6 +8560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -7957,6 +8611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8004,6 +8660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -8053,6 +8711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8100,6 +8760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -8149,6 +8811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8196,6 +8860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -8245,6 +8911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8292,6 +8960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -8341,6 +9011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8388,6 +9060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -8437,6 +9111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8484,6 +9160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -8533,6 +9211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8580,6 +9260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "subjonctif",
         "verb-phrase",
         "subjonctif"
     ],
@@ -8629,6 +9311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -8676,6 +9360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -8725,6 +9411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8772,6 +9460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -8821,6 +9511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8868,6 +9560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -8917,6 +9611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -8964,6 +9660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9013,6 +9711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -9060,6 +9760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9109,6 +9811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -9156,6 +9860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9205,6 +9911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -9252,6 +9960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9301,6 +10011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -9348,6 +10060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9397,6 +10111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -9444,6 +10160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9493,6 +10211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -9540,6 +10260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9589,6 +10311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -9636,6 +10360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9685,6 +10411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -9732,6 +10460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9781,6 +10511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -9828,6 +10560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9877,6 +10611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -9924,6 +10660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -9973,6 +10711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10020,6 +10760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10069,6 +10811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10116,6 +10860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10165,6 +10911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10212,6 +10960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10261,6 +11011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10308,6 +11060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10357,6 +11111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10404,6 +11160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10453,6 +11211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10500,6 +11260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10549,6 +11311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10596,6 +11360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10645,6 +11411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10692,6 +11460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10741,6 +11511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10788,6 +11560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10837,6 +11611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10884,6 +11660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -10933,6 +11711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -10980,6 +11760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11029,6 +11811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11076,6 +11860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11125,6 +11911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11172,6 +11960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11221,6 +12011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11268,6 +12060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11317,6 +12111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11364,6 +12160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11413,6 +12211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11460,6 +12260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11509,6 +12311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11556,6 +12360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11605,6 +12411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11652,6 +12460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11701,6 +12511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11748,6 +12560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11797,6 +12611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11844,6 +12660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11893,6 +12711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -11940,6 +12760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -11989,6 +12811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12036,6 +12860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12085,6 +12911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12132,6 +12960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12181,6 +13011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12228,6 +13060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12277,6 +13111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12324,6 +13160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12373,6 +13211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12420,6 +13260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12469,6 +13311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12516,6 +13360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12565,6 +13411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12612,6 +13460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12661,6 +13511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12708,6 +13560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12757,6 +13611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12804,6 +13660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12853,6 +13711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -12900,6 +13760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -12949,6 +13811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -12996,6 +13860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -13045,6 +13911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -13092,6 +13960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -13141,6 +14011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -13188,6 +14060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -13237,6 +14111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -13284,6 +14160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -13333,6 +14211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -13380,6 +14260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -13429,6 +14311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -13476,6 +14360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -13525,6 +14411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -13572,6 +14460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -13621,6 +14511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -13668,6 +14560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -13717,6 +14611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -13764,6 +14660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -13813,6 +14711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -13860,6 +14760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -13909,6 +14811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -13956,6 +14860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -14005,6 +14911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14052,6 +14960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -14101,6 +15011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14148,6 +15060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -14197,6 +15111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14244,6 +15160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -14293,6 +15211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14340,6 +15260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -14389,6 +15311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14436,6 +15360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -14485,6 +15411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14532,6 +15460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -14581,6 +15511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14628,6 +15560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -14677,6 +15611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14724,6 +15660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -14773,6 +15711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14820,6 +15760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -14869,6 +15811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -14916,6 +15860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -14965,6 +15911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -15012,6 +15960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -15061,6 +16011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -15108,6 +16060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -15157,6 +16111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -15204,6 +16160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -15253,6 +16211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -15300,6 +16260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -15349,6 +16311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -15396,6 +16360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -15445,6 +16411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -15492,6 +16460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -15541,6 +16511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -15588,6 +16560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -15637,60 +16611,14 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
     "created_at": "2025-10-21T18:56:09.747Z",
     "updated_at": "2025-10-21T18:56:09.747Z",
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
-    "verified": true,
-    "conjugationGroup": "irregular"
-}
-  ],
-  [
-    "vous-commandez-fr",
-    {
-    "id": "vous-commandez-fr",
-    "language": "fr",
-    "word": "vous commandez",
-    "partOfSpeech": "verb",
-    "translations": [
-        {
-            "language": "en",
-            "text": "you order (formal/plural)",
-            "definition": "regular -ER ending: -ez",
-            "context": "general",
-            "confidence": 0.95
-        }
-    ],
-    "gender": "none",
-    "variants": [],
-    "frequency": {
-        "rank": 1000,
-        "score": 0.5,
-        "corpus": "lesson",
-        "perMillion": 100,
-        "percentile": 50
-    },
-    "difficulty": 2,
-    "cefr_level": "A1",
-    "examples": [],
-    "relationships": [
-        {
-            "type": "subject",
-            "pronoun": "vous",
-            "relationship": "subject_pronoun"
-        }
-    ],
-    "tags": [
-        "lesson",
-        "verb-phrase",
-        "présent"
-    ],
-    "semantic_field": "general",
-    "created_at": "2025-10-21T18:56:09.758Z",
-    "updated_at": "2025-10-21T18:56:09.758Z",
-    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
     "verified": true,
     "conjugationGroup": "irregular"
 }
@@ -15732,6 +16660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -15781,6 +16711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -15828,6 +16760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -15877,6 +16811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -15924,6 +16860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -15973,6 +16911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -16020,6 +16960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -16069,6 +17011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -16116,6 +17060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -16165,6 +17111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -16212,6 +17160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -16261,6 +17211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -16308,6 +17260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -16357,6 +17311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -16404,6 +17360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -16453,6 +17411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -16500,6 +17460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -16549,6 +17511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -16596,6 +17560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -16645,6 +17611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -16692,6 +17660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -16741,6 +17711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -16788,6 +17760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -16837,6 +17811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -16884,6 +17860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -16933,6 +17911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -16980,6 +17960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17029,6 +18011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -17076,6 +18060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17125,6 +18111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -17172,6 +18160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17221,6 +18211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -17268,6 +18260,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17317,6 +18311,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -17364,6 +18360,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17413,6 +18411,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -17460,6 +18460,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17509,6 +18511,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -17556,6 +18560,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17605,6 +18611,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "imparfait",
+        "verb-phrase",
         "imparfait"
     ],
     "semantic_field": "general",
@@ -17652,6 +18660,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17701,6 +18711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -17748,6 +18760,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17797,6 +18811,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -17844,6 +18860,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17893,6 +18911,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -17940,6 +18960,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -17989,6 +19011,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -18036,6 +19060,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -18085,6 +19111,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -18132,6 +19160,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -18181,6 +19211,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -18229,6 +19261,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -18275,6 +19309,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -18323,6 +19359,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -18369,6 +19407,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -18417,6 +19457,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -18463,6 +19505,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -18511,6 +19555,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -18557,6 +19603,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -18605,6 +19653,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -18651,6 +19701,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -18699,6 +19751,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -18745,6 +19799,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -18793,6 +19849,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -18839,6 +19897,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -18887,6 +19947,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -18933,6 +19995,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "subjonctif",
         "verb-phrase",
         "subjonctif"
     ],
@@ -18981,6 +20045,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -19027,6 +20093,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -19075,6 +20143,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -19121,6 +20191,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "subjonctif",
         "verb-phrase",
         "subjonctif"
     ],
@@ -19169,6 +20241,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -19215,6 +20289,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -19263,6 +20339,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -19309,6 +20387,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -19357,6 +20437,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -19403,6 +20485,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -19451,6 +20535,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -19497,6 +20583,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -19545,6 +20633,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -19591,6 +20681,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "subjonctif",
         "verb-phrase",
         "subjonctif"
     ],
@@ -19639,6 +20731,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -19685,6 +20779,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -19733,6 +20829,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -19779,6 +20877,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -19827,6 +20927,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -19873,6 +20975,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "subjonctif",
         "verb-phrase",
         "subjonctif"
     ],
@@ -19921,6 +21025,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -19967,6 +21073,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -20015,6 +21123,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -20061,6 +21171,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "imparfait",
         "verb-phrase",
         "imparfait"
     ],
@@ -20109,6 +21221,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -20155,6 +21269,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "subjonctif",
         "verb-phrase",
         "subjonctif"
     ],
@@ -20203,6 +21319,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -20249,6 +21367,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -20297,6 +21417,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -20343,6 +21465,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -20391,6 +21515,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -20437,6 +21563,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "subjonctif",
         "verb-phrase",
         "subjonctif"
     ],
@@ -20485,6 +21613,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -20531,6 +21661,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -20579,6 +21711,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -20625,6 +21759,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "subjonctif",
         "verb-phrase",
         "subjonctif"
     ],
@@ -20673,6 +21809,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "présent",
+        "verb-phrase",
         "présent"
     ],
     "semantic_field": "general",
@@ -20719,6 +21857,8 @@ export const verbPhrases = new Map([
     ],
     "tags": [
         "lesson",
+        "verb-phrase",
+        "présent",
         "verb-phrase",
         "présent"
     ],
@@ -20767,6 +21907,8 @@ export const verbPhrases = new Map([
     "tags": [
         "lesson",
         "verb-phrase",
+        "subjonctif",
+        "verb-phrase",
         "subjonctif"
     ],
     "semantic_field": "general",
@@ -20775,10 +21917,14150 @@ export const verbPhrases = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
     "verified": true
 }
+  ],
+  [
+    "jai-fr",
+    {
+    "id": "jai-fr",
+    "language": "fr",
+    "word": "j'ai",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I have",
+            "definition": "use apostrophe!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.740Z",
+    "updated_at": "2025-10-21T18:56:09.740Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
+    "verified": true
+}
+  ],
+  [
+    "jai--ans-fr",
+    {
+    "id": "jai--ans-fr",
+    "language": "fr",
+    "word": "j'ai ... ans",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I am ... years old",
+            "definition": "⭐ Essential: literally 'I have X years'",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-aim-fr",
+    {
+    "id": "jai-aim-fr",
+    "language": "fr",
+    "word": "j'ai aimé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I loved / I liked",
+            "definition": "⭐ aimer → aimé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-appris-fr",
+    {
+    "id": "jai-appris-fr",
+    "language": "fr",
+    "word": "j'ai appris",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I learned",
+            "definition": "apprendre → appris (like prendre)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-besoin-daide-fr",
+    {
+    "id": "jai-besoin-daide-fr",
+    "language": "fr",
+    "word": "j'ai besoin d'aide",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I need help",
+            "definition": "de → d' before vowel",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-besoin-dargent-fr",
+    {
+    "id": "jai-besoin-dargent-fr",
+    "language": "fr",
+    "word": "j'ai besoin d'argent",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I need money",
+            "definition": "very common phrase",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-besoin-de-fr",
+    {
+    "id": "jai-besoin-de-fr",
+    "language": "fr",
+    "word": "j'ai besoin de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I need",
+            "definition": "avoir besoin de + infinitive/noun",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-besoin-de-temps-fr",
+    {
+    "id": "jai-besoin-de-temps-fr",
+    "language": "fr",
+    "word": "j'ai besoin de temps",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I need time",
+            "definition": "common phrase",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-bu-fr",
+    {
+    "id": "jai-bu-fr",
+    "language": "fr",
+    "word": "j'ai bu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I drank / I have drunk",
+            "definition": "passé composé - avoir + bu (irregular!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-a-fr",
+    {
+    "id": "jai-a-fr",
+    "language": "fr",
+    "word": "j'ai ça",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I have that",
+            "definition": "avoir + ça",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.750Z",
+    "updated_at": "2025-10-21T18:56:09.750Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/ca-survival.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-ce-livre-fr",
+    {
+    "id": "jai-ce-livre-fr",
+    "language": "fr",
+    "word": "j'ai ce livre",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I have this book",
+            "definition": "avoir + ce + noun",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.751Z",
+    "updated_at": "2025-10-21T18:56:09.751Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-ces-enfants-fr",
+    {
+    "id": "jai-ces-enfants-fr",
+    "language": "fr",
+    "word": "j'ai ces enfants",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I have these children",
+            "definition": "full phrase",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.751Z",
+    "updated_at": "2025-10-21T18:56:09.751Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-cherch-fr",
+    {
+    "id": "jai-cherch-fr",
+    "language": "fr",
+    "word": "j'ai cherché",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I looked for / I searched",
+            "definition": "chercher → cherché",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-compris-fr",
+    {
+    "id": "jai-compris-fr",
+    "language": "fr",
+    "word": "j'ai compris",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I understood",
+            "definition": "comprendre → compris (like prendre)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-dcid-de-fr",
+    {
+    "id": "jai-dcid-de-fr",
+    "language": "fr",
+    "word": "j'ai décidé de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I decided to",
+            "definition": "PC decision + infinitive",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/past-tense-composition.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-demand-fr",
+    {
+    "id": "jai-demand-fr",
+    "language": "fr",
+    "word": "j'ai demandé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I asked",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-dit-fr",
+    {
+    "id": "jai-dit-fr",
+    "language": "fr",
+    "word": "j'ai dit",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I said",
+            "definition": "⭐ dire → dit (irregular!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-d-fr",
+    {
+    "id": "jai-d-fr",
+    "language": "fr",
+    "word": "j'ai dû",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I had to / I must have",
+            "definition": "⭐ devoir → dû (irregular! - accent)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-cout-fr",
+    {
+    "id": "jai-cout-fr",
+    "language": "fr",
+    "word": "j'ai écouté",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I listened",
+            "definition": "écouter → écouté",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-t-fr",
+    {
+    "id": "jai-t-fr",
+    "language": "fr",
+    "word": "j'ai été",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I was / I have been",
+            "definition": "⭐ être → été (irregular!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-tudi-fr",
+    {
+    "id": "jai-tudi-fr",
+    "language": "fr",
+    "word": "j'ai étudié",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I studied / I have studied",
+            "definition": "étudier → étudié",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-eu-fr",
+    {
+    "id": "jai-eu-fr",
+    "language": "fr",
+    "word": "j'ai eu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I had",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-fait-fr",
+    {
+    "id": "jai-fait-fr",
+    "language": "fr",
+    "word": "j'ai fait",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I did / I made",
+            "definition": "⭐ faire → fait (irregular!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-le-chat-fr",
+    {
+    "id": "jai-le-chat-fr",
+    "language": "fr",
+    "word": "j'ai le chat",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I have the cat",
+            "definition": "avoir + le",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.751Z",
+    "updated_at": "2025-10-21T18:56:09.751Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-mang-fr",
+    {
+    "id": "jai-mang-fr",
+    "language": "fr",
+    "word": "j'ai mangé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I ate / I have eaten",
+            "definition": "⭐ very common - manger → mangé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-mis-fr",
+    {
+    "id": "jai-mis-fr",
+    "language": "fr",
+    "word": "j'ai mis",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I put",
+            "definition": "mettre → mis (irregular!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-parl-fr",
+    {
+    "id": "jai-parl-fr",
+    "language": "fr",
+    "word": "j'ai parlé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I spoke / I have spoken",
+            "definition": "⭐ regular -ER verb pattern",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "jai-pens-fr",
+    {
+    "id": "jai-pens-fr",
+    "language": "fr",
+    "word": "j'ai pensé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I thought",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-peur-quil-parte-fr",
+    {
+    "id": "jai-peur-quil-parte-fr",
+    "language": "fr",
+    "word": "j'ai peur qu'il parte",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm afraid he'll leave",
+            "definition": "worry about someone",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-peur-que-fr",
+    {
+    "id": "jai-peur-que-fr",
+    "language": "fr",
+    "word": "j'ai peur que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm afraid that",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-pris-fr",
+    {
+    "id": "jai-pris-fr",
+    "language": "fr",
+    "word": "j'ai pris",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I took",
+            "definition": "⭐ prendre → pris (irregular!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-pu-fr",
+    {
+    "id": "jai-pu-fr",
+    "language": "fr",
+    "word": "j'ai pu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I could / I was able to",
+            "definition": "⭐ pouvoir → pu (irregular!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-regard-fr",
+    {
+    "id": "jai-regard-fr",
+    "language": "fr",
+    "word": "j'ai regardé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I watched / I looked at",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-travaill-fr",
+    {
+    "id": "jai-travaill-fr",
+    "language": "fr",
+    "word": "j'ai travaillé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I worked",
+            "definition": "⭐ travailler → travaillé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-trouv-fr",
+    {
+    "id": "jai-trouv-fr",
+    "language": "fr",
+    "word": "j'ai trouvé!",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I found it!",
+            "definition": "⭐ exclamation when you find something",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-vingt-ans-fr",
+    {
+    "id": "jai-vingt-ans-fr",
+    "language": "fr",
+    "word": "j'ai vingt ans",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm twenty years old",
+            "definition": "example with number",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-voulu-fr",
+    {
+    "id": "jai-voulu-fr",
+    "language": "fr",
+    "word": "j'ai voulu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I wanted",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "jai-vu-fr",
+    {
+    "id": "jai-vu-fr",
+    "language": "fr",
+    "word": "j'ai vu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I saw",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "jaie-perdu-fr",
+    {
+    "id": "jaie-perdu-fr",
+    "language": "fr",
+    "word": "j'aie perdu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I lost (subjunctive)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "subjonctif"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true
+}
+  ],
+  [
+    "jaime-fr",
+    {
+    "id": "jaime-fr",
+    "language": "fr",
+    "word": "j'aime",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I like / I love",
+            "definition": "emotion verb",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "jaime-les-samedis-fr",
+    {
+    "id": "jaime-les-samedis-fr",
+    "language": "fr",
+    "word": "j'aime les samedis",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I love Saturdays",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "jaimerais-que-fr",
+    {
+    "id": "jaimerais-que-fr",
+    "language": "fr",
+    "word": "j'aimerais que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'd like (someone to)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true
+}
+  ],
+  [
+    "jaimerais-que-tu-sois-l-fr",
+    {
+    "id": "jaimerais-que-tu-sois-l-fr",
+    "language": "fr",
+    "word": "j'aimerais que tu sois là",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'd like you to be there",
+            "definition": "polite wish",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "japprends-fr",
+    {
+    "id": "japprends-fr",
+    "language": "fr",
+    "word": "j'apprends",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I learn / I'm learning",
+            "definition": "same pattern as je prends",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.761Z",
+    "updated_at": "2025-10-21T18:56:09.761Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
+    "verified": true
+}
+  ],
+  [
+    "japprends-le-franais-fr",
+    {
+    "id": "japprends-le-franais-fr",
+    "language": "fr",
+    "word": "j'apprends le français",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm learning French",
+            "definition": "⭐ what you're doing right now!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.761Z",
+    "updated_at": "2025-10-21T18:56:09.761Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
+    "verified": true
+}
+  ],
+  [
+    "jarrive-fr",
+    {
+    "id": "jarrive-fr",
+    "language": "fr",
+    "word": "j'arrive",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I arrive / I'm arriving",
+            "definition": "motion towards destination",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true
+}
+  ],
+  [
+    "jarrive--fr",
+    {
+    "id": "jarrive--fr",
+    "language": "fr",
+    "word": "j'arrive à",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I arrive at/in",
+            "definition": "with location + time",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true
+}
+  ],
+  [
+    "jarrive--8h-fr",
+    {
+    "id": "jarrive--8h-fr",
+    "language": "fr",
+    "word": "j'arrive à 8h",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I arrive at 8am",
+            "definition": "specific time arrival",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true
+}
+  ],
+  [
+    "jattends-fr",
+    {
+    "id": "jattends-fr",
+    "language": "fr",
+    "word": "j'attends",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I wait / I'm waiting",
+            "definition": "drop -re, add -s",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true
+}
+  ],
+  [
+    "jattends-le-bus-fr",
+    {
+    "id": "jattends-le-bus-fr",
+    "language": "fr",
+    "word": "j'attends le bus",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm waiting for the bus",
+            "definition": "⭐ common transport situation",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true
+}
+  ],
+  [
+    "jaurais-continu-fr",
+    {
+    "id": "jaurais-continu-fr",
+    "language": "fr",
+    "word": "j'aurais continué",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I would have continued",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "futur"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true
+}
+  ],
+  [
+    "jaurais-russi-fr",
+    {
+    "id": "jaurais-russi-fr",
+    "language": "fr",
+    "word": "j'aurais réussi",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I would have succeeded",
+            "definition": "missed opportunity",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "futur"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "javais-fr",
+    {
+    "id": "javais-fr",
+    "language": "fr",
+    "word": "j'avais",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I had",
+            "definition": "imperfect tense",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
+    "verified": true
+}
+  ],
+  [
+    "javais-dj-fr",
+    {
+    "id": "javais-dj-fr",
+    "language": "fr",
+    "word": "j'avais déjà",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I had already",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true
+}
+  ],
+  [
+    "javais-dj-mang-fr",
+    {
+    "id": "javais-dj-mang-fr",
+    "language": "fr",
+    "word": "j'avais déjà mangé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I had already eaten",
+            "definition": "⭐ very common!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "javais-dj-vu-ce-film-fr",
+    {
+    "id": "javais-dj-vu-ce-film-fr",
+    "language": "fr",
+    "word": "j'avais déjà vu ce film",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I had already seen this movie",
+            "definition": "previous experience",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "jcoute-fr",
+    {
+    "id": "jcoute-fr",
+    "language": "fr",
+    "word": "j'écoute",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I listen / I'm listening",
+            "definition": "active listening",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.745Z",
+    "updated_at": "2025-10-21T18:56:09.745Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
+    "verified": true
+}
+  ],
+  [
+    "jenseigne-fr",
+    {
+    "id": "jenseigne-fr",
+    "language": "fr",
+    "word": "j'enseigne",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I teach",
+            "definition": "regular conjugation",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.761Z",
+    "updated_at": "2025-10-21T18:56:09.761Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "jtais-fr",
+    {
+    "id": "jtais-fr",
+    "language": "fr",
+    "word": "j'étais",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I was",
+            "definition": "être imperfect",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
+    "verified": true
+}
+  ],
+  [
+    "jtais-content-fr",
+    {
+    "id": "jtais-content-fr",
+    "language": "fr",
+    "word": "j'étais content",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I was happy",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "jtais-dj-parti-fr",
+    {
+    "id": "jtais-dj-parti-fr",
+    "language": "fr",
+    "word": "j'étais déjà parti",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I had already left",
+            "definition": "explaining absence",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
+    "verified": true
+}
+  ],
+  [
+    "jtais-en-train-de-parler-fr",
+    {
+    "id": "jtais-en-train-de-parler-fr",
+    "language": "fr",
+    "word": "j'étais en train de parler",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I was talking",
+            "definition": "past progressive - was happening then",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
+    "verified": true
+}
+  ],
+  [
+    "jtais-fatigu-fr",
+    {
+    "id": "jtais-fatigu-fr",
+    "language": "fr",
+    "word": "j'étais fatigué",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I was tired",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true
+}
+  ],
+  [
+    "jtudie-le-franais-fr",
+    {
+    "id": "jtudie-le-franais-fr",
+    "language": "fr",
+    "word": "j'étudie le français",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm studying French",
+            "definition": "⭐ your current activity!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
+    "verified": true
+}
+  ],
+  [
+    "jirais-fr",
+    {
+    "id": "jirais-fr",
+    "language": "fr",
+    "word": "j'irais",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I would go",
+            "definition": "conditional of aller",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "j'",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
+    "verified": true
+}
+  ],
+  [
+    "je-cherche-mes-cls-fr",
+    {
+    "id": "je-cherche-mes-cls-fr",
+    "language": "fr",
+    "word": "je cherche mes clés",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm looking for my keys",
+            "definition": "⭐ very common daily phrase",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-comprends-bien-fr",
+    {
+    "id": "je-comprends-bien-fr",
+    "language": "fr",
+    "word": "je comprends bien",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I understand well",
+            "definition": "adverb after verb",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.760Z",
+    "updated_at": "2025-10-21T18:56:09.760Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-comprends-mal-fr",
+    {
+    "id": "je-comprends-mal-fr",
+    "language": "fr",
+    "word": "je comprends mal",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I understand poorly",
+            "definition": "adverb after verb",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.760Z",
+    "updated_at": "2025-10-21T18:56:09.760Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-connais-Marie-fr",
+    {
+    "id": "je-connais-Marie-fr",
+    "language": "fr",
+    "word": "je connais Marie",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I know Marie",
+            "definition": "⭐ people - use connaître",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.761Z",
+    "updated_at": "2025-10-21T18:56:09.761Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-connais-Paris-fr",
+    {
+    "id": "je-connais-Paris-fr",
+    "language": "fr",
+    "word": "je connais Paris",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I know Paris / I'm familiar with Paris",
+            "definition": "⭐ places - use connaître",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.761Z",
+    "updated_at": "2025-10-21T18:56:09.761Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-crois-que-oui-fr",
+    {
+    "id": "je-crois-que-oui-fr",
+    "language": "fr",
+    "word": "je crois que oui",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I believe so / I think so",
+            "definition": "⭐ softer than 'je pense que oui'",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.761Z",
+    "updated_at": "2025-10-21T18:56:09.761Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/croire.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-doute-quelle-sache-fr",
+    {
+    "id": "je-doute-quelle-sache-fr",
+    "language": "fr",
+    "word": "je doute qu'elle sache",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I doubt she knows",
+            "definition": "expressing uncertainty",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-doute-que-ce-soit-possible-fr",
+    {
+    "id": "je-doute-que-ce-soit-possible-fr",
+    "language": "fr",
+    "word": "je doute que ce soit possible",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I doubt that's possible",
+            "definition": "expressing skepticism",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-fais-construire-une-maison-fr",
+    {
+    "id": "je-fais-construire-une-maison-fr",
+    "language": "fr",
+    "word": "je fais construire une maison",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm having a house built",
+            "definition": "construction project",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-fais-nettoyer-la-maison-fr",
+    {
+    "id": "je-fais-nettoyer-la-maison-fr",
+    "language": "fr",
+    "word": "je fais nettoyer la maison",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm having the house cleaned",
+            "definition": "cleaning service",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-fais-rparer-ma-voiture-fr",
+    {
+    "id": "je-fais-rparer-ma-voiture-fr",
+    "language": "fr",
+    "word": "je fais réparer ma voiture",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm having my car repaired",
+            "definition": "mechanic service",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
+    "verified": true,
+    "conjugationGroup": "re"
+}
+  ],
+  [
+    "je-le-veux-fr",
+    {
+    "id": "je-le-veux-fr",
+    "language": "fr",
+    "word": "je le veux",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I want it",
+            "definition": "vouloir + object",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.752Z",
+    "updated_at": "2025-10-21T18:56:09.752Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-lui-ai-dit-fr",
+    {
+    "id": "je-lui-ai-dit-fr",
+    "language": "fr",
+    "word": "je lui ai dit",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I told him",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-demande-fr",
+    {
+    "id": "je-me-demande-fr",
+    "language": "fr",
+    "word": "je me demande",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I wonder",
+            "definition": "⭐ followed by question word + statement order",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.748Z",
+    "updated_at": "2025-10-21T18:56:09.748Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-dpche-fr",
+    {
+    "id": "je-me-dpche-fr",
+    "language": "fr",
+    "word": "je me dépêche",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I hurry",
+            "definition": "se dépêcher",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-fais-couper-les-cheveux-fr",
+    {
+    "id": "je-me-fais-couper-les-cheveux-fr",
+    "language": "fr",
+    "word": "je me fais couper les cheveux",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm getting my hair cut",
+            "definition": "⭐ salon appointment!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-fais-examiner-fr",
+    {
+    "id": "je-me-fais-examiner-fr",
+    "language": "fr",
+    "word": "je me fais examiner",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm getting examined",
+            "definition": "doctor appointment",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
+    "verified": true,
+    "conjugationGroup": "er"
+}
+  ],
+  [
+    "je-me-fais-maquiller-fr",
+    {
+    "id": "je-me-fais-maquiller-fr",
+    "language": "fr",
+    "word": "je me fais maquiller",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm getting my makeup done",
+            "definition": "makeup artist",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
+    "verified": true,
+    "conjugationGroup": "er"
+}
+  ],
+  [
+    "je-me-lave-fr",
+    {
+    "id": "je-me-lave-fr",
+    "language": "fr",
+    "word": "je me lave",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I wash myself",
+            "definition": "⭐ example reflexive verb",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reflexive-pronouns.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-levais-fr",
+    {
+    "id": "je-me-levais-fr",
+    "language": "fr",
+    "word": "je me levais",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I used to get up",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-lve-fr",
+    {
+    "id": "je-me-lve-fr",
+    "language": "fr",
+    "word": "je me lève",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I get up",
+            "definition": "se lever",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-prpare-fr",
+    {
+    "id": "je-me-prpare-fr",
+    "language": "fr",
+    "word": "je me prépare",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I get ready",
+            "definition": "se préparer",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true,
+    "conjugationGroup": "re"
+}
+  ],
+  [
+    "je-me-rveille-fr",
+    {
+    "id": "je-me-rveille-fr",
+    "language": "fr",
+    "word": "je me réveille",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I wake up",
+            "definition": "se réveiller",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-souviens-fr",
+    {
+    "id": "je-me-souviens-fr",
+    "language": "fr",
+    "word": "je me souviens",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I remember",
+            "definition": "se souvenir",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-suis-rveill-fr",
+    {
+    "id": "je-me-suis-rveill-fr",
+    "language": "fr",
+    "word": "je me suis réveillé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I woke up (masc)",
+            "definition": "⭐ passé composé with être",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-me-suis-rveille-fr",
+    {
+    "id": "je-me-suis-rveille-fr",
+    "language": "fr",
+    "word": "je me suis réveillée",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I woke up (fem)",
+            "definition": "add -e for feminine",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-nai-pas-fr",
+    {
+    "id": "je-nai-pas-fr",
+    "language": "fr",
+    "word": "je n'ai pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't have",
+            "definition": "avoir negated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-nai-pas-besoin-de-fr",
+    {
+    "id": "je-nai-pas-besoin-de-fr",
+    "language": "fr",
+    "word": "je n'ai pas besoin de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't need",
+            "definition": "negative - ne...pas around avoir",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-crois-pas-fr",
+    {
+    "id": "je-ne-crois-pas-fr",
+    "language": "fr",
+    "word": "je ne crois pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't believe so / I don't think so",
+            "definition": "common negative response",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.761Z",
+    "updated_at": "2025-10-21T18:56:09.761Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/croire.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-crois-pas-quil-ait-raison-fr",
+    {
+    "id": "je-ne-crois-pas-quil-ait-raison-fr",
+    "language": "fr",
+    "word": "je ne crois pas qu'il ait raison",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't think he's right",
+            "definition": "polite disagreement",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-devrais-pas-fr",
+    {
+    "id": "je-ne-devrais-pas-fr",
+    "language": "fr",
+    "word": "je ne devrais pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I shouldn't",
+            "definition": "negative conditional - devoir",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-fais-pas-fr",
+    {
+    "id": "je-ne-fais-pas-fr",
+    "language": "fr",
+    "word": "je ne fais pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't do/make",
+            "definition": "faire negated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-ferai-pas-fr",
+    {
+    "id": "je-ne-ferai-pas-fr",
+    "language": "fr",
+    "word": "je ne ferai pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I won't do",
+            "definition": "negative future tense",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-pense-pas-quil-vienne-fr",
+    {
+    "id": "je-ne-pense-pas-quil-vienne-fr",
+    "language": "fr",
+    "word": "je ne pense pas qu'il vienne",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't think he's coming",
+            "definition": "diplomatic doubt",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-pense-pas-que-ce-soit-vrai-fr",
+    {
+    "id": "je-ne-pense-pas-que-ce-soit-vrai-fr",
+    "language": "fr",
+    "word": "je ne pense pas que ce soit vrai",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't think that's true",
+            "definition": "diplomatic correction",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-peux-pas-fr",
+    {
+    "id": "je-ne-peux-pas-fr",
+    "language": "fr",
+    "word": "je ne peux pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I can't",
+            "definition": "negative modal - pouvoir",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-savais-pas-fr",
+    {
+    "id": "je-ne-savais-pas-fr",
+    "language": "fr",
+    "word": "je ne savais pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I didn't know",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-suis-pas-fr",
+    {
+    "id": "je-ne-suis-pas-fr",
+    "language": "fr",
+    "word": "je ne suis pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I am not",
+            "definition": "être negated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-vais-pas-fr",
+    {
+    "id": "je-ne-vais-pas-fr",
+    "language": "fr",
+    "word": "je ne vais pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm not going to",
+            "definition": "negative near future",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-ne-veux-pas-fr",
+    {
+    "id": "je-ne-veux-pas-fr",
+    "language": "fr",
+    "word": "je ne veux pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't want",
+            "definition": "vouloir negated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-pense--toi-fr",
+    {
+    "id": "je-pense--toi-fr",
+    "language": "fr",
+    "word": "je pense à toi",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm thinking about you",
+            "definition": "use à for 'about'",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.762Z",
+    "updated_at": "2025-10-21T18:56:09.762Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-pense-quil-vient-fr",
+    {
+    "id": "je-pense-quil-vient-fr",
+    "language": "fr",
+    "word": "je pense qu'il vient",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I think he's coming",
+            "definition": "⭐ expressing belief",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-pense-que-non-fr",
+    {
+    "id": "je-pense-que-non-fr",
+    "language": "fr",
+    "word": "je pense que non",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I don't think so",
+            "definition": "negative response",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.762Z",
+    "updated_at": "2025-10-21T18:56:09.762Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-pense-que-oui-fr",
+    {
+    "id": "je-pense-que-oui-fr",
+    "language": "fr",
+    "word": "je pense que oui",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I think so",
+            "definition": "⭐ super common response",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.762Z",
+    "updated_at": "2025-10-21T18:56:09.762Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-regrette-que-fr",
+    {
+    "id": "je-regrette-que-fr",
+    "language": "fr",
+    "word": "je regrette que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I regret that",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-regrette-que-tu-ne-puisses-pas-venir-fr",
+    {
+    "id": "je-regrette-que-tu-ne-puisses-pas-venir-fr",
+    "language": "fr",
+    "word": "je regrette que tu ne puisses pas venir",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I regret you can't come",
+            "definition": "disappointment",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "ir"
+}
+  ],
+  [
+    "je-reste-ici-fr",
+    {
+    "id": "je-reste-ici-fr",
+    "language": "fr",
+    "word": "je reste ici",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm staying here",
+            "definition": "location decision",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-rvise-mes-leons-fr",
+    {
+    "id": "je-rvise-mes-leons-fr",
+    "language": "fr",
+    "word": "je révise mes leçons",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm reviewing my lessons",
+            "definition": "⭐ what you do before exams!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-sais-parler-fr",
+    {
+    "id": "je-sais-parler-fr",
+    "language": "fr",
+    "word": "je sais parler",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I know how to speak / I can speak",
+            "definition": "savoir + infinitive for skills",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.763Z",
+    "updated_at": "2025-10-21T18:56:09.763Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/savoir.js",
+    "verified": true,
+    "conjugationGroup": "er"
+}
+  ],
+  [
+    "je-serais-venu-fr",
+    {
+    "id": "je-serais-venu-fr",
+    "language": "fr",
+    "word": "je serais venu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I would have come",
+            "definition": "result of regret",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-all-fr",
+    {
+    "id": "je-suis-all-fr",
+    "language": "fr",
+    "word": "je suis allé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I went",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-alle-fr",
+    {
+    "id": "je-suis-alle-fr",
+    "language": "fr",
+    "word": "je suis allé(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I went",
+            "definition": "⭐ aller → allé (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-arrive-fr",
+    {
+    "id": "je-suis-arrive-fr",
+    "language": "fr",
+    "word": "je suis arrivé(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I arrived",
+            "definition": "⭐ arriver → arrivé (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-content-que-tu-sois-l-fr",
+    {
+    "id": "je-suis-content-que-tu-sois-l-fr",
+    "language": "fr",
+    "word": "je suis content que tu sois là",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm glad you're here",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-contente-que-fr",
+    {
+    "id": "je-suis-contente-que-fr",
+    "language": "fr",
+    "word": "je suis content(e) que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm happy that",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-descendue-fr",
+    {
+    "id": "je-suis-descendue-fr",
+    "language": "fr",
+    "word": "je suis descendu(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I went down / I got off",
+            "definition": "descendre → descendu (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-dsol-que-tu-sois-malade-fr",
+    {
+    "id": "je-suis-dsol-que-tu-sois-malade-fr",
+    "language": "fr",
+    "word": "je suis désolé que tu sois malade",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm sorry you're sick",
+            "definition": "sympathy",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-devenue-fr",
+    {
+    "id": "je-suis-devenue-fr",
+    "language": "fr",
+    "word": "je suis devenu(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I became",
+            "definition": "devenir → devenu (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-en-train-de-fr",
+    {
+    "id": "je-suis-en-train-de-fr",
+    "language": "fr",
+    "word": "je suis en train de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I am in the process of",
+            "definition": "progressive present",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-en-train-de-manger-fr",
+    {
+    "id": "je-suis-en-train-de-manger-fr",
+    "language": "fr",
+    "word": "je suis en train de manger",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I am eating",
+            "definition": "present progressive - happening now!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
+    "verified": true,
+    "conjugationGroup": "er"
+}
+  ],
+  [
+    "je-suis-entre-fr",
+    {
+    "id": "je-suis-entre-fr",
+    "language": "fr",
+    "word": "je suis entré(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I entered",
+            "definition": "entrer → entré (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-heureuxheureuse-que-fr",
+    {
+    "id": "je-suis-heureuxheureuse-que-fr",
+    "language": "fr",
+    "word": "je suis heureux/heureuse que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm happy that",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-monte-fr",
+    {
+    "id": "je-suis-monte-fr",
+    "language": "fr",
+    "word": "je suis monté(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I went up / I climbed",
+            "definition": "monter → monté (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-n-fr",
+    {
+    "id": "je-suis-n-fr",
+    "language": "fr",
+    "word": "je suis né",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I was born (masculine)",
+            "definition": "for males",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-ne-fr",
+    {
+    "id": "je-suis-ne-fr",
+    "language": "fr",
+    "word": "je suis née",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I was born (feminine)",
+            "definition": "for females - add 'e'",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-partie-fr",
+    {
+    "id": "je-suis-partie-fr",
+    "language": "fr",
+    "word": "je suis parti(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I left",
+            "definition": "⭐ partir → parti (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-rentr-fr",
+    {
+    "id": "je-suis-rentr-fr",
+    "language": "fr",
+    "word": "je suis rentré",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I went home",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-rentre-fr",
+    {
+    "id": "je-suis-rentre-fr",
+    "language": "fr",
+    "word": "je suis rentré(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I returned home / I came back",
+            "definition": "rentrer → rentré (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-reste-fr",
+    {
+    "id": "je-suis-reste-fr",
+    "language": "fr",
+    "word": "je suis resté(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I stayed",
+            "definition": "rester → resté (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-sortie-fr",
+    {
+    "id": "je-suis-sortie-fr",
+    "language": "fr",
+    "word": "je suis sorti(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I went out",
+            "definition": "sortir → sorti (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-surpris-que-tu-saches-a-fr",
+    {
+    "id": "je-suis-surpris-que-tu-saches-a-fr",
+    "language": "fr",
+    "word": "je suis surpris que tu saches ça",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm surprised you know that",
+            "definition": "unexpected knowledge",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-tombe-fr",
+    {
+    "id": "je-suis-tombe-fr",
+    "language": "fr",
+    "word": "je suis tombé(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I fell",
+            "definition": "tomber → tombé (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-triste-que-tu-partes-fr",
+    {
+    "id": "je-suis-triste-que-tu-partes-fr",
+    "language": "fr",
+    "word": "je suis triste que tu partes",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm sad you're leaving",
+            "definition": "goodbye emotion",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-suis-venue-fr",
+    {
+    "id": "je-suis-venue-fr",
+    "language": "fr",
+    "word": "je suis venu(e)",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I came",
+            "definition": "⭐ venir → venu (uses être!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-te-donne-fr",
+    {
+    "id": "je-te-donne-fr",
+    "language": "fr",
+    "word": "je te donne",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I give you / I'm giving you",
+            "definition": "⭐ very common - giving TO someone",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.745Z",
+    "updated_at": "2025-10-21T18:56:09.745Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-travaille--fr",
+    {
+    "id": "je-travaille--fr",
+    "language": "fr",
+    "word": "je travaille à",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I work at/in",
+            "definition": "location of work",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-trouve-que-fr",
+    {
+    "id": "je-trouve-que-fr",
+    "language": "fr",
+    "word": "je trouve que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I think that / I find that",
+            "definition": "opinion expression - very common",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-vais-manger-fr",
+    {
+    "id": "je-vais-manger-fr",
+    "language": "fr",
+    "word": "je vais manger",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I am going to eat",
+            "definition": "near future",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
+    "verified": true,
+    "conjugationGroup": "er"
+}
+  ],
+  [
+    "je-vais-mettre-fr",
+    {
+    "id": "je-vais-mettre-fr",
+    "language": "fr",
+    "word": "je vais mettre",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'm going to put",
+            "definition": "near future",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
+    "verified": true,
+    "conjugationGroup": "re"
+}
+  ],
+  [
+    "je-vais-partir-fr",
+    {
+    "id": "je-vais-partir-fr",
+    "language": "fr",
+    "word": "je vais partir",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I am going to leave",
+            "definition": "near future - aller + infinitive",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
+    "verified": true,
+    "conjugationGroup": "ir"
+}
+  ],
+  [
+    "je-veux-quelle-sache-fr",
+    {
+    "id": "je-veux-quelle-sache-fr",
+    "language": "fr",
+    "word": "je veux qu'elle sache",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I want her to know",
+            "definition": "sharing information",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-veux-quil-parte-fr",
+    {
+    "id": "je-veux-quil-parte-fr",
+    "language": "fr",
+    "word": "je veux qu'il parte",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I want him to leave",
+            "definition": "wanting someone to go",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-veux-quon-aille-ensemble-fr",
+    {
+    "id": "je-veux-quon-aille-ensemble-fr",
+    "language": "fr",
+    "word": "je veux qu'on aille ensemble",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I want us to go together",
+            "definition": "group plan",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-veux-que-fr",
+    {
+    "id": "je-veux-que-fr",
+    "language": "fr",
+    "word": "je veux que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I want (someone to)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-veux-que-tu-comprennes-fr",
+    {
+    "id": "je-veux-que-tu-comprennes-fr",
+    "language": "fr",
+    "word": "je veux que tu comprennes",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I want you to understand",
+            "definition": "explaining something important",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-veux-que-tu-viennes-fr",
+    {
+    "id": "je-veux-que-tu-viennes-fr",
+    "language": "fr",
+    "word": "je veux que tu viennes",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I want you to come",
+            "definition": "⭐ inviting someone",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-vis--fr",
+    {
+    "id": "je-vis--fr",
+    "language": "fr",
+    "word": "je vis à",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I live in/at",
+            "definition": "location of residence",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-voudrais-commander-fr",
+    {
+    "id": "je-voudrais-commander-fr",
+    "language": "fr",
+    "word": "je voudrais commander",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I would like to order",
+            "definition": "polite restaurant phrase",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
+    "verified": true,
+    "conjugationGroup": "er"
+}
+  ],
+  [
+    "je-voulais-tre-dehors-fr",
+    {
+    "id": "je-voulais-tre-dehors-fr",
+    "language": "fr",
+    "word": "je voulais être dehors",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I wanted to be outside",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "je-voyagerais-le-monde-fr",
+    {
+    "id": "je-voyagerais-le-monde-fr",
+    "language": "fr",
+    "word": "je voyagerais le monde",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I'd travel the world",
+            "definition": "result of fantasy",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "je",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-as-besoin-de-fr",
+    {
+    "id": "tu-as-besoin-de-fr",
+    "language": "fr",
+    "word": "tu as besoin de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you need",
+            "definition": "besoin expression",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-as-bu-fr",
+    {
+    "id": "tu-as-bu-fr",
+    "language": "fr",
+    "word": "tu as bu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you drank (informal)",
+            "definition": "passé composé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-as-a-fr",
+    {
+    "id": "tu-as-a-fr",
+    "language": "fr",
+    "word": "tu as ça",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you have that",
+            "definition": "combining practice",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.750Z",
+    "updated_at": "2025-10-21T18:56:09.750Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/ca-survival.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-as-ce-chat-fr",
+    {
+    "id": "tu-as-ce-chat-fr",
+    "language": "fr",
+    "word": "tu as ce chat",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you have this cat",
+            "definition": "combining!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.751Z",
+    "updated_at": "2025-10-21T18:56:09.751Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-as-eu-fr",
+    {
+    "id": "tu-as-eu-fr",
+    "language": "fr",
+    "word": "tu as eu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you had",
+            "definition": "avoir → eu conjugated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-as-mang-fr",
+    {
+    "id": "tu-as-mang-fr",
+    "language": "fr",
+    "word": "tu as mangé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you ate (informal)",
+            "definition": "passé composé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-as-quel-ge-fr",
+    {
+    "id": "tu-as-quel-ge-fr",
+    "language": "fr",
+    "word": "tu as quel âge?",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "how old are you?",
+            "definition": "casual question order",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-attends-quelquun-fr",
+    {
+    "id": "tu-attends-quelquun-fr",
+    "language": "fr",
+    "word": "tu attends quelqu'un?",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "are you waiting for someone?",
+            "definition": "social question",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-cherches-quoi-fr",
+    {
+    "id": "tu-cherches-quoi-fr",
+    "language": "fr",
+    "word": "tu cherches quoi?",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "what are you looking for? (casual)",
+            "definition": "informal version",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-es-l-fr",
+    {
+    "id": "tu-es-l-fr",
+    "language": "fr",
+    "word": "tu es là",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you're here / you're there",
+            "definition": "être + location",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-me-donnes-fr",
+    {
+    "id": "tu-me-donnes-fr",
+    "language": "fr",
+    "word": "tu me donnes",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you give me",
+            "definition": "receiving from someone",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.745Z",
+    "updated_at": "2025-10-21T18:56:09.745Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-ne-dois-pas-fr",
+    {
+    "id": "tu-ne-dois-pas-fr",
+    "language": "fr",
+    "word": "tu ne dois pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you don't have to / you mustn't",
+            "definition": "devoir + negation",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-ne-peux-pas-fr",
+    {
+    "id": "tu-ne-peux-pas-fr",
+    "language": "fr",
+    "word": "tu ne peux pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you can't",
+            "definition": "informal",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-ne-sauras-jamais-fr",
+    {
+    "id": "tu-ne-sauras-jamais-fr",
+    "language": "fr",
+    "word": "tu ne sauras jamais",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you'll never know",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-ne-vas-pas-fr",
+    {
+    "id": "tu-ne-vas-pas-fr",
+    "language": "fr",
+    "word": "tu ne vas pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you don't go",
+            "definition": "aller negated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-ne-veux-jamais-fr",
+    {
+    "id": "tu-ne-veux-jamais-fr",
+    "language": "fr",
+    "word": "tu ne veux jamais",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you never want",
+            "definition": "ne...jamais",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-parles-bien-fr",
+    {
+    "id": "tu-parles-bien-fr",
+    "language": "fr",
+    "word": "tu parles bien",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you speak well",
+            "definition": "compliment",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-restes-combien-de-temps-fr",
+    {
+    "id": "tu-restes-combien-de-temps-fr",
+    "language": "fr",
+    "word": "tu restes combien de temps?",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "how long are you staying?",
+            "definition": "duration question",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-tes-lev-fr",
+    {
+    "id": "tu-tes-lev-fr",
+    "language": "fr",
+    "word": "tu t'es levé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you got up (masc)",
+            "definition": "informal past",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-te-dpches-fr",
+    {
+    "id": "tu-te-dpches-fr",
+    "language": "fr",
+    "word": "tu te dépêches",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you're hurrying",
+            "definition": "informal",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-te-laves-fr",
+    {
+    "id": "tu-te-laves-fr",
+    "language": "fr",
+    "word": "tu te laves",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you wash yourself",
+            "definition": "informal",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-te-lves-fr",
+    {
+    "id": "tu-te-lves-fr",
+    "language": "fr",
+    "word": "tu te lèves",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you get (yourself) up",
+            "definition": "example with tu",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reflexive-pronouns.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-te-prpares-fr",
+    {
+    "id": "tu-te-prpares-fr",
+    "language": "fr",
+    "word": "tu te prépares",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you get ready",
+            "definition": "asking about preparation",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-te-rveilles-fr",
+    {
+    "id": "tu-te-rveilles-fr",
+    "language": "fr",
+    "word": "tu te réveilles",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you wake up (informal)",
+            "definition": "asking about routines",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-te-souviens-fr",
+    {
+    "id": "tu-te-souviens-fr",
+    "language": "fr",
+    "word": "tu te souviens",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you remember",
+            "definition": "common in questions",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "tu-trouves-a-comment-fr",
+    {
+    "id": "tu-trouves-a-comment-fr",
+    "language": "fr",
+    "word": "tu trouves ça comment?",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "what do you think of that?",
+            "definition": "asking for opinion",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "tu",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-a-cette-maison-fr",
+    {
+    "id": "elle-a-cette-maison-fr",
+    "language": "fr",
+    "word": "elle a cette maison",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she has this house",
+            "definition": "avoir + cette + noun",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.751Z",
+    "updated_at": "2025-10-21T18:56:09.751Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-a-dit-fr",
+    {
+    "id": "elle-a-dit-fr",
+    "language": "fr",
+    "word": "elle a dit",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she said",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-a-la-maison-fr",
+    {
+    "id": "elle-a-la-maison-fr",
+    "language": "fr",
+    "word": "elle a la maison",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she has the house",
+            "definition": "avoir + la",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.751Z",
+    "updated_at": "2025-10-21T18:56:09.751Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-a-trente-ans-fr",
+    {
+    "id": "elle-a-trente-ans-fr",
+    "language": "fr",
+    "word": "elle a trente ans",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she's thirty years old",
+            "definition": "describing a woman",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-est-alle-fr",
+    {
+    "id": "elle-est-alle-fr",
+    "language": "fr",
+    "word": "elle est allée",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she went",
+            "definition": "⭐ feminine singular - add e",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-est-entre-fr",
+    {
+    "id": "elle-est-entre-fr",
+    "language": "fr",
+    "word": "elle est entrée",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she entered",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-est-maintenant-fr",
+    {
+    "id": "elle-est-maintenant-fr",
+    "language": "fr",
+    "word": "elle est maintenant",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she's now",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-est-venue-fr",
+    {
+    "id": "elle-est-venue-fr",
+    "language": "fr",
+    "word": "elle est venue",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she came",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-tait-dj-partie-fr",
+    {
+    "id": "elle-tait-dj-partie-fr",
+    "language": "fr",
+    "word": "elle était déjà partie",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she had already left",
+            "definition": "she left first",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "subjonctif"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-ne-voit-jamais-fr",
+    {
+    "id": "elle-ne-voit-jamais-fr",
+    "language": "fr",
+    "word": "elle ne voit jamais",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she never sees",
+            "definition": "voir + jamais",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-nous-a-vus-fr",
+    {
+    "id": "elle-nous-a-vus-fr",
+    "language": "fr",
+    "word": "elle nous a vus",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she saw us",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-sest-leve-fr",
+    {
+    "id": "elle-sest-leve-fr",
+    "language": "fr",
+    "word": "elle s'est levée",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she got up",
+            "definition": "⭐ feminine agreement -ée",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-se-lve-fr",
+    {
+    "id": "elle-se-lve-fr",
+    "language": "fr",
+    "word": "elle se lève",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she gets up",
+            "definition": "feminine form",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elle-se-rveille-fr",
+    {
+    "id": "elle-se-rveille-fr",
+    "language": "fr",
+    "word": "elle se réveille",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she wakes up",
+            "definition": "feminine form",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-a-dit-fr",
+    {
+    "id": "il-a-dit-fr",
+    "language": "fr",
+    "word": "il a dit",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he said",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-a-fait-fr",
+    {
+    "id": "il-a-fait-fr",
+    "language": "fr",
+    "word": "il a fait",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he did / he made",
+            "definition": "faire → fait conjugated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-a-plu-fr",
+    {
+    "id": "il-a-plu-fr",
+    "language": "fr",
+    "word": "il a plu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it rained",
+            "definition": "passé composé - irregular past participle",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.749Z",
+    "updated_at": "2025-10-21T18:56:09.749Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-a-quinze-ans-fr",
+    {
+    "id": "il-a-quinze-ans-fr",
+    "language": "fr",
+    "word": "il a quinze ans",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he's fifteen years old",
+            "definition": "describing someone else",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.744Z",
+    "updated_at": "2025-10-21T18:56:09.744Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-avait-dj-commenc-fr",
+    {
+    "id": "il-avait-dj-commenc-fr",
+    "language": "fr",
+    "word": "il avait déjà commencé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he had already started",
+            "definition": "something began earlier",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "subjonctif"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-est-all-fr",
+    {
+    "id": "il-est-all-fr",
+    "language": "fr",
+    "word": "il est allé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he went",
+            "definition": "masculine singular - no change",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-est-possible-quil-vienne-fr",
+    {
+    "id": "il-est-possible-quil-vienne-fr",
+    "language": "fr",
+    "word": "il est possible qu'il vienne",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it's possible he'll come",
+            "definition": "⭐ uncertain plan",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/possibility-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-est-possible-quon-parte-fr",
+    {
+    "id": "il-est-possible-quon-parte-fr",
+    "language": "fr",
+    "word": "il est possible qu'on parte",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it's possible we'll leave",
+            "definition": "group planning",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/possibility-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-tait-assis-fr",
+    {
+    "id": "il-tait-assis-fr",
+    "language": "fr",
+    "word": "il était assis",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he was sitting",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "subjonctif"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-faut-quelle-vienne-fr",
+    {
+    "id": "il-faut-quelle-vienne-fr",
+    "language": "fr",
+    "word": "il faut qu'elle vienne",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "she needs to come",
+            "definition": "expecting someone",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-faut-quon-parte-fr",
+    {
+    "id": "il-faut-quon-parte-fr",
+    "language": "fr",
+    "word": "il faut qu'on parte",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we need to leave",
+            "definition": "group decision",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-faut-que-fr",
+    {
+    "id": "il-faut-que-fr",
+    "language": "fr",
+    "word": "il faut que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it's necessary that / must",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-faut-que-jaille-fr",
+    {
+    "id": "il-faut-que-jaille-fr",
+    "language": "fr",
+    "word": "il faut que j'aille",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "I need to go",
+            "definition": "saying you must leave",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-faut-que-tu-fasses-attention-fr",
+    {
+    "id": "il-faut-que-tu-fasses-attention-fr",
+    "language": "fr",
+    "word": "il faut que tu fasses attention",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you need to pay attention",
+            "definition": "be careful!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-faut-que-tu-manges-fr",
+    {
+    "id": "il-faut-que-tu-manges-fr",
+    "language": "fr",
+    "word": "il faut que tu manges",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you need to eat",
+            "definition": "⭐ parent to kid",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-faut-que-tu-partes-fr",
+    {
+    "id": "il-faut-que-tu-partes-fr",
+    "language": "fr",
+    "word": "il faut que tu partes",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you need to leave",
+            "definition": "telling someone to go",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-faut-que-tu-sois-sage-fr",
+    {
+    "id": "il-faut-que-tu-sois-sage-fr",
+    "language": "fr",
+    "word": "il faut que tu sois sage",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you need to be good",
+            "definition": "parent to child",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-ma-dit-fr",
+    {
+    "id": "il-ma-dit-fr",
+    "language": "fr",
+    "word": "il m'a dit",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he told me",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-me-demande-fr",
+    {
+    "id": "il-me-demande-fr",
+    "language": "fr",
+    "word": "il me demande",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he asks me",
+            "definition": "object pronoun before verb",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-me-donne-fr",
+    {
+    "id": "il-me-donne-fr",
+    "language": "fr",
+    "word": "il me donne",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he gives me",
+            "definition": "third person giving to me",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.745Z",
+    "updated_at": "2025-10-21T18:56:09.745Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-naimait-pas-fr",
+    {
+    "id": "il-naimait-pas-fr",
+    "language": "fr",
+    "word": "il n'aimait pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he didn't like",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "subjonctif"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-ne-fait-jamais-fr",
+    {
+    "id": "il-ne-fait-jamais-fr",
+    "language": "fr",
+    "word": "il ne fait jamais",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he never does",
+            "definition": "faire + jamais",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "subjonctif"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-ne-voit-pas-fr",
+    {
+    "id": "il-ne-voit-pas-fr",
+    "language": "fr",
+    "word": "il ne voit pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he doesn't see",
+            "definition": "voir negated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-reste-du-pain-fr",
+    {
+    "id": "il-reste-du-pain-fr",
+    "language": "fr",
+    "word": "il reste du pain",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "there's bread left",
+            "definition": "quantity remaining",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-sest-lav-fr",
+    {
+    "id": "il-sest-lav-fr",
+    "language": "fr",
+    "word": "il s'est lavé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he washed himself",
+            "definition": "third person past",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-se-lve-fr",
+    {
+    "id": "il-se-lve-fr",
+    "language": "fr",
+    "word": "il se lève",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he gets up",
+            "definition": "third person",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-se-peut-que-fr",
+    {
+    "id": "il-se-peut-que-fr",
+    "language": "fr",
+    "word": "il se peut que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "it may be that",
+            "definition": "formal possibility",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.743Z",
+    "updated_at": "2025-10-21T18:56:09.743Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/possibility-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-se-prpare-fr",
+    {
+    "id": "il-se-prpare-fr",
+    "language": "fr",
+    "word": "il se prépare",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he prepares himself / he gets ready",
+            "definition": "example with il",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reflexive-pronouns.js",
+    "verified": true,
+    "conjugationGroup": "re"
+}
+  ],
+  [
+    "il-se-rveille-fr",
+    {
+    "id": "il-se-rveille-fr",
+    "language": "fr",
+    "word": "il se réveille",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he wakes up",
+            "definition": "third person",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-se-souvient-fr",
+    {
+    "id": "il-se-souvient-fr",
+    "language": "fr",
+    "word": "il se souvient",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he remembers",
+            "definition": "third person",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "il-va-partir-fr",
+    {
+    "id": "il-va-partir-fr",
+    "language": "fr",
+    "word": "il va partir",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he's going to leave",
+            "definition": "aller + infinitive",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.752Z",
+    "updated_at": "2025-10-21T18:56:09.752Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
+    "verified": true,
+    "conjugationGroup": "ir"
+}
+  ],
+  [
+    "il-y-avait-fr",
+    {
+    "id": "il-y-avait-fr",
+    "language": "fr",
+    "word": "il y avait",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "there was/were",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "subjonctif"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elles-se-sont-amuses-fr",
+    {
+    "id": "elles-se-sont-amuses-fr",
+    "language": "fr",
+    "word": "elles se sont amusées",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they had fun (fem)",
+            "definition": "feminine plural -ées",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elles",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "elles-sont-alles-fr",
+    {
+    "id": "elles-sont-alles-fr",
+    "language": "fr",
+    "word": "elles sont allées",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they went",
+            "definition": "⭐ feminine plural - add es",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "elles",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ils-les-ont-fr",
+    {
+    "id": "ils-les-ont-fr",
+    "language": "fr",
+    "word": "ils les ont",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they have them",
+            "definition": "plural (avoir)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.752Z",
+    "updated_at": "2025-10-21T18:56:09.752Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ils-ne-sont-pas-fr",
+    {
+    "id": "ils-ne-sont-pas-fr",
+    "language": "fr",
+    "word": "ils ne sont pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they are not",
+            "definition": "être negated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ils-ont-ces-chats-fr",
+    {
+    "id": "ils-ont-ces-chats-fr",
+    "language": "fr",
+    "word": "ils ont ces chats",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they have these cats",
+            "definition": "avoir + ces",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.751Z",
+    "updated_at": "2025-10-21T18:56:09.751Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ils-ont-t-fr",
+    {
+    "id": "ils-ont-t-fr",
+    "language": "fr",
+    "word": "ils ont été",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they were / they have been",
+            "definition": "être → été conjugated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ils-ont-les-chiens-fr",
+    {
+    "id": "ils-ont-les-chiens-fr",
+    "language": "fr",
+    "word": "ils ont les chiens",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they have the dogs",
+            "definition": "avoir + les",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.751Z",
+    "updated_at": "2025-10-21T18:56:09.751Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ils-se-connaissent-fr",
+    {
+    "id": "ils-se-connaissent-fr",
+    "language": "fr",
+    "word": "ils se connaissent",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they know each other",
+            "definition": "acquaintances",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ils-se-parlent-fr",
+    {
+    "id": "ils-se-parlent-fr",
+    "language": "fr",
+    "word": "ils se parlent",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they talk to each other",
+            "definition": "communication",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ils-se-sont-amuss-fr",
+    {
+    "id": "ils-se-sont-amuss-fr",
+    "language": "fr",
+    "word": "ils se sont amusés",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they had fun (masc)",
+            "definition": "plural masculine -és",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ils-sont-alls-fr",
+    {
+    "id": "ils-sont-alls-fr",
+    "language": "fr",
+    "word": "ils sont allés",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they went",
+            "definition": "masculine plural - add s",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-allons-partir-fr",
+    {
+    "id": "nous-allons-partir-fr",
+    "language": "fr",
+    "word": "nous allons partir",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we're going to leave",
+            "definition": "near future: aller + infinitive",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.759Z",
+    "updated_at": "2025-10-21T18:56:09.759Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
+    "verified": true,
+    "conjugationGroup": "ir"
+}
+  ],
+  [
+    "nous-avions-dj-fini-fr",
+    {
+    "id": "nous-avions-dj-fini-fr",
+    "language": "fr",
+    "word": "nous avions déjà fini",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we had already finished",
+            "definition": "completed before",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.742Z",
+    "updated_at": "2025-10-21T18:56:09.742Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avions-faim-fr",
+    {
+    "id": "nous-avions-faim-fr",
+    "language": "fr",
+    "word": "nous avions faim",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we were hungry",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-beaucoup-aim-fr",
+    {
+    "id": "nous-avons-beaucoup-aim-fr",
+    "language": "fr",
+    "word": "nous avons beaucoup aimé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we really liked",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-besoin-de-fr",
+    {
+    "id": "nous-avons-besoin-de-fr",
+    "language": "fr",
+    "word": "nous avons besoin de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we need",
+            "definition": "nous avons + besoin + de",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-bu-fr",
+    {
+    "id": "nous-avons-bu-fr",
+    "language": "fr",
+    "word": "nous avons bu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we drank",
+            "definition": "passé composé - boire (irregular!)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-ces-livres-fr",
+    {
+    "id": "nous-avons-ces-livres-fr",
+    "language": "fr",
+    "word": "nous avons ces livres",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we have these books",
+            "definition": "avoir + ces + plural",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.751Z",
+    "updated_at": "2025-10-21T18:56:09.751Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-command-fr",
+    {
+    "id": "nous-avons-command-fr",
+    "language": "fr",
+    "word": "nous avons commandé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we ordered",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-dcid-fr",
+    {
+    "id": "nous-avons-dcid-fr",
+    "language": "fr",
+    "word": "nous avons décidé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we decided",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-dcid-de-manger-fr",
+    {
+    "id": "nous-avons-dcid-de-manger-fr",
+    "language": "fr",
+    "word": "nous avons décidé de manger",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we decided to eat",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "er"
+}
+  ],
+  [
+    "nous-avons-mang-fr",
+    {
+    "id": "nous-avons-mang-fr",
+    "language": "fr",
+    "word": "nous avons mangé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we ate",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-parl-fr",
+    {
+    "id": "nous-avons-parl-fr",
+    "language": "fr",
+    "word": "nous avons parlé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we talked",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-parl-de-fr",
+    {
+    "id": "nous-avons-parl-de-fr",
+    "language": "fr",
+    "word": "nous avons parlé de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we talked about",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-pris-fr",
+    {
+    "id": "nous-avons-pris-fr",
+    "language": "fr",
+    "word": "nous avons pris",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we had / took",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-pu-tre-fr",
+    {
+    "id": "nous-avons-pu-tre-fr",
+    "language": "fr",
+    "word": "nous avons pu être",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we were able to be",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "re"
+}
+  ],
+  [
+    "nous-avons-vu-fr",
+    {
+    "id": "nous-avons-vu-fr",
+    "language": "fr",
+    "word": "nous avons vu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we saw",
+            "definition": "voir → vu conjugated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-avons-vu-Marie-fr",
+    {
+    "id": "nous-avons-vu-Marie-fr",
+    "language": "fr",
+    "word": "nous avons vu Marie",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we saw Marie",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-nallons-pas-fr",
+    {
+    "id": "nous-nallons-pas-fr",
+    "language": "fr",
+    "word": "nous n'allons pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we don't go",
+            "definition": "aller negated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-ne-faisons-pas-fr",
+    {
+    "id": "nous-ne-faisons-pas-fr",
+    "language": "fr",
+    "word": "nous ne faisons pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we don't do/make",
+            "definition": "faire negated",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-ne-lavons-pas-vue-fr",
+    {
+    "id": "nous-ne-lavons-pas-vue-fr",
+    "language": "fr",
+    "word": "nous ne l'avons pas vue",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we haven't seen her",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-ne-pouvions-pas-fr",
+    {
+    "id": "nous-ne-pouvions-pas-fr",
+    "language": "fr",
+    "word": "nous ne pouvions pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we could not",
+            "definition": "imperfect negative",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-ne-pouvons-pas-fr",
+    {
+    "id": "nous-ne-pouvons-pas-fr",
+    "language": "fr",
+    "word": "nous ne pouvons pas",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we can't",
+            "definition": "plural form",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.754Z",
+    "updated_at": "2025-10-21T18:56:09.754Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-nous-aimons-fr",
+    {
+    "id": "nous-nous-aimons-fr",
+    "language": "fr",
+    "word": "nous nous aimons",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we love each other",
+            "definition": "⭐ reciprocal - mutual love",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-nous-appelons-fr",
+    {
+    "id": "nous-nous-appelons-fr",
+    "language": "fr",
+    "word": "nous nous appelons",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "our names are / we're called",
+            "definition": "nous nous pattern",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-nous-comprenons-fr",
+    {
+    "id": "nous-nous-comprenons-fr",
+    "language": "fr",
+    "word": "nous nous comprenons",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we understand each other",
+            "definition": "reciprocal",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-nous-levons-fr",
+    {
+    "id": "nous-nous-levons-fr",
+    "language": "fr",
+    "word": "nous nous levons",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we get up",
+            "definition": "nous nous pattern",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-nous-parlons-fr",
+    {
+    "id": "nous-nous-parlons-fr",
+    "language": "fr",
+    "word": "nous nous parlons",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we talk to each other",
+            "definition": "mutual conversation",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-nous-rveillons-fr",
+    {
+    "id": "nous-nous-rveillons-fr",
+    "language": "fr",
+    "word": "nous nous réveillons",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we wake up",
+            "definition": "nous nous pattern",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-nous-sommes-prpars-fr",
+    {
+    "id": "nous-nous-sommes-prpars-fr",
+    "language": "fr",
+    "word": "nous nous sommes préparés",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we got ready",
+            "definition": "plural agreement",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-sommes-alles-fr",
+    {
+    "id": "nous-sommes-alles-fr",
+    "language": "fr",
+    "word": "nous sommes allées",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we went",
+            "definition": "all feminine group - add es",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-sommes-alls-fr",
+    {
+    "id": "nous-sommes-alls-fr",
+    "language": "fr",
+    "word": "nous sommes allés",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we went",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.768Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "nous-sommes-amis-fr",
+    {
+    "id": "nous-sommes-amis-fr",
+    "language": "fr",
+    "word": "nous sommes amis",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we are friends",
+            "definition": "statement",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "nous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-avez-besoin-de-fr",
+    {
+    "id": "vous-avez-besoin-de-fr",
+    "language": "fr",
+    "word": "vous avez besoin de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you need (formal/plural)",
+            "definition": "vous avez + besoin + de",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-avez-bu-fr",
+    {
+    "id": "vous-avez-bu-fr",
+    "language": "fr",
+    "word": "vous avez bu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you drank (formal/plural)",
+            "definition": "passé composé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-avez-mang-fr",
+    {
+    "id": "vous-avez-mang-fr",
+    "language": "fr",
+    "word": "vous avez mangé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you ate (formal/plural)",
+            "definition": "passé composé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-tes-all-fr",
+    {
+    "id": "vous-tes-all-fr",
+    "language": "fr",
+    "word": "vous êtes allé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you went (singular formal, masculine)",
+            "definition": "formal singular masculine",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-tes-alle-fr",
+    {
+    "id": "vous-tes-alle-fr",
+    "language": "fr",
+    "word": "vous êtes allée",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you went (singular formal, feminine)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-tes-alles-fr",
+    {
+    "id": "vous-tes-alles-fr",
+    "language": "fr",
+    "word": "vous êtes allées",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you went (plural, all feminine)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-tes-alls-fr",
+    {
+    "id": "vous-tes-alls-fr",
+    "language": "fr",
+    "word": "vous êtes allés",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you went (plural, masculine/mixed)",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.766Z",
+    "updated_at": "2025-10-21T18:56:09.766Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-tiez-ici-fr",
+    {
+    "id": "vous-tiez-ici-fr",
+    "language": "fr",
+    "word": "vous étiez ici",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you were here",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.768Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-vous-appelez-fr",
+    {
+    "id": "vous-vous-appelez-fr",
+    "language": "fr",
+    "word": "vous vous appelez",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "your name is (formal)",
+            "definition": "vous vous pattern",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-vous-comprenez-fr",
+    {
+    "id": "vous-vous-comprenez-fr",
+    "language": "fr",
+    "word": "vous vous comprenez",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you understand each other",
+            "definition": "mutual understanding",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-vous-levez-fr",
+    {
+    "id": "vous-vous-levez-fr",
+    "language": "fr",
+    "word": "vous vous levez",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you get up (formal/plural)",
+            "definition": "polite form",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "vous-vous-rveillez-fr",
+    {
+    "id": "vous-vous-rveillez-fr",
+    "language": "fr",
+    "word": "vous vous réveillez",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "you wake up (formal/plural)",
+            "definition": "polite form",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "vous",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "on-a-commenc--parler-fr",
+    {
+    "id": "on-a-commenc--parler-fr",
+    "language": "fr",
+    "word": "on a commencé à parler",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we started talking",
+            "definition": "",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "on",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.767Z",
+    "updated_at": "2025-10-21T18:56:09.767Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
+    "verified": true,
+    "conjugationGroup": "er"
+}
+  ],
+  [
+    "on-dit-que-fr",
+    {
+    "id": "on-dit-que-fr",
+    "language": "fr",
+    "word": "on dit que",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they say that / people say that",
+            "definition": "on = people in general",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "on",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "on-reste-ensemble-fr",
+    {
+    "id": "on-reste-ensemble-fr",
+    "language": "fr",
+    "word": "on reste ensemble",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we're staying together",
+            "definition": "social coordination",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "on",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.747Z",
+    "updated_at": "2025-10-21T18:56:09.747Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "on-se-parle-fr",
+    {
+    "id": "on-se-parle-fr",
+    "language": "fr",
+    "word": "on se parle",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we speak to each other",
+            "definition": "reciprocal",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "on",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "on-se-pose-des-questions-fr",
+    {
+    "id": "on-se-pose-des-questions-fr",
+    "language": "fr",
+    "word": "on se pose des questions",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we ask ourselves questions",
+            "definition": "reciprocal",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "on",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "imparfait"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.765Z",
+    "updated_at": "2025-10-21T18:56:09.765Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "on-se-prpare-fr",
+    {
+    "id": "on-se-prpare-fr",
+    "language": "fr",
+    "word": "on se prépare",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we get ready",
+            "definition": "group preparation",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "on",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.764Z",
+    "updated_at": "2025-10-21T18:56:09.764Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
+    "verified": true,
+    "conjugationGroup": "re"
+}
+  ],
+  [
+    "on-se-voit-fr",
+    {
+    "id": "on-se-voit-fr",
+    "language": "fr",
+    "word": "on se voit",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we see each other",
+            "definition": "⭐ very common!",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "on",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "on-se-voit-demain-fr",
+    {
+    "id": "on-se-voit-demain-fr",
+    "language": "fr",
+    "word": "on se voit demain",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "we'll see each other tomorrow",
+            "definition": "making plans",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "on",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "présent"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.769Z",
+    "updated_at": "2025-10-21T18:56:09.769Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
+    "verified": true,
+    "conjugationGroup": "irregular"
+}
+  ],
+  [
+    "ilelle-a-besoin-de-fr",
+    {
+    "id": "ilelle-a-besoin-de-fr",
+    "language": "fr",
+    "word": "il/elle a besoin de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he/she needs",
+            "definition": "il/elle a + besoin + de",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il/elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
+    "verified": true
+}
+  ],
+  [
+    "ilelle-a-bu-fr",
+    {
+    "id": "ilelle-a-bu-fr",
+    "language": "fr",
+    "word": "il/elle a bu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he/she drank",
+            "definition": "passé composé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il/elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
+    "verified": true
+}
+  ],
+  [
+    "ilelle-a-mang-fr",
+    {
+    "id": "ilelle-a-mang-fr",
+    "language": "fr",
+    "word": "il/elle a mangé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "he/she ate",
+            "definition": "passé composé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "il/elle",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
+    "verified": true
+}
+  ],
+  [
+    "ilselles-ont-besoin-de-fr",
+    {
+    "id": "ilselles-ont-besoin-de-fr",
+    "language": "fr",
+    "word": "ils/elles ont besoin de",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they need",
+            "definition": "ils/elles ont + besoin + de",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils/elles",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.758Z",
+    "updated_at": "2025-10-21T18:56:09.758Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
+    "verified": true
+}
+  ],
+  [
+    "ilselles-ont-bu-fr",
+    {
+    "id": "ilselles-ont-bu-fr",
+    "language": "fr",
+    "word": "ils/elles ont bu",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they drank",
+            "definition": "passé composé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils/elles",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.755Z",
+    "updated_at": "2025-10-21T18:56:09.755Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
+    "verified": true
+}
+  ],
+  [
+    "ilselles-ont-mang-fr",
+    {
+    "id": "ilselles-ont-mang-fr",
+    "language": "fr",
+    "word": "ils/elles ont mangé",
+    "partOfSpeech": "verb",
+    "translations": [
+        {
+            "language": "en",
+            "text": "they ate",
+            "definition": "passé composé",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [
+        {
+            "type": "subject",
+            "pronoun": "ils/elles",
+            "relationship": "subject_pronoun"
+        }
+    ],
+    "tags": [
+        "lesson",
+        "verb-phrase",
+        "passé composé"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.757Z",
+    "updated_at": "2025-10-21T18:56:09.757Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
+    "verified": true
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const verbPhrasesByFrequency = ["il-me-dit-fr", "ils-elles-croient-fr", "ils-elles-savent-fr", "j--tudie-fr", "je-crois-fr", "je-la-vois-fr", "je-ne-le-veux-pas-fr", "je-ne-le-vois-pas-fr", "je-sais-fr", "je-te-demande-fr", "je-te-dis-fr", "le-faites-fr", "me-dis-fr", "nous-comprenons-fr", "nous-croyons-fr", "nous-parlons-fr", "nous-prenons-fr", "nous-savons-fr", "vous-croyez-fr", "vous-parlez-fr", "vous-prenez-fr", "vous-savez-fr", "je-bois-fr", "je-brille-fr", "je-cherche-fr", "je-commande-fr", "je-comprenais-fr", "je-comprends-fr", "je-connais-fr", "je-cours-fr", "je-demande-fr", "je-devrais-fr", "je-dis-fr", "je-dois-fr", "je-donne-fr", "je-dors-fr", "je-fais-fr", "je-ferais-fr", "je-grimpe-fr", "je-mamuse-fr", "je-mappelle-fr", "je-mhabille-fr", "je-mange-fr", "je-marche-fr", "je-mets-fr", "je-nage-fr", "je-paie-fr", "je-parlais-fr", "je-parle-fr", "je-parlerai-fr", "je-pars-fr", "je-pense-fr", "je-peux-fr", "je-pourrais-fr", "je-pousse-fr", "je-prenais-fr", "je-prends-fr", "je-regarde-fr", "je-rends-fr", "je-reste-fr", "je-rvise-fr", "je-saute-fr", "je-sois-fr", "je-souffle-fr", "je-suis-fr", "je-taime-fr", "je-tombe-fr", "je-travaille-fr", "je-trouve-fr", "je-vais-fr", "je-veux-fr", "je-viens-fr", "je-vis-fr", "je-vois-fr", "je-vole-fr", "je-voudrais-fr", "je-voulais-fr", "tu-aies-fr", "tu-ailles-fr", "tu-aimes-fr", "tu-apprends-fr", "tu-arrives-fr", "tu-as-fr", "tu-attends-fr", "tu-avais-fr", "tu-bois-fr", "tu-brilles-fr", "tu-cherches-fr", "tu-commandes-fr", "tu-comprends-fr", "tu-comprennes-fr", "tu-connais-fr", "tu-cours-fr", "tu-crois-fr", "tu-demandes-fr", "tu-devrais-fr", "tu-dis-fr", "tu-dois-fr", "tu-donnes-fr", "tu-dors-fr", "tu-coutes-fr", "tu-enseignes-fr", "tu-es-fr", "tu-tais-fr", "tu-tudies-fr", "tu-fais-fr", "tu-fasses-fr", "tu-ferais-fr", "tu-grimpes-fr", "tu-irais-fr", "tu-mangeras-fr", "tu-manges-fr", "tu-marches-fr", "tu-mets-fr", "tu-nages-fr", "tu-parles-fr", "tu-pars-fr", "tu-partes-fr", "tu-penses-fr", "tu-peux-fr", "tu-pourrais-fr", "tu-pousses-fr", "tu-prends-fr", "tu-puisses-fr", "tu-regardes-fr", "tu-rends-fr", "tu-restes-fr", "tu-rvises-fr", "tu-saches-fr", "tu-sais-fr", "tu-sautes-fr", "tu-sois-fr", "tu-souffles-fr", "tu-tamuses-fr", "tu-tappelles-fr", "tu-thabilles-fr", "tu-travailles-fr", "tu-trouves-fr", "tu-vas-fr", "tu-veux-fr", "tu-viennes-fr", "tu-viens-fr", "tu-vis-fr", "tu-vois-fr", "tu-voles-fr", "tu-voudrais-fr", "elle-a-fr", "elle-arrive-fr", "elle-attend-fr", "elle-cherche-fr", "elle-doit-fr", "elle-donne-fr", "elle-dort-fr", "elle-coute-fr", "elle-est-fr", "elle-fait-fr", "elle-la-fr", "elle-nage-fr", "elle-parle-fr", "elle-part-fr", "elle-peut-fr", "elle-regarde-fr", "elle-reste-fr", "elle-sappelle-fr", "elle-travaille-fr", "elle-trouve-fr", "elle-va-fr", "elle-veut-fr", "elle-vient-fr", "elle-vit-fr", "elle-voit-fr", "il-a-fr", "il-arrive-fr", "il-attend-fr", "il-brille-fr", "il-cherche-fr", "il-court-fr", "il-doit-fr", "il-donne-fr", "il-dort-fr", "il-coute-fr", "il-est-fr", "il-faisait-fr", "il-fait-fr", "il-grimpe-fr", "il-ira-fr", "il-la-fr", "il-marche-fr", "il-nage-fr", "il-parle-fr", "il-part-fr", "il-peut-fr", "il-pleut-fr", "il-pleuvait-fr", "il-pousse-fr", "il-regarde-fr", "il-rend-fr", "il-reste-fr", "il-sappelle-fr", "il-shabille-fr", "il-saute-fr", "il-souffle-fr", "il-tombe-fr", "il-travaille-fr", "il-trouve-fr", "il-va-fr", "il-veut-fr", "il-vient-fr", "il-vit-fr", "il-voit-fr", "il-vole-fr", "elles-arrivent-fr", "elles-attendent-fr", "elles-cherchent-fr", "elles-doivent-fr", "elles-donnent-fr", "elles-dorment-fr", "elles-coutent-fr", "elles-font-fr", "elles-nagent-fr", "elles-ont-fr", "elles-parlent-fr", "elles-partent-fr", "elles-peuvent-fr", "elles-regardent-fr", "elles-restent-fr", "elles-sappellent-fr", "elles-sont-fr", "elles-travaillent-fr", "elles-trouvent-fr", "elles-veulent-fr", "elles-viennent-fr", "elles-vivent-fr", "elles-voient-fr", "elles-vont-fr", "ils-arrivent-fr", "ils-attendent-fr", "ils-brillent-fr", "ils-cherchent-fr", "ils-courent-fr", "ils-doivent-fr", "ils-donnent-fr", "ils-dorment-fr", "ils-coutent-fr", "ils-font-fr", "ils-grimpent-fr", "ils-marchent-fr", "ils-nagent-fr", "ils-ont-fr", "ils-parlent-fr", "ils-partent-fr", "ils-peuvent-fr", "ils-poussent-fr", "ils-regardent-fr", "ils-rendent-fr", "ils-restent-fr", "ils-sappellent-fr", "ils-sautent-fr", "ils-sont-fr", "ils-soufflent-fr", "ils-travaillent-fr", "ils-trouvent-fr", "ils-veulent-fr", "ils-viennent-fr", "ils-vivent-fr", "ils-voient-fr", "ils-volent-fr", "ils-vont-fr", "nous-aimons-fr", "nous-allons-fr", "nous-apprenons-fr", "nous-arrivons-fr", "nous-attendons-fr", "nous-avions-fr", "nous-avons-fr", "nous-brillons-fr", "nous-buvons-fr", "nous-cherchons-fr", "nous-commandons-fr", "nous-connaissons-fr", "nous-courons-fr", "nous-demandons-fr", "nous-devons-fr", "nous-devrions-fr", "nous-disons-fr", "nous-donnons-fr", "nous-dormons-fr", "nous-coutons-fr", "nous-enseignons-fr", "nous-tions-fr", "nous-tudions-fr", "nous-faisons-fr", "nous-ferions-fr", "nous-grimpons-fr", "nous-irions-fr", "nous-mangeons-fr", "nous-mangions-fr", "nous-marchons-fr", "nous-mettons-fr", "nous-nageons-fr", "nous-partons-fr", "nous-pensons-fr", "nous-pourrions-fr", "nous-poussons-fr", "nous-pouvons-fr", "nous-regardons-fr", "nous-rendons-fr", "nous-restons-fr", "nous-rvisons-fr", "nous-sautons-fr", "nous-sommes-fr", "nous-soufflons-fr", "nous-travaillons-fr", "nous-trouvons-fr", "nous-venons-fr", "nous-vivons-fr", "nous-volons-fr", "nous-voudrions-fr", "nous-voulons-fr", "nous-voyons-fr", "vous-aimez-fr", "vous-allez-fr", "vous-apprenez-fr", "vous-arrivez-fr", "vous-attendez-fr", "vous-avez-fr", "vous-aviez-fr", "vous-brillez-fr", "vous-buvez-fr", "vous-cherchez-fr", "vous-commandez-fr", "vous-commandez-fr", "vous-comprenez-fr", "vous-connaissez-fr", "vous-courez-fr", "vous-demandez-fr", "vous-devez-fr", "vous-devriez-fr", "vous-dites-fr", "vous-donnez-fr", "vous-dormez-fr", "vous-coutez-fr", "vous-enseignez-fr", "vous-tes-fr", "vous-tiez-fr", "vous-tudiez-fr", "vous-faites-fr", "vous-feriez-fr", "vous-grimpez-fr", "vous-iriez-fr", "vous-mangez-fr", "vous-marchez-fr", "vous-mettez-fr", "vous-nagez-fr", "vous-partez-fr", "vous-pensez-fr", "vous-pourriez-fr", "vous-poussez-fr", "vous-pouvez-fr", "vous-regardez-fr", "vous-rendez-fr", "vous-restez-fr", "vous-rvisez-fr", "vous-sautez-fr", "vous-soufflez-fr", "vous-travaillez-fr", "vous-trouvez-fr", "vous-venez-fr", "vous-vivez-fr", "vous-volez-fr", "vous-voudriez-fr", "vous-voulez-fr", "vous-voyez-fr", "on-a-fr", "on-allait-fr", "on-dit-fr", "on-doit-fr", "on-est-fr", "on-fait-fr", "on-peut-fr", "on-samuse-fr", "on-va-fr", "on-voit-fr", "ilelle-aille-fr", "ilelle-aime-fr", "ilelle-ait-fr", "ilelle-apprend-fr", "ilelle-avait-fr", "ilelle-boit-fr", "ilelle-commande-fr", "ilelle-comprend-fr", "ilelle-comprenne-fr", "ilelle-connat-fr", "ilelle-croit-fr", "ilelle-demande-fr", "ilelle-devrait-fr", "ilelle-dit-fr", "ilelle-enseigne-fr", "ilelle-tait-fr", "ilelle-tudie-fr", "ilelle-fasse-fr", "ilelle-ferait-fr", "ilelle-irait-fr", "ilelle-mange-fr", "ilelle-met-fr", "ilelle-parte-fr", "ilelle-pense-fr", "ilelle-pourrait-fr", "ilelle-prend-fr", "ilelle-puisse-fr", "ilelle-rvise-fr", "ilelle-sache-fr", "ilelle-sait-fr", "ilelle-soit-fr", "ilelle-vienne-fr", "ilelle-voudrait-fr", "ilselles-aiment-fr", "ilselles-apprennent-fr", "ilselles-avaient-fr", "ilselles-boivent-fr", "ilselles-commandent-fr", "ilselles-comprennent-fr", "ilselles-connaissent-fr", "ilselles-demandent-fr", "ilselles-devraient-fr", "ilselles-disent-fr", "ilselles-enseignent-fr", "ilselles-taient-fr", "ilselles-tudient-fr", "ilselles-feraient-fr", "ilselles-iraient-fr", "ilselles-mangent-fr", "ilselles-mettent-fr", "ilselles-pensent-fr", "ilselles-pourraient-fr", "ilselles-prennent-fr", "ilselles-rvisent-fr", "ilselles-voudraient-fr"];
+export const verbphrasesByFrequency = ["il-me-dit-fr", "ils-elles-croient-fr", "ils-elles-savent-fr", "j--tudie-fr", "je-crois-fr", "je-la-vois-fr", "je-ne-le-veux-pas-fr", "je-ne-le-vois-pas-fr", "je-sais-fr", "je-te-demande-fr", "je-te-dis-fr", "le-faites-fr", "me-dis-fr", "nous-comprenons-fr", "nous-croyons-fr", "nous-parlons-fr", "nous-prenons-fr", "nous-savons-fr", "vous-croyez-fr", "vous-parlez-fr", "vous-prenez-fr", "vous-savez-fr", "aimer-bien-fr", "aller-mal-fr", "avions-faim-fr", "avions-mang-fr", "avoir-besoin-de-fr", "avoir-faim-fr", "avoir-raison-fr", "bien-dormir-fr", "bien-couter-fr", "je-bois-fr", "je-brille-fr", "je-cherche-fr", "je-commande-fr", "je-comprenais-fr", "je-comprends-fr", "je-connais-fr", "je-cours-fr", "je-demande-fr", "je-devrais-fr", "je-dis-fr", "je-dois-fr", "je-donne-fr", "je-dors-fr", "je-fais-fr", "je-ferais-fr", "je-grimpe-fr", "je-mamuse-fr", "je-mappelle-fr", "je-mhabille-fr", "je-mange-fr", "je-marche-fr", "je-mets-fr", "je-nage-fr", "je-paie-fr", "je-parlais-fr", "je-parle-fr", "je-parlerai-fr", "je-pars-fr", "je-pense-fr", "je-peux-fr", "je-pourrais-fr", "je-pousse-fr", "je-prenais-fr", "je-prends-fr", "je-regarde-fr", "je-rends-fr", "je-reste-fr", "je-rvise-fr", "je-saute-fr", "je-sois-fr", "je-souffle-fr", "je-suis-fr", "je-taime-fr", "je-tombe-fr", "je-travaille-fr", "je-trouve-fr", "je-vais-fr", "je-veux-fr", "je-viens-fr", "je-vis-fr", "je-vois-fr", "je-vole-fr", "je-voudrais-fr", "je-voulais-fr", "tu-aies-fr", "tu-ailles-fr", "tu-aimes-fr", "tu-apprends-fr", "tu-arrives-fr", "tu-as-fr", "tu-attends-fr", "tu-avais-fr", "tu-bois-fr", "tu-brilles-fr", "tu-cherches-fr", "tu-commandes-fr", "tu-comprends-fr", "tu-comprennes-fr", "tu-connais-fr", "tu-cours-fr", "tu-crois-fr", "tu-demandes-fr", "tu-devrais-fr", "tu-dis-fr", "tu-dois-fr", "tu-donnes-fr", "tu-dors-fr", "tu-coutes-fr", "tu-enseignes-fr", "tu-es-fr", "tu-tais-fr", "tu-tudies-fr", "tu-fais-fr", "tu-fasses-fr", "tu-ferais-fr", "tu-grimpes-fr", "tu-irais-fr", "tu-mangeras-fr", "tu-manges-fr", "tu-marches-fr", "tu-mets-fr", "tu-nages-fr", "tu-parles-fr", "tu-pars-fr", "tu-partes-fr", "tu-penses-fr", "tu-peux-fr", "tu-pourrais-fr", "tu-pousses-fr", "tu-prends-fr", "tu-puisses-fr", "tu-regardes-fr", "tu-rends-fr", "tu-restes-fr", "tu-rvises-fr", "tu-saches-fr", "tu-sais-fr", "tu-sautes-fr", "tu-sois-fr", "tu-souffles-fr", "tu-tamuses-fr", "tu-tappelles-fr", "tu-thabilles-fr", "tu-travailles-fr", "tu-trouves-fr", "tu-vas-fr", "tu-veux-fr", "tu-viennes-fr", "tu-viens-fr", "tu-vis-fr", "tu-vois-fr", "tu-voles-fr", "tu-voudrais-fr", "elle-a-fr", "elle-arrive-fr", "elle-attend-fr", "elle-cherche-fr", "elle-doit-fr", "elle-donne-fr", "elle-dort-fr", "elle-coute-fr", "elle-est-fr", "elle-fait-fr", "elle-la-fr", "elle-nage-fr", "elle-parle-fr", "elle-part-fr", "elle-peut-fr", "elle-regarde-fr", "elle-reste-fr", "elle-sappelle-fr", "elle-travaille-fr", "elle-trouve-fr", "elle-va-fr", "elle-veut-fr", "elle-vient-fr", "elle-vit-fr", "elle-voit-fr", "il-a-fr", "il-arrive-fr", "il-attend-fr", "il-brille-fr", "il-cherche-fr", "il-court-fr", "il-doit-fr", "il-donne-fr", "il-dort-fr", "il-coute-fr", "il-est-fr", "il-faisait-fr", "il-fait-fr", "il-grimpe-fr", "il-ira-fr", "il-la-fr", "il-marche-fr", "il-nage-fr", "il-parle-fr", "il-part-fr", "il-peut-fr", "il-pleut-fr", "il-pleuvait-fr", "il-pousse-fr", "il-regarde-fr", "il-rend-fr", "il-reste-fr", "il-sappelle-fr", "il-shabille-fr", "il-saute-fr", "il-souffle-fr", "il-tombe-fr", "il-travaille-fr", "il-trouve-fr", "il-va-fr", "il-veut-fr", "il-vient-fr", "il-vit-fr", "il-voit-fr", "il-vole-fr", "elles-arrivent-fr", "elles-attendent-fr", "elles-cherchent-fr", "elles-doivent-fr", "elles-donnent-fr", "elles-dorment-fr", "elles-coutent-fr", "elles-font-fr", "elles-nagent-fr", "elles-ont-fr", "elles-parlent-fr", "elles-partent-fr", "elles-peuvent-fr", "elles-regardent-fr", "elles-restent-fr", "elles-sappellent-fr", "elles-sont-fr", "elles-travaillent-fr", "elles-trouvent-fr", "elles-veulent-fr", "elles-viennent-fr", "elles-vivent-fr", "elles-voient-fr", "elles-vont-fr", "ils-arrivent-fr", "ils-attendent-fr", "ils-brillent-fr", "ils-cherchent-fr", "ils-courent-fr", "ils-doivent-fr", "ils-donnent-fr", "ils-dorment-fr", "ils-coutent-fr", "ils-font-fr", "ils-grimpent-fr", "ils-marchent-fr", "ils-nagent-fr", "ils-ont-fr", "ils-parlent-fr", "ils-partent-fr", "ils-peuvent-fr", "ils-poussent-fr", "ils-regardent-fr", "ils-rendent-fr", "ils-restent-fr", "ils-sappellent-fr", "ils-sautent-fr", "ils-sont-fr", "ils-soufflent-fr", "ils-travaillent-fr", "ils-trouvent-fr", "ils-veulent-fr", "ils-viennent-fr", "ils-vivent-fr", "ils-voient-fr", "ils-volent-fr", "ils-vont-fr", "nous-aimons-fr", "nous-allons-fr", "nous-apprenons-fr", "nous-arrivons-fr", "nous-attendons-fr", "nous-avions-fr", "nous-avons-fr", "nous-brillons-fr", "nous-buvons-fr", "nous-cherchons-fr", "nous-commandons-fr", "nous-connaissons-fr", "nous-courons-fr", "nous-demandons-fr", "nous-devons-fr", "nous-devrions-fr", "nous-disons-fr", "nous-donnons-fr", "nous-dormons-fr", "nous-coutons-fr", "nous-enseignons-fr", "nous-tions-fr", "nous-tudions-fr", "nous-faisons-fr", "nous-ferions-fr", "nous-grimpons-fr", "nous-irions-fr", "nous-mangeons-fr", "nous-mangions-fr", "nous-marchons-fr", "nous-mettons-fr", "nous-nageons-fr", "nous-partons-fr", "nous-pensons-fr", "nous-pourrions-fr", "nous-poussons-fr", "nous-pouvons-fr", "nous-regardons-fr", "nous-rendons-fr", "nous-restons-fr", "nous-rvisons-fr", "nous-sautons-fr", "nous-sommes-fr", "nous-soufflons-fr", "nous-travaillons-fr", "nous-trouvons-fr", "nous-venons-fr", "nous-vivons-fr", "nous-volons-fr", "nous-voudrions-fr", "nous-voulons-fr", "nous-voyons-fr", "vous-aimez-fr", "vous-allez-fr", "vous-apprenez-fr", "vous-arrivez-fr", "vous-attendez-fr", "vous-avez-fr", "vous-aviez-fr", "vous-brillez-fr", "vous-buvez-fr", "vous-cherchez-fr", "vous-commandez-fr", "vous-comprenez-fr", "vous-connaissez-fr", "vous-courez-fr", "vous-demandez-fr", "vous-devez-fr", "vous-devriez-fr", "vous-dites-fr", "vous-donnez-fr", "vous-dormez-fr", "vous-coutez-fr", "vous-enseignez-fr", "vous-tes-fr", "vous-tiez-fr", "vous-tudiez-fr", "vous-faites-fr", "vous-feriez-fr", "vous-grimpez-fr", "vous-iriez-fr", "vous-mangez-fr", "vous-marchez-fr", "vous-mettez-fr", "vous-nagez-fr", "vous-partez-fr", "vous-pensez-fr", "vous-pourriez-fr", "vous-poussez-fr", "vous-pouvez-fr", "vous-regardez-fr", "vous-rendez-fr", "vous-restez-fr", "vous-rvisez-fr", "vous-sautez-fr", "vous-soufflez-fr", "vous-travaillez-fr", "vous-trouvez-fr", "vous-venez-fr", "vous-vivez-fr", "vous-volez-fr", "vous-voudriez-fr", "vous-voulez-fr", "vous-voyez-fr", "on-a-fr", "on-allait-fr", "on-dit-fr", "on-doit-fr", "on-est-fr", "on-fait-fr", "on-peut-fr", "on-samuse-fr", "on-va-fr", "on-voit-fr", "ilelle-aille-fr", "ilelle-aime-fr", "ilelle-ait-fr", "ilelle-apprend-fr", "ilelle-avait-fr", "ilelle-boit-fr", "ilelle-commande-fr", "ilelle-comprend-fr", "ilelle-comprenne-fr", "ilelle-connat-fr", "ilelle-croit-fr", "ilelle-demande-fr", "ilelle-devrait-fr", "ilelle-dit-fr", "ilelle-enseigne-fr", "ilelle-tait-fr", "ilelle-tudie-fr", "ilelle-fasse-fr", "ilelle-ferait-fr", "ilelle-irait-fr", "ilelle-mange-fr", "ilelle-met-fr", "ilelle-parte-fr", "ilelle-pense-fr", "ilelle-pourrait-fr", "ilelle-prend-fr", "ilelle-puisse-fr", "ilelle-rvise-fr", "ilelle-sache-fr", "ilelle-sait-fr", "ilelle-soit-fr", "ilelle-vienne-fr", "ilelle-voudrait-fr", "ilselles-aiment-fr", "ilselles-apprennent-fr", "ilselles-avaient-fr", "ilselles-boivent-fr", "ilselles-commandent-fr", "ilselles-comprennent-fr", "ilselles-connaissent-fr", "ilselles-demandent-fr", "ilselles-devraient-fr", "ilselles-disent-fr", "ilselles-enseignent-fr", "ilselles-taient-fr", "ilselles-tudient-fr", "ilselles-feraient-fr", "ilselles-iraient-fr", "ilselles-mangent-fr", "ilselles-mettent-fr", "ilselles-pensent-fr", "ilselles-pourraient-fr", "ilselles-prennent-fr", "ilselles-rvisent-fr", "ilselles-voudraient-fr", "jai-fr", "jai--ans-fr", "jai-aim-fr", "jai-appris-fr", "jai-besoin-daide-fr", "jai-besoin-dargent-fr", "jai-besoin-de-fr", "jai-besoin-de-temps-fr", "jai-bu-fr", "jai-a-fr", "jai-ce-livre-fr", "jai-ces-enfants-fr", "jai-cherch-fr", "jai-compris-fr", "jai-dcid-de-fr", "jai-demand-fr", "jai-dit-fr", "jai-d-fr", "jai-cout-fr", "jai-t-fr", "jai-tudi-fr", "jai-eu-fr", "jai-fait-fr", "jai-le-chat-fr", "jai-mang-fr", "jai-mis-fr", "jai-parl-fr", "jai-pens-fr", "jai-peur-quil-parte-fr", "jai-peur-que-fr", "jai-pris-fr", "jai-pu-fr", "jai-regard-fr", "jai-travaill-fr", "jai-trouv-fr", "jai-vingt-ans-fr", "jai-voulu-fr", "jai-vu-fr", "jaie-perdu-fr", "jaime-fr", "jaime-les-samedis-fr", "jaimerais-que-fr", "jaimerais-que-tu-sois-l-fr", "japprends-fr", "japprends-le-franais-fr", "jarrive-fr", "jarrive--fr", "jarrive--8h-fr", "jattends-fr", "jattends-le-bus-fr", "jaurais-continu-fr", "jaurais-russi-fr", "javais-fr", "javais-dj-fr", "javais-dj-mang-fr", "javais-dj-vu-ce-film-fr", "jcoute-fr", "jenseigne-fr", "jtais-fr", "jtais-content-fr", "jtais-dj-parti-fr", "jtais-en-train-de-parler-fr", "jtais-fatigu-fr", "jtudie-le-franais-fr", "jirais-fr", "je-cherche-mes-cls-fr", "je-comprends-bien-fr", "je-comprends-mal-fr", "je-connais-Marie-fr", "je-connais-Paris-fr", "je-crois-que-oui-fr", "je-doute-quelle-sache-fr", "je-doute-que-ce-soit-possible-fr", "je-fais-construire-une-maison-fr", "je-fais-nettoyer-la-maison-fr", "je-fais-rparer-ma-voiture-fr", "je-le-veux-fr", "je-lui-ai-dit-fr", "je-me-demande-fr", "je-me-dpche-fr", "je-me-fais-couper-les-cheveux-fr", "je-me-fais-examiner-fr", "je-me-fais-maquiller-fr", "je-me-lave-fr", "je-me-levais-fr", "je-me-lve-fr", "je-me-prpare-fr", "je-me-rveille-fr", "je-me-souviens-fr", "je-me-suis-rveill-fr", "je-me-suis-rveille-fr", "je-nai-pas-fr", "je-nai-pas-besoin-de-fr", "je-ne-crois-pas-fr", "je-ne-crois-pas-quil-ait-raison-fr", "je-ne-devrais-pas-fr", "je-ne-fais-pas-fr", "je-ne-ferai-pas-fr", "je-ne-pense-pas-quil-vienne-fr", "je-ne-pense-pas-que-ce-soit-vrai-fr", "je-ne-peux-pas-fr", "je-ne-savais-pas-fr", "je-ne-suis-pas-fr", "je-ne-vais-pas-fr", "je-ne-veux-pas-fr", "je-pense--toi-fr", "je-pense-quil-vient-fr", "je-pense-que-non-fr", "je-pense-que-oui-fr", "je-regrette-que-fr", "je-regrette-que-tu-ne-puisses-pas-venir-fr", "je-reste-ici-fr", "je-rvise-mes-leons-fr", "je-sais-parler-fr", "je-serais-venu-fr", "je-suis-all-fr", "je-suis-alle-fr", "je-suis-arrive-fr", "je-suis-content-que-tu-sois-l-fr", "je-suis-contente-que-fr", "je-suis-descendue-fr", "je-suis-dsol-que-tu-sois-malade-fr", "je-suis-devenue-fr", "je-suis-en-train-de-fr", "je-suis-en-train-de-manger-fr", "je-suis-entre-fr", "je-suis-heureuxheureuse-que-fr", "je-suis-monte-fr", "je-suis-n-fr", "je-suis-ne-fr", "je-suis-partie-fr", "je-suis-rentr-fr", "je-suis-rentre-fr", "je-suis-reste-fr", "je-suis-sortie-fr", "je-suis-surpris-que-tu-saches-a-fr", "je-suis-tombe-fr", "je-suis-triste-que-tu-partes-fr", "je-suis-venue-fr", "je-te-donne-fr", "je-travaille--fr", "je-trouve-que-fr", "je-vais-manger-fr", "je-vais-mettre-fr", "je-vais-partir-fr", "je-veux-quelle-sache-fr", "je-veux-quil-parte-fr", "je-veux-quon-aille-ensemble-fr", "je-veux-que-fr", "je-veux-que-tu-comprennes-fr", "je-veux-que-tu-viennes-fr", "je-vis--fr", "je-voudrais-commander-fr", "je-voulais-tre-dehors-fr", "je-voyagerais-le-monde-fr", "tu-as-besoin-de-fr", "tu-as-bu-fr", "tu-as-a-fr", "tu-as-ce-chat-fr", "tu-as-eu-fr", "tu-as-mang-fr", "tu-as-quel-ge-fr", "tu-attends-quelquun-fr", "tu-cherches-quoi-fr", "tu-es-l-fr", "tu-me-donnes-fr", "tu-ne-dois-pas-fr", "tu-ne-peux-pas-fr", "tu-ne-sauras-jamais-fr", "tu-ne-vas-pas-fr", "tu-ne-veux-jamais-fr", "tu-parles-bien-fr", "tu-restes-combien-de-temps-fr", "tu-tes-lev-fr", "tu-te-dpches-fr", "tu-te-laves-fr", "tu-te-lves-fr", "tu-te-prpares-fr", "tu-te-rveilles-fr", "tu-te-souviens-fr", "tu-trouves-a-comment-fr", "elle-a-cette-maison-fr", "elle-a-dit-fr", "elle-a-la-maison-fr", "elle-a-trente-ans-fr", "elle-est-alle-fr", "elle-est-entre-fr", "elle-est-maintenant-fr", "elle-est-venue-fr", "elle-tait-dj-partie-fr", "elle-ne-voit-jamais-fr", "elle-nous-a-vus-fr", "elle-sest-leve-fr", "elle-se-lve-fr", "elle-se-rveille-fr", "il-a-dit-fr", "il-a-fait-fr", "il-a-plu-fr", "il-a-quinze-ans-fr", "il-avait-dj-commenc-fr", "il-est-all-fr", "il-est-possible-quil-vienne-fr", "il-est-possible-quon-parte-fr", "il-tait-assis-fr", "il-faut-quelle-vienne-fr", "il-faut-quon-parte-fr", "il-faut-que-fr", "il-faut-que-jaille-fr", "il-faut-que-tu-fasses-attention-fr", "il-faut-que-tu-manges-fr", "il-faut-que-tu-partes-fr", "il-faut-que-tu-sois-sage-fr", "il-ma-dit-fr", "il-me-demande-fr", "il-me-donne-fr", "il-naimait-pas-fr", "il-ne-fait-jamais-fr", "il-ne-voit-pas-fr", "il-reste-du-pain-fr", "il-sest-lav-fr", "il-se-lve-fr", "il-se-peut-que-fr", "il-se-prpare-fr", "il-se-rveille-fr", "il-se-souvient-fr", "il-va-partir-fr", "il-y-avait-fr", "elles-se-sont-amuses-fr", "elles-sont-alles-fr", "ils-les-ont-fr", "ils-ne-sont-pas-fr", "ils-ont-ces-chats-fr", "ils-ont-t-fr", "ils-ont-les-chiens-fr", "ils-se-connaissent-fr", "ils-se-parlent-fr", "ils-se-sont-amuss-fr", "ils-sont-alls-fr", "nous-allons-partir-fr", "nous-avions-dj-fini-fr", "nous-avions-faim-fr", "nous-avons-beaucoup-aim-fr", "nous-avons-besoin-de-fr", "nous-avons-bu-fr", "nous-avons-ces-livres-fr", "nous-avons-command-fr", "nous-avons-dcid-fr", "nous-avons-dcid-de-manger-fr", "nous-avons-mang-fr", "nous-avons-parl-fr", "nous-avons-parl-de-fr", "nous-avons-pris-fr", "nous-avons-pu-tre-fr", "nous-avons-vu-fr", "nous-avons-vu-Marie-fr", "nous-nallons-pas-fr", "nous-ne-faisons-pas-fr", "nous-ne-lavons-pas-vue-fr", "nous-ne-pouvions-pas-fr", "nous-ne-pouvons-pas-fr", "nous-nous-aimons-fr", "nous-nous-appelons-fr", "nous-nous-comprenons-fr", "nous-nous-levons-fr", "nous-nous-parlons-fr", "nous-nous-rveillons-fr", "nous-nous-sommes-prpars-fr", "nous-sommes-alles-fr", "nous-sommes-alls-fr", "nous-sommes-amis-fr", "vous-avez-besoin-de-fr", "vous-avez-bu-fr", "vous-avez-mang-fr", "vous-tes-all-fr", "vous-tes-alle-fr", "vous-tes-alles-fr", "vous-tes-alls-fr", "vous-tiez-ici-fr", "vous-vous-appelez-fr", "vous-vous-comprenez-fr", "vous-vous-levez-fr", "vous-vous-rveillez-fr", "on-a-commenc--parler-fr", "on-dit-que-fr", "on-reste-ensemble-fr", "on-se-parle-fr", "on-se-pose-des-questions-fr", "on-se-prpare-fr", "on-se-voit-fr", "on-se-voit-demain-fr", "ilelle-a-besoin-de-fr", "ilelle-a-bu-fr", "ilelle-a-mang-fr", "ilselles-ont-besoin-de-fr", "ilselles-ont-bu-fr", "ilselles-ont-mang-fr"];
 
-export default verbPhrases;
+export default verbphrases;

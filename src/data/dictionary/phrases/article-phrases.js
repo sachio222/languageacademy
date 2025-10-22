@@ -1,10 +1,10 @@
 /**
- * Article Phrases Dictionary
- * Article combinations and forms
- * Total entries: 0
+ * Article phrases Dictionary
+ * Auto-generated from phrases migration
+ * Total entries: 7
  */
 
-export const articlePhrases = new Map([
+export const articlephrases = new Map([
   [
     "de-la-fr",
     {
@@ -199,9 +199,90 @@ export const articlePhrases = new Map([
     "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons.js",
     "verified": true
 }
+  ],
+  [
+    "-l-fr",
+    {
+    "id": "-l-fr",
+    "language": "fr",
+    "word": "à l'",
+    "partOfSpeech": "article-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to/at the (vowel)",
+            "definition": "before vowel",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "article-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.752Z",
+    "updated_at": "2025-10-21T18:56:09.752Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/contractions.js",
+    "verified": true
+}
+  ],
+  [
+    "-la-fr",
+    {
+    "id": "-la-fr",
+    "language": "fr",
+    "word": "à la",
+    "partOfSpeech": "article-phrase",
+    "translations": [
+        {
+            "language": "en",
+            "text": "to/at the (fem)",
+            "definition": "no contraction (feminine)",
+            "context": "general",
+            "confidence": 0.95
+        }
+    ],
+    "gender": "none",
+    "variants": [],
+    "frequency": {
+        "rank": 1000,
+        "score": 0.5,
+        "corpus": "lesson",
+        "perMillion": 100,
+        "percentile": 50
+    },
+    "difficulty": 2,
+    "cefr_level": "A1",
+    "examples": [],
+    "relationships": [],
+    "tags": [
+        "lesson",
+        "article-phrase"
+    ],
+    "semantic_field": "general",
+    "created_at": "2025-10-21T18:56:09.752Z",
+    "updated_at": "2025-10-21T18:56:09.752Z",
+    "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/contractions.js",
+    "verified": true
+}
   ]
 ]);
 
 // Frequency-ordered array for priority loading
-export const article-phrasesByFrequency = ["de-la-fr", "l--fr", "le-meilleur---la-meilleure-fr", "le-la-m-me-fr", "le-la-pire-fr"];
+export const articlephrasesByFrequency = ["de-la-fr", "l--fr", "le-meilleur---la-meilleure-fr", "le-la-m-me-fr", "le-la-pire-fr", "-l-fr", "-la-fr"];
 
+export default articlephrases;

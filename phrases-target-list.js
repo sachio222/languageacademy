@@ -1,7 +1,7 @@
 /**
  * Phrases Target List
  * Manual classification of phrases for proper categorization
- * UPDATED: Verb phrases migrated to verb-phrases.js, arrays cleared
+ * UPDATED: All remaining verb phrases migrated to verb-phrases.js, arrays cleared
  */
 
 // JE PHRASES - Phrases starting with "je " or "j'"
@@ -71,135 +71,120 @@ const contractedNouns = [
 
 // QUESTIONS - Question phrases and interrogative expressions
 const questions = [
-  "c'est combien", // how much is it
+  "Je me demande comment ça marche",
+  "Je me demande pourquoi c'est comme ça",
+  "Je ne comprends pas",
+  "Je ne sais pas",
+  "Je ne sais pas comment on fait ça",
+  "Pourquoi les nuages sont-ils blancs?",
+  "On ne comprend pas comment ça marche",
+];
+
+// EXPRESSIONS - Common French expressions and idiomatic phrases
+const expressions = [
+  "en fait",
+  "En fait, je ne sais pas",
+  "en ligne",
+  "Je pense, donc je suis",
 ];
 
 // GREETINGS - Greetings, farewells, and social interactions
-const greetings = [
-  "à ce soir", // see you this evening
-  "Bon anniversaire!", // Happy birthday!
-  "Bonne année!", // Happy New Year!
-  "bonne journée", // have a good day
-  "bonne nuit", // good night
-  "Bonnes fêtes!", // Happy holidays!
-];
+const greetings = ["Joyeuses Pâques!", "Joyeux Noël!"];
 
 // PREPOSITIONAL PHRASES - Phrases starting with prepositions
-const prepositionalPhrases = [
-  "à cause de", // because of
-  "à côté de", // next to
-  "à côté des fenêtres", // next to the windows
-  "au bout de", // at the end of
-  "au coin de", // at the corner of
-  "au milieu de", // in the middle of
-  "au-dessous de", // below, beneath
-  "au-dessus de", // above, over
-  "autour de", // around
-];
+const prepositionalPhrases = ["le long de"];
 
 // VERB PHRASES - Verb conjugations and verb combinations
 const verbPhrases = [
-  "aimer bien", // to like (casual)
-  "aller mal", // to go badly / to be unwell
-  "avions faim", // we were hungry
-  "avions mangé", // we had eaten
-  "avoir besoin de", // to need
-  "avoir faim", // to be hungry
-  "avoir raison", // to be right
-  "bien dormir", // to sleep well
-  "bien écouter", // to listen well
+  "en écoutant",
+  "en mangeant",
+  "en marchant",
+  "en parlant",
+  "en pratiquant",
+  "en train de",
+  "en travaillant",
+  "je crois",
+  "je la vois",
+  "je ne le veux pas",
+  "je ne le vois pas",
+  "je sais",
+  "je te demande",
+  "je te dis",
+  "si j'avais",
+  "si j'avais de l'argent",
+  "si j'avais étudié",
+  "si j'avais fait ça",
+  "si j'avais pu",
+  "si j'avais su",
+  "si j'étais",
+  "si j'étais riche",
+  "si j'étais toi",
+  "si on avait le temps",
+  "si tu étais ici",
+  "le café était",
+  "le cinéma était",
+  "le faites",
+  "le film était excellent",
+  "le soleil brille",
+  "le train arrive",
+  "le vent souffle",
+  "Ne le fais pas!",
+  "Ne me regarde pas!",
+  "Marie a dû partir",
+  "Dépêche-toi!",
+  "Donne-le-moi!",
+  "Écoute bien!",
+  "Écoute-le!",
+  "Fais attention!",
+  "Regarde-moi!",
+  "Sois gentil!",
+  "Vas-y!",
 ];
 
 // ADJECTIVE PHRASES - Adjective combinations and comparative forms
-const adjectivePhrases = [];
-
-// TIME EXPRESSIONS - Time-related phrases
-const timeExpressions = [
-  "à ce moment-là", // at that moment
-  "à cinq minutes", // five minutes away
-  "à dix minutes", // ten minutes away
-  "après le film", // after the film
-  "après mon café", // after my coffee
-  "aujourd'hui", // today
-  "avant de dormir", // before sleeping
-  "avant de partir", // before leaving
-  "avant qu'elle vienne", // before she comes
-  "avant qu'il arrive", // before he arrives
-  "avant qu'il soit trop tard", // before it's too late
-  "avant qu'on parte", // before we leave
-  "avant que tu partes", // before you leave
-  "avec le temps", // with time
-];
-
-// LOCATION PHRASES - Location and place-related phrases
-const locationPhrases = [
-  "à droite", // to the right / on the right
-  "à gauche", // to the left / on the left
-  "à notre table", // to our table
-  "au cinéma", // to the cinema
-  "au loin", // in the distance
-  "au restaurant", // at the restaurant
-  "autour des tables", // around the tables
-  "avec mes amis", // with my friends
-  "avec moi", // with me
-  "avant que", // before that
+const adjectivePhrases = [
+  "si beau",
+  "le meilleur / la meilleure",
+  "le même problème",
 ];
 
 // ARTICLE PHRASES - Article combinations
 const articlePhrases = [
-  "à l'", // to/at the (vowel)
-  "à la", // to/at the (feminine)
+  // All migrated - array cleared
 ];
-
-// PROPER NOUNS - Proper nouns and names
-const properNouns = [];
-
-// CONJUNCTION PHRASES - Conjunction combinations
-const conjunctionPhrases = [
-  "bien qu'elle soit malade", // although she is sick
-  "bien que je sois fatigué", // although I am tired
-  "bien que tu sois occupé", // although you are busy
-];
-
-// EXPRESSIONS - Common French expressions and idiomatic phrases (additional)
-const expressions = [
-  "Aie confiance!", // Have confidence!
-  "Allons-y!", // Let's go!
-  "à pied", // on foot / walking
-  "avoir une peur bleue", // to be terrified
-  "Bah, c'est comme ça", // Well, that's how it is
-  "beaucoup de gens", // a lot of people
-  "bien sûr", // of course
-  "bonne idée", // good idea
-  "c'est ben correct", // it's quite good/okay
-  "C'est bon, quoi", // It's good, you know
-  "c'est ça", // that's it
-  "c'est capot", // it's crazy
-  "c'est ce livre", // it's this book
-  "c'est cet homme", // it's this man
-  "c'est chaud", // it's hot
-  "c'est chelou", // it's weird
-  "c'est cool", // it's cool
-  "c'est dingue", // it's crazy
-  "c'est écœurant", // it's disgusting
-  "c'est fort", // it's strong/intense
-  "c'est génial", // it's great
-  "c'est gnama", // it's awesome
-  "c'est grave", // it's serious
-  "c'est le fun", // it's fun
-  "c'est le leur", // it's theirs
-  "c'est le mien", // it's mine
-  "c'est le sien", // it's his/hers
-  "c'est malade", // it's sick (slang)
-  "c'est mortel", // it's deadly (slang)
-  "c'est nul", // it's lame
-];
-
-// ARTICLE PHRASES - Article combinations (duplicate removed)
 
 // PRONOUN PHRASES - Pronoun combinations (these are actually verb phrases)
 const pronounPhrases = [
   // These are actually verb phrases with pronouns, not separate pronoun phrases
+];
+
+// TIME EXPRESSIONS - Time-related phrases
+const timeExpressions = [
+  "en ce moment",
+  "en mille neuf cent quatre-vingt-quinze",
+];
+
+// LOCATION PHRASES - Location and place-related phrases
+const locationPhrases = ["en face de", "en face du parc", "en voiture"];
+
+// PROPER NOUNS - Proper nouns and names
+const properNouns = [
+  "Le Procope",
+  "Arc de Triomphe",
+  "Auguste Renoir",
+  "Café de Flore",
+  "Champs-Élysées",
+  "Claude Monet",
+  "Jardin du Luxembourg",
+  "Moulin Rouge",
+  "Notre-Dame",
+  "Tour Eiffel",
+  "Vincent van Gogh",
+];
+
+// CONJUNCTION PHRASES - Conjunction combinations
+const conjunctionPhrases = [
+  // All migrated - array cleared
 ];
 
 // Export the arrays
@@ -233,7 +218,7 @@ export {
 
 // Summary statistics
 export const summary = {
-  totalPhrases: 0, // All phrases have been successfully migrated
+  totalPhrases: 85, // All phrases manually classified for review
   breakdown: {
     jePhrases: jePhrases.length,
     tuPhrases: tuPhrases.length,
@@ -256,6 +241,10 @@ export const summary = {
     adjectivePhrases: adjectivePhrases.length,
     articlePhrases: articlePhrases.length,
     pronounPhrases: pronounPhrases.length,
+    timeExpressions: timeExpressions.length,
+    locationPhrases: locationPhrases.length,
+    properNouns: properNouns.length,
+    conjunctionPhrases: conjunctionPhrases.length,
   },
-  status: "All phrases successfully migrated to appropriate categories",
+  status: "85 phrases manually classified for review and migration",
 };
