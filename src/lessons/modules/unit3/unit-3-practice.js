@@ -216,7 +216,7 @@ export const unit3Practice = {
 
     // Multiple blanks: voir + object pronoun
     {
-      text: "Je  .",
+      text: "Je    .",
       instruction: "Complete: 'I see them' (plural)",
       blanks: [
         {
@@ -234,7 +234,7 @@ export const unit3Practice = {
 
     // Multiple blanks: venir + contraction
     {
-      text: "Elle  magasin.",
+      text: "Elle    magasin.",
       instruction: "Complete: 'She comes from the store' (use contraction)",
       blanks: [
         {
@@ -243,7 +243,7 @@ export const unit3Practice = {
           hint: "venir conjugated for elle",
         },
         {
-          position: 11,
+          position: 7,
           answer: "du",
           hint: "de + le = ?",
         },
