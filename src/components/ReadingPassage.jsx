@@ -8,97 +8,13 @@ import { useSpeech } from '../hooks/useSpeech';
 import { readingVocabulary as wordTranslations } from './readingVocabulary';
 import { getTTSText } from '../utils/ttsUtils';
 import { wikipediaEntries } from '../data/wikipediaEntries';
+import { convertYearToFrench } from '../utils/readings/numberTTSUtilsFr';
+import { isImageMarker, extractImageInfo } from '../utils/readings/imgUtils';
+
+import { stripMarkdown } from '../utils/markdownUtils';
 
 // Word translations now imported from readingVocabulary.js (deduplicated, 1752 unique entries)
 
-// Convert year to French words for TTS
-const convertYearToFrench = (year) => {
-  const num = parseInt(year);
-
-  if (num < 1000) return year; // Don't convert years before 1000
-
-  if (num === 1000) return "mille";
-  if (num < 2000) {
-    const hundreds = Math.floor(num / 100);
-    const remainder = num % 100;
-
-    if (hundreds === 10) {
-      return remainder === 0 ? "mille" : `mille ${convertTensAndOnes(remainder)}`;
-    } else if (hundreds === 11) {
-      return remainder === 0 ? "onze cents" : `onze cent ${convertTensAndOnes(remainder)}`;
-    } else if (hundreds === 12) {
-      return remainder === 0 ? "douze cents" : `douze cent ${convertTensAndOnes(remainder)}`;
-    } else if (hundreds === 13) {
-      return remainder === 0 ? "treize cents" : `treize cent ${convertTensAndOnes(remainder)}`;
-    } else if (hundreds === 14) {
-      return remainder === 0 ? "quatorze cents" : `quatorze cent ${convertTensAndOnes(remainder)}`;
-    } else if (hundreds === 15) {
-      return remainder === 0 ? "quinze cents" : `quinze cent ${convertTensAndOnes(remainder)}`;
-    } else if (hundreds === 16) {
-      return remainder === 0 ? "seize cents" : `seize cent ${convertTensAndOnes(remainder)}`;
-    } else if (hundreds === 17) {
-      return remainder === 0 ? "dix-sept cents" : `dix-sept cent ${convertTensAndOnes(remainder)}`;
-    } else if (hundreds === 18) {
-      return remainder === 0 ? "dix-huit cents" : `dix-huit cent ${convertTensAndOnes(remainder)}`;
-    } else if (hundreds === 19) {
-      return remainder === 0 ? "dix-neuf cents" : `dix-neuf cent ${convertTensAndOnes(remainder)}`;
-    }
-  }
-
-  // For 2000 and beyond
-  if (num >= 2000) {
-    const thousands = Math.floor(num / 1000);
-    const remainder = num % 1000;
-
-    if (thousands === 2) {
-      return remainder === 0 ? "deux mille" : `deux mille ${convertHundreds(remainder)}`;
-    }
-  }
-
-  return year; // Fallback to original if not handled
-};
-
-const convertHundreds = (num) => {
-  if (num === 0) return "";
-  if (num < 100) return convertTensAndOnes(num);
-
-  const hundreds = Math.floor(num / 100);
-  const remainder = num % 100;
-
-  const hundredsText = hundreds === 1 ? "cent" : `${convertOnes(hundreds)} cent`;
-  const remainderText = remainder === 0 ? "" : ` ${convertTensAndOnes(remainder)}`;
-
-  return hundredsText + remainderText;
-};
-
-const convertTensAndOnes = (num) => {
-  if (num === 0) return "";
-  if (num < 10) return convertOnes(num);
-  if (num < 20) return convertTeens(num);
-
-  const tens = Math.floor(num / 10);
-  const ones = num % 10;
-
-  const tensText = convertTens(tens);
-  const onesText = ones === 0 ? "" : `-${convertOnes(ones)}`;
-
-  return tensText + onesText;
-};
-
-const convertOnes = (num) => {
-  const ones = ["", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf"];
-  return ones[num] || "";
-};
-
-const convertTeens = (num) => {
-  const teens = ["", "onze", "douze", "treize", "quatorze", "quinze", "seize", "dix-sept", "dix-huit", "dix-neuf"];
-  return teens[num - 10] || "";
-};
-
-const convertTens = (num) => {
-  const tens = ["", "", "vingt", "trente", "quarante", "cinquante", "soixante", "soixante", "quatre-vingt", "quatre-vingt"];
-  return tens[num] || "";
-};
 
 // Wikipedia entries now imported from separate data file
 
@@ -170,14 +86,6 @@ function ReadingPassage({ passage }) {
   }, [hoveredWord]);
 
   if (!passage) return null;
-
-  // Strip markdown formatting and image markers for TTS
-  const stripMarkdown = (text) => {
-    return text
-      .replace(/\*\*/g, '')
-      .replace(/!\[.*?\]/g, '')  // Remove image markers
-      .replace(/\n\n+/g, '\n\n'); // Clean up extra newlines
-  };
 
   // Make words interactive - use paragraph index for truly unique keys
   const renderInteractiveText = (text, paragraphIndex) => {
@@ -640,36 +548,6 @@ function ReadingPassage({ passage }) {
   const frenchParagraphs = passage.text.split('\n\n');
   const englishParagraphs = passage.translation.split('\n\n');
 
-  // Helper to check if a paragraph is an image marker
-  const isImageMarker = (text) => {
-    return /^!\[(.+?)\]$/.test(text.trim());
-  };
-
-  // Helper to extract image path and optional size from marker
-  // Syntax: ![path] or ![path|maxWidth:400px] or ![path|400px]
-  const extractImageInfo = (text) => {
-    const match = text.trim().match(/^!\[(.+?)\]$/);
-    if (!match) return null;
-
-    const content = match[1];
-    const parts = content.split('|');
-    const path = parts[0].trim();
-
-    let style = {};
-    if (parts[1]) {
-      const size = parts[1].trim();
-      // If it's just a number with px/%, treat it as maxWidth
-      if (/^\d+(%|px)$/.test(size)) {
-        style.maxWidth = size;
-      } else if (size.includes(':')) {
-        // Parse CSS-like syntax: maxWidth:400px
-        const [prop, value] = size.split(':');
-        style[prop.trim()] = value.trim();
-      }
-    }
-
-    return { path, style };
-  };
 
   return (
     <div className="reading-passage">
@@ -733,7 +611,7 @@ function ReadingPassage({ passage }) {
                   />
                 </div>
                 {showTranslation && (
-                  <p className="english-translation">{englishParagraphs[pIdx]}</p>
+                  <p className="english-translation">{stripMarkdown(englishParagraphs[pIdx])}</p>
                 )}
               </div>
             );

@@ -39,7 +39,7 @@ export const reading2 = {
 
   readingPassage: {
     title: "Rendez-vous en Normandie (The Normandy Meetup)",
-    text: `**Marie:** Salut Sophie ! Comment ça va ?
+    text: `**Marie:** Bonjour Sophie ! Comment ça va ?
 
 **Sophie:** Ça va bien ! Je suis à Caen avec un ami Thomas. Et toi, où es-tu ?
 
@@ -78,7 +78,7 @@ export const reading2 = {
 **Sophie:** Très bien ! Voilà ! Nous pouvons voir ces belles choses ! Salut !
 
 ![img/reading2-mont-saint-michele.jpg|maxWidth:65%]`,
-    translation: `**Marie:** Hi Sophie! How's it going?
+    translation: `**Marie:** Hello, Sophie! How's it going?
 
 **Sophie:** It's going well! I am in Caen with a friend Thomas. And you, where are you?
 
