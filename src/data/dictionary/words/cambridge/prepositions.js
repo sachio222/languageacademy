@@ -1395,17 +1395,293 @@ export const prepositionsCambridge = new Map([
       },
     },
   ],
+  [
+    "chez-fr",
+    {
+      id: "chez-fr",
+      lang: "fr",
+      word: "chez",
+      partOfSpeech: "preposition",
+      translations: [
+        {
+          lang: "en",
+          text: "at the home/business of",
+          confidence: 0.9,
+          source: "manual",
+        },
+      ],
+      relationships: [
+        {
+          type: "contrast",
+          targetWord: "à",
+          note: "chez + person/place of person; à + general place",
+          strength: 0.6,
+        },
+      ],
+      etymology: "",
+      register: [],
+      usage_notes:
+        "S’emploie avec les noms propres, pronoms disjoints et professions: chez Marie, chez moi, chez le médecin.",
+      regional_variants: [],
+      examples: [
+        {
+          lang: "en",
+          text: "Nous dînons chez Paul",
+          trans: "We’re having dinner at Paul’s",
+          source: "manual",
+        },
+        {
+          lang: "en",
+          text: "Je suis chez le dentiste",
+          trans: "I’m at the dentist’s",
+          source: "manual",
+        },
+      ],
+      phonetic: "ʃɛz",
+      tags: ["core", "A1", "preposition", "location", "at_someone_s_place"],
+      sources: ["manual"],
+      verified: false,
+    },
+  ],
+  [
+    "par-fr",
+    {
+      id: "par-fr",
+      lang: "fr",
+      word: "par",
+      partOfSpeech: "preposition",
+      translations: [
+        {
+          lang: "en",
+          text: "by, through, per",
+          confidence: 0.9,
+          source: "manual",
+        },
+      ],
+      relationships: [
+        {
+          type: "role",
+          targetWord: "agent",
+          note: "agent of passive verbs",
+          strength: 0.7,
+        },
+        {
+          type: "role",
+          targetWord: "means",
+          note: "par = by/through as means",
+          strength: 0.5,
+        },
+      ],
+      etymology: "",
+      register: [],
+      usage_notes:
+        "Souvent agent du passif; sert aussi pour la répartition (deux fois par jour)",
+      regional_variants: [],
+      examples: [
+        {
+          lang: "en",
+          text: "un livre écrit par Hugo",
+          trans: "a book written by Hugo",
+          source: "manual",
+        },
+        {
+          lang: "en",
+          text: "passer par le parc",
+          trans: "to go through the park",
+          source: "manual",
+        },
+        {
+          lang: "en",
+          text: "deux fois par jour",
+          trans: "twice per day",
+          source: "manual",
+        },
+      ],
+      phonetic: "paʀ",
+      tags: ["core", "A1", "preposition", "agent", "means", "distribution"],
+      sources: ["manual"],
+      verified: false,
+    },
+  ],
+  [
+    "sans-fr",
+    {
+      id: "sans-fr",
+      lang: "fr",
+      word: "sans",
+      partOfSpeech: "preposition",
+      translations: [
+        { lang: "en", text: "without", confidence: 0.9, source: "manual" },
+      ],
+      relationships: [
+        {
+          type: "opposite",
+          targetWord: "avec",
+          note: "without vs with",
+          strength: 0.9,
+        },
+      ],
+      etymology: "",
+      register: [],
+      usage_notes: "Indique l’absence ou la privation.",
+      regional_variants: [],
+      examples: [
+        {
+          lang: "en",
+          text: "un café sans sucre",
+          trans: "a coffee without sugar",
+          source: "manual",
+        },
+      ],
+      phonetic: "sɑ̃",
+      tags: ["core", "A1", "preposition", "negation", "absence"],
+      sources: ["manual"],
+      verified: false,
+    },
+  ],
+  [
+    "vers-fr",
+    {
+      id: "vers-fr",
+      lang: "fr",
+      word: "vers",
+      partOfSpeech: "preposition",
+      translations: [
+        {
+          lang: "en",
+          text: "toward, around (time)",
+          confidence: 0.9,
+          source: "manual",
+        },
+      ],
+      relationships: [
+        {
+          type: "contrast",
+          targetWord: "envers",
+          note: "vers = direction; envers = attitude toward",
+          strength: 0.7,
+        },
+      ],
+      etymology: "",
+      register: [],
+      usage_notes: "Direction spatiale ou approximation temporelle.",
+      regional_variants: [],
+      examples: [
+        {
+          lang: "en",
+          text: "Il marche vers la gare",
+          trans: "He walks toward the station",
+          source: "manual",
+        },
+        {
+          lang: "en",
+          text: "Rendez-vous vers six heures",
+          trans: "Meet around six o’clock",
+          source: "manual",
+        },
+      ],
+      phonetic: "vɛʀ",
+      tags: ["core", "A1", "preposition", "direction", "approx_time"],
+      sources: ["manual"],
+      verified: false,
+    },
+  ],
+  [
+    "envers-fr",
+    {
+      id: "envers-fr",
+      lang: "fr",
+      word: "envers",
+      partOfSpeech: "preposition",
+      translations: [
+        {
+          lang: "en",
+          text: "toward (attitude)",
+          confidence: 0.9,
+          source: "manual",
+        },
+      ],
+      relationships: [
+        {
+          type: "contrast",
+          targetWord: "vers",
+          note: "envers = attitude toward someone; vers = physical direction",
+          strength: 0.7,
+        },
+      ],
+      etymology: "",
+      register: [],
+      usage_notes:
+        "S’emploie surtout pour les sentiments/attitudes envers une personne ou un groupe.",
+      regional_variants: [],
+      examples: [
+        {
+          lang: "en",
+          text: "sa gentillesse envers les inconnus",
+          trans: "his kindness toward strangers",
+          source: "manual",
+        },
+      ],
+      phonetic: "ɑ̃vɛʀ",
+      tags: ["A2", "preposition", "attitude", "relation"],
+      sources: ["manual"],
+      verified: false,
+    },
+  ],
+  [
+    "contre-fr",
+    {
+      id: "contre-fr",
+      lang: "fr",
+      word: "contre",
+      partOfSpeech: "preposition",
+      translations: [
+        { lang: "en", text: "against", confidence: 0.9, source: "manual" },
+      ],
+      relationships: [
+        {
+          type: "contrast",
+          targetWord: "pour",
+          note: "against vs for (stances)",
+          strength: 0.7,
+        },
+        {
+          type: "spatial",
+          targetWord: "sur",
+          note: "contact against a surface",
+          strength: 0.4,
+        },
+      ],
+      etymology: "",
+      register: [],
+      usage_notes: "Opposition, prévention, ou appui physique.",
+      regional_variants: [],
+      examples: [
+        {
+          lang: "en",
+          text: "être contre ce projet",
+          trans: "to be against this project",
+          source: "manual",
+        },
+        {
+          lang: "en",
+          text: "s’adosser contre le mur",
+          trans: "to lean against the wall",
+          source: "manual",
+        },
+      ],
+      phonetic: "kɔ̃tʀ",
+      tags: ["core", "A1", "preposition", "opposition", "contact"],
+      sources: ["manual"],
+      verified: false,
+    },
+  ],
 ]);
 
 export const scrapeStats = {
   scraped_at: "2025-10-23T05:22:29.545Z",
-  total_prepositions: 15,
-  successful_scrapes: 14,
-  failed_scrapes: 1,
-  failed_prepositions: [
-    {
-      word: "à",
-      reason: "No data returned",
-    },
-  ],
+  total_prepositions: 21,
+  successful_scrapes: 21,
+  failed_scrapes: 0,
+  failed_prepositions: [],
 };

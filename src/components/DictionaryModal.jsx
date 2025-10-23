@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDictionary } from '../hooks/useDictionary';
 import SpeakButton from './SpeakButton';
 import '../styles/DictionaryModal.css';
@@ -47,10 +47,73 @@ function DictionaryModal({ isOpen, onClose }) {
     setSortOrder,
     setSelectedWord,
     filteredWords,
+    allWords,
     partOfSpeechOptions,
     cefrLevelOptions,
     difficultyOptions
   } = useDictionary();
+
+  // Handle querystring parameter for pre-selecting a word
+  useEffect(() => {
+    if (isOpen && filteredWords.length > 0) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const wordParam = urlParams.get('word');
+
+      if (wordParam) {
+        // Find the word by exact match first, then by partial match
+        const exactMatch = filteredWords.find(word =>
+          word.word.toLowerCase() === wordParam.toLowerCase()
+        );
+
+        const partialMatch = filteredWords.find(word =>
+          word.word.toLowerCase().includes(wordParam.toLowerCase())
+        );
+
+        const targetWord = exactMatch || partialMatch;
+
+        if (targetWord) {
+          setSelectedWord(targetWord);
+          setScrollToSelected(true); // Trigger scroll to selected word
+          // Clear the word parameter from URL after selection
+          const newUrl = new URL(window.location);
+          newUrl.searchParams.delete('word');
+          window.history.replaceState({}, '', newUrl);
+        }
+      }
+    }
+  }, [isOpen, filteredWords, setSelectedWord]);
+
+  // Track if selection came from relationship click
+  const [scrollToSelected, setScrollToSelected] = React.useState(false);
+
+  // Scroll to selected word in the word list when selection changes from relationship
+  useEffect(() => {
+    if (selectedWord && scrollToSelected) {
+      const wordElement = document.querySelector(`[data-word-id="${selectedWord.id}"]`);
+      if (wordElement) {
+        // Get the scrollable container
+        const scrollContainer = document.querySelector('.dictionary-word-list');
+        if (scrollContainer) {
+          // Calculate the target position relative to the scroll container
+          const containerRect = scrollContainer.getBoundingClientRect();
+          const elementRect = wordElement.getBoundingClientRect();
+          const targetScrollTop = scrollContainer.scrollTop + (elementRect.top - containerRect.top);
+
+          // Account for sticky header height to prevent overlap
+          const stickyHeader = document.querySelector('.dictionary-letter-header');
+          const headerHeight = stickyHeader ? stickyHeader.offsetHeight : 0;
+          const adjustedScrollTop = Math.max(0, targetScrollTop - headerHeight - 8); // 8px extra padding
+
+          // Scroll to the target position with smooth behavior
+          scrollContainer.scrollTo({
+            top: adjustedScrollTop,
+            behavior: 'smooth'
+          });
+        }
+      }
+      setScrollToSelected(false); // Reset the flag
+    }
+  }, [selectedWord, scrollToSelected]);
 
   if (!isOpen) return null;
 
@@ -225,7 +288,13 @@ function DictionaryModal({ isOpen, onClose }) {
                     )}
                     <div
                       data-word-id={word.id}
-                      onClick={() => setSelectedWord(word)}
+                      onClick={() => {
+                        setSelectedWord(word);
+                        // Update URL with the selected word
+                        const newUrl = new URL(window.location);
+                        newUrl.searchParams.set('word', word.word);
+                        window.history.pushState({}, '', newUrl);
+                      }}
                       className={`dictionary-word-item ${selectedWord?.id === word.id ? 'selected' : ''}`}
                     >
                       <div className="dictionary-word-item-header">
@@ -305,8 +374,224 @@ function DictionaryModal({ isOpen, onClose }) {
                         ))}
                       </div>
                     )}
+
+                    {/* Part-of-Speech Specific Content */}
+                    {pos === 'verb' && selectedWord.verb_phrases && selectedWord.verb_phrases.length > 0 && (
+                      <div className="dictionary-word-verb-phrases">
+                        <h4 className="dictionary-section-title">Common Phrases</h4>
+                        <div className="dictionary-phrases-grid">
+                          {selectedWord.verb_phrases.map((phrase, idx) => (
+                            <div key={idx} className={`dictionary-phrase-item phrase-${phrase.type}`}>
+                              <div className="dictionary-phrase-header">
+                                <span className="dictionary-phrase-text">{phrase.phrase}</span>
+                                <SpeakButton
+                                  text={phrase.phrase}
+                                  language="fr-FR"
+                                  size="small"
+                                  className="dictionary-phrase-speak-button"
+                                />
+                              </div>
+                              {phrase.context && (
+                                <span className="dictionary-phrase-context">({phrase.context})</span>
+                              )}
+                              <span className={`dictionary-phrase-type type-${phrase.type}`}>
+                                {phrase.type.replace('_', ' ')}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {pos === 'noun' && (
+                      <>
+                        {selectedWord.noun_articles && (
+                          <div className="dictionary-word-noun-articles">
+                            <h4 className="dictionary-section-title">Articles</h4>
+                            <div className="dictionary-articles-grid">
+                              {selectedWord.noun_articles.definite && (
+                                <span className="dictionary-article-item">
+                                  <strong>Definite:</strong> {selectedWord.noun_articles.definite}
+                                </span>
+                              )}
+                              {selectedWord.noun_articles.indefinite && (
+                                <span className="dictionary-article-item">
+                                  <strong>Indefinite:</strong> {selectedWord.noun_articles.indefinite}
+                                </span>
+                              )}
+                              {selectedWord.noun_articles.plural && (
+                                <span className="dictionary-article-item">
+                                  <strong>Plural:</strong> {selectedWord.noun_articles.plural}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                        {selectedWord.plural_form && (
+                          <div className="dictionary-word-plural">
+                            <h4 className="dictionary-section-title">Plural Form</h4>
+                            <span className="dictionary-plural-form">{selectedWord.plural_form}</span>
+                          </div>
+                        )}
+                        {selectedWord.noun_phrases && selectedWord.noun_phrases.length > 0 && (
+                          <div className="dictionary-word-noun-phrases">
+                            <h4 className="dictionary-section-title">Common Phrases</h4>
+                            <div className="dictionary-phrases-grid">
+                              {selectedWord.noun_phrases.map((phrase, idx) => (
+                                <div key={idx} className={`dictionary-phrase-item phrase-${phrase.type}`}>
+                                  <div className="dictionary-phrase-header">
+                                    <span className="dictionary-phrase-text">{phrase.phrase}</span>
+                                    <SpeakButton
+                                      text={phrase.phrase}
+                                      language="fr-FR"
+                                      size="small"
+                                      className="dictionary-phrase-speak-button"
+                                    />
+                                  </div>
+                                  {phrase.context && (
+                                    <span className="dictionary-phrase-context">({phrase.context})</span>
+                                  )}
+                                  <span className={`dictionary-phrase-type type-${phrase.type}`}>
+                                    {phrase.type.replace('_', ' ')}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </>
+                    )}
+
+                    {pos === 'adjective' && (
+                      <>
+                        {selectedWord.adjective_forms && (
+                          <div className="dictionary-word-adjective-forms">
+                            <h4 className="dictionary-section-title">Forms</h4>
+                            <div className="dictionary-forms-grid">
+                              {selectedWord.adjective_forms.masculine_singular && (
+                                <span className="dictionary-form-item">
+                                  <strong>Masc. Sing.:</strong> {selectedWord.adjective_forms.masculine_singular}
+                                </span>
+                              )}
+                              {selectedWord.adjective_forms.feminine_singular && (
+                                <span className="dictionary-form-item">
+                                  <strong>Fem. Sing.:</strong> {selectedWord.adjective_forms.feminine_singular}
+                                </span>
+                              )}
+                              {selectedWord.adjective_forms.masculine_plural && (
+                                <span className="dictionary-form-item">
+                                  <strong>Masc. Plur.:</strong> {selectedWord.adjective_forms.masculine_plural}
+                                </span>
+                              )}
+                              {selectedWord.adjective_forms.feminine_plural && (
+                                <span className="dictionary-form-item">
+                                  <strong>Fem. Plur.:</strong> {selectedWord.adjective_forms.feminine_plural}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                        {selectedWord.adjective_phrases && selectedWord.adjective_phrases.length > 0 && (
+                          <div className="dictionary-word-adjective-phrases">
+                            <h4 className="dictionary-section-title">Common Phrases</h4>
+                            <div className="dictionary-phrases-grid">
+                              {selectedWord.adjective_phrases.map((phrase, idx) => (
+                                <div key={idx} className={`dictionary-phrase-item phrase-${phrase.type}`}>
+                                  <div className="dictionary-phrase-header">
+                                    <span className="dictionary-phrase-text">{phrase.phrase}</span>
+                                    <SpeakButton
+                                      text={phrase.phrase}
+                                      language="fr-FR"
+                                      size="small"
+                                      className="dictionary-phrase-speak-button"
+                                    />
+                                  </div>
+                                  {phrase.context && (
+                                    <span className="dictionary-phrase-context">({phrase.context})</span>
+                                  )}
+                                  <span className={`dictionary-phrase-type type-${phrase.type}`}>
+                                    {phrase.type.replace('_', ' ')}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </>
+                    )}
                   </div>
                 ))}
+
+                {/* Relationships */}
+                {selectedWord.relationships && selectedWord.relationships.length > 0 && (
+                  <div className="dictionary-word-relationships">
+                    <h4 className="dictionary-section-title">Related Words</h4>
+                    <div className="dictionary-relationships-grid">
+                      {selectedWord.relationships.map((relationship, idx) => (
+                        <div
+                          key={idx}
+                          className={`dictionary-relationship-item relationship-${relationship.type} clickable`}
+                          onClick={() => {
+                            // Find the related word - try multiple approaches
+                            let relatedWord = filteredWords.find(word =>
+                              word.id === relationship.targetId
+                            );
+
+                            // If not found by ID, try by word text
+                            if (!relatedWord) {
+                              relatedWord = filteredWords.find(word =>
+                                word.word.toLowerCase() === relationship.targetWord.toLowerCase()
+                              );
+                            }
+
+                            // If still not found, try in all words (not just filtered)
+                            if (!relatedWord) {
+                              relatedWord = allWords.find(word =>
+                                word.id === relationship.targetId ||
+                                word.word.toLowerCase() === relationship.targetWord.toLowerCase()
+                              );
+                            }
+
+                            if (relatedWord) {
+                              setSelectedWord(relatedWord);
+                              setScrollToSelected(true); // Trigger scroll to selected word
+                              // Update URL with the new word
+                              const newUrl = new URL(window.location);
+                              newUrl.searchParams.set('word', relatedWord.word);
+                              window.history.pushState({}, '', newUrl);
+                            } else {
+                              console.warn(`Could not find related word: ${relationship.targetWord} (ID: ${relationship.targetId})`);
+                            }
+                          }}
+                        >
+                          <div className="dictionary-relationship-content">
+                            <span className="dictionary-relationship-word">{relationship.targetWord}</span>
+                            <span className="dictionary-relationship-type">
+                              {relationship.type.replace('_', ' ')}
+                            </span>
+                            {relationship.note && (
+                              <span className="dictionary-relationship-note">({relationship.note})</span>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Gender and Infinitive Info */}
+                <div className="dictionary-word-grammar-info">
+                  {selectedWord.gender && (
+                    <div className="dictionary-grammar-item">
+                      <strong>Gender:</strong> {selectedWord.gender}
+                    </div>
+                  )}
+                  {selectedWord.infinitive && (
+                    <div className="dictionary-grammar-item">
+                      <strong>Infinitive:</strong> {selectedWord.infinitive}
+                    </div>
+                  )}
+                </div>
 
                 {/* Metadata */}
                 <div className="dictionary-word-metadata">

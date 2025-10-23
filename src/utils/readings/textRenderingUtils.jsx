@@ -51,7 +51,8 @@ export const renderInteractiveText = (
     hoveredWord,
     tooltipPosition,
     speak,
-    allWords
+    allWords,
+    fullText: text  // Add full text for context analysis
   };
 
   // Check if line has subheader
@@ -331,24 +332,27 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
   const { paragraphIndex, allWords } = context;
   try {
     const word = wordMatch[1];
-    const wordData = getWordTranslation(word, allWords);
+    const wordLength = wordMatch[0].length;
+
+    // Capture context efficiently - only when needed for ambiguous words
+    const contextString = getContextString(context, charPosition, wordLength, remainingText);
+    const wordData = getWordTranslation(word, allWords, contextString);
     const uniqueKey = generateTextKey(paragraphIndex, charPosition);
 
-    if (wordData && wordData.translation) {
+    if (wordData?.translation) {
       const element = createInteractiveWordElement(word, wordData.translation, uniqueKey, context, wordData.partOfSpeech);
       return {
         element,
-        remainingText: remainingText.slice(wordMatch[0].length),
-        charPosition: charPosition + wordMatch[0].length
+        remainingText: remainingText.slice(wordLength),
+        charPosition: charPosition + wordLength
       };
     } else {
-      // Log missing words for debugging
       console.warn(`Missing translation for: "${word}"`);
       const element = createMissingTranslationElement(word, uniqueKey);
       return {
         element,
-        remainingText: remainingText.slice(wordMatch[0].length),
-        charPosition: charPosition + wordMatch[0].length
+        remainingText: remainingText.slice(wordLength),
+        charPosition: charPosition + wordLength
       };
     }
   } catch (error) {
@@ -359,6 +363,24 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
       charPosition: charPosition + 1
     };
   }
+};
+
+/**
+ * Get context string around a word for disambiguation
+ * @param {Object} context - The rendering context
+ * @param {number} charPosition - Current character position
+ * @param {number} wordLength - Length of the word
+ * @param {string} remainingText - Remaining text to process
+ * @returns {string} - Context string around the word
+ */
+const getContextString = (context, charPosition, wordLength, remainingText) => {
+  if (!context.fullText) return '';
+
+  const CONTEXT_RADIUS = 20;
+  const startPos = Math.max(0, charPosition - CONTEXT_RADIUS);
+  const endPos = charPosition + wordLength + CONTEXT_RADIUS;
+
+  return context.fullText.slice(startPos, endPos);
 };
 
 
@@ -399,9 +421,10 @@ const processDialogue = (speakerMatch, text, context) => {
  * Look up a word in the dictionary and return its translation and part of speech
  * @param {string} word - The word to look up
  * @param {Array} allWords - The dictionary words array
+ * @param {string} context - Optional context string around the word
  * @returns {Object|null} - Object with translation and partOfSpeech, or null if not found
  */
-const getWordTranslation = (word, allWords) => {
+const getWordTranslation = (word, allWords, context = '') => {
   const cleanWord = word.toLowerCase();
 
   // New way: Look up in comprehensive dictionary
@@ -410,15 +433,79 @@ const getWordTranslation = (word, allWords) => {
   );
 
   if (dictionaryEntry) {
+    // If word has multiple parts of speech, use context to disambiguate
+    if (dictionaryEntry.allPartsOfSpeech && dictionaryEntry.allPartsOfSpeech.length > 1) {
+      const contextAwarePartOfSpeech = getContextAwarePartOfSpeech(
+        word,
+        dictionaryEntry.allPartsOfSpeech,
+        context,
+        dictionaryEntry
+      );
+
+      return {
+        translation: getTranslationForPartOfSpeech(dictionaryEntry, contextAwarePartOfSpeech),
+        partOfSpeech: contextAwarePartOfSpeech
+      };
+    }
+
+    // Single part of speech - use primary
     return {
       translation: dictionaryEntry.translations?.[0]?.text || null,
       partOfSpeech: dictionaryEntry.partOfSpeech || null
     };
   }
 
-  // Fallback: Old way using readingVocabulary (commented out)
-  // const translation = wordTranslations[word] || wordTranslations[cleanWord];
-  // return { translation, partOfSpeech: null };
-
   return null;
+};
+
+/**
+ * Use context to determine the most likely part of speech for ambiguous words
+ * @param {string} word - The word being analyzed
+ * @param {Array} possiblePartsOfSpeech - Available parts of speech for this word
+ * @param {string} context - Context string around the word
+ * @param {Object} dictionaryEntry - The full dictionary entry for the word
+ * @returns {string} - The most likely part of speech based on context
+ */
+const getContextAwarePartOfSpeech = (word, possiblePartsOfSpeech, context, dictionaryEntry) => {
+  const contextLower = context.toLowerCase();
+
+  // Check if any part of speech has verb_phrases that match the context
+  for (const partOfSpeech of possiblePartsOfSpeech) {
+    if (dictionaryEntry.allTranslations?.[partOfSpeech]) {
+      const partOfSpeechEntry = dictionaryEntry.allTranslations[partOfSpeech];
+
+      // Look for verb_phrases in the entry
+      if (partOfSpeechEntry.verb_phrases) {
+        const matchingPhrase = partOfSpeechEntry.verb_phrases.find(phrase =>
+          contextLower.includes(phrase.phrase.toLowerCase())
+        );
+
+        if (matchingPhrase) {
+          return partOfSpeech;
+        }
+      }
+    }
+  }
+
+  // Fallback: prioritize verb for common French words like "est"
+  if (word.toLowerCase() === 'est' && possiblePartsOfSpeech.includes('verb')) {
+    return 'verb';
+  }
+
+  return possiblePartsOfSpeech[0];
+};
+
+/**
+ * Get translation for a specific part of speech
+ * @param {Object} dictionaryEntry - The dictionary entry
+ * @param {string} partOfSpeech - The desired part of speech
+ * @returns {string|null} - The translation for that part of speech
+ */
+const getTranslationForPartOfSpeech = (dictionaryEntry, partOfSpeech) => {
+  if (dictionaryEntry.allTranslations && dictionaryEntry.allTranslations[partOfSpeech]) {
+    return dictionaryEntry.allTranslations[partOfSpeech][0]?.text || null;
+  }
+
+  // Fallback to primary translation
+  return dictionaryEntry.translations?.[0]?.text || null;
 };

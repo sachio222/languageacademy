@@ -1586,7 +1586,6 @@ export const readingVocabulary = {
   "ne pense": "don't think",
   "ne pense pas": "don't/doesn't think",
   "ne pense pas avoir": "don't think we'll have",
-  "ne peux pas": "can't",
   "ne peux pas penser": "can't think",
   "ne pouvions pas": "could not",
   "ne savais": "didn't know",

@@ -17,7 +17,9 @@ const TranslationSchema = z.object({
   register: z
     .array(z.enum(["formal", "informal", "neutral", "colloquial", "archaic"]))
     .optional(),
-  source: z.enum(["cambridge", "manual", "lesson"]).optional(),
+  source: z
+    .enum(["cambridge", "manual", "lesson", "language_academy"])
+    .optional(),
 });
 
 const RelationshipSchema = z.object({
@@ -52,7 +54,7 @@ const ExampleSchema = z.object({
   lang: z.string().min(2).max(5), // Target language code (e.g., "en")
   text: z.string().min(1), // The example text in the source language
   trans: z.string().optional(), // Translation of the example
-  source: z.enum(["cambridge", "manual"]).optional(),
+  source: z.enum(["cambridge", "manual", "language_academy"]).optional(),
 });
 
 const FrequencySchema = z.object({
@@ -80,20 +82,20 @@ export const WordSchema = z.object({
   word: z.string().min(1),
   definition: z.string().optional(), // French definition
   gender: z.enum(["masculine", "feminine", "neutral", "none"]).optional(),
-  partOfSpeech: z
-    .enum([
-      "noun",
-      "verb",
-      "adjective",
-      "adverb",
-      "pronoun",
-      "article",
-      "preposition",
-      "conjunction",
-      "interjection",
-      "expression",
-    ])
-    .optional(),
+  partOfSpeech: z.enum([
+    "noun",
+    "verb",
+    "adjective",
+    "adverb",
+    "pronoun",
+    "article",
+    "preposition",
+    "conjunction",
+    "interjection",
+    "expression",
+    "other",
+    "unknown",
+  ]),
   conjugationGroup: z.enum(["er", "ir", "re", "irregular", "none"]).optional(),
 
   // Verb-specific fields
@@ -145,6 +147,47 @@ export const WordSchema = z.object({
       })
     )
     .optional(), // Idiomatic uses like "il n'y a qu'à"
+
+  // Verb phrases for word detection and disambiguation
+  verb_phrases: z
+    .array(
+      z.object({
+        phrase: z.string(), // The complete phrase (e.g., "n'est pas", "il est")
+        type: z.enum(["negation", "pronoun_verb", "question", "compound"]), // Type of phrase
+        context: z.string().optional(), // Usage context or meaning
+        frequency: z.enum(["common", "uncommon", "rare"]).optional(), // How common this phrase is
+      })
+    )
+    .optional()
+    .default([]), // Common phrases using this verb form
+
+  // Noun-specific fields
+  plural_form: z.string().optional(), // Plural form of the noun
+  noun_articles: z
+    .object({
+      definite: z.string().optional(), // "le", "la", "l'"
+      indefinite: z.string().optional(), // "un", "une"
+      plural: z.string().optional(), // "les", "des"
+    })
+    .optional(), // Articles that go with this noun
+  noun_phrases: z
+    .array(
+      z.object({
+        phrase: z.string(), // The complete phrase (e.g., "le chat", "des chats")
+        type: z.enum([
+          "definite_article",
+          "indefinite_article",
+          "plural_article",
+          "possessive",
+          "demonstrative",
+        ]),
+        context: z.string().optional(), // Usage context
+        frequency: z.enum(["common", "uncommon", "rare"]).optional(),
+      })
+    )
+    .optional()
+    .default([]), // Common noun phrases with articles
+
   noun_form: z.string().optional(), // Noun form if verb can be used as noun
   transitive: z.boolean().optional(), // Does it take a direct object?
   intransitive: z.boolean().optional(), // Does it not take a direct object?
@@ -159,6 +202,23 @@ export const WordSchema = z.object({
       feminine_plural: z.string().optional(),
     })
     .optional(), // Gender and number agreement forms
+  adjective_phrases: z
+    .array(
+      z.object({
+        phrase: z.string(), // The complete phrase (e.g., "très grand", "plus belle que")
+        type: z.enum([
+          "intensifier",
+          "comparative",
+          "superlative",
+          "agreement",
+          "position",
+        ]),
+        context: z.string().optional(), // Usage context
+        frequency: z.enum(["common", "uncommon", "rare"]).optional(),
+      })
+    )
+    .optional()
+    .default([]), // Common adjective phrases and constructions
   position: z.enum(["before_noun", "after_noun", "either"]).optional(), // Where it typically goes
   comparative: z.string().optional(), // Comparative form (e.g., "plus belle")
   superlative: z.string().optional(), // Superlative form (e.g., "la plus belle")
@@ -210,7 +270,7 @@ export const WordSchema = z.object({
   created_at: z.string().datetime().optional(),
   updated_at: z.string().datetime().optional(),
   sources: z
-    .array(z.enum(["cambridge", "lesson", "manual"]))
+    .array(z.enum(["cambridge", "lesson", "manual", "language_academy"]))
     .optional()
     .default([]),
   verified: z.boolean().optional().default(false),

@@ -588,3 +588,213 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Part-of-Speech Specific Sections */
+.dictionary-section-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 1rem 0 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.25rem;
+}
+
+/* Verb Phrases */
+.dictionary-word-verb-phrases {
+  margin-top: 1rem;
+}
+
+.dictionary-phrases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dictionary-phrase-item {
+  background: #fafbfc;
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: none;
+}
+
+.dictionary-phrase-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.dictionary-phrase-text {
+  font-weight: 500;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.dictionary-phrase-speak-button {
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.dictionary-phrase-context {
+  display: block;
+  font-size: 0.75rem;
+  color: #999999;
+  margin-bottom: 0.25rem;
+}
+
+.dictionary-phrase-type {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  background: #f0f0f0;
+  color: #665665;
+}
+
+/* Noun Articles */
+.dictionary-word-noun-articles {
+  margin-top: 1rem;
+}
+
+.dictionary-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dictionary-article-item {
+  background: #fafbfc;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+}
+
+/* Plural Form */
+.dictionary-word-plural {
+  margin-top: 1rem;
+}
+
+.dictionary-plural-form {
+  display: inline-block;
+  background: #fafbfc;
+  border: none;
+  border-radius: 8px;
+  padding: 0.375rem 0.75rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+/* Adjective Forms */
+.dictionary-word-adjective-forms {
+  margin-top: 1rem;
+}
+
+.dictionary-forms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dictionary-form-item {
+  background: #fafbfc;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+}
+
+/* Relationships */
+.dictionary-word-relationships {
+  margin-top: 1rem;
+}
+
+.dictionary-relationships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dictionary-relationship-item {
+  background: #fafbfc;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: default;
+}
+
+.dictionary-relationship-item.clickable {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.dictionary-relationship-item.clickable:hover {
+  background: #f0f0f0;
+}
+
+.dictionary-relationship-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dictionary-relationship-word {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.dictionary-relationship-type {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #665665;
+}
+
+.dictionary-relationship-note {
+  font-size: 0.75rem;
+  color: #999999;
+}
+
+/* Grammar Info */
+.dictionary-word-grammar-info {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dictionary-grammar-item {
+  background: #fafbfc;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #665665;
+}
+
+.dictionary-grammar-item strong {
+  color: #1a1a1a;
+}
+
+/* Mobile responsive adjustments for new sections */
+@media (max-width: 768px) {
+  .dictionary-phrases-grid,
+  .dictionary-articles-grid,
+  .dictionary-forms-grid,
+  .dictionary-relationships-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dictionary-word-grammar-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
