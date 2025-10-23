@@ -1,0 +1,409 @@
+# Raw Extracted Words from Dictionary
+
+Generated: 2025-10-23T02:16:17.802Z
+
+## Summary
+
+- **adjectives**: 68 words
+- **adverbs**: 46 words
+- **alphabet**: 26 words
+- **articles**: 9 words
+- **conjunctions**: 7 words
+- **expressions**: 3 words
+- **interjections**: 0 words
+- **interrogatives**: 6 words
+- **nouns**: 0 words
+- **prepositions**: 15 words
+- **pronouns**: 40 words
+- **proper-nouns**: 0 words
+- **verbs**: 133 words
+
+## ADJECTIVES (68 words)
+
+1. francophone
+2. historiques
+3. éducatif
+4. entier
+5. populaire
+6. public
+7. rapides
+8. autres
+9. nouvelle
+10. contents
+11. quelques
+12. belle
+13. contente
+14. tous
+15. bons
+16. typique
+17. nouveaux
+18. proche
+19. lointain(e)
+20. rouge
+21. jaune
+22. orange
+23. rose
+24. marron
+25. beige
+26. clair
+27. foncé
+28. pâle
+29. doré
+30. argenté
+31. multicolore
+32. bon
+33. difficile
+34. rapide
+35. nouveau
+36. excellente
+37. magnifique
+38. reconnaissante
+39. quotidienne
+40. internationales
+41. européennes
+42. mondiales
+43. économiques
+44. politiques
+45. culturelles
+46. moderne
+47. historique
+48. significatif
+49. pire
+50. même
+51. génial
+52. top
+53. super
+54. toute
+55. tout
+56. toutes
+57. meilleures
+58. chaque
+59. autre
+60. français
+61. excellent
+62. française
+63. délicieux
+64. dernier
+65. fatigué
+66. parfait
+67. meilleur
+68. différente
+
+## ADVERBS (46 words)
+
+1. aussi
+2. vraiment
+3. sérieusement
+4. lentement
+5. rapidement
+6. facilement
+7. complètement
+8. probablement
+9. toujours
+10. simplement
+11. encore
+12. régulièrement
+13. jamais
+14. trop
+15. vachement
+16. hyper
+17. plus
+18. moins
+19. ainsi
+20. alors
+21. ensuite
+22. finalement
+23. mieux
+24. puis
+25. enfin
+26. soudain
+27. dehors
+28. ensemble
+29. parfois
+30. ici
+31. là
+32. partout
+33. merci
+34. oui
+35. non
+36. voilà
+37. voici
+38. bah
+39. demain
+40. hier
+41. bien
+42. maintenant
+43. mal
+44. beaucoup
+45. déjà
+46. très
+
+## ALPHABET (26 words)
+
+1. a
+2. b
+3. c
+4. d
+5. e
+6. f
+7. g
+8. h
+9. i
+10. j
+11. k
+12. l
+13. m
+14. n
+15. o
+16. p
+17. q
+18. r
+19. s
+20. t
+21. u
+22. v
+23. w
+24. x
+25. y
+26. z
+
+## ARTICLES (9 words)
+
+1. un
+2. une
+3. le
+4. la
+5. les
+6. des
+7. du
+8. au
+9. aux
+
+## CONJUNCTIONS (7 words)
+
+1. et
+2. mais
+3. ou
+4. donc
+5. car
+6. comme
+7. puisque
+
+## EXPRESSIONS (3 words)
+
+1. bonjour
+2. pardon
+3. salut
+
+## INTERROGATIVES (6 words)
+
+1. qui
+2. où
+3. quand
+4. comment
+5. pourquoi
+6. combien
+
+## PREPOSITIONS (15 words)
+
+1. avec
+2. dans
+3. sur
+4. sous
+5. entre
+6. à
+7. de
+8. pour
+9. pendant
+10. avant
+11. depuis
+12. devant
+13. derrière
+14. après
+15. parmi
+
+## PRONOUNS (40 words)
+
+1. je
+2. tu
+3. il
+4. elle
+5. nous
+6. vous
+7. ils
+8. elles
+9. on
+10. ça
+11. ce
+12. cet
+13. cette
+14. ces
+15. ceci
+16. cela
+17. lui
+18. me
+19. te
+20. leur
+21. soi
+22. certains
+23. se
+24. toi
+25. eux
+26. quoi
+27. mon
+28. ma
+29. mes
+30. ton
+31. ta
+32. tes
+33. son
+34. sa
+35. ses
+36. notre
+37. nos
+38. votre
+39. vos
+40. leurs
+
+## VERBS (133 words)
+
+1. connaître
+2. croire
+3. enseigner
+4. penser
+5. étudier
+6. réviser
+7. dormir
+8. travailler
+9. vivre
+10. rentre
+11. avoir
+12. être
+13. aller
+14. faire
+15. pouvoir
+16. venir
+17. voir
+18. vouloir
+19. partir
+20. devoir
+21. donner
+22. jouer
+23. boire
+24. apprendre
+25. continuer
+26. savoir
+27. évoluer
+28. reconnu
+29. créent
+30. inspirent
+31. peuvent
+32. tournez
+33. tourne
+34. allez
+35. va
+36. continuez
+37. continue
+38. dépend
+39. exportent
+40. fonctionne
+41. connectent
+42. permet
+43. profiter
+44. préfèrent
+45. communiquent
+46. encourage
+47. utiliser
+48. recycler
+49. économiser
+50. montrent
+51. participe
+52. rencontrer
+53. discutent
+54. combine
+55. préserve
+56. embrassant
+57. enrichissent
+58. pleuvoir
+59. rendre
+60. viens
+61. comprends
+62. fais
+63. apprend
+64. étudie
+65. comprend
+66. comprenez
+67. sais
+68. sait
+69. connais
+70. pense
+71. pensent
+72. croit
+73. révise
+74. cherche
+75. trouve
+76. faites
+77. sortir
+78. essayé
+79. réussi
+80. perdu
+81. retrouvé
+82. brillaient
+83. soit
+84. sois
+85. soyons
+86. soient
+87. vienne
+88. ait
+89. aies
+90. essaie
+91. essaies
+92. réussisse
+93. réussissions
+94. sache
+95. saches
+96. voient
+97. puisse
+98. puissions
+99. achèterais
+100. voyagerais
+101. serais
+102. renoncerais
+103. Mange!
+104. Parle!
+105. Écoute!
+106. Regarde!
+107. Pense!
+108. Viens!
+109. Pars!
+110. Prends!
+111. Mangez!
+112. Parlez!
+113. Écoutez!
+114. Regardez!
+115. Venez!
+116. Prenez!
+117. Sois!
+118. Soyez!
+119. Aie!
+120. Ayez!
+121. Va!
+122. Allez!
+123. Fais!
+124. Faites!
+125. change
+126. adorent
+127. dois
+128. appeler
+129. devenir
+130. deviennent
+131. existe
+132. protéger
+133. aider
+
+## DUPLICATE ANALYSIS
+
+No cross-category duplicates found.
+
+## DUPLICATES WITHIN CATEGORIES
+

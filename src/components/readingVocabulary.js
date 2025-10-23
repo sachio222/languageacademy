@@ -9,8 +9,6 @@
 export const readingVocabulary = {
   "-": "-",
   "- un": "- a",
-  "- un très": "- a very",
-  "- un très bon": "- a very good",
   '"Amélie"': '"Amélie"',
   '"Amélie" -': '"Amélie" -',
   '"Bonjour!': '"Hello!',

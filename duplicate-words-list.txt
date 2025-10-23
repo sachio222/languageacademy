@@ -1,0 +1,215 @@
+meilleur (5 times): adjectives, adjectives, adjectives, adjectives, nouns
+même (5 times): adjectives, adjectives, adjectives, adjectives, nouns
+orange (5 times): adjectives, adjectives, adjectives, adjectives, nouns
+ainsi (4 times): adverbs, adverbs, adverbs, adverbs
+alors (4 times): adverbs, adverbs, adverbs, adverbs
+argenté (4 times): adjectives, adjectives, adjectives, adjectives
+aussi (4 times): adverbs, adverbs, adverbs, adverbs
+autre (4 times): adjectives, adjectives, adjectives, adjectives
+avoir (4 times): verbs, verbs, verbs, verbs
+beige (4 times): adjectives, adjectives, adjectives, adjectives
+bon (4 times): adjectives, adjectives, adjectives, adjectives
+chaque (4 times): adjectives, adjectives, adjectives, adjectives
+clair (4 times): adjectives, adjectives, adjectives, adjectives
+complètement (4 times): adverbs, adverbs, adverbs, adverbs
+culturelles (4 times): adjectives, adjectives, adjectives, adjectives
+dehors (4 times): adverbs, adverbs, adverbs, adverbs
+délicieux (4 times): adjectives, adjectives, adjectives, adjectives
+dernier (4 times): adjectives, adjectives, adjectives, adjectives
+différente (4 times): adjectives, adjectives, adjectives, adjectives
+difficile (4 times): adjectives, adjectives, adjectives, adjectives
+doré (4 times): adjectives, adjectives, adjectives, adjectives
+économiques (4 times): adjectives, adjectives, adjectives, adjectives
+encore (4 times): adverbs, adverbs, adverbs, adverbs
+enfin (4 times): adverbs, adverbs, adverbs, adverbs
+ensemble (4 times): adverbs, adverbs, adverbs, adverbs
+ensuite (4 times): adverbs, adverbs, adverbs, adverbs
+européennes (4 times): adjectives, adjectives, adjectives, adjectives
+excellent (4 times): adjectives, adjectives, adjectives, adjectives
+excellente (4 times): adjectives, adjectives, adjectives, adjectives
+facilement (4 times): adverbs, adverbs, adverbs, adverbs
+fatigué (4 times): adjectives, adjectives, adjectives, adjectives
+finalement (4 times): adverbs, adverbs, adverbs, adverbs
+foncé (4 times): adjectives, adjectives, adjectives, adjectives
+français (4 times): adjectives, adjectives, adjectives, adjectives
+française (4 times): adjectives, adjectives, adjectives, adjectives
+génial (4 times): adjectives, adjectives, adjectives, adjectives
+historique (4 times): adjectives, adjectives, adjectives, adjectives
+hyper (4 times): adverbs, adverbs, adverbs, adverbs
+ici (4 times): adverbs, adverbs, adverbs, adverbs
+internationales (4 times): adjectives, adjectives, adjectives, adjectives
+jamais (4 times): adverbs, adverbs, adverbs, adverbs
+jaune (4 times): adjectives, adjectives, adjectives, adjectives
+là (4 times): adverbs, adverbs, adverbs, adverbs
+lentement (4 times): adverbs, adverbs, adverbs, adverbs
+magnifique (4 times): adjectives, adjectives, adjectives, adjectives
+marron (4 times): adjectives, adjectives, adjectives, adjectives
+meilleures (4 times): adjectives, adjectives, adjectives, adjectives
+mieux (4 times): adverbs, adverbs, adverbs, adverbs
+moderne (4 times): adjectives, adjectives, adjectives, adjectives
+moins (4 times): adverbs, adverbs, adverbs, adverbs
+mondiales (4 times): adjectives, adjectives, adjectives, adjectives
+multicolore (4 times): adjectives, adjectives, adjectives, adjectives
+nouveau (4 times): adjectives, adjectives, adjectives, adjectives
+pâle (4 times): adjectives, adjectives, adjectives, adjectives
+parfait (4 times): adjectives, adjectives, adjectives, adjectives
+parfois (4 times): adverbs, adverbs, adverbs, adverbs
+partout (4 times): adverbs, adverbs, adverbs, adverbs
+pire (4 times): adjectives, adjectives, adjectives, adjectives
+plus (4 times): adverbs, adverbs, adverbs, adverbs
+politiques (4 times): adjectives, adjectives, adjectives, adjectives
+probablement (4 times): adverbs, adverbs, adverbs, adverbs
+puis (4 times): adverbs, adverbs, adverbs, adverbs
+puisque (4 times): conjunctions, conjunctions, conjunctions, conjunctions
+quotidienne (4 times): adjectives, adjectives, adjectives, adjectives
+rapide (4 times): adjectives, adjectives, adjectives, adjectives
+rapidement (4 times): adverbs, adverbs, adverbs, adverbs
+reconnaissante (4 times): adjectives, adjectives, adjectives, adjectives
+régulièrement (4 times): adverbs, adverbs, adverbs, adverbs
+rose (4 times): adjectives, adjectives, adjectives, adjectives
+rouge (4 times): adjectives, adjectives, adjectives, adjectives
+sérieusement (4 times): adverbs, adverbs, adverbs, adverbs
+significatif (4 times): adjectives, adjectives, adjectives, adjectives
+simplement (4 times): adverbs, adverbs, adverbs, adverbs
+soudain (4 times): adverbs, adverbs, adverbs, adverbs
+super (4 times): adjectives, adjectives, adjectives, adjectives
+top (4 times): adjectives, adjectives, adjectives, adjectives
+toujours (4 times): adverbs, adverbs, adverbs, adverbs
+tout (4 times): adjectives, adjectives, adjectives, adjectives
+toute (4 times): adjectives, adjectives, adjectives, adjectives
+toutes (4 times): adjectives, adjectives, adjectives, adjectives
+trop (4 times): adverbs, adverbs, adverbs, adverbs
+vachement (4 times): adverbs, adverbs, adverbs, adverbs
+vraiment (4 times): adverbs, adverbs, adverbs, adverbs
+bah (3 times): adverbs, adverbs, interjections
+merci (3 times): adverbs, adverbs, interjections
+non (3 times): adverbs, adverbs, interjections
+oui (3 times): adverbs, adverbs, interjections
+savoir (3 times): nouns, verbs, verbs
+voici (3 times): adverbs, adverbs, interjections
+voilà (3 times): adverbs, adverbs, interjections
+achèterais (2 times): verbs, verbs
+adorent (2 times): verbs, verbs
+aider (2 times): verbs, verbs
+aie! (2 times): verbs, verbs
+aies (2 times): verbs, verbs
+ait (2 times): verbs, verbs
+aller (2 times): verbs, verbs
+allez (2 times): verbs, verbs
+allez! (2 times): verbs, verbs
+appeler (2 times): verbs, verbs
+apprend (2 times): verbs, verbs
+apprendre (2 times): verbs, verbs
+ayez! (2 times): verbs, verbs
+boire (2 times): verbs, verbs
+brillaient (2 times): verbs, verbs
+change (2 times): verbs, verbs
+cherche (2 times): verbs, verbs
+combine (2 times): verbs, verbs
+communiquent (2 times): verbs, verbs
+comprend (2 times): verbs, verbs
+comprends (2 times): verbs, verbs
+comprenez (2 times): verbs, verbs
+connais (2 times): verbs, verbs
+connectent (2 times): verbs, verbs
+continue (2 times): verbs, verbs
+continuer (2 times): verbs, verbs
+continuez (2 times): verbs, verbs
+créent (2 times): verbs, verbs
+croit (2 times): verbs, verbs
+dépend (2 times): verbs, verbs
+devenir (2 times): verbs, verbs
+deviennent (2 times): verbs, verbs
+devoir (2 times): verbs, verbs
+discutent (2 times): verbs, verbs
+dois (2 times): verbs, verbs
+donner (2 times): verbs, verbs
+économiser (2 times): verbs, verbs
+écoute! (2 times): verbs, verbs
+écoutez! (2 times): verbs, verbs
+embrassant (2 times): verbs, verbs
+encourage (2 times): verbs, verbs
+enrichissent (2 times): verbs, verbs
+essaie (2 times): verbs, verbs
+essaies (2 times): verbs, verbs
+essayé (2 times): verbs, verbs
+être (2 times): verbs, verbs
+étudie (2 times): verbs, verbs
+europe (2 times): nouns, proper-nouns
+évoluer (2 times): verbs, verbs
+existe (2 times): verbs, verbs
+exportent (2 times): verbs, verbs
+faire (2 times): verbs, verbs
+fais (2 times): verbs, verbs
+fais! (2 times): verbs, verbs
+faites (2 times): verbs, verbs
+faites! (2 times): verbs, verbs
+fonctionne (2 times): verbs, verbs
+france (2 times): nouns, proper-nouns
+inspirent (2 times): verbs, verbs
+jouer (2 times): verbs, verbs
+leur (2 times): nouns, pronouns
+louvre (2 times): nouns, proper-nouns
+mange! (2 times): verbs, verbs
+mangez! (2 times): verbs, verbs
+montrent (2 times): verbs, verbs
+parle! (2 times): verbs, verbs
+parlez! (2 times): verbs, verbs
+pars! (2 times): verbs, verbs
+participe (2 times): verbs, verbs
+partir (2 times): verbs, verbs
+pense (2 times): verbs, verbs
+pense! (2 times): verbs, verbs
+pensent (2 times): verbs, verbs
+perdu (2 times): verbs, verbs
+permet (2 times): verbs, verbs
+peuvent (2 times): verbs, verbs
+pleuvoir (2 times): verbs, verbs
+pouvoir (2 times): verbs, verbs
+préfèrent (2 times): verbs, verbs
+prends! (2 times): verbs, verbs
+prenez! (2 times): verbs, verbs
+préserve (2 times): verbs, verbs
+profiter (2 times): verbs, verbs
+protéger (2 times): verbs, verbs
+puisse (2 times): verbs, verbs
+puissions (2 times): verbs, verbs
+reconnu (2 times): verbs, verbs
+recycler (2 times): verbs, verbs
+regarde! (2 times): verbs, verbs
+regardez! (2 times): verbs, verbs
+rencontrer (2 times): verbs, verbs
+rendre (2 times): verbs, verbs
+renoncerais (2 times): verbs, verbs
+retrouvé (2 times): verbs, verbs
+réussi (2 times): verbs, verbs
+réussisse (2 times): verbs, verbs
+réussissions (2 times): verbs, verbs
+révise (2 times): verbs, verbs
+sache (2 times): verbs, verbs
+saches (2 times): verbs, verbs
+sais (2 times): verbs, verbs
+sait (2 times): verbs, verbs
+serais (2 times): verbs, verbs
+soient (2 times): verbs, verbs
+sois (2 times): verbs, verbs
+sois! (2 times): verbs, verbs
+soit (2 times): verbs, verbs
+sortir (2 times): verbs, verbs
+soyez! (2 times): verbs, verbs
+soyons (2 times): verbs, verbs
+tourne (2 times): verbs, verbs
+tournez (2 times): verbs, verbs
+trouve (2 times): verbs, verbs
+utiliser (2 times): verbs, verbs
+va (2 times): verbs, verbs
+va! (2 times): verbs, verbs
+venez! (2 times): verbs, verbs
+venir (2 times): verbs, verbs
+vienne (2 times): verbs, verbs
+viens (2 times): verbs, verbs
+viens! (2 times): verbs, verbs
+voient (2 times): verbs, verbs
+voir (2 times): verbs, verbs
+vouloir (2 times): verbs, verbs
+voyagerais (2 times): verbs, verbs

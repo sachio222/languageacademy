@@ -1,0 +1,63 @@
+# Word Duplicates Analysis Report
+
+Generated: 2025-10-23T02:05:53.797Z
+
+## Summary
+
+- **Total duplicate words found**: 7
+- **Files analyzed**: 13
+
+## 🔄 DUPLICATES FOUND
+
+These words appear in MULTIPLE files:
+
+### Words in 2 files (7 words)
+
+"beaucoup" | "bien" | "déjà" | "demain"
+"hier" | "maintenant" | "mal"
+
+## 📋 Detailed Duplicate Examples
+
+### "beaucoup"
+- **Appears in**: adverbs, verbs
+- **File count**: 2
+
+### "bien"
+- **Appears in**: adverbs, verbs
+- **File count**: 2
+
+### "déjà"
+- **Appears in**: adverbs, verbs
+- **File count**: 2
+
+### "demain"
+- **Appears in**: adverbs, verbs
+- **File count**: 2
+
+### "hier"
+- **Appears in**: adverbs, verbs
+- **File count**: 2
+
+### "maintenant"
+- **Appears in**: adverbs, verbs
+- **File count**: 2
+
+### "mal"
+- **Appears in**: adverbs, verbs
+- **File count**: 2
+
+## 📊 File Statistics
+
+- **adjectives**: 68 unique words
+- **adverbs**: 46 unique words
+- **alphabet**: 26 unique words
+- **articles**: 9 unique words
+- **conjunctions**: 7 unique words
+- **expressions**: 3 unique words
+- **interjections**: 0 unique words
+- **interrogatives**: 6 unique words
+- **nouns**: 0 unique words
+- **prepositions**: 15 unique words
+- **pronouns**: 40 unique words
+- **proper-nouns**: 0 unique words
+- **verbs**: 176 unique words

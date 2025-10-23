@@ -1,7 +1,7 @@
 /**
  * Conjunctions Dictionary
  * Auto-generated from vocabulary extraction
- * Total entries: 10
+ * Total entries: 7
  */
 
 export const conjunctions = new Map([
@@ -277,127 +277,5 @@ export const conjunctions = new Map([
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
         "verified": true
     }
-  ],
-  [
-    "puisque-fr",
-        {
-        "id": "puisque-fr",
-        "language": "fr",
-        "word": "puisque",
-        "partOfSpeech": "conjunction",
-        "translations": [
-            {
-                "language": "en",
-                "text": "since, seeing as",
-                "definition": "established fact - more formal",
-                "context": "general",
-                "confidence": 0.95
-            }
-        ],
-        "gender": "none",
-        "variants": [],
-        "frequency": {
-            "rank": 1000,
-            "score": 0.5,
-            "corpus": "lesson",
-            "perMillion": 100,
-            "percentile": 50
-        },
-        "difficulty": 2,
-        "cefr_level": "A1",
-        "examples": [],
-        "relationships": [],
-        "tags": [
-            "lesson"
-        ],
-        "semantic_field": "general",
-        "created_at": "2025-10-21T18:56:09.765Z",
-        "updated_at": "2025-10-22T02:43:22.562Z",
-        "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
-        "verified": true
-    }
-  ],
-  [
-    "puisque-fr",
-        {
-        "id": "puisque-fr",
-        "language": "fr",
-        "word": "puisque",
-        "partOfSpeech": "conjunction",
-        "translations": [
-            {
-                "language": "en",
-                "text": "since, seeing as",
-                "definition": "established fact - more formal",
-                "context": "general",
-                "confidence": 0.95
-            }
-        ],
-        "gender": "none",
-        "variants": [],
-        "frequency": {
-            "rank": 1000,
-            "score": 0.5,
-            "corpus": "lesson",
-            "perMillion": 100,
-            "percentile": 50
-        },
-        "difficulty": 2,
-        "cefr_level": "A1",
-        "examples": [],
-        "relationships": [],
-        "tags": [
-            "lesson"
-        ],
-        "semantic_field": "general",
-        "created_at": "2025-10-21T18:56:09.765Z",
-        "updated_at": "2025-10-22T02:46:18.661Z",
-        "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
-        "verified": true
-    }
-  ],
-  [
-    "puisque-fr",
-        {
-        "id": "puisque-fr",
-        "language": "fr",
-        "word": "puisque",
-        "partOfSpeech": "conjunction",
-        "translations": [
-            {
-                "language": "en",
-                "text": "since, seeing as",
-                "definition": "established fact - more formal",
-                "context": "general",
-                "confidence": 0.95
-            }
-        ],
-        "gender": "none",
-        "variants": [],
-        "frequency": {
-            "rank": 1000,
-            "score": 0.5,
-            "corpus": "lesson",
-            "perMillion": 100,
-            "percentile": 50
-        },
-        "difficulty": 2,
-        "cefr_level": "A1",
-        "examples": [],
-        "relationships": [],
-        "tags": [
-            "lesson"
-        ],
-        "semantic_field": "general",
-        "created_at": "2025-10-21T18:56:09.765Z",
-        "updated_at": "2025-10-22T02:49:55.013Z",
-        "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
-        "verified": true
-    }
   ]
 ]);
-// Frequency-ordered array for priority loading
-export const conjunctionsByFrequency = ["et-fr", "mais-fr", "ou-fr", "donc-fr", "car-fr", "comme-fr", "puisque-fr"];
-
-
-export default conjunctions;
