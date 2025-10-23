@@ -11,6 +11,7 @@ import {
   checkSpeakerMatch,
   checkSubheaderMatch,
   checkHorizontalRuleMatch,
+  checkWordMatch,
   checkItalicMatch,
   extractDialogue,
   generateTextKey
@@ -125,7 +126,6 @@ const renderWords = (text, context) => {
 
     // Check for numbers (including years) - make them clickable for French pronunciation
     const numberMatch = checkNumberMatch(remainingText, charPosition, context);
-
     if (numberMatch) {
       elements.push(numberMatch.element);
       remainingText = numberMatch.remainingText;
@@ -134,81 +134,12 @@ const renderWords = (text, context) => {
     }
 
     // Check for single words (including accented characters)
-    const wordMatch = remainingText.match(/^([a-zàâäæçéèêëïîôùûüœ']+)/i);
-
+    const wordMatch = checkWordMatch(remainingText);
     if (wordMatch) {
-      const word = wordMatch[1];
-      const cleanWord = word.toLowerCase();
-      const translation = wordTranslations[word] || wordTranslations[cleanWord];
-      const uniqueKey = generateTextKey(paragraphIndex, charPosition);
-
-      if (translation) {
-        const wikiEntry = wikipediaEntries[word] || wikipediaEntries[cleanWord];
-
-        elements.push(
-          <span
-            key={uniqueKey}
-            ref={(el) => {
-              if (el) wordRefs.current[uniqueKey] = el;
-            }}
-            className="interactive-word"
-            onMouseEnter={() => setHoveredWord(uniqueKey)}
-            onMouseLeave={() => setHoveredWord(null)}
-            onClick={() => speak(getTTSText(word), "fr-FR")}
-            style={{ cursor: "pointer" }}
-          >
-            {word}
-            {hoveredWord === uniqueKey && wikiEntry && (
-              <span
-                className="word-tooltip wiki-tooltip"
-                style={{
-                  "--tooltip-shift": `${tooltipPosition.shift}px`,
-                  "--arrow-shift": `${tooltipPosition.arrowShift}px`,
-                  visibility: tooltipPosition.isVisible ? "visible" : "hidden",
-                }}
-              >
-                <span className="wiki-content">
-                  <img
-                    src={wikiEntry.image}
-                    alt={wikiEntry.name}
-                    className="wiki-image"
-                  />
-                  <span className="wiki-text">
-                    <strong>{wikiEntry.name}</strong>
-                    <span>{wikiEntry.description}</span>
-                    <a
-                      href={wikiEntry.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="wiki-link"
-                    >
-                      📖 Wikipedia
-                    </a>
-                  </span>
-                </span>
-              </span>
-            )}
-            {hoveredWord === uniqueKey && !wikiEntry && (
-              <span className="word-tooltip">{translation}</span>
-            )}
-          </span>
-        );
-      } else {
-        // Log missing words for debugging
-        console.warn(`Missing translation for: "${word}"`);
-        elements.push(
-          <span
-            key={uniqueKey}
-            className="missing-translation"
-            title={`Translation missing for: ${word}`}
-          >
-            {word}
-          </span>
-        );
-      }
-
-      remainingText = remainingText.slice(word.length);
-      charPosition += word.length;
+      const result = processWordMatch(wordMatch, remainingText, charPosition, context);
+      elements.push(result.element);
+      remainingText = result.remainingText;
+      charPosition = result.charPosition;
       continue;
     }
 
@@ -389,6 +320,109 @@ const processHorizontalRule = (context) => {
   } catch (error) {
     console.error("Error processing horizontal rule:", error);
     return <span>Error processing horizontal rule</span>;
+  }
+};
+
+/**
+ * Process word match with translation and tooltip logic
+ * @param {RegExpMatchArray} wordMatch - The word match result
+ * @param {string} remainingText - The original remaining text
+ * @param {number} charPosition - The character position
+ * @param {Object} context - The rendering context
+ * @returns {Object} - The result object with element and updated positions
+ */
+const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
+  const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
+  try {
+    const word = wordMatch[1];
+    const cleanWord = word.toLowerCase();
+    const translation = wordTranslations[word] || wordTranslations[cleanWord];
+    const uniqueKey = generateTextKey(paragraphIndex, charPosition);
+
+    if (translation) {
+      const wikiEntry = wikipediaEntries[word] || wikipediaEntries[cleanWord];
+
+      const element = (
+        <span
+          key={uniqueKey}
+          ref={(el) => {
+            if (el) wordRefs.current[uniqueKey] = el;
+          }}
+          className="interactive-word"
+          onMouseEnter={() => setHoveredWord(uniqueKey)}
+          onMouseLeave={() => setHoveredWord(null)}
+          onClick={() => speak(getTTSText(word), "fr-FR")}
+          style={{ cursor: "pointer" }}
+        >
+          {word}
+          {hoveredWord === uniqueKey && wikiEntry && (
+            <span
+              className="word-tooltip wiki-tooltip"
+              style={{
+                "--tooltip-shift": `${tooltipPosition.shift}px`,
+                "--arrow-shift": `${tooltipPosition.arrowShift}px`,
+                visibility: tooltipPosition.isVisible ? "visible" : "hidden",
+              }}
+            >
+              <span className="wiki-content">
+                <img
+                  src={wikiEntry.image}
+                  alt={wikiEntry.name}
+                  className="wiki-image"
+                />
+                <span className="wiki-text">
+                  <strong>{wikiEntry.name}</strong>
+                  <span>{wikiEntry.description}</span>
+                  <a
+                    href={wikiEntry.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="wiki-link"
+                  >
+                    📖 Wikipedia
+                  </a>
+                </span>
+              </span>
+            </span>
+          )}
+          {hoveredWord === uniqueKey && !wikiEntry && (
+            <span className="word-tooltip">{translation}</span>
+          )}
+        </span>
+      );
+
+      return {
+        element,
+        remainingText: remainingText.slice(wordMatch[0].length),
+        charPosition: charPosition + wordMatch[0].length
+      };
+    } else {
+      // Log missing words for debugging
+      console.warn(`Missing translation for: "${word}"`);
+
+      const element = (
+        <span
+          key={uniqueKey}
+          className="missing-translation"
+          title={`Translation missing for: ${word}`}
+        >
+          {word}
+        </span>
+      );
+
+      return {
+        element,
+        remainingText: remainingText.slice(wordMatch[0].length),
+        charPosition: charPosition + wordMatch[0].length
+      };
+    }
+  } catch (error) {
+    console.error("Error processing word match:", error);
+    return {
+      element: <span>Error processing word</span>,
+      remainingText: remainingText.slice(1),
+      charPosition: charPosition + 1
+    };
   }
 };
 

@@ -24,6 +24,12 @@ export const SUBHEADER_PATTERN = /^##\s+(.+)$/;
 export const HORIZONTAL_RULE_PATTERN = /^---$/;
 
 /**
+ * Pattern for French words (including accented characters)
+ * Matches: bonjour, français, café, etc.
+ */
+export const WORD_PATTERN = /^([a-zàâäæçéèêëïîôùûüœ']+)/i;
+
+/**
  * Pattern for italic text using *text* syntax
  * Matches: *Vingt mille lieues sous les mers*, *Le Comte de Monte-Cristo*, etc.
  */
@@ -71,6 +77,20 @@ export const checkHorizontalRuleMatch = (text) => {
     return text.match(HORIZONTAL_RULE_PATTERN);
   } catch (error) {
     console.error("Error checking horizontal rule match:", error);
+    return null;
+  }
+};
+
+/**
+ * Check if text starts with a French word
+ * @param {string} text - The text to check
+ * @returns {RegExpMatchArray|null} - The match result or null
+ */
+export const checkWordMatch = (text) => {
+  try {
+    return text.match(WORD_PATTERN);
+  } catch (error) {
+    console.error("Error checking word match:", error);
     return null;
   }
 };
