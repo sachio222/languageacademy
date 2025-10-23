@@ -1,5 +1,4 @@
 import { readingVocabulary as wordTranslations } from "../../components/readingVocabulary";
-import { wikipediaEntries } from "../../data/wikipediaEntries";
 import { getTTSText } from "../ttsUtils";
 import { multiWordPhrases } from "../../components/readingVocabularyPhrases";
 import {
@@ -18,6 +17,7 @@ import {
   generateTextKey
 } from "./textRegexUtils";
 import { getSpeakerColor } from "./speakerColorUtils";
+import { createInteractiveWordElement, createMissingTranslationElement } from "./tooltipCardUtils";
 
 
 /**
@@ -168,65 +168,23 @@ const renderWords = (text, context) => {
 
 
 
+/**
+ * Check for multi-word phrases and render them as interactive elements
+ * @param {string} remainingText - The remaining text to check
+ * @param {number} charPosition - The character position
+ * @param {Object} context - The rendering context
+ * @example "Bonjour Marie!"
+ * @returns {Object|null} - The result object with element and updated positions, or null if no match
+ */
 const checkMultiWordPhrases = (remainingText, charPosition, context) => {
-  const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
+  const { paragraphIndex } = context;
   try {
     for (const { phrase, translation } of multiWordPhrases) {
       if (remainingText.toLowerCase().startsWith(phrase.toLowerCase())) {
         const matchedText = remainingText.slice(0, phrase.length);
         const uniqueKey = generateTextKey(paragraphIndex, charPosition);
-        const wikiEntry =
-          wikipediaEntries[matchedText] ||
-          wikipediaEntries[matchedText.toLowerCase()];
 
-        const element = (
-          <span
-            key={uniqueKey}
-            ref={(el) => {
-              if (el) wordRefs.current[uniqueKey] = el;
-            }}
-            className="interactive-word"
-            onMouseEnter={() => setHoveredWord(uniqueKey)}
-            onMouseLeave={() => setHoveredWord(null)}
-            onClick={() => speak(getTTSText(matchedText), "fr-FR")}
-            style={{ cursor: "pointer" }}
-          >
-            {matchedText}
-            {hoveredWord === uniqueKey && wikiEntry && (
-              <span
-                className="word-tooltip wiki-tooltip"
-                style={{
-                  "--tooltip-shift": `${tooltipPosition.shift}px`,
-                  "--arrow-shift": `${tooltipPosition.arrowShift}px`,
-                  visibility: tooltipPosition.isVisible ? "visible" : "hidden",
-                }}
-              >
-                <span className="wiki-content">
-                  <img
-                    src={wikiEntry.image}
-                    alt={wikiEntry.name}
-                    className="wiki-image"
-                  />
-                  <span className="wiki-text">
-                    <strong>{wikiEntry.name}</strong>
-                    <span>{wikiEntry.description}</span>
-                    <a
-                      href={wikiEntry.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="wiki-link"
-                    >
-                      📖 Wikipedia
-                    </a>
-                  </span>
-                </span>
-              </span>
-            )}
-            {hoveredWord === uniqueKey && !wikiEntry && (
-              <span className="word-tooltip">{translation}</span>
-            )}
-          </span>
-        );
+        const element = createInteractiveWordElement(matchedText, translation, uniqueKey, context);
 
         return {
           element,
@@ -248,6 +206,7 @@ const checkMultiWordPhrases = (remainingText, charPosition, context) => {
  * @param {string} remainingText - The remaining text to check
  * @param {number} charPosition - The character position
  * @param {Object} context - The rendering context
+ * @example _Bonjour_
  * @returns {Object|null} - The result object with element and updated positions, or null if no match
  */
 const processItalics = (remainingText, charPosition, context) => {
@@ -290,6 +249,7 @@ const processItalics = (remainingText, charPosition, context) => {
  * Process subheader text with styling
  * @param {RegExpMatchArray} subheaderMatch - The subheader match result
  * @param {Object} context - The rendering context
+ * @example ## Ce soir au café:
  * @returns {JSX.Element} - Rendered subheader
  */
 const processSubheader = (subheaderMatch, context) => {
@@ -310,6 +270,7 @@ const processSubheader = (subheaderMatch, context) => {
 /**
  * Process horizontal rule with clean styling
  * @param {Object} context - The rendering context
+ * @example ---
  * @returns {JSX.Element} - Rendered horizontal rule
  */
 const processHorizontalRule = (context) => {
@@ -329,6 +290,8 @@ const processHorizontalRule = (context) => {
  * @param {string} remainingText - The original remaining text
  * @param {number} charPosition - The character position
  * @param {Object} context - The rendering context
+ * @example " "
+ * @example "!"
  * @returns {Object} - The result object with element and updated positions
  */
 const processOtherMatch = (otherMatch, remainingText, charPosition, context) => {
@@ -353,16 +316,18 @@ const processOtherMatch = (otherMatch, remainingText, charPosition, context) => 
   }
 };
 
+
 /**
  * Process word match with translation and tooltip logic
  * @param {RegExpMatchArray} wordMatch - The word match result
  * @param {string} remainingText - The original remaining text
  * @param {number} charPosition - The character position
  * @param {Object} context - The rendering context
+ * @example "Bonjour"
  * @returns {Object} - The result object with element and updated positions
  */
 const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
-  const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
+  const { paragraphIndex } = context;
   try {
     const word = wordMatch[1];
     const cleanWord = word.toLowerCase();
@@ -370,57 +335,7 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
     const uniqueKey = generateTextKey(paragraphIndex, charPosition);
 
     if (translation) {
-      const wikiEntry = wikipediaEntries[word] || wikipediaEntries[cleanWord];
-
-      const element = (
-        <span
-          key={uniqueKey}
-          ref={(el) => {
-            if (el) wordRefs.current[uniqueKey] = el;
-          }}
-          className="interactive-word"
-          onMouseEnter={() => setHoveredWord(uniqueKey)}
-          onMouseLeave={() => setHoveredWord(null)}
-          onClick={() => speak(getTTSText(word), "fr-FR")}
-          style={{ cursor: "pointer" }}
-        >
-          {word}
-          {hoveredWord === uniqueKey && wikiEntry && (
-            <span
-              className="word-tooltip wiki-tooltip"
-              style={{
-                "--tooltip-shift": `${tooltipPosition.shift}px`,
-                "--arrow-shift": `${tooltipPosition.arrowShift}px`,
-                visibility: tooltipPosition.isVisible ? "visible" : "hidden",
-              }}
-            >
-              <span className="wiki-content">
-                <img
-                  src={wikiEntry.image}
-                  alt={wikiEntry.name}
-                  className="wiki-image"
-                />
-                <span className="wiki-text">
-                  <strong>{wikiEntry.name}</strong>
-                  <span>{wikiEntry.description}</span>
-                  <a
-                    href={wikiEntry.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="wiki-link"
-                  >
-                    📖 Wikipedia
-                  </a>
-                </span>
-              </span>
-            </span>
-          )}
-          {hoveredWord === uniqueKey && !wikiEntry && (
-            <span className="word-tooltip">{translation}</span>
-          )}
-        </span>
-      );
-
+      const element = createInteractiveWordElement(word, translation, uniqueKey, context);
       return {
         element,
         remainingText: remainingText.slice(wordMatch[0].length),
@@ -429,17 +344,7 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
     } else {
       // Log missing words for debugging
       console.warn(`Missing translation for: "${word}"`);
-
-      const element = (
-        <span
-          key={uniqueKey}
-          className="missing-translation"
-          title={`Translation missing for: ${word}`}
-        >
-          {word}
-        </span>
-      );
-
+      const element = createMissingTranslationElement(word, uniqueKey);
       return {
         element,
         remainingText: remainingText.slice(wordMatch[0].length),
@@ -456,11 +361,13 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
   }
 };
 
+
 /**
  * Process dialogue text with speaker label and interactive content
  * @param {RegExpMatchArray} speakerMatch - The speaker match result
  * @param {string} text - The full dialogue text
  * @param {Object} context - The rendering context
+ * @example **Paul:** Bonjour Marie! Comment ça va?
  * @returns {JSX.Element} - Rendered dialogue with speaker label and interactive content
  */
 const processDialogue = (speakerMatch, text, context) => {
@@ -486,3 +393,5 @@ const processDialogue = (speakerMatch, text, context) => {
     return <span>Error processing dialogue</span>;
   }
 };
+
+
