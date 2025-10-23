@@ -12,9 +12,10 @@ import { wikipediaEntries } from '../../data/wikipediaEntries';
  * @param {string} translation - The translation text
  * @param {string} uniqueKey - The unique key for the element
  * @param {Object} context - The rendering context
+ * @param {string} partOfSpeech - The part of speech (optional)
  * @returns {JSX.Element} - The interactive word element
  */
-export const createInteractiveWordElement = (text, translation, uniqueKey, context) => {
+export const createInteractiveWordElement = (text, translation, uniqueKey, context, partOfSpeech = null) => {
   const { wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
   const wikiEntry = wikipediaEntries[text] || wikipediaEntries[text.toLowerCase()];
 
@@ -44,7 +45,14 @@ export const createInteractiveWordElement = (text, translation, uniqueKey, conte
         </span>
       )}
       {hoveredWord === uniqueKey && !wikiEntry && (
-        <span className="word-tooltip">{translation}</span>
+        <span className="word-tooltip">
+          {translation}
+          {partOfSpeech && (
+            <span style={{ fontStyle: 'italic', fontSize: '0.8em', opacity: 0.7 }}>
+              {' '}({partOfSpeech})
+            </span>
+          )}
+        </span>
       )}
     </span>
   );

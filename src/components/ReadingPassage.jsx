@@ -38,6 +38,7 @@ import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import SpeakButton from './SpeakButton';
 import { useSpeech } from '../hooks/useSpeech';
+import { useDictionary } from '../hooks/useDictionary';
 import { isImageMarker, extractImageInfo } from '../utils/readings/imgUtils';
 import { stripMarkdown } from '../utils/markdownUtils';
 import {
@@ -46,7 +47,7 @@ import {
   resetDiscoveredSpeakers
 } from '../utils/readings';
 
-// Word translations now imported from readingVocabulary.js (deduplicated, 1752 unique entries)
+// Word translations now use useDictionary hook (comprehensive dictionary with Cambridge data)
 // Multi-word phrases now imported from readingVocabularyPhrases.js
 // Wikipedia entries now imported from separate data file
 
@@ -56,6 +57,7 @@ function ReadingPassage({ passage }) {
   const [tooltipPosition, setTooltipPosition] = useState({ shift: 0, arrowShift: 0, isVisible: false });
   const wordRefs = useRef({});
   const { speak } = useSpeech();
+  const { allWords } = useDictionary();
 
   // Reset speaker colors when component mounts (new reading session)
   useEffect(() => {
@@ -122,7 +124,7 @@ function ReadingPassage({ passage }) {
             if (subheaderMatch) {
               return (
                 <div key={pIdx} className="paragraph-block paragraph-subheader">
-                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak)}
+                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords)}
                 </div>
               );
             }
@@ -132,7 +134,7 @@ function ReadingPassage({ passage }) {
             if (horizontalRuleMatch) {
               return (
                 <div key={pIdx} className="paragraph-block paragraph-horizontal-rule">
-                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak)}
+                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords)}
                 </div>
               );
             }
@@ -141,7 +143,7 @@ function ReadingPassage({ passage }) {
             return (
               <div key={pIdx} className="paragraph-block paragraph-with-audio">
                 <p className="french-text">
-                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak)}
+                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords)}
                 </p>
                 {/* Per-paragraph speaker button - appears on hover */}
                 <div className="paragraph-audio-btn">

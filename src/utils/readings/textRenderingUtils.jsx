@@ -1,5 +1,6 @@
-import { readingVocabulary as wordTranslations } from "../../components/readingVocabulary";
+// import { readingVocabulary as wordTranslations } from "../../components/readingVocabulary";
 import { multiWordPhrases } from "../../components/readingVocabularyPhrases";
+import { useDictionary } from "../../hooks/useDictionary";
 import {
   checkExplicitYearMatch,
   checkNumberMatch,
@@ -38,7 +39,8 @@ export const renderInteractiveText = (
   setHoveredWord,
   hoveredWord,
   tooltipPosition,
-  speak
+  speak,
+  allWords = []
 ) => {
 
   // Create a context object to avoid passing the same parameters repeatedly
@@ -48,7 +50,8 @@ export const renderInteractiveText = (
     setHoveredWord,
     hoveredWord,
     tooltipPosition,
-    speak
+    speak,
+    allWords
   };
 
   // Check if line has subheader
@@ -182,7 +185,7 @@ const checkMultiWordPhrases = (remainingText, charPosition, context) => {
         const matchedText = remainingText.slice(0, phrase.length);
         const uniqueKey = generateTextKey(paragraphIndex, charPosition);
 
-        const element = createInteractiveWordElement(matchedText, translation, uniqueKey, context);
+        const element = createInteractiveWordElement(matchedText, translation, uniqueKey, context, null);
 
         return {
           element,
@@ -325,15 +328,14 @@ const processOtherMatch = (otherMatch, remainingText, charPosition, context) => 
  * @returns {Object} - The result object with element and updated positions
  */
 const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
-  const { paragraphIndex } = context;
+  const { paragraphIndex, allWords } = context;
   try {
     const word = wordMatch[1];
-    const cleanWord = word.toLowerCase();
-    const translation = wordTranslations[word] || wordTranslations[cleanWord];
+    const wordData = getWordTranslation(word, allWords);
     const uniqueKey = generateTextKey(paragraphIndex, charPosition);
 
-    if (translation) {
-      const element = createInteractiveWordElement(word, translation, uniqueKey, context);
+    if (wordData && wordData.translation) {
+      const element = createInteractiveWordElement(word, wordData.translation, uniqueKey, context, wordData.partOfSpeech);
       return {
         element,
         remainingText: remainingText.slice(wordMatch[0].length),
@@ -393,3 +395,30 @@ const processDialogue = (speakerMatch, text, context) => {
 };
 
 
+/**
+ * Look up a word in the dictionary and return its translation and part of speech
+ * @param {string} word - The word to look up
+ * @param {Array} allWords - The dictionary words array
+ * @returns {Object|null} - Object with translation and partOfSpeech, or null if not found
+ */
+const getWordTranslation = (word, allWords) => {
+  const cleanWord = word.toLowerCase();
+
+  // New way: Look up in comprehensive dictionary
+  const dictionaryEntry = allWords.find(entry =>
+    entry.word.toLowerCase() === cleanWord
+  );
+
+  if (dictionaryEntry) {
+    return {
+      translation: dictionaryEntry.translations?.[0]?.text || null,
+      partOfSpeech: dictionaryEntry.partOfSpeech || null
+    };
+  }
+
+  // Fallback: Old way using readingVocabulary (commented out)
+  // const translation = wordTranslations[word] || wordTranslations[cleanWord];
+  // return { translation, partOfSpeech: null };
+
+  return null;
+};

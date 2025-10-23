@@ -81,7 +81,7 @@ Après notre café, nous avons marché vers la Seine. Il faisait nuit maintenant
 
 "Si on avait plus de temps, on pourrait marcher toute la nuit," Marc a dit.
 
-"Oui! J'adore Paris la nuit. C'est pour ça que je veux rester ici toute ma vie," j'ai dit.
+"Oui ! J'adore Paris la nuit. C'est pour ça que je veux rester ici toute ma vie," j'ai dit.
 
 Nous nous sommes dit au revoir près du pont. Avant de partir, Marc m'a dit quelque chose d'important.
 

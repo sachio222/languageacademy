@@ -42,7 +42,7 @@ export const reading4 = {
 
 ![img/reading4-elle-se-maquille.jpg|maxWidth:88%]
 
-**Marie[8]:** Oui! Mais je ne peux pas maintenant. Je dois aller au travail.
+**Marie[8]:** Oui ! Mais je ne peux pas maintenant. Je dois aller au travail.
 
 **Paul:** Tu vas au travail aujourd'hui ? C'est demain ton jour de travail, non ?
 
@@ -98,7 +98,7 @@ export const reading4 = {
 
 **Marie:** Oui, je suis nouvelle dans la ville. Je ne vois personne ici. Tu es mon meilleur ami maintenant !
 
-**Paul:** Oui! Nous pouvons être de bons amis ! Et tu vas voir, la vie ici est très bonne.
+**Paul:** Oui ! Nous pouvons être de bons amis ! Et tu vas voir, la vie ici est très bonne.
 
 **Marie:** Mmmh! J'aime cette ville. Je ne vais jamais partir !
 

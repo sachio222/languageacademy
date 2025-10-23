@@ -1,0 +1,739 @@
+/**
+ * Cambridge Dictionary Scraped Failed Adjectives (Retry)
+ * Generated: 2025-10-23T04:59:22.678Z
+ * Successfully scraped: 9/21
+ */
+
+export const failedAdjectivesRetry = new Map([
+  ["historiques-fr", {
+    "id": "historiques-fr",
+    "lang": "fr",
+    "word": "historiques",
+    "partOfSpeech": "adjective",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "historical",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "plural",
+            "targetWord": "historique",
+            "note": "Plural form of historique",
+            "strength": 1
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "une explication historique",
+            "trans": "a historical explanation",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "voir un reportage historique à la télévision",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un personnage historique",
+            "trans": "a historical figure",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "écrire l’historique des rois de France",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un événement historique",
+            "trans": "a historic event",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "C’est là un site historique qui a vu la naissance d’un roi.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "istɔʀik",
+    "tags": [],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T04:57:35.147Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/historiques",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T04:57:35.148Z"
+    }
+}],
+  ["rapides-fr", {
+    "id": "rapides-fr",
+    "lang": "fr",
+    "word": "rapides",
+    "partOfSpeech": "adjective",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "fast",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "plural",
+            "targetWord": "rapide",
+            "note": "Plural form of rapide",
+            "strength": 1
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "une voiture rapide",
+            "trans": "a fast car",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "prendre un train rapide pour gagner du temps",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "des progrès rapides",
+            "trans": "rapid progress",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "son succès a été plus rapide que nous le pensions",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être rapide dans son travail",
+            "trans": "to work fast",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il va bientôt finir sa traduction, il est très rapide !",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "ʀapid",
+    "tags": [],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T04:57:40.432Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/rapides",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T04:57:40.432Z"
+    }
+}],
+  ["autres-fr", {
+    "id": "autres-fr",
+    "lang": "fr",
+    "word": "autres",
+    "partOfSpeech": "adjective",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "other",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "plural",
+            "targetWord": "autre",
+            "note": "Plural form of autre",
+            "strength": 1
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "prendre un autre train",
+            "trans": "to take another train",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "choisir un autre chemin",
+            "trans": "to do something else",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je te verrai une autre fois.",
+            "trans": "I’ll see you another time.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "J’ai une autre idée pour les vacances.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il y a trop de gens ici, retrouvons-nous autre part.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "faire autre chose",
+            "trans": "to do something else",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Le serveur a apporté un thé, mais le client avait demandé autre chose.",
+            "trans": "The waiter brought tea, but the customer had asked for something else.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Tu veux un autre café ?",
+            "trans": "Do you want another coffee?",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "J’ai aussi cette autre robe.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "L’autre jour, je me promenais dans la rue, quand j’ai rencontré un ami.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "otʀ",
+    "tags": [],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T04:57:46.621Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/autres",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T04:57:46.621Z"
+    }
+}],
+  ["contents-fr", {
+    "id": "contents-fr",
+    "lang": "fr",
+    "word": "contents",
+    "partOfSpeech": "adjective",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "happy",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "plural",
+            "targetWord": "content",
+            "note": "Plural form of content",
+            "strength": 1
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "être content de sa nouvelle voiture",
+            "trans": "to be happy with one’s new car",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je suis contente de te voir.",
+            "trans": "I’m pleased to see you.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je suis contente que tu sois venu.",
+            "trans": "I’m happy that you came.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il était si content qu’il ne cessait de remercier le public.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "kɔ̃tɑ̃",
+    "tags": [],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T04:57:57.352Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/contents",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T04:57:57.352Z"
+    }
+}],
+  ["quelques-fr", {
+    "id": "quelques-fr",
+    "lang": "fr",
+    "word": "quelques",
+    "partOfSpeech": "adjective",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "a few",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "plural",
+            "targetWord": "quelque",
+            "note": "Plural form of quelque",
+            "strength": 1
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Nous avons acheté quelques souvenirs.",
+            "trans": "We bought a few souvenirs.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il nous a vendu quelques bricoles.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "kɛlk",
+    "tags": [],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T04:58:02.189Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/quelques",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T04:58:02.189Z"
+    }
+}],
+  ["bons-fr", {
+    "id": "bons-fr",
+    "lang": "fr",
+    "word": "bons",
+    "partOfSpeech": "adjective",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "good",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "plural",
+            "targetWord": "bon",
+            "note": "Plural form of bon",
+            "strength": 1
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "une bonne idée",
+            "trans": "a good idea",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être bon pour la santé",
+            "trans": "to be good for one’s health",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Elle avait de bonnes intentions mais cela ne lui a pas réussi.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Le repas était très bon.",
+            "trans": "The meal was very good.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "de bonnes vacances",
+            "trans": "a good vacation",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Bon anniversaire !",
+            "trans": "Happy Birthday!",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Bonne année !",
+            "trans": "Happy New Year!",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "envoyer des vœux de bonne réussite au candidat",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être bon avec qqn",
+            "trans": "to be good to sb",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "faire une bonne action",
+            "trans": "to do a good deed",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Les bonnes actions sont toujours récompensées.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un bon médecin",
+            "trans": "a good doctor",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être bon en dessin",
+            "trans": "to be good at drawing",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être déclaré bon pour le service",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "trois bons kilomètres",
+            "trans": "a good three kilometers",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "attendre quelques bonnes heures",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il est parti pour de bon.",
+            "trans": "He left for good.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Ce n’est pas de la rigolade, c’est pour de bon.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "bɔ̃",
+    "tags": [],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T04:58:18.441Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/bons",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T04:58:18.441Z"
+    }
+}],
+  ["lointain(e)-fr", {
+    "id": "lointain(e)-fr",
+    "lang": "fr",
+    "word": "lointain(e)",
+    "partOfSpeech": "adjective",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "distant",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "gender_pair",
+            "targetWord": "lointain",
+            "note": "Feminine form of lointain",
+            "strength": 1
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "un souvenir lointain",
+            "trans": "a distant memory",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un pays lointain",
+            "trans": "a far-off country",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "rêver de lointains horizons",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "lwɛ̃tɛ̃",
+    "tags": [],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T04:58:24.112Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/lointain(e)",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T04:58:24.112Z"
+    }
+}],
+  ["économiques-fr", {
+    "id": "économiques-fr",
+    "lang": "fr",
+    "word": "économiques",
+    "partOfSpeech": "adjective",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "economic",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "plural",
+            "targetWord": "économique",
+            "note": "Plural form of économique",
+            "strength": 1
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "pour des raisons économiques",
+            "trans": "for economic reasons",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "La crise économique touche plusieurs pays.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un format économique",
+            "trans": "an economy size",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un véhicule économique en carburant",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "ekɔnɔmik",
+    "tags": [],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T04:58:51.464Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/économiques",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T04:58:51.464Z"
+    }
+}],
+  ["politiques-fr", {
+    "id": "politiques-fr",
+    "lang": "fr",
+    "word": "politiques",
+    "partOfSpeech": "adjective",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "political",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "plural",
+            "targetWord": "politique",
+            "note": "Plural form of politique",
+            "strength": 1
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "un homme politique",
+            "trans": "a politician",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un parti politique",
+            "trans": "a political party",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être rompu au jeu politique",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "pɔlitik",
+    "tags": [],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T04:58:57.176Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/politiques",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T04:58:57.176Z"
+    }
+}]
+]);
+
+export const retryStats = {
+  scraped_at: "2025-10-23T04:59:22.679Z",
+  total_failed_adjectives: 21,
+  successfully_scraped: 9,
+  still_failed: 12,
+  still_failed_adjectives: [
+  {
+    "word": "nouvelle",
+    "reason": "No data returned"
+  },
+  {
+    "word": "contente",
+    "reason": "No data returned"
+  },
+  {
+    "word": "tous",
+    "reason": "No data returned"
+  },
+  {
+    "word": "excellente",
+    "reason": "No data returned"
+  },
+  {
+    "word": "reconnaissante",
+    "reason": "No data returned"
+  },
+  {
+    "word": "quotidienne",
+    "reason": "No data returned"
+  },
+  {
+    "word": "européennes",
+    "reason": "No data returned"
+  },
+  {
+    "word": "culturelles",
+    "reason": "No data returned"
+  },
+  {
+    "word": "toute",
+    "reason": "No data returned"
+  },
+  {
+    "word": "meilleures",
+    "reason": "No data returned"
+  },
+  {
+    "word": "française",
+    "reason": "No data returned"
+  },
+  {
+    "word": "différente",
+    "reason": "No data returned"
+  }
+]
+};

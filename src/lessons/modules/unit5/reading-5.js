@@ -42,7 +42,7 @@ export const reading5 = {
 
 «Moi aussi! Nous devrions aller au restaurant,» Pierre a dit.
 
-«Oui! Nous pourrions aller au meilleur restaurant!» j'ai dit.
+«Oui ! Nous pourrions aller au meilleur restaurant!» j'ai dit.
 
 Le restaurant était sur la grande place. C'était un petit restaurant, mais c'était génial! Tout le monde était là. Nous avons vu des hommes, des femmes et des enfants.
 
@@ -58,7 +58,7 @@ Le pain était très bon. J'ai mangé du pain avec du beurre. Pierre a mangé un
 
 «Ce restaurant est meilleur que les autres restaurants!» Pierre a dit.
 
-«Oui! C'est le meilleur! Je devrais venir ici toujours! J'aime ce restaurant!»
+«Oui ! C'est le meilleur! Je devrais venir ici toujours! J'aime ce restaurant!»
 
 Nous avons mangé la pizza. Elle était grande et très bonne. Nous avons bu du vin aussi. C'était la meilleure pizza de ma vie!
 
