@@ -12,6 +12,18 @@
 export const SPEAKER_PATTERN = /^\*\*([^:]+):\*\*/;
 
 /**
+ * Pattern for subheaders using ## syntax
+ * Matches: ## Ce soir au café:, ## Scene 1:, etc.
+ */
+export const SUBHEADER_PATTERN = /^##\s+(.+)$/;
+
+/**
+ * Pattern for horizontal rules using --- syntax
+ * Matches: ---
+ */
+export const HORIZONTAL_RULE_PATTERN = /^---$/;
+
+/**
  * Pattern for italic text using *text* syntax
  * Matches: *Vingt mille lieues sous les mers*, *Le Comte de Monte-Cristo*, etc.
  */
@@ -31,6 +43,34 @@ export const checkSpeakerMatch = (text) => {
     return text.match(SPEAKER_PATTERN);
   } catch (error) {
     console.error("Error checking speaker match:", error);
+    return null;
+  }
+};
+
+/**
+ * Check if text starts with a subheader
+ * @param {string} text - The text to check
+ * @returns {RegExpMatchArray|null} - The match result or null
+ */
+export const checkSubheaderMatch = (text) => {
+  try {
+    return text.match(SUBHEADER_PATTERN);
+  } catch (error) {
+    console.error("Error checking subheader match:", error);
+    return null;
+  }
+};
+
+/**
+ * Check if text is a horizontal rule
+ * @param {string} text - The text to check
+ * @returns {RegExpMatchArray|null} - The match result or null
+ */
+export const checkHorizontalRuleMatch = (text) => {
+  try {
+    return text.match(HORIZONTAL_RULE_PATTERN);
+  } catch (error) {
+    console.error("Error checking horizontal rule match:", error);
     return null;
   }
 };

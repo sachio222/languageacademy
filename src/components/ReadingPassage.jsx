@@ -4,10 +4,18 @@
  * 
  * Markup Syntax:
  * - Years: {1871} for proper French pronunciation
- * - Speakers: **Speaker:** Marc
+ * - Subheaders: ## Section Title
+ * - Horizontal Rules: ---
  * - Images: ![path/to/image.jpg]
  * - Italics: _text_
  * - Phrases: [multi-word phrase]
+ * - Speakers Labels: **Marc:**  
+ *   - defaults to no color
+ *   - must have a colon after the speaker name
+ *   - example: **Speaker[0]:** for blue
+ *   - only specify on 1 instance of the speaker name
+ *   - can specify 14 colors: [0]=Blue, [1]=Red, [2]=Green, [3]=Orange, [4]=Purple, [5]=Cyan, etc.
+ *   - See DEFAULT_SPEAKER_COLORS in src/utils/readings/speakerColorUtils.js
  */
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
@@ -17,6 +25,7 @@ import { isImageMarker, extractImageInfo } from '../utils/readings/imgUtils';
 import { stripMarkdown } from '../utils/markdownUtils';
 import { calculateTooltipPosition } from '../utils/readings/toottipUtils';
 import { renderInteractiveText } from '../utils/readings/textRenderingUtils.jsx';
+import { resetDiscoveredSpeakers } from '../utils/readings/speakerColorUtils';
 
 // Word translations now imported from readingVocabulary.js (deduplicated, 1752 unique entries)
 // Multi-word phrases now imported from readingVocabularyPhrases.js
@@ -28,6 +37,11 @@ function ReadingPassage({ passage }) {
   const [tooltipPosition, setTooltipPosition] = useState({ shift: 0, arrowShift: 0, isVisible: false });
   const wordRefs = useRef({});
   const { speak } = useSpeech();
+
+  // Reset speaker colors when component mounts (new reading session)
+  useEffect(() => {
+    resetDiscoveredSpeakers();
+  }, []);
 
   useEffect(() => {
     calculateTooltipPosition(hoveredWord, wordRefs, setTooltipPosition);

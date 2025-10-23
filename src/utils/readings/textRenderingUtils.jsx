@@ -9,6 +9,8 @@ import {
 import { checkExplicitPhraseMatch } from "./phraseRenderingUtils";
 import {
   checkSpeakerMatch,
+  checkSubheaderMatch,
+  checkHorizontalRuleMatch,
   checkItalicMatch,
   extractDialogue,
   generateTextKey
@@ -49,10 +51,20 @@ export const renderInteractiveText = (
     speak
   };
 
+  // Check if line has subheader
+  const subheaderMatch = checkSubheaderMatch(text);
+  if (subheaderMatch) {
+    return processSubheader(subheaderMatch, context);
+  }
+
+  // Check if line is a horizontal rule
+  const horizontalRuleMatch = checkHorizontalRuleMatch(text);
+  if (horizontalRuleMatch) {
+    return processHorizontalRule(context);
+  }
+
   // Check if line has speaker label
   const speakerMatch = checkSpeakerMatch(text);
-
-  // Speaker detected, take passage out of the formula
   if (speakerMatch) {
     return processDialogue(speakerMatch, text, context);
   }
@@ -342,6 +354,43 @@ const processItalics = (remainingText, charPosition, context) => {
   }
 };
 
+
+/**
+ * Process subheader text with styling
+ * @param {RegExpMatchArray} subheaderMatch - The subheader match result
+ * @param {Object} context - The rendering context
+ * @returns {JSX.Element} - Rendered subheader
+ */
+const processSubheader = (subheaderMatch, context) => {
+  try {
+    const subheaderText = subheaderMatch[1];
+
+    return (
+      <h3 className="subheader">
+        {subheaderText}
+      </h3>
+    );
+  } catch (error) {
+    console.error("Error processing subheader:", error);
+    return <span>Error processing subheader</span>;
+  }
+};
+
+/**
+ * Process horizontal rule with clean styling
+ * @param {Object} context - The rendering context
+ * @returns {JSX.Element} - Rendered horizontal rule
+ */
+const processHorizontalRule = (context) => {
+  try {
+    return (
+      <hr className="horizontal-rule" />
+    );
+  } catch (error) {
+    console.error("Error processing horizontal rule:", error);
+    return <span>Error processing horizontal rule</span>;
+  }
+};
 
 /**
  * Process dialogue text with speaker label and interactive content

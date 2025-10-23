@@ -151,6 +151,27 @@
   cursor: default;
 }
 
+.subheader {
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 1.375rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 0;
+  border: none;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  cursor: default;
+}
+
+.horizontal-rule {
+  border: none;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 2.5rem 0;
+  width: 100%;
+}
+
 .english-translation {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1rem;
@@ -425,6 +446,11 @@
 
   .speaker-label {
     font-size: 1rem;
+  }
+
+  .subheader {
+    font-size: 1.25rem;
+    margin: 2rem 0 1.25rem 0;
   }
 
   .paragraph-block {

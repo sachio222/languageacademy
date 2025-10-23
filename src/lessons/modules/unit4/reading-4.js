@@ -38,11 +38,11 @@ export const reading4 = {
 
   readingPassage: {
     title: "La nouvelle époque de Marie (Marie's new life)",
-    text: `**Paul:** Marie ! Tu veux aller au Jardin du Luxembourg avec moi ?
+    text: `**Paul[9]:** Marie ! Tu veux aller au Jardin du Luxembourg avec moi ?
 
 ![img/reading4-elle-se-maquille.jpg|maxWidth:88%]
 
-**Marie[0]:** Oui! Mais je ne peux pas maintenant. Je dois aller au travail.
+**Marie[8]:** Oui! Mais je ne peux pas maintenant. Je dois aller au travail.
 
 **Paul:** Tu vas au travail aujourd'hui ? C'est demain ton jour de travail, non ?
 
@@ -74,7 +74,7 @@ export const reading4 = {
 
 ---
 
-**Ce soir au café:**
+## Ce soir au café:
 
 **Marie:** Bonsoir Paul !
 
@@ -108,7 +108,7 @@ export const reading4 = {
 
 **Marie:** Oui ! Merci Paul. Tu es un très bon ami.
 
-**Fin.**`,
+*Fin!*`,
     translation: `**Paul:** Marie! Do you want to go to Jardin du Luxembourg with me?
 
 
@@ -143,9 +143,9 @@ export const reading4 = {
 
 **Paul:** Goodbye Me! See you this evening!
 
----
 
-**This evening at the café:**
+
+This evening at the café:
 
 **Marie:** Good evening Paul!
 
