@@ -41,7 +41,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -80,7 +80,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -119,7 +119,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -158,7 +158,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -197,7 +197,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -236,7 +236,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -275,7 +275,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -314,7 +314,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -353,7 +353,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-21T18:56:09.763Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -392,7 +392,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.765Z",
         "updated_at": "2025-10-21T18:56:09.765Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -431,7 +431,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:49:54.985Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -470,7 +470,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:54.991Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -509,7 +509,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:54.996Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/prepositions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -548,7 +548,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:49:55.002Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -587,11 +587,7 @@ export const prepositions = new Map([
         "created_at": "2025-10-21T18:56:09.769Z",
         "updated_at": "2025-10-22T02:49:55.006Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/spatial-prepositions.js",
-        "verified": true
+        "verified": false
     }
   ]
 ]);
-// Frequency-ordered array for priority loading
-export const prepositionsByFrequency = ["avec-fr", "dans-fr", "sur-fr", "sous-fr", "entre-fr", "--fr", "de-fr", "pour-fr", "pendant-fr", "avant-fr", "depuis-fr", "devant-fr", "derri-re-fr", "apr-s-fr", "parmi-fr"];
-
-export default prepositions;

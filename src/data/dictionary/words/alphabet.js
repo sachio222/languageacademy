@@ -41,7 +41,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.735Z",
         "updated_at": "2025-10-22T02:49:55.052Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -80,7 +80,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.736Z",
         "updated_at": "2025-10-22T02:49:55.056Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -119,7 +119,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.736Z",
         "updated_at": "2025-10-22T02:49:55.060Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -158,7 +158,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.736Z",
         "updated_at": "2025-10-22T02:49:55.063Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -197,7 +197,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.736Z",
         "updated_at": "2025-10-22T02:49:55.067Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -236,7 +236,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.736Z",
         "updated_at": "2025-10-22T02:49:55.072Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -275,7 +275,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.736Z",
         "updated_at": "2025-10-22T02:49:55.078Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -314,7 +314,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.736Z",
         "updated_at": "2025-10-22T02:49:55.083Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -353,7 +353,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.736Z",
         "updated_at": "2025-10-22T02:49:55.088Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -392,7 +392,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.736Z",
         "updated_at": "2025-10-22T02:49:55.093Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -431,7 +431,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.097Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -470,7 +470,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.104Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -509,7 +509,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.107Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -548,7 +548,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.110Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -587,7 +587,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.114Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -626,7 +626,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.117Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -665,7 +665,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.120Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -704,7 +704,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.124Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -743,7 +743,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.127Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -782,7 +782,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.130Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -821,7 +821,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.133Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -860,7 +860,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.136Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -899,7 +899,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.138Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -938,7 +938,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.141Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -977,7 +977,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.148Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1016,12 +1016,7 @@ export const alphabet = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:49:55.159Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
-        "verified": true
+        "verified": false
     }
   ]
 ]);
-
-// Frequency-ordered array for priority loading
-export const alphabetByFrequency = ["a-fr", "b-fr", "c-fr", "d-fr", "e-fr", "f-fr", "g-fr", "h-fr", "i-fr", "j-fr", "k-fr", "l-fr", "m-fr", "n-fr", "o-fr", "p-fr", "q-fr", "r-fr", "s-fr", "t-fr", "u-fr", "v-fr", "w-fr", "x-fr", "y-fr", "z-fr"];
-
-export default alphabet;

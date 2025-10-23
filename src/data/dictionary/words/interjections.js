@@ -41,7 +41,7 @@ export const interjections = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-22T02:51:34.269Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/famous-words.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -80,7 +80,7 @@ export const interjections = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-22T02:51:34.277Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/famous-words.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -119,7 +119,7 @@ export const interjections = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-22T02:51:34.284Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/famous-words.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -158,7 +158,7 @@ export const interjections = new Map([
         "created_at": "2025-10-21T18:56:09.761Z",
         "updated_at": "2025-10-22T02:51:34.302Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
-        "verified": true
+        "verified": false
     }
   ]
 ]);

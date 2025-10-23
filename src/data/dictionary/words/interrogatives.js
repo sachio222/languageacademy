@@ -41,7 +41,7 @@ export const interrogatives = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:55.023Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -80,7 +80,7 @@ export const interrogatives = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:55.029Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -119,7 +119,7 @@ export const interrogatives = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:55.032Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -158,7 +158,7 @@ export const interrogatives = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:55.036Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -197,7 +197,7 @@ export const interrogatives = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:55.040Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -236,12 +236,7 @@ export const interrogatives = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:55.047Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
-        "verified": true
+        "verified": false
     }
   ]
 ]);
-
-// Frequency-ordered array for priority loading
-export const interrogativesByFrequency = ["qui-fr", "o--fr", "quand-fr", "comment-fr", "pourquoi-fr", "combien-fr"];
-
-export default interrogatives;

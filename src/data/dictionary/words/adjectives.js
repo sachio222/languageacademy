@@ -41,7 +41,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.739Z",
         "updated_at": "2025-10-21T18:56:09.739Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -80,7 +80,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-21T18:56:09.746Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -119,7 +119,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-21T18:56:09.746Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -158,7 +158,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-21T18:56:09.746Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -197,7 +197,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-21T18:56:09.746Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -236,7 +236,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-21T18:56:09.746Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -275,7 +275,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-21T18:56:09.746Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -314,7 +314,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.755Z",
         "updated_at": "2025-10-21T18:56:09.755Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -353,7 +353,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.755Z",
         "updated_at": "2025-10-21T18:56:09.755Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -392,7 +392,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.757Z",
         "updated_at": "2025-10-21T18:56:09.757Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -431,7 +431,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.760Z",
         "updated_at": "2025-10-21T18:56:09.760Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -470,7 +470,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.760Z",
         "updated_at": "2025-10-21T18:56:09.760Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -509,7 +509,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.760Z",
         "updated_at": "2025-10-21T18:56:09.760Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -548,7 +548,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.760Z",
         "updated_at": "2025-10-21T18:56:09.760Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -587,7 +587,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-21T18:56:09.763Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -626,7 +626,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.765Z",
         "updated_at": "2025-10-21T18:56:09.765Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -665,7 +665,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.765Z",
         "updated_at": "2025-10-21T18:56:09.765Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -704,7 +704,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.766Z",
         "updated_at": "2025-10-21T18:56:09.766Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/more-spatial-relations.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -743,7 +743,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.766Z",
         "updated_at": "2025-10-21T18:56:09.766Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/more-spatial-relations.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -782,7 +782,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.769Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -821,7 +821,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.778Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -860,7 +860,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.787Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -899,7 +899,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.795Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -938,7 +938,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.804Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -977,7 +977,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.812Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1016,7 +1016,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.820Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1055,7 +1055,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.828Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1094,7 +1094,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.836Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1133,7 +1133,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.844Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1172,7 +1172,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.855Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1211,7 +1211,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.737Z",
         "updated_at": "2025-10-22T02:41:47.863Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1250,7 +1250,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-22T02:41:47.871Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/famous-words.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1289,7 +1289,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:41:47.879Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1328,7 +1328,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.749Z",
         "updated_at": "2025-10-22T02:41:47.887Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1367,7 +1367,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.767Z",
         "updated_at": "2025-10-22T02:41:47.895Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1406,7 +1406,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:41:47.912Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1445,7 +1445,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:41:47.919Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1484,7 +1484,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:41:47.927Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1523,7 +1523,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:47.935Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1562,7 +1562,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:47.946Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1601,7 +1601,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:47.966Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1640,7 +1640,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:47.975Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1679,7 +1679,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:47.984Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1718,7 +1718,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:47.999Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1757,7 +1757,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:48.010Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1796,7 +1796,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:48.022Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1835,7 +1835,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:48.031Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1874,7 +1874,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:48.040Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1913,7 +1913,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.756Z",
         "updated_at": "2025-10-22T02:41:48.049Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1952,7 +1952,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.756Z",
         "updated_at": "2025-10-22T02:41:48.058Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1991,7 +1991,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.757Z",
         "updated_at": "2025-10-22T02:41:48.072Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2030,7 +2030,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.757Z",
         "updated_at": "2025-10-22T02:41:48.082Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2069,7 +2069,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.759Z",
         "updated_at": "2025-10-22T02:41:48.091Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2108,7 +2108,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.759Z",
         "updated_at": "2025-10-22T02:41:48.099Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2147,7 +2147,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.760Z",
         "updated_at": "2025-10-22T02:41:48.107Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2186,7 +2186,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.760Z",
         "updated_at": "2025-10-22T02:41:48.115Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2225,7 +2225,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:41:48.124Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2264,7 +2264,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.766Z",
         "updated_at": "2025-10-22T02:41:48.134Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/imparfait-all-verbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2303,7 +2303,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.142Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2342,7 +2342,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.152Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2381,7 +2381,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.160Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2420,7 +2420,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.168Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2459,7 +2459,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.176Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2498,7 +2498,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.184Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2537,7 +2537,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.192Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2576,7 +2576,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.207Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2615,7 +2615,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.214Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2654,7 +2654,7 @@ export const adjectives = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:41:48.222Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ]
 ]);

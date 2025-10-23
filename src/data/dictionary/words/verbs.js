@@ -41,7 +41,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.760Z",
         "updated_at": "2025-10-21T18:56:09.760Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "re"
     }
   ],
@@ -81,7 +81,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.761Z",
         "updated_at": "2025-10-21T18:56:09.761Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/croire.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "re"
     }
   ],
@@ -121,7 +121,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.761Z",
         "updated_at": "2025-10-21T18:56:09.761Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "er"
     }
   ],
@@ -161,7 +161,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-21T18:56:09.762Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "er"
     }
   ],
@@ -201,7 +201,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-21T18:56:09.762Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "er"
     }
   ],
@@ -241,7 +241,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-21T18:56:09.762Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "er"
     }
   ],
@@ -281,7 +281,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-21T18:56:09.763Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "ir"
     }
   ],
@@ -321,7 +321,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-21T18:56:09.763Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "er"
     }
   ],
@@ -361,7 +361,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-21T18:56:09.764Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "re"
     }
   ],
@@ -401,7 +401,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.765Z",
         "updated_at": "2025-10-21T18:56:09.765Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
-        "verified": true,
+        "verified": false,
         "conjugationGroup": "re"
     }
   ],
@@ -441,7 +441,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.740Z",
         "updated_at": "2025-10-21T18:56:09.740Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -480,7 +480,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.740Z",
         "updated_at": "2025-10-22T02:36:31.513Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/etre.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -519,7 +519,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.750Z",
         "updated_at": "2025-10-22T02:36:31.527Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/aller.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -558,7 +558,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.754Z",
         "updated_at": "2025-10-22T02:36:31.539Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/faire.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -597,7 +597,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:36:31.551Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/pouvoir.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -636,7 +636,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.752Z",
         "updated_at": "2025-10-22T02:36:31.564Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/venir.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -675,7 +675,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.752Z",
         "updated_at": "2025-10-22T02:36:31.576Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/voir.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -714,7 +714,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.752Z",
         "updated_at": "2025-10-22T02:36:31.604Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/vouloir.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -753,7 +753,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.752Z",
         "updated_at": "2025-10-22T02:36:31.626Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/partir.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -792,7 +792,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.754Z",
         "updated_at": "2025-10-22T02:36:31.654Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/devoir.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -831,7 +831,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.744Z",
         "updated_at": "2025-10-22T02:36:31.678Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -870,7 +870,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:31.694Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -909,7 +909,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.755Z",
         "updated_at": "2025-10-22T02:36:31.713Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -948,7 +948,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.759Z",
         "updated_at": "2025-10-22T02:36:31.730Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/prendre.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -987,7 +987,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:31.753Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1026,7 +1026,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:31.770Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1065,7 +1065,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:31.802Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1104,7 +1104,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:31.821Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1143,7 +1143,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:31.836Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1182,7 +1182,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:31.853Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1221,7 +1221,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:31.870Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1260,7 +1260,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.744Z",
         "updated_at": "2025-10-22T02:36:31.884Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1299,7 +1299,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.744Z",
         "updated_at": "2025-10-22T02:36:31.899Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1338,7 +1338,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.744Z",
         "updated_at": "2025-10-22T02:36:31.913Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1377,7 +1377,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.744Z",
         "updated_at": "2025-10-22T02:36:31.927Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1416,7 +1416,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.744Z",
         "updated_at": "2025-10-22T02:36:31.945Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1455,7 +1455,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.744Z",
         "updated_at": "2025-10-22T02:36:31.960Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1494,7 +1494,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:31.973Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1533,7 +1533,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:31.986Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1572,7 +1572,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:31.999Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1611,7 +1611,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.026Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1650,7 +1650,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.047Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1689,7 +1689,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.063Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1728,7 +1728,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.081Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1767,7 +1767,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.094Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1806,7 +1806,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.121Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1845,7 +1845,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.135Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1884,7 +1884,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.177Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1923,7 +1923,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.247Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1962,7 +1962,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.261Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2001,7 +2001,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.274Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2040,7 +2040,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.294Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2079,7 +2079,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.312Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2118,7 +2118,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.326Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2157,7 +2157,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.340Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2196,7 +2196,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.352Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2235,7 +2235,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:32.364Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2274,7 +2274,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.749Z",
         "updated_at": "2025-10-22T02:36:32.378Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2313,7 +2313,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.749Z",
         "updated_at": "2025-10-22T02:36:32.390Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2352,7 +2352,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.755Z",
         "updated_at": "2025-10-22T02:36:32.402Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2391,7 +2391,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.759Z",
         "updated_at": "2025-10-22T02:36:32.416Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2430,7 +2430,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.759Z",
         "updated_at": "2025-10-22T02:36:32.430Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2469,7 +2469,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.442Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2508,7 +2508,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.456Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2547,7 +2547,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.468Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2586,7 +2586,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.483Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2625,7 +2625,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.496Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2664,7 +2664,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.508Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2703,7 +2703,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.520Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2742,7 +2742,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.533Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2781,7 +2781,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.545Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2820,7 +2820,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.557Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2859,7 +2859,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.570Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2898,7 +2898,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.583Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2937,7 +2937,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.762Z",
         "updated_at": "2025-10-22T02:36:32.595Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -2976,7 +2976,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:32.607Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3015,7 +3015,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.767Z",
         "updated_at": "2025-10-22T02:36:32.619Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3054,7 +3054,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.631Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3093,7 +3093,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.659Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3132,7 +3132,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.702Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3171,7 +3171,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.718Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3210,7 +3210,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.743Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3249,7 +3249,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.755Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3288,7 +3288,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.784Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3327,7 +3327,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.828Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3366,7 +3366,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.841Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3405,7 +3405,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.854Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3444,7 +3444,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.868Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3483,7 +3483,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.880Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3522,7 +3522,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.894Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3561,7 +3561,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.907Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3600,7 +3600,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.919Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3639,7 +3639,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.930Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3678,7 +3678,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.943Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3717,7 +3717,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.958Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3756,7 +3756,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.970Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3795,7 +3795,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.982Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3834,7 +3834,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:32.994Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3873,7 +3873,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.007Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3912,7 +3912,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.020Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3951,7 +3951,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.031Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -3990,7 +3990,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.044Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4029,7 +4029,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.056Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-tu.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4068,7 +4068,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.068Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-tu.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4107,7 +4107,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.080Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-tu.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4146,7 +4146,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.093Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-tu.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4185,7 +4185,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.103Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-tu.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4224,7 +4224,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.114Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-tu.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4263,7 +4263,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.126Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-tu.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4302,7 +4302,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.138Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-tu.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4341,7 +4341,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.150Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-vous.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4380,7 +4380,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.161Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-vous.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4419,7 +4419,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.174Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-vous.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4458,7 +4458,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.185Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-vous.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4497,7 +4497,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.197Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-vous.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4536,7 +4536,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:36:33.215Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-vous.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4575,7 +4575,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-22T02:36:33.245Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4614,7 +4614,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-22T02:36:33.261Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4653,7 +4653,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-22T02:36:33.273Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4692,7 +4692,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-22T02:36:33.290Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4731,7 +4731,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-22T02:36:33.308Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4770,7 +4770,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-22T02:36:33.337Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4809,7 +4809,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-22T02:36:33.372Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4848,7 +4848,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-22T02:36:33.427Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4887,7 +4887,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.449Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4926,7 +4926,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.462Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -4965,7 +4965,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.475Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -5004,7 +5004,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.501Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -5043,7 +5043,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.513Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -5082,7 +5082,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.525Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -5121,7 +5121,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.537Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -5160,7 +5160,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:36:33.549Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -5199,7 +5199,7 @@ export const verbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:36:33.560Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ]
 ]);

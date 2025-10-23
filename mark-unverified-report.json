@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "total_files_processed": 13,
+    "successful_files": 13,
+    "failed_files": 0,
+    "total_entries_processed": 765,
+    "total_entries_updated": 742
+  },
+  "file_details": [
+    {
+      "file": "adjectives.js",
+      "entriesProcessed": 68,
+      "entriesUpdated": 68,
+      "status": "success"
+    },
+    {
+      "file": "adverbs.js",
+      "entriesProcessed": 42,
+      "entriesUpdated": 34,
+      "status": "success"
+    },
+    {
+      "file": "alphabet.js",
+      "entriesProcessed": 26,
+      "entriesUpdated": 26,
+      "status": "success"
+    },
+    {
+      "file": "articles.js",
+      "entriesProcessed": 9,
+      "entriesUpdated": 9,
+      "status": "success"
+    },
+    {
+      "file": "conjunctions.js",
+      "entriesProcessed": 7,
+      "entriesUpdated": 7,
+      "status": "success"
+    },
+    {
+      "file": "expressions.js",
+      "entriesProcessed": 3,
+      "entriesUpdated": 3,
+      "status": "success"
+    },
+    {
+      "file": "interjections.js",
+      "entriesProcessed": 4,
+      "entriesUpdated": 4,
+      "status": "success"
+    },
+    {
+      "file": "interrogatives.js",
+      "entriesProcessed": 6,
+      "entriesUpdated": 6,
+      "status": "success"
+    },
+    {
+      "file": "nouns.js",
+      "entriesProcessed": 383,
+      "entriesUpdated": 382,
+      "status": "success"
+    },
+    {
+      "file": "prepositions.js",
+      "entriesProcessed": 15,
+      "entriesUpdated": 15,
+      "status": "success"
+    },
+    {
+      "file": "pronouns.js",
+      "entriesProcessed": 40,
+      "entriesUpdated": 26,
+      "status": "success"
+    },
+    {
+      "file": "proper-nouns.js",
+      "entriesProcessed": 29,
+      "entriesUpdated": 29,
+      "status": "success"
+    },
+    {
+      "file": "verbs.js",
+      "entriesProcessed": 133,
+      "entriesUpdated": 133,
+      "status": "success"
+    }
+  ]
+}

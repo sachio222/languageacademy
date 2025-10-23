@@ -41,7 +41,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-21T18:56:09.741Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -80,7 +80,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-21T18:56:09.741Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -119,7 +119,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-21T18:56:09.741Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -158,7 +158,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-21T18:56:09.741Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -197,7 +197,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-21T18:56:09.741Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -236,7 +236,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-21T18:56:09.741Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -275,7 +275,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-21T18:56:09.741Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -314,7 +314,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-21T18:56:09.741Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -353,7 +353,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-21T18:56:09.741Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -392,7 +392,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.750Z",
         "updated_at": "2025-10-21T18:56:09.750Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/ca-survival.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -431,7 +431,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/demonstratives.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -470,7 +470,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/demonstratives.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -509,7 +509,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/demonstratives.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -548,7 +548,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/demonstratives.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -587,7 +587,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/demonstratives.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -626,7 +626,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/demonstratives.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -665,7 +665,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-21T18:56:09.751Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/stressed-pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -704,7 +704,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.752Z",
         "updated_at": "2025-10-21T18:56:09.752Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/object-pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -743,7 +743,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.752Z",
         "updated_at": "2025-10-21T18:56:09.752Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/object-pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -782,7 +782,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.753Z",
         "updated_at": "2025-10-21T18:56:09.753Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-adjectives.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -821,7 +821,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-21T18:56:09.763Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -860,7 +860,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-21T18:56:09.763Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -899,7 +899,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.765Z",
         "updated_at": "2025-10-21T18:56:09.765Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reflexive-pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -938,7 +938,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:54.929Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/stressed-pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -977,7 +977,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.751Z",
         "updated_at": "2025-10-22T02:49:54.936Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/stressed-pronouns.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1016,7 +1016,7 @@ export const pronouns = new Map([
         "created_at": "2025-10-21T18:56:09.761Z",
         "updated_at": "2025-10-22T02:49:54.942Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1566,7 +1566,3 @@ export const pronouns = new Map([
     }
   ]
 ]);
-// Frequency-ordered array for priority loading
-export const pronounsByFrequency = ["je-fr", "tu-fr", "il-fr", "elle-fr", "nous-fr", "vous-fr", "ils-fr", "elles-fr", "on-fr", "-a-fr", "ce-fr", "cet-fr", "cette-fr", "ces-fr", "ceci-fr", "cela-fr", "lui-fr", "me-fr", "te-fr", "leur-fr", "soi-fr", "certains-fr", "se-fr", "toi-fr", "eux-fr", "quoi-fr", "mon-fr", "ma-fr", "mes-fr", "ton-fr", "ta-fr", "tes-fr", "son-fr", "sa-fr", "ses-fr", "notre-fr", "nos-fr", "votre-fr", "vos-fr", "leurs-fr"];
-
-export default pronouns;

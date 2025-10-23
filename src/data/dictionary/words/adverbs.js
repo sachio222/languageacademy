@@ -41,7 +41,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.740Z",
         "updated_at": "2025-10-22T02:41:48.228Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/connectors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -80,7 +80,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.742Z",
         "updated_at": "2025-10-22T02:41:48.235Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -119,7 +119,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.742Z",
         "updated_at": "2025-10-22T02:41:48.241Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -158,7 +158,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.742Z",
         "updated_at": "2025-10-22T02:41:48.250Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -197,7 +197,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.742Z",
         "updated_at": "2025-10-22T02:41:48.256Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -236,7 +236,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.742Z",
         "updated_at": "2025-10-22T02:41:48.263Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -275,7 +275,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.742Z",
         "updated_at": "2025-10-22T02:41:48.269Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -314,7 +314,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.742Z",
         "updated_at": "2025-10-22T02:41:48.275Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -353,7 +353,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:41:48.281Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -392,7 +392,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:41:48.287Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -431,7 +431,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.743Z",
         "updated_at": "2025-10-22T02:41:48.294Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -470,7 +470,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.746Z",
         "updated_at": "2025-10-22T02:41:48.300Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -509,7 +509,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.755Z",
         "updated_at": "2025-10-22T02:41:48.306Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -548,7 +548,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.756Z",
         "updated_at": "2025-10-22T02:41:48.311Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -587,7 +587,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.756Z",
         "updated_at": "2025-10-22T02:41:48.318Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -626,7 +626,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.756Z",
         "updated_at": "2025-10-22T02:41:48.324Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -665,7 +665,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.756Z",
         "updated_at": "2025-10-22T02:41:48.329Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -704,7 +704,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.756Z",
         "updated_at": "2025-10-22T02:41:48.336Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -743,7 +743,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.761Z",
         "updated_at": "2025-10-22T02:41:48.342Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -782,7 +782,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.761Z",
         "updated_at": "2025-10-22T02:41:48.347Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -821,7 +821,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:41:48.353Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -860,7 +860,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:41:48.365Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -899,7 +899,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:41:48.371Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -938,7 +938,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.764Z",
         "updated_at": "2025-10-22T02:41:48.385Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -977,7 +977,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.765Z",
         "updated_at": "2025-10-22T02:41:48.397Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/temporal-words.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1016,7 +1016,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.767Z",
         "updated_at": "2025-10-22T02:41:48.405Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1055,7 +1055,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.767Z",
         "updated_at": "2025-10-22T02:41:48.412Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1094,7 +1094,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.422Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1133,7 +1133,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.768Z",
         "updated_at": "2025-10-22T02:41:48.428Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1172,7 +1172,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.754Z",
         "updated_at": "2025-10-22T02:41:48.434Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/location-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1211,7 +1211,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.754Z",
         "updated_at": "2025-10-22T02:41:48.444Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/location-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1250,7 +1250,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.754Z",
         "updated_at": "2025-10-22T02:41:48.463Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/location-adverbs.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1289,7 +1289,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.741Z",
         "updated_at": "2025-10-22T02:41:48.541Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/famous-words.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -1328,7 +1328,7 @@ export const adverbs = new Map([
         "created_at": "2025-10-21T18:56:09.763Z",
         "updated_at": "2025-10-22T02:41:48.548Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
-        "verified": true
+        "verified": false
     }
   ],
   [

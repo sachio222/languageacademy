@@ -41,7 +41,7 @@ export const conjunctions = new Map([
         "created_at": "2025-10-21T18:56:09.740Z",
         "updated_at": "2025-10-21T18:56:09.740Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/connectors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -80,7 +80,7 @@ export const conjunctions = new Map([
         "created_at": "2025-10-21T18:56:09.740Z",
         "updated_at": "2025-10-21T18:56:09.740Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/connectors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -119,7 +119,7 @@ export const conjunctions = new Map([
         "created_at": "2025-10-21T18:56:09.740Z",
         "updated_at": "2025-10-21T18:56:09.740Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/connectors.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -158,7 +158,7 @@ export const conjunctions = new Map([
         "created_at": "2025-10-21T18:56:09.761Z",
         "updated_at": "2025-10-21T18:56:09.761Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -197,7 +197,7 @@ export const conjunctions = new Map([
         "created_at": "2025-10-21T18:56:09.765Z",
         "updated_at": "2025-10-21T18:56:09.765Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -236,7 +236,7 @@ export const conjunctions = new Map([
         "created_at": "2025-10-21T18:56:09.765Z",
         "updated_at": "2025-10-21T18:56:09.765Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
-        "verified": true
+        "verified": false
     }
   ],
   [
@@ -275,7 +275,7 @@ export const conjunctions = new Map([
         "created_at": "2025-10-21T18:56:09.765Z",
         "updated_at": "2025-10-22T02:41:48.703Z",
         "source": "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
-        "verified": true
+        "verified": false
     }
   ]
 ]);
