@@ -42,7 +42,7 @@ export const reading4 = {
 
 ![img/reading4-elle-se-maquille.jpg|maxWidth:88%]
 
-**Marie:** Oui! Mais je ne peux pas maintenant. Je dois aller au travail.
+**Marie[0]:** Oui! Mais je ne peux pas maintenant. Je dois aller au travail.
 
 **Paul:** Tu vas au travail aujourd'hui ? C'est demain ton jour de travail, non ?
 

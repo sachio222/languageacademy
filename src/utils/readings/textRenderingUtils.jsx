@@ -1,13 +1,19 @@
 import { readingVocabulary as wordTranslations } from "../../components/readingVocabulary";
 import { wikipediaEntries } from "../../data/wikipediaEntries";
 import { getTTSText } from "../ttsUtils";
-import { convertYearToFrench, convertNumberToFrench } from "./numberTTSUtilsFr";
 import { multiWordPhrases } from "../../components/readingVocabularyPhrases";
 import {
   checkExplicitYearMatch,
   checkNumberMatch
 } from "./numberRenderingUtils";
 import { checkExplicitPhraseMatch } from "./phraseRenderingUtils";
+import {
+  checkSpeakerMatch,
+  checkItalicMatch,
+  extractDialogue,
+  generateTextKey
+} from "./textRegexUtils";
+import { getSpeakerColor } from "./speakerColorUtils";
 
 
 /**
@@ -66,7 +72,7 @@ const renderWords = (text, context) => {
     let matched = false;
 
     // Check for italic formatting first
-    const italicMatch = processItalicMatch(remainingText, charPosition, context);
+    const italicMatch = processItalics(remainingText, charPosition, context);
 
     if (italicMatch) {
       elements.push(italicMatch.element);
@@ -122,7 +128,7 @@ const renderWords = (text, context) => {
       const word = wordMatch[1];
       const cleanWord = word.toLowerCase();
       const translation = wordTranslations[word] || wordTranslations[cleanWord];
-      const uniqueKey = `p${paragraphIndex}-c${charPosition}`;
+      const uniqueKey = generateTextKey(paragraphIndex, charPosition);
 
       if (translation) {
         const wikiEntry = wikipediaEntries[word] || wikipediaEntries[cleanWord];
@@ -218,41 +224,6 @@ const renderWords = (text, context) => {
 };
 
 
-const checkSpeakerMatch = (text) => {
-  try {
-    return text.match(/^\*\*([^:]+):\*\*/);
-  } catch (error) {
-    console.error("Error checking speaker match:", error);
-    return null;
-  }
-};
-
-const checkItalicMatch = (text) => {
-  try {
-    return text.match(/^\*([^*]+)\*/);
-  } catch (error) {
-    console.error("Error checking italic match:", error);
-    return null;
-  }
-};
-
-const processDialogue = (speakerMatch, text, context) => {
-  const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
-  try {
-    const speaker = speakerMatch[1];
-    const dialogue = text.replace(/^\*\*[^:]+:\*\*\s*/, "");
-
-    return (
-      <>
-        <strong className="speaker-label">{speaker}:</strong>{" "}
-        {renderWords(dialogue, context)}
-      </>
-    );
-  } catch (error) {
-    console.error("Error processing dialogue:", error);
-    return <span>Error processing dialogue</span>;
-  }
-};
 
 const checkMultiWordPhrases = (remainingText, charPosition, context) => {
   const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
@@ -260,7 +231,7 @@ const checkMultiWordPhrases = (remainingText, charPosition, context) => {
     for (const { phrase, translation } of multiWordPhrases) {
       if (remainingText.toLowerCase().startsWith(phrase.toLowerCase())) {
         const matchedText = remainingText.slice(0, phrase.length);
-        const uniqueKey = `p${paragraphIndex}-c${charPosition}`;
+        const uniqueKey = generateTextKey(paragraphIndex, charPosition);
         const wikiEntry =
           wikipediaEntries[matchedText] ||
           wikipediaEntries[matchedText.toLowerCase()];
@@ -329,9 +300,14 @@ const checkMultiWordPhrases = (remainingText, charPosition, context) => {
 };
 
 
-
-
-const processItalicMatch = (remainingText, charPosition, context) => {
+/**
+ * Process italic text formatting with isolated context to prevent key conflicts
+ * @param {string} remainingText - The remaining text to check
+ * @param {number} charPosition - The character position
+ * @param {Object} context - The rendering context
+ * @returns {Object|null} - The result object with element and updated positions, or null if no match
+ */
+const processItalics = (remainingText, charPosition, context) => {
   const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
   try {
     const italicMatch = checkItalicMatch(remainingText);
@@ -363,5 +339,37 @@ const processItalicMatch = (remainingText, charPosition, context) => {
   } catch (error) {
     console.error("Error processing italic match:", error);
     return null;
+  }
+};
+
+
+/**
+ * Process dialogue text with speaker label and interactive content
+ * @param {RegExpMatchArray} speakerMatch - The speaker match result
+ * @param {string} text - The full dialogue text
+ * @param {Object} context - The rendering context
+ * @returns {JSX.Element} - Rendered dialogue with speaker label and interactive content
+ */
+const processDialogue = (speakerMatch, text, context) => {
+  const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
+  try {
+    const speaker = speakerMatch[1];
+    const dialogue = extractDialogue(text);
+    const { speakerName, color } = getSpeakerColor(speaker);
+
+    return (
+      <>
+        <strong
+          className="speaker-label"
+          style={{ color }}
+        >
+          {speakerName}:
+        </strong>{" "}
+        {renderWords(dialogue, context)}
+      </>
+    );
+  } catch (error) {
+    console.error("Error processing dialogue:", error);
+    return <span>Error processing dialogue</span>;
   }
 };
