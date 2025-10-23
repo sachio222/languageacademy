@@ -315,7 +315,6 @@ export const multiWordPhrases = [
   { phrase: "nous voyons", translation: "we see" },
   { phrase: "nous avons vu", translation: "we saw/have seen" },
   { phrase: "je suis", translation: "I am" },
-  { phrase: "il est", translation: "he is" },
   { phrase: "nous allons", translation: "we go/are going" },
   { phrase: "je vais", translation: "I go/am going" },
   { phrase: "tu vas", translation: "you go/are going" },

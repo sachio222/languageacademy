@@ -38,7 +38,7 @@ export const reading3 = {
 
   readingPassage: {
     title: "La Première Page (The First Page)",
-    text: `*Paris, 1871, Belle Époque*
+    text: `*Paris, {1871}, Belle Époque*
 
 **Sophie:** Bonjour Marc ! Tu viens au Café de la Paix avec moi ?
 

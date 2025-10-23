@@ -1,6 +1,13 @@
 /**
  * Reading Passage Component
- * Displays a reading passage with translation toggle and interactive word tooltips
+ * Displays interactive reading passages with translation toggle and word tooltips
+ * 
+ * Markup Syntax:
+ * - Years: {1871} for proper French pronunciation
+ * - Speakers: **Speaker:** Marc
+ * - Images: ![path/to/image.jpg]
+ * - Italics: _text_
+ * - Phrases: [multi-word phrase]
  */
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';

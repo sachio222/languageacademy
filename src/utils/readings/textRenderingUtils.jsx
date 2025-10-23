@@ -1,10 +1,28 @@
 import { readingVocabulary as wordTranslations } from "../../components/readingVocabulary";
 import { wikipediaEntries } from "../../data/wikipediaEntries";
 import { getTTSText } from "../ttsUtils";
-import { convertYearToFrench } from "./numberTTSUtilsFr";
+import { convertYearToFrench, convertNumberToFrench } from "./numberTTSUtilsFr";
 import { multiWordPhrases } from "../../components/readingVocabularyPhrases";
+import {
+  checkExplicitYearMatch,
+  checkNumberMatch
+} from "./numberRenderingUtils";
+import { checkExplicitPhraseMatch } from "./phraseRenderingUtils";
 
-// Make words interactive - use paragraph index for truly unique keys
+
+/**
+ * Make words interactive - use paragraph index for truly unique keys
+ * @param {string} text - The text to render
+ * @param {number} paragraphIndex - The index of the paragraph
+ * @param {Object} wordRefs - The references to the words
+ * @param {Function} setHoveredWord - The function to set the hovered word
+ * @param {string} hoveredWord - The hovered word
+ * @param {Object} tooltipPosition - The position of the tooltip
+ * @param {Function} speak - The function to speak
+ * @returns {JSX.Element} The rendered text
+ * @returns {JSX.Element} Returns the rendered text, and the speaker
+  */
+
 export const renderInteractiveText = (
   text,
   paragraphIndex,
@@ -14,192 +32,92 @@ export const renderInteractiveText = (
   tooltipPosition,
   speak
 ) => {
-  // Check if line has speaker label
-  const speakerMatch = text.match(/^\*\*([^:]+):\*\*/);
 
-  if (speakerMatch) {
-    const speaker = speakerMatch[1];
-    const dialogue = text.replace(/^\*\*[^:]+:\*\*\s*/, "");
-
-    return (
-      <>
-        <strong className="speaker-label">{speaker}:</strong>{" "}
-        {renderWords(
-          dialogue,
-          paragraphIndex,
-          wordRefs,
-          setHoveredWord,
-          hoveredWord,
-          tooltipPosition,
-          speak
-        )}
-      </>
-    );
-  }
-
-  return renderWords(
-    text,
+  // Create a context object to avoid passing the same parameters repeatedly
+  const context = {
     paragraphIndex,
     wordRefs,
     setHoveredWord,
     hoveredWord,
     tooltipPosition,
     speak
-  );
+  };
+
+  // Check if line has speaker label
+  const speakerMatch = checkSpeakerMatch(text);
+
+  // Speaker detected, take passage out of the formula
+  if (speakerMatch) {
+    return processDialogue(speakerMatch, text, context);
+  }
+
+  return renderWords(text, context);
 };
 
-export const renderWords = (
-  text,
-  paragraphIndex,
-  wordRefs,
-  setHoveredWord,
-  hoveredWord,
-  tooltipPosition,
-  speak
-) => {
+
+const renderWords = (text, context) => {
+  const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
   let remainingText = text;
   const elements = [];
-  let charPosition = 0;
+  // Use context's charPosition as base offset to avoid key conflicts
+  let charPosition = context.charPosition || 0;
 
   while (remainingText.length > 0) {
     let matched = false;
 
     // Check for italic formatting first
-    const italicMatch = remainingText.match(/^\*([^*]+)\*/);
+    const italicMatch = processItalicMatch(remainingText, charPosition, context);
+
     if (italicMatch) {
-      const italicText = italicMatch[1];
-      const uniqueKey = `p${paragraphIndex}-c${charPosition}-italic`;
-
-      // Render the italic text as interactive words
-      elements.push(
-        <em key={uniqueKey}>
-          {renderWords(
-            italicText,
-            paragraphIndex,
-            wordRefs,
-            setHoveredWord,
-            hoveredWord,
-            tooltipPosition,
-            speak
-          )}
-        </em>
-      );
-
-      remainingText = remainingText.slice(italicMatch[0].length);
-      charPosition += italicMatch[0].length;
+      elements.push(italicMatch.element);
+      remainingText = italicMatch.remainingText;
+      charPosition = italicMatch.charPosition;
       continue;
     }
 
     // Check for multi-word phrases
-    for (const { phrase, translation } of multiWordPhrases) {
-      if (remainingText.toLowerCase().startsWith(phrase.toLowerCase())) {
-        const matchedText = remainingText.slice(0, phrase.length);
-        const uniqueKey = `p${paragraphIndex}-c${charPosition}`;
-        const wikiEntry =
-          wikipediaEntries[matchedText] ||
-          wikipediaEntries[matchedText.toLowerCase()];
+    const phraseMatch = checkMultiWordPhrases(remainingText, charPosition, context);
 
-        elements.push(
-          <span
-            key={uniqueKey}
-            ref={(el) => {
-              if (el) wordRefs.current[uniqueKey] = el;
-            }}
-            className="interactive-word"
-            onMouseEnter={() => setHoveredWord(uniqueKey)}
-            onMouseLeave={() => setHoveredWord(null)}
-            onClick={() => speak(getTTSText(matchedText), "fr-FR")}
-            style={{ cursor: "pointer" }}
-          >
-            {matchedText}
-            {hoveredWord === uniqueKey && wikiEntry && (
-              <span
-                className="word-tooltip wiki-tooltip"
-                style={{
-                  "--tooltip-shift": `${tooltipPosition.shift}px`,
-                  "--arrow-shift": `${tooltipPosition.arrowShift}px`,
-                  visibility: tooltipPosition.isVisible ? "visible" : "hidden",
-                }}
-              >
-                <span className="wiki-content">
-                  <img
-                    src={wikiEntry.image}
-                    alt={wikiEntry.name}
-                    className="wiki-image"
-                  />
-                  <span className="wiki-text">
-                    <strong>{wikiEntry.name}</strong>
-                    <span>{wikiEntry.description}</span>
-                    <a
-                      href={wikiEntry.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="wiki-link"
-                    >
-                      📖 Wikipedia
-                    </a>
-                  </span>
-                </span>
-              </span>
-            )}
-            {hoveredWord === uniqueKey && !wikiEntry && (
-              <span className="word-tooltip">{translation}</span>
-            )}
-          </span>
-        );
-        remainingText = remainingText.slice(phrase.length);
-        charPosition += phrase.length;
-        matched = true;
-        break;
-      }
+    if (phraseMatch) {
+      elements.push(phraseMatch.element);
+      remainingText = phraseMatch.remainingText;
+      charPosition = phraseMatch.charPosition;
+      matched = true;
     }
 
     if (matched) continue;
 
-    // Check for years (4-digit numbers) - make them clickable for French pronunciation
-    const yearMatch = remainingText.match(/^(18\d{2}|19\d{2}|20\d{2})/);
+    // Check for explicitly marked phrases using [phrase] syntax - highest priority
+    const explicitPhraseMatch = checkExplicitPhraseMatch(remainingText, charPosition, context);
+    if (explicitPhraseMatch) {
+      elements.push(explicitPhraseMatch.element);
+      remainingText = explicitPhraseMatch.remainingText;
+      charPosition = explicitPhraseMatch.charPosition;
+      continue;
+    }
+
+    // Check for explicitly marked years using {year} syntax - high priority
+    const yearMatch = checkExplicitYearMatch(remainingText, charPosition, context);
     if (yearMatch) {
-      const year = yearMatch[1];
-      const uniqueKey = `p${paragraphIndex}-c${charPosition}`;
+      elements.push(yearMatch.element);
+      remainingText = yearMatch.remainingText;
+      charPosition = yearMatch.charPosition;
+      continue;
+    }
 
-      // Convert year to French words for TTS
-      const yearInFrench = convertYearToFrench(year);
+    // Check for numbers (including years) - make them clickable for French pronunciation
+    const numberMatch = checkNumberMatch(remainingText, charPosition, context);
 
-      elements.push(
-        <span
-          key={uniqueKey}
-          ref={(el) => {
-            if (el) wordRefs.current[uniqueKey] = el;
-          }}
-          className="interactive-word"
-          onMouseEnter={() => setHoveredWord(uniqueKey)}
-          onMouseLeave={() => setHoveredWord(null)}
-          onClick={() => speak(yearInFrench, "fr-FR")}
-          style={{ cursor: "pointer" }}
-        >
-          {year}
-          {hoveredWord === uniqueKey && (
-            <span
-              className="word-tooltip"
-              style={{
-                "--tooltip-shift": `${tooltipPosition.shift}px`,
-                "--arrow-shift": `${tooltipPosition.arrowShift}px`,
-                visibility: tooltipPosition.isVisible ? "visible" : "hidden",
-              }}
-            >
-              {yearInFrench}
-            </span>
-          )}
-        </span>
-      );
-
-      remainingText = remainingText.slice(year.length);
-      charPosition += year.length;
+    if (numberMatch) {
+      elements.push(numberMatch.element);
+      remainingText = numberMatch.remainingText;
+      charPosition = numberMatch.charPosition;
       continue;
     }
 
     // Check for single words (including accented characters)
     const wordMatch = remainingText.match(/^([a-zàâäæçéèêëïîôùûüœ']+)/i);
+
     if (wordMatch) {
       const word = wordMatch[1];
       const cleanWord = word.toLowerCase();
@@ -297,4 +215,153 @@ export const renderWords = (
   }
 
   return elements;
+};
+
+
+const checkSpeakerMatch = (text) => {
+  try {
+    return text.match(/^\*\*([^:]+):\*\*/);
+  } catch (error) {
+    console.error("Error checking speaker match:", error);
+    return null;
+  }
+};
+
+const checkItalicMatch = (text) => {
+  try {
+    return text.match(/^\*([^*]+)\*/);
+  } catch (error) {
+    console.error("Error checking italic match:", error);
+    return null;
+  }
+};
+
+const processDialogue = (speakerMatch, text, context) => {
+  const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
+  try {
+    const speaker = speakerMatch[1];
+    const dialogue = text.replace(/^\*\*[^:]+:\*\*\s*/, "");
+
+    return (
+      <>
+        <strong className="speaker-label">{speaker}:</strong>{" "}
+        {renderWords(dialogue, context)}
+      </>
+    );
+  } catch (error) {
+    console.error("Error processing dialogue:", error);
+    return <span>Error processing dialogue</span>;
+  }
+};
+
+const checkMultiWordPhrases = (remainingText, charPosition, context) => {
+  const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
+  try {
+    for (const { phrase, translation } of multiWordPhrases) {
+      if (remainingText.toLowerCase().startsWith(phrase.toLowerCase())) {
+        const matchedText = remainingText.slice(0, phrase.length);
+        const uniqueKey = `p${paragraphIndex}-c${charPosition}`;
+        const wikiEntry =
+          wikipediaEntries[matchedText] ||
+          wikipediaEntries[matchedText.toLowerCase()];
+
+        const element = (
+          <span
+            key={uniqueKey}
+            ref={(el) => {
+              if (el) wordRefs.current[uniqueKey] = el;
+            }}
+            className="interactive-word"
+            onMouseEnter={() => setHoveredWord(uniqueKey)}
+            onMouseLeave={() => setHoveredWord(null)}
+            onClick={() => speak(getTTSText(matchedText), "fr-FR")}
+            style={{ cursor: "pointer" }}
+          >
+            {matchedText}
+            {hoveredWord === uniqueKey && wikiEntry && (
+              <span
+                className="word-tooltip wiki-tooltip"
+                style={{
+                  "--tooltip-shift": `${tooltipPosition.shift}px`,
+                  "--arrow-shift": `${tooltipPosition.arrowShift}px`,
+                  visibility: tooltipPosition.isVisible ? "visible" : "hidden",
+                }}
+              >
+                <span className="wiki-content">
+                  <img
+                    src={wikiEntry.image}
+                    alt={wikiEntry.name}
+                    className="wiki-image"
+                  />
+                  <span className="wiki-text">
+                    <strong>{wikiEntry.name}</strong>
+                    <span>{wikiEntry.description}</span>
+                    <a
+                      href={wikiEntry.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="wiki-link"
+                    >
+                      📖 Wikipedia
+                    </a>
+                  </span>
+                </span>
+              </span>
+            )}
+            {hoveredWord === uniqueKey && !wikiEntry && (
+              <span className="word-tooltip">{translation}</span>
+            )}
+          </span>
+        );
+
+        return {
+          element,
+          remainingText: remainingText.slice(phrase.length),
+          charPosition: charPosition + phrase.length
+        };
+      }
+    }
+    return null;
+  } catch (error) {
+    console.error("Error checking multi-word phrases:", error);
+    return null;
+  }
+};
+
+
+
+
+const processItalicMatch = (remainingText, charPosition, context) => {
+  const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
+  try {
+    const italicMatch = checkItalicMatch(remainingText);
+    if (italicMatch) {
+      const italicText = italicMatch[1];
+      const uniqueKey = `p${paragraphIndex}-c${charPosition}-italic`;
+
+      // Create a new context for the italic text with updated position
+      const italicContext = {
+        ...context,
+        paragraphIndex: paragraphIndex,
+        // Use a large offset to ensure unique keys for italic content
+        charPosition: charPosition + 100000,
+      };
+
+      const element = (
+        <em key={uniqueKey}>
+          {renderWords(italicText, italicContext)}
+        </em>
+      );
+
+      return {
+        element,
+        remainingText: remainingText.slice(italicMatch[0].length),
+        charPosition: charPosition + italicMatch[0].length
+      };
+    }
+    return null;
+  } catch (error) {
+    console.error("Error processing italic match:", error);
+    return null;
+  }
 };
