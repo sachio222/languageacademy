@@ -6,6 +6,7 @@ import LessonList from './components/LessonList';
 import LessonView from './components/LessonView';
 import ReferenceModules from './components/ReferenceModules';
 import VocabularyDashboard from './components/VocabularyDashboard';
+import DictionaryModal from './components/DictionaryModal';
 import SafariTTSHelper from './components/SafariTTSHelper';
 import OfflineIndicator from './components/OfflineIndicator';
 import FeedbackForm from './components/FeedbackForm';
@@ -30,6 +31,7 @@ function App() {
     const moduleParam = params.get('module');
     const referenceParam = params.get('reference');
     const vocabularyParam = params.get('vocabulary');
+    const dictionaryParam = params.get('dictionary');
 
     if (referenceParam === 'true') {
       return 'reference';
@@ -37,6 +39,10 @@ function App() {
 
     if (vocabularyParam === 'true') {
       return 'vocabulary';
+    }
+
+    if (dictionaryParam === 'true') {
+      return 'dictionary';
     }
 
     if (moduleParam) {
@@ -559,6 +565,18 @@ function App() {
                 )}
               </button>
             )}
+          </div>
+        ) : currentLesson === 'dictionary' ? (
+          <div className="main-content-wrapper">
+            <DictionaryModal
+              isOpen={true}
+              onClose={() => {
+                const url = new URL(window.location);
+                url.searchParams.delete('dictionary');
+                window.history.pushState({}, '', url);
+                setCurrentLesson(null);
+              }}
+            />
           </div>
         ) : !currentLesson ? (
           <div className="main-content-wrapper">

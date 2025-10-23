@@ -80,7 +80,7 @@ export const reading4 = {
 
 **Paul:** Marie ! Tu es là ! Viens, viens ! Nous allons voir la femme ici. Excusez-moi madame !
 
-**La femme[5]:** Bonjour ! Qu'est-ce que vous voulez ?
+**La femme[3]:** Bonjour ! Qu'est-ce que vous voulez ?
 
 **Paul:** Nous voudrions du pain et de l'eau, s'il vous plaît.
 

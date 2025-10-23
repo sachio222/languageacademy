@@ -117,6 +117,26 @@ function ReadingPassage({ passage }) {
               );
             }
 
+            // Check if this paragraph is a subheader (starts with ##)
+            const subheaderMatch = paragraph.match(/^##\s*(.+)$/);
+            if (subheaderMatch) {
+              return (
+                <div key={pIdx} className="paragraph-block paragraph-subheader">
+                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak)}
+                </div>
+              );
+            }
+
+            // Check if this paragraph is a horizontal rule (starts with ---)
+            const horizontalRuleMatch = paragraph.match(/^---$/);
+            if (horizontalRuleMatch) {
+              return (
+                <div key={pIdx} className="paragraph-block paragraph-horizontal-rule">
+                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak)}
+                </div>
+              );
+            }
+
             // Regular paragraph
             return (
               <div key={pIdx} className="paragraph-block paragraph-with-audio">

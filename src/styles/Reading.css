@@ -76,6 +76,13 @@
   color: #1e293b;
 }
 
+.passage-controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
 .passage-content {
   margin-bottom: 3.5rem;
 }
@@ -111,6 +118,18 @@
   padding-right: 3rem;
   transition: background-color 0.2s;
   border-radius: 4px;
+}
+
+/* Subheader paragraph block - no audio button, no padding */
+.paragraph-subheader {
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 0;
+}
+
+/* Horizontal rule paragraph block - no audio button, no padding */
+.paragraph-horizontal-rule {
+  margin: 2.5rem 0;
+  padding: 0;
 }
 
 .paragraph-with-audio:hover {
@@ -432,6 +451,12 @@
   .btn-translation {
     padding: 0.5rem 1rem;
     font-size: 0.8125rem;
+  }
+
+  .passage-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .passage-content {

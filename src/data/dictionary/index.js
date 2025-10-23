@@ -4,24 +4,18 @@
  */
 
 // Import all word categories
-import { nouns, nounsByFrequency } from "./words/nouns.js";
-import { verbs, verbsByFrequency, verbsByConjugation } from "./words/verbs.js";
-import { adjectives, adjectivesByFrequency } from "./words/adjectives.js";
-import { adverbs, adverbsByFrequency } from "./words/adverbs.js";
-import { pronouns, pronounsByFrequency } from "./words/pronouns.js";
-import { articles, articlesByFrequency } from "./words/articles.js";
-import { prepositions, prepositionsByFrequency } from "./words/prepositions.js";
-import { conjunctions, conjunctionsByFrequency } from "./words/conjunctions.js";
-import {
-  interjections,
-  interjectionsByFrequency,
-} from "./words/interjections.js";
-import {
-  interrogatives,
-  interrogativesByFrequency,
-} from "./words/interrogatives.js";
-import { alphabet, alphabetByFrequency } from "./words/alphabet.js";
-import { expressions, expressionsByFrequency } from "./words/expressions.js";
+import { nouns } from "./words/nouns.js";
+import { verbs } from "./words/verbs.js";
+import { adjectives } from "./words/adjectives.js";
+import { adverbs } from "./words/adverbs.js";
+import { pronouns } from "./words/pronouns.js";
+import { articles } from "./words/articles.js";
+import { prepositions } from "./words/prepositions.js";
+import { conjunctions } from "./words/conjunctions.js";
+import { interjections } from "./words/interjections.js";
+import { interrogatives } from "./words/interrogatives.js";
+import { alphabet } from "./words/alphabet.js";
+import { expressions } from "./words/expressions.js";
 
 // Import phrases and relationships
 import { phrases } from "./phrases.js";
@@ -72,24 +66,7 @@ export const indices = {
     ["es", new Map()],
   ]),
 
-  // By frequency (for priority loading)
-  byFrequency: [
-    ...nounsByFrequency,
-    ...verbsByFrequency,
-    ...adjectivesByFrequency,
-    ...adverbsByFrequency,
-    ...pronounsByFrequency,
-    ...articlesByFrequency,
-    ...prepositionsByFrequency,
-    ...conjunctionsByFrequency,
-    ...interjectionsByFrequency,
-    ...interrogativesByFrequency,
-    ...alphabetByFrequency,
-    ...expressionsByFrequency,
-  ],
-
   // Specialized indices
-  verbsByConjugation,
 };
 
 /**
