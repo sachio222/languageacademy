@@ -12,6 +12,7 @@ import {
   checkSubheaderMatch,
   checkHorizontalRuleMatch,
   checkWordMatch,
+  checkOtherMatch,
   checkItalicMatch,
   extractDialogue,
   generateTextKey
@@ -144,13 +145,12 @@ const renderWords = (text, context) => {
     }
 
     // Match spaces and punctuation
-    const otherMatch = remainingText.match(/^(\s+|[.!?,;:])/);
+    const otherMatch = checkOtherMatch(remainingText);
     if (otherMatch) {
-      elements.push(
-        <span key={`p${paragraphIndex}-c${charPosition}`}>{otherMatch[1]}</span>
-      );
-      remainingText = remainingText.slice(otherMatch[1].length);
-      charPosition += otherMatch[1].length;
+      const result = processOtherMatch(otherMatch, remainingText, charPosition, context);
+      elements.push(result.element);
+      remainingText = result.remainingText;
+      charPosition = result.charPosition;
       continue;
     }
 
@@ -320,6 +320,36 @@ const processHorizontalRule = (context) => {
   } catch (error) {
     console.error("Error processing horizontal rule:", error);
     return <span>Error processing horizontal rule</span>;
+  }
+};
+
+/**
+ * Process other match (spaces and punctuation) with simple rendering
+ * @param {RegExpMatchArray} otherMatch - The other match result
+ * @param {string} remainingText - The original remaining text
+ * @param {number} charPosition - The character position
+ * @param {Object} context - The rendering context
+ * @returns {Object} - The result object with element and updated positions
+ */
+const processOtherMatch = (otherMatch, remainingText, charPosition, context) => {
+  const { paragraphIndex } = context;
+  try {
+    const element = (
+      <span key={`p${paragraphIndex}-c${charPosition}`}>{otherMatch[1]}</span>
+    );
+
+    return {
+      element,
+      remainingText: remainingText.slice(otherMatch[1].length),
+      charPosition: charPosition + otherMatch[1].length
+    };
+  } catch (error) {
+    console.error("Error processing other match:", error);
+    return {
+      element: <span>Error processing other</span>,
+      remainingText: remainingText.slice(1),
+      charPosition: charPosition + 1
+    };
   }
 };
 

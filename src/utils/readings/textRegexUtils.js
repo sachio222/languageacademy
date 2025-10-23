@@ -30,6 +30,12 @@ export const HORIZONTAL_RULE_PATTERN = /^---$/;
 export const WORD_PATTERN = /^([a-zàâäæçéèêëïîôùûüœ']+)/i;
 
 /**
+ * Pattern for spaces and punctuation
+ * Matches: spaces, periods, exclamation marks, question marks, commas, semicolons, colons
+ */
+export const OTHER_PATTERN = /^(\s+|[.!?,;:])/;
+
+/**
  * Pattern for italic text using *text* syntax
  * Matches: *Vingt mille lieues sous les mers*, *Le Comte de Monte-Cristo*, etc.
  */
@@ -91,6 +97,20 @@ export const checkWordMatch = (text) => {
     return text.match(WORD_PATTERN);
   } catch (error) {
     console.error("Error checking word match:", error);
+    return null;
+  }
+};
+
+/**
+ * Check if text starts with spaces or punctuation
+ * @param {string} text - The text to check
+ * @returns {RegExpMatchArray|null} - The match result or null
+ */
+export const checkOtherMatch = (text) => {
+  try {
+    return text.match(OTHER_PATTERN);
+  } catch (error) {
+    console.error("Error checking other match:", error);
     return null;
   }
 };
