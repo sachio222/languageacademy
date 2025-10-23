@@ -1,12 +1,9 @@
 import { readingVocabulary as wordTranslations } from "../../components/readingVocabulary";
-import { getTTSText } from "../ttsUtils";
 import { multiWordPhrases } from "../../components/readingVocabularyPhrases";
 import {
   checkExplicitYearMatch,
-  checkNumberMatch
-} from "./numberRenderingUtils";
-import { checkExplicitPhraseMatch } from "./phraseRenderingUtils";
-import {
+  checkNumberMatch,
+  checkExplicitPhraseMatch,
   checkSpeakerMatch,
   checkSubheaderMatch,
   checkHorizontalRuleMatch,
@@ -14,10 +11,11 @@ import {
   checkOtherMatch,
   checkItalicMatch,
   extractDialogue,
-  generateTextKey
-} from "./textRegexUtils";
-import { getSpeakerColor } from "./speakerColorUtils";
-import { createInteractiveWordElement, createMissingTranslationElement } from "./tooltipCardUtils";
+  generateTextKey,
+  getSpeakerColor,
+  createInteractiveWordElement,
+  createMissingTranslationElement
+} from "./index";
 
 
 /**

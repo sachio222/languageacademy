@@ -54,6 +54,7 @@ export const createInteractiveWordElement = (text, translation, uniqueKey, conte
  * Create a missing translation element
  * @param {string} text - The text that's missing translation
  * @param {string} uniqueKey - The unique key for the element
+ * @example "Bonjour"
  * @returns {JSX.Element} - The missing translation element
  */
 export const createMissingTranslationElement = (text, uniqueKey) => {
@@ -71,6 +72,12 @@ export const createMissingTranslationElement = (text, uniqueKey) => {
 /**
  * Create a Wikipedia card with image, title, description, and link
  * @param {Object} wikiEntry - The Wikipedia entry data
+ * @example {
+ *   name: "Bonjour",
+ *   description: "Hello",
+ *   image: "https://example.com/image.jpg",
+ *   url: "https://example.com/wiki/Bonjour"
+ * }
  * @returns {JSX.Element} - The Wikipedia card element
  */
 export const createWikiCard = (wikiEntry) => {

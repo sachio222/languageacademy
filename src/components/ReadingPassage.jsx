@@ -1,21 +1,38 @@
 /**
- * Reading Passage Component
- * Displays interactive reading passages with translation toggle and word tooltips
+ * Interactive Reading Passage Component
  * 
- * Markup Syntax:
- * - Years: {1871} for proper French pronunciation
- * - Subheaders: ## Section Title
- * - Horizontal Rules: ---
- * - Images: ![path/to/image.jpg]
- * - Italics: _text_
- * - Phrases: [multi-word phrase]
- * - Speakers Labels: **Marc:**  
- *   - defaults to no color
- *   - must have a colon after the speaker name
- *   - example: **Speaker[0]:** for blue
- *   - only specify on 1 instance of the speaker name
- *   - can specify 14 colors: [0]=Blue, [1]=Red, [2]=Green, [3]=Orange, [4]=Purple, [5]=Cyan, etc.
- *   - See DEFAULT_SPEAKER_COLORS in src/utils/readings/speakerColorUtils.js
+ * Renders French text with hover tooltips, TTS pronunciation, and translation toggle.
+ * Supports rich markup for years, speakers, italics, phrases, images, and formatting.
+ * 
+ * @component
+ * @param {Object} passage - Reading passage data with French text and English translation
+ * @example {
+ *   title: "La nouvelle époque de Marie (Marie's new life)",
+ *   text: "**Paul[9]:** Marie ! Tu veux aller au Jardin du Luxembourg avec moi ?",
+ *   translation: "**Paul:** Marie! Do you want to go to Jardin du Luxembourg with me?"
+ * 
+ * }
+ * 
+ * ## Markup Syntax
+ * - **Years**: `{1871}` - Explicit year marking for French pronunciation
+ * - **Subheaders**: `## Section Title` - Styled section headers
+ * - **Horizontal Rules**: `---` - Clean visual separators
+ * - **Images**: `![path/to/image.jpg]` - Embedded images
+ * - **Italics**: `_text_` - Emphasized text
+ * - **Phrases**: `[multi-word phrase]` - Explicit phrase highlighting
+ * - **Speakers**: `**Speaker:**` - Dialogue labels
+ *   - Default: No color styling
+ *   - Optional: `**Speaker[0]:**` for color assignment (14 colors available)
+ *   - Colors: [0]=Blue, [1]=Red, [2]=Green, [3]=Orange, [4]=Purple, [5]=Cyan, etc.
+ *   - Color palette: `src/utils/readings/speakerColorUtils.js`
+ * 
+ * ## Features
+ * - Interactive word tooltips with translations and Wikipedia entries
+ * - Text-to-speech pronunciation for French text
+ * - Dynamic speaker color assignment
+ * - Responsive design for web and mobile
+ * - Markdown stripping for clean English translations
+ * @returns {JSX.Element} The rendered reading passage component
  */
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
@@ -23,9 +40,11 @@ import SpeakButton from './SpeakButton';
 import { useSpeech } from '../hooks/useSpeech';
 import { isImageMarker, extractImageInfo } from '../utils/readings/imgUtils';
 import { stripMarkdown } from '../utils/markdownUtils';
-import { calculateTooltipPosition } from '../utils/readings/toottipUtils';
-import { renderInteractiveText } from '../utils/readings/textRenderingUtils.jsx';
-import { resetDiscoveredSpeakers } from '../utils/readings/speakerColorUtils';
+import {
+  calculateTooltipPosition,
+  renderInteractiveText,
+  resetDiscoveredSpeakers
+} from '../utils/readings';
 
 // Word translations now imported from readingVocabulary.js (deduplicated, 1752 unique entries)
 // Multi-word phrases now imported from readingVocabularyPhrases.js
