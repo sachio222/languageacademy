@@ -376,22 +376,6 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
         charPosition: charPosition + wordLength
       };
     } else {
-      // Final fallback: Check if word matches a discovered speaker name
-      const { discoveredSpeakers } = require('./speakerColorUtils');
-      const isSpeaker = discoveredSpeakers.some(speaker => {
-        const cleanSpeaker = speaker.replace(/\[c\]$/, ''); // Remove color flag
-        return cleanSpeaker.toLowerCase() === word.toLowerCase();
-      });
-      
-      if (isSpeaker) {
-        const element = createInteractiveWordElement(word, word, uniqueKey, context, 'speaker');
-        return {
-          element,
-          remainingText: remainingText.slice(wordLength),
-          charPosition: charPosition + wordLength
-        };
-      }
-      
       console.warn(`Missing translation for: "${word}"`);
       const element = createMissingTranslationElement(word, uniqueKey);
       return {
