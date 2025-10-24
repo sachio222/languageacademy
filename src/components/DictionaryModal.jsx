@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDictionary } from '../hooks/useDictionary';
 import SpeakButton from './SpeakButton';
+import { ChevronDown } from 'lucide-react';
 import '../styles/DictionaryModal.css';
 
 // Helper function to normalize accented characters to base letters for header grouping
@@ -86,6 +87,7 @@ function DictionaryModal({ isOpen, onClose }) {
   // Track if selection came from relationship click
   const [scrollToSelected, setScrollToSelected] = React.useState(false);
 
+
   // Scroll to selected word in the word list when selection changes from relationship
   useEffect(() => {
     if (selectedWord && scrollToSelected) {
@@ -123,6 +125,24 @@ function DictionaryModal({ isOpen, onClose }) {
         {/* Header */}
         <div className="dictionary-modal-header">
           <h1 className="dictionary-modal-title">French Dictionary</h1>
+          <div className="dictionary-header-search">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder="Search words or translations..."
+              className="dictionary-header-search-input"
+            />
+            {searchTerm && (
+              <button
+                className="dictionary-search-clear"
+                onClick={() => setSearchTerm('')}
+                type="button"
+              >
+                ×
+              </button>
+            )}
+          </div>
           <button className="dictionary-modal-close" onClick={onClose}>
             ×
           </button>
@@ -130,23 +150,15 @@ function DictionaryModal({ isOpen, onClose }) {
 
         {/* Filters */}
         <div className="dictionary-modal-filters">
-          <div className="dictionary-filters-grid">
+          <div className="dictionary-filters-single-line">
             <div className="dictionary-filter-group">
-              <label className="dictionary-filter-label">Search</label>
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search words or translations..."
-                className="dictionary-filter-input"
-              />
-            </div>
-            <div className="dictionary-filter-group">
-              <label className="dictionary-filter-label">Part of Speech</label>
+              <label className="dictionary-filter-label" htmlFor="part-of-speech-filter">Part of Speech</label>
               <select
+                id="part-of-speech-filter"
                 value={selectedPartOfSpeech}
                 onChange={(e) => setSelectedPartOfSpeech(e.target.value)}
-                className="dictionary-filter-select"
+                className="dictionary-filter-select-small"
+                aria-label="Filter by part of speech"
               >
                 {partOfSpeechOptions.map(option => (
                   <option key={option} value={option}>
@@ -156,11 +168,13 @@ function DictionaryModal({ isOpen, onClose }) {
               </select>
             </div>
             <div className="dictionary-filter-group">
-              <label className="dictionary-filter-label">CEFR Level</label>
+              <label className="dictionary-filter-label" htmlFor="cefr-level-filter">CEFR Level</label>
               <select
+                id="cefr-level-filter"
                 value={selectedCefrLevel}
                 onChange={(e) => setSelectedCefrLevel(e.target.value)}
-                className="dictionary-filter-select"
+                className="dictionary-filter-select-small"
+                aria-label="Filter by CEFR level"
               >
                 {cefrLevelOptions.map(option => (
                   <option key={option} value={option}>
@@ -170,11 +184,13 @@ function DictionaryModal({ isOpen, onClose }) {
               </select>
             </div>
             <div className="dictionary-filter-group">
-              <label className="dictionary-filter-label">Difficulty</label>
+              <label className="dictionary-filter-label" htmlFor="difficulty-filter">Difficulty</label>
               <select
+                id="difficulty-filter"
                 value={selectedDifficulty}
                 onChange={(e) => setSelectedDifficulty(e.target.value)}
-                className="dictionary-filter-select"
+                className="dictionary-filter-select-small"
+                aria-label="Filter by difficulty"
               >
                 {difficultyOptions.map(option => (
                   <option key={option} value={option}>
@@ -183,34 +199,34 @@ function DictionaryModal({ isOpen, onClose }) {
                 ))}
               </select>
             </div>
-          </div>
-          <div className="dictionary-sort-controls">
-            <div className="dictionary-sort-group">
-              <label className="dictionary-sort-label">Sort by:</label>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="dictionary-sort-select"
-              >
-                <option value="word">Word</option>
-                <option value="partOfSpeech">Part of Speech</option>
-                <option value="cefrLevel">CEFR Level</option>
-                <option value="difficulty">Difficulty</option>
-              </select>
-            </div>
-            <div className="dictionary-sort-group">
-              <label className="dictionary-sort-label">Order:</label>
-              <select
-                value={sortOrder}
-                onChange={(e) => setSortOrder(e.target.value)}
-                className="dictionary-sort-select"
-              >
-                <option value="asc">Ascending</option>
-                <option value="desc">Descending</option>
-              </select>
-            </div>
-            <div className="dictionary-results-count">
-              Showing {filteredWords.length} definitions
+            <div className="dictionary-sort-section">
+              <div className="dictionary-sort-group">
+                <label className="dictionary-sort-label">Sort by:</label>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="dictionary-sort-select"
+                >
+                  <option value="word">Word</option>
+                  <option value="partOfSpeech">Part of Speech</option>
+                  <option value="cefrLevel">CEFR Level</option>
+                  <option value="difficulty">Difficulty</option>
+                </select>
+              </div>
+              <div className="dictionary-sort-group">
+                <label className="dictionary-sort-label">Order:</label>
+                <select
+                  value={sortOrder}
+                  onChange={(e) => setSortOrder(e.target.value)}
+                  className="dictionary-sort-select"
+                >
+                  <option value="asc">Ascending</option>
+                  <option value="desc">Descending</option>
+                </select>
+              </div>
+              <div className="dictionary-results-count">
+                Showing {filteredWords.length} definitions
+              </div>
             </div>
           </div>
         </div>
