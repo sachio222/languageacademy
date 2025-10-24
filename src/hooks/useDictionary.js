@@ -12,6 +12,171 @@ import { prepositionsCambridge } from "../data/dictionary/words/cambridge/prepos
 import { pronounsCambridge } from "../data/dictionary/words/cambridge/pronouns";
 import { verbsCambridge } from "../data/dictionary/words/cambridge/verbs";
 
+/**
+ * Generate relationships from infinitive field (conjugation → infinitive)
+ */
+const generateInfinitiveRelationships = (word, allWords) => {
+  if (word.word === "a") {
+    console.log("🔍 generateInfinitiveRelationships for 'a':");
+    console.log("  word.infinitive:", word.infinitive);
+    console.log("  word.partOfSpeech:", word.partOfSpeech);
+  }
+
+  if (!word.infinitive) {
+    if (word.word === "a") {
+      console.log("  ❌ No infinitive field found for 'a'");
+    }
+    return [];
+  }
+
+  // Find the infinitive word
+  const infinitiveWord = allWords.find(
+    (w) => w.word.toLowerCase() === word.infinitive.toLowerCase()
+  );
+
+  if (word.word === "a") {
+    console.log("  🔍 Looking for infinitive:", word.infinitive);
+    console.log(
+      "  Found infinitive word:",
+      infinitiveWord ? infinitiveWord.word : "none"
+    );
+  }
+
+  if (infinitiveWord) {
+    return [
+      {
+        type: "conjugation_pair",
+        targetId: infinitiveWord.id,
+        targetWord: infinitiveWord.word,
+        note: "infinitive form",
+      },
+    ];
+  }
+  return [];
+};
+
+/**
+ * Generate relationships from infinitive to conjugations (infinitive → conjugations)
+ */
+const generateConjugationRelationships = (word, allWords) => {
+  if (word.word === "avoir") {
+    console.log("🔍 generateConjugationRelationships for 'avoir':");
+    console.log("  word.partOfSpeech:", word.partOfSpeech);
+    console.log("  word.word:", word.word);
+  }
+
+  if (word.partOfSpeech !== "verb") {
+    if (word.word === "avoir") {
+      console.log("  ❌ Not a verb, skipping conjugation generation");
+    }
+    return [];
+  }
+
+  // For infinitive entries, find all conjugations that point to this word
+  const conjugations = allWords.filter((w) => {
+    if (word.word === "avoir") {
+      console.log(`    Checking word: ${w.word}, infinitive: ${w.infinitive}`);
+      console.log(
+        `    Condition: ${!!w.infinitive} && ${
+          w.infinitive?.toLowerCase() === word.word.toLowerCase()
+        }`
+      );
+    }
+    return (
+      w.infinitive && w.infinitive.toLowerCase() === word.word.toLowerCase()
+    );
+  });
+
+  if (word.word === "avoir") {
+    console.log(
+      "  Found conjugations:",
+      conjugations.map((c) => c.word)
+    );
+  }
+
+  return conjugations.map((conj) => {
+    // Use existing person/tense data if available
+    let person = conj.person;
+    let tense = conj.tense;
+
+    // If not available, try to detect from word patterns
+    if (!person || !tense) {
+      const detected = detectPersonAndTense(conj, word);
+      person = person || detected.person;
+      tense = tense || detected.tense;
+    }
+
+    // Format the note preserving the detailed person info
+    const note = `${tense} - ${person}`;
+
+    return {
+      type: "conjugation_pair",
+      targetId: conj.id,
+      targetWord: conj.word,
+      note: note,
+    };
+  });
+};
+
+/**
+ * Detect person and tense from word patterns
+ */
+const detectPersonAndTense = (word, infinitive) => {
+  const wordText = word.word.toLowerCase();
+  const infinitiveText = infinitive.word.toLowerCase();
+
+  // Present tense patterns for -er verbs
+  if (infinitiveText.endsWith("er")) {
+    if (wordText === infinitiveText)
+      return { tense: "present", person: "je/il/elle" };
+    if (wordText === infinitiveText.slice(0, -2) + "es")
+      return { tense: "present", person: "tu" };
+    if (wordText === infinitiveText.slice(0, -2) + "ons")
+      return { tense: "present", person: "nous" };
+    if (wordText === infinitiveText.slice(0, -2) + "ez")
+      return { tense: "present", person: "vous" };
+    if (wordText === infinitiveText.slice(0, -2) + "ent")
+      return { tense: "present", person: "ils/elles" };
+  }
+
+  // Past tense patterns (avoir + past participle)
+  if (
+    wordText.includes("parlé") ||
+    wordText.includes("eu") ||
+    wordText.includes("vu")
+  ) {
+    if (wordText.startsWith("ai ")) return { tense: "past", person: "je" };
+    if (wordText.startsWith("as ")) return { tense: "past", person: "tu" };
+    if (wordText.startsWith("a ")) return { tense: "past", person: "il/elle" };
+    if (wordText.startsWith("avons ")) return { tense: "past", person: "nous" };
+    if (wordText.startsWith("avez ")) return { tense: "past", person: "vous" };
+    if (wordText.startsWith("ont "))
+      return { tense: "past", person: "ils/elles" };
+  }
+
+  // Future tense patterns
+  if (wordText.endsWith("ai") && infinitiveText.endsWith("er")) {
+    return { tense: "future", person: "je" };
+  }
+  if (wordText.endsWith("as") && infinitiveText.endsWith("er")) {
+    return { tense: "future", person: "tu" };
+  }
+  if (wordText.endsWith("a") && infinitiveText.endsWith("er")) {
+    return { tense: "future", person: "il/elle" };
+  }
+  if (wordText.endsWith("ons") && infinitiveText.endsWith("er")) {
+    return { tense: "future", person: "nous" };
+  }
+  if (wordText.endsWith("ez") && infinitiveText.endsWith("er")) {
+    return { tense: "future", person: "vous" };
+  }
+  if (wordText.endsWith("ont") && infinitiveText.endsWith("er")) {
+    return { tense: "future", person: "ils/elles" };
+  }
+
+  return { tense: "present", person: "all" };
+};
+
 export const useDictionary = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedPartOfSpeech, setSelectedPartOfSpeech] = useState("all");
@@ -125,6 +290,14 @@ export const useDictionary = () => {
           existing.allSources.push(word.source);
         }
 
+        // Preserve relationships from the entry with the most relationships
+        if (
+          word.relationships &&
+          word.relationships.length > (existing.relationships?.length || 0)
+        ) {
+          existing.relationships = word.relationships;
+        }
+
         if (
           word.examples &&
           word.examples.length > (existing.examples?.length || 0)
@@ -184,7 +357,68 @@ export const useDictionary = () => {
       });
     }
 
-    return mergedWords;
+    // Generate automatic relationships for all words
+    const processedWords = mergedWords.map((word) => {
+      // Generate infinitive relationships (conjugation → infinitive)
+      const infinitiveRelationships = generateInfinitiveRelationships(
+        word,
+        mergedWords
+      );
+
+      // Generate conjugation relationships (infinitive → conjugations)
+      const conjugationRelationships = generateConjugationRelationships(
+        word,
+        mergedWords
+      );
+
+      // Combine with existing relationships
+      const existingRelationships = word.relationships || [];
+      const allRelationships = [
+        ...existingRelationships,
+        ...infinitiveRelationships,
+        ...conjugationRelationships,
+      ];
+
+      // Remove duplicates based on targetId
+      const uniqueRelationships = allRelationships.filter(
+        (rel, index, arr) =>
+          arr.findIndex((r) => r.targetId === rel.targetId) === index
+      );
+
+      // Debug logging for parler, avoir, and a
+      if (
+        word.word === "parler" ||
+        word.word === "avoir" ||
+        word.word === "a"
+      ) {
+        console.log(`📊 ${word.word} relationships:`, {
+          existing: existingRelationships.length,
+          infinitive: infinitiveRelationships.length,
+          conjugation: conjugationRelationships.length,
+          total: uniqueRelationships.length,
+          hasInfinitive: !!word.infinitive,
+          infinitiveValue: word.infinitive,
+          partOfSpeech: word.partOfSpeech,
+        });
+
+        if (word.word === "a") {
+          console.log("  🔍 'a' word details:", {
+            id: word.id,
+            word: word.word,
+            infinitive: word.infinitive,
+            partOfSpeech: word.partOfSpeech,
+            existingRelationships: existingRelationships,
+          });
+        }
+      }
+
+      return {
+        ...word,
+        relationships: uniqueRelationships,
+      };
+    });
+
+    return processedWords;
   }, []);
 
   // Generate unique options for filters

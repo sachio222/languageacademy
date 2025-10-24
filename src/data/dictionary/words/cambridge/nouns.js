@@ -5114,11 +5114,13 @@ export const nounsCambridge = new Map([
         {
           lang: "en",
           text: "Si tu as besoin de quelque chose dis-le moi.",
+          trans: "If you need anything, let me know.",
           source: "cambridge",
         },
         {
           lang: "en",
           text: "Depuis qu’il a perdu son travail, il est dans le besoin.",
+          trans: "Since he lost his job, he is in need.",
           source: "cambridge",
         },
       ],
@@ -15929,6 +15931,11 @@ export const nounsCambridge = new Map([
         {
           text: "l'argent de poche",
           trans: "pocket money",
+          lang: "en",
+        },
+        {
+          text: "d'argent",
+          trans: "any money",
           lang: "en",
         },
       ],

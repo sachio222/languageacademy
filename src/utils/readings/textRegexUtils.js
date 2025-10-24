@@ -24,10 +24,10 @@ export const SUBHEADER_PATTERN = /^##\s+(.+)$/;
 export const HORIZONTAL_RULE_PATTERN = /^---$/;
 
 /**
- * Pattern for French words (including accented characters)
- * Matches: bonjour, français, café, etc.
+ * Pattern for French words (including accented characters and hyphens)
+ * Matches: bonjour, français, café, là-bas, etc.
  */
-export const WORD_PATTERN = /^([a-zàâäæçéèêëïîôùûüœ']+)/i;
+export const WORD_PATTERN = /^([a-zàâäæçéèêëïîôùûüœ'-]+)/i;
 
 /**
  * Pattern for spaces and punctuation
