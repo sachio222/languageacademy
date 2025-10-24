@@ -1,4 +1,73 @@
 import React, { useEffect } from 'react';
+
+// Constants
+const WORD_TYPES = {
+  ADJECTIVE: 'adjective',
+  VERB: 'verb',
+  NOUN: 'noun',
+  UNKNOWN: 'unknown'
+};
+
+const RELATIONSHIP_TYPES = {
+  CONJUGATION_PAIR: 'conjugation_pair',
+  ADJECTIVE_FORM: 'adjective_form'
+};
+
+const CEFR_LEVELS = {
+  UNKNOWN: 'unknown'
+};
+
+// Utility function to format parts of speech, filtering out 'unknown'
+const formatPartsOfSpeech = (word) => {
+  const parts = word.allPartsOfSpeech?.length > 1
+    ? word.allPartsOfSpeech
+    : [word.partOfSpeech];
+
+  return parts
+    .filter(pos => pos && pos !== WORD_TYPES.UNKNOWN)
+    .join(', ');
+};
+
+// Utility function to find word by ID or text
+const findWordByIdOrText = (words, id, text) => {
+  return words.find(word =>
+    word.id === id || word.word.toLowerCase() === text.toLowerCase()
+  );
+};
+
+// Utility function to get redirect translation
+const getRedirectTranslation = (word, allWords) => {
+  const mainWord = findWordByIdOrText(allWords, word.redirect_to, word.base_word);
+  return mainWord?.translations?.[0]?.text || '';
+};
+
+// Utility function to scroll to a word element
+const scrollToWordElement = (wordElement) => {
+  if (!wordElement) return;
+
+  // Get the scrollable container
+  const scrollContainer = document.querySelector('.dictionary-word-list');
+  if (scrollContainer) {
+    // Calculate the target position relative to the scroll container
+    const containerRect = scrollContainer.getBoundingClientRect();
+    const elementRect = wordElement.getBoundingClientRect();
+    const targetScrollTop = scrollContainer.scrollTop + (elementRect.top - containerRect.top);
+
+    // Account for sticky header height to prevent overlap
+    const stickyHeader = document.querySelector('.dictionary-letter-header');
+    const headerHeight = stickyHeader ? stickyHeader.offsetHeight : 0;
+    const adjustedScrollTop = Math.max(0, targetScrollTop - headerHeight - 8); // 8px extra padding
+
+    // Scroll to the target position with smooth behavior
+    scrollContainer.scrollTo({
+      top: adjustedScrollTop,
+      behavior: 'smooth'
+    });
+  } else {
+    // Fallback to the original method if container not found
+    wordElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 import { useDictionary } from '../hooks/useDictionary';
 import SpeakButton from './SpeakButton';
 import { ChevronDown } from 'lucide-react';
@@ -32,6 +101,7 @@ const getBaseLetterForHeader = (word) => {
  * @returns {JSX.Element} The dictionary modal component
  */
 function DictionaryModal({ isOpen, onClose }) {
+  const dictionary = useDictionary();
   const {
     searchTerm,
     selectedPartOfSpeech,
@@ -40,19 +110,22 @@ function DictionaryModal({ isOpen, onClose }) {
     sortBy,
     sortOrder,
     selectedWord,
+    filteredWords,
+    allWords,
+    partOfSpeechOptions,
+    cefrLevelOptions,
+    difficultyOptions
+  } = dictionary;
+
+  const {
     setSearchTerm,
     setSelectedPartOfSpeech,
     setSelectedCefrLevel,
     setSelectedDifficulty,
     setSortBy,
     setSortOrder,
-    setSelectedWord,
-    filteredWords,
-    allWords,
-    partOfSpeechOptions,
-    cefrLevelOptions,
-    difficultyOptions
-  } = useDictionary();
+    setSelectedWord
+  } = dictionary;
 
   // Handle querystring parameter for pre-selecting a word
   useEffect(() => {
@@ -92,27 +165,7 @@ function DictionaryModal({ isOpen, onClose }) {
   useEffect(() => {
     if (selectedWord && scrollToSelected) {
       const wordElement = document.querySelector(`[data-word-id="${selectedWord.id}"]`);
-      if (wordElement) {
-        // Get the scrollable container
-        const scrollContainer = document.querySelector('.dictionary-word-list');
-        if (scrollContainer) {
-          // Calculate the target position relative to the scroll container
-          const containerRect = scrollContainer.getBoundingClientRect();
-          const elementRect = wordElement.getBoundingClientRect();
-          const targetScrollTop = scrollContainer.scrollTop + (elementRect.top - containerRect.top);
-
-          // Account for sticky header height to prevent overlap
-          const stickyHeader = document.querySelector('.dictionary-letter-header');
-          const headerHeight = stickyHeader ? stickyHeader.offsetHeight : 0;
-          const adjustedScrollTop = Math.max(0, targetScrollTop - headerHeight - 8); // 8px extra padding
-
-          // Scroll to the target position with smooth behavior
-          scrollContainer.scrollTo({
-            top: adjustedScrollTop,
-            behavior: 'smooth'
-          });
-        }
-      }
+      scrollToWordElement(wordElement);
       setScrollToSelected(false); // Reset the flag
     }
   }, [selectedWord, scrollToSelected]);
@@ -248,30 +301,7 @@ function DictionaryModal({ isOpen, onClose }) {
                   );
                   if (firstWordWithLetter) {
                     const wordElement = document.querySelector(`[data-word-id="${firstWordWithLetter.id}"]`);
-                    if (wordElement) {
-                      // Get the scrollable container
-                      const scrollContainer = document.querySelector('.dictionary-word-list');
-                      if (scrollContainer) {
-                        // Calculate the target position relative to the scroll container
-                        const containerRect = scrollContainer.getBoundingClientRect();
-                        const elementRect = wordElement.getBoundingClientRect();
-                        const targetScrollTop = scrollContainer.scrollTop + (elementRect.top - containerRect.top);
-
-                        // Account for sticky header height to prevent overlap
-                        const stickyHeader = document.querySelector('.dictionary-letter-header');
-                        const headerHeight = stickyHeader ? stickyHeader.offsetHeight : 0;
-                        const adjustedScrollTop = Math.max(0, targetScrollTop - headerHeight - 8); // 8px extra padding
-
-                        // Scroll to the target position with smooth behavior
-                        scrollContainer.scrollTo({
-                          top: adjustedScrollTop,
-                          behavior: 'smooth'
-                        });
-                      } else {
-                        // Fallback to the original method if container not found
-                        wordElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }
-                    }
+                    scrollToWordElement(wordElement);
                   }
                 }}
                 disabled={!hasWords}
@@ -318,25 +348,19 @@ function DictionaryModal({ isOpen, onClose }) {
                           <h3 className="dictionary-word-french">{word.word}</h3>
                           <p className="dictionary-word-translation">
                             {word.translations?.[0]?.text ||
-                              (word.redirect_to ? (() => {
-                                // For redirects, show "see [base_word]: [translation]"
-                                const mainWord = allWords.find(w =>
-                                  w.id === word.redirect_to ||
-                                  w.word.toLowerCase() === word.base_word.toLowerCase()
-                                );
-                                const translation = mainWord?.translations?.[0]?.text || '';
-                                return `see: ${word.base_word} → ${translation}`;
-                              })() : 'No translation')}
+                              (word.redirect_to ? `see: ${word.base_word} → ${getRedirectTranslation(word, allWords)}` : 'No translation')}
                           </p>
                         </div>
                         <div className="dictionary-word-meta">
                           <div className="dictionary-word-part-of-speech">
-                            {word.allPartsOfSpeech && word.allPartsOfSpeech.length > 1
-                              ? word.allPartsOfSpeech.join(', ')
-                              : word.partOfSpeech
-                            }
+                            {formatPartsOfSpeech(word)}
                           </div>
-                          <div className="dictionary-word-cefr">{word.cefr_level || word.cefrLevel}</div>
+                          <div className="dictionary-word-cefr">
+                            {(() => {
+                              const cefrLevel = word.cefr_level || word.cefrLevel;
+                              return cefrLevel && cefrLevel !== CEFR_LEVELS.UNKNOWN ? cefrLevel : '';
+                            })()}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -392,15 +416,7 @@ function DictionaryModal({ isOpen, onClose }) {
                       )}
                       {!selectedWord.allTranslations[pos] && selectedWord.redirect_to && (
                         <div className="dictionary-word-translation-text">
-                          {(() => {
-                            // For redirects, show "see [base_word]: [translation]"
-                            const mainWord = allWords.find(word =>
-                              word.id === selectedWord.redirect_to ||
-                              word.word.toLowerCase() === selectedWord.base_word.toLowerCase()
-                            );
-                            const translation = mainWord?.translations?.[0]?.text || '';
-                            return `see ${selectedWord.base_word}: ${translation}`;
-                          })()}
+                          {`see ${selectedWord.base_word}: ${getRedirectTranslation(selectedWord, allWords)}`}
                         </div>
                       )}
 
@@ -425,7 +441,7 @@ function DictionaryModal({ isOpen, onClose }) {
 
                       {/* Part-of-Speech Specific Content */}
                       {/* Verb conjugation details */}
-                      {pos === 'verb' && (selectedWord.tense || selectedWord.mood || selectedWord.person) && (
+                      {pos === WORD_TYPES.VERB && (selectedWord.tense || selectedWord.mood || selectedWord.person) && (
                         <div className="dictionary-word-grammar-info">
                           <h4 className="dictionary-section-title">Grammar Info</h4>
                           <div className="dictionary-grammar-details">
@@ -457,7 +473,7 @@ function DictionaryModal({ isOpen, onClose }) {
                         </div>
                       )}
 
-                      {pos === 'verb' && selectedWord.verb_phrases && selectedWord.verb_phrases.length > 0 && (
+                      {pos === WORD_TYPES.VERB && selectedWord.verb_phrases && selectedWord.verb_phrases.length > 0 && (
                         <div className="dictionary-word-verb-phrases">
                           <h4 className="dictionary-section-title">Common Phrases</h4>
                           <div className="dictionary-phrases-grid">
@@ -484,7 +500,7 @@ function DictionaryModal({ isOpen, onClose }) {
                         </div>
                       )}
 
-                      {pos === 'noun' && (
+                      {pos === WORD_TYPES.NOUN && (
                         <>
                           {selectedWord.noun_articles && (
                             <div className="dictionary-word-noun-articles">
@@ -543,7 +559,7 @@ function DictionaryModal({ isOpen, onClose }) {
                         </>
                       )}
 
-                      {pos === 'adjective' && (
+                      {pos === WORD_TYPES.ADJECTIVE && (
                         <>
                           {selectedWord.adjective_forms && (
                             <div className="dictionary-word-adjective-forms">
@@ -604,49 +620,6 @@ function DictionaryModal({ isOpen, onClose }) {
                   );
                 })}
 
-                {/* Redirect Information */}
-                {selectedWord.redirect_to && (
-                  <div className="dictionary-word-relationships">
-                    <h4 className="dictionary-section-title">See</h4>
-                    <div className="dictionary-relationships-grid">
-                      <div
-                        className="dictionary-relationship-item relationship-redirect clickable"
-                        onClick={() => {
-                          // Find the main word that this redirects to
-                          const mainWord = allWords.find(word =>
-                            word.id === selectedWord.redirect_to ||
-                            word.word.toLowerCase() === selectedWord.base_word.toLowerCase()
-                          );
-
-                          if (mainWord) {
-                            setSelectedWord(mainWord);
-                            setScrollToSelected(true);
-                            // Update URL with the main word
-                            const newUrl = new URL(window.location);
-                            newUrl.searchParams.set('word', mainWord.word);
-                            window.history.pushState({}, '', newUrl);
-                          } else {
-                            console.warn(`Could not find main word: ${selectedWord.base_word} (ID: ${selectedWord.redirect_to})`);
-                          }
-                        }}
-                      >
-                        <div className="dictionary-relationship-content">
-                          <span className="dictionary-relationship-word">{selectedWord.base_word}</span>
-                          <span className="dictionary-relationship-note">
-                            {(() => {
-                              // Find the main word to get its translation
-                              const mainWord = allWords.find(word =>
-                                word.id === selectedWord.redirect_to ||
-                                word.word.toLowerCase() === selectedWord.base_word.toLowerCase()
-                              );
-                              return mainWord?.translations?.[0]?.text || '';
-                            })()}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
 
                 {/* Variants */}
                 {selectedWord.variants && selectedWord.variants.length > 0 && (
@@ -692,9 +665,11 @@ function DictionaryModal({ isOpen, onClose }) {
 
                 {/* Relationships */}
                 {((selectedWord.relationships && selectedWord.relationships.length > 0) ||
-                  (selectedWord.partOfSpeech === 'adjective' && selectedWord.adjective_forms)) && (
+                  (selectedWord.partOfSpeech === WORD_TYPES.ADJECTIVE && selectedWord.adjective_forms)) && (
                     <div className="dictionary-word-relationships">
-                      <h4 className="dictionary-section-title">Related Words</h4>
+                      <h4 className="dictionary-section-title">
+                        {selectedWord.partOfSpeech === WORD_TYPES.ADJECTIVE ? 'SEE' : 'Related Words'}
+                      </h4>
                       <div className="dictionary-relationships-grid">
                         {/* Regular relationships */}
                         {selectedWord.relationships && selectedWord.relationships.map((relationship, idx) => (
@@ -736,18 +711,24 @@ function DictionaryModal({ isOpen, onClose }) {
                           >
                             <div className="dictionary-relationship-content">
                               <span className="dictionary-relationship-word">{relationship.targetWord}</span>
-                              <span className="dictionary-relationship-type">
-                                {relationship.type.replace('_', ' ')}
-                              </span>
-                              {relationship.note && (
-                                <span className="dictionary-relationship-note">({relationship.note})</span>
+                              {relationship.type === 'adjective_form' ? (
+                                <span className="dictionary-relationship-type">{relationship.note}</span>
+                              ) : (
+                                <>
+                                  <span className="dictionary-relationship-type">
+                                    {relationship.type.replace('_', ' ')}
+                                  </span>
+                                  {relationship.note && (
+                                    <span className="dictionary-relationship-note">({relationship.note})</span>
+                                  )}
+                                </>
                               )}
                             </div>
                           </div>
                         ))}
 
                         {/* Adjective forms as relationships */}
-                        {selectedWord.partOfSpeech === 'adjective' && selectedWord.adjective_forms && (
+                        {selectedWord.partOfSpeech === WORD_TYPES.ADJECTIVE && selectedWord.adjective_forms && (
                           <>
                             {selectedWord.adjective_forms.masculine_singular &&
                               selectedWord.adjective_forms.masculine_singular !== selectedWord.word && (
@@ -768,8 +749,7 @@ function DictionaryModal({ isOpen, onClose }) {
                                 >
                                   <div className="dictionary-relationship-content">
                                     <span className="dictionary-relationship-word">{selectedWord.adjective_forms.masculine_singular}</span>
-                                    <span className="dictionary-relationship-type">adjective form</span>
-                                    <span className="dictionary-relationship-note">(masculine singular)</span>
+                                    <span className="dictionary-relationship-type">masculine singular</span>
                                   </div>
                                 </div>
                               )}
@@ -792,8 +772,7 @@ function DictionaryModal({ isOpen, onClose }) {
                                 >
                                   <div className="dictionary-relationship-content">
                                     <span className="dictionary-relationship-word">{selectedWord.adjective_forms.feminine_singular}</span>
-                                    <span className="dictionary-relationship-type">adjective form</span>
-                                    <span className="dictionary-relationship-note">(feminine singular)</span>
+                                    <span className="dictionary-relationship-type">feminine singular</span>
                                   </div>
                                 </div>
                               )}
@@ -816,8 +795,7 @@ function DictionaryModal({ isOpen, onClose }) {
                                 >
                                   <div className="dictionary-relationship-content">
                                     <span className="dictionary-relationship-word">{selectedWord.adjective_forms.masculine_plural}</span>
-                                    <span className="dictionary-relationship-type">adjective form</span>
-                                    <span className="dictionary-relationship-note">(masculine plural)</span>
+                                    <span className="dictionary-relationship-type">masculine plural</span>
                                   </div>
                                 </div>
                               )}
@@ -840,8 +818,7 @@ function DictionaryModal({ isOpen, onClose }) {
                                 >
                                   <div className="dictionary-relationship-content">
                                     <span className="dictionary-relationship-word">{selectedWord.adjective_forms.feminine_plural}</span>
-                                    <span className="dictionary-relationship-type">adjective form</span>
-                                    <span className="dictionary-relationship-note">(feminine plural)</span>
+                                    <span className="dictionary-relationship-type">feminine plural</span>
                                   </div>
                                 </div>
                               )}

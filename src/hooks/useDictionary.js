@@ -177,6 +177,100 @@ const detectPersonAndTense = (word, infinitive) => {
   return { tense: "present", person: "all" };
 };
 
+/**
+ * Generate relationships from base_word field (adjective forms → base form)
+ */
+const generateBaseWordRelationships = (word, allWords) => {
+  if (word.word === "belle") {
+    console.log("🔍 generateBaseWordRelationships for 'belle':");
+    console.log("  word.base_word:", word.base_word);
+    console.log("  word.partOfSpeech:", word.partOfSpeech);
+  }
+
+  if (!word.base_word) {
+    if (word.word === "belle") {
+      console.log("  ❌ No base_word field found for 'belle'");
+    }
+    return [];
+  }
+
+  // Find the base word
+  const baseWord = allWords.find(
+    (w) => w.word.toLowerCase() === word.base_word.toLowerCase()
+  );
+
+  if (word.word === "belle") {
+    console.log("  🔍 Looking for base word:", word.base_word);
+    console.log("  Found base word:", baseWord ? baseWord.word : "none");
+  }
+
+  if (baseWord) {
+    return [
+      {
+        type: "adjective_form",
+        targetId: baseWord.id,
+        targetWord: baseWord.word,
+        note: "base form",
+      },
+    ];
+  }
+  return [];
+};
+
+/**
+ * Generate relationships from base word to all forms (base → adjective forms)
+ */
+const generateAdjectiveFormRelationships = (word, allWords) => {
+  if (word.word === "beau") {
+    console.log("🔍 generateAdjectiveFormRelationships for 'beau':");
+    console.log("  word.partOfSpeech:", word.partOfSpeech);
+    console.log("  word.word:", word.word);
+  }
+
+  if (word.partOfSpeech !== "adjective") {
+    if (word.word === "beau") {
+      console.log("  ❌ Not an adjective, skipping form generation");
+    }
+    return [];
+  }
+
+  // Find all adjective forms that point to this word as base_word
+  const forms = allWords.filter((w) => {
+    if (word.word === "beau") {
+      console.log(`    Checking word: ${w.word}, base_word: ${w.base_word}`);
+      console.log(
+        `    Condition: ${!!w.base_word} && ${
+          w.base_word?.toLowerCase() === word.word.toLowerCase()
+        }`
+      );
+    }
+    return w.base_word && w.base_word.toLowerCase() === word.word.toLowerCase();
+  });
+
+  if (word.word === "beau") {
+    console.log(
+      "  Found forms:",
+      forms.map((f) => f.word)
+    );
+  }
+
+  return forms.map((form) => {
+    // Use existing gender/number data if available
+    let gender = form.gender;
+    let number = form.number;
+
+    // Format the note with gender and number info
+    const note = `${gender} ${number}`;
+
+    return {
+      type: "adjective_form",
+      targetId: form.id,
+      targetWord: form.word,
+      note: note,
+    };
+  });
+};
+
 export const useDictionary = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedPartOfSpeech, setSelectedPartOfSpeech] = useState("all");
@@ -371,12 +465,26 @@ export const useDictionary = () => {
         mergedWords
       );
 
+      // Generate base word relationships (adjective forms → base form)
+      const baseWordRelationships = generateBaseWordRelationships(
+        word,
+        mergedWords
+      );
+
+      // Generate adjective form relationships (base → adjective forms)
+      const adjectiveFormRelationships = generateAdjectiveFormRelationships(
+        word,
+        mergedWords
+      );
+
       // Combine with existing relationships
       const existingRelationships = word.relationships || [];
       const allRelationships = [
         ...existingRelationships,
         ...infinitiveRelationships,
         ...conjugationRelationships,
+        ...baseWordRelationships,
+        ...adjectiveFormRelationships,
       ];
 
       // Remove duplicates based on targetId
@@ -385,19 +493,25 @@ export const useDictionary = () => {
           arr.findIndex((r) => r.targetId === rel.targetId) === index
       );
 
-      // Debug logging for parler, avoir, and a
+      // Debug logging for parler, avoir, a, beau, and belle
       if (
         word.word === "parler" ||
         word.word === "avoir" ||
-        word.word === "a"
+        word.word === "a" ||
+        word.word === "beau" ||
+        word.word === "belle"
       ) {
         console.log(`📊 ${word.word} relationships:`, {
           existing: existingRelationships.length,
           infinitive: infinitiveRelationships.length,
           conjugation: conjugationRelationships.length,
+          baseWord: baseWordRelationships.length,
+          adjectiveForm: adjectiveFormRelationships.length,
           total: uniqueRelationships.length,
           hasInfinitive: !!word.infinitive,
           infinitiveValue: word.infinitive,
+          hasBaseWord: !!word.base_word,
+          baseWordValue: word.base_word,
           partOfSpeech: word.partOfSpeech,
         });
 
@@ -406,6 +520,16 @@ export const useDictionary = () => {
             id: word.id,
             word: word.word,
             infinitive: word.infinitive,
+            partOfSpeech: word.partOfSpeech,
+            existingRelationships: existingRelationships,
+          });
+        }
+
+        if (word.word === "belle") {
+          console.log("  🔍 'belle' word details:", {
+            id: word.id,
+            word: word.word,
+            base_word: word.base_word,
             partOfSpeech: word.partOfSpeech,
             existingRelationships: existingRelationships,
           });
