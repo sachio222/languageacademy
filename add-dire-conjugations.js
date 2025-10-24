@@ -1,4 +1,6 @@
-const { DefinitionGenerator } = require('./src/data/dictionary/utils/generate-definitions');
+const {
+  DefinitionGenerator,
+} = require("./src/data/dictionary/utils/generate-definitions");
 
 async function addDireConjugations() {
   const generator = new DefinitionGenerator();
@@ -13,10 +15,10 @@ async function addDireConjugations() {
       infinitive: "dire",
       examples: [
         { text: "Je dois dire", trans: "I must say", lang: "en" },
-        { text: "Il faut dire", trans: "We must say", lang: "en" }
-      ]
+        { text: "Il faut dire", trans: "We must say", lang: "en" },
+      ],
     },
-    
+
     // Present tense conjugations
     {
       word: "dis",
@@ -28,8 +30,8 @@ async function addDireConjugations() {
       tense: "present",
       examples: [
         { text: "Je dis", trans: "I say", lang: "en" },
-        { text: "Il dit", trans: "He says", lang: "en" }
-      ]
+        { text: "Il dit", trans: "He says", lang: "en" },
+      ],
     },
     {
       word: "dit",
@@ -39,9 +41,7 @@ async function addDireConjugations() {
       person: "third",
       number: "singular",
       tense: "present",
-      examples: [
-        { text: "Il dit", trans: "He says", lang: "en" }
-      ]
+      examples: [{ text: "Il dit", trans: "He says", lang: "en" }],
     },
     {
       word: "disons",
@@ -51,9 +51,7 @@ async function addDireConjugations() {
       person: "first",
       number: "plural",
       tense: "present",
-      examples: [
-        { text: "Nous disons", trans: "We say", lang: "en" }
-      ]
+      examples: [{ text: "Nous disons", trans: "We say", lang: "en" }],
     },
     {
       word: "dites",
@@ -63,9 +61,7 @@ async function addDireConjugations() {
       person: "second",
       number: "plural",
       tense: "present",
-      examples: [
-        { text: "Vous dites", trans: "You say", lang: "en" }
-      ]
+      examples: [{ text: "Vous dites", trans: "You say", lang: "en" }],
     },
     {
       word: "disent",
@@ -75,9 +71,7 @@ async function addDireConjugations() {
       person: "third",
       number: "plural",
       tense: "present",
-      examples: [
-        { text: "Ils disent", trans: "They say", lang: "en" }
-      ]
+      examples: [{ text: "Ils disent", trans: "They say", lang: "en" }],
     },
 
     // Past tense (passé composé)
@@ -89,9 +83,7 @@ async function addDireConjugations() {
       person: "first",
       number: "singular",
       tense: "past",
-      examples: [
-        { text: "J'ai dit", trans: "I said/I have said", lang: "en" }
-      ]
+      examples: [{ text: "J'ai dit", trans: "I said/I have said", lang: "en" }],
     },
     {
       word: "as dit",
@@ -102,8 +94,8 @@ async function addDireConjugations() {
       number: "singular",
       tense: "past",
       examples: [
-        { text: "Tu as dit", trans: "You said/You have said", lang: "en" }
-      ]
+        { text: "Tu as dit", trans: "You said/You have said", lang: "en" },
+      ],
     },
     {
       word: "a dit",
@@ -114,8 +106,8 @@ async function addDireConjugations() {
       number: "singular",
       tense: "past",
       examples: [
-        { text: "Il a dit", trans: "He said/He has said", lang: "en" }
-      ]
+        { text: "Il a dit", trans: "He said/He has said", lang: "en" },
+      ],
     },
     {
       word: "avons dit",
@@ -126,8 +118,8 @@ async function addDireConjugations() {
       number: "plural",
       tense: "past",
       examples: [
-        { text: "Nous avons dit", trans: "We said/We have said", lang: "en" }
-      ]
+        { text: "Nous avons dit", trans: "We said/We have said", lang: "en" },
+      ],
     },
     {
       word: "avez dit",
@@ -138,8 +130,8 @@ async function addDireConjugations() {
       number: "plural",
       tense: "past",
       examples: [
-        { text: "Vous avez dit", trans: "You said/You have said", lang: "en" }
-      ]
+        { text: "Vous avez dit", trans: "You said/You have said", lang: "en" },
+      ],
     },
     {
       word: "ont dit",
@@ -150,8 +142,8 @@ async function addDireConjugations() {
       number: "plural",
       tense: "past",
       examples: [
-        { text: "Ils ont dit", trans: "They said/They have said", lang: "en" }
-      ]
+        { text: "Ils ont dit", trans: "They said/They have said", lang: "en" },
+      ],
     },
 
     // Future tense
@@ -163,9 +155,7 @@ async function addDireConjugations() {
       person: "first",
       number: "singular",
       tense: "future",
-      examples: [
-        { text: "Je dirai", trans: "I will say", lang: "en" }
-      ]
+      examples: [{ text: "Je dirai", trans: "I will say", lang: "en" }],
     },
     {
       word: "diras",
@@ -175,9 +165,7 @@ async function addDireConjugations() {
       person: "second",
       number: "singular",
       tense: "future",
-      examples: [
-        { text: "Tu diras", trans: "You will say", lang: "en" }
-      ]
+      examples: [{ text: "Tu diras", trans: "You will say", lang: "en" }],
     },
     {
       word: "dira",
@@ -187,9 +175,7 @@ async function addDireConjugations() {
       person: "third",
       number: "singular",
       tense: "future",
-      examples: [
-        { text: "Il dira", trans: "He will say", lang: "en" }
-      ]
+      examples: [{ text: "Il dira", trans: "He will say", lang: "en" }],
     },
     {
       word: "dirons",
@@ -199,9 +185,7 @@ async function addDireConjugations() {
       person: "first",
       number: "plural",
       tense: "future",
-      examples: [
-        { text: "Nous dirons", trans: "We will say", lang: "en" }
-      ]
+      examples: [{ text: "Nous dirons", trans: "We will say", lang: "en" }],
     },
     {
       word: "direz",
@@ -211,9 +195,7 @@ async function addDireConjugations() {
       person: "second",
       number: "plural",
       tense: "future",
-      examples: [
-        { text: "Vous direz", trans: "You will say", lang: "en" }
-      ]
+      examples: [{ text: "Vous direz", trans: "You will say", lang: "en" }],
     },
     {
       word: "diront",
@@ -223,9 +205,7 @@ async function addDireConjugations() {
       person: "third",
       number: "plural",
       tense: "future",
-      examples: [
-        { text: "Ils diront", trans: "They will say", lang: "en" }
-      ]
+      examples: [{ text: "Ils diront", trans: "They will say", lang: "en" }],
     },
 
     // Past participle
@@ -237,9 +217,9 @@ async function addDireConjugations() {
       tense: "past_participle",
       examples: [
         { text: "J'ai dit", trans: "I said/I have said", lang: "en" },
-        { text: "Il a dit", trans: "He said/He has said", lang: "en" }
-      ]
-    }
+        { text: "Il a dit", trans: "He said/He has said", lang: "en" },
+      ],
+    },
   ];
 
   console.log("🚀 Adding 'dire' and all conjugations...\n");
@@ -247,7 +227,7 @@ async function addDireConjugations() {
   try {
     await generator.generateDefinitions(direConjugations, {
       autoScrape: true,
-      saveToFiles: true
+      saveToFiles: true,
     });
 
     console.log("\n✅ 'dire' conjugations added successfully!");
@@ -257,7 +237,6 @@ async function addDireConjugations() {
     console.log("• ai dit, as dit, a dit, avons dit, avez dit, ont dit (past)");
     console.log("• dirai, diras, dira, dirons, direz, diront (future)");
     console.log("• dit (past participle)");
-
   } catch (error) {
     console.error("❌ Error adding dire conjugations:", error);
   }
