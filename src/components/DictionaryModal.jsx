@@ -210,7 +210,7 @@ function DictionaryModal({ isOpen, onClose }) {
               </select>
             </div>
             <div className="dictionary-results-count">
-              {filteredWords.length} words found
+              Showing {filteredWords.length} definitions
             </div>
           </div>
         </div>
