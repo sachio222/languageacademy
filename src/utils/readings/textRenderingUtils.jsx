@@ -223,15 +223,6 @@ const renderWords = (text, context) => {
       continue;
     }
 
-    // Check for contractions first (single letter + apostrophe)
-    const contractionMatch = checkContractionMatch(remainingText);
-    if (contractionMatch) {
-      const result = processContractionMatch(contractionMatch, remainingText, charPosition, context);
-      elements.push(result.element);
-      remainingText = result.remainingText;
-      charPosition = result.charPosition;
-      continue;
-    }
 
     // Check for single words (including accented characters)
     const wordMatch = checkWordMatch(remainingText);
@@ -338,7 +329,18 @@ const checkMultiWordPhrases = (remainingText, charPosition, context) => {
       }
     }
 
-    // PRIORITY 4: Check regular multi-word phrases
+    // PRIORITY 4: Check contractions (single letter + apostrophe)
+    const contractionMatch = checkContractionMatch(remainingText);
+    if (contractionMatch) {
+      const result = processContractionMatch(contractionMatch, remainingText, charPosition, context);
+      return {
+        element: result.element,
+        remainingText: result.remainingText,
+        charPosition: result.charPosition
+      };
+    }
+
+    // PRIORITY 5: Check regular multi-word phrases
     for (const { phrase, translation } of multiWordPhrases) {
       if (remainingText.toLowerCase().startsWith(phrase.toLowerCase())) {
         const matchedText = remainingText.slice(0, phrase.length);
