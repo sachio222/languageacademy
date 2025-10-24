@@ -49,6 +49,8 @@ Verbs support specialized fields for phrases and conjugation relationships.
 - `infinitive`: The infinitive form (creates bidirectional relationships)
 - `verb_phrases`: Array of common phrases using this verb form
 
+**Note**: The generator automatically adds negative forms (`ne...word...pas`) for all verbs unless already provided.
+
 #### Example
 
 ```json
@@ -65,12 +67,6 @@ Verbs support specialized fields for phrases and conjugation relationships.
       "frequency": "common"
     },
     {
-      "phrase": "n'est pas",
-      "type": "negation",
-      "context": "is not",
-      "frequency": "common"
-    },
-    {
       "phrase": "est-ce que",
       "type": "question",
       "context": "question formation",
@@ -79,6 +75,8 @@ Verbs support specialized fields for phrases and conjugation relationships.
   ]
 }
 ```
+
+**Result**: The generator will automatically add `"ne...est...pas"` as a negation phrase.
 
 #### Verb Phrase Types
 
@@ -400,11 +398,12 @@ All phrase objects share this structure:
     "infinitive": "manger",
     "verb_phrases": [
       { "phrase": "je mange", "type": "pronoun_verb", "frequency": "common" },
-      { "phrase": "il mange", "type": "pronoun_verb", "frequency": "common" },
-      { "phrase": "ne mange pas", "type": "negation", "frequency": "common" }
+      { "phrase": "il mange", "type": "pronoun_verb", "frequency": "common" }
     ]
   }
 ]
 ```
+
+**Note**: The generator automatically adds `"ne...mange...pas"` as a negation phrase for the verb "mange".
 
 This guide provides comprehensive coverage of the Dictionary Generator's capabilities. For additional help, run `node generate-lesson-words.js --help` or examine the existing dictionary files for more examples.

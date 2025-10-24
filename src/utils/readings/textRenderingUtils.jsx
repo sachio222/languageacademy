@@ -1,6 +1,7 @@
 // import { readingVocabulary as wordTranslations } from "../../components/readingVocabulary";
 import { multiWordPhrases } from "../../components/readingVocabularyPhrases";
 import { useDictionary } from "../../hooks/useDictionary";
+import { wikipediaEntries } from "../../data/wikipediaEntries";
 import {
   checkExplicitYearMatch,
   checkNumberMatch,
@@ -181,6 +182,23 @@ const renderWords = (text, context) => {
 const checkMultiWordPhrases = (remainingText, charPosition, context) => {
   const { paragraphIndex } = context;
   try {
+    // First check Wikipedia entries for multi-word phrases
+    for (const [wikiKey, wikiEntry] of Object.entries(wikipediaEntries)) {
+      if (remainingText.toLowerCase().startsWith(wikiKey.toLowerCase())) {
+        const matchedText = remainingText.slice(0, wikiKey.length);
+        const uniqueKey = generateTextKey(paragraphIndex, charPosition);
+
+        const element = createInteractiveWordElement(matchedText, null, uniqueKey, context, null);
+
+        return {
+          element,
+          remainingText: remainingText.slice(wikiKey.length),
+          charPosition: charPosition + wikiKey.length
+        };
+      }
+    }
+
+    // Then check regular multi-word phrases
     for (const { phrase, translation } of multiWordPhrases) {
       if (remainingText.toLowerCase().startsWith(phrase.toLowerCase())) {
         const matchedText = remainingText.slice(0, phrase.length);
@@ -333,11 +351,22 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
   try {
     const word = wordMatch[1];
     const wordLength = wordMatch[0].length;
+    const uniqueKey = generateTextKey(paragraphIndex, charPosition);
 
-    // Capture context efficiently - only when needed for ambiguous words
+    // Check Wikipedia entries FIRST (highest priority for cultural references)
+    const wikiEntry = wikipediaEntries[word] || wikipediaEntries[word.toLowerCase()];
+    if (wikiEntry) {
+      const element = createInteractiveWordElement(word, null, uniqueKey, context, null);
+      return {
+        element,
+        remainingText: remainingText.slice(wordLength),
+        charPosition: charPosition + wordLength
+      };
+    }
+
+    // If no Wikipedia entry, check dictionary
     const contextString = getContextString(context, charPosition, wordLength, remainingText);
     const wordData = getWordTranslation(word, allWords, contextString);
-    const uniqueKey = generateTextKey(paragraphIndex, charPosition);
 
     if (wordData?.translation) {
       const element = createInteractiveWordElement(word, wordData.translation, uniqueKey, context, wordData.partOfSpeech);
@@ -347,6 +376,22 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
         charPosition: charPosition + wordLength
       };
     } else {
+      // Final fallback: Check if word matches a discovered speaker name
+      const { discoveredSpeakers } = require('./speakerColorUtils');
+      const isSpeaker = discoveredSpeakers.some(speaker => {
+        const cleanSpeaker = speaker.replace(/\[c\]$/, ''); // Remove color flag
+        return cleanSpeaker.toLowerCase() === word.toLowerCase();
+      });
+      
+      if (isSpeaker) {
+        const element = createInteractiveWordElement(word, word, uniqueKey, context, 'speaker');
+        return {
+          element,
+          remainingText: remainingText.slice(wordLength),
+          charPosition: charPosition + wordLength
+        };
+      }
+      
       console.warn(`Missing translation for: "${word}"`);
       const element = createMissingTranslationElement(word, uniqueKey);
       return {
@@ -358,7 +403,7 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
   } catch (error) {
     console.error("Error processing word match:", error);
     return {
-      element: <span>Error processing word</span>,
+      element: <span key={uniqueKey}>{word}</span>,
       remainingText: remainingText.slice(1),
       charPosition: charPosition + 1
     };
@@ -448,6 +493,14 @@ const getWordTranslation = (word, allWords, context = '') => {
       };
     }
 
+    // For verbs, check context for negative forms and other verb phrases
+    if (dictionaryEntry.partOfSpeech === 'verb' && context) {
+      const contextAwareTranslation = getVerbContextAwareTranslation(word, dictionaryEntry, context);
+      if (contextAwareTranslation) {
+        return contextAwareTranslation;
+      }
+    }
+
     // Single part of speech - use primary
     return {
       translation: dictionaryEntry.translations?.[0]?.text || null,
@@ -508,4 +561,61 @@ const getTranslationForPartOfSpeech = (dictionaryEntry, partOfSpeech) => {
 
   // Fallback to primary translation
   return dictionaryEntry.translations?.[0]?.text || null;
+};
+
+/**
+ * Get context-aware translation for verbs by checking verb phrases
+ * @param {string} word - The word being analyzed
+ * @param {Object} dictionaryEntry - The dictionary entry for the verb
+ * @param {string} context - Context string around the word
+ * @returns {Object|null} - Object with translation and partOfSpeech, or null if no context match
+ */
+const getVerbContextAwareTranslation = (word, dictionaryEntry, context) => {
+  const contextLower = context.toLowerCase();
+  const cleanWord = word.toLowerCase();
+
+  // Check if the verb has verb_phrases that match the context
+  if (dictionaryEntry.verb_phrases && Array.isArray(dictionaryEntry.verb_phrases)) {
+    for (const phrase of dictionaryEntry.verb_phrases) {
+      const phraseText = phrase.phrase.toLowerCase();
+
+      // Check for exact phrase matches in context
+      if (contextLower.includes(phraseText)) {
+        console.log(`🎯 Verb context match: "${cleanWord}" in "${phraseText}" → ${phrase.type}`);
+
+        // Return enhanced translation with context info
+        const baseTranslation = dictionaryEntry.translations?.[0]?.text || '';
+        const contextTranslation = phrase.context ? `${baseTranslation} (${phrase.context})` : baseTranslation;
+
+        return {
+          translation: contextTranslation,
+          partOfSpeech: 'verb'
+        };
+      }
+    }
+  }
+
+  // Check for common negative patterns even if not explicitly in verb_phrases
+  const negativePatterns = [
+    `ne ${cleanWord} pas`,
+    `n'${cleanWord} pas`,
+    `ne ${cleanWord} plus`,
+    `n'${cleanWord} plus`,
+    `ne ${cleanWord} jamais`,
+    `n'${cleanWord} jamais`
+  ];
+
+  for (const pattern of negativePatterns) {
+    if (contextLower.includes(pattern)) {
+      console.log(`🎯 Verb negative context match: "${cleanWord}" in "${pattern}"`);
+
+      const baseTranslation = dictionaryEntry.translations?.[0]?.text || '';
+      return {
+        translation: `${baseTranslation} (not)`,
+        partOfSpeech: 'verb'
+      };
+    }
+  }
+
+  return null;
 };

@@ -763,25 +763,42 @@
   color: #999999;
 }
 
+.dictionary-relationship-conjugation {
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
 /* Grammar Info */
 .dictionary-word-grammar-info {
   margin-top: 1rem;
+}
+
+.dictionary-grammar-details {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .dictionary-grammar-item {
-  background: #fafbfc;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
-  color: #665665;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  color: #666;
 }
 
-.dictionary-grammar-item strong {
-  color: #1a1a1a;
+.dictionary-grammar-label {
+  font-weight: 500;
+  color: #888;
+}
+
+.dictionary-grammar-value {
+  color: #333;
+  text-transform: capitalize;
 }
 
 /* Mobile responsive adjustments for new sections */

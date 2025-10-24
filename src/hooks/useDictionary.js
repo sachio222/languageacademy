@@ -209,16 +209,45 @@ export const useDictionary = () => {
     return ["all", ...uniqueDifficulties.sort()];
   }, [allWords]);
 
+  // Helper function to normalize text for search (remove accents)
+  const normalizeText = (text) => {
+    return text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, ""); // Remove diacritical marks
+  };
+
   // Filter and sort words
   const filteredWords = useMemo(() => {
     let filtered = allWords.filter((word) => {
+      if (searchTerm === "") {
+        const matchesPartOfSpeech =
+          selectedPartOfSpeech === "all" ||
+          word.partOfSpeech === selectedPartOfSpeech ||
+          (word.allPartsOfSpeech &&
+            word.allPartsOfSpeech.includes(selectedPartOfSpeech));
+
+        const matchesCefrLevel =
+          selectedCefrLevel === "all" ||
+          (word.cefr_level || word.cefrLevel) === selectedCefrLevel;
+
+        const matchesDifficulty =
+          selectedDifficulty === "all" ||
+          word.difficulty === selectedDifficulty;
+
+        return matchesPartOfSpeech && matchesCefrLevel && matchesDifficulty;
+      }
+
+      // Normalize search term and word for accent-insensitive matching
+      const normalizedSearchTerm = normalizeText(searchTerm);
+      const normalizedWord = normalizeText(word.word);
+      const normalizedTranslation = word.translations?.[0]?.text
+        ? normalizeText(word.translations[0].text)
+        : "";
+
       const matchesSearch =
-        searchTerm === "" ||
-        word.word.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (word.translations?.[0]?.text &&
-          word.translations[0].text
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()));
+        normalizedWord.includes(normalizedSearchTerm) ||
+        normalizedTranslation.includes(normalizedSearchTerm);
 
       const matchesPartOfSpeech =
         selectedPartOfSpeech === "all" ||
@@ -241,43 +270,76 @@ export const useDictionary = () => {
       );
     });
 
-    // Sort the filtered results using French locale
-    filtered.sort((a, b) => {
-      let comparison = 0;
+    // Sort search results to prioritize exact matches
+    if (searchTerm) {
+      const normalizedSearchTerm = normalizeText(searchTerm);
 
-      switch (sortBy) {
-        case "word":
-          // Sort with proper French collation - base letters first, then accents as secondary sort
-          comparison = a.word.localeCompare(b.word, "fr-FR", {
-            sensitivity: "base",
-            numeric: true,
-            caseFirst: "lower",
-          });
-          break;
-        case "partOfSpeech":
-          comparison = a.partOfSpeech.localeCompare(b.partOfSpeech, "fr-FR");
-          break;
-        case "cefrLevel":
-          const aLevel = a.cefr_level || a.cefrLevel || "";
-          const bLevel = b.cefr_level || b.cefrLevel || "";
-          comparison = aLevel.localeCompare(bLevel, "fr-FR");
-          break;
-        case "difficulty":
-          comparison = (a.difficulty || "").localeCompare(
-            b.difficulty || "",
-            "fr-FR"
-          );
-          break;
-        default:
-          comparison = a.word.localeCompare(b.word, "fr-FR", {
-            sensitivity: "base",
-            numeric: true,
-            caseFirst: "lower",
-          });
-      }
+      filtered.sort((a, b) => {
+        const aNormalized = normalizeText(a.word);
+        const bNormalized = normalizeText(b.word);
 
-      return sortOrder === "asc" ? comparison : -comparison;
-    });
+        // Exact matches first
+        const aExactMatch = aNormalized === normalizedSearchTerm;
+        const bExactMatch = bNormalized === normalizedSearchTerm;
+
+        if (aExactMatch && !bExactMatch) return -1;
+        if (!aExactMatch && bExactMatch) return 1;
+
+        // Then starts-with matches
+        const aStartsWith = aNormalized.startsWith(normalizedSearchTerm);
+        const bStartsWith = bNormalized.startsWith(normalizedSearchTerm);
+
+        if (aStartsWith && !bStartsWith) return -1;
+        if (!aStartsWith && bStartsWith) return 1;
+
+        // Finally, regular alphabetical order
+        return a.word.localeCompare(b.word, "fr-FR", {
+          sensitivity: "base",
+          numeric: true,
+          caseFirst: "lower",
+        });
+      });
+    }
+
+    // Apply general sorting only if not searching (search results are already sorted)
+    if (!searchTerm) {
+      filtered.sort((a, b) => {
+        let comparison = 0;
+
+        switch (sortBy) {
+          case "word":
+            // Sort with proper French collation - base letters first, then accents as secondary sort
+            comparison = a.word.localeCompare(b.word, "fr-FR", {
+              sensitivity: "base",
+              numeric: true,
+              caseFirst: "lower",
+            });
+            break;
+          case "partOfSpeech":
+            comparison = a.partOfSpeech.localeCompare(b.partOfSpeech, "fr-FR");
+            break;
+          case "cefrLevel":
+            const aLevel = a.cefr_level || a.cefrLevel || "";
+            const bLevel = b.cefr_level || b.cefrLevel || "";
+            comparison = aLevel.localeCompare(bLevel, "fr-FR");
+            break;
+          case "difficulty":
+            comparison = (a.difficulty || "").localeCompare(
+              b.difficulty || "",
+              "fr-FR"
+            );
+            break;
+          default:
+            comparison = a.word.localeCompare(b.word, "fr-FR", {
+              sensitivity: "base",
+              numeric: true,
+              caseFirst: "lower",
+            });
+        }
+
+        return sortOrder === "asc" ? comparison : -comparison;
+      });
+    }
 
     return filtered;
   }, [

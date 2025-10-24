@@ -9,7 +9,111 @@ const __dirname = path.dirname(__filename);
 
 /**
  * Dictionary Definition Generator
- * Generates dictionary entries from simple word inputs with auto-scraping
+ *
+ * Generates dictionary entries from simple word inputs with auto-scraping capabilities.
+ * Supports all parts of speech with part-of-speech-specific fields and automatic
+ * Cambridge Dictionary enhancement.
+ *
+ * @see {@link ../words/cambridge/DICTIONARY_GENERATOR_GUIDE.md} for comprehensive usage guide
+ *
+ * ## Basic Usage
+ * ```javascript
+ * import generator from './generate-definitions.js';
+ *
+ * // Single word
+ * await generator.generateDefinitions({
+ *   word: "bonjour",
+ *   translation: "hello",
+ *   partOfSpeech: "interjection"
+ * });
+ *
+ * // Multiple words
+ * await generator.generateDefinitions([
+ *   { word: "chat", translation: "cat", partOfSpeech: "noun", gender: "masculine" },
+ *   { word: "manger", translation: "to eat", partOfSpeech: "verb" }
+ * ]);
+ * ```
+ *
+ * ## Part-of-Speech Specific Examples
+ *
+ * ### Verbs
+ * ```javascript
+ * {
+ *   word: "manger",
+ *   translation: "to eat",
+ *   partOfSpeech: "verb",
+ *   infinitive: "manger",
+ *   verb_phrases: [
+ *     { phrase: "je mange", type: "pronoun_verb", context: "I eat", frequency: "common" }
+ *   ],
+ *   unit: "unit1",
+ *   tags: ["unit1", "food"]
+ * }
+ * ```
+ *
+ * ### Nouns
+ * ```javascript
+ * {
+ *   word: "chat",
+ *   translation: "cat",
+ *   partOfSpeech: "noun",
+ *   gender: "masculine",
+ *   plural_form: "chats",
+ *   noun_articles: {
+ *     definite: "le",
+ *     indefinite: "un",
+ *     plural: "les"
+ *   },
+ *   noun_phrases: [
+ *     { phrase: "le chat", type: "definite_article", context: "the cat", frequency: "common" }
+ *   ]
+ * }
+ * ```
+ *
+ * ### Adjectives
+ * ```javascript
+ * {
+ *   word: "grand",
+ *   translation: "big/tall",
+ *   partOfSpeech: "adjective",
+ *   adjective_forms: {
+ *     masculine_singular: "grand",
+ *     feminine_singular: "grande",
+ *     masculine_plural: "grands",
+ *     feminine_plural: "grandes"
+ *   },
+ *   adjective_phrases: [
+ *     { phrase: "très grand", type: "intensifier", context: "very big", frequency: "common" }
+ *   ]
+ * }
+ * ```
+ *
+ * ### Verb Conjugations
+ * ```javascript
+ * {
+ *   word: "suis",
+ *   translation: "am",
+ *   partOfSpeech: "verb",
+ *   infinitive: "être",
+ *   tense: "present",
+ *   mood: "indicative",
+ *   person: "je",
+ *   number: "singular",
+ *   verb_phrases: [
+ *     { phrase: "je suis", type: "pronoun_verb", context: "I am", frequency: "common" }
+ *   ]
+ * }
+ * ```
+ *
+ * ## Important Notes
+ * - **Automatic negative forms**: All verbs automatically get "ne...pas" patterns
+ * - **Duplicate checking**: Based on both `word` AND `partOfSpeech`
+ * - **Two-phase process**: Basic entries created first, then Cambridge enhancement
+ * - **Schema compliance**: All entries validated against word-schema.js
+ * - **Unit/Module support**: Use `unit`, `module`, `tags` for curriculum organization
+ *
+ * @author Language Academy Team
+ * @version 2.0.0
  */
 
 export class DefinitionGenerator {
@@ -21,9 +125,47 @@ export class DefinitionGenerator {
 
   /**
    * Generate dictionary entries from word inputs
+   *
+   * Creates dictionary entries with proper schema compliance and optional Cambridge enhancement.
+   * Supports all parts of speech with part-of-speech-specific fields.
+   *
    * @param {Array|Object} input - Single word object or array of word objects
    * @param {Object} options - Generation options
-   * @returns {Array} - Array of generated dictionary entries
+   * @param {boolean} [options.autoScrape=true] - Whether to enhance with Cambridge data
+   * @param {boolean} [options.verbose=false] - Whether to show detailed logging
+   * @returns {Object} - Object with results array and addResults summary
+   *
+   * @example
+   * // Basic verb
+   * await generator.generateDefinitions({
+   *   word: "manger",
+   *   translation: "to eat",
+   *   partOfSpeech: "verb"
+   * });
+   *
+   * @example
+   * // Noun with gender and articles
+   * await generator.generateDefinitions({
+   *   word: "chat",
+   *   translation: "cat",
+   *   partOfSpeech: "noun",
+   *   gender: "masculine",
+   *   plural_form: "chats",
+   *   noun_articles: { definite: "le", indefinite: "un" }
+   * });
+   *
+   * @example
+   * // Verb conjugation with details
+   * await generator.generateDefinitions({
+   *   word: "suis",
+   *   translation: "am",
+   *   partOfSpeech: "verb",
+   *   infinitive: "être",
+   *   tense: "present",
+   *   person: "je"
+   * });
+   *
+   * @see {@link ../words/cambridge/DICTIONARY_GENERATOR_GUIDE.md} for complete examples
    */
   async generateDefinitions(input, options = {}) {
     const words = Array.isArray(input) ? input : [input];
@@ -103,10 +245,7 @@ export class DefinitionGenerator {
       })`
     );
 
-    const cambridgeData = await this.scraper.scrapeWordWithPartOfSpeech(
-      entry.word,
-      partOfSpeech
-    );
+    const cambridgeData = await this.scraper.scrapeWord(entry.word);
 
     if (cambridgeData.found) {
       // Merge Cambridge data with existing entry
@@ -173,6 +312,9 @@ export class DefinitionGenerator {
       noun_phrases,
       adjective_forms,
       adjective_phrases,
+      unit,
+      module,
+      tags,
       ...rest
     } = wordInput;
 
@@ -247,10 +389,7 @@ export class DefinitionGenerator {
           partOfSpeech || "any"
         })`
       );
-      const cambridgeData = await this.scraper.scrapeWordWithPartOfSpeech(
-        word,
-        partOfSpeech
-      );
+      const cambridgeData = await this.scraper.scrapeWord(word);
 
       if (cambridgeData.found) {
         // Merge Cambridge data with user data (user data takes precedence)
@@ -270,6 +409,15 @@ export class DefinitionGenerator {
         targetWord: infinitive,
         note: "infinitive form",
       });
+
+      // Add conjugation details for conjugated forms
+      const conjugationDetails = this.getConjugationDetails(word, infinitive);
+      if (conjugationDetails) {
+        entryData.tense = conjugationDetails.tense;
+        entryData.mood = conjugationDetails.mood;
+        entryData.person = conjugationDetails.person;
+        entryData.number = conjugationDetails.number;
+      }
     }
 
     // Apply part-of-speech-specific fields
@@ -281,6 +429,25 @@ export class DefinitionGenerator {
       adjective_forms,
       adjective_phrases,
     });
+
+    // Handle unit, module, and tags
+    if (unit) {
+      entryData.unit = unit;
+      console.log(`  ✅ Added unit: ${unit}`);
+    }
+
+    if (module) {
+      entryData.module = module;
+      console.log(`  ✅ Added module: ${module}`);
+    }
+
+    if (tags && Array.isArray(tags)) {
+      // Merge with existing tags, avoiding duplicates
+      const existingTags = entryData.tags || [];
+      const newTags = [...new Set([...existingTags, ...tags])];
+      entryData.tags = newTags;
+      console.log(`  ✅ Added tags: ${tags.join(", ")}`);
+    }
 
     // Validate the entry
     const validation = validateWord(entryData);
@@ -334,7 +501,18 @@ export class DefinitionGenerator {
       cambridgeData.examples &&
       cambridgeData.examples.length > 0
     ) {
-      merged.examples = cambridgeData.examples;
+      // Transform examples to proper format if they're strings
+      merged.examples = cambridgeData.examples.map((example) => {
+        if (typeof example === "string") {
+          return {
+            lang: "en",
+            text: example,
+            trans: "",
+            source: "cambridge",
+          };
+        }
+        return example; // Already in proper format
+      });
     }
 
     // Add phonetic if not provided
@@ -865,9 +1043,31 @@ export default ${varName}Cambridge;
    * @param {Object} fields - Verb-specific fields
    */
   applyVerbFields(entryData, { verb_phrases }) {
+    // Initialize verb_phrases array
+    entryData.verb_phrases = [];
+
+    // Add user-provided verb phrases
     if (verb_phrases && Array.isArray(verb_phrases)) {
-      entryData.verb_phrases = verb_phrases;
-      console.log(`  ✅ Added ${verb_phrases.length} verb phrases`);
+      entryData.verb_phrases.push(...verb_phrases);
+      console.log(
+        `  ✅ Added ${verb_phrases.length} user-provided verb phrases`
+      );
+    }
+
+    // Automatically add negative form if not already present
+    const negativePhrase = `ne...${entryData.word}...pas`;
+    const hasNegative = entryData.verb_phrases.some(
+      (phrase) => phrase.phrase.includes("ne") && phrase.phrase.includes("pas")
+    );
+
+    if (!hasNegative) {
+      entryData.verb_phrases.push({
+        phrase: negativePhrase,
+        type: "negation",
+        context: `not ${entryData.word}`,
+        frequency: "common",
+      });
+      console.log(`  ✅ Auto-added negative form: ${negativePhrase}`);
     }
   }
 
@@ -910,6 +1110,750 @@ export default ${varName}Cambridge;
       entryData.adjective_phrases = adjective_phrases;
       console.log(`  ✅ Added ${adjective_phrases.length} adjective phrases`);
     }
+  }
+
+  /**
+   * Get conjugation details for a conjugated verb form
+   * @param {string} verbForm - The conjugated verb form (e.g., "veux", "voulait")
+   * @param {string} infinitive - The infinitive form (e.g., "vouloir")
+   * @returns {Object|null} - Conjugation details or null if not found
+   */
+  getConjugationDetails(verbForm, infinitive) {
+    // Common conjugation patterns for vouloir
+    if (infinitive === "vouloir") {
+      const vouloirConjugations = {
+        // Present tense
+        veux: {
+          tense: "present",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        veut: {
+          tense: "present",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        voulons: {
+          tense: "present",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        voulez: {
+          tense: "present",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        veulent: {
+          tense: "present",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Imperfect tense
+        voulais: {
+          tense: "past",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        voulait: {
+          tense: "past",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        voulions: {
+          tense: "past",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        vouliez: {
+          tense: "past",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        voulaient: {
+          tense: "past",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Future tense
+        voudrai: {
+          tense: "future",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        voudras: {
+          tense: "future",
+          mood: "indicative",
+          person: "tu",
+          number: "singular",
+        },
+        voudra: {
+          tense: "future",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        voudrons: {
+          tense: "future",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        voudrez: {
+          tense: "future",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        voudront: {
+          tense: "future",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Conditional tense
+        voudrais: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        voudrait: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        voudrions: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        voudriez: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        voudraient: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Subjunctive
+        veuille: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "je",
+          number: "singular",
+        },
+        veuillent: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Past participle
+        voulu: {
+          tense: "participle",
+          mood: "participle",
+          person: null,
+          number: null,
+        },
+      };
+
+      return vouloirConjugations[verbForm] || null;
+    }
+
+    // Common conjugation patterns for être
+    if (infinitive === "être") {
+      const etreConjugations = {
+        // Present tense
+        suis: {
+          tense: "present",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        es: {
+          tense: "present",
+          mood: "indicative",
+          person: "tu",
+          number: "singular",
+        },
+        est: {
+          tense: "present",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        sommes: {
+          tense: "present",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        êtes: {
+          tense: "present",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        sont: {
+          tense: "present",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Imperfect tense
+        étais: {
+          tense: "past",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        était: {
+          tense: "past",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        étions: {
+          tense: "past",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        étiez: {
+          tense: "past",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        étaient: {
+          tense: "past",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Future tense
+        serai: {
+          tense: "future",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        seras: {
+          tense: "future",
+          mood: "indicative",
+          person: "tu",
+          number: "singular",
+        },
+        sera: {
+          tense: "future",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        serons: {
+          tense: "future",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        serez: {
+          tense: "future",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        seront: {
+          tense: "future",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Conditional tense
+        serais: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        serait: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        serions: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        seriez: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        seraient: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Subjunctive
+        sois: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "je",
+          number: "singular",
+        },
+        soit: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "il",
+          number: "singular",
+        },
+        soyons: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "nous",
+          number: "plural",
+        },
+        soyez: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "vous",
+          number: "plural",
+        },
+        soient: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Past participle
+        été: {
+          tense: "participle",
+          mood: "participle",
+          person: null,
+          number: null,
+        },
+      };
+
+      return etreConjugations[verbForm] || null;
+    }
+
+    // Common conjugation patterns for pouvoir
+    if (infinitive === "pouvoir") {
+      const pouvoirConjugations = {
+        // Present tense
+        peux: {
+          tense: "present",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        peut: {
+          tense: "present",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        pouvons: {
+          tense: "present",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        pouvez: {
+          tense: "present",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        peuvent: {
+          tense: "present",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Imperfect tense
+        pouvais: {
+          tense: "past",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        pouvait: {
+          tense: "past",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        pouvions: {
+          tense: "past",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        pouviez: {
+          tense: "past",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        pouvaient: {
+          tense: "past",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Future tense
+        pourrai: {
+          tense: "future",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        pourras: {
+          tense: "future",
+          mood: "indicative",
+          person: "tu",
+          number: "singular",
+        },
+        pourra: {
+          tense: "future",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        pourrons: {
+          tense: "future",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        pourrez: {
+          tense: "future",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        pourront: {
+          tense: "future",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Conditional tense
+        pourrais: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        pourrait: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        pourrions: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        pourriez: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        pourraient: {
+          tense: "conditional",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Subjunctive
+        puisse: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "je",
+          number: "singular",
+        },
+        puissions: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "nous",
+          number: "plural",
+        },
+        puissiez: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "vous",
+          number: "plural",
+        },
+        puissent: {
+          tense: "subjunctive",
+          mood: "subjunctive",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Past participle
+        pu: {
+          tense: "participle",
+          mood: "participle",
+          person: null,
+          number: null,
+        },
+      };
+
+      return pouvoirConjugations[verbForm] || null;
+    }
+
+    // Common conjugation patterns for avoir
+    if (infinitive === "avoir") {
+      const avoirConjugations = {
+        // Present tense
+        ai: {
+          tense: "present",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        as: {
+          tense: "present",
+          mood: "indicative",
+          person: "tu",
+          number: "singular",
+        },
+        a: {
+          tense: "present",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        avons: {
+          tense: "present",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        avez: {
+          tense: "present",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        ont: {
+          tense: "present",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Imperfect tense
+        avais: {
+          tense: "past",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        avait: {
+          tense: "past",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        avions: {
+          tense: "past",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        aviez: {
+          tense: "past",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        avaient: {
+          tense: "past",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Future tense
+        aurai: {
+          tense: "future",
+          mood: "indicative",
+          person: "je",
+          number: "singular",
+        },
+        auras: {
+          tense: "future",
+          mood: "indicative",
+          person: "tu",
+          number: "singular",
+        },
+        aura: {
+          tense: "future",
+          mood: "indicative",
+          person: "il",
+          number: "singular",
+        },
+        aurons: {
+          tense: "future",
+          mood: "indicative",
+          person: "nous",
+          number: "plural",
+        },
+        aurez: {
+          tense: "future",
+          mood: "indicative",
+          person: "vous",
+          number: "plural",
+        },
+        auront: {
+          tense: "future",
+          mood: "indicative",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Conditional tense
+        aurais: {
+          tense: "conditional",
+          mood: "conditional",
+          person: "je",
+          number: "singular",
+        },
+        aurait: {
+          tense: "conditional",
+          mood: "conditional",
+          person: "il",
+          number: "singular",
+        },
+        aurions: {
+          tense: "conditional",
+          mood: "conditional",
+          person: "nous",
+          number: "plural",
+        },
+        auriez: {
+          tense: "conditional",
+          mood: "conditional",
+          person: "vous",
+          number: "plural",
+        },
+        auraient: {
+          tense: "conditional",
+          mood: "conditional",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Subjunctive tense
+        aie: {
+          tense: "present",
+          mood: "subjunctive",
+          person: "je",
+          number: "singular",
+        },
+        aies: {
+          tense: "present",
+          mood: "subjunctive",
+          person: "tu",
+          number: "singular",
+        },
+        ait: {
+          tense: "present",
+          mood: "subjunctive",
+          person: "il",
+          number: "singular",
+        },
+        ayons: {
+          tense: "present",
+          mood: "subjunctive",
+          person: "nous",
+          number: "plural",
+        },
+        ayez: {
+          tense: "present",
+          mood: "subjunctive",
+          person: "vous",
+          number: "plural",
+        },
+        aient: {
+          tense: "present",
+          mood: "subjunctive",
+          person: "ils",
+          number: "plural",
+        },
+
+        // Imperative
+        aie: {
+          tense: "present",
+          mood: "imperative",
+          person: "tu",
+          number: "singular",
+        },
+        ayons: {
+          tense: "present",
+          mood: "imperative",
+          person: "nous",
+          number: "plural",
+        },
+        ayez: {
+          tense: "present",
+          mood: "imperative",
+          person: "vous",
+          number: "plural",
+        },
+
+        // Past participle
+        eu: { tense: "past", mood: "participle", person: null, number: null },
+      };
+
+      return avoirConjugations[verbForm] || null;
+    }
+
+    // Add patterns for other common verbs as needed
+    return null;
   }
 }
 

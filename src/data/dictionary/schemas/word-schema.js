@@ -3,6 +3,9 @@ import { z } from "zod";
 /**
  * Enhanced Dictionary Schema with Zod Validation
  * Provides runtime validation, type safety, and data transformation
+ *
+ * Note: Contractions (like "J'ai", "c'est", "qu'est-ce que") are treated as single words
+ * and should be tagged with "contraction" for proper identification.
  */
 
 // Base schemas for reusable components
@@ -92,6 +95,7 @@ export const WordSchema = z.object({
     "preposition",
     "conjunction",
     "interjection",
+    "interrogative",
     "expression",
     "other",
     "unknown",
@@ -100,6 +104,33 @@ export const WordSchema = z.object({
 
   // Verb-specific fields
   infinitive: z.string().optional(), // For conjugated forms, what's the infinitive?
+  tense: z
+    .enum([
+      "present",
+      "past",
+      "future",
+      "conditional",
+      "subjunctive",
+      "imperative",
+      "infinitive",
+      "participle",
+    ])
+    .optional(), // Tense of the conjugated form
+  mood: z
+    .enum([
+      "indicative",
+      "subjunctive",
+      "conditional",
+      "imperative",
+      "infinitive",
+      "participle",
+    ])
+    .optional(), // Mood of the conjugated form
+  person: z
+    .enum(["je", "tu", "il", "elle", "nous", "vous", "ils", "elles", "on"])
+    .nullable()
+    .optional(), // Person of the conjugated form
+  number: z.enum(["singular", "plural"]).nullable().optional(), // Number of the conjugated form
   conjugation: z
     .object({
       present: z
@@ -153,7 +184,17 @@ export const WordSchema = z.object({
     .array(
       z.object({
         phrase: z.string(), // The complete phrase (e.g., "n'est pas", "il est")
-        type: z.enum(["negation", "pronoun_verb", "question", "compound"]), // Type of phrase
+        type: z.enum([
+          "negation",
+          "pronoun_verb",
+          "question",
+          "compound",
+          "subjunctive",
+          "compound_past",
+          "imperative",
+          "demonstrative_verb",
+          "existential_verb",
+        ]), // Type of phrase
         context: z.string().optional(), // Usage context or meaning
         frequency: z.enum(["common", "uncommon", "rare"]).optional(), // How common this phrase is
       })

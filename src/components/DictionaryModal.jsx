@@ -376,6 +376,39 @@ function DictionaryModal({ isOpen, onClose }) {
                     )}
 
                     {/* Part-of-Speech Specific Content */}
+                    {/* Verb conjugation details */}
+                    {pos === 'verb' && (selectedWord.tense || selectedWord.mood || selectedWord.person) && (
+                      <div className="dictionary-word-grammar-info">
+                        <h4 className="dictionary-section-title">Grammar Info</h4>
+                        <div className="dictionary-grammar-details">
+                          {selectedWord.tense && (
+                            <div className="dictionary-grammar-item">
+                              <span className="dictionary-grammar-label">Tense:</span>
+                              <span className="dictionary-grammar-value">{selectedWord.tense}</span>
+                            </div>
+                          )}
+                          {selectedWord.mood && (
+                            <div className="dictionary-grammar-item">
+                              <span className="dictionary-grammar-label">Mood:</span>
+                              <span className="dictionary-grammar-value">{selectedWord.mood}</span>
+                            </div>
+                          )}
+                          {selectedWord.person && (
+                            <div className="dictionary-grammar-item">
+                              <span className="dictionary-grammar-label">Person:</span>
+                              <span className="dictionary-grammar-value">{selectedWord.person}</span>
+                            </div>
+                          )}
+                          {selectedWord.number && (
+                            <div className="dictionary-grammar-item">
+                              <span className="dictionary-grammar-label">Number:</span>
+                              <span className="dictionary-grammar-value">{selectedWord.number}</span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
                     {pos === 'verb' && selectedWord.verb_phrases && selectedWord.verb_phrases.length > 0 && (
                       <div className="dictionary-word-verb-phrases">
                         <h4 className="dictionary-section-title">Common Phrases</h4>
@@ -592,6 +625,8 @@ function DictionaryModal({ isOpen, onClose }) {
                     </div>
                   )}
                 </div>
+
+
 
                 {/* Metadata */}
                 <div className="dictionary-word-metadata">
