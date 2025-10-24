@@ -1,0 +1,257 @@
+[
+  {
+    "word": "j'",
+    "translation": "I",
+    "partOfSpeech": "pronoun",
+    "gender": "none",
+    "number": "singular",
+    "definition": "contracted form of 'je' (I) used before vowels and silent h",
+    "examples": [
+      {
+        "text": "j'ai",
+        "trans": "I have",
+        "lang": "en"
+      },
+      {
+        "text": "j'aime",
+        "trans": "I like",
+        "lang": "en"
+      },
+      {
+        "text": "j'habite",
+        "trans": "I live",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "pronoun", "elision"]
+  },
+  {
+    "word": "l'",
+    "translation": "the",
+    "partOfSpeech": "article",
+    "gender": "both",
+    "number": "singular",
+    "definition": "contracted form of 'le' or 'la' (the) used before vowels and silent h",
+    "examples": [
+      {
+        "text": "l'eau",
+        "trans": "the water",
+        "lang": "en"
+      },
+      {
+        "text": "l'homme",
+        "trans": "the man",
+        "lang": "en"
+      },
+      {
+        "text": "l'école",
+        "trans": "the school",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "article", "elision"]
+  },
+  {
+    "word": "d'",
+    "translation": "of/from",
+    "partOfSpeech": "preposition",
+    "gender": "none",
+    "number": "singular",
+    "definition": "contracted form of 'de' (of/from) used before vowels and silent h",
+    "examples": [
+      {
+        "text": "d'argent",
+        "trans": "money / of money",
+        "lang": "en"
+      },
+      {
+        "text": "d'eau",
+        "trans": "of water",
+        "lang": "en"
+      },
+      {
+        "text": "d'ici",
+        "trans": "from here",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "preposition", "elision"]
+  },
+  {
+    "word": "n'",
+    "translation": "not",
+    "partOfSpeech": "adverb",
+    "gender": "none",
+    "number": "singular",
+    "definition": "contracted form of 'ne' (not) used before vowels and silent h in negative constructions",
+    "examples": [
+      {
+        "text": "n'est pas",
+        "trans": "is not",
+        "lang": "en"
+      },
+      {
+        "text": "n'ai pas",
+        "trans": "have not",
+        "lang": "en"
+      },
+      {
+        "text": "n'aime pas",
+        "trans": "don't like",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "adverb", "negation", "elision"]
+  },
+  {
+    "word": "s'",
+    "translation": "himself/herself/itself/themselves",
+    "partOfSpeech": "pronoun",
+    "gender": "both",
+    "number": "both",
+    "definition": "contracted form of 'se' (reflexive pronoun) used before vowels and silent h",
+    "examples": [
+      {
+        "text": "s'appelle",
+        "trans": "is called",
+        "lang": "en"
+      },
+      {
+        "text": "s'habille",
+        "trans": "gets dressed",
+        "lang": "en"
+      },
+      {
+        "text": "s'arrête",
+        "trans": "stops",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "pronoun", "reflexive", "elision"]
+  },
+  {
+    "word": "c'",
+    "translation": "it/this/that",
+    "partOfSpeech": "pronoun",
+    "gender": "none",
+    "number": "singular",
+    "definition": "contracted form of 'ce' (it/this/that) used before vowels and silent h",
+    "examples": [
+      {
+        "text": "c'est",
+        "trans": "it is / this is",
+        "lang": "en"
+      },
+      {
+        "text": "c'était",
+        "trans": "it was",
+        "lang": "en"
+      },
+      {
+        "text": "c'arrive",
+        "trans": "it happens",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "pronoun", "demonstrative", "elision"]
+  },
+  {
+    "word": "qu'",
+    "translation": "that/which/who",
+    "partOfSpeech": "pronoun",
+    "gender": "none",
+    "number": "both",
+    "definition": "contracted form of 'que' (that/which/who) used before vowels and silent h",
+    "examples": [
+      {
+        "text": "qu'est-ce que",
+        "trans": "what",
+        "lang": "en"
+      },
+      {
+        "text": "qu'il",
+        "trans": "that he",
+        "lang": "en"
+      },
+      {
+        "text": "qu'elle",
+        "trans": "that she",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "pronoun", "relative", "elision"]
+  },
+  {
+    "word": "m'",
+    "translation": "me",
+    "partOfSpeech": "pronoun",
+    "gender": "none",
+    "number": "singular",
+    "definition": "contracted form of 'me' (me) used before vowels and silent h",
+    "examples": [
+      {
+        "text": "m'appelle",
+        "trans": "my name is",
+        "lang": "en"
+      },
+      {
+        "text": "m'aide",
+        "trans": "helps me",
+        "lang": "en"
+      },
+      {
+        "text": "m'écoute",
+        "trans": "listens to me",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "pronoun", "object", "elision"]
+  },
+  {
+    "word": "t'",
+    "translation": "you",
+    "partOfSpeech": "pronoun",
+    "gender": "none",
+    "number": "singular",
+    "definition": "contracted form of 'te' (you) used before vowels and silent h",
+    "examples": [
+      {
+        "text": "t'appelles",
+        "trans": "your name is",
+        "lang": "en"
+      },
+      {
+        "text": "t'aide",
+        "trans": "helps you",
+        "lang": "en"
+      },
+      {
+        "text": "t'écoute",
+        "trans": "listens to you",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "pronoun", "object", "elision"]
+  },
+  {
+    "word": "y'",
+    "translation": "there",
+    "partOfSpeech": "pronoun",
+    "gender": "none",
+    "number": "singular",
+    "definition": "contracted form of 'y' (there) used before vowels and silent h",
+    "examples": [
+      {
+        "text": "y'a",
+        "trans": "there is",
+        "lang": "en"
+      },
+      {
+        "text": "y'en a",
+        "trans": "there are some",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "pronoun", "adverb", "elision"]
+  }
+]

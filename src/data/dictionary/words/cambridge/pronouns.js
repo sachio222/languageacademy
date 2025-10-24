@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Pronouns
- * Generated: 2025-10-24T04:42:13.956Z
- * Successfully scraped: 66/66
+ * Generated: 2025-10-24T21:33:48.071Z
+ * Successfully scraped: 73/73
  */
 
 export const pronounsCambridge = new Map([
@@ -4132,6 +4132,392 @@ export const pronounsCambridge = new Map([
             "cambridge"
         ],
         "verified": false,
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "j'-fr",
+        {
+        "id": "j'-fr",
+        "lang": "fr",
+        "word": "j'",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "I",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "j'ai",
+                "trans": "I have",
+                "lang": "en"
+            },
+            {
+                "text": "j'aime",
+                "trans": "I like",
+                "lang": "en"
+            },
+            {
+                "text": "j'habite",
+                "trans": "I live",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "contraction",
+            "pronoun",
+            "elision"
+        ],
+        "created_at": "2025-10-24T21:33:44.325Z",
+        "updated_at": "2025-10-24T21:33:44.821Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "contracted form of 'je' (I) used before vowels and silent h",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "s'-fr",
+        {
+        "id": "s'-fr",
+        "lang": "fr",
+        "word": "s'",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "himself/herself/itself/themselves",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "s'appelle",
+                "trans": "is called",
+                "lang": "en"
+            },
+            {
+                "text": "s'habille",
+                "trans": "gets dressed",
+                "lang": "en"
+            },
+            {
+                "text": "s'arrête",
+                "trans": "stops",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "contraction",
+            "pronoun",
+            "reflexive",
+            "elision"
+        ],
+        "created_at": "2025-10-24T21:33:44.330Z",
+        "updated_at": "2025-10-24T21:33:46.073Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "contracted form of 'se' (reflexive pronoun) used before vowels and silent h",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "c'-fr",
+        {
+        "id": "c'-fr",
+        "lang": "fr",
+        "word": "c'",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "it/this/that",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "c'est",
+                "trans": "it is / this is",
+                "lang": "en"
+            },
+            {
+                "text": "c'était",
+                "trans": "it was",
+                "lang": "en"
+            },
+            {
+                "text": "c'arrive",
+                "trans": "it happens",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "contraction",
+            "pronoun",
+            "demonstrative",
+            "elision"
+        ],
+        "created_at": "2025-10-24T21:33:44.330Z",
+        "updated_at": "2025-10-24T21:33:46.387Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "contracted form of 'ce' (it/this/that) used before vowels and silent h",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "qu'-fr",
+        {
+        "id": "qu'-fr",
+        "lang": "fr",
+        "word": "qu'",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "that/which/who",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "qu'est-ce que",
+                "trans": "what",
+                "lang": "en"
+            },
+            {
+                "text": "qu'il",
+                "trans": "that he",
+                "lang": "en"
+            },
+            {
+                "text": "qu'elle",
+                "trans": "that she",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "contraction",
+            "pronoun",
+            "relative",
+            "elision"
+        ],
+        "created_at": "2025-10-24T21:33:44.330Z",
+        "updated_at": "2025-10-24T21:33:46.664Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "contracted form of 'que' (that/which/who) used before vowels and silent h",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "m'-fr",
+        {
+        "id": "m'-fr",
+        "lang": "fr",
+        "word": "m'",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "me",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "m'appelle",
+                "trans": "my name is",
+                "lang": "en"
+            },
+            {
+                "text": "m'aide",
+                "trans": "helps me",
+                "lang": "en"
+            },
+            {
+                "text": "m'écoute",
+                "trans": "listens to me",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "contraction",
+            "pronoun",
+            "object",
+            "elision"
+        ],
+        "created_at": "2025-10-24T21:33:44.330Z",
+        "updated_at": "2025-10-24T21:33:47.346Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "contracted form of 'me' (me) used before vowels and silent h",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "t'-fr",
+        {
+        "id": "t'-fr",
+        "lang": "fr",
+        "word": "t'",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "you",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "t'appelles",
+                "trans": "your name is",
+                "lang": "en"
+            },
+            {
+                "text": "t'aide",
+                "trans": "helps you",
+                "lang": "en"
+            },
+            {
+                "text": "t'écoute",
+                "trans": "listens to you",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "contraction",
+            "pronoun",
+            "object",
+            "elision"
+        ],
+        "created_at": "2025-10-24T21:33:44.331Z",
+        "updated_at": "2025-10-24T21:33:47.653Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "contracted form of 'te' (you) used before vowels and silent h",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "y'-fr",
+        {
+        "id": "y'-fr",
+        "lang": "fr",
+        "word": "y'",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "there",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "y'a",
+                "trans": "there is",
+                "lang": "en"
+            },
+            {
+                "text": "y'en a",
+                "trans": "there are some",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "contraction",
+            "pronoun",
+            "adverb",
+            "elision"
+        ],
+        "created_at": "2025-10-24T21:33:44.331Z",
+        "updated_at": "2025-10-24T21:33:48.069Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "contracted form of 'y' (there) used before vowels and silent h",
         "partOfSpeech": "pronoun"
     }
   ]

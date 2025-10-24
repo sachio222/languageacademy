@@ -78,6 +78,83 @@ export const renderInteractiveText = (
 };
 
 
+/**
+ * Check for French contractions (single letter + apostrophe)
+ * @param {string} text - The text to check
+ * @returns {RegExpMatchArray|null} - The match result or null
+ */
+const checkContractionMatch = (text) => {
+  // Match single letter + apostrophe + word (e.g., d'argent, l'eau, j'ai)
+  const contractionPattern = /^([a-z]'[a-zàâäæçéèêëïîôùûüœ]+)/i;
+  return text.match(contractionPattern);
+};
+
+/**
+ * Process contraction match by splitting into contraction + word
+ * @param {RegExpMatchArray} contractionMatch - The contraction match result
+ * @param {string} remainingText - The original remaining text
+ * @param {number} charPosition - The character position
+ * @param {Object} context - The rendering context
+ * @returns {Object} - The result object with element and updated positions
+ */
+const processContractionMatch = (contractionMatch, remainingText, charPosition, context) => {
+  const { paragraphIndex, allWords } = context;
+  try {
+    const fullMatch = contractionMatch[0];
+    const fullLength = fullMatch.length;
+    const uniqueKey = generateTextKey(paragraphIndex, charPosition);
+
+    // Split the contraction: "d'argent" -> "d'" + "argent"
+    const apostropheIndex = fullMatch.indexOf("'");
+    const contraction = fullMatch.substring(0, apostropheIndex + 1); // "d'"
+    const word = fullMatch.substring(apostropheIndex + 1); // "argent"
+
+    // Process the contraction part
+    const contractionContext = getContextString(context, charPosition, contraction.length, remainingText);
+    const contractionData = getWordTranslation(contraction, allWords, contractionContext);
+
+    // Process the word part
+    const wordContext = getContextString(context, charPosition + contraction.length, word.length, remainingText);
+    const wordData = getWordTranslation(word, allWords, wordContext);
+
+    // Create combined tooltip for the full contraction
+    const combinedTranslation = createCombinedContractionTranslation(
+      fullMatch,
+      contraction,
+      word,
+      contractionData,
+      wordData
+    );
+
+    // Create a single interactive element for the full contraction
+    const combinedElement = createInteractiveWordElement(
+      fullMatch,
+      combinedTranslation,
+      uniqueKey,
+      context,
+      'contraction',
+      {
+        contraction: contractionData,
+        word: wordData,
+        isCombined: true
+      }
+    );
+
+    return {
+      element: combinedElement,
+      remainingText: remainingText.slice(fullLength),
+      charPosition: charPosition + fullLength
+    };
+  } catch (error) {
+    console.error("Error processing contraction match:", error);
+    return {
+      element: <span key={uniqueKey}>{fullMatch}</span>,
+      remainingText: remainingText.slice(1),
+      charPosition: charPosition + 1
+    };
+  }
+};
+
 const renderWords = (text, context) => {
   const { paragraphIndex, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
   let remainingText = text;
@@ -134,6 +211,16 @@ const renderWords = (text, context) => {
       elements.push(numberMatch.element);
       remainingText = numberMatch.remainingText;
       charPosition = numberMatch.charPosition;
+      continue;
+    }
+
+    // Check for contractions first (single letter + apostrophe)
+    const contractionMatch = checkContractionMatch(remainingText);
+    if (contractionMatch) {
+      const result = processContractionMatch(contractionMatch, remainingText, charPosition, context);
+      elements.push(result.element);
+      remainingText = result.remainingText;
+      charPosition = result.charPosition;
       continue;
     }
 
@@ -682,4 +769,54 @@ const getVerbContextAwareTranslation = (word, dictionaryEntry, context) => {
   }
 
   return null;
+};
+
+/**
+ * Create a combined translation for contractions
+ * @param {string} fullMatch - The full contraction (e.g., "d'argent")
+ * @param {string} contraction - The contraction part (e.g., "d'")
+ * @param {string} word - The word part (e.g., "argent")
+ * @param {Object} contractionData - Translation data for the contraction
+ * @param {Object} wordData - Translation data for the word
+ * @returns {string} - Combined translation text
+ */
+const createCombinedContractionTranslation = (fullMatch, contraction, word, contractionData, wordData) => {
+  const contractionTranslation = contractionData?.translation || contraction;
+  const wordTranslation = wordData?.translation || word;
+
+  // Create a meaningful combined translation
+  if (contraction === "d'" && wordData?.partOfSpeech === "noun") {
+    // d'argent = "money" (not "of money")
+    return wordTranslation;
+  } else if (contraction === "l'" && wordData?.partOfSpeech === "noun") {
+    // l'eau = "water" (not "the water")
+    return wordTranslation;
+  } else if (contraction === "j'" && wordData?.partOfSpeech === "verb") {
+    // j'ai = "I have"
+    return `${contractionTranslation} ${wordTranslation}`;
+  } else if (contraction === "n'" && wordData?.partOfSpeech === "verb") {
+    // n'est pas = "is not"
+    return `${wordTranslation} not`;
+  } else if (contraction === "s'" && wordData?.partOfSpeech === "verb") {
+    // s'appelle = "is called"
+    return `${wordTranslation} (reflexive)`;
+  } else if (contraction === "c'" && wordData?.partOfSpeech === "verb") {
+    // c'est = "it is"
+    return `${contractionTranslation} ${wordTranslation}`;
+  } else if (contraction === "qu'" && wordData?.partOfSpeech === "verb") {
+    // qu'est-ce que = "what"
+    return `${contractionTranslation} ${wordTranslation}`;
+  } else if (contraction === "m'" && wordData?.partOfSpeech === "verb") {
+    // m'appelle = "my name is"
+    return `${contractionTranslation} ${wordTranslation}`;
+  } else if (contraction === "t'" && wordData?.partOfSpeech === "verb") {
+    // t'appelles = "your name is"
+    return `${contractionTranslation} ${wordTranslation}`;
+  } else if (contraction === "y'" && wordData?.partOfSpeech === "verb") {
+    // y'a = "there is"
+    return `${contractionTranslation} ${wordTranslation}`;
+  } else {
+    // Fallback: combine both translations
+    return `${contractionTranslation} ${wordTranslation}`;
+  }
 };
