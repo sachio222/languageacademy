@@ -102,6 +102,20 @@ export const WordSchema = z.object({
   ]),
   conjugationGroup: z.enum(["er", "ir", "re", "irregular", "none"]).optional(),
 
+  // Redirect fields for variant entries
+  redirect_to: z.string().optional(), // ID of the main entry this redirects to
+  redirect_type: z
+    .enum([
+      "plural_form",
+      "feminine_form",
+      "masculine_form",
+      "conjugated_form",
+      "variant",
+    ])
+    .optional(), // Type of redirect relationship
+  base_word: z.string().optional(), // The base word this is a variant of
+  number: z.enum(["singular", "plural"]).optional(), // Grammatical number
+
   // Verb-specific fields
   infinitive: z.string().optional(), // For conjugated forms, what's the infinitive?
   tense: z

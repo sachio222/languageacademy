@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Adjectives
- * Generated: 2025-10-23T23:26:53.787Z
- * Successfully scraped: 48/48
+ * Generated: 2025-10-24T02:50:57.971Z
+ * Successfully scraped: 53/53
  */
 
 export const adjectivesCambridge = new Map([
@@ -335,86 +335,42 @@ export const adjectivesCambridge = new Map([
         "id": "belle-fr",
         "lang": "fr",
         "word": "belle",
-        "partOfSpeech": "adjective",
         "translations": [
             {
                 "lang": "en",
                 "text": "beautiful",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
-        "relationships": [
-            {
-                "type": "redirect",
-                "targetWord": "beau",
-                "note": "Redirects to beau",
-                "strength": 1
-            }
-        ],
+        "relationships": [],
         "etymology": "",
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "un bel homme",
-                "trans": "a handsome man",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une belle musique",
-                "trans": "a beautiful piece of music",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Comme elle était belle dans sa robe de mariée !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un beau voyage",
-                "trans": "a nice trip",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un beau temps",
-                "trans": "nice weather",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La journée est au beau, il faut en profiter !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une belle somme",
-                "trans": "a large amount",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle possède une belle fortune.",
-                "source": "cambridge"
+                "text": "Une belle fille",
+                "translation": "A beautiful girl",
+                "context": "general",
+                "source": "language_academy",
+                "lang": "en"
             }
         ],
-        "phonetic": "bo",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "variant"
+        ],
+        "created_at": "2025-10-24T02:32:47.709Z",
+        "updated_at": "2025-10-24T02:32:48.125Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T04:41:40.854Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/beau",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:41:40.854Z"
-        }
+        "partOfSpeech": "adjective"
     }
   ],
   [
@@ -2863,15 +2819,93 @@ export const adjectivesCambridge = new Map([
     }
   ],
   [
-    "grand-fr",
+    "beaux-fr",
         {
-        "id": "grand-fr",
+        "id": "beaux-fr",
         "lang": "fr",
-        "word": "grand",
+        "word": "beaux",
+        "partOfSpeech": "adjective",
+        "redirect_to": "beau-fr",
+        "redirect_type": "masculine_plural",
+        "base_word": "beau",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Les beaux garçons",
+                "translation": "The handsome boys",
+                "context": "general",
+                "source": "language_academy",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:46:55.129Z",
+        "updated_at": "2025-10-24T02:46:55.129Z"
+    }
+  ],
+  [
+    "belles-fr",
+        {
+        "id": "belles-fr",
+        "lang": "fr",
+        "word": "belles",
+        "partOfSpeech": "adjective",
+        "redirect_to": "beau-fr",
+        "redirect_type": "feminine_plural",
+        "base_word": "beau",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Les belles fleurs",
+                "translation": "The beautiful flowers",
+                "context": "general",
+                "source": "language_academy",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:46:55.130Z",
+        "updated_at": "2025-10-24T02:46:55.130Z"
+    }
+  ],
+  [
+    "beau-fr",
+        {
+        "id": "beau-fr",
+        "lang": "fr",
+        "word": "beau",
         "translations": [
             {
                 "lang": "en",
-                "text": "big/tall",
+                "text": "beautiful/handsome",
                 "source": "language_academy",
                 "confidence": 0.95
             }
@@ -2881,39 +2915,177 @@ export const adjectivesCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [],
+        "examples": [
+            {
+                "text": "Un beau garçon",
+                "translation": "A handsome boy",
+                "context": "general",
+                "source": "language_academy",
+                "lang": "en"
+            },
+            {
+                "text": "Le beau temps",
+                "translation": "The beautiful weather",
+                "context": "general",
+                "source": "language_academy",
+                "lang": "en"
+            }
+        ],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
-            "lesson"
+            "lesson",
+            "common"
         ],
-        "created_at": "2025-10-23T23:26:53.778Z",
-        "updated_at": "2025-10-23T23:26:53.778Z",
+        "created_at": "2025-10-24T02:49:10.277Z",
+        "updated_at": "2025-10-24T02:49:10.997Z",
         "sources": [
-            "language_academy"
+            "language_academy",
+            "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "adjective",
         "adjective_forms": {
-            "masculine_singular": "grand",
-            "feminine_singular": "grande",
-            "masculine_plural": "grands",
-            "feminine_plural": "grandes"
-        },
-        "adjective_phrases": [
+            "masculine_singular": "beau",
+            "feminine_singular": "belle",
+            "masculine_plural": "beaux",
+            "feminine_plural": "belles"
+        }
+    }
+  ],
+  [
+    "vieux-fr",
+        {
+        "id": "vieux-fr",
+        "lang": "fr",
+        "word": "vieux",
+        "translations": [
             {
-                "phrase": "très grand",
-                "type": "intensifier",
-                "context": "very big/tall",
-                "frequency": "common"
+                "lang": "en",
+                "text": "old",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Un vieux livre",
+                "translation": "An old book",
+                "context": "general",
+                "source": "language_academy",
+                "lang": "en"
             },
             {
-                "phrase": "plus grand que",
-                "type": "comparative",
-                "context": "bigger than",
-                "frequency": "common"
+                "text": "Le vieux château",
+                "translation": "The old castle",
+                "context": "general",
+                "source": "language_academy",
+                "lang": "en"
             }
-        ]
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "common"
+        ],
+        "created_at": "2025-10-24T02:50:57.308Z",
+        "updated_at": "2025-10-24T02:50:57.970Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "vieux",
+            "feminine_singular": "vieille",
+            "masculine_plural": "vieux",
+            "feminine_plural": "vieilles"
+        }
+    }
+  ],
+  [
+    "vieille-fr",
+        {
+        "id": "vieille-fr",
+        "lang": "fr",
+        "word": "vieille",
+        "partOfSpeech": "adjective",
+        "redirect_to": "vieux-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "vieux",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Une vieille maison",
+                "translation": "An old house",
+                "context": "general",
+                "source": "language_academy",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:50:57.312Z",
+        "updated_at": "2025-10-24T02:50:57.312Z"
+    }
+  ],
+  [
+    "vieilles-fr",
+        {
+        "id": "vieilles-fr",
+        "lang": "fr",
+        "word": "vieilles",
+        "partOfSpeech": "adjective",
+        "redirect_to": "vieux-fr",
+        "redirect_type": "feminine_plural",
+        "base_word": "vieux",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Les vieilles maisons",
+                "translation": "The old houses",
+                "context": "general",
+                "source": "language_academy",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:50:57.312Z",
+        "updated_at": "2025-10-24T02:50:57.312Z"
     }
   ]
 ]);

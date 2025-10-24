@@ -369,7 +369,7 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
     const wordData = getWordTranslation(word, allWords, contextString);
 
     if (wordData?.translation) {
-      const element = createInteractiveWordElement(word, wordData.translation, uniqueKey, context, wordData.partOfSpeech);
+      const element = createInteractiveWordElement(word, wordData.translation, uniqueKey, context, wordData.partOfSpeech, wordData);
       return {
         element,
         remainingText: remainingText.slice(wordLength),
@@ -462,6 +462,23 @@ const getWordTranslation = (word, allWords, context = '') => {
   );
 
   if (dictionaryEntry) {
+    // Handle redirect entries - get translation from the main entry
+    if (dictionaryEntry.redirect_to) {
+      const mainEntry = allWords.find(entry => entry.id === dictionaryEntry.redirect_to);
+      if (mainEntry) {
+        return {
+          translation: mainEntry.translations?.[0]?.text || null,
+          partOfSpeech: dictionaryEntry.partOfSpeech || null,
+          gender: dictionaryEntry.gender,
+          number: dictionaryEntry.number,
+          redirectInfo: {
+            baseWord: dictionaryEntry.base_word,
+            redirectType: dictionaryEntry.redirect_type
+          }
+        };
+      }
+    }
+
     // If word has multiple parts of speech, use context to disambiguate
     if (dictionaryEntry.allPartsOfSpeech && dictionaryEntry.allPartsOfSpeech.length > 1) {
       const contextAwarePartOfSpeech = getContextAwarePartOfSpeech(

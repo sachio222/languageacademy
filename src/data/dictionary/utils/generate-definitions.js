@@ -187,7 +187,14 @@ export class DefinitionGenerator {
           ...options,
           autoScrape: false,
         });
-        results.push(entry);
+
+        // Handle redirect entries (they return the entry directly)
+        if (entry.redirect_to) {
+          results.push(entry);
+        } else {
+          // Regular entries are wrapped in {entry, success}
+          results.push(entry);
+        }
       } catch (error) {
         console.error(
           `❌ Error generating definition for ${wordInput.word}:`,
@@ -211,6 +218,15 @@ export class DefinitionGenerator {
 
       for (let i = 0; i < results.length; i++) {
         const result = results[i];
+
+        // Skip redirect entries for Cambridge scraping (they don't need it)
+        if (result.redirect_to) {
+          console.log(
+            `\n🔍 Skipping Cambridge enhancement for redirect entry: ${result.word}`
+          );
+          continue;
+        }
+
         if (!result.success) continue;
 
         const wordInput = words[i];
@@ -315,11 +331,21 @@ export class DefinitionGenerator {
       unit,
       module,
       tags,
+      // Redirect fields
+      redirect_to,
+      redirect_type,
+      base_word,
+      number,
       ...rest
     } = wordInput;
 
     if (!word) {
       throw new Error("Word is required");
+    }
+
+    // Handle redirect entries (lightweight definitions)
+    if (redirect_to) {
+      return this.generateRedirectEntry(wordInput);
     }
 
     // Start with core required fields and schema defaults
@@ -587,6 +613,36 @@ export class DefinitionGenerator {
     console.log(`\n📁 Adding ${entries.length} entries to dictionary files...`);
 
     for (const entryResult of entries) {
+      // Handle redirect entries (they don't have success/entry wrapper)
+      if (entryResult.redirect_to) {
+        try {
+          const added = await this.addEntryToFile(entryResult, options);
+          if (added) {
+            results.added++;
+            results.details.push({
+              word: entryResult.word,
+              status: "added",
+              file: this.getTargetFileName(entryResult.partOfSpeech),
+            });
+          } else {
+            results.skipped++;
+            results.details.push({
+              word: entryResult.word,
+              status: "skipped",
+              message: "Already exists",
+            });
+          }
+        } catch (error) {
+          results.errors++;
+          results.details.push({
+            word: entryResult.word,
+            status: "error",
+            message: error.message,
+          });
+        }
+        continue;
+      }
+
       if (!entryResult.success) {
         results.errors++;
         results.details.push({
@@ -1110,6 +1166,121 @@ export default ${varName}Cambridge;
       entryData.adjective_phrases = adjective_phrases;
       console.log(`  ✅ Added ${adjective_phrases.length} adjective phrases`);
     }
+  }
+
+  /**
+   * Generate a lightweight redirect entry
+   * @param {Object} wordInput - Word input object with redirect fields
+   * @returns {Object} - Generated redirect entry
+   */
+  generateRedirectEntry(wordInput) {
+    const {
+      word,
+      partOfSpeech,
+      gender,
+      redirect_to,
+      redirect_type,
+      base_word,
+      number,
+      examples = [],
+      ...rest
+    } = wordInput;
+
+    // Validate required redirect fields
+    if (!redirect_to) {
+      throw new Error("redirect_to is required for redirect entries");
+    }
+    if (!redirect_type) {
+      throw new Error("redirect_type is required for redirect entries");
+    }
+
+    // Create lightweight redirect entry
+    const entryData = {
+      // Core required fields
+      id: `${word}-fr`,
+      lang: "fr",
+      word,
+      partOfSpeech: partOfSpeech || "unknown", // Use provided partOfSpeech or default to unknown
+
+      // Redirect fields
+      redirect_to,
+      redirect_type,
+      base_word: base_word || word,
+      gender: gender || "none",
+      number: number || "singular",
+
+      // Standard fields with minimal data
+      translations: [], // No translations for redirects
+      relationships: [],
+      etymology: "",
+      register: [],
+      usage_notes: "",
+      regional_variants: [],
+      examples: Array.isArray(examples) ? examples : [],
+      phonetic: "",
+      tags: ["redirect"],
+      sources: ["language_academy"],
+      verified: false,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+
+      // Override with any additional fields
+      ...rest,
+    };
+
+    console.log(
+      `  ✅ Generated redirect entry: ${word} → ${redirect_to} (${redirect_type})`
+    );
+
+    // Note: The main entry's variants array should be updated separately
+    // This ensures bidirectional relationship: redirect → main entry, main entry → variants
+    console.log(
+      `  📝 Note: Add "${word}" to variants array of "${redirect_to}" entry`
+    );
+
+    return entryData;
+  }
+
+  /**
+   * Add a variant to an existing main entry
+   * @param {string} mainEntryId - ID of the main entry to update
+   * @param {string} variantWord - The variant word to add
+   * @param {string} variantType - Type of variant (plural_form, feminine_form, etc.)
+   * @param {Object} dictionaryMap - The dictionary Map to update
+   */
+  addVariantToMainEntry(mainEntryId, variantWord, variantType, dictionaryMap) {
+    const mainEntry = dictionaryMap.get(mainEntryId);
+    if (!mainEntry) {
+      console.warn(
+        `⚠️  Main entry "${mainEntryId}" not found for variant "${variantWord}"`
+      );
+      return;
+    }
+
+    // Initialize variants array if it doesn't exist
+    if (!mainEntry.variants) {
+      mainEntry.variants = [];
+    }
+
+    // Check if variant already exists
+    const existingVariant = mainEntry.variants.find(
+      (v) => v.text === variantWord
+    );
+    if (existingVariant) {
+      console.log(
+        `  ℹ️  Variant "${variantWord}" already exists in "${mainEntryId}"`
+      );
+      return;
+    }
+
+    // Add the variant
+    mainEntry.variants.push({
+      type: variantType,
+      text: variantWord,
+      note: `${variantType} form`,
+    });
+
+    console.log(`  ✅ Added variant "${variantWord}" to "${mainEntryId}"`);
   }
 
   /**

@@ -342,6 +342,23 @@ function DictionaryModal({ isOpen, onClose }) {
                   </div>
                 </div>
 
+                {/* Redirect Information */}
+                {selectedWord.redirect_to && (
+                  <div className="dictionary-word-redirect-info">
+                    <div className="dictionary-redirect-banner">
+                      <span className="dictionary-redirect-label">Redirects to:</span>
+                      <span className="dictionary-redirect-target">{selectedWord.base_word}</span>
+                      <span className="dictionary-redirect-type">({selectedWord.redirect_type.replace('_', ' ')})</span>
+                    </div>
+                    <div className="dictionary-redirect-details">
+                      <span className="dictionary-redirect-gender">{selectedWord.gender}</span>
+                      {selectedWord.number && (
+                        <span className="dictionary-redirect-number">{selectedWord.number}</span>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 {/* Stacked Definitions by Part of Speech */}
                 {selectedWord.allPartsOfSpeech && selectedWord.allPartsOfSpeech.map((pos, index) => (
                   <div key={pos} className="dictionary-word-entry">
@@ -554,6 +571,48 @@ function DictionaryModal({ isOpen, onClose }) {
                     )}
                   </div>
                 ))}
+
+                {/* Variants */}
+                {selectedWord.variants && selectedWord.variants.length > 0 && (
+                  <div className="dictionary-word-variants">
+                    <h4 className="dictionary-section-title">Variants</h4>
+                    <div className="dictionary-variants-grid">
+                      {selectedWord.variants.map((variant, idx) => (
+                        <div
+                          key={idx}
+                          className={`dictionary-variant-item variant-${variant.type} clickable`}
+                          onClick={() => {
+                            // Find the variant word
+                            const variantWord = allWords.find(word =>
+                              word.word.toLowerCase() === variant.text.toLowerCase()
+                            );
+
+                            if (variantWord) {
+                              setSelectedWord(variantWord);
+                              setScrollToSelected(true);
+                              // Update URL with the variant word
+                              const newUrl = new URL(window.location);
+                              newUrl.searchParams.set('word', variantWord.word);
+                              window.history.pushState({}, '', newUrl);
+                            } else {
+                              console.warn(`Could not find variant word: ${variant.text}`);
+                            }
+                          }}
+                        >
+                          <div className="dictionary-variant-content">
+                            <span className="dictionary-variant-word">{variant.text}</span>
+                            <span className="dictionary-variant-type">
+                              {variant.type.replace('_', ' ')}
+                            </span>
+                            {variant.note && (
+                              <span className="dictionary-variant-note">({variant.note})</span>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Relationships */}
                 {selectedWord.relationships && selectedWord.relationships.length > 0 && (

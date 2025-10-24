@@ -13,9 +13,10 @@ import { wikipediaEntries } from '../../data/wikipediaEntries';
  * @param {string} uniqueKey - The unique key for the element
  * @param {Object} context - The rendering context
  * @param {string} partOfSpeech - The part of speech (optional)
+ * @param {Object} wordData - Additional word data including redirect info (optional)
  * @returns {JSX.Element} - The interactive word element
  */
-export const createInteractiveWordElement = (text, translation, uniqueKey, context, partOfSpeech = null) => {
+export const createInteractiveWordElement = (text, translation, uniqueKey, context, partOfSpeech = null, wordData = null) => {
   const { wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
   const wikiEntry = wikipediaEntries[text] || wikipediaEntries[text.toLowerCase()];
 
@@ -51,6 +52,21 @@ export const createInteractiveWordElement = (text, translation, uniqueKey, conte
             <span style={{ fontStyle: 'italic', fontSize: '0.8em', opacity: 0.7 }}>
               {' '}({partOfSpeech})
             </span>
+          )}
+          {wordData?.gender && (
+            <span style={{ fontSize: '0.8em', opacity: 0.7 }}>
+              {' '}({wordData.gender})
+            </span>
+          )}
+          {wordData?.number && (
+            <span style={{ fontSize: '0.8em', opacity: 0.7 }}>
+              {' '}({wordData.number})
+            </span>
+          )}
+          {wordData?.redirectInfo && (
+            <div style={{ fontSize: '0.7em', opacity: 0.6, marginTop: '2px' }}>
+              {wordData.redirectInfo.redirectType.replace('_', ' ')} of {wordData.redirectInfo.baseWord}
+            </div>
           )}
         </span>
       )}
