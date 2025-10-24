@@ -4,6 +4,7 @@ import { adjectivesCambridge } from "../data/dictionary/words/cambridge/adjectiv
 import { adverbsCambridge } from "../data/dictionary/words/cambridge/adverbs";
 import { articlesCambridge } from "../data/dictionary/words/cambridge/articles";
 import { conjunctionsCambridge } from "../data/dictionary/words/cambridge/conjunctions";
+import { expressionsCambridge } from "../data/dictionary/words/cambridge/expressions";
 import { interjectionsCambridge } from "../data/dictionary/words/cambridge/interjections";
 import { interrogativesCambridge } from "../data/dictionary/words/cambridge/interrogatives";
 import { nounsCambridge } from "../data/dictionary/words/cambridge/nouns";
@@ -29,6 +30,7 @@ export const useDictionary = () => {
       { name: "adverbs", data: adverbsCambridge },
       { name: "articles", data: articlesCambridge },
       { name: "conjunctions", data: conjunctionsCambridge },
+      { name: "expressions", data: expressionsCambridge },
       { name: "interjections", data: interjectionsCambridge },
       { name: "interrogatives", data: interrogativesCambridge },
       { name: "nouns", data: nounsCambridge },

@@ -14,6 +14,13 @@ const __dirname = path.dirname(__filename);
  * Supports all parts of speech with part-of-speech-specific fields and automatic
  * Cambridge Dictionary enhancement.
  *
+ * Features:
+ * - Redirect system for word variants (plurals, gender forms, conjugations)
+ * - Automatic Cambridge Dictionary integration
+ * - Duplicate detection and handling
+ * - Schema validation
+ * - File organization by part of speech
+ *
  * @see {@link ../words/cambridge/DICTIONARY_GENERATOR_GUIDE.md} for comprehensive usage guide
  *
  * ## Basic Usage
@@ -26,6 +33,28 @@ const __dirname = path.dirname(__filename);
  *   translation: "hello",
  *   partOfSpeech: "interjection"
  * });
+ *
+ * // Word with redirect variants
+ * await generator.generateDefinitions([
+ *   // Main entry
+ *   {
+ *     word: "beau",
+ *     translation: "beautiful",
+ *     partOfSpeech: "adjective",
+ *     gender: "masculine",
+ *     number: "singular"
+ *   },
+ *   // Redirect variant
+ *   {
+ *     word: "belle",
+ *     partOfSpeech: "adjective",
+ *     redirect_to: "beau-fr",
+ *     redirect_type: "feminine_form",
+ *     base_word: "beau",
+ *     gender: "feminine",
+ *     number: "singular"
+ *   }
+ * ]);
  *
  * // Multiple words
  * await generator.generateDefinitions([
@@ -1170,7 +1199,18 @@ export default ${varName}Cambridge;
 
   /**
    * Generate a lightweight redirect entry
+   *
+   * Used for word variants like plurals, gender forms, and conjugations.
+   * Redirect entries inherit translations from the main entry while preserving
+   * their own grammatical information (gender, number, etc.).
+   *
    * @param {Object} wordInput - Word input object with redirect fields
+   * @param {string} wordInput.word - The variant word (e.g., "belle")
+   * @param {string} wordInput.redirect_to - ID of main entry (e.g., "beau-fr")
+   * @param {string} wordInput.redirect_type - Type of redirect (e.g., "feminine_form")
+   * @param {string} wordInput.base_word - Base word (e.g., "beau")
+   * @param {string} wordInput.gender - Grammatical gender
+   * @param {string} wordInput.number - Grammatical number
    * @returns {Object} - Generated redirect entry
    */
   generateRedirectEntry(wordInput) {

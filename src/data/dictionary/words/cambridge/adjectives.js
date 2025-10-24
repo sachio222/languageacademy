@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Adjectives
- * Generated: 2025-10-24T02:50:57.971Z
- * Successfully scraped: 53/53
+ * Generated: 2025-10-24T03:08:23.690Z
+ * Successfully scraped: 65/65
  */
 
 export const adjectivesCambridge = new Map([
@@ -1470,13 +1470,12 @@ export const adjectivesCambridge = new Map([
         "id": "nouveau-fr",
         "lang": "fr",
         "word": "nouveau",
-        "partOfSpeech": "adjective",
         "translations": [
             {
                 "lang": "en",
                 "text": "new",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -1486,51 +1485,29 @@ export const adjectivesCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "un nouveau film",
-                "trans": "a new movie",
-                "source": "cambridge"
+                "text": "un nouveau livre",
+                "trans": "a new book",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "Les nouveaux mariés sont parti en voyage de noces.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "acheter un nouveau téléviseur",
-                "trans": "to buy a new TV",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Mon nouvel ordinateur est moins convivial que le précédent.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "faire un nouvel essai",
-                "trans": "to try again",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je vous engage à faire une nouvelle tentative.",
-                "source": "cambridge"
+                "text": "le nouveau professeur",
+                "trans": "the new teacher",
+                "lang": "en"
             }
         ],
-        "phonetic": "nuvo",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T02:58:19.469Z",
+        "updated_at": "2025-10-24T02:58:19.994Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T04:43:45.354Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/nouveau",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:43:45.354Z"
-        }
+        "partOfSpeech": "adjective"
     }
   ],
   [
@@ -3086,6 +3063,522 @@ export const adjectivesCambridge = new Map([
         "verified": false,
         "created_at": "2025-10-24T02:50:57.312Z",
         "updated_at": "2025-10-24T02:50:57.312Z"
+    }
+  ],
+  [
+    "nouvelle-fr",
+        {
+        "id": "nouvelle-fr",
+        "lang": "fr",
+        "word": "nouvelle",
+        "partOfSpeech": "adjective",
+        "redirect_to": "nouveau-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "nouveau",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "une nouvelle voiture",
+                "trans": "a new car",
+                "lang": "en"
+            },
+            {
+                "text": "la nouvelle étudiante",
+                "trans": "the new student",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:58:19.472Z",
+        "updated_at": "2025-10-24T02:58:19.472Z"
+    }
+  ],
+  [
+    "nouvelles-fr",
+        {
+        "id": "nouvelles-fr",
+        "lang": "fr",
+        "word": "nouvelles",
+        "partOfSpeech": "adjective",
+        "redirect_to": "nouveau-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "nouveau",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de nouvelles idées",
+                "trans": "new ideas",
+                "lang": "en"
+            },
+            {
+                "text": "les nouvelles voitures",
+                "trans": "the new cars",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:58:19.473Z",
+        "updated_at": "2025-10-24T02:58:19.473Z"
+    }
+  ],
+  [
+    "grand-fr",
+        {
+        "id": "grand-fr",
+        "lang": "fr",
+        "word": "grand",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "big/large/tall",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un grand arbre",
+                "trans": "a big tree",
+                "lang": "en"
+            },
+            {
+                "text": "le grand homme",
+                "trans": "the tall man",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T02:58:20.001Z",
+        "updated_at": "2025-10-24T02:58:20.417Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective"
+    }
+  ],
+  [
+    "grande-fr",
+        {
+        "id": "grande-fr",
+        "lang": "fr",
+        "word": "grande",
+        "partOfSpeech": "adjective",
+        "redirect_to": "grand-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "grand",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "une grande maison",
+                "trans": "a big house",
+                "lang": "en"
+            },
+            {
+                "text": "la grande ville",
+                "trans": "the big city",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:58:20.002Z",
+        "updated_at": "2025-10-24T02:58:20.002Z"
+    }
+  ],
+  [
+    "grands-fr",
+        {
+        "id": "grands-fr",
+        "lang": "fr",
+        "word": "grands",
+        "partOfSpeech": "adjective",
+        "redirect_to": "grand-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "grand",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de grands arbres",
+                "trans": "big trees",
+                "lang": "en"
+            },
+            {
+                "text": "les grands hommes",
+                "trans": "the tall men",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:58:20.003Z",
+        "updated_at": "2025-10-24T02:58:20.003Z"
+    }
+  ],
+  [
+    "grandes-fr",
+        {
+        "id": "grandes-fr",
+        "lang": "fr",
+        "word": "grandes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "grand-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "grand",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de grandes maisons",
+                "trans": "big houses",
+                "lang": "en"
+            },
+            {
+                "text": "les grandes villes",
+                "trans": "the big cities",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:58:20.004Z",
+        "updated_at": "2025-10-24T02:58:20.004Z"
+    }
+  ],
+  [
+    "petit-fr",
+        {
+        "id": "petit-fr",
+        "lang": "fr",
+        "word": "petit",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "small/little",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un petit chien",
+                "trans": "a small dog",
+                "lang": "en"
+            },
+            {
+                "text": "le petit garçon",
+                "trans": "the little boy",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T02:58:20.425Z",
+        "updated_at": "2025-10-24T02:58:20.734Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective"
+    }
+  ],
+  [
+    "petite-fr",
+        {
+        "id": "petite-fr",
+        "lang": "fr",
+        "word": "petite",
+        "partOfSpeech": "adjective",
+        "redirect_to": "petit-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "petit",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "une petite fille",
+                "trans": "a little girl",
+                "lang": "en"
+            },
+            {
+                "text": "la petite maison",
+                "trans": "the small house",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:58:20.426Z",
+        "updated_at": "2025-10-24T02:58:20.426Z"
+    }
+  ],
+  [
+    "petits-fr",
+        {
+        "id": "petits-fr",
+        "lang": "fr",
+        "word": "petits",
+        "partOfSpeech": "adjective",
+        "redirect_to": "petit-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "petit",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de petits chiens",
+                "trans": "small dogs",
+                "lang": "en"
+            },
+            {
+                "text": "les petits garçons",
+                "trans": "the little boys",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:58:20.426Z",
+        "updated_at": "2025-10-24T02:58:20.426Z"
+    }
+  ],
+  [
+    "petites-fr",
+        {
+        "id": "petites-fr",
+        "lang": "fr",
+        "word": "petites",
+        "partOfSpeech": "adjective",
+        "redirect_to": "petit-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "petit",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de petites filles",
+                "trans": "little girls",
+                "lang": "en"
+            },
+            {
+                "text": "les petites maisons",
+                "trans": "the small houses",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:58:20.426Z",
+        "updated_at": "2025-10-24T02:58:20.426Z"
+    }
+  ],
+  [
+    "jeune-fr",
+        {
+        "id": "jeune-fr",
+        "lang": "fr",
+        "word": "jeune",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "young",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un jeune homme",
+                "trans": "a young man",
+                "lang": "en"
+            },
+            {
+                "text": "le jeune garçon",
+                "trans": "the young boy",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:08:23.415Z",
+        "updated_at": "2025-10-24T03:08:23.688Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective"
+    }
+  ],
+  [
+    "jeunes-fr",
+        {
+        "id": "jeunes-fr",
+        "lang": "fr",
+        "word": "jeunes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "jeune-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "jeune",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de jeunes hommes",
+                "trans": "young men",
+                "lang": "en"
+            },
+            {
+                "text": "les jeunes garçons",
+                "trans": "the young boys",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:08:23.415Z",
+        "updated_at": "2025-10-24T03:08:23.415Z"
     }
   ]
 ]);

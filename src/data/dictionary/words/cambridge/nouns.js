@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Nouns
- * Generated: 2025-10-23T21:19:24.861Z
- * Successfully scraped: 311/311
+ * Generated: 2025-10-24T03:08:23.103Z
+ * Successfully scraped: 319/319
  */
 
 export const nounsCambridge = new Map([
@@ -10929,13 +10929,12 @@ export const nounsCambridge = new Map([
         "id": "ami-fr",
         "lang": "fr",
         "word": "ami",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
-                "text": "friend",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "text": "friend (masculine)",
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -10945,29 +10944,30 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "une réunion entre amis",
-                "trans": "a meeting between friends",
-                "source": "cambridge"
+                "text": "un bon ami",
+                "trans": "a good friend",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "Ses nombreux amis lui ont rendu visite.",
-                "source": "cambridge"
+                "text": "mon ami Pierre",
+                "trans": "my friend Pierre",
+                "lang": "en"
             }
         ],
-        "phonetic": "ami",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:08:22.037Z",
+        "updated_at": "2025-10-24T03:08:22.496Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:07:09.567Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/ami",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:07:09.567Z"
-        }
+        "partOfSpeech": "noun",
+        "gender": "masculine"
     }
   ],
   [
@@ -11023,13 +11023,12 @@ export const nounsCambridge = new Map([
         "id": "chat-fr",
         "lang": "fr",
         "word": "chat",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
                 "text": "cat",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -11037,19 +11036,32 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [],
-        "phonetic": "ʃa",
-        "tags": [],
+        "examples": [
+            {
+                "text": "un chat noir",
+                "trans": "a black cat",
+                "lang": "en"
+            },
+            {
+                "text": "le chat de ma voisine",
+                "trans": "my neighbor's cat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:08:22.508Z",
+        "updated_at": "2025-10-24T03:08:23.095Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:07:17.555Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/chat",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:07:17.555Z"
-        }
+        "partOfSpeech": "noun",
+        "gender": "masculine"
     }
   ],
   [
@@ -11315,13 +11327,12 @@ export const nounsCambridge = new Map([
         "id": "jour-fr",
         "lang": "fr",
         "word": "jour",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
                 "text": "day",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -11331,101 +11342,30 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Quel jour sommes-nous ?",
-                "trans": "What day is it today?",
-                "source": "cambridge"
+                "text": "un beau jour",
+                "trans": "a beautiful day",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "partir plusieurs jours",
-                "trans": "to leave for several days",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Que faites-vous dans les jours prochains ?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il grandit de jour en jour.",
-                "trans": "He get’s taller every day.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sa fortune croit de jour en jour.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les jours rallongent.",
-                "trans": "The days are getting longer.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "long comme un jour sans pain",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il fait jour.",
-                "trans": "It’s light.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le jour se lève, debout !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Un jour, tu comprendras.",
-                "trans": "One day you’ll understand.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ce sera ton tour, un jour !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Un jour ou l’autre, il reviendra.",
-                "trans": "He’ll come back one day.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je vous assure qu’il se fera arrêter un jour ou l’autre !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être à jour dans son travail",
-                "trans": "to be on schedule with one’s work",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ses cahiers de devoirs sont à jour.",
-                "source": "cambridge"
+                "text": "le jour de la semaine",
+                "trans": "the day of the week",
+                "lang": "en"
             }
         ],
-        "phonetic": "ʒuʀ",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T02:59:36.786Z",
+        "updated_at": "2025-10-24T02:59:37.178Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:07:46.153Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/jour",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:07:46.153Z"
-        }
+        "partOfSpeech": "noun",
+        "gender": "masculine"
     }
   ],
   [
@@ -15607,13 +15547,12 @@ export const nounsCambridge = new Map([
         "id": "maison-fr",
         "lang": "fr",
         "word": "maison",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
-                "text": "house",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "text": "house/home",
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -15623,57 +15562,30 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Ils ont vendu leur maison.",
-                "trans": "They sold their house.",
-                "source": "cambridge"
+                "text": "une belle maison",
+                "trans": "a beautiful house",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "Les maisons de ce quartier sont alignées le long du trottoir.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être à la maison",
-                "trans": "to be home",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "rentrer à la maison",
-                "trans": "to go home",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "On se retrouve à la maison tous les soirs.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une maison d’édition",
-                "trans": "a publishing house",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La maison ne fait plus de crédit !",
-                "source": "cambridge"
+                "text": "la maison de mes parents",
+                "trans": "my parents' house",
+                "lang": "en"
             }
         ],
-        "phonetic": "mɛzɔ̃",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:00:30.450Z",
+        "updated_at": "2025-10-24T03:00:31.137Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:13:13.319Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/maison",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:13:13.319Z"
-        }
+        "partOfSpeech": "noun",
+        "gender": "feminine"
     }
   ],
   [
@@ -17662,6 +17574,347 @@ export const nounsCambridge = new Map([
         "verified": false,
         "partOfSpeech": "noun",
         "gender": "feminine"
+    }
+  ],
+  [
+    "jours-fr",
+        {
+        "id": "jours-fr",
+        "lang": "fr",
+        "word": "jours",
+        "partOfSpeech": "noun",
+        "redirect_to": "jour-fr",
+        "redirect_type": "plural_form",
+        "base_word": "jour",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de beaux jours",
+                "trans": "beautiful days",
+                "lang": "en"
+            },
+            {
+                "text": "les jours de la semaine",
+                "trans": "the days of the week",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T02:59:36.790Z",
+        "updated_at": "2025-10-24T02:59:36.790Z"
+    }
+  ],
+  [
+    "maisons-fr",
+        {
+        "id": "maisons-fr",
+        "lang": "fr",
+        "word": "maisons",
+        "partOfSpeech": "noun",
+        "redirect_to": "maison-fr",
+        "redirect_type": "plural_form",
+        "base_word": "maison",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de belles maisons",
+                "trans": "beautiful houses",
+                "lang": "en"
+            },
+            {
+                "text": "les maisons du quartier",
+                "trans": "the houses in the neighborhood",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:00:30.454Z",
+        "updated_at": "2025-10-24T03:00:30.454Z"
+    }
+  ],
+  [
+    "soir-fr",
+        {
+        "id": "soir-fr",
+        "lang": "fr",
+        "word": "soir",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "evening",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un beau soir",
+                "trans": "a beautiful evening",
+                "lang": "en"
+            },
+            {
+                "text": "le soir de Noël",
+                "trans": "Christmas evening",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:05:54.808Z",
+        "updated_at": "2025-10-24T03:05:55.058Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine"
+    }
+  ],
+  [
+    "soirs-fr",
+        {
+        "id": "soirs-fr",
+        "lang": "fr",
+        "word": "soirs",
+        "partOfSpeech": "noun",
+        "redirect_to": "soir-fr",
+        "redirect_type": "plural_form",
+        "base_word": "soir",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de beaux soirs",
+                "trans": "beautiful evenings",
+                "lang": "en"
+            },
+            {
+                "text": "les soirs d'été",
+                "trans": "summer evenings",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:05:54.809Z",
+        "updated_at": "2025-10-24T03:05:54.809Z"
+    }
+  ],
+  [
+    "hommes-fr",
+        {
+        "id": "hommes-fr",
+        "lang": "fr",
+        "word": "hommes",
+        "partOfSpeech": "noun",
+        "redirect_to": "homme-fr",
+        "redirect_type": "plural_form",
+        "base_word": "homme",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "les hommes politiques",
+                "trans": "politicians",
+                "lang": "en"
+            },
+            {
+                "text": "de jeunes hommes",
+                "trans": "young men",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:05:55.070Z",
+        "updated_at": "2025-10-24T03:05:55.070Z"
+    }
+  ],
+  [
+    "femmes-fr",
+        {
+        "id": "femmes-fr",
+        "lang": "fr",
+        "word": "femmes",
+        "partOfSpeech": "noun",
+        "redirect_to": "femme-fr",
+        "redirect_type": "plural_form",
+        "base_word": "femme",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "les femmes de la famille",
+                "trans": "the women of the family",
+                "lang": "en"
+            },
+            {
+                "text": "de belles femmes",
+                "trans": "beautiful women",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:05:55.090Z",
+        "updated_at": "2025-10-24T03:05:55.090Z"
+    }
+  ],
+  [
+    "amis-fr",
+        {
+        "id": "amis-fr",
+        "lang": "fr",
+        "word": "amis",
+        "partOfSpeech": "noun",
+        "redirect_to": "ami-fr",
+        "redirect_type": "plural_form",
+        "base_word": "ami",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de bons amis",
+                "trans": "good friends",
+                "lang": "en"
+            },
+            {
+                "text": "mes amis",
+                "trans": "my friends",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:08:22.040Z",
+        "updated_at": "2025-10-24T03:08:22.040Z"
+    }
+  ],
+  [
+    "chats-fr",
+        {
+        "id": "chats-fr",
+        "lang": "fr",
+        "word": "chats",
+        "partOfSpeech": "noun",
+        "redirect_to": "chat-fr",
+        "redirect_type": "plural_form",
+        "base_word": "chat",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de beaux chats",
+                "trans": "beautiful cats",
+                "lang": "en"
+            },
+            {
+                "text": "les chats du quartier",
+                "trans": "the neighborhood cats",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:08:22.509Z",
+        "updated_at": "2025-10-24T03:08:22.509Z"
     }
   ]
 ]);

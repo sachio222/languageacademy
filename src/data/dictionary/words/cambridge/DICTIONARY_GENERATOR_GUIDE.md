@@ -206,6 +206,107 @@ Adjectives support gender/number agreement forms and common phrases.
 - `agreement`: Agreement examples (grand garçon, grande fille)
 - `position`: Position examples (before/after noun)
 
+## Redirect System (Word Variants)
+
+The generator supports lightweight redirect entries for word variants (plurals, gender forms, etc.) that point to main entries.
+
+### Redirect Entry Format
+
+```json
+{
+  "word": "belle",
+  "partOfSpeech": "adjective",
+  "redirect_to": "beau-fr",
+  "redirect_type": "feminine_form",
+  "base_word": "beau",
+  "gender": "feminine",
+  "number": "singular",
+  "examples": [
+    { "text": "une belle fille", "trans": "a beautiful girl", "lang": "en" }
+  ]
+}
+```
+
+### Redirect Types
+
+- `plural_form`: Plural forms (jours → jour)
+- `feminine_form`: Feminine forms (belle → beau)
+- `masculine_form`: Masculine forms (beaux → beau)
+- `conjugated_form`: Verb conjugations
+- `variant`: Other variants
+
+### Complete Example: Adjective with Variants
+
+```json
+[
+  {
+    "word": "beau",
+    "translation": "beautiful/handsome",
+    "partOfSpeech": "adjective",
+    "gender": "masculine",
+    "number": "singular"
+  },
+  {
+    "word": "belle",
+    "partOfSpeech": "adjective",
+    "redirect_to": "beau-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "beau",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "beaux",
+    "partOfSpeech": "adjective",
+    "redirect_to": "beau-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "beau",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "belles",
+    "partOfSpeech": "adjective",
+    "redirect_to": "beau-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "beau",
+    "gender": "feminine",
+    "number": "plural"
+  }
+]
+```
+
+### Complete Example: Noun with Plural
+
+```json
+[
+  {
+    "word": "maison",
+    "translation": "house",
+    "partOfSpeech": "noun",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "maisons",
+    "partOfSpeech": "noun",
+    "redirect_to": "maison-fr",
+    "redirect_type": "plural_form",
+    "base_word": "maison",
+    "gender": "feminine",
+    "number": "plural"
+  }
+]
+```
+
+### Key Rules for Redirects
+
+1. **Main Entry First**: Always include the main entry before redirects
+2. **Correct redirect_to**: Use the main entry's ID (e.g., "beau-fr", "maison-fr")
+3. **Proper redirect_type**: Use the exact enum values
+4. **Include Examples**: Redirect entries can have their own examples
+5. **Gender/Number**: Always specify gender and number for redirects
+
 ## Advanced Features
 
 ### Cambridge Dictionary Integration

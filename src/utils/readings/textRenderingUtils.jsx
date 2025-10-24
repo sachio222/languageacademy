@@ -180,7 +180,7 @@ const renderWords = (text, context) => {
  * @returns {Object|null} - The result object with element and updated positions, or null if no match
  */
 const checkMultiWordPhrases = (remainingText, charPosition, context) => {
-  const { paragraphIndex } = context;
+  const { paragraphIndex, allWords } = context;
   try {
     // First check Wikipedia entries for multi-word phrases
     for (const [wikiKey, wikiEntry] of Object.entries(wikipediaEntries)) {
@@ -195,6 +195,30 @@ const checkMultiWordPhrases = (remainingText, charPosition, context) => {
           remainingText: remainingText.slice(wikiKey.length),
           charPosition: charPosition + wikiKey.length
         };
+      }
+    }
+
+    // Then check dictionary expressions (multi-word entries)
+    for (const wordEntry of allWords) {
+      if (wordEntry.partOfSpeech === 'expression' && wordEntry.word.includes(' ')) {
+        if (remainingText.toLowerCase().startsWith(wordEntry.word.toLowerCase())) {
+          const matchedText = remainingText.slice(0, wordEntry.word.length);
+          const uniqueKey = generateTextKey(paragraphIndex, charPosition);
+
+          const element = createInteractiveWordElement(
+            matchedText,
+            wordEntry.translations?.[0]?.text || null,
+            uniqueKey,
+            context,
+            wordEntry.partOfSpeech
+          );
+
+          return {
+            element,
+            remainingText: remainingText.slice(wordEntry.word.length),
+            charPosition: charPosition + wordEntry.word.length
+          };
+        }
       }
     }
 
