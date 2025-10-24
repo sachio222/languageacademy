@@ -1,7 +1,7 @@
 /**
- * Cambridge Dictionary Scraped Expressions
- * Generated: 2025-10-24T04:36:03.531Z
- * Successfully scraped: 13/13
+ * Cambridge Dictionary Scraped Interrogatives
+ * Generated: 2025-10-24T22:21:08.350Z
+ * Successfully scraped: 18/18
  */
 
 export const expressionsCambridge = new Map([
@@ -569,6 +569,274 @@ export const expressionsCambridge = new Map([
         ],
         "verified": false,
         "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Excusez-moi-fr",
+        {
+        "id": "Excusez-moi-fr",
+        "lang": "fr",
+        "word": "Excusez-moi",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "Excuse me / Sorry",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "formal",
+            "neutral"
+        ],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Excusez-moi, où est la gare?",
+                "trans": "Excuse me, where is the train station?",
+                "lang": "en"
+            },
+            {
+                "text": "Excusez-moi, je ne comprends pas",
+                "trans": "Excuse me, I don't understand",
+                "lang": "en"
+            },
+            {
+                "text": "Excusez-moi pour le retard",
+                "trans": "Sorry for being late",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "polite",
+            "expression",
+            "common",
+            "apology"
+        ],
+        "created_at": "2025-10-24T22:20:21.818Z",
+        "updated_at": "2025-10-24T22:20:22.277Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Polite way to get someone's attention or apologize",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "quel-fr",
+        {
+        "id": "quel-fr",
+        "lang": "fr",
+        "word": "quel",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "what / which (masculine singular)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Quel est votre nom?",
+                "trans": "What is your name?",
+                "lang": "en"
+            },
+            {
+                "text": "Quel livre préférez-vous?",
+                "trans": "Which book do you prefer?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "interrogative",
+            "question",
+            "masculine",
+            "singular"
+        ],
+        "created_at": "2025-10-24T22:21:07.146Z",
+        "updated_at": "2025-10-24T22:21:07.499Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Interrogative adjective used to ask about masculine singular nouns",
+        "frequency": "common",
+        "partOfSpeech": "interrogative"
+    }
+  ],
+  [
+    "quelle-fr",
+        {
+        "id": "quelle-fr",
+        "lang": "fr",
+        "word": "quelle",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "what / which (feminine singular)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Quelle est votre adresse?",
+                "trans": "What is your address?",
+                "lang": "en"
+            },
+            {
+                "text": "Quelle couleur aimez-vous?",
+                "trans": "Which color do you like?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "interrogative",
+            "question",
+            "feminine",
+            "singular"
+        ],
+        "created_at": "2025-10-24T22:21:07.150Z",
+        "updated_at": "2025-10-24T22:21:07.788Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Interrogative adjective used to ask about feminine singular nouns",
+        "frequency": "common",
+        "partOfSpeech": "interrogative"
+    }
+  ],
+  [
+    "quels-fr",
+        {
+        "id": "quels-fr",
+        "lang": "fr",
+        "word": "quels",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "what / which (masculine plural)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Quels sont vos hobbies?",
+                "trans": "What are your hobbies?",
+                "lang": "en"
+            },
+            {
+                "text": "Quels livres lisez-vous?",
+                "trans": "Which books do you read?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "interrogative",
+            "question",
+            "masculine",
+            "plural"
+        ],
+        "created_at": "2025-10-24T22:21:07.151Z",
+        "updated_at": "2025-10-24T22:21:08.110Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Interrogative adjective used to ask about masculine plural nouns",
+        "frequency": "common",
+        "partOfSpeech": "interrogative"
+    }
+  ],
+  [
+    "quelles-fr",
+        {
+        "id": "quelles-fr",
+        "lang": "fr",
+        "word": "quelles",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "what / which (feminine plural)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Quelles sont vos couleurs préférées?",
+                "trans": "What are your favorite colors?",
+                "lang": "en"
+            },
+            {
+                "text": "Quelles langues parlez-vous?",
+                "trans": "Which languages do you speak?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "interrogative",
+            "question",
+            "feminine",
+            "plural"
+        ],
+        "created_at": "2025-10-24T22:21:07.151Z",
+        "updated_at": "2025-10-24T22:21:08.350Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Interrogative adjective used to ask about feminine plural nouns",
+        "frequency": "common",
+        "partOfSpeech": "interrogative"
     }
   ]
 ]);

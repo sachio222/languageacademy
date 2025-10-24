@@ -106,6 +106,15 @@ const processContractionMatch = (contractionMatch, remainingText, charPosition, 
 
     // Split the contraction: "d'argent" -> "d'" + "argent"
     const apostropheIndex = fullMatch.indexOf("'");
+    if (apostropheIndex === -1) {
+      console.error("Invalid contraction format - no apostrophe found:", fullMatch);
+      return {
+        element: <span key={uniqueKey}>{fullMatch}</span>,
+        remainingText: remainingText.slice(fullLength),
+        charPosition: charPosition + fullLength
+      };
+    }
+
     const contraction = fullMatch.substring(0, apostropheIndex + 1); // "d'"
     const word = fullMatch.substring(apostropheIndex + 1); // "argent"
 
@@ -772,7 +781,45 @@ const getVerbContextAwareTranslation = (word, dictionaryEntry, context) => {
 };
 
 /**
- * Create a combined translation for contractions
+ * Contraction translation rules configuration
+ */
+const CONTRACTION_RULES = {
+  "d'": {
+    noun: (wordTranslation) => wordTranslation, // d'argent = "money"
+    verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}`
+  },
+  "l'": {
+    noun: (wordTranslation) => wordTranslation, // l'eau = "water"
+    verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}`
+  },
+  "j'": {
+    verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}` // j'ai = "I have"
+  },
+  "n'": {
+    verb: (contractionTranslation, wordTranslation) => `${wordTranslation} not` // n'est pas = "is not"
+  },
+  "s'": {
+    verb: (contractionTranslation, wordTranslation) => `${wordTranslation} (reflexive)` // s'appelle = "is called"
+  },
+  "c'": {
+    verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}` // c'est = "it is"
+  },
+  "qu'": {
+    verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}` // qu'est-ce que = "what"
+  },
+  "m'": {
+    verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}` // m'appelle = "my name is"
+  },
+  "t'": {
+    verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}` // t'appelles = "your name is"
+  },
+  "y'": {
+    verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}` // y'a = "there is"
+  }
+};
+
+/**
+ * Create a combined translation for contractions using rule-based approach
  * @param {string} fullMatch - The full contraction (e.g., "d'argent")
  * @param {string} contraction - The contraction part (e.g., "d'")
  * @param {string} word - The word part (e.g., "argent")
@@ -783,40 +830,20 @@ const getVerbContextAwareTranslation = (word, dictionaryEntry, context) => {
 const createCombinedContractionTranslation = (fullMatch, contraction, word, contractionData, wordData) => {
   const contractionTranslation = contractionData?.translation || contraction;
   const wordTranslation = wordData?.translation || word;
+  const partOfSpeech = wordData?.partOfSpeech;
 
-  // Create a meaningful combined translation
-  if (contraction === "d'" && wordData?.partOfSpeech === "noun") {
-    // d'argent = "money" (not "of money")
-    return wordTranslation;
-  } else if (contraction === "l'" && wordData?.partOfSpeech === "noun") {
-    // l'eau = "water" (not "the water")
-    return wordTranslation;
-  } else if (contraction === "j'" && wordData?.partOfSpeech === "verb") {
-    // j'ai = "I have"
-    return `${contractionTranslation} ${wordTranslation}`;
-  } else if (contraction === "n'" && wordData?.partOfSpeech === "verb") {
-    // n'est pas = "is not"
-    return `${wordTranslation} not`;
-  } else if (contraction === "s'" && wordData?.partOfSpeech === "verb") {
-    // s'appelle = "is called"
-    return `${wordTranslation} (reflexive)`;
-  } else if (contraction === "c'" && wordData?.partOfSpeech === "verb") {
-    // c'est = "it is"
-    return `${contractionTranslation} ${wordTranslation}`;
-  } else if (contraction === "qu'" && wordData?.partOfSpeech === "verb") {
-    // qu'est-ce que = "what"
-    return `${contractionTranslation} ${wordTranslation}`;
-  } else if (contraction === "m'" && wordData?.partOfSpeech === "verb") {
-    // m'appelle = "my name is"
-    return `${contractionTranslation} ${wordTranslation}`;
-  } else if (contraction === "t'" && wordData?.partOfSpeech === "verb") {
-    // t'appelles = "your name is"
-    return `${contractionTranslation} ${wordTranslation}`;
-  } else if (contraction === "y'" && wordData?.partOfSpeech === "verb") {
-    // y'a = "there is"
-    return `${contractionTranslation} ${wordTranslation}`;
-  } else {
-    // Fallback: combine both translations
+  // Get rule for this contraction
+  const rule = CONTRACTION_RULES[contraction];
+  if (!rule) {
     return `${contractionTranslation} ${wordTranslation}`;
   }
+
+  // Get rule for this part of speech
+  const partOfSpeechRule = rule[partOfSpeech];
+  if (!partOfSpeechRule) {
+    return `${contractionTranslation} ${wordTranslation}`;
+  }
+
+  // Apply the rule
+  return partOfSpeechRule(contractionTranslation, wordTranslation);
 };

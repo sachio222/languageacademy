@@ -6,8 +6,64 @@ import React from 'react';
 import { getTTSText } from '../ttsUtils';
 import { wikipediaEntries } from '../../data/wikipediaEntries';
 
+// Tooltip configuration constants
+const TOOLTIP_STYLES = {
+  METADATA: { fontSize: '0.8em', opacity: 0.7 },
+  REDIRECT: { fontSize: '0.7em', opacity: 0.6, marginTop: '2px' },
+  PART_OF_SPEECH: { fontStyle: 'italic', fontSize: '0.8em', opacity: 0.7 }
+};
+
 /**
- * Create an interactive word element with tooltips and TTS
+ * Create tooltip content for regular words
+ */
+const createRegularTooltipContent = (translation, partOfSpeech, wordData) => {
+  return (
+    <>
+      {translation}
+      {partOfSpeech && (
+        <span style={TOOLTIP_STYLES.PART_OF_SPEECH}>
+          {' '}({partOfSpeech})
+        </span>
+      )}
+      {wordData?.gender && (
+        <span style={TOOLTIP_STYLES.METADATA}>
+          {' '}({wordData.gender})
+        </span>
+      )}
+      {wordData?.number && (
+        <span style={TOOLTIP_STYLES.METADATA}>
+          {' '}({wordData.number})
+        </span>
+      )}
+      {wordData?.redirectInfo && (
+        <div style={TOOLTIP_STYLES.REDIRECT}>
+          {wordData.redirectInfo.redirectType.replace('_', ' ')} of {wordData.redirectInfo.baseWord}
+        </div>
+      )}
+    </>
+  );
+};
+
+/**
+ * Create tooltip element with consistent styling
+ */
+const createTooltipElement = (content, tooltipPosition, className = "word-tooltip") => {
+  return (
+    <span
+      className={className}
+      style={{
+        "--tooltip-shift": `${tooltipPosition.shift}px`,
+        "--arrow-shift": `${tooltipPosition.arrowShift}px`,
+        visibility: tooltipPosition.isVisible ? "visible" : "hidden",
+      }}
+    >
+      {content}
+    </span>
+  );
+};
+
+/**
+ * Create interactive word element with tooltips and TTS
  * @param {string} text - The text to display
  * @param {string} translation - The translation text
  * @param {string} uniqueKey - The unique key for the element
@@ -19,6 +75,7 @@ import { wikipediaEntries } from '../../data/wikipediaEntries';
 export const createInteractiveWordElement = (text, translation, uniqueKey, context, partOfSpeech = null, wordData = null) => {
   const { wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak } = context;
   const wikiEntry = wikipediaEntries[text] || wikipediaEntries[text.toLowerCase()];
+  const isHovered = hoveredWord === uniqueKey;
 
   return (
     <span
@@ -33,42 +90,14 @@ export const createInteractiveWordElement = (text, translation, uniqueKey, conte
       style={{ cursor: "pointer" }}
     >
       {text}
-      {hoveredWord === uniqueKey && wikiEntry && (
-        <span
-          className="word-tooltip wiki-tooltip"
-          style={{
-            "--tooltip-shift": `${tooltipPosition.shift}px`,
-            "--arrow-shift": `${tooltipPosition.arrowShift}px`,
-            visibility: tooltipPosition.isVisible ? "visible" : "hidden",
-          }}
-        >
-          {createWikiCard(wikiEntry)}
-        </span>
+      {isHovered && wikiEntry && createTooltipElement(
+        createWikiCard(wikiEntry),
+        tooltipPosition,
+        "word-tooltip wiki-tooltip"
       )}
-      {hoveredWord === uniqueKey && !wikiEntry && (
-        <span className="word-tooltip">
-          {translation}
-          {partOfSpeech && (
-            <span style={{ fontStyle: 'italic', fontSize: '0.8em', opacity: 0.7 }}>
-              {' '}({partOfSpeech})
-            </span>
-          )}
-          {wordData?.gender && (
-            <span style={{ fontSize: '0.8em', opacity: 0.7 }}>
-              {' '}({wordData.gender})
-            </span>
-          )}
-          {wordData?.number && (
-            <span style={{ fontSize: '0.8em', opacity: 0.7 }}>
-              {' '}({wordData.number})
-            </span>
-          )}
-          {wordData?.redirectInfo && (
-            <div style={{ fontSize: '0.7em', opacity: 0.6, marginTop: '2px' }}>
-              {wordData.redirectInfo.redirectType.replace('_', ' ')} of {wordData.redirectInfo.baseWord}
-            </div>
-          )}
-        </span>
+      {isHovered && !wikiEntry && createTooltipElement(
+        createRegularTooltipContent(translation, partOfSpeech, wordData),
+        tooltipPosition
       )}
     </span>
   );

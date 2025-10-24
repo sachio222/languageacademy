@@ -1,0 +1,447 @@
+[
+  {
+    "word": "boire",
+    "translation": "to drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "conjugationGroup": "irregular",
+    "definition": "To consume liquid through the mouth",
+    "examples": [
+      {
+        "text": "Je veux boire de l'eau",
+        "trans": "I want to drink water",
+        "lang": "en"
+      },
+      {
+        "text": "Il faut boire beaucoup d'eau",
+        "trans": "You need to drink a lot of water",
+        "lang": "en"
+      }
+    ],
+    "tags": ["verb", "irregular", "infinitive", "common"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "bois",
+    "translation": "drink/drinks",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je/tu",
+    "number": "singular",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "je bois",
+        "type": "pronoun_verb",
+        "context": "I drink",
+        "frequency": "common"
+      },
+      {
+        "phrase": "tu bois",
+        "type": "pronoun_verb",
+        "context": "you drink",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "present", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "boit",
+    "translation": "drinks",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il/elle",
+    "number": "singular",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "il boit",
+        "type": "pronoun_verb",
+        "context": "he drinks",
+        "frequency": "common"
+      },
+      {
+        "phrase": "elle boit",
+        "type": "pronoun_verb",
+        "context": "she drinks",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "present", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "buvons",
+    "translation": "drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "nous buvons",
+        "type": "pronoun_verb",
+        "context": "we drink",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "present", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "buvez",
+    "translation": "drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "vous buvez",
+        "type": "pronoun_verb",
+        "context": "you drink (formal/plural)",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "present", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "boivent",
+    "translation": "drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils/elles",
+    "number": "plural",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "ils boivent",
+        "type": "pronoun_verb",
+        "context": "they drink (masculine)",
+        "frequency": "common"
+      },
+      {
+        "phrase": "elles boivent",
+        "type": "pronoun_verb",
+        "context": "they drink (feminine)",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "present", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "buvais",
+    "translation": "was drinking / used to drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "imperfect",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "je buvais",
+        "type": "pronoun_verb",
+        "context": "I was drinking",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "imperfect", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buvait",
+    "translation": "was drinking / used to drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "imperfect",
+    "mood": "indicative",
+    "person": "il/elle",
+    "number": "singular",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "il buvait",
+        "type": "pronoun_verb",
+        "context": "he was drinking",
+        "frequency": "common"
+      },
+      {
+        "phrase": "elle buvait",
+        "type": "pronoun_verb",
+        "context": "she was drinking",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "imperfect", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buvions",
+    "translation": "were drinking / used to drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "imperfect",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "nous buvions",
+        "type": "pronoun_verb",
+        "context": "we were drinking",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "imperfect", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buviez",
+    "translation": "were drinking / used to drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "imperfect",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "vous buviez",
+        "type": "pronoun_verb",
+        "context": "you were drinking (formal/plural)",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "imperfect", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buvaient",
+    "translation": "were drinking / used to drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "imperfect",
+    "mood": "indicative",
+    "person": "ils/elles",
+    "number": "plural",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "ils buvaient",
+        "type": "pronoun_verb",
+        "context": "they were drinking (masculine)",
+        "frequency": "common"
+      },
+      {
+        "phrase": "elles buvaient",
+        "type": "pronoun_verb",
+        "context": "they were drinking (feminine)",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "imperfect", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buvrai",
+    "translation": "will drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "je buvrai",
+        "type": "pronoun_verb",
+        "context": "I will drink",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "future", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buvras",
+    "translation": "will drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "tu buvras",
+        "type": "pronoun_verb",
+        "context": "you will drink",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "future", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buvra",
+    "translation": "will drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il/elle",
+    "number": "singular",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "il buvra",
+        "type": "pronoun_verb",
+        "context": "he will drink",
+        "frequency": "common"
+      },
+      {
+        "phrase": "elle buvra",
+        "type": "pronoun_verb",
+        "context": "she will drink",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "future", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buvrons",
+    "translation": "will drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "nous buvrons",
+        "type": "pronoun_verb",
+        "context": "we will drink",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "future", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buvrez",
+    "translation": "will drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "vous buvrez",
+        "type": "pronoun_verb",
+        "context": "you will drink (formal/plural)",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "future", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "buvront",
+    "translation": "will drink",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils/elles",
+    "number": "plural",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "ils buvront",
+        "type": "pronoun_verb",
+        "context": "they will drink (masculine)",
+        "frequency": "common"
+      },
+      {
+        "phrase": "elles buvront",
+        "type": "pronoun_verb",
+        "context": "they will drink (feminine)",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "future", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "bu",
+    "translation": "drank / drunk",
+    "partOfSpeech": "verb",
+    "infinitive": "boire",
+    "tense": "past_participle",
+    "mood": "indicative",
+    "person": "all",
+    "number": "all",
+    "conjugationGroup": "irregular",
+    "verb_phrases": [
+      {
+        "phrase": "j'ai bu",
+        "type": "compound_tense",
+        "context": "I drank / I have drunk",
+        "frequency": "common"
+      },
+      {
+        "phrase": "il a bu",
+        "type": "compound_tense",
+        "context": "he drank / he has drunk",
+        "frequency": "common"
+      }
+    ],
+    "tags": ["verb", "past_participle", "conjugation"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  }
+]
