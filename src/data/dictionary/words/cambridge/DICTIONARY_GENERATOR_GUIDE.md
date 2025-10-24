@@ -505,6 +505,39 @@ All phrase objects share this structure:
 ]
 ```
 
-**Note**: The generator automatically adds `"ne...mange...pas"` as a negation phrase for the verb "mange".
+## Manual Steps After Generation
+
+### Adding Verb Conjugation Relationships
+
+After generating verb conjugations, you must manually add all conjugations to the main infinitive entry's `relationships` array. This ensures the dictionary modal shows all related conjugations.
+
+**Example**: After adding "dire" and its conjugations, update the main "dire" entry:
+
+```javascript
+"relationships": [
+  {
+    "type": "conjugation_pair",
+    "targetId": "dis-fr",
+    "targetWord": "dis",
+    "note": "present - je/tu"
+  },
+  {
+    "type": "conjugation_pair", 
+    "targetId": "dit-fr",
+    "targetWord": "dit",
+    "note": "present - il/elle"
+  },
+  // ... add all other conjugations
+]
+```
+
+**Steps**:
+1. Generate all verb conjugations using the generator
+2. Manually edit the main infinitive entry in `verbs.js`
+3. Add all conjugations to the `relationships` array
+4. Use `"type": "conjugation_pair"` for all entries
+5. Include descriptive `note` fields (e.g., "present - je", "future - nous")
+
+This manual step is required because the generator creates individual entries but doesn't automatically link them to the main verb entry.
 
 This guide provides comprehensive coverage of the Dictionary Generator's capabilities. For additional help, run `node generate-lesson-words.js --help` or examine the existing dictionary files for more examples.

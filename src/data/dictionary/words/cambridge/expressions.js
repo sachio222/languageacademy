@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Expressions
- * Generated: 2025-10-24T03:08:24.076Z
- * Successfully scraped: 12/12
+ * Generated: 2025-10-24T04:36:03.531Z
+ * Successfully scraped: 13/13
  */
 
 export const expressionsCambridge = new Map([
@@ -512,6 +512,57 @@ export const expressionsCambridge = new Map([
         ],
         "created_at": "2025-10-24T03:08:23.692Z",
         "updated_at": "2025-10-24T03:08:24.076Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "bien sûr-fr",
+        {
+        "id": "bien sûr-fr",
+        "lang": "fr",
+        "word": "bien sûr",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "of course",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Bien sûr, je viens",
+                "trans": "Of course, I'm coming",
+                "lang": "en"
+            },
+            {
+                "text": "Bien sûr que oui",
+                "trans": "Of course yes",
+                "lang": "en"
+            },
+            {
+                "text": "Bien sûr, c'est possible",
+                "trans": "Of course, it's possible",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T04:36:03.040Z",
+        "updated_at": "2025-10-24T04:36:03.530Z",
         "sources": [
             "language_academy",
             "cambridge"

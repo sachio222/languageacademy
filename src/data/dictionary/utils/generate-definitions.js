@@ -73,7 +73,8 @@ const __dirname = path.dirname(__filename);
  *   partOfSpeech: "verb",
  *   infinitive: "manger",
  *   verb_phrases: [
- *     { phrase: "je mange", type: "pronoun_verb", context: "I eat", frequency: "common" }
+ *     { phrase: "je mange", type: "pronoun_verb", context: "I eat", frequency: "common" },
+ *     { phrase: "ne dire pas", type: "negation", context: "don't say", frequency: "common" }
  *   ],
  *   unit: "unit1",
  *   tags: ["unit1", "food"]
@@ -135,7 +136,7 @@ const __dirname = path.dirname(__filename);
  * ```
  *
  * ## Important Notes
- * - **Automatic negative forms**: All verbs automatically get "ne...pas" patterns
+ * - **Manual verb phrases**: Supply common phrases manually in `verb_phrases` array, including negative forms
  * - **Duplicate checking**: Based on both `word` AND `partOfSpeech`
  * - **Two-phase process**: Basic entries created first, then Cambridge enhancement
  * - **Schema compliance**: All entries validated against word-schema.js
@@ -550,9 +551,9 @@ export class DefinitionGenerator {
 
     merged.translations = [...userTranslations, ...cambridgeTranslations];
 
-    // Add Cambridge examples if none provided
+    // Add Cambridge examples if none provided by user
     if (
-      merged.examples.length === 0 &&
+      (!userData.examples || userData.examples.length === 0) &&
       cambridgeData.examples &&
       cambridgeData.examples.length > 0
     ) {
@@ -585,12 +586,12 @@ export class DefinitionGenerator {
       merged.usage_notes = cambridgeData.usage_notes;
     }
 
-    // Merge register information
+    // Merge register information - always append Cambridge data to existing data
     if (cambridgeData.register && cambridgeData.register.length > 0) {
       merged.register = [...(merged.register || []), ...cambridgeData.register];
     }
 
-    // Merge regional variants
+    // Merge regional variants - always append Cambridge data to existing data
     if (
       cambridgeData.regional_variants &&
       cambridgeData.regional_variants.length > 0
@@ -601,7 +602,7 @@ export class DefinitionGenerator {
       ];
     }
 
-    // Merge relationships
+    // Merge relationships - always append Cambridge data to existing data
     if (cambridgeData.relationships && cambridgeData.relationships.length > 0) {
       merged.relationships = [
         ...(merged.relationships || []),
@@ -1139,21 +1140,22 @@ export default ${varName}Cambridge;
       );
     }
 
-    // Automatically add negative form if not already present
-    const negativePhrase = `ne...${entryData.word}...pas`;
-    const hasNegative = entryData.verb_phrases.some(
-      (phrase) => phrase.phrase.includes("ne") && phrase.phrase.includes("pas")
-    );
+    // DISABLED: Automatically add negative form if not already present
+    // Manual verb phrases should be supplied in the input data
+    // const negativePhrase = `ne...${entryData.word}...pas`;
+    // const hasNegative = entryData.verb_phrases.some(
+    //   (phrase) => phrase.phrase.includes("ne") && phrase.phrase.includes("pas")
+    // );
 
-    if (!hasNegative) {
-      entryData.verb_phrases.push({
-        phrase: negativePhrase,
-        type: "negation",
-        context: `not ${entryData.word}`,
-        frequency: "common",
-      });
-      console.log(`  ✅ Auto-added negative form: ${negativePhrase}`);
-    }
+    // if (!hasNegative) {
+    //   entryData.verb_phrases.push({
+    //     phrase: negativePhrase,
+    //     type: "negation",
+    //     context: `not ${entryData.word}`,
+    //     frequency: "common",
+    //   });
+    //   console.log(`  ✅ Auto-added negative form: ${negativePhrase}`);
+    // }
   }
 
   /**

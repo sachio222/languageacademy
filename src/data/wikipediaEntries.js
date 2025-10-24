@@ -208,13 +208,13 @@ export const wikipediaEntries = {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Palais_du_Luxembourg_October_21%2C_2010.jpg/960px-Palais_du_Luxembourg_October_21%2C_2010.jpg",
     url: "https://en.wikipedia.org/wiki/Luxembourg_Gardens",
   },
-  "café de flore": {
-    name: "Café de Flore",
+  "l'Odéon": {
+    name: "Odéon-Théâtre de l'Europe",
     description:
-      "Historic café in Paris, opened 1887, famous meeting place for intellectuals like Sartre and Simone de Beauvoir",
+      "A historiccal theater in Saint-Germaine with avant garde performances.",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg/500px-Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg",
-    url: "https://en.wikipedia.org/wiki/Caf%C3%A9_de_Flore",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Th%C3%A9%C3%A2tre_de_l%27Od%C3%A9on%2C_Paris_6e_140402_1.jpg/960px-Th%C3%A9%C3%A2tre_de_l%27Od%C3%A9on%2C_Paris_6e_140402_1.jpg",
+    url: "https://en.wikipedia.org/wiki/Od%C3%A9on-Th%C3%A9%C3%A2tre_de_l%27Europe",
   },
   "Café de Flore": {
     name: "Café de Flore",
@@ -790,14 +790,6 @@ export const wikipediaEntries = {
     url: "https://en.wikipedia.org/wiki/Paris",
   },
   "Belle Époque": {
-    name: "Belle Époque",
-    description:
-      "Period of French history from 1871-1914, characterized by peace, prosperity, and cultural flourishing",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg/500px-Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg",
-    url: "https://en.wikipedia.org/wiki/Belle_%C3%89poque",
-  },
-  "belle époque": {
     name: "Belle Époque",
     description:
       "Period of French history from 1871-1914, characterized by peace, prosperity, and cultural flourishing",

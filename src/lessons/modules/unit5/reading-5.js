@@ -50,7 +50,7 @@ Le restaurant était sur la grande place. C'était un petit restaurant, mais c'�
 
 **Pierre:** Nous voudrions du pain et de l'eau, s'il vous plaît. Et une pizza aussi!
 
-**Moi:** Et je voudrais un express, s'il vous plaît.
+**Moi:** Et je voudrais un expresso, s'il vous plaît.
 
 **La femme:** Très bien! Voilà votre pain et votre eau.
 
@@ -239,7 +239,7 @@ You should go to this restaurant! It's on the big square. You could eat bread, p
     { french: "le pain", english: "bread", note: "essential food" },
     { french: "l'eau", english: "water", note: "essential drink" },
     { french: "une pizza", english: "a pizza", note: "popular food" },
-    { french: "un express", english: "an espresso", note: "strong coffee" },
+    { french: "un expresso", english: "an espresso", note: "strong coffee" },
     { french: "une baguette", english: "a baguette", note: "French bread" },
     { french: "le beurre", english: "butter", note: "with bread" },
     { french: "le café", english: "coffee", note: "drink" },
@@ -347,8 +347,8 @@ You should go to this restaurant! It's on the big square. You could eat bread, p
         instruction: "What kind of coffee did the narrator want?",
         prompt: "Je voudrais un ___",
         hint: "Espresso (in French)",
-        expectedAnswer: "un express",
-        acceptableAnswers: ["express", "café", "un expresso", "un café"],
+        expectedAnswer: "un expresso",
+        acceptableAnswers: ["expresso", "café", "un expresso", "un café"],
         wrongAnswers: [],
       },
       {

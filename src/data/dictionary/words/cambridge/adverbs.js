@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Adverbs
- * Generated: 2025-10-24T03:02:52.668Z
- * Successfully scraped: 43/43
+ * Generated: 2025-10-24T04:42:14.132Z
+ * Successfully scraped: 45/45
  */
 
 export const adverbsCambridge = new Map([
@@ -2822,6 +2822,108 @@ export const adverbsCambridge = new Map([
         ],
         "created_at": "2025-10-24T03:02:52.245Z",
         "updated_at": "2025-10-24T03:02:52.664Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adverb"
+    }
+  ],
+  [
+    "là-fr",
+        {
+        "id": "là-fr",
+        "lang": "fr",
+        "word": "là",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "there",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je vais là",
+                "trans": "I'm going there",
+                "lang": "en"
+            },
+            {
+                "text": "Il est là",
+                "trans": "He is there",
+                "lang": "en"
+            },
+            {
+                "text": "Là-bas",
+                "trans": "Over there",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T04:32:43.424Z",
+        "updated_at": "2025-10-24T04:32:43.888Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adverb"
+    }
+  ],
+  [
+    "tout-fr",
+        {
+        "id": "tout-fr",
+        "lang": "fr",
+        "word": "tout",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "quite/very/all",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tout près",
+                "trans": "Very close",
+                "lang": "en"
+            },
+            {
+                "text": "Tout à fait",
+                "trans": "Quite/absolutely",
+                "lang": "en"
+            },
+            {
+                "text": "Tout de suite",
+                "trans": "Right away",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T04:42:11.672Z",
+        "updated_at": "2025-10-24T04:42:14.130Z",
         "sources": [
             "language_academy",
             "cambridge"

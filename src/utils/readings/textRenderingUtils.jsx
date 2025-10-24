@@ -1,4 +1,4 @@
-// import { readingVocabulary as wordTranslations } from "../../components/readingVocabulary";
+import { readingVocabulary as wordTranslations } from "../../components/readingVocabulary";
 import { multiWordPhrases } from "../../components/readingVocabularyPhrases";
 import { useDictionary } from "../../hooks/useDictionary";
 import { wikipediaEntries } from "../../data/wikipediaEntries";
@@ -182,7 +182,27 @@ const renderWords = (text, context) => {
 const checkMultiWordPhrases = (remainingText, charPosition, context) => {
   const { paragraphIndex, allWords } = context;
   try {
-    // First check Wikipedia entries for multi-word phrases
+    // PRIORITY 1: Check reading vocabulary first (manual override for multi-word phrases)
+    for (const [vocabKey, vocabEntry] of Object.entries(wordTranslations)) {
+      if (vocabKey.includes(' ') && remainingText.toLowerCase().startsWith(vocabKey.toLowerCase())) {
+        const matchedText = remainingText.slice(0, vocabKey.length);
+        const uniqueKey = generateTextKey(paragraphIndex, charPosition);
+
+        // Handle both old string format and new object format
+        const translation = typeof vocabEntry === 'string' ? vocabEntry : vocabEntry.translation;
+        const partOfSpeech = typeof vocabEntry === 'string' ? null : vocabEntry.partOfSpeech;
+
+        const element = createInteractiveWordElement(matchedText, translation, uniqueKey, context, partOfSpeech);
+
+        return {
+          element,
+          remainingText: remainingText.slice(vocabKey.length),
+          charPosition: charPosition + vocabKey.length
+        };
+      }
+    }
+
+    // PRIORITY 2: Check Wikipedia entries for multi-word phrases
     for (const [wikiKey, wikiEntry] of Object.entries(wikipediaEntries)) {
       if (remainingText.toLowerCase().startsWith(wikiKey.toLowerCase())) {
         const matchedText = remainingText.slice(0, wikiKey.length);
@@ -198,7 +218,7 @@ const checkMultiWordPhrases = (remainingText, charPosition, context) => {
       }
     }
 
-    // Then check dictionary expressions (multi-word entries)
+    // PRIORITY 3: Check dictionary expressions (multi-word entries)
     for (const wordEntry of allWords) {
       if (wordEntry.partOfSpeech === 'expression' && wordEntry.word.includes(' ')) {
         if (remainingText.toLowerCase().startsWith(wordEntry.word.toLowerCase())) {
@@ -222,7 +242,7 @@ const checkMultiWordPhrases = (remainingText, charPosition, context) => {
       }
     }
 
-    // Then check regular multi-word phrases
+    // PRIORITY 4: Check regular multi-word phrases
     for (const { phrase, translation } of multiWordPhrases) {
       if (remainingText.toLowerCase().startsWith(phrase.toLowerCase())) {
         const matchedText = remainingText.slice(0, phrase.length);
@@ -480,7 +500,26 @@ const processDialogue = (speakerMatch, text, context) => {
 const getWordTranslation = (word, allWords, context = '') => {
   const cleanWord = word.toLowerCase();
 
-  // New way: Look up in comprehensive dictionary
+  // PRIORITY 1: Check reading vocabulary first (manual override)
+  const readingVocabEntry = wordTranslations[word] || wordTranslations[word.toLowerCase()];
+  if (readingVocabEntry) {
+    // Handle both old string format and new object format for backward compatibility
+    if (typeof readingVocabEntry === 'string') {
+      return {
+        translation: readingVocabEntry,
+        partOfSpeech: null
+      };
+    } else {
+      return {
+        translation: readingVocabEntry.translation,
+        partOfSpeech: readingVocabEntry.partOfSpeech || null,
+        gender: readingVocabEntry.gender || null,
+        number: readingVocabEntry.number || null
+      };
+    }
+  }
+
+  // PRIORITY 2: Look up in comprehensive dictionary
   const dictionaryEntry = allWords.find(entry =>
     entry.word.toLowerCase() === cleanWord
   );
