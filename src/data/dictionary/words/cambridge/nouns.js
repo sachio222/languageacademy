@@ -1954,9 +1954,9 @@ export const nounsCambridge = new Map([
   [
     "marc-fr",
     {
-      id: "Marc-fr",
+      id: "marc-fr",
       lang: "fr",
-      word: "Marc",
+      word: "marc",
       partOfSpeech: "noun",
       translations: [
         {

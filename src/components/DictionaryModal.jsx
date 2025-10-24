@@ -278,7 +278,7 @@ function DictionaryModal({ isOpen, onClose }) {
                 </select>
               </div>
               <div className="dictionary-results-count">
-                Showing {filteredWords.length} definitions
+                {filteredWords.length} definitions
               </div>
             </div>
           </div>
@@ -711,7 +711,7 @@ function DictionaryModal({ isOpen, onClose }) {
                           >
                             <div className="dictionary-relationship-content">
                               <span className="dictionary-relationship-word">{relationship.targetWord}</span>
-                              {relationship.type === 'adjective_form' ? (
+                              {relationship.type === 'adjective_form' || relationship.type === 'noun_form' ? (
                                 <span className="dictionary-relationship-type">{relationship.note}</span>
                               ) : (
                                 <>
