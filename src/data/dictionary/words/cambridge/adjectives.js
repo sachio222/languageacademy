@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Adjectives
- * Generated: 2025-10-24T03:08:23.690Z
- * Successfully scraped: 65/65
+ * Generated: 2025-10-24T03:25:46.970Z
+ * Successfully scraped: 75/75
  */
 
 export const adjectivesCambridge = new Map([
@@ -1188,13 +1188,12 @@ export const adjectivesCambridge = new Map([
         "id": "bon-fr",
         "lang": "fr",
         "word": "bon",
-        "partOfSpeech": "adjective",
         "translations": [
             {
                 "lang": "en",
                 "text": "good",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -1204,120 +1203,29 @@ export const adjectivesCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "une bonne idée",
-                "trans": "a good idea",
-                "source": "cambridge"
+                "text": "un bon livre",
+                "trans": "a good book",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "être bon pour la santé",
-                "trans": "to be good for one’s health",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle avait de bonnes intentions mais cela ne lui a pas réussi.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le repas était très bon.",
-                "trans": "The meal was very good.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "de bonnes vacances",
-                "trans": "a good vacation",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Bon anniversaire !",
-                "trans": "Happy Birthday!",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Bonne année !",
-                "trans": "Happy New Year!",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "envoyer des vœux de bonne réussite au candidat",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être bon avec qqn",
-                "trans": "to be good to sb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "faire une bonne action",
-                "trans": "to do a good deed",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les bonnes actions sont toujours récompensées.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un bon médecin",
-                "trans": "a good doctor",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être bon en dessin",
-                "trans": "to be good at drawing",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être déclaré bon pour le service",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "trois bons kilomètres",
-                "trans": "a good three kilometers",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "attendre quelques bonnes heures",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est parti pour de bon.",
-                "trans": "He left for good.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ce n’est pas de la rigolade, c’est pour de bon.",
-                "source": "cambridge"
+                "text": "le bon garçon",
+                "trans": "the good boy",
+                "lang": "en"
             }
         ],
-        "phonetic": "bɔ̃",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:12:44.296Z",
+        "updated_at": "2025-10-24T03:12:44.803Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T04:43:30.338Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/bon",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:43:30.338Z"
-        }
+        "partOfSpeech": "adjective"
     }
   ],
   [
@@ -2742,13 +2650,12 @@ export const adjectivesCambridge = new Map([
         "id": "meilleur-fr",
         "lang": "fr",
         "word": "meilleur",
-        "partOfSpeech": "adjective",
         "translations": [
             {
                 "lang": "en",
-                "text": "better",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "text": "better/best",
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -2758,41 +2665,29 @@ export const adjectivesCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Ce plat est meilleur froid.",
-                "trans": "This dish is better eaten cold.",
-                "source": "cambridge"
+                "text": "un meilleur résultat",
+                "trans": "a better result",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "être en meilleure santé",
-                "trans": "to be in better health",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est meilleur que moi en anglais.",
-                "trans": "He’s better than me at English.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est mon meilleur ami depuis toujours.",
-                "source": "cambridge"
+                "text": "le meilleur élève",
+                "trans": "the best student",
+                "lang": "en"
             }
         ],
-        "phonetic": "mɛjœʀ",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:25:46.743Z",
+        "updated_at": "2025-10-24T03:25:46.968Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T04:46:37.931Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/meilleur",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:46:37.931Z"
-        }
+        "partOfSpeech": "adjective"
     }
   ],
   [
@@ -3579,6 +3474,430 @@ export const adjectivesCambridge = new Map([
         "verified": false,
         "created_at": "2025-10-24T03:08:23.415Z",
         "updated_at": "2025-10-24T03:08:23.415Z"
+    }
+  ],
+  [
+    "bonne-fr",
+        {
+        "id": "bonne-fr",
+        "lang": "fr",
+        "word": "bonne",
+        "partOfSpeech": "adjective",
+        "redirect_to": "bon-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "bon",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "une bonne fille",
+                "trans": "a good girl",
+                "lang": "en"
+            },
+            {
+                "text": "la bonne nouvelle",
+                "trans": "the good news",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:12:44.299Z",
+        "updated_at": "2025-10-24T03:12:44.299Z"
+    }
+  ],
+  [
+    "bons-fr",
+        {
+        "id": "bons-fr",
+        "lang": "fr",
+        "word": "bons",
+        "partOfSpeech": "adjective",
+        "redirect_to": "bon-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "bon",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de bons amis",
+                "trans": "good friends",
+                "lang": "en"
+            },
+            {
+                "text": "les bons élèves",
+                "trans": "the good students",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:12:44.300Z",
+        "updated_at": "2025-10-24T03:12:44.300Z"
+    }
+  ],
+  [
+    "bonnes-fr",
+        {
+        "id": "bonnes-fr",
+        "lang": "fr",
+        "word": "bonnes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "bon-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "bon",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de bonnes idées",
+                "trans": "good ideas",
+                "lang": "en"
+            },
+            {
+                "text": "les bonnes nouvelles",
+                "trans": "the good news",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:12:44.300Z",
+        "updated_at": "2025-10-24T03:12:44.300Z"
+    }
+  ],
+  [
+    "gentil-fr",
+        {
+        "id": "gentil-fr",
+        "lang": "fr",
+        "word": "gentil",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "nice/kind",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un gentil garçon",
+                "trans": "a nice boy",
+                "lang": "en"
+            },
+            {
+                "text": "le gentil chien",
+                "trans": "the nice dog",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:21:40.838Z",
+        "updated_at": "2025-10-24T03:21:41.231Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective"
+    }
+  ],
+  [
+    "gentille-fr",
+        {
+        "id": "gentille-fr",
+        "lang": "fr",
+        "word": "gentille",
+        "partOfSpeech": "adjective",
+        "redirect_to": "gentil-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "gentil",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "une gentille fille",
+                "trans": "a nice girl",
+                "lang": "en"
+            },
+            {
+                "text": "la gentille dame",
+                "trans": "the nice lady",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:21:40.841Z",
+        "updated_at": "2025-10-24T03:21:40.841Z"
+    }
+  ],
+  [
+    "gentils-fr",
+        {
+        "id": "gentils-fr",
+        "lang": "fr",
+        "word": "gentils",
+        "partOfSpeech": "adjective",
+        "redirect_to": "gentil-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "gentil",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de gentils enfants",
+                "trans": "nice children",
+                "lang": "en"
+            },
+            {
+                "text": "les gentils garçons",
+                "trans": "the nice boys",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:21:40.842Z",
+        "updated_at": "2025-10-24T03:21:40.842Z"
+    }
+  ],
+  [
+    "gentilles-fr",
+        {
+        "id": "gentilles-fr",
+        "lang": "fr",
+        "word": "gentilles",
+        "partOfSpeech": "adjective",
+        "redirect_to": "gentil-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "gentil",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de gentilles filles",
+                "trans": "nice girls",
+                "lang": "en"
+            },
+            {
+                "text": "les gentilles dames",
+                "trans": "the nice ladies",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:21:40.842Z",
+        "updated_at": "2025-10-24T03:21:40.842Z"
+    }
+  ],
+  [
+    "meilleure-fr",
+        {
+        "id": "meilleure-fr",
+        "lang": "fr",
+        "word": "meilleure",
+        "partOfSpeech": "adjective",
+        "redirect_to": "meilleur-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "meilleur",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "une meilleure idée",
+                "trans": "a better idea",
+                "lang": "en"
+            },
+            {
+                "text": "la meilleure solution",
+                "trans": "the best solution",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:25:46.744Z",
+        "updated_at": "2025-10-24T03:25:46.744Z"
+    }
+  ],
+  [
+    "meilleurs-fr",
+        {
+        "id": "meilleurs-fr",
+        "lang": "fr",
+        "word": "meilleurs",
+        "partOfSpeech": "adjective",
+        "redirect_to": "meilleur-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "meilleur",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de meilleurs résultats",
+                "trans": "better results",
+                "lang": "en"
+            },
+            {
+                "text": "les meilleurs élèves",
+                "trans": "the best students",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:25:46.744Z",
+        "updated_at": "2025-10-24T03:25:46.744Z"
+    }
+  ],
+  [
+    "meilleures-fr",
+        {
+        "id": "meilleures-fr",
+        "lang": "fr",
+        "word": "meilleures",
+        "partOfSpeech": "adjective",
+        "redirect_to": "meilleur-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "meilleur",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de meilleures idées",
+                "trans": "better ideas",
+                "lang": "en"
+            },
+            {
+                "text": "les meilleures solutions",
+                "trans": "the best solutions",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:25:46.744Z",
+        "updated_at": "2025-10-24T03:25:46.744Z"
     }
   ]
 ]);

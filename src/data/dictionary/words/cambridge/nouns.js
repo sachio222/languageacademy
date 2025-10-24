@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Nouns
- * Generated: 2025-10-24T03:08:23.103Z
- * Successfully scraped: 319/319
+ * Generated: 2025-10-24T03:25:47.570Z
+ * Successfully scraped: 332/332
  */
 
 export const nounsCambridge = new Map([
@@ -9612,13 +9612,12 @@ export const nounsCambridge = new Map([
         "id": "restaurant-fr",
         "lang": "fr",
         "word": "restaurant",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
                 "text": "restaurant",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -9628,35 +9627,30 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "aller au restaurant",
-                "trans": "to go to a restaurant",
-                "source": "cambridge"
+                "text": "un bon restaurant",
+                "trans": "a good restaurant",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "inviter qqn au restaurant",
-                "trans": "to invite sb to a restaurant",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous avons un restaurant pas cher en bas de l’immeuble.",
-                "source": "cambridge"
+                "text": "le restaurant du coin",
+                "trans": "the local restaurant",
+                "lang": "en"
             }
         ],
-        "phonetic": "ʀɛstɔʀɑ̃",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:25:46.452Z",
+        "updated_at": "2025-10-24T03:25:46.733Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:05:49.199Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/restaurant",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:05:49.199Z"
-        }
+        "partOfSpeech": "noun",
+        "gender": "masculine"
     }
   ],
   [
@@ -16286,13 +16280,12 @@ export const nounsCambridge = new Map([
         "id": "addition-fr",
         "lang": "fr",
         "word": "addition",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
-                "text": "addition",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "text": "bill/check",
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -16302,51 +16295,30 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "faire une addition",
-                "trans": "to perform an addition",
-                "source": "cambridge"
+                "text": "l'addition, s'il vous plaît",
+                "trans": "the bill, please",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "On apprend l’addition en classe primaire.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "demander l’addition",
-                "trans": "to ask for the check",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’addition a été salée.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "sans addition de sel",
-                "trans": "with no added salt",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "l’addition de sucre au jus de fruit",
-                "source": "cambridge"
+                "text": "une addition élevée",
+                "trans": "a high bill",
+                "lang": "en"
             }
         ],
-        "phonetic": "adisjɔ̃",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:25:46.971Z",
+        "updated_at": "2025-10-24T03:25:47.271Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:15:02.330Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/addition",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:15:02.330Z"
-        }
+        "partOfSpeech": "noun",
+        "gender": "feminine"
     }
   ],
   [
@@ -16576,13 +16548,12 @@ export const nounsCambridge = new Map([
         "id": "argent-fr",
         "lang": "fr",
         "word": "argent",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
-                "text": "silver",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "text": "money/silver",
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -16592,40 +16563,30 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "bijou en argent",
-                "trans": "piece of silver jewelry",
-                "source": "cambridge"
+                "text": "beaucoup d'argent",
+                "trans": "a lot of money",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "L’argent noircit à l’air.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "gagner beaucoup d’argent",
-                "trans": "to earn a lot of money",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être bourré d’argent",
-                "source": "cambridge"
+                "text": "l'argent de poche",
+                "trans": "pocket money",
+                "lang": "en"
             }
         ],
-        "phonetic": "aʀʒɑ̃",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:25:45.907Z",
+        "updated_at": "2025-10-24T03:25:46.163Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:15:34.634Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/argent",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:15:34.634Z"
-        }
+        "partOfSpeech": "noun",
+        "gender": "masculine"
     }
   ],
   [
@@ -16681,13 +16642,12 @@ export const nounsCambridge = new Map([
         "id": "eau-fr",
         "lang": "fr",
         "word": "eau",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
                 "text": "water",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -16697,47 +16657,30 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "eau douce",
-                "trans": "fresh water",
-                "source": "cambridge"
+                "text": "un verre d'eau",
+                "trans": "a glass of water",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "boire de l’eau",
-                "trans": "to drink water",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "l’eau du robinet",
-                "trans": "tap water",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "plonger dans l’eau",
-                "trans": "to dive into the water",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "boire de l’eau minérale",
-                "source": "cambridge"
+                "text": "l'eau de la rivière",
+                "trans": "the river water",
+                "lang": "en"
             }
         ],
-        "phonetic": "o",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:25:46.173Z",
+        "updated_at": "2025-10-24T03:25:46.443Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:15:43.408Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/eau",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:15:43.408Z"
-        }
+        "partOfSpeech": "noun",
+        "gender": "feminine"
     }
   ],
   [
@@ -16965,13 +16908,12 @@ export const nounsCambridge = new Map([
         "id": "heure-fr",
         "lang": "fr",
         "word": "heure",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
-                "text": "hour",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "text": "hour/time",
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -16981,126 +16923,30 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "travailler pendant cinq heures",
-                "trans": "to work for five hours",
-                "source": "cambridge"
+                "text": "une heure de cours",
+                "trans": "an hour of class",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "Dans vingt-quatre heures, il sera là.",
-                "trans": "In twenty-four hours he’ll be here.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être payé à l’heure",
-                "trans": "to be paid by the hour",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Paris est à deux heures de route d’ici.",
-                "trans": "Paris is a two-hour drive from here.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "rouler à cent kilomètres à l’heure",
-                "trans": "to drive at a hundred kilometers an hour",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le médecin le recevra dans une heure.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Quelle heure est-il ?",
-                "trans": "What time is it?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est vingt heures.",
-                "trans": "It’s eight o-clock.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "arriver à l’heure",
-                "trans": "to arrive on time",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "À l’heure qu’il est il ne doit pas être loin.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est l’heure de se réveiller.",
-                "trans": "It’s time to wake up.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Allez les enfants, c’est l’heure d’aller au lit !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "se lever de bonne heure",
-                "trans": "to get up early",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir l’habitude de se coucher de bonne heure",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "On s’est déjà vu tout à l’heure.",
-                "trans": "We met earlier.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il était déjà là tout à l’heure.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Passe me voir tout à l’heure.",
-                "trans": "Come see me later.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "à tout à l’heure",
-                "trans": "See you later.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je vous dirais ce que j’en pense tout à l’heure.",
-                "source": "cambridge"
+                "text": "quelle heure est-il ?",
+                "trans": "what time is it?",
+                "lang": "en"
             }
         ],
-        "phonetic": "œʀ",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:21:41.666Z",
+        "updated_at": "2025-10-24T03:21:42.022Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:16:11.856Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/heure",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:16:11.856Z"
-        }
+        "partOfSpeech": "noun",
+        "gender": "feminine"
     }
   ],
   [
@@ -17915,6 +17761,572 @@ export const nounsCambridge = new Map([
         "verified": false,
         "created_at": "2025-10-24T03:08:22.509Z",
         "updated_at": "2025-10-24T03:08:22.509Z"
+    }
+  ],
+  [
+    "carte-fr",
+        {
+        "id": "carte-fr",
+        "lang": "fr",
+        "word": "carte",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "card/map",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "une carte de crédit",
+                "trans": "a credit card",
+                "lang": "en"
+            },
+            {
+                "text": "la carte de France",
+                "trans": "the map of France",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:21:41.233Z",
+        "updated_at": "2025-10-24T03:21:41.641Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine"
+    }
+  ],
+  [
+    "cartes-fr",
+        {
+        "id": "cartes-fr",
+        "lang": "fr",
+        "word": "cartes",
+        "partOfSpeech": "noun",
+        "redirect_to": "carte-fr",
+        "redirect_type": "plural_form",
+        "base_word": "carte",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de belles cartes",
+                "trans": "beautiful cards",
+                "lang": "en"
+            },
+            {
+                "text": "les cartes du monde",
+                "trans": "the world maps",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:21:41.234Z",
+        "updated_at": "2025-10-24T03:21:41.234Z"
+    }
+  ],
+  [
+    "heures-fr",
+        {
+        "id": "heures-fr",
+        "lang": "fr",
+        "word": "heures",
+        "partOfSpeech": "noun",
+        "redirect_to": "heure-fr",
+        "redirect_type": "plural_form",
+        "base_word": "heure",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "deux heures",
+                "trans": "two hours",
+                "lang": "en"
+            },
+            {
+                "text": "les heures de travail",
+                "trans": "working hours",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:21:41.667Z",
+        "updated_at": "2025-10-24T03:21:41.667Z"
+    }
+  ],
+  [
+    "carrefour-fr",
+        {
+        "id": "carrefour-fr",
+        "lang": "fr",
+        "word": "carrefour",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "intersection/crossroads",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un carrefour dangereux",
+                "trans": "a dangerous intersection",
+                "lang": "en"
+            },
+            {
+                "text": "le carrefour principal",
+                "trans": "the main intersection",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:21:42.037Z",
+        "updated_at": "2025-10-24T03:21:42.337Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine"
+    }
+  ],
+  [
+    "carrefours-fr",
+        {
+        "id": "carrefours-fr",
+        "lang": "fr",
+        "word": "carrefours",
+        "partOfSpeech": "noun",
+        "redirect_to": "carrefour-fr",
+        "redirect_type": "plural_form",
+        "base_word": "carrefour",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de nombreux carrefours",
+                "trans": "many intersections",
+                "lang": "en"
+            },
+            {
+                "text": "les carrefours de la ville",
+                "trans": "the city intersections",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:21:42.038Z",
+        "updated_at": "2025-10-24T03:21:42.038Z"
+    }
+  ],
+  [
+    "cafés-fr",
+        {
+        "id": "cafés-fr",
+        "lang": "fr",
+        "word": "cafés",
+        "partOfSpeech": "noun",
+        "redirect_to": "café-fr",
+        "redirect_type": "plural_form",
+        "base_word": "café",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "deux cafés",
+                "trans": "two coffees",
+                "lang": "en"
+            },
+            {
+                "text": "les cafés de Paris",
+                "trans": "the cafés of Paris",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:25:45.253Z",
+        "updated_at": "2025-10-24T03:25:45.253Z"
+    }
+  ],
+  [
+    "madame-fr",
+        {
+        "id": "madame-fr",
+        "lang": "fr",
+        "word": "madame",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "madam/Mrs.",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Bonjour, madame",
+                "trans": "Hello, madam",
+                "lang": "en"
+            },
+            {
+                "text": "Madame Dupont",
+                "trans": "Mrs. Dupont",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:25:45.585Z",
+        "updated_at": "2025-10-24T03:25:45.889Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine"
+    }
+  ],
+  [
+    "mesdames-fr",
+        {
+        "id": "mesdames-fr",
+        "lang": "fr",
+        "word": "mesdames",
+        "partOfSpeech": "noun",
+        "redirect_to": "madame-fr",
+        "redirect_type": "plural_form",
+        "base_word": "madame",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Bonjour, mesdames",
+                "trans": "Hello, ladies",
+                "lang": "en"
+            },
+            {
+                "text": "Mesdames et messieurs",
+                "trans": "Ladies and gentlemen",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:25:45.586Z",
+        "updated_at": "2025-10-24T03:25:45.586Z"
+    }
+  ],
+  [
+    "eaux-fr",
+        {
+        "id": "eaux-fr",
+        "lang": "fr",
+        "word": "eaux",
+        "partOfSpeech": "noun",
+        "redirect_to": "eau-fr",
+        "redirect_type": "plural_form",
+        "base_word": "eau",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "les eaux de la mer",
+                "trans": "the sea waters",
+                "lang": "en"
+            },
+            {
+                "text": "des eaux minérales",
+                "trans": "mineral waters",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:25:46.174Z",
+        "updated_at": "2025-10-24T03:25:46.174Z"
+    }
+  ],
+  [
+    "restaurants-fr",
+        {
+        "id": "restaurants-fr",
+        "lang": "fr",
+        "word": "restaurants",
+        "partOfSpeech": "noun",
+        "redirect_to": "restaurant-fr",
+        "redirect_type": "plural_form",
+        "base_word": "restaurant",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "de nombreux restaurants",
+                "trans": "many restaurants",
+                "lang": "en"
+            },
+            {
+                "text": "les restaurants de Paris",
+                "trans": "the restaurants of Paris",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:25:46.452Z",
+        "updated_at": "2025-10-24T03:25:46.452Z"
+    }
+  ],
+  [
+    "additions-fr",
+        {
+        "id": "additions-fr",
+        "lang": "fr",
+        "word": "additions",
+        "partOfSpeech": "noun",
+        "redirect_to": "addition-fr",
+        "redirect_type": "plural_form",
+        "base_word": "addition",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "les additions du restaurant",
+                "trans": "the restaurant bills",
+                "lang": "en"
+            },
+            {
+                "text": "des additions séparées",
+                "trans": "separate bills",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:25:46.972Z",
+        "updated_at": "2025-10-24T03:25:46.972Z"
+    }
+  ],
+  [
+    "expresso-fr",
+        {
+        "id": "expresso-fr",
+        "lang": "fr",
+        "word": "expresso",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "espresso",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un expresso serré",
+                "trans": "a strong espresso",
+                "lang": "en"
+            },
+            {
+                "text": "l'expresso du matin",
+                "trans": "morning espresso",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:25:47.283Z",
+        "updated_at": "2025-10-24T03:25:47.562Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine"
+    }
+  ],
+  [
+    "expressos-fr",
+        {
+        "id": "expressos-fr",
+        "lang": "fr",
+        "word": "expressos",
+        "partOfSpeech": "noun",
+        "redirect_to": "expresso-fr",
+        "redirect_type": "plural_form",
+        "base_word": "expresso",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "deux expressos",
+                "trans": "two espressos",
+                "lang": "en"
+            },
+            {
+                "text": "les expressos italiens",
+                "trans": "Italian espressos",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-24T03:25:47.285Z",
+        "updated_at": "2025-10-24T03:25:47.285Z"
     }
   ]
 ]);
