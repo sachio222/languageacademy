@@ -573,6 +573,7 @@ function App() {
               onClose={() => {
                 const url = new URL(window.location);
                 url.searchParams.delete('dictionary');
+                url.searchParams.delete('word');
                 window.history.pushState({}, '', url);
                 setCurrentLesson(null);
               }}
