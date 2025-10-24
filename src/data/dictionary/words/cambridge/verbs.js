@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Verbs
- * Generated: 2025-10-24T02:29:12.643Z
- * Successfully scraped: 238/238
+ * Generated: 2025-10-24T03:33:10.199Z
+ * Successfully scraped: 315/315
  */
 
 export const verbsCambridge = new Map([
@@ -1905,88 +1905,198 @@ export const verbsCambridge = new Map([
         "id": "devoir-fr",
         "lang": "fr",
         "word": "devoir",
-        "partOfSpeech": "verb",
         "translations": [
             {
                 "lang": "en",
-                "text": "to have to",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "text": "to have to/must/owe",
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
-        "relationships": [],
+        "relationships": [
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "dois-fr",
+                    "targetWord": "dois",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "doit-fr",
+                    "targetWord": "doit",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devons-fr",
+                    "targetWord": "devons",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devez-fr",
+                    "targetWord": "devez",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "doivent-fr",
+                    "targetWord": "doivent",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devrais-fr",
+                    "targetWord": "devrais",
+                    "note": "conditional form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devrais-fr",
+                    "targetWord": "devrais",
+                    "note": "conditional form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devrait-fr",
+                    "targetWord": "devrait",
+                    "note": "conditional form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devrions-fr",
+                    "targetWord": "devrions",
+                    "note": "conditional form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devriez-fr",
+                    "targetWord": "devriez",
+                    "note": "conditional form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devraient-fr",
+                    "targetWord": "devraient",
+                    "note": "conditional form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "ai dû-fr",
+                    "targetWord": "ai dû",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "as dû-fr",
+                    "targetWord": "as dû",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "a dû-fr",
+                    "targetWord": "a dû",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "avons dû-fr",
+                    "targetWord": "avons dû",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "avez dû-fr",
+                    "targetWord": "avez dû",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "ont dû-fr",
+                    "targetWord": "ont dû",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devrai-fr",
+                    "targetWord": "devrai",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devras-fr",
+                    "targetWord": "devras",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devra-fr",
+                    "targetWord": "devra",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devrons-fr",
+                    "targetWord": "devrons",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devrez-fr",
+                    "targetWord": "devrez",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "devront-fr",
+                    "targetWord": "devront",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "dû-fr",
+                    "targetWord": "dû",
+                    "note": "participle form"
+          }
+],
         "etymology": "",
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Il doit partir.",
-                "trans": "He has to go.",
-                "source": "cambridge"
+                "text": "Je dois partir",
+                "trans": "I must leave",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "Tu devrais le savoir.",
-                "trans": "You should know.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tu aurais dû m’appeler.",
-                "trans": "You should have called me.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai dû l’aider.",
-                "trans": "I had to help him.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tu dois te tromper.",
-                "trans": "You must be mistaken.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La tarte doit être cuite maintenant.",
-                "trans": "The pie must be done now.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle doit venir cet été.",
-                "trans": "She’s planning to come this summer.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je lui dois trente euros.",
-                "trans": "I owe him thirty euros.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je lui dois la vie.",
-                "trans": "I owe him my life.",
-                "source": "cambridge"
+                "text": "Il doit de l'argent",
+                "trans": "He owes money",
+                "lang": "en"
             }
         ],
-        "phonetic": "dəvwaʀ",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.763Z",
+        "updated_at": "2025-10-24T03:32:58.450Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:37:43.874Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/devoir",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:37:43.874Z"
-        }
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devoir...pas",
+                "type": "negation",
+                "context": "not devoir",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -3931,21 +4041,20 @@ export const verbsCambridge = new Map([
         "id": "dois-fr",
         "lang": "fr",
         "word": "dois",
-        "partOfSpeech": "verb",
         "translations": [
             {
                 "lang": "en",
-                "text": "to have to",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "text": "have to/must/owe",
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [
             {
-                "type": "redirect",
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
                 "targetWord": "devoir",
-                "note": "Redirects to devoir",
-                "strength": 1
+                "note": "infinitive form"
             }
         ],
         "etymology": "",
@@ -3954,72 +4063,40 @@ export const verbsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Il doit partir.",
-                "trans": "He has to go.",
-                "source": "cambridge"
+                "text": "Je dois",
+                "trans": "I must/have to",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "Tu devrais le savoir.",
-                "trans": "You should know.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tu aurais dû m’appeler.",
-                "trans": "You should have called me.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai dû l’aider.",
-                "trans": "I had to help him.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tu dois te tromper.",
-                "trans": "You must be mistaken.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La tarte doit être cuite maintenant.",
-                "trans": "The pie must be done now.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle doit venir cet été.",
-                "trans": "She’s planning to come this summer.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je lui dois trente euros.",
-                "trans": "I owe him thirty euros.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je lui dois la vie.",
-                "trans": "I owe him my life.",
-                "source": "cambridge"
+                "text": "Il doit",
+                "trans": "He must/has to",
+                "lang": "en"
             }
         ],
-        "phonetic": "dəvwaʀ",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.767Z",
+        "updated_at": "2025-10-24T03:32:58.603Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:45:35.401Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/devoir",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:45:35.401Z"
-        }
+        "person": "first_third",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...dois...pas",
+                "type": "negation",
+                "context": "not dois",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -4534,55 +4611,30 @@ export const verbsCambridge = new Map([
                 "text": "to eat",
                 "source": "language_academy",
                 "confidence": 0.95
-            },
-            {
-                "lang": "en",
-                "text": "to eat",
-                "confidence": 0.9,
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "I ate an apple.",
-                "confidence": 0.9,
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "to eat out",
-                "confidence": 0.9,
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "eat",
-                "confidence": 0.9,
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "tuck in",
-                "confidence": 0.9,
-                "source": "cambridge"
             }
         ],
-        "relationships": [],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
         "etymology": "",
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "J’ai mangé une pomme.",
-                "trans": "I ate an apple.",
-                "source": "cambridge"
+                "text": "J'aime manger",
+                "trans": "I like to eat",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "manger au restaurant",
-                "trans": "to eat out",
-                "source": "cambridge"
+                "text": "Il faut manger",
+                "trans": "We must eat",
+                "lang": "en"
             }
         ],
         "phonetic": "",
@@ -4590,20 +4642,23 @@ export const verbsCambridge = new Map([
         "tags": [
             "lesson"
         ],
-        "created_at": "2025-10-23T21:54:27.916Z",
-        "updated_at": "2025-10-24T00:46:23.182Z",
+        "created_at": "2025-10-24T03:26:56.831Z",
+        "updated_at": "2025-10-24T03:26:57.350Z",
         "sources": [
             "language_academy",
             "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "verb",
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T21:54:28.236Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/manger",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T21:54:28.236Z"
-        }
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...manger...pas",
+                "type": "negation",
+                "context": "not manger",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -9426,28 +9481,35 @@ export const verbsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [],
+        "examples": [
+            {
+                "text": "Je mange",
+                "trans": "I eat",
+                "lang": "en"
+            },
+            {
+                "text": "Il mange",
+                "trans": "He eats",
+                "lang": "en"
+            }
+        ],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
             "lesson"
         ],
-        "created_at": "2025-10-24T00:26:45.081Z",
-        "updated_at": "2025-10-24T00:26:45.672Z",
+        "created_at": "2025-10-24T03:26:56.835Z",
+        "updated_at": "2025-10-24T03:26:57.671Z",
         "sources": [
             "language_academy",
             "cambridge"
         ],
         "verified": false,
+        "person": "first_third",
+        "tense": "present",
         "partOfSpeech": "verb",
         "infinitive": "manger",
         "verb_phrases": [
-            {
-                "phrase": "je mange",
-                "type": "pronoun_verb",
-                "context": "I eat",
-                "frequency": "common"
-            },
             {
                 "phrase": "ne...mange...pas",
                 "type": "negation",
@@ -15292,6 +15354,4785 @@ export const verbsCambridge = new Map([
                 "phrase": "ne...voient...pas",
                 "type": "negation",
                 "context": "not voient",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "manges-fr",
+        {
+        "id": "manges-fr",
+        "lang": "fr",
+        "word": "manges",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu manges",
+                "trans": "You eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.836Z",
+        "updated_at": "2025-10-24T03:26:57.981Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...manges...pas",
+                "type": "negation",
+                "context": "not manges",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangeons-fr",
+        {
+        "id": "mangeons-fr",
+        "lang": "fr",
+        "word": "mangeons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous mangeons",
+                "trans": "We eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.836Z",
+        "updated_at": "2025-10-24T03:26:58.233Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangeons...pas",
+                "type": "negation",
+                "context": "not mangeons",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangez-fr",
+        {
+        "id": "mangez-fr",
+        "lang": "fr",
+        "word": "mangez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous mangez",
+                "trans": "You eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.836Z",
+        "updated_at": "2025-10-24T03:26:58.465Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangez...pas",
+                "type": "negation",
+                "context": "not mangez",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangent-fr",
+        {
+        "id": "mangent-fr",
+        "lang": "fr",
+        "word": "mangent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils mangent",
+                "trans": "They eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.836Z",
+        "updated_at": "2025-10-24T03:26:58.713Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangent...pas",
+                "type": "negation",
+                "context": "not mangent",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "ai mangé-fr",
+        {
+        "id": "ai mangé-fr",
+        "lang": "fr",
+        "word": "ai mangé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ate/have eaten",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'ai mangé",
+                "trans": "I ate/I have eaten",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.837Z",
+        "updated_at": "2025-10-24T03:26:58.990Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...ai mangé...pas",
+                "type": "negation",
+                "context": "not ai mangé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "as mangé-fr",
+        {
+        "id": "as mangé-fr",
+        "lang": "fr",
+        "word": "as mangé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ate/have eaten",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu as mangé",
+                "trans": "You ate/You have eaten",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.837Z",
+        "updated_at": "2025-10-24T03:26:59.215Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...as mangé...pas",
+                "type": "negation",
+                "context": "not as mangé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "a mangé-fr",
+        {
+        "id": "a mangé-fr",
+        "lang": "fr",
+        "word": "a mangé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ate/has eaten",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il a mangé",
+                "trans": "He ate/He has eaten",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.837Z",
+        "updated_at": "2025-10-24T03:26:59.475Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...a mangé...pas",
+                "type": "negation",
+                "context": "not a mangé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "avons mangé-fr",
+        {
+        "id": "avons mangé-fr",
+        "lang": "fr",
+        "word": "avons mangé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ate/have eaten",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous avons mangé",
+                "trans": "We ate/We have eaten",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.838Z",
+        "updated_at": "2025-10-24T03:26:59.698Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...avons mangé...pas",
+                "type": "negation",
+                "context": "not avons mangé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "avez mangé-fr",
+        {
+        "id": "avez mangé-fr",
+        "lang": "fr",
+        "word": "avez mangé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ate/have eaten",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous avez mangé",
+                "trans": "You ate/You have eaten",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.839Z",
+        "updated_at": "2025-10-24T03:26:59.927Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...avez mangé...pas",
+                "type": "negation",
+                "context": "not avez mangé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "ont mangé-fr",
+        {
+        "id": "ont mangé-fr",
+        "lang": "fr",
+        "word": "ont mangé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ate/have eaten",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils ont mangé",
+                "trans": "They ate/They have eaten",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.839Z",
+        "updated_at": "2025-10-24T03:27:00.180Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...ont mangé...pas",
+                "type": "negation",
+                "context": "not ont mangé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangerai-fr",
+        {
+        "id": "mangerai-fr",
+        "lang": "fr",
+        "word": "mangerai",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je mangerai",
+                "trans": "I will eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.839Z",
+        "updated_at": "2025-10-24T03:27:00.463Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangerai...pas",
+                "type": "negation",
+                "context": "not mangerai",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangeras-fr",
+        {
+        "id": "mangeras-fr",
+        "lang": "fr",
+        "word": "mangeras",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu mangeras",
+                "trans": "You will eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.839Z",
+        "updated_at": "2025-10-24T03:27:00.934Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangeras...pas",
+                "type": "negation",
+                "context": "not mangeras",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangera-fr",
+        {
+        "id": "mangera-fr",
+        "lang": "fr",
+        "word": "mangera",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il mangera",
+                "trans": "He will eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.839Z",
+        "updated_at": "2025-10-24T03:27:01.172Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangera...pas",
+                "type": "negation",
+                "context": "not mangera",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangerons-fr",
+        {
+        "id": "mangerons-fr",
+        "lang": "fr",
+        "word": "mangerons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous mangerons",
+                "trans": "We will eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.839Z",
+        "updated_at": "2025-10-24T03:27:01.427Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangerons...pas",
+                "type": "negation",
+                "context": "not mangerons",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangerez-fr",
+        {
+        "id": "mangerez-fr",
+        "lang": "fr",
+        "word": "mangerez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous mangerez",
+                "trans": "You will eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.839Z",
+        "updated_at": "2025-10-24T03:27:01.726Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangerez...pas",
+                "type": "negation",
+                "context": "not mangerez",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangeront-fr",
+        {
+        "id": "mangeront-fr",
+        "lang": "fr",
+        "word": "mangeront",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will eat",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils mangeront",
+                "trans": "They will eat",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:26:56.840Z",
+        "updated_at": "2025-10-24T03:27:01.955Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangeront...pas",
+                "type": "negation",
+                "context": "not mangeront",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangé-fr",
+        {
+        "id": "mangé-fr",
+        "lang": "fr",
+        "word": "mangé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "eaten",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'ai mangé",
+                "trans": "I ate/I have eaten",
+                "lang": "en"
+            },
+            {
+                "text": "Il a mangé",
+                "trans": "He ate/He has eaten",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:28:45.763Z",
+        "updated_at": "2025-10-24T03:28:46.371Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "past_participle",
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "ne...mangé...pas",
+                "type": "negation",
+                "context": "not mangé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "payer-fr",
+        {
+        "id": "payer-fr",
+        "lang": "fr",
+        "word": "payer",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "to pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "paie-fr",
+                    "targetWord": "paie",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "payes-fr",
+                    "targetWord": "payes",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "payons-fr",
+                    "targetWord": "payons",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "payez-fr",
+                    "targetWord": "payez",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "paient-fr",
+                    "targetWord": "paient",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "ai payé-fr",
+                    "targetWord": "ai payé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "as payé-fr",
+                    "targetWord": "as payé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "a payé-fr",
+                    "targetWord": "a payé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "avons payé-fr",
+                    "targetWord": "avons payé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "avez payé-fr",
+                    "targetWord": "avez payé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "ont payé-fr",
+                    "targetWord": "ont payé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "paierai-fr",
+                    "targetWord": "paierai",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "paieras-fr",
+                    "targetWord": "paieras",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "paiera-fr",
+                    "targetWord": "paiera",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "paierons-fr",
+                    "targetWord": "paierons",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "paierez-fr",
+                    "targetWord": "paierez",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "paieront-fr",
+                    "targetWord": "paieront",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "payé-fr",
+                    "targetWord": "payé",
+                    "note": "participle form"
+          }
+],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je dois payer",
+                "trans": "I must pay",
+                "lang": "en"
+            },
+            {
+                "text": "Il faut payer",
+                "trans": "We must pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.336Z",
+        "updated_at": "2025-10-24T03:30:55.015Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...payer...pas",
+                "type": "negation",
+                "context": "not payer",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "paie-fr",
+        {
+        "id": "paie-fr",
+        "lang": "fr",
+        "word": "paie",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "pay/pays",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je paie",
+                "trans": "I pay",
+                "lang": "en"
+            },
+            {
+                "text": "Il paie",
+                "trans": "He pays",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.339Z",
+        "updated_at": "2025-10-24T03:30:55.187Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first_third",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...paie...pas",
+                "type": "negation",
+                "context": "not paie",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "payes-fr",
+        {
+        "id": "payes-fr",
+        "lang": "fr",
+        "word": "payes",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu payes",
+                "trans": "You pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.340Z",
+        "updated_at": "2025-10-24T03:30:55.561Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...payes...pas",
+                "type": "negation",
+                "context": "not payes",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "payons-fr",
+        {
+        "id": "payons-fr",
+        "lang": "fr",
+        "word": "payons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous payons",
+                "trans": "We pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.341Z",
+        "updated_at": "2025-10-24T03:30:56.077Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...payons...pas",
+                "type": "negation",
+                "context": "not payons",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "payez-fr",
+        {
+        "id": "payez-fr",
+        "lang": "fr",
+        "word": "payez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous payez",
+                "trans": "You pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.341Z",
+        "updated_at": "2025-10-24T03:30:56.361Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...payez...pas",
+                "type": "negation",
+                "context": "not payez",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "paient-fr",
+        {
+        "id": "paient-fr",
+        "lang": "fr",
+        "word": "paient",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils paient",
+                "trans": "They pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.341Z",
+        "updated_at": "2025-10-24T03:30:56.610Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...paient...pas",
+                "type": "negation",
+                "context": "not paient",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "ai payé-fr",
+        {
+        "id": "ai payé-fr",
+        "lang": "fr",
+        "word": "ai payé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "paid/have paid",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'ai payé",
+                "trans": "I paid/I have paid",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.341Z",
+        "updated_at": "2025-10-24T03:30:56.859Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...ai payé...pas",
+                "type": "negation",
+                "context": "not ai payé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "as payé-fr",
+        {
+        "id": "as payé-fr",
+        "lang": "fr",
+        "word": "as payé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "paid/have paid",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu as payé",
+                "trans": "You paid/You have paid",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.341Z",
+        "updated_at": "2025-10-24T03:30:57.119Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...as payé...pas",
+                "type": "negation",
+                "context": "not as payé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "a payé-fr",
+        {
+        "id": "a payé-fr",
+        "lang": "fr",
+        "word": "a payé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "paid/has paid",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il a payé",
+                "trans": "He paid/He has paid",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.341Z",
+        "updated_at": "2025-10-24T03:30:57.342Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...a payé...pas",
+                "type": "negation",
+                "context": "not a payé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "avons payé-fr",
+        {
+        "id": "avons payé-fr",
+        "lang": "fr",
+        "word": "avons payé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "paid/have paid",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous avons payé",
+                "trans": "We paid/We have paid",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.343Z",
+        "updated_at": "2025-10-24T03:30:57.597Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...avons payé...pas",
+                "type": "negation",
+                "context": "not avons payé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "avez payé-fr",
+        {
+        "id": "avez payé-fr",
+        "lang": "fr",
+        "word": "avez payé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "paid/have paid",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous avez payé",
+                "trans": "You paid/You have paid",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.343Z",
+        "updated_at": "2025-10-24T03:30:57.850Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...avez payé...pas",
+                "type": "negation",
+                "context": "not avez payé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "ont payé-fr",
+        {
+        "id": "ont payé-fr",
+        "lang": "fr",
+        "word": "ont payé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "paid/have paid",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils ont payé",
+                "trans": "They paid/They have paid",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.343Z",
+        "updated_at": "2025-10-24T03:30:58.121Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...ont payé...pas",
+                "type": "negation",
+                "context": "not ont payé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "paierai-fr",
+        {
+        "id": "paierai-fr",
+        "lang": "fr",
+        "word": "paierai",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je paierai",
+                "trans": "I will pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.343Z",
+        "updated_at": "2025-10-24T03:30:58.368Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...paierai...pas",
+                "type": "negation",
+                "context": "not paierai",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "paieras-fr",
+        {
+        "id": "paieras-fr",
+        "lang": "fr",
+        "word": "paieras",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu paieras",
+                "trans": "You will pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.344Z",
+        "updated_at": "2025-10-24T03:30:58.602Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...paieras...pas",
+                "type": "negation",
+                "context": "not paieras",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "paiera-fr",
+        {
+        "id": "paiera-fr",
+        "lang": "fr",
+        "word": "paiera",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il paiera",
+                "trans": "He will pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.344Z",
+        "updated_at": "2025-10-24T03:30:58.837Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...paiera...pas",
+                "type": "negation",
+                "context": "not paiera",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "paierons-fr",
+        {
+        "id": "paierons-fr",
+        "lang": "fr",
+        "word": "paierons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous paierons",
+                "trans": "We will pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.344Z",
+        "updated_at": "2025-10-24T03:30:59.066Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...paierons...pas",
+                "type": "negation",
+                "context": "not paierons",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "paierez-fr",
+        {
+        "id": "paierez-fr",
+        "lang": "fr",
+        "word": "paierez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous paierez",
+                "trans": "You will pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.344Z",
+        "updated_at": "2025-10-24T03:30:59.296Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...paierez...pas",
+                "type": "negation",
+                "context": "not paierez",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "paieront-fr",
+        {
+        "id": "paieront-fr",
+        "lang": "fr",
+        "word": "paieront",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will pay",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils paieront",
+                "trans": "They will pay",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.344Z",
+        "updated_at": "2025-10-24T03:30:59.784Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...paieront...pas",
+                "type": "negation",
+                "context": "not paieront",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "payé-fr",
+        {
+        "id": "payé-fr",
+        "lang": "fr",
+        "word": "payé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "paid",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "payer-fr",
+                "targetWord": "payer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'ai payé",
+                "trans": "I paid/I have paid",
+                "lang": "en"
+            },
+            {
+                "text": "Il a payé",
+                "trans": "He paid/He has paid",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:30:54.344Z",
+        "updated_at": "2025-10-24T03:31:00.066Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "past_participle",
+        "partOfSpeech": "verb",
+        "infinitive": "payer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...payé...pas",
+                "type": "negation",
+                "context": "not payé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "doit-fr",
+        {
+        "id": "doit-fr",
+        "lang": "fr",
+        "word": "doit",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "has to/must/owes",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il doit",
+                "trans": "He must/has to",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.767Z",
+        "updated_at": "2025-10-24T03:32:58.766Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...doit...pas",
+                "type": "negation",
+                "context": "not doit",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devons-fr",
+        {
+        "id": "devons-fr",
+        "lang": "fr",
+        "word": "devons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "have to/must/owe",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous devons",
+                "trans": "We must/have to",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.768Z",
+        "updated_at": "2025-10-24T03:32:59.082Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devons...pas",
+                "type": "negation",
+                "context": "not devons",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devez-fr",
+        {
+        "id": "devez-fr",
+        "lang": "fr",
+        "word": "devez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "have to/must/owe",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous devez",
+                "trans": "You must/have to",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.768Z",
+        "updated_at": "2025-10-24T03:32:59.379Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devez...pas",
+                "type": "negation",
+                "context": "not devez",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "doivent-fr",
+        {
+        "id": "doivent-fr",
+        "lang": "fr",
+        "word": "doivent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "have to/must/owe",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils doivent",
+                "trans": "They must/have to",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.768Z",
+        "updated_at": "2025-10-24T03:32:59.643Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...doivent...pas",
+                "type": "negation",
+                "context": "not doivent",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devrais-fr",
+        {
+        "id": "devrais-fr",
+        "lang": "fr",
+        "word": "devrais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "should/would have to",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu devrais",
+                "trans": "You should/would have to",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.768Z",
+        "updated_at": "2025-10-24T03:33:00.132Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "conditional",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devrais...pas",
+                "type": "negation",
+                "context": "not devrais",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devrait-fr",
+        {
+        "id": "devrait-fr",
+        "lang": "fr",
+        "word": "devrait",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "should/would have to",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il devrait",
+                "trans": "He should/would have to",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.768Z",
+        "updated_at": "2025-10-24T03:33:00.399Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "conditional",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devrait...pas",
+                "type": "negation",
+                "context": "not devrait",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devrions-fr",
+        {
+        "id": "devrions-fr",
+        "lang": "fr",
+        "word": "devrions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "should/would have to",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous devrions",
+                "trans": "We should/would have to",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.770Z",
+        "updated_at": "2025-10-24T03:33:00.656Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "conditional",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devrions...pas",
+                "type": "negation",
+                "context": "not devrions",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devriez-fr",
+        {
+        "id": "devriez-fr",
+        "lang": "fr",
+        "word": "devriez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "should/would have to",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous devriez",
+                "trans": "You should/would have to",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.770Z",
+        "updated_at": "2025-10-24T03:33:00.894Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "conditional",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devriez...pas",
+                "type": "negation",
+                "context": "not devriez",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devraient-fr",
+        {
+        "id": "devraient-fr",
+        "lang": "fr",
+        "word": "devraient",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "should/would have to",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils devraient",
+                "trans": "They should/would have to",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.771Z",
+        "updated_at": "2025-10-24T03:33:01.411Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "conditional",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devraient...pas",
+                "type": "negation",
+                "context": "not devraient",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "ai dû-fr",
+        {
+        "id": "ai dû-fr",
+        "lang": "fr",
+        "word": "ai dû",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "had to/must have",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'ai dû",
+                "trans": "I had to/must have",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.771Z",
+        "updated_at": "2025-10-24T03:33:01.672Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...ai dû...pas",
+                "type": "negation",
+                "context": "not ai dû",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "as dû-fr",
+        {
+        "id": "as dû-fr",
+        "lang": "fr",
+        "word": "as dû",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "had to/must have",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu as dû",
+                "trans": "You had to/must have",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.771Z",
+        "updated_at": "2025-10-24T03:33:01.900Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...as dû...pas",
+                "type": "negation",
+                "context": "not as dû",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "a dû-fr",
+        {
+        "id": "a dû-fr",
+        "lang": "fr",
+        "word": "a dû",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "had to/must have",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il a dû",
+                "trans": "He had to/must have",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.771Z",
+        "updated_at": "2025-10-24T03:33:02.169Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...a dû...pas",
+                "type": "negation",
+                "context": "not a dû",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "avons dû-fr",
+        {
+        "id": "avons dû-fr",
+        "lang": "fr",
+        "word": "avons dû",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "had to/must have",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous avons dû",
+                "trans": "We had to/must have",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.771Z",
+        "updated_at": "2025-10-24T03:33:02.396Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...avons dû...pas",
+                "type": "negation",
+                "context": "not avons dû",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "avez dû-fr",
+        {
+        "id": "avez dû-fr",
+        "lang": "fr",
+        "word": "avez dû",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "had to/must have",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous avez dû",
+                "trans": "You had to/must have",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.771Z",
+        "updated_at": "2025-10-24T03:33:02.685Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...avez dû...pas",
+                "type": "negation",
+                "context": "not avez dû",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "ont dû-fr",
+        {
+        "id": "ont dû-fr",
+        "lang": "fr",
+        "word": "ont dû",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "had to/must have",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils ont dû",
+                "trans": "They had to/must have",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.771Z",
+        "updated_at": "2025-10-24T03:33:02.939Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...ont dû...pas",
+                "type": "negation",
+                "context": "not ont dû",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devrai-fr",
+        {
+        "id": "devrai-fr",
+        "lang": "fr",
+        "word": "devrai",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will have to/must",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je devrai",
+                "trans": "I will have to/must",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.771Z",
+        "updated_at": "2025-10-24T03:33:03.137Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devrai...pas",
+                "type": "negation",
+                "context": "not devrai",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devras-fr",
+        {
+        "id": "devras-fr",
+        "lang": "fr",
+        "word": "devras",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will have to/must",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu devras",
+                "trans": "You will have to/must",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.771Z",
+        "updated_at": "2025-10-24T03:33:03.432Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devras...pas",
+                "type": "negation",
+                "context": "not devras",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devra-fr",
+        {
+        "id": "devra-fr",
+        "lang": "fr",
+        "word": "devra",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will have to/must",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il devra",
+                "trans": "He will have to/must",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.772Z",
+        "updated_at": "2025-10-24T03:33:03.666Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devra...pas",
+                "type": "negation",
+                "context": "not devra",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devrons-fr",
+        {
+        "id": "devrons-fr",
+        "lang": "fr",
+        "word": "devrons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will have to/must",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous devrons",
+                "trans": "We will have to/must",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.772Z",
+        "updated_at": "2025-10-24T03:33:03.905Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devrons...pas",
+                "type": "negation",
+                "context": "not devrons",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devrez-fr",
+        {
+        "id": "devrez-fr",
+        "lang": "fr",
+        "word": "devrez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will have to/must",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous devrez",
+                "trans": "You will have to/must",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.772Z",
+        "updated_at": "2025-10-24T03:33:04.175Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devrez...pas",
+                "type": "negation",
+                "context": "not devrez",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "devront-fr",
+        {
+        "id": "devront-fr",
+        "lang": "fr",
+        "word": "devront",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will have to/must",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils devront",
+                "trans": "They will have to/must",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.772Z",
+        "updated_at": "2025-10-24T03:33:04.427Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...devront...pas",
+                "type": "negation",
+                "context": "not devront",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "dû-fr",
+        {
+        "id": "dû-fr",
+        "lang": "fr",
+        "word": "dû",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "had to/must have",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devoir-fr",
+                "targetWord": "devoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'ai dû",
+                "trans": "I had to/must have",
+                "lang": "en"
+            },
+            {
+                "text": "Il a dû",
+                "trans": "He had to/must have",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:32:57.772Z",
+        "updated_at": "2025-10-24T03:33:04.917Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "past_participle",
+        "partOfSpeech": "verb",
+        "infinitive": "devoir",
+        "verb_phrases": [
+            {
+                "phrase": "ne...dû...pas",
+                "type": "negation",
+                "context": "not dû",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimer-fr",
+        {
+        "id": "aimer-fr",
+        "lang": "fr",
+        "word": "aimer",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "to love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aime-fr",
+                    "targetWord": "aime",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimes-fr",
+                    "targetWord": "aimes",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimons-fr",
+                    "targetWord": "aimons",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimez-fr",
+                    "targetWord": "aimez",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aiment-fr",
+                    "targetWord": "aiment",
+                    "note": "present form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "ai aimé-fr",
+                    "targetWord": "ai aimé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "as aimé-fr",
+                    "targetWord": "as aimé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "a aimé-fr",
+                    "targetWord": "a aimé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "avons aimé-fr",
+                    "targetWord": "avons aimé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "avez aimé-fr",
+                    "targetWord": "avez aimé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "ont aimé-fr",
+                    "targetWord": "ont aimé",
+                    "note": "past form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimerai-fr",
+                    "targetWord": "aimerai",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimeras-fr",
+                    "targetWord": "aimeras",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimera-fr",
+                    "targetWord": "aimera",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimerons-fr",
+                    "targetWord": "aimerons",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimerez-fr",
+                    "targetWord": "aimerez",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimeront-fr",
+                    "targetWord": "aimeront",
+                    "note": "future form"
+          },
+          {
+                    "type": "conjugation_pair",
+                    "targetId": "aimé-fr",
+                    "targetWord": "aimé",
+                    "note": "participle form"
+          }
+],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'aime le chocolat",
+                "trans": "I love chocolate",
+                "lang": "en"
+            },
+            {
+                "text": "Il aime sa famille",
+                "trans": "He loves his family",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.951Z",
+        "updated_at": "2025-10-24T03:33:05.400Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimer...pas",
+                "type": "negation",
+                "context": "not aimer",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aime-fr",
+        {
+        "id": "aime-fr",
+        "lang": "fr",
+        "word": "aime",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "love/loves/like/likes",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'aime",
+                "trans": "I love/like",
+                "lang": "en"
+            },
+            {
+                "text": "Il aime",
+                "trans": "He loves/likes",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.953Z",
+        "updated_at": "2025-10-24T03:33:05.686Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first_third",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aime...pas",
+                "type": "negation",
+                "context": "not aime",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimes-fr",
+        {
+        "id": "aimes-fr",
+        "lang": "fr",
+        "word": "aimes",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu aimes",
+                "trans": "You love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.953Z",
+        "updated_at": "2025-10-24T03:33:05.919Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimes...pas",
+                "type": "negation",
+                "context": "not aimes",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimons-fr",
+        {
+        "id": "aimons-fr",
+        "lang": "fr",
+        "word": "aimons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous aimons",
+                "trans": "We love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.953Z",
+        "updated_at": "2025-10-24T03:33:06.162Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimons...pas",
+                "type": "negation",
+                "context": "not aimons",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimez-fr",
+        {
+        "id": "aimez-fr",
+        "lang": "fr",
+        "word": "aimez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous aimez",
+                "trans": "You love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.954Z",
+        "updated_at": "2025-10-24T03:33:06.429Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimez...pas",
+                "type": "negation",
+                "context": "not aimez",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aiment-fr",
+        {
+        "id": "aiment-fr",
+        "lang": "fr",
+        "word": "aiment",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils aiment",
+                "trans": "They love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.954Z",
+        "updated_at": "2025-10-24T03:33:06.665Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "present",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aiment...pas",
+                "type": "negation",
+                "context": "not aiment",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "ai aimé-fr",
+        {
+        "id": "ai aimé-fr",
+        "lang": "fr",
+        "word": "ai aimé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "loved/liked",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'ai aimé",
+                "trans": "I loved/liked",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.954Z",
+        "updated_at": "2025-10-24T03:33:06.924Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...ai aimé...pas",
+                "type": "negation",
+                "context": "not ai aimé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "as aimé-fr",
+        {
+        "id": "as aimé-fr",
+        "lang": "fr",
+        "word": "as aimé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "loved/liked",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu as aimé",
+                "trans": "You loved/liked",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.954Z",
+        "updated_at": "2025-10-24T03:33:07.166Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...as aimé...pas",
+                "type": "negation",
+                "context": "not as aimé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "a aimé-fr",
+        {
+        "id": "a aimé-fr",
+        "lang": "fr",
+        "word": "a aimé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "loved/liked",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il a aimé",
+                "trans": "He loved/liked",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.954Z",
+        "updated_at": "2025-10-24T03:33:07.421Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...a aimé...pas",
+                "type": "negation",
+                "context": "not a aimé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "avons aimé-fr",
+        {
+        "id": "avons aimé-fr",
+        "lang": "fr",
+        "word": "avons aimé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "loved/liked",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous avons aimé",
+                "trans": "We loved/liked",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.954Z",
+        "updated_at": "2025-10-24T03:33:07.661Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...avons aimé...pas",
+                "type": "negation",
+                "context": "not avons aimé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "avez aimé-fr",
+        {
+        "id": "avez aimé-fr",
+        "lang": "fr",
+        "word": "avez aimé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "loved/liked",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous avez aimé",
+                "trans": "You loved/liked",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.954Z",
+        "updated_at": "2025-10-24T03:33:08.267Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...avez aimé...pas",
+                "type": "negation",
+                "context": "not avez aimé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "ont aimé-fr",
+        {
+        "id": "ont aimé-fr",
+        "lang": "fr",
+        "word": "ont aimé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "loved/liked",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils ont aimé",
+                "trans": "They loved/liked",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.954Z",
+        "updated_at": "2025-10-24T03:33:08.488Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "past",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...ont aimé...pas",
+                "type": "negation",
+                "context": "not ont aimé",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimerai-fr",
+        {
+        "id": "aimerai-fr",
+        "lang": "fr",
+        "word": "aimerai",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'aimerai",
+                "trans": "I will love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.955Z",
+        "updated_at": "2025-10-24T03:33:08.737Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimerai...pas",
+                "type": "negation",
+                "context": "not aimerai",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimeras-fr",
+        {
+        "id": "aimeras-fr",
+        "lang": "fr",
+        "word": "aimeras",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Tu aimeras",
+                "trans": "You will love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.955Z",
+        "updated_at": "2025-10-24T03:33:08.954Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimeras...pas",
+                "type": "negation",
+                "context": "not aimeras",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimera-fr",
+        {
+        "id": "aimera-fr",
+        "lang": "fr",
+        "word": "aimera",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il aimera",
+                "trans": "He will love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.955Z",
+        "updated_at": "2025-10-24T03:33:09.219Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimera...pas",
+                "type": "negation",
+                "context": "not aimera",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimerons-fr",
+        {
+        "id": "aimerons-fr",
+        "lang": "fr",
+        "word": "aimerons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Nous aimerons",
+                "trans": "We will love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.955Z",
+        "updated_at": "2025-10-24T03:33:09.456Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "first",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimerons...pas",
+                "type": "negation",
+                "context": "not aimerons",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimerez-fr",
+        {
+        "id": "aimerez-fr",
+        "lang": "fr",
+        "word": "aimerez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Vous aimerez",
+                "trans": "You will love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.955Z",
+        "updated_at": "2025-10-24T03:33:09.695Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "second",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimerez...pas",
+                "type": "negation",
+                "context": "not aimerez",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimeront-fr",
+        {
+        "id": "aimeront-fr",
+        "lang": "fr",
+        "word": "aimeront",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will love/like",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Ils aimeront",
+                "trans": "They will love/like",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.955Z",
+        "updated_at": "2025-10-24T03:33:09.932Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "person": "third",
+        "tense": "future",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimeront...pas",
+                "type": "negation",
+                "context": "not aimeront",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimé-fr",
+        {
+        "id": "aimé-fr",
+        "lang": "fr",
+        "word": "aimé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "loved/liked",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "J'ai aimé",
+                "trans": "I loved/liked",
+                "lang": "en"
+            },
+            {
+                "text": "Il a aimé",
+                "trans": "He loved/liked",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-24T03:33:04.955Z",
+        "updated_at": "2025-10-24T03:33:10.193Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "past_participle",
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "ne...aimé...pas",
+                "type": "negation",
+                "context": "not aimé",
                 "frequency": "common"
             }
         ]
