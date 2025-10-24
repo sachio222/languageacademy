@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "@clerk/clerk-react": "^5.51.0",
+    "@microsoft/clarity": "^1.0.0",
     "@supabase/supabase-js": "^2.74.0",
     "edge-tts-client": "^1.0.2",
     "lucide-react": "^0.544.0",
