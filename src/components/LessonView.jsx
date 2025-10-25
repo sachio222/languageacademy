@@ -3,6 +3,7 @@ import ExercisePane from './ExercisePane';
 import ConceptPane from './ConceptPane';
 import ConceptIntro from './ConceptIntro';
 import StudyMode from './StudyMode';
+import SpeedMatch from './SpeedMatch';
 import VocabularyReference from './VocabularyReference';
 import RightSidebar from './RightSidebar';
 import ModuleExam from './ModuleExam';
@@ -61,34 +62,38 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         showIntro: false,
         isStudying: false,
         studyCompleted: true,
+        showSpeedMatch: false,
+        speedMatchCompleted: true,
         showExam: false
       };
     }
 
     // Normal modules: validate view parameter
-    const validViews = ['intro', 'study', 'practice', 'exam'];
+    const validViews = ['intro', 'study', 'speedmatch', 'practice', 'exam'];
 
     // If view is invalid, clear it and default to intro
     if (view && !validViews.includes(view)) {
       const url = new URL(window.location);
       url.searchParams.delete('view');
       window.history.replaceState({}, '', url);
-      return { showIntro: true, isStudying: false, studyCompleted: false, showExam: false };
+      return { showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
     }
 
     // Valid views
     switch (view) {
       case 'intro':
-        return { showIntro: true, isStudying: false, studyCompleted: false, showExam: false };
+        return { showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
       case 'study':
-        return { showIntro: false, isStudying: true, studyCompleted: false, showExam: false };
+        return { showIntro: false, isStudying: true, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
+      case 'speedmatch':
+        return { showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: true, speedMatchCompleted: false, showExam: false };
       case 'practice':
-        return { showIntro: false, isStudying: false, studyCompleted: true, showExam: false };
+        return { showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: false };
       case 'exam':
-        return { showIntro: false, isStudying: false, studyCompleted: true, showExam: true };
+        return { showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: true };
       default:
         // Default to intro for normal modules
-        return { showIntro: true, isStudying: false, studyCompleted: false, showExam: false };
+        return { showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
     }
   };
 
@@ -97,6 +102,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const [showIntro, setShowIntro] = useState(initialState.showIntro);
   const [isStudying, setIsStudying] = useState(initialState.isStudying);
   const [studyCompleted, setStudyCompleted] = useState(initialState.studyCompleted);
+  const [showSpeedMatch, setShowSpeedMatch] = useState(initialState.showSpeedMatch);
+  const [speedMatchCompleted, setSpeedMatchCompleted] = useState(initialState.speedMatchCompleted);
   const [showExam, setShowExam] = useState(initialState.showExam);
   const [moduleCompleted, setModuleCompleted] = useState(false);
   const [resetting, setResetting] = useState(false);
@@ -177,6 +184,23 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const handleFinishStudying = () => {
     setIsStudying(false);
     setStudyCompleted(true);
+
+    // Check if module has vocabulary for Speed Match
+    if (lesson.vocabularyReference && lesson.vocabularyReference.length >= 4) {
+      setShowSpeedMatch(true);
+      updateViewInUrl('speedmatch');
+    } else {
+      // Skip Speed Match if not enough vocabulary
+      setSpeedMatchCompleted(true);
+      setCurrentExerciseIndex(0);
+      updateViewInUrl('practice');
+      updateExerciseInUrl(0);
+    }
+  };
+
+  const handleFinishSpeedMatch = () => {
+    setShowSpeedMatch(false);
+    setSpeedMatchCompleted(true);
     setCurrentExerciseIndex(0);
     updateViewInUrl('practice');
     updateExerciseInUrl(0);
@@ -185,6 +209,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const handleSkipStudy = () => {
     setIsStudying(false);
     setStudyCompleted(true);
+    setSpeedMatchCompleted(true); // Also skip Speed Match
     setCurrentExerciseIndex(0);
     updateViewInUrl('practice');
     updateExerciseInUrl(0);
@@ -655,6 +680,11 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
             onFinishStudying={handleFinishStudying}
           />
         </div>
+      ) : showSpeedMatch ? (
+        <SpeedMatch
+          vocabulary={lesson.vocabularyReference}
+          onFinish={handleFinishSpeedMatch}
+        />
       ) : lesson.isReadingComprehension ? (
         <div className="reading-module-layout">
           <ExercisePane

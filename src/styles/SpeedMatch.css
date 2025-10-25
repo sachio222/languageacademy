@@ -1,22 +1,31 @@
 /* Speed Match Demo Styles */
 
 .speed-match-container {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: #ffffff;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
+  justify-content: start;
+  padding: 1rem;
 }
 
 .speed-match-container.playing {
   align-items: flex-start;
-  padding-top: 3rem;
+  min-height: 100vh;
 }
 
 .speed-match-content {
   max-width: 64rem;
   width: 100%;
+}
+
+.speed-match-intro {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
 }
 
 /* Ready Screen */
