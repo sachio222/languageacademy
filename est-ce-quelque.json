@@ -1,0 +1,233 @@
+[
+  {
+    "word": "Est-ce",
+    "translation": "Is it / Is this",
+    "partOfSpeech": "expression",
+    "definition": "Question formation expression used to start yes/no questions",
+    "examples": [
+      {
+        "text": "Est-ce que vous parlez français?",
+        "trans": "Do you speak French?",
+        "lang": "en"
+      },
+      {
+        "text": "Est-ce que c'est vrai?",
+        "trans": "Is it true?",
+        "lang": "en"
+      },
+      {
+        "text": "Est-ce que vous avez faim?",
+        "trans": "Are you hungry?",
+        "lang": "en"
+      }
+    ],
+    "tags": ["question", "expression", "interrogative", "common"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "est-ce que",
+    "translation": "do / does / is / are",
+    "partOfSpeech": "expression",
+    "definition": "Question formation expression used to turn statements into questions",
+    "examples": [
+      {
+        "text": "Est-ce que tu viens?",
+        "trans": "Are you coming?",
+        "lang": "en"
+      },
+      {
+        "text": "Est-ce qu'il pleut?",
+        "trans": "Is it raining?",
+        "lang": "en"
+      },
+      {
+        "text": "Est-ce que vous comprenez?",
+        "trans": "Do you understand?",
+        "lang": "en"
+      }
+    ],
+    "tags": ["question", "expression", "interrogative", "common"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "quelque",
+    "translation": "some / a few",
+    "partOfSpeech": "adjective",
+    "gender": "both",
+    "number": "singular",
+    "definition": "Indefinite adjective used before singular nouns to indicate an unspecified quantity",
+    "examples": [
+      {
+        "text": "J'ai quelque argent",
+        "trans": "I have some money",
+        "lang": "en"
+      },
+      {
+        "text": "Il y a quelque problème",
+        "trans": "There is some problem",
+        "lang": "en"
+      },
+      {
+        "text": "Quelque chose",
+        "trans": "Something",
+        "lang": "en"
+      }
+    ],
+    "tags": ["adjective", "indefinite", "quantity", "common"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "quelques",
+    "translation": "some / a few",
+    "partOfSpeech": "adjective",
+    "gender": "both",
+    "number": "plural",
+    "definition": "Indefinite adjective used before plural nouns to indicate an unspecified small quantity",
+    "examples": [
+      {
+        "text": "J'ai quelques livres",
+        "trans": "I have some books / a few books",
+        "lang": "en"
+      },
+      {
+        "text": "Il y a quelques personnes",
+        "trans": "There are some people / a few people",
+        "lang": "en"
+      },
+      {
+        "text": "Quelques minutes",
+        "trans": "A few minutes",
+        "lang": "en"
+      }
+    ],
+    "tags": ["adjective", "indefinite", "quantity", "plural", "common"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "quelque chose",
+    "translation": "something",
+    "partOfSpeech": "expression",
+    "definition": "Indefinite pronoun meaning 'something'",
+    "examples": [
+      {
+        "text": "Je veux quelque chose à manger",
+        "trans": "I want something to eat",
+        "lang": "en"
+      },
+      {
+        "text": "Il y a quelque chose de bizarre",
+        "trans": "There is something strange",
+        "lang": "en"
+      },
+      {
+        "text": "Quelque chose ne va pas",
+        "trans": "Something is wrong",
+        "lang": "en"
+      }
+    ],
+    "tags": ["expression", "pronoun", "indefinite", "common"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "quelqu'un",
+    "translation": "someone / somebody",
+    "partOfSpeech": "pronoun",
+    "gender": "masculine",
+    "number": "singular",
+    "definition": "Indefinite pronoun meaning 'someone' or 'somebody'",
+    "examples": [
+      {
+        "text": "Il y a quelqu'un à la porte",
+        "trans": "There is someone at the door",
+        "lang": "en"
+      },
+      {
+        "text": "Je cherche quelqu'un",
+        "trans": "I'm looking for someone",
+        "lang": "en"
+      },
+      {
+        "text": "Quelqu'un m'a dit",
+        "trans": "Someone told me",
+        "lang": "en"
+      }
+    ],
+    "tags": ["pronoun", "indefinite", "masculine", "common"],
+    "frequency": "common",
+    "cefr_level": "A1"
+  },
+  {
+    "word": "quelqu'une",
+    "translation": "someone / somebody",
+    "partOfSpeech": "pronoun",
+    "gender": "feminine",
+    "number": "singular",
+    "definition": "Indefinite pronoun meaning 'someone' or 'somebody' (feminine)",
+    "examples": [
+      {
+        "text": "Il y a quelqu'une qui attend",
+        "trans": "There is someone (feminine) waiting",
+        "lang": "en"
+      },
+      {
+        "text": "Je connais quelqu'une",
+        "trans": "I know someone (feminine)",
+        "lang": "en"
+      }
+    ],
+    "tags": ["pronoun", "indefinite", "feminine", "common"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "quelques-uns",
+    "translation": "some / a few",
+    "partOfSpeech": "pronoun",
+    "gender": "masculine",
+    "number": "plural",
+    "definition": "Indefinite pronoun meaning 'some' or 'a few' (masculine plural)",
+    "examples": [
+      {
+        "text": "Quelques-uns sont venus",
+        "trans": "Some came / A few came",
+        "lang": "en"
+      },
+      {
+        "text": "J'en ai quelques-uns",
+        "trans": "I have some of them",
+        "lang": "en"
+      }
+    ],
+    "tags": ["pronoun", "indefinite", "masculine", "plural", "common"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "quelques-unes",
+    "translation": "some / a few",
+    "partOfSpeech": "pronoun",
+    "gender": "feminine",
+    "number": "plural",
+    "definition": "Indefinite pronoun meaning 'some' or 'a few' (feminine plural)",
+    "examples": [
+      {
+        "text": "Quelques-unes sont parties",
+        "trans": "Some left / A few left",
+        "lang": "en"
+      },
+      {
+        "text": "J'en ai quelques-unes",
+        "trans": "I have some of them (feminine)",
+        "lang": "en"
+      }
+    ],
+    "tags": ["pronoun", "indefinite", "feminine", "plural", "common"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  }
+]

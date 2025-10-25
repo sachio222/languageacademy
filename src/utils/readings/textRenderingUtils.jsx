@@ -743,7 +743,6 @@ const getVerbContextAwareTranslation = (word, dictionaryEntry, context) => {
 
       // Check for exact phrase matches in context
       if (contextLower.includes(phraseText)) {
-        console.log(`🎯 Verb context match: "${cleanWord}" in "${phraseText}" → ${phrase.type}`);
 
         // Return enhanced translation with context info
         const baseTranslation = dictionaryEntry.translations?.[0]?.text || '';

@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Pronouns
- * Generated: 2025-10-24T21:33:48.071Z
- * Successfully scraped: 73/73
+ * Generated: 2025-10-24T22:37:09.920Z
+ * Successfully scraped: 78/78
  */
 
 export const pronounsCambridge = new Map([
@@ -4518,6 +4518,273 @@ export const pronounsCambridge = new Map([
         ],
         "verified": false,
         "definition": "contracted form of 'y' (there) used before vowels and silent h",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "qu'on-fr",
+        {
+        "id": "qu'on-fr",
+        "lang": "fr",
+        "word": "qu'on",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "that we / that one",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "La personne qu'on voit",
+                "trans": "The person that we see / The person that one sees",
+                "lang": "en"
+            },
+            {
+                "text": "Le livre qu'on lit",
+                "trans": "The book that we read / The book that one reads",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "contraction",
+            "pronoun",
+            "relative",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:35:54.028Z",
+        "updated_at": "2025-10-24T22:35:54.752Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Contraction of 'que' + 'on' used as a relative pronoun",
+        "frequency": "common",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "quelqu'un-fr",
+        {
+        "id": "quelqu'un-fr",
+        "lang": "fr",
+        "word": "quelqu'un",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "someone / somebody",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il y a quelqu'un à la porte",
+                "trans": "There is someone at the door",
+                "lang": "en"
+            },
+            {
+                "text": "Je cherche quelqu'un",
+                "trans": "I'm looking for someone",
+                "lang": "en"
+            },
+            {
+                "text": "Quelqu'un m'a dit",
+                "trans": "Someone told me",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "pronoun",
+            "indefinite",
+            "masculine",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:37:06.984Z",
+        "updated_at": "2025-10-24T22:37:09.220Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Indefinite pronoun meaning 'someone' or 'somebody'",
+        "frequency": "common",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "quelqu'une-fr",
+        {
+        "id": "quelqu'une-fr",
+        "lang": "fr",
+        "word": "quelqu'une",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "someone / somebody",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il y a quelqu'une qui attend",
+                "trans": "There is someone (feminine) waiting",
+                "lang": "en"
+            },
+            {
+                "text": "Je connais quelqu'une",
+                "trans": "I know someone (feminine)",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "pronoun",
+            "indefinite",
+            "feminine",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:37:06.984Z",
+        "updated_at": "2025-10-24T22:37:09.491Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Indefinite pronoun meaning 'someone' or 'somebody' (feminine)",
+        "frequency": "common",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "quelques-uns-fr",
+        {
+        "id": "quelques-uns-fr",
+        "lang": "fr",
+        "word": "quelques-uns",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "some / a few",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Quelques-uns sont venus",
+                "trans": "Some came / A few came",
+                "lang": "en"
+            },
+            {
+                "text": "J'en ai quelques-uns",
+                "trans": "I have some of them",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "pronoun",
+            "indefinite",
+            "masculine",
+            "plural",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:37:06.984Z",
+        "updated_at": "2025-10-24T22:37:09.669Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Indefinite pronoun meaning 'some' or 'a few' (masculine plural)",
+        "frequency": "common",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "quelques-unes-fr",
+        {
+        "id": "quelques-unes-fr",
+        "lang": "fr",
+        "word": "quelques-unes",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "some / a few",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Quelques-unes sont parties",
+                "trans": "Some left / A few left",
+                "lang": "en"
+            },
+            {
+                "text": "J'en ai quelques-unes",
+                "trans": "I have some of them (feminine)",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "pronoun",
+            "indefinite",
+            "feminine",
+            "plural",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:37:06.984Z",
+        "updated_at": "2025-10-24T22:37:09.918Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Indefinite pronoun meaning 'some' or 'a few' (feminine plural)",
+        "frequency": "common",
         "partOfSpeech": "pronoun"
     }
   ]

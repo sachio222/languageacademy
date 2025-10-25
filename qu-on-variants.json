@@ -1,0 +1,91 @@
+[
+  {
+    "word": "qu'on",
+    "translation": "that we / that one",
+    "partOfSpeech": "conjunction",
+    "definition": "Contraction of 'que' + 'on' used to introduce subordinate clauses",
+    "examples": [
+      {
+        "text": "Il faut qu'on parte",
+        "trans": "We need to leave / One needs to leave",
+        "lang": "en"
+      },
+      {
+        "text": "Je pense qu'on devrait aller",
+        "trans": "I think we should go",
+        "lang": "en"
+      },
+      {
+        "text": "Il est important qu'on comprenne",
+        "trans": "It's important that we understand",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "conjunction", "subordinate", "common"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "qu'on",
+    "translation": "that we / that one",
+    "partOfSpeech": "pronoun",
+    "definition": "Contraction of 'que' + 'on' used as a relative pronoun",
+    "examples": [
+      {
+        "text": "La personne qu'on voit",
+        "trans": "The person that we see / The person that one sees",
+        "lang": "en"
+      },
+      {
+        "text": "Le livre qu'on lit",
+        "trans": "The book that we read / The book that one reads",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "pronoun", "relative", "common"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "qu'on",
+    "translation": "that we / that one",
+    "partOfSpeech": "expression",
+    "definition": "Contraction of 'que' + 'on' used in various expressions",
+    "examples": [
+      {
+        "text": "Il faut qu'on y aille",
+        "trans": "We need to go there",
+        "lang": "en"
+      },
+      {
+        "text": "Il est temps qu'on parte",
+        "trans": "It's time we leave",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "expression", "common"],
+    "frequency": "common",
+    "cefr_level": "A2"
+  },
+  {
+    "word": "qu'on",
+    "translation": "that we / that one",
+    "partOfSpeech": "conjunction",
+    "definition": "Contraction used in subjunctive constructions",
+    "examples": [
+      {
+        "text": "Il faut qu'on soit prêt",
+        "trans": "We need to be ready",
+        "lang": "en"
+      },
+      {
+        "text": "Il est nécessaire qu'on fasse attention",
+        "trans": "It's necessary that we pay attention",
+        "lang": "en"
+      }
+    ],
+    "tags": ["contraction", "conjunction", "subjunctive", "common"],
+    "frequency": "common",
+    "cefr_level": "B1"
+  }
+]

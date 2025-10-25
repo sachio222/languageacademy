@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Verbs
- * Generated: 2025-10-24T22:22:30.636Z
- * Successfully scraped: 462/462
+ * Generated: 2025-10-24T22:46:06.200Z
+ * Successfully scraped: 519/519
  */
 
 export const verbsCambridge = new Map([
@@ -2437,70 +2437,60 @@ export const verbsCambridge = new Map([
         "id": "apprendre-fr",
         "lang": "fr",
         "word": "apprendre",
-        "partOfSpeech": "verb",
         "translations": [
             {
                 "lang": "en",
                 "text": "to learn",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
-        "relationships": [],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
         "etymology": "",
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "apprendre à marcher",
-                "trans": "to learn to walk",
-                "source": "cambridge"
+                "text": "J'apprends le français",
+                "trans": "I'm learning French",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "apprendre une poésie par cœur",
-                "trans": "to learn a poem by heart",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "apprendre une mauvaise nouvelle",
-                "trans": "to hear a piece of bad news",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "apprendre une chanson à ses élèves",
-                "trans": "to teach a song to one’s students",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "apprendre la nouvelle à qqn",
-                "trans": "to tell sb the news",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je lui ai appris que j’étais enceinte.",
-                "trans": "I told him I was pregnant.",
-                "source": "cambridge"
+                "text": "Elle apprend à conduire",
+                "trans": "She's learning to drive",
+                "lang": "en"
             }
         ],
-        "phonetic": "apʀɑ̃dʀ",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "irregular",
+            "infinitive",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:41:18.143Z",
+        "updated_at": "2025-10-24T22:41:19.267Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:38:02.335Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/apprendre",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:38:02.335Z"
-        }
+        "conjugationGroup": "re",
+        "definition": "To acquire knowledge or skills through study or experience",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": []
     }
   ],
   [
@@ -22272,30 +22262,37 @@ export const verbsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "text": "Je ferai",
-                "trans": "I will do",
-                "lang": "en"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
-        "cefr_level": "A1",
+        "cefr_level": "A2",
         "tags": [
-            "lesson"
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
         ],
-        "created_at": "2025-10-24T04:35:31.468Z",
-        "updated_at": "2025-10-24T04:35:35.607Z",
+        "created_at": "2025-10-24T22:46:02.658Z",
+        "updated_at": "2025-10-24T22:46:04.631Z",
         "sources": [
             "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "person": "first",
         "tense": "future",
+        "mood": "indicative",
+        "person": "je",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
         "partOfSpeech": "verb",
         "infinitive": "faire",
-        "verb_phrases": []
+        "verb_phrases": [
+            {
+                "phrase": "je ferai",
+                "type": "pronoun_verb",
+                "context": "I will do",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -22324,30 +22321,37 @@ export const verbsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "text": "Tu feras",
-                "trans": "You will do",
-                "lang": "en"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
-        "cefr_level": "A1",
+        "cefr_level": "A2",
         "tags": [
-            "lesson"
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
         ],
-        "created_at": "2025-10-24T04:35:31.468Z",
-        "updated_at": "2025-10-24T04:35:35.963Z",
+        "created_at": "2025-10-24T22:46:02.658Z",
+        "updated_at": "2025-10-24T22:46:04.922Z",
         "sources": [
             "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "person": "second",
         "tense": "future",
+        "mood": "indicative",
+        "person": "tu",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
         "partOfSpeech": "verb",
         "infinitive": "faire",
-        "verb_phrases": []
+        "verb_phrases": [
+            {
+                "phrase": "tu feras",
+                "type": "pronoun_verb",
+                "context": "you will do",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -22376,30 +22380,43 @@ export const verbsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "text": "Il fera",
-                "trans": "He will do",
-                "lang": "en"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
-        "cefr_level": "A1",
+        "cefr_level": "A2",
         "tags": [
-            "lesson"
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
         ],
-        "created_at": "2025-10-24T04:35:31.468Z",
-        "updated_at": "2025-10-24T04:35:36.260Z",
+        "created_at": "2025-10-24T22:46:02.658Z",
+        "updated_at": "2025-10-24T22:46:05.189Z",
         "sources": [
             "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "person": "third",
         "tense": "future",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
         "partOfSpeech": "verb",
         "infinitive": "faire",
-        "verb_phrases": []
+        "verb_phrases": [
+            {
+                "phrase": "il fera",
+                "type": "pronoun_verb",
+                "context": "he will do",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle fera",
+                "type": "pronoun_verb",
+                "context": "she will do",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -22428,30 +22445,37 @@ export const verbsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "text": "Nous ferons",
-                "trans": "We will do",
-                "lang": "en"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
-        "cefr_level": "A1",
+        "cefr_level": "A2",
         "tags": [
-            "lesson"
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
         ],
-        "created_at": "2025-10-24T04:35:31.469Z",
-        "updated_at": "2025-10-24T04:35:36.417Z",
+        "created_at": "2025-10-24T22:46:02.659Z",
+        "updated_at": "2025-10-24T22:46:05.369Z",
         "sources": [
             "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "person": "first",
         "tense": "future",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
         "partOfSpeech": "verb",
         "infinitive": "faire",
-        "verb_phrases": []
+        "verb_phrases": [
+            {
+                "phrase": "nous ferons",
+                "type": "pronoun_verb",
+                "context": "we will do",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -22480,30 +22504,37 @@ export const verbsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "text": "Vous ferez",
-                "trans": "You will do",
-                "lang": "en"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
-        "cefr_level": "A1",
+        "cefr_level": "A2",
         "tags": [
-            "lesson"
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
         ],
-        "created_at": "2025-10-24T04:35:31.469Z",
-        "updated_at": "2025-10-24T04:35:37.897Z",
+        "created_at": "2025-10-24T22:46:02.660Z",
+        "updated_at": "2025-10-24T22:46:05.928Z",
         "sources": [
             "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "person": "second",
         "tense": "future",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
         "partOfSpeech": "verb",
         "infinitive": "faire",
-        "verb_phrases": []
+        "verb_phrases": [
+            {
+                "phrase": "vous ferez",
+                "type": "pronoun_verb",
+                "context": "you will do (formal/plural)",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -22532,30 +22563,43 @@ export const verbsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "text": "Ils feront",
-                "trans": "They will do",
-                "lang": "en"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
-        "cefr_level": "A1",
+        "cefr_level": "A2",
         "tags": [
-            "lesson"
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
         ],
-        "created_at": "2025-10-24T04:35:31.469Z",
-        "updated_at": "2025-10-24T04:35:38.142Z",
+        "created_at": "2025-10-24T22:46:02.660Z",
+        "updated_at": "2025-10-24T22:46:06.184Z",
         "sources": [
             "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "person": "third",
         "tense": "future",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
         "partOfSpeech": "verb",
         "infinitive": "faire",
-        "verb_phrases": []
+        "verb_phrases": [
+            {
+                "phrase": "ils feront",
+                "type": "pronoun_verb",
+                "context": "they will do (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles feront",
+                "type": "pronoun_verb",
+                "context": "they will do (feminine)",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -28747,6 +28791,3750 @@ export const verbsCambridge = new Map([
                 "phrase": "il a bu",
                 "type": "compound_tense",
                 "context": "he drank / he has drunk",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demander-fr",
+        {
+        "id": "demander-fr",
+        "lang": "fr",
+        "word": "demander",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "to ask / to request",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je vais demander l'heure",
+                "trans": "I'm going to ask the time",
+                "lang": "en"
+            },
+            {
+                "text": "Il faut demander la permission",
+                "trans": "You need to ask for permission",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "regular",
+            "infinitive",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:38:10.099Z",
+        "updated_at": "2025-10-24T22:38:10.888Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "conjugationGroup": "er",
+        "definition": "To request information or something from someone",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": []
+    }
+  ],
+  [
+    "demande-fr",
+        {
+        "id": "demande-fr",
+        "lang": "fr",
+        "word": "demande",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ask/asks / request/requests",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "faire une demande à qqn \n                        \n        to ask sb for something",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "les demandes d’emploi \n                        \n        job applications",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "As-tu fait ta demande de candidature ?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Cet article est très demandé cet hiver. \n                        \n        This item is very much in demand this winter.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une célébrité très demandée \n                        \n        a celebrity who is very much in demand",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "We have received several applications for the new job",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The syllabus can be obtained on application to the headmaster.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There’s less call for coachmen nowadays.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There’s no demand for books of this kind.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The next song I will play is a request.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The child has a long list of wants.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.103Z",
+        "updated_at": "2025-10-24T22:38:11.201Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "je/tu/il/elle",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "je demande",
+                "type": "pronoun_verb",
+                "context": "I ask",
+                "frequency": "common"
+            },
+            {
+                "phrase": "tu demandes",
+                "type": "pronoun_verb",
+                "context": "you ask",
+                "frequency": "common"
+            },
+            {
+                "phrase": "il demande",
+                "type": "pronoun_verb",
+                "context": "he asks",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle demande",
+                "type": "pronoun_verb",
+                "context": "she asks",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandons-fr",
+        {
+        "id": "demandons-fr",
+        "lang": "fr",
+        "word": "demandons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.104Z",
+        "updated_at": "2025-10-24T22:38:11.980Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "nous demandons",
+                "type": "pronoun_verb",
+                "context": "we ask",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandez-fr",
+        {
+        "id": "demandez-fr",
+        "lang": "fr",
+        "word": "demandez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.104Z",
+        "updated_at": "2025-10-24T22:38:12.382Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "vous demandez",
+                "type": "pronoun_verb",
+                "context": "you ask (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandent-fr",
+        {
+        "id": "demandent-fr",
+        "lang": "fr",
+        "word": "demandent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.104Z",
+        "updated_at": "2025-10-24T22:38:12.685Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "ils demandent",
+                "type": "pronoun_verb",
+                "context": "they ask (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles demandent",
+                "type": "pronoun_verb",
+                "context": "they ask (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandais-fr",
+        {
+        "id": "demandais-fr",
+        "lang": "fr",
+        "word": "demandais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "was asking / used to ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.104Z",
+        "updated_at": "2025-10-24T22:38:13.105Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "je/tu",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "je demandais",
+                "type": "pronoun_verb",
+                "context": "I was asking",
+                "frequency": "common"
+            },
+            {
+                "phrase": "tu demandais",
+                "type": "pronoun_verb",
+                "context": "you were asking",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandait-fr",
+        {
+        "id": "demandait-fr",
+        "lang": "fr",
+        "word": "demandait",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "was asking / used to ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.105Z",
+        "updated_at": "2025-10-24T22:38:13.462Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "il demandait",
+                "type": "pronoun_verb",
+                "context": "he was asking",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle demandait",
+                "type": "pronoun_verb",
+                "context": "she was asking",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandions-fr",
+        {
+        "id": "demandions-fr",
+        "lang": "fr",
+        "word": "demandions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were asking / used to ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.105Z",
+        "updated_at": "2025-10-24T22:38:13.989Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "nous demandions",
+                "type": "pronoun_verb",
+                "context": "we were asking",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandiez-fr",
+        {
+        "id": "demandiez-fr",
+        "lang": "fr",
+        "word": "demandiez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were asking / used to ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.105Z",
+        "updated_at": "2025-10-24T22:38:14.343Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "vous demandiez",
+                "type": "pronoun_verb",
+                "context": "you were asking (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandaient-fr",
+        {
+        "id": "demandaient-fr",
+        "lang": "fr",
+        "word": "demandaient",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were asking / used to ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.107Z",
+        "updated_at": "2025-10-24T22:38:14.658Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "ils demandaient",
+                "type": "pronoun_verb",
+                "context": "they were asking (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles demandaient",
+                "type": "pronoun_verb",
+                "context": "they were asking (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demanderai-fr",
+        {
+        "id": "demanderai-fr",
+        "lang": "fr",
+        "word": "demanderai",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.107Z",
+        "updated_at": "2025-10-24T22:38:14.909Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "je",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "je demanderai",
+                "type": "pronoun_verb",
+                "context": "I will ask",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demanderas-fr",
+        {
+        "id": "demanderas-fr",
+        "lang": "fr",
+        "word": "demanderas",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.107Z",
+        "updated_at": "2025-10-24T22:38:15.247Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "tu",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "tu demanderas",
+                "type": "pronoun_verb",
+                "context": "you will ask",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandera-fr",
+        {
+        "id": "demandera-fr",
+        "lang": "fr",
+        "word": "demandera",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.107Z",
+        "updated_at": "2025-10-24T22:38:15.506Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "il demandera",
+                "type": "pronoun_verb",
+                "context": "he will ask",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle demandera",
+                "type": "pronoun_verb",
+                "context": "she will ask",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demanderons-fr",
+        {
+        "id": "demanderons-fr",
+        "lang": "fr",
+        "word": "demanderons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.107Z",
+        "updated_at": "2025-10-24T22:38:15.729Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "nous demanderons",
+                "type": "pronoun_verb",
+                "context": "we will ask",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demanderez-fr",
+        {
+        "id": "demanderez-fr",
+        "lang": "fr",
+        "word": "demanderez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.108Z",
+        "updated_at": "2025-10-24T22:38:16.372Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "vous demanderez",
+                "type": "pronoun_verb",
+                "context": "you will ask (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demanderont-fr",
+        {
+        "id": "demanderont-fr",
+        "lang": "fr",
+        "word": "demanderont",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will ask",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.108Z",
+        "updated_at": "2025-10-24T22:38:16.700Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "ils demanderont",
+                "type": "pronoun_verb",
+                "context": "they will ask (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles demanderont",
+                "type": "pronoun_verb",
+                "context": "they will ask (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "demandé-fr",
+        {
+        "id": "demandé-fr",
+        "lang": "fr",
+        "word": "demandé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "asked / requested",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "demander-fr",
+                "targetWord": "demander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "faire une demande à qqn \n                        \n        to ask sb for something",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "les demandes d’emploi \n                        \n        job applications",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "As-tu fait ta demande de candidature ?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Cet article est très demandé cet hiver. \n                        \n        This item is very much in demand this winter.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une célébrité très demandée \n                        \n        a celebrity who is very much in demand",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "We have received several applications for the new job",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The syllabus can be obtained on application to the headmaster.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There’s less call for coachmen nowadays.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There’s no demand for books of this kind.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The next song I will play is a request.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The child has a long list of wants.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "past_participle",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:38:10.108Z",
+        "updated_at": "2025-10-24T22:38:17.021Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "past_participle",
+        "mood": "indicative",
+        "person": "all",
+        "conjugationGroup": "er",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "demander",
+        "verb_phrases": [
+            {
+                "phrase": "j'ai demandé",
+                "type": "compound_past",
+                "context": "I asked / I have asked",
+                "frequency": "common"
+            },
+            {
+                "phrase": "il a demandé",
+                "type": "compound_past",
+                "context": "he asked / he has asked",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprends-fr",
+        {
+        "id": "apprends-fr",
+        "lang": "fr",
+        "word": "apprends",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "learn/learns",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.148Z",
+        "updated_at": "2025-10-24T22:41:19.735Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "je/tu",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "j'apprends",
+                "type": "pronoun_verb",
+                "context": "I learn",
+                "frequency": "common"
+            },
+            {
+                "phrase": "tu apprends",
+                "type": "pronoun_verb",
+                "context": "you learn",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprend-fr",
+        {
+        "id": "apprend-fr",
+        "lang": "fr",
+        "word": "apprend",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "learns",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.149Z",
+        "updated_at": "2025-10-24T22:41:20.682Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "il apprend",
+                "type": "pronoun_verb",
+                "context": "he learns",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle apprend",
+                "type": "pronoun_verb",
+                "context": "she learns",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprenons-fr",
+        {
+        "id": "apprenons-fr",
+        "lang": "fr",
+        "word": "apprenons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.150Z",
+        "updated_at": "2025-10-24T22:41:21.097Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "nous apprenons",
+                "type": "pronoun_verb",
+                "context": "we learn",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprenez-fr",
+        {
+        "id": "apprenez-fr",
+        "lang": "fr",
+        "word": "apprenez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.150Z",
+        "updated_at": "2025-10-24T22:41:21.452Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "vous apprenez",
+                "type": "pronoun_verb",
+                "context": "you learn (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprennent-fr",
+        {
+        "id": "apprennent-fr",
+        "lang": "fr",
+        "word": "apprennent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.150Z",
+        "updated_at": "2025-10-24T22:41:21.753Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "ils apprennent",
+                "type": "pronoun_verb",
+                "context": "they learn (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles apprennent",
+                "type": "pronoun_verb",
+                "context": "they learn (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprenais-fr",
+        {
+        "id": "apprenais-fr",
+        "lang": "fr",
+        "word": "apprenais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "was learning / used to learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.150Z",
+        "updated_at": "2025-10-24T22:41:22.471Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "je/tu",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "j'apprenais",
+                "type": "pronoun_verb",
+                "context": "I was learning",
+                "frequency": "common"
+            },
+            {
+                "phrase": "tu apprenais",
+                "type": "pronoun_verb",
+                "context": "you were learning",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprenait-fr",
+        {
+        "id": "apprenait-fr",
+        "lang": "fr",
+        "word": "apprenait",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "was learning / used to learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.151Z",
+        "updated_at": "2025-10-24T22:41:22.772Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "il apprenait",
+                "type": "pronoun_verb",
+                "context": "he was learning",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle apprenait",
+                "type": "pronoun_verb",
+                "context": "she was learning",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprenions-fr",
+        {
+        "id": "apprenions-fr",
+        "lang": "fr",
+        "word": "apprenions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were learning / used to learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.151Z",
+        "updated_at": "2025-10-24T22:41:23.104Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "nous apprenions",
+                "type": "pronoun_verb",
+                "context": "we were learning",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "appreniez-fr",
+        {
+        "id": "appreniez-fr",
+        "lang": "fr",
+        "word": "appreniez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were learning / used to learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.152Z",
+        "updated_at": "2025-10-24T22:41:23.345Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "vous appreniez",
+                "type": "pronoun_verb",
+                "context": "you were learning (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprenaient-fr",
+        {
+        "id": "apprenaient-fr",
+        "lang": "fr",
+        "word": "apprenaient",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were learning / used to learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.153Z",
+        "updated_at": "2025-10-24T22:41:23.600Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "ils apprenaient",
+                "type": "pronoun_verb",
+                "context": "they were learning (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles apprenaient",
+                "type": "pronoun_verb",
+                "context": "they were learning (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprendrai-fr",
+        {
+        "id": "apprendrai-fr",
+        "lang": "fr",
+        "word": "apprendrai",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.154Z",
+        "updated_at": "2025-10-24T22:41:23.843Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "je",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "j'apprendrai",
+                "type": "pronoun_verb",
+                "context": "I will learn",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprendras-fr",
+        {
+        "id": "apprendras-fr",
+        "lang": "fr",
+        "word": "apprendras",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.154Z",
+        "updated_at": "2025-10-24T22:41:24.065Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "tu",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "tu apprendras",
+                "type": "pronoun_verb",
+                "context": "you will learn",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprendra-fr",
+        {
+        "id": "apprendra-fr",
+        "lang": "fr",
+        "word": "apprendra",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.154Z",
+        "updated_at": "2025-10-24T22:41:24.323Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "il apprendra",
+                "type": "pronoun_verb",
+                "context": "he will learn",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle apprendra",
+                "type": "pronoun_verb",
+                "context": "she will learn",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprendrons-fr",
+        {
+        "id": "apprendrons-fr",
+        "lang": "fr",
+        "word": "apprendrons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.154Z",
+        "updated_at": "2025-10-24T22:41:25.203Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "nous apprendrons",
+                "type": "pronoun_verb",
+                "context": "we will learn",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprendrez-fr",
+        {
+        "id": "apprendrez-fr",
+        "lang": "fr",
+        "word": "apprendrez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.154Z",
+        "updated_at": "2025-10-24T22:41:25.594Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "vous apprendrez",
+                "type": "pronoun_verb",
+                "context": "you will learn (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "apprendront-fr",
+        {
+        "id": "apprendront-fr",
+        "lang": "fr",
+        "word": "apprendront",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will learn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.154Z",
+        "updated_at": "2025-10-24T22:41:25.924Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "ils apprendront",
+                "type": "pronoun_verb",
+                "context": "they will learn (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles apprendront",
+                "type": "pronoun_verb",
+                "context": "they will learn (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "appris-fr",
+        {
+        "id": "appris-fr",
+        "lang": "fr",
+        "word": "appris",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "learned / learnt",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "apprendre-fr",
+                "targetWord": "apprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "past_participle",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:41:18.154Z",
+        "updated_at": "2025-10-24T22:41:26.235Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "past_participle",
+        "mood": "indicative",
+        "person": "all",
+        "conjugationGroup": "re",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "apprendre",
+        "verb_phrases": [
+            {
+                "phrase": "j'ai appris",
+                "type": "compound_past",
+                "context": "I learned / I have learned",
+                "frequency": "common"
+            },
+            {
+                "phrase": "il a appris",
+                "type": "compound_past",
+                "context": "he learned / he has learned",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finir-fr",
+        {
+        "id": "finir-fr",
+        "lang": "fr",
+        "word": "finir",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "to finish / to end",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je finis mon travail",
+                "trans": "I finish my work",
+                "lang": "en"
+            },
+            {
+                "text": "Il faut finir avant midi",
+                "trans": "We need to finish before noon",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "regular",
+            "infinitive",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:42:10.801Z",
+        "updated_at": "2025-10-24T22:42:11.547Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "conjugationGroup": "ir",
+        "definition": "To complete or bring to an end",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": []
+    }
+  ],
+  [
+    "finis-fr",
+        {
+        "id": "finis-fr",
+        "lang": "fr",
+        "word": "finis",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "finish/finishes",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.806Z",
+        "updated_at": "2025-10-24T22:42:11.863Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "je/tu",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "je finis",
+                "type": "pronoun_verb",
+                "context": "I finish",
+                "frequency": "common"
+            },
+            {
+                "phrase": "tu finis",
+                "type": "pronoun_verb",
+                "context": "you finish",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finit-fr",
+        {
+        "id": "finit-fr",
+        "lang": "fr",
+        "word": "finit",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "finishes",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.806Z",
+        "updated_at": "2025-10-24T22:42:12.537Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "il finit",
+                "type": "pronoun_verb",
+                "context": "he finishes",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle finit",
+                "type": "pronoun_verb",
+                "context": "she finishes",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finissons-fr",
+        {
+        "id": "finissons-fr",
+        "lang": "fr",
+        "word": "finissons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.807Z",
+        "updated_at": "2025-10-24T22:42:12.853Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "nous finissons",
+                "type": "pronoun_verb",
+                "context": "we finish",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finissez-fr",
+        {
+        "id": "finissez-fr",
+        "lang": "fr",
+        "word": "finissez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.807Z",
+        "updated_at": "2025-10-24T22:42:13.117Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "vous finissez",
+                "type": "pronoun_verb",
+                "context": "you finish (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finissent-fr",
+        {
+        "id": "finissent-fr",
+        "lang": "fr",
+        "word": "finissent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "verb",
+            "present",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.807Z",
+        "updated_at": "2025-10-24T22:42:13.449Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "present",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "ils finissent",
+                "type": "pronoun_verb",
+                "context": "they finish (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles finissent",
+                "type": "pronoun_verb",
+                "context": "they finish (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finissais-fr",
+        {
+        "id": "finissais-fr",
+        "lang": "fr",
+        "word": "finissais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "was finishing / used to finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.807Z",
+        "updated_at": "2025-10-24T22:42:13.776Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "je/tu",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "je finissais",
+                "type": "pronoun_verb",
+                "context": "I was finishing",
+                "frequency": "common"
+            },
+            {
+                "phrase": "tu finissais",
+                "type": "pronoun_verb",
+                "context": "you were finishing",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finissait-fr",
+        {
+        "id": "finissait-fr",
+        "lang": "fr",
+        "word": "finissait",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "was finishing / used to finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.808Z",
+        "updated_at": "2025-10-24T22:42:14.017Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "il finissait",
+                "type": "pronoun_verb",
+                "context": "he was finishing",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle finissait",
+                "type": "pronoun_verb",
+                "context": "she was finishing",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finissions-fr",
+        {
+        "id": "finissions-fr",
+        "lang": "fr",
+        "word": "finissions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were finishing / used to finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.808Z",
+        "updated_at": "2025-10-24T22:42:14.305Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "nous finissions",
+                "type": "pronoun_verb",
+                "context": "we were finishing",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finissiez-fr",
+        {
+        "id": "finissiez-fr",
+        "lang": "fr",
+        "word": "finissiez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were finishing / used to finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.809Z",
+        "updated_at": "2025-10-24T22:42:14.569Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "vous finissiez",
+                "type": "pronoun_verb",
+                "context": "you were finishing (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finissaient-fr",
+        {
+        "id": "finissaient-fr",
+        "lang": "fr",
+        "word": "finissaient",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were finishing / used to finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.810Z",
+        "updated_at": "2025-10-24T22:42:14.824Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "ils finissaient",
+                "type": "pronoun_verb",
+                "context": "they were finishing (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles finissaient",
+                "type": "pronoun_verb",
+                "context": "they were finishing (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finirai-fr",
+        {
+        "id": "finirai-fr",
+        "lang": "fr",
+        "word": "finirai",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.810Z",
+        "updated_at": "2025-10-24T22:42:15.526Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "je",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "je finirai",
+                "type": "pronoun_verb",
+                "context": "I will finish",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finiras-fr",
+        {
+        "id": "finiras-fr",
+        "lang": "fr",
+        "word": "finiras",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.810Z",
+        "updated_at": "2025-10-24T22:42:15.947Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "tu",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "tu finiras",
+                "type": "pronoun_verb",
+                "context": "you will finish",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finira-fr",
+        {
+        "id": "finira-fr",
+        "lang": "fr",
+        "word": "finira",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.810Z",
+        "updated_at": "2025-10-24T22:42:16.354Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "il finira",
+                "type": "pronoun_verb",
+                "context": "he will finish",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle finira",
+                "type": "pronoun_verb",
+                "context": "she will finish",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finirons-fr",
+        {
+        "id": "finirons-fr",
+        "lang": "fr",
+        "word": "finirons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.810Z",
+        "updated_at": "2025-10-24T22:42:16.602Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "nous finirons",
+                "type": "pronoun_verb",
+                "context": "we will finish",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finirez-fr",
+        {
+        "id": "finirez-fr",
+        "lang": "fr",
+        "word": "finirez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.810Z",
+        "updated_at": "2025-10-24T22:42:16.879Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "vous finirez",
+                "type": "pronoun_verb",
+                "context": "you will finish (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "finiront-fr",
+        {
+        "id": "finiront-fr",
+        "lang": "fr",
+        "word": "finiront",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will finish",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "future",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.810Z",
+        "updated_at": "2025-10-24T22:42:17.118Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "future",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "ils finiront",
+                "type": "pronoun_verb",
+                "context": "they will finish (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles finiront",
+                "type": "pronoun_verb",
+                "context": "they will finish (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "fini-fr",
+        {
+        "id": "fini-fr",
+        "lang": "fr",
+        "word": "fini",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "finished",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "finir-fr",
+                "targetWord": "finir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "L’été est fini. \n                        \n        Summer is over.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "présenter son texte fini au professeur",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "That’s that job done at last.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Her chances of success are finished.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a finished product.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The food is finished – there’s none left.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a finite range of possibilities",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Human knowledge is finite, divine knowledge infinite.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The affair is over now.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "past_participle",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:42:10.811Z",
+        "updated_at": "2025-10-24T22:42:17.383Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "past_participle",
+        "mood": "indicative",
+        "person": "all",
+        "conjugationGroup": "ir",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "finir",
+        "verb_phrases": [
+            {
+                "phrase": "j'ai fini",
+                "type": "compound_past",
+                "context": "I finished / I have finished",
+                "frequency": "common"
+            },
+            {
+                "phrase": "il a fini",
+                "type": "compound_past",
+                "context": "he finished / he has finished",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "faisais-fr",
+        {
+        "id": "faisais-fr",
+        "lang": "fr",
+        "word": "faisais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "was doing / used to do",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "faire-fr",
+                "targetWord": "faire",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:46:02.652Z",
+        "updated_at": "2025-10-24T22:46:03.418Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "je/tu",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "faire",
+        "verb_phrases": [
+            {
+                "phrase": "je faisais",
+                "type": "pronoun_verb",
+                "context": "I was doing",
+                "frequency": "common"
+            },
+            {
+                "phrase": "tu faisais",
+                "type": "pronoun_verb",
+                "context": "you were doing",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "faisait-fr",
+        {
+        "id": "faisait-fr",
+        "lang": "fr",
+        "word": "faisait",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "was doing / used to do",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "faire-fr",
+                "targetWord": "faire",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:46:02.656Z",
+        "updated_at": "2025-10-24T22:46:03.677Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "il/elle",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "faire",
+        "verb_phrases": [
+            {
+                "phrase": "il faisait",
+                "type": "pronoun_verb",
+                "context": "he was doing",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle faisait",
+                "type": "pronoun_verb",
+                "context": "she was doing",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "faisions-fr",
+        {
+        "id": "faisions-fr",
+        "lang": "fr",
+        "word": "faisions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were doing / used to do",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "faire-fr",
+                "targetWord": "faire",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:46:02.657Z",
+        "updated_at": "2025-10-24T22:46:03.962Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "nous",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "faire",
+        "verb_phrases": [
+            {
+                "phrase": "nous faisions",
+                "type": "pronoun_verb",
+                "context": "we were doing",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "faisiez-fr",
+        {
+        "id": "faisiez-fr",
+        "lang": "fr",
+        "word": "faisiez",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were doing / used to do",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "faire-fr",
+                "targetWord": "faire",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:46:02.657Z",
+        "updated_at": "2025-10-24T22:46:04.208Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "vous",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "faire",
+        "verb_phrases": [
+            {
+                "phrase": "vous faisiez",
+                "type": "pronoun_verb",
+                "context": "you were doing (formal/plural)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "faisaient-fr",
+        {
+        "id": "faisaient-fr",
+        "lang": "fr",
+        "word": "faisaient",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were doing / used to do",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "faire-fr",
+                "targetWord": "faire",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "verb",
+            "imperfect",
+            "conjugation"
+        ],
+        "created_at": "2025-10-24T22:46:02.658Z",
+        "updated_at": "2025-10-24T22:46:04.466Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "tense": "imperfect",
+        "mood": "indicative",
+        "person": "ils/elles",
+        "conjugationGroup": "irregular",
+        "frequency": "common",
+        "partOfSpeech": "verb",
+        "infinitive": "faire",
+        "verb_phrases": [
+            {
+                "phrase": "ils faisaient",
+                "type": "pronoun_verb",
+                "context": "they were doing (masculine)",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elles faisaient",
+                "type": "pronoun_verb",
+                "context": "they were doing (feminine)",
                 "frequency": "common"
             }
         ]

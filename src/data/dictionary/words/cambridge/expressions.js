@@ -1,7 +1,7 @@
 /**
- * Cambridge Dictionary Scraped Interrogatives
- * Generated: 2025-10-24T22:21:08.350Z
- * Successfully scraped: 18/18
+ * Cambridge Dictionary Scraped Expressions
+ * Generated: 2025-10-24T22:43:21.273Z
+ * Successfully scraped: 33/33
  */
 
 export const expressionsCambridge = new Map([
@@ -837,6 +837,845 @@ export const expressionsCambridge = new Map([
         "definition": "Interrogative adjective used to ask about feminine plural nouns",
         "frequency": "common",
         "partOfSpeech": "interrogative"
+    }
+  ],
+  [
+    "qu'on-fr",
+        {
+        "id": "qu'on-fr",
+        "lang": "fr",
+        "word": "qu'on",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "that we / that one",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il faut qu'on y aille",
+                "trans": "We need to go there",
+                "lang": "en"
+            },
+            {
+                "text": "Il est temps qu'on parte",
+                "trans": "It's time we leave",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A2",
+        "tags": [
+            "lesson",
+            "contraction",
+            "expression",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:35:54.028Z",
+        "updated_at": "2025-10-24T22:35:55.067Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Contraction of 'que' + 'on' used in various expressions",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Est-ce-fr",
+        {
+        "id": "Est-ce-fr",
+        "lang": "fr",
+        "word": "Est-ce",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "Is it / Is this",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Est-ce que vous parlez français?",
+                "trans": "Do you speak French?",
+                "lang": "en"
+            },
+            {
+                "text": "Est-ce que c'est vrai?",
+                "trans": "Is it true?",
+                "lang": "en"
+            },
+            {
+                "text": "Est-ce que vous avez faim?",
+                "trans": "Are you hungry?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "question",
+            "expression",
+            "interrogative",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:37:06.978Z",
+        "updated_at": "2025-10-24T22:37:07.410Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question formation expression used to start yes/no questions",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "est-ce que-fr",
+        {
+        "id": "est-ce que-fr",
+        "lang": "fr",
+        "word": "est-ce que",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "do / does / is / are",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Est-ce que tu viens?",
+                "trans": "Are you coming?",
+                "lang": "en"
+            },
+            {
+                "text": "Est-ce qu'il pleut?",
+                "trans": "Is it raining?",
+                "lang": "en"
+            },
+            {
+                "text": "Est-ce que vous comprenez?",
+                "trans": "Do you understand?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "question",
+            "expression",
+            "interrogative",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:37:06.982Z",
+        "updated_at": "2025-10-24T22:37:07.838Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question formation expression used to turn statements into questions",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "quelque chose-fr",
+        {
+        "id": "quelque chose-fr",
+        "lang": "fr",
+        "word": "quelque chose",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "something",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je veux quelque chose à manger",
+                "trans": "I want something to eat",
+                "lang": "en"
+            },
+            {
+                "text": "Il y a quelque chose de bizarre",
+                "trans": "There is something strange",
+                "lang": "en"
+            },
+            {
+                "text": "Quelque chose ne va pas",
+                "trans": "Something is wrong",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "pronoun",
+            "indefinite",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:37:06.983Z",
+        "updated_at": "2025-10-24T22:37:08.501Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Indefinite pronoun meaning 'something'",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce-fr",
+        {
+        "id": "Qu'est-ce-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What is",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce que c'est ?",
+                "trans": "What is it?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qui se passe ?",
+                "trans": "What is happening?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "contraction",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.214Z",
+        "updated_at": "2025-10-24T22:43:18.729Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Contraction of 'Que est-ce' meaning 'What is'",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce que-fr",
+        {
+        "id": "Qu'est-ce que-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce que",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce que tu fais ?",
+                "trans": "What are you doing?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce que c'est ?",
+                "trans": "What is it?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce que tu veux ?",
+                "trans": "What do you want?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.218Z",
+        "updated_at": "2025-10-24T22:43:19.039Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question phrase meaning 'What' when asking about objects or things",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce qui-fr",
+        {
+        "id": "Qu'est-ce qui-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce qui",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce qui se passe ?",
+                "trans": "What is happening?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qui ne va pas ?",
+                "trans": "What's wrong?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qui t'intéresse ?",
+                "trans": "What interests you?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.219Z",
+        "updated_at": "2025-10-24T22:43:19.311Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question phrase meaning 'What' when asking about subjects or actions",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce que c'est-fr",
+        {
+        "id": "Qu'est-ce que c'est-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce que c'est",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What is it",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce que c'est que ça ?",
+                "trans": "What is that?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce que c'est que ce bruit ?",
+                "trans": "What is that noise?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "complete_phrase",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.219Z",
+        "updated_at": "2025-10-24T22:43:19.525Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Complete question phrase meaning 'What is it?'",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce que tu-fr",
+        {
+        "id": "Qu'est-ce que tu-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce que tu",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What do you",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce que tu fais ?",
+                "trans": "What are you doing?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce que tu veux ?",
+                "trans": "What do you want?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce que tu penses ?",
+                "trans": "What do you think?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "informal",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.219Z",
+        "updated_at": "2025-10-24T22:43:19.753Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question phrase meaning 'What do you' (informal)",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce que vous-fr",
+        {
+        "id": "Qu'est-ce que vous-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce que vous",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What do you",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce que vous faites ?",
+                "trans": "What are you doing? (formal)",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce que vous voulez ?",
+                "trans": "What do you want? (formal)",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce que vous pensez ?",
+                "trans": "What do you think? (formal)",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "formal",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.219Z",
+        "updated_at": "2025-10-24T22:43:19.962Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question phrase meaning 'What do you' (formal/plural)",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce qu'il-fr",
+        {
+        "id": "Qu'est-ce qu'il-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce qu'il",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What does he",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce qu'il fait ?",
+                "trans": "What is he doing?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'il veut ?",
+                "trans": "What does he want?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'il dit ?",
+                "trans": "What is he saying?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "third_person",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.220Z",
+        "updated_at": "2025-10-24T22:43:20.371Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question phrase meaning 'What does he'",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce qu'elle-fr",
+        {
+        "id": "Qu'est-ce qu'elle-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce qu'elle",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What does she",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce qu'elle fait ?",
+                "trans": "What is she doing?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'elle veut ?",
+                "trans": "What does she want?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'elle dit ?",
+                "trans": "What is she saying?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "third_person",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.220Z",
+        "updated_at": "2025-10-24T22:43:20.596Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question phrase meaning 'What does she'",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce qu'on-fr",
+        {
+        "id": "Qu'est-ce qu'on-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce qu'on",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What do we / What does one",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce qu'on fait ?",
+                "trans": "What are we doing?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'on mange ?",
+                "trans": "What are we eating?",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'on va faire ?",
+                "trans": "What are we going to do?",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "first_person_plural",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.220Z",
+        "updated_at": "2025-10-24T22:43:20.835Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question phrase meaning 'What do we' or 'What does one'",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce qu'ils-fr",
+        {
+        "id": "Qu'est-ce qu'ils-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce qu'ils",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What do they",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce qu'ils font ?",
+                "trans": "What are they doing? (masculine)",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'ils veulent ?",
+                "trans": "What do they want? (masculine)",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'ils disent ?",
+                "trans": "What are they saying? (masculine)",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "third_person_plural",
+            "masculine",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.221Z",
+        "updated_at": "2025-10-24T22:43:21.047Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question phrase meaning 'What do they' (masculine/plural)",
+        "frequency": "common",
+        "partOfSpeech": "expression"
+    }
+  ],
+  [
+    "Qu'est-ce qu'elles-fr",
+        {
+        "id": "Qu'est-ce qu'elles-fr",
+        "lang": "fr",
+        "word": "Qu'est-ce qu'elles",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "What do they",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Qu'est-ce qu'elles font ?",
+                "trans": "What are they doing? (feminine)",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'elles veulent ?",
+                "trans": "What do they want? (feminine)",
+                "lang": "en"
+            },
+            {
+                "text": "Qu'est-ce qu'elles disent ?",
+                "trans": "What are they saying? (feminine)",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "expression",
+            "question",
+            "third_person_plural",
+            "feminine",
+            "common"
+        ],
+        "created_at": "2025-10-24T22:43:18.222Z",
+        "updated_at": "2025-10-24T22:43:21.272Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "Question phrase meaning 'What do they' (feminine/plural)",
+        "frequency": "common",
+        "partOfSpeech": "expression"
     }
   ]
 ]);

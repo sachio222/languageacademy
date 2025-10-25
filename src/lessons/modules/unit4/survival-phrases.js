@@ -133,7 +133,7 @@ export const survivalPhrases = {
       },
       {
         instruction: "Ask your friend for the book politely (to a friend)",
-        prompt: "I want the book, please",
+        prompt: "I want the book, please (to a friend)",
         hint: "Je veux + le livre + s'il te plaît",
         expectedAnswer: "je veux le livre, s'il te plaît",
         acceptableAnswers: ["je veux le livre"],
@@ -147,10 +147,13 @@ export const survivalPhrases = {
       },
       {
         instruction: "Ask your friend for the cat politely (to a friend)",
-        prompt: "I want the cat, please",
+        prompt: "I want the cat, please (to a friend)",
         hint: "Je veux + le chat + s'il te plaît",
         expectedAnswer: "je veux le chat, s'il te plaît",
-        acceptableAnswers: ["je veux le chat"],
+        acceptableAnswers: [
+          "je veux le chat",
+          "je veux le chat, s'il te plaît",
+        ],
         wrongAnswers: [
           {
             answer: "je veux le chat, s'il vous plaît",
