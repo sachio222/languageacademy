@@ -147,7 +147,12 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   const formatTimer = () => {
     const seconds = Math.floor(timer / 1000);
     const hundredths = Math.floor((timer % 1000) / 10);
-    return `${seconds}.${hundredths.toString().padStart(2, '0')}`;
+    return (
+      <>
+        <span className="speed-match-timer-integer">{seconds}</span>
+        <span className="speed-match-timer-decimal">.{hundredths.toString().padStart(2, '0')}</span>
+      </>
+    );
   };
 
   const getOptionClass = (option) => {
@@ -190,7 +195,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   return (
     <div className={`speed-match-container embedded ${isPlayingState ? "playing" : ""}`}>
       <div className="speed-match-intro">
-        <button className="btn-back-to-study" onClick={() => window.history.back()}>
+        <button className="btn-back-to-study btn-skip" onClick={() => window.history.back()}>
           ← Back to Study Mode
         </button>
         <button className="btn-skip" onClick={onFinish}>
@@ -321,7 +326,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
               <div></div>
             </div>
 
-            {/* Timer / Feedback / Continue Button - Fixed position to prevent reflow */}
+            {/* Timer / Feedback */}
             <div className="speed-match-timer">
               {gameState === GAME_STATES.PLAYING ? (
                 <div className={getTimerClass()}>
@@ -333,11 +338,6 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
                   <div className="speed-match-time">
                     {formatTimer()}
                   </div>
-                  {!autoAdvance && (
-                    <button onClick={nextQuestion} className="speed-match-button">
-                      Continue
-                    </button>
-                  )}
                 </div>
               ) : gameState === GAME_STATES.WRONG ? (
                 <div className="speed-match-feedback-wrong">
@@ -345,11 +345,6 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
                   <div className="speed-match-time">
                     {formatTimer()}
                   </div>
-                  {!autoAdvance && (
-                    <button onClick={nextQuestion} className="speed-match-button">
-                      Continue
-                    </button>
-                  )}
                 </div>
               ) : gameState === GAME_STATES.TIMEUP ? (
                 <div className="speed-match-feedback-wrong">
@@ -357,11 +352,6 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
                   <div className="speed-match-time">
                     0.00
                   </div>
-                  {!autoAdvance && (
-                    <button onClick={nextQuestion} className="speed-match-button">
-                      Continue
-                    </button>
-                  )}
                 </div>
               ) : null}
             </div>
@@ -389,6 +379,15 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
                 {currentWord?.french}
               </div>
             </div>
+
+            {/* Continue Button */}
+            {!autoAdvance && (gameState === GAME_STATES.CORRECT || gameState === GAME_STATES.WRONG || gameState === GAME_STATES.TIMEUP) && (
+              <div className="speed-match-continue">
+                <button onClick={nextQuestion} className="speed-match-button">
+                  Continue
+                </button>
+              </div>
+            )}
 
           </div>
         )}

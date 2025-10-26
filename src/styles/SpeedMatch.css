@@ -1,7 +1,7 @@
 /* Speed Match Demo Styles */
 
 .speed-match-container {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -11,12 +11,12 @@
 }
 
 .speed-match-container.playing {
-  align-items: flex-start;
+  align-items: center;
   min-height: 100vh;
 }
 
 .speed-match-content {
-  max-width: 64rem;
+  max-width: 54rem;
   width: 100%;
 }
 
@@ -96,6 +96,7 @@
 
 .speed-match-button {
   background: #3b82f6;
+  /* margin-top: 0.5rem; */
   color: white;
   font-size: 1rem;
   font-weight: 600;
@@ -105,6 +106,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: opacity 0.15s ease;
+  margin-right: 0.5rem;
 }
 
 .speed-match-button:hover {
@@ -135,8 +137,7 @@
 .speed-match-playing {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding-top: 4rem; /* Space for fixed header */
+  gap: 1.5rem;
 }
 
 .speed-match-header {
@@ -249,6 +250,14 @@
   transition: all 0.15s ease;
 }
 
+.speed-match-timer-integer {
+  font-weight: 500;
+}
+
+.speed-match-timer-decimal {
+  font-weight: 200;
+}
+
 .speed-match-timer-number.timer-normal {
   color: #3b82f6;
 }
@@ -323,11 +332,11 @@
 
 .speed-match-option {
   background: white;
-  color: #1a1a1a;
+  color: #665665;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 200;
   padding: 3rem 2rem;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #6b7280;
   border-radius: 12px;
   cursor: grab;
   transition: all 0.15s ease;
@@ -380,9 +389,9 @@
 }
 
 .speed-match-grid .speed-match-option.correct {
-  background: #22c55e;
+  background: #4ade80;
   color: white;
-  border-color: #22c55e;
+  border-color: #4ade80;
   animation: correctPop 0.4s ease-out forwards;
   position: relative;
   z-index: 1;
@@ -496,6 +505,12 @@
   font-size: 0.9375rem;
   color: #999999;
   margin-bottom: 2rem;
+}
+
+/* Continue Button */
+.speed-match-continue {
+  text-align: center;
+  /* margin-top: 1rem; */
 }
 
 /* Preview Screen */
