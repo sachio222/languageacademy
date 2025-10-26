@@ -7,6 +7,20 @@ import { useState, useEffect } from "react";
 import { RotateCcw } from 'lucide-react';
 import "../styles/SpeedMatch.css";
 
+// Helper component to format option text with lighter parentheses
+const OptionText = ({ text }) => {
+  const parts = text.split(/(\([^)]+\))/);
+  return (
+    <>
+      {parts.map((part, index) =>
+        part.startsWith('(') && part.endsWith(')')
+          ? <span key={index} className="option-parentheses">&nbsp;{part}&nbsp;</span>
+          : <span key={`option-text-${index}`} className="option-text">{part}</span>
+      )}
+    </>
+  );
+};
+
 // Constants
 const GAME_CONFIG = {
   TIMER_DURATION: 3000,
@@ -39,6 +53,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   const [timer, setTimer] = useState(GAME_CONFIG.TIMER_DURATION);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [autoAdvance, setAutoAdvance] = useState(true);
+  const [difficulty, setDifficulty] = useState('medium'); // easy, medium, hard
 
   const currentWord = vocabulary[currentIndex];
   const [answerOptions, setAnswerOptions] = useState([]);
@@ -77,9 +92,18 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
     setGameState(GAME_STATES.READY);
   };
 
+  // Get timer duration based on difficulty
+  const getTimerDuration = () => {
+    switch (difficulty) {
+      case 'easy': return 5000; // 5 seconds
+      case 'hard': return 2000; // 2 seconds
+      default: return GAME_CONFIG.TIMER_DURATION; // 3 seconds (medium)
+    }
+  };
+
   // Start the actual test after preview
   const startTest = () => {
-    setTimer(GAME_CONFIG.TIMER_DURATION);
+    setTimer(getTimerDuration());
     setAnswerOptions(generateNewOptions());
     setGameState(GAME_STATES.PLAYING);
   };
@@ -205,7 +229,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
       <div className="speed-match-content">
         {/* Ready Screen */}
         {gameState === GAME_STATES.READY && (
-          <div className="speed-match-ready">
+          <div className="speed-match-ready study-header">
 
 
             <div className="speed-match-header">
@@ -217,16 +241,53 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
               </div>
             </div>
 
-            <h1>Speed Match</h1>
+            <h3>⚡️ Speed Match</h3>
             <p>Quick-Fire Matching Challenge</p>
             <div className="speed-match-instructions">
               <h2>How to Play</h2>
               <ul>
-                <li>You'll see a French word</li>
+                <li>You'll see a French word or phrase</li>
                 <li>Pick the correct English translation from 4 options</li>
-                <li>You have 3 seconds per word</li>
+                <li>Choose your difficulty level below</li>
                 <li>Try to get as many correct as possible!</li>
+                <li>Repeat as needed.</li>
               </ul>
+
+              <div className="speed-match-difficulty">
+                <h3>Difficulty</h3>
+                <div className="difficulty-options">
+                  <label className="difficulty-option">
+                    <input
+                      type="radio"
+                      name="difficulty"
+                      value="easy"
+                      checked={difficulty === 'easy'}
+                      onChange={(e) => setDifficulty(e.target.value)}
+                    />
+                    <span className="difficulty-label">Easy - 5 seconds</span>
+                  </label>
+                  <label className="difficulty-option">
+                    <input
+                      type="radio"
+                      name="difficulty"
+                      value="medium"
+                      checked={difficulty === 'medium'}
+                      onChange={(e) => setDifficulty(e.target.value)}
+                    />
+                    <span className="difficulty-label">Medium - 3 seconds</span>
+                  </label>
+                  <label className="difficulty-option">
+                    <input
+                      type="radio"
+                      name="difficulty"
+                      value="hard"
+                      checked={difficulty === 'hard'}
+                      onChange={(e) => setDifficulty(e.target.value)}
+                    />
+                    <span className="difficulty-label">Hard - 2 seconds</span>
+                  </label>
+                </div>
+              </div>
 
               <button onClick={startGame} className="speed-match-button">
                 Start Game
@@ -365,7 +426,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
                   disabled={gameState !== GAME_STATES.PLAYING}
                   className={getOptionClass(option)}
                 >
-                  {option.englishFull || option.english}
+                  <OptionText text={option.englishFull || option.english} />
                 </button>
               ))}
             </div>

@@ -73,7 +73,7 @@
 }
 
 .speed-match-instructions h2 {
-  font-size: 1.25rem;
+  font-size: 1.618rem;
   font-weight: 600;
   color: #1a1a1a;
   letter-spacing: -0.015em;
@@ -88,7 +88,7 @@
 }
 
 .speed-match-instructions li {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #665665;
   line-height: 1.6;
   margin-bottom: 0.75rem;
@@ -111,6 +111,60 @@
 
 .speed-match-button:hover {
   opacity: 0.9;
+}
+
+.speed-match-difficulty {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.speed-match-difficulty h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.difficulty-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.difficulty-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: white;
+}
+
+.difficulty-option:hover {
+  border-color: #3b82f6;
+  background: #f7f9fc;
+}
+
+.difficulty-option input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.difficulty-option input[type="radio"]:checked + .difficulty-label {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.difficulty-label {
+  font-size: 0.9375rem;
+  color: #665665;
+  cursor: pointer;
+  transition: all 0.15s ease;
 }
 
 .speed-match-settings {
@@ -332,7 +386,7 @@
 
 .speed-match-option {
   background: white;
-  color: #665665;
+  color: #1a1a1a;
   font-size: 2rem;
   font-weight: 200;
   padding: 3rem 2rem;
@@ -389,9 +443,9 @@
 }
 
 .speed-match-grid .speed-match-option.correct {
-  background: #4ade80;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-color: #0f172a;
   color: white;
-  border-color: #4ade80;
   animation: correctPop 0.4s ease-out forwards;
   position: relative;
   z-index: 1;
@@ -413,15 +467,25 @@
 }
 
 .speed-match-grid .speed-match-option.wrong {
-  background: #fee2e2;
-  color: #665665;
-  border-color: #fee2e2;
+  /* background: #fee2e2; */
+  color: #a19ba0;
+  border-color: #cac9ca;
 }
 
 .speed-match-option.disabled {
   background: #fafbfc;
   color: #999999;
   border: 2px solid #f0f0f0;
+}
+
+.option-text {
+  font-weight: 800 !important;
+  opacity: 1;
+}
+
+.option-parentheses {
+  font-weight: 200 !important;
+  opacity: 0.5;
 }
 
 /* Feedback */
@@ -438,7 +502,7 @@
 .speed-match-feedback-correct {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #22c55e;
+  color: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   letter-spacing: -0.025em;
 }
 
@@ -451,8 +515,8 @@
 }
 
 .speed-match-time {
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
   color: #999999;
   margin-top: 0.25rem;
 }
@@ -518,7 +582,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding-top: 4rem; /* Space for fixed header */
+  padding-top: 8rem; /* Space for fixed header */
 }
 
 .speed-match-preview-actions {

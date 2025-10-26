@@ -671,9 +671,14 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
             <button className="btn-back-to-concepts" onClick={handleBackToConcepts}>
               ← Back to Concepts
             </button>
-            <button className="btn-skip" onClick={handleSkipStudy}>
-              Skip Study Mode →
-            </button>
+            <div className="study-skip-group">
+              <button className="btn-skip-small" onClick={handleFinishStudying}>
+                ⚡
+              </button>
+              <button className="btn-skip" onClick={handleSkipStudy}>
+                Skip Study Mode →
+              </button>
+            </div>
           </div>
           <StudyMode
             exercises={lesson.exercises}
