@@ -384,6 +384,11 @@ body:has(.left-nav.collapsed) .app-footer {
 }
 
 /* Lesson List */
+.lesson-list {
+  max-width: 1280px; /* Approximate Tailwind max-w-7xl */
+  margin: 0 auto;
+}
+
 .lesson-list-header {
   text-align: left;
   margin-bottom: 3rem;
