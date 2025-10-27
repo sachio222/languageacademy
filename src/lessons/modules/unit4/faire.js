@@ -20,8 +20,8 @@ export const faireModule = {
     },
     {
       term: "Irregular Pattern",
-      definition: "faire is highly irregular - must memorize each form!",
-      example: "je fais, tu fais, il fait, nous faisons, vous faites, ils font",
+      definition: "faire is irregular - but you've seen a pattern like this before!",
+      example: "je fais, tu fais, il fait, elle fait, are all the same sounding, but different spellings. Nous faisons, vous faites, ils font, elles font are like the other irregular verbs you've learned. Easy!",
     },
     {
       term: "Common Uses",
