@@ -1,0 +1,2306 @@
+[
+  {
+    "word": "célèbre",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "famous / celebrated",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "célèbre",
+      "feminine_singular": "célèbre",
+      "masculine_plural": "célèbres",
+      "feminine_plural": "célèbres"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très célèbre",
+        "type": "intensifier",
+        "context": "very famous / celebrated",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Describes someone or something well-known or famous",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un artiste célèbre",
+        "trans": "a famous artist",
+        "lang": "en"
+      },
+      {
+        "text": "une ville célèbre",
+        "trans": "a famous city",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.271Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/c%C3%A9l%C3%A8bre",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.275Z"
+    }
+  },
+  {
+    "word": "célèbres",
+    "partOfSpeech": "adjective",
+    "redirect_to": "célèbre-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "célèbre",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "célèbres",
+    "partOfSpeech": "adjective",
+    "redirect_to": "célèbre-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "célèbre",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "collectif",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "collective / group",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "collectif",
+      "feminine_singular": "collectife",
+      "masculine_plural": "collectifs",
+      "feminine_plural": "collectifes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très collectif",
+        "type": "intensifier",
+        "context": "very collective / group",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to a group or collective action",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un effort collectif",
+        "trans": "a collective effort",
+        "lang": "en"
+      },
+      {
+        "text": "une décision collective",
+        "trans": "a collective decision",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.275Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/collectif",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.275Z"
+    }
+  },
+  {
+    "word": "collectife",
+    "partOfSpeech": "adjective",
+    "redirect_to": "collectif-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "collectif",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "collectifs",
+    "partOfSpeech": "adjective",
+    "redirect_to": "collectif-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "collectif",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "collectifes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "collectif-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "collectif",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "culinaire",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "culinary / cooking",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "culinaire",
+      "feminine_singular": "culinaire",
+      "masculine_plural": "culinaires",
+      "feminine_plural": "culinaires"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très culinaire",
+        "type": "intensifier",
+        "context": "very culinary / cooking",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Related to cooking, food, or cuisine",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "des traditions culinaires",
+        "trans": "culinary traditions",
+        "lang": "en"
+      },
+      {
+        "text": "un art culinaire",
+        "trans": "a culinary art",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.275Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/culinaire",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.275Z"
+    }
+  },
+  {
+    "word": "culinaires",
+    "partOfSpeech": "adjective",
+    "redirect_to": "culinaire-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "culinaire",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "culinaires",
+    "partOfSpeech": "adjective",
+    "redirect_to": "culinaire-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "culinaire",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "culturel",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "cultural",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "culturel",
+      "feminine_singular": "culturele",
+      "masculine_plural": "culturels",
+      "feminine_plural": "cultureles"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très culturel",
+        "type": "intensifier",
+        "context": "very cultural",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to culture, arts, or cultural activities",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un événement culturel",
+        "trans": "a cultural event",
+        "lang": "en"
+      },
+      {
+        "text": "des échanges culturels",
+        "trans": "cultural exchanges",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.275Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/culturel",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.275Z"
+    }
+  },
+  {
+    "word": "culturele",
+    "partOfSpeech": "adjective",
+    "redirect_to": "culturel-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "culturel",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "culturels",
+    "partOfSpeech": "adjective",
+    "redirect_to": "culturel-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "culturel",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "cultureles",
+    "partOfSpeech": "adjective",
+    "redirect_to": "culturel-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "culturel",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "dernier",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "last / final",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "dernier",
+      "feminine_singular": "derniere",
+      "masculine_plural": "derniers",
+      "feminine_plural": "dernieres"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très dernier",
+        "type": "intensifier",
+        "context": "very last / final",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates the final or most recent in a series",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "le dernier jour",
+        "trans": "the last day",
+        "lang": "en"
+      },
+      {
+        "text": "la dernière fois",
+        "trans": "the last time",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.275Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/dernier",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.275Z"
+    }
+  },
+  {
+    "word": "derniere",
+    "partOfSpeech": "adjective",
+    "redirect_to": "dernier-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "dernier",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "derniers",
+    "partOfSpeech": "adjective",
+    "redirect_to": "dernier-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "dernier",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "dernieres",
+    "partOfSpeech": "adjective",
+    "redirect_to": "dernier-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "dernier",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "différent",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "different",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "différent",
+      "feminine_singular": "différente",
+      "masculine_plural": "différents",
+      "feminine_plural": "différentes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très différent",
+        "type": "intensifier",
+        "context": "very different",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates something is not the same, distinct",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "une approche différente",
+        "trans": "a different approach",
+        "lang": "en"
+      },
+      {
+        "text": "des opinions différentes",
+        "trans": "different opinions",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/diff%C3%A9rent",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "différente",
+    "partOfSpeech": "adjective",
+    "redirect_to": "différent-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "différent",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "différents",
+    "partOfSpeech": "adjective",
+    "redirect_to": "différent-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "différent",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "différentes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "différent-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "différent",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "dur",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "hard / tough",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "dur",
+      "feminine_singular": "dure",
+      "masculine_plural": "durs",
+      "feminine_plural": "dures"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très dur",
+        "type": "intensifier",
+        "context": "very hard / tough",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Describes something hard, difficult, or tough",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un travail dur",
+        "trans": "hard work",
+        "lang": "en"
+      },
+      {
+        "text": "une situation dure",
+        "trans": "a tough situation",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/dur",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "dure",
+    "partOfSpeech": "adjective",
+    "redirect_to": "dur-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "dur",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "durs",
+    "partOfSpeech": "adjective",
+    "redirect_to": "dur-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "dur",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "dures",
+    "partOfSpeech": "adjective",
+    "redirect_to": "dur-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "dur",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "essentiel",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "essential / necessary",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "essentiel",
+      "feminine_singular": "essentiele",
+      "masculine_plural": "essentiels",
+      "feminine_plural": "essentieles"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très essentiel",
+        "type": "intensifier",
+        "context": "very essential / necessary",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates something is necessary or fundamental",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un élément essentiel",
+        "trans": "an essential element",
+        "lang": "en"
+      },
+      {
+        "text": "des informations essentielles",
+        "trans": "essential information",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/essentiel",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "essentiele",
+    "partOfSpeech": "adjective",
+    "redirect_to": "essentiel-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "essentiel",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "essentiels",
+    "partOfSpeech": "adjective",
+    "redirect_to": "essentiel-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "essentiel",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "essentieles",
+    "partOfSpeech": "adjective",
+    "redirect_to": "essentiel-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "essentiel",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "européen",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "European",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "européen",
+      "feminine_singular": "européene",
+      "masculine_plural": "européens",
+      "feminine_plural": "européenes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très européen",
+        "type": "intensifier",
+        "context": "very European",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to Europe or European characteristics",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un pays européen",
+        "trans": "a European country",
+        "lang": "en"
+      },
+      {
+        "text": "des institutions européennes",
+        "trans": "European institutions",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/europ%C3%A9en",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "européene",
+    "partOfSpeech": "adjective",
+    "redirect_to": "européen-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "européen",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "européens",
+    "partOfSpeech": "adjective",
+    "redirect_to": "européen-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "européen",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "européenes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "européen-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "européen",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "excellent",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "excellent",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "excellent",
+      "feminine_singular": "excellente",
+      "masculine_plural": "excellents",
+      "feminine_plural": "excellentes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très excellent",
+        "type": "intensifier",
+        "context": "very excellent",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates very high quality or performance",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un résultat excellent",
+        "trans": "an excellent result",
+        "lang": "en"
+      },
+      {
+        "text": "une qualité excellente",
+        "trans": "excellent quality",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/excellent",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "excellente",
+    "partOfSpeech": "adjective",
+    "redirect_to": "excellent-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "excellent",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "excellents",
+    "partOfSpeech": "adjective",
+    "redirect_to": "excellent-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "excellent",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "excellentes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "excellent-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "excellent",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "français",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "French",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "français",
+      "feminine_singular": "française",
+      "masculine_plural": "françaiss",
+      "feminine_plural": "françaises"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très français",
+        "type": "intensifier",
+        "context": "very French",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to France or French characteristics",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un livre français",
+        "trans": "a French book",
+        "lang": "en"
+      },
+      {
+        "text": "la culture française",
+        "trans": "French culture",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/fran%C3%A7ais",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "française",
+    "partOfSpeech": "adjective",
+    "redirect_to": "français-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "français",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "françaiss",
+    "partOfSpeech": "adjective",
+    "redirect_to": "français-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "français",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "françaises",
+    "partOfSpeech": "adjective",
+    "redirect_to": "français-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "français",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "froid",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "cold",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "froid",
+      "feminine_singular": "froide",
+      "masculine_plural": "froids",
+      "feminine_plural": "froides"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très froid",
+        "type": "intensifier",
+        "context": "very cold",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Describes low temperature or coldness",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un jour froid",
+        "trans": "a cold day",
+        "lang": "en"
+      },
+      {
+        "text": "une boisson froide",
+        "trans": "a cold drink",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/froid",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "froide",
+    "partOfSpeech": "adjective",
+    "redirect_to": "froid-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "froid",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "froids",
+    "partOfSpeech": "adjective",
+    "redirect_to": "froid-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "froid",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "froides",
+    "partOfSpeech": "adjective",
+    "redirect_to": "froid-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "froid",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "heureux",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "happy / fortunate",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "heureux",
+      "feminine_singular": "heureuxe",
+      "masculine_plural": "heureux",
+      "feminine_plural": "heureuxes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très heureux",
+        "type": "intensifier",
+        "context": "very happy / fortunate",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates happiness, joy, or good fortune",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un homme heureux",
+        "trans": "a happy man",
+        "lang": "en"
+      },
+      {
+        "text": "une femme heureuse",
+        "trans": "a happy woman",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/heureux",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "heureuxe",
+    "partOfSpeech": "adjective",
+    "redirect_to": "heureux-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "heureux",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "heureuxes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "heureux-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "heureux",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "important",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "important",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "important",
+      "feminine_singular": "importante",
+      "masculine_plural": "importants",
+      "feminine_plural": "importantes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très important",
+        "type": "intensifier",
+        "context": "very important",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates significance, value, or consequence",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un point important",
+        "trans": "an important point",
+        "lang": "en"
+      },
+      {
+        "text": "des décisions importantes",
+        "trans": "important decisions",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/important",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "importante",
+    "partOfSpeech": "adjective",
+    "redirect_to": "important-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "important",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "importants",
+    "partOfSpeech": "adjective",
+    "redirect_to": "important-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "important",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "importantes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "important-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "important",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "impressionniste",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "impressionist",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "impressionniste",
+      "feminine_singular": "impressionniste",
+      "masculine_plural": "impressionnistes",
+      "feminine_plural": "impressionnistes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très impressionniste",
+        "type": "intensifier",
+        "context": "very impressionist",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to impressionist art or style",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un peintre impressionniste",
+        "trans": "an impressionist painter",
+        "lang": "en"
+      },
+      {
+        "text": "une œuvre impressionniste",
+        "trans": "an impressionist work",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/impressionniste",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "impressionnistes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "impressionniste-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "impressionniste",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "impressionnistes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "impressionniste-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "impressionniste",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "inoubliable",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "unforgettable",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "inoubliable",
+      "feminine_singular": "inoubliable",
+      "masculine_plural": "inoubliables",
+      "feminine_plural": "inoubliables"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très inoubliable",
+        "type": "intensifier",
+        "context": "very unforgettable",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Describes something that cannot be forgotten",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un moment inoubliable",
+        "trans": "an unforgettable moment",
+        "lang": "en"
+      },
+      {
+        "text": "une expérience inoubliable",
+        "trans": "an unforgettable experience",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/inoubliable",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "inoubliables",
+    "partOfSpeech": "adjective",
+    "redirect_to": "inoubliable-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "inoubliable",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "inoubliables",
+    "partOfSpeech": "adjective",
+    "redirect_to": "inoubliable-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "inoubliable",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "international",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "international",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "international",
+      "feminine_singular": "internationale",
+      "masculine_plural": "internationals",
+      "feminine_plural": "internationales"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très international",
+        "type": "intensifier",
+        "context": "very international",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to multiple countries or global scope",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un accord international",
+        "trans": "an international agreement",
+        "lang": "en"
+      },
+      {
+        "text": "des relations internationales",
+        "trans": "international relations",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/international",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "internationale",
+    "partOfSpeech": "adjective",
+    "redirect_to": "international-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "international",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "internationals",
+    "partOfSpeech": "adjective",
+    "redirect_to": "international-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "international",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "internationales",
+    "partOfSpeech": "adjective",
+    "redirect_to": "international-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "international",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "magnifique",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "magnificent / beautiful",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "magnifique",
+      "feminine_singular": "magnifique",
+      "masculine_plural": "magnifiques",
+      "feminine_plural": "magnifiques"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très magnifique",
+        "type": "intensifier",
+        "context": "very magnificent / beautiful",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates great beauty or excellence",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un paysage magnifique",
+        "trans": "a magnificent landscape",
+        "lang": "en"
+      },
+      {
+        "text": "une vue magnifique",
+        "trans": "a magnificent view",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/magnifique",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "magnifiques",
+    "partOfSpeech": "adjective",
+    "redirect_to": "magnifique-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "magnifique",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "magnifiques",
+    "partOfSpeech": "adjective",
+    "redirect_to": "magnifique-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "magnifique",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "parfait",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "perfect",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "parfait",
+      "feminine_singular": "parfaite",
+      "masculine_plural": "parfaits",
+      "feminine_plural": "parfaites"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très parfait",
+        "type": "intensifier",
+        "context": "very perfect",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates perfection or completeness",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un plan parfait",
+        "trans": "a perfect plan",
+        "lang": "en"
+      },
+      {
+        "text": "une solution parfaite",
+        "trans": "a perfect solution",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/parfait",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "parfaite",
+    "partOfSpeech": "adjective",
+    "redirect_to": "parfait-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "parfait",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "parfaits",
+    "partOfSpeech": "adjective",
+    "redirect_to": "parfait-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "parfait",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "parfaites",
+    "partOfSpeech": "adjective",
+    "redirect_to": "parfait-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "parfait",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "populaire",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "popular",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "populaire",
+      "feminine_singular": "populaire",
+      "masculine_plural": "populaires",
+      "feminine_plural": "populaires"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très populaire",
+        "type": "intensifier",
+        "context": "very popular",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates widespread acceptance or appeal",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un chanteur populaire",
+        "trans": "a popular singer",
+        "lang": "en"
+      },
+      {
+        "text": "une musique populaire",
+        "trans": "popular music",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/populaire",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "populaires",
+    "partOfSpeech": "adjective",
+    "redirect_to": "populaire-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "populaire",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "populaires",
+    "partOfSpeech": "adjective",
+    "redirect_to": "populaire-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "populaire",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "public",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "public",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "public",
+      "feminine_singular": "publice",
+      "masculine_plural": "publics",
+      "feminine_plural": "publices"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très public",
+        "type": "intensifier",
+        "context": "very public",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to the general population or open access",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un service public",
+        "trans": "a public service",
+        "lang": "en"
+      },
+      {
+        "text": "des espaces publics",
+        "trans": "public spaces",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/public",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "publice",
+    "partOfSpeech": "adjective",
+    "redirect_to": "public-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "public",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "publics",
+    "partOfSpeech": "adjective",
+    "redirect_to": "public-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "public",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "publices",
+    "partOfSpeech": "adjective",
+    "redirect_to": "public-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "public",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "quotidien",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "daily / everyday",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "quotidien",
+      "feminine_singular": "quotidiene",
+      "masculine_plural": "quotidiens",
+      "feminine_plural": "quotidienes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très quotidien",
+        "type": "intensifier",
+        "context": "very daily / everyday",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to daily or everyday activities",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "la vie quotidienne",
+        "trans": "daily life",
+        "lang": "en"
+      },
+      {
+        "text": "des activités quotidiennes",
+        "trans": "daily activities",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/quotidien",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "quotidiene",
+    "partOfSpeech": "adjective",
+    "redirect_to": "quotidien-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "quotidien",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "quotidiens",
+    "partOfSpeech": "adjective",
+    "redirect_to": "quotidien-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "quotidien",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "quotidienes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "quotidien-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "quotidien",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "reconnaissant",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "grateful / thankful",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "reconnaissant",
+      "feminine_singular": "reconnaissante",
+      "masculine_plural": "reconnaissants",
+      "feminine_plural": "reconnaissantes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très reconnaissant",
+        "type": "intensifier",
+        "context": "very grateful / thankful",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates gratitude or thankfulness",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un homme reconnaissant",
+        "trans": "a grateful man",
+        "lang": "en"
+      },
+      {
+        "text": "une femme reconnaissante",
+        "trans": "a grateful woman",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/reconnaissant",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "reconnaissante",
+    "partOfSpeech": "adjective",
+    "redirect_to": "reconnaissant-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "reconnaissant",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "reconnaissants",
+    "partOfSpeech": "adjective",
+    "redirect_to": "reconnaissant-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "reconnaissant",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "reconnaissantes",
+    "partOfSpeech": "adjective",
+    "redirect_to": "reconnaissant-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "reconnaissant",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "reconnu",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "recognized / acknowledged",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "reconnu",
+      "feminine_singular": "reconnue",
+      "masculine_plural": "reconnus",
+      "feminine_plural": "reconnues"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très reconnu",
+        "type": "intensifier",
+        "context": "very recognized / acknowledged",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates official acknowledgment or acceptance",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un expert reconnu",
+        "trans": "a recognized expert",
+        "lang": "en"
+      },
+      {
+        "text": "une artiste reconnue",
+        "trans": "a recognized artist",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/reconnu",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "reconnue",
+    "partOfSpeech": "adjective",
+    "redirect_to": "reconnu-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "reconnu",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "reconnus",
+    "partOfSpeech": "adjective",
+    "redirect_to": "reconnu-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "reconnu",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "reconnues",
+    "partOfSpeech": "adjective",
+    "redirect_to": "reconnu-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "reconnu",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "riche",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "rich / wealthy",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "riche",
+      "feminine_singular": "riche",
+      "masculine_plural": "riches",
+      "feminine_plural": "riches"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très riche",
+        "type": "intensifier",
+        "context": "very rich / wealthy",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates wealth, abundance, or value",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un homme riche",
+        "trans": "a rich man",
+        "lang": "en"
+      },
+      {
+        "text": "une culture riche",
+        "trans": "a rich culture",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/riche",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "riches",
+    "partOfSpeech": "adjective",
+    "redirect_to": "riche-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "riche",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "riches",
+    "partOfSpeech": "adjective",
+    "redirect_to": "riche-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "riche",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "sûr",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "sure / certain",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "sûr",
+      "feminine_singular": "sûre",
+      "masculine_plural": "sûrs",
+      "feminine_plural": "sûres"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très sûr",
+        "type": "intensifier",
+        "context": "very sure / certain",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates certainty, confidence, or safety",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un résultat sûr",
+        "trans": "a sure result",
+        "lang": "en"
+      },
+      {
+        "text": "une méthode sûre",
+        "trans": "a safe method",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/s%C3%BBr",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "sûre",
+    "partOfSpeech": "adjective",
+    "redirect_to": "sûr-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "sûr",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "sûrs",
+    "partOfSpeech": "adjective",
+    "redirect_to": "sûr-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "sûr",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "sûres",
+    "partOfSpeech": "adjective",
+    "redirect_to": "sûr-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "sûr",
+    "gender": "feminine",
+    "number": "plural"
+  },
+  {
+    "word": "traditionnel",
+    "partOfSpeech": "adjective",
+    "translations": [
+      {
+        "language": "en",
+        "text": "traditional",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "gender": "masculine",
+    "number": "singular",
+    "adjective_forms": {
+      "masculine_singular": "traditionnel",
+      "feminine_singular": "traditionnele",
+      "masculine_plural": "traditionnels",
+      "feminine_plural": "traditionneles"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très traditionnel",
+        "type": "intensifier",
+        "context": "very traditional",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to established customs or practices",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "un plat traditionnel",
+        "trans": "a traditional dish",
+        "lang": "en"
+      },
+      {
+        "text": "des valeurs traditionnelles",
+        "trans": "traditional values",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:19:32.276Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/traditionnel",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:19:32.276Z"
+    }
+  },
+  {
+    "word": "traditionnele",
+    "partOfSpeech": "adjective",
+    "redirect_to": "traditionnel-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "traditionnel",
+    "gender": "feminine",
+    "number": "singular"
+  },
+  {
+    "word": "traditionnels",
+    "partOfSpeech": "adjective",
+    "redirect_to": "traditionnel-fr",
+    "redirect_type": "masculine_form",
+    "base_word": "traditionnel",
+    "gender": "masculine",
+    "number": "plural"
+  },
+  {
+    "word": "traditionneles",
+    "partOfSpeech": "adjective",
+    "redirect_to": "traditionnel-fr",
+    "redirect_type": "feminine_form",
+    "base_word": "traditionnel",
+    "gender": "feminine",
+    "number": "plural"
+  }
+]

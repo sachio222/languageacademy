@@ -1,0 +1,272 @@
+[
+  {
+    "word": "excusez",
+    "partOfSpeech": "interjection",
+    "translations": [
+      {
+        "language": "en",
+        "text": "excuse me / pardon me",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Polite interjection used to get attention or apologize. Often followed by 'moi' (excusez-moi)",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Excusez-moi, où est la gare ?",
+        "trans": "Excuse me, where is the train station?",
+        "lang": "en"
+      },
+      {
+        "text": "Excusez, je ne comprends pas",
+        "trans": "Excuse me, I don't understand",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:15:02.789Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/excusez",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:15:02.790Z"
+    }
+  },
+  {
+    "word": "qu",
+    "partOfSpeech": "pronoun",
+    "translations": [
+      {
+        "language": "en",
+        "text": "that / which / who / what",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relative pronoun used to introduce subordinate clauses. Can be subject or object",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Le livre qu'il lit",
+        "trans": "The book that he is reading",
+        "lang": "en"
+      },
+      {
+        "text": "La personne qu'il connaît",
+        "trans": "The person whom he knows",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:15:02.790Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/qu",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:15:02.790Z"
+    }
+  },
+  {
+    "word": "rien",
+    "partOfSpeech": "pronoun",
+    "translations": [
+      {
+        "language": "en",
+        "text": "nothing / anything",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indefinite pronoun meaning 'nothing'. Used with 'ne' in negative constructions (ne...rien)",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Il ne dit rien",
+        "trans": "He says nothing",
+        "lang": "en"
+      },
+      {
+        "text": "Je ne vois rien",
+        "trans": "I see nothing",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:15:02.790Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/rien",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:15:02.790Z"
+    }
+  },
+  {
+    "word": "si",
+    "partOfSpeech": "conjunction",
+    "translations": [
+      {
+        "language": "en",
+        "text": "if / whether / yes (contradiction)",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Conjunction meaning 'if' for conditions, or 'yes' when contradicting a negative statement",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Si tu viens, je serai content",
+        "trans": "If you come, I will be happy",
+        "lang": "en"
+      },
+      {
+        "text": "Tu n'aimes pas le café ? - Si, j'aime !",
+        "trans": "You don't like coffee? - Yes, I do!",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:15:02.790Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/si",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:15:02.790Z"
+    }
+  },
+  {
+    "word": "parce",
+    "partOfSpeech": "conjunction",
+    "translations": [
+      {
+        "language": "en",
+        "text": "because (contraction of parce que)",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Contraction of 'parce que' meaning 'because'. Used in informal speech",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je reste parce j'ai faim",
+        "trans": "I'm staying because I'm hungry",
+        "lang": "en"
+      },
+      {
+        "text": "Il part parce il est fatigué",
+        "trans": "He's leaving because he's tired",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:15:02.790Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/parce",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:15:02.790Z"
+    }
+  },
+  {
+    "word": "end",
+    "partOfSpeech": "conjunction",
+    "translations": [
+      {
+        "language": "en",
+        "text": "end / finish",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Conjunction meaning 'end' or 'finish'. Used to conclude or terminate",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "C'est la fin, end",
+        "trans": "It's the end, finish",
+        "lang": "en"
+      },
+      {
+        "text": "Nous devons end cette discussion",
+        "trans": "We need to end this discussion",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:15:02.790Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/end",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:15:02.790Z"
+    }
+  }
+]

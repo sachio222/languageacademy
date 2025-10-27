@@ -1,0 +1,5464 @@
+[
+  {
+    "word": "attendre",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to wait",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "attendre",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne attendre pas",
+        "type": "negation",
+        "context": "not to wait",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -re verb. Indicates waiting for someone or something",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "J'attends le bus",
+        "trans": "I'm waiting for the bus",
+        "lang": "en"
+      },
+      {
+        "text": "Nous attendons ici",
+        "trans": "We're waiting here",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.825Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/attendre",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.826Z"
+    }
+  },
+  {
+    "word": "attendres",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "je attendres",
+        "type": "pronoun_verb",
+        "context": "je to wait",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attendres pas",
+        "type": "negation",
+        "context": "je does not to wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendres",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "tu attendres",
+        "type": "pronoun_verb",
+        "context": "tu to wait",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attendres pas",
+        "type": "negation",
+        "context": "tu does not to wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreons",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "nous attendreons",
+        "type": "pronoun_verb",
+        "context": "nous to wait",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attendreons pas",
+        "type": "negation",
+        "context": "nous does not to wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreez",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "vous attendreez",
+        "type": "pronoun_verb",
+        "context": "vous to wait",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attendreez pas",
+        "type": "negation",
+        "context": "vous does not to wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreent",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "ils attendreent",
+        "type": "pronoun_verb",
+        "context": "ils to wait",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attendreent pas",
+        "type": "negation",
+        "context": "ils does not to wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreais",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "je attendreais",
+        "type": "pronoun_verb",
+        "context": "je was waiting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreait",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "il attendreait",
+        "type": "pronoun_verb",
+        "context": "il was waiting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreions",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "nous attendreions",
+        "type": "pronoun_verb",
+        "context": "nous was waiting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreaient",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "ils attendreaient",
+        "type": "pronoun_verb",
+        "context": "ils was waiting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreai",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "je attendreai",
+        "type": "pronoun_verb",
+        "context": "je will wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendrea",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "il attendrea",
+        "type": "pronoun_verb",
+        "context": "il will wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreons",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "nous attendreons",
+        "type": "pronoun_verb",
+        "context": "nous will wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreont",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "ils attendreont",
+        "type": "pronoun_verb",
+        "context": "ils will wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendreé",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "attendre-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "avoir attendreé",
+        "type": "compound",
+        "context": "to have waited",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirer",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to attract",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "attirer",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne attirer pas",
+        "type": "negation",
+        "context": "not to attract",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates drawing attention or attraction",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Cela attire l'attention",
+        "trans": "That attracts attention",
+        "lang": "en"
+      },
+      {
+        "text": "Il attire les regards",
+        "trans": "He attracts looks",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.826Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/attirer",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.826Z"
+    }
+  },
+  {
+    "word": "attire",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "je attire",
+        "type": "pronoun_verb",
+        "context": "je to attract",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attire pas",
+        "type": "negation",
+        "context": "je does not to attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attires",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "tu attires",
+        "type": "pronoun_verb",
+        "context": "tu to attract",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attires pas",
+        "type": "negation",
+        "context": "tu does not to attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attire",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "il attire",
+        "type": "pronoun_verb",
+        "context": "il to attract",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attire pas",
+        "type": "negation",
+        "context": "il does not to attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirons",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "nous attirons",
+        "type": "pronoun_verb",
+        "context": "nous to attract",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attirons pas",
+        "type": "negation",
+        "context": "nous does not to attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirez",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "vous attirez",
+        "type": "pronoun_verb",
+        "context": "vous to attract",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attirez pas",
+        "type": "negation",
+        "context": "vous does not to attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirent",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "ils attirent",
+        "type": "pronoun_verb",
+        "context": "ils to attract",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne attirent pas",
+        "type": "negation",
+        "context": "ils does not to attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirais",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "je attirais",
+        "type": "pronoun_verb",
+        "context": "je was attracting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirait",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "il attirait",
+        "type": "pronoun_verb",
+        "context": "il was attracting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirions",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "nous attirions",
+        "type": "pronoun_verb",
+        "context": "nous was attracting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attiraient",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "ils attiraient",
+        "type": "pronoun_verb",
+        "context": "ils was attracting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirerai",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "je attirerai",
+        "type": "pronoun_verb",
+        "context": "je will attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirera",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "il attirera",
+        "type": "pronoun_verb",
+        "context": "il will attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attirerons",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "nous attirerons",
+        "type": "pronoun_verb",
+        "context": "nous will attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attireront",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "ils attireront",
+        "type": "pronoun_verb",
+        "context": "ils will attract",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attiré",
+    "partOfSpeech": "verb",
+    "infinitive": "attirer",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "attirer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "attirer",
+    "verb_phrases": [
+      {
+        "phrase": "avoir attiré",
+        "type": "compound",
+        "context": "to have attracted",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquer",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to communicate",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "communiquer",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne communiquer pas",
+        "type": "negation",
+        "context": "not to communicate",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates sharing information or ideas",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Nous communiquons par email",
+        "trans": "We communicate by email",
+        "lang": "en"
+      },
+      {
+        "text": "Il communique bien",
+        "trans": "He communicates well",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.826Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/communiquer",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.826Z"
+    }
+  },
+  {
+    "word": "communique",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "je communique",
+        "type": "pronoun_verb",
+        "context": "je to communicate",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne communique pas",
+        "type": "negation",
+        "context": "je does not to communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiques",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "tu communiques",
+        "type": "pronoun_verb",
+        "context": "tu to communicate",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne communiques pas",
+        "type": "negation",
+        "context": "tu does not to communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communique",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "il communique",
+        "type": "pronoun_verb",
+        "context": "il to communicate",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne communique pas",
+        "type": "negation",
+        "context": "il does not to communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquons",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "nous communiquons",
+        "type": "pronoun_verb",
+        "context": "nous to communicate",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne communiquons pas",
+        "type": "negation",
+        "context": "nous does not to communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquez",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "vous communiquez",
+        "type": "pronoun_verb",
+        "context": "vous to communicate",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne communiquez pas",
+        "type": "negation",
+        "context": "vous does not to communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquent",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "ils communiquent",
+        "type": "pronoun_verb",
+        "context": "ils to communicate",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne communiquent pas",
+        "type": "negation",
+        "context": "ils does not to communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquais",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "je communiquais",
+        "type": "pronoun_verb",
+        "context": "je was communicateing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquait",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "il communiquait",
+        "type": "pronoun_verb",
+        "context": "il was communicateing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquions",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "nous communiquions",
+        "type": "pronoun_verb",
+        "context": "nous was communicateing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquaient",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "ils communiquaient",
+        "type": "pronoun_verb",
+        "context": "ils was communicateing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquerai",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "je communiquerai",
+        "type": "pronoun_verb",
+        "context": "je will communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquera",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "il communiquera",
+        "type": "pronoun_verb",
+        "context": "il will communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiquerons",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "nous communiquerons",
+        "type": "pronoun_verb",
+        "context": "nous will communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiqueront",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "ils communiqueront",
+        "type": "pronoun_verb",
+        "context": "ils will communicate",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "communiqué",
+    "partOfSpeech": "verb",
+    "infinitive": "communiquer",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "communiquer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "communiquer",
+    "verb_phrases": [
+      {
+        "phrase": "avoir communiqué",
+        "type": "compound",
+        "context": "to have communicateed",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connecter",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to connect",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "connecter",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne connecter pas",
+        "type": "negation",
+        "context": "not to connect",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates linking or joining things together",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je connecte l'ordinateur",
+        "trans": "I connect the computer",
+        "lang": "en"
+      },
+      {
+        "text": "Connectez-vous à internet",
+        "trans": "Connect to the internet",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/connecter",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "connecte",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "je connecte",
+        "type": "pronoun_verb",
+        "context": "je to connect",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne connecte pas",
+        "type": "negation",
+        "context": "je does not to connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connectes",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "tu connectes",
+        "type": "pronoun_verb",
+        "context": "tu to connect",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne connectes pas",
+        "type": "negation",
+        "context": "tu does not to connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connecte",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "il connecte",
+        "type": "pronoun_verb",
+        "context": "il to connect",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne connecte pas",
+        "type": "negation",
+        "context": "il does not to connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connectons",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "nous connectons",
+        "type": "pronoun_verb",
+        "context": "nous to connect",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne connectons pas",
+        "type": "negation",
+        "context": "nous does not to connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connectez",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "vous connectez",
+        "type": "pronoun_verb",
+        "context": "vous to connect",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne connectez pas",
+        "type": "negation",
+        "context": "vous does not to connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connectent",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "ils connectent",
+        "type": "pronoun_verb",
+        "context": "ils to connect",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne connectent pas",
+        "type": "negation",
+        "context": "ils does not to connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connectais",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "je connectais",
+        "type": "pronoun_verb",
+        "context": "je was connecting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connectait",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "il connectait",
+        "type": "pronoun_verb",
+        "context": "il was connecting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connections",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "nous connections",
+        "type": "pronoun_verb",
+        "context": "nous was connecting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connectaient",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "ils connectaient",
+        "type": "pronoun_verb",
+        "context": "ils was connecting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connecterai",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "je connecterai",
+        "type": "pronoun_verb",
+        "context": "je will connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connectera",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "il connectera",
+        "type": "pronoun_verb",
+        "context": "il will connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connecterons",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "nous connecterons",
+        "type": "pronoun_verb",
+        "context": "nous will connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connecteront",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "ils connecteront",
+        "type": "pronoun_verb",
+        "context": "ils will connect",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connecté",
+    "partOfSpeech": "verb",
+    "infinitive": "connecter",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "connecter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "connecter",
+    "verb_phrases": [
+      {
+        "phrase": "avoir connecté",
+        "type": "compound",
+        "context": "to have connected",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacer",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to move",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "déplacer",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne déplacer pas",
+        "type": "negation",
+        "context": "not to move",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates moving from one place to another",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je déplace la table",
+        "trans": "I move the table",
+        "lang": "en"
+      },
+      {
+        "text": "Il se déplace rapidement",
+        "trans": "He moves quickly",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/d%C3%A9placer",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "déplace",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "je déplace",
+        "type": "pronoun_verb",
+        "context": "je to move",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne déplace pas",
+        "type": "negation",
+        "context": "je does not to move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplaces",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "tu déplaces",
+        "type": "pronoun_verb",
+        "context": "tu to move",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne déplaces pas",
+        "type": "negation",
+        "context": "tu does not to move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplace",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "il déplace",
+        "type": "pronoun_verb",
+        "context": "il to move",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne déplace pas",
+        "type": "negation",
+        "context": "il does not to move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacons",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "nous déplacons",
+        "type": "pronoun_verb",
+        "context": "nous to move",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne déplacons pas",
+        "type": "negation",
+        "context": "nous does not to move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacez",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "vous déplacez",
+        "type": "pronoun_verb",
+        "context": "vous to move",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne déplacez pas",
+        "type": "negation",
+        "context": "vous does not to move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacent",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "ils déplacent",
+        "type": "pronoun_verb",
+        "context": "ils to move",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne déplacent pas",
+        "type": "negation",
+        "context": "ils does not to move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacais",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "je déplacais",
+        "type": "pronoun_verb",
+        "context": "je was moveing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacait",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "il déplacait",
+        "type": "pronoun_verb",
+        "context": "il was moveing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacions",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "nous déplacions",
+        "type": "pronoun_verb",
+        "context": "nous was moveing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacaient",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "ils déplacaient",
+        "type": "pronoun_verb",
+        "context": "ils was moveing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacerai",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "je déplacerai",
+        "type": "pronoun_verb",
+        "context": "je will move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacera",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "il déplacera",
+        "type": "pronoun_verb",
+        "context": "il will move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacerons",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "nous déplacerons",
+        "type": "pronoun_verb",
+        "context": "nous will move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplaceront",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "ils déplaceront",
+        "type": "pronoun_verb",
+        "context": "ils will move",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "déplacé",
+    "partOfSpeech": "verb",
+    "infinitive": "déplacer",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "déplacer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "déplacer",
+    "verb_phrases": [
+      {
+        "phrase": "avoir déplacé",
+        "type": "compound",
+        "context": "to have moveed",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêcher",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to hurry",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "dépêcher",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne dépêcher pas",
+        "type": "negation",
+        "context": "not to hurry",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates hurrying or rushing",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je me dépêche",
+        "trans": "I'm hurrying",
+        "lang": "en"
+      },
+      {
+        "text": "Dépêchez-vous !",
+        "trans": "Hurry up!",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/d%C3%A9p%C3%AAcher",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "dépêche",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "je dépêche",
+        "type": "pronoun_verb",
+        "context": "je to hurry",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne dépêche pas",
+        "type": "negation",
+        "context": "je does not to hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêches",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "tu dépêches",
+        "type": "pronoun_verb",
+        "context": "tu to hurry",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne dépêches pas",
+        "type": "negation",
+        "context": "tu does not to hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêche",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "il dépêche",
+        "type": "pronoun_verb",
+        "context": "il to hurry",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne dépêche pas",
+        "type": "negation",
+        "context": "il does not to hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêchons",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "nous dépêchons",
+        "type": "pronoun_verb",
+        "context": "nous to hurry",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne dépêchons pas",
+        "type": "negation",
+        "context": "nous does not to hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêchez",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "vous dépêchez",
+        "type": "pronoun_verb",
+        "context": "vous to hurry",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne dépêchez pas",
+        "type": "negation",
+        "context": "vous does not to hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêchent",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "ils dépêchent",
+        "type": "pronoun_verb",
+        "context": "ils to hurry",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne dépêchent pas",
+        "type": "negation",
+        "context": "ils does not to hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêchais",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "je dépêchais",
+        "type": "pronoun_verb",
+        "context": "je was hurrying",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêchait",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "il dépêchait",
+        "type": "pronoun_verb",
+        "context": "il was hurrying",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêchions",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "nous dépêchions",
+        "type": "pronoun_verb",
+        "context": "nous was hurrying",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêchaient",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "ils dépêchaient",
+        "type": "pronoun_verb",
+        "context": "ils was hurrying",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêcherai",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "je dépêcherai",
+        "type": "pronoun_verb",
+        "context": "je will hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêchera",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "il dépêchera",
+        "type": "pronoun_verb",
+        "context": "il will hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêcherons",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "nous dépêcherons",
+        "type": "pronoun_verb",
+        "context": "nous will hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêcheront",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "ils dépêcheront",
+        "type": "pronoun_verb",
+        "context": "ils will hurry",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dépêché",
+    "partOfSpeech": "verb",
+    "infinitive": "dépêcher",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "dépêcher-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "dépêcher",
+    "verb_phrases": [
+      {
+        "phrase": "avoir dépêché",
+        "type": "compound",
+        "context": "to have hurryed",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrasser",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to kiss/embrace",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "embrasser",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne embrasser pas",
+        "type": "negation",
+        "context": "not to kiss/embrace",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates kissing or embracing someone",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Il embrasse sa femme",
+        "trans": "He kisses his wife",
+        "lang": "en"
+      },
+      {
+        "text": "Je t'embrasse",
+        "trans": "I kiss you",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/embrasser",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "embrasse",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "je embrasse",
+        "type": "pronoun_verb",
+        "context": "je to kiss/embrace",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne embrasse pas",
+        "type": "negation",
+        "context": "je does not to kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrasses",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "tu embrasses",
+        "type": "pronoun_verb",
+        "context": "tu to kiss/embrace",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne embrasses pas",
+        "type": "negation",
+        "context": "tu does not to kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrasse",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "il embrasse",
+        "type": "pronoun_verb",
+        "context": "il to kiss/embrace",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne embrasse pas",
+        "type": "negation",
+        "context": "il does not to kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrassons",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "nous embrassons",
+        "type": "pronoun_verb",
+        "context": "nous to kiss/embrace",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne embrassons pas",
+        "type": "negation",
+        "context": "nous does not to kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrassez",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "vous embrassez",
+        "type": "pronoun_verb",
+        "context": "vous to kiss/embrace",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne embrassez pas",
+        "type": "negation",
+        "context": "vous does not to kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrassent",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "ils embrassent",
+        "type": "pronoun_verb",
+        "context": "ils to kiss/embrace",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne embrassent pas",
+        "type": "negation",
+        "context": "ils does not to kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrassais",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "je embrassais",
+        "type": "pronoun_verb",
+        "context": "je was kiss/embraceing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrassait",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "il embrassait",
+        "type": "pronoun_verb",
+        "context": "il was kiss/embraceing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrassions",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "nous embrassions",
+        "type": "pronoun_verb",
+        "context": "nous was kiss/embraceing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrassaient",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "ils embrassaient",
+        "type": "pronoun_verb",
+        "context": "ils was kiss/embraceing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrasserai",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "je embrasserai",
+        "type": "pronoun_verb",
+        "context": "je will kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrassera",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "il embrassera",
+        "type": "pronoun_verb",
+        "context": "il will kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrasserons",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "nous embrasserons",
+        "type": "pronoun_verb",
+        "context": "nous will kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrasseront",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "ils embrasseront",
+        "type": "pronoun_verb",
+        "context": "ils will kiss/embrace",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "embrassé",
+    "partOfSpeech": "verb",
+    "infinitive": "embrasser",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "embrasser-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "embrasser",
+    "verb_phrases": [
+      {
+        "phrase": "avoir embrassé",
+        "type": "compound",
+        "context": "to have kiss/embraceed",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encourager",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to encourage",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "encourager",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne encourager pas",
+        "type": "negation",
+        "context": "not to encourage",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates giving support or motivation",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je l'encourage",
+        "trans": "I encourage him",
+        "lang": "en"
+      },
+      {
+        "text": "Cela encourage les étudiants",
+        "trans": "That encourages the students",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/encourager",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "encourage",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "je encourage",
+        "type": "pronoun_verb",
+        "context": "je to encourage",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne encourage pas",
+        "type": "negation",
+        "context": "je does not to encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encourages",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "tu encourages",
+        "type": "pronoun_verb",
+        "context": "tu to encourage",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne encourages pas",
+        "type": "negation",
+        "context": "tu does not to encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encourage",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "il encourage",
+        "type": "pronoun_verb",
+        "context": "il to encourage",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne encourage pas",
+        "type": "negation",
+        "context": "il does not to encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragons",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "nous encouragons",
+        "type": "pronoun_verb",
+        "context": "nous to encourage",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne encouragons pas",
+        "type": "negation",
+        "context": "nous does not to encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragez",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "vous encouragez",
+        "type": "pronoun_verb",
+        "context": "vous to encourage",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne encouragez pas",
+        "type": "negation",
+        "context": "vous does not to encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragent",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "ils encouragent",
+        "type": "pronoun_verb",
+        "context": "ils to encourage",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne encouragent pas",
+        "type": "negation",
+        "context": "ils does not to encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragais",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "je encouragais",
+        "type": "pronoun_verb",
+        "context": "je was encourageing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragait",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "il encouragait",
+        "type": "pronoun_verb",
+        "context": "il was encourageing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragions",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "nous encouragions",
+        "type": "pronoun_verb",
+        "context": "nous was encourageing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragaient",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "ils encouragaient",
+        "type": "pronoun_verb",
+        "context": "ils was encourageing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragerai",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "je encouragerai",
+        "type": "pronoun_verb",
+        "context": "je will encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragera",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "il encouragera",
+        "type": "pronoun_verb",
+        "context": "il will encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragerons",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "nous encouragerons",
+        "type": "pronoun_verb",
+        "context": "nous will encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encourageront",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "ils encourageront",
+        "type": "pronoun_verb",
+        "context": "ils will encourage",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "encouragé",
+    "partOfSpeech": "verb",
+    "infinitive": "encourager",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "encourager-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "encourager",
+    "verb_phrases": [
+      {
+        "phrase": "avoir encouragé",
+        "type": "compound",
+        "context": "to have encourageed",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichir",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to enrich",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "enrichir",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne enrichir pas",
+        "type": "negation",
+        "context": "not to enrich",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -ir verb. Indicates making something richer or better",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Cela enrichit la culture",
+        "trans": "That enriches the culture",
+        "lang": "en"
+      },
+      {
+        "text": "Il s'enrichit",
+        "trans": "He gets richer",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/enrichir",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "enrichis",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "je enrichis",
+        "type": "pronoun_verb",
+        "context": "je to enrich",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne enrichis pas",
+        "type": "negation",
+        "context": "je does not to enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichis",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "tu enrichis",
+        "type": "pronoun_verb",
+        "context": "tu to enrich",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne enrichis pas",
+        "type": "negation",
+        "context": "tu does not to enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichit",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "il enrichit",
+        "type": "pronoun_verb",
+        "context": "il to enrich",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne enrichit pas",
+        "type": "negation",
+        "context": "il does not to enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichissons",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "nous enrichissons",
+        "type": "pronoun_verb",
+        "context": "nous to enrich",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne enrichissons pas",
+        "type": "negation",
+        "context": "nous does not to enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichissez",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "vous enrichissez",
+        "type": "pronoun_verb",
+        "context": "vous to enrich",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne enrichissez pas",
+        "type": "negation",
+        "context": "vous does not to enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichissent",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "ils enrichissent",
+        "type": "pronoun_verb",
+        "context": "ils to enrich",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne enrichissent pas",
+        "type": "negation",
+        "context": "ils does not to enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichissais",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "je enrichissais",
+        "type": "pronoun_verb",
+        "context": "je was enriching",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichissait",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "il enrichissait",
+        "type": "pronoun_verb",
+        "context": "il was enriching",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichissions",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "nous enrichissions",
+        "type": "pronoun_verb",
+        "context": "nous was enriching",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichissaient",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "ils enrichissaient",
+        "type": "pronoun_verb",
+        "context": "ils was enriching",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichirai",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "je enrichirai",
+        "type": "pronoun_verb",
+        "context": "je will enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichira",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "il enrichira",
+        "type": "pronoun_verb",
+        "context": "il will enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichirons",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "nous enrichirons",
+        "type": "pronoun_verb",
+        "context": "nous will enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichiront",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "ils enrichiront",
+        "type": "pronoun_verb",
+        "context": "ils will enrich",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "enrichi",
+    "partOfSpeech": "verb",
+    "infinitive": "enrichir",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "enrichir-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "enrichir",
+    "verb_phrases": [
+      {
+        "phrase": "avoir enrichi",
+        "type": "compound",
+        "context": "to have enriched",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exporter",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to export",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "exporter",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne exporter pas",
+        "type": "negation",
+        "context": "not to export",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates sending goods to another country",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "La France exporte du vin",
+        "trans": "France exports wine",
+        "lang": "en"
+      },
+      {
+        "text": "Nous exportons nos produits",
+        "trans": "We export our products",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/exporter",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "exporte",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "je exporte",
+        "type": "pronoun_verb",
+        "context": "je to export",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne exporte pas",
+        "type": "negation",
+        "context": "je does not to export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exportes",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "tu exportes",
+        "type": "pronoun_verb",
+        "context": "tu to export",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne exportes pas",
+        "type": "negation",
+        "context": "tu does not to export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exporte",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "il exporte",
+        "type": "pronoun_verb",
+        "context": "il to export",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne exporte pas",
+        "type": "negation",
+        "context": "il does not to export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exportons",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "nous exportons",
+        "type": "pronoun_verb",
+        "context": "nous to export",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne exportons pas",
+        "type": "negation",
+        "context": "nous does not to export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exportez",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "vous exportez",
+        "type": "pronoun_verb",
+        "context": "vous to export",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne exportez pas",
+        "type": "negation",
+        "context": "vous does not to export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exportent",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "ils exportent",
+        "type": "pronoun_verb",
+        "context": "ils to export",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne exportent pas",
+        "type": "negation",
+        "context": "ils does not to export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exportais",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "je exportais",
+        "type": "pronoun_verb",
+        "context": "je was exporting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exportait",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "il exportait",
+        "type": "pronoun_verb",
+        "context": "il was exporting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exportions",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "nous exportions",
+        "type": "pronoun_verb",
+        "context": "nous was exporting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exportaient",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "ils exportaient",
+        "type": "pronoun_verb",
+        "context": "ils was exporting",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exporterai",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "je exporterai",
+        "type": "pronoun_verb",
+        "context": "je will export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exportera",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "il exportera",
+        "type": "pronoun_verb",
+        "context": "il will export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exporterons",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "nous exporterons",
+        "type": "pronoun_verb",
+        "context": "nous will export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exporteront",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "ils exporteront",
+        "type": "pronoun_verb",
+        "context": "ils will export",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "exporté",
+    "partOfSpeech": "verb",
+    "infinitive": "exporter",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "exporter-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "exporter",
+    "verb_phrases": [
+      {
+        "phrase": "avoir exporté",
+        "type": "compound",
+        "context": "to have exported",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habiller",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to dress",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "habiller",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne habiller pas",
+        "type": "negation",
+        "context": "not to dress",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates putting clothes on someone",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je m'habille",
+        "trans": "I get dressed",
+        "lang": "en"
+      },
+      {
+        "text": "Elle habille ses enfants",
+        "trans": "She dresses her children",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/habiller",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "habille",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "je habille",
+        "type": "pronoun_verb",
+        "context": "je to dress",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne habille pas",
+        "type": "negation",
+        "context": "je does not to dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habilles",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "tu habilles",
+        "type": "pronoun_verb",
+        "context": "tu to dress",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne habilles pas",
+        "type": "negation",
+        "context": "tu does not to dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habille",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "il habille",
+        "type": "pronoun_verb",
+        "context": "il to dress",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne habille pas",
+        "type": "negation",
+        "context": "il does not to dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillons",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "nous habillons",
+        "type": "pronoun_verb",
+        "context": "nous to dress",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne habillons pas",
+        "type": "negation",
+        "context": "nous does not to dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillez",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "vous habillez",
+        "type": "pronoun_verb",
+        "context": "vous to dress",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne habillez pas",
+        "type": "negation",
+        "context": "vous does not to dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillent",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "ils habillent",
+        "type": "pronoun_verb",
+        "context": "ils to dress",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne habillent pas",
+        "type": "negation",
+        "context": "ils does not to dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillais",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "je habillais",
+        "type": "pronoun_verb",
+        "context": "je was dressing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillait",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "il habillait",
+        "type": "pronoun_verb",
+        "context": "il was dressing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillions",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "nous habillions",
+        "type": "pronoun_verb",
+        "context": "nous was dressing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillaient",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "ils habillaient",
+        "type": "pronoun_verb",
+        "context": "ils was dressing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillerai",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "je habillerai",
+        "type": "pronoun_verb",
+        "context": "je will dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillera",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "il habillera",
+        "type": "pronoun_verb",
+        "context": "il will dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillerons",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "nous habillerons",
+        "type": "pronoun_verb",
+        "context": "nous will dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habilleront",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "ils habilleront",
+        "type": "pronoun_verb",
+        "context": "ils will dress",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "habillé",
+    "partOfSpeech": "verb",
+    "infinitive": "habiller",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "habiller-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "habiller",
+    "verb_phrases": [
+      {
+        "phrase": "avoir habillé",
+        "type": "compound",
+        "context": "to have dressed",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "laver",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to wash",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "laver",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne laver pas",
+        "type": "negation",
+        "context": "not to wash",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates cleaning with water and soap",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je lave la voiture",
+        "trans": "I wash the car",
+        "lang": "en"
+      },
+      {
+        "text": "Elle se lave les mains",
+        "trans": "She washes her hands",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/laver",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "lave",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "je lave",
+        "type": "pronoun_verb",
+        "context": "je to wash",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne lave pas",
+        "type": "negation",
+        "context": "je does not to wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "laves",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "tu laves",
+        "type": "pronoun_verb",
+        "context": "tu to wash",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne laves pas",
+        "type": "negation",
+        "context": "tu does not to wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lave",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "il lave",
+        "type": "pronoun_verb",
+        "context": "il to wash",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne lave pas",
+        "type": "negation",
+        "context": "il does not to wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lavons",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "nous lavons",
+        "type": "pronoun_verb",
+        "context": "nous to wash",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne lavons pas",
+        "type": "negation",
+        "context": "nous does not to wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lavez",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "vous lavez",
+        "type": "pronoun_verb",
+        "context": "vous to wash",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne lavez pas",
+        "type": "negation",
+        "context": "vous does not to wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lavent",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "ils lavent",
+        "type": "pronoun_verb",
+        "context": "ils to wash",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne lavent pas",
+        "type": "negation",
+        "context": "ils does not to wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lavais",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "je lavais",
+        "type": "pronoun_verb",
+        "context": "je was washing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lavait",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "il lavait",
+        "type": "pronoun_verb",
+        "context": "il was washing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lavions",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "nous lavions",
+        "type": "pronoun_verb",
+        "context": "nous was washing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lavaient",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "ils lavaient",
+        "type": "pronoun_verb",
+        "context": "ils was washing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "laverai",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "je laverai",
+        "type": "pronoun_verb",
+        "context": "je will wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lavera",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "il lavera",
+        "type": "pronoun_verb",
+        "context": "il will wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "laverons",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "nous laverons",
+        "type": "pronoun_verb",
+        "context": "nous will wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "laveront",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "ils laveront",
+        "type": "pronoun_verb",
+        "context": "ils will wash",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lavé",
+    "partOfSpeech": "verb",
+    "infinitive": "laver",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "laver-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "laver",
+    "verb_phrases": [
+      {
+        "phrase": "avoir lavé",
+        "type": "compound",
+        "context": "to have washed",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "lever",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to lift/raise",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "lever",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne lever pas",
+        "type": "negation",
+        "context": "not to lift/raise",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates raising or lifting something up",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je lève la main",
+        "trans": "I raise my hand",
+        "lang": "en"
+      },
+      {
+        "text": "Le soleil se lève",
+        "trans": "The sun rises",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/lever",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "leve",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "je leve",
+        "type": "pronoun_verb",
+        "context": "je to lift/raise",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne leve pas",
+        "type": "negation",
+        "context": "je does not to lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "leves",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "tu leves",
+        "type": "pronoun_verb",
+        "context": "tu to lift/raise",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne leves pas",
+        "type": "negation",
+        "context": "tu does not to lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "leve",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "il leve",
+        "type": "pronoun_verb",
+        "context": "il to lift/raise",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne leve pas",
+        "type": "negation",
+        "context": "il does not to lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "levons",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "nous levons",
+        "type": "pronoun_verb",
+        "context": "nous to lift/raise",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne levons pas",
+        "type": "negation",
+        "context": "nous does not to lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "levez",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "vous levez",
+        "type": "pronoun_verb",
+        "context": "vous to lift/raise",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne levez pas",
+        "type": "negation",
+        "context": "vous does not to lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "levent",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "ils levent",
+        "type": "pronoun_verb",
+        "context": "ils to lift/raise",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne levent pas",
+        "type": "negation",
+        "context": "ils does not to lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "levais",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "je levais",
+        "type": "pronoun_verb",
+        "context": "je was lift/raiseing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "levait",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "il levait",
+        "type": "pronoun_verb",
+        "context": "il was lift/raiseing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "levions",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "nous levions",
+        "type": "pronoun_verb",
+        "context": "nous was lift/raiseing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "levaient",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "ils levaient",
+        "type": "pronoun_verb",
+        "context": "ils was lift/raiseing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "leverai",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "je leverai",
+        "type": "pronoun_verb",
+        "context": "je will lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "levera",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "il levera",
+        "type": "pronoun_verb",
+        "context": "il will lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "leverons",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "nous leverons",
+        "type": "pronoun_verb",
+        "context": "nous will lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "leveront",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "ils leveront",
+        "type": "pronoun_verb",
+        "context": "ils will lift/raise",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "levé",
+    "partOfSpeech": "verb",
+    "infinitive": "lever",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "lever-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "lever",
+    "verb_phrases": [
+      {
+        "phrase": "avoir levé",
+        "type": "compound",
+        "context": "to have lift/raiseed",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrer",
+    "partOfSpeech": "verb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "to show",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "infinitive": "montrer",
+    "tense": "infinitive",
+    "mood": "infinitive",
+    "verb_phrases": [
+      {
+        "phrase": "ne montrer pas",
+        "type": "negation",
+        "context": "not to show",
+        "frequency": "common"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Regular -er verb. Indicates displaying or demonstrating something",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je montre la photo",
+        "trans": "I show the photo",
+        "lang": "en"
+      },
+      {
+        "text": "Montrez-moi le chemin",
+        "trans": "Show me the way",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:31:09.827Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/montrer",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:31:09.827Z"
+    }
+  },
+  {
+    "word": "montre",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "je montre",
+        "type": "pronoun_verb",
+        "context": "je to show",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne montre pas",
+        "type": "negation",
+        "context": "je does not to show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montres",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "tu",
+    "number": "singular",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "tu montres",
+        "type": "pronoun_verb",
+        "context": "tu to show",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne montres pas",
+        "type": "negation",
+        "context": "tu does not to show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montre",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "il montre",
+        "type": "pronoun_verb",
+        "context": "il to show",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne montre pas",
+        "type": "negation",
+        "context": "il does not to show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrons",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "nous montrons",
+        "type": "pronoun_verb",
+        "context": "nous to show",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne montrons pas",
+        "type": "negation",
+        "context": "nous does not to show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrez",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "vous",
+    "number": "plural",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "vous montrez",
+        "type": "pronoun_verb",
+        "context": "vous to show",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne montrez pas",
+        "type": "negation",
+        "context": "vous does not to show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrent",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "present",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "ils montrent",
+        "type": "pronoun_verb",
+        "context": "ils to show",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne montrent pas",
+        "type": "negation",
+        "context": "ils does not to show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrais",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "je montrais",
+        "type": "pronoun_verb",
+        "context": "je was showing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrait",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "il montrait",
+        "type": "pronoun_verb",
+        "context": "il was showing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrions",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "nous montrions",
+        "type": "pronoun_verb",
+        "context": "nous was showing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montraient",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "past",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "ils montraient",
+        "type": "pronoun_verb",
+        "context": "ils was showing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrerai",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "je",
+    "number": "singular",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "je montrerai",
+        "type": "pronoun_verb",
+        "context": "je will show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrera",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "il",
+    "number": "singular",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "il montrera",
+        "type": "pronoun_verb",
+        "context": "il will show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montrerons",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "nous",
+    "number": "plural",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "nous montrerons",
+        "type": "pronoun_verb",
+        "context": "nous will show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montreront",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "future",
+    "mood": "indicative",
+    "person": "ils",
+    "number": "plural",
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "ils montreront",
+        "type": "pronoun_verb",
+        "context": "ils will show",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "montré",
+    "partOfSpeech": "verb",
+    "infinitive": "montrer",
+    "tense": "past",
+    "mood": "participle",
+    "person": null,
+    "number": null,
+    "redirect_to": "montrer-fr",
+    "redirect_type": "conjugated_form",
+    "base_word": "montrer",
+    "verb_phrases": [
+      {
+        "phrase": "avoir montré",
+        "type": "compound",
+        "context": "to have showed",
+        "frequency": "common"
+      }
+    ]
+  }
+]

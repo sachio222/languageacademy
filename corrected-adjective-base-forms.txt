@@ -1,0 +1,47 @@
+# Corrected Adjective Base Forms
+# Generated: 2025-10-26T02:17:42.482Z
+# Total base forms: 27
+
+# Base Forms List (Alphabetically Sorted):
+collectif
+culinaire
+culturel
+célèbre
+dernier
+différent
+dur
+essentiel
+européen
+excellent
+français
+froid
+heureux
+important
+impressionniste
+inoubliable
+international
+magnifique
+parfait
+populaire
+public
+quotidien
+reconnaissant
+reconnu
+riche
+sûr
+traditionnel
+
+# Usage Notes:
+- These are the masculine singular forms of French adjectives
+- The Dictionary Generator can automatically create gender/number variants
+- Each base form can generate: masculine singular, feminine singular, masculine plural, feminine plural
+
+# Examples of Variants:
+- important → importante, importants, importantes
+- français → française, français, françaises
+- heureux → heureuse, heureux, heureuses
+
+# Next Steps:
+1. Use these 26 base forms to create Cambridge dictionary entries
+2. The generator will automatically handle all gender/number variants
+3. Focus on the most essential adjectives first (important, français, etc.)

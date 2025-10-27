@@ -1,0 +1,89 @@
+# Verb Comparison Results
+# Generated: 2025-10-26T02:23:44.728Z
+# Total base forms: 71
+# Already defined in Cambridge: 14
+# Truly unmet: 57
+
+## Already Defined in Cambridge Dictionary:
+aimer
+aller
+comprendre
+continuer
+devenir
+donner
+manger
+parler
+penser
+réviser
+savoir
+travailler
+vivre
+étudier
+
+## Truly Unmet Verbs:
+acheter
+admirer
+adore
+adorent
+aident
+amuse
+appelle
+arriver
+asseoir
+attendre
+attirer
+changer
+commencer
+communiquer
+connecter
+créer
+décider
+découvrir
+déplacer
+dépêcher
+embrasser
+encourager
+enrichir
+essayer
+exporter
+fonctionner
+habiller
+habiter
+laver
+lever
+marcher
+monter
+montrer
+participer
+perdre
+permettre
+plaire
+poser
+préférer
+préparer
+préserver
+regarder
+regretter
+renoncer
+rentrer
+rester
+retrouver
+revoir
+réussir
+réveiller
+rêver
+se souvenir
+soutenir
+trouver
+visiter
+voyager
+écouter
+
+## Summary:
+- Already defined: 14 (19.7%)
+- Truly unmet: 57 (80.3%)
+
+## Next Steps:
+1. Focus on the truly unmet verbs for dictionary generation
+2. The already defined verbs can be skipped
+3. Use the truly unmet list to create Cambridge dictionary entries

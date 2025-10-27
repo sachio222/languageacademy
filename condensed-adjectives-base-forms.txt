@@ -1,0 +1,148 @@
+# Condensed Adjectives - Base Forms
+# Generated: 2025-10-26T02:17:23.695Z
+# Total base forms: 28
+# Original adjectives: 34
+
+# Base Forms List:
+collectiv
+culinair
+culturell
+célèbr
+célèbre
+dernier
+différent
+dur
+essentiel
+européen
+excellent
+français
+froid
+heureux
+important
+impressionniste
+inoubliable
+international
+magnifique
+parfait
+populaire
+public
+quotidien
+reconnaissant
+reconnu
+rich
+sûr
+traditionnel
+
+# Detailed Mapping:
+
+## collectiv
+Variants: collective
+Count: 1
+
+## culinair
+Variants: culinaires
+Count: 1
+
+## culturell
+Variants: culturelles
+Count: 1
+
+## célèbr
+Variants: célèbre
+Count: 1
+
+## célèbre
+Variants: célèbres
+Count: 1
+
+## dernier
+Variants: dernière
+Count: 1
+
+## différent
+Variants: différente, différentes
+Count: 2
+
+## dur
+Variants: dur
+Count: 1
+
+## essentiel
+Variants: essentielles
+Count: 1
+
+## européen
+Variants: européennes
+Count: 1
+
+## excellent
+Variants: excellente
+Count: 1
+
+## français
+Variants: française, françaises
+Count: 2
+
+## froid
+Variants: froid
+Count: 1
+
+## heureux
+Variants: heureuse, heureux
+Count: 2
+
+## important
+Variants: important, importante, importantes, importants
+Count: 4
+
+## impressionniste
+Variants: impressionnistes
+Count: 1
+
+## inoubliable
+Variants: inoubliables
+Count: 1
+
+## international
+Variants: internationale
+Count: 1
+
+## magnifique
+Variants: magnifiques
+Count: 1
+
+## parfait
+Variants: parfaite
+Count: 1
+
+## populaire
+Variants: populaires
+Count: 1
+
+## public
+Variants: publics
+Count: 1
+
+## quotidien
+Variants: quotidienne
+Count: 1
+
+## reconnaissant
+Variants: reconnaissante
+Count: 1
+
+## reconnu
+Variants: reconnu
+Count: 1
+
+## rich
+Variants: riche
+Count: 1
+
+## sûr
+Variants: sûr
+Count: 1
+
+## traditionnel
+Variants: traditionnels
+Count: 1

@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Pronouns
- * Generated: 2025-10-24T22:37:09.920Z
- * Successfully scraped: 78/78
+ * Generated: 2025-10-26T02:15:06.098Z
+ * Successfully scraped: 80/80
  */
 
 export const pronounsCambridge = new Map([
@@ -4785,6 +4785,116 @@ export const pronounsCambridge = new Map([
         "verified": false,
         "definition": "Indefinite pronoun meaning 'some' or 'a few' (feminine plural)",
         "frequency": "common",
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "qu-fr",
+        {
+        "id": "qu-fr",
+        "lang": "fr",
+        "word": "qu",
+        "translations": [
+            {
+                "language": "en",
+                "text": "that / which / who / what",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Relative pronoun used to introduce subordinate clauses. Can be subject or object",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Le livre qu'il lit",
+                "trans": "The book that he is reading",
+                "lang": "en"
+            },
+            {
+                "text": "La personne qu'il connaît",
+                "trans": "The person whom he knows",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:15:05.263Z",
+        "updated_at": "2025-10-26T02:15:05.906Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:15:02.790Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/qu",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:15:02.790Z"
+        },
+        "partOfSpeech": "pronoun"
+    }
+  ],
+  [
+    "rien-fr",
+        {
+        "id": "rien-fr",
+        "lang": "fr",
+        "word": "rien",
+        "translations": [
+            {
+                "language": "en",
+                "text": "nothing / anything",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indefinite pronoun meaning 'nothing'. Used with 'ne' in negative constructions (ne...rien)",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il ne dit rien",
+                "trans": "He says nothing",
+                "lang": "en"
+            },
+            {
+                "text": "Je ne vois rien",
+                "trans": "I see nothing",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:15:05.263Z",
+        "updated_at": "2025-10-26T02:15:06.097Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:15:02.790Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/rien",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:15:02.790Z"
+        },
         "partOfSpeech": "pronoun"
     }
   ]

@@ -1,0 +1,772 @@
+[
+  {
+    "word": "abord",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "arc",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "artistes",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "champs",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "château",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "citoyens",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "compte",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "comte",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "contributions",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "coq",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "dame",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "destinations",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "diplomates",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "directions",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "école",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "écoles",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "éditeurs",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "efforts",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "époque",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "étrangères",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "étrangers",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "études",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "étudiants",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "expériences",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "face",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "films",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "habitude",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "idées",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "influence",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "informations",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "jardin",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "journées",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "langues",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "leçons",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "lieues",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "lieux",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "ligne",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "lumières",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "mémoire",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "millions",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "minutes",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "mois",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "monuments",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "musée",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "musique",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "organisations",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "paix",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "peintres",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "peintures",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "phrases",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "produits",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "quartiers",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "questions",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "relations",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "rêves",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "secteurs",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "sens",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "suite",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "surprise",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "tables",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "tour",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "touristes",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "transports",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "valeurs",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "vies",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "villes",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "visiteurs",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "voyageurs",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "vue",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  },
+  {
+    "word": "week",
+    "translation": "TODO: Add translation",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    }
+  }
+]

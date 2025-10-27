@@ -19,7 +19,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40,7 +41,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-lettre-fr",
     {
@@ -55,7 +57,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -76,7 +79,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-accent-fr",
     {
@@ -91,7 +95,8 @@ export const phrases = new Map([
           definition: "masculine - 5 types",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -112,7 +117,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-voyelle-fr",
     {
@@ -127,7 +133,8 @@ export const phrases = new Map([
           definition: "feminine - 16 vowel sounds!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -148,7 +155,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-consonne-fr",
     {
@@ -163,7 +171,8 @@ export const phrases = new Map([
           definition: "feminine - 20-21 sounds",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -184,7 +193,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment--a-s--crit--fr",
     {
@@ -199,7 +209,8 @@ export const phrases = new Map([
           definition: "useful phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -220,7 +231,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/alphabet.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bleu---bleue-fr",
     {
@@ -235,7 +247,8 @@ export const phrases = new Map([
           definition: "le ciel est bleu, la mer est bleue",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -256,7 +269,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vert---verte-fr",
     {
@@ -271,7 +285,8 @@ export const phrases = new Map([
           definition: "l'herbe est verte, un arbre vert",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -292,7 +307,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "blanc---blanche-fr",
     {
@@ -307,7 +323,8 @@ export const phrases = new Map([
           definition: "les nuages sont blancs, la neige est blanche",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -328,7 +345,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "noir---noire-fr",
     {
@@ -343,7 +361,8 @@ export const phrases = new Map([
           definition: "un chat noir, une voiture noire",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -364,7 +383,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "violet---violette-fr",
     {
@@ -379,7 +399,8 @@ export const phrases = new Map([
           definition: "un violon violet, une fleur violette",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -400,7 +421,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "gris---grise-fr",
     {
@@ -415,7 +437,8 @@ export const phrases = new Map([
           definition: "un ciel gris, une souris grise",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -436,7 +459,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vif---vive-fr",
     {
@@ -451,7 +475,8 @@ export const phrases = new Map([
           definition: "une couleur vive (a bright color)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -472,7 +497,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "color----color-e-fr",
     {
@@ -487,7 +513,8 @@ export const phrases = new Map([
           definition: "agrees - une maison colorée",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -508,7 +535,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-couleur-fr",
     {
@@ -523,7 +551,8 @@ export const phrases = new Map([
           definition: "feminine - De quelle couleur?",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -544,7 +573,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "de-quelle-couleur--fr",
     {
@@ -559,7 +589,8 @@ export const phrases = new Map([
           definition: "essential question phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -580,7 +611,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "de-quelle-couleur-est-----fr",
     {
@@ -595,7 +627,8 @@ export const phrases = new Map([
           definition: "De quelle couleur est le ciel?",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -616,7 +649,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-ciel-fr",
     {
@@ -631,7 +665,8 @@ export const phrases = new Map([
           definition: "masculine - le ciel est bleu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -652,7 +687,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-herbe-fr",
     {
@@ -667,7 +703,8 @@ export const phrases = new Map([
           definition: "feminine (herbe) - l'herbe est verte",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -688,7 +725,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-nuages-fr",
     {
@@ -703,7 +741,8 @@ export const phrases = new Map([
           definition: "masculine plural - les nuages sont blancs",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -724,7 +763,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-soleil-fr",
     {
@@ -739,7 +779,8 @@ export const phrases = new Map([
           definition: "masculine - le soleil est jaune",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -760,7 +801,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-mer-fr",
     {
@@ -775,7 +817,8 @@ export const phrases = new Map([
           definition: "feminine - la mer est bleue",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -796,7 +839,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-neige-fr",
     {
@@ -811,7 +855,8 @@ export const phrases = new Map([
           definition: "feminine - la neige est blanche",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -832,7 +877,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-arbre-fr",
     {
@@ -847,7 +893,8 @@ export const phrases = new Map([
           definition: "masculine - review from colors module",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -868,7 +915,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-fleur-fr",
     {
@@ -883,7 +931,8 @@ export const phrases = new Map([
           definition: "feminine - review from colors module",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -904,7 +953,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-feuilles-fr",
     {
@@ -919,7 +969,8 @@ export const phrases = new Map([
           definition: "feminine plural - les feuilles sont vertes",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -940,7 +991,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "voir-la-vie-en-rose-fr",
     {
@@ -955,7 +1007,8 @@ export const phrases = new Map([
           definition: "idiom - être optimiste",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -976,7 +1029,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "-tre-dans-le-rouge-fr",
     {
@@ -991,7 +1045,8 @@ export const phrases = new Map([
           definition: "idiom - financial expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1012,7 +1067,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avoir-une-peur-bleue-fr",
     {
@@ -1027,7 +1083,8 @@ export const phrases = new Map([
           definition: "idiom - literally 'to have a blue fear'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1048,7 +1105,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "rire-jaune-fr",
     {
@@ -1063,7 +1121,8 @@ export const phrases = new Map([
           definition: "idiom - literally 'to laugh yellow'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1084,7 +1143,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/colors.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-printemps-fr",
     {
@@ -1099,7 +1159,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1120,7 +1181,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/days-months.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l--t--fr",
     {
@@ -1135,7 +1197,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1156,7 +1219,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/days-months.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-automne-fr",
     {
@@ -1171,7 +1235,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1192,7 +1257,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/days-months.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-hiver-fr",
     {
@@ -1207,7 +1273,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1228,7 +1295,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/days-months.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "aujourd-hui-fr",
     {
@@ -1243,7 +1311,8 @@ export const phrases = new Map([
           definition: "this day",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1264,7 +1333,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/time-adverbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "cette-semaine-fr",
     {
@@ -1279,7 +1349,8 @@ export const phrases = new Map([
           definition: "time phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1300,7 +1371,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/days-months.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-week-end-fr",
     {
@@ -1315,7 +1387,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1336,7 +1409,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-francophonie-fr",
     {
@@ -1351,7 +1425,8 @@ export const phrases = new Map([
           definition: "cultural/linguistic community",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1372,7 +1447,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-pays-fr",
     {
@@ -1387,7 +1463,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1408,7 +1485,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-langue-fr",
     {
@@ -1423,7 +1501,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1444,7 +1523,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-langue-officielle-fr",
     {
@@ -1459,7 +1539,8 @@ export const phrases = new Map([
           definition: "government language",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1480,7 +1561,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "parler-fran-ais-fr",
     {
@@ -1495,7 +1577,8 @@ export const phrases = new Map([
           definition: "from Unit 4 parler",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1516,7 +1599,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-afrique-fr",
     {
@@ -1531,7 +1615,8 @@ export const phrases = new Map([
           definition: "feminine - 60% of French speakers!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1552,7 +1637,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-europe-fr",
     {
@@ -1567,7 +1653,8 @@ export const phrases = new Map([
           definition: "feminine - birthplace",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1588,7 +1675,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-am-rique-du-nord-fr",
     {
@@ -1603,7 +1691,8 @@ export const phrases = new Map([
           definition: "feminine - Quebec!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1624,7 +1713,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-cara-bes-fr",
     {
@@ -1639,7 +1729,8 @@ export const phrases = new Map([
           definition: "feminine plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1660,7 +1751,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-qu-bec-fr",
     {
@@ -1675,7 +1767,8 @@ export const phrases = new Map([
           definition: "7.9 million French speakers",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1696,7 +1789,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-congo-fr",
     {
@@ -1711,7 +1805,8 @@ export const phrases = new Map([
           definition: "90M - 2nd largest French country!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1732,7 +1827,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-france-fr",
     {
@@ -1747,7 +1843,8 @@ export const phrases = new Map([
           definition: "67M - birthplace of French",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1768,7 +1865,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-belgique-fr",
     {
@@ -1783,7 +1881,8 @@ export const phrases = new Map([
           definition: "French, Dutch, German",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1804,7 +1903,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-suisse-fr",
     {
@@ -1819,7 +1919,8 @@ export const phrases = new Map([
           definition: "French, German, Italian, Romansh",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1840,7 +1941,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-s-n-gal-fr",
     {
@@ -1855,7 +1957,8 @@ export const phrases = new Map([
           definition: "West Africa",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1876,7 +1979,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-c-te-d-ivoire-fr",
     {
@@ -1891,7 +1995,8 @@ export const phrases = new Map([
           definition: "economic hub of West Africa",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1912,7 +2017,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-maroc-fr",
     {
@@ -1927,7 +2033,8 @@ export const phrases = new Map([
           definition: "North Africa - Maghreb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1948,7 +2055,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-liban-fr",
     {
@@ -1963,7 +2071,8 @@ export const phrases = new Map([
           definition: "Paris of the Middle East",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -1984,7 +2093,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/french-countries.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-f-te-fr",
     {
@@ -1999,7 +2109,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2020,7 +2131,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-jour-f-ri--fr",
     {
@@ -2035,7 +2147,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2056,7 +2169,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-nouvel-an-fr",
     {
@@ -2071,7 +2185,8 @@ export const phrases = new Map([
           definition: "January 1",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2092,7 +2207,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-f-te-du-travail-fr",
     {
@@ -2107,7 +2223,8 @@ export const phrases = new Map([
           definition: "May 1",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2128,7 +2245,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-f-te-nationale-fr",
     {
@@ -2143,7 +2261,8 @@ export const phrases = new Map([
           definition: "July 14 🇫🇷",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2164,7 +2283,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-toussaint-fr",
     {
@@ -2179,7 +2299,8 @@ export const phrases = new Map([
           definition: "November 1",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2200,7 +2321,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-chandeleur-fr",
     {
@@ -2215,7 +2337,8 @@ export const phrases = new Map([
           definition: "February 2 - make crêpes!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2236,7 +2359,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-poisson-d-avril-fr",
     {
@@ -2251,7 +2375,8 @@ export const phrases = new Map([
           definition: "April 1 - stick paper fish on backs!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2272,7 +2397,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-f-te-de-la-musique-fr",
     {
@@ -2287,7 +2413,8 @@ export const phrases = new Map([
           definition: "June 21 - free concerts!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2308,7 +2435,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-r-veillon-fr",
     {
@@ -2323,7 +2451,8 @@ export const phrases = new Map([
           definition: "fancy celebration meal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2344,7 +2473,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-galette-des-rois-fr",
     {
@@ -2359,7 +2489,8 @@ export const phrases = new Map([
           definition: "Jan 6 - hidden prize inside!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2380,7 +2511,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-saint-valentin-fr",
     {
@@ -2395,7 +2527,8 @@ export const phrases = new Map([
           definition: "February 14",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2416,7 +2549,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "joyeux-no-l--fr",
     {
@@ -2431,7 +2565,8 @@ export const phrases = new Map([
           definition: "holiday greeting",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2452,7 +2587,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bonne-ann-e--fr",
     {
@@ -2467,7 +2603,8 @@ export const phrases = new Map([
           definition: "holiday greeting",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2488,7 +2625,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "joyeuses-p-ques--fr",
     {
@@ -2503,7 +2641,8 @@ export const phrases = new Map([
           definition: "holiday greeting",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2524,7 +2663,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bonnes-f-tes--fr",
     {
@@ -2539,7 +2679,8 @@ export const phrases = new Map([
           definition: "general greeting",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2560,7 +2701,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bon-anniversaire--fr",
     {
@@ -2575,7 +2717,8 @@ export const phrases = new Map([
           definition: "birthday greeting",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2596,7 +2739,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/holidays.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-phon-me-fr",
     {
@@ -2611,7 +2755,8 @@ export const phrases = new Map([
           definition: "masculine - 36-37 in French",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2632,7 +2777,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-syllabe-fr",
     {
@@ -2647,7 +2793,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2668,7 +2815,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-liaison-fr",
     {
@@ -2683,7 +2831,8 @@ export const phrases = new Map([
           definition: "unique French feature",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2704,7 +2853,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-mot-fr",
     {
@@ -2719,7 +2869,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2740,7 +2891,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-phrase-fr",
     {
@@ -2755,7 +2907,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2776,7 +2929,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-vocabulaire-fr",
     {
@@ -2791,7 +2945,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2812,7 +2967,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-grammaire-fr",
     {
@@ -2827,7 +2983,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2848,7 +3005,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-verbe-fr",
     {
@@ -2863,7 +3021,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2884,7 +3043,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-nom-fr",
     {
@@ -2899,7 +3059,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2920,7 +3081,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-adjectif-fr",
     {
@@ -2935,7 +3097,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2956,7 +3119,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-conjugaison-fr",
     {
@@ -2971,7 +3135,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -2992,7 +3157,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-acad-mie-fran-aise-fr",
     {
@@ -3007,7 +3173,8 @@ export const phrases = new Map([
           definition: "since 1635 - language authority",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3028,7 +3195,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "parler-vite-fr",
     {
@@ -3043,7 +3211,8 @@ export const phrases = new Map([
           definition: "7-8 syllables per second!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3064,7 +3233,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/language-stats.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vingt-et-un-fr",
     {
@@ -3079,7 +3249,8 @@ export const phrases = new Map([
           definition: "21 - uses 'et' (and)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3100,7 +3271,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vingt-deux-fr",
     {
@@ -3115,7 +3287,8 @@ export const phrases = new Map([
           definition: "22 - regular hyphen",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3136,7 +3309,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "trente-et-un-fr",
     {
@@ -3151,7 +3325,8 @@ export const phrases = new Map([
           definition: "31 - uses 'et' (and)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3172,7 +3347,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "trente-cinq-fr",
     {
@@ -3187,7 +3363,8 @@ export const phrases = new Map([
           definition: "35 - regular hyphen",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3208,7 +3385,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quarante-et-un-fr",
     {
@@ -3223,7 +3401,8 @@ export const phrases = new Map([
           definition: "41 - uses 'et' (and)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3244,7 +3423,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "cinquante-et-un-fr",
     {
@@ -3259,7 +3439,8 @@ export const phrases = new Map([
           definition: "51 - uses 'et' (and)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3280,7 +3461,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "soixante-et-un-fr",
     {
@@ -3295,7 +3477,8 @@ export const phrases = new Map([
           definition: "61 - uses 'et' (and)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3316,7 +3499,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "soixante-neuf-fr",
     {
@@ -3331,7 +3515,8 @@ export const phrases = new Map([
           definition: "69 - nice 😏",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3352,7 +3537,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "soixante-dix-fr",
     {
@@ -3367,7 +3553,8 @@ export const phrases = new Map([
           definition: "70 (literally: sixty-ten)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3388,7 +3575,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "soixante-et-onze-fr",
     {
@@ -3403,7 +3591,8 @@ export const phrases = new Map([
           definition: "71 - uses 'et' (sixty-and-eleven)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3424,7 +3613,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "soixante-quinze-fr",
     {
@@ -3439,7 +3629,8 @@ export const phrases = new Map([
           definition: "75 - sixty-fifteen",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3460,7 +3651,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "soixante-dix-neuf-fr",
     {
@@ -3475,7 +3667,8 @@ export const phrases = new Map([
           definition: "79 - sixty-nineteen",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3496,7 +3689,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quatre-vingts-fr",
     {
@@ -3511,7 +3705,8 @@ export const phrases = new Map([
           definition: "80 - four-twenties (has 's')",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3532,7 +3727,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quatre-vingt-un-fr",
     {
@@ -3547,7 +3743,8 @@ export const phrases = new Map([
           definition: "81 - NO 'et', no 's' on vingt",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3568,7 +3765,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quatre-vingt-dix-fr",
     {
@@ -3583,7 +3781,8 @@ export const phrases = new Map([
           definition: "90 - four-twenty-ten",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3604,7 +3803,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quatre-vingt-onze-fr",
     {
@@ -3619,7 +3819,8 @@ export const phrases = new Map([
           definition: "91 - NO 'et' (four-twenty-eleven)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3640,7 +3841,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quatre-vingt-dix-neuf-fr",
     {
@@ -3655,7 +3857,8 @@ export const phrases = new Map([
           definition: "99 - four-twenty-nineteen!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3676,7 +3879,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "deux-cents-fr",
     {
@@ -3691,7 +3895,8 @@ export const phrases = new Map([
           definition: "200 - plural 's'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3712,7 +3917,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "deux-cent-un-fr",
     {
@@ -3727,7 +3933,8 @@ export const phrases = new Map([
           definition: "201 - no 's' when followed by number",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3748,7 +3955,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "trois-mille-fr",
     {
@@ -3763,7 +3971,8 @@ export const phrases = new Map([
           definition: "3,000 - mille NEVER plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3784,7 +3993,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-million-fr",
     {
@@ -3799,7 +4009,8 @@ export const phrases = new Map([
           definition: "1,000,000",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3820,7 +4031,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/reference/numbers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-fr",
     {
@@ -3835,7 +4047,8 @@ export const phrases = new Map([
           definition: "use apostrophe!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3856,7 +4069,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-as-fr",
     {
@@ -3871,7 +4085,8 @@ export const phrases = new Map([
           definition: "singular",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3893,7 +4108,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-a-fr",
     {
@@ -3908,7 +4124,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3930,7 +4147,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-a-fr",
     {
@@ -3945,7 +4163,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -3967,7 +4186,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-avons-fr",
     {
@@ -3982,7 +4202,8 @@ export const phrases = new Map([
           definition: "plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4004,7 +4225,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-avez-fr",
     {
@@ -4019,7 +4241,8 @@ export const phrases = new Map([
           definition: "formal or groups",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4041,7 +4264,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-ont-fr",
     {
@@ -4056,7 +4280,8 @@ export const phrases = new Map([
           definition: "masc or mixed",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4078,7 +4303,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-ont-fr",
     {
@@ -4093,7 +4319,8 @@ export const phrases = new Map([
           definition: "all feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4115,7 +4342,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/avoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "un-livre-fr",
     {
@@ -4130,7 +4358,8 @@ export const phrases = new Map([
           definition: "masculine (livre)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4151,7 +4380,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-chat-fr",
     {
@@ -4166,7 +4396,8 @@ export const phrases = new Map([
           definition: "masculine - review from basic nouns",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4187,7 +4418,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-chatte-fr",
     {
@@ -4202,7 +4434,8 @@ export const phrases = new Map([
           definition: "feminine (chatte)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4223,7 +4456,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-chien-fr",
     {
@@ -4238,7 +4472,8 @@ export const phrases = new Map([
           definition: "masculine (chien)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4259,7 +4494,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-chienne-fr",
     {
@@ -4274,7 +4510,8 @@ export const phrases = new Map([
           definition: "feminine (chienne)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4295,7 +4532,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-maison-fr",
     {
@@ -4310,7 +4548,8 @@ export const phrases = new Map([
           definition: "feminine (maison)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4331,7 +4570,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-voiture-fr",
     {
@@ -4346,7 +4586,8 @@ export const phrases = new Map([
           definition: "feminine (voiture)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4367,7 +4608,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-ami-fr",
     {
@@ -4382,7 +4624,8 @@ export const phrases = new Map([
           definition: "masculine (ami)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4403,7 +4646,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-amie-fr",
     {
@@ -4418,7 +4662,8 @@ export const phrases = new Map([
           definition: "feminine (amie)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4439,7 +4684,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-homme-fr",
     {
@@ -4454,7 +4700,8 @@ export const phrases = new Map([
           definition: "masculine, silent h (homme)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4475,7 +4722,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-femme-fr",
     {
@@ -4490,7 +4738,8 @@ export const phrases = new Map([
           definition: "feminine (femme)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4511,7 +4760,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-enfant-fr",
     {
@@ -4526,7 +4776,8 @@ export const phrases = new Map([
           definition: "masculine or feminine (enfant)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4547,7 +4798,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-chose-fr",
     {
@@ -4562,7 +4814,8 @@ export const phrases = new Map([
           definition: "feminine (chose)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4583,7 +4836,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-jour-fr",
     {
@@ -4598,7 +4852,8 @@ export const phrases = new Map([
           definition: "masculine (jour)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4619,7 +4874,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/basic-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-suis-fr",
     {
@@ -4634,7 +4890,8 @@ export const phrases = new Map([
           definition: "être conjugated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4656,7 +4913,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-es-fr",
     {
@@ -4671,7 +4929,8 @@ export const phrases = new Map([
           definition: "singular",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4693,7 +4952,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-est-fr",
     {
@@ -4708,7 +4968,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4730,7 +4991,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-est-fr",
     {
@@ -4745,7 +5007,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4767,7 +5030,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-sommes-fr",
     {
@@ -4782,7 +5046,8 @@ export const phrases = new Map([
           definition: "plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4804,7 +5069,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous--tes-fr",
     {
@@ -4819,7 +5085,8 @@ export const phrases = new Map([
           definition: "formal or groups",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4841,7 +5108,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-sont-fr",
     {
@@ -4856,7 +5124,8 @@ export const phrases = new Map([
           definition: "masc or mixed",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4878,7 +5147,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-sont-fr",
     {
@@ -4893,7 +5163,8 @@ export const phrases = new Map([
           definition: "all feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4915,7 +5186,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit1/etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "bien-que-je-sois-fatigu--fr",
     {
@@ -4930,7 +5202,8 @@ export const phrases = new Map([
           definition: "⭐ working despite tiredness",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4951,7 +5224,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/although-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bien-qu-il-fasse-froid-fr",
     {
@@ -4966,7 +5240,8 @@ export const phrases = new Map([
           definition: "weather doesn't stop you",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -4987,7 +5262,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/although-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bien-que-tu-sois-occup--fr",
     {
@@ -5002,7 +5278,8 @@ export const phrases = new Map([
           definition: "despite being busy",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5023,7 +5300,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/although-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bien-qu-elle-soit-malade-fr",
     {
@@ -5038,7 +5316,8 @@ export const phrases = new Map([
           definition: "persevering despite illness",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5059,7 +5338,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/although-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bien-qu-on-ait-peu-de-temps-fr",
     {
@@ -5074,7 +5354,8 @@ export const phrases = new Map([
           definition: "time pressure",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5095,7 +5376,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/although-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avant-que-tu-partes-fr",
     {
@@ -5110,7 +5392,8 @@ export const phrases = new Map([
           definition: "⭐ very common!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5131,7 +5414,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/before-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avant-qu-il-arrive-fr",
     {
@@ -5146,7 +5430,8 @@ export const phrases = new Map([
           definition: "timing coordination",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5167,7 +5452,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/before-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avant-qu-elle-vienne-fr",
     {
@@ -5182,7 +5468,8 @@ export const phrases = new Map([
           definition: "expecting someone",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5203,7 +5490,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/before-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avant-qu-on-parte-fr",
     {
@@ -5218,7 +5506,8 @@ export const phrases = new Map([
           definition: "group departure",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5239,7 +5528,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/before-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avant-qu-il-soit-trop-tard-fr",
     {
@@ -5254,7 +5544,8 @@ export const phrases = new Map([
           definition: "urgency!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5275,7 +5566,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/before-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-sois-fr",
     {
@@ -5290,7 +5582,8 @@ export const phrases = new Map([
           definition: "⭐ used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5312,7 +5605,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-soit-fr",
     {
@@ -5327,7 +5621,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5348,7 +5643,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-sois-fr",
     {
@@ -5363,7 +5659,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5385,7 +5682,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-aies-fr",
     {
@@ -5400,7 +5698,8 @@ export const phrases = new Map([
           definition: "⭐ used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5422,7 +5721,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-ait-fr",
     {
@@ -5437,7 +5737,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5458,7 +5759,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-ailles-fr",
     {
@@ -5473,7 +5775,8 @@ export const phrases = new Map([
           definition: "⭐ used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5495,7 +5798,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-aille-fr",
     {
@@ -5510,7 +5814,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5531,7 +5836,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-fasses-fr",
     {
@@ -5546,7 +5852,8 @@ export const phrases = new Map([
           definition: "⭐ used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5568,7 +5875,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-fasse-fr",
     {
@@ -5583,7 +5891,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5604,7 +5913,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-viennes-fr",
     {
@@ -5619,7 +5929,8 @@ export const phrases = new Map([
           definition: "⭐ used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5641,7 +5952,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-vienne-fr",
     {
@@ -5656,7 +5968,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5677,7 +5990,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-partes-fr",
     {
@@ -5692,7 +6006,8 @@ export const phrases = new Map([
           definition: "⭐ used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5714,7 +6029,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-parte-fr",
     {
@@ -5729,7 +6045,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5750,7 +6067,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-puisses-fr",
     {
@@ -5765,7 +6083,8 @@ export const phrases = new Map([
           definition: "⭐ used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5787,7 +6106,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-puisse-fr",
     {
@@ -5802,7 +6122,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5823,7 +6144,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-saches-fr",
     {
@@ -5838,7 +6160,8 @@ export const phrases = new Map([
           definition: "⭐ used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5860,7 +6183,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-sache-fr",
     {
@@ -5875,7 +6199,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5896,7 +6221,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-comprennes-fr",
     {
@@ -5911,7 +6237,8 @@ export const phrases = new Map([
           definition: "⭐ used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5933,7 +6260,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-comprenne-fr",
     {
@@ -5948,7 +6276,8 @@ export const phrases = new Map([
           definition: "used after 'il faut que' / 'je veux que'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -5969,7 +6298,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/common-special-forms-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-suis-content-que-tu-sois-l--fr",
     {
@@ -5984,7 +6314,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6006,7 +6337,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-triste-que-tu-partes-fr",
     {
@@ -6021,7 +6353,8 @@ export const phrases = new Map([
           definition: "goodbye emotion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6043,7 +6376,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-ai-peur-qu-il-parte-fr",
     {
@@ -6058,7 +6392,8 @@ export const phrases = new Map([
           definition: "worry about someone",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6079,7 +6414,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-suis-d-sol--que-tu-sois-malade-fr",
     {
@@ -6094,7 +6430,8 @@ export const phrases = new Map([
           definition: "sympathy",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6116,7 +6453,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-surpris-que-tu-saches--a-fr",
     {
@@ -6131,7 +6469,8 @@ export const phrases = new Map([
           definition: "unexpected knowledge",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6153,7 +6492,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-regrette-que-tu-ne-puisses-pas-venir-fr",
     {
@@ -6168,7 +6508,8 @@ export const phrases = new Map([
           definition: "disappointment",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6190,7 +6531,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/emotion-phrases.js",
       verified: true,
       conjugationGroup: "ir",
-    }],
+    },
+  ],
   [
     "j-avais-d-j--mang--fr",
     {
@@ -6205,7 +6547,8 @@ export const phrases = new Map([
           definition: "⭐ very common!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6226,7 +6569,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j--tais-d-j--parti-fr",
     {
@@ -6241,7 +6585,8 @@ export const phrases = new Map([
           definition: "explaining absence",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6262,7 +6607,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "elle--tait-d-j--partie-fr",
     {
@@ -6277,7 +6623,8 @@ export const phrases = new Map([
           definition: "she left first",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6299,7 +6646,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-avais-d-j--vu-ce-film-fr",
     {
@@ -6314,7 +6662,8 @@ export const phrases = new Map([
           definition: "previous experience",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6335,7 +6684,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il-avait-d-j--commenc--fr",
     {
@@ -6350,7 +6700,8 @@ export const phrases = new Map([
           definition: "something began earlier",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6372,7 +6723,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-avions-d-j--fini-fr",
     {
@@ -6387,7 +6739,8 @@ export const phrases = new Map([
           definition: "completed before",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6409,7 +6762,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/had-already-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "si-j--tais-riche-fr",
     {
@@ -6424,7 +6778,8 @@ export const phrases = new Map([
           definition: "⭐ daydreaming!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6445,7 +6800,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "si-j-avais-de-l-argent-fr",
     {
@@ -6460,7 +6816,8 @@ export const phrases = new Map([
           definition: "fantasy scenario",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6481,7 +6838,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "si-j--tais-toi-fr",
     {
@@ -6496,7 +6854,8 @@ export const phrases = new Map([
           definition: "giving advice",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6517,7 +6876,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "si-tu--tais-ici-fr",
     {
@@ -6532,7 +6892,8 @@ export const phrases = new Map([
           definition: "wishing someone was present",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6553,7 +6914,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "si-on-avait-le-temps-fr",
     {
@@ -6568,7 +6930,8 @@ export const phrases = new Map([
           definition: "hypothetical plan",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6589,7 +6952,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-voyagerais-le-monde-fr",
     {
@@ -6604,7 +6968,8 @@ export const phrases = new Map([
           definition: "result of fantasy",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6626,7 +6991,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/hypothetical-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-faut-que-tu-manges-fr",
     {
@@ -6641,7 +7007,8 @@ export const phrases = new Map([
           definition: "⭐ parent to kid",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6663,7 +7030,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-faut-que-tu-partes-fr",
     {
@@ -6678,7 +7046,8 @@ export const phrases = new Map([
           definition: "telling someone to go",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6700,7 +7069,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-faut-que-j-aille-fr",
     {
@@ -6715,7 +7085,8 @@ export const phrases = new Map([
           definition: "saying you must leave",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6737,7 +7108,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-faut-qu-on-parte-fr",
     {
@@ -6752,7 +7124,8 @@ export const phrases = new Map([
           definition: "group decision",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6774,7 +7147,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-faut-que-tu-sois-sage-fr",
     {
@@ -6789,7 +7163,8 @@ export const phrases = new Map([
           definition: "parent to child",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6811,7 +7186,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-faut-que-tu-fasses-attention-fr",
     {
@@ -6826,7 +7202,8 @@ export const phrases = new Map([
           definition: "be careful!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6848,7 +7225,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-faut-qu-elle-vienne-fr",
     {
@@ -6863,7 +7241,8 @@ export const phrases = new Map([
           definition: "expecting someone",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6885,7 +7264,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/necessity-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-pense-qu-il-vient-fr",
     {
@@ -6900,7 +7280,8 @@ export const phrases = new Map([
           definition: "⭐ expressing belief",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6922,7 +7303,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-pense-pas-qu-il-vienne-fr",
     {
@@ -6937,7 +7319,8 @@ export const phrases = new Map([
           definition: "diplomatic doubt",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6959,7 +7342,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-doute-qu-elle-sache-fr",
     {
@@ -6974,7 +7358,8 @@ export const phrases = new Map([
           definition: "expressing uncertainty",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -6996,7 +7381,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-crois-pas-qu-il-ait-raison-fr",
     {
@@ -7011,7 +7397,8 @@ export const phrases = new Map([
           definition: "polite disagreement",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7033,7 +7420,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-pense-pas-que-ce-soit-vrai-fr",
     {
@@ -7048,7 +7436,8 @@ export const phrases = new Map([
           definition: "diplomatic correction",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7070,7 +7459,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-doute-que-ce-soit-possible-fr",
     {
@@ -7085,7 +7475,8 @@ export const phrases = new Map([
           definition: "expressing skepticism",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7107,7 +7498,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/opinion-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "si-j-avais-su-fr",
     {
@@ -7122,7 +7514,8 @@ export const phrases = new Map([
           definition: "⭐ most common regret!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7143,7 +7536,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "si-j-avais--tudi--fr",
     {
@@ -7158,7 +7552,8 @@ export const phrases = new Map([
           definition: "student regret",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7179,7 +7574,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "si-j-avais-fait--a-fr",
     {
@@ -7194,7 +7590,8 @@ export const phrases = new Map([
           definition: "general regret",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7215,7 +7612,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-serais-venu-fr",
     {
@@ -7230,7 +7628,8 @@ export const phrases = new Map([
           definition: "result of regret",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7252,7 +7651,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-aurais-r-ussi-fr",
     {
@@ -7267,7 +7667,8 @@ export const phrases = new Map([
           definition: "missed opportunity",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7288,7 +7689,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "si-j-avais-pu-fr",
     {
@@ -7303,7 +7705,8 @@ export const phrases = new Map([
           definition: "inability regret",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7324,7 +7727,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/past-regret-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il-est-possible-qu-il-vienne-fr",
     {
@@ -7339,7 +7743,8 @@ export const phrases = new Map([
           definition: "⭐ uncertain plan",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7361,7 +7766,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/possibility-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "peut--tre-qu-il-viendra-fr",
     {
@@ -7376,7 +7782,8 @@ export const phrases = new Map([
           definition: "simple maybe",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7397,7 +7804,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/possibility-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il-se-peut-que-fr",
     {
@@ -7412,7 +7820,8 @@ export const phrases = new Map([
           definition: "formal possibility",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7434,7 +7843,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/possibility-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-est-possible-qu-on-parte-fr",
     {
@@ -7449,7 +7859,8 @@ export const phrases = new Map([
           definition: "group planning",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7471,7 +7882,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/possibility-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "peut--tre-demain-fr",
     {
@@ -7486,7 +7898,8 @@ export const phrases = new Map([
           definition: "quick hedge",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7507,7 +7920,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/possibility-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "peut--tre-pas-fr",
     {
@@ -7522,7 +7936,8 @@ export const phrases = new Map([
           definition: "uncertainty",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7543,7 +7958,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/possibility-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "notre-dame-fr",
     {
@@ -7558,7 +7974,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7579,7 +7996,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-louvre-fr",
     {
@@ -7594,7 +8012,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7615,7 +8034,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-seine-fr",
     {
@@ -7630,7 +8050,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7651,7 +8072,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-tour-eiffel-fr",
     {
@@ -7666,7 +8088,8 @@ export const phrases = new Map([
           definition: "proper noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7687,7 +8110,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-veux-que-fr",
     {
@@ -7702,7 +8126,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7724,7 +8149,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-aimerais-que-fr",
     {
@@ -7739,7 +8165,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7760,7 +8187,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-suis-content-e--que-fr",
     {
@@ -7775,7 +8203,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7797,7 +8226,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-heureux-heureuse-que-fr",
     {
@@ -7812,7 +8242,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7834,7 +8265,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-ai-peur-que-fr",
     {
@@ -7849,7 +8281,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7870,7 +8303,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-regrette-que-fr",
     {
@@ -7885,7 +8319,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7907,7 +8342,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-faut-que-fr",
     {
@@ -7922,7 +8358,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7944,7 +8381,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "si-j--tais-fr",
     {
@@ -7959,7 +8397,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -7980,7 +8419,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "si-j-avais-fr",
     {
@@ -7995,7 +8435,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8016,7 +8457,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-avais-d-j--fr",
     {
@@ -8031,7 +8473,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8052,7 +8495,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avant-que-fr",
     {
@@ -8067,7 +8511,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8088,7 +8533,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pour-que-fr",
     {
@@ -8103,7 +8549,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8124,7 +8571,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ont-v-cu-fr",
     {
@@ -8139,7 +8587,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8160,7 +8609,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-train-de-fr",
     {
@@ -8175,7 +8625,8 @@ export const phrases = new Map([
           definition: "progressive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8196,7 +8647,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-ne-sauras-jamais-fr",
     {
@@ -8211,7 +8663,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8233,7 +8686,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "l-un-l-autre-fr",
     {
@@ -8248,7 +8702,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8269,7 +8724,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tous-les-deux-fr",
     {
@@ -8284,7 +8740,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8305,7 +8762,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "au-loin-fr",
     {
@@ -8320,7 +8778,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8341,7 +8800,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "toute-la-nuit-fr",
     {
@@ -8356,7 +8816,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8377,7 +8838,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "toute-ma-vie-fr",
     {
@@ -8392,7 +8854,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8413,7 +8876,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "m-aies-dit-fr",
     {
@@ -8428,7 +8892,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8449,7 +8914,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-aie-perdu-fr",
     {
@@ -8464,7 +8930,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8485,7 +8952,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "plus-t-t-fr",
     {
@@ -8500,7 +8968,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8521,7 +8990,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-aurais-continu--fr",
     {
@@ -8536,7 +9006,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8557,7 +9028,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "trop-tard-fr",
     {
@@ -8572,7 +9044,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8593,7 +9066,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "gr-ce---fr",
     {
@@ -8608,7 +9082,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8629,7 +9104,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "me-soutiennent-fr",
     {
@@ -8644,7 +9120,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8665,7 +9142,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/reading-10.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-me-fais-couper-les-cheveux-fr",
     {
@@ -8680,7 +9158,8 @@ export const phrases = new Map([
           definition: "⭐ salon appointment!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8702,7 +9181,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-fais-r-parer-ma-voiture-fr",
     {
@@ -8717,7 +9197,8 @@ export const phrases = new Map([
           definition: "mechanic service",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8739,7 +9220,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
       verified: true,
       conjugationGroup: "re",
-    }],
+    },
+  ],
   [
     "je-me-fais-maquiller-fr",
     {
@@ -8754,7 +9236,8 @@ export const phrases = new Map([
           definition: "makeup artist",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8776,7 +9259,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "je-fais-nettoyer-la-maison-fr",
     {
@@ -8791,7 +9275,8 @@ export const phrases = new Map([
           definition: "cleaning service",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8813,7 +9298,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-me-fais-examiner-fr",
     {
@@ -8828,7 +9314,8 @@ export const phrases = new Map([
           definition: "doctor appointment",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8850,7 +9337,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "je-fais-construire-une-maison-fr",
     {
@@ -8865,7 +9353,8 @@ export const phrases = new Map([
           definition: "construction project",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8887,7 +9376,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/service-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "pour-que-tu-comprennes-fr",
     {
@@ -8902,7 +9392,8 @@ export const phrases = new Map([
           definition: "⭐ explaining purpose!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8923,7 +9414,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pour-qu-elle-sache-fr",
     {
@@ -8938,7 +9430,8 @@ export const phrases = new Map([
           definition: "sharing information",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8959,7 +9452,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pour-qu-on-puisse-fr",
     {
@@ -8974,7 +9468,8 @@ export const phrases = new Map([
           definition: "group goal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -8995,7 +9490,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pour-que-tu-sois-content-fr",
     {
@@ -9010,7 +9506,8 @@ export const phrases = new Map([
           definition: "pleasing someone",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9031,7 +9528,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pour-qu-il-vienne-fr",
     {
@@ -9046,7 +9544,8 @@ export const phrases = new Map([
           definition: "invitation purpose",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9067,7 +9566,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/so-that-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-mangeant-fr",
     {
@@ -9082,7 +9582,8 @@ export const phrases = new Map([
           definition: "⭐ very common!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9103,7 +9604,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-parlant-fr",
     {
@@ -9118,7 +9620,8 @@ export const phrases = new Map([
           definition: "during conversation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9139,7 +9642,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-travaillant-fr",
     {
@@ -9154,7 +9658,8 @@ export const phrases = new Map([
           definition: "can mean method or simultaneous",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9175,7 +9680,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en--coutant-fr",
     {
@@ -9190,7 +9696,8 @@ export const phrases = new Map([
           definition: "multitasking",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9211,7 +9718,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-marchant-fr",
     {
@@ -9226,7 +9734,8 @@ export const phrases = new Map([
           definition: "walking and talking",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9247,7 +9756,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-pratiquant-fr",
     {
@@ -9262,7 +9772,8 @@ export const phrases = new Map([
           definition: "method of learning",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9283,7 +9794,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/while-doing-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-veux-que-tu-viennes-fr",
     {
@@ -9298,7 +9810,8 @@ export const phrases = new Map([
           definition: "⭐ inviting someone",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9320,7 +9833,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-veux-qu-il-parte-fr",
     {
@@ -9335,7 +9849,8 @@ export const phrases = new Map([
           definition: "wanting someone to go",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9357,7 +9872,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-veux-que-tu-comprennes-fr",
     {
@@ -9372,7 +9888,8 @@ export const phrases = new Map([
           definition: "explaining something important",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9394,7 +9911,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-aimerais-que-tu-sois-l--fr",
     {
@@ -9409,7 +9927,8 @@ export const phrases = new Map([
           definition: "polite wish",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9430,7 +9949,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-veux-qu-on-aille-ensemble-fr",
     {
@@ -9445,7 +9965,8 @@ export const phrases = new Map([
           definition: "group plan",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9467,7 +9988,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-veux-qu-elle-sache-fr",
     {
@@ -9482,7 +10004,8 @@ export const phrases = new Map([
           definition: "sharing information",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9504,7 +10027,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit10/wish-phrases.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-ai-----ans-fr",
     {
@@ -9519,7 +10043,8 @@ export const phrases = new Map([
           definition: "⭐ Essential: literally 'I have X years'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9540,7 +10065,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quel--ge-avez-vous--fr",
     {
@@ -9555,7 +10081,8 @@ export const phrases = new Map([
           definition: "polite way to ask age",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9576,7 +10103,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quel--ge-as-tu--fr",
     {
@@ -9591,7 +10119,8 @@ export const phrases = new Map([
           definition: "with friends/family",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9612,7 +10141,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-vingt-ans-fr",
     {
@@ -9627,7 +10157,8 @@ export const phrases = new Map([
           definition: "example with number",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9648,7 +10179,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-as-quel--ge--fr",
     {
@@ -9663,7 +10195,8 @@ export const phrases = new Map([
           definition: "casual question order",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9685,7 +10218,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-a-quinze-ans-fr",
     {
@@ -9700,7 +10234,8 @@ export const phrases = new Map([
           definition: "describing someone else",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9722,7 +10257,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-a-trente-ans-fr",
     {
@@ -9737,7 +10273,8 @@ export const phrases = new Map([
           definition: "describing a woman",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9759,7 +10296,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-n--fr",
     {
@@ -9774,7 +10312,8 @@ export const phrases = new Map([
           definition: "for males",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9796,7 +10335,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-n-e-fr",
     {
@@ -9811,7 +10351,8 @@ export const phrases = new Map([
           definition: "for females - add 'e'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9833,7 +10374,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "en-mille-neuf-cent-quatre-vingt-quinze-fr",
     {
@@ -9848,7 +10390,8 @@ export const phrases = new Map([
           definition: "birth year example",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9869,7 +10412,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quelle-est-votre-date-de-naissance--fr",
     {
@@ -9884,7 +10428,8 @@ export const phrases = new Map([
           definition: "official/formal question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9905,7 +10450,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ma-date-de-naissance-fr",
     {
@@ -9920,7 +10466,8 @@ export const phrases = new Map([
           definition: "for forms/documents",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9941,7 +10488,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l--ge-fr",
     {
@@ -9956,7 +10504,8 @@ export const phrases = new Map([
           definition: "masculine noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -9977,7 +10526,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-ans-fr",
     {
@@ -9992,7 +10542,8 @@ export const phrases = new Map([
           definition: "always plural with numbers",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10013,7 +10564,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-naissance-fr",
     {
@@ -10028,7 +10580,8 @@ export const phrases = new Map([
           definition: "feminine noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10049,7 +10602,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/age-personal-info.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-nord-fr",
     {
@@ -10064,7 +10618,8 @@ export const phrases = new Map([
           definition: "masculine - vers le nord (towards the north)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10085,7 +10640,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-sud-fr",
     {
@@ -10100,7 +10656,8 @@ export const phrases = new Map([
           definition: "masculine - au sud de Paris (south of Paris)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10121,7 +10678,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-est-fr",
     {
@@ -10136,7 +10694,8 @@ export const phrases = new Map([
           definition: "masculine - à l'est (in/to the east)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10157,7 +10716,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-ouest-fr",
     {
@@ -10172,7 +10732,8 @@ export const phrases = new Map([
           definition: "masculine - vers l'ouest (towards the west)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10193,7 +10754,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--gauche-fr",
     {
@@ -10208,7 +10770,8 @@ export const phrases = new Map([
           definition: "⭐ essential for directions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10229,7 +10792,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--droite-fr",
     {
@@ -10244,7 +10808,8 @@ export const phrases = new Map([
           definition: "⭐ essential for directions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10265,7 +10830,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tout-droit-fr",
     {
@@ -10280,7 +10846,8 @@ export const phrases = new Map([
           definition: "⭐ keep going forward",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10301,7 +10868,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tournez---gauche-fr",
     {
@@ -10316,7 +10884,8 @@ export const phrases = new Map([
           definition: "complete direction instruction",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10337,7 +10906,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tournez---droite-fr",
     {
@@ -10352,7 +10922,8 @@ export const phrases = new Map([
           definition: "complete direction instruction",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10373,7 +10944,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pr-s-de-fr",
     {
@@ -10388,7 +10960,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10409,7 +10982,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "loin-de-fr",
     {
@@ -10424,7 +10998,8 @@ export const phrases = new Map([
           definition: "opposite of près de - distance",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10445,7 +11020,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/more-spatial-relations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--c-t--de-fr",
     {
@@ -10460,7 +11036,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10481,7 +11058,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-face-de-fr",
     {
@@ -10496,7 +11074,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10517,7 +11096,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "au-coin-de-fr",
     {
@@ -10532,7 +11112,8 @@ export const phrases = new Map([
           definition: "street intersection",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10553,7 +11134,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--cinq-minutes-fr",
     {
@@ -10568,7 +11150,8 @@ export const phrases = new Map([
           definition: "time-based distance",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10589,7 +11172,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--pied-fr",
     {
@@ -10604,7 +11188,8 @@ export const phrases = new Map([
           definition: "mode of transport",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10625,7 +11210,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-voiture-fr",
     {
@@ -10640,7 +11226,8 @@ export const phrases = new Map([
           definition: "mode of transport",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10661,7 +11248,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "o--est-----fr",
     {
@@ -10676,7 +11264,8 @@ export const phrases = new Map([
           definition: "⭐ basic location question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10697,7 +11286,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-aller-------fr",
     {
@@ -10712,7 +11302,8 @@ export const phrases = new Map([
           definition: "asking for directions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10733,7 +11324,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "excusez-moi--o--est-----fr",
     {
@@ -10748,7 +11340,8 @@ export const phrases = new Map([
           definition: "polite way to ask directions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10769,7 +11362,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-loin--fr",
     {
@@ -10784,7 +11378,8 @@ export const phrases = new Map([
           definition: "distance inquiry",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10805,7 +11400,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-pr-s--fr",
     {
@@ -10820,7 +11416,8 @@ export const phrases = new Map([
           definition: "proximity inquiry",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10841,7 +11438,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-par-l--fr",
     {
@@ -10856,7 +11454,8 @@ export const phrases = new Map([
           definition: "pointing in a direction",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10877,7 +11476,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-par-ici-fr",
     {
@@ -10892,7 +11492,8 @@ export const phrases = new Map([
           definition: "indicating nearby direction",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10913,7 +11514,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/directions-navigation.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vous-voyez-fr",
     {
@@ -10928,7 +11530,8 @@ export const phrases = new Map([
           definition: "also voy-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10950,7 +11553,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/voir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-donne-fr",
     {
@@ -10965,7 +11569,8 @@ export const phrases = new Map([
           definition: "regular -ER conjugation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -10987,7 +11592,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-donnes-fr",
     {
@@ -11002,7 +11608,8 @@ export const phrases = new Map([
           definition: "add -s for tu form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11024,7 +11631,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-donne-fr",
     {
@@ -11039,7 +11647,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11061,7 +11670,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-donne-fr",
     {
@@ -11076,7 +11686,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11098,7 +11709,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-donnons-fr",
     {
@@ -11113,7 +11725,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11135,7 +11748,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-donnez-fr",
     {
@@ -11150,7 +11764,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11172,7 +11787,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-donnent-fr",
     {
@@ -11187,7 +11803,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11209,7 +11826,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-donnent-fr",
     {
@@ -11224,7 +11842,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11246,7 +11865,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-te-donne-fr",
     {
@@ -11261,7 +11881,8 @@ export const phrases = new Map([
           definition: "⭐ very common - giving TO someone",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11283,7 +11904,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-me-donnes-fr",
     {
@@ -11298,7 +11920,8 @@ export const phrases = new Map([
           definition: "receiving from someone",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11320,7 +11943,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-me-donne-fr",
     {
@@ -11335,7 +11959,8 @@ export const phrases = new Map([
           definition: "third person giving to me",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11357,7 +11982,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "donner-quelque-chose---quelqu-un-fr",
     {
@@ -11372,7 +11998,8 @@ export const phrases = new Map([
           definition: "full construction pattern",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11393,7 +12020,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "donner-rendez-vous-fr",
     {
@@ -11408,7 +12036,8 @@ export const phrases = new Map([
           definition: "fixed expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11429,7 +12058,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "donner-l-heure-fr",
     {
@@ -11444,7 +12074,8 @@ export const phrases = new Map([
           definition: "common expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11465,7 +12096,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "donner-raison-fr",
     {
@@ -11480,7 +12112,8 @@ export const phrases = new Map([
           definition: "give reason = agree",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11501,7 +12134,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "donner-de-l-aide-fr",
     {
@@ -11516,7 +12150,8 @@ export const phrases = new Map([
           definition: "practical helping",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11537,7 +12172,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "donner-de-l-argent-fr",
     {
@@ -11552,7 +12188,8 @@ export const phrases = new Map([
           definition: "transactions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11573,7 +12210,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/donner.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j--coute-fr",
     {
@@ -11588,7 +12226,8 @@ export const phrases = new Map([
           definition: "active listening",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11609,7 +12248,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu--coutes-fr",
     {
@@ -11624,7 +12264,8 @@ export const phrases = new Map([
           definition: "add -s for tu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11646,7 +12287,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il--coute-fr",
     {
@@ -11661,7 +12303,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11683,7 +12326,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle--coute-fr",
     {
@@ -11698,7 +12342,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11720,7 +12365,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous--coutons-fr",
     {
@@ -11735,7 +12381,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11757,7 +12404,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous--coutez-fr",
     {
@@ -11772,7 +12420,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11794,7 +12443,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils--coutent-fr",
     {
@@ -11809,7 +12459,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11831,7 +12482,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles--coutent-fr",
     {
@@ -11846,7 +12498,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11868,7 +12521,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-regarde-fr",
     {
@@ -11883,7 +12537,8 @@ export const phrases = new Map([
           definition: "visual attention",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11905,7 +12560,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-regardes-fr",
     {
@@ -11920,7 +12576,8 @@ export const phrases = new Map([
           definition: "add -s for tu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11942,7 +12599,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-regarde-fr",
     {
@@ -11957,7 +12615,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -11979,7 +12638,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-regarde-fr",
     {
@@ -11994,7 +12654,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12016,7 +12677,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-regardons-fr",
     {
@@ -12031,7 +12693,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12053,7 +12716,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-regardez-fr",
     {
@@ -12068,7 +12732,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12090,7 +12755,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-regardent-fr",
     {
@@ -12105,7 +12771,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12127,7 +12794,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-regardent-fr",
     {
@@ -12142,7 +12810,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12164,7 +12833,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "-couter-de-la-musique-fr",
     {
@@ -12179,7 +12849,8 @@ export const phrases = new Map([
           definition: "⭐ very common activity",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12200,7 +12871,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "regarder-la-t-l--fr",
     {
@@ -12215,7 +12887,8 @@ export const phrases = new Map([
           definition: "⭐ very common activity",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12236,7 +12909,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "regarder-un-film-fr",
     {
@@ -12251,7 +12925,8 @@ export const phrases = new Map([
           definition: "entertainment activity",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12272,7 +12947,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "-couter-le-professeur-fr",
     {
@@ -12287,7 +12963,8 @@ export const phrases = new Map([
           definition: "school/learning context",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12308,7 +12985,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "regarder-par-la-fen-tre-fr",
     {
@@ -12323,7 +13001,8 @@ export const phrases = new Map([
           definition: "common observation action",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12344,7 +13023,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-tu--coutes--fr",
     {
@@ -12359,7 +13039,8 @@ export const phrases = new Map([
           definition: "asking about music/audio",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12380,7 +13061,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-tu-regardes--fr",
     {
@@ -12395,7 +13077,8 @@ export const phrases = new Map([
           definition: "asking about visual content",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12416,7 +13099,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-trouve-que-fr",
     {
@@ -12431,7 +13115,8 @@ export const phrases = new Map([
           definition: "opinion expression - very common",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12453,7 +13138,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "comment-tu-trouves--a--fr",
     {
@@ -12468,7 +13154,8 @@ export const phrases = new Map([
           definition: "asking for opinion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12489,7 +13176,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bien--couter-fr",
     {
@@ -12504,7 +13192,8 @@ export const phrases = new Map([
           definition: "quality listening",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12525,7 +13214,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/perception-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "se-d-placer-fr",
     {
@@ -12540,7 +13230,8 @@ export const phrases = new Map([
           definition: "reflexive movement",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12561,7 +13252,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-ligne-fr",
     {
@@ -12576,7 +13268,8 @@ export const phrases = new Map([
           definition: "internet context",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12597,7 +13290,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vingt-et-uni-me-fr",
     {
@@ -12612,7 +13306,8 @@ export const phrases = new Map([
           definition: "21st century",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12633,7 +13328,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tour-eiffel-fr",
     {
@@ -12648,7 +13344,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12669,7 +13366,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "arc-de-triomphe-fr",
     {
@@ -12684,7 +13382,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12705,7 +13404,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "champs--lys-es-fr",
     {
@@ -12720,7 +13420,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12741,7 +13442,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "moulin-rouge-fr",
     {
@@ -12756,7 +13458,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12777,7 +13480,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "claude-monet-fr",
     {
@@ -12792,7 +13496,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12813,7 +13518,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "auguste-renoir-fr",
     {
@@ -12828,7 +13534,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12849,7 +13556,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vincent-van-gogh-fr",
     {
@@ -12864,7 +13572,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12885,7 +13594,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "coq-au-vin-fr",
     {
@@ -12900,7 +13610,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12921,7 +13632,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/reading-11.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-cherche-fr",
     {
@@ -12936,7 +13648,8 @@ export const phrases = new Map([
           definition: "present continuous meaning",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12958,7 +13671,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-cherches-fr",
     {
@@ -12973,7 +13687,8 @@ export const phrases = new Map([
           definition: "add -s for tu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -12995,7 +13710,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-cherche-fr",
     {
@@ -13010,7 +13726,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13032,7 +13749,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-cherche-fr",
     {
@@ -13047,7 +13765,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13069,7 +13788,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-cherchons-fr",
     {
@@ -13084,7 +13804,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13106,7 +13827,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-cherchez-fr",
     {
@@ -13121,7 +13843,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13143,7 +13866,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-cherchent-fr",
     {
@@ -13158,7 +13882,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13180,7 +13905,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-cherchent-fr",
     {
@@ -13195,7 +13921,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13217,7 +13944,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-trouve-fr",
     {
@@ -13232,7 +13960,8 @@ export const phrases = new Map([
           definition: "also means 'I think' (opinion)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13254,7 +13983,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-trouves-fr",
     {
@@ -13269,7 +13999,8 @@ export const phrases = new Map([
           definition: "add -s for tu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13291,7 +14022,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-trouve-fr",
     {
@@ -13306,7 +14038,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13328,7 +14061,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-trouve-fr",
     {
@@ -13343,7 +14077,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13365,7 +14100,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-trouvons-fr",
     {
@@ -13380,7 +14116,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13402,7 +14139,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-trouvez-fr",
     {
@@ -13417,7 +14155,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13439,7 +14178,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-trouvent-fr",
     {
@@ -13454,7 +14194,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13476,7 +14217,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-trouvent-fr",
     {
@@ -13491,7 +14233,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13513,7 +14256,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-cherche-mes-cl-s-fr",
     {
@@ -13528,7 +14272,8 @@ export const phrases = new Map([
           definition: "⭐ very common daily phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13550,7 +14295,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-tu-cherches--fr",
     {
@@ -13565,7 +14311,8 @@ export const phrases = new Map([
           definition: "common question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13586,7 +14333,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-cherches-quoi--fr",
     {
@@ -13601,7 +14349,8 @@ export const phrases = new Map([
           definition: "informal version",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13623,7 +14372,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-ai-trouv---fr",
     {
@@ -13638,7 +14388,8 @@ export const phrases = new Map([
           definition: "⭐ exclamation when you find something",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13659,7 +14410,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-trouves--a-comment--fr",
     {
@@ -13674,7 +14426,8 @@ export const phrases = new Map([
           definition: "asking for opinion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13696,7 +14449,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "chercher-du-travail-fr",
     {
@@ -13711,7 +14465,8 @@ export const phrases = new Map([
           definition: "job searching",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13732,7 +14487,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "trouver-du-travail-fr",
     {
@@ -13747,7 +14503,8 @@ export const phrases = new Map([
           definition: "successful job search",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13768,7 +14525,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "chercher-quelqu-un-fr",
     {
@@ -13783,7 +14541,8 @@ export const phrases = new Map([
           definition: "searching for a person",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13804,7 +14563,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "trouver-quelqu-un-fr",
     {
@@ -13819,7 +14579,8 @@ export const phrases = new Map([
           definition: "locating a person",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13840,7 +14601,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/search-and-find.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-attends-fr",
     {
@@ -13855,7 +14617,8 @@ export const phrases = new Map([
           definition: "drop -re, add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13876,7 +14639,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-attends-fr",
     {
@@ -13891,7 +14655,8 @@ export const phrases = new Map([
           definition: "same as je",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13913,7 +14678,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-attend-fr",
     {
@@ -13928,7 +14694,8 @@ export const phrases = new Map([
           definition: "drop -s from tu form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13950,7 +14717,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-attend-fr",
     {
@@ -13965,7 +14733,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -13987,7 +14756,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-attendons-fr",
     {
@@ -14002,7 +14772,8 @@ export const phrases = new Map([
           definition: "add -ons to attend-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14024,7 +14795,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-attendez-fr",
     {
@@ -14039,7 +14811,8 @@ export const phrases = new Map([
           definition: "add -ez to attend-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14061,7 +14834,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-attendent-fr",
     {
@@ -14076,7 +14850,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14098,7 +14873,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-attendent-fr",
     {
@@ -14113,7 +14889,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14135,7 +14912,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-arrive-fr",
     {
@@ -14150,7 +14928,8 @@ export const phrases = new Map([
           definition: "motion towards destination",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14171,7 +14950,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-arrives-fr",
     {
@@ -14186,7 +14966,8 @@ export const phrases = new Map([
           definition: "add -s for tu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14208,7 +14989,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-arrive-fr",
     {
@@ -14223,7 +15005,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14245,7 +15028,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-arrive-fr",
     {
@@ -14260,7 +15044,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14282,7 +15067,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-arrivons-fr",
     {
@@ -14297,7 +15083,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14319,7 +15106,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-arrivez-fr",
     {
@@ -14334,7 +15122,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14356,7 +15145,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-arrivent-fr",
     {
@@ -14371,7 +15161,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14393,7 +15184,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-arrivent-fr",
     {
@@ -14408,7 +15200,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14430,7 +15223,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-reste-fr",
     {
@@ -14445,7 +15239,8 @@ export const phrases = new Map([
           definition: "remaining in place",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14467,7 +15262,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-restes-fr",
     {
@@ -14482,7 +15278,8 @@ export const phrases = new Map([
           definition: "add -s for tu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14504,7 +15301,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-reste-fr",
     {
@@ -14519,7 +15317,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14541,7 +15340,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-reste-fr",
     {
@@ -14556,7 +15356,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14578,7 +15379,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-restons-fr",
     {
@@ -14593,7 +15395,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14615,7 +15418,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-restez-fr",
     {
@@ -14630,7 +15434,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14652,7 +15457,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-restent-fr",
     {
@@ -14667,7 +15473,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14689,7 +15496,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-restent-fr",
     {
@@ -14704,7 +15512,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14726,7 +15535,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-attends-le-bus-fr",
     {
@@ -14741,7 +15551,8 @@ export const phrases = new Map([
           definition: "⭐ common transport situation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14762,7 +15573,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-attends-quelqu-un--fr",
     {
@@ -14777,7 +15589,8 @@ export const phrases = new Map([
           definition: "social question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14799,7 +15612,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-arrive---fr",
     {
@@ -14814,7 +15628,8 @@ export const phrases = new Map([
           definition: "with location + time",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14835,7 +15650,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-arrive---8h-fr",
     {
@@ -14850,7 +15666,8 @@ export const phrases = new Map([
           definition: "specific time arrival",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14871,7 +15688,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-train-arrive-fr",
     {
@@ -14886,7 +15704,8 @@ export const phrases = new Map([
           definition: "transport arrival",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14907,7 +15726,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-reste-ici-fr",
     {
@@ -14922,7 +15742,8 @@ export const phrases = new Map([
           definition: "location decision",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14944,7 +15765,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-restes-combien-de-temps--fr",
     {
@@ -14959,7 +15781,8 @@ export const phrases = new Map([
           definition: "duration question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -14981,7 +15804,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-reste-ensemble-fr",
     {
@@ -14996,7 +15820,8 @@ export const phrases = new Map([
           definition: "social coordination",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15018,7 +15843,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-reste-du-pain-fr",
     {
@@ -15033,7 +15859,8 @@ export const phrases = new Map([
           definition: "quantity remaining",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15055,7 +15882,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit11/social-situations.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "comment-est-ce-que-fr",
     {
@@ -15070,7 +15898,8 @@ export const phrases = new Map([
           definition: "⭐ already learned - now compose with any subject!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15091,7 +15920,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/comment-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-qu-une-tortue-nage--fr",
     {
@@ -15106,7 +15936,8 @@ export const phrases = new Map([
           definition: "animal + movement question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15127,7 +15958,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/comment-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-qu-un-oiseau-vole--fr",
     {
@@ -15142,7 +15974,8 @@ export const phrases = new Map([
           definition: "animal + movement question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15163,7 +15996,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/comment-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-qu-un--cureuil-saute--fr",
     {
@@ -15178,7 +16012,8 @@ export const phrases = new Map([
           definition: "animal + movement question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15199,7 +16034,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/comment-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-qu-un-lapin-saute--fr",
     {
@@ -15214,7 +16050,8 @@ export const phrases = new Map([
           definition: "animal + movement question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15235,7 +16072,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/comment-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-que-les-plantes-poussent--fr",
     {
@@ -15250,7 +16088,8 @@ export const phrases = new Map([
           definition: "natural process question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15271,7 +16110,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/comment-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-qu-on-fait--a--fr",
     {
@@ -15286,7 +16126,8 @@ export const phrases = new Map([
           definition: "practical question - very common!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15307,7 +16148,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/comment-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-que-tu-fais--a--fr",
     {
@@ -15322,7 +16164,8 @@ export const phrases = new Map([
           definition: "asking for method",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15343,7 +16186,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/comment-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-qu-il-court-si-vite--fr",
     {
@@ -15358,7 +16202,8 @@ export const phrases = new Map([
           definition: "with adverb 'si vite'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15380,7 +16225,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/comment-complex.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "comment-nage-une-tortue--fr",
     {
@@ -15395,7 +16241,8 @@ export const phrases = new Map([
           definition: "simple inversion with noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15416,7 +16263,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/inversion-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-me-demande-fr",
     {
@@ -15431,7 +16279,8 @@ export const phrases = new Map([
           definition: "⭐ followed by question word + statement order",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15453,7 +16302,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-sais-pas-fr",
     {
@@ -15468,7 +16318,8 @@ export const phrases = new Map([
           definition: "⭐⭐⭐ MOST IMPORTANT! Rank 21!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15490,7 +16341,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/savoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "peux-tu-me-dire-fr",
     {
@@ -15505,7 +16357,8 @@ export const phrases = new Map([
           definition: "⭐ polite way to ask - followed by question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15526,7 +16379,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-me-demande-pourquoi-c-est-comme--a-fr",
     {
@@ -15541,7 +16395,8 @@ export const phrases = new Map([
           definition: "embedded question - no est-ce que!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15563,7 +16418,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-sais-pas-comment-on-fait--a-fr",
     {
@@ -15578,7 +16434,8 @@ export const phrases = new Map([
           definition: "embedded question - statement order",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15600,7 +16457,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "peux-tu-me-dire-o--est-la-gare--fr",
     {
@@ -15615,7 +16473,8 @@ export const phrases = new Map([
           definition: "polite question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15636,7 +16495,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-sais-pourquoi-il-fait--a--fr",
     {
@@ -15651,7 +16511,8 @@ export const phrases = new Map([
           definition: "natural conversation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15673,7 +16534,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-ne-comprend-pas-comment--a-marche-fr",
     {
@@ -15688,7 +16550,8 @@ export const phrases = new Map([
           definition: "embedded understanding question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15710,7 +16573,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-me-demande-comment--a-marche-fr",
     {
@@ -15725,7 +16589,8 @@ export const phrases = new Map([
           definition: "curiosity expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15747,7 +16612,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/embedded-questions.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "comment-fais-tu--a--fr",
     {
@@ -15762,7 +16628,8 @@ export const phrases = new Map([
           definition: "inversion: verb-subject with hyphen",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15784,7 +16651,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/inversion-questions.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "o--vas-tu--fr",
     {
@@ -15799,7 +16667,8 @@ export const phrases = new Map([
           definition: "inversion with aller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15820,7 +16689,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/inversion-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-court-il--fr",
     {
@@ -15835,7 +16705,8 @@ export const phrases = new Map([
           definition: "inversion with courir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15856,7 +16727,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/inversion-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-a-t-il--a--fr",
     {
@@ -15871,7 +16743,8 @@ export const phrases = new Map([
           definition: "⭐ -t- liaison: vowel verb + il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15893,7 +16766,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/inversion-questions.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "o--va-t-elle--fr",
     {
@@ -15908,7 +16782,8 @@ export const phrases = new Map([
           definition: "⭐ -t- liaison: va + elle",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15929,7 +16804,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/inversion-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "o--vont-les-oiseaux-en-hiver--fr",
     {
@@ -15944,7 +16820,8 @@ export const phrases = new Map([
           definition: "inversion with plural noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -15965,7 +16842,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/inversion-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quand-fleurissent-les-plantes--fr",
     {
@@ -15980,7 +16858,8 @@ export const phrases = new Map([
           definition: "formal inversion with plants",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16001,7 +16880,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/inversion-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-fait-on--a--fr",
     {
@@ -16016,7 +16896,8 @@ export const phrases = new Map([
           definition: "inversion with 'on'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16037,7 +16918,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/inversion-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-nage-fr",
     {
@@ -16052,7 +16934,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16074,7 +16957,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-nages-fr",
     {
@@ -16089,7 +16973,8 @@ export const phrases = new Map([
           definition: "add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16111,7 +16996,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-nage-fr",
     {
@@ -16126,7 +17012,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16148,7 +17035,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-nage-fr",
     {
@@ -16163,7 +17051,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16185,7 +17074,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-nageons-fr",
     {
@@ -16200,7 +17090,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16222,7 +17113,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-nagez-fr",
     {
@@ -16237,7 +17129,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16259,7 +17152,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-nagent-fr",
     {
@@ -16274,7 +17168,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16296,7 +17191,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-nagent-fr",
     {
@@ -16311,7 +17207,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16333,7 +17230,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-saute-fr",
     {
@@ -16348,7 +17246,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16370,7 +17269,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-sautes-fr",
     {
@@ -16385,7 +17285,8 @@ export const phrases = new Map([
           definition: "add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16407,7 +17308,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-saute-fr",
     {
@@ -16422,7 +17324,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16444,7 +17347,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-sautons-fr",
     {
@@ -16459,7 +17363,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16481,7 +17386,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-sautez-fr",
     {
@@ -16496,7 +17402,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16518,7 +17425,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-sautent-fr",
     {
@@ -16533,7 +17441,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16555,7 +17464,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-vole-fr",
     {
@@ -16570,7 +17480,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16592,7 +17503,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-voles-fr",
     {
@@ -16607,7 +17519,8 @@ export const phrases = new Map([
           definition: "add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16629,7 +17542,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-vole-fr",
     {
@@ -16644,7 +17558,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16666,7 +17581,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-volons-fr",
     {
@@ -16681,7 +17597,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16703,7 +17620,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-volez-fr",
     {
@@ -16718,7 +17636,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16740,7 +17659,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-volent-fr",
     {
@@ -16755,7 +17675,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16777,7 +17698,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-cours-fr",
     {
@@ -16792,7 +17714,8 @@ export const phrases = new Map([
           definition: "irregular - sounds like 'coor'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16814,7 +17737,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-cours-fr",
     {
@@ -16829,7 +17753,8 @@ export const phrases = new Map([
           definition: "same as je - sounds like 'coor'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16851,7 +17776,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-court-fr",
     {
@@ -16866,7 +17792,8 @@ export const phrases = new Map([
           definition: "drop -s, sounds like 'coor'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16888,7 +17815,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-courons-fr",
     {
@@ -16903,7 +17831,8 @@ export const phrases = new Map([
           definition: "add -ons to cour-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16925,7 +17854,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-courez-fr",
     {
@@ -16940,7 +17870,8 @@ export const phrases = new Map([
           definition: "add -ez to cour-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16962,7 +17893,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-courent-fr",
     {
@@ -16977,7 +17909,8 @@ export const phrases = new Map([
           definition: "add -ent to cour-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -16999,7 +17932,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-marche-fr",
     {
@@ -17014,7 +17948,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17036,7 +17971,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-marches-fr",
     {
@@ -17051,7 +17987,8 @@ export const phrases = new Map([
           definition: "add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17073,7 +18010,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-marche-fr",
     {
@@ -17088,7 +18026,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17110,7 +18049,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-marchons-fr",
     {
@@ -17125,7 +18065,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17147,7 +18088,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-marchez-fr",
     {
@@ -17162,7 +18104,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17184,7 +18127,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-marchent-fr",
     {
@@ -17199,7 +18143,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17221,7 +18166,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-grimpe-fr",
     {
@@ -17236,7 +18182,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17258,7 +18205,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-grimpes-fr",
     {
@@ -17273,7 +18221,8 @@ export const phrases = new Map([
           definition: "add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17295,7 +18244,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-grimpe-fr",
     {
@@ -17310,7 +18260,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17332,7 +18283,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-grimpons-fr",
     {
@@ -17347,7 +18299,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17369,7 +18322,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-grimpez-fr",
     {
@@ -17384,7 +18338,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17406,7 +18361,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-grimpent-fr",
     {
@@ -17421,7 +18377,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17443,7 +18400,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nager-dans-la-mer-fr",
     {
@@ -17458,7 +18416,8 @@ export const phrases = new Map([
           definition: "je nage dans la mer",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17479,7 +18438,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "courir-vite-fr",
     {
@@ -17494,7 +18454,8 @@ export const phrases = new Map([
           definition: "tu cours vite!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17515,7 +18476,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "marcher-lentement-fr",
     {
@@ -17530,7 +18492,8 @@ export const phrases = new Map([
           definition: "il marche lentement",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17551,7 +18514,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/movement-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-qu-il-faut-que-je-fasse--a--fr",
     {
@@ -17566,7 +18530,8 @@ export const phrases = new Map([
           definition: "question + necessity + subjunctive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17587,7 +18552,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/multi-clause-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-qu-il-faut-que-tu-partes--fr",
     {
@@ -17602,7 +18568,8 @@ export const phrases = new Map([
           definition: "question + necessity + subjunctive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17623,7 +18590,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/multi-clause-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-tu-veux-que-je-fasse--a--fr",
     {
@@ -17638,7 +18606,8 @@ export const phrases = new Map([
           definition: "question + wish + subjunctive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17659,7 +18628,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/multi-clause-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-que-tu-veux-que-je-le-fasse--fr",
     {
@@ -17674,7 +18644,8 @@ export const phrases = new Map([
           definition: "question + wish + subjunctive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17695,7 +18666,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/multi-clause-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-tu-penses-que-c-est-comme--a--fr",
     {
@@ -17710,7 +18682,8 @@ export const phrases = new Map([
           definition: "question + opinion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17731,7 +18704,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/multi-clause-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-est-ce-que-tu-penses-qu-on-devrait-faire--a--fr",
     {
@@ -17746,7 +18720,8 @@ export const phrases = new Map([
           definition: "question + opinion + conditional",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17767,7 +18742,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/multi-clause-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-qui-rendrait-l-herbe-plus-verte--fr",
     {
@@ -17782,7 +18758,8 @@ export const phrases = new Map([
           definition: "question + conditional causative",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17803,7 +18780,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/multi-clause-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-tu-ferais--a--fr",
     {
@@ -17818,7 +18796,8 @@ export const phrases = new Map([
           definition: "question + conditional",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17839,7 +18818,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/multi-clause-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que--a-ne-marche-pas--fr",
     {
@@ -17854,7 +18834,8 @@ export const phrases = new Map([
           definition: "question + negative + process",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17875,7 +18856,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/multi-clause-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-brille-fr",
     {
@@ -17890,7 +18872,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17912,7 +18895,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-brilles-fr",
     {
@@ -17927,7 +18911,8 @@ export const phrases = new Map([
           definition: "add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17949,7 +18934,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-brille-fr",
     {
@@ -17964,7 +18950,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -17986,7 +18973,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-brillons-fr",
     {
@@ -18001,7 +18989,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18023,7 +19012,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-brillez-fr",
     {
@@ -18038,7 +19028,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18060,7 +19051,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-brillent-fr",
     {
@@ -18075,7 +19067,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18097,7 +19090,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "le-soleil-brille-fr",
     {
@@ -18112,7 +19106,8 @@ export const phrases = new Map([
           definition: "common phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18133,7 +19128,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-pousse-fr",
     {
@@ -18148,7 +19144,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18170,7 +19167,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-pousses-fr",
     {
@@ -18185,7 +19183,8 @@ export const phrases = new Map([
           definition: "add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18207,7 +19206,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-pousse-fr",
     {
@@ -18222,7 +19222,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18244,7 +19245,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-poussons-fr",
     {
@@ -18259,7 +19261,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18281,7 +19284,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-poussez-fr",
     {
@@ -18296,7 +19300,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18318,7 +19323,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-poussent-fr",
     {
@@ -18333,7 +19339,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18355,7 +19362,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "les-plantes-poussent-fr",
     {
@@ -18370,7 +19378,8 @@ export const phrases = new Map([
           definition: "common phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18391,7 +19400,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il-pleut-fr",
     {
@@ -18406,7 +19416,8 @@ export const phrases = new Map([
           definition: "impersonal - only this form exists in present",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18428,7 +19439,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-a-plu-fr",
     {
@@ -18443,7 +19455,8 @@ export const phrases = new Map([
           definition: "passé composé - irregular past participle",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18465,7 +19478,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-pleuvait-fr",
     {
@@ -18480,7 +19494,8 @@ export const phrases = new Map([
           definition: "imparfait - regular formation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18502,7 +19517,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-souffle-fr",
     {
@@ -18517,7 +19533,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18539,7 +19556,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-souffles-fr",
     {
@@ -18554,7 +19572,8 @@ export const phrases = new Map([
           definition: "add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18576,7 +19595,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-souffle-fr",
     {
@@ -18591,7 +19611,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18613,7 +19634,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-soufflons-fr",
     {
@@ -18628,7 +19650,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18650,7 +19673,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-soufflez-fr",
     {
@@ -18665,7 +19689,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18687,7 +19712,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-soufflent-fr",
     {
@@ -18702,7 +19728,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18724,7 +19751,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "le-vent-souffle-fr",
     {
@@ -18739,7 +19767,8 @@ export const phrases = new Map([
           definition: "common phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18760,7 +19789,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-tombe-fr",
     {
@@ -18775,7 +19805,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18797,7 +19828,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-tombe-fr",
     {
@@ -18812,7 +19844,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18834,7 +19867,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-tomb--e--fr",
     {
@@ -18849,7 +19883,8 @@ export const phrases = new Map([
           definition: "tomber → tombé (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18871,7 +19906,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "la-pluie-tombe-fr",
     {
@@ -18886,7 +19922,8 @@ export const phrases = new Map([
           definition: "common expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18907,7 +19944,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-rends-fr",
     {
@@ -18922,7 +19960,8 @@ export const phrases = new Map([
           definition: "drop -re, add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18944,7 +19983,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-rends-fr",
     {
@@ -18959,7 +19999,8 @@ export const phrases = new Map([
           definition: "same as je",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -18981,7 +20022,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-rend-fr",
     {
@@ -18996,7 +20038,8 @@ export const phrases = new Map([
           definition: "drop -s from tu form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19018,7 +20061,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-rendons-fr",
     {
@@ -19033,7 +20077,8 @@ export const phrases = new Map([
           definition: "add -ons to rend-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19055,7 +20100,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-rendez-fr",
     {
@@ -19070,7 +20116,8 @@ export const phrases = new Map([
           definition: "add -ez to rend-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19092,7 +20139,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-rendent-fr",
     {
@@ -19107,7 +20155,8 @@ export const phrases = new Map([
           definition: "add -ent to rend-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19129,7 +20178,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/natural-phenomena-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "un-oiseau-fr",
     {
@@ -19144,7 +20194,8 @@ export const phrases = new Map([
           definition: "masculine - silent 's' in oiseau",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19165,7 +20216,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-oiseaux-fr",
     {
@@ -19180,7 +20232,8 @@ export const phrases = new Map([
           definition: "plural - silent 'x'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19201,7 +20254,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-tortue-fr",
     {
@@ -19216,7 +20270,8 @@ export const phrases = new Map([
           definition: "feminine - slow movement example",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19237,7 +20292,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un--cureuil-fr",
     {
@@ -19252,7 +20308,8 @@ export const phrases = new Map([
           definition: "masculine - fast movement example",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19273,7 +20330,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-lapin-fr",
     {
@@ -19288,7 +20346,8 @@ export const phrases = new Map([
           definition: "masculine - hopping example",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19309,7 +20368,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-papillon-fr",
     {
@@ -19324,7 +20384,8 @@ export const phrases = new Map([
           definition: "masculine - flying insect",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19345,7 +20406,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-abeille-fr",
     {
@@ -19360,7 +20422,8 @@ export const phrases = new Map([
           definition: "feminine - buzzing insect",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19381,7 +20444,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-poisson-fr",
     {
@@ -19396,7 +20460,8 @@ export const phrases = new Map([
           definition: "masculine - review from food module",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19417,7 +20482,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-arbres-fr",
     {
@@ -19432,7 +20498,8 @@ export const phrases = new Map([
           definition: "plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19453,7 +20520,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-plante-fr",
     {
@@ -19468,7 +20536,8 @@ export const phrases = new Map([
           definition: "feminine - living vegetation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19489,7 +20558,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-plantes-fr",
     {
@@ -19504,7 +20574,8 @@ export const phrases = new Map([
           definition: "plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19525,7 +20596,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-vent-fr",
     {
@@ -19540,7 +20612,8 @@ export const phrases = new Map([
           definition: "masculine - for 'souffler' (to blow)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19561,7 +20634,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-pluie-fr",
     {
@@ -19576,7 +20650,8 @@ export const phrases = new Map([
           definition: "feminine - for 'pleuvoir' (to rain)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19597,7 +20672,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-nature-fr",
     {
@@ -19612,7 +20688,8 @@ export const phrases = new Map([
           definition: "feminine - abstract concept",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19633,7 +20710,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "lent---lente-fr",
     {
@@ -19648,7 +20726,8 @@ export const phrases = new Map([
           definition: "la tortue est lente (the turtle is slow)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19669,7 +20748,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/nature-animals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "petit---petite-fr",
     {
@@ -19684,7 +20764,8 @@ export const phrases = new Map([
           definition: "un petit chat / une petite maison",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19705,7 +20786,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/adjectives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-fr",
     {
@@ -19720,7 +20802,8 @@ export const phrases = new Map([
           definition: "⭐ already learned - now compose with everything!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19741,7 +20824,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-le-ciel-est-bleu--fr",
     {
@@ -19756,7 +20840,8 @@ export const phrases = new Map([
           definition: "nature curiosity question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19777,7 +20862,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-l-herbe-est-verte--fr",
     {
@@ -19792,7 +20878,8 @@ export const phrases = new Map([
           definition: "nature curiosity question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19813,7 +20900,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-les-nuages-sont-blancs--fr",
     {
@@ -19828,7 +20916,8 @@ export const phrases = new Map([
           definition: "nature curiosity question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19849,7 +20938,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-le-soleil-brille--fr",
     {
@@ -19864,7 +20954,8 @@ export const phrases = new Map([
           definition: "natural phenomenon question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19885,7 +20976,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-les-oiseaux-volent--fr",
     {
@@ -19900,7 +20992,8 @@ export const phrases = new Map([
           definition: "animal behavior question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19921,7 +21014,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-les-plantes-poussent--fr",
     {
@@ -19936,7 +21030,8 @@ export const phrases = new Map([
           definition: "natural process question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19957,7 +21052,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-qu-il-pleut--fr",
     {
@@ -19972,7 +21068,8 @@ export const phrases = new Map([
           definition: "weather question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -19993,7 +21090,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-qu-il-fait--a--fr",
     {
@@ -20008,7 +21106,8 @@ export const phrases = new Map([
           definition: "action question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20029,7 +21128,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-tu-cours--fr",
     {
@@ -20044,7 +21144,8 @@ export const phrases = new Map([
           definition: "movement question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20065,7 +21166,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-est-ce-que-c-est-comme--a--fr",
     {
@@ -20080,7 +21182,8 @@ export const phrases = new Map([
           definition: "general question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20101,7 +21204,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/pourquoi-complex.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-qui-fr",
     {
@@ -20116,7 +21220,8 @@ export const phrases = new Map([
           definition: "⭐⭐⭐ SUBJECT: what DOES something",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20137,7 +21242,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/questce-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-qui-brille--fr",
     {
@@ -20152,7 +21258,8 @@ export const phrases = new Map([
           definition: "SUBJECT question - thing is doing the shining",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20173,7 +21280,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/questce-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-qui-tombe--fr",
     {
@@ -20188,7 +21296,8 @@ export const phrases = new Map([
           definition: "SUBJECT question - thing is doing the falling",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20209,7 +21318,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/questce-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-qui-fait-du-bruit--fr",
     {
@@ -20224,7 +21334,8 @@ export const phrases = new Map([
           definition: "SUBJECT question - thing is making noise",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20245,7 +21356,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/questce-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-qui-rend-l-herbe-verte--fr",
     {
@@ -20260,7 +21372,8 @@ export const phrases = new Map([
           definition: "SUBJECT question - thing is making grass green",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20281,7 +21394,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/questce-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-tu-vois--fr",
     {
@@ -20296,7 +21410,8 @@ export const phrases = new Map([
           definition: "OBJECT question - you are seeing WHAT",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20317,7 +21432,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/questce-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-tu-manges--fr",
     {
@@ -20332,7 +21448,8 @@ export const phrases = new Map([
           definition: "OBJECT question - you are eating WHAT",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20353,7 +21470,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/questce-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-les-oiseaux-mangent--fr",
     {
@@ -20368,7 +21486,8 @@ export const phrases = new Map([
           definition: "OBJECT question - birds are eating WHAT",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20389,7 +21508,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/questce-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-le-soleil-fait--fr",
     {
@@ -20404,7 +21524,8 @@ export const phrases = new Map([
           definition: "OBJECT question - sun does WHAT",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20425,7 +21546,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/questce-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-ce-qui-fr",
     {
@@ -20440,7 +21562,8 @@ export const phrases = new Map([
           definition: "⭐ SUBJECT: who DOES something",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20461,7 +21584,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-ce-que-fr",
     {
@@ -20476,7 +21600,8 @@ export const phrases = new Map([
           definition: "⭐ OBJECT: who DO you verb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20498,7 +21623,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "qui-est-ce-qui-parle--fr",
     {
@@ -20513,7 +21639,8 @@ export const phrases = new Map([
           definition: "SUBJECT question - person is doing the speaking",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20534,7 +21661,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-ce-qui-fait--a--fr",
     {
@@ -20549,7 +21677,8 @@ export const phrases = new Map([
           definition: "SUBJECT question - person is doing that",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20570,7 +21699,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-ce-qui-nage--fr",
     {
@@ -20585,7 +21715,8 @@ export const phrases = new Map([
           definition: "SUBJECT question - person is swimming",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20606,7 +21737,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-ce-qui-parle-fran-ais--fr",
     {
@@ -20621,7 +21753,8 @@ export const phrases = new Map([
           definition: "SUBJECT question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20642,7 +21775,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-ce-que-tu-vois--fr",
     {
@@ -20657,7 +21791,8 @@ export const phrases = new Map([
           definition: "OBJECT question - you are seeing WHOM",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20678,7 +21813,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-ce-que-tu-aimes--fr",
     {
@@ -20693,7 +21829,8 @@ export const phrases = new Map([
           definition: "OBJECT question - you are liking WHOM",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20714,7 +21851,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-ce-que-je-dois-appeler--fr",
     {
@@ -20729,7 +21867,8 @@ export const phrases = new Map([
           definition: "OBJECT question - I should call WHOM",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20750,7 +21889,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-ce-que-tu-connais--fr",
     {
@@ -20765,7 +21905,8 @@ export const phrases = new Map([
           definition: "OBJECT question - you know WHOM",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20786,7 +21927,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/quiest-qui-que.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "n-est-ce-pas-vrai--fr",
     {
@@ -20801,7 +21943,8 @@ export const phrases = new Map([
           definition: "seeking agreement",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20822,7 +21965,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/rhetorical-negative-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "n-est-ce-pas--fr",
     {
@@ -20837,7 +21981,8 @@ export const phrases = new Map([
           definition: "tag question for confirmation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20858,7 +22003,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/rhetorical-negative-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "n-es-tu-pas-content--fr",
     {
@@ -20873,7 +22019,8 @@ export const phrases = new Map([
           definition: "negative question with tu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20894,7 +22041,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/rhetorical-negative-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "n-as-tu-pas-faim--fr",
     {
@@ -20909,7 +22057,8 @@ export const phrases = new Map([
           definition: "negative question with avoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20930,7 +22079,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/rhetorical-negative-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ne-veux-tu-pas-essayer--fr",
     {
@@ -20945,7 +22095,8 @@ export const phrases = new Map([
           definition: "negative question with vouloir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -20966,7 +22117,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/rhetorical-negative-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-ne-pas-aimer--a--fr",
     {
@@ -20981,7 +22133,8 @@ export const phrases = new Map([
           definition: "⭐ rhetorical - implies everyone loves it",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21002,7 +22155,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/rhetorical-negative-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-ne-voudrait-pas--a--fr",
     {
@@ -21017,7 +22171,8 @@ export const phrases = new Map([
           definition: "⭐ rhetorical - implies everyone wants it",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21038,7 +22193,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/rhetorical-negative-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pourquoi-ne-pas-essayer--fr",
     {
@@ -21053,7 +22209,8 @@ export const phrases = new Map([
           definition: "⭐ rhetorical suggestion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21074,7 +22231,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/rhetorical-negative-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-ne-pas-aimer-le-soleil--fr",
     {
@@ -21089,7 +22247,8 @@ export const phrases = new Map([
           definition: "rhetorical about nature",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21110,7 +22269,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit12/rhetorical-negative-questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bon---bonne-fr",
     {
@@ -21125,7 +22285,8 @@ export const phrases = new Map([
           definition: "un bon livre / une bonne maison",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21146,7 +22307,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/adjectives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "grand---grande-fr",
     {
@@ -21161,7 +22323,8 @@ export const phrases = new Map([
           definition: "un grand homme / une grande femme",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21182,7 +22345,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/adjectives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nouveau---nouvelle-fr",
     {
@@ -21197,7 +22361,8 @@ export const phrases = new Map([
           definition: "un nouveau livre / une nouvelle voiture",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21218,7 +22383,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/adjectives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vieux---vieille-fr",
     {
@@ -21233,7 +22399,8 @@ export const phrases = new Map([
           definition: "un vieux chat / une vieille maison",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21254,7 +22421,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/adjectives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "jeune---jeune-fr",
     {
@@ -21269,7 +22437,8 @@ export const phrases = new Map([
           definition: "un jeune homme / une jeune femme (same both)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21290,7 +22459,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/adjectives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "beau---belle-fr",
     {
@@ -21305,7 +22475,8 @@ export const phrases = new Map([
           definition: "un beau livre / une belle maison",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21326,7 +22497,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/adjectives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "autre---autre-fr",
     {
@@ -21341,7 +22513,8 @@ export const phrases = new Map([
           definition: "un autre livre / une autre maison (same both)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21362,7 +22535,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/adjectives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-vais-fr",
     {
@@ -21377,7 +22551,8 @@ export const phrases = new Map([
           definition: "aller - irregular!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21399,7 +22574,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/aller.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-vas-fr",
     {
@@ -21414,7 +22590,8 @@ export const phrases = new Map([
           definition: "different from je",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21436,7 +22613,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/aller.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-va-fr",
     {
@@ -21451,7 +22629,8 @@ export const phrases = new Map([
           definition: "also in 'ça va'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21473,7 +22652,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/aller.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-va-fr",
     {
@@ -21488,7 +22668,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21510,7 +22691,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/aller.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-allons-fr",
     {
@@ -21525,7 +22707,8 @@ export const phrases = new Map([
           definition: "completely different stem!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21547,7 +22730,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/aller.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-allez-fr",
     {
@@ -21562,7 +22746,8 @@ export const phrases = new Map([
           definition: "similar to nous",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21584,7 +22769,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/aller.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-vont-fr",
     {
@@ -21599,7 +22785,8 @@ export const phrases = new Map([
           definition: "yet another form!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21621,7 +22808,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/aller.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-vont-fr",
     {
@@ -21636,7 +22824,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21658,7 +22847,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/aller.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "c-est--a-fr",
     {
@@ -21673,7 +22863,8 @@ export const phrases = new Map([
           definition: "expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21694,7 +22885,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai--a-fr",
     {
@@ -21709,7 +22901,8 @@ export const phrases = new Map([
           definition: "avoir + ça",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21730,7 +22923,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/ca-survival.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-as--a-fr",
     {
@@ -21745,7 +22939,8 @@ export const phrases = new Map([
           definition: "combining practice",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21767,7 +22962,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/ca-survival.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-ai-ce-livre-fr",
     {
@@ -21782,7 +22978,8 @@ export const phrases = new Map([
           definition: "avoir + ce + noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21803,7 +23000,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "elle-a-cette-maison-fr",
     {
@@ -21818,7 +23016,8 @@ export const phrases = new Map([
           definition: "avoir + cette + noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21840,7 +23039,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-avons-ces-livres-fr",
     {
@@ -21855,7 +23055,8 @@ export const phrases = new Map([
           definition: "avoir + ces + plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21877,7 +23078,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-as-ce-chat-fr",
     {
@@ -21892,7 +23094,8 @@ export const phrases = new Map([
           definition: "combining!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21914,7 +23117,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-ont-ces-chats-fr",
     {
@@ -21929,7 +23133,8 @@ export const phrases = new Map([
           definition: "avoir + ces",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21951,7 +23156,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "c-est-cet-homme-fr",
     {
@@ -21966,7 +23172,8 @@ export const phrases = new Map([
           definition: "c'est + cet",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -21987,7 +23194,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-ces-enfants-fr",
     {
@@ -22002,7 +23210,8 @@ export const phrases = new Map([
           definition: "full phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22023,7 +23232,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-le-chat-fr",
     {
@@ -22038,7 +23248,8 @@ export const phrases = new Map([
           definition: "avoir + le",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22059,7 +23270,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "elle-a-la-maison-fr",
     {
@@ -22074,7 +23286,8 @@ export const phrases = new Map([
           definition: "avoir + la",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22096,7 +23309,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-ont-les-chiens-fr",
     {
@@ -22111,7 +23325,8 @@ export const phrases = new Map([
           definition: "avoir + les",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22133,7 +23348,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "c-est-ce-livre-fr",
     {
@@ -22148,7 +23364,8 @@ export const phrases = new Map([
           definition: "être + ce",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22169,7 +23386,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/determiners-with-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-peux-fr",
     {
@@ -22184,7 +23402,8 @@ export const phrases = new Map([
           definition: "irregular form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22206,7 +23425,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/pouvoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-peux-fr",
     {
@@ -22221,7 +23441,8 @@ export const phrases = new Map([
           definition: "same as je!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22243,7 +23464,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/pouvoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-peut-fr",
     {
@@ -22258,7 +23480,8 @@ export const phrases = new Map([
           definition: "different ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22280,7 +23503,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/pouvoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-peut-fr",
     {
@@ -22295,7 +23519,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22317,7 +23542,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/pouvoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-pouvons-fr",
     {
@@ -22332,7 +23558,8 @@ export const phrases = new Map([
           definition: "regular ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22354,7 +23581,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/pouvoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-pouvez-fr",
     {
@@ -22369,7 +23597,8 @@ export const phrases = new Map([
           definition: "formal/plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22391,7 +23620,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/pouvoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-peuvent-fr",
     {
@@ -22406,7 +23636,8 @@ export const phrases = new Map([
           definition: "irregular",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22428,7 +23659,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/pouvoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-peuvent-fr",
     {
@@ -22443,7 +23675,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22465,7 +23698,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/pouvoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "que---quoi-fr",
     {
@@ -22480,7 +23714,8 @@ export const phrases = new Map([
           definition: "most common question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22501,7 +23736,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "est-ce-que-fr",
     {
@@ -22516,7 +23752,8 @@ export const phrases = new Map([
           definition: "forms yes/no questions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22537,7 +23774,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment--a-va-fr",
     {
@@ -22552,7 +23790,8 @@ export const phrases = new Map([
           definition: "common greeting",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22573,7 +23812,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-tu-veux-fr",
     {
@@ -22588,7 +23828,8 @@ export const phrases = new Map([
           definition: "essential question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22609,7 +23850,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "est-ce-que-tu-peux-fr",
     {
@@ -22624,7 +23866,8 @@ export const phrases = new Map([
           definition: "asking for ability/permission",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22645,7 +23888,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/questions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-viens-fr",
     {
@@ -22660,7 +23904,8 @@ export const phrases = new Map([
           definition: "venir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22682,7 +23927,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/venir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-viens-fr",
     {
@@ -22697,7 +23943,8 @@ export const phrases = new Map([
           definition: "same as je!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22719,7 +23966,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/venir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-vient-fr",
     {
@@ -22734,7 +23982,8 @@ export const phrases = new Map([
           definition: "different ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22756,7 +24005,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/venir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-vient-fr",
     {
@@ -22771,7 +24021,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22793,7 +24044,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/venir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-venons-fr",
     {
@@ -22808,7 +24060,8 @@ export const phrases = new Map([
           definition: "regular -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22830,7 +24083,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/venir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-venez-fr",
     {
@@ -22845,7 +24099,8 @@ export const phrases = new Map([
           definition: "regular -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22867,7 +24122,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/venir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-viennent-fr",
     {
@@ -22882,7 +24138,8 @@ export const phrases = new Map([
           definition: "double n!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22904,7 +24161,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/venir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-viennent-fr",
     {
@@ -22919,7 +24177,8 @@ export const phrases = new Map([
           definition: "double n!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22941,7 +24200,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/venir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-vois-fr",
     {
@@ -22956,7 +24216,8 @@ export const phrases = new Map([
           definition: "voir - irregular",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -22978,7 +24239,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/voir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-vois-fr",
     {
@@ -22993,7 +24255,8 @@ export const phrases = new Map([
           definition: "same as je!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23015,7 +24278,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/voir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-voit-fr",
     {
@@ -23030,7 +24294,8 @@ export const phrases = new Map([
           definition: "different ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23052,7 +24317,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/voir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-voit-fr",
     {
@@ -23067,7 +24333,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23089,7 +24356,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/voir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-voyons-fr",
     {
@@ -23104,7 +24372,8 @@ export const phrases = new Map([
           definition: "stem changes to voy-!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23126,7 +24395,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/voir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-voient-fr",
     {
@@ -23141,7 +24411,8 @@ export const phrases = new Map([
           definition: "back to voi- stem",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23163,7 +24434,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/voir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-voient-fr",
     {
@@ -23178,7 +24450,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23200,7 +24473,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/voir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-veux-fr",
     {
@@ -23215,7 +24489,8 @@ export const phrases = new Map([
           definition: "irregular form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23237,7 +24512,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/vouloir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-veux-fr",
     {
@@ -23252,7 +24528,8 @@ export const phrases = new Map([
           definition: "same as je!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23274,7 +24551,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/vouloir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-veut-fr",
     {
@@ -23289,7 +24567,8 @@ export const phrases = new Map([
           definition: "different ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23311,7 +24590,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/vouloir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-veut-fr",
     {
@@ -23326,7 +24606,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23348,7 +24629,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/vouloir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-voulons-fr",
     {
@@ -23363,7 +24645,8 @@ export const phrases = new Map([
           definition: "regular ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23385,7 +24668,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/vouloir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-voulez-fr",
     {
@@ -23400,7 +24684,8 @@ export const phrases = new Map([
           definition: "formal/plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23422,7 +24707,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/vouloir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-veulent-fr",
     {
@@ -23437,7 +24723,8 @@ export const phrases = new Map([
           definition: "irregular",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23459,7 +24746,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/vouloir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-veulent-fr",
     {
@@ -23474,7 +24762,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23496,7 +24785,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit2/vouloir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-l-a-fr",
     {
@@ -23511,7 +24801,8 @@ export const phrases = new Map([
           definition: "l' = le/la (avoir)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23533,7 +24824,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-l-a-fr",
     {
@@ -23548,7 +24840,8 @@ export const phrases = new Map([
           definition: "l' = le/la (avoir)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23570,7 +24863,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-les-ont-fr",
     {
@@ -23585,7 +24879,8 @@ export const phrases = new Map([
           definition: "plural (avoir)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23607,7 +24902,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-le-veux-fr",
     {
@@ -23622,7 +24918,8 @@ export const phrases = new Map([
           definition: "vouloir + object",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23644,7 +24941,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-va-partir-fr",
     {
@@ -23659,7 +24957,8 @@ export const phrases = new Map([
           definition: "aller + infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23681,7 +24980,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
       verified: true,
       conjugationGroup: "ir",
-    }],
+    },
+  ],
   [
     "c-est-le-mien-fr",
     {
@@ -23696,7 +24996,8 @@ export const phrases = new Map([
           definition: "masculine thing",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23717,7 +25018,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-le-sien-fr",
     {
@@ -23732,7 +25034,8 @@ export const phrases = new Map([
           definition: "masculine thing",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23753,7 +25056,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-le-leur-fr",
     {
@@ -23768,7 +25072,8 @@ export const phrases = new Map([
           definition: "masculine thing",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23789,7 +25094,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "est-ce-le-tien-fr",
     {
@@ -23804,7 +25110,8 @@ export const phrases = new Map([
           definition: "question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23825,7 +25132,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/combining.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "de-l--fr",
     {
@@ -23840,7 +25148,8 @@ export const phrases = new Map([
           definition: "before vowel",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23861,7 +25170,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/contractions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--la-fr",
     {
@@ -23876,7 +25186,8 @@ export const phrases = new Map([
           definition: "no contraction (feminine)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23897,7 +25208,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/contractions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--l--fr",
     {
@@ -23912,7 +25224,8 @@ export const phrases = new Map([
           definition: "before vowel",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23933,7 +25246,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/contractions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-pars-fr",
     {
@@ -23948,7 +25262,8 @@ export const phrases = new Map([
           definition: "partir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -23970,7 +25285,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/partir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-pars-fr",
     {
@@ -23985,7 +25301,8 @@ export const phrases = new Map([
           definition: "same as je!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24007,7 +25324,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/partir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-part-fr",
     {
@@ -24022,7 +25340,8 @@ export const phrases = new Map([
           definition: "drops -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24044,7 +25363,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/partir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-part-fr",
     {
@@ -24059,7 +25379,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24081,7 +25402,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/partir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-partons-fr",
     {
@@ -24096,7 +25418,8 @@ export const phrases = new Map([
           definition: "add -ons to stem",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24118,7 +25441,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/partir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-partez-fr",
     {
@@ -24133,7 +25457,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24155,7 +25480,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/partir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-partent-fr",
     {
@@ -24170,7 +25496,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24192,7 +25519,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/partir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-partent-fr",
     {
@@ -24207,7 +25535,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24229,7 +25558,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/partir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "le-mien-fr",
     {
@@ -24244,7 +25574,8 @@ export const phrases = new Map([
           definition: "le livre est le mien",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24265,7 +25596,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-mienne-fr",
     {
@@ -24280,7 +25612,8 @@ export const phrases = new Map([
           definition: "feminine - la voiture est la mienne",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24301,7 +25634,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-tien-fr",
     {
@@ -24316,7 +25650,8 @@ export const phrases = new Map([
           definition: "masculine thing",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24337,7 +25672,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-tienne-fr",
     {
@@ -24352,7 +25688,8 @@ export const phrases = new Map([
           definition: "feminine thing",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24373,7 +25710,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-sien-fr",
     {
@@ -24388,7 +25726,8 @@ export const phrases = new Map([
           definition: "masculine thing owned",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24409,7 +25748,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-sienne-fr",
     {
@@ -24424,7 +25764,8 @@ export const phrases = new Map([
           definition: "feminine thing owned",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24445,7 +25786,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-n-tre-fr",
     {
@@ -24460,7 +25802,8 @@ export const phrases = new Map([
           definition: "with circumflex",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24481,7 +25824,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-n-tre-fr",
     {
@@ -24496,7 +25840,8 @@ export const phrases = new Map([
           definition: "feminine - with circumflex",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24517,7 +25862,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-v-tre-fr",
     {
@@ -24532,7 +25878,8 @@ export const phrases = new Map([
           definition: "with circumflex",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24553,7 +25900,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-v-tre-fr",
     {
@@ -24568,7 +25916,8 @@ export const phrases = new Map([
           definition: "feminine - with circumflex",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24589,7 +25938,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-leur-fr",
     {
@@ -24604,7 +25954,8 @@ export const phrases = new Map([
           definition: "masculine thing owned",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24625,7 +25976,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-leur-fr",
     {
@@ -24640,7 +25992,8 @@ export const phrases = new Map([
           definition: "feminine thing owned",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24661,7 +26014,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit3/possessive-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-dois-fr",
     {
@@ -24676,7 +26030,8 @@ export const phrases = new Map([
           definition: "from devoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24698,7 +26053,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-dois-fr",
     {
@@ -24713,7 +26069,8 @@ export const phrases = new Map([
           definition: "same as je!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24735,7 +26092,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/devoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-doit-fr",
     {
@@ -24750,7 +26108,8 @@ export const phrases = new Map([
           definition: "different ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24772,7 +26131,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/devoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-doit-fr",
     {
@@ -24787,7 +26147,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24809,7 +26170,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/devoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-devons-fr",
     {
@@ -24824,7 +26186,8 @@ export const phrases = new Map([
           definition: "regular ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24846,7 +26209,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/devoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-devez-fr",
     {
@@ -24861,7 +26225,8 @@ export const phrases = new Map([
           definition: "formal/plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24883,7 +26248,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/devoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-doivent-fr",
     {
@@ -24898,7 +26264,8 @@ export const phrases = new Map([
           definition: "irregular",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24920,7 +26287,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/devoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-doivent-fr",
     {
@@ -24935,7 +26303,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24957,7 +26326,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/devoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "le-temps-fr",
     {
@@ -24972,7 +26342,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -24993,7 +26364,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-vie-fr",
     {
@@ -25008,7 +26380,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25029,7 +26402,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-monde-fr",
     {
@@ -25044,7 +26418,8 @@ export const phrases = new Map([
           definition: "le monde entier = whole world",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25065,7 +26440,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-eau-fr",
     {
@@ -25080,7 +26456,8 @@ export const phrases = new Map([
           definition: "essential drink",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25101,7 +26478,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-pain-fr",
     {
@@ -25116,7 +26494,8 @@ export const phrases = new Map([
           definition: "essential food",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25137,7 +26516,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-argent-fr",
     {
@@ -25152,7 +26532,8 @@ export const phrases = new Map([
           definition: "masculine (argent) - also means silver",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25173,7 +26554,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/everyday-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-travail-fr",
     {
@@ -25188,7 +26570,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25209,7 +26592,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-ville-fr",
     {
@@ -25224,7 +26608,8 @@ export const phrases = new Map([
           definition: "from Unit 4 everyday-nouns",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25245,7 +26630,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-place-fr",
     {
@@ -25260,7 +26646,8 @@ export const phrases = new Map([
           definition: "feminine noun - room/space/seat",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25281,7 +26668,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/spatial-prepositions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-rue-fr",
     {
@@ -25296,7 +26684,8 @@ export const phrases = new Map([
           definition: "feminine - dans la rue (in the street)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25317,7 +26706,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/everyday-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-table-fr",
     {
@@ -25332,7 +26722,8 @@ export const phrases = new Map([
           definition: "feminine - sur la table (on the table)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25353,7 +26744,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/everyday-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-main-fr",
     {
@@ -25368,7 +26760,8 @@ export const phrases = new Map([
           definition: "feminine - dans la main (in the hand)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25389,7 +26782,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/everyday-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-t-te-fr",
     {
@@ -25404,7 +26798,8 @@ export const phrases = new Map([
           definition: "feminine - very common body part",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25425,7 +26820,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/everyday-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-nom-fr",
     {
@@ -25440,7 +26836,8 @@ export const phrases = new Map([
           definition: "masculine - mon nom est... (my name is...)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25461,7 +26858,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/everyday-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-porte-fr",
     {
@@ -25476,7 +26874,8 @@ export const phrases = new Map([
           definition: "feminine - la porte est ouverte (door is open)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25497,7 +26896,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/everyday-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tout-le-monde-fr",
     {
@@ -25512,7 +26912,8 @@ export const phrases = new Map([
           definition: "fixed expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25533,7 +26934,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-carte-de-cr-dit-fr",
     {
@@ -25548,7 +26950,8 @@ export const phrases = new Map([
           definition: "compound noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25569,7 +26972,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-esp-ces-fr",
     {
@@ -25584,7 +26988,8 @@ export const phrases = new Map([
           definition: "feminine plural - payer en espèces (pay in cash)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25605,7 +27010,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/everyday-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-carafe-d-eau-fr",
     {
@@ -25620,7 +27026,8 @@ export const phrases = new Map([
           definition: "feminine - free water at restaurants!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25641,7 +27048,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/everyday-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-addition-fr",
     {
@@ -25656,7 +27064,8 @@ export const phrases = new Map([
           definition: "at restaurant",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25677,7 +27086,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-fais-fr",
     {
@@ -25692,7 +27102,8 @@ export const phrases = new Map([
           definition: "irregular form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25714,7 +27125,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/faire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-fais-fr",
     {
@@ -25729,7 +27141,8 @@ export const phrases = new Map([
           definition: "same as je",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25751,7 +27164,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/faire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-fait-fr",
     {
@@ -25766,7 +27180,8 @@ export const phrases = new Map([
           definition: "different ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25788,7 +27203,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/faire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-fait-fr",
     {
@@ -25803,7 +27219,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25825,7 +27242,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/faire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-faisons-fr",
     {
@@ -25840,7 +27258,8 @@ export const phrases = new Map([
           definition: "unique form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25862,7 +27281,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/faire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-faites-fr",
     {
@@ -25877,7 +27297,8 @@ export const phrases = new Map([
           definition: "unique form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25899,7 +27320,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/faire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-font-fr",
     {
@@ -25914,7 +27336,8 @@ export const phrases = new Map([
           definition: "irregular",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25936,7 +27359,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/faire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-font-fr",
     {
@@ -25951,7 +27375,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -25973,7 +27398,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/faire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "l--bas-fr",
     {
@@ -25988,7 +27414,8 @@ export const phrases = new Map([
           definition: "location adverb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26010,7 +27437,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "quelque-part-fr",
     {
@@ -26025,7 +27453,8 @@ export const phrases = new Map([
           definition: "some place",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26046,7 +27475,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/location-adverbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nulle-part-fr",
     {
@@ -26061,7 +27491,8 @@ export const phrases = new Map([
           definition: "no place",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26082,7 +27513,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/location-adverbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-ne-peux-pas-fr",
     {
@@ -26097,7 +27529,8 @@ export const phrases = new Map([
           definition: "negative modal - pouvoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26119,7 +27552,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-ne-peux-pas-fr",
     {
@@ -26134,7 +27568,8 @@ export const phrases = new Map([
           definition: "informal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26156,7 +27591,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-ne-pouvons-pas-fr",
     {
@@ -26171,7 +27607,8 @@ export const phrases = new Map([
           definition: "plural form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26193,7 +27630,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-veux-pas-fr",
     {
@@ -26208,7 +27646,8 @@ export const phrases = new Map([
           definition: "vouloir negated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26230,7 +27669,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-ne-veux-jamais-fr",
     {
@@ -26245,7 +27685,8 @@ export const phrases = new Map([
           definition: "ne...jamais",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26267,7 +27708,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-ne-fait-jamais-fr",
     {
@@ -26282,7 +27724,8 @@ export const phrases = new Map([
           definition: "faire + jamais",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26304,7 +27747,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-ne-faisons-pas-fr",
     {
@@ -26319,7 +27763,8 @@ export const phrases = new Map([
           definition: "faire negated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26341,7 +27786,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-ne-sont-pas-fr",
     {
@@ -26356,7 +27802,8 @@ export const phrases = new Map([
           definition: "être negated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26378,7 +27825,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-n-allons-pas-fr",
     {
@@ -26393,7 +27841,8 @@ export const phrases = new Map([
           definition: "aller negated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26415,7 +27864,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-ne-voit-jamais-fr",
     {
@@ -26430,7 +27880,8 @@ export const phrases = new Map([
           definition: "voir + jamais",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26452,7 +27903,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation-2.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-suis-pas-fr",
     {
@@ -26467,7 +27919,8 @@ export const phrases = new Map([
           definition: "être negated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26489,7 +27942,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-n-ai-pas-fr",
     {
@@ -26504,7 +27958,8 @@ export const phrases = new Map([
           definition: "avoir negated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26526,7 +27981,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-fais-pas-fr",
     {
@@ -26541,7 +27997,8 @@ export const phrases = new Map([
           definition: "faire negated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26563,7 +28020,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-ne-vas-pas-fr",
     {
@@ -26578,7 +28036,8 @@ export const phrases = new Map([
           definition: "aller negated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26600,7 +28059,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-ne-voit-pas-fr",
     {
@@ -26615,7 +28075,8 @@ export const phrases = new Map([
           definition: "voir negated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26637,7 +28098,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/negation.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-parle-fr",
     {
@@ -26652,7 +28114,8 @@ export const phrases = new Map([
           definition: "drop -er, add -e (silent)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26674,7 +28137,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/parler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-parles-fr",
     {
@@ -26689,7 +28153,8 @@ export const phrases = new Map([
           definition: "from Unit 4 parler",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26711,7 +28176,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-parle-fr",
     {
@@ -26726,7 +28192,8 @@ export const phrases = new Map([
           definition: "add -e (sounds same as je)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26748,7 +28215,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/parler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-parle-fr",
     {
@@ -26763,7 +28231,8 @@ export const phrases = new Map([
           definition: "add -e (sounds same)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26785,7 +28254,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/parler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-parlent-fr",
     {
@@ -26800,7 +28270,8 @@ export const phrases = new Map([
           definition: "add -ent (silent!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26822,7 +28293,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/parler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-parlent-fr",
     {
@@ -26837,7 +28309,8 @@ export const phrases = new Map([
           definition: "sounds same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26859,7 +28332,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/parler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "-a-va-bien-fr",
     {
@@ -26874,7 +28348,8 @@ export const phrases = new Map([
           definition: "response",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26895,7 +28370,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-matin-fr",
     {
@@ -26910,7 +28386,8 @@ export const phrases = new Map([
           definition: "time expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26931,7 +28408,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ce-soir-fr",
     {
@@ -26946,7 +28424,8 @@ export const phrases = new Map([
           definition: "time expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -26967,7 +28446,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-probl-me-fr",
     {
@@ -26982,7 +28462,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27003,7 +28484,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "d-argent-fr",
     {
@@ -27018,7 +28500,8 @@ export const phrases = new Map([
           definition: "with negation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27039,7 +28522,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "dans-ma-maison-fr",
     {
@@ -27054,7 +28538,8 @@ export const phrases = new Map([
           definition: "location",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27075,7 +28560,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-paie-fr",
     {
@@ -27090,7 +28576,8 @@ export const phrases = new Map([
           definition: "present tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27112,7 +28599,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-ne-dois-pas-fr",
     {
@@ -27127,7 +28615,8 @@ export const phrases = new Map([
           definition: "devoir + negation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27149,7 +28638,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "--ce-soir-fr",
     {
@@ -27164,7 +28654,8 @@ export const phrases = new Map([
           definition: "expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27185,7 +28676,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-es-l--fr",
     {
@@ -27200,7 +28692,8 @@ export const phrases = new Map([
           definition: "être + location",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27222,7 +28715,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-vous-voulez-fr",
     {
@@ -27237,7 +28731,8 @@ export const phrases = new Map([
           definition: "polite question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27258,7 +28753,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-voudrions-fr",
     {
@@ -27273,7 +28769,8 @@ export const phrases = new Map([
           definition: "conditional of vouloir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27295,7 +28792,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "le-meilleur-fr",
     {
@@ -27310,7 +28808,8 @@ export const phrases = new Map([
           definition: "superlative",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27331,7 +28830,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-parles-bien-fr",
     {
@@ -27346,7 +28846,8 @@ export const phrases = new Map([
           definition: "compliment",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27368,7 +28869,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "mais-non-fr",
     {
@@ -27383,7 +28885,8 @@ export const phrases = new Map([
           definition: "expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27404,7 +28907,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mon-ami-fr",
     {
@@ -27419,7 +28923,8 @@ export const phrases = new Map([
           definition: "possessive + noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27440,7 +28945,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-sommes-amis-fr",
     {
@@ -27455,7 +28961,8 @@ export const phrases = new Map([
           definition: "statement",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27477,7 +28984,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-aime-fr",
     {
@@ -27492,7 +29000,8 @@ export const phrases = new Map([
           definition: "emotion verb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27514,7 +29023,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "cette-ville-fr",
     {
@@ -27529,7 +29039,8 @@ export const phrases = new Map([
           definition: "demonstrative + noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27550,7 +29061,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/reading-4.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-voudrais-fr",
     {
@@ -27565,7 +29077,8 @@ export const phrases = new Map([
           definition: "conditional of vouloir (review!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27587,7 +29100,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "c-est-combien-fr",
     {
@@ -27602,7 +29116,8 @@ export const phrases = new Map([
           definition: "asking prices",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27623,7 +29138,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/survival-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "combien--a-co-te-fr",
     {
@@ -27638,7 +29154,8 @@ export const phrases = new Map([
           definition: "formal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27659,7 +29176,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/survival-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "o--sont-fr",
     {
@@ -27674,7 +29192,8 @@ export const phrases = new Map([
           definition: "où + être plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27695,7 +29214,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/survival-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-toilettes-fr",
     {
@@ -27710,7 +29230,8 @@ export const phrases = new Map([
           definition: "essential!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27731,7 +29252,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit4/survival-phrases.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-aimes-fr",
     {
@@ -27746,7 +29268,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -es",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27768,7 +29291,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/aimer.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-aime-fr",
     {
@@ -27783,7 +29307,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -e",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27804,7 +29329,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/aimer.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-aimons-fr",
     {
@@ -27819,7 +29345,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27841,7 +29368,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/aimer.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-aimez-fr",
     {
@@ -27856,7 +29384,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27878,7 +29407,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/aimer.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-aiment-fr",
     {
@@ -27893,7 +29423,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -ent (silent)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27914,7 +29445,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/aimer.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "aimer-bien-fr",
     {
@@ -27929,7 +29461,8 @@ export const phrases = new Map([
           definition: "less intense than aimer alone",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27950,7 +29483,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/aimer.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-t-aime-fr",
     {
@@ -27965,7 +29499,8 @@ export const phrases = new Map([
           definition: "❤️ famous phrase!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -27987,7 +29522,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/aimer.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-avais-fr",
     {
@@ -28002,7 +29538,8 @@ export const phrases = new Map([
           definition: "imperfect tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28023,7 +29560,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-avais-fr",
     {
@@ -28038,7 +29576,8 @@ export const phrases = new Map([
           definition: "sounds same as j'avais",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28060,7 +29599,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-avait-fr",
     {
@@ -28075,7 +29615,8 @@ export const phrases = new Map([
           definition: "slightly different pronunciation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28096,7 +29637,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avions-fr",
     {
@@ -28111,7 +29653,8 @@ export const phrases = new Map([
           definition: "avoir imperfect",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28133,7 +29676,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-aviez-fr",
     {
@@ -28148,7 +29692,8 @@ export const phrases = new Map([
           definition: "imperfect tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28170,7 +29715,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-avaient-fr",
     {
@@ -28185,7 +29731,8 @@ export const phrases = new Map([
           definition: "sounds like 'avè'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28206,7 +29753,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avoir-faim-fr",
     {
@@ -28221,7 +29769,8 @@ export const phrases = new Map([
           definition: "literally 'to have hunger'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28242,7 +29791,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avoir-raison-fr",
     {
@@ -28257,7 +29807,8 @@ export const phrases = new Map([
           definition: "literally 'to have reason'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28278,7 +29829,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/avoir-past.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-bois-fr",
     {
@@ -28293,7 +29845,8 @@ export const phrases = new Map([
           definition: "present - boi- stem",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28315,7 +29868,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-bois-fr",
     {
@@ -28330,7 +29884,8 @@ export const phrases = new Map([
           definition: "present - boi- stem",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28352,7 +29907,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-boit-fr",
     {
@@ -28367,7 +29923,8 @@ export const phrases = new Map([
           definition: "present - boi- stem + t",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28388,7 +29945,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-buvons-fr",
     {
@@ -28403,7 +29961,8 @@ export const phrases = new Map([
           definition: "present - buv- stem change!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28425,7 +29984,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-buvez-fr",
     {
@@ -28440,7 +30000,8 @@ export const phrases = new Map([
           definition: "present - buv- stem",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28462,7 +30023,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-boivent-fr",
     {
@@ -28477,7 +30039,8 @@ export const phrases = new Map([
           definition: "present - boi- stem + vent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28498,7 +30061,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-bu-fr",
     {
@@ -28513,7 +30077,8 @@ export const phrases = new Map([
           definition: "passé composé - avoir + bu (irregular!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28534,7 +30099,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-as-bu-fr",
     {
@@ -28549,7 +30115,8 @@ export const phrases = new Map([
           definition: "passé composé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28571,7 +30138,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-a-bu-fr",
     {
@@ -28586,7 +30154,8 @@ export const phrases = new Map([
           definition: "passé composé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28607,7 +30176,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-bu-fr",
     {
@@ -28622,7 +30192,8 @@ export const phrases = new Map([
           definition: "passé composé - boire (irregular!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28644,7 +30215,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-avez-bu-fr",
     {
@@ -28659,7 +30231,8 @@ export const phrases = new Map([
           definition: "passé composé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28681,7 +30254,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-ont-bu-fr",
     {
@@ -28696,7 +30270,8 @@ export const phrases = new Map([
           definition: "passé composé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28717,7 +30292,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/boire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-ouf-fr",
     {
@@ -28732,7 +30308,8 @@ export const phrases = new Map([
           definition: "🇫🇷 France - verlan for 'fou' (crazy)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28753,7 +30330,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-chelou-fr",
     {
@@ -28768,7 +30346,8 @@ export const phrases = new Map([
           definition: "🇫🇷 France - verlan for 'louche' (weird)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28789,7 +30368,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-g-nial-fr",
     {
@@ -28804,7 +30384,8 @@ export const phrases = new Map([
           definition: "🇫🇷 France - very common!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28825,7 +30406,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-nul-fr",
     {
@@ -28840,7 +30422,8 @@ export const phrases = new Map([
           definition: "🇫🇷 France - negative slang",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28861,7 +30444,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-cool-fr",
     {
@@ -28876,7 +30460,8 @@ export const phrases = new Map([
           definition: "🇫🇷 France - borrowed from English",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28897,7 +30482,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-dingue-fr",
     {
@@ -28912,7 +30498,8 @@ export const phrases = new Map([
           definition: "🇫🇷 France - informal for crazy",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28933,7 +30520,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-grave-fr",
     {
@@ -28948,7 +30536,8 @@ export const phrases = new Map([
           definition: "🇫🇷 France & Africa - used for emphasis",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -28969,7 +30558,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-malade-fr",
     {
@@ -28984,7 +30574,8 @@ export const phrases = new Map([
           definition: "🇨🇦 Quebec - positive meaning!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29005,7 +30596,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-capot-fr",
     {
@@ -29020,7 +30612,8 @@ export const phrases = new Map([
           definition: "🇨🇦 Quebec - very informal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29041,7 +30634,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est--c-urant-fr",
     {
@@ -29056,7 +30650,8 @@ export const phrases = new Map([
           definition: "🇨🇦 Quebec - can be positive OR negative!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29077,7 +30672,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-le-fun-fr",
     {
@@ -29092,7 +30688,8 @@ export const phrases = new Map([
           definition: "🇨🇦 Quebec - borrowed from English",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29113,7 +30710,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-poche-fr",
     {
@@ -29128,7 +30726,8 @@ export const phrases = new Map([
           definition: "🇨🇦 Quebec - negative",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29149,7 +30748,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-ben-correct-fr",
     {
@@ -29164,7 +30764,8 @@ export const phrases = new Map([
           definition: "🇨🇦 Quebec - 'ben' = 'bien'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29185,7 +30786,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-gnama-fr",
     {
@@ -29200,7 +30802,8 @@ export const phrases = new Map([
           definition: "🌍 West Africa (Senegal, Ivory Coast)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29221,7 +30824,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-fort-fr",
     {
@@ -29236,7 +30840,8 @@ export const phrases = new Map([
           definition: "🌍 Africa - used for emphasis",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29257,7 +30862,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-chaud-fr",
     {
@@ -29272,7 +30878,8 @@ export const phrases = new Map([
           definition: "🌍 Africa & France - figurative meaning",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29293,7 +30900,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-top-fr",
     {
@@ -29308,7 +30916,8 @@ export const phrases = new Map([
           definition: "Universal - borrowed from English",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29329,7 +30938,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-mortel-fr",
     {
@@ -29344,7 +30954,8 @@ export const phrases = new Map([
           definition: "France - positive slang",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29365,7 +30976,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons-slang.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tout---toute---tous---toutes-fr",
     {
@@ -29380,7 +30992,8 @@ export const phrases = new Map([
           definition: "quantifier - agrees with noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29401,7 +31014,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/comparisons.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-devrais-fr",
     {
@@ -29416,7 +31030,8 @@ export const phrases = new Map([
           definition: "conditional - devoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29438,7 +31053,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-devrais-fr",
     {
@@ -29453,7 +31069,8 @@ export const phrases = new Map([
           definition: "conditional - devoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29475,7 +31092,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-devrait-fr",
     {
@@ -29490,7 +31108,8 @@ export const phrases = new Map([
           definition: "conditional of devoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29511,7 +31130,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-devrions-fr",
     {
@@ -29526,7 +31146,8 @@ export const phrases = new Map([
           definition: "conditional - devoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29548,7 +31169,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-devriez-fr",
     {
@@ -29563,7 +31185,8 @@ export const phrases = new Map([
           definition: "conditional of devoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29585,7 +31208,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-devraient-fr",
     {
@@ -29600,7 +31224,8 @@ export const phrases = new Map([
           definition: "conditional of devoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29621,7 +31246,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-pourrais-fr",
     {
@@ -29636,7 +31262,8 @@ export const phrases = new Map([
           definition: "conditional of pouvoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29658,7 +31285,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-pourrais-fr",
     {
@@ -29673,7 +31301,8 @@ export const phrases = new Map([
           definition: "conditional - pouvoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29695,7 +31324,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-pourrait-fr",
     {
@@ -29710,7 +31340,8 @@ export const phrases = new Map([
           definition: "conditional of pouvoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29731,7 +31362,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-pourrions-fr",
     {
@@ -29746,7 +31378,8 @@ export const phrases = new Map([
           definition: "conditional - pouvoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29768,7 +31401,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-pourriez-fr",
     {
@@ -29783,7 +31417,8 @@ export const phrases = new Map([
           definition: "conditional of pouvoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29805,7 +31440,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-pourraient-fr",
     {
@@ -29820,7 +31456,8 @@ export const phrases = new Map([
           definition: "conditional of pouvoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29841,7 +31478,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j--tais-fr",
     {
@@ -29856,7 +31494,8 @@ export const phrases = new Map([
           definition: "être imperfect",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29877,7 +31516,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu--tais-fr",
     {
@@ -29892,7 +31532,8 @@ export const phrases = new Map([
           definition: "sounds same as j'étais",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29914,7 +31555,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/etre-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle--tait-fr",
     {
@@ -29929,7 +31571,8 @@ export const phrases = new Map([
           definition: "sounds similar to j'étais/tu étais",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29950,7 +31593,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/etre-past.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous--tions-fr",
     {
@@ -29965,7 +31609,8 @@ export const phrases = new Map([
           definition: "être in imparfait (irregular stem)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -29987,7 +31632,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/imparfait-all-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous--tiez-fr",
     {
@@ -30002,7 +31648,8 @@ export const phrases = new Map([
           definition: "imperfect tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30024,7 +31671,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/etre-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles--taient-fr",
     {
@@ -30039,7 +31687,8 @@ export const phrases = new Map([
           definition: "sounds like 'étè'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30060,7 +31709,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/etre-past.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-caf--fr",
     {
@@ -30075,7 +31725,8 @@ export const phrases = new Map([
           definition: "drink",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30096,7 +31747,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-express-fr",
     {
@@ -30111,7 +31763,8 @@ export const phrases = new Map([
           definition: "strong coffee",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30132,7 +31785,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-th--fr",
     {
@@ -30147,7 +31801,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30168,7 +31823,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-lait-fr",
     {
@@ -30183,7 +31839,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30204,7 +31861,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-vin-fr",
     {
@@ -30219,7 +31877,8 @@ export const phrases = new Map([
           definition: "drink",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30240,7 +31899,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-bi-re-fr",
     {
@@ -30255,7 +31915,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30276,7 +31937,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-jus-fr",
     {
@@ -30291,7 +31953,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30312,7 +31975,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-baguette-fr",
     {
@@ -30327,7 +31991,8 @@ export const phrases = new Map([
           definition: "French bread",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30348,7 +32013,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-croissant-fr",
     {
@@ -30363,7 +32029,8 @@ export const phrases = new Map([
           definition: "masculine - classic breakfast!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30384,7 +32051,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-beurre-fr",
     {
@@ -30399,7 +32067,8 @@ export const phrases = new Map([
           definition: "with bread",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30420,7 +32089,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-fromage-fr",
     {
@@ -30435,7 +32105,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30456,7 +32127,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-pizza-fr",
     {
@@ -30471,7 +32143,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30492,7 +32165,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-sel-fr",
     {
@@ -30507,7 +32181,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30528,7 +32203,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-poivre-fr",
     {
@@ -30543,7 +32219,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30564,7 +32241,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-sucre-fr",
     {
@@ -30579,7 +32257,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30600,7 +32279,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-viande-fr",
     {
@@ -30615,7 +32295,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30636,7 +32317,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-poulet-fr",
     {
@@ -30651,7 +32333,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30672,7 +32355,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-poisson-fr",
     {
@@ -30687,7 +32371,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30708,7 +32393,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-b-uf-fr",
     {
@@ -30723,7 +32409,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30744,7 +32431,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-porc-fr",
     {
@@ -30759,7 +32447,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30780,7 +32469,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les--ufs-fr",
     {
@@ -30795,7 +32485,8 @@ export const phrases = new Map([
           definition: "masculine plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30816,7 +32507,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-l-gumes-fr",
     {
@@ -30831,7 +32523,8 @@ export const phrases = new Map([
           definition: "masculine plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30852,7 +32545,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-salade-fr",
     {
@@ -30867,7 +32561,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30888,7 +32583,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-tomate-fr",
     {
@@ -30903,7 +32599,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30924,7 +32621,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-pomme-de-terre-fr",
     {
@@ -30939,7 +32637,8 @@ export const phrases = new Map([
           definition: "feminine - literally 'apple of earth'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30960,7 +32659,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-frites-fr",
     {
@@ -30975,7 +32675,8 @@ export const phrases = new Map([
           definition: "feminine plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -30996,7 +32697,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-haricots-fr",
     {
@@ -31011,7 +32713,8 @@ export const phrases = new Map([
           definition: "masculine plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31032,7 +32735,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-fruits-fr",
     {
@@ -31047,7 +32751,8 @@ export const phrases = new Map([
           definition: "masculine plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31068,7 +32773,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-pomme-fr",
     {
@@ -31083,7 +32789,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31104,7 +32811,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-banane-fr",
     {
@@ -31119,7 +32827,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31140,7 +32849,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-orange-fr",
     {
@@ -31155,7 +32865,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31176,7 +32887,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-riz-fr",
     {
@@ -31191,7 +32903,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31212,7 +32925,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-p-tes-fr",
     {
@@ -31227,7 +32941,8 @@ export const phrases = new Map([
           definition: "feminine plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31248,7 +32963,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-g-teau-fr",
     {
@@ -31263,7 +32979,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31284,7 +33001,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-glace-fr",
     {
@@ -31299,7 +33017,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31320,7 +33039,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-chocolat-fr",
     {
@@ -31335,7 +33055,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31356,7 +33077,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/food-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-mange-fr",
     {
@@ -31371,7 +33093,8 @@ export const phrases = new Map([
           definition: "present tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31393,7 +33116,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-manges-fr",
     {
@@ -31408,7 +33132,8 @@ export const phrases = new Map([
           definition: "present tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31430,7 +33155,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-mange-fr",
     {
@@ -31445,7 +33171,8 @@ export const phrases = new Map([
           definition: "present tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31466,7 +33193,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-mangeons-fr",
     {
@@ -31481,7 +33209,8 @@ export const phrases = new Map([
           definition: "note: mangeons (not mangons)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31503,7 +33232,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-mangez-fr",
     {
@@ -31518,7 +33248,8 @@ export const phrases = new Map([
           definition: "present tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31540,7 +33271,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-mangent-fr",
     {
@@ -31555,7 +33287,8 @@ export const phrases = new Map([
           definition: "present tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31576,7 +33309,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-mang--fr",
     {
@@ -31591,7 +33325,8 @@ export const phrases = new Map([
           definition: "⭐ very common - manger → mangé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31612,7 +33347,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-as-mang--fr",
     {
@@ -31627,7 +33363,8 @@ export const phrases = new Map([
           definition: "passé composé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31649,7 +33386,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-a-mang--fr",
     {
@@ -31664,7 +33402,8 @@ export const phrases = new Map([
           definition: "passé composé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31685,7 +33424,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-mang--fr",
     {
@@ -31700,7 +33440,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31722,7 +33463,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-avez-mang--fr",
     {
@@ -31737,7 +33479,8 @@ export const phrases = new Map([
           definition: "passé composé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31759,7 +33502,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-ont-mang--fr",
     {
@@ -31774,7 +33518,8 @@ export const phrases = new Map([
           definition: "passé composé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31795,7 +33540,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/manger.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c--tait-fr",
     {
@@ -31810,7 +33556,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31831,7 +33578,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avions-faim-fr",
     {
@@ -31846,7 +33594,8 @@ export const phrases = new Map([
           definition: "avoir faim in past",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31867,7 +33616,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avions-mang--fr",
     {
@@ -31882,7 +33632,8 @@ export const phrases = new Map([
           definition: "pluperfect",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31903,7 +33654,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "a-mang--fr",
     {
@@ -31918,7 +33670,8 @@ export const phrases = new Map([
           definition: "passé composé - il/elle",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31939,7 +33692,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-vu-fr",
     {
@@ -31954,7 +33708,8 @@ export const phrases = new Map([
           definition: "voir → vu conjugated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -31976,7 +33731,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-ai-dit-fr",
     {
@@ -31991,7 +33747,8 @@ export const phrases = new Map([
           definition: "⭐ dire → dit (irregular!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32012,7 +33769,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-ne-pouvions-pas-fr",
     {
@@ -32027,7 +33785,8 @@ export const phrases = new Map([
           definition: "imperfect negative",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32049,7 +33808,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-voudriez-fr",
     {
@@ -32064,7 +33824,8 @@ export const phrases = new Map([
           definition: "conditional of vouloir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32086,7 +33847,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "meilleur-que-fr",
     {
@@ -32101,7 +33863,8 @@ export const phrases = new Map([
           definition: "comparison",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32122,7 +33885,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-meilleure-fr",
     {
@@ -32137,7 +33901,8 @@ export const phrases = new Map([
           definition: "superlative",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32158,7 +33923,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-m-me-fr",
     {
@@ -32173,7 +33939,8 @@ export const phrases = new Map([
           definition: "comparison",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32194,7 +33961,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-pizza-fr",
     {
@@ -32209,7 +33977,8 @@ export const phrases = new Map([
           definition: "popular food",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32230,7 +33999,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-restaurant-fr",
     {
@@ -32245,7 +34015,8 @@ export const phrases = new Map([
           definition: "place",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32266,7 +34037,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "moi-aussi-fr",
     {
@@ -32281,7 +34053,8 @@ export const phrases = new Map([
           definition: "agreement",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32302,7 +34075,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/reading-5.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-voudrais-fr",
     {
@@ -32317,7 +34091,8 @@ export const phrases = new Map([
           definition: "conditional of vouloir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32339,7 +34114,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-voudrait-fr",
     {
@@ -32354,7 +34130,8 @@ export const phrases = new Map([
           definition: "conditional of vouloir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32375,7 +34152,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ils-elles-voudraient-fr",
     {
@@ -32390,7 +34168,8 @@ export const phrases = new Map([
           definition: "conditional of vouloir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32411,7 +34190,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-irais-fr",
     {
@@ -32426,7 +34206,8 @@ export const phrases = new Map([
           definition: "conditional of aller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32447,7 +34228,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-irais-fr",
     {
@@ -32462,7 +34244,8 @@ export const phrases = new Map([
           definition: "conditional of aller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32484,7 +34267,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-irait-fr",
     {
@@ -32499,7 +34283,8 @@ export const phrases = new Map([
           definition: "conditional of aller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32520,7 +34305,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-irions-fr",
     {
@@ -32535,7 +34321,8 @@ export const phrases = new Map([
           definition: "conditional of aller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32557,7 +34344,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-iriez-fr",
     {
@@ -32572,7 +34360,8 @@ export const phrases = new Map([
           definition: "conditional of aller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32594,7 +34383,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-iraient-fr",
     {
@@ -32609,7 +34399,8 @@ export const phrases = new Map([
           definition: "conditional of aller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32630,7 +34421,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-ferais-fr",
     {
@@ -32645,7 +34437,8 @@ export const phrases = new Map([
           definition: "conditional of faire",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32667,7 +34460,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-ferais-fr",
     {
@@ -32682,7 +34476,8 @@ export const phrases = new Map([
           definition: "conditional of faire",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32704,7 +34499,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-ferait-fr",
     {
@@ -32719,7 +34515,8 @@ export const phrases = new Map([
           definition: "conditional of faire",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32740,7 +34537,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-ferions-fr",
     {
@@ -32755,7 +34553,8 @@ export const phrases = new Map([
           definition: "conditional of faire",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32777,7 +34576,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-feriez-fr",
     {
@@ -32792,7 +34592,8 @@ export const phrases = new Map([
           definition: "conditional of faire",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32814,7 +34615,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-feraient-fr",
     {
@@ -32829,7 +34631,8 @@ export const phrases = new Map([
           definition: "conditional of faire",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32850,7 +34653,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit5/would-conditionals.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avoir-besoin-de-fr",
     {
@@ -32865,7 +34669,8 @@ export const phrases = new Map([
           definition: "essential expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32886,7 +34691,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-besoin-de-fr",
     {
@@ -32901,7 +34707,8 @@ export const phrases = new Map([
           definition: "avoir besoin de + infinitive/noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32922,7 +34729,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-as-besoin-de-fr",
     {
@@ -32937,7 +34745,8 @@ export const phrases = new Map([
           definition: "besoin expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32959,7 +34768,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-a-besoin-de-fr",
     {
@@ -32974,7 +34784,8 @@ export const phrases = new Map([
           definition: "il/elle a + besoin + de",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -32995,7 +34806,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-besoin-de-fr",
     {
@@ -33010,7 +34822,8 @@ export const phrases = new Map([
           definition: "nous avons + besoin + de",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33032,7 +34845,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-avez-besoin-de-fr",
     {
@@ -33047,7 +34861,8 @@ export const phrases = new Map([
           definition: "vous avez + besoin + de",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33069,7 +34884,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-ont-besoin-de-fr",
     {
@@ -33084,7 +34900,8 @@ export const phrases = new Map([
           definition: "ils/elles ont + besoin + de",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33105,7 +34922,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-besoin-d-aide-fr",
     {
@@ -33120,7 +34938,8 @@ export const phrases = new Map([
           definition: "de → d' before vowel",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33141,7 +34960,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-besoin-d-argent-fr",
     {
@@ -33156,7 +34976,8 @@ export const phrases = new Map([
           definition: "very common phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33177,7 +34998,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-besoin-de-temps-fr",
     {
@@ -33192,7 +35014,8 @@ export const phrases = new Map([
           definition: "common phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33213,7 +35036,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-n-ai-pas-besoin-de-fr",
     {
@@ -33228,7 +35052,8 @@ export const phrases = new Map([
           definition: "negative - ne...pas around avoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33250,7 +35075,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/besoin.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-commande-fr",
     {
@@ -33265,7 +35091,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -e",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33287,7 +35114,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-commandes-fr",
     {
@@ -33302,7 +35130,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -es",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33324,7 +35153,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-commande-fr",
     {
@@ -33339,7 +35169,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -e",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33360,7 +35191,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-commandons-fr",
     {
@@ -33375,7 +35207,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33397,7 +35230,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-commandez-fr",
     {
@@ -33412,7 +35246,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33434,7 +35269,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-commandent-fr",
     {
@@ -33449,7 +35285,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -ent (silent)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33470,7 +35307,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "commander-un-caf--fr",
     {
@@ -33485,7 +35323,8 @@ export const phrases = new Map([
           definition: "very common at cafés",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33506,7 +35345,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "commander-une-pizza-fr",
     {
@@ -33521,7 +35361,8 @@ export const phrases = new Map([
           definition: "common phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33542,7 +35383,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "commander-en-ligne-fr",
     {
@@ -33557,7 +35399,8 @@ export const phrases = new Map([
           definition: "modern shopping phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33578,7 +35421,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-voudrais-commander-fr",
     {
@@ -33593,7 +35437,8 @@ export const phrases = new Map([
           definition: "polite restaurant phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33615,7 +35460,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "vous-commandez--fr",
     {
@@ -33630,7 +35476,8 @@ export const phrases = new Map([
           definition: "waiter's question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33652,7 +35499,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/commander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-demande-fr",
     {
@@ -33667,7 +35515,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -e",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33689,7 +35538,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-demandes-fr",
     {
@@ -33704,7 +35554,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -es",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33726,7 +35577,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-demande-fr",
     {
@@ -33741,7 +35593,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -e",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33762,7 +35615,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-demandons-fr",
     {
@@ -33777,7 +35631,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33799,7 +35654,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-demandez-fr",
     {
@@ -33814,7 +35670,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33836,7 +35693,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-demandent-fr",
     {
@@ -33851,7 +35709,8 @@ export const phrases = new Map([
           definition: "regular -ER ending: -ent (silent)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33872,7 +35731,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "demander-de-l-aide-fr",
     {
@@ -33887,7 +35747,8 @@ export const phrases = new Map([
           definition: "very common phrase - rank 63!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33908,7 +35769,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "demander-pardon-fr",
     {
@@ -33923,7 +35785,8 @@ export const phrases = new Map([
           definition: "polite expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33944,7 +35807,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "demander-la-permission-fr",
     {
@@ -33959,7 +35823,8 @@ export const phrases = new Map([
           definition: "formal phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -33980,7 +35845,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "demander---quelqu-un-fr",
     {
@@ -33995,7 +35861,8 @@ export const phrases = new Map([
           definition: "use 'à' + person",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34016,7 +35883,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il-me-demande-fr",
     {
@@ -34031,7 +35899,8 @@ export const phrases = new Map([
           definition: "object pronoun before verb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34053,7 +35922,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "demander-de-faire-fr",
     {
@@ -34068,7 +35938,8 @@ export const phrases = new Map([
           definition: "de + infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34089,7 +35960,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/demander.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-dis-fr",
     {
@@ -34104,7 +35976,8 @@ export const phrases = new Map([
           definition: "irregular - sounds like 'dee'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34126,7 +35999,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-dis-fr",
     {
@@ -34141,7 +36015,8 @@ export const phrases = new Map([
           definition: "same form as je dis",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34163,7 +36038,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-dit-fr",
     {
@@ -34178,7 +36054,8 @@ export const phrases = new Map([
           definition: "same sound as je/tu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34199,7 +36076,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-disons-fr",
     {
@@ -34214,7 +36092,8 @@ export const phrases = new Map([
           definition: "add -ons to 'dis'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34236,7 +36115,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-dites-fr",
     {
@@ -34251,7 +36131,8 @@ export const phrases = new Map([
           definition: "⚠️ IRREGULAR! Not 'disez'!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34273,7 +36154,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-disent-fr",
     {
@@ -34288,7 +36170,8 @@ export const phrases = new Map([
           definition: "add -ent (silent)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34309,7 +36192,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "dire-que-fr",
     {
@@ -34324,7 +36208,8 @@ export const phrases = new Map([
           definition: "introduce what someone says",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34345,7 +36230,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "dire---quelqu-un-fr",
     {
@@ -34360,7 +36246,8 @@ export const phrases = new Map([
           definition: "use à + person",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34381,7 +36268,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est---dire-fr",
     {
@@ -34396,7 +36284,8 @@ export const phrases = new Map([
           definition: "useful connector - abbreviated as 'càd'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34417,7 +36306,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "on-dit-que-fr",
     {
@@ -34432,7 +36322,8 @@ export const phrases = new Map([
           definition: "on = people in general",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34454,7 +36345,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "comme-on-dit-fr",
     {
@@ -34469,7 +36361,8 @@ export const phrases = new Map([
           definition: "common expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34490,7 +36383,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/dire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-mets-fr",
     {
@@ -34505,7 +36399,8 @@ export const phrases = new Map([
           definition: "single 't' - silent 's'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34527,7 +36422,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-mets-fr",
     {
@@ -34542,7 +36438,8 @@ export const phrases = new Map([
           definition: "same as je mets",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34564,7 +36461,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-met-fr",
     {
@@ -34579,7 +36477,8 @@ export const phrases = new Map([
           definition: "no 's' - single 't'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34600,7 +36499,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-mettons-fr",
     {
@@ -34615,7 +36515,8 @@ export const phrases = new Map([
           definition: "double 'tt' + ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34637,7 +36538,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-mettez-fr",
     {
@@ -34652,7 +36554,8 @@ export const phrases = new Map([
           definition: "double 'tt' + ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34674,7 +36577,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-mettent-fr",
     {
@@ -34689,7 +36593,8 @@ export const phrases = new Map([
           definition: "double 'tt' + ent (silent)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34710,7 +36615,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mettre-la-table-fr",
     {
@@ -34725,7 +36631,8 @@ export const phrases = new Map([
           definition: "very common expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34746,7 +36653,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mettre-un-pantalon-fr",
     {
@@ -34761,7 +36669,8 @@ export const phrases = new Map([
           definition: "mettre + clothing",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34782,7 +36691,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mettre-un-manteau-fr",
     {
@@ -34797,7 +36707,8 @@ export const phrases = new Map([
           definition: "mettre + clothing",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34818,7 +36729,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mettre-du-temps-fr",
     {
@@ -34833,7 +36745,8 @@ export const phrases = new Map([
           definition: "ça met du temps (it takes time)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34854,7 +36767,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-tu-mets--fr",
     {
@@ -34869,7 +36783,8 @@ export const phrases = new Map([
           definition: "asking about clothes",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34890,7 +36805,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/mettre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-prends-fr",
     {
@@ -34905,7 +36821,8 @@ export const phrases = new Map([
           definition: "sounds like 'pran'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34927,7 +36844,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/prendre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-prends-fr",
     {
@@ -34942,7 +36860,8 @@ export const phrases = new Map([
           definition: "same sound as je",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -34964,7 +36883,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/prendre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-prend-fr",
     {
@@ -34979,7 +36899,8 @@ export const phrases = new Map([
           definition: "no 's' at end - still sounds like 'pran'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35000,7 +36921,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/prendre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ils-elles-prennent-fr",
     {
@@ -35015,7 +36937,8 @@ export const phrases = new Map([
           definition: "double 'n' - sounds like 'pren'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35036,7 +36959,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/prendre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "prendre-le-bus-fr",
     {
@@ -35051,7 +36975,8 @@ export const phrases = new Map([
           definition: "common phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35072,7 +36997,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/prendre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "prendre-un-caf--fr",
     {
@@ -35087,7 +37013,8 @@ export const phrases = new Map([
           definition: "prendre = to have (food/drink)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35108,7 +37035,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/prendre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-apprends-fr",
     {
@@ -35123,7 +37051,8 @@ export const phrases = new Map([
           definition: "same pattern as je prends",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35144,7 +37073,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-apprends-le-fran-ais-fr",
     {
@@ -35159,7 +37089,8 @@ export const phrases = new Map([
           definition: "⭐ what you're doing right now!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35180,7 +37111,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-comprends-fr",
     {
@@ -35195,7 +37127,8 @@ export const phrases = new Map([
           definition: "same as je prends pattern",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35217,7 +37150,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-comprends--fr",
     {
@@ -35232,7 +37166,8 @@ export const phrases = new Map([
           definition: "essential question for learning",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35254,7 +37189,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-comprends-pas-fr",
     {
@@ -35269,7 +37205,8 @@ export const phrases = new Map([
           definition: "⭐ MOST IMPORTANT PHRASE!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35291,7 +37228,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "-tre-en-train-de-fr",
     {
@@ -35307,7 +37245,8 @@ export const phrases = new Map([
             "en train = in the train/process - literally 'in the act of'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35328,7 +37267,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-suis-en-train-de-manger-fr",
     {
@@ -35343,7 +37283,8 @@ export const phrases = new Map([
           definition: "present progressive - happening now!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35365,7 +37306,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "j--tais-en-train-de-parler-fr",
     {
@@ -35380,7 +37322,8 @@ export const phrases = new Map([
           definition: "past progressive - was happening then",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35401,7 +37344,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-vais-partir-fr",
     {
@@ -35416,7 +37360,8 @@ export const phrases = new Map([
           definition: "near future - aller + infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35438,7 +37383,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "ir",
-    }],
+    },
+  ],
   [
     "je-vais-manger-fr",
     {
@@ -35453,7 +37399,8 @@ export const phrases = new Map([
           definition: "near future",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35475,7 +37422,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "je-parlerai-fr",
     {
@@ -35490,7 +37438,8 @@ export const phrases = new Map([
           definition: "future tense - parler + ai",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35512,7 +37461,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-mangeras-fr",
     {
@@ -35527,7 +37477,8 @@ export const phrases = new Map([
           definition: "future tense - manger + as",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35549,7 +37500,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-ira-fr",
     {
@@ -35564,7 +37516,8 @@ export const phrases = new Map([
           definition: "irregular future - from aller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35586,7 +37539,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-vais-pas-fr",
     {
@@ -35601,7 +37555,8 @@ export const phrases = new Map([
           definition: "negative near future",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35623,7 +37578,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-devrais-pas-fr",
     {
@@ -35638,7 +37594,8 @@ export const phrases = new Map([
           definition: "negative conditional - devoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35660,7 +37617,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-ferai-pas-fr",
     {
@@ -35675,7 +37633,8 @@ export const phrases = new Map([
           definition: "negative future tense",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35697,7 +37656,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/progressive-tenses.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-en-train-de-fr",
     {
@@ -35712,7 +37672,8 @@ export const phrases = new Map([
           definition: "progressive present",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35734,7 +37695,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "prendre-le-train-fr",
     {
@@ -35749,7 +37711,8 @@ export const phrases = new Map([
           definition: "common phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35770,7 +37733,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "-a-prend-fr",
     {
@@ -35785,7 +37749,8 @@ export const phrases = new Map([
           definition: "impersonal expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35806,7 +37771,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mettre-dans-fr",
     {
@@ -35821,7 +37787,8 @@ export const phrases = new Map([
           definition: "with location",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35842,7 +37809,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-allons-partir-fr",
     {
@@ -35857,7 +37825,8 @@ export const phrases = new Map([
           definition: "near future: aller + infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35879,7 +37848,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
       conjugationGroup: "ir",
-    }],
+    },
+  ],
   [
     "je-vais-mettre-fr",
     {
@@ -35894,7 +37864,8 @@ export const phrases = new Map([
           definition: "near future",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35916,7 +37887,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
       conjugationGroup: "re",
-    }],
+    },
+  ],
   [
     "qu-est-ce-qu-on-va-faire-fr",
     {
@@ -35931,7 +37903,8 @@ export const phrases = new Map([
           definition: "question with near future",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35952,7 +37925,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-famille-fr",
     {
@@ -35967,7 +37941,8 @@ export const phrases = new Map([
           definition: "feminine - ma famille (my family)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -35988,7 +37963,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-p-re-fr",
     {
@@ -36003,7 +37979,8 @@ export const phrases = new Map([
           definition: "masculine - mon père (my father)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36024,7 +38001,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-m-re-fr",
     {
@@ -36039,7 +38017,8 @@ export const phrases = new Map([
           definition: "feminine - ma mère (my mother)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36060,7 +38039,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mon-fr-re-fr",
     {
@@ -36075,7 +38055,8 @@ export const phrases = new Map([
           definition: "masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36096,7 +38077,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-semaine-fr",
     {
@@ -36111,7 +38093,8 @@ export const phrases = new Map([
           definition: "time period",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36132,7 +38115,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-question-fr",
     {
@@ -36147,7 +38131,8 @@ export const phrases = new Map([
           definition: "feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36168,7 +38153,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-moment-fr",
     {
@@ -36183,7 +38169,8 @@ export const phrases = new Map([
           definition: "masculine - un moment (a moment)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36204,7 +38191,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-premi-re-fois-fr",
     {
@@ -36219,7 +38207,8 @@ export const phrases = new Map([
           definition: "fois = time/occasion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36240,7 +38229,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-ann-e-fr",
     {
@@ -36255,7 +38245,8 @@ export const phrases = new Map([
           definition: "feminine - duration",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36276,7 +38267,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tes-livres-fr",
     {
@@ -36291,7 +38283,8 @@ export const phrases = new Map([
           definition: "plural possessive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36312,7 +38305,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ses-livres-fr",
     {
@@ -36327,7 +38321,8 @@ export const phrases = new Map([
           definition: "plural possessive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36348,7 +38343,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ton-manteau-fr",
     {
@@ -36363,7 +38359,8 @@ export const phrases = new Map([
           definition: "from Unit 6 mettre module",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36384,7 +38381,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mon-livre-fr",
     {
@@ -36399,7 +38397,8 @@ export const phrases = new Map([
           definition: "from Unit 1",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36420,7 +38419,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "livre-de-fran-ais-fr",
     {
@@ -36435,7 +38435,8 @@ export const phrases = new Map([
           definition: "compound noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36456,7 +38457,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bien-s-r-fr",
     {
@@ -36471,7 +38473,8 @@ export const phrases = new Map([
           definition: "common phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36492,7 +38495,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-train-fr",
     {
@@ -36507,7 +38511,8 @@ export const phrases = new Map([
           definition: "from vocabulary",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36528,7 +38533,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "trois-heures-fr",
     {
@@ -36543,7 +38549,8 @@ export const phrases = new Map([
           definition: "time expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36564,7 +38571,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quelque-chose-fr",
     {
@@ -36579,7 +38587,8 @@ export const phrases = new Map([
           definition: "indefinite pronoun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36600,7 +38609,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "du-pain-fr",
     {
@@ -36615,7 +38625,8 @@ export const phrases = new Map([
           definition: "from Unit 5 food-nouns",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36636,7 +38647,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "du-fromage-fr",
     {
@@ -36651,7 +38663,8 @@ export const phrases = new Map([
           definition: "from Unit 5 food-nouns",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36672,7 +38685,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-prix-fr",
     {
@@ -36687,7 +38701,8 @@ export const phrases = new Map([
           definition: "from everyday-nouns",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36708,7 +38723,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-vrai-fr",
     {
@@ -36723,7 +38739,8 @@ export const phrases = new Map([
           definition: "confirmation phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36744,7 +38761,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "va-venir-fr",
     {
@@ -36759,7 +38777,8 @@ export const phrases = new Map([
           definition: "near future of venir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36780,7 +38799,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-ce-moment-fr",
     {
@@ -36795,7 +38815,8 @@ export const phrases = new Map([
           definition: "time expression with Unit 6 moment",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36816,7 +38837,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avant-de-partir-fr",
     {
@@ -36831,7 +38853,8 @@ export const phrases = new Map([
           definition: "avant de + infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36852,7 +38875,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tr-s-bien-fr",
     {
@@ -36867,7 +38891,8 @@ export const phrases = new Map([
           definition: "adverb phrase",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36889,7 +38914,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "plus-belle-fr",
     {
@@ -36904,7 +38930,8 @@ export const phrases = new Map([
           definition: "superlative from Unit 5",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36925,7 +38952,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/reading-6.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-ann-e-fr",
     {
@@ -36940,7 +38968,8 @@ export const phrases = new Map([
           definition: "feminine (année) - full calendar year",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36961,7 +38990,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-fois-fr",
     {
@@ -36976,7 +39006,8 @@ export const phrases = new Map([
           definition: "feminine - une fois (once), deux fois (twice)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -36997,7 +39028,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-heure-fr",
     {
@@ -37012,7 +39044,8 @@ export const phrases = new Map([
           definition: "feminine (heure) - quelle heure? (what time?)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37033,7 +39066,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-minute-fr",
     {
@@ -37048,7 +39082,8 @@ export const phrases = new Map([
           definition: "feminine - une minute (one minute)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37069,7 +39104,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-d-but-fr",
     {
@@ -37084,7 +39120,8 @@ export const phrases = new Map([
           definition: "masculine - au début (at the beginning)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37105,7 +39142,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-fin-fr",
     {
@@ -37120,7 +39158,8 @@ export const phrases = new Map([
           definition: "feminine - à la fin (at the end)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37141,7 +39180,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-personne-fr",
     {
@@ -37156,7 +39196,8 @@ export const phrases = new Map([
           definition: "feminine - always feminine even for males!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37177,7 +39218,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-fils-fr",
     {
@@ -37192,7 +39234,8 @@ export const phrases = new Map([
           definition: "masculine - silent 's' at end",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37213,7 +39256,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-fille-fr",
     {
@@ -37228,7 +39272,8 @@ export const phrases = new Map([
           definition: "feminine - can mean daughter OR girl",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37249,7 +39294,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-fr-re-fr",
     {
@@ -37264,7 +39310,8 @@ export const phrases = new Map([
           definition: "masculine - mon frère (my brother)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37285,7 +39332,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-s-ur-fr",
     {
@@ -37300,7 +39348,8 @@ export const phrases = new Map([
           definition: "feminine - ma sœur (my sister)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37321,7 +39370,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-yeux-fr",
     {
@@ -37336,7 +39386,8 @@ export const phrases = new Map([
           definition: "masculine plural - singular: un œil (irregular!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37357,7 +39408,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-visage-fr",
     {
@@ -37372,7 +39424,8 @@ export const phrases = new Map([
           definition: "masculine - sur le visage (on the face)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37393,7 +39446,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-corps-fr",
     {
@@ -37408,7 +39462,8 @@ export const phrases = new Map([
           definition: "masculine - silent 'p' and 's'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37429,7 +39484,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-c-ur-fr",
     {
@@ -37444,7 +39500,8 @@ export const phrases = new Map([
           definition: "masculine - mon cœur (my heart)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37465,7 +39522,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-voix-fr",
     {
@@ -37480,7 +39538,8 @@ export const phrases = new Map([
           definition: "feminine - silent 'x'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37501,7 +39560,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-histoire-fr",
     {
@@ -37516,7 +39576,8 @@ export const phrases = new Map([
           definition: "feminine (histoire) - can mean both!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37537,7 +39598,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-question-fr",
     {
@@ -37552,7 +39614,8 @@ export const phrases = new Map([
           definition: "⭐ essential for learning!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37573,7 +39636,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-raison-fr",
     {
@@ -37588,7 +39652,8 @@ export const phrases = new Map([
           definition: "feminine noun - la raison pour...",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37609,7 +39674,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-fait-fr",
     {
@@ -37624,7 +39690,8 @@ export const phrases = new Map([
           definition: "masculine - un fait (a fact)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37645,7 +39712,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-partie-fr",
     {
@@ -37660,7 +39728,8 @@ export const phrases = new Map([
           definition: "feminine - une partie de (a part of)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37681,7 +39750,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-c-t--fr",
     {
@@ -37696,7 +39766,8 @@ export const phrases = new Map([
           definition: "masculine - à côté de (next to)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37717,7 +39788,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-fois-fr",
     {
@@ -37732,7 +39804,8 @@ export const phrases = new Map([
           definition: "feminine - la première fois (the first time)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37753,7 +39826,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit6/top-200-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "toute-la-classe-fr",
     {
@@ -37768,7 +39842,8 @@ export const phrases = new Map([
           definition: "feminine 'toute' + la classe",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37789,7 +39864,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tout-petit-fr",
     {
@@ -37804,7 +39880,8 @@ export const phrases = new Map([
           definition: "adverb use - intensifier",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37826,7 +39903,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "m-me-moi-fr",
     {
@@ -37841,7 +39919,8 @@ export const phrases = new Map([
           definition: "emphasis - 'même' before word",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37862,7 +39941,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-comprends-mal-fr",
     {
@@ -37877,7 +39957,8 @@ export const phrases = new Map([
           definition: "adverb after verb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37899,7 +39980,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "aller-mal-fr",
     {
@@ -37914,7 +39996,8 @@ export const phrases = new Map([
           definition: "Ça va mal (It's going badly)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37935,7 +40018,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comparison-modifiers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-comprends-fr",
     {
@@ -37950,7 +40034,8 @@ export const phrases = new Map([
           definition: "most common in questions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -37972,7 +40057,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-comprend-fr",
     {
@@ -37987,7 +40073,8 @@ export const phrases = new Map([
           definition: "no final -s or -t",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38008,7 +40095,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vous-comprenez-fr",
     {
@@ -38023,7 +40111,8 @@ export const phrases = new Map([
           definition: "polite form for strangers",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38045,7 +40134,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-comprennent-fr",
     {
@@ -38060,7 +40150,8 @@ export const phrases = new Map([
           definition: "double n, silent -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38081,7 +40172,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-comprends-bien-fr",
     {
@@ -38096,7 +40188,8 @@ export const phrases = new Map([
           definition: "adverb after verb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38118,7 +40211,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/comprendre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-connais-fr",
     {
@@ -38133,7 +40227,8 @@ export const phrases = new Map([
           definition: "for people/places only",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38155,7 +40250,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-connais-fr",
     {
@@ -38170,7 +40266,8 @@ export const phrases = new Map([
           definition: "Tu connais Marie?",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38192,7 +40289,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-conna-t-fr",
     {
@@ -38207,7 +40305,8 @@ export const phrases = new Map([
           definition: "⚠️ circumflex accent î",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38228,7 +40327,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-connaissons-fr",
     {
@@ -38243,7 +40343,8 @@ export const phrases = new Map([
           definition: "double -ss-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38265,7 +40366,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-connaissez-fr",
     {
@@ -38280,7 +40382,8 @@ export const phrases = new Map([
           definition: "double -ss-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38302,7 +40405,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-connaissent-fr",
     {
@@ -38317,7 +40421,8 @@ export const phrases = new Map([
           definition: "double -ss-, silent -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38338,7 +40443,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-connais-marie-fr",
     {
@@ -38353,7 +40459,8 @@ export const phrases = new Map([
           definition: "⭐ people - use connaître",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38375,7 +40482,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-connais-paris-fr",
     {
@@ -38390,7 +40498,8 @@ export const phrases = new Map([
           definition: "⭐ places - use connaître",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38412,7 +40521,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-connais--fr",
     {
@@ -38427,7 +40537,8 @@ export const phrases = new Map([
           definition: "asking if familiar",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38449,7 +40560,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/connaitre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-crois-fr",
     {
@@ -38464,7 +40576,8 @@ export const phrases = new Map([
           definition: "same sound as je crois",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38486,7 +40599,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/croire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-croit-fr",
     {
@@ -38501,7 +40615,8 @@ export const phrases = new Map([
           definition: "same sound, different spelling",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38522,7 +40637,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/croire.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-crois-que-oui-fr",
     {
@@ -38537,7 +40653,8 @@ export const phrases = new Map([
           definition: "⭐ softer than 'je pense que oui'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38559,7 +40676,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/croire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-crois-pas-fr",
     {
@@ -38574,7 +40692,8 @@ export const phrases = new Map([
           definition: "common negative response",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38596,7 +40715,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/croire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-crois--fr",
     {
@@ -38611,7 +40731,8 @@ export const phrases = new Map([
           definition: "asking for opinion/belief",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38633,7 +40754,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/croire.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "en-fait-fr",
     {
@@ -38648,7 +40770,8 @@ export const phrases = new Map([
           definition: "discourse marker",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38669,7 +40792,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-pense--donc-je-suis-fr",
     {
@@ -38684,7 +40808,8 @@ export const phrases = new Map([
           definition: "famous Descartes quote!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38706,7 +40831,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "donc--tu-comprends--fr",
     {
@@ -38721,7 +40847,8 @@ export const phrases = new Map([
           definition: "donc at beginning = conclusion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38742,7 +40869,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-fait--je-ne-sais-pas-fr",
     {
@@ -38757,7 +40885,8 @@ export const phrases = new Map([
           definition: "en fait = clarification",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38778,7 +40907,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "bah--c-est-comme--a-fr",
     {
@@ -38793,7 +40923,8 @@ export const phrases = new Map([
           definition: "bah = informal hesitation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38814,7 +40945,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-bon--quoi-fr",
     {
@@ -38829,7 +40961,8 @@ export const phrases = new Map([
           definition: "quoi at end = emphasis",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38850,7 +40983,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/discourse-markers.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-connaissance-fr",
     {
@@ -38865,7 +40999,8 @@ export const phrases = new Map([
           definition: "feminine noun - from connaître",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38886,7 +41021,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-savoir-fr",
     {
@@ -38901,7 +41037,8 @@ export const phrases = new Map([
           definition: "masculine noun - from savoir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38922,7 +41059,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-apprentissage--m--fr",
     {
@@ -38937,7 +41075,8 @@ export const phrases = new Map([
           definition: "masculine noun - from apprendre",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38958,7 +41097,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l--tude--f--fr",
     {
@@ -38973,7 +41113,8 @@ export const phrases = new Map([
           definition: "feminine noun - from étudier",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -38994,7 +41135,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-le-on-fr",
     {
@@ -39009,7 +41151,8 @@ export const phrases = new Map([
           definition: "feminine noun ⭐ what you're doing now!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39030,7 +41173,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-cours-fr",
     {
@@ -39045,7 +41189,8 @@ export const phrases = new Map([
           definition: "masculine noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39066,7 +41211,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l--cole--f--fr",
     {
@@ -39081,7 +41227,8 @@ export const phrases = new Map([
           definition: "feminine noun - primary/secondary",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39102,7 +41249,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-universit---f--fr",
     {
@@ -39117,7 +41265,8 @@ export const phrases = new Map([
           definition: "feminine noun - higher education",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39138,7 +41287,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-pens-e-fr",
     {
@@ -39153,7 +41303,8 @@ export const phrases = new Map([
           definition: "feminine noun - from penser",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39174,7 +41325,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-id-e--f--fr",
     {
@@ -39189,7 +41341,8 @@ export const phrases = new Map([
           definition: "feminine noun ⭐ very common!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39210,7 +41363,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-r-ponse-fr",
     {
@@ -39225,7 +41379,8 @@ export const phrases = new Map([
           definition: "feminine noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39246,7 +41401,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/knowledge-nouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "allons-y--fr",
     {
@@ -39261,7 +41417,8 @@ export const phrases = new Map([
           definition: "⭐ group command",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39282,7 +41439,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-apprends-fr",
     {
@@ -39297,7 +41455,8 @@ export const phrases = new Map([
           definition: "asking what someone is learning",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39319,7 +41478,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-apprend-fr",
     {
@@ -39334,7 +41494,8 @@ export const phrases = new Map([
           definition: "no final consonant sound",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39355,7 +41516,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-apprenons-fr",
     {
@@ -39370,7 +41532,8 @@ export const phrases = new Map([
           definition: "learning together",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39392,7 +41555,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-apprenez-fr",
     {
@@ -39407,7 +41571,8 @@ export const phrases = new Map([
           definition: "polite form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39429,7 +41594,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-apprennent-fr",
     {
@@ -39444,7 +41610,8 @@ export const phrases = new Map([
           definition: "double n, silent -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39465,7 +41632,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-enseigne-fr",
     {
@@ -39480,7 +41648,8 @@ export const phrases = new Map([
           definition: "regular conjugation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39502,7 +41671,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-enseignes-fr",
     {
@@ -39517,7 +41687,8 @@ export const phrases = new Map([
           definition: "regular -es ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39539,7 +41710,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-enseigne-fr",
     {
@@ -39554,7 +41726,8 @@ export const phrases = new Map([
           definition: "teacher profession",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39575,7 +41748,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-enseignons-fr",
     {
@@ -39590,7 +41764,8 @@ export const phrases = new Map([
           definition: "team teaching",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39612,7 +41787,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-enseignez-fr",
     {
@@ -39627,7 +41803,8 @@ export const phrases = new Map([
           definition: "polite form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39649,7 +41826,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-enseignent-fr",
     {
@@ -39664,7 +41842,8 @@ export const phrases = new Map([
           definition: "silent -ent ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39685,7 +41864,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/learning-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "on-est-fr",
     {
@@ -39700,7 +41880,8 @@ export const phrases = new Map([
           definition: "uses il/elle form 'est'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39722,7 +41903,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-a-fr",
     {
@@ -39737,7 +41919,8 @@ export const phrases = new Map([
           definition: "uses il/elle form 'a'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39759,7 +41942,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-va-fr",
     {
@@ -39774,7 +41958,8 @@ export const phrases = new Map([
           definition: "⭐ very common! 'On y va?'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39796,7 +41981,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-fait-fr",
     {
@@ -39811,7 +41997,8 @@ export const phrases = new Map([
           definition: "uses il/elle form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39833,7 +42020,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-peut-fr",
     {
@@ -39848,7 +42036,8 @@ export const phrases = new Map([
           definition: "On peut apprendre!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39870,7 +42059,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-doit-fr",
     {
@@ -39885,7 +42075,8 @@ export const phrases = new Map([
           definition: "On doit étudier",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39907,7 +42098,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-dit-fr",
     {
@@ -39922,7 +42114,8 @@ export const phrases = new Map([
           definition: "On dit que... (People say that...)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39944,7 +42137,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-voit-fr",
     {
@@ -39959,7 +42153,8 @@ export const phrases = new Map([
           definition: "general observation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -39981,7 +42176,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-y-va--fr",
     {
@@ -39996,7 +42192,8 @@ export const phrases = new Map([
           definition: "⭐⭐⭐ extremely common phrase!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40018,7 +42215,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "les-gens-fr",
     {
@@ -40033,7 +42231,8 @@ export const phrases = new Map([
           definition: "⭐ plural noun, very common",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40054,7 +42253,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-gens-disent-fr",
     {
@@ -40069,7 +42269,8 @@ export const phrases = new Map([
           definition: "plural verb 'disent'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40091,7 +42292,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "les-gens-pensent-fr",
     {
@@ -40106,7 +42308,8 @@ export const phrases = new Map([
           definition: "general opinion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40127,7 +42330,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tout-le-monde-sait-fr",
     {
@@ -40142,7 +42346,8 @@ export const phrases = new Map([
           definition: "singular 'sait' not 'savent'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40163,7 +42368,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-peuple-fr",
     {
@@ -40178,7 +42384,8 @@ export const phrases = new Map([
           definition: "more formal/political",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40199,7 +42406,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-population-fr",
     {
@@ -40214,7 +42422,8 @@ export const phrases = new Map([
           definition: "demographic term",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40235,7 +42444,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-personnes-fr",
     {
@@ -40250,7 +42460,8 @@ export const phrases = new Map([
           definition: "more formal than 'les gens'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40271,7 +42482,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/on-and-people.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-pense-fr",
     {
@@ -40286,7 +42498,8 @@ export const phrases = new Map([
           definition: "first person - most common",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40308,7 +42521,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-penses-fr",
     {
@@ -40323,7 +42537,8 @@ export const phrases = new Map([
           definition: "for asking opinions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40345,7 +42560,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-pense-fr",
     {
@@ -40360,7 +42576,8 @@ export const phrases = new Map([
           definition: "third person opinion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40381,7 +42598,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-pensons-fr",
     {
@@ -40396,7 +42614,8 @@ export const phrases = new Map([
           definition: "group opinion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40418,7 +42637,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-pensez-fr",
     {
@@ -40433,7 +42653,8 @@ export const phrases = new Map([
           definition: "polite form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40455,7 +42676,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-pensent-fr",
     {
@@ -40470,7 +42692,8 @@ export const phrases = new Map([
           definition: "silent -ent ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40491,7 +42714,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-pense-que-oui-fr",
     {
@@ -40506,7 +42730,8 @@ export const phrases = new Map([
           definition: "⭐ super common response",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40528,7 +42753,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-pense-que-non-fr",
     {
@@ -40543,7 +42769,8 @@ export const phrases = new Map([
           definition: "negative response",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40565,7 +42792,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-tu-penses--fr",
     {
@@ -40580,7 +42808,8 @@ export const phrases = new Map([
           definition: "asking for opinion",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40601,7 +42830,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-pense---toi-fr",
     {
@@ -40616,7 +42846,8 @@ export const phrases = new Map([
           definition: "use à for 'about'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40638,7 +42869,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/penser.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "l-apprentissage-fr",
     {
@@ -40653,7 +42885,8 @@ export const phrases = new Map([
           definition: "masculine noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40674,7 +42907,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l--tude-fr",
     {
@@ -40689,7 +42923,8 @@ export const phrases = new Map([
           definition: "feminine noun",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40710,7 +42945,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "des-heures-fr",
     {
@@ -40725,7 +42961,8 @@ export const phrases = new Map([
           definition: "time",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40746,7 +42983,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "d-abord-fr",
     {
@@ -40761,7 +42999,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40782,7 +43021,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avec-le-temps-fr",
     {
@@ -40797,7 +43037,8 @@ export const phrases = new Map([
           definition: "expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40818,7 +43059,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-peu-fr",
     {
@@ -40833,7 +43075,8 @@ export const phrases = new Map([
           definition: "quantity",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40854,7 +43097,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "des-mots-fr",
     {
@@ -40869,7 +43113,8 @@ export const phrases = new Map([
           definition: "noun plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40890,7 +43135,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "des-phrases-fr",
     {
@@ -40905,7 +43151,8 @@ export const phrases = new Map([
           definition: "plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40926,7 +43173,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/reading-7.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-sais-fr",
     {
@@ -40941,7 +43189,8 @@ export const phrases = new Map([
           definition: "same sound as je sais",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40963,7 +43212,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/savoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-sait-fr",
     {
@@ -40978,7 +43228,8 @@ export const phrases = new Map([
           definition: "same sound, different spelling",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -40999,7 +43250,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/savoir.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-sais--fr",
     {
@@ -41014,7 +43266,8 @@ export const phrases = new Map([
           definition: "super common question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41036,7 +43289,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/savoir.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-sais-parler-fr",
     {
@@ -41051,7 +43305,8 @@ export const phrases = new Map([
           definition: "savoir + infinitive for skills",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41073,7 +43328,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/savoir.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "tu--tudies-fr",
     {
@@ -41088,7 +43344,8 @@ export const phrases = new Map([
           definition: "asking about studies",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41110,7 +43367,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle--tudie-fr",
     {
@@ -41125,7 +43383,8 @@ export const phrases = new Map([
           definition: "third person studying",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41146,7 +43405,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous--tudions-fr",
     {
@@ -41161,7 +43421,8 @@ export const phrases = new Map([
           definition: "group studying",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41183,7 +43444,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous--tudiez-fr",
     {
@@ -41198,7 +43460,8 @@ export const phrases = new Map([
           definition: "polite form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41220,7 +43483,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles--tudient-fr",
     {
@@ -41235,7 +43499,8 @@ export const phrases = new Map([
           definition: "silent -ent ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41256,7 +43521,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-r-vise-fr",
     {
@@ -41271,7 +43537,8 @@ export const phrases = new Map([
           definition: "going over material",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41293,7 +43560,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-r-vises-fr",
     {
@@ -41308,7 +43576,8 @@ export const phrases = new Map([
           definition: "asking about review",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41330,7 +43599,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-elle-r-vise-fr",
     {
@@ -41345,7 +43615,8 @@ export const phrases = new Map([
           definition: "reviewing lessons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41366,7 +43637,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-r-visons-fr",
     {
@@ -41381,7 +43653,8 @@ export const phrases = new Map([
           definition: "studying together",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41403,7 +43676,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-r-visez-fr",
     {
@@ -41418,7 +43692,8 @@ export const phrases = new Map([
           definition: "polite form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41440,7 +43715,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-elles-r-visent-fr",
     {
@@ -41455,7 +43731,8 @@ export const phrases = new Map([
           definition: "silent -ent ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41476,7 +43753,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j--tudie-le-fran-ais-fr",
     {
@@ -41491,7 +43769,8 @@ export const phrases = new Map([
           definition: "⭐ your current activity!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41512,7 +43791,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-r-vise-mes-le-ons-fr",
     {
@@ -41527,7 +43807,8 @@ export const phrases = new Map([
           definition: "⭐ what you do before exams!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41549,7 +43830,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit7/studying-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "donne-le-moi--fr",
     {
@@ -41564,7 +43846,8 @@ export const phrases = new Map([
           definition: "⭐ command + object + indirect",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41585,7 +43868,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "regarde-moi--fr",
     {
@@ -41600,7 +43884,8 @@ export const phrases = new Map([
           definition: "command + moi",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41621,7 +43906,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "-coute-le--fr",
     {
@@ -41636,7 +43922,8 @@ export const phrases = new Map([
           definition: "command + object",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41657,7 +43944,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ne-le-fais-pas--fr",
     {
@@ -41672,7 +43960,8 @@ export const phrases = new Map([
           definition: "⭐ negative command",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41693,7 +43982,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ne-me-regarde-pas--fr",
     {
@@ -41708,7 +43998,8 @@ export const phrases = new Map([
           definition: "negative with me",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41729,7 +44020,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/commands-pronouns.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-dors-fr",
     {
@@ -41744,7 +44036,8 @@ export const phrases = new Map([
           definition: "drop final consonants",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41766,7 +44059,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-dors-fr",
     {
@@ -41781,7 +44075,8 @@ export const phrases = new Map([
           definition: "same as je",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41803,7 +44098,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-dort-fr",
     {
@@ -41818,7 +44114,8 @@ export const phrases = new Map([
           definition: "drop -s from tu form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41840,7 +44137,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-dort-fr",
     {
@@ -41855,7 +44153,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41877,7 +44176,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-dormons-fr",
     {
@@ -41892,7 +44192,8 @@ export const phrases = new Map([
           definition: "add -ons to stem",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41914,7 +44215,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-dormez-fr",
     {
@@ -41929,7 +44231,8 @@ export const phrases = new Map([
           definition: "add -ez to stem",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41951,7 +44254,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-dorment-fr",
     {
@@ -41966,7 +44270,8 @@ export const phrases = new Map([
           definition: "add -ent, silent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -41988,7 +44293,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-dorment-fr",
     {
@@ -42003,7 +44309,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42025,7 +44332,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-travaille-fr",
     {
@@ -42040,7 +44348,8 @@ export const phrases = new Map([
           definition: "regular -ER ending",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42062,7 +44371,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-travailles-fr",
     {
@@ -42077,7 +44387,8 @@ export const phrases = new Map([
           definition: "add -s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42099,7 +44410,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-travaille-fr",
     {
@@ -42114,7 +44426,8 @@ export const phrases = new Map([
           definition: "base form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42136,7 +44449,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-travaille-fr",
     {
@@ -42151,7 +44465,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42173,7 +44488,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-travaillons-fr",
     {
@@ -42188,7 +44504,8 @@ export const phrases = new Map([
           definition: "add -ons",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42210,7 +44527,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-travaillez-fr",
     {
@@ -42225,7 +44543,8 @@ export const phrases = new Map([
           definition: "add -ez",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42247,7 +44566,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-travaillent-fr",
     {
@@ -42262,7 +44582,8 @@ export const phrases = new Map([
           definition: "add -ent",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42284,7 +44605,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-travaillent-fr",
     {
@@ -42299,7 +44621,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42321,7 +44644,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-vis-fr",
     {
@@ -42336,7 +44660,8 @@ export const phrases = new Map([
           definition: "irregular - sounds like 'vee'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42358,7 +44683,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-vis-fr",
     {
@@ -42373,7 +44699,8 @@ export const phrases = new Map([
           definition: "same sound as je",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42395,7 +44722,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-vit-fr",
     {
@@ -42410,7 +44738,8 @@ export const phrases = new Map([
           definition: "drop -s, sounds like 'vee'",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42432,7 +44761,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-vit-fr",
     {
@@ -42447,7 +44777,8 @@ export const phrases = new Map([
           definition: "same as il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42469,7 +44800,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-vivons-fr",
     {
@@ -42484,7 +44816,8 @@ export const phrases = new Map([
           definition: "add -ons to viv-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42506,7 +44839,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-vivez-fr",
     {
@@ -42521,7 +44855,8 @@ export const phrases = new Map([
           definition: "add -ez to viv-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42543,7 +44878,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-vivent-fr",
     {
@@ -42558,7 +44894,8 @@ export const phrases = new Map([
           definition: "add -ent to viv-",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42580,7 +44917,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-vivent-fr",
     {
@@ -42595,7 +44933,8 @@ export const phrases = new Map([
           definition: "same as ils",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42617,7 +44956,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "bien-dormir-fr",
     {
@@ -42632,7 +44972,8 @@ export const phrases = new Map([
           definition: "je dors bien",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42653,7 +44994,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "travailler-dur-fr",
     {
@@ -42668,7 +45010,8 @@ export const phrases = new Map([
           definition: "je travaille dur",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42689,7 +45032,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vivre-sa-vie-fr",
     {
@@ -42704,7 +45048,8 @@ export const phrases = new Map([
           definition: "philosophical expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42725,7 +45070,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "o--travaillez-vous--fr",
     {
@@ -42740,7 +45086,8 @@ export const phrases = new Map([
           definition: "common social question",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42761,7 +45108,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-travaille---fr",
     {
@@ -42776,7 +45124,8 @@ export const phrases = new Map([
           definition: "location of work",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42798,7 +45147,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-vis---fr",
     {
@@ -42813,7 +45163,8 @@ export const phrases = new Map([
           definition: "location of residence",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42835,7 +45186,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-actions-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "se-souvenir-fr",
     {
@@ -42850,7 +45202,8 @@ export const phrases = new Map([
           definition: "infinitive - reflexive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42871,7 +45224,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-me-souviens-fr",
     {
@@ -42886,7 +45240,8 @@ export const phrases = new Map([
           definition: "se souvenir",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42908,7 +45263,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-te-souviens-fr",
     {
@@ -42923,7 +45279,8 @@ export const phrases = new Map([
           definition: "common in questions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42945,7 +45302,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-se-souvient-fr",
     {
@@ -42960,7 +45318,8 @@ export const phrases = new Map([
           definition: "third person",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -42982,7 +45341,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "s-amuser-fr",
     {
@@ -42997,7 +45357,8 @@ export const phrases = new Map([
           definition: "infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43018,7 +45379,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-m-amuse-fr",
     {
@@ -43033,7 +45395,8 @@ export const phrases = new Map([
           definition: "⭐ elision",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43055,7 +45418,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-t-amuses-fr",
     {
@@ -43070,7 +45434,8 @@ export const phrases = new Map([
           definition: "elision",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43092,7 +45457,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-s-amuse-fr",
     {
@@ -43107,7 +45473,8 @@ export const phrases = new Map([
           definition: "s'amuser",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43129,7 +45496,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "se-d-p-cher-fr",
     {
@@ -43144,7 +45512,8 @@ export const phrases = new Map([
           definition: "infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43165,7 +45534,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-me-d-p-che-fr",
     {
@@ -43180,7 +45550,8 @@ export const phrases = new Map([
           definition: "se dépêcher",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43202,7 +45573,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-te-d-p-ches-fr",
     {
@@ -43217,7 +45589,8 @@ export const phrases = new Map([
           definition: "informal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43239,7 +45612,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "d-p-che-toi--fr",
     {
@@ -43254,7 +45628,8 @@ export const phrases = new Map([
           definition: "command form (preview!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43275,7 +45650,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/daily-reflexives.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "se-laver-fr",
     {
@@ -43290,7 +45666,8 @@ export const phrases = new Map([
           definition: "infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43311,7 +45688,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-me-lave-fr",
     {
@@ -43326,7 +45704,8 @@ export const phrases = new Map([
           definition: "⭐ example reflexive verb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43348,7 +45727,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reflexive-pronouns.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-te-laves-fr",
     {
@@ -43363,7 +45743,8 @@ export const phrases = new Map([
           definition: "informal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43385,7 +45766,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "s-habiller-fr",
     {
@@ -43400,7 +45782,8 @@ export const phrases = new Map([
           definition: "infinitive - note elision",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43421,7 +45804,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-m-habille-fr",
     {
@@ -43436,7 +45820,8 @@ export const phrases = new Map([
           definition: "s'habiller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43458,7 +45843,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-t-habilles-fr",
     {
@@ -43473,7 +45859,8 @@ export const phrases = new Map([
           definition: "elision: t' not te",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43495,7 +45882,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-s-habille-fr",
     {
@@ -43510,7 +45898,8 @@ export const phrases = new Map([
           definition: "third person",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43532,7 +45921,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "se-pr-parer-fr",
     {
@@ -43547,7 +45937,8 @@ export const phrases = new Map([
           definition: "infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43568,7 +45959,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-me-pr-pare-fr",
     {
@@ -43583,7 +45975,8 @@ export const phrases = new Map([
           definition: "se préparer",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43605,7 +45998,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "re",
-    }],
+    },
+  ],
   [
     "tu-te-pr-pares-fr",
     {
@@ -43620,7 +46014,8 @@ export const phrases = new Map([
           definition: "asking about preparation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43642,7 +46037,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-se-pr-pare-fr",
     {
@@ -43657,7 +46053,8 @@ export const phrases = new Map([
           definition: "group preparation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43679,7 +46076,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/getting-ready.js",
       verified: true,
       conjugationGroup: "re",
-    }],
+    },
+  ],
   [
     "sois-gentil--fr",
     {
@@ -43694,7 +46092,8 @@ export const phrases = new Map([
           definition: "common command",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43715,7 +46114,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "aie-confiance--fr",
     {
@@ -43730,7 +46130,8 @@ export const phrases = new Map([
           definition: "encouragement",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43751,7 +46152,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vas-y--fr",
     {
@@ -43766,7 +46168,8 @@ export const phrases = new Map([
           definition: "⭐⭐⭐ extremely common phrase!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43787,7 +46190,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "fais-attention--fr",
     {
@@ -43802,7 +46206,8 @@ export const phrases = new Map([
           definition: "⭐⭐ safety/warning",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43823,7 +46228,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/irregular-commands.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "se-r-veiller-fr",
     {
@@ -43838,7 +46244,8 @@ export const phrases = new Map([
           definition: "infinitive - reflexive verb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43860,7 +46267,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "je-me-r-veille-fr",
     {
@@ -43875,7 +46283,8 @@ export const phrases = new Map([
           definition: "se réveiller",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43897,7 +46306,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-te-r-veilles-fr",
     {
@@ -43912,7 +46322,8 @@ export const phrases = new Map([
           definition: "asking about routines",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43934,7 +46345,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-se-r-veille-fr",
     {
@@ -43949,7 +46361,8 @@ export const phrases = new Map([
           definition: "third person",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -43971,7 +46384,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-se-r-veille-fr",
     {
@@ -43986,7 +46400,8 @@ export const phrases = new Map([
           definition: "feminine form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44008,7 +46423,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-nous-r-veillons-fr",
     {
@@ -44023,7 +46439,8 @@ export const phrases = new Map([
           definition: "nous nous pattern",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44045,7 +46462,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-vous-r-veillez-fr",
     {
@@ -44060,7 +46478,8 @@ export const phrases = new Map([
           definition: "polite form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44082,7 +46501,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "se-lever-fr",
     {
@@ -44097,7 +46517,8 @@ export const phrases = new Map([
           definition: "infinitive - reflexive verb",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44119,7 +46540,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "je-me-l-ve-fr",
     {
@@ -44134,7 +46556,8 @@ export const phrases = new Map([
           definition: "se lever",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44156,7 +46579,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-te-l-ves-fr",
     {
@@ -44171,7 +46595,8 @@ export const phrases = new Map([
           definition: "example with tu",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44193,7 +46618,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reflexive-pronouns.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-se-l-ve-fr",
     {
@@ -44208,7 +46634,8 @@ export const phrases = new Map([
           definition: "third person",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44230,7 +46657,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-se-l-ve-fr",
     {
@@ -44245,7 +46673,8 @@ export const phrases = new Map([
           definition: "feminine form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44267,7 +46696,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-nous-levons-fr",
     {
@@ -44282,7 +46712,8 @@ export const phrases = new Map([
           definition: "nous nous pattern",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44304,7 +46735,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-vous-levez-fr",
     {
@@ -44319,7 +46751,8 @@ export const phrases = new Map([
           definition: "polite form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44341,7 +46774,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/morning-routine.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-m-appelle-fr",
     {
@@ -44356,7 +46790,8 @@ export const phrases = new Map([
           definition: "⭐ elision: m' not me",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44378,7 +46813,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-se-pose-des-questions-fr",
     {
@@ -44393,7 +46829,8 @@ export const phrases = new Map([
           definition: "reciprocal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44415,7 +46852,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "s-aident-fr",
     {
@@ -44430,7 +46868,8 @@ export const phrases = new Map([
           definition: "reciprocal s'aider",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44451,7 +46890,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-nous-comprenons-fr",
     {
@@ -44466,7 +46906,8 @@ export const phrases = new Map([
           definition: "reciprocal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44488,7 +46929,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-se-voit-fr",
     {
@@ -44503,7 +46945,8 @@ export const phrases = new Map([
           definition: "⭐ very common!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44525,7 +46968,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-se-parle-fr",
     {
@@ -44540,7 +46984,8 @@ export const phrases = new Map([
           definition: "reciprocal",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44562,7 +47007,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "-coute-bien--fr",
     {
@@ -44577,7 +47023,8 @@ export const phrases = new Map([
           definition: "command",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44598,7 +47045,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-sorbonne-fr",
     {
@@ -44613,7 +47061,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44634,7 +47083,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tout-de-suite-fr",
     {
@@ -44649,7 +47099,8 @@ export const phrases = new Map([
           definition: "expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44670,7 +47121,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tes-amis-fr",
     {
@@ -44685,7 +47137,8 @@ export const phrases = new Map([
           definition: "possessive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44706,7 +47159,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les--tudiants-fr",
     {
@@ -44721,7 +47175,8 @@ export const phrases = new Map([
           definition: "plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44742,7 +47197,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mes-le-ons-fr",
     {
@@ -44757,7 +47213,8 @@ export const phrases = new Map([
           definition: "possessive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44778,7 +47235,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "chez-moi-fr",
     {
@@ -44793,7 +47251,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44814,7 +47273,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "encore-plus-fr",
     {
@@ -44829,7 +47289,8 @@ export const phrases = new Map([
           definition: "expression",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44850,7 +47311,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reading-8.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il-se-pr-pare-fr",
     {
@@ -44865,7 +47327,8 @@ export const phrases = new Map([
           definition: "example with il",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44887,7 +47350,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/reflexive-pronouns.js",
       verified: true,
       conjugationGroup: "re",
-    }],
+    },
+  ],
   [
     "nous-nous-aimons-fr",
     {
@@ -44902,7 +47366,8 @@ export const phrases = new Map([
           definition: "⭐ reciprocal - mutual love",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44924,7 +47389,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "s-appeler-fr",
     {
@@ -44939,7 +47405,8 @@ export const phrases = new Map([
           definition: "⭐⭐⭐ essential for introductions!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44960,7 +47427,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-t-appelles-fr",
     {
@@ -44975,7 +47443,8 @@ export const phrases = new Map([
           definition: "elision: t' not te",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -44997,7 +47466,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-s-appelle-fr",
     {
@@ -45012,7 +47482,8 @@ export const phrases = new Map([
           definition: "common form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45034,7 +47505,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-s-appelle-fr",
     {
@@ -45049,7 +47521,8 @@ export const phrases = new Map([
           definition: "feminine form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45071,7 +47544,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-nous-appelons-fr",
     {
@@ -45086,7 +47560,8 @@ export const phrases = new Map([
           definition: "nous nous pattern",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45108,7 +47583,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-vous-appelez-fr",
     {
@@ -45123,7 +47599,8 @@ export const phrases = new Map([
           definition: "vous vous pattern",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45145,7 +47622,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-s-appellent-fr",
     {
@@ -45160,7 +47638,8 @@ export const phrases = new Map([
           definition: "plural form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45182,7 +47661,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-s-appellent-fr",
     {
@@ -45197,7 +47677,8 @@ export const phrases = new Map([
           definition: "feminine plural",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45219,7 +47700,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "comment-tu-t-appelles--fr",
     {
@@ -45234,7 +47716,8 @@ export const phrases = new Map([
           definition: "⭐⭐⭐ most common question!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45255,7 +47738,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "comment-vous-vous-appelez--fr",
     {
@@ -45270,7 +47754,8 @@ export const phrases = new Map([
           definition: "polite form",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45291,7 +47776,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit8/s-appeler.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "parce-que-fr",
     {
@@ -45306,7 +47792,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45327,7 +47814,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--cause-de-fr",
     {
@@ -45342,7 +47830,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45363,7 +47852,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-motif-fr",
     {
@@ -45378,7 +47868,8 @@ export const phrases = new Map([
           definition: "masculine noun - formal context",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45399,7 +47890,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-cause-fr",
     {
@@ -45414,7 +47906,8 @@ export const phrases = new Map([
           definition: "feminine noun - à cause de...",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45435,7 +47928,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/causal-words.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-parlais-fr",
     {
@@ -45450,7 +47944,8 @@ export const phrases = new Map([
           definition: "⭐ regular -ER verb imparfait",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45472,7 +47967,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/imparfait-all-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-faisait-fr",
     {
@@ -45487,7 +47983,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45509,7 +48006,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-allait-fr",
     {
@@ -45524,7 +48022,8 @@ export const phrases = new Map([
           definition: "⭐ common - habitual actions",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45546,7 +48045,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/imparfait-all-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-voulais-fr",
     {
@@ -45561,7 +48061,8 @@ export const phrases = new Map([
           definition: "vouloir in imparfait",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45583,7 +48084,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/imparfait-all-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-y-avait-fr",
     {
@@ -45598,7 +48100,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45620,7 +48123,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-prenais-fr",
     {
@@ -45635,7 +48139,8 @@ export const phrases = new Map([
           definition: "prendre in imparfait",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45657,7 +48162,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/imparfait-all-verbs.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tous-les-jours-fr",
     {
@@ -45672,7 +48178,8 @@ export const phrases = new Map([
           definition: "signals IMP - repeated habit",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45693,7 +48200,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/pc-vs-imparfait.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "autour-de-fr",
     {
@@ -45708,7 +48216,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45729,7 +48238,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-long-de-fr",
     {
@@ -45744,7 +48254,8 @@ export const phrases = new Map([
           definition: "following a length/path",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45765,7 +48276,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/more-spatial-relations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "au-milieu-de-fr",
     {
@@ -45780,7 +48292,8 @@ export const phrases = new Map([
           definition: "center position - compound prep",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45801,7 +48314,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/more-spatial-relations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "au-bout-de-fr",
     {
@@ -45816,7 +48330,8 @@ export const phrases = new Map([
           definition: "end position - compound prep",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45837,7 +48352,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/more-spatial-relations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-distance-fr",
     {
@@ -45852,7 +48368,8 @@ export const phrases = new Map([
           definition: "feminine noun - how far",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45873,7 +48390,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/more-spatial-relations.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il-est-all--fr",
     {
@@ -45888,7 +48406,8 @@ export const phrases = new Map([
           definition: "masculine singular - no change",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45910,7 +48429,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-est-all-e-fr",
     {
@@ -45925,7 +48445,8 @@ export const phrases = new Map([
           definition: "⭐ feminine singular - add e",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45947,7 +48468,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-sont-all-s-fr",
     {
@@ -45962,7 +48484,8 @@ export const phrases = new Map([
           definition: "masculine plural - add s",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -45984,7 +48507,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-sont-all-es-fr",
     {
@@ -45999,7 +48523,8 @@ export const phrases = new Map([
           definition: "⭐ feminine plural - add es",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46021,7 +48546,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-sommes-all-s-fr",
     {
@@ -46036,7 +48562,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46058,7 +48585,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-sommes-all-es-fr",
     {
@@ -46073,7 +48601,8 @@ export const phrases = new Map([
           definition: "all feminine group - add es",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46095,7 +48624,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous--tes-all--fr",
     {
@@ -46110,7 +48640,8 @@ export const phrases = new Map([
           definition: "formal singular masculine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46132,7 +48663,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous--tes-all-e-fr",
     {
@@ -46147,7 +48679,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46169,7 +48702,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous--tes-all-s-fr",
     {
@@ -46184,7 +48718,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46206,7 +48741,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous--tes-all-es-fr",
     {
@@ -46221,7 +48757,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46243,7 +48780,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-agreement.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-ai-parl--fr",
     {
@@ -46258,7 +48796,8 @@ export const phrases = new Map([
           definition: "⭐ regular -ER verb pattern",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46280,7 +48819,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-ai--tudi--fr",
     {
@@ -46295,7 +48835,8 @@ export const phrases = new Map([
           definition: "étudier → étudié",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46316,7 +48857,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-aim--fr",
     {
@@ -46331,7 +48873,8 @@ export const phrases = new Map([
           definition: "⭐ aimer → aimé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46352,7 +48895,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-cherch--fr",
     {
@@ -46367,7 +48911,8 @@ export const phrases = new Map([
           definition: "chercher → cherché",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46388,7 +48933,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-trouv--fr",
     {
@@ -46403,7 +48949,8 @@ export const phrases = new Map([
           definition: "⭐ trouver → trouvé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46424,7 +48971,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-travaill--fr",
     {
@@ -46439,7 +48987,8 @@ export const phrases = new Map([
           definition: "⭐ travailler → travaillé",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46460,7 +49009,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai--cout--fr",
     {
@@ -46475,7 +49025,8 @@ export const phrases = new Map([
           definition: "écouter → écouté",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46496,7 +49047,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-regard--fr",
     {
@@ -46511,7 +49063,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46532,7 +49085,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-er.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-demand--fr",
     {
@@ -46547,7 +49101,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46568,7 +49123,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-suis-all--e--fr",
     {
@@ -46583,7 +49139,8 @@ export const phrases = new Map([
           definition: "⭐ aller → allé (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46605,7 +49162,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-venu-e--fr",
     {
@@ -46620,7 +49178,8 @@ export const phrases = new Map([
           definition: "⭐ venir → venu (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46642,7 +49201,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-parti-e--fr",
     {
@@ -46657,7 +49217,8 @@ export const phrases = new Map([
           definition: "⭐ partir → parti (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46679,7 +49240,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-arriv--e--fr",
     {
@@ -46694,7 +49256,8 @@ export const phrases = new Map([
           definition: "⭐ arriver → arrivé (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46716,7 +49279,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-sorti-e--fr",
     {
@@ -46731,7 +49295,8 @@ export const phrases = new Map([
           definition: "sortir → sorti (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46753,7 +49318,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-entr--e--fr",
     {
@@ -46768,7 +49334,8 @@ export const phrases = new Map([
           definition: "entrer → entré (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46790,7 +49357,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-rentr--e--fr",
     {
@@ -46805,7 +49373,8 @@ export const phrases = new Map([
           definition: "rentrer → rentré (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46827,7 +49396,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-rest--e--fr",
     {
@@ -46842,7 +49412,8 @@ export const phrases = new Map([
           definition: "rester → resté (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46864,7 +49435,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-mont--e--fr",
     {
@@ -46879,7 +49451,8 @@ export const phrases = new Map([
           definition: "monter → monté (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46901,7 +49474,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-descendu-e--fr",
     {
@@ -46916,7 +49490,8 @@ export const phrases = new Map([
           definition: "descendre → descendu (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46938,7 +49513,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-suis-devenu-e--fr",
     {
@@ -46953,7 +49529,8 @@ export const phrases = new Map([
           definition: "devenir → devenu (uses être!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -46975,7 +49552,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-etre.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "j-ai-eu-fr",
     {
@@ -46990,7 +49568,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47011,7 +49590,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai--t--fr",
     {
@@ -47026,7 +49606,8 @@ export const phrases = new Map([
           definition: "⭐ être → été (irregular!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47047,7 +49628,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-fait-fr",
     {
@@ -47062,7 +49644,8 @@ export const phrases = new Map([
           definition: "⭐ faire → fait (irregular!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47083,7 +49666,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-vu-fr",
     {
@@ -47098,7 +49682,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47119,7 +49704,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tu-as-eu-fr",
     {
@@ -47134,7 +49720,8 @@ export const phrases = new Map([
           definition: "avoir → eu conjugated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47156,7 +49743,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-a-fait-fr",
     {
@@ -47171,7 +49759,8 @@ export const phrases = new Map([
           definition: "faire → fait conjugated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47193,7 +49782,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-ont--t--fr",
     {
@@ -47208,7 +49798,8 @@ export const phrases = new Map([
           definition: "être → été conjugated",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47230,7 +49821,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "la-chance-fr",
     {
@@ -47245,7 +49837,8 @@ export const phrases = new Map([
           definition: "feminine noun - avoir de la chance = to be lucky",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47266,7 +49859,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-devoirs-fr",
     {
@@ -47281,7 +49875,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47302,7 +49897,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-1.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-voulu-fr",
     {
@@ -47317,7 +49913,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47338,7 +49935,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-pu-fr",
     {
@@ -47353,7 +49951,8 @@ export const phrases = new Map([
           definition: "⭐ pouvoir → pu (irregular!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47374,7 +49973,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-d--fr",
     {
@@ -47389,7 +49989,8 @@ export const phrases = new Map([
           definition: "⭐ devoir → dû (irregular! - accent)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47410,7 +50011,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-pris-fr",
     {
@@ -47425,7 +50027,8 @@ export const phrases = new Map([
           definition: "⭐ prendre → pris (irregular!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47446,7 +50049,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-mis-fr",
     {
@@ -47461,7 +50065,8 @@ export const phrases = new Map([
           definition: "mettre → mis (irregular!)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47482,7 +50087,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-compris-fr",
     {
@@ -47497,7 +50103,8 @@ export const phrases = new Map([
           definition: "comprendre → compris (like prendre)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47518,7 +50125,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-appris-fr",
     {
@@ -47533,7 +50141,8 @@ export const phrases = new Map([
           definition: "apprendre → appris (like prendre)",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47554,7 +50163,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-manteau-fr",
     {
@@ -47569,7 +50179,8 @@ export const phrases = new Map([
           definition: "masculine noun - winter clothing",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47590,7 +50201,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/passe-compose-irregular-2.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-d-cid--de-fr",
     {
@@ -47605,7 +50217,8 @@ export const phrases = new Map([
           definition: "PC decision + infinitive",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47626,7 +50239,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/past-tense-composition.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pendant-que-fr",
     {
@@ -47641,7 +50255,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47662,7 +50277,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "soudain---tout---coup-fr",
     {
@@ -47677,7 +50293,8 @@ export const phrases = new Map([
           definition: "⭐ signals PC - sudden event!",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47698,7 +50315,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/pc-vs-imparfait.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "d-habitude-fr",
     {
@@ -47713,7 +50331,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47734,7 +50353,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--ce-moment-l--fr",
     {
@@ -47749,7 +50369,8 @@ export const phrases = new Map([
           definition: "signals PC - precise moment",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47770,7 +50391,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/pc-vs-imparfait.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "jardin-du-luxembourg-fr",
     {
@@ -47785,7 +50407,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47806,7 +50429,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "caf--de-flore-fr",
     {
@@ -47821,7 +50445,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47842,7 +50467,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-procope-fr",
     {
@@ -47857,7 +50483,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47878,7 +50505,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j--tais-content-fr",
     {
@@ -47893,7 +50521,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47914,7 +50543,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-me-suis-r-veill--fr",
     {
@@ -47929,7 +50559,8 @@ export const phrases = new Map([
           definition: "⭐ passé composé with être",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47951,7 +50582,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-me-levais-fr",
     {
@@ -47966,7 +50598,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -47988,7 +50621,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "plus-tard-fr",
     {
@@ -48003,7 +50637,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48024,7 +50659,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ce-jour-l--fr",
     {
@@ -48039,7 +50675,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48060,7 +50697,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "si-beau-fr",
     {
@@ -48075,7 +50713,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48096,7 +50735,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "apr-s-mon-caf--fr",
     {
@@ -48111,7 +50751,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48132,7 +50773,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-suis-all--fr",
     {
@@ -48147,7 +50789,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48169,7 +50812,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "le-parc-fr",
     {
@@ -48184,7 +50828,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48205,7 +50850,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ma-maison-fr",
     {
@@ -48220,7 +50866,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48241,7 +50888,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "beaucoup-de-gens-fr",
     {
@@ -48256,7 +50904,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48277,7 +50926,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-belle-journ-e-fr",
     {
@@ -48292,7 +50942,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48313,7 +50964,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pr-s-du-lac-fr",
     {
@@ -48328,7 +50980,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48349,7 +51002,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-lac-fr",
     {
@@ -48364,7 +51018,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48385,7 +51040,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mon-ami-pierre-fr",
     {
@@ -48400,7 +51056,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48421,7 +51078,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il--tait-assis-fr",
     {
@@ -48436,7 +51094,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48458,7 +51117,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "sur-un-banc-fr",
     {
@@ -48473,7 +51133,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48494,7 +51155,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-banc-fr",
     {
@@ -48509,7 +51171,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48530,7 +51193,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "sous-un-arbre-fr",
     {
@@ -48545,7 +51209,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48566,7 +51231,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-grand-arbre-fr",
     {
@@ -48581,7 +51247,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48602,7 +51269,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-arbre-fr",
     {
@@ -48617,7 +51285,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48638,7 +51307,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vers-lui-fr",
     {
@@ -48653,7 +51323,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48674,7 +51345,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "on-a-commenc----parler-fr",
     {
@@ -48689,7 +51361,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48711,7 +51384,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "qu-est-ce-que-tu-fais-fr",
     {
@@ -48726,7 +51400,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48747,7 +51422,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-voulais--tre-dehors-fr",
     {
@@ -48762,7 +51438,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48784,7 +51461,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-a-dit-fr",
     {
@@ -48799,7 +51477,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48821,7 +51500,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-avons-parl--fr",
     {
@@ -48836,7 +51516,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48858,7 +51539,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "pendant-une-heure-fr",
     {
@@ -48873,7 +51555,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48894,7 +51577,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il-m-a-dit-fr",
     {
@@ -48909,7 +51593,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48931,7 +51616,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "qu-il-voulait-fr",
     {
@@ -48946,7 +51632,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -48967,7 +51654,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-nouveau-travail-fr",
     {
@@ -48982,7 +51670,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49003,7 +51692,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "il-n-aimait-pas-fr",
     {
@@ -49018,7 +51708,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49040,7 +51731,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "son-travail-fr",
     {
@@ -49055,7 +51747,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49076,7 +51769,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-lui-ai-dit-fr",
     {
@@ -49091,7 +51785,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49113,7 +51808,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-comprenais-fr",
     {
@@ -49128,7 +51824,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49150,7 +51847,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "le-m-me-probl-me-fr",
     {
@@ -49165,7 +51863,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49186,7 +51885,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-ann-e-derni-re-fr",
     {
@@ -49201,7 +51901,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49222,7 +51923,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avions-faim-fr",
     {
@@ -49237,7 +51939,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49259,7 +51962,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-avons-d-cid--fr",
     {
@@ -49274,7 +51978,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49296,7 +52001,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "d-aller-au-caf--fr",
     {
@@ -49311,7 +52017,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49332,7 +52039,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-fr",
     {
@@ -49347,7 +52055,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49368,7 +52077,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "en-face-du-parc-fr",
     {
@@ -49383,7 +52093,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49404,7 +52115,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-caf---tait-fr",
     {
@@ -49419,7 +52131,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49440,7 +52153,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "tr-s-bon-fr",
     {
@@ -49455,7 +52169,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49476,7 +52191,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--c-t--des-fen-tres-fr",
     {
@@ -49491,7 +52207,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49512,7 +52229,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-fen-tres-fr",
     {
@@ -49527,7 +52245,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49548,7 +52267,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "autour-des-tables-fr",
     {
@@ -49563,7 +52283,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49584,7 +52305,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-command--fr",
     {
@@ -49599,7 +52321,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49621,7 +52344,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "des-sandwichs-fr",
     {
@@ -49636,7 +52360,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49657,7 +52382,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-mangions-fr",
     {
@@ -49672,7 +52398,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49694,7 +52421,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-avons-vu-marie-fr",
     {
@@ -49709,7 +52437,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49731,7 +52460,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-est-entr-e-fr",
     {
@@ -49746,7 +52476,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49768,7 +52499,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-nous-a-vus-fr",
     {
@@ -49783,7 +52515,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49805,7 +52538,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-est-venue-fr",
     {
@@ -49820,7 +52554,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49842,7 +52577,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "--notre-table-fr",
     {
@@ -49857,7 +52593,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49878,7 +52615,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "quelle-surprise-fr",
     {
@@ -49893,7 +52631,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49914,7 +52653,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "elle-a-dit-fr",
     {
@@ -49929,7 +52669,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49951,7 +52692,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-ne-savais-pas-fr",
     {
@@ -49966,7 +52708,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -49988,7 +52731,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous--tiez-ici-fr",
     {
@@ -50003,7 +52747,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50025,7 +52770,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "notre-amie-fr",
     {
@@ -50040,7 +52786,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50061,7 +52808,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "de-l-universit--fr",
     {
@@ -50076,7 +52824,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50097,7 +52846,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-universit--fr",
     {
@@ -50112,7 +52862,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50133,7 +52884,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-ne-l-avons-pas-vue-fr",
     {
@@ -50148,7 +52900,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50170,7 +52923,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "depuis-six-mois-fr",
     {
@@ -50185,7 +52939,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50206,7 +52961,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "elle-est-maintenant-fr",
     {
@@ -50221,7 +52977,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50243,7 +53000,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "dans-une-autre-ville-fr",
     {
@@ -50258,7 +53016,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50279,7 +53038,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "cette-rencontre-fr",
     {
@@ -50294,7 +53054,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50315,7 +53076,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-rencontre-fr",
     {
@@ -50330,7 +53092,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50351,7 +53114,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-pu--tre-fr",
     {
@@ -50366,7 +53130,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50388,7 +53153,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "re",
-    }],
+    },
+  ],
   [
     "pour-l-apr-s-midi-fr",
     {
@@ -50403,7 +53169,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50424,7 +53191,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-apr-s-midi-fr",
     {
@@ -50439,7 +53207,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50460,7 +53229,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "au-cin-ma-fr",
     {
@@ -50475,7 +53245,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50496,7 +53267,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-cin-ma-fr",
     {
@@ -50511,7 +53283,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50532,7 +53305,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-bon-film-fr",
     {
@@ -50547,7 +53321,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50568,7 +53343,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-film-fr",
     {
@@ -50583,7 +53359,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50604,7 +53381,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-cin-ma--tait-fr",
     {
@@ -50619,7 +53397,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50640,7 +53419,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pr-s-de-la-gare-fr",
     {
@@ -50655,7 +53435,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50676,7 +53457,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-gare-fr",
     {
@@ -50691,7 +53473,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50712,7 +53495,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--dix-minutes-fr",
     {
@@ -50727,7 +53511,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50748,7 +53533,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "du-caf--fr",
     {
@@ -50763,7 +53549,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50784,7 +53571,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "le-film--tait-excellent-fr",
     {
@@ -50799,7 +53587,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50820,7 +53609,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-beaucoup-aim--fr",
     {
@@ -50835,7 +53625,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50857,7 +53648,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "apr-s-le-film-fr",
     {
@@ -50872,7 +53664,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50893,7 +53686,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-d-cid--de-manger-fr",
     {
@@ -50908,7 +53702,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50930,7 +53725,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "er",
-    }],
+    },
+  ],
   [
     "au-restaurant-fr",
     {
@@ -50945,7 +53741,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -50966,7 +53763,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qui-est-derri-re-fr",
     {
@@ -50981,7 +53779,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51002,7 +53801,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "derri-re-le-cin-ma-fr",
     {
@@ -51017,7 +53817,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51038,7 +53839,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "de-la-bonne-cuisine-fr",
     {
@@ -51053,7 +53855,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51074,7 +53877,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-cuisine-fr",
     {
@@ -51089,7 +53893,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51110,7 +53915,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c--tait-d-licieux-fr",
     {
@@ -51125,7 +53931,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51146,7 +53953,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-parl--de-fr",
     {
@@ -51161,7 +53969,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51183,7 +53992,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nos-vies-fr",
     {
@@ -51198,7 +54008,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51219,7 +54030,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "ce-que-nous-voulons-faire-fr",
     {
@@ -51234,7 +54046,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51255,7 +54068,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "--cause-du-temps-fr",
     {
@@ -51270,7 +54084,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51291,7 +54106,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "marie-a-d--partir-fr",
     {
@@ -51306,7 +54122,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51327,7 +54144,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "vers-9h-fr",
     {
@@ -51342,7 +54160,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51363,7 +54182,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pour-rentrer-fr",
     {
@@ -51378,7 +54198,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51399,7 +54220,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "chez-elle-fr",
     {
@@ -51414,7 +54236,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51435,7 +54258,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "pierre-et-moi-fr",
     {
@@ -51450,7 +54274,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51471,7 +54296,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "sommes-rest-s-fr",
     {
@@ -51486,7 +54312,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51507,7 +54334,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "un-peu-plus-fr",
     {
@@ -51522,7 +54350,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51543,7 +54372,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-avons-pris-fr",
     {
@@ -51558,7 +54388,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51580,7 +54411,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "un-dernier-caf--fr",
     {
@@ -51595,7 +54427,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51616,7 +54449,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "je-suis-rentr--fr",
     {
@@ -51631,7 +54465,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51653,7 +54488,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vers-10h-fr",
     {
@@ -51668,7 +54504,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51689,7 +54526,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j--tais-fatigu--fr",
     {
@@ -51704,7 +54542,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51725,7 +54564,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "mais-tr-s-heureux-fr",
     {
@@ -51740,7 +54580,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51761,7 +54602,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-journ-e-parfaite-fr",
     {
@@ -51776,7 +54618,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51797,7 +54640,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "les-meilleures-journ-es-fr",
     {
@@ -51812,7 +54656,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51833,7 +54678,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "sont-celles-fr",
     {
@@ -51848,7 +54694,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51869,7 +54716,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "qu-on-ne-pense-pas-avoir-fr",
     {
@@ -51884,7 +54732,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51905,7 +54754,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "gr-ce---ma-sortie-fr",
     {
@@ -51920,7 +54770,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51941,7 +54792,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "la-sortie-fr",
     {
@@ -51956,7 +54808,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -51977,7 +54830,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "une-tr-s-belle-journ-e-fr",
     {
@@ -51992,7 +54846,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52013,7 +54868,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avec-mes-amis-fr",
     {
@@ -52028,7 +54884,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52049,7 +54906,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "avant-de-dormir-fr",
     {
@@ -52064,7 +54922,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52085,7 +54944,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-ai-pens--fr",
     {
@@ -52100,7 +54960,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52121,7 +54982,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "c-est-pour--a-que-fr",
     {
@@ -52136,7 +54998,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52157,7 +55020,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "j-aime-les-samedis-fr",
     {
@@ -52172,7 +55036,8 @@ export const phrases = new Map([
           definition: "",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52193,7 +55058,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reading-9.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "nous-nous-parlons-fr",
     {
@@ -52208,7 +55074,8 @@ export const phrases = new Map([
           definition: "mutual conversation",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52230,7 +55097,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "on-se-voit-demain-fr",
     {
@@ -52245,7 +55113,8 @@ export const phrases = new Map([
           definition: "making plans",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52267,7 +55136,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-se-connaissent-fr",
     {
@@ -52282,7 +55152,8 @@ export const phrases = new Map([
           definition: "acquaintances",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52304,7 +55175,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-se-parlent-fr",
     {
@@ -52319,7 +55191,8 @@ export const phrases = new Map([
           definition: "communication",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52341,7 +55214,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "vous-vous-comprenez-fr",
     {
@@ -52356,7 +55230,8 @@ export const phrases = new Map([
           definition: "mutual understanding",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52378,7 +55253,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reciprocal-reflexives.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "je-me-suis-r-veill-e-fr",
     {
@@ -52393,7 +55269,8 @@ export const phrases = new Map([
           definition: "add -e for feminine",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52415,7 +55292,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "tu-t-es-lev--fr",
     {
@@ -52430,7 +55308,8 @@ export const phrases = new Map([
           definition: "informal past",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52452,7 +55331,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "il-s-est-lav--fr",
     {
@@ -52467,7 +55347,8 @@ export const phrases = new Map([
           definition: "third person past",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52489,7 +55370,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elle-s-est-lev-e-fr",
     {
@@ -52504,7 +55386,8 @@ export const phrases = new Map([
           definition: "⭐ feminine agreement -ée",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52526,7 +55409,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "nous-nous-sommes-pr-par-s-fr",
     {
@@ -52541,7 +55425,8 @@ export const phrases = new Map([
           definition: "plural agreement",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52563,7 +55448,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "ils-se-sont-amus-s-fr",
     {
@@ -52578,7 +55464,8 @@ export const phrases = new Map([
           definition: "plural masculine -és",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52600,7 +55487,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "elles-se-sont-amus-es-fr",
     {
@@ -52615,7 +55503,8 @@ export const phrases = new Map([
           definition: "feminine plural -ées",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52637,7 +55526,8 @@ export const phrases = new Map([
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/reflexive-past.js",
       verified: true,
       conjugationGroup: "irregular",
-    }],
+    },
+  ],
   [
     "la-position-fr",
     {
@@ -52652,7 +55542,8 @@ export const phrases = new Map([
           definition: "feminine noun - where something is",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52673,7 +55564,8 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/spatial-prepositions.js",
       verified: true,
-    }],
+    },
+  ],
   [
     "l-endroit--m--fr",
     {
@@ -52688,7 +55580,8 @@ export const phrases = new Map([
           definition: "masculine noun - specific location",
           context: "general",
           confidence: 0.95,
-        }],
+        },
+      ],
       gender: "none",
       variants: [],
       frequency: {
@@ -52709,7 +55602,9 @@ export const phrases = new Map([
       source:
         "/Users/jupiter/dev/woodshed/languageacademy/src/lessons/modules/unit9/spatial-prepositions.js",
       verified: true,
-    }]]);
+    },
+  ],
+]);
 
 // Frequency-ordered array for priority loading
 export const phrasesByFrequency = [
@@ -54160,6 +57055,7 @@ export const phrasesByFrequency = [
   "ils-se-sont-amus-s-fr",
   "elles-se-sont-amus-es-fr",
   "la-position-fr",
-  "l-endroit--m--fr"];
+  "l-endroit--m--fr",
+];
 
 export default phrases;

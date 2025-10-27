@@ -1,0 +1,363 @@
+# Condensed Verbs - Base Forms (Infinitives)
+# Generated: 2025-10-26T02:21:37.696Z
+# Total base forms: 71
+# Original verbs: 109
+
+# Base Forms List:
+acheter
+admirer
+adore
+adorent
+aident
+aimer
+aller
+amuse
+appelle
+arriver
+asseoir
+attendre
+attirer
+changer
+commencer
+communiquer
+comprendre
+connecter
+continuer
+créer
+devenir
+donner
+décider
+découvrir
+déplacer
+dépêcher
+embrasser
+encourager
+enrichir
+essayer
+exporter
+fonctionner
+habiller
+habiter
+laver
+lever
+manger
+marcher
+monter
+montrer
+parler
+participer
+penser
+perdre
+permettre
+plaire
+poser
+préférer
+préparer
+préserver
+regarder
+regretter
+renoncer
+rentrer
+rester
+retrouver
+revoir
+réussir
+réveiller
+réviser
+rêver
+savoir
+se souvenir
+soutenir
+travailler
+trouver
+visiter
+vivre
+voyager
+écouter
+étudier
+
+# Detailed Mapping:
+
+## acheter
+Variants: achèterais
+Count: 1
+
+## admirer
+Variants: admirer
+Count: 1
+
+## adore
+Variants: adore
+Count: 1
+
+## adorent
+Variants: adorent
+Count: 1
+
+## aident
+Variants: aident
+Count: 1
+
+## aimer
+Variants: aimait, aimerais
+Count: 2
+
+## aller
+Variants: allés
+Count: 1
+
+## amuse
+Variants: amuse
+Count: 1
+
+## appelle
+Variants: appelle
+Count: 1
+
+## arriver
+Variants: arrivé, arrivent, arriver
+Count: 3
+
+## asseoir
+Variants: assis, assise
+Count: 2
+
+## attendre
+Variants: attendent
+Count: 1
+
+## attirer
+Variants: attire
+Count: 1
+
+## changer
+Variants: change, changements
+Count: 2
+
+## commencer
+Variants: commence, commencé
+Count: 2
+
+## communiquer
+Variants: communiquent
+Count: 1
+
+## comprendre
+Variants: comprenais
+Count: 1
+
+## connecter
+Variants: connectent
+Count: 1
+
+## continuer
+Variants: continue, continué, continues
+Count: 3
+
+## créer
+Variants: créé, créent
+Count: 2
+
+## devenir
+Variants: deviennent
+Count: 1
+
+## donner
+Variants: donnent
+Count: 1
+
+## décider
+Variants: décidé
+Count: 1
+
+## découvrir
+Variants: découvrir
+Count: 1
+
+## déplacer
+Variants: déplacer
+Count: 1
+
+## dépêcher
+Variants: dépêcher
+Count: 1
+
+## embrasser
+Variants: embrassant
+Count: 1
+
+## encourager
+Variants: encourage
+Count: 1
+
+## enrichir
+Variants: enrichissent
+Count: 1
+
+## essayer
+Variants: essaies, essayé, essayer
+Count: 3
+
+## exporter
+Variants: exportent
+Count: 1
+
+## fonctionner
+Variants: fonctionne
+Count: 1
+
+## habiller
+Variants: habille
+Count: 1
+
+## habiter
+Variants: habite, habiter
+Count: 2
+
+## laver
+Variants: lave
+Count: 1
+
+## lever
+Variants: levais, lève
+Count: 2
+
+## manger
+Variants: mangions
+Count: 1
+
+## marcher
+Variants: marcher
+Count: 1
+
+## monter
+Variants: monte
+Count: 1
+
+## montrer
+Variants: montrent
+Count: 1
+
+## parler
+Variants: parlions
+Count: 1
+
+## participer
+Variants: participe
+Count: 1
+
+## penser
+Variants: pensais, pense, pensé, pensent
+Count: 4
+
+## perdre
+Variants: perdu
+Count: 1
+
+## permettre
+Variants: permet
+Count: 1
+
+## plaire
+Variants: plaît
+Count: 1
+
+## poser
+Variants: pose
+Count: 1
+
+## préférer
+Variants: préfèrent
+Count: 1
+
+## préparer
+Variants: prépare
+Count: 1
+
+## préserver
+Variants: préserve
+Count: 1
+
+## regarder
+Variants: regardais, regardent
+Count: 2
+
+## regretter
+Variants: regrette
+Count: 1
+
+## renoncer
+Variants: renoncerais
+Count: 1
+
+## rentrer
+Variants: rentrant, rentre, rentré, rentrer
+Count: 4
+
+## rester
+Variants: reste, restent, rester, restés
+Count: 4
+
+## retrouver
+Variants: retrouvé
+Count: 1
+
+## revoir
+Variants: revoir
+Count: 1
+
+## réussir
+Variants: réussi, réussisse, réussissions
+Count: 3
+
+## réveiller
+Variants: réveille, réveillé
+Count: 2
+
+## réviser
+Variants: révise
+Count: 1
+
+## rêver
+Variants: rêver
+Count: 1
+
+## savoir
+Variants: saches, saura, sauras, savais, savait, su
+Count: 6
+
+## se souvenir
+Variants: souviens
+Count: 1
+
+## soutenir
+Variants: soutiennent
+Count: 1
+
+## travailler
+Variants: travaille, travaillent
+Count: 2
+
+## trouver
+Variants: trouve, trouver
+Count: 2
+
+## visiter
+Variants: visitent
+Count: 1
+
+## vivre
+Variants: vécu, vit, vivent
+Count: 3
+
+## voyager
+Variants: voyagent, voyagerais
+Count: 2
+
+## écouter
+Variants: écoute, écoutent
+Count: 2
+
+## étudier
+Variants: étudie, étudient
+Count: 2

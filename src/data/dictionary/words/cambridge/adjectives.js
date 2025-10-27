@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Adjectives
- * Generated: 2025-10-24T22:37:08.209Z
- * Successfully scraped: 91/91
+ * Generated: 2025-10-26T02:19:41.830Z
+ * Successfully scraped: 176/176
  */
 
 export const adjectivesCambridge = new Map([
@@ -202,62 +202,67 @@ export const adjectivesCambridge = new Map([
         "id": "populaire-fr",
         "lang": "fr",
         "word": "populaire",
-        "partOfSpeech": "adjective",
         "translations": [
             {
-                "lang": "en",
+                "language": "en",
                 "text": "popular",
                 "confidence": 0.9,
-                "source": "cambridge"
+                "source": "manual"
             }
         ],
         "relationships": [],
         "etymology": "",
-        "register": [],
-        "usage_notes": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates widespread acceptance or appeal",
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "chanteur populaire",
-                "trans": "popular singer",
-                "source": "cambridge"
+                "text": "un chanteur populaire",
+                "trans": "a popular singer",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "Un ministre populaire est souvent réélu.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "les croyances populaires",
-                "trans": "folk beliefs",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "la chanson populaire",
-                "trans": "popular songs",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "apprécier le bon sens populaire",
-                "source": "cambridge"
+                "text": "une musique populaire",
+                "trans": "popular music",
+                "lang": "en"
             }
         ],
-        "phonetic": "pɔpylɛʀ",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:40.336Z",
         "sources": [
+            "manual",
             "cambridge"
         ],
         "verified": false,
         "cambridge_data": {
-            "scraped_at": "2025-10-23T04:41:00.695Z",
+            "scraped_at": "2025-10-26T02:19:32.276Z",
             "url": "https://dictionary.cambridge.org/dictionary/french-english/populaire",
             "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:41:00.695Z"
-        }
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "populaire",
+            "feminine_singular": "populaire",
+            "masculine_plural": "populaires",
+            "feminine_plural": "populaires"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très populaire",
+                "type": "intensifier",
+                "context": "very popular",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -266,67 +271,67 @@ export const adjectivesCambridge = new Map([
         "id": "public-fr",
         "lang": "fr",
         "word": "public",
-        "partOfSpeech": "adjective",
         "translations": [
             {
-                "lang": "en",
+                "language": "en",
                 "text": "public",
                 "confidence": 0.9,
-                "source": "cambridge"
+                "source": "manual"
             }
         ],
         "relationships": [],
         "etymology": "",
-        "register": [],
-        "usage_notes": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Relates to the general population or open access",
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "un établissement public",
-                "trans": "a public establishment",
-                "source": "cambridge"
+                "text": "un service public",
+                "trans": "a public service",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "La dette publique s’élève à plusieurs milliards d’euros.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un jardin public",
-                "trans": "a park",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les biens publics sont accessibles à tous.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "rendre public",
-                "trans": "to make public",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La démission du ministre a été rendue publique ce matin.",
-                "source": "cambridge"
+                "text": "des espaces publics",
+                "trans": "public spaces",
+                "lang": "en"
             }
         ],
-        "phonetic": "pyblik",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:40.563Z",
         "sources": [
+            "manual",
             "cambridge"
         ],
         "verified": false,
         "cambridge_data": {
-            "scraped_at": "2025-10-23T04:41:06.865Z",
+            "scraped_at": "2025-10-26T02:19:32.276Z",
             "url": "https://dictionary.cambridge.org/dictionary/french-english/public",
             "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:41:06.865Z"
-        }
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "public",
+            "feminine_singular": "publice",
+            "masculine_plural": "publics",
+            "feminine_plural": "publices"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très public",
+                "type": "intensifier",
+                "context": "very public",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -1427,33 +1432,67 @@ export const adjectivesCambridge = new Map([
         "id": "magnifique-fr",
         "lang": "fr",
         "word": "magnifique",
-        "partOfSpeech": "adjective",
         "translations": [
             {
-                "lang": "en",
-                "text": "magnificent",
+                "language": "en",
+                "text": "magnificent / beautiful",
                 "confidence": 0.9,
-                "source": "cambridge"
+                "source": "manual"
             }
         ],
         "relationships": [],
         "etymology": "",
-        "register": [],
-        "usage_notes": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates great beauty or excellence",
         "regional_variants": [],
-        "examples": [],
-        "phonetic": "maɲifik",
-        "tags": [],
+        "examples": [
+            {
+                "text": "un paysage magnifique",
+                "trans": "a magnificent landscape",
+                "lang": "en"
+            },
+            {
+                "text": "une vue magnifique",
+                "trans": "a magnificent view",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:39.995Z",
         "sources": [
+            "manual",
             "cambridge"
         ],
         "verified": false,
         "cambridge_data": {
-            "scraped_at": "2025-10-23T04:43:55.292Z",
+            "scraped_at": "2025-10-26T02:19:32.276Z",
             "url": "https://dictionary.cambridge.org/dictionary/french-english/magnifique",
             "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:43:55.292Z"
-        }
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "magnifique",
+            "feminine_singular": "magnifique",
+            "masculine_plural": "magnifiques",
+            "feminine_plural": "magnifiques"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très magnifique",
+                "type": "intensifier",
+                "context": "very magnificent / beautiful",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -2298,33 +2337,67 @@ export const adjectivesCambridge = new Map([
         "id": "excellent-fr",
         "lang": "fr",
         "word": "excellent",
-        "partOfSpeech": "adjective",
         "translations": [
             {
-                "lang": "en",
+                "language": "en",
                 "text": "excellent",
                 "confidence": 0.9,
-                "source": "cambridge"
+                "source": "manual"
             }
         ],
         "relationships": [],
         "etymology": "",
-        "register": [],
-        "usage_notes": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates very high quality or performance",
         "regional_variants": [],
-        "examples": [],
-        "phonetic": "ɛkselɑ̃",
-        "tags": [],
+        "examples": [
+            {
+                "text": "un résultat excellent",
+                "trans": "an excellent result",
+                "lang": "en"
+            },
+            {
+                "text": "une qualité excellente",
+                "trans": "excellent quality",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.362Z",
+        "updated_at": "2025-10-26T02:19:38.511Z",
         "sources": [
+            "manual",
             "cambridge"
         ],
         "verified": false,
         "cambridge_data": {
-            "scraped_at": "2025-10-23T04:46:05.148Z",
+            "scraped_at": "2025-10-26T02:19:32.276Z",
             "url": "https://dictionary.cambridge.org/dictionary/french-english/excellent",
             "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:46:05.148Z"
-        }
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "excellent",
+            "feminine_singular": "excellente",
+            "masculine_plural": "excellents",
+            "feminine_plural": "excellentes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très excellent",
+                "type": "intensifier",
+                "context": "very excellent",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -2380,62 +2453,67 @@ export const adjectivesCambridge = new Map([
         "id": "dernier-fr",
         "lang": "fr",
         "word": "dernier",
-        "partOfSpeech": "adjective",
         "translations": [
             {
-                "lang": "en",
-                "text": "last",
+                "language": "en",
+                "text": "last / final",
                 "confidence": 0.9,
-                "source": "cambridge"
+                "source": "manual"
             }
         ],
         "relationships": [],
         "etymology": "",
-        "register": [],
-        "usage_notes": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates the final or most recent in a series",
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Nous irons à la dernière séance.",
-                "trans": "We’ll go to the last screening.",
-                "source": "cambridge"
+                "text": "le dernier jour",
+                "trans": "the last day",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "arriver dernier",
-                "trans": "to arrive last",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "attendre le dernier client pour fermer la boutique",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la dernière fois",
-                "trans": "last time",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il était plus souriant la dernière fois que je l’ai vu.",
-                "source": "cambridge"
+                "trans": "the last time",
+                "lang": "en"
             }
         ],
-        "phonetic": "dɛʀnje",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:37.396Z",
         "sources": [
+            "manual",
             "cambridge"
         ],
         "verified": false,
         "cambridge_data": {
-            "scraped_at": "2025-10-23T04:46:23.099Z",
+            "scraped_at": "2025-10-26T02:19:32.275Z",
             "url": "https://dictionary.cambridge.org/dictionary/french-english/dernier",
             "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:46:23.099Z"
-        }
+            "last_updated": "2025-10-26T02:19:32.275Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "dernier",
+            "feminine_singular": "derniere",
+            "masculine_plural": "derniers",
+            "feminine_plural": "dernieres"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très dernier",
+                "type": "intensifier",
+                "context": "very last / final",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -2502,45 +2580,67 @@ export const adjectivesCambridge = new Map([
         "id": "parfait-fr",
         "lang": "fr",
         "word": "parfait",
-        "partOfSpeech": "adjective",
         "translations": [
             {
-                "lang": "en",
+                "language": "en",
                 "text": "perfect",
                 "confidence": 0.9,
-                "source": "cambridge"
+                "source": "manual"
             }
         ],
         "relationships": [],
         "etymology": "",
-        "register": [],
-        "usage_notes": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates perfection or completeness",
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "une ressemblance parfaite",
-                "trans": "a perfect resemblance",
-                "source": "cambridge"
+                "text": "un plan parfait",
+                "trans": "a perfect plan",
+                "lang": "en"
             },
             {
-                "lang": "en",
-                "text": "Il rédige ses textes d’une écriture parfaite.",
-                "source": "cambridge"
+                "text": "une solution parfaite",
+                "trans": "a perfect solution",
+                "lang": "en"
             }
         ],
-        "phonetic": "paʀfɛ",
-        "tags": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:40.170Z",
         "sources": [
+            "manual",
             "cambridge"
         ],
         "verified": false,
         "cambridge_data": {
-            "scraped_at": "2025-10-23T04:46:32.658Z",
+            "scraped_at": "2025-10-26T02:19:32.276Z",
             "url": "https://dictionary.cambridge.org/dictionary/french-english/parfait",
             "confidence_score": 0.9,
-            "last_updated": "2025-10-23T04:46:32.658Z"
-        }
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "parfait",
+            "feminine_singular": "parfaite",
+            "masculine_plural": "parfaits",
+            "feminine_plural": "parfaites"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très parfait",
+                "type": "intensifier",
+                "context": "very perfect",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -4527,6 +4627,3401 @@ export const adjectivesCambridge = new Map([
         "definition": "Indefinite adjective used before plural nouns to indicate an unspecified small quantity",
         "frequency": "common",
         "partOfSpeech": "adjective"
+    }
+  ],
+  [
+    "célèbre-fr",
+        {
+        "id": "célèbre-fr",
+        "lang": "fr",
+        "word": "célèbre",
+        "translations": [
+            {
+                "language": "en",
+                "text": "famous / celebrated",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Describes someone or something well-known or famous",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un artiste célèbre",
+                "trans": "a famous artist",
+                "lang": "en"
+            },
+            {
+                "text": "une ville célèbre",
+                "trans": "a famous city",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.354Z",
+        "updated_at": "2025-10-26T02:19:36.590Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.271Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/c%C3%A9l%C3%A8bre",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.275Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "célèbre",
+            "feminine_singular": "célèbre",
+            "masculine_plural": "célèbres",
+            "feminine_plural": "célèbres"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très célèbre",
+                "type": "intensifier",
+                "context": "very famous / celebrated",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "célèbres-fr",
+        {
+        "id": "célèbres-fr",
+        "lang": "fr",
+        "word": "célèbres",
+        "partOfSpeech": "adjective",
+        "redirect_to": "célèbre-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "célèbre",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.359Z",
+        "updated_at": "2025-10-26T02:19:35.359Z"
+    }
+  ],
+  [
+    "collectif-fr",
+        {
+        "id": "collectif-fr",
+        "lang": "fr",
+        "word": "collectif",
+        "translations": [
+            {
+                "language": "en",
+                "text": "collective / group",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Relates to a group or collective action",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un effort collectif",
+                "trans": "a collective effort",
+                "lang": "en"
+            },
+            {
+                "text": "une décision collective",
+                "trans": "a collective decision",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.359Z",
+        "updated_at": "2025-10-26T02:19:36.848Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.275Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/collectif",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.275Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "collectif",
+            "feminine_singular": "collectife",
+            "masculine_plural": "collectifs",
+            "feminine_plural": "collectifes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très collectif",
+                "type": "intensifier",
+                "context": "very collective / group",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "collectife-fr",
+        {
+        "id": "collectife-fr",
+        "lang": "fr",
+        "word": "collectife",
+        "partOfSpeech": "adjective",
+        "redirect_to": "collectif-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "collectif",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.359Z",
+        "updated_at": "2025-10-26T02:19:35.359Z"
+    }
+  ],
+  [
+    "collectifs-fr",
+        {
+        "id": "collectifs-fr",
+        "lang": "fr",
+        "word": "collectifs",
+        "partOfSpeech": "adjective",
+        "redirect_to": "collectif-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "collectif",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.359Z",
+        "updated_at": "2025-10-26T02:19:35.359Z"
+    }
+  ],
+  [
+    "collectifes-fr",
+        {
+        "id": "collectifes-fr",
+        "lang": "fr",
+        "word": "collectifes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "collectif-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "collectif",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.359Z",
+        "updated_at": "2025-10-26T02:19:35.359Z"
+    }
+  ],
+  [
+    "culinaire-fr",
+        {
+        "id": "culinaire-fr",
+        "lang": "fr",
+        "word": "culinaire",
+        "translations": [
+            {
+                "language": "en",
+                "text": "culinary / cooking",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Related to cooking, food, or cuisine",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "des traditions culinaires",
+                "trans": "culinary traditions",
+                "lang": "en"
+            },
+            {
+                "text": "un art culinaire",
+                "trans": "a culinary art",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.359Z",
+        "updated_at": "2025-10-26T02:19:37.027Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.275Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/culinaire",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.275Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "culinaire",
+            "feminine_singular": "culinaire",
+            "masculine_plural": "culinaires",
+            "feminine_plural": "culinaires"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très culinaire",
+                "type": "intensifier",
+                "context": "very culinary / cooking",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "culinaires-fr",
+        {
+        "id": "culinaires-fr",
+        "lang": "fr",
+        "word": "culinaires",
+        "partOfSpeech": "adjective",
+        "redirect_to": "culinaire-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "culinaire",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.359Z",
+        "updated_at": "2025-10-26T02:19:35.359Z"
+    }
+  ],
+  [
+    "culturel-fr",
+        {
+        "id": "culturel-fr",
+        "lang": "fr",
+        "word": "culturel",
+        "translations": [
+            {
+                "language": "en",
+                "text": "cultural",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Relates to culture, arts, or cultural activities",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un événement culturel",
+                "trans": "a cultural event",
+                "lang": "en"
+            },
+            {
+                "text": "des échanges culturels",
+                "trans": "cultural exchanges",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:37.216Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.275Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/culturel",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.275Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "culturel",
+            "feminine_singular": "culturele",
+            "masculine_plural": "culturels",
+            "feminine_plural": "cultureles"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très culturel",
+                "type": "intensifier",
+                "context": "very cultural",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "culturele-fr",
+        {
+        "id": "culturele-fr",
+        "lang": "fr",
+        "word": "culturele",
+        "partOfSpeech": "adjective",
+        "redirect_to": "culturel-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "culturel",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:35.360Z"
+    }
+  ],
+  [
+    "culturels-fr",
+        {
+        "id": "culturels-fr",
+        "lang": "fr",
+        "word": "culturels",
+        "partOfSpeech": "adjective",
+        "redirect_to": "culturel-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "culturel",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:35.360Z"
+    }
+  ],
+  [
+    "cultureles-fr",
+        {
+        "id": "cultureles-fr",
+        "lang": "fr",
+        "word": "cultureles",
+        "partOfSpeech": "adjective",
+        "redirect_to": "culturel-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "culturel",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:35.360Z"
+    }
+  ],
+  [
+    "derniere-fr",
+        {
+        "id": "derniere-fr",
+        "lang": "fr",
+        "word": "derniere",
+        "partOfSpeech": "adjective",
+        "redirect_to": "dernier-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "dernier",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:35.360Z"
+    }
+  ],
+  [
+    "derniers-fr",
+        {
+        "id": "derniers-fr",
+        "lang": "fr",
+        "word": "derniers",
+        "partOfSpeech": "adjective",
+        "redirect_to": "dernier-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "dernier",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:35.360Z"
+    }
+  ],
+  [
+    "dernieres-fr",
+        {
+        "id": "dernieres-fr",
+        "lang": "fr",
+        "word": "dernieres",
+        "partOfSpeech": "adjective",
+        "redirect_to": "dernier-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "dernier",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:35.360Z"
+    }
+  ],
+  [
+    "différent-fr",
+        {
+        "id": "différent-fr",
+        "lang": "fr",
+        "word": "différent",
+        "translations": [
+            {
+                "language": "en",
+                "text": "different",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates something is not the same, distinct",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "une approche différente",
+                "trans": "a different approach",
+                "lang": "en"
+            },
+            {
+                "text": "des opinions différentes",
+                "trans": "different opinions",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:37.662Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/diff%C3%A9rent",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "différent",
+            "feminine_singular": "différente",
+            "masculine_plural": "différents",
+            "feminine_plural": "différentes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très différent",
+                "type": "intensifier",
+                "context": "very different",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "différente-fr",
+        {
+        "id": "différente-fr",
+        "lang": "fr",
+        "word": "différente",
+        "partOfSpeech": "adjective",
+        "redirect_to": "différent-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "différent",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:35.360Z"
+    }
+  ],
+  [
+    "différents-fr",
+        {
+        "id": "différents-fr",
+        "lang": "fr",
+        "word": "différents",
+        "partOfSpeech": "adjective",
+        "redirect_to": "différent-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "différent",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:35.360Z"
+    }
+  ],
+  [
+    "différentes-fr",
+        {
+        "id": "différentes-fr",
+        "lang": "fr",
+        "word": "différentes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "différent-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "différent",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:35.360Z"
+    }
+  ],
+  [
+    "dur-fr",
+        {
+        "id": "dur-fr",
+        "lang": "fr",
+        "word": "dur",
+        "translations": [
+            {
+                "language": "en",
+                "text": "hard / tough",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Describes something hard, difficult, or tough",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un travail dur",
+                "trans": "hard work",
+                "lang": "en"
+            },
+            {
+                "text": "une situation dure",
+                "trans": "a tough situation",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.360Z",
+        "updated_at": "2025-10-26T02:19:37.887Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/dur",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "dur",
+            "feminine_singular": "dure",
+            "masculine_plural": "durs",
+            "feminine_plural": "dures"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très dur",
+                "type": "intensifier",
+                "context": "very hard / tough",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "dure-fr",
+        {
+        "id": "dure-fr",
+        "lang": "fr",
+        "word": "dure",
+        "partOfSpeech": "adjective",
+        "redirect_to": "dur-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "dur",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.361Z",
+        "updated_at": "2025-10-26T02:19:35.361Z"
+    }
+  ],
+  [
+    "durs-fr",
+        {
+        "id": "durs-fr",
+        "lang": "fr",
+        "word": "durs",
+        "partOfSpeech": "adjective",
+        "redirect_to": "dur-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "dur",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.361Z",
+        "updated_at": "2025-10-26T02:19:35.361Z"
+    }
+  ],
+  [
+    "dures-fr",
+        {
+        "id": "dures-fr",
+        "lang": "fr",
+        "word": "dures",
+        "partOfSpeech": "adjective",
+        "redirect_to": "dur-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "dur",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.361Z",
+        "updated_at": "2025-10-26T02:19:35.361Z"
+    }
+  ],
+  [
+    "essentiel-fr",
+        {
+        "id": "essentiel-fr",
+        "lang": "fr",
+        "word": "essentiel",
+        "translations": [
+            {
+                "language": "en",
+                "text": "essential / necessary",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates something is necessary or fundamental",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un élément essentiel",
+                "trans": "an essential element",
+                "lang": "en"
+            },
+            {
+                "text": "des informations essentielles",
+                "trans": "essential information",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.361Z",
+        "updated_at": "2025-10-26T02:19:38.040Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/essentiel",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "essentiel",
+            "feminine_singular": "essentiele",
+            "masculine_plural": "essentiels",
+            "feminine_plural": "essentieles"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très essentiel",
+                "type": "intensifier",
+                "context": "very essential / necessary",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "essentiele-fr",
+        {
+        "id": "essentiele-fr",
+        "lang": "fr",
+        "word": "essentiele",
+        "partOfSpeech": "adjective",
+        "redirect_to": "essentiel-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "essentiel",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.361Z",
+        "updated_at": "2025-10-26T02:19:35.361Z"
+    }
+  ],
+  [
+    "essentiels-fr",
+        {
+        "id": "essentiels-fr",
+        "lang": "fr",
+        "word": "essentiels",
+        "partOfSpeech": "adjective",
+        "redirect_to": "essentiel-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "essentiel",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.361Z",
+        "updated_at": "2025-10-26T02:19:35.361Z"
+    }
+  ],
+  [
+    "essentieles-fr",
+        {
+        "id": "essentieles-fr",
+        "lang": "fr",
+        "word": "essentieles",
+        "partOfSpeech": "adjective",
+        "redirect_to": "essentiel-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "essentiel",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.361Z",
+        "updated_at": "2025-10-26T02:19:35.361Z"
+    }
+  ],
+  [
+    "européen-fr",
+        {
+        "id": "européen-fr",
+        "lang": "fr",
+        "word": "européen",
+        "translations": [
+            {
+                "language": "en",
+                "text": "European",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Relates to Europe or European characteristics",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un pays européen",
+                "trans": "a European country",
+                "lang": "en"
+            },
+            {
+                "text": "des institutions européennes",
+                "trans": "European institutions",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.361Z",
+        "updated_at": "2025-10-26T02:19:38.331Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/europ%C3%A9en",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "européen",
+            "feminine_singular": "européene",
+            "masculine_plural": "européens",
+            "feminine_plural": "européenes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très européen",
+                "type": "intensifier",
+                "context": "very European",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "européene-fr",
+        {
+        "id": "européene-fr",
+        "lang": "fr",
+        "word": "européene",
+        "partOfSpeech": "adjective",
+        "redirect_to": "européen-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "européen",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.362Z",
+        "updated_at": "2025-10-26T02:19:35.362Z"
+    }
+  ],
+  [
+    "européens-fr",
+        {
+        "id": "européens-fr",
+        "lang": "fr",
+        "word": "européens",
+        "partOfSpeech": "adjective",
+        "redirect_to": "européen-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "européen",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.362Z",
+        "updated_at": "2025-10-26T02:19:35.362Z"
+    }
+  ],
+  [
+    "européenes-fr",
+        {
+        "id": "européenes-fr",
+        "lang": "fr",
+        "word": "européenes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "européen-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "européen",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.362Z",
+        "updated_at": "2025-10-26T02:19:35.362Z"
+    }
+  ],
+  [
+    "excellente-fr",
+        {
+        "id": "excellente-fr",
+        "lang": "fr",
+        "word": "excellente",
+        "partOfSpeech": "adjective",
+        "redirect_to": "excellent-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "excellent",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "excellents-fr",
+        {
+        "id": "excellents-fr",
+        "lang": "fr",
+        "word": "excellents",
+        "partOfSpeech": "adjective",
+        "redirect_to": "excellent-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "excellent",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "excellentes-fr",
+        {
+        "id": "excellentes-fr",
+        "lang": "fr",
+        "word": "excellentes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "excellent-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "excellent",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "française-fr",
+        {
+        "id": "française-fr",
+        "lang": "fr",
+        "word": "française",
+        "partOfSpeech": "adjective",
+        "redirect_to": "français-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "français",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "françaiss-fr",
+        {
+        "id": "françaiss-fr",
+        "lang": "fr",
+        "word": "françaiss",
+        "partOfSpeech": "adjective",
+        "redirect_to": "français-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "français",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "françaises-fr",
+        {
+        "id": "françaises-fr",
+        "lang": "fr",
+        "word": "françaises",
+        "partOfSpeech": "adjective",
+        "redirect_to": "français-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "français",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "froid-fr",
+        {
+        "id": "froid-fr",
+        "lang": "fr",
+        "word": "froid",
+        "translations": [
+            {
+                "language": "en",
+                "text": "cold",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Describes low temperature or coldness",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un jour froid",
+                "trans": "a cold day",
+                "lang": "en"
+            },
+            {
+                "text": "une boisson froide",
+                "trans": "a cold drink",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:38.986Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/froid",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "froid",
+            "feminine_singular": "froide",
+            "masculine_plural": "froids",
+            "feminine_plural": "froides"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très froid",
+                "type": "intensifier",
+                "context": "very cold",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "froide-fr",
+        {
+        "id": "froide-fr",
+        "lang": "fr",
+        "word": "froide",
+        "partOfSpeech": "adjective",
+        "redirect_to": "froid-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "froid",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "froids-fr",
+        {
+        "id": "froids-fr",
+        "lang": "fr",
+        "word": "froids",
+        "partOfSpeech": "adjective",
+        "redirect_to": "froid-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "froid",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "froides-fr",
+        {
+        "id": "froides-fr",
+        "lang": "fr",
+        "word": "froides",
+        "partOfSpeech": "adjective",
+        "redirect_to": "froid-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "froid",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "heureux-fr",
+        {
+        "id": "heureux-fr",
+        "lang": "fr",
+        "word": "heureux",
+        "translations": [
+            {
+                "language": "en",
+                "text": "happy / fortunate",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates happiness, joy, or good fortune",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un homme heureux",
+                "trans": "a happy man",
+                "lang": "en"
+            },
+            {
+                "text": "une femme heureuse",
+                "trans": "a happy woman",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:39.165Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/heureux",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "heureux",
+            "feminine_singular": "heureuxe",
+            "masculine_plural": "heureux",
+            "feminine_plural": "heureuxes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très heureux",
+                "type": "intensifier",
+                "context": "very happy / fortunate",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "heureuxe-fr",
+        {
+        "id": "heureuxe-fr",
+        "lang": "fr",
+        "word": "heureuxe",
+        "partOfSpeech": "adjective",
+        "redirect_to": "heureux-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "heureux",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "heureuxes-fr",
+        {
+        "id": "heureuxes-fr",
+        "lang": "fr",
+        "word": "heureuxes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "heureux-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "heureux",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:35.363Z"
+    }
+  ],
+  [
+    "important-fr",
+        {
+        "id": "important-fr",
+        "lang": "fr",
+        "word": "important",
+        "translations": [
+            {
+                "language": "en",
+                "text": "important",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates significance, value, or consequence",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un point important",
+                "trans": "an important point",
+                "lang": "en"
+            },
+            {
+                "text": "des décisions importantes",
+                "trans": "important decisions",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.363Z",
+        "updated_at": "2025-10-26T02:19:39.314Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/important",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "important",
+            "feminine_singular": "importante",
+            "masculine_plural": "importants",
+            "feminine_plural": "importantes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très important",
+                "type": "intensifier",
+                "context": "very important",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "importante-fr",
+        {
+        "id": "importante-fr",
+        "lang": "fr",
+        "word": "importante",
+        "partOfSpeech": "adjective",
+        "redirect_to": "important-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "important",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "importants-fr",
+        {
+        "id": "importants-fr",
+        "lang": "fr",
+        "word": "importants",
+        "partOfSpeech": "adjective",
+        "redirect_to": "important-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "important",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "importantes-fr",
+        {
+        "id": "importantes-fr",
+        "lang": "fr",
+        "word": "importantes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "important-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "important",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "impressionniste-fr",
+        {
+        "id": "impressionniste-fr",
+        "lang": "fr",
+        "word": "impressionniste",
+        "translations": [
+            {
+                "language": "en",
+                "text": "impressionist",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Relates to impressionist art or style",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un peintre impressionniste",
+                "trans": "an impressionist painter",
+                "lang": "en"
+            },
+            {
+                "text": "une œuvre impressionniste",
+                "trans": "an impressionist work",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:39.515Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/impressionniste",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "impressionniste",
+            "feminine_singular": "impressionniste",
+            "masculine_plural": "impressionnistes",
+            "feminine_plural": "impressionnistes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très impressionniste",
+                "type": "intensifier",
+                "context": "very impressionist",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "impressionnistes-fr",
+        {
+        "id": "impressionnistes-fr",
+        "lang": "fr",
+        "word": "impressionnistes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "impressionniste-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "impressionniste",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "inoubliable-fr",
+        {
+        "id": "inoubliable-fr",
+        "lang": "fr",
+        "word": "inoubliable",
+        "translations": [
+            {
+                "language": "en",
+                "text": "unforgettable",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Describes something that cannot be forgotten",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un moment inoubliable",
+                "trans": "an unforgettable moment",
+                "lang": "en"
+            },
+            {
+                "text": "une expérience inoubliable",
+                "trans": "an unforgettable experience",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:39.657Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/inoubliable",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "inoubliable",
+            "feminine_singular": "inoubliable",
+            "masculine_plural": "inoubliables",
+            "feminine_plural": "inoubliables"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très inoubliable",
+                "type": "intensifier",
+                "context": "very unforgettable",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "inoubliables-fr",
+        {
+        "id": "inoubliables-fr",
+        "lang": "fr",
+        "word": "inoubliables",
+        "partOfSpeech": "adjective",
+        "redirect_to": "inoubliable-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "inoubliable",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "international-fr",
+        {
+        "id": "international-fr",
+        "lang": "fr",
+        "word": "international",
+        "translations": [
+            {
+                "language": "en",
+                "text": "international",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Relates to multiple countries or global scope",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un accord international",
+                "trans": "an international agreement",
+                "lang": "en"
+            },
+            {
+                "text": "des relations internationales",
+                "trans": "international relations",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:39.802Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/international",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "international",
+            "feminine_singular": "internationale",
+            "masculine_plural": "internationals",
+            "feminine_plural": "internationales"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très international",
+                "type": "intensifier",
+                "context": "very international",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "internationale-fr",
+        {
+        "id": "internationale-fr",
+        "lang": "fr",
+        "word": "internationale",
+        "partOfSpeech": "adjective",
+        "redirect_to": "international-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "international",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "internationals-fr",
+        {
+        "id": "internationals-fr",
+        "lang": "fr",
+        "word": "internationals",
+        "partOfSpeech": "adjective",
+        "redirect_to": "international-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "international",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "magnifiques-fr",
+        {
+        "id": "magnifiques-fr",
+        "lang": "fr",
+        "word": "magnifiques",
+        "partOfSpeech": "adjective",
+        "redirect_to": "magnifique-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "magnifique",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "parfaite-fr",
+        {
+        "id": "parfaite-fr",
+        "lang": "fr",
+        "word": "parfaite",
+        "partOfSpeech": "adjective",
+        "redirect_to": "parfait-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "parfait",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "parfaits-fr",
+        {
+        "id": "parfaits-fr",
+        "lang": "fr",
+        "word": "parfaits",
+        "partOfSpeech": "adjective",
+        "redirect_to": "parfait-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "parfait",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "parfaites-fr",
+        {
+        "id": "parfaites-fr",
+        "lang": "fr",
+        "word": "parfaites",
+        "partOfSpeech": "adjective",
+        "redirect_to": "parfait-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "parfait",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "populaires-fr",
+        {
+        "id": "populaires-fr",
+        "lang": "fr",
+        "word": "populaires",
+        "partOfSpeech": "adjective",
+        "redirect_to": "populaire-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "populaire",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "publice-fr",
+        {
+        "id": "publice-fr",
+        "lang": "fr",
+        "word": "publice",
+        "partOfSpeech": "adjective",
+        "redirect_to": "public-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "public",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "publics-fr",
+        {
+        "id": "publics-fr",
+        "lang": "fr",
+        "word": "publics",
+        "partOfSpeech": "adjective",
+        "redirect_to": "public-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "public",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "publices-fr",
+        {
+        "id": "publices-fr",
+        "lang": "fr",
+        "word": "publices",
+        "partOfSpeech": "adjective",
+        "redirect_to": "public-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "public",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "quotidien-fr",
+        {
+        "id": "quotidien-fr",
+        "lang": "fr",
+        "word": "quotidien",
+        "translations": [
+            {
+                "language": "en",
+                "text": "daily / everyday",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Relates to daily or everyday activities",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "la vie quotidienne",
+                "trans": "daily life",
+                "lang": "en"
+            },
+            {
+                "text": "des activités quotidiennes",
+                "trans": "daily activities",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:40.790Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/quotidien",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "quotidien",
+            "feminine_singular": "quotidiene",
+            "masculine_plural": "quotidiens",
+            "feminine_plural": "quotidienes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très quotidien",
+                "type": "intensifier",
+                "context": "very daily / everyday",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "quotidiene-fr",
+        {
+        "id": "quotidiene-fr",
+        "lang": "fr",
+        "word": "quotidiene",
+        "partOfSpeech": "adjective",
+        "redirect_to": "quotidien-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "quotidien",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "quotidiens-fr",
+        {
+        "id": "quotidiens-fr",
+        "lang": "fr",
+        "word": "quotidiens",
+        "partOfSpeech": "adjective",
+        "redirect_to": "quotidien-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "quotidien",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "quotidienes-fr",
+        {
+        "id": "quotidienes-fr",
+        "lang": "fr",
+        "word": "quotidienes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "quotidien-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "quotidien",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:35.364Z"
+    }
+  ],
+  [
+    "reconnaissant-fr",
+        {
+        "id": "reconnaissant-fr",
+        "lang": "fr",
+        "word": "reconnaissant",
+        "translations": [
+            {
+                "language": "en",
+                "text": "grateful / thankful",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates gratitude or thankfulness",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un homme reconnaissant",
+                "trans": "a grateful man",
+                "lang": "en"
+            },
+            {
+                "text": "une femme reconnaissante",
+                "trans": "a grateful woman",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.364Z",
+        "updated_at": "2025-10-26T02:19:40.961Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/reconnaissant",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "reconnaissant",
+            "feminine_singular": "reconnaissante",
+            "masculine_plural": "reconnaissants",
+            "feminine_plural": "reconnaissantes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très reconnaissant",
+                "type": "intensifier",
+                "context": "very grateful / thankful",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "reconnaissante-fr",
+        {
+        "id": "reconnaissante-fr",
+        "lang": "fr",
+        "word": "reconnaissante",
+        "partOfSpeech": "adjective",
+        "redirect_to": "reconnaissant-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "reconnaissant",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "reconnaissants-fr",
+        {
+        "id": "reconnaissants-fr",
+        "lang": "fr",
+        "word": "reconnaissants",
+        "partOfSpeech": "adjective",
+        "redirect_to": "reconnaissant-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "reconnaissant",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "reconnaissantes-fr",
+        {
+        "id": "reconnaissantes-fr",
+        "lang": "fr",
+        "word": "reconnaissantes",
+        "partOfSpeech": "adjective",
+        "redirect_to": "reconnaissant-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "reconnaissant",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "reconnu-fr",
+        {
+        "id": "reconnu-fr",
+        "lang": "fr",
+        "word": "reconnu",
+        "translations": [
+            {
+                "language": "en",
+                "text": "recognized / acknowledged",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates official acknowledgment or acceptance",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un expert reconnu",
+                "trans": "a recognized expert",
+                "lang": "en"
+            },
+            {
+                "text": "une artiste reconnue",
+                "trans": "a recognized artist",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:41.125Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/reconnu",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "reconnu",
+            "feminine_singular": "reconnue",
+            "masculine_plural": "reconnus",
+            "feminine_plural": "reconnues"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très reconnu",
+                "type": "intensifier",
+                "context": "very recognized / acknowledged",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "reconnue-fr",
+        {
+        "id": "reconnue-fr",
+        "lang": "fr",
+        "word": "reconnue",
+        "partOfSpeech": "adjective",
+        "redirect_to": "reconnu-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "reconnu",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "reconnus-fr",
+        {
+        "id": "reconnus-fr",
+        "lang": "fr",
+        "word": "reconnus",
+        "partOfSpeech": "adjective",
+        "redirect_to": "reconnu-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "reconnu",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "reconnues-fr",
+        {
+        "id": "reconnues-fr",
+        "lang": "fr",
+        "word": "reconnues",
+        "partOfSpeech": "adjective",
+        "redirect_to": "reconnu-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "reconnu",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "riche-fr",
+        {
+        "id": "riche-fr",
+        "lang": "fr",
+        "word": "riche",
+        "translations": [
+            {
+                "language": "en",
+                "text": "rich / wealthy",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates wealth, abundance, or value",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un homme riche",
+                "trans": "a rich man",
+                "lang": "en"
+            },
+            {
+                "text": "une culture riche",
+                "trans": "a rich culture",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:41.326Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/riche",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "riche",
+            "feminine_singular": "riche",
+            "masculine_plural": "riches",
+            "feminine_plural": "riches"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très riche",
+                "type": "intensifier",
+                "context": "very rich / wealthy",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "riches-fr",
+        {
+        "id": "riches-fr",
+        "lang": "fr",
+        "word": "riches",
+        "partOfSpeech": "adjective",
+        "redirect_to": "riche-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "riche",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "sûr-fr",
+        {
+        "id": "sûr-fr",
+        "lang": "fr",
+        "word": "sûr",
+        "translations": [
+            {
+                "language": "en",
+                "text": "sure / certain",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Indicates certainty, confidence, or safety",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un résultat sûr",
+                "trans": "a sure result",
+                "lang": "en"
+            },
+            {
+                "text": "une méthode sûre",
+                "trans": "a safe method",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:41.654Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/s%C3%BBr",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "sûr",
+            "feminine_singular": "sûre",
+            "masculine_plural": "sûrs",
+            "feminine_plural": "sûres"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très sûr",
+                "type": "intensifier",
+                "context": "very sure / certain",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "sûre-fr",
+        {
+        "id": "sûre-fr",
+        "lang": "fr",
+        "word": "sûre",
+        "partOfSpeech": "adjective",
+        "redirect_to": "sûr-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "sûr",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "sûrs-fr",
+        {
+        "id": "sûrs-fr",
+        "lang": "fr",
+        "word": "sûrs",
+        "partOfSpeech": "adjective",
+        "redirect_to": "sûr-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "sûr",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "sûres-fr",
+        {
+        "id": "sûres-fr",
+        "lang": "fr",
+        "word": "sûres",
+        "partOfSpeech": "adjective",
+        "redirect_to": "sûr-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "sûr",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "traditionnel-fr",
+        {
+        "id": "traditionnel-fr",
+        "lang": "fr",
+        "word": "traditionnel",
+        "translations": [
+            {
+                "language": "en",
+                "text": "traditional",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Relates to established customs or practices",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "un plat traditionnel",
+                "trans": "a traditional dish",
+                "lang": "en"
+            },
+            {
+                "text": "des valeurs traditionnelles",
+                "trans": "traditional values",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:41.828Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:19:32.276Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/traditionnel",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:19:32.276Z"
+        },
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "traditionnel",
+            "feminine_singular": "traditionnele",
+            "masculine_plural": "traditionnels",
+            "feminine_plural": "traditionneles"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très traditionnel",
+                "type": "intensifier",
+                "context": "very traditional",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "traditionnele-fr",
+        {
+        "id": "traditionnele-fr",
+        "lang": "fr",
+        "word": "traditionnele",
+        "partOfSpeech": "adjective",
+        "redirect_to": "traditionnel-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "traditionnel",
+        "gender": "feminine",
+        "number": "singular",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "traditionnels-fr",
+        {
+        "id": "traditionnels-fr",
+        "lang": "fr",
+        "word": "traditionnels",
+        "partOfSpeech": "adjective",
+        "redirect_to": "traditionnel-fr",
+        "redirect_type": "masculine_form",
+        "base_word": "traditionnel",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "traditionneles-fr",
+        {
+        "id": "traditionneles-fr",
+        "lang": "fr",
+        "word": "traditionneles",
+        "partOfSpeech": "adjective",
+        "redirect_to": "traditionnel-fr",
+        "redirect_type": "feminine_form",
+        "base_word": "traditionnel",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-26T02:19:35.365Z",
+        "updated_at": "2025-10-26T02:19:35.365Z"
     }
   ]
 ]);

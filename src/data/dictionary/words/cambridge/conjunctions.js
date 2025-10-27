@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Conjunctions
- * Generated: 2025-10-24T22:35:55.320Z
- * Successfully scraped: 8/8
+ * Generated: 2025-10-26T02:15:06.971Z
+ * Successfully scraped: 11/11
  */
 
 export const conjunctionsCambridge = new Map([
@@ -422,6 +422,171 @@ export const conjunctionsCambridge = new Map([
         "verified": false,
         "definition": "Contraction used in subjunctive constructions",
         "frequency": "common",
+        "partOfSpeech": "conjunction"
+    }
+  ],
+  [
+    "si-fr",
+        {
+        "id": "si-fr",
+        "lang": "fr",
+        "word": "si",
+        "translations": [
+            {
+                "language": "en",
+                "text": "if / whether / yes (contradiction)",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Conjunction meaning 'if' for conditions, or 'yes' when contradicting a negative statement",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Si tu viens, je serai content",
+                "trans": "If you come, I will be happy",
+                "lang": "en"
+            },
+            {
+                "text": "Tu n'aimes pas le café ? - Si, j'aime !",
+                "trans": "You don't like coffee? - Yes, I do!",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:15:05.263Z",
+        "updated_at": "2025-10-26T02:15:06.306Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:15:02.790Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/si",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:15:02.790Z"
+        },
+        "partOfSpeech": "conjunction"
+    }
+  ],
+  [
+    "parce-fr",
+        {
+        "id": "parce-fr",
+        "lang": "fr",
+        "word": "parce",
+        "translations": [
+            {
+                "language": "en",
+                "text": "because (contraction of parce que)",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Contraction of 'parce que' meaning 'because'. Used in informal speech",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je reste parce j'ai faim",
+                "trans": "I'm staying because I'm hungry",
+                "lang": "en"
+            },
+            {
+                "text": "Il part parce il est fatigué",
+                "trans": "He's leaving because he's tired",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:15:05.263Z",
+        "updated_at": "2025-10-26T02:15:06.662Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:15:02.790Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/parce",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:15:02.790Z"
+        },
+        "partOfSpeech": "conjunction"
+    }
+  ],
+  [
+    "end-fr",
+        {
+        "id": "end-fr",
+        "lang": "fr",
+        "word": "end",
+        "translations": [
+            {
+                "language": "en",
+                "text": "end / finish",
+                "confidence": 0.9,
+                "source": "manual"
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [
+            "neutral"
+        ],
+        "usage_notes": "Conjunction meaning 'end' or 'finish'. Used to conclude or terminate",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "C'est la fin, end",
+                "trans": "It's the end, finish",
+                "lang": "en"
+            },
+            {
+                "text": "Nous devons end cette discussion",
+                "trans": "We need to end this discussion",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson",
+            "reading_vocabulary"
+        ],
+        "created_at": "2025-10-26T02:15:05.264Z",
+        "updated_at": "2025-10-26T02:15:06.971Z",
+        "sources": [
+            "manual",
+            "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+            "scraped_at": "2025-10-26T02:15:02.790Z",
+            "url": "https://dictionary.cambridge.org/dictionary/french-english/end",
+            "confidence_score": 0.9,
+            "last_updated": "2025-10-26T02:15:02.790Z"
+        },
         "partOfSpeech": "conjunction"
     }
   ]

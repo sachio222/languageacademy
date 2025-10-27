@@ -1,0 +1,452 @@
+[
+  {
+    "word": "activement",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "actively",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Used to describe how an action is performed with energy or enthusiasm",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Il participe activement aux discussions",
+        "trans": "He actively participates in discussions",
+        "lang": "en"
+      },
+      {
+        "text": "Elle travaille activement sur ce projet",
+        "trans": "She is actively working on this project",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.898Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/activement",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  },
+  {
+    "word": "différemment",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "differently",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Used to indicate a different manner or way of doing something",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Je vois les choses différemment",
+        "trans": "I see things differently",
+        "lang": "en"
+      },
+      {
+        "text": "Il réagit différemment chaque fois",
+        "trans": "He reacts differently each time",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.899Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/différemment",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  },
+  {
+    "word": "également",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "also, equally",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Can mean 'also' or 'equally' - often used to add information",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Il est également professeur",
+        "trans": "He is also a teacher",
+        "lang": "en"
+      },
+      {
+        "text": "Nous sommes également d'accord",
+        "trans": "We also agree",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.899Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/également",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  },
+  {
+    "word": "généralement",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "generally, usually",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates what usually happens or is generally true",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Il arrive généralement à l'heure",
+        "trans": "He generally arrives on time",
+        "lang": "en"
+      },
+      {
+        "text": "Généralement, c'est plus facile",
+        "trans": "Generally, it's easier",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.899Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/généralement",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  },
+  {
+    "word": "internationalement",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "internationally",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Relates to international scope or perspective",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Cette entreprise est internationalement reconnue",
+        "trans": "This company is internationally recognized",
+        "lang": "en"
+      },
+      {
+        "text": "Il voyage internationalement",
+        "trans": "He travels internationally",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.899Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/internationalement",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  },
+  {
+    "word": "peu",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "little, not much",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates small quantity or degree - often used with 'de'",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Il mange peu",
+        "trans": "He eats little",
+        "lang": "en"
+      },
+      {
+        "text": "J'ai peu de temps",
+        "trans": "I have little time",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.899Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/peu",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  },
+  {
+    "word": "seulement",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "only, just",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates limitation or restriction - can be used alone or with 'ne...que'",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Il y a seulement trois personnes",
+        "trans": "There are only three people",
+        "lang": "en"
+      },
+      {
+        "text": "Je veux seulement te parler",
+        "trans": "I just want to talk to you",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.899Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/seulement",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  },
+  {
+    "word": "souvent",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "often",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates frequency - used with present, past, and future tenses",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Nous nous voyons souvent",
+        "trans": "We see each other often",
+        "lang": "en"
+      },
+      {
+        "text": "Il arrive souvent en retard",
+        "trans": "He often arrives late",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.899Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/souvent",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  },
+  {
+    "word": "tard",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "late",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates lateness in time - opposite of 'tôt'",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Il est arrivé tard",
+        "trans": "He arrived late",
+        "lang": "en"
+      },
+      {
+        "text": "Nous travaillons tard",
+        "trans": "We work late",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.899Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/tard",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  },
+  {
+    "word": "tôt",
+    "partOfSpeech": "adverb",
+    "translations": [
+      {
+        "language": "en",
+        "text": "early",
+        "confidence": 0.9,
+        "source": "manual"
+      }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+      "neutral"
+    ],
+    "usage_notes": "Indicates earliness in time - opposite of 'tard'",
+    "regional_variants": [],
+    "examples": [
+      {
+        "text": "Il se lève tôt",
+        "trans": "He gets up early",
+        "lang": "en"
+      },
+      {
+        "text": "Nous partons tôt demain",
+        "trans": "We're leaving early tomorrow",
+        "lang": "en"
+      }
+    ],
+    "phonetic": "",
+    "tags": [
+      "reading_vocabulary"
+    ],
+    "sources": [
+      "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+      "scraped_at": "2025-10-26T02:10:14.899Z",
+      "url": "https://dictionary.cambridge.org/dictionary/french-english/tôt",
+      "confidence_score": 0.9,
+      "last_updated": "2025-10-26T02:10:14.899Z"
+    }
+  }
+]
