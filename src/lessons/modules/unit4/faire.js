@@ -337,4 +337,38 @@ export const faireModule = {
       },
     ],
   },
+
+  // Study mode exercises - practical usage of faire
+  exercises: [
+    {
+      instruction: "Complete the sentence",
+      prompt: "It's nice weather",
+      hint: "Use faire for weather expressions - il fait + adjective",
+      expectedAnswer: "il fait beau",
+    },
+    {
+      instruction: "Complete the sentence", 
+      prompt: "I do sports",
+      hint: "Use faire + du/de la/des + activity",
+      expectedAnswer: "je fais du sport",
+    },
+    {
+      instruction: "Complete the sentence",
+      prompt: "She makes a cake",
+      hint: "Use faire + article + noun for making things",
+      expectedAnswer: "elle fait un gâteau",
+    },
+    {
+      instruction: "Complete the sentence",
+      prompt: "We do our homework",
+      hint: "Use faire + possessive + noun for activities",
+      expectedAnswer: "nous faisons nos devoirs",
+    },
+    {
+      instruction: "Complete the sentence",
+      prompt: "It's cold",
+      hint: "Use faire for weather - il fait + adjective",
+      expectedAnswer: "il fait froid",
+    },
+  ],
 };

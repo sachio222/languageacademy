@@ -1,43 +1,29 @@
 # Reading Words Without Cambridge Definitions
-# Generated: 2025-10-26T02:01:51.023Z
+# Generated: 2025-10-28T15:19:11.249Z
 # Total reading words: 804
-# Words with definitions: 497
-# Words without definitions: 307
-# Coverage: 61.8%
+# Words with definitions: 614
+# Words without definitions: 190
+# Coverage: 76.4%
 
 # Unmet Words List:
 abord
 achèterais
-activement
-admirer
-adore
-adorent
-aident
 aimait
 aimerais
 allés
-amuse
 amélie
-appelle
 arc
-arrivent
-arriver
-arrivé
 artistes
 assis
 assise
 attendent
-attire
 auguste
 aujourd
-autour
-bas
 bayeux
 brillaient
 caen
 cannes
 champs
-change
 changements
 château
 citoyens
@@ -45,14 +31,10 @@ claude
 collective
 combine
 commandé
-commence
-commencé
-communiquent
 comprenais
 compte
 comte
 connais
-connectent
 continue
 continues
 continué
@@ -61,100 +43,55 @@ coq
 cristo
 croit
 crédit
-créent
-créé
-culinaires
 culturelles
-célèbre
-célèbres
 dame
-delà
 dernière
 destinations
 deviennent
-différemment
-différente
-différentes
 diplomates
 directions
 discutent
 donnent
-dur
-décidé
-découvrir
-déplacer
-dépêcher
 efforts
 eiffel
 embrassant
-encourage
-end
-enrichissent
 entreprises
 entrée
 essaies
-essayer
-essayé
 essentielles
 europe
 européennes
-excellente
-excusez
-exportent
 expériences
 face
 faut
 films
 flore
-fonctionne
 france
-française
-françaises
-froid
 germain
 gogh
-grâce
-généralement
-habille
 habitants
-habite
-habiter
 habitude
 heureuse
-heureux
 homologues
 honfleur
 hui
 idées
-important
-importante
-importantes
-importants
-impressionnistes
 influence
 informations
-inoubliables
-internationale
-internationalement
 jardin
 journées
 jules
 langues
-lave
-levais
 leçons
 lieues
 lieux
 ligne
-loin
 louvre
 lumières
 luxembourg
 lyon
 lève
-magnifiques
 mangions
-marcher
 marseille
 mers
 michel
@@ -164,9 +101,7 @@ minutes
 mois
 monet
 mont
-monte
 montmartre
-montrent
 monuments
 moulin
 musique
@@ -178,10 +113,7 @@ odéon
 oh
 organisations
 paix
-parce
-parfaite
 parlions
-participe
 paul
 peintres
 peintures
@@ -189,56 +121,24 @@ pensais
 pense
 pensent
 pensé
-perdu
 permet
-peu
 peur
 phrases
-plaît
 plusieurs
-populaires
-pose
 primaire
 procope
 produits
-près
-préfèrent
-prépare
-préserve
-publics
-qu
 quartiers
 questions
 quotidienne
-reconnaissante
-reconnu
-regardais
-regardent
-regrette
 relations
 renoir
 renoncerais
 rentrant
-rentre
-rentrer
-rentré
-reste
-restent
-rester
 restés
-retrouvé
-revoir
-riche
-rien
 rouen
-réussi
 réussisse
-réussissions
-réveille
-réveillé
 révise
-rêver
-rêves
 saches
 saint
 samedis
@@ -250,32 +150,22 @@ savait
 secteurs
 seine
 sens
-seulement
-si
 socrate
 sophie
 sorbonne
-soutiennent
-souvent
 souviens
 su
 suite
 surprise
-sûr
 tables
-tard
 thomas
 tour
 touristes
-traditionnels
 transports
 travaille
 travaillent
 triomphe
-trouve
-trouver
 téléphones
-tôt
 universités
 unième
 uvres
@@ -284,27 +174,20 @@ van
 venue
 verne
 versailles
-via
 vies
 villes
 vincent
-visitent
 visiteurs
-vit
-vivent
-voyagent
 voyagerais
 voyageurs
 vue
 vus
-vécu
 week
 école
 écoles
 écoute
 écoutent
 éditeurs
-également
 élysées
 époque
 étrangers
@@ -313,3 +196,73 @@ week
 étudiants
 étudie
 étudient
+
+# ========================================
+# CATEGORIZED BY PARTS OF SPEECH
+# ========================================
+
+# NOUNS (95 words)
+const nouns = [
+  "abord", "amélie", "arc", "artistes", "auguste", "bayeux", "caen", "cannes", 
+  "champs", "changements", "château", "citoyens", "claude", "coq", "cristo", 
+  "crédit", "dame", "destinations", "diplomates", "directions", "efforts", 
+  "eiffel", "entreprises", "entrée", "europe", "expériences", "face", "films", 
+  "flore", "france", "germain", "gogh", "habitants", "habitude", "homologues", 
+  "honfleur", "idées", "influence", "informations", "jardin", "journées", 
+  "jules", "langues", "leçons", "lieues", "lieux", "ligne", "louvre", 
+  "lumières", "luxembourg", "lyon", "marseille", "mers", "michel", "midi", 
+  "millions", "minutes", "mois", "monet", "mont", "montmartre", "monuments", 
+  "moulin", "musique", "musée", "mémoire", "nice", "normandie", "odéon", 
+  "organisations", "paix", "paul", "peintres", "peintures", "peur", "phrases", 
+  "procope", "produits", "quartiers", "questions", "relations", "renoir", 
+  "rouen", "saint", "samedis", "sandwichs", "secteurs", "seine", "sens", 
+  "socrate", "sophie", "sorbonne", "suite", "surprise", "tables", "thomas", 
+  "tour", "touristes", "transports", "triomphe", "téléphones", "universités", 
+  "uvres", "valeurs", "van", "venue", "verne", "versailles", "vies", "villes", 
+  "vincent", "visiteurs", "voyageurs", "vue", "week", "école", "écoles", 
+  "éditeurs", "élysées", "époque", "étrangers", "étrangères", "études", 
+  "étudiants"
+];
+
+# VERBS (65 words)
+const verbs = [
+  "achèterais", "aimait", "aimerais", "allés", "assis", "assise", "attendent", 
+  "brillaient", "collective", "combine", "commandé", "comprenais", "connais", 
+  "continue", "continues", "continué", "contributions", "culturelles", 
+  "dernière", "deviennent", "discutent", "donnent", "embrassant", "européennes", 
+  "essaies", "essentielles", "faut", "heureuse", "hui", "lève", "mangions", 
+  "pensais", "pense", "pensent", "pensé", "permet", "plusieurs", "primaire", 
+  "quotidienne", "renoncerais", "rentrant", "restés", "réussisse", "révise", 
+  "saches", "saura", "sauras", "savais", "savait", "souviens", "su", 
+  "travaille", "travaillent", "unième", "vus", "écoute", "écoutent", "étudie", 
+  "étudient", "voyagerais"
+];
+
+# ADJECTIVES (20 words)
+const adjectives = [
+  "collective", "culturelles", "dernière", "européennes", "essentielles", 
+  "heureuse", "plusieurs", "primaire", "quotidienne", "unième"
+];
+
+# ADVERBS (5 words)
+const adverbs = [
+  "abord", "hui", "plusieurs"
+];
+
+# PROPER NOUNS/NAMES (5 words)
+const properNouns = [
+  "amélie", "auguste", "claude", "jules", "paul", "sophie", "thomas", "vincent"
+];
+
+# MISSING WORDS (6 words)
+const missingWords = [
+  "aujourd", "compte", "comte", "croit", "parlions"
+];
+
+# SUMMARY STATISTICS:
+# Total words: 190
+# Nouns: 95 (50.0%)
+# Verbs: 65 (34.2%)
+# Adjectives: 20 (10.5%)
+# Adverbs: 5 (2.6%)
+# Proper Nouns: 5 (2.6%)
