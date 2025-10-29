@@ -1,0 +1,403 @@
+[
+  {
+    "word": "abord",
+    "translation": "approach / beginning",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "d'abord",
+        "type": "prepositional_phrase",
+        "context": "first / at first",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "arc",
+    "translation": "arch / bow",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "plural_form": "arcs",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "l'arc de triomphe",
+        "type": "proper_noun",
+        "context": "Arc de Triomphe",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "artistes",
+    "translation": "artists",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les artistes",
+        "type": "definite_article",
+        "context": "the artists",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "changements",
+    "translation": "changes",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les changements",
+        "type": "definite_article",
+        "context": "the changes",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "château",
+    "translation": "castle",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "plural_form": "châteaux",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "le château",
+        "type": "definite_article",
+        "context": "the castle",
+        "frequency": "common"
+      },
+      {
+        "phrase": "un château",
+        "type": "indefinite_article",
+        "context": "a castle",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "citoyens",
+    "translation": "citizens",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les citoyens",
+        "type": "definite_article",
+        "context": "the citizens",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "coq",
+    "translation": "rooster",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "plural_form": "coqs",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "le coq",
+        "type": "definite_article",
+        "context": "the rooster",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "crédit",
+    "translation": "credit",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "le crédit",
+        "type": "definite_article",
+        "context": "the credit",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dame",
+    "translation": "lady / woman",
+    "partOfSpeech": "noun",
+    "gender": "feminine",
+    "plural_form": "dames",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "la dame",
+        "type": "definite_article",
+        "context": "the lady",
+        "frequency": "common"
+      },
+      {
+        "phrase": "une dame",
+        "type": "indefinite_article",
+        "context": "a lady",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "destinations",
+    "translation": "destinations",
+    "partOfSpeech": "noun",
+    "gender": "feminine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les destinations",
+        "type": "definite_article",
+        "context": "the destinations",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "diplomates",
+    "translation": "diplomats",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les diplomates",
+        "type": "definite_article",
+        "context": "the diplomats",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "directions",
+    "translation": "directions",
+    "partOfSpeech": "noun",
+    "gender": "feminine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les directions",
+        "type": "definite_article",
+        "context": "the directions",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "efforts",
+    "translation": "efforts",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les efforts",
+        "type": "definite_article",
+        "context": "the efforts",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "entreprises",
+    "translation": "companies / enterprises",
+    "partOfSpeech": "noun",
+    "gender": "feminine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les entreprises",
+        "type": "definite_article",
+        "context": "the companies",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "entrée",
+    "translation": "entrance / entry",
+    "partOfSpeech": "noun",
+    "gender": "feminine",
+    "plural_form": "entrées",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "l'entrée",
+        "type": "definite_article",
+        "context": "the entrance",
+        "frequency": "common"
+      },
+      {
+        "phrase": "une entrée",
+        "type": "indefinite_article",
+        "context": "an entrance",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "expériences",
+    "translation": "experiences",
+    "partOfSpeech": "noun",
+    "gender": "feminine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les expériences",
+        "type": "definite_article",
+        "context": "the experiences",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "face",
+    "translation": "face",
+    "partOfSpeech": "noun",
+    "gender": "feminine",
+    "plural_form": "faces",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "la face",
+        "type": "definite_article",
+        "context": "the face",
+        "frequency": "common"
+      },
+      {
+        "phrase": "en face de",
+        "type": "prepositional_phrase",
+        "context": "in front of / facing",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "films",
+    "translation": "films / movies",
+    "partOfSpeech": "noun",
+    "gender": "masculine",
+    "number": "plural",
+    "noun_articles": {
+      "definite": "les",
+      "indefinite": "des",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "les films",
+        "type": "definite_article",
+        "context": "the films",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "flore",
+    "translation": "flora / plant life",
+    "partOfSpeech": "noun",
+    "gender": "feminine",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "la flore",
+        "type": "definite_article",
+        "context": "the flora",
+        "frequency": "common"
+      }
+    ]
+  }
+]
