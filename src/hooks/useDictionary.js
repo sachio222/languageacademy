@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { alphabet } from "../data/dictionary/words/alphabet";
+import { alphabetCambridge } from "../data/dictionary/words/cambridge/alphabet";
 import { adjectivesCambridge } from "../data/dictionary/words/cambridge/adjectives";
 import { adverbsCambridge } from "../data/dictionary/words/cambridge/adverbs";
 import { articlesCambridge } from "../data/dictionary/words/cambridge/articles";
@@ -260,7 +260,7 @@ export const useDictionary = () => {
   // Load and merge all dictionary data
   const allWords = useMemo(() => {
     const dictionaries = [
-      { name: "alphabet", data: alphabet },
+      { name: "alphabet", data: alphabetCambridge },
       { name: "adjectives", data: adjectivesCambridge },
       { name: "adverbs", data: adverbsCambridge },
       { name: "articles", data: articlesCambridge },
