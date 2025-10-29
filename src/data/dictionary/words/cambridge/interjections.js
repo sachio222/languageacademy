@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Interjections
- * Generated: 2025-10-26T02:15:05.663Z
- * Successfully scraped: 12/12
+ * Generated: 2025-10-29T01:40:48.444Z
+ * Successfully scraped: 13/13
  */
 
 export const interjectionsCambridge = new Map([
@@ -568,6 +568,86 @@ export const interjectionsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-26T02:15:02.790Z"
         },
+        "partOfSpeech": "interjection"
+    }
+  ],
+  [
+    "oh-fr",
+        {
+        "id": "oh-fr",
+        "lang": "fr",
+        "word": "oh",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "oh",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "Oh ! Comme c’est beau ! \n                        \n        Oh! That’s so beautiful!",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Oh ! Une montgolfière ! \n                        \n        Oh! A hot air balloon!",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Oh ! Quel culot ! \n                        \n        Oh! How dare you!",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Oh, what a lovely present!",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:47.973Z",
+        "updated_at": "2025-10-29T01:40:48.444Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "interjection_phrases": [
+            {
+                "phrase": "oh là là",
+                "type": "exclamation",
+                "context": "oh my / wow",
+                "frequency": "common"
+            },
+            {
+                "phrase": "oh mon dieu",
+                "type": "exclamation",
+                "context": "oh my god",
+                "frequency": "common"
+            },
+            {
+                "phrase": "oh non",
+                "type": "exclamation",
+                "context": "oh no",
+                "frequency": "common"
+            }
+        ],
         "partOfSpeech": "interjection"
     }
   ]

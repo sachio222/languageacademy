@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Verbs
- * Generated: 2025-10-26T02:36:54.140Z
- * Successfully scraped: 1350/1350
+ * Generated: 2025-10-29T01:40:35.385Z
+ * Successfully scraped: 1401/1401
  */
 
 export const verbsCambridge = new Map([
@@ -71611,6 +71611,3229 @@ export const verbsCambridge = new Map([
                 "phrase": "avoir voyagé",
                 "type": "compound",
                 "context": "to have traveled",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "achèterais-fr",
+        {
+        "id": "achèterais-fr",
+        "lang": "fr",
+        "word": "achèterais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "would buy",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "acheter-fr",
+                "targetWord": "acheter",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.860Z",
+        "updated_at": "2025-10-29T01:40:10.465Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "acheter",
+        "verb_phrases": [
+            {
+                "phrase": "j'achèterais",
+                "type": "pronoun_verb",
+                "context": "I would buy",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'achèterais pas",
+                "type": "negation",
+                "context": "would not buy",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimait-fr",
+        {
+        "id": "aimait-fr",
+        "lang": "fr",
+        "word": "aimait",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "loved / liked",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.866Z",
+        "updated_at": "2025-10-29T01:40:10.862Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "il aimait",
+                "type": "pronoun_verb",
+                "context": "he loved",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle aimait",
+                "type": "pronoun_verb",
+                "context": "she loved",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'aimait pas",
+                "type": "negation",
+                "context": "did not love",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aimerais-fr",
+        {
+        "id": "aimerais-fr",
+        "lang": "fr",
+        "word": "aimerais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "would like / would love",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aimer-fr",
+                "targetWord": "aimer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.867Z",
+        "updated_at": "2025-10-29T01:40:11.291Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "aimer",
+        "verb_phrases": [
+            {
+                "phrase": "j'aimerais",
+                "type": "pronoun_verb",
+                "context": "I would like",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'aimerais pas",
+                "type": "negation",
+                "context": "would not like",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "allés-fr",
+        {
+        "id": "allés-fr",
+        "lang": "fr",
+        "word": "allés",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "gone (masculine plural)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "aller-fr",
+                "targetWord": "aller",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.867Z",
+        "updated_at": "2025-10-29T01:40:11.621Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "aller",
+        "verb_phrases": [
+            {
+                "phrase": "ils sont allés",
+                "type": "compound_tense",
+                "context": "they went",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'ont pas allés",
+                "type": "negation",
+                "context": "did not go",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "assis-fr",
+        {
+        "id": "assis-fr",
+        "lang": "fr",
+        "word": "assis",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "seated / sitting",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "asseoir-fr",
+                "targetWord": "asseoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "être assis par terre \n                        \n        to be sitting on the ground",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "assis en tailleur, il décorait une boîte",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.868Z",
+        "updated_at": "2025-10-29T01:40:11.863Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "asseoir",
+        "verb_phrases": [
+            {
+                "phrase": "être assis",
+                "type": "compound_tense",
+                "context": "to be seated",
+                "frequency": "common"
+            },
+            {
+                "phrase": "s'asseoir",
+                "type": "reflexive",
+                "context": "to sit down",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "assise-fr",
+        {
+        "id": "assise-fr",
+        "lang": "fr",
+        "word": "assise",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "seated / sitting (feminine)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "asseoir-fr",
+                "targetWord": "asseoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "l’assise d’un bâtiment \n                        \n        the foundations of a building",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "l’assise en paille d’une chaise \n                        \n        the straw seat of a chair",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "l’assise d’un projet \n                        \n        the basis for a project",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.869Z",
+        "updated_at": "2025-10-29T01:40:12.178Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "asseoir",
+        "verb_phrases": [
+            {
+                "phrase": "elle est assise",
+                "type": "compound_tense",
+                "context": "she is seated",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "attendent-fr",
+        {
+        "id": "attendent-fr",
+        "lang": "fr",
+        "word": "attendent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "wait / are waiting",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "attendre-fr",
+                "targetWord": "attendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.869Z",
+        "updated_at": "2025-10-29T01:40:12.508Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "attendre",
+        "verb_phrases": [
+            {
+                "phrase": "ils attendent",
+                "type": "pronoun_verb",
+                "context": "they wait",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'attendent pas",
+                "type": "negation",
+                "context": "do not wait",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "brillaient-fr",
+        {
+        "id": "brillaient-fr",
+        "lang": "fr",
+        "word": "brillaient",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "shone / were shining",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "briller-fr",
+                "targetWord": "briller",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.869Z",
+        "updated_at": "2025-10-29T01:40:12.823Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "briller",
+        "verb_phrases": [
+            {
+                "phrase": "ils brillaient",
+                "type": "pronoun_verb",
+                "context": "they shone",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne brillaient pas",
+                "type": "negation",
+                "context": "did not shine",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "combine-fr",
+        {
+        "id": "combine-fr",
+        "lang": "fr",
+        "word": "combine",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "combines / is combining",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "combiner-fr",
+                "targetWord": "combiner",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "une combine pour payer moins d’impôts \n                        \n        a scheme for paying less tax",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "décrocher le combiné \n                        \n        to pick up the phone",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "reposer le combiné en soupirant.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "You’ll never catch him – he knows every dodge there is.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a tax fiddle.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Some monkey business has clearly been going on.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "His schemes to steal the money were discovered.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.870Z",
+        "updated_at": "2025-10-29T01:40:13.159Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "combiner",
+        "verb_phrases": [
+            {
+                "phrase": "il combine",
+                "type": "pronoun_verb",
+                "context": "he combines",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne combine pas",
+                "type": "negation",
+                "context": "does not combine",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "commandé-fr",
+        {
+        "id": "commandé-fr",
+        "lang": "fr",
+        "word": "commandé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ordered / commanded",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "commander-fr",
+                "targetWord": "commander",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "passer une commande \n                        \n        to place an order",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La commande a été livrée à temps.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une commande à distance \n                        \n        a remote control",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Une commande à distance s’appelle aussi une “zappette”.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a commission to paint the president’s portrait.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The clutch and accelerator are foot controls in a car.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Your order is nearly ready.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.870Z",
+        "updated_at": "2025-10-29T01:40:13.527Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "commander",
+        "verb_phrases": [
+            {
+                "phrase": "a commandé",
+                "type": "compound_tense",
+                "context": "has ordered",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'a pas commandé",
+                "type": "negation",
+                "context": "has not ordered",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "comprenais-fr",
+        {
+        "id": "comprenais-fr",
+        "lang": "fr",
+        "word": "comprenais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "understood / was understanding",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "comprendre-fr",
+                "targetWord": "comprendre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.870Z",
+        "updated_at": "2025-10-29T01:40:13.894Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "comprendre",
+        "verb_phrases": [
+            {
+                "phrase": "je comprenais",
+                "type": "pronoun_verb",
+                "context": "I understood",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne comprenais pas",
+                "type": "negation",
+                "context": "did not understand",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "connais-fr",
+        {
+        "id": "connais-fr",
+        "lang": "fr",
+        "word": "connais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "know / knows",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "connaître-fr",
+                "targetWord": "connaître",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.871Z",
+        "updated_at": "2025-10-29T01:40:14.214Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "connaître",
+        "verb_phrases": [
+            {
+                "phrase": "je connais",
+                "type": "pronoun_verb",
+                "context": "I know",
+                "frequency": "common"
+            },
+            {
+                "phrase": "tu connais",
+                "type": "pronoun_verb",
+                "context": "you know",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne connais pas",
+                "type": "negation",
+                "context": "do not know",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "continue-fr",
+        {
+        "id": "continue-fr",
+        "lang": "fr",
+        "word": "continue",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "continues / is continuing",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "continuer-fr",
+                "targetWord": "continuer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.871Z",
+        "updated_at": "2025-10-29T01:40:14.766Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "continuer",
+        "verb_phrases": [
+            {
+                "phrase": "il continue",
+                "type": "pronoun_verb",
+                "context": "he continues",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne continue pas",
+                "type": "negation",
+                "context": "does not continue",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "continues-fr",
+        {
+        "id": "continues-fr",
+        "lang": "fr",
+        "word": "continues",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "continue / are continuing",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "continuer-fr",
+                "targetWord": "continuer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.871Z",
+        "updated_at": "2025-10-29T01:40:15.126Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "continuer",
+        "verb_phrases": [
+            {
+                "phrase": "tu continues",
+                "type": "pronoun_verb",
+                "context": "you continue",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne continues pas",
+                "type": "negation",
+                "context": "do not continue",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "continué-fr",
+        {
+        "id": "continué-fr",
+        "lang": "fr",
+        "word": "continué",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "continued",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "continuer-fr",
+                "targetWord": "continuer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.871Z",
+        "updated_at": "2025-10-29T01:40:15.514Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "continuer",
+        "verb_phrases": [
+            {
+                "phrase": "a continué",
+                "type": "compound_tense",
+                "context": "has continued",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'a pas continué",
+                "type": "negation",
+                "context": "has not continued",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "contributions-fr",
+        {
+        "id": "contributions-fr",
+        "lang": "fr",
+        "word": "contributions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "contribute / are contributing",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "contribuer-fr",
+                "targetWord": "contribuer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.871Z",
+        "updated_at": "2025-10-29T01:40:15.849Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "contribuer",
+        "verb_phrases": [
+            {
+                "phrase": "ils contribuent",
+                "type": "pronoun_verb",
+                "context": "they contribute",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne contribuent pas",
+                "type": "negation",
+                "context": "do not contribute",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "deviennent-fr",
+        {
+        "id": "deviennent-fr",
+        "lang": "fr",
+        "word": "deviennent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "become / are becoming",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "devenir-fr",
+                "targetWord": "devenir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.871Z",
+        "updated_at": "2025-10-29T01:40:16.181Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "devenir",
+        "verb_phrases": [
+            {
+                "phrase": "ils deviennent",
+                "type": "pronoun_verb",
+                "context": "they become",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne deviennent pas",
+                "type": "negation",
+                "context": "do not become",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "discutent-fr",
+        {
+        "id": "discutent-fr",
+        "lang": "fr",
+        "word": "discutent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "discuss / are discussing",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "discuter-fr",
+                "targetWord": "discuter",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.871Z",
+        "updated_at": "2025-10-29T01:40:16.473Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "discuter",
+        "verb_phrases": [
+            {
+                "phrase": "ils discutent",
+                "type": "pronoun_verb",
+                "context": "they discuss",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne discutent pas",
+                "type": "negation",
+                "context": "do not discuss",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "donnent-fr",
+        {
+        "id": "donnent-fr",
+        "lang": "fr",
+        "word": "donnent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "give / are giving",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "donner-fr",
+                "targetWord": "donner",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:08.872Z",
+        "updated_at": "2025-10-29T01:40:16.836Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "donner",
+        "verb_phrases": [
+            {
+                "phrase": "ils donnent",
+                "type": "pronoun_verb",
+                "context": "they give",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne donnent pas",
+                "type": "negation",
+                "context": "do not give",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "embrassant-fr",
+        {
+        "id": "embrassant-fr",
+        "lang": "fr",
+        "word": "embrassant",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "embracing / kissing",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "embrasser-fr",
+                "targetWord": "embrasser",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.426Z",
+        "updated_at": "2025-10-29T01:40:20.917Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "embrasser",
+        "verb_phrases": [
+            {
+                "phrase": "en embrassant",
+                "type": "gerund",
+                "context": "while embracing",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'embrassant pas",
+                "type": "negation",
+                "context": "not embracing",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "essaies-fr",
+        {
+        "id": "essaies-fr",
+        "lang": "fr",
+        "word": "essaies",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "try / are trying",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "essayer-fr",
+                "targetWord": "essayer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.432Z",
+        "updated_at": "2025-10-29T01:40:21.258Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "essayer",
+        "verb_phrases": [
+            {
+                "phrase": "tu essaies",
+                "type": "pronoun_verb",
+                "context": "you try",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'essaies pas",
+                "type": "negation",
+                "context": "do not try",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "faut-fr",
+        {
+        "id": "faut-fr",
+        "lang": "fr",
+        "word": "faut",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "must / have to",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "falloir-fr",
+                "targetWord": "falloir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.432Z",
+        "updated_at": "2025-10-29T01:40:21.517Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "falloir",
+        "verb_phrases": [
+            {
+                "phrase": "il faut",
+                "type": "pronoun_verb",
+                "context": "it is necessary",
+                "frequency": "common"
+            },
+            {
+                "phrase": "il ne faut pas",
+                "type": "negation",
+                "context": "it is not necessary",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "lève-fr",
+        {
+        "id": "lève-fr",
+        "lang": "fr",
+        "word": "lève",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "raises / lifts",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "lever-fr",
+                "targetWord": "lever",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "rester sur un pied en gardant la jambe levée \n                        \n        to stand on one foot with the other leg raised",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Tu es déjà levé ? \n                        \n        Are you up already?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "leavened bread.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.433Z",
+        "updated_at": "2025-10-29T01:40:21.930Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "lever",
+        "verb_phrases": [
+            {
+                "phrase": "il lève",
+                "type": "pronoun_verb",
+                "context": "he raises",
+                "frequency": "common"
+            },
+            {
+                "phrase": "se lève",
+                "type": "reflexive",
+                "context": "gets up",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne lève pas",
+                "type": "negation",
+                "context": "does not raise",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mangions-fr",
+        {
+        "id": "mangions-fr",
+        "lang": "fr",
+        "word": "mangions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were eating / ate",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "manger-fr",
+                "targetWord": "manger",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.433Z",
+        "updated_at": "2025-10-29T01:40:22.287Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "manger",
+        "verb_phrases": [
+            {
+                "phrase": "nous mangions",
+                "type": "pronoun_verb",
+                "context": "we were eating",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne mangions pas",
+                "type": "negation",
+                "context": "were not eating",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "pensais-fr",
+        {
+        "id": "pensais-fr",
+        "lang": "fr",
+        "word": "pensais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "was thinking / thought",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "penser-fr",
+                "targetWord": "penser",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.433Z",
+        "updated_at": "2025-10-29T01:40:22.647Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "penser",
+        "verb_phrases": [
+            {
+                "phrase": "je pensais",
+                "type": "pronoun_verb",
+                "context": "I was thinking",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne pensais pas",
+                "type": "negation",
+                "context": "was not thinking",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "pense-fr",
+        {
+        "id": "pense-fr",
+        "lang": "fr",
+        "word": "pense",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "thinks / is thinking",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "penser-fr",
+                "targetWord": "penser",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "un pense-bête destiné à ne pas oublier l’anniversaire de qqn \n                        \n        a reminder not to forget sb’s birthday",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.433Z",
+        "updated_at": "2025-10-29T01:40:23.029Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "penser",
+        "verb_phrases": [
+            {
+                "phrase": "il pense",
+                "type": "pronoun_verb",
+                "context": "he thinks",
+                "frequency": "common"
+            },
+            {
+                "phrase": "je pense",
+                "type": "pronoun_verb",
+                "context": "I think",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne pense pas",
+                "type": "negation",
+                "context": "does not think",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "pensent-fr",
+        {
+        "id": "pensent-fr",
+        "lang": "fr",
+        "word": "pensent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "think / are thinking",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "penser-fr",
+                "targetWord": "penser",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.434Z",
+        "updated_at": "2025-10-29T01:40:23.360Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "penser",
+        "verb_phrases": [
+            {
+                "phrase": "ils pensent",
+                "type": "pronoun_verb",
+                "context": "they think",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne pensent pas",
+                "type": "negation",
+                "context": "do not think",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "pensé-fr",
+        {
+        "id": "pensé-fr",
+        "lang": "fr",
+        "word": "pensé",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "thought",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "penser-fr",
+                "targetWord": "penser",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "un pense-bête destiné à ne pas oublier l’anniversaire de qqn \n                        \n        a reminder not to forget sb’s birthday",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.434Z",
+        "updated_at": "2025-10-29T01:40:23.716Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "penser",
+        "verb_phrases": [
+            {
+                "phrase": "a pensé",
+                "type": "compound_tense",
+                "context": "has thought",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'a pas pensé",
+                "type": "negation",
+                "context": "has not thought",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "permet-fr",
+        {
+        "id": "permet-fr",
+        "lang": "fr",
+        "word": "permet",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "allows / permits",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "permettre-fr",
+                "targetWord": "permettre",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.434Z",
+        "updated_at": "2025-10-29T01:40:24.102Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "permettre",
+        "verb_phrases": [
+            {
+                "phrase": "il permet",
+                "type": "pronoun_verb",
+                "context": "he allows",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne permet pas",
+                "type": "negation",
+                "context": "does not allow",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "renoncerais-fr",
+        {
+        "id": "renoncerais-fr",
+        "lang": "fr",
+        "word": "renoncerais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "would give up",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "renoncer-fr",
+                "targetWord": "renoncer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.435Z",
+        "updated_at": "2025-10-29T01:40:24.471Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "renoncer",
+        "verb_phrases": [
+            {
+                "phrase": "je renoncerais",
+                "type": "pronoun_verb",
+                "context": "I would give up",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne renoncerais pas",
+                "type": "negation",
+                "context": "would not give up",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "rentrant-fr",
+        {
+        "id": "rentrant-fr",
+        "lang": "fr",
+        "word": "rentrant",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "returning / coming back",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "rentrer-fr",
+                "targetWord": "rentrer",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.435Z",
+        "updated_at": "2025-10-29T01:40:24.843Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "rentrer",
+        "verb_phrases": [
+            {
+                "phrase": "en rentrant",
+                "type": "gerund",
+                "context": "while returning",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne rentrant pas",
+                "type": "negation",
+                "context": "not returning",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "restés-fr",
+        {
+        "id": "restés-fr",
+        "lang": "fr",
+        "word": "restés",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "stayed / remained",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "rester-fr",
+                "targetWord": "rester",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "le reste d’une somme d’argent \n                        \n        the remainder of a sum of money",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "finir le reste du gâteau \n                        \n        to finish the rest of the cake",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il travaille six mois et voyage le reste de l’année. \n                        \n        He works for six months and travels for the rest of the year.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il y a un reste de fromage sur la table, le veux-tu ?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "manger les restes \n                        \n        to eat the leftovers",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "donner les restes aux oiseaux",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "les restes d’un monument \n                        \n        the ruins of a monument",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Ils recherchent un corps dans les restes de l’immeuble.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il est tard, du reste, je dois partir. \n                        \n        It’s late, what’s more I have to leave.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Elle n’a pas été admise au concours, du reste cela ne l’intéressait pas trop.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "We can heat up the leftovers and have them tomorrow.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "I’ve corrected most of the essays – the remainder will get done tomorrow.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "How did the killer dispose of the victim’s remains?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "They gave the scraps to the dog.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.435Z",
+        "updated_at": "2025-10-29T01:40:25.558Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "rester",
+        "verb_phrases": [
+            {
+                "phrase": "ils sont restés",
+                "type": "compound_tense",
+                "context": "they stayed",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne sont pas restés",
+                "type": "negation",
+                "context": "did not stay",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "réussisse-fr",
+        {
+        "id": "réussisse-fr",
+        "lang": "fr",
+        "word": "réussisse",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "succeed / am succeeding",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "réussir-fr",
+                "targetWord": "réussir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.435Z",
+        "updated_at": "2025-10-29T01:40:25.885Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "réussir",
+        "verb_phrases": [
+            {
+                "phrase": "je réussisse",
+                "type": "pronoun_verb",
+                "context": "I succeed",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne réussisse pas",
+                "type": "negation",
+                "context": "do not succeed",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "révise-fr",
+        {
+        "id": "révise-fr",
+        "lang": "fr",
+        "word": "révise",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "revises / is revising",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "réviser-fr",
+                "targetWord": "réviser",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.435Z",
+        "updated_at": "2025-10-29T01:40:26.238Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "réviser",
+        "verb_phrases": [
+            {
+                "phrase": "il révise",
+                "type": "pronoun_verb",
+                "context": "he revises",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne révise pas",
+                "type": "negation",
+                "context": "does not revise",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "saches-fr",
+        {
+        "id": "saches-fr",
+        "lang": "fr",
+        "word": "saches",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "know / know how to",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "savoir-fr",
+                "targetWord": "savoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.436Z",
+        "updated_at": "2025-10-29T01:40:26.579Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "savoir",
+        "verb_phrases": [
+            {
+                "phrase": "que tu saches",
+                "type": "subjunctive",
+                "context": "that you know",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne saches pas",
+                "type": "negation",
+                "context": "do not know",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "saura-fr",
+        {
+        "id": "saura-fr",
+        "lang": "fr",
+        "word": "saura",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will know",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "savoir-fr",
+                "targetWord": "savoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.436Z",
+        "updated_at": "2025-10-29T01:40:26.937Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "savoir",
+        "verb_phrases": [
+            {
+                "phrase": "il saura",
+                "type": "pronoun_verb",
+                "context": "he will know",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne saura pas",
+                "type": "negation",
+                "context": "will not know",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "sauras-fr",
+        {
+        "id": "sauras-fr",
+        "lang": "fr",
+        "word": "sauras",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "will know",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "savoir-fr",
+                "targetWord": "savoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.436Z",
+        "updated_at": "2025-10-29T01:40:27.255Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "savoir",
+        "verb_phrases": [
+            {
+                "phrase": "tu sauras",
+                "type": "pronoun_verb",
+                "context": "you will know",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne sauras pas",
+                "type": "negation",
+                "context": "will not know",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "savais-fr",
+        {
+        "id": "savais-fr",
+        "lang": "fr",
+        "word": "savais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "knew / was knowing",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "savoir-fr",
+                "targetWord": "savoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:19.436Z",
+        "updated_at": "2025-10-29T01:40:27.515Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "savoir",
+        "verb_phrases": [
+            {
+                "phrase": "je savais",
+                "type": "pronoun_verb",
+                "context": "I knew",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne savais pas",
+                "type": "negation",
+                "context": "did not know",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "savait-fr",
+        {
+        "id": "savait-fr",
+        "lang": "fr",
+        "word": "savait",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "knew / was knowing",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "savoir-fr",
+                "targetWord": "savoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.078Z",
+        "updated_at": "2025-10-29T01:40:31.231Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "savoir",
+        "verb_phrases": [
+            {
+                "phrase": "il savait",
+                "type": "pronoun_verb",
+                "context": "he knew",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle savait",
+                "type": "pronoun_verb",
+                "context": "she knew",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne savait pas",
+                "type": "negation",
+                "context": "did not know",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "souviens-fr",
+        {
+        "id": "souviens-fr",
+        "lang": "fr",
+        "word": "souviens",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "remember / am remembering",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "se souvenir-fr",
+                "targetWord": "se souvenir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.083Z",
+        "updated_at": "2025-10-29T01:40:31.591Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "se souvenir",
+        "verb_phrases": [
+            {
+                "phrase": "je me souviens",
+                "type": "reflexive",
+                "context": "I remember",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne me souviens pas",
+                "type": "negation",
+                "context": "do not remember",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "su-fr",
+        {
+        "id": "su-fr",
+        "lang": "fr",
+        "word": "su",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "known",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "savoir-fr",
+                "targetWord": "savoir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.084Z",
+        "updated_at": "2025-10-29T01:40:31.843Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "savoir",
+        "verb_phrases": [
+            {
+                "phrase": "j'ai su",
+                "type": "compound_tense",
+                "context": "I have known",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'ai pas su",
+                "type": "negation",
+                "context": "have not known",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "travaille-fr",
+        {
+        "id": "travaille-fr",
+        "lang": "fr",
+        "word": "travaille",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "works / is working",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "travailler-fr",
+                "targetWord": "travailler",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.084Z",
+        "updated_at": "2025-10-29T01:40:32.198Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "travailler",
+        "verb_phrases": [
+            {
+                "phrase": "il travaille",
+                "type": "pronoun_verb",
+                "context": "he works",
+                "frequency": "common"
+            },
+            {
+                "phrase": "je travaille",
+                "type": "pronoun_verb",
+                "context": "I work",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne travaille pas",
+                "type": "negation",
+                "context": "does not work",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "travaillent-fr",
+        {
+        "id": "travaillent-fr",
+        "lang": "fr",
+        "word": "travaillent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "work / are working",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "travailler-fr",
+                "targetWord": "travailler",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.085Z",
+        "updated_at": "2025-10-29T01:40:32.517Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "travailler",
+        "verb_phrases": [
+            {
+                "phrase": "ils travaillent",
+                "type": "pronoun_verb",
+                "context": "they work",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne travaillent pas",
+                "type": "negation",
+                "context": "do not work",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "vus-fr",
+        {
+        "id": "vus-fr",
+        "lang": "fr",
+        "word": "vus",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "seen (masculine plural)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "voir-fr",
+                "targetWord": "voir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.085Z",
+        "updated_at": "2025-10-29T01:40:32.889Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "voir",
+        "verb_phrases": [
+            {
+                "phrase": "ils ont vus",
+                "type": "compound_tense",
+                "context": "they have seen",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'ont pas vus",
+                "type": "negation",
+                "context": "have not seen",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "écoute-fr",
+        {
+        "id": "écoute-fr",
+        "lang": "fr",
+        "word": "écoute",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "listens / is listening",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "écouter-fr",
+                "targetWord": "écouter",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "faire preuve d’une grande écoute \n                        \n        to be a very good listener",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Cette mère est à l’écoute de ses enfants. \n                        \n        That mother really listens to what her children have to say.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "l’écoute gratuite d’un album \n                        \n        listening to an album free",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "présenter une émission à une heure de grande écoute \n                        \n        to present a program during prime time",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.085Z",
+        "updated_at": "2025-10-29T01:40:33.301Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "écouter",
+        "verb_phrases": [
+            {
+                "phrase": "il écoute",
+                "type": "pronoun_verb",
+                "context": "he listens",
+                "frequency": "common"
+            },
+            {
+                "phrase": "j'écoute",
+                "type": "pronoun_verb",
+                "context": "I listen",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'écoute pas",
+                "type": "negation",
+                "context": "does not listen",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "écoutent-fr",
+        {
+        "id": "écoutent-fr",
+        "lang": "fr",
+        "word": "écoutent",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "listen / are listening",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "écouter-fr",
+                "targetWord": "écouter",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.085Z",
+        "updated_at": "2025-10-29T01:40:33.665Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "écouter",
+        "verb_phrases": [
+            {
+                "phrase": "ils écoutent",
+                "type": "pronoun_verb",
+                "context": "they listen",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'écoutent pas",
+                "type": "negation",
+                "context": "do not listen",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "étudie-fr",
+        {
+        "id": "étudie-fr",
+        "lang": "fr",
+        "word": "étudie",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "studies / is studying",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "étudier-fr",
+                "targetWord": "étudier",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "un plan très étudié \n                        \n        a very carefully prepared plan",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.085Z",
+        "updated_at": "2025-10-29T01:40:34.039Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "étudier",
+        "verb_phrases": [
+            {
+                "phrase": "il étudie",
+                "type": "pronoun_verb",
+                "context": "he studies",
+                "frequency": "common"
+            },
+            {
+                "phrase": "j'étudie",
+                "type": "pronoun_verb",
+                "context": "I study",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'étudie pas",
+                "type": "negation",
+                "context": "does not study",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "étudient-fr",
+        {
+        "id": "étudient-fr",
+        "lang": "fr",
+        "word": "étudient",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "study / are studying",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "étudier-fr",
+                "targetWord": "étudier",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.086Z",
+        "updated_at": "2025-10-29T01:40:34.358Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "étudier",
+        "verb_phrases": [
+            {
+                "phrase": "ils étudient",
+                "type": "pronoun_verb",
+                "context": "they study",
+                "frequency": "common"
+            },
+            {
+                "phrase": "n'étudient pas",
+                "type": "negation",
+                "context": "do not study",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "voyagerais-fr",
+        {
+        "id": "voyagerais-fr",
+        "lang": "fr",
+        "word": "voyagerais",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "would travel",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "voyager-fr",
+                "targetWord": "voyager",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.086Z",
+        "updated_at": "2025-10-29T01:40:34.692Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "voyager",
+        "verb_phrases": [
+            {
+                "phrase": "je voyagerais",
+                "type": "pronoun_verb",
+                "context": "I would travel",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne voyagerais pas",
+                "type": "negation",
+                "context": "would not travel",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "parlions-fr",
+        {
+        "id": "parlions-fr",
+        "lang": "fr",
+        "word": "parlions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "were speaking / spoke",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "parler-fr",
+                "targetWord": "parler",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.086Z",
+        "updated_at": "2025-10-29T01:40:35.034Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "parler",
+        "verb_phrases": [
+            {
+                "phrase": "nous parlions",
+                "type": "pronoun_verb",
+                "context": "we were speaking",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne parlions pas",
+                "type": "negation",
+                "context": "were not speaking",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "croit-fr",
+        {
+        "id": "croit-fr",
+        "lang": "fr",
+        "word": "croit",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "believes / is believing",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "croire-fr",
+                "targetWord": "croire",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:30.086Z",
+        "updated_at": "2025-10-29T01:40:35.354Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "croire",
+        "verb_phrases": [
+            {
+                "phrase": "il croit",
+                "type": "pronoun_verb",
+                "context": "he believes",
+                "frequency": "common"
+            },
+            {
+                "phrase": "je crois",
+                "type": "pronoun_verb",
+                "context": "I believe",
+                "frequency": "common"
+            },
+            {
+                "phrase": "ne croit pas",
+                "type": "negation",
+                "context": "does not believe",
                 "frequency": "common"
             }
         ]

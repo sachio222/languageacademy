@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Adjectives
- * Generated: 2025-10-26T02:19:41.830Z
- * Successfully scraped: 176/176
+ * Generated: 2025-10-29T01:40:41.229Z
+ * Successfully scraped: 186/186
  */
 
 export const adjectivesCambridge = new Map([
@@ -8022,6 +8022,637 @@ export const adjectivesCambridge = new Map([
         "verified": false,
         "created_at": "2025-10-26T02:19:35.365Z",
         "updated_at": "2025-10-26T02:19:35.365Z"
+    }
+  ],
+  [
+    "collective-fr",
+        {
+        "id": "collective-fr",
+        "lang": "fr",
+        "word": "collective",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "collective",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.885Z",
+        "updated_at": "2025-10-29T01:40:38.475Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "collectif",
+            "feminine_singular": "collective",
+            "masculine_plural": "collectifs",
+            "feminine_plural": "collectives"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très collective",
+                "type": "intensifier",
+                "context": "very collective",
+                "frequency": "common"
+            },
+            {
+                "phrase": "plus collective que",
+                "type": "comparative",
+                "context": "more collective than",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "culturelles-fr",
+        {
+        "id": "culturelles-fr",
+        "lang": "fr",
+        "word": "culturelles",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "cultural (feminine plural)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.889Z",
+        "updated_at": "2025-10-29T01:40:38.780Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "culturel",
+            "feminine_singular": "culturelle",
+            "masculine_plural": "culturels",
+            "feminine_plural": "culturelles"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très culturelles",
+                "type": "intensifier",
+                "context": "very cultural",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les activités culturelles",
+                "type": "agreement",
+                "context": "cultural activities",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "dernière-fr",
+        {
+        "id": "dernière-fr",
+        "lang": "fr",
+        "word": "dernière",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "last / final (feminine)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "The child was saved from the kidnappers at the eleventh hour.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He had to make the speech at very short notice when his boss suddenly fell ill.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.889Z",
+        "updated_at": "2025-10-29T01:40:39.133Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "dernier",
+            "feminine_singular": "dernière",
+            "masculine_plural": "derniers",
+            "feminine_plural": "dernières"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "la dernière fois",
+                "type": "agreement",
+                "context": "the last time",
+                "frequency": "common"
+            },
+            {
+                "phrase": "très dernière",
+                "type": "intensifier",
+                "context": "very last",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "européennes-fr",
+        {
+        "id": "européennes-fr",
+        "lang": "fr",
+        "word": "européennes",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "European (feminine plural)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.889Z",
+        "updated_at": "2025-10-29T01:40:39.484Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "européen",
+            "feminine_singular": "européenne",
+            "masculine_plural": "européens",
+            "feminine_plural": "européennes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "les villes européennes",
+                "type": "agreement",
+                "context": "European cities",
+                "frequency": "common"
+            },
+            {
+                "phrase": "très européennes",
+                "type": "intensifier",
+                "context": "very European",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "essentielles-fr",
+        {
+        "id": "essentielles-fr",
+        "lang": "fr",
+        "word": "essentielles",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "essential (feminine plural)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.889Z",
+        "updated_at": "2025-10-29T01:40:39.845Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "essentiel",
+            "feminine_singular": "essentielle",
+            "masculine_plural": "essentiels",
+            "feminine_plural": "essentielles"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "les informations essentielles",
+                "type": "agreement",
+                "context": "essential information",
+                "frequency": "common"
+            },
+            {
+                "phrase": "très essentielles",
+                "type": "intensifier",
+                "context": "very essential",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "heureuse-fr",
+        {
+        "id": "heureuse-fr",
+        "lang": "fr",
+        "word": "heureuse",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "happy (feminine)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.890Z",
+        "updated_at": "2025-10-29T01:40:40.196Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "heureux",
+            "feminine_singular": "heureuse",
+            "masculine_plural": "heureux",
+            "feminine_plural": "heureuses"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "très heureuse",
+                "type": "intensifier",
+                "context": "very happy",
+                "frequency": "common"
+            },
+            {
+                "phrase": "une femme heureuse",
+                "type": "agreement",
+                "context": "a happy woman",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "plusieurs-fr",
+        {
+        "id": "plusieurs-fr",
+        "lang": "fr",
+        "word": "plusieurs",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "several / many",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "pendant plusieurs jours \n                        \n        for several days",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La traduction du dictionnaire prendra plusieurs mois.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "travailler à plusieurs \n                        \n        to work in a group",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Nous étions plusieurs à le féliciter.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Several weeks passed before he got a reply to his letter.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.890Z",
+        "updated_at": "2025-10-29T01:40:40.399Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "plusieurs",
+            "feminine_singular": "plusieurs",
+            "masculine_plural": "plusieurs",
+            "feminine_plural": "plusieurs"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "plusieurs fois",
+                "type": "agreement",
+                "context": "several times",
+                "frequency": "common"
+            },
+            {
+                "phrase": "plusieurs personnes",
+                "type": "agreement",
+                "context": "several people",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "primaire-fr",
+        {
+        "id": "primaire-fr",
+        "lang": "fr",
+        "word": "primaire",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "primary (feminine)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "école primaire \n                        \n        primary school",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Son fils rentre en primaire cette année.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "les couleurs primaires \n                        \n        primary colors",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Les délinquants primaires sont jugés avec indulgence.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "His primary concern is his family.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a primary school.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.890Z",
+        "updated_at": "2025-10-29T01:40:40.618Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "primaire",
+            "feminine_singular": "primaire",
+            "masculine_plural": "primaires",
+            "feminine_plural": "primaires"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "l'école primaire",
+                "type": "agreement",
+                "context": "primary school",
+                "frequency": "common"
+            },
+            {
+                "phrase": "très primaire",
+                "type": "intensifier",
+                "context": "very primary",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "quotidienne-fr",
+        {
+        "id": "quotidienne-fr",
+        "lang": "fr",
+        "word": "quotidienne",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "daily (feminine)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.890Z",
+        "updated_at": "2025-10-29T01:40:40.940Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "quotidien",
+            "feminine_singular": "quotidienne",
+            "masculine_plural": "quotidiens",
+            "feminine_plural": "quotidiennes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "la routine quotidienne",
+                "type": "agreement",
+                "context": "daily routine",
+                "frequency": "common"
+            },
+            {
+                "phrase": "très quotidienne",
+                "type": "intensifier",
+                "context": "very daily",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "unième-fr",
+        {
+        "id": "unième-fr",
+        "lang": "fr",
+        "word": "unième",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "first (ordinal)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:37.890Z",
+        "updated_at": "2025-10-29T01:40:41.226Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "adjective",
+        "adjective_forms": {
+            "masculine_singular": "unième",
+            "feminine_singular": "unième",
+            "masculine_plural": "unièmes",
+            "feminine_plural": "unièmes"
+        },
+        "adjective_phrases": [
+            {
+                "phrase": "la unième fois",
+                "type": "agreement",
+                "context": "the first time",
+                "frequency": "common"
+            },
+            {
+                "phrase": "très unième",
+                "type": "intensifier",
+                "context": "very first",
+                "frequency": "common"
+            }
+        ]
     }
   ]
 ]);

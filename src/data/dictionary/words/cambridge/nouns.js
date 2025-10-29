@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Nouns
- * Generated: 2025-10-29T01:39:27.464Z
- * Successfully scraped: 350/350
+ * Generated: 2025-10-29T01:40:06.286Z
+ * Successfully scraped: 423/423
  */
 
 export const nounsCambridge = new Map([
@@ -19077,9 +19077,10 @@ export const nounsCambridge = new Map([
             "lesson"
         ],
         "created_at": "2025-10-29T01:39:23.020Z",
-        "updated_at": "2025-10-29T01:39:23.020Z",
+        "updated_at": "2025-10-29T01:39:27.799Z",
         "sources": [
-            "language_academy"
+            "language_academy",
+            "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "noun",
@@ -19125,9 +19126,10 @@ export const nounsCambridge = new Map([
             "lesson"
         ],
         "created_at": "2025-10-29T01:39:23.020Z",
-        "updated_at": "2025-10-29T01:39:23.020Z",
+        "updated_at": "2025-10-29T01:39:28.166Z",
         "sources": [
-            "language_academy"
+            "language_academy",
+            "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "noun",
@@ -19173,9 +19175,10 @@ export const nounsCambridge = new Map([
             "lesson"
         ],
         "created_at": "2025-10-29T01:39:23.020Z",
-        "updated_at": "2025-10-29T01:39:23.020Z",
+        "updated_at": "2025-10-29T01:39:28.475Z",
         "sources": [
-            "language_academy"
+            "language_academy",
+            "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "noun",
@@ -19214,16 +19217,120 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "à l’entrée du cinéma \n                        \n        at the entrance to the movie theater",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "se retrouver devant l’entrée d’un magasin",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "L’entrée est interdite. \n                        \n        No entry.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "entrée libre \n                        \n        free admission",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "L’entrée au zoo est gratuite.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Qu’as-tu mangé en entrée ? \n                        \n        What did you have as a starter?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Les entrées ont été très copieuses.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "They charge a high price for admission.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the entrance to the tunnel",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The church has an impressive entrance.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Hamlet now makes his second entrance.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "They were silenced by the entry of the headmaster.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "We can’t go in – the sign says ‘No Entry’.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Don’t bring your bike in here – leave it in the entry.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "We left our coats in the hall.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "This is the way in/out",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There’s no way through.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
             "lesson"
         ],
         "created_at": "2025-10-29T01:39:23.021Z",
-        "updated_at": "2025-10-29T01:39:23.021Z",
+        "updated_at": "2025-10-29T01:39:28.830Z",
         "sources": [
-            "language_academy"
+            "language_academy",
+            "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "noun",
@@ -19276,9 +19383,10 @@ export const nounsCambridge = new Map([
             "lesson"
         ],
         "created_at": "2025-10-29T01:39:23.021Z",
-        "updated_at": "2025-10-29T01:39:23.021Z",
+        "updated_at": "2025-10-29T01:39:29.156Z",
         "sources": [
-            "language_academy"
+            "language_academy",
+            "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "noun",
@@ -19317,16 +19425,72 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "les faces d’un cube \n                        \n        the sides of a cube",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "jouer à pile ou face",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "étudier un cas sous toutes ses faces \n                        \n        to study a case from all sides",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La face cachée de la science.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une face souriante \n                        \n        a smiling face",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "un homme à double face",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a rock face",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Dice have six faces.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He tossed the penny and it came down heads.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
             "lesson"
         ],
         "created_at": "2025-10-29T01:39:23.021Z",
-        "updated_at": "2025-10-29T01:39:23.021Z",
+        "updated_at": "2025-10-29T01:39:29.589Z",
         "sources": [
-            "language_academy"
+            "language_academy",
+            "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "noun",
@@ -19379,9 +19543,10 @@ export const nounsCambridge = new Map([
             "lesson"
         ],
         "created_at": "2025-10-29T01:39:23.022Z",
-        "updated_at": "2025-10-29T01:39:23.022Z",
+        "updated_at": "2025-10-29T01:39:29.876Z",
         "sources": [
-            "language_academy"
+            "language_academy",
+            "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "noun",
@@ -19420,16 +19585,36 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "la faune et la flore \n                        \n        flora and fauna",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "étudier la flore tropicale",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the flora and fauna of Borneo.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
             "lesson"
         ],
         "created_at": "2025-10-29T01:39:23.022Z",
-        "updated_at": "2025-10-29T01:39:23.022Z",
+        "updated_at": "2025-10-29T01:39:30.153Z",
         "sources": [
-            "language_academy"
+            "language_academy",
+            "cambridge"
         ],
         "verified": false,
         "partOfSpeech": "noun",
@@ -19444,6 +19629,6188 @@ export const nounsCambridge = new Map([
                 "phrase": "la flore",
                 "type": "definite_article",
                 "context": "the flora",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "habitants-fr",
+        {
+        "id": "habitants-fr",
+        "lang": "fr",
+        "word": "habitants",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "inhabitants / residents",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.774Z",
+        "updated_at": "2025-10-29T01:39:33.628Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les habitants",
+                "type": "definite_article",
+                "context": "the inhabitants",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "habitude-fr",
+        {
+        "id": "habitude-fr",
+        "lang": "fr",
+        "word": "habitude",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "habit / custom",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "avoir l’habitude de fumer après le repas \n                        \n        to be in the habit of smoking after meals",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "prendre l’habitude de lire \n                        \n        to get into the habit of reading",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "ne rien changer à ses habitudes les jours fériés",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "D’habitude, il se lève à six heures. \n                        \n        He usually gets up at six.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "D’habitude, il nous rend visite le dimanche.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Comme d’habitude, il est en retard. \n                        \n        He’s late as usual.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Donnez-moi votre programme de la semaine, comme d’habitude.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Elle a l’habitude de conduire la nuit. \n                        \n        She’s used to driving at night.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il a l’habitude de chanter à l’opéra.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "It’s my custom to go for a walk on Saturday mornings",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "religious customs.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He has the habit of going for a walk after dinner",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She has an irritating habit of interrupting people.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "It was his usual practice to rise at 6.00 a.m.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He has some rather unpleasant ways.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.778Z",
+        "updated_at": "2025-10-29T01:39:33.963Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "habitudes",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "l'habitude",
+                "type": "definite_article",
+                "context": "the habit",
+                "frequency": "common"
+            },
+            {
+                "phrase": "avoir l'habitude de",
+                "type": "verb_phrase",
+                "context": "to be used to",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "homologues-fr",
+        {
+        "id": "homologues-fr",
+        "lang": "fr",
+        "word": "homologues",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "counterparts / colleagues",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.779Z",
+        "updated_at": "2025-10-29T01:39:34.296Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les homologues",
+                "type": "definite_article",
+                "context": "the counterparts",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "idées-fr",
+        {
+        "id": "idées-fr",
+        "lang": "fr",
+        "word": "idées",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ideas",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "A good holiday will take your mind off your troubles.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.780Z",
+        "updated_at": "2025-10-29T01:39:34.654Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les idées",
+                "type": "definite_article",
+                "context": "the ideas",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "influence-fr",
+        {
+        "id": "influence-fr",
+        "lang": "fr",
+        "word": "influence",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "influence",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "Il a une mauvaise influence sur elle. \n                        \n        He’s a bad influence on her.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Nous verrons quelle sera l’influence de ce médicament sur la maladie.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He carried a lot of clout on the local council",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "financial/political clout.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He used his influence to get her the job",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He should not have driven the car while under the influence of alcohol.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She is a bad influence on him.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The public has some leverage with their representatives in the Senate.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He thinks he has some pull with the headmaster.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.780Z",
+        "updated_at": "2025-10-29T01:39:34.970Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "influences",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "l'influence",
+                "type": "definite_article",
+                "context": "the influence",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "informations-fr",
+        {
+        "id": "informations-fr",
+        "lang": "fr",
+        "word": "informations",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "information",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "You can hear the news on the radio at 9 o’clock",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Is there any news about your friend?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "(also adjective) a news broadcast.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a live newscast.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.780Z",
+        "updated_at": "2025-10-29T01:39:35.176Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les informations",
+                "type": "definite_article",
+                "context": "the information",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "jardin-fr",
+        {
+        "id": "jardin-fr",
+        "lang": "fr",
+        "word": "jardin",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "garden",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "Les enfants jouent dans le jardin. \n                        \n        The children are playing in the yard.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une maison avec jardin \n                        \n        a house with a yard",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il faut cultiver son jardin.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a small garden at the front of the house",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "(also adjective) a garden slug.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.780Z",
+        "updated_at": "2025-10-29T01:39:35.404Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "jardins",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le jardin",
+                "type": "definite_article",
+                "context": "the garden",
+                "frequency": "common"
+            },
+            {
+                "phrase": "un jardin",
+                "type": "indefinite_article",
+                "context": "a garden",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "journées-fr",
+        {
+        "id": "journées-fr",
+        "lang": "fr",
+        "word": "journées",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "days",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.780Z",
+        "updated_at": "2025-10-29T01:39:35.715Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les journées",
+                "type": "definite_article",
+                "context": "the days",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "langues-fr",
+        {
+        "id": "langues-fr",
+        "lang": "fr",
+        "word": "langues",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "languages",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "manger des langues-de-chat avec de la glace \n                        \n        to eat langue-de-chat cookies with ice cream",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.781Z",
+        "updated_at": "2025-10-29T01:39:36.071Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les langues",
+                "type": "definite_article",
+                "context": "the languages",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "leçons-fr",
+        {
+        "id": "leçons-fr",
+        "lang": "fr",
+        "word": "leçons",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "lessons",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.781Z",
+        "updated_at": "2025-10-29T01:39:36.328Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les leçons",
+                "type": "definite_article",
+                "context": "the lessons",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "lieues-fr",
+        {
+        "id": "lieues-fr",
+        "lang": "fr",
+        "word": "lieues",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "leagues (old unit of distance)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "à cinq lieues d’ici \n                        \n        five leagues from here",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "J’étais à mille lieues de l’imaginer. \n                        \n        I was far from imagining that.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.781Z",
+        "updated_at": "2025-10-29T01:39:36.689Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les lieues",
+                "type": "definite_article",
+                "context": "the leagues",
+                "frequency": "uncommon"
+            }
+        ]
+    }
+  ],
+  [
+    "lieux-fr",
+        {
+        "id": "lieux-fr",
+        "lang": "fr",
+        "word": "lieux",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "places",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "lieu de naissance \n                        \n        place of birth",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "un lieu public \n                        \n        a public place",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il s’est réfugié en lieu sûr.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "les lieux de l’accident \n                        \n        the place where the accident occurred",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La police est arrivée sur les lieux du cambriolage.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "manger des fruits au lieu d’une glace \n                        \n        to eat fruit instead of ice cream",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "prendre une chambre d’hôtel au lieu de dormir chez l’habitant",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Tu ferais mieux de m’aider au lieu de te moquer. \n                        \n        You’d be better off helping instead of laughing at me.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "J’aurais mieux fait d’aller le voir au lieu de lui téléphoner.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "On a cuisiné ce lieu au court-bouillon. \n                        \n        This hake has been cooked in a court-bouillon.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "These premises are used by the local football team.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "I don’t know his whereabouts.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.781Z",
+        "updated_at": "2025-10-29T01:39:37.064Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les lieux",
+                "type": "definite_article",
+                "context": "the places",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "ligne-fr",
+        {
+        "id": "ligne-fr",
+        "lang": "fr",
+        "word": "ligne",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "line",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "tracer une ligne \n                        \n        to draw a line",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Sa ligne n’est pas encore bien droite mais il s’améliore.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "la ligne d’horizon \n                        \n        the line of the horizon",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "la ligne d’arrivée \n                        \n        the finish line",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La ligne de démarcation a été franchie.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "la ligne d’un avion \n                        \n        the design of a plane",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "des lignes pures \n                        \n        pure lines",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Cette voiture est réputée pour sa ligne aérodynamique.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "surveiller sa ligne \n                        \n        to watch one’s figure",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Elle figure sur de nombreux tableaux qui accentuent ses belles lignes.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une ligne de chemin de fer / d’autobus \n                        \n        a railroad line / bus service",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Selon le plan de la ligne d’autobus il passe par chez nous.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une ligne téléphonique \n                        \n        a phone line",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La ligne a été rétablie depuis ce matin.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "mettre en ligne \n                        \n        to put in a line",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Les enfants, mettez-vous en ligne avant d’entrer en classe !",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "écrire quelques lignes \n                        \n        to write a few lines",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Elle a juste envoyé quelques lignes pour dire que tout allait bien.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "la pêche à la ligne \n                        \n        line fishing",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Passez nous voir, nous irons à la pêche à la ligne !",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "raconter qqch dans les grandes lignes \n                        \n        to outline sth",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "présenter les grandes lignes de son ouvrage",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The opening batsman walked up to the crease.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She hung the washing on the line",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a fishing-rod and line.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She drew a straight line across the page",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a dotted/wavy line.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The ship had very graceful lines",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "A dancer uses a mirror to improve his line.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a pipeline",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a line of communication",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "All (telephone) lines are engaged.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The letter contained only three lines",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a poem of sixteen lines.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a shipping line.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He was sent to fight on the front line.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "A ridge of high pressure is a long narrow area of high pressure as shown on a weather map.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "lined paper",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a lined face.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "ruled paper.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.782Z",
+        "updated_at": "2025-10-29T01:39:37.405Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "lignes",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la ligne",
+                "type": "definite_article",
+                "context": "the line",
+                "frequency": "common"
+            },
+            {
+                "phrase": "une ligne",
+                "type": "indefinite_article",
+                "context": "a line",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "lumières-fr",
+        {
+        "id": "lumières-fr",
+        "lang": "fr",
+        "word": "lumières",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "lights",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.782Z",
+        "updated_at": "2025-10-29T01:39:37.674Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les lumières",
+                "type": "definite_article",
+                "context": "the lights",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mers-fr",
+        {
+        "id": "mers-fr",
+        "lang": "fr",
+        "word": "mers",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "seas",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.782Z",
+        "updated_at": "2025-10-29T01:39:38.000Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les mers",
+                "type": "definite_article",
+                "context": "the seas",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "midi-fr",
+        {
+        "id": "midi-fr",
+        "lang": "fr",
+        "word": "midi",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "noon / midday",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "C’est ouvert le midi. \n                        \n        It’s open at noon.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "se rencontrer le midi pour le repas",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il est midi. \n                        \n        It’s noon.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il arrive à midi et quart. \n                        \n        He arrives at a quarter after twelve.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La cloche sonne à midi juste.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "We’ll meet you at midday",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "(also adjective) a midday meal.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "They arrived at noon.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.782Z",
+        "updated_at": "2025-10-29T01:39:38.192Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le midi",
+                "type": "definite_article",
+                "context": "noon",
+                "frequency": "common"
+            },
+            {
+                "phrase": "à midi",
+                "type": "prepositional_phrase",
+                "context": "at noon",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "millions-fr",
+        {
+        "id": "millions-fr",
+        "lang": "fr",
+        "word": "millions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "millions",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.782Z",
+        "updated_at": "2025-10-29T01:39:38.506Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les millions",
+                "type": "definite_article",
+                "context": "the millions",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "minutes-fr",
+        {
+        "id": "minutes-fr",
+        "lang": "fr",
+        "word": "minutes",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "minutes",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.782Z",
+        "updated_at": "2025-10-29T01:39:38.826Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les minutes",
+                "type": "definite_article",
+                "context": "the minutes",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mois-fr",
+        {
+        "id": "mois-fr",
+        "lang": "fr",
+        "word": "mois",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "month / months",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "au mois de mai \n                        \n        in May",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Les vacances commencent à la fin mois de juin.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.783Z",
+        "updated_at": "2025-10-29T01:39:39.047Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les mois",
+                "type": "definite_article",
+                "context": "the months",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mont-fr",
+        {
+        "id": "mont-fr",
+        "lang": "fr",
+        "word": "mont",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "mountain / mount",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "Mount Everest.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:32.783Z",
+        "updated_at": "2025-10-29T01:39:39.265Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "monts",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le mont",
+                "type": "definite_article",
+                "context": "the mountain",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "monuments-fr",
+        {
+        "id": "monuments-fr",
+        "lang": "fr",
+        "word": "monuments",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "monuments",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.847Z",
+        "updated_at": "2025-10-29T01:39:42.752Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les monuments",
+                "type": "definite_article",
+                "context": "the monuments",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "moulin-fr",
+        {
+        "id": "moulin-fr",
+        "lang": "fr",
+        "word": "moulin",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "mill",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "moulin à eau / vent \n                        \n        watermill/windmill",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "se battre contre des moulins à vent",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "moulin à café \n                        \n        coffee grinder",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Passe-moi le moulin à légumes s’il te plaît !",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a coffee mill",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a pepper mill.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.851Z",
+        "updated_at": "2025-10-29T01:39:43.014Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "moulins",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le moulin",
+                "type": "definite_article",
+                "context": "the mill",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "musique-fr",
+        {
+        "id": "musique-fr",
+        "lang": "fr",
+        "word": "musique",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "music",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "composer / faire de la musique \n                        \n        to compose / make music",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "la musique classique \n                        \n        classical music",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il s’est fait un nom dans le monde de la musique.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She prefers classical music to pop music",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She is studying music",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "(also adjective) a music lesson.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The pianist has forgotten to bring her music.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.851Z",
+        "updated_at": "2025-10-29T01:39:43.233Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la musique",
+                "type": "definite_article",
+                "context": "the music",
+                "frequency": "common"
+            },
+            {
+                "phrase": "faire de la musique",
+                "type": "verb_phrase",
+                "context": "to make music",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "musée-fr",
+        {
+        "id": "musée-fr",
+        "lang": "fr",
+        "word": "musée",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "museum",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "the National History Museum.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.852Z",
+        "updated_at": "2025-10-29T01:39:43.777Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "musées",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le musée",
+                "type": "definite_article",
+                "context": "the museum",
+                "frequency": "common"
+            },
+            {
+                "phrase": "un musée",
+                "type": "indefinite_article",
+                "context": "a museum",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "mémoire-fr",
+        {
+        "id": "mémoire-fr",
+        "lang": "fr",
+        "word": "mémoire",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "memory",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "avoir une bonne / mauvaise mémoire \n                        \n        to have a good / bad memory",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "perdre la mémoire \n                        \n        to lose one’s memory",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Sa mémoire flanche de plus en plus.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "garder en mémoire \n                        \n        to save",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Mettre son texte en mémoire pour plus de sécurité.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "choisir son sujet de mémoire \n                        \n        to choose one’s dissertation subject",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Elle doit présenter son mémoire de philosophie en fin d’année.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He has a good memory for details.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Her memory is full of interesting stories.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He has total recall of the incident.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Students have to submit a 20,000-word dissertation.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.853Z",
+        "updated_at": "2025-10-29T01:39:44.220Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "mémoires",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la mémoire",
+                "type": "definite_article",
+                "context": "the memory",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "nice-fr",
+        {
+        "id": "nice-fr",
+        "lang": "fr",
+        "word": "nice",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "Nice (city)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.853Z",
+        "updated_at": "2025-10-29T01:39:44.509Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "Nice",
+            "indefinite": "Nice",
+            "plural": "Nice"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "à Nice",
+                "type": "prepositional_phrase",
+                "context": "in Nice",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "organisations-fr",
+        {
+        "id": "organisations-fr",
+        "lang": "fr",
+        "word": "organisations",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "organizations",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.853Z",
+        "updated_at": "2025-10-29T01:39:44.827Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les organisations",
+                "type": "definite_article",
+                "context": "the organizations",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "paix-fr",
+        {
+        "id": "paix-fr",
+        "lang": "fr",
+        "word": "paix",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "peace",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "vivre en paix avec ses voisins \n                        \n        to live in peace with one’s neighbors",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Les pourparlers de paix sont au point mort.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Does our country want peace or war?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "(also adjective) a peace treaty.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "I need some peace and quiet.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.853Z",
+        "updated_at": "2025-10-29T01:39:45.051Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la paix",
+                "type": "definite_article",
+                "context": "the peace",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "peintres-fr",
+        {
+        "id": "peintres-fr",
+        "lang": "fr",
+        "word": "peintres",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "painters",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.853Z",
+        "updated_at": "2025-10-29T01:39:45.346Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les peintres",
+                "type": "definite_article",
+                "context": "the painters",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "peintures-fr",
+        {
+        "id": "peintures-fr",
+        "lang": "fr",
+        "word": "peintures",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "paintings",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.854Z",
+        "updated_at": "2025-10-29T01:39:45.680Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les peintures",
+                "type": "definite_article",
+                "context": "the paintings",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "peur-fr",
+        {
+        "id": "peur-fr",
+        "lang": "fr",
+        "word": "peur",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "fear",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "avoir peur de qqch \n                        \n        to be afraid of sth",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "avoir peur de faire qqch \n                        \n        to be afraid of doing sth",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "avoir peur que qqn fasse qqch \n                        \n        to be afraid sb will do sth",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "faire peur à qqn \n                        \n        to frighten sb",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "N’ayez pas peur ce chien ne mord pas !",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The child is not afraid of the dark",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She was afraid to go to the dentist.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He was afraid of disappointing her.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She was filled with a feeling of angst.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The soldier tried not to show his fear",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She has a deep-seated fear of spiders.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The noise gave me a terrible fright.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The noise gave me a scare.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.854Z",
+        "updated_at": "2025-10-29T01:39:45.923Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la peur",
+                "type": "definite_article",
+                "context": "the fear",
+                "frequency": "common"
+            },
+            {
+                "phrase": "avoir peur",
+                "type": "verb_phrase",
+                "context": "to be afraid",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "phrases-fr",
+        {
+        "id": "phrases-fr",
+        "lang": "fr",
+        "word": "phrases",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "sentences / phrases",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.854Z",
+        "updated_at": "2025-10-29T01:39:46.211Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les phrases",
+                "type": "definite_article",
+                "context": "the sentences",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "produits-fr",
+        {
+        "id": "produits-fr",
+        "lang": "fr",
+        "word": "produits",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "products",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.854Z",
+        "updated_at": "2025-10-29T01:39:46.525Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les produits",
+                "type": "definite_article",
+                "context": "the products",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "quartiers-fr",
+        {
+        "id": "quartiers-fr",
+        "lang": "fr",
+        "word": "quartiers",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "neighborhoods / quarters",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.854Z",
+        "updated_at": "2025-10-29T01:39:46.787Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les quartiers",
+                "type": "definite_article",
+                "context": "the neighborhoods",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "questions-fr",
+        {
+        "id": "questions-fr",
+        "lang": "fr",
+        "word": "questions",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "questions",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "oiseau qui se pose sur une branche \n                        \n        bird landing on a branch",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "avion qui se pose \n                        \n        plane landing",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Pose-toi là, je reviens tout de suite.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "problème qui se pose \n                        \n        problem that is posed",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La question se pose de savoir s’il répondra ou pas.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The bird alighted on the fence.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.855Z",
+        "updated_at": "2025-10-29T01:39:47.120Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les questions",
+                "type": "definite_article",
+                "context": "the questions",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "relations-fr",
+        {
+        "id": "relations-fr",
+        "lang": "fr",
+        "word": "relations",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "relations / relationships",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "This campaign is good for the firm’s PR.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.855Z",
+        "updated_at": "2025-10-29T01:39:47.417Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les relations",
+                "type": "definite_article",
+                "context": "the relations",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "saint-fr",
+        {
+        "id": "saint-fr",
+        "lang": "fr",
+        "word": "saint",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "saint",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "saint Jean \n                        \n        Saint John",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "fêter le mardi saint",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "un lieu saint \n                        \n        a holy place",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "respecter les lieux saints",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "C’est une sainte femme. \n                        \n        She’s a saint.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Le saint homme est décédé.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "les reliques d’un saint \n                        \n        a saint’s relics",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Ne plus savoir à quel saint se vouer.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "C’est un saint. \n                        \n        He’s a saint.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Son père passe pour un sain.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Saint Matthew",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "St John’s Road.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "You really are a saint to put up with her.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the Holy Bible",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "holy ground.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a holy life.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the Blessed Virgin.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "hallowed ground.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He led a saintly life",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a saintly expression.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.855Z",
+        "updated_at": "2025-10-29T01:39:47.664Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "saints",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le saint",
+                "type": "definite_article",
+                "context": "the saint",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "samedis-fr",
+        {
+        "id": "samedis-fr",
+        "lang": "fr",
+        "word": "samedis",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "Saturdays",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.855Z",
+        "updated_at": "2025-10-29T01:39:47.991Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les samedis",
+                "type": "definite_article",
+                "context": "Saturdays",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "sandwichs-fr",
+        {
+        "id": "sandwichs-fr",
+        "lang": "fr",
+        "word": "sandwichs",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "sandwiches",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.855Z",
+        "updated_at": "2025-10-29T01:39:48.455Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les sandwichs",
+                "type": "definite_article",
+                "context": "the sandwiches",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "secteurs-fr",
+        {
+        "id": "secteurs-fr",
+        "lang": "fr",
+        "word": "secteurs",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "sectors",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:41.855Z",
+        "updated_at": "2025-10-29T01:39:48.853Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les secteurs",
+                "type": "definite_article",
+                "context": "the sectors",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "seine-fr",
+        {
+        "id": "seine-fr",
+        "lang": "fr",
+        "word": "seine",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "Seine (river)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.371Z",
+        "updated_at": "2025-10-29T01:39:52.279Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "la",
+            "plural": "la"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la Seine",
+                "type": "proper_noun",
+                "context": "the Seine river",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "sens-fr",
+        {
+        "id": "sens-fr",
+        "lang": "fr",
+        "word": "sens",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "sense / meaning",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "Quel est le sens de ce mot ? \n                        \n        What does this word mean?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Cette phrase n’a pas de sens. \n                        \n        This sentence doesn’t make sense.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "sens figuré \n                        \n        figurative meaning",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Ce qu’il dit est plein de sens.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "À mon sens, ça ne fonctionnera pas. \n                        \n        I don’t think it will work.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il faudrait, à mon sens, refaire le parquet en entier.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "avoir le sens des affaires \n                        \n        to have business sense",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "avoir le sens de l’humour \n                        \n        to have a sense of humor",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "n’avoir aucun sens moral",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "avoir du bon sens \n                        \n        to have common sense",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Son bon sens lui permet d’intervenir au bon moment.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "les organes des sens \n                        \n        the sense organs",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "les cinq sens \n                        \n        the five senses",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "perdre le sens de l’odorat",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La voiture venait en sens inverse. \n                        \n        The car was coming from the other direction.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "dans le sens des aiguilles d’une montre \n                        \n        clockwise",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "fendre la bûche dans le sens de la largeur",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une rue à sens unique \n                        \n        a one way street",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "sens interdit \n                        \n        one way street",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La circulation dans le sens Paris-province.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "I couldn’t hear you clearly, but I did catch the drift of what you said.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "What is the meaning of this phrase?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "What is the meaning of his behaviour?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There’s no point (in) asking me – I don’t know.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Dogs have an acute sense of hearing.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a well-developed musical sense",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She has no sense of humour.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Some words have several senses.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.376Z",
+        "updated_at": "2025-10-29T01:39:52.617Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "sens",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le sens",
+                "type": "definite_article",
+                "context": "the sense",
+                "frequency": "common"
+            },
+            {
+                "phrase": "avoir du sens",
+                "type": "verb_phrase",
+                "context": "to make sense",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "suite-fr",
+        {
+        "id": "suite-fr",
+        "lang": "fr",
+        "word": "suite",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "suite / continuation",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "la suite d’une histoire \n                        \n        the next part of a story",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Je ne pense pas que ce film ait une suite.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une suite d’images \n                        \n        a series of pictures",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une suite de catastrophes \n                        \n        a series of disasters",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "raconter une suite de mésaventures",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "se mettre à la suite \n                        \n        to follow on",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il étaient rangés l’un à la suite de l’autre.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "avoir des suites fâcheuses \n                        \n        to have unfortunate consequences",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Leur rencontre a eu une suite heureuse.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Ils n’ont pas donné suite à ma demande. \n                        \n        They didn’t follow up on my request.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il a enfin donné une suite à mon coup de téléphone.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "réserver une suite \n                        \n        to reserve a suite",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La suite parentale est immense.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "la suite du roi \n                        \n        the king’s retinue",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Le ministre et sa suite viennent d’arriver.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il a trouvé un emploi à la suite de sa formation. \n                        \n        He found a job after he finished his training.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il m’a écrit à la suite de notre rencontre.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "jouer trois matchs de suite \n                        \n        to play three games in a row",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "deux jours de suite \n                        \n        two days running",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il a plu plusieurs jours de suite",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Je ne l’ai plus revu par la suite. \n                        \n        I never saw him again.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Ce n’est que par la suite que j’ai appris son divorce.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Cette décision fait suite à une enquête. \n                        \n        This decision follows on from an investigation.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Son décès fait suite à une longue maladie.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "This is a continuation of what he said last week.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Was there any follow-up to the letter you wrote to the newspaper?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The President was flanked by a retinue of officials.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a succession of bad harvests.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a suite of furniture",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He has composed a suite of music for the film.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Then began a train of events which ended in disaster.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.377Z",
+        "updated_at": "2025-10-29T01:39:52.936Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "suites",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la suite",
+                "type": "definite_article",
+                "context": "the suite",
+                "frequency": "common"
+            },
+            {
+                "phrase": "à la suite de",
+                "type": "prepositional_phrase",
+                "context": "following / as a result of",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "surprise-fr",
+        {
+        "id": "surprise-fr",
+        "lang": "fr",
+        "word": "surprise",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "surprise",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "une bonne / mauvaise surprise \n                        \n        a pleasant/unpleasant surprise",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "préparer un anniversaire surprise",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "His statement caused some surprise",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Your letter was a pleasant surprise",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There were some nasty surprises waiting for her when she returned",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He stared at her in surprise",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "To my surprise the door was unlocked",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "(also adjective) He paid them a surprise visit.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.377Z",
+        "updated_at": "2025-10-29T01:39:53.307Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "surprises",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la surprise",
+                "type": "definite_article",
+                "context": "the surprise",
+                "frequency": "common"
+            },
+            {
+                "phrase": "une surprise",
+                "type": "indefinite_article",
+                "context": "a surprise",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "tables-fr",
+        {
+        "id": "tables-fr",
+        "lang": "fr",
+        "word": "tables",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "tables",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.378Z",
+        "updated_at": "2025-10-29T01:39:53.598Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les tables",
+                "type": "definite_article",
+                "context": "the tables",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "tour-fr",
+        {
+        "id": "tour-fr",
+        "lang": "fr",
+        "word": "tour",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "tower / turn",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "la tour d’une cathédrale \n                        \n        the tower of a cathedral",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "tour de contrôle \n                        \n        control tower",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "monter en haut de la tour",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "vivre dans une tour \n                        \n        to live in a tower",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "habiter au 20e étage de la tour",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "prendre une tour \n                        \n        to take a rook",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il lui a pris toutes ses tours.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "mesurer son tour de taille \n                        \n        to measure one’s waist",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Le chapelier lui a pris le tour de la tête.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "faire le tour du lac \n                        \n        to walk all around the lake",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il a fait plusieurs fois le tour du quartier.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "faire un tour \n                        \n        to go for a walk",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Je vais faire un petit tour dehors.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "donner un tour de clé \n                        \n        to turn the key",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Son sang n’a fait qu’un tour.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "tour de magie \n                        \n        magic trick",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il nous a fait un tour de passe-passe curieux.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "attendre son tour pour jouer \n                        \n        to wait for one’s turn to play",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "C’est ton tour. \n                        \n        It’s your turn.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il a laissé passer son tour.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "prendre la parole à tour de rôle \n                        \n        to take it in turn to speak",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Présentez-vous à tour de rôle !",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il est tour à tour drôle ou triste. \n                        \n        He’s funny or sad by turns.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Le temps était tour à tour couvert ou ensoleillé.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "voter au second tour \n                        \n        to vote in the second round",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Rien ne prévoit qu’il sera élu dès le premier tour.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "affaire qui prend un mauvais tour \n                        \n        matter taking a turn for the worse",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "La maladie nous a joué un mauvais tour.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the Tower of London",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a church tower.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "They live in a tower block.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He moved his castle to d5.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the Earth’s circuit round the sun",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "three circuits of the racetrack.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The children thought it a huge joke when the cat stole the fish.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He did it as a prank.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Can I have a ride on your bike?",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Shortly afterwards I did another spell working on the checkout desk.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "After lunch we went for a spin in my new car.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The message was just a trick to get her to leave the room.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The magician performed some clever tricks.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He gave the handle a turn.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "It’s your turn to choose a record",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "You’ll have to wait your turn in the bathroom.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He’s gone for a wander round the shops.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a potter’s wheel",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He was found drunk at the wheel (= steering-wheel) of his car.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.378Z",
+        "updated_at": "2025-10-29T01:39:53.994Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "tours",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la tour",
+                "type": "definite_article",
+                "context": "the tower",
+                "frequency": "common"
+            },
+            {
+                "phrase": "la Tour Eiffel",
+                "type": "proper_noun",
+                "context": "the Eiffel Tower",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "touristes-fr",
+        {
+        "id": "touristes-fr",
+        "lang": "fr",
+        "word": "touristes",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "tourists",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.378Z",
+        "updated_at": "2025-10-29T01:39:54.333Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les touristes",
+                "type": "definite_article",
+                "context": "the tourists",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "transports-fr",
+        {
+        "id": "transports-fr",
+        "lang": "fr",
+        "word": "transports",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "transportation",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "a campaign to encourage more people to use public transport.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.379Z",
+        "updated_at": "2025-10-29T01:39:54.678Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les transports",
+                "type": "definite_article",
+                "context": "the transportation",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "triomphe-fr",
+        {
+        "id": "triomphe-fr",
+        "lang": "fr",
+        "word": "triomphe",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "triumph",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "remporter un triomphe \n                        \n        to win",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "fêter le triomphe de la justice dans notre pays",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The battle ended in a triumph for the Romans.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "They went home in triumph.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.379Z",
+        "updated_at": "2025-10-29T01:39:55.029Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "triomphes",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le triomphe",
+                "type": "definite_article",
+                "context": "the triumph",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'Arc de Triomphe",
+                "type": "proper_noun",
+                "context": "Arc de Triomphe",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "téléphones-fr",
+        {
+        "id": "téléphones-fr",
+        "lang": "fr",
+        "word": "téléphones",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "telephones",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.379Z",
+        "updated_at": "2025-10-29T01:39:55.340Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les téléphones",
+                "type": "definite_article",
+                "context": "the telephones",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "universités-fr",
+        {
+        "id": "universités-fr",
+        "lang": "fr",
+        "word": "universités",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "universities",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.380Z",
+        "updated_at": "2025-10-29T01:39:55.664Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les universités",
+                "type": "definite_article",
+                "context": "the universities",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "uvres-fr",
+        {
+        "id": "uvres-fr",
+        "lang": "fr",
+        "word": "uvres",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "works / oeuvres",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.380Z",
+        "updated_at": "2025-10-29T01:39:55.981Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les œuvres",
+                "type": "definite_article",
+                "context": "the works",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "valeurs-fr",
+        {
+        "id": "valeurs-fr",
+        "lang": "fr",
+        "word": "valeurs",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "values",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.380Z",
+        "updated_at": "2025-10-29T01:39:56.327Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les valeurs",
+                "type": "definite_article",
+                "context": "the values",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "van-fr",
+        {
+        "id": "van-fr",
+        "lang": "fr",
+        "word": "van",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "van",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "voyager en van \n                        \n        to travel in a van",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "faire monter une jument dans un van \n                        \n        to get a mare into a horsebox",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.380Z",
+        "updated_at": "2025-10-29T01:39:56.538Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "vans",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le van",
+                "type": "definite_article",
+                "context": "the van",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "venue-fr",
+        {
+        "id": "venue-fr",
+        "lang": "fr",
+        "word": "venue",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "arrival / coming",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "Ils organisent une fête à l’occasion de sa venue. \n                        \n        They’re organizing a party to celebrate his coming.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Sa venue n’a pas arrangé les choses dans la société.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the comings and goings of the people in the street.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.380Z",
+        "updated_at": "2025-10-29T01:39:56.790Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "venues",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la venue",
+                "type": "definite_article",
+                "context": "the arrival",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "verne-fr",
+        {
+        "id": "verne-fr",
+        "lang": "fr",
+        "word": "verne",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "Verne (Jules Verne)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.380Z",
+        "updated_at": "2025-10-29T01:39:57.164Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "Verne",
+            "indefinite": "Verne",
+            "plural": "Verne"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "Jules Verne",
+                "type": "proper_noun",
+                "context": "Jules Verne",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "vies-fr",
+        {
+        "id": "vies-fr",
+        "lang": "fr",
+        "word": "vies",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "lives",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.381Z",
+        "updated_at": "2025-10-29T01:39:57.476Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les vies",
+                "type": "definite_article",
+                "context": "the lives",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "villes-fr",
+        {
+        "id": "villes-fr",
+        "lang": "fr",
+        "word": "villes",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "cities",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "habiter le centre-ville \n                        \n        to live in the town center",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "ouvrir une rue piétonne au centre-ville",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "You can get a bus from the town centre.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.381Z",
+        "updated_at": "2025-10-29T01:39:57.793Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les villes",
+                "type": "definite_article",
+                "context": "the cities",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "visiteurs-fr",
+        {
+        "id": "visiteurs-fr",
+        "lang": "fr",
+        "word": "visiteurs",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "visitors",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.381Z",
+        "updated_at": "2025-10-29T01:39:58.099Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les visiteurs",
+                "type": "definite_article",
+                "context": "the visitors",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "voyageurs-fr",
+        {
+        "id": "voyageurs-fr",
+        "lang": "fr",
+        "word": "voyageurs",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "travelers",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:39:51.381Z",
+        "updated_at": "2025-10-29T01:39:58.396Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les voyageurs",
+                "type": "definite_article",
+                "context": "the travelers",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "vue-fr",
+        {
+        "id": "vue-fr",
+        "lang": "fr",
+        "word": "vue",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "view / sight",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "avoir une bonne vue \n                        \n        to have good eyesight",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Sa vue décline depuis quelques temps.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "détourner la vue \n                        \n        to look away",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "De honte, il détournait la vue.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "avoir une belle vue sur la campagne \n                        \n        to have a beautiful view of the countryside",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "De là-haut nous avons une vue magnifique sur la ville.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une vue du port \n                        \n        a view of the harbor",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Dessinez une vue générale du paysage !",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "avoir une vue générale de la situation \n                        \n        to have an overall view of the situation",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il a exprimé des vues nouvelles.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "À première vue, cela semble simple. \n                        \n        At first sight it seems simple.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "À première vue, elle a raison.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Elle a un nouveau poste en vue. \n                        \n        She has a new job in her sights.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "J’ai quelqu’un en vue pour votre projet.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "I have good eyesight.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Their house has a wonderful outlook.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a fine prospect.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The blind man had lost his sight in the war.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The boat was within sight of land",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The end of our troubles is in sight.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Your house has a fine view of the hills",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He painted a view of the harbour.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He is slowly losing his vision.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.916Z",
+        "updated_at": "2025-10-29T01:40:01.832Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "vues",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la vue",
+                "type": "definite_article",
+                "context": "the view",
+                "frequency": "common"
+            },
+            {
+                "phrase": "en vue de",
+                "type": "prepositional_phrase",
+                "context": "with a view to",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "week-fr",
+        {
+        "id": "week-fr",
+        "lang": "fr",
+        "word": "week",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "week (English loanword)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "partir en week-end \n                        \n        to go away for the weekend",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "L’Académie conseille de changer le terme “week-end” par “fin de semaine”",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "We spent a weekend in Paris",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "(also adjective) a weekend trip.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.921Z",
+        "updated_at": "2025-10-29T01:40:02.321Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "weeks",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la week",
+                "type": "definite_article",
+                "context": "the week",
+                "frequency": "uncommon"
+            }
+        ]
+    }
+  ],
+  [
+    "école-fr",
+        {
+        "id": "école-fr",
+        "lang": "fr",
+        "word": "école",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "school",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "aller à l’école \n                        \n        to go to school",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "école publique / privée \n                        \n        state/private school",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "l’école primaire \n                        \n        primary school",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "une école de danse \n                        \n        a dance school",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "faire l’école buissonnière",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She goes to the school",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He’s not at university – he’s still at school",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "(American) He’s still in school.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The behaviour of this school in public is sometimes not very good.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "She runs a sewing school",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a driving school.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There are two schools of thought about the treatment of this disease.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.921Z",
+        "updated_at": "2025-10-29T01:40:02.729Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "écoles",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "l'école",
+                "type": "definite_article",
+                "context": "the school",
+                "frequency": "common"
+            },
+            {
+                "phrase": "une école",
+                "type": "indefinite_article",
+                "context": "a school",
+                "frequency": "common"
+            },
+            {
+                "phrase": "aller à l'école",
+                "type": "verb_phrase",
+                "context": "to go to school",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "écoles-fr",
+        {
+        "id": "écoles-fr",
+        "lang": "fr",
+        "word": "écoles",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "schools",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "apprendre le code de la route à l’auto-école",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.922Z",
+        "updated_at": "2025-10-29T01:40:03.067Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les écoles",
+                "type": "definite_article",
+                "context": "the schools",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "éditeurs-fr",
+        {
+        "id": "éditeurs-fr",
+        "lang": "fr",
+        "word": "éditeurs",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "publishers",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.922Z",
+        "updated_at": "2025-10-29T01:40:03.480Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les éditeurs",
+                "type": "definite_article",
+                "context": "the publishers",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "époque-fr",
+        {
+        "id": "époque-fr",
+        "lang": "fr",
+        "word": "époque",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "era / period",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "à mon époque \n                        \n        in my time",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "C’est l’époque des fraises. \n                        \n        It’s strawberry time.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "C’était la bonne époque !",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "This machine was the wonder of the age",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the Middle Ages.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There was far less traffic on the roads in my grandfather’s day",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "In the days of steam power, a five-person crew was required if a steam locomotive pulled a single passenger carriage.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The invention of printing marked an epoch in the history of education.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the Victorian era.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "at the time of his wedding",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "breakfast time.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.922Z",
+        "updated_at": "2025-10-29T01:40:03.966Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "époques",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "l'époque",
+                "type": "definite_article",
+                "context": "the era",
+                "frequency": "common"
+            },
+            {
+                "phrase": "à cette époque",
+                "type": "prepositional_phrase",
+                "context": "at that time",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "étrangers-fr",
+        {
+        "id": "étrangers-fr",
+        "lang": "fr",
+        "word": "étrangers",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "foreigners / strangers",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.922Z",
+        "updated_at": "2025-10-29T01:40:04.294Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les étrangers",
+                "type": "definite_article",
+                "context": "the foreigners",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "étrangères-fr",
+        {
+        "id": "étrangères-fr",
+        "lang": "fr",
+        "word": "étrangères",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "foreigners / strangers (feminine)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "C’est mon affaire. \n                        \n        That’s my business.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Occupe-toi de tes affaires. \n                        \n        Mind your own business.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "J’en fais mon affaire !",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "étouffer une affaire \n                        \n        to hush up a scandal",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "L’affaire a mal tourné.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "conclure une affaire \n                        \n        to clinch a deal",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "faire une bonne affaire \n                        \n        to get a bargain",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Les affaires sont les affaires !",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "créer sa propre affaire \n                        \n        to set up one’s own business",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "L’affaire est bien gérée.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "prendre soin de ses affaires \n                        \n        to look after one’s personal belongings",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il a ramassé ses affaires et est parti.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "un homme d’affaires \n                        \n        a businessman",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il a fait des affaires en or.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Ce tournevis fera l’affaire. \n                        \n        This screwdriver will do the job.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Ce costume fait l’affaire.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Nous irons le chercher : c’est l’affaire de quelques heures seulement. \n                        \n        We’ll go and get him: it’ll only take a few hours.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Il fait de cette histoire une affaire d’honneur. \n                        \n        He’s making all this into a matter of honor.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "instruire une affaire \n                        \n        to try a case",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "L’affaire a été présentée au juge.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Elle est très affairée ces temps-ci. \n                        \n        She’s very busy these days.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the Suez affair.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "financial affairs",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Where I go is entirely my own affair.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "This carpet was a real bargain.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Selling china is my business",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The shop/store does more business at Christmas than at any other time.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He owns his own business.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Make it your business to help him",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Let’s get down to business (= Let’s start the work etc that must be done).",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The judge in this case has been very fair.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a business deal.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "If he catches you leaving early, that’s your lookout!",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "a difficult proposition.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "There has been a tremendous to-do about the missing papers.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.923Z",
+        "updated_at": "2025-10-29T01:40:04.682Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les étrangères",
+                "type": "definite_article",
+                "context": "the foreigners (feminine)",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "études-fr",
+        {
+        "id": "études-fr",
+        "lang": "fr",
+        "word": "études",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "studies",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "secondary education",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "His lack of education prevented him from getting a good job.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.923Z",
+        "updated_at": "2025-10-29T01:40:05.057Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les études",
+                "type": "definite_article",
+                "context": "the studies",
+                "frequency": "common"
+            },
+            {
+                "phrase": "faire des études",
+                "type": "verb_phrase",
+                "context": "to study",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "étudiants-fr",
+        {
+        "id": "étudiants-fr",
+        "lang": "fr",
+        "word": "étudiants",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "students",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.923Z",
+        "updated_at": "2025-10-29T01:40:05.374Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "les",
+            "indefinite": "des",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "les étudiants",
+                "type": "definite_article",
+                "context": "the students",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "aujourd-fr",
+        {
+        "id": "aujourd-fr",
+        "lang": "fr",
+        "word": "aujourd",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "today (short form)",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.924Z",
+        "updated_at": "2025-10-29T01:40:05.669Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "aujourd'hui",
+                "type": "adverb_phrase",
+                "context": "today",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "compte-fr",
+        {
+        "id": "compte-fr",
+        "lang": "fr",
+        "word": "compte",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "account / count",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "Le compte est bon. \n                        \n        That’s right.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Voici votre compte, il est certainement exact.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "faire ses comptes \n                        \n        to do one’s accounts",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "tenir les comptes d’un commerce \n                        \n        to do the accounts for a store",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "faire le compte des ventes en fin de journée",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "ouvrir un compte \n                        \n        to open an account",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "un compte en banque déficitaire",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "tenir compte de son opinion \n                        \n        to take account of one’s opinion",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Le patron tient compte de vos remarques.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Je m’en rends compte. \n                        \n        I realize that.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "se rendre compte que tout n’est que mensonges",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Tout compte fait, tu as raison. \n                        \n        All things considered, you’re right.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Tout compte fait, ses remarques sont justes.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "I have (opened) an account with the local bank.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "I have an account at Smiths.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "They took a count of how many people attended.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "He kept a tally of all the money he spent.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.924Z",
+        "updated_at": "2025-10-29T01:40:05.947Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "comptes",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le compte",
+                "type": "definite_article",
+                "context": "the account",
+                "frequency": "common"
+            },
+            {
+                "phrase": "rendre compte",
+                "type": "verb_phrase",
+                "context": "to realize",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "comte-fr",
+        {
+        "id": "comte-fr",
+        "lang": "fr",
+        "word": "comte",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "count / earl",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "un sandwich au comté \n                        \n        a Comté cheese sandwich",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Count Dracula.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the Earl of Essex.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the county of Essex.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T01:40:00.924Z",
+        "updated_at": "2025-10-29T01:40:06.275Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "comtes",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le comte",
+                "type": "definite_article",
+                "context": "the count",
                 "frequency": "common"
             }
         ]
