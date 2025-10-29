@@ -4771,115 +4771,8 @@ export const verbsCambridge = new Map([
     "module": "2024-03-30-reading-4",
     "lesson": null
 }],
-  ["testverb456-fr", {
-    "id": "testverb456-fr",
-    "lang": "fr",
-    "word": "testverb456",
-    "translations": [
-        {
-            "lang": "en",
-            "text": "test verb",
-            "source": "language_academy",
-            "confidence": 0.95
-        }
-    ],
-    "relationships": [
-        {
-            "type": "conjugation_pair",
-            "targetId": "tester-fr",
-            "targetWord": "tester",
-            "note": "infinitive form"
-        }
-    ],
-    "etymology": "",
-    "register": [],
-    "usage_notes": "",
-    "regional_variants": [],
-    "examples": [],
-    "phonetic": "",
-    "cefr_level": "A1",
-    "tags": [
-        "lesson"
-    ],
-    "created_at": "2025-10-23T22:00:54.201Z",
-    "updated_at": "2025-10-23T22:00:54.202Z",
-    "sources": [
-        "language_academy"
-    ],
-    "verified": false,
-    "partOfSpeech": "verb",
-    "infinitive": "tester"
-}],
-  ["testest-fr", {
-    "id": "testest-fr",
-    "lang": "fr",
-    "word": "testest",
-    "translations": [
-        {
-            "lang": "en",
-            "text": "test is",
-            "source": "language_academy",
-            "confidence": 0.95
-        }
-    ],
-    "relationships": [],
-    "etymology": "",
-    "register": [],
-    "usage_notes": "",
-    "regional_variants": [],
-    "examples": [],
-    "phonetic": "",
-    "cefr_level": "A1",
-    "tags": [
-        "lesson"
-    ],
-    "created_at": "2025-10-23T22:00:59.783Z",
-    "updated_at": "2025-10-23T22:00:59.784Z",
-    "sources": [
-        "language_academy"
-    ],
-    "verified": false,
-    "partOfSpeech": "verb"
-}],
-  ["testestverb-fr", {
-    "id": "testestverb-fr",
-    "lang": "fr",
-    "word": "testestverb",
-    "translations": [
-        {
-            "lang": "en",
-            "text": "test is",
-            "source": "language_academy",
-            "confidence": 0.95
-        }
-    ],
-    "relationships": [
-        {
-            "type": "conjugation_pair",
-            "targetId": "être-fr",
-            "targetWord": "être",
-            "note": "infinitive form"
-        }
-    ],
-    "etymology": "",
-    "register": [],
-    "usage_notes": "",
-    "regional_variants": [],
-    "examples": [],
-    "phonetic": "",
-    "cefr_level": "A1",
-    "tags": [
-        "lesson"
-    ],
-    "created_at": "2025-10-23T22:01:46.719Z",
-    "updated_at": "2025-10-23T22:01:46.720Z",
-    "sources": [
-        "language_academy"
-    ],
-    "verified": false,
-    "partOfSpeech": "verb",
-    "infinitive": "être"
-}],
+
+
   ["est-fr", {
     "id": "est-fr",
     "lang": "fr",
@@ -26910,6 +26803,7 @@ export const verbsCambridge = new Map([
     "redirect_to": "chercher",
     "redirect_type": "conjugation",
     "base_word": "chercher",
+    "infinitive": "chercher",
     "gender": "none",
     "number": "singular",
     "translations": [
