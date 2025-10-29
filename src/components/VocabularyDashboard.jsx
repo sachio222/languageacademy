@@ -14,10 +14,10 @@ const GRAPH_CONSTANTS = {
   // Link properties
   LINK_COLOR: '#f59e0b',
   LINK_WIDTH: 1,
-  LINK_DISTANCE: 200,
+  LINK_DISTANCE: 80,
   
   // Node properties
-  NODE_REPULSION: -10,
+  NODE_REPULSION: -300,
   NODE_RADIUS: 1.2,
   NODE_FONT_SIZE: 11,
   NODE_STROKE_WIDTH: 0.15,
@@ -30,9 +30,9 @@ const GRAPH_CONSTANTS = {
   NODE_ENGLISH_OFFSET: 0.5,
   
   // Force simulation properties
-  VELOCITY_DECAY: 0.15,
-  ALPHA_DECAY: 0.008,
-  CENTER_FORCE_STRENGTH: 1,
+  VELOCITY_DECAY: 0.3,
+  ALPHA_DECAY: 0.02,
+  CENTER_FORCE_STRENGTH: 0.1,
   
   // Animation properties
   COOLDOWN_TICKS: 300,
@@ -40,13 +40,14 @@ const GRAPH_CONSTANTS = {
   ZOOM_IN_FACTOR: 1.2,
   ZOOM_OUT_FACTOR: 0.8,
   CENTER_AT_DURATION: 1000,
+  INITIAL_ZOOM: 0.4,
   
   // UI properties
   ICON_SIZE: 14,
   TOOLTIP_BACKGROUND: 'rgba(0,0,0,0.9)',
   TOOLTIP_PADDING: '8px 12px',
   TOOLTIP_BORDER_RADIUS: 6,
-  TOOLTIP_FONT_SIZE: 12,
+  TOOLTIP_FONT_SIZE: 8,
   TOOLTIP_FONT_WEIGHT: 600,
   TOOLTIP_MARGIN_BOTTOM: 4,
   TOOLTIP_OPACITY: 0.8,
@@ -79,6 +80,9 @@ function VocabularyDashboard({ completedExercises }) {
   const { moduleProgress } = useSupabaseProgress();
   const { allWords } = useDictionary();
   const graphRef = useRef();
+
+  // Debug: Log constants on component mount
+  console.log('🔧 GRAPH_CONSTANTS loaded:', GRAPH_CONSTANTS);
 
   const [graphData, setGraphData] = useState({ nodes: [], links: [] });
   const [loading, setLoading] = useState(true);
@@ -209,10 +213,25 @@ function VocabularyDashboard({ completedExercises }) {
         // Get dictionary statistics for performance monitoring
         const dictStats = VocabularyStats.getWordCountByPartOfSpeech();
         console.log('📚 Dictionary loaded:', dictStats);
+        
+        // Debug: Check if pronouns exist in the entire dictionary
+        const allPronouns = allWords.filter(word => word.partOfSpeech === 'pronoun');
+        console.log(`🔍 Total pronouns in dictionary: ${allPronouns.length}`, allPronouns.slice(0, 10).map(p => p.word));
 
         // Get words from dictionary based on completed lessons
         const learnedWords = getWordsFromCompletedLessons();
         console.log(`📚 Found ${learnedWords.length} words from completed lessons`);
+        
+        // Debug: Check for pronouns specifically
+        const pronouns = learnedWords.filter(word => word.partOfSpeech === 'pronoun');
+        console.log(`🔍 Pronouns found: ${pronouns.length}`, pronouns.map(p => p.word));
+        
+        // Debug: Check all part of speech types
+        const posCounts = {};
+        learnedWords.forEach(word => {
+          posCounts[word.partOfSpeech] = (posCounts[word.partOfSpeech] || 0) + 1;
+        });
+        console.log('📊 Part of speech counts:', posCounts);
 
         // Process each learned word
         learnedWords.forEach(word => {
@@ -254,6 +273,16 @@ function VocabularyDashboard({ completedExercises }) {
 
         // Create nodes array
         const nodes = Array.from(nodesMap.values());
+        
+        // Position "je" at the center of the canvas (0,0)
+        const jeNode = nodes.find(node => node.french === 'je');
+        if (jeNode) {
+          jeNode.x = 0;
+          jeNode.y = 0;
+          jeNode.fx = 0; // Fix the position so it stays in center
+          jeNode.fy = 0;
+          console.log('🎯 Positioned "je" at center:', jeNode);
+        }
 
         // Create verb connections using relationships
         const links = [];
@@ -280,6 +309,30 @@ function VocabularyDashboard({ completedExercises }) {
             }
           });
 
+        // Create connections from "je" to its present tense forms
+        const jeNode = nodes.find(node => node.french === 'je');
+        if (jeNode) {
+          // Find all present tense forms of "je" that have been learned
+          const jePresentForms = learnedWords.filter(word => {
+            // Look for words that are conjugations of verbs with "je" as the subject
+            return word.person === '1st' && word.type === 'present' && word.word !== 'je';
+          });
+          
+          jePresentForms.forEach(form => {
+            const formNode = nodes.find(n => n.french === form.word);
+            if (formNode) {
+              links.push({
+                source: 'je',
+                target: form.word,
+                type: 'je_conjugation',
+                note: 'je present form'
+              });
+            }
+          });
+          
+          console.log(`🔗 Connected "je" to ${jePresentForms.length} present forms:`, jePresentForms.map(f => f.word));
+        }
+
         console.timeEnd('VocabularyDashboard: Dictionary processing');
 
         setGraphData({ nodes, links });
@@ -296,11 +349,45 @@ function VocabularyDashboard({ completedExercises }) {
     loadVocabulary();
   }, [supabaseUser, supabaseClient, moduleProgress, completedExercises, allWords]);
 
+  // Set initial zoom when graph data loads
+  useEffect(() => {
+    if (graphData.nodes.length > 0 && graphRef.current) {
+      // Small delay to ensure graph is fully rendered
+      const timer = setTimeout(() => {
+        if (graphRef.current) {
+          console.log('🔍 Setting initial zoom to:', GRAPH_CONSTANTS.INITIAL_ZOOM);
+          graphRef.current.zoom(GRAPH_CONSTANTS.INITIAL_ZOOM, 0);
+          console.log('🔍 Current zoom after setting:', graphRef.current.zoom());
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [graphData.nodes.length]);
+
   // Custom node canvas object
   const drawNode = useCallback((node, ctx, globalScale) => {
     const label = node.french;
-    const fontSize = GRAPH_CONSTANTS.NODE_FONT_SIZE / globalScale;
+    // Apply minimum font size to ensure constants have visible effect
+    const fontSize = Math.max(GRAPH_CONSTANTS.NODE_FONT_SIZE / globalScale, 8);
     const nodeRadius = GRAPH_CONSTANTS.NODE_RADIUS;
+    
+    // Debug: Log constants being used (only for first node to avoid spam)
+    if (node.id === graphData.nodes[0]?.id) {
+      console.log('🎨 Drawing constants:', {
+        NODE_FONT_SIZE: GRAPH_CONSTANTS.NODE_FONT_SIZE,
+        NODE_RADIUS: GRAPH_CONSTANTS.NODE_RADIUS,
+        NODE_STROKE_WIDTH: GRAPH_CONSTANTS.NODE_STROKE_WIDTH,
+        NODE_STROKE_OPACITY: GRAPH_CONSTANTS.NODE_STROKE_OPACITY,
+        NODE_FILL_OPACITY: GRAPH_CONSTANTS.NODE_FILL_OPACITY,
+        NODE_SHADOW_BLUR: GRAPH_CONSTANTS.NODE_SHADOW_BLUR,
+        NODE_LABEL_OFFSET: GRAPH_CONSTANTS.NODE_LABEL_OFFSET,
+        NODE_ENGLISH_FONT_SCALE: GRAPH_CONSTANTS.NODE_ENGLISH_FONT_SCALE,
+        NODE_ENGLISH_OPACITY: GRAPH_CONSTANTS.NODE_ENGLISH_OPACITY,
+        NODE_ENGLISH_OFFSET: GRAPH_CONSTANTS.NODE_ENGLISH_OFFSET,
+        globalScale,
+        actualFontSize: fontSize
+      });
+    }
 
     ctx.font = `${fontSize}px Sans-Serif`;
 
@@ -401,7 +488,7 @@ function VocabularyDashboard({ completedExercises }) {
 
         <div className="graph-container">
           <ForceGraph2D
-            key={`graph-${GRAPH_CONSTANTS.NODE_REPULSION}-${GRAPH_CONSTANTS.LINK_DISTANCE}-${GRAPH_CONSTANTS.CENTER_FORCE_STRENGTH}`}
+            key={`graph-${GRAPH_CONSTANTS.NODE_REPULSION}-${GRAPH_CONSTANTS.LINK_DISTANCE}-${GRAPH_CONSTANTS.CENTER_FORCE_STRENGTH}-${GRAPH_CONSTANTS.NODE_RADIUS}-${GRAPH_CONSTANTS.NODE_FONT_SIZE}-${GRAPH_CONSTANTS.LINK_WIDTH}-${GRAPH_CONSTANTS.VELOCITY_DECAY}-${GRAPH_CONSTANTS.ALPHA_DECAY}-${GRAPH_CONSTANTS.BACKGROUND_COLOR}`}
             ref={graphRef}
             graphData={graphData}
             nodeId="id"
@@ -422,7 +509,16 @@ function VocabularyDashboard({ completedExercises }) {
             linkDistance={GRAPH_CONSTANTS.LINK_DISTANCE}
             backgroundColor={GRAPH_CONSTANTS.BACKGROUND_COLOR}
             cooldownTicks={GRAPH_CONSTANTS.COOLDOWN_TICKS}
-            onEngineStop={() => graphRef.current?.zoomToFit(GRAPH_CONSTANTS.ZOOM_FIT_DURATION)}
+            onEngineStop={() => {
+              // Set initial zoom level after simulation settles
+              if (graphRef.current) {
+                graphRef.current.zoom(GRAPH_CONSTANTS.INITIAL_ZOOM, 0);
+                // Only zoom to fit if there are very few nodes, otherwise let it settle naturally
+                if (graphData.nodes.length <= 10) {
+                  graphRef.current?.zoomToFit(GRAPH_CONSTANTS.ZOOM_FIT_DURATION);
+                }
+              }
+            }}
             enableNodeDrag={true}
             enableZoomInteraction={true}
             enablePanInteraction={true}
