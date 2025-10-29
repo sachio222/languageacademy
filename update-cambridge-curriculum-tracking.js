@@ -8,6 +8,8 @@
  * 2. Creates Cambridge dictionary entries for words that don't exist
  * 3. Updates Cambridge entries with unit/module/lesson tracking
  * 4. Reports unmatched words for later processing
+ * 
+ * Now uses the Cambridge dictionary structure exclusively.
  */
 
 import fs from 'fs';
@@ -20,35 +22,37 @@ const __dirname = path.dirname(__filename);
 // Import all unit vocabulary
 import { allUnitsVocabulary } from './src/vocabulary/all_units_vocabulary.js';
 
-// Import non-Cambridge dictionaries (the ones that actually have data)
-import { adjectives } from './src/data/dictionary/words/adjectives.js';
-import { adverbs } from './src/data/dictionary/words/adverbs.js';
-import { articles } from './src/data/dictionary/words/articles.js';
-import { conjunctions } from './src/data/dictionary/words/conjunctions.js';
-import { expressions } from './src/data/dictionary/words/expressions.js';
-import { interjections } from './src/data/dictionary/words/interjections.js';
-import { interrogatives } from './src/data/dictionary/words/interrogatives.js';
-import { nouns } from './src/data/dictionary/words/nouns.js';
-import { prepositions } from './src/data/dictionary/words/prepositions.js';
-import { pronouns } from './src/data/dictionary/words/pronouns.js';
-import { verbs } from './src/data/dictionary/words/verbs.js';
+// Import Cambridge dictionaries
+import { adjectivesCambridge } from './src/data/dictionary/words/cambridge/adjectives.js';
+import { adverbsCambridge } from './src/data/dictionary/words/cambridge/adverbs.js';
+import { articlesCambridge } from './src/data/dictionary/words/cambridge/articles.js';
+import { conjunctionsCambridge } from './src/data/dictionary/words/cambridge/conjunctions.js';
+import { expressionsCambridge } from './src/data/dictionary/words/cambridge/expressions.js';
+import { interjectionsCambridge } from './src/data/dictionary/words/cambridge/interjections.js';
+import { interrogativesCambridge } from './src/data/dictionary/words/cambridge/interrogatives.js';
+import { nounsCambridge } from './src/data/dictionary/words/cambridge/nouns.js';
+import { prepositionsCambridge } from './src/data/dictionary/words/cambridge/prepositions.js';
+import { pronounsCambridge } from './src/data/dictionary/words/cambridge/pronouns.js';
+import { verbsCambridge } from './src/data/dictionary/words/cambridge/verbs.js';
+import { alphabetCambridge } from './src/data/dictionary/words/cambridge/alphabet.js';
 
 // Import dictionary generator
 import { DefinitionGenerator } from './src/data/dictionary/utils/generate-definitions.js';
 
-// Combine all non-Cambridge dictionaries (the ones that actually have data)
+// Combine all Cambridge dictionaries
 const allDictionaries = {
-  adjectives: adjectives,
-  adverbs: adverbs,
-  articles: articles,
-  conjunctions: conjunctions,
-  expressions: expressions,
-  interjections: interjections,
-  interrogatives: interrogatives,
-  nouns: nouns,
-  prepositions: prepositions,
-  pronouns: pronouns,
-  verbs: verbs,
+  adjectives: adjectivesCambridge,
+  adverbs: adverbsCambridge,
+  articles: articlesCambridge,
+  conjunctions: conjunctionsCambridge,
+  expressions: expressionsCambridge,
+  interjections: interjectionsCambridge,
+  interrogatives: interrogativesCambridge,
+  nouns: nounsCambridge,
+  prepositions: prepositionsCambridge,
+  pronouns: pronounsCambridge,
+  verbs: verbsCambridge,
+  alphabet: alphabetCambridge,
 };
 
 // French contraction patterns
@@ -316,17 +320,18 @@ async function processUnitVocabulary() {
   console.log('💾 Saving updated Cambridge dictionaries...');
   
   const dictionaryPaths = {
-    adjectives: './src/data/dictionary/words/adjectives.js',
-    adverbs: './src/data/dictionary/words/adverbs.js',
-    articles: './src/data/dictionary/words/articles.js',
-    conjunctions: './src/data/dictionary/words/conjunctions.js',
-    expressions: './src/data/dictionary/words/expressions.js',
-    interjections: './src/data/dictionary/words/interjections.js',
-    interrogatives: './src/data/dictionary/words/interrogatives.js',
-    nouns: './src/data/dictionary/words/nouns.js',
-    prepositions: './src/data/dictionary/words/prepositions.js',
-    pronouns: './src/data/dictionary/words/pronouns.js',
-    verbs: './src/data/dictionary/words/verbs.js',
+    adjectives: './src/data/dictionary/words/cambridge/adjectives.js',
+    adverbs: './src/data/dictionary/words/cambridge/adverbs.js',
+    articles: './src/data/dictionary/words/cambridge/articles.js',
+    conjunctions: './src/data/dictionary/words/cambridge/conjunctions.js',
+    expressions: './src/data/dictionary/words/cambridge/expressions.js',
+    interjections: './src/data/dictionary/words/cambridge/interjections.js',
+    interrogatives: './src/data/dictionary/words/cambridge/interrogatives.js',
+    nouns: './src/data/dictionary/words/cambridge/nouns.js',
+    prepositions: './src/data/dictionary/words/cambridge/prepositions.js',
+    pronouns: './src/data/dictionary/words/cambridge/pronouns.js',
+    verbs: './src/data/dictionary/words/cambridge/verbs.js',
+    alphabet: './src/data/dictionary/words/cambridge/alphabet.js',
   };
   
   for (const [dictName, dictPath] of Object.entries(dictionaryPaths)) {

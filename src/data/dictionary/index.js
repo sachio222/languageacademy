@@ -3,19 +3,19 @@
  * High-performance vocabulary lookup system with O(1) access
  */
 
-// Import all word categories
-import { nouns } from "./words/nouns.js";
-import { verbs } from "./words/verbs.js";
-import { adjectives } from "./words/adjectives.js";
-import { adverbs } from "./words/adverbs.js";
-import { pronouns } from "./words/pronouns.js";
-import { articles } from "./words/articles.js";
-import { prepositions } from "./words/prepositions.js";
-import { conjunctions } from "./words/conjunctions.js";
-import { interjections } from "./words/interjections.js";
-import { interrogatives } from "./words/interrogatives.js";
-import { alphabet } from "./words/alphabet.js";
-import { expressions } from "./words/expressions.js";
+// Import all word categories from Cambridge structure
+import { nounsCambridge } from "./words/cambridge/nouns.js";
+import { verbsCambridge } from "./words/cambridge/verbs.js";
+import { adjectivesCambridge } from "./words/cambridge/adjectives.js";
+import { adverbsCambridge } from "./words/cambridge/adverbs.js";
+import { pronounsCambridge } from "./words/cambridge/pronouns.js";
+import { articlesCambridge } from "./words/cambridge/articles.js";
+import { prepositionsCambridge } from "./words/cambridge/prepositions.js";
+import { conjunctionsCambridge } from "./words/cambridge/conjunctions.js";
+import { interjectionsCambridge } from "./words/cambridge/interjections.js";
+import { interrogativesCambridge } from "./words/cambridge/interrogatives.js";
+import { alphabetCambridge } from "./words/cambridge/alphabet.js";
+import { expressionsCambridge } from "./words/cambridge/expressions.js";
 
 // Import phrases and relationships
 import { phrases } from "./phrases.js";
@@ -25,18 +25,18 @@ import { relationships, relationshipsByType } from "./relationships.js";
  * Master word dictionary - combines all word categories
  */
 export const dictionary = new Map([
-  ...nouns,
-  ...verbs,
-  ...adjectives,
-  ...adverbs,
-  ...pronouns,
-  ...articles,
-  ...prepositions,
-  ...conjunctions,
-  ...interjections,
-  ...interrogatives,
-  ...alphabet,
-  ...expressions,
+  ...nounsCambridge,
+  ...verbsCambridge,
+  ...adjectivesCambridge,
+  ...adverbsCambridge,
+  ...pronounsCambridge,
+  ...articlesCambridge,
+  ...prepositionsCambridge,
+  ...conjunctionsCambridge,
+  ...interjectionsCambridge,
+  ...interrogativesCambridge,
+  ...alphabetCambridge,
+  ...expressionsCambridge,
 ]);
 
 /**
@@ -45,18 +45,18 @@ export const dictionary = new Map([
 export const indices = {
   // By part of speech
   byPartOfSpeech: {
-    noun: nouns,
-    verb: verbs,
-    adjective: adjectives,
-    adverb: adverbs,
-    pronoun: pronouns,
-    article: articles,
-    preposition: prepositions,
-    conjunction: conjunctions,
-    interjection: interjections,
-    interrogative: interrogatives,
-    alphabet: alphabet,
-    expression: expressions,
+    noun: nounsCambridge,
+    verb: verbsCambridge,
+    adjective: adjectivesCambridge,
+    adverb: adverbsCambridge,
+    pronoun: pronounsCambridge,
+    article: articlesCambridge,
+    preposition: prepositionsCambridge,
+    conjunction: conjunctionsCambridge,
+    interjection: interjectionsCambridge,
+    interrogative: interrogativesCambridge,
+    alphabet: alphabetCambridge,
+    expression: expressionsCambridge,
   },
 
   // By language
