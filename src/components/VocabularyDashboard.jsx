@@ -6,11 +6,13 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { lessons } from '../lessons/lessonData';
 import { extractModuleId } from '../utils/progressSync';
 import { DictionaryLookup, LessonCompatibility, VocabularyStats } from '../data/dictionary/index.js';
+import { useDictionary } from '../hooks/useDictionary';
 import '../styles/VocabularyDashboard.css';
 
 function VocabularyDashboard({ completedExercises }) {
   const { supabaseClient, supabaseUser } = useAuth();
   const { moduleProgress } = useSupabaseProgress();
+  const { allWords } = useDictionary();
   const graphRef = useRef();
 
   const [graphData, setGraphData] = useState({ nodes: [], links: [] });
@@ -195,6 +197,41 @@ function VocabularyDashboard({ completedExercises }) {
     return colors[category] || '#6b7280';
   };
 
+  // Helper function to get completed lesson modules
+  const getCompletedLessonModules = () => {
+    return lessons.filter(lesson => {
+      const total = getExerciseCount(lesson);
+      if (total === 0) return false;
+      const completed = getCompletedCount(lesson);
+      return completed === total;
+    }).map(lesson => ({
+      moduleKey: lesson.moduleKey,
+      title: lesson.title,
+      unit: lesson.unitNumber ? `unit${lesson.unitNumber}` : null
+    }));
+  };
+
+  // Helper function to filter dictionary words by completed lessons
+  const getWordsFromCompletedLessons = () => {
+    const completedModules = getCompletedLessonModules();
+    const completedModuleKeys = new Set(completedModules.map(m => m.moduleKey));
+    const completedUnits = new Set(completedModules.map(m => m.unit).filter(Boolean));
+
+    return allWords.filter(word => {
+      // Check if word belongs to a completed module
+      if (word.module && completedModuleKeys.has(word.module)) {
+        return true;
+      }
+      
+      // Check if word belongs to a completed unit
+      if (word.unit && completedUnits.has(word.unit)) {
+        return true;
+      }
+      
+      return false;
+    });
+  };
+
   useEffect(() => {
     const loadVocabulary = async () => {
       if (!supabaseUser || !supabaseClient) {
@@ -221,582 +258,71 @@ function VocabularyDashboard({ completedExercises }) {
         const dictStats = VocabularyStats.getWordCountByPartOfSpeech();
         console.log('📚 Dictionary loaded:', dictStats);
 
-        completedLessons.forEach(lesson => {
-          if (lesson.vocabularyReference && lesson.vocabularyReference.length > 0) {
-            lesson.vocabularyReference.forEach(vocab => {
-              const french = vocab.french.trim();
+        // Get words from dictionary based on completed lessons
+        const learnedWords = getWordsFromCompletedLessons();
+        console.log(`📚 Found ${learnedWords.length} words from completed lessons`);
 
-              // Check if this is a multi-word phrase that should be split
-              const words = french.split(/[\s\-']+/).filter(word => word.length > 0);
-              const shouldSplit = shouldSplitPhrase(french, words);
+        // Process each learned word
+        learnedWords.forEach(word => {
+          const french = word.word.trim();
+          
+          if (!uniqueWords.has(french)) {
+            uniqueWords.add(french);
+            
+            // Determine category from part of speech
+            let category = 'Other';
+            switch (word.partOfSpeech) {
+              case 'noun': category = 'Nouns'; break;
+              case 'verb': category = 'Verbs'; break;
+              case 'adjective': category = 'Adjectives'; break;
+              case 'adverb': category = 'Adverbs'; break;
+              case 'pronoun': category = 'Pronouns'; break;
+              case 'article': category = 'Articles'; break;
+              case 'preposition': category = 'Prepositions'; break;
+              case 'conjunction': category = 'Conjunctions'; break;
+              case 'interjection': category = 'Interjections'; break;
+              case 'interrogative': category = 'Interrogatives'; break;
+              case 'alphabet': category = 'Alphabet'; break;
+              case 'expression': category = 'Expressions'; break;
+            }
 
-              if (shouldSplit) {
-                // Split and process individual words
-                words.forEach((word, index) => {
-                  // Skip words containing '/' or starting with 'c', 's', or 'l'
-                  if (word.includes('/') ||
-                    word.toLowerCase().startsWith('c') ||
-                    word.toLowerCase().startsWith('s') ||
-                    word.toLowerCase().startsWith('l')) {
-                    return; // Skip this word
-                  }
-
-                  if (!uniqueWords.has(word)) {
-                    uniqueWords.add(word);
-
-                    // Determine if this is an article + noun combination
-                    const isArticle = ['le', 'la', 'les', 'un', 'une', 'du', 'de', 'des'].includes(word.toLowerCase());
-                    const nextWord = words[index + 1];
-                    const isArticleWithNoun = isArticle && nextWord && !['le', 'la', 'les', 'un', 'une', 'du', 'de', 'des'].includes(nextWord.toLowerCase());
-
-                    // Create category for the word
-                    let category;
-                    if (isArticle) {
-                      category = 'Articles';
-                    } else if (isArticleWithNoun) {
-                      // Keep article with noun as a phrase
-                      const phrase = `${word} ${nextWord}`;
-                      if (!uniqueWords.has(phrase)) {
-                        uniqueWords.add(phrase);
-                        category = categorizeWord({ french: phrase, english: vocab.english, note: vocab.note });
-                        processWord(phrase, vocab, lesson, category, nodesMap);
-                      }
-                      return; // Skip processing the article alone
-                    } else {
-                      // For individual words, create a new vocab object with just the word
-                      const wordVocab = { french: word, english: vocab.english, note: vocab.note };
-                      category = categorizeWord(wordVocab);
-                    }
-
-                    processWord(word, vocab, lesson, category, nodesMap);
-                  }
-                });
-              } else {
-                // Process as a single phrase/word
-                if (!uniqueWords.has(french)) {
-                  uniqueWords.add(french);
-                  const category = categorizeWord(vocab);
-                  processWord(french, vocab, lesson, category, nodesMap);
-                }
+            // Create node data
+            const nodeData = {
+              id: french,
+              french: french,
+              english: word.translations?.[0]?.text || 'No translation',
+              note: word.definition || '',
+              category: category,
+              lessonTitle: `Unit ${word.unit?.replace('unit', '') || 'Unknown'}`,
+              color: getCategoryColor(category),
+              // Grammatical properties
+              gender: word.gender || null,
+              person: word.person || null,
+              type: word.type || null,
+              femForm: word.femForm || null,
+              classification: {
+                type: word.partOfSpeech,
+                gender: word.gender,
+                person: word.person
               }
-            });
+            };
+
+            nodesMap.set(french, nodeData);
           }
         });
 
-        // Helper function to determine if a phrase should be split
-        function shouldSplitPhrase(french, words) {
-          // Don't split single words
-          if (words.length <= 1) return false;
 
-          // Split adjective pairs (e.g., "bon / bonne")
-          if (french.includes(' / ')) return true;
 
-          // Split article + noun combinations
-          const articles = ['le', 'la', 'les', 'un', 'une', 'du', 'de', 'des'];
-          if (words.length === 2 && articles.includes(words[0].toLowerCase())) {
-            return true;
-          }
 
-          // Split pronoun + verb combinations (but only for specific pronouns)
-          const pronouns = ['je', 'tu', 'il', 'elle', 'nous', 'vous', 'ils', 'elles', 'on'];
-          if (words.length === 2 && pronouns.includes(words[0].toLowerCase())) {
-            return true;
-          }
-
-          // Don't split other multi-word phrases like "au revoir", "bonjour", etc.
-          return false;
-        }
-
-        // Helper function to process individual words
-        function processWord(word, originalVocab, lesson, category, nodesMap) {
-          // Extract grammatical information from original vocabulary
-          const gender = originalVocab.gender || inferGender(word, originalVocab);
-          const person = originalVocab.person || null;
-          const type = originalVocab.type || null;
-          const femForm = originalVocab.femForm || null;
-          const classification = classifyWord(word, originalVocab);
-
-          nodesMap.set(word, {
-            id: word,
-            french: word,
-            english: originalVocab.english,
-            note: originalVocab.note,
-            category,
-            lessonTitle: lesson.title,
-            color: getCategoryColor(category),
-            // Grammatical properties
-            gender,
-            person,
-            type,
-            femForm,
-            classification
-          });
-        }
-
-        // Dynamic word classification system
-        function classifyWord(word, vocab) {
-          // 1. Check explicit grammar info from vocabulary data
-          if (vocab.gender) return { type: 'noun', gender: vocab.gender };
-          if (vocab.person) return { type: 'pronoun', person: vocab.person };
-          if (vocab.femForm) return { type: 'adjective', forms: [word, vocab.femForm] };
-
-          // Special case for "on" - it's a pronoun, not a verb
-          if (word.toLowerCase() === 'on') return { type: 'pronoun', person: 'third' };
-
-          // 2. Pattern-based classification for verbs
-          if (word.endsWith('er') || word.endsWith('ir') || word.endsWith('re')) {
-            return { type: 'verb', infinitive: word };
-          }
-
-          // 3. Ending-based gender inference for nouns
-          const feminineEndings = ['tion', 'sion', 'ette', 'ance', 'ence', 'ure', 'té'];
-          const masculineEndings = ['ment', 'age', 'eau', 'isme'];
-
-          if (feminineEndings.some(ending => word.endsWith(ending))) {
-            return { type: 'noun', gender: 'feminine' };
-          }
-          if (masculineEndings.some(ending => word.endsWith(ending))) {
-            return { type: 'noun', gender: 'masculine' };
-          }
-
-          // 4. Semantic field detection
-          const semanticField = detectSemanticField(word, vocab.english);
-          return { type: 'unknown', semanticField };
-        }
-
-        function detectSemanticField(french, english) {
-          const fields = {
-            family: ['mother', 'father', 'son', 'daughter', 'brother', 'sister', 'family', 'parent', 'mère', 'père', 'fils', 'fille', 'frère', 'sœur'],
-            animals: ['cat', 'dog', 'bird', 'fish', 'animal', 'pet', 'chat', 'chien', 'oiseau', 'poisson'],
-            food: ['bread', 'cheese', 'meat', 'vegetable', 'fruit', 'food', 'eat', 'drink', 'pain', 'fromage', 'viande'],
-            colors: ['red', 'blue', 'green', 'yellow', 'white', 'black', 'color', 'rouge', 'bleu', 'vert', 'jaune', 'blanc', 'noir'],
-            body: ['head', 'hand', 'foot', 'eye', 'mouth', 'nose', 'body', 'tête', 'main', 'pied', 'œil', 'bouche', 'nez'],
-            greetings: ['hello', 'goodbye', 'hi', 'bye', 'good morning', 'good evening', 'bonjour', 'au revoir', 'salut'],
-            emotions: ['happy', 'sad', 'angry', 'love', 'hate', 'like', 'feel', 'heureux', 'triste', 'aimer'],
-            time: ['day', 'night', 'morning', 'evening', 'today', 'yesterday', 'tomorrow', 'jour', 'nuit', 'matin', 'soir'],
-            places: ['house', 'school', 'city', 'country', 'place', 'location', 'maison', 'école', 'ville', 'pays']
-          };
-
-          const searchText = `${french} ${english}`.toLowerCase();
-
-          for (const [field, keywords] of Object.entries(fields)) {
-            if (keywords.some(keyword => searchText.includes(keyword.toLowerCase()))) {
-              return field;
-            }
-          }
-
-          return null;
-        }
-
-        function inferGender(word, vocab) {
-          // Try to infer gender from various sources
-          if (vocab.article) {
-            if (vocab.article.includes('un ') || vocab.article.includes('le ')) return 'masculine';
-            if (vocab.article.includes('une ') || vocab.article.includes('la ')) return 'feminine';
-          }
-
-          // Pattern-based inference
-          const feminineEndings = ['tion', 'sion', 'ette', 'ance', 'ence', 'ure', 'té', 'ie'];
-          const masculineEndings = ['ment', 'age', 'eau', 'isme', 'oir'];
-
-          if (feminineEndings.some(ending => word.endsWith(ending))) return 'feminine';
-          if (masculineEndings.some(ending => word.endsWith(ending))) return 'masculine';
-
-          return null;
-        }
-
-        // Create nodes and connections between infinitives and conjugations
-        const links = [];
+        // Create nodes array
         const nodes = Array.from(nodesMap.values());
 
-        // Create connections between infinitives and their conjugations
-        createInfinitiveConnections(nodes, links);
 
-        // Create connections between subject pronouns and their conjugated verbs
-        createPronounVerbConnections(nodes, links);
 
-        // Position subject pronouns at the center
-        positionPronounsAtCenter(nodes);
-
-        // Create connections between articles and their gendered nouns
-        createArticleConnections(nodes, links);
-
-        // Create connections between adjectives and nouns by gender/number
-        createAdjectiveNounConnections(nodes, links);
-
-        // Create connections between masculine and feminine adjective forms
-        createAdjectiveGenderConnections(nodes, links);
-
-        // Debug: Force connection between petite and maison
-        const petiteNode = nodes.find(n => n.french === 'petite');
-        const maisonNode = nodes.find(n => n.french === 'maison');
-        if (petiteNode && maisonNode) {
-          links.push({
-            source: petiteNode.id,
-            target: maisonNode.id,
-            strength: 'medium',
-            type: 'adjective-noun'
-          });
-        }
-
-        // Helper function to create connections between infinitives and conjugations
-        function createInfinitiveConnections(nodes, links) {
-          // Define verb families with their conjugations
-          const verbFamilies = {
-            'être': ['suis', 'es', 'est', 'sommes', 'êtes', 'sont'],
-            'avoir': ['ai', 'as', 'a', 'avons', 'avez', 'ont'],
-            'aller': ['vais', 'vas', 'va', 'allons', 'allez', 'vont'],
-            'faire': ['fais', 'fais', 'fait', 'faisons', 'faites', 'font'],
-            'vouloir': ['veux', 'veux', 'veut', 'voulons', 'voulez', 'veulent'],
-            'pouvoir': ['peux', 'peux', 'peut', 'pouvons', 'pouvez', 'peuvent'],
-            'venir': ['viens', 'viens', 'vient', 'venons', 'venez', 'viennent'],
-            'voir': ['vois', 'vois', 'voit', 'voyons', 'voyez', 'voient'],
-            'savoir': ['sais', 'sais', 'sait', 'savons', 'savez', 'savent'],
-            'dire': ['dis', 'dis', 'dit', 'disons', 'dites', 'disent'],
-            'prendre': ['prends', 'prends', 'prend', 'prenons', 'prenez', 'prennent'],
-            'mettre': ['mets', 'mets', 'met', 'mettons', 'mettez', 'mettent'],
-            'partir': ['pars', 'pars', 'part', 'partons', 'partez', 'partent'],
-            'sortir': ['sors', 'sors', 'sort', 'sortons', 'sortez', 'sortent'],
-            'dormir': ['dors', 'dors', 'dort', 'dormons', 'dormez', 'dorment'],
-            'servir': ['sers', 'sers', 'sert', 'servons', 'servez', 'servent'],
-            'ouvrir': ['ouvre', 'ouvres', 'ouvre', 'ouvrons', 'ouvrez', 'ouvrent'],
-            'couvrir': ['couvre', 'couvres', 'couvre', 'couvrons', 'couvrez', 'couvrent'],
-            'offrir': ['offre', 'offres', 'offre', 'offrons', 'offrez', 'offrent'],
-            'suffire': ['suffis', 'suffis', 'suffit', 'suffisons', 'suffisez', 'suffisent']
-          };
-
-          // Create connections for each verb family
-          Object.entries(verbFamilies).forEach(([infinitive, conjugations]) => {
-            const infinitiveNode = nodes.find(n => n.french.toLowerCase() === infinitive);
-
-            if (infinitiveNode) {
-              conjugations.forEach(conjugation => {
-                const conjugationNode = nodes.find(n => n.french.toLowerCase() === conjugation);
-
-                if (conjugationNode) {
-                  // Check if connection already exists
-                  const existingConnection = links.find(link =>
-                    (link.source === infinitiveNode.id && link.target === conjugationNode.id) ||
-                    (link.source === conjugationNode.id && link.target === infinitiveNode.id)
-                  );
-
-                  if (!existingConnection) {
-                    links.push({
-                      source: infinitiveNode.id,
-                      target: conjugationNode.id,
-                      strength: 'very-strong',
-                      type: 'infinitive-conjugation'
-                    });
-                  }
-                }
-              });
-            }
-          });
-        }
-
-        // Helper function to create connections between subject pronouns and their conjugated verbs
-        function createPronounVerbConnections(nodes, links) {
-          // Define pronoun-verb relationships
-          const pronounVerbPairs = [
-            // je + first person singular verbs
-            { pronoun: 'je', verbs: ['suis', 'ai', 'vais', 'fais', 'veux', 'peux', 'viens', 'vois', 'sais', 'dis', 'prends', 'mets', 'pars', 'sors', 'dors', 'sers', 'ouvre', 'couvre', 'offre', 'suffis'] },
-            // tu + second person singular verbs  
-            { pronoun: 'tu', verbs: ['es', 'as', 'vas', 'fais', 'veux', 'peux', 'viens', 'vois', 'sais', 'dis', 'prends', 'mets', 'pars', 'sors', 'dors', 'sers', 'ouvres', 'couvres', 'offres', 'suffis'] },
-            // il/elle + third person singular verbs
-            { pronoun: 'il', verbs: ['est', 'a', 'va', 'fait', 'veut', 'peut', 'vient', 'voit', 'sait', 'dit', 'prend', 'met', 'part', 'sort', 'dort', 'sert', 'ouvre', 'couvre', 'offre', 'suffit'] },
-            { pronoun: 'elle', verbs: ['est', 'a', 'va', 'fait', 'veut', 'peut', 'vient', 'voit', 'sait', 'dit', 'prend', 'met', 'part', 'sort', 'dort', 'sert', 'ouvre', 'couvre', 'offre', 'suffit'] },
-            // nous + first person plural verbs
-            { pronoun: 'nous', verbs: ['sommes', 'avons', 'allons', 'faisons', 'voulons', 'pouvons', 'venons', 'voyons', 'savons', 'disons', 'prenons', 'mettons', 'partons', 'sortons', 'dormons', 'servons', 'ouvrons', 'couvrons', 'offrons', 'suffisons'] },
-            // vous + second person plural verbs
-            { pronoun: 'vous', verbs: ['êtes', 'avez', 'allez', 'faites', 'voulez', 'pouvez', 'venez', 'voyez', 'savez', 'dites', 'prenez', 'mettez', 'partez', 'sortez', 'dormez', 'servez', 'ouvrez', 'couvrez', 'offrez', 'suffisez'] },
-            // ils/elles + third person plural verbs
-            { pronoun: 'ils', verbs: ['sont', 'ont', 'vont', 'font', 'veulent', 'peuvent', 'viennent', 'voient', 'savent', 'disent', 'prennent', 'mettent', 'partent', 'sortent', 'dorment', 'servent', 'ouvrent', 'couvrent', 'offrent', 'suffisent'] },
-            { pronoun: 'elles', verbs: ['sont', 'ont', 'vont', 'font', 'veulent', 'peuvent', 'viennent', 'voient', 'savent', 'disent', 'prennent', 'mettent', 'partent', 'sortent', 'dorment', 'servent', 'ouvrent', 'couvrent', 'offrent', 'suffisent'] },
-            // on + third person singular verbs (like il/elle)
-            { pronoun: 'on', verbs: ['est', 'a', 'va', 'fait', 'veut', 'peut', 'vient', 'voit', 'sait', 'dit', 'prend', 'met', 'part', 'sort', 'dort', 'sert', 'ouvre', 'couvre', 'offre', 'suffit'] }
-          ];
-
-          // Create connections for each pronoun-verb pair
-          pronounVerbPairs.forEach(({ pronoun, verbs }) => {
-            const pronounNode = nodes.find(n => n.french.toLowerCase() === pronoun);
-
-            if (pronounNode) {
-              verbs.forEach(verb => {
-                const verbNode = nodes.find(n => n.french.toLowerCase() === verb);
-
-                if (verbNode) {
-                  // Check if connection already exists
-                  const existingConnection = links.find(link =>
-                    (link.source === pronounNode.id && link.target === verbNode.id) ||
-                    (link.source === verbNode.id && link.target === pronounNode.id)
-                  );
-
-                  if (!existingConnection) {
-                    links.push({
-                      source: pronounNode.id,
-                      target: verbNode.id,
-                      strength: 'medium',
-                      type: 'pronoun-verb'
-                    });
-                  }
-                }
-              });
-            }
-          });
-        }
-
-        // Helper function to position subject pronouns at the center
-        function positionPronounsAtCenter(nodes) {
-          // Define center positions with je at the very center, pronouns clustered tightly
-          const centerPositions = [
-            { pronoun: 'je', fx: 0, fy: 0 },        // Center
-            { pronoun: 'tu', fx: 25, fy: -15 },     // Top right
-            { pronoun: 'il', fx: 30, fy: 0 },       // Right center
-            { pronoun: 'elle', fx: 25, fy: 15 },    // Bottom right
-            { pronoun: 'nous', fx: 0, fy: 25 },     // Bottom center
-            { pronoun: 'vous', fx: -25, fy: 15 },    // Bottom left
-            { pronoun: 'ils', fx: -30, fy: 0 },      // Left center
-            { pronoun: 'elles', fx: -25, fy: -15 },  // Top left
-            { pronoun: 'on', fx: 0, fy: -35 }        // Above center
-          ];
-
-          centerPositions.forEach(({ pronoun, fx, fy }) => {
-            const pronounNode = nodes.find(n => n.french.toLowerCase() === pronoun);
-            if (pronounNode) {
-              pronounNode.fx = fx;
-              pronounNode.fy = fy;
-            }
-          });
-        }
-
-        // Helper function to create connections between articles and their gendered nouns
-        function createArticleConnections(nodes, links) {
-          // Define article-noun relationships based on gender
-          const articleNounPairs = [
-            // Masculine articles with masculine nouns
-            { article: 'le', nouns: ['homme', 'livre', 'chat', 'chien', 'ami', 'café', 'jour', 'livre', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { article: 'un', nouns: ['homme', 'livre', 'chat', 'ami', 'café', 'jour', 'livre', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { article: 'du', nouns: ['café', 'pain', 'fromage', 'vin', 'lait'] },
-
-            // Feminine articles with feminine nouns
-            { article: 'la', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { article: 'une', nouns: ['femme', 'maison', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { article: 'de', nouns: ['maison', 'école', 'ville', 'pays', 'famille'] },
-
-            // Plural articles with plural nouns
-            { article: 'les', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { article: 'des', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] }
-          ];
-
-          // Create connections for each article-noun pair
-          articleNounPairs.forEach(({ article, nouns }) => {
-            const articleNode = nodes.find(n => n.french.toLowerCase() === article);
-
-            if (articleNode) {
-              nouns.forEach(noun => {
-                const nounNode = nodes.find(n => n.french.toLowerCase() === noun);
-
-                if (nounNode) {
-                  // Check if connection already exists
-                  const existingConnection = links.find(link =>
-                    (link.source === articleNode.id && link.target === nounNode.id) ||
-                    (link.source === nounNode.id && link.target === articleNode.id)
-                  );
-
-                  if (!existingConnection) {
-                    links.push({
-                      source: articleNode.id,
-                      target: nounNode.id,
-                      strength: 'medium',
-                      type: 'article-noun'
-                    });
-                  }
-                }
-              });
-            }
-          });
-
-          // Create connections between related articles
-          const articleGroups = [
-            // Masculine articles
-            { articles: ['le', 'un', 'du'] },
-            // Feminine articles  
-            { articles: ['la', 'une', 'de'] },
-            // Plural articles
-            { articles: ['les', 'des'] }
-          ];
-
-          articleGroups.forEach(({ articles }) => {
-            for (let i = 0; i < articles.length; i++) {
-              for (let j = i + 1; j < articles.length; j++) {
-                const article1Node = nodes.find(n => n.french.toLowerCase() === articles[i]);
-                const article2Node = nodes.find(n => n.french.toLowerCase() === articles[j]);
-
-                if (article1Node && article2Node) {
-                  // Check if connection already exists
-                  const existingConnection = links.find(link =>
-                    (link.source === article1Node.id && link.target === article2Node.id) ||
-                    (link.source === article2Node.id && link.target === article1Node.id)
-                  );
-
-                  if (!existingConnection) {
-                    links.push({
-                      source: article1Node.id,
-                      target: article2Node.id,
-                      strength: 'weak',
-                      type: 'article-article'
-                    });
-                  }
-                }
-              }
-            }
-          });
-        }
-
-        // Helper function to create connections between adjectives and nouns by gender/number
-        function createAdjectiveNounConnections(nodes, links) {
-          // Get all adjectives and nouns
-          const adjectives = nodes.filter(n => n.category === 'Adjectives');
-          const nouns = nodes.filter(n => n.category === 'Nouns');
-
-          // Define adjective-noun pairs based on gender and number agreement
-          const adjectiveNounPairs = [
-            // Masculine singular
-            { adjective: 'bon', nouns: ['homme', 'livre', 'chat', 'chien', 'ami', 'café', 'jour', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'grand', nouns: ['homme', 'livre', 'chat', 'chien', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'petit', nouns: ['chat', 'enfant', 'livre', 'pied', 'œil', 'nez', 'main'] },
-            { adjective: 'beau', nouns: ['homme', 'livre', 'jour', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'nouveau', nouns: ['livre', 'chat', 'chien', 'ami', 'jour', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'vieux', nouns: ['homme', 'livre', 'chat', 'chien', 'ami', 'jour', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'jeune', nouns: ['homme', 'enfant', 'chat', 'chien', 'ami', 'jour', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'blanc', nouns: ['chat', 'livre', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'noir', nouns: ['chat', 'chien', 'livre', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'rouge', nouns: ['chat', 'livre', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'bleu', nouns: ['chat', 'livre', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'vert', nouns: ['chat', 'livre', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'content', nouns: ['homme', 'enfant', 'chat', 'chien', 'ami', 'jour', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-            { adjective: 'heureux', nouns: ['homme', 'enfant', 'chat', 'chien', 'ami', 'jour', 'pied', 'œil', 'nez', 'corps', 'tête', 'main'] },
-
-            // Feminine singular
-            { adjective: 'bonne', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'grande', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'petite', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'belle', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'nouvelle', nouns: ['maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'vieille', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'jeune', nouns: ['femme', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'blanche', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'noire', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'rouge', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'bleue', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'verte', nouns: ['femme', 'maison', 'voiture', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'contente', nouns: ['femme', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-            { adjective: 'heureuse', nouns: ['femme', 'amie', 'nuit', 'bouche', 'main', 'tête', 'famille', 'école', 'ville', 'pays'] },
-
-            // Plural (both masculine and feminine)
-            { adjective: 'bons', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'bonnes', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'grands', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'grandes', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'petits', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'petites', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'beaux', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'belles', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'nouveaux', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'nouvelles', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'vieux', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'vieux', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'jeunes', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'blancs', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'blanches', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'noirs', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'noires', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'rouges', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'bleus', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'bleues', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'verts', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'vertes', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'contents', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'contentes', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'heureux', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] },
-            { adjective: 'heureuses', nouns: ['enfants', 'amis', 'chats', 'chiens', 'maisons', 'voitures', 'livres', 'mains', 'têtes', 'yeux', 'pieds'] }
-          ];
-
-          // Create connections for each adjective-noun pair
-          adjectiveNounPairs.forEach(({ adjective, nouns }) => {
-            const adjectiveNode = nodes.find(n => n.french.toLowerCase() === adjective);
-
-            if (adjectiveNode) {
-              nouns.forEach(noun => {
-                const nounNode = nodes.find(n => n.french.toLowerCase() === noun);
-
-                if (nounNode) {
-                  // Check if connection already exists
-                  const existingConnection = links.find(link =>
-                    (link.source === adjectiveNode.id && link.target === nounNode.id) ||
-                    (link.source === nounNode.id && link.target === adjectiveNode.id)
-                  );
-
-                  if (!existingConnection) {
-                    links.push({
-                      source: adjectiveNode.id,
-                      target: nounNode.id,
-                      strength: 'medium',
-                      type: 'adjective-noun'
-                    });
-                  }
-                }
-              });
-            }
-          });
-        }
-
-        // Helper function to create connections between masculine and feminine adjective forms
-        function createAdjectiveGenderConnections(nodes, links) {
-          // Define adjective pairs (masculine -> feminine)
-          const adjectivePairs = {
-            'bon': 'bonne',
-            'grand': 'grande',
-            'petit': 'petite',
-            'nouveau': 'nouvelle',
-            'vieux': 'vieille',
-            'beau': 'belle',
-            'blanc': 'blanche',
-            'noir': 'noire',
-            'rouge': 'rouge', // same form
-            'bleu': 'bleue',
-            'vert': 'verte',
-            'content': 'contente',
-            'heureux': 'heureuse'
-          };
-
-          // Create connections between masculine and feminine forms
-          Object.entries(adjectivePairs).forEach(([masc, fem]) => {
-            const mascNode = nodes.find(n => n.french === masc && n.category === 'Adjectives');
-            const femNode = nodes.find(n => n.french === fem && n.category === 'Adjectives');
-
-            if (mascNode && femNode) {
-              // Check if connection already exists
-              const existingConnection = links.find(link =>
-                (link.source === mascNode.id && link.target === femNode.id) ||
-                (link.source === femNode.id && link.target === mascNode.id)
-              );
-
-              if (!existingConnection) {
-                links.push({
-                  source: mascNode.id,
-                  target: femNode.id,
-                  strength: 'strong',
-                  type: 'adjective-gender'
-                });
-              }
-            }
-          });
-        }
 
         console.timeEnd('VocabularyDashboard: Dictionary processing');
 
-        setGraphData({ nodes, links });
+        setGraphData({ nodes, links: [] });
         setTotalWords(uniqueWords.size);
 
         console.log(`📊 Processed ${uniqueWords.size} vocabulary items in dashboard`);
@@ -930,25 +456,6 @@ function VocabularyDashboard({ completedExercises }) {
           `}
             nodeCanvasObject={drawNode}
             nodeCanvasObjectMode={() => 'replace'}
-            linkColor={link => {
-              if (link.type === 'infinitive-conjugation') return 'rgba(255, 215, 0, 0.6)'; // Gold for infinitive-conjugation
-              if (link.type === 'pronoun-verb') return 'rgba(0, 255, 255, 0.6)'; // Cyan for pronoun-verb
-              if (link.type === 'article-noun') return 'rgba(255, 165, 0, 0.6)'; // Orange for article-noun
-              if (link.type === 'article-article') return 'rgba(255, 192, 203, 0.6)'; // Pink for article-article
-              if (link.type === 'adjective-noun') return 'rgba(255, 0, 255, 0.6)'; // Magenta for adjective-noun
-              if (link.type === 'adjective-gender') return 'rgba(255, 100, 100, 0.8)'; // Red for adjective-gender
-              return 'rgba(255, 255, 255, 0.15)'; // White for other connections
-            }}
-            linkWidth={link => {
-              if (link.type === 'infinitive-conjugation') return 1.0;
-              if (link.type === 'pronoun-verb') return 0.8;
-              if (link.type === 'article-noun') return 0.6;
-              if (link.type === 'article-article') return 0.4;
-              if (link.type === 'adjective-noun') return 0.5;
-              if (link.type === 'adjective-gender') return 0.7;
-              return 0.4;
-            }}
-            linkDirectionalParticles={0}
             backgroundColor="rgba(15, 23, 42, 1)"
             cooldownTicks={300}
             onEngineStop={() => graphRef.current?.zoomToFit(400)}
@@ -958,13 +465,6 @@ function VocabularyDashboard({ completedExercises }) {
             d3VelocityDecay={0.15}
             d3AlphaDecay={0.008}
             d3ReheatSimulation={false}
-            linkDistance={link => {
-              if (link.strength === 'very-strong') return 40; // Infinitive-conjugation connections
-              if (link.strength === 'strong') return 60; // Strong connections
-              if (link.strength === 'medium') return 80; // Pronoun-verb and article-noun connections
-              if (link.strength === 'weak') return 90; // Article-article connections
-              return 100; // Other connections
-            }}
             nodeRepulsion={-300}
             d3Force="center"
             d3ForceStrength={0.1}
