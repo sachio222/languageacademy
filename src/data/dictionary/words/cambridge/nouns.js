@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Nouns
- * Generated: 2025-10-29T19:20:01.688Z
- * Successfully scraped: 468/468
+ * Generated: 2025-10-29T19:26:40.455Z
+ * Successfully scraped: 470/470
  */
 
 export const nounsCambridge = new Map([
@@ -30847,6 +30847,184 @@ export const nounsCambridge = new Map([
                 "frequency": "common"
             }
         ]
+    }
+  ],
+  [
+    "œuvre-fr",
+        {
+        "id": "œuvre-fr",
+        "lang": "fr",
+        "word": "œuvre",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "work",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "en",
+                "text": "une mise en œuvre \n                        \n        an implementation",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Le gros œuvre a été exécuté par un entrepreneur.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "œuvre d’art \n                        \n        work of art",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "Les œuvres de ce sculpteur sont exposées dans un musée.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "lire toute l’œuvre d’un écrivain \n                        \n        to read an author’s entire work",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "recevoir un prix pour l’ensemble de son œuvre",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "His latest composition is a piano concerto.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "The broken window was Simon’s handiwork.",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "the works of Van Gogh / Shakespeare/Mozart",
+                "trans": "",
+                "source": "cambridge"
+            },
+            {
+                "lang": "en",
+                "text": "This work was composed in 1816.",
+                "trans": "",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-29T19:26:39.249Z",
+        "updated_at": "2025-10-29T19:26:40.421Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "definition": "a work of art, literature, or music; a piece of work",
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "œuvres",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "l'œuvre",
+                "type": "definite_article",
+                "context": "the work",
+                "frequency": "common"
+            },
+            {
+                "phrase": "une œuvre",
+                "type": "indefinite_article",
+                "context": "a work",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les œuvres",
+                "type": "plural_article",
+                "context": "the works",
+                "frequency": "common"
+            },
+            {
+                "phrase": "œuvre d'art",
+                "type": "compound",
+                "context": "work of art",
+                "frequency": "common"
+            },
+            {
+                "phrase": "œuvre littéraire",
+                "type": "compound",
+                "context": "literary work",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "œuvres-fr",
+        {
+        "id": "œuvres-fr",
+        "lang": "fr",
+        "word": "œuvres",
+        "partOfSpeech": "noun",
+        "redirect_to": "œuvre-fr",
+        "redirect_type": "plural_form",
+        "base_word": "œuvre",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "les œuvres de Monet",
+                "trans": "Monet's works",
+                "lang": "en"
+            },
+            {
+                "text": "ses œuvres complètes",
+                "trans": "his complete works",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-10-29T19:26:39.256Z",
+        "updated_at": "2025-10-29T19:26:39.256Z"
     }
   ]
 ]);
