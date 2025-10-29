@@ -137,27 +137,33 @@ function splitFrenchWords(phrase) {
  */
 function findWordInCambridge(word) {
   const results = [];
+  const lowerWord = word.toLowerCase();
   
   for (const [dictName, dictionary] of Object.entries(allDictionaries)) {
-    // Direct match
-    if (dictionary.has(word)) {
-      const entry = dictionary.get(word);
-      results.push({
-        dictionary: dictName,
-        entry: entry,
-        matchType: 'direct'
-      });
-    }
-    
-    // Check for case-insensitive match
-    const lowerWord = word.toLowerCase();
+    // Search through all entries looking for word field match
     for (const [key, entry] of dictionary.entries()) {
-      if (key.toLowerCase() === lowerWord) {
+      if (!entry) continue;
+      
+      const entryWord = entry.word || entry.french;
+      if (!entryWord) continue;
+      
+      // Direct case-sensitive match
+      if (entryWord === word) {
+        results.push({
+          dictionary: dictName,
+          entry: entry,
+          matchType: 'direct',
+          key: key
+        });
+      }
+      // Case-insensitive match
+      else if (entryWord.toLowerCase() === lowerWord) {
         results.push({
           dictionary: dictName,
           entry: entry,
           matchType: 'case_insensitive',
-          originalKey: key
+          key: key,
+          originalWord: entryWord
         });
       }
     }

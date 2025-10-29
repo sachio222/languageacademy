@@ -1,656 +1,669 @@
 /**
  * Cambridge Dictionary Scraped Interjections
- * Generated: 2025-10-29T01:40:48.444Z
- * Successfully scraped: 13/13
+ * Generated: 2025-10-29T17:32:29.255Z
+ * Updated with curriculum tracking information
  */
 
 export const interjectionsCambridge = new Map([
-  [
-    "bonjour-fr",
+  ["bonjour-fr", {
+    "id": "bonjour-fr",
+    "lang": "fr",
+    "word": "bonjour",
+    "partOfSpeech": "interjection",
+    "translations": [
         {
-        "id": "bonjour-fr",
-        "lang": "fr",
-        "word": "bonjour",
-        "partOfSpeech": "interjection",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "good day/hello",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Good morning, Mrs Brown",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Good night, everyone – I'm going to bed.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "bɔ̃ʒuʀ",
-        "tags": [],
-        "sources": [
-            "manual"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:13:35.736Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/bonjour",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:13:35.736Z"
+            "lang": "en",
+            "text": "good day/hello",
+            "confidence": 0.9,
+            "source": "cambridge"
         }
-    }
-  ],
-  [
-    "bonsoir-fr",
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
         {
-        "id": "bonsoir-fr",
-        "lang": "fr",
-        "word": "bonsoir",
-        "partOfSpeech": "interjection",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "good evening",
-                "confidence": 0.95,
-                "source": "language_academy"
-            }
-        ],
-        "relationships": [],
-        "etymology": "From bon (good) + soir (evening)",
-        "register": [],
-        "usage_notes": "Used as both a greeting and farewell in the evening",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Bonsoir, comment allez-vous ?",
-                "trans": "Good evening, how are you?",
-                "source": "language_academy"
-            },
-            {
-                "lang": "en",
-                "text": "Bonsoir, à demain !",
-                "trans": "Good evening, see you tomorrow!",
-                "source": "language_academy"
-            },
-            {
-                "lang": "en",
-                "text": "Bonsoir tout le monde !",
-                "trans": "Good evening everyone!",
-                "source": "language_academy"
-            }
-        ],
-        "phonetic": "bɔ̃swaʀ",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "greeting"
-        ],
-        "created_at": "2025-01-27T00:00:00.000Z",
-        "updated_at": "2025-01-27T00:00:00.000Z",
-        "sources": [
-            "language_academy"
-        ],
-        "verified": false
-    }
-  ],
-  [
-    "merci-fr",
-        {
-        "id": "merci-fr",
-        "lang": "fr",
-        "word": "merci",
-        "partOfSpeech": "interjection",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "thank you",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Merci beaucoup!",
-                "trans": "Thank you very much!",
-                "source": "manual"
-            }
-        ],
-        "phonetic": "mɛʀsi",
-        "tags": [],
-        "sources": [
-            "manual"
-        ],
-        "verified": false
-    }
-  ],
-  [
-    "pardon-fr",
-        {
-        "id": "pardon-fr",
-        "lang": "fr",
-        "word": "pardon",
-        "partOfSpeech": "interjection",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "pardon",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Pardon? Could you repeat that last sentence?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sorry (, what did you say)?",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "paʀdɔ̃",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:13:11.176Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/pardon",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:13:11.176Z"
-        }
-    }
-  ],
-  [
-    "salut-fr",
-        {
-        "id": "salut-fr",
-        "lang": "fr",
-        "word": "salut",
-        "partOfSpeech": "interjection",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "hi",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Salut ! Ça va ?",
-                "trans": "Hi! How are you?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Salut la compagnie !",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "saly",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:13:16.546Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/salut",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:13:16.546Z"
-        }
-    }
-  ],
-  [
-    "oui-fr",
-        {
-        "id": "oui-fr",
-        "lang": "fr",
-        "word": "oui",
-        "partOfSpeech": "interjection",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "yes",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Yes, that is true",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Yes, you may go.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "'wi",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:13:26.181Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/oui",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:13:26.181Z"
-        }
-    }
-  ],
-  [
-    "non-fr",
-        {
-        "id": "non-fr",
-        "lang": "fr",
-        "word": "non",
-        "partOfSpeech": "interjection",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "no",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "‘Do you like travelling?’ ‘No, (I don’t).’",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "No, I don’t agree",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "‘Will you help me?’ ‘No, I won’t.’",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "‘Have you seen my keys anywhere?’ ‘Nope.’",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "nɔ̃",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:13:31.291Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/non",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:13:31.291Z"
-        }
-    }
-  ],
-  [
-    "bah-fr",
-        {
-        "id": "bah-fr",
-        "lang": "fr",
-        "word": "bah",
-        "partOfSpeech": "interjection",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "who cares",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Bah, ça m’est égal !",
-                "trans": "Well, I don’t mind!",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "bɑ",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:13:35.735Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/bah",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:13:35.735Z"
-        }
-    }
-  ],
-  [
-    "Ah-fr",
-        {
-        "id": "Ah-fr",
-        "lang": "fr",
-        "word": "Ah",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "Ah!",
-                "source": "language_academy",
-                "confidence": 0.95
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Ah ! C'est magnifique !",
-                "trans": "Ah! That's magnificent!",
-                "lang": "en"
-            },
-            {
-                "text": "Ah ! Je comprends maintenant",
-                "trans": "Ah! I understand now",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson"
-        ],
-        "created_at": "2025-10-24T03:21:42.347Z",
-        "updated_at": "2025-10-24T03:21:43.027Z",
-        "sources": [
-            "language_academy",
-            "cambridge"
-        ],
-        "verified": false,
-        "partOfSpeech": "interjection"
-    }
-  ],
-  [
-    "Miam-fr",
-        {
-        "id": "Miam-fr",
-        "lang": "fr",
-        "word": "Miam",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "Yum!",
-                "source": "language_academy",
-                "confidence": 0.95
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Miam ! C'est délicieux !",
-                "trans": "Yum! That's delicious!",
-                "lang": "en"
-            },
-            {
-                "text": "Miam, j'adore ce gâteau",
-                "trans": "Yum, I love this cake",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson"
-        ],
-        "created_at": "2025-10-24T03:25:44.473Z",
-        "updated_at": "2025-10-24T03:25:44.899Z",
-        "sources": [
-            "language_academy",
-            "cambridge"
-        ],
-        "verified": false,
-        "partOfSpeech": "interjection"
-    }
-  ],
-  [
-    "Mmmh-fr",
-        {
-        "id": "Mmmh-fr",
-        "lang": "fr",
-        "word": "Mmmh",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "Mmmh",
-                "source": "language_academy",
-                "confidence": 0.95
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Mmmh, c'est bon !",
-                "trans": "Mmmh, that's good!",
-                "lang": "en"
-            },
-            {
-                "text": "Mmmh, je ne sais pas",
-                "trans": "Mmmh, I don't know",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson"
-        ],
-        "created_at": "2025-10-24T03:25:44.900Z",
-        "updated_at": "2025-10-24T03:25:45.252Z",
-        "sources": [
-            "language_academy",
-            "cambridge"
-        ],
-        "verified": false,
-        "partOfSpeech": "interjection"
-    }
-  ],
-  [
-    "excusez-fr",
-        {
-        "id": "excusez-fr",
-        "lang": "fr",
-        "word": "excusez",
-        "translations": [
-            {
-                "language": "en",
-                "text": "excuse me / pardon me",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [
-            "neutral"
-        ],
-        "usage_notes": "Polite interjection used to get attention or apologize. Often followed by 'moi' (excusez-moi)",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Excusez-moi, où est la gare ?",
-                "trans": "Excuse me, where is the train station?",
-                "lang": "en"
-            },
-            {
-                "text": "Excusez, je ne comprends pas",
-                "trans": "Excuse me, I don't understand",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "reading_vocabulary"
-        ],
-        "created_at": "2025-10-26T02:15:05.258Z",
-        "updated_at": "2025-10-26T02:15:05.662Z",
-        "sources": [
-            "manual",
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-26T02:15:02.789Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/excusez",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-26T02:15:02.790Z"
+            "lang": "en",
+            "text": "Good morning, Mrs Brown",
+            "source": "cambridge"
         },
-        "partOfSpeech": "interjection"
-    }
-  ],
-  [
-    "oh-fr",
         {
-        "id": "oh-fr",
-        "lang": "fr",
-        "word": "oh",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "oh",
-                "source": "language_academy",
-                "confidence": 0.95
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Oh ! Comme c’est beau ! \n                        \n        Oh! That’s so beautiful!",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Oh ! Une montgolfière ! \n                        \n        Oh! A hot air balloon!",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Oh ! Quel culot ! \n                        \n        Oh! How dare you!",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Oh, what a lovely present!",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson"
-        ],
-        "created_at": "2025-10-29T01:40:47.973Z",
-        "updated_at": "2025-10-29T01:40:48.444Z",
-        "sources": [
-            "language_academy",
-            "cambridge"
-        ],
-        "verified": false,
-        "interjection_phrases": [
-            {
-                "phrase": "oh là là",
-                "type": "exclamation",
-                "context": "oh my / wow",
-                "frequency": "common"
-            },
-            {
-                "phrase": "oh mon dieu",
-                "type": "exclamation",
-                "context": "oh my god",
-                "frequency": "common"
-            },
-            {
-                "phrase": "oh non",
-                "type": "exclamation",
-                "context": "oh no",
-                "frequency": "common"
-            }
-        ],
-        "partOfSpeech": "interjection"
-    }
-  ]
+            "lang": "en",
+            "text": "Good night, everyone – I'm going to bed.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "bɔ̃ʒuʀ",
+    "tags": [
+        "unit1",
+        "2024-01-01-famous-words"
+    ],
+    "sources": [
+        "manual"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:13:35.736Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/bonjour",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:13:35.736Z"
+    },
+    "unit": "unit1",
+    "module": "2024-01-01-famous-words",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.031Z"
+}],
+  ["bonsoir-fr", {
+    "id": "bonsoir-fr",
+    "lang": "fr",
+    "word": "bonsoir",
+    "partOfSpeech": "interjection",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "good evening",
+            "confidence": 0.95,
+            "source": "language_academy"
+        }
+    ],
+    "relationships": [],
+    "etymology": "From bon (good) + soir (evening)",
+    "register": [],
+    "usage_notes": "Used as both a greeting and farewell in the evening",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Bonsoir, comment allez-vous ?",
+            "trans": "Good evening, how are you?",
+            "source": "language_academy"
+        },
+        {
+            "lang": "en",
+            "text": "Bonsoir, à demain !",
+            "trans": "Good evening, see you tomorrow!",
+            "source": "language_academy"
+        },
+        {
+            "lang": "en",
+            "text": "Bonsoir tout le monde !",
+            "trans": "Good evening everyone!",
+            "source": "language_academy"
+        }
+    ],
+    "phonetic": "bɔ̃swaʀ",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "greeting",
+        "unit1",
+        "2024-01-01-famous-words"
+    ],
+    "created_at": "2025-01-27T00:00:00.000Z",
+    "updated_at": "2025-10-29T17:32:29.031Z",
+    "sources": [
+        "language_academy"
+    ],
+    "verified": false,
+    "unit": "unit1",
+    "module": "2024-01-01-famous-words",
+    "lesson": null
+}],
+  ["merci-fr", {
+    "id": "merci-fr",
+    "lang": "fr",
+    "word": "merci",
+    "partOfSpeech": "interjection",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "thank you",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Merci beaucoup!",
+            "trans": "Thank you very much!",
+            "source": "manual"
+        }
+    ],
+    "phonetic": "mɛʀsi",
+    "tags": [
+        "unit1",
+        "2024-01-01-famous-words"
+    ],
+    "sources": [
+        "manual"
+    ],
+    "verified": false,
+    "unit": "unit1",
+    "module": "2024-01-01-famous-words",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.032Z"
+}],
+  ["pardon-fr", {
+    "id": "pardon-fr",
+    "lang": "fr",
+    "word": "pardon",
+    "partOfSpeech": "interjection",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "pardon",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Pardon? Could you repeat that last sentence?",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Sorry (, what did you say)?",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "paʀdɔ̃",
+    "tags": [
+        "unit1",
+        "2024-01-01-famous-words"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:13:11.176Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/pardon",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:13:11.176Z"
+    },
+    "unit": "unit1",
+    "module": "2024-01-01-famous-words",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.036Z"
+}],
+  ["salut-fr", {
+    "id": "salut-fr",
+    "lang": "fr",
+    "word": "salut",
+    "partOfSpeech": "interjection",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "hi",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Salut ! Ça va ?",
+            "trans": "Hi! How are you?",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Salut la compagnie !",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "saly",
+    "tags": [
+        "unit1",
+        "2024-01-01-famous-words"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:13:16.546Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/salut",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:13:16.546Z"
+    },
+    "unit": "unit1",
+    "module": "2024-01-01-famous-words",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.038Z"
+}],
+  ["oui-fr", {
+    "id": "oui-fr",
+    "lang": "fr",
+    "word": "oui",
+    "partOfSpeech": "interjection",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "yes",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Yes, that is true",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Yes, you may go.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "'wi",
+    "tags": [
+        "unit1",
+        "2024-01-01-famous-words"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:13:26.181Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/oui",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:13:26.181Z"
+    },
+    "unit": "unit1",
+    "module": "2024-01-01-famous-words",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.032Z"
+}],
+  ["non-fr", {
+    "id": "non-fr",
+    "lang": "fr",
+    "word": "non",
+    "partOfSpeech": "interjection",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "no",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "‘Do you like travelling?’ ‘No, (I don’t).’",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "No, I don’t agree",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "‘Will you help me?’ ‘No, I won’t.’",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "‘Have you seen my keys anywhere?’ ‘Nope.’",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "nɔ̃",
+    "tags": [
+        "unit1",
+        "2024-01-01-famous-words"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:13:31.291Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/non",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:13:31.291Z"
+    },
+    "unit": "unit1",
+    "module": "2024-01-01-famous-words",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.033Z"
+}],
+  ["bah-fr", {
+    "id": "bah-fr",
+    "lang": "fr",
+    "word": "bah",
+    "partOfSpeech": "interjection",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "who cares",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Bah, ça m’est égal !",
+            "trans": "Well, I don’t mind!",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "bɑ",
+    "tags": [
+        "unit7",
+        "2024-05-02-discourse-markers"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:13:35.735Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/bah",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:13:35.735Z"
+    },
+    "unit": "unit7",
+    "module": "2024-05-02-discourse-markers",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.144Z"
+}],
+  ["Ah-fr", {
+    "id": "Ah-fr",
+    "lang": "fr",
+    "word": "Ah",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "Ah!",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Ah ! C'est magnifique !",
+            "trans": "Ah! That's magnificent!",
+            "lang": "en"
+        },
+        {
+            "text": "Ah ! Je comprends maintenant",
+            "trans": "Ah! I understand now",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson"
+    ],
+    "created_at": "2025-10-24T03:21:42.347Z",
+    "updated_at": "2025-10-24T03:21:43.027Z",
+    "sources": [
+        "language_academy",
+        "cambridge"
+    ],
+    "verified": false,
+    "partOfSpeech": "interjection"
+}],
+  ["Miam-fr", {
+    "id": "Miam-fr",
+    "lang": "fr",
+    "word": "Miam",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "Yum!",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Miam ! C'est délicieux !",
+            "trans": "Yum! That's delicious!",
+            "lang": "en"
+        },
+        {
+            "text": "Miam, j'adore ce gâteau",
+            "trans": "Yum, I love this cake",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson"
+    ],
+    "created_at": "2025-10-24T03:25:44.473Z",
+    "updated_at": "2025-10-24T03:25:44.899Z",
+    "sources": [
+        "language_academy",
+        "cambridge"
+    ],
+    "verified": false,
+    "partOfSpeech": "interjection"
+}],
+  ["Mmmh-fr", {
+    "id": "Mmmh-fr",
+    "lang": "fr",
+    "word": "Mmmh",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "Mmmh",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Mmmh, c'est bon !",
+            "trans": "Mmmh, that's good!",
+            "lang": "en"
+        },
+        {
+            "text": "Mmmh, je ne sais pas",
+            "trans": "Mmmh, I don't know",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson"
+    ],
+    "created_at": "2025-10-24T03:25:44.900Z",
+    "updated_at": "2025-10-24T03:25:45.252Z",
+    "sources": [
+        "language_academy",
+        "cambridge"
+    ],
+    "verified": false,
+    "partOfSpeech": "interjection"
+}],
+  ["excusez-fr", {
+    "id": "excusez-fr",
+    "lang": "fr",
+    "word": "excusez",
+    "translations": [
+        {
+            "language": "en",
+            "text": "excuse me / pardon me",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+        "neutral"
+    ],
+    "usage_notes": "Polite interjection used to get attention or apologize. Often followed by 'moi' (excusez-moi)",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Excusez-moi, où est la gare ?",
+            "trans": "Excuse me, where is the train station?",
+            "lang": "en"
+        },
+        {
+            "text": "Excusez, je ne comprends pas",
+            "trans": "Excuse me, I don't understand",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "reading_vocabulary"
+    ],
+    "created_at": "2025-10-26T02:15:05.258Z",
+    "updated_at": "2025-10-26T02:15:05.662Z",
+    "sources": [
+        "manual",
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-26T02:15:02.789Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/excusez",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-26T02:15:02.790Z"
+    },
+    "partOfSpeech": "interjection"
+}],
+  ["oh-fr", {
+    "id": "oh-fr",
+    "lang": "fr",
+    "word": "oh",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "oh",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Oh ! Comme c’est beau ! \n                        \n        Oh! That’s so beautiful!",
+            "trans": "",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Oh ! Une montgolfière ! \n                        \n        Oh! A hot air balloon!",
+            "trans": "",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Oh ! Quel culot ! \n                        \n        Oh! How dare you!",
+            "trans": "",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Oh, what a lovely present!",
+            "trans": "",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson"
+    ],
+    "created_at": "2025-10-29T01:40:47.973Z",
+    "updated_at": "2025-10-29T01:40:48.444Z",
+    "sources": [
+        "language_academy",
+        "cambridge"
+    ],
+    "verified": false,
+    "interjection_phrases": [
+        {
+            "phrase": "oh là là",
+            "type": "exclamation",
+            "context": "oh my / wow",
+            "frequency": "common"
+        },
+        {
+            "phrase": "oh mon dieu",
+            "type": "exclamation",
+            "context": "oh my god",
+            "frequency": "common"
+        },
+        {
+            "phrase": "oh non",
+            "type": "exclamation",
+            "context": "oh no",
+            "frequency": "common"
+        }
+    ],
+    "partOfSpeech": "interjection"
+}]
 ]);
-
-export default interjectionsCambridge;

@@ -71,6 +71,7 @@ const scrollToWordElement = (wordElement) => {
 import { useDictionary } from '../hooks/useDictionary';
 import SpeakButton from './SpeakButton';
 import { ChevronDown } from 'lucide-react';
+import { getModuleId } from '../lessons/moduleIdResolver';
 import '../styles/DictionaryModal.css';
 
 // Helper function to normalize accented characters to base letters for header grouping
@@ -857,6 +858,15 @@ function DictionaryModal({ isOpen, onClose }) {
                     )}
                     {selectedWord.difficulty && (
                       <span>Difficulty: {selectedWord.difficulty}</span>
+                    )}
+                    {selectedWord.unit && (
+                      <span>Unit: {selectedWord.unit.replace('unit', '')}</span>
+                    )}
+                    {selectedWord.module && (
+                      <span>Module: {getModuleId(selectedWord.module)}</span>
+                    )}
+                    {selectedWord.lesson && (
+                      <span>Lesson: {selectedWord.lesson}</span>
                     )}
                     {selectedWord.source && (
                       <span>Source: {selectedWord.source}</span>

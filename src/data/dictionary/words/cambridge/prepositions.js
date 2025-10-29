@@ -1,2301 +1,2501 @@
 /**
  * Cambridge Dictionary Scraped Prepositions
- * Generated: 2025-10-26T02:15:39.624Z
- * Successfully scraped: 29/29
+ * Generated: 2025-10-29T17:32:29.263Z
+ * Updated with curriculum tracking information
  */
 
 export const prepositionsCambridge = new Map([
-  [
-    "à-fr",
+  ["à-fr", {
+    "id": "à-fr",
+    "lang": "fr",
+    "word": "à",
+    "partOfSpeech": "preposition",
+    "translations": [
         {
-        "id": "à-fr",
-        "lang": "fr",
-        "word": "à",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "to, at, in",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Je vais à Paris",
-                "trans": "I'm going to Paris",
-                "source": "manual"
-            },
-            {
-                "lang": "en",
-                "text": "Il est à la maison",
-                "trans": "He is at home",
-                "source": "manual"
-            },
-            {
-                "lang": "en",
-                "text": "demander qqch à qqn",
-                "trans": "to ask sb for sth",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "donner à boire à un enfant",
-                "trans": "to give a child sth to drink",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il vit à Paris",
-                "trans": "He lives in Paris",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "aller à la boulangerie",
-                "trans": "to go to the bakery",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un voyage aux Seychelles",
-                "trans": "a trip to the Seychelles",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "à la fin du mois",
-                "trans": "at the end of the month",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "au printemps",
-                "trans": "in the spring",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ce livre est à Paul",
-                "trans": "This book is Paul's",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "fait à la main",
-                "trans": "hand made",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "aller à pied / bicyclette",
-                "trans": "to go on foot / by bike",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "parler à voix basse",
-                "trans": "to talk in a low voice",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "donner un manteau à nettoyer",
-                "trans": "to take a coat to be cleaned",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une tarte au citron",
-                "trans": "a lemon tart",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une tasse à café",
-                "trans": "a coffee cup",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une fille aux cheveux courts",
-                "trans": "a girl with short hair",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un enfant de deux à trois ans",
-                "trans": "a two- to three-year-old child",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "100 km à l'heure",
-                "trans": "100 kms per hour",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "a",
-        "tags": [],
-        "sources": [
-            "manual"
-        ],
-        "verified": false
-    }
-  ],
-  [
-    "avec-fr",
-        {
-        "id": "avec-fr",
-        "lang": "fr",
-        "word": "avec",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "with",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "faire des courses avec un ami",
-                "trans": "to go shopping with a friend",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Venez avec moi, je vous montrerai l’appartement.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il s’est battu avec son frère.",
-                "trans": "He fought with his brother.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une maison avec un jardin",
-                "trans": "a house with a garden",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un livre pour enfants avec des images",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je viendrai avec plaisir.",
-                "trans": "I’ll come with pleasure.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Avec de la patience, nous réussirons.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "manger avec les doigts",
-                "trans": "to eat with one’s fingers",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "prendre le jouet avec ses petites mains",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Avec cette chaleur, c’est difficile de travailler.",
-                "trans": "It’s hard to work with this heat.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Avec lui, tu n’arriveras jamais à rien.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "se marier avec qqn",
-                "trans": "to get married to sb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être d’accord avec qqn",
-                "trans": "to agree with sb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle est allée au théâtre avec des amies.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "avɛk",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:21:25.441Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/avec",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:21:25.441Z"
+            "lang": "en",
+            "text": "to, at, in",
+            "confidence": 0.9,
+            "source": "manual"
         }
-    }
-  ],
-  [
-    "dans-fr",
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
         {
-        "id": "dans-fr",
-        "lang": "fr",
-        "word": "dans",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "in",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "être dans le salon",
-                "trans": "to be in the living room",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "monter dans le bus",
-                "trans": "to get on the bus",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "lire dans le journal",
-                "trans": "to read in the paper",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "se trouver dans la cour lorsque l’orage a éclaté",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être dans une situation difficile",
-                "trans": "to be in a difficult situation",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "vivre dans de bons rapports",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle arrive dans une semaine.",
-                "trans": "She’ll arrive in a week.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je reviens dans un instant.",
-                "trans": "I’ll be back in a moment.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "penser revenir au pays dans un an",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Cela vaut dans les trente euros.",
-                "trans": "It’s worth about thirty euros.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle avait dans les dix-huit ans quand elle a obtenu son bac.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "dɑ̃",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:21:29.778Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/dans",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:21:29.778Z"
-        }
-    }
-  ],
-  [
-    "sur-fr",
-        {
-        "id": "sur-fr",
-        "lang": "fr",
-        "word": "sur",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "on",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "poser un vase sur la cheminée",
-                "trans": "to put a vase on the mantelpiece",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "s’allonger sur le canapé",
-                "trans": "to lie on the sofa",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "porter qqn sur son dos",
-                "trans": "to carry sb on one’s back",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai mis ta veste sur le porte-manteaux.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un reportage sur les loups",
-                "trans": "a feature on wolves",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je l’ai interrogé sur ses parents.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "lancer qqch sur qqn",
-                "trans": "to throw sth at sb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "vue sur la mer",
-                "trans": "sea view",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La maison est sur votre gauche.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir de l’argent sur soi",
-                "trans": "to have money on one",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je n’ai pas votre lettre sur moi.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un jour sur deux",
-                "trans": "every other day",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sept joueurs sur dix sont des hommes.",
-                "trans": "Seven out of ten players are men.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sur dix assiettes cinq sont ébréchées !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une pièce qui mesure trois mètres sur quatre",
-                "trans": "a room that measure three meters by four",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a couru sur cent mètres.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "syʀ",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:21:34.847Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/sur",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:21:34.847Z"
-        }
-    }
-  ],
-  [
-    "sous-fr",
-        {
-        "id": "sous-fr",
-        "lang": "fr",
-        "word": "sous",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "under",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "être sous la table",
-                "trans": "to be under the table",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "nager sous l’eau",
-                "trans": "to swim underwater",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tes chaussures sont sous le lit !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "travailler sous la direction de qqn",
-                "trans": "to work under sb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle prépare sa thèse sous les directives d’un professeur.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est arrivé sous mes yeux.",
-                "trans": "It happened right in front of me.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle s’est effondrée sous nos yeux.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Vous le recevrez sous peu.",
-                "trans": "You will receive it shortly.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je pense qu’il va arriver sous peu.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "su",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:21:39.556Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/sous",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:21:39.556Z"
-        }
-    }
-  ],
-  [
-    "entre-fr",
-        {
-        "id": "entre-fr",
-        "lang": "fr",
-        "word": "entre",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "between",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "entre le mur et l’armoire",
-                "trans": "between the wall and the wardrobe",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être en panne entre Paris et la banlieue",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tout est fini entre nous.",
-                "trans": "It’s all over between us.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’amitié s’est brisées entre les deux amis.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "entre le début et la fin de l’année",
-                "trans": "between the beginning and the end of the year",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir rendez-vous entre trois et quatre heures",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "hésiter entre plusieurs plats",
-                "trans": "to hesitate between several dishes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "choisir entre plusieurs vêtements",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "ɑ̃tʀ",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:21:43.919Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/entre",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:21:43.919Z"
-        }
-    }
-  ],
-  [
-    "de-fr",
-        {
-        "id": "de-fr",
-        "lang": "fr",
-        "word": "de",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "from",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "venir de New York",
-                "trans": "to come from New York",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "le train de Paris",
-                "trans": "the train from Paris",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "arriver de la ville en voiture",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "le frère de Sophie",
-                "trans": "Sophie’s brother",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "la voiture de ma mère",
-                "trans": "my mother’s car",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "la fenêtre de ma chambre",
-                "trans": "my bedroom window",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est le livre de mon professeur.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "des chaussures de marche",
-                "trans": "walking shoes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "porter une combinaison de ski bleue",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un sac de cuir",
-                "trans": "a leather bag",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "porter des robes de coton l’été",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un billet de cinq euros",
-                "trans": "a five euro bill",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un appartement de cent mètres carrés",
-                "trans": "a one hundred square meter apartment",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un homme de trente ans",
-                "trans": "a man of thirty",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "habiter une maison de grande dimension",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "montrer du doigt",
-                "trans": "to point at",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "De loin, il nous saluait de la main.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "pleurer de joie",
-                "trans": "to weep with joy",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "mourir de faim",
-                "trans": "to die of hunger",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il ne cessait de crier de peur.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "partir de nuit / de bonne heure",
-                "trans": "to leave at night / early",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est son costume de jour.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "du 1er janvier au 30 juin",
-                "trans": "from 1 January to 30 June",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "du matin au soir",
-                "trans": "from morning to evening",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La grande guerre a duré de 1914 à 1918.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un livre de Victor Hugo",
-                "trans": "a book by Victor Hugo",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "aller voir Carmen de Bizet",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "parler de qqch",
-                "trans": "to talk about sth",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "se séparer de sa secrétaire à la fin du mois",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "le souvenir du passé",
-                "trans": "memory of the past",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Pour le retour de l’école il prend le bus.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une bouteille remplie d’eau",
-                "trans": "a bottle full of water",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être content de partir",
-                "trans": "to be happy to leave",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Orné de fleurs, le char défilait dans la ville.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il y a trop de bruit.",
-                "trans": "There’s too much noise.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "N’y a-t-il pas trop de couverts sur cette table ?",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "də",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:21:52.616Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/de",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:21:52.616Z"
-        }
-    }
-  ],
-  [
-    "pour-fr",
-        {
-        "id": "pour-fr",
-        "lang": "fr",
-        "word": "pour",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "for",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "une lettre pour qqn",
-                "trans": "a letter for sb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un livre pour enfants",
-                "trans": "a book for children",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être mauvais pour la santé",
-                "trans": "to be bad for one’s health",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "voter pour qqn",
-                "trans": "to vote for sb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est bon pour ton moral.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je suis pour ce candidat.",
-                "trans": "I’m for this candidate.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est pour.",
-                "trans": "He’s in favor.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Si vous voulez aller au cinéma, je suis pour !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir pour ami",
-                "trans": "to have for a friend",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "prendre qqn pour un idiot",
-                "trans": "to take sb for a fool",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir pour habitude de déjeuner dans le jardin",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "signer un papier pour qqn",
-                "trans": "to sign a paper for sb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je le prends pour lui, je le lui donnerai.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "enfant grand pour son âge",
-                "trans": "child tall for his age",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est trop intelligent pour sa classe.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "partir pour Paris",
-                "trans": "to leave for Paris",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous sommes partis pour Moscou par le train.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "partir pour les vacances",
-                "trans": "to leave on vacation",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une amitié pour l’éternité",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être puni pour ses crimes",
-                "trans": "to be punished for one’s crimes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "remercier qqn pour qqch",
-                "trans": "to thank sb for sth",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je l’admire pour son courage.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "acheter qqch pour 50 euros",
-                "trans": "to buy sth for 50 euros",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai mis pour vingt euros d’essence.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "tout faire pour réussir",
-                "trans": "to do everything to succeed",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est assez grand pour comprendre.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai tout fait pour qu’il vienne.",
-                "trans": "I did everything I could to make him come.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Faire tout son possible pour qu’il réussisse.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "puʀ",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:21:57.854Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/pour",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:21:57.854Z"
-        }
-    }
-  ],
-  [
-    "pendant-fr",
-        {
-        "id": "pendant-fr",
-        "lang": "fr",
-        "word": "pendant",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "during",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "pendant la réunion",
-                "trans": "during the meeting",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "se rencontrer pendant les années scolaires",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "pɑ̃dɑ̃",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:22:01.401Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/pendant",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:22:01.401Z"
-        }
-    }
-  ],
-  [
-    "avant-fr",
-        {
-        "id": "avant-fr",
-        "lang": "fr",
-        "word": "avant",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "before",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "avant la tombée de la nuit",
-                "trans": "before nightfall",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "arriver avant les autres",
-                "trans": "to arrive before the others",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avant de venir",
-                "trans": "before coming",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avant que qqn (n’)arrive",
-                "trans": "before someone arrives",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous nous étions rencontrés le jour d’avant.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tournez à gauche avant le carrefour.",
-                "trans": "Turn left before the intersection.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "c’est juste avant le rond-point",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il faut avant tout les avertir.",
-                "trans": "First of all, we must warn them.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Avant tout il devait m’en parler !",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "avɑ̃",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:22:06.455Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/avant",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:22:06.455Z"
-        }
-    }
-  ],
-  [
-    "depuis-fr",
-        {
-        "id": "depuis-fr",
-        "lang": "fr",
-        "word": "depuis",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "since",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "depuis la naissance de mon fils",
-                "trans": "since my son was born",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "bêcher son jardin depuis l’aube",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il n’a rien mangé depuis trois jours.",
-                "trans": "He hasn’t eaten for three days.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "travailler depuis six heures du matin",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est venu depuis Lyon.",
-                "trans": "He came from Lyon.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "marcher depuis la gare jusqu’au taxi",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "dəpɥi",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:22:11.334Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/depuis",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:22:11.334Z"
-        }
-    }
-  ],
-  [
-    "devant-fr",
-        {
-        "id": "devant-fr",
-        "lang": "fr",
-        "word": "devant",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "in front of",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "devant la glace",
-                "trans": "in front of the mirror",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "attendre devant la porte",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "dəvɑ̃",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:22:15.920Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/devant",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:22:15.920Z"
-        }
-    }
-  ],
-  [
-    "derri-re-fr",
-        {
-        "id": "derrière-fr",
-        "lang": "fr",
-        "word": "derrière",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "behind",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "derrière le canapé",
-                "trans": "behind the sofa",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La table est juste derrière la porte.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "dɛʀjɛʀ",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:22:20.865Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/derrière",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:22:20.865Z"
-        }
-    }
-  ],
-  [
-    "apr-s-fr",
-        {
-        "id": "après-fr",
-        "lang": "fr",
-        "word": "après",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "after",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "après cinq heures",
-                "trans": "after five o’clock",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est parti après avoir tout rangé.",
-                "trans": "He left after he’d put everything away.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il viendra après qu’il aura terminé.",
-                "trans": "He’ll come when he’s finished.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je viendrais après avoir déjeuné.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Prenez à droite après le feu.",
-                "trans": "Turn right after the lights.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’habite après le tournant.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Après tout, tu es libre.",
-                "trans": "After all, you’re free.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ce n’est pas si mal après tout.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "D’après lui, il serait parti en voyage.",
-                "trans": "According to him, he’s gone on a trip.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "D’après la météo, il fera beau demain.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "apʀɛ",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:22:24.698Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/après",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:22:24.698Z"
-        }
-    }
-  ],
-  [
-    "parmi-fr",
-        {
-        "id": "parmi-fr",
-        "lang": "fr",
-        "word": "parmi",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "among",
-                "confidence": 0.9,
-                "source": "cambridge"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "parmi les participants",
-                "trans": "among the participants",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai retrouvé sa lettre parmi tous mes papiers.",
-                "source": "cambridge"
-            }
-        ],
-        "phonetic": "paʀmi",
-        "tags": [],
-        "sources": [
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T05:22:29.544Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/parmi",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T05:22:29.544Z"
-        }
-    }
-  ],
-  [
-    "chez-fr",
-        {
-        "id": "chez-fr",
-        "lang": "fr",
-        "word": "chez",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "at the home/business of",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [
-            {
-                "type": "contrast",
-                "targetWord": "à",
-                "note": "chez + person/place of person; à + general place",
-                "strength": 0.6
-            }
-        ],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "S’emploie avec les noms propres, pronoms disjoints et professions: chez Marie, chez moi, chez le médecin.",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Nous dînons chez Paul",
-                "trans": "We’re having dinner at Paul’s",
-                "source": "manual"
-            },
-            {
-                "lang": "en",
-                "text": "Je suis chez le dentiste",
-                "trans": "I’m at the dentist’s",
-                "source": "manual"
-            }
-        ],
-        "phonetic": "ʃɛz",
-        "tags": [
-            "core",
-            "A1",
-            "preposition",
-            "location",
-            "at_someone_s_place"
-        ],
-        "sources": [
-            "manual"
-        ],
-        "verified": false
-    }
-  ],
-  [
-    "par-fr",
-        {
-        "id": "par-fr",
-        "lang": "fr",
-        "word": "par",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "by, through, per",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [
-            {
-                "type": "role",
-                "targetWord": "agent",
-                "note": "agent of passive verbs",
-                "strength": 0.7
-            },
-            {
-                "type": "role",
-                "targetWord": "means",
-                "note": "par = by/through as means",
-                "strength": 0.5
-            }
-        ],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "Souvent agent du passif; sert aussi pour la répartition (deux fois par jour)",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "un livre écrit par Hugo",
-                "trans": "a book written by Hugo",
-                "source": "manual"
-            },
-            {
-                "lang": "en",
-                "text": "passer par le parc",
-                "trans": "to go through the park",
-                "source": "manual"
-            },
-            {
-                "lang": "en",
-                "text": "deux fois par jour",
-                "trans": "twice per day",
-                "source": "manual"
-            }
-        ],
-        "phonetic": "paʀ",
-        "tags": [
-            "core",
-            "A1",
-            "preposition",
-            "agent",
-            "means",
-            "distribution"
-        ],
-        "sources": [
-            "manual"
-        ],
-        "verified": false
-    }
-  ],
-  [
-    "sans-fr",
-        {
-        "id": "sans-fr",
-        "lang": "fr",
-        "word": "sans",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "without",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [
-            {
-                "type": "opposite",
-                "targetWord": "avec",
-                "note": "without vs with",
-                "strength": 0.9
-            }
-        ],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "Indique l’absence ou la privation.",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "un café sans sucre",
-                "trans": "a coffee without sugar",
-                "source": "manual"
-            }
-        ],
-        "phonetic": "sɑ̃",
-        "tags": [
-            "core",
-            "A1",
-            "preposition",
-            "negation",
-            "absence"
-        ],
-        "sources": [
-            "manual"
-        ],
-        "verified": false
-    }
-  ],
-  [
-    "vers-fr",
-        {
-        "id": "vers-fr",
-        "lang": "fr",
-        "word": "vers",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "toward, around (time)",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [
-            {
-                "type": "contrast",
-                "targetWord": "envers",
-                "note": "vers = direction; envers = attitude toward",
-                "strength": 0.7
-            }
-        ],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "Direction spatiale ou approximation temporelle.",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Il marche vers la gare",
-                "trans": "He walks toward the station",
-                "source": "manual"
-            },
-            {
-                "lang": "en",
-                "text": "Rendez-vous vers six heures",
-                "trans": "Meet around six o’clock",
-                "source": "manual"
-            }
-        ],
-        "phonetic": "vɛʀ",
-        "tags": [
-            "core",
-            "A1",
-            "preposition",
-            "direction",
-            "approx_time"
-        ],
-        "sources": [
-            "manual"
-        ],
-        "verified": false
-    }
-  ],
-  [
-    "envers-fr",
-        {
-        "id": "envers-fr",
-        "lang": "fr",
-        "word": "envers",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "toward (attitude)",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [
-            {
-                "type": "contrast",
-                "targetWord": "vers",
-                "note": "envers = attitude toward someone; vers = physical direction",
-                "strength": 0.7
-            }
-        ],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "S’emploie surtout pour les sentiments/attitudes envers une personne ou un groupe.",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "sa gentillesse envers les inconnus",
-                "trans": "his kindness toward strangers",
-                "source": "manual"
-            }
-        ],
-        "phonetic": "ɑ̃vɛʀ",
-        "tags": [
-            "A2",
-            "preposition",
-            "attitude",
-            "relation"
-        ],
-        "sources": [
-            "manual"
-        ],
-        "verified": false
-    }
-  ],
-  [
-    "contre-fr",
-        {
-        "id": "contre-fr",
-        "lang": "fr",
-        "word": "contre",
-        "partOfSpeech": "preposition",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "against",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [
-            {
-                "type": "contrast",
-                "targetWord": "pour",
-                "note": "against vs for (stances)",
-                "strength": 0.7
-            },
-            {
-                "type": "spatial",
-                "targetWord": "sur",
-                "note": "contact against a surface",
-                "strength": 0.4
-            }
-        ],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "Opposition, prévention, ou appui physique.",
-        "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "être contre ce projet",
-                "trans": "to be against this project",
-                "source": "manual"
-            },
-            {
-                "lang": "en",
-                "text": "s’adosser contre le mur",
-                "trans": "to lean against the wall",
-                "source": "manual"
-            }
-        ],
-        "phonetic": "kɔ̃tʀ",
-        "tags": [
-            "core",
-            "A1",
-            "preposition",
-            "opposition",
-            "contact"
-        ],
-        "sources": [
-            "manual"
-        ],
-        "verified": false
-    }
-  ],
-  [
-    "d'-fr",
-        {
-        "id": "d'-fr",
-        "lang": "fr",
-        "word": "d'",
-        "translations": [
-            {
-                "lang": "en",
-                "text": "of/from",
-                "source": "language_academy",
-                "confidence": 0.95
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [],
-        "usage_notes": "",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "d'argent",
-                "trans": "money / of money",
-                "lang": "en"
-            },
-            {
-                "text": "d'eau",
-                "trans": "of water",
-                "lang": "en"
-            },
-            {
-                "text": "d'ici",
-                "trans": "from here",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "contraction",
-            "preposition",
-            "elision"
-        ],
-        "created_at": "2025-10-24T21:33:44.330Z",
-        "updated_at": "2025-10-24T21:33:45.508Z",
-        "sources": [
-            "language_academy",
-            "cambridge"
-        ],
-        "verified": false,
-        "definition": "contracted form of 'de' (of/from) used before vowels and silent h",
-        "partOfSpeech": "preposition"
-    }
-  ],
-  [
-    "autour-fr",
-        {
-        "id": "autour-fr",
-        "lang": "fr",
-        "word": "autour",
-        "translations": [
-            {
-                "language": "en",
-                "text": "around / about",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [
-            "neutral"
-        ],
-        "usage_notes": "Indicates location around or about something. Often used with 'de' (autour de)",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Il marche autour du parc",
-                "trans": "He walks around the park",
-                "lang": "en"
-            },
-            {
-                "text": "Les enfants jouent autour de la maison",
-                "trans": "The children play around the house",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "reading_vocabulary"
-        ],
-        "created_at": "2025-10-26T02:15:37.588Z",
-        "updated_at": "2025-10-26T02:15:37.923Z",
-        "sources": [
-            "manual",
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-26T02:15:34.311Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/autour",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-26T02:15:34.312Z"
+            "lang": "en",
+            "text": "Je vais à Paris",
+            "trans": "I'm going to Paris",
+            "source": "manual"
         },
-        "partOfSpeech": "preposition"
-    }
-  ],
-  [
-    "bas-fr",
         {
-        "id": "bas-fr",
-        "lang": "fr",
-        "word": "bas",
-        "translations": [
-            {
-                "language": "en",
-                "text": "down / low / below",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [
-            "neutral"
-        ],
-        "usage_notes": "Indicates downward direction or low position. Can be used alone or with 'en bas'",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Il regarde en bas",
-                "trans": "He looks down",
-                "lang": "en"
-            },
-            {
-                "text": "Le prix est bas",
-                "trans": "The price is low",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "reading_vocabulary"
-        ],
-        "created_at": "2025-10-26T02:15:37.592Z",
-        "updated_at": "2025-10-26T02:15:38.192Z",
-        "sources": [
-            "manual",
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-26T02:15:34.312Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/bas",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-26T02:15:34.312Z"
+            "lang": "en",
+            "text": "Il est à la maison",
+            "trans": "He is at home",
+            "source": "manual"
         },
-        "partOfSpeech": "preposition"
-    }
-  ],
-  [
-    "delà-fr",
         {
-        "id": "delà-fr",
-        "lang": "fr",
-        "word": "delà",
-        "translations": [
-            {
-                "language": "en",
-                "text": "beyond / on the other side",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [
-            "neutral"
-        ],
-        "usage_notes": "Indicates something beyond or on the other side. Often used with 'au-delà'",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Au-delà de la rivière",
-                "trans": "Beyond the river",
-                "lang": "en"
-            },
-            {
-                "text": "Il habite delà la montagne",
-                "trans": "He lives beyond the mountain",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "reading_vocabulary"
-        ],
-        "created_at": "2025-10-26T02:15:37.593Z",
-        "updated_at": "2025-10-26T02:15:38.672Z",
-        "sources": [
-            "manual",
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-26T02:15:34.312Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/del%C3%A0",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-26T02:15:34.312Z"
+            "lang": "en",
+            "text": "demander qqch à qqn",
+            "trans": "to ask sb for sth",
+            "source": "cambridge"
         },
-        "partOfSpeech": "preposition"
-    }
-  ],
-  [
-    "grâce-fr",
         {
-        "id": "grâce-fr",
-        "lang": "fr",
-        "word": "grâce",
-        "translations": [
-            {
-                "language": "en",
-                "text": "thanks to / due to",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [
-            "neutral"
-        ],
-        "usage_notes": "Indicates cause or reason, meaning 'thanks to' or 'due to'. Used with 'à' (grâce à)",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Grâce à toi, j'ai réussi",
-                "trans": "Thanks to you, I succeeded",
-                "lang": "en"
-            },
-            {
-                "text": "Grâce à la pluie, le jardin est vert",
-                "trans": "Thanks to the rain, the garden is green",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "reading_vocabulary"
-        ],
-        "created_at": "2025-10-26T02:15:37.593Z",
-        "updated_at": "2025-10-26T02:15:38.975Z",
-        "sources": [
-            "manual",
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-26T02:15:34.312Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/gr%C3%A2ce",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-26T02:15:34.312Z"
+            "lang": "en",
+            "text": "donner à boire à un enfant",
+            "trans": "to give a child sth to drink",
+            "source": "cambridge"
         },
-        "partOfSpeech": "preposition"
-    }
-  ],
-  [
-    "loin-fr",
         {
-        "id": "loin-fr",
-        "lang": "fr",
-        "word": "loin",
-        "translations": [
-            {
-                "language": "en",
-                "text": "far / distant",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [
-            "neutral"
-        ],
-        "usage_notes": "Indicates distance or remoteness. Often used with 'de' (loin de)",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Il habite loin de la ville",
-                "trans": "He lives far from the city",
-                "lang": "en"
-            },
-            {
-                "text": "L'école est loin d'ici",
-                "trans": "The school is far from here",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "reading_vocabulary"
-        ],
-        "created_at": "2025-10-26T02:15:37.593Z",
-        "updated_at": "2025-10-26T02:15:39.184Z",
-        "sources": [
-            "manual",
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-26T02:15:34.312Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/loin",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-26T02:15:34.312Z"
+            "lang": "en",
+            "text": "Il vit à Paris",
+            "trans": "He lives in Paris",
+            "source": "cambridge"
         },
-        "partOfSpeech": "preposition"
-    }
-  ],
-  [
-    "près-fr",
         {
-        "id": "près-fr",
-        "lang": "fr",
-        "word": "près",
-        "translations": [
-            {
-                "language": "en",
-                "text": "near / close to",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [
-            "neutral"
-        ],
-        "usage_notes": "Indicates proximity or closeness. Often used with 'de' (près de)",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Il habite près de la gare",
-                "trans": "He lives near the train station",
-                "lang": "en"
-            },
-            {
-                "text": "L'hôtel est près du centre",
-                "trans": "The hotel is near the center",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "reading_vocabulary"
-        ],
-        "created_at": "2025-10-26T02:15:37.593Z",
-        "updated_at": "2025-10-26T02:15:39.457Z",
-        "sources": [
-            "manual",
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-26T02:15:34.312Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/pr%C3%A8s",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-26T02:15:34.312Z"
+            "lang": "en",
+            "text": "aller à la boulangerie",
+            "trans": "to go to the bakery",
+            "source": "cambridge"
         },
-        "partOfSpeech": "preposition"
-    }
-  ],
-  [
-    "via-fr",
         {
-        "id": "via-fr",
-        "lang": "fr",
-        "word": "via",
-        "translations": [
-            {
-                "language": "en",
-                "text": "via / through / by way of",
-                "confidence": 0.9,
-                "source": "manual"
-            }
-        ],
-        "relationships": [],
-        "etymology": "",
-        "register": [
-            "neutral"
-        ],
-        "usage_notes": "Indicates route or means of passage. Used to show how something is done or achieved",
-        "regional_variants": [],
-        "examples": [
-            {
-                "text": "Je voyage via Paris",
-                "trans": "I'm traveling via Paris",
-                "lang": "en"
-            },
-            {
-                "text": "Il a appris via internet",
-                "trans": "He learned via the internet",
-                "lang": "en"
-            }
-        ],
-        "phonetic": "",
-        "cefr_level": "A1",
-        "tags": [
-            "lesson",
-            "reading_vocabulary"
-        ],
-        "created_at": "2025-10-26T02:15:37.594Z",
-        "updated_at": "2025-10-26T02:15:39.623Z",
-        "sources": [
-            "manual",
-            "cambridge"
-        ],
-        "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-26T02:15:34.312Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/via",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-26T02:15:34.312Z"
+            "lang": "en",
+            "text": "un voyage aux Seychelles",
+            "trans": "a trip to the Seychelles",
+            "source": "cambridge"
         },
-        "partOfSpeech": "preposition"
+        {
+            "lang": "en",
+            "text": "à la fin du mois",
+            "trans": "at the end of the month",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "au printemps",
+            "trans": "in the spring",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Ce livre est à Paul",
+            "trans": "This book is Paul's",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "fait à la main",
+            "trans": "hand made",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "aller à pied / bicyclette",
+            "trans": "to go on foot / by bike",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "parler à voix basse",
+            "trans": "to talk in a low voice",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "donner un manteau à nettoyer",
+            "trans": "to take a coat to be cleaned",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "une tarte au citron",
+            "trans": "a lemon tart",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "une tasse à café",
+            "trans": "a coffee cup",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "une fille aux cheveux courts",
+            "trans": "a girl with short hair",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un enfant de deux à trois ans",
+            "trans": "a two- to three-year-old child",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "100 km à l'heure",
+            "trans": "100 kms per hour",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "a",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "manual"
+    ],
+    "verified": false,
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.069Z"
+}],
+  ["avec-fr", {
+    "id": "avec-fr",
+    "lang": "fr",
+    "word": "avec",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "with",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "faire des courses avec un ami",
+            "trans": "to go shopping with a friend",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Venez avec moi, je vous montrerai l’appartement.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il s’est battu avec son frère.",
+            "trans": "He fought with his brother.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "une maison avec un jardin",
+            "trans": "a house with a garden",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un livre pour enfants avec des images",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je viendrai avec plaisir.",
+            "trans": "I’ll come with pleasure.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Avec de la patience, nous réussirons.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "manger avec les doigts",
+            "trans": "to eat with one’s fingers",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "prendre le jouet avec ses petites mains",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Avec cette chaleur, c’est difficile de travailler.",
+            "trans": "It’s hard to work with this heat.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Avec lui, tu n’arriveras jamais à rien.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "se marier avec qqn",
+            "trans": "to get married to sb",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être d’accord avec qqn",
+            "trans": "to agree with sb",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Elle est allée au théâtre avec des amies.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "avɛk",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:21:25.441Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/avec",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:21:25.441Z"
+    },
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.068Z"
+}],
+  ["dans-fr", {
+    "id": "dans-fr",
+    "lang": "fr",
+    "word": "dans",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "in",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "être dans le salon",
+            "trans": "to be in the living room",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "monter dans le bus",
+            "trans": "to get on the bus",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "lire dans le journal",
+            "trans": "to read in the paper",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "se trouver dans la cour lorsque l’orage a éclaté",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être dans une situation difficile",
+            "trans": "to be in a difficult situation",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "vivre dans de bons rapports",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Elle arrive dans une semaine.",
+            "trans": "She’ll arrive in a week.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je reviens dans un instant.",
+            "trans": "I’ll be back in a moment.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "penser revenir au pays dans un an",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Cela vaut dans les trente euros.",
+            "trans": "It’s worth about thirty euros.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Elle avait dans les dix-huit ans quand elle a obtenu son bac.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "dɑ̃",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:21:29.778Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/dans",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:21:29.778Z"
+    },
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.068Z"
+}],
+  ["sur-fr", {
+    "id": "sur-fr",
+    "lang": "fr",
+    "word": "sur",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "on",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "poser un vase sur la cheminée",
+            "trans": "to put a vase on the mantelpiece",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "s’allonger sur le canapé",
+            "trans": "to lie on the sofa",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "porter qqn sur son dos",
+            "trans": "to carry sb on one’s back",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "J’ai mis ta veste sur le porte-manteaux.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un reportage sur les loups",
+            "trans": "a feature on wolves",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je l’ai interrogé sur ses parents.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "lancer qqch sur qqn",
+            "trans": "to throw sth at sb",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "vue sur la mer",
+            "trans": "sea view",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "La maison est sur votre gauche.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "avoir de l’argent sur soi",
+            "trans": "to have money on one",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je n’ai pas votre lettre sur moi.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un jour sur deux",
+            "trans": "every other day",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Sept joueurs sur dix sont des hommes.",
+            "trans": "Seven out of ten players are men.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Sur dix assiettes cinq sont ébréchées !",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "une pièce qui mesure trois mètres sur quatre",
+            "trans": "a room that measure three meters by four",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il a couru sur cent mètres.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "syʀ",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:21:34.847Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/sur",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:21:34.847Z"
+    },
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.068Z"
+}],
+  ["sous-fr", {
+    "id": "sous-fr",
+    "lang": "fr",
+    "word": "sous",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "under",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "être sous la table",
+            "trans": "to be under the table",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "nager sous l’eau",
+            "trans": "to swim underwater",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Tes chaussures sont sous le lit !",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "travailler sous la direction de qqn",
+            "trans": "to work under sb",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Elle prépare sa thèse sous les directives d’un professeur.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "C’est arrivé sous mes yeux.",
+            "trans": "It happened right in front of me.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Elle s’est effondrée sous nos yeux.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Vous le recevrez sous peu.",
+            "trans": "You will receive it shortly.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je pense qu’il va arriver sous peu.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "su",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:21:39.556Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/sous",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:21:39.556Z"
+    },
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.068Z"
+}],
+  ["entre-fr", {
+    "id": "entre-fr",
+    "lang": "fr",
+    "word": "entre",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "between",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "entre le mur et l’armoire",
+            "trans": "between the wall and the wardrobe",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être en panne entre Paris et la banlieue",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Tout est fini entre nous.",
+            "trans": "It’s all over between us.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "L’amitié s’est brisées entre les deux amis.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "entre le début et la fin de l’année",
+            "trans": "between the beginning and the end of the year",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "avoir rendez-vous entre trois et quatre heures",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "hésiter entre plusieurs plats",
+            "trans": "to hesitate between several dishes",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "choisir entre plusieurs vêtements",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "ɑ̃tʀ",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:21:43.919Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/entre",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:21:43.919Z"
+    },
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.069Z"
+}],
+  ["de-fr", {
+    "id": "de-fr",
+    "lang": "fr",
+    "word": "de",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "from",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "venir de New York",
+            "trans": "to come from New York",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "le train de Paris",
+            "trans": "the train from Paris",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "arriver de la ville en voiture",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "le frère de Sophie",
+            "trans": "Sophie’s brother",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "la voiture de ma mère",
+            "trans": "my mother’s car",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "la fenêtre de ma chambre",
+            "trans": "my bedroom window",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "C’est le livre de mon professeur.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "des chaussures de marche",
+            "trans": "walking shoes",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "porter une combinaison de ski bleue",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un sac de cuir",
+            "trans": "a leather bag",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "porter des robes de coton l’été",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un billet de cinq euros",
+            "trans": "a five euro bill",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un appartement de cent mètres carrés",
+            "trans": "a one hundred square meter apartment",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un homme de trente ans",
+            "trans": "a man of thirty",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "habiter une maison de grande dimension",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "montrer du doigt",
+            "trans": "to point at",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "De loin, il nous saluait de la main.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "pleurer de joie",
+            "trans": "to weep with joy",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "mourir de faim",
+            "trans": "to die of hunger",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il ne cessait de crier de peur.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "partir de nuit / de bonne heure",
+            "trans": "to leave at night / early",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "C’est son costume de jour.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "du 1er janvier au 30 juin",
+            "trans": "from 1 January to 30 June",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "du matin au soir",
+            "trans": "from morning to evening",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "La grande guerre a duré de 1914 à 1918.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un livre de Victor Hugo",
+            "trans": "a book by Victor Hugo",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "aller voir Carmen de Bizet",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "parler de qqch",
+            "trans": "to talk about sth",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "se séparer de sa secrétaire à la fin du mois",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "le souvenir du passé",
+            "trans": "memory of the past",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Pour le retour de l’école il prend le bus.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "une bouteille remplie d’eau",
+            "trans": "a bottle full of water",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être content de partir",
+            "trans": "to be happy to leave",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Orné de fleurs, le char défilait dans la ville.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il y a trop de bruit.",
+            "trans": "There’s too much noise.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "N’y a-t-il pas trop de couverts sur cette table ?",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "də",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions",
+        "unit13",
+        "2024-04-05-colors"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:21:52.616Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/de",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:21:52.616Z"
+    },
+    "unit": "unit13",
+    "module": "2024-04-05-colors",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.246Z"
+}],
+  ["pour-fr", {
+    "id": "pour-fr",
+    "lang": "fr",
+    "word": "pour",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "for",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "une lettre pour qqn",
+            "trans": "a letter for sb",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "un livre pour enfants",
+            "trans": "a book for children",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être mauvais pour la santé",
+            "trans": "to be bad for one’s health",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "voter pour qqn",
+            "trans": "to vote for sb",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "C’est bon pour ton moral.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je suis pour ce candidat.",
+            "trans": "I’m for this candidate.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il est pour.",
+            "trans": "He’s in favor.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Si vous voulez aller au cinéma, je suis pour !",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "avoir pour ami",
+            "trans": "to have for a friend",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "prendre qqn pour un idiot",
+            "trans": "to take sb for a fool",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "avoir pour habitude de déjeuner dans le jardin",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "signer un papier pour qqn",
+            "trans": "to sign a paper for sb",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je le prends pour lui, je le lui donnerai.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "enfant grand pour son âge",
+            "trans": "child tall for his age",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il est trop intelligent pour sa classe.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "partir pour Paris",
+            "trans": "to leave for Paris",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Nous sommes partis pour Moscou par le train.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "partir pour les vacances",
+            "trans": "to leave on vacation",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "une amitié pour l’éternité",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "être puni pour ses crimes",
+            "trans": "to be punished for one’s crimes",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "remercier qqn pour qqch",
+            "trans": "to thank sb for sth",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je l’admire pour son courage.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "acheter qqch pour 50 euros",
+            "trans": "to buy sth for 50 euros",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "J’ai mis pour vingt euros d’essence.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "tout faire pour réussir",
+            "trans": "to do everything to succeed",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il est assez grand pour comprendre.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "J’ai tout fait pour qu’il vienne.",
+            "trans": "I did everything I could to make him come.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Faire tout son possible pour qu’il réussisse.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "puʀ",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:21:57.854Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/pour",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:21:57.854Z"
+    },
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.070Z"
+}],
+  ["pendant-fr", {
+    "id": "pendant-fr",
+    "lang": "fr",
+    "word": "pendant",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "during",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "pendant la réunion",
+            "trans": "during the meeting",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "se rencontrer pendant les années scolaires",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "pɑ̃dɑ̃",
+    "tags": [
+        "unit7",
+        "2024-05-07-reading-7"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:22:01.401Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/pendant",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:22:01.401Z"
+    },
+    "unit": "unit7",
+    "module": "2024-05-07-reading-7",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.146Z"
+}],
+  ["avant-fr", {
+    "id": "avant-fr",
+    "lang": "fr",
+    "word": "avant",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "before",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "avant la tombée de la nuit",
+            "trans": "before nightfall",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "arriver avant les autres",
+            "trans": "to arrive before the others",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "avant de venir",
+            "trans": "before coming",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "avant que qqn (n’)arrive",
+            "trans": "before someone arrives",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Nous nous étions rencontrés le jour d’avant.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Tournez à gauche avant le carrefour.",
+            "trans": "Turn left before the intersection.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "c’est juste avant le rond-point",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il faut avant tout les avertir.",
+            "trans": "First of all, we must warn them.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Avant tout il devait m’en parler !",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "avɑ̃",
+    "tags": [
+        "unit6",
+        "2024-04-24-reading-6"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:22:06.455Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/avant",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:22:06.455Z"
+    },
+    "unit": "unit6",
+    "module": "2024-04-24-reading-6",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.134Z"
+}],
+  ["depuis-fr", {
+    "id": "depuis-fr",
+    "lang": "fr",
+    "word": "depuis",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "since",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "depuis la naissance de mon fils",
+            "trans": "since my son was born",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "bêcher son jardin depuis l’aube",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il n’a rien mangé depuis trois jours.",
+            "trans": "He hasn’t eaten for three days.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "travailler depuis six heures du matin",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il est venu depuis Lyon.",
+            "trans": "He came from Lyon.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "marcher depuis la gare jusqu’au taxi",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "dəpɥi",
+    "tags": [
+        "unit8",
+        "2024-05-23-temporal-words"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:22:11.334Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/depuis",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:22:11.334Z"
+    },
+    "unit": "unit8",
+    "module": "2024-05-23-temporal-words",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.149Z"
+}],
+  ["devant-fr", {
+    "id": "devant-fr",
+    "lang": "fr",
+    "word": "devant",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "in front of",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "devant la glace",
+            "trans": "in front of the mirror",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "attendre devant la porte",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "dəvɑ̃",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:22:15.920Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/devant",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:22:15.920Z"
+    },
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.069Z"
+}],
+  ["derri-re-fr", {
+    "id": "derrière-fr",
+    "lang": "fr",
+    "word": "derrière",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "behind",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "derrière le canapé",
+            "trans": "behind the sofa",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "La table est juste derrière la porte.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "dɛʀjɛʀ",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:22:20.865Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/derrière",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:22:20.865Z"
     }
-  ]
+}],
+  ["apr-s-fr", {
+    "id": "après-fr",
+    "lang": "fr",
+    "word": "après",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "after",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "après cinq heures",
+            "trans": "after five o’clock",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il est parti après avoir tout rangé.",
+            "trans": "He left after he’d put everything away.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il viendra après qu’il aura terminé.",
+            "trans": "He’ll come when he’s finished.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je viendrais après avoir déjeuné.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Prenez à droite après le feu.",
+            "trans": "Turn right after the lights.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "J’habite après le tournant.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Après tout, tu es libre.",
+            "trans": "After all, you’re free.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Ce n’est pas si mal après tout.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "D’après lui, il serait parti en voyage.",
+            "trans": "According to him, he’s gone on a trip.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "D’après la météo, il fera beau demain.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "apʀɛ",
+    "tags": [
+        "unit7",
+        "2024-05-07-reading-7"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:22:24.698Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/après",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:22:24.698Z"
+    }
+}],
+  ["parmi-fr", {
+    "id": "parmi-fr",
+    "lang": "fr",
+    "word": "parmi",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "among",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "parmi les participants",
+            "trans": "among the participants",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "J’ai retrouvé sa lettre parmi tous mes papiers.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "paʀmi",
+    "tags": [
+        "unit9",
+        "2024-06-08-spatial-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:22:29.544Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/parmi",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:22:29.544Z"
+    },
+    "unit": "unit9",
+    "module": "2024-06-08-spatial-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.161Z"
+}],
+  ["chez-fr", {
+    "id": "chez-fr",
+    "lang": "fr",
+    "word": "chez",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "at the home/business of",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "contrast",
+            "targetWord": "à",
+            "note": "chez + person/place of person; à + general place",
+            "strength": 0.6
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "S’emploie avec les noms propres, pronoms disjoints et professions: chez Marie, chez moi, chez le médecin.",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Nous dînons chez Paul",
+            "trans": "We’re having dinner at Paul’s",
+            "source": "manual"
+        },
+        {
+            "lang": "en",
+            "text": "Je suis chez le dentiste",
+            "trans": "I’m at the dentist’s",
+            "source": "manual"
+        }
+    ],
+    "phonetic": "ʃɛz",
+    "tags": [
+        "core",
+        "A1",
+        "preposition",
+        "location",
+        "at_someone_s_place",
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "manual"
+    ],
+    "verified": false,
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.070Z"
+}],
+  ["par-fr", {
+    "id": "par-fr",
+    "lang": "fr",
+    "word": "par",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "by, through, per",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "role",
+            "targetWord": "agent",
+            "note": "agent of passive verbs",
+            "strength": 0.7
+        },
+        {
+            "type": "role",
+            "targetWord": "means",
+            "note": "par = by/through as means",
+            "strength": 0.5
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "Souvent agent du passif; sert aussi pour la répartition (deux fois par jour)",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "un livre écrit par Hugo",
+            "trans": "a book written by Hugo",
+            "source": "manual"
+        },
+        {
+            "lang": "en",
+            "text": "passer par le parc",
+            "trans": "to go through the park",
+            "source": "manual"
+        },
+        {
+            "lang": "en",
+            "text": "deux fois par jour",
+            "trans": "twice per day",
+            "source": "manual"
+        }
+    ],
+    "phonetic": "paʀ",
+    "tags": [
+        "core",
+        "A1",
+        "preposition",
+        "agent",
+        "means",
+        "distribution",
+        "unit11",
+        "2024-02-11-perception-verbs"
+    ],
+    "sources": [
+        "manual"
+    ],
+    "verified": false,
+    "unit": "unit11",
+    "module": "2024-02-11-perception-verbs",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.196Z"
+}],
+  ["sans-fr", {
+    "id": "sans-fr",
+    "lang": "fr",
+    "word": "sans",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "without",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "opposite",
+            "targetWord": "avec",
+            "note": "without vs with",
+            "strength": 0.9
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "Indique l’absence ou la privation.",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "un café sans sucre",
+            "trans": "a coffee without sugar",
+            "source": "manual"
+        }
+    ],
+    "phonetic": "sɑ̃",
+    "tags": [
+        "core",
+        "A1",
+        "preposition",
+        "negation",
+        "absence"
+    ],
+    "sources": [
+        "manual"
+    ],
+    "verified": false
+}],
+  ["vers-fr", {
+    "id": "vers-fr",
+    "lang": "fr",
+    "word": "vers",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "toward, around (time)",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "contrast",
+            "targetWord": "envers",
+            "note": "vers = direction; envers = attitude toward",
+            "strength": 0.7
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "Direction spatiale ou approximation temporelle.",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "Il marche vers la gare",
+            "trans": "He walks toward the station",
+            "source": "manual"
+        },
+        {
+            "lang": "en",
+            "text": "Rendez-vous vers six heures",
+            "trans": "Meet around six o’clock",
+            "source": "manual"
+        }
+    ],
+    "phonetic": "vɛʀ",
+    "tags": [
+        "core",
+        "A1",
+        "preposition",
+        "direction",
+        "approx_time",
+        "unit9",
+        "2024-06-05-reading-9"
+    ],
+    "sources": [
+        "manual"
+    ],
+    "verified": false,
+    "unit": "unit9",
+    "module": "2024-06-05-reading-9",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.170Z"
+}],
+  ["envers-fr", {
+    "id": "envers-fr",
+    "lang": "fr",
+    "word": "envers",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "toward (attitude)",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "contrast",
+            "targetWord": "vers",
+            "note": "envers = attitude toward someone; vers = physical direction",
+            "strength": 0.7
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "S’emploie surtout pour les sentiments/attitudes envers une personne ou un groupe.",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "sa gentillesse envers les inconnus",
+            "trans": "his kindness toward strangers",
+            "source": "manual"
+        }
+    ],
+    "phonetic": "ɑ̃vɛʀ",
+    "tags": [
+        "A2",
+        "preposition",
+        "attitude",
+        "relation"
+    ],
+    "sources": [
+        "manual"
+    ],
+    "verified": false
+}],
+  ["contre-fr", {
+    "id": "contre-fr",
+    "lang": "fr",
+    "word": "contre",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "against",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "contrast",
+            "targetWord": "pour",
+            "note": "against vs for (stances)",
+            "strength": 0.7
+        },
+        {
+            "type": "spatial",
+            "targetWord": "sur",
+            "note": "contact against a surface",
+            "strength": 0.4
+        }
+    ],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "Opposition, prévention, ou appui physique.",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "être contre ce projet",
+            "trans": "to be against this project",
+            "source": "manual"
+        },
+        {
+            "lang": "en",
+            "text": "s’adosser contre le mur",
+            "trans": "to lean against the wall",
+            "source": "manual"
+        }
+    ],
+    "phonetic": "kɔ̃tʀ",
+    "tags": [
+        "core",
+        "A1",
+        "preposition",
+        "opposition",
+        "contact"
+    ],
+    "sources": [
+        "manual"
+    ],
+    "verified": false
+}],
+  ["d'-fr", {
+    "id": "d'-fr",
+    "lang": "fr",
+    "word": "d'",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "of/from",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "d'argent",
+            "trans": "money / of money",
+            "lang": "en"
+        },
+        {
+            "text": "d'eau",
+            "trans": "of water",
+            "lang": "en"
+        },
+        {
+            "text": "d'ici",
+            "trans": "from here",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "contraction",
+        "preposition",
+        "elision",
+        "unit4",
+        "2024-03-24-everyday-nouns"
+    ],
+    "created_at": "2025-10-24T21:33:44.330Z",
+    "updated_at": "2025-10-29T17:32:29.096Z",
+    "sources": [
+        "language_academy",
+        "cambridge"
+    ],
+    "verified": false,
+    "definition": "contracted form of 'de' (of/from) used before vowels and silent h",
+    "partOfSpeech": "preposition",
+    "unit": "unit4",
+    "module": "2024-03-24-everyday-nouns",
+    "lesson": null
+}],
+  ["autour-fr", {
+    "id": "autour-fr",
+    "lang": "fr",
+    "word": "autour",
+    "translations": [
+        {
+            "language": "en",
+            "text": "around / about",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+        "neutral"
+    ],
+    "usage_notes": "Indicates location around or about something. Often used with 'de' (autour de)",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Il marche autour du parc",
+            "trans": "He walks around the park",
+            "lang": "en"
+        },
+        {
+            "text": "Les enfants jouent autour de la maison",
+            "trans": "The children play around the house",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "reading_vocabulary",
+        "unit9",
+        "2024-05-28-more-spatial-relations"
+    ],
+    "created_at": "2025-10-26T02:15:37.588Z",
+    "updated_at": "2025-10-29T17:32:29.162Z",
+    "sources": [
+        "manual",
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-26T02:15:34.311Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/autour",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-26T02:15:34.312Z"
+    },
+    "partOfSpeech": "preposition",
+    "unit": "unit9",
+    "module": "2024-05-28-more-spatial-relations",
+    "lesson": null
+}],
+  ["bas-fr", {
+    "id": "bas-fr",
+    "lang": "fr",
+    "word": "bas",
+    "translations": [
+        {
+            "language": "en",
+            "text": "down / low / below",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+        "neutral"
+    ],
+    "usage_notes": "Indicates downward direction or low position. Can be used alone or with 'en bas'",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Il regarde en bas",
+            "trans": "He looks down",
+            "lang": "en"
+        },
+        {
+            "text": "Le prix est bas",
+            "trans": "The price is low",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "reading_vocabulary"
+    ],
+    "created_at": "2025-10-26T02:15:37.592Z",
+    "updated_at": "2025-10-26T02:15:38.192Z",
+    "sources": [
+        "manual",
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-26T02:15:34.312Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/bas",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-26T02:15:34.312Z"
+    },
+    "partOfSpeech": "preposition"
+}],
+  ["delà-fr", {
+    "id": "delà-fr",
+    "lang": "fr",
+    "word": "delà",
+    "translations": [
+        {
+            "language": "en",
+            "text": "beyond / on the other side",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+        "neutral"
+    ],
+    "usage_notes": "Indicates something beyond or on the other side. Often used with 'au-delà'",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Au-delà de la rivière",
+            "trans": "Beyond the river",
+            "lang": "en"
+        },
+        {
+            "text": "Il habite delà la montagne",
+            "trans": "He lives beyond the mountain",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "reading_vocabulary"
+    ],
+    "created_at": "2025-10-26T02:15:37.593Z",
+    "updated_at": "2025-10-26T02:15:38.672Z",
+    "sources": [
+        "manual",
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-26T02:15:34.312Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/del%C3%A0",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-26T02:15:34.312Z"
+    },
+    "partOfSpeech": "preposition"
+}],
+  ["grâce-fr", {
+    "id": "grâce-fr",
+    "lang": "fr",
+    "word": "grâce",
+    "translations": [
+        {
+            "language": "en",
+            "text": "thanks to / due to",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+        "neutral"
+    ],
+    "usage_notes": "Indicates cause or reason, meaning 'thanks to' or 'due to'. Used with 'à' (grâce à)",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Grâce à toi, j'ai réussi",
+            "trans": "Thanks to you, I succeeded",
+            "lang": "en"
+        },
+        {
+            "text": "Grâce à la pluie, le jardin est vert",
+            "trans": "Thanks to the rain, the garden is green",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "reading_vocabulary",
+        "unit9",
+        "2024-05-26-causal-words"
+    ],
+    "created_at": "2025-10-26T02:15:37.593Z",
+    "updated_at": "2025-10-29T17:32:29.160Z",
+    "sources": [
+        "manual",
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-26T02:15:34.312Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/gr%C3%A2ce",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-26T02:15:34.312Z"
+    },
+    "partOfSpeech": "preposition",
+    "unit": "unit9",
+    "module": "2024-05-26-causal-words",
+    "lesson": null
+}],
+  ["loin-fr", {
+    "id": "loin-fr",
+    "lang": "fr",
+    "word": "loin",
+    "translations": [
+        {
+            "language": "en",
+            "text": "far / distant",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+        "neutral"
+    ],
+    "usage_notes": "Indicates distance or remoteness. Often used with 'de' (loin de)",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Il habite loin de la ville",
+            "trans": "He lives far from the city",
+            "lang": "en"
+        },
+        {
+            "text": "L'école est loin d'ici",
+            "trans": "The school is far from here",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "reading_vocabulary",
+        "unit9",
+        "2024-05-28-more-spatial-relations"
+    ],
+    "created_at": "2025-10-26T02:15:37.593Z",
+    "updated_at": "2025-10-29T17:32:29.161Z",
+    "sources": [
+        "manual",
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-26T02:15:34.312Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/loin",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-26T02:15:34.312Z"
+    },
+    "partOfSpeech": "preposition",
+    "unit": "unit9",
+    "module": "2024-05-28-more-spatial-relations",
+    "lesson": null
+}],
+  ["près-fr", {
+    "id": "près-fr",
+    "lang": "fr",
+    "word": "près",
+    "translations": [
+        {
+            "language": "en",
+            "text": "near / close to",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+        "neutral"
+    ],
+    "usage_notes": "Indicates proximity or closeness. Often used with 'de' (près de)",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Il habite près de la gare",
+            "trans": "He lives near the train station",
+            "lang": "en"
+        },
+        {
+            "text": "L'hôtel est près du centre",
+            "trans": "The hotel is near the center",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "reading_vocabulary",
+        "unit9",
+        "2024-05-28-more-spatial-relations"
+    ],
+    "created_at": "2025-10-26T02:15:37.593Z",
+    "updated_at": "2025-10-29T17:32:29.161Z",
+    "sources": [
+        "manual",
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-26T02:15:34.312Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/pr%C3%A8s",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-26T02:15:34.312Z"
+    },
+    "partOfSpeech": "preposition",
+    "unit": "unit9",
+    "module": "2024-05-28-more-spatial-relations",
+    "lesson": null
+}],
+  ["via-fr", {
+    "id": "via-fr",
+    "lang": "fr",
+    "word": "via",
+    "translations": [
+        {
+            "language": "en",
+            "text": "via / through / by way of",
+            "confidence": 0.9,
+            "source": "manual"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [
+        "neutral"
+    ],
+    "usage_notes": "Indicates route or means of passage. Used to show how something is done or achieved",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Je voyage via Paris",
+            "trans": "I'm traveling via Paris",
+            "lang": "en"
+        },
+        {
+            "text": "Il a appris via internet",
+            "trans": "He learned via the internet",
+            "lang": "en"
+        }
+    ],
+    "phonetic": "",
+    "cefr_level": "A1",
+    "tags": [
+        "lesson",
+        "reading_vocabulary"
+    ],
+    "created_at": "2025-10-26T02:15:37.594Z",
+    "updated_at": "2025-10-26T02:15:39.623Z",
+    "sources": [
+        "manual",
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-26T02:15:34.312Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/via",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-26T02:15:34.312Z"
+    },
+    "partOfSpeech": "preposition"
+}],
+  ["derrière-fr", {
+    "id": "derrière-fr",
+    "lang": "fr",
+    "word": "derrière",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "behind",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "derrière le canapé",
+            "trans": "behind the sofa",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "La table est juste derrière la porte.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "dɛʀjɛʀ",
+    "tags": [
+        "unit2",
+        "2024-01-20-prepositions"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:22:20.865Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/derrière",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:22:20.865Z"
+    },
+    "unit": "unit2",
+    "module": "2024-01-20-prepositions",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.069Z"
+}],
+  ["après-fr", {
+    "id": "après-fr",
+    "lang": "fr",
+    "word": "après",
+    "partOfSpeech": "preposition",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "after",
+            "confidence": 0.9,
+            "source": "cambridge"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": [],
+    "usage_notes": "",
+    "regional_variants": [],
+    "examples": [
+        {
+            "lang": "en",
+            "text": "après cinq heures",
+            "trans": "after five o’clock",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il est parti après avoir tout rangé.",
+            "trans": "He left after he’d put everything away.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Il viendra après qu’il aura terminé.",
+            "trans": "He’ll come when he’s finished.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Je viendrais après avoir déjeuné.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Prenez à droite après le feu.",
+            "trans": "Turn right after the lights.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "J’habite après le tournant.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Après tout, tu es libre.",
+            "trans": "After all, you’re free.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "Ce n’est pas si mal après tout.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "D’après lui, il serait parti en voyage.",
+            "trans": "According to him, he’s gone on a trip.",
+            "source": "cambridge"
+        },
+        {
+            "lang": "en",
+            "text": "D’après la météo, il fera beau demain.",
+            "source": "cambridge"
+        }
+    ],
+    "phonetic": "apʀɛ",
+    "tags": [
+        "unit7",
+        "2024-05-07-reading-7"
+    ],
+    "sources": [
+        "cambridge"
+    ],
+    "verified": false,
+    "cambridge_data": {
+        "scraped_at": "2025-10-23T05:22:24.698Z",
+        "url": "https://dictionary.cambridge.org/dictionary/french-english/après",
+        "confidence_score": 0.9,
+        "last_updated": "2025-10-23T05:22:24.698Z"
+    },
+    "unit": "unit7",
+    "module": "2024-05-07-reading-7",
+    "lesson": null,
+    "updated_at": "2025-10-29T17:32:29.147Z"
+}]
 ]);
-
-export default prepositionsCambridge;
