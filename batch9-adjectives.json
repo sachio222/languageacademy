@@ -1,0 +1,252 @@
+[
+  {
+    "word": "collective",
+    "translation": "collective",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "collectif",
+      "feminine_singular": "collective",
+      "masculine_plural": "collectifs",
+      "feminine_plural": "collectives"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très collective",
+        "type": "intensifier",
+        "context": "very collective",
+        "frequency": "common"
+      },
+      {
+        "phrase": "plus collective que",
+        "type": "comparative",
+        "context": "more collective than",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "culturelles",
+    "translation": "cultural (feminine plural)",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "culturel",
+      "feminine_singular": "culturelle",
+      "masculine_plural": "culturels",
+      "feminine_plural": "culturelles"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très culturelles",
+        "type": "intensifier",
+        "context": "very cultural",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les activités culturelles",
+        "type": "agreement",
+        "context": "cultural activities",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "dernière",
+    "translation": "last / final (feminine)",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "dernier",
+      "feminine_singular": "dernière",
+      "masculine_plural": "derniers",
+      "feminine_plural": "dernières"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "la dernière fois",
+        "type": "agreement",
+        "context": "the last time",
+        "frequency": "common"
+      },
+      {
+        "phrase": "très dernière",
+        "type": "intensifier",
+        "context": "very last",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "européennes",
+    "translation": "European (feminine plural)",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "européen",
+      "feminine_singular": "européenne",
+      "masculine_plural": "européens",
+      "feminine_plural": "européennes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "les villes européennes",
+        "type": "agreement",
+        "context": "European cities",
+        "frequency": "common"
+      },
+      {
+        "phrase": "très européennes",
+        "type": "intensifier",
+        "context": "very European",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "essentielles",
+    "translation": "essential (feminine plural)",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "essentiel",
+      "feminine_singular": "essentielle",
+      "masculine_plural": "essentiels",
+      "feminine_plural": "essentielles"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "les informations essentielles",
+        "type": "agreement",
+        "context": "essential information",
+        "frequency": "common"
+      },
+      {
+        "phrase": "très essentielles",
+        "type": "intensifier",
+        "context": "very essential",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "heureuse",
+    "translation": "happy (feminine)",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "heureux",
+      "feminine_singular": "heureuse",
+      "masculine_plural": "heureux",
+      "feminine_plural": "heureuses"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "très heureuse",
+        "type": "intensifier",
+        "context": "very happy",
+        "frequency": "common"
+      },
+      {
+        "phrase": "une femme heureuse",
+        "type": "agreement",
+        "context": "a happy woman",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "plusieurs",
+    "translation": "several / many",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "plusieurs",
+      "feminine_singular": "plusieurs",
+      "masculine_plural": "plusieurs",
+      "feminine_plural": "plusieurs"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "plusieurs fois",
+        "type": "agreement",
+        "context": "several times",
+        "frequency": "common"
+      },
+      {
+        "phrase": "plusieurs personnes",
+        "type": "agreement",
+        "context": "several people",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "primaire",
+    "translation": "primary (feminine)",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "primaire",
+      "feminine_singular": "primaire",
+      "masculine_plural": "primaires",
+      "feminine_plural": "primaires"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "l'école primaire",
+        "type": "agreement",
+        "context": "primary school",
+        "frequency": "common"
+      },
+      {
+        "phrase": "très primaire",
+        "type": "intensifier",
+        "context": "very primary",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "quotidienne",
+    "translation": "daily (feminine)",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "quotidien",
+      "feminine_singular": "quotidienne",
+      "masculine_plural": "quotidiens",
+      "feminine_plural": "quotidiennes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "la routine quotidienne",
+        "type": "agreement",
+        "context": "daily routine",
+        "frequency": "common"
+      },
+      {
+        "phrase": "très quotidienne",
+        "type": "intensifier",
+        "context": "very daily",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "unième",
+    "translation": "first (ordinal)",
+    "partOfSpeech": "adjective",
+    "adjective_forms": {
+      "masculine_singular": "unième",
+      "feminine_singular": "unième",
+      "masculine_plural": "unièmes",
+      "feminine_plural": "unièmes"
+    },
+    "adjective_phrases": [
+      {
+        "phrase": "la unième fois",
+        "type": "agreement",
+        "context": "the first time",
+        "frequency": "common"
+      },
+      {
+        "phrase": "très unième",
+        "type": "intensifier",
+        "context": "very first",
+        "frequency": "common"
+      }
+    ]
+  }
+]

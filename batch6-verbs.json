@@ -1,0 +1,388 @@
+[
+  {
+    "word": "achèterais",
+    "translation": "would buy",
+    "partOfSpeech": "verb",
+    "infinitive": "acheter",
+    "verb_phrases": [
+      {
+        "phrase": "j'achèterais",
+        "type": "pronoun_verb",
+        "context": "I would buy",
+        "frequency": "common"
+      },
+      {
+        "phrase": "n'achèterais pas",
+        "type": "negation",
+        "context": "would not buy",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "aimait",
+    "translation": "loved / liked",
+    "partOfSpeech": "verb",
+    "infinitive": "aimer",
+    "verb_phrases": [
+      {
+        "phrase": "il aimait",
+        "type": "pronoun_verb",
+        "context": "he loved",
+        "frequency": "common"
+      },
+      {
+        "phrase": "elle aimait",
+        "type": "pronoun_verb",
+        "context": "she loved",
+        "frequency": "common"
+      },
+      {
+        "phrase": "n'aimait pas",
+        "type": "negation",
+        "context": "did not love",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "aimerais",
+    "translation": "would like / would love",
+    "partOfSpeech": "verb",
+    "infinitive": "aimer",
+    "verb_phrases": [
+      {
+        "phrase": "j'aimerais",
+        "type": "pronoun_verb",
+        "context": "I would like",
+        "frequency": "common"
+      },
+      {
+        "phrase": "n'aimerais pas",
+        "type": "negation",
+        "context": "would not like",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "allés",
+    "translation": "gone (masculine plural)",
+    "partOfSpeech": "verb",
+    "infinitive": "aller",
+    "verb_phrases": [
+      {
+        "phrase": "ils sont allés",
+        "type": "compound_tense",
+        "context": "they went",
+        "frequency": "common"
+      },
+      {
+        "phrase": "n'ont pas allés",
+        "type": "negation",
+        "context": "did not go",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "assis",
+    "translation": "seated / sitting",
+    "partOfSpeech": "verb",
+    "infinitive": "asseoir",
+    "verb_phrases": [
+      {
+        "phrase": "être assis",
+        "type": "compound_tense",
+        "context": "to be seated",
+        "frequency": "common"
+      },
+      {
+        "phrase": "s'asseoir",
+        "type": "reflexive",
+        "context": "to sit down",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "assise",
+    "translation": "seated / sitting (feminine)",
+    "partOfSpeech": "verb",
+    "infinitive": "asseoir",
+    "verb_phrases": [
+      {
+        "phrase": "elle est assise",
+        "type": "compound_tense",
+        "context": "she is seated",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "attendent",
+    "translation": "wait / are waiting",
+    "partOfSpeech": "verb",
+    "infinitive": "attendre",
+    "verb_phrases": [
+      {
+        "phrase": "ils attendent",
+        "type": "pronoun_verb",
+        "context": "they wait",
+        "frequency": "common"
+      },
+      {
+        "phrase": "n'attendent pas",
+        "type": "negation",
+        "context": "do not wait",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "brillaient",
+    "translation": "shone / were shining",
+    "partOfSpeech": "verb",
+    "infinitive": "briller",
+    "verb_phrases": [
+      {
+        "phrase": "ils brillaient",
+        "type": "pronoun_verb",
+        "context": "they shone",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne brillaient pas",
+        "type": "negation",
+        "context": "did not shine",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "combine",
+    "translation": "combines / is combining",
+    "partOfSpeech": "verb",
+    "infinitive": "combiner",
+    "verb_phrases": [
+      {
+        "phrase": "il combine",
+        "type": "pronoun_verb",
+        "context": "he combines",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne combine pas",
+        "type": "negation",
+        "context": "does not combine",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "commandé",
+    "translation": "ordered / commanded",
+    "partOfSpeech": "verb",
+    "infinitive": "commander",
+    "verb_phrases": [
+      {
+        "phrase": "a commandé",
+        "type": "compound_tense",
+        "context": "has ordered",
+        "frequency": "common"
+      },
+      {
+        "phrase": "n'a pas commandé",
+        "type": "negation",
+        "context": "has not ordered",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "comprenais",
+    "translation": "understood / was understanding",
+    "partOfSpeech": "verb",
+    "infinitive": "comprendre",
+    "verb_phrases": [
+      {
+        "phrase": "je comprenais",
+        "type": "pronoun_verb",
+        "context": "I understood",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne comprenais pas",
+        "type": "negation",
+        "context": "did not understand",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "connais",
+    "translation": "know / knows",
+    "partOfSpeech": "verb",
+    "infinitive": "connaître",
+    "verb_phrases": [
+      {
+        "phrase": "je connais",
+        "type": "pronoun_verb",
+        "context": "I know",
+        "frequency": "common"
+      },
+      {
+        "phrase": "tu connais",
+        "type": "pronoun_verb",
+        "context": "you know",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne connais pas",
+        "type": "negation",
+        "context": "do not know",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "continue",
+    "translation": "continues / is continuing",
+    "partOfSpeech": "verb",
+    "infinitive": "continuer",
+    "verb_phrases": [
+      {
+        "phrase": "il continue",
+        "type": "pronoun_verb",
+        "context": "he continues",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne continue pas",
+        "type": "negation",
+        "context": "does not continue",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "continues",
+    "translation": "continue / are continuing",
+    "partOfSpeech": "verb",
+    "infinitive": "continuer",
+    "verb_phrases": [
+      {
+        "phrase": "tu continues",
+        "type": "pronoun_verb",
+        "context": "you continue",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne continues pas",
+        "type": "negation",
+        "context": "do not continue",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "continué",
+    "translation": "continued",
+    "partOfSpeech": "verb",
+    "infinitive": "continuer",
+    "verb_phrases": [
+      {
+        "phrase": "a continué",
+        "type": "compound_tense",
+        "context": "has continued",
+        "frequency": "common"
+      },
+      {
+        "phrase": "n'a pas continué",
+        "type": "negation",
+        "context": "has not continued",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "contributions",
+    "translation": "contribute / are contributing",
+    "partOfSpeech": "verb",
+    "infinitive": "contribuer",
+    "verb_phrases": [
+      {
+        "phrase": "ils contribuent",
+        "type": "pronoun_verb",
+        "context": "they contribute",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne contribuent pas",
+        "type": "negation",
+        "context": "do not contribute",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "deviennent",
+    "translation": "become / are becoming",
+    "partOfSpeech": "verb",
+    "infinitive": "devenir",
+    "verb_phrases": [
+      {
+        "phrase": "ils deviennent",
+        "type": "pronoun_verb",
+        "context": "they become",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne deviennent pas",
+        "type": "negation",
+        "context": "do not become",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "discutent",
+    "translation": "discuss / are discussing",
+    "partOfSpeech": "verb",
+    "infinitive": "discuter",
+    "verb_phrases": [
+      {
+        "phrase": "ils discutent",
+        "type": "pronoun_verb",
+        "context": "they discuss",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne discutent pas",
+        "type": "negation",
+        "context": "do not discuss",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "donnent",
+    "translation": "give / are giving",
+    "partOfSpeech": "verb",
+    "infinitive": "donner",
+    "verb_phrases": [
+      {
+        "phrase": "ils donnent",
+        "type": "pronoun_verb",
+        "context": "they give",
+        "frequency": "common"
+      },
+      {
+        "phrase": "ne donnent pas",
+        "type": "negation",
+        "context": "do not give",
+        "frequency": "common"
+      }
+    ]
+  }
+]
