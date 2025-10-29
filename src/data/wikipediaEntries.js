@@ -580,6 +580,21 @@ export const wikipediaEntries = {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg/960px-Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg",
     url: "https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es",
   },
+  France: {
+    name: "France",
+    description:
+      "Country in Western Europe, known for its culture, history, and cuisine",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/500px-Flag_of_France.svg.png",
+    url: "https://en.wikipedia.org/wiki/France",
+  },
+  Europe: {
+    name: "Europe",
+    description:
+      "Continent in the Northern Hemisphere, known for its culture, history, and cuisine",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Lascaux_painting.jpg/250px-Lascaux_painting.jpg",
+  },
   versailles: {
     name: "Palace of Versailles",
     description:

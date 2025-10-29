@@ -86,7 +86,8 @@ export const renderInteractiveText = (
 const checkContractionMatch = (text) => {
   // Match single letter + apostrophe + word (e.g., d'argent, l'eau, j'ai)
   // Also match qu' + word (e.g., qu'est-ce que, qu'il)
-  const contractionPattern = /^((?:[a-z]|qu)'[a-zàâäæçéèêëïîôùûüœ]+)/i;
+  // Include hyphens for compound words (e.g., l'après-midi)
+  const contractionPattern = /^((?:[a-z]|qu)'[a-zàâäæçéèêëïîôùûüœ-]+)/i;
   return text.match(contractionPattern);
 };
 
@@ -519,15 +520,23 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
         remainingText: remainingText.slice(wordLength),
         charPosition: charPosition + wordLength
       };
-    } else {
-      console.warn(`Missing translation for: "${word}"`);
-      const element = createMissingTranslationElement(word, uniqueKey);
-      return {
-        element,
-        remainingText: remainingText.slice(wordLength),
-        charPosition: charPosition + wordLength
-      };
+    } 
+    
+    // Fallback for hyphenated words: try individual words if compound word not found
+    if (word.includes('-')) {
+      const fallbackResult = processHyphenatedWordFallback(word, wordLength, uniqueKey, context, allWords, contextString, remainingText, charPosition);
+      if (fallbackResult) {
+        return fallbackResult;
+      }
     }
+    
+    console.warn(`Missing translation for: "${word}"`);
+    const element = createMissingTranslationElement(word, uniqueKey);
+    return {
+      element,
+      remainingText: remainingText.slice(wordLength),
+      charPosition: charPosition + wordLength
+    };
   } catch (error) {
     console.error("Error processing word match:", error);
     return {
@@ -536,6 +545,66 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
       charPosition: charPosition + 1
     };
   }
+};
+
+/**
+ * Process hyphenated word fallback by splitting into individual words
+ * @param {string} word - The hyphenated word (e.g., "soixante-dix")
+ * @param {number} wordLength - The length of the original word
+ * @param {string} uniqueKey - The unique key for the element
+ * @param {Object} context - The rendering context
+ * @param {Array} allWords - The dictionary words array
+ * @param {string} contextString - The context string around the word
+ * @returns {Object|null} - The result object with element and updated positions, or null if no fallback possible
+ */
+const processHyphenatedWordFallback = (word, wordLength, uniqueKey, context, allWords, contextString, remainingText, charPosition) => {
+  const { paragraphIndex } = context;
+  const wordParts = word.split('-');
+  
+  // Only proceed if we have at least 2 parts
+  if (wordParts.length < 2) {
+    return null;
+  }
+  
+  // Try to find translations for each part
+  const partData = wordParts.map(part => {
+    const partContext = getContextString(context, 0, part.length, part);
+    return getWordTranslation(part, allWords, partContext);
+  });
+  
+  // Check if all parts have translations
+  const allPartsTranslated = partData.every(data => data?.translation);
+  
+  if (allPartsTranslated) {
+    // Create a combined translation
+    const combinedTranslation = partData
+      .map(data => data.translation)
+      .join(' ');
+    
+    // Create a single interactive element for the full hyphenated word
+    const element = createInteractiveWordElement(
+      word, 
+      combinedTranslation, 
+      uniqueKey, 
+      context, 
+      'compound',
+      {
+        parts: wordParts.map((part, index) => ({
+          word: part,
+          translation: partData[index].translation,
+          partOfSpeech: partData[index].partOfSpeech
+        }))
+      }
+    );
+    
+    return {
+      element,
+      remainingText: remainingText.slice(wordLength),
+      charPosition: charPosition + wordLength
+    };
+  }
+  
+  return null;
 };
 
 /**
@@ -792,7 +861,7 @@ const CONTRACTION_RULES = {
     verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}`
   },
   "l'": {
-    noun: (wordTranslation) => wordTranslation, // l'eau = "water"
+    noun: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}`, // l'eau = "the water"
     verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}`
   },
   "j'": {

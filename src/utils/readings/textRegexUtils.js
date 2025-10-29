@@ -26,8 +26,9 @@ export const HORIZONTAL_RULE_PATTERN = /^---$/;
 /**
  * Pattern for French words (including accented characters and hyphens)
  * Matches: bonjour, français, café, là-bas, etc.
+ * Hyphens are only valid within words, not as standalone characters
  */
-export const WORD_PATTERN = /^([a-zàâäæçéèêëïîôùûüœ'-]+)/i;
+export const WORD_PATTERN = /^([a-zàâäæçéèêëïîôùûüœ]+(?:-[a-zàâäæçéèêëïîôùûüœ]+)*)/i;
 
 /**
  * Pattern for spaces and punctuation

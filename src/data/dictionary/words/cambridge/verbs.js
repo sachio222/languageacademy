@@ -26912,7 +26912,14 @@ export const verbsCambridge = new Map([
     "base_word": "chercher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -35987,7 +35994,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36033,7 +36047,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36079,7 +36100,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36125,7 +36153,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36171,7 +36206,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36217,7 +36259,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36257,7 +36306,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36297,7 +36353,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36337,7 +36400,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36377,7 +36447,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36417,7 +36494,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36457,7 +36541,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36497,7 +36588,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36537,7 +36635,14 @@ export const verbsCambridge = new Map([
     "base_word": "acheter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36577,7 +36682,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36623,7 +36735,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36669,7 +36788,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36715,7 +36841,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36761,7 +36894,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36807,7 +36947,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36847,7 +36994,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36887,7 +37041,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36927,7 +37088,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -36967,7 +37135,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37007,7 +37182,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37047,7 +37229,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37087,7 +37276,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37127,7 +37323,14 @@ export const verbsCambridge = new Map([
     "base_word": "admirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37167,7 +37370,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37218,7 +37428,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37269,7 +37486,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37320,7 +37544,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37371,7 +37602,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37422,7 +37660,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37462,7 +37707,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37502,7 +37754,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37542,7 +37801,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37582,7 +37848,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37622,7 +37895,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37662,7 +37942,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37702,7 +37989,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37742,7 +38036,14 @@ export const verbsCambridge = new Map([
     "base_word": "arriver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37782,7 +38083,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37833,7 +38141,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37879,7 +38194,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37925,7 +38247,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -37971,7 +38300,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38017,7 +38353,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38057,7 +38400,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38097,7 +38447,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38137,7 +38494,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38177,7 +38541,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38217,7 +38588,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38257,7 +38635,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38297,7 +38682,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38337,7 +38729,14 @@ export const verbsCambridge = new Map([
     "base_word": "changer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38377,7 +38776,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38423,7 +38829,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38469,7 +38882,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38515,7 +38935,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38561,7 +38988,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38607,7 +39041,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38647,7 +39088,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38687,7 +39135,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38727,7 +39182,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38767,7 +39229,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38807,7 +39276,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38847,7 +39323,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38887,7 +39370,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38927,7 +39417,14 @@ export const verbsCambridge = new Map([
     "base_word": "commencer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -38972,7 +39469,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39018,7 +39522,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39064,7 +39575,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39110,7 +39628,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39156,7 +39681,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39207,7 +39739,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39247,7 +39786,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39287,7 +39833,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39327,7 +39880,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39367,7 +39927,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39407,7 +39974,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39447,7 +40021,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39487,7 +40068,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39527,7 +40115,14 @@ export const verbsCambridge = new Map([
     "base_word": "créer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39567,7 +40162,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39613,7 +40215,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39659,7 +40268,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39705,7 +40321,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39751,7 +40374,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39797,7 +40427,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39837,7 +40474,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39877,7 +40521,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39917,7 +40568,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39957,7 +40615,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -39997,7 +40662,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40037,7 +40709,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40077,7 +40756,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40117,7 +40803,14 @@ export const verbsCambridge = new Map([
     "base_word": "décider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40162,7 +40855,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40208,7 +40908,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40254,7 +40961,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40300,7 +41014,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40346,7 +41067,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40386,7 +41114,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40426,7 +41161,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40466,7 +41208,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40506,7 +41255,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40546,7 +41302,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40586,7 +41349,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40626,7 +41396,14 @@ export const verbsCambridge = new Map([
     "base_word": "découvrir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40666,7 +41443,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40712,7 +41496,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40758,7 +41549,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40804,7 +41602,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40850,7 +41655,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40896,7 +41708,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40936,7 +41755,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -40976,7 +41802,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41016,7 +41849,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41056,7 +41896,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41096,7 +41943,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41136,7 +41990,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41176,7 +42037,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41216,7 +42084,14 @@ export const verbsCambridge = new Map([
     "base_word": "essayer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41261,7 +42136,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41312,7 +42194,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41358,7 +42247,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41404,7 +42300,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41450,7 +42353,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41496,7 +42406,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41536,7 +42453,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41576,7 +42500,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41616,7 +42547,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41656,7 +42594,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41696,7 +42641,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41736,7 +42688,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41776,7 +42735,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41816,7 +42782,14 @@ export const verbsCambridge = new Map([
     "base_word": "fonctionner",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41856,7 +42829,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "live/reside",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41902,7 +42882,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "live/reside",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41948,7 +42935,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "live/reside",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -41994,7 +42988,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "live/reside",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42040,7 +43041,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "live/reside",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42086,7 +43094,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42126,7 +43141,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42166,7 +43188,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42206,7 +43235,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42246,7 +43282,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "will live/reside",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42286,7 +43329,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "will live/reside",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42326,7 +43376,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "will live/reside",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42366,7 +43423,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "will live/reside",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42406,7 +43470,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42446,7 +43517,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42497,7 +43575,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42548,7 +43633,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42599,7 +43691,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42650,7 +43749,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42701,7 +43807,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42741,7 +43854,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42781,7 +43901,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42821,7 +43948,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42861,7 +43995,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42901,7 +44042,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42941,7 +44089,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -42981,7 +44136,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43021,7 +44183,14 @@ export const verbsCambridge = new Map([
     "base_word": "marcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43066,7 +44235,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43112,7 +44288,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43158,7 +44341,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43204,7 +44394,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43250,7 +44447,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43296,7 +44500,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43336,7 +44547,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43376,7 +44594,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43416,7 +44641,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43456,7 +44688,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43496,7 +44735,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43536,7 +44782,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43576,7 +44829,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43616,7 +44876,14 @@ export const verbsCambridge = new Map([
     "base_word": "monter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43656,7 +44923,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43707,7 +44981,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43758,7 +45039,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43809,7 +45097,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43860,7 +45155,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43911,7 +45213,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43951,7 +45260,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -43991,7 +45307,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44031,7 +45354,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44071,7 +45401,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44111,7 +45448,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44151,7 +45495,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44191,7 +45542,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44231,7 +45589,14 @@ export const verbsCambridge = new Map([
     "base_word": "regarder",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44276,7 +45641,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44322,7 +45694,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44368,7 +45747,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44414,7 +45800,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44460,7 +45853,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44500,7 +45900,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44540,7 +45947,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44580,7 +45994,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44620,7 +46041,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44660,7 +46088,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44700,7 +46135,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44740,7 +46182,14 @@ export const verbsCambridge = new Map([
     "base_word": "attendre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44780,7 +46229,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44826,7 +46282,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44872,7 +46335,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44918,7 +46388,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -44964,7 +46441,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45010,7 +46494,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45050,7 +46541,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45090,7 +46588,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45130,7 +46635,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45170,7 +46682,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45210,7 +46729,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45250,7 +46776,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45290,7 +46823,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45330,7 +46870,14 @@ export const verbsCambridge = new Map([
     "base_word": "attirer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45370,7 +46917,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45416,7 +46970,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45462,7 +47023,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45508,7 +47076,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45554,7 +47129,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45605,7 +47187,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45645,7 +47234,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45685,7 +47281,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45725,7 +47328,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45765,7 +47375,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45805,7 +47422,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45845,7 +47469,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45885,7 +47516,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45925,7 +47563,14 @@ export const verbsCambridge = new Map([
     "base_word": "communiquer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -45965,7 +47610,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46011,7 +47663,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46057,7 +47716,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46103,7 +47769,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46149,7 +47822,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46200,7 +47880,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46240,7 +47927,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46280,7 +47974,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46320,7 +48021,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46360,7 +48068,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46400,7 +48115,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46440,7 +48162,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46480,7 +48209,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46520,7 +48256,14 @@ export const verbsCambridge = new Map([
     "base_word": "connecter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46560,7 +48303,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46606,7 +48356,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46652,7 +48409,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46698,7 +48462,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46744,7 +48515,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46790,7 +48568,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46830,7 +48615,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46870,7 +48662,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46910,7 +48709,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46950,7 +48756,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -46990,7 +48803,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47030,7 +48850,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47070,7 +48897,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47110,7 +48944,14 @@ export const verbsCambridge = new Map([
     "base_word": "déplacer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47150,7 +48991,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47201,7 +49049,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47252,7 +49107,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47298,7 +49160,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47344,7 +49213,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47390,7 +49266,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47430,7 +49313,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47470,7 +49360,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47510,7 +49407,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47550,7 +49454,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47590,7 +49501,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47630,7 +49548,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47670,7 +49595,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47710,7 +49642,14 @@ export const verbsCambridge = new Map([
     "base_word": "dépêcher",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47750,7 +49689,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47796,7 +49742,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47842,7 +49795,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47888,7 +49848,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47934,7 +49901,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -47980,7 +49954,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48020,7 +50001,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48060,7 +50048,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48100,7 +50095,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48140,7 +50142,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48180,7 +50189,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48220,7 +50236,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48260,7 +50283,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48300,7 +50330,14 @@ export const verbsCambridge = new Map([
     "base_word": "embrasser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48340,7 +50377,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48391,7 +50435,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48437,7 +50488,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48483,7 +50541,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48529,7 +50594,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48575,7 +50647,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48615,7 +50694,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48655,7 +50741,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48695,7 +50788,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48735,7 +50835,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48775,7 +50882,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48815,7 +50929,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48855,7 +50976,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48895,7 +51023,14 @@ export const verbsCambridge = new Map([
     "base_word": "encourager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48935,7 +51070,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -48981,7 +51123,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49027,7 +51176,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49073,7 +51229,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49119,7 +51282,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49170,7 +51340,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49210,7 +51387,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49250,7 +51434,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49290,7 +51481,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49330,7 +51528,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49370,7 +51575,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49410,7 +51622,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49450,7 +51669,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49490,7 +51716,14 @@ export const verbsCambridge = new Map([
     "base_word": "enrichir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49530,7 +51763,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49576,7 +51816,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49622,7 +51869,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49668,7 +51922,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49714,7 +51975,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49765,7 +52033,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49805,7 +52080,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49845,7 +52127,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49885,7 +52174,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49925,7 +52221,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -49965,7 +52268,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50005,7 +52315,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50045,7 +52362,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50085,7 +52409,14 @@ export const verbsCambridge = new Map([
     "base_word": "exporter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50125,7 +52456,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50176,7 +52514,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50227,7 +52572,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50273,7 +52625,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50319,7 +52678,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50365,7 +52731,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50405,7 +52778,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50445,7 +52825,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50485,7 +52872,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50525,7 +52919,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50565,7 +52966,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50605,7 +53013,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50645,7 +53060,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50685,7 +53107,14 @@ export const verbsCambridge = new Map([
     "base_word": "habiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50725,7 +53154,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50776,7 +53212,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50827,7 +53270,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50873,7 +53323,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50919,7 +53376,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -50965,7 +53429,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51005,7 +53476,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51045,7 +53523,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51085,7 +53570,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51125,7 +53617,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51165,7 +53664,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51205,7 +53711,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51245,7 +53758,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51285,7 +53805,14 @@ export const verbsCambridge = new Map([
     "base_word": "laver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51330,7 +53857,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51376,7 +53910,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51422,7 +53963,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51473,7 +54021,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51524,7 +54079,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51570,7 +54132,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51615,7 +54184,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51655,7 +54231,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51695,7 +54278,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51735,7 +54325,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51775,7 +54372,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51815,7 +54419,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51855,7 +54466,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51895,7 +54513,14 @@ export const verbsCambridge = new Map([
     "base_word": "lever",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51940,7 +54565,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -51986,7 +54618,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52032,7 +54671,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52078,7 +54724,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52124,7 +54777,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52175,7 +54835,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52215,7 +54882,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52255,7 +54929,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52295,7 +54976,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52335,7 +55023,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52375,7 +55070,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52415,7 +55117,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52455,7 +55164,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52495,7 +55211,14 @@ export const verbsCambridge = new Map([
     "base_word": "montrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52535,7 +55258,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52581,7 +55311,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52627,7 +55364,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52673,7 +55417,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52719,7 +55470,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52770,7 +55528,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52810,7 +55575,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52850,7 +55622,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52890,7 +55669,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52930,7 +55716,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -52970,7 +55763,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53010,7 +55810,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53050,7 +55857,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53090,7 +55904,14 @@ export const verbsCambridge = new Map([
     "base_word": "adorer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53130,7 +55951,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53181,7 +56009,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53227,7 +56062,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53273,7 +56115,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53319,7 +56168,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53370,7 +56226,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53410,7 +56273,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53450,7 +56320,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53490,7 +56367,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53530,7 +56414,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53570,7 +56461,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53610,7 +56508,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53650,7 +56555,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53690,7 +56602,14 @@ export const verbsCambridge = new Map([
     "base_word": "aider",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53730,7 +56649,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53781,7 +56707,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53832,7 +56765,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53878,7 +56818,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53924,7 +56871,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -53970,7 +56924,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54010,7 +56971,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54050,7 +57018,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54090,7 +57065,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54130,7 +57112,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54170,7 +57159,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54210,7 +57206,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54250,7 +57253,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54290,7 +57300,14 @@ export const verbsCambridge = new Map([
     "base_word": "amuser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54330,7 +57347,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54381,7 +57405,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54432,7 +57463,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54483,7 +57521,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54534,7 +57579,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54585,7 +57637,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54625,7 +57684,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54665,7 +57731,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54705,7 +57778,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54745,7 +57825,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54785,7 +57872,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54825,7 +57919,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54865,7 +57966,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54905,7 +58013,14 @@ export const verbsCambridge = new Map([
     "base_word": "appeler",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54945,7 +58060,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -54991,7 +58113,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55037,7 +58166,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55083,7 +58219,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55129,7 +58272,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55175,7 +58325,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55215,7 +58372,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55255,7 +58419,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55295,7 +58466,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55335,7 +58513,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55375,7 +58560,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55415,7 +58607,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55455,7 +58654,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55495,7 +58701,14 @@ export const verbsCambridge = new Map([
     "base_word": "asseoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55535,7 +58748,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55586,7 +58806,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55632,7 +58859,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55678,7 +58912,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55724,7 +58965,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55770,7 +59018,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55810,7 +59065,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55850,7 +59112,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55890,7 +59159,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55930,7 +59206,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -55970,7 +59253,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56010,7 +59300,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56050,7 +59347,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56090,7 +59394,14 @@ export const verbsCambridge = new Map([
     "base_word": "participer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56130,7 +59441,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56176,7 +59494,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56222,7 +59547,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56268,7 +59600,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56314,7 +59653,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56354,7 +59700,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56394,7 +59747,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56434,7 +59794,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56474,7 +59841,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56514,7 +59888,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56554,7 +59935,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56594,7 +59982,14 @@ export const verbsCambridge = new Map([
     "base_word": "perdre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56639,7 +60034,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56685,7 +60087,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56731,7 +60140,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56777,7 +60193,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56823,7 +60246,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56863,7 +60293,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56903,7 +60340,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56943,7 +60387,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -56983,7 +60434,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57023,7 +60481,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57063,7 +60528,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57103,7 +60575,14 @@ export const verbsCambridge = new Map([
     "base_word": "permettre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57143,7 +60622,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57189,7 +60675,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57240,7 +60733,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57286,7 +60786,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57332,7 +60839,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57378,7 +60892,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57418,7 +60939,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57458,7 +60986,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57498,7 +61033,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57538,7 +61080,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57578,7 +61127,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57618,7 +61174,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57658,7 +61221,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57698,7 +61268,14 @@ export const verbsCambridge = new Map([
     "base_word": "plaire",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57738,7 +61315,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57789,7 +61373,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57835,7 +61426,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57881,7 +61479,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57927,7 +61532,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -57973,7 +61585,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58013,7 +61632,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58053,7 +61679,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58093,7 +61726,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58133,7 +61773,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58173,7 +61820,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58213,7 +61867,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58253,7 +61914,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58293,7 +61961,14 @@ export const verbsCambridge = new Map([
     "base_word": "poser",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58333,7 +62008,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58379,7 +62061,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58425,7 +62114,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58471,7 +62167,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58517,7 +62220,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58568,7 +62278,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58608,7 +62325,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58648,7 +62372,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58688,7 +62419,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58728,7 +62466,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58768,7 +62513,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58808,7 +62560,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58848,7 +62607,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58888,7 +62654,14 @@ export const verbsCambridge = new Map([
     "base_word": "préférer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58928,7 +62701,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -58979,7 +62759,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59030,7 +62817,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59076,7 +62870,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59122,7 +62923,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59168,7 +62976,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59208,7 +63023,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59248,7 +63070,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59288,7 +63117,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59328,7 +63164,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59368,7 +63211,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59408,7 +63258,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59448,7 +63305,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59488,7 +63352,14 @@ export const verbsCambridge = new Map([
     "base_word": "préparer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59528,7 +63399,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59579,7 +63457,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59625,7 +63510,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59671,7 +63563,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59717,7 +63616,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59763,7 +63669,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59803,7 +63716,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59843,7 +63763,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59883,7 +63810,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59923,7 +63857,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -59963,7 +63904,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60003,7 +63951,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60043,7 +63998,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60083,7 +64045,14 @@ export const verbsCambridge = new Map([
     "base_word": "préserver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60123,7 +64092,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60174,7 +64150,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60220,7 +64203,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60266,7 +64256,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60312,7 +64309,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60358,7 +64362,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60398,7 +64409,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60438,7 +64456,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60478,7 +64503,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60518,7 +64550,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60558,7 +64597,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60598,7 +64644,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60638,7 +64691,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60678,7 +64738,14 @@ export const verbsCambridge = new Map([
     "base_word": "regretter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60718,7 +64785,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60764,7 +64838,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60810,7 +64891,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60856,7 +64944,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60902,7 +64997,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60948,7 +65050,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -60988,7 +65097,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61028,7 +65144,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61068,7 +65191,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61108,7 +65238,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61148,7 +65285,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61188,7 +65332,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61228,7 +65379,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61268,7 +65426,14 @@ export const verbsCambridge = new Map([
     "base_word": "renoncer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61308,7 +65473,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61359,7 +65531,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61405,7 +65584,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61451,7 +65637,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61497,7 +65690,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61543,7 +65743,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61583,7 +65790,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61623,7 +65837,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61663,7 +65884,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61703,7 +65931,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61743,7 +65978,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61783,7 +66025,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61823,7 +66072,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61863,7 +66119,14 @@ export const verbsCambridge = new Map([
     "base_word": "rentrer",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61908,7 +66171,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -61959,7 +66229,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62010,7 +66287,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62061,7 +66345,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62112,7 +66403,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62163,7 +66461,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62203,7 +66508,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62243,7 +66555,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62283,7 +66602,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62323,7 +66649,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62363,7 +66696,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62403,7 +66743,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62443,7 +66790,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62483,7 +66837,14 @@ export const verbsCambridge = new Map([
     "base_word": "rester",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62523,7 +66884,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62569,7 +66937,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62615,7 +66990,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62661,7 +67043,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62707,7 +67096,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62753,7 +67149,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62793,7 +67196,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62833,7 +67243,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62873,7 +67290,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62913,7 +67337,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62953,7 +67384,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -62993,7 +67431,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63033,7 +67478,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63073,7 +67525,14 @@ export const verbsCambridge = new Map([
     "base_word": "retrouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63118,7 +67577,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63164,7 +67630,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63210,7 +67683,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63256,7 +67736,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63302,7 +67789,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63348,7 +67842,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63388,7 +67889,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63428,7 +67936,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63468,7 +67983,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63508,7 +68030,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63548,7 +68077,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63588,7 +68124,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63628,7 +68171,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63668,7 +68218,14 @@ export const verbsCambridge = new Map([
     "base_word": "revoir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63708,7 +68265,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63754,7 +68318,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63800,7 +68371,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63846,7 +68424,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63892,7 +68477,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63938,7 +68530,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -63978,7 +68577,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64018,7 +68624,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64063,7 +68676,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64103,7 +68723,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64143,7 +68770,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64183,7 +68817,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64223,7 +68864,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64263,7 +68911,14 @@ export const verbsCambridge = new Map([
     "base_word": "réussir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64308,7 +68963,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64359,7 +69021,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64410,7 +69079,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64461,7 +69137,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64512,7 +69195,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64558,7 +69248,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64598,7 +69295,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64638,7 +69342,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64678,7 +69389,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64718,7 +69436,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64758,7 +69483,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64798,7 +69530,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64838,7 +69577,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64878,7 +69624,14 @@ export const verbsCambridge = new Map([
     "base_word": "réveiller",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64923,7 +69676,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -64974,7 +69734,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65025,7 +69792,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65071,7 +69845,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65117,7 +69898,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65163,7 +69951,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65203,7 +69998,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65243,7 +70045,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65283,7 +70092,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65323,7 +70139,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65363,7 +70186,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65403,7 +70233,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65443,7 +70280,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65483,7 +70327,14 @@ export const verbsCambridge = new Map([
     "base_word": "rêver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65523,7 +70374,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65569,7 +70427,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65615,7 +70480,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65661,7 +70533,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65707,7 +70586,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65753,7 +70639,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65799,7 +70692,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65839,7 +70739,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65879,7 +70786,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65919,7 +70833,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65959,7 +70880,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -65999,7 +70927,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66039,7 +70974,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66079,7 +71021,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66119,7 +71068,14 @@ export const verbsCambridge = new Map([
     "base_word": "se souvenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66159,7 +71115,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66205,7 +71168,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66251,7 +71221,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66297,7 +71274,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66343,7 +71327,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66394,7 +71385,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66434,7 +71432,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66474,7 +71479,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66514,7 +71526,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66554,7 +71573,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66594,7 +71620,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66634,7 +71667,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66674,7 +71714,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66714,7 +71761,14 @@ export const verbsCambridge = new Map([
     "base_word": "soutenir",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66754,7 +71808,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66805,7 +71866,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66856,7 +71924,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66907,7 +71982,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -66958,7 +72040,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67009,7 +72098,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67049,7 +72145,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67089,7 +72192,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67129,7 +72239,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67169,7 +72286,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67209,7 +72333,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67249,7 +72380,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67289,7 +72427,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67329,7 +72474,14 @@ export const verbsCambridge = new Map([
     "base_word": "trouver",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67374,7 +72526,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67420,7 +72579,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67466,7 +72632,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67512,7 +72685,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67558,7 +72738,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67604,7 +72791,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67644,7 +72838,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67684,7 +72885,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67724,7 +72932,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67764,7 +72979,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67804,7 +73026,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67844,7 +73073,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67884,7 +73120,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67924,7 +73167,14 @@ export const verbsCambridge = new Map([
     "base_word": "visiter",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -67964,7 +73214,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68015,7 +73272,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68066,7 +73330,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68117,7 +73388,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68168,7 +73446,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68219,7 +73504,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68259,7 +73551,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68299,7 +73598,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68339,7 +73645,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68379,7 +73692,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68419,7 +73739,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68459,7 +73786,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68499,7 +73833,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68539,7 +73880,14 @@ export const verbsCambridge = new Map([
     "base_word": "vivre",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68584,7 +73932,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68635,7 +73990,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68681,7 +74043,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68727,7 +74096,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68773,7 +74149,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68819,7 +74202,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68859,7 +74249,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68899,7 +74296,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68939,7 +74343,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -68979,7 +74390,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -69019,7 +74437,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -69059,7 +74484,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -69099,7 +74531,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "plural",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
@@ -69139,7 +74578,14 @@ export const verbsCambridge = new Map([
     "base_word": "voyager",
     "gender": "none",
     "number": "singular",
-    "translations": [],
+    "translations": [
+        {
+            "lang": "en",
+            "text": "lived/resided",
+            "source": "language_academy",
+            "confidence": 0.95
+        }
+    ],
     "relationships": [],
     "etymology": "",
     "register": [],
