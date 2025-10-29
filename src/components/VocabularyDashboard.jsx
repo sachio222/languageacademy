@@ -9,6 +9,71 @@ import { DictionaryLookup, LessonCompatibility, VocabularyStats } from '../data/
 import { useDictionary } from '../hooks/useDictionary';
 import '../styles/VocabularyDashboard.css';
 
+// Graph display constants
+const GRAPH_CONSTANTS = {
+  // Link properties
+  LINK_COLOR: '#f59e0b',
+  LINK_WIDTH: 1,
+  LINK_DISTANCE: 200,
+  
+  // Node properties
+  NODE_REPULSION: -10,
+  NODE_RADIUS: 1.2,
+  NODE_FONT_SIZE: 11,
+  NODE_STROKE_WIDTH: 0.15,
+  NODE_STROKE_OPACITY: 0.4,
+  NODE_FILL_OPACITY: 0.9,
+  NODE_SHADOW_BLUR: 2,
+  NODE_LABEL_OFFSET: 1,
+  NODE_ENGLISH_FONT_SCALE: 0.65,
+  NODE_ENGLISH_OPACITY: 0.6,
+  NODE_ENGLISH_OFFSET: 0.5,
+  
+  // Force simulation properties
+  VELOCITY_DECAY: 0.15,
+  ALPHA_DECAY: 0.008,
+  CENTER_FORCE_STRENGTH: 1,
+  
+  // Animation properties
+  COOLDOWN_TICKS: 300,
+  ZOOM_FIT_DURATION: 400,
+  ZOOM_IN_FACTOR: 1.2,
+  ZOOM_OUT_FACTOR: 0.8,
+  CENTER_AT_DURATION: 1000,
+  
+  // UI properties
+  ICON_SIZE: 14,
+  TOOLTIP_BACKGROUND: 'rgba(0,0,0,0.9)',
+  TOOLTIP_PADDING: '8px 12px',
+  TOOLTIP_BORDER_RADIUS: 6,
+  TOOLTIP_FONT_SIZE: 12,
+  TOOLTIP_FONT_WEIGHT: 600,
+  TOOLTIP_MARGIN_BOTTOM: 4,
+  TOOLTIP_OPACITY: 0.8,
+  TOOLTIP_FONT_STYLE: 'italic',
+  TOOLTIP_MARGIN_TOP: 4,
+  TOOLTIP_FONT_SIZE_SMALL: 10,
+  TOOLTIP_OPACITY_SMALL: 0.6,
+  TOOLTIP_FONT_SIZE_TINY: 9,
+  TOOLTIP_OPACITY_TINY: 0.5,
+  TOOLTIP_MARGIN_TOP_TINY: 2,
+  
+  // Background
+  BACKGROUND_COLOR: 'rgba(15, 23, 42, 1)',
+  
+  // Canvas drawing constants
+  CANVAS_ARC_START: 0,
+  CANVAS_ARC_END: 2 * Math.PI,
+  CANVAS_SHADOW_COLOR: 'rgba(0, 0, 0, 0.8)',
+  
+  // Array access
+  FIRST_TRANSLATION_INDEX: 0,
+  
+  // Center coordinates
+  CENTER_X: 0,
+  CENTER_Y: 0
+};
+
 function VocabularyDashboard({ completedExercises }) {
   const { supabaseClient, supabaseUser } = useAuth();
   const { moduleProgress } = useSupabaseProgress();
@@ -42,137 +107,24 @@ function VocabularyDashboard({ completedExercises }) {
     return lesson.exercises?.length || 0;
   };
 
-  // High-performance word categorization using dictionary lookup
-  const categorizeWord = (vocab) => {
-    const french = vocab.french?.toLowerCase().trim();
-    if (!french) return 'Unknown';
-
-    // Try dictionary lookup first (O(1) performance)
-    const wordId = `${french}-fr`;
-    const category = LessonCompatibility.getWordCategory(wordId);
-
-    if (category !== 'Unknown') {
-      return category;
+  // Simple word categorization using dictionary data only
+  const categorizeWord = (word) => {
+    // Use the part of speech from the dictionary entry
+    switch (word.partOfSpeech) {
+      case 'noun': return 'Nouns';
+      case 'verb': return 'Verbs';
+      case 'adjective': return 'Adjectives';
+      case 'adverb': return 'Adverbs';
+      case 'pronoun': return 'Pronouns';
+      case 'article': return 'Articles';
+      case 'preposition': return 'Prepositions';
+      case 'conjunction': return 'Conjunctions';
+      case 'interjection': return 'Interjections';
+      case 'interrogative': return 'Question Words';
+      case 'alphabet': return 'Alphabet';
+      case 'expression': return 'Expressions';
+      default: return 'Other';
     }
-
-    // Fallback to legacy categorization for words not in dictionary
-    const note = vocab.note?.toLowerCase() || '';
-
-    // Check note field first
-    if (note.includes('verb') || note.includes('conjugat')) return 'Verbs';
-    if (note.includes('adjective')) return 'Adjectives';
-    if (note.includes('adverb')) return 'Adverbs';
-    if (note.includes('preposition')) return 'Prepositions';
-    if (note.includes('pronoun')) return 'Pronouns';
-    if (note.includes('article')) return 'Articles';
-    if (note.includes('number')) return 'Numbers';
-    if (note.includes('conjunction')) return 'Conjunctions';
-
-    // Common expressions
-    const commonExpressions = ['ça va', 'ça va?', "qu'est-ce que", "qu'est-ce que c'est", 'il y a',
-      'merci beaucoup', 'de rien', 's\'il vous plaît', 's\'il te plaît', 'excusez-moi', 'pardon',
-      'bonne nuit', 'bonne journée', 'à bientôt', 'au revoir', 'salut', 'bonjour', 'bonsoir'];
-    if (commonExpressions.includes(french)) return 'Expressions';
-
-    // Articles
-    const articles = ['un', 'une', 'le', 'la', 'les', "l'", 'du', 'de la', 'des', 'au', 'aux'];
-    if (articles.includes(french)) return 'Articles';
-
-    // Demonstratives
-    const demonstratives = ['ce', 'cet', 'cette', 'ces', 'ça', 'ceci', 'cela'];
-    if (demonstratives.includes(french)) return 'Demonstratives';
-
-    // Pronouns - check this first to avoid conflicts
-    const pronouns = ['on', 'je', 'tu', 'il', 'elle', 'nous', 'vous', 'ils', 'elles', 'me', 'te', 'se', 'lui', 'leur', 'y', 'en'];
-    if (pronouns.includes(french)) {
-      if (french === 'on') {
-        console.log('"on" found in pronouns list - returning Pronouns');
-      }
-      return 'Pronouns';
-    }
-
-    // Possessives
-    const possessives = ['mon', 'ma', 'mes', 'ton', 'ta', 'tes', 'son', 'sa', 'ses', 'notre', 'nos', 'votre', 'vos', 'leur', 'leurs'];
-    if (possessives.includes(french)) return 'Possessives';
-
-    // Question words
-    const questionWords = ['que', 'qui', 'où', 'quand', 'comment', 'pourquoi', 'combien', 'quel', 'quelle', 'quels', 'quelles'];
-    if (questionWords.includes(french)) return 'Question Words';
-
-    // Prepositions
-    const prepositions = ['à', 'de', 'dans', 'sur', 'sous', 'avec', 'sans', 'pour', 'par',
-      'devant', 'derrière', 'entre', 'chez', 'vers', 'depuis', 'pendant', 'avant', 'après'];
-    if (prepositions.includes(french)) return 'Prepositions';
-
-    // Conjunctions
-    const conjunctions = ['et', 'ou', 'mais', 'donc', 'car', 'ni', 'or', 'parce que', 'puisque', 'quand', 'si', 'comme'];
-    if (conjunctions.includes(french)) return 'Conjunctions';
-
-    // Numbers
-    const numbers = ['zéro', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix',
-      'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'cent', 'mille'];
-    if (numbers.includes(french)) return 'Numbers';
-
-    // Adverbs
-    const adverbs = ['bien', 'mal', 'très', 'assez', 'beaucoup', 'peu', 'trop', 'plus', 'moins', 'aussi',
-      'encore', 'déjà', 'jamais', 'toujours', 'souvent', 'parfois', 'maintenant', 'hier', 'demain'];
-    if (adverbs.includes(french) || french.endsWith('ment')) return 'Adverbs';
-
-    // Adjectives
-    const adjectives = ['bon', 'bonne', 'mauvais', 'mauvaise', 'grand', 'grande', 'petit', 'petite',
-      'beau', 'belle', 'nouveau', 'nouvelle', 'vieux', 'vieille', 'jeune', 'blanc', 'blanche', 'noir', 'noire',
-      'rouge', 'bleu', 'bleue', 'vert', 'verte', 'content', 'contente', 'heureux', 'heureuse'];
-    if (adjectives.includes(french)) return 'Adjectives';
-
-    // Verbs - comprehensive list including all conjugated forms
-    const verbs = [
-      // Infinitives
-      'être', 'avoir', 'faire', 'aller', 'venir', 'voir', 'savoir', 'pouvoir', 'vouloir', 'devoir', 'dire', 'prendre', 'mettre', 'partir', 'sortir', 'dormir', 'servir', 'ouvrir', 'couvrir', 'offrir', 'suffire',
-      // être conjugations
-      'suis', 'es', 'est', 'sommes', 'êtes', 'sont',
-      // avoir conjugations
-      'ai', 'as', 'a', 'avons', 'avez', 'ont',
-      // faire conjugations
-      'fais', 'fais', 'fait', 'faisons', 'faites', 'font',
-      // aller conjugations
-      'vais', 'vas', 'va', 'allons', 'allez', 'vont',
-      // venir conjugations
-      'viens', 'viens', 'vient', 'venons', 'venez', 'viennent',
-      // voir conjugations
-      'vois', 'vois', 'voit', 'voyons', 'voyez', 'voient',
-      // savoir conjugations
-      'sais', 'sais', 'sait', 'savons', 'savez', 'savent',
-      // pouvoir conjugations
-      'peux', 'peux', 'peut', 'pouvons', 'pouvez', 'peuvent',
-      // vouloir conjugations
-      'veux', 'veux', 'veut', 'voulons', 'voulez', 'veulent',
-      // dire conjugations
-      'dis', 'dis', 'dit', 'disons', 'dites', 'disent',
-      // prendre conjugations
-      'prends', 'prends', 'prend', 'prenons', 'prenez', 'prennent',
-      // mettre conjugations
-      'mets', 'mets', 'met', 'mettons', 'mettez', 'mettent',
-      // partir conjugations
-      'pars', 'pars', 'part', 'partons', 'partez', 'partent',
-      // sortir conjugations
-      'sors', 'sors', 'sort', 'sortons', 'sortez', 'sortent',
-      // dormir conjugations
-      'dors', 'dors', 'dort', 'dormons', 'dormez', 'dorment',
-      // servir conjugations
-      'sers', 'sers', 'sert', 'servons', 'servez', 'servent',
-      // ouvrir conjugations
-      'ouvre', 'ouvres', 'ouvre', 'ouvrons', 'ouvrez', 'ouvrent',
-      // couvrir conjugations
-      'couvre', 'couvres', 'couvre', 'couvrons', 'couvrez', 'couvrent',
-      // offrir conjugations
-      'offre', 'offres', 'offre', 'offrons', 'offrez', 'offrent',
-      // suffire conjugations
-      'suffis', 'suffis', 'suffit', 'suffisons', 'suffisez', 'suffisent'
-    ];
-    if (verbs.includes(french) || french.endsWith('er') || french.endsWith('ir') || french.endsWith('re')) return 'Verbs';
-
-    if (french.includes(' ')) return 'Phrases';
-    return 'Nouns';
   };
 
   // Get category color
@@ -218,13 +170,13 @@ function VocabularyDashboard({ completedExercises }) {
     const completedUnits = new Set(completedModules.map(m => m.unit).filter(Boolean));
 
     return allWords.filter(word => {
-      // Check if word belongs to a completed module
-      if (word.module && completedModuleKeys.has(word.module)) {
-        return true;
+      // Only show words that have BOTH unit AND module fields
+      if (!word.unit || !word.module || word.module === 'undefined') {
+        return false;
       }
       
-      // Check if word belongs to a completed unit
-      if (word.unit && completedUnits.has(word.unit)) {
+      // Check if word belongs to a completed module (using dictionary module field)
+      if (completedModuleKeys.has(word.module)) {
         return true;
       }
       
@@ -266,31 +218,17 @@ function VocabularyDashboard({ completedExercises }) {
         learnedWords.forEach(word => {
           const french = word.word.trim();
           
-          if (!uniqueWords.has(french)) {
-            uniqueWords.add(french);
+                if (!uniqueWords.has(french)) {
+                  uniqueWords.add(french);
             
             // Determine category from part of speech
-            let category = 'Other';
-            switch (word.partOfSpeech) {
-              case 'noun': category = 'Nouns'; break;
-              case 'verb': category = 'Verbs'; break;
-              case 'adjective': category = 'Adjectives'; break;
-              case 'adverb': category = 'Adverbs'; break;
-              case 'pronoun': category = 'Pronouns'; break;
-              case 'article': category = 'Articles'; break;
-              case 'preposition': category = 'Prepositions'; break;
-              case 'conjunction': category = 'Conjunctions'; break;
-              case 'interjection': category = 'Interjections'; break;
-              case 'interrogative': category = 'Interrogatives'; break;
-              case 'alphabet': category = 'Alphabet'; break;
-              case 'expression': category = 'Expressions'; break;
-            }
+            const category = categorizeWord(word);
 
             // Create node data
             const nodeData = {
               id: french,
               french: french,
-              english: word.translations?.[0]?.text || 'No translation',
+              english: word.translations?.[GRAPH_CONSTANTS.FIRST_TRANSLATION_INDEX]?.text || 'No translation',
               note: word.definition || '',
               category: category,
               lessonTitle: `Unit ${word.unit?.replace('unit', '') || 'Unknown'}`,
@@ -317,12 +255,34 @@ function VocabularyDashboard({ completedExercises }) {
         // Create nodes array
         const nodes = Array.from(nodesMap.values());
 
-
-
+        // Create verb connections using relationships
+        const links = [];
+        const verbNodes = nodes.filter(node => node.category === 'Verbs');
+        
+        verbNodes.forEach(node => {
+          const wordEntry = learnedWords.find(w => w.word === node.french);
+          if (wordEntry && wordEntry.relationships) {
+            wordEntry.relationships.forEach(relationship => {
+              if (relationship.type === 'conjugation_pair') {
+                const targetWord = relationship.targetWord;
+                const targetNode = nodes.find(n => n.french === targetWord);
+                
+                if (targetNode) {
+          links.push({
+                    source: node.french,
+                    target: targetWord,
+                    type: 'conjugation',
+                    note: relationship.note || 'conjugation'
+                    });
+                  }
+                }
+              });
+            }
+          });
 
         console.timeEnd('VocabularyDashboard: Dictionary processing');
 
-        setGraphData({ nodes, links: [] });
+        setGraphData({ nodes, links });
         setTotalWords(uniqueWords.size);
 
         console.log(`📊 Processed ${uniqueWords.size} vocabulary items in dashboard`);
@@ -334,40 +294,40 @@ function VocabularyDashboard({ completedExercises }) {
     };
 
     loadVocabulary();
-  }, [supabaseUser, supabaseClient, moduleProgress, completedExercises]);
+  }, [supabaseUser, supabaseClient, moduleProgress, completedExercises, allWords]);
 
   // Custom node canvas object
   const drawNode = useCallback((node, ctx, globalScale) => {
     const label = node.french;
-    const fontSize = 11 / globalScale;
-    const nodeRadius = 1.2;
+    const fontSize = GRAPH_CONSTANTS.NODE_FONT_SIZE / globalScale;
+    const nodeRadius = GRAPH_CONSTANTS.NODE_RADIUS;
 
     ctx.font = `${fontSize}px Sans-Serif`;
 
     // Draw node circle
     ctx.beginPath();
-    ctx.arc(node.x, node.y, nodeRadius, 0, 2 * Math.PI, false);
+    ctx.arc(node.x, node.y, nodeRadius, GRAPH_CONSTANTS.CANVAS_ARC_START, GRAPH_CONSTANTS.CANVAS_ARC_END, false);
     ctx.fillStyle = node.color;
     ctx.fill();
 
     // Draw stroke
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
-    ctx.lineWidth = 0.15;
+    ctx.strokeStyle = `rgba(255, 255, 255, ${GRAPH_CONSTANTS.NODE_STROKE_OPACITY})`;
+    ctx.lineWidth = GRAPH_CONSTANTS.NODE_STROKE_WIDTH;
     ctx.stroke();
 
     // Draw label
     ctx.textAlign = 'center';
     ctx.textBaseline = 'top';
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
-    ctx.shadowColor = 'rgba(0, 0, 0, 0.8)';
-    ctx.shadowBlur = 2;
-    ctx.fillText(label, node.x, node.y + nodeRadius + 1);
+    ctx.fillStyle = `rgba(255, 255, 255, ${GRAPH_CONSTANTS.NODE_FILL_OPACITY})`;
+    ctx.shadowColor = GRAPH_CONSTANTS.CANVAS_SHADOW_COLOR;
+    ctx.shadowBlur = GRAPH_CONSTANTS.NODE_SHADOW_BLUR;
+    ctx.fillText(label, node.x, node.y + nodeRadius + GRAPH_CONSTANTS.NODE_LABEL_OFFSET);
     ctx.shadowBlur = 0;
 
     // Draw English translation
-    ctx.font = `${fontSize * 0.65}px Sans-Serif`;
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
-    ctx.fillText(node.english, node.x, node.y + nodeRadius + 1 + fontSize + 0.5);
+    ctx.font = `${fontSize * GRAPH_CONSTANTS.NODE_ENGLISH_FONT_SCALE}px Sans-Serif`;
+    ctx.fillStyle = `rgba(255, 255, 255, ${GRAPH_CONSTANTS.NODE_ENGLISH_OPACITY})`;
+    ctx.fillText(node.english, node.x, node.y + nodeRadius + GRAPH_CONSTANTS.NODE_LABEL_OFFSET + fontSize + GRAPH_CONSTANTS.NODE_ENGLISH_OFFSET);
   }, []);
 
   if (loading) {
@@ -398,35 +358,35 @@ function VocabularyDashboard({ completedExercises }) {
               onClick={() => window.history.back()}
               title="Close vocabulary tree"
             >
-              <X size={14} />
+              <X size={GRAPH_CONSTANTS.ICON_SIZE} />
             </button>
           </div>
         </div>
 
         <div className="canvas-controls">
           <button
-            onClick={() => graphRef.current?.zoomToFit(400)}
+            onClick={() => graphRef.current?.zoomToFit(GRAPH_CONSTANTS.ZOOM_FIT_DURATION)}
             title="Fit to view"
           >
-            <Home size={14} />
+            <Home size={GRAPH_CONSTANTS.ICON_SIZE} />
           </button>
           <button
-            onClick={() => graphRef.current?.zoom(graphRef.current.zoom() * 1.2)}
+            onClick={() => graphRef.current?.zoom(graphRef.current.zoom() * GRAPH_CONSTANTS.ZOOM_IN_FACTOR)}
             title="Zoom in"
           >
-            <ZoomIn size={14} />
+            <ZoomIn size={GRAPH_CONSTANTS.ICON_SIZE} />
           </button>
           <button
-            onClick={() => graphRef.current?.zoom(graphRef.current.zoom() * 0.8)}
+            onClick={() => graphRef.current?.zoom(graphRef.current.zoom() * GRAPH_CONSTANTS.ZOOM_OUT_FACTOR)}
             title="Zoom out"
           >
-            <ZoomOut size={14} />
+            <ZoomOut size={GRAPH_CONSTANTS.ICON_SIZE} />
           </button>
           <button
-            onClick={() => graphRef.current?.centerAt(0, 0, 1000)}
+            onClick={() => graphRef.current?.centerAt(GRAPH_CONSTANTS.CENTER_X, GRAPH_CONSTANTS.CENTER_Y, GRAPH_CONSTANTS.CENTER_AT_DURATION)}
             title="Center view"
           >
-            <Target size={14} />
+            <Target size={GRAPH_CONSTANTS.ICON_SIZE} />
           </button>
           <button
             onClick={() => {
@@ -435,39 +395,43 @@ function VocabularyDashboard({ completedExercises }) {
             }}
             title="Reorganize layout"
           >
-            <RotateCcw size={14} />
+            <RotateCcw size={GRAPH_CONSTANTS.ICON_SIZE} />
           </button>
         </div>
 
         <div className="graph-container">
           <ForceGraph2D
+            key={`graph-${GRAPH_CONSTANTS.NODE_REPULSION}-${GRAPH_CONSTANTS.LINK_DISTANCE}-${GRAPH_CONSTANTS.CENTER_FORCE_STRENGTH}`}
             ref={graphRef}
             graphData={graphData}
             nodeId="id"
             nodeLabel={node => `
-            <div style="background: rgba(0,0,0,0.9); padding: 8px 12px; border-radius: 6px; font-size: 12px;">
-              <div style="font-weight: 600; margin-bottom: 4px;">${node.french} - ${node.english}</div>
-              ${node.note ? `<div style="opacity: 0.8; font-style: italic; margin-bottom: 4px;">${node.note}</div>` : ''}
-              <div style="font-size: 10px; opacity: 0.6; margin-top: 4px;">${node.lessonTitle}</div>
-              <div style="font-size: 9px; opacity: 0.5; margin-top: 2px;">
+            <div style="background: ${GRAPH_CONSTANTS.TOOLTIP_BACKGROUND}; padding: ${GRAPH_CONSTANTS.TOOLTIP_PADDING}; border-radius: ${GRAPH_CONSTANTS.TOOLTIP_BORDER_RADIUS}px; font-size: ${GRAPH_CONSTANTS.TOOLTIP_FONT_SIZE}px;">
+              <div style="font-weight: ${GRAPH_CONSTANTS.TOOLTIP_FONT_WEIGHT}; margin-bottom: ${GRAPH_CONSTANTS.TOOLTIP_MARGIN_BOTTOM}px;">${node.french} - ${node.english}</div>
+              ${node.note ? `<div style="opacity: ${GRAPH_CONSTANTS.TOOLTIP_OPACITY}; font-style: ${GRAPH_CONSTANTS.TOOLTIP_FONT_STYLE}; margin-bottom: ${GRAPH_CONSTANTS.TOOLTIP_MARGIN_BOTTOM}px;">${node.note}</div>` : ''}
+              <div style="font-size: ${GRAPH_CONSTANTS.TOOLTIP_FONT_SIZE_SMALL}px; opacity: ${GRAPH_CONSTANTS.TOOLTIP_OPACITY_SMALL}; margin-top: ${GRAPH_CONSTANTS.TOOLTIP_MARGIN_TOP}px;">${node.lessonTitle}</div>
+              <div style="font-size: ${GRAPH_CONSTANTS.TOOLTIP_FONT_SIZE_TINY}px; opacity: ${GRAPH_CONSTANTS.TOOLTIP_OPACITY_TINY}; margin-top: ${GRAPH_CONSTANTS.TOOLTIP_MARGIN_TOP_TINY}px;">
                 ${node.category}
               </div>
             </div>
           `}
             nodeCanvasObject={drawNode}
             nodeCanvasObjectMode={() => 'replace'}
-            backgroundColor="rgba(15, 23, 42, 1)"
-            cooldownTicks={300}
-            onEngineStop={() => graphRef.current?.zoomToFit(400)}
+            linkColor={() => GRAPH_CONSTANTS.LINK_COLOR}
+            linkWidth={GRAPH_CONSTANTS.LINK_WIDTH}
+            linkDistance={GRAPH_CONSTANTS.LINK_DISTANCE}
+            backgroundColor={GRAPH_CONSTANTS.BACKGROUND_COLOR}
+            cooldownTicks={GRAPH_CONSTANTS.COOLDOWN_TICKS}
+            onEngineStop={() => graphRef.current?.zoomToFit(GRAPH_CONSTANTS.ZOOM_FIT_DURATION)}
             enableNodeDrag={true}
             enableZoomInteraction={true}
             enablePanInteraction={true}
-            d3VelocityDecay={0.15}
-            d3AlphaDecay={0.008}
+            d3VelocityDecay={GRAPH_CONSTANTS.VELOCITY_DECAY}
+            d3AlphaDecay={GRAPH_CONSTANTS.ALPHA_DECAY}
             d3ReheatSimulation={false}
-            nodeRepulsion={-300}
+            nodeRepulsion={GRAPH_CONSTANTS.NODE_REPULSION}
             d3Force="center"
-            d3ForceStrength={0.1}
+            d3ForceStrength={GRAPH_CONSTANTS.CENTER_FORCE_STRENGTH}
             onNodeDragEnd={node => {
               // Release fixed position after drag
               node.fx = node.fy = undefined;
