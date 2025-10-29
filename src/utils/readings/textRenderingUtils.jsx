@@ -79,18 +79,20 @@ export const renderInteractiveText = (
 
 
 /**
- * Check for French contractions (single letter + apostrophe)
+ * Check for French contractions (single letter + apostrophe or qu' + word)
  * @param {string} text - The text to check
  * @returns {RegExpMatchArray|null} - The match result or null
  */
 const checkContractionMatch = (text) => {
   // Match single letter + apostrophe + word (e.g., d'argent, l'eau, j'ai)
-  const contractionPattern = /^([a-z]'[a-zàâäæçéèêëïîôùûüœ]+)/i;
+  // Also match qu' + word (e.g., qu'est-ce que, qu'il)
+  const contractionPattern = /^((?:[a-z]|qu)'[a-zàâäæçéèêëïîôùûüœ]+)/i;
   return text.match(contractionPattern);
 };
 
 /**
  * Process contraction match by splitting into contraction + word
+ * Handles both single letter contractions (d', l', j', etc.) and qu' contractions
  * @param {RegExpMatchArray} contractionMatch - The contraction match result
  * @param {string} remainingText - The original remaining text
  * @param {number} charPosition - The character position
@@ -104,7 +106,7 @@ const processContractionMatch = (contractionMatch, remainingText, charPosition, 
     const fullLength = fullMatch.length;
     const uniqueKey = generateTextKey(paragraphIndex, charPosition);
 
-    // Split the contraction: "d'argent" -> "d'" + "argent"
+    // Split the contraction: "d'argent" -> "d'" + "argent" or "qu'est-ce que" -> "qu'" + "est-ce que"
     const apostropheIndex = fullMatch.indexOf("'");
     if (apostropheIndex === -1) {
       console.error("Invalid contraction format - no apostrophe found:", fullMatch);
@@ -115,8 +117,8 @@ const processContractionMatch = (contractionMatch, remainingText, charPosition, 
       };
     }
 
-    const contraction = fullMatch.substring(0, apostropheIndex + 1); // "d'"
-    const word = fullMatch.substring(apostropheIndex + 1); // "argent"
+    const contraction = fullMatch.substring(0, apostropheIndex + 1); // "d'" or "qu'"
+    const word = fullMatch.substring(apostropheIndex + 1); // "argent" or "est-ce que"
 
     // Process the contraction part
     const contractionContext = getContextString(context, charPosition, contraction.length, remainingText);
