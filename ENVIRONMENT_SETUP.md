@@ -11,6 +11,9 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 # Clerk Authentication
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+
+# Microsoft Clarity Analytics (Optional)
+VITE_CLARITY_PROJECT_ID=your_clarity_project_id
 ```
 
 ## Setup Steps
