@@ -127,8 +127,16 @@
 .cognate-french {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #2563eb;
   letter-spacing: -0.02em;
+}
+
+.cognate-french.feminine {
+  color: #ec4899;
+}
+
+.cognate-french.masculine {
+  color: #2563eb;
 }
 
 .cognate-english {
