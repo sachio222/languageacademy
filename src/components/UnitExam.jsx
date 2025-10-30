@@ -226,7 +226,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
           {
             id: "3.3",
             prompt: "I am a man but she is a woman",
-            expectedAnswer: "je suis un homme mais tu es une femme",
+            expectedAnswer: "je suis un homme mais elle est une femme",
             hint: "Use 'mais' (but) to connect two statements",
           },
           {

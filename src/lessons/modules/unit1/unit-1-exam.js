@@ -159,7 +159,7 @@ export const unit1Exam = {
         instruction: "Translate to French",
         prompt: "I am a man but she is a woman",
         hint: "Use 'mais' (but) to connect two statements",
-        expectedAnswer: "je suis un homme mais tu es une femme",
+        expectedAnswer: "je suis un homme mais elle est une femme",
       },
       {
         instruction: "Translate to French",
