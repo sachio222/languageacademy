@@ -4,21 +4,15 @@ import { useAuth } from "./useAuth";
 import { logger } from "../utils/logger";
 
 export const useAnalyticsSummary = () => {
-  const { supabaseUser, supabaseClient } = useAuth();
+  const { supabaseUser, supabaseClient, profile } = useAuth();
 
   // Get user analytics summary
   const getAnalyticsSummary = useCallback(async () => {
     if (!supabaseUser) return null;
 
     try {
-      // Get user profile data
-      const { data: profile, error: profileError } = await supabaseClient
-        .from("user_profiles")
-        .select("*")
-        .eq("id", supabaseUser.id)
-        .single();
-
-      if (profileError) throw profileError;
+      // Use profile data from useAuth instead of fetching
+      if (!profile) return null;
 
       // Get session count and total time
       const { data: sessionStats, error: sessionError } = await supabaseClient
@@ -81,7 +75,7 @@ export const useAnalyticsSummary = () => {
       logger.error("Error getting analytics summary:", err);
       return null;
     }
-  }, [supabaseUser, supabaseClient]);
+  }, [supabaseUser, supabaseClient, profile]);
 
   return {
     getAnalyticsSummary,

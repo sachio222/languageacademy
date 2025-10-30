@@ -12,6 +12,7 @@ export const useAuth = () => {
   const [supabaseClient, setSupabaseClient] = useState(supabase);
   const [clientReady, setClientReady] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [profile, setProfile] = useState(null);
 
   // Create Supabase client with Clerk session token (OFFICIAL METHOD)
   useEffect(() => {
@@ -98,6 +99,7 @@ logger.log('Dev account created:', data);
 
             if (insertError) throw insertError;
             setSupabaseUser(newProfile);
+            setProfile(newProfile);
           } else {
             const { data: updatedProfile, error: updateError } = await supabase
               .from("user_profiles")
@@ -108,6 +110,7 @@ logger.log('Dev account created:', data);
 
             if (updateError) throw updateError;
             setSupabaseUser(updatedProfile);
+            setProfile(updatedProfile);
           }
         } catch (error) {
           logger.error("Error with dev account:", error);
@@ -149,6 +152,7 @@ logger.log('Dev account created:', data);
 
             if (insertError) throw insertError;
             setSupabaseUser(newProfile);
+            setProfile(newProfile);
           } else {
             // Update existing profile with latest Clerk data
             const { data: updatedProfile, error: updateError } =
@@ -166,6 +170,7 @@ logger.log('Dev account created:', data);
 
             if (updateError) throw updateError;
             setSupabaseUser(updatedProfile);
+            setProfile(updatedProfile);
           }
         } catch (error) {
           logger.error("Error syncing user profile:", error);
@@ -198,5 +203,6 @@ logger.log('Dev account created:', data);
     isAuthenticated: isDevMode ? true : isSignedIn,
     loading: loading || (!isDevMode && !userLoaded),
     signOut: handleSignOut,
+    profile, // User profile data for all hooks to use
   };
 };

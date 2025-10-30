@@ -3,7 +3,7 @@ import { useAuth } from "./useAuth";
 import { logger } from "../utils/logger";
 
 export const useStudyTime = () => {
-  const { supabaseUser, supabaseClient } = useAuth();
+  const { supabaseUser, supabaseClient, profile } = useAuth();
 
   // Update user study time
   const updateStudyTime = useCallback(
@@ -11,13 +11,8 @@ export const useStudyTime = () => {
       if (!supabaseUser) return;
 
       try {
-        const { data: profile, error: fetchError } = await supabaseClient
-          .from("user_profiles")
-          .select("total_study_time_seconds")
-          .eq("id", supabaseUser.id)
-          .single();
-
-        if (fetchError) throw fetchError;
+        // Use profile data from useAuth instead of fetching
+        if (!profile) return;
 
         const newTotalTime =
           (profile.total_study_time_seconds || 0) + additionalSeconds;
@@ -35,7 +30,7 @@ export const useStudyTime = () => {
         logger.error("Error updating study time:", err);
       }
     },
-    [supabaseUser, supabaseClient]
+    [supabaseUser, supabaseClient, profile]
   );
 
   return {

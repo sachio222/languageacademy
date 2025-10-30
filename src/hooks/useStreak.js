@@ -4,7 +4,7 @@ import { useAuth } from "./useAuth";
 import { logger } from "../utils/logger";
 
 export const useStreak = () => {
-  const { supabaseUser, supabaseClient } = useAuth();
+  const { supabaseUser, supabaseClient, profile } = useAuth();
   const isCalculatingStreak = useRef(false);
 
   // Fallback: Calculate streak client-side if database function doesn't exist

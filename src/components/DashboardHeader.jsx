@@ -8,7 +8,7 @@ import '../styles/DashboardHeader.css';
 import { logger } from "../utils/logger";
 
 function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned, isAdmin }) {
-  const { supabaseClient, supabaseUser } = useAuth();
+  const { supabaseClient, supabaseUser, profile } = useAuth();
   const { moduleProgress } = useSupabaseProgress();
   const [stats, setStats] = useState({
     lessonsCompleted: 0,
@@ -78,14 +78,11 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
       }
 
       try {
-        // Get user profile for study time, last active, and streak
-        const { data: profile, error: profileError } = await supabaseClient
-          .from('user_profiles')
-          .select('total_study_time_seconds, last_active_at, streak_days')
-          .eq('id', supabaseUser.id)
-          .single();
-
-        if (profileError) throw profileError;
+        // Use profile data from useAuth instead of fetching
+        if (!profile) {
+          setLoading(false);
+          return;
+        }
 
         // Count completed lessons
         const lessonsCompleted = lessons.filter(lesson => {
@@ -130,7 +127,7 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
     };
 
     loadStats();
-  }, [supabaseUser, supabaseClient, completedExercises]);
+  }, [supabaseUser, supabaseClient, completedExercises, profile]);
 
   // Format time duration
   const formatDuration = (seconds) => {
