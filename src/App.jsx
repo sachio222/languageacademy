@@ -66,7 +66,7 @@ function App() {
   };
 
   const [currentLesson, setCurrentLesson] = useState(getInitialLesson);
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [showFeedbackAdmin, setShowFeedbackAdmin] = useState(() => {
     const params = new URLSearchParams(window.location.search);
