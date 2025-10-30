@@ -5,6 +5,7 @@
 
 import { useState, useEffect } from "react";
 import { RotateCcw } from 'lucide-react';
+import { usePageTime } from '../hooks/usePageTime';
 import "../styles/SpeedMatch.css";
 
 // Helper component to format option text with lighter parentheses
@@ -54,6 +55,10 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [autoAdvance, setAutoAdvance] = useState(true);
   const [difficulty, setDifficulty] = useState('medium'); // easy, medium, hard
+
+  // Track page time for study time analytics
+  const pageId = `speedmatch-${vocabulary.length}-words`;
+  const { totalTime: pageTime, isTracking } = usePageTime(pageId, true);
 
   const currentWord = vocabulary[currentIndex];
   const [answerOptions, setAnswerOptions] = useState([]);

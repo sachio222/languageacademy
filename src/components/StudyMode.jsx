@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SpeakButton from './SpeakButton';
 import { detectLanguage } from '../hooks/useSpeech';
+import { usePageTime } from '../hooks/usePageTime';
 
 /**
  * Study Mode - Learn before you test
@@ -9,6 +10,10 @@ import { detectLanguage } from '../hooks/useSpeech';
 function StudyMode({ exercises, onFinishStudying }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
+
+  // Track page time for study time analytics
+  const pageId = `studymode-${exercises?.length || 0}-exercises`;
+  const { totalTime: pageTime, isTracking } = usePageTime(pageId, true);
 
   // Safety check for empty exercises
   if (!exercises || exercises.length === 0) {

@@ -16,6 +16,7 @@ import LiaisonHelp from './LiaisonHelp';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { usePageTime } from '../hooks/usePageTime';
 import { logger } from "../utils/logger";
 
 function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
@@ -109,6 +110,10 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const [moduleCompleted, setModuleCompleted] = useState(false);
   const [resetting, setResetting] = useState(false);
   const [moduleTimeSpent, setModuleTimeSpent] = useState(0);
+
+  // Track page time for study time analytics
+  const pageId = `lesson-${lesson.id}`;
+  const { totalTime: pageTime, isTracking } = usePageTime(pageId, true);
 
   // Track time spent on module
   const moduleStartTimeRef = useRef(Date.now());
