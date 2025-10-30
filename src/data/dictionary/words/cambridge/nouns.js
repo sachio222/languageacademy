@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Nouns
- * Generated: 2025-10-29T19:26:40.455Z
- * Successfully scraped: 470/470
+ * Generated: 2025-10-30T21:26:56.069Z
+ * Successfully scraped: 493/493
  */
 
 export const nounsCambridge = new Map([
@@ -157,11 +157,6 @@ export const nounsCambridge = new Map([
                 "text": "Elle va à la piscine tous les jeudis.",
                 "trans": "She goes to the pool every Thursday.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "On risque d’attendre la semaine des quatre jeudis.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʒødi",
@@ -253,11 +248,6 @@ export const nounsCambridge = new Map([
                 "text": "À samedi prochain !",
                 "trans": "See you next Saturday!",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le samedi c’est le jour des courses.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "samdi",
@@ -306,11 +296,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "On ira au parc dimanche.",
                 "trans": "We’ll go to the park on Sunday.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "profiter de son dimanche pour se promener dans les bois",
                 "source": "cambridge"
             }
         ],
@@ -482,11 +467,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "être né en avril",
                 "trans": "to be born in April",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "accrocher un poisson d’avril au dos de l’instituteur",
                 "source": "cambridge"
             }
         ],
@@ -664,16 +644,6 @@ export const nounsCambridge = new Map([
                 "text": "prendre ses vacances en août",
                 "trans": "to take one’s vacation in August",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le mois d’août a été le plus chaud de l’année.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "le 31 août",
-                "source": "cambridge"
             }
         ],
         "phonetic": "u(t)",
@@ -718,11 +688,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "en septembre",
                 "trans": "in September",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle est née en septembre.",
                 "source": "cambridge"
             }
         ],
@@ -857,11 +822,6 @@ export const nounsCambridge = new Map([
                 "text": "Il est né en décembre.",
                 "trans": "He was born in December.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Décembre est le mois de la fête de Noël.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "desɑ̃bʀ",
@@ -906,11 +866,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Joyeuses Pâques !",
                 "trans": "Happy Easter!",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "passer Pâques dans la famille à la campagne",
                 "source": "cambridge"
             }
         ],
@@ -1129,29 +1084,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il est zéro heure dix.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il fait cinq degrés au-dessous de zéro.",
                 "trans": "It’s five below zero.",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "En hiver les températures baissent en-dessous de zéro.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il a eu zéro à sa dictée.",
                 "trans": "He got zero in his dictation.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Pour moi c’est zéro !",
                 "source": "cambridge"
             }
         ],
@@ -1197,11 +1137,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Deux et deux font quatre.",
                 "trans": "two and two make four",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Entrez tous les deux.",
                 "source": "cambridge"
             }
         ],
@@ -1294,11 +1229,6 @@ export const nounsCambridge = new Map([
                 "text": "quatre pour cent de taxes",
                 "trans": "four per cent tax",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "deux fois deux font quatre",
-                "source": "cambridge"
             }
         ],
         "phonetic": "katʀ",
@@ -1347,11 +1277,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Cinq et cinq font dix.",
                 "trans": "five and five are ten",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ce sont les cinq meilleures chansons.",
                 "source": "cambridge"
             }
         ],
@@ -1402,11 +1327,6 @@ export const nounsCambridge = new Map([
                 "text": "habiter au six de la rue",
                 "trans": "to live at number six",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle est née le six du mois de décembre.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "sis",
@@ -1456,11 +1376,6 @@ export const nounsCambridge = new Map([
                 "text": "une lettre datée du sept",
                 "trans": "a letter dated the seventh",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je pars le sept.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "sɛt",
@@ -1509,11 +1424,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "avoir huit sur dix à un devoir",
                 "trans": "to get eight out of ten for a piece of homework",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Avec son huit il sera probablement le dernier.",
                 "source": "cambridge"
             }
         ],
@@ -1567,18 +1477,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Nous nous rencontrons tous les neuf du mois.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "habiter au neuf de la rue des Champs",
                 "trans": "to live at number nine, rue des Champs",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il ne me reste plus que le neuf de trèfle.",
                 "source": "cambridge"
             }
         ],
@@ -1635,11 +1535,6 @@ export const nounsCambridge = new Map([
                 "text": "noter un devoir sur dix",
                 "trans": "to grade a piece of homework out of ten",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous étions au moins dix à table.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "dis",
@@ -1688,11 +1583,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "parier à vingt contre un",
                 "trans": "to bet twenty to one",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "habiter au vingt de la rue Rousseau",
                 "source": "cambridge"
             }
         ],
@@ -1785,11 +1675,6 @@ export const nounsCambridge = new Map([
                 "text": "quarante pour cent de matière grasse",
                 "trans": "forty per cent fat",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sa fortune approche les quarante millions.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "kaʀɑ̃t",
@@ -1839,11 +1724,6 @@ export const nounsCambridge = new Map([
                 "text": "habiter au cinquante",
                 "trans": "to live at number fifty",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir plus de cinquante ans",
-                "source": "cambridge"
             }
         ],
         "phonetic": "sɛ̃kɑ̃t",
@@ -1892,11 +1772,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "habiter au soixante",
                 "trans": "to live at number sixty",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La rue prend fin au soixante.",
                 "source": "cambridge"
             }
         ],
@@ -1953,11 +1828,6 @@ export const nounsCambridge = new Map([
                 "text": "une remise de vingt pour cent (20%)",
                 "trans": "a twenty per cent discount",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les prix ont augmenté de plus de 15 %.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "sɑ̃",
@@ -2006,11 +1876,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "compter jusqu’à mille",
                 "trans": "to count to a thousand",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "mettre dans le mille",
                 "source": "cambridge"
             }
         ],
@@ -2250,11 +2115,6 @@ export const nounsCambridge = new Map([
                 "text": "champignon comestible / vénéneux",
                 "trans": "edible/poisonous mushroom",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "mettre des champignons dans la sauce du rôti",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʃɑ̃piɲɔ̃",
@@ -2303,18 +2163,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le bordeaux a longtemps été la couleur à la mode.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "boire du bordeaux",
                 "trans": "to drink Bordeaux",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "faire la tournée des chais pour une dégustation de bordeaux",
                 "source": "cambridge"
             }
         ],
@@ -2422,11 +2272,6 @@ export const nounsCambridge = new Map([
                 "text": "faire un rêve",
                 "trans": "to have a dream",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Un rêve devenu réalité.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʀɛv",
@@ -2478,11 +2323,6 @@ export const nounsCambridge = new Map([
                 "text": "être plein d’espoir",
                 "trans": "to be full of hope",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "faire miroiter l’espoir d’une vie meilleure",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ɛspwaʀ",
@@ -2526,13 +2366,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Le mariage est célébré à la cathédrale.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "katedʀal",
         "tags": [
             "unit10",
@@ -2579,29 +2413,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le concours du plus beau quartier.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un quartier d’orange",
                 "trans": "a segment of orange",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Je t’ai gardé un quartier du gâteau.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le premier quartier",
                 "trans": "the first quarter",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous sommes au dernier de la lune.",
                 "source": "cambridge"
             }
         ],
@@ -2655,18 +2474,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "L’artiste a présenté son œuvre au grand public.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "inviter un artiste sur le plateau",
                 "trans": "to invite a performer onto the stage",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’artiste a été longuement applaudi.",
                 "source": "cambridge"
             }
         ],
@@ -2685,10 +2494,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T05:53:53.004Z"
         },
-        "unit": "unit10",
-        "module": "2024-02-01-reading-10",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.186Z"
+        "updated_at": "2025-10-29T17:32:29.186Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -2717,11 +2527,6 @@ export const nounsCambridge = new Map([
                 "text": "professeur de français / de chant",
                 "trans": "French/singing teacher",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Un étudiant a dérangé son professeur dans ses explications.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "pʀɔfesœʀ",
@@ -2739,10 +2544,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T05:54:05.523Z"
         },
-        "unit": "unit8",
-        "module": "2024-05-20-reading-8",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.160Z"
+        "updated_at": "2025-10-29T17:32:29.160Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -2774,18 +2580,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Attention, les marches sont très hautes !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "des chaussures de marche",
                 "trans": "walking shoes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La marche jusqu’au refuge a été pénible.",
                 "source": "cambridge"
             },
             {
@@ -2796,18 +2592,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Nous avons fait une marche le long du fleuve.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "mettre en marche une machine",
                 "trans": "to start a machine",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’ordinateur est en marche, tu peux l’utiliser.",
                 "source": "cambridge"
             },
             {
@@ -2818,18 +2604,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Les militaires ont fait une marche forcée d’une trentaine de kilomètres.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Quelle est la marche à suivre ?",
                 "trans": "What’s the procedure?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Pensez-vous que c’est effectivement la bonne marche à suivre ?",
                 "source": "cambridge"
             }
         ],
@@ -2891,18 +2667,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "rentrer à la maison au milieu de la nuit",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il fait nuit.",
                 "trans": "It’s dark.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’enfant avait peur de la nuit.",
                 "source": "cambridge"
             }
         ],
@@ -2956,29 +2722,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "traverser le pont de l’Alma à Paris",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire le pont",
                 "trans": "to take an extra day/a couple of extra days off",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Profiter que la fête tombe un jeudi pour faire le pont.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le pont arrière",
                 "trans": "the aft deck",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous étions sur le pont lorsque l’orage a éclaté.",
                 "source": "cambridge"
             }
         ],
@@ -3029,11 +2780,6 @@ export const nounsCambridge = new Map([
                 "text": "avoir une conversation avec qqn",
                 "trans": "to have a conversation with sb",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La conversation a duré plus d’une heure.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "kɔ̃vɛʀsasjɔ̃",
@@ -3051,10 +2797,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T05:54:27.921Z"
         },
-        "unit": "unit10",
-        "module": "2024-02-01-reading-10",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.188Z"
+        "updated_at": "2025-10-29T17:32:29.188Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -3088,11 +2835,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "les demandes d’emploi",
                 "trans": "job applications",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "As-tu fait ta demande de candidature ?",
                 "source": "cambridge"
             }
         ],
@@ -3143,11 +2885,6 @@ export const nounsCambridge = new Map([
                 "text": "la réalité de la vie d’artiste",
                 "trans": "the reality of an artist’s life",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Un pays où se mêlent fantasme et réalité.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʀealite",
@@ -3196,18 +2933,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "passer les longues soirées d’hiver près de la cheminée",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "aller à une soirée",
                 "trans": "to go to a party",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La soirée a été très réussie.",
                 "source": "cambridge"
             }
         ],
@@ -3257,18 +2984,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ce n’est pas le courage qui lui manque !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "avoir le courage de monter à pied",
                 "trans": "to have the strength to walk up",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il n’avait même pas le courage de se doucher.",
                 "source": "cambridge"
             }
         ],
@@ -3364,18 +3081,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "C’est la capitale mondiale du parfum.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "écrire en capitales",
                 "trans": "to write in capitals",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Son nom figure en lettres capitales à l’entrée du théâtre.",
                 "source": "cambridge"
             }
         ],
@@ -3435,29 +3142,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "un système électoral dévastateur",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un système d’alarme",
                 "trans": "the alarm system",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Le système d’appel fonctionne bien.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le système nerveux",
                 "trans": "the nervous system",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "contrôler le système respiratoire",
                 "source": "cambridge"
             }
         ],
@@ -3498,13 +3190,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Look up the contents at the beginning of the book.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [
             "unit11",
@@ -3542,13 +3228,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "My daughter prefers science to languages.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [
             "unit11",
@@ -3595,11 +3275,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "étudier la littérature anglaise",
                 "trans": "to study English literature",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Mes moments de bonheur sont réservés à la littérature.",
                 "source": "cambridge"
             }
         ],
@@ -3649,29 +3324,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "C’est une personne de grande culture.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la culture française",
                 "trans": "French culture",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "essayer de répandre sa culture au-delà de ses frontières",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la culture du maïs",
                 "trans": "growing corn",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "faire de la culture organique",
                 "source": "cambridge"
             },
             {
@@ -3684,11 +3344,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "la culture d’un champ",
                 "trans": "farming a field",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les cultures de cette année ont bien donné.",
                 "source": "cambridge"
             }
         ],
@@ -3738,11 +3393,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "la planète Terre",
                 "trans": "the planet Earth",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Notre planète est en danger.",
                 "source": "cambridge"
             }
         ],
@@ -3794,11 +3444,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "prendre du plaisir à faire qqch",
                 "trans": "to enjoy doing sth",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Fais-moi plaisir, arrête de fumer !",
                 "source": "cambridge"
             }
         ],
@@ -3901,29 +3546,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La crise touche aussi l’économie du monde.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un cours d’économie",
                 "trans": "an economics class",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "une leçon d’économie domestique",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire des économies",
                 "trans": "to save",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "des économies de bouts de chandelle",
                 "source": "cambridge"
             }
         ],
@@ -4012,11 +3642,6 @@ export const nounsCambridge = new Map([
                 "text": "l’industrie automobile",
                 "trans": "the automobile industry",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’industrie textile est très développée dans le nord.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ɛ̃dystʀi",
@@ -4060,13 +3685,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "l’agriculture française",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "aɡʀikyltyʀ",
         "tags": [
             "unit11",
@@ -4123,18 +3742,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "le transport de troupes par mer",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "les transports en commun",
                 "trans": "public transportation",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "utiliser les transports en commun de la ville",
                 "source": "cambridge"
             }
         ],
@@ -4240,11 +3849,6 @@ export const nounsCambridge = new Map([
                 "text": "un train à destination de Paris",
                 "trans": "a train bound for Paris",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Quelle sera votre prochaine destination ?",
-                "source": "cambridge"
             }
         ],
         "phonetic": "dɛstinasjɔ̃",
@@ -4293,11 +3897,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "prendre le métro",
                 "trans": "to take the subway",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "courir dans les couloirs pour ne pas rater son métro",
                 "source": "cambridge"
             }
         ],
@@ -4356,11 +3955,6 @@ export const nounsCambridge = new Map([
                 "text": "partir en vacances",
                 "trans": "to go on vacation",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Vivement les vacances !",
-                "source": "cambridge"
             }
         ],
         "phonetic": "vakɑ̃s",
@@ -4410,11 +4004,6 @@ export const nounsCambridge = new Map([
                 "text": "une région industrielle",
                 "trans": "an industrial region",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La région est spécialisée dans la culture des châtaignes.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʀeʒjɔ̃",
@@ -4463,18 +4052,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le diamant était de toute beauté.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Cette enfant est déjà une vraie beauté.",
                 "trans": "That child is already a real beauty.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est ébloui pour la beauté de sa fiancée.",
                 "source": "cambridge"
             }
         ],
@@ -4530,18 +4109,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Je l’ai connu alors qu’il habitait la campagne.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une belle campagne",
                 "trans": "beautiful countryside",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "aimer battre la campagne dès le petit jour",
                 "source": "cambridge"
             }
         ],
@@ -4595,18 +4164,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "étudier la technologie dans une école spéciale",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "les nouvelles technologies",
                 "trans": "the new technologies",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "utiliser les technologies de pointe",
                 "source": "cambridge"
             }
         ],
@@ -4663,11 +4222,6 @@ export const nounsCambridge = new Map([
                 "text": "Il a rencontré beaucoup de gens.",
                 "trans": "He met a lot of people.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La plupart des gens de mon immeuble sont des amis.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʒɑ̃",
@@ -4717,11 +4271,6 @@ export const nounsCambridge = new Map([
                 "text": "naviguer sur Internet",
                 "trans": "to surf the Web",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Internet prend de plus en plus de place dans notre vie.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ɛ̃tɛʀnɛt",
@@ -4770,11 +4319,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Il est de ma génération.",
                 "trans": "He’s a member of my generation.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Une génération passe et l’autre arrive.",
                 "source": "cambridge"
             }
         ],
@@ -4878,11 +4422,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La garde est assurée par plusieurs vigiles.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un médecin / une pharmacie de garde",
                 "trans": "a duty doctor/pharmacy",
                 "source": "cambridge"
@@ -4895,18 +4434,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Les infirmières de garde veillent sur lui.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il a obtenu la garde de son enfant.",
                 "trans": "He got custody of his child.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "exiger la garde de son fils une semaine sur deux",
                 "source": "cambridge"
             },
             {
@@ -4917,29 +4446,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Prenez garde de tomber, le terrain est glissant !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Je l’ai mise en garde contre les risques.",
                 "trans": "I warned her of the risks.",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Je vous mets en garde contre cet escroc !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la garde royale",
                 "trans": "the royal guard",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La garde républicaine défile sur le boulevard.",
                 "source": "cambridge"
             }
         ],
@@ -4990,11 +4504,6 @@ export const nounsCambridge = new Map([
                 "text": "la protection de l’environnement",
                 "trans": "protecting the environment",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous avons créé une association pour lutter contre la pollution de l’environnement.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ɑ̃viʀɔnmɑ̃",
@@ -5043,11 +4552,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "le chef du gouvernement",
                 "trans": "the Prime Minister",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le gouvernement s’est réuni pour sa séance d’ouverture.",
                 "source": "cambridge"
             }
         ],
@@ -5098,11 +4602,6 @@ export const nounsCambridge = new Map([
                 "text": "déchets recyclables",
                 "trans": "recyclable waste",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "On ne sait que faire des déchets radioactifs.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "deʃɛ",
@@ -5151,18 +4650,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "la production d’énergies renouvelables",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire qqch avec énergie",
                 "trans": "to do sth energetically",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "mettre toute son énergie à réussir",
                 "source": "cambridge"
             }
         ],
@@ -5212,23 +4701,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Nul ne sait ce que nous réserve l’avenir.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "À l’avenir, tu feras plus attention.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "métier d’avenir",
                 "trans": "job with a future",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "ne pas avoir à s’en faire pour son avenir",
                 "source": "cambridge"
             }
         ],
@@ -5282,18 +4756,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La presse a publié les conclusions du congrès.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "tirer une conclusion",
                 "trans": "to draw a conclusion",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "tenter de ne pas tirer des conclusions hâtives",
                 "source": "cambridge"
             }
         ],
@@ -5344,11 +4808,6 @@ export const nounsCambridge = new Map([
                 "text": "respecter la tradition",
                 "trans": "to respect tradition",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "On se rassemblait pour la fête selon la tradition de chez nous.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "tʀadisjɔ̃",
@@ -5397,11 +4856,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "une innovation technique",
                 "trans": "a technical innovation",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "introduire des innovations dans la décoration d’un magasin",
                 "source": "cambridge"
             }
         ],
@@ -5494,11 +4948,6 @@ export const nounsCambridge = new Map([
                 "text": "au vingt et unième siècle",
                 "trans": "in the twenty-first century",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est né au siècle dernier.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "sjɛkl",
@@ -5547,11 +4996,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Elle était excellente dans le rôle d’une folle.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le rôle de parent",
                 "trans": "a parent’s role",
                 "source": "cambridge"
@@ -5564,18 +5008,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "avoir un rôle d’observateur dans des élections",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "jouer à tour de rôle",
                 "trans": "to take it in turns to play",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ils se sont présentés à tour de rôle.",
                 "source": "cambridge"
             }
         ],
@@ -5625,29 +5059,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Nous étions assis loin de la scène.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "assister à la scène",
                 "trans": "to witness the scene",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Nous étions là subjugués devant la scène.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "La scène se déroule à Londres.",
                 "trans": "The action takes place in London.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La scène se passe dans un salon bourgeois.",
                 "source": "cambridge"
             }
         ],
@@ -5832,18 +5251,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "vulnérable comme tous les êtres humains",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un être cher",
                 "trans": "a loved one",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est un être d’une bonté inégalable.",
                 "source": "cambridge"
             }
         ],
@@ -5889,11 +5298,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "avoir faim",
                 "trans": "to be hungry",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "ne pas manger à sa faim",
                 "source": "cambridge"
             }
         ],
@@ -6095,11 +5499,6 @@ export const nounsCambridge = new Map([
                 "text": "agir sans arrière-pensée",
                 "trans": "to act without an ulterior motive",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle devait avoir une certaine arrière- pensée en disant cela.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "aʀjɛʀpɑ̃se",
@@ -6148,29 +5547,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Elle a commencé ses révisions deux mois avant l’examen.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire la révision d’une machine",
                 "trans": "to service a machine",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "La révision du moteur a pris deux jours.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la révision d’un loyer",
                 "trans": "revising rental charges",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La révision des salaire est en cours.",
                 "source": "cambridge"
             }
         ],
@@ -6265,18 +5649,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ses idées fixes constituent un handicape pour lui.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "avoir une idée",
                 "trans": "to have an idea",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il me vient tout à coup à l’idée que nous pourrions aller au restaurant.",
                 "source": "cambridge"
             },
             {
@@ -6287,18 +5661,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ses idées correspondent souvent aux miennes.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "As-tu une idée de l’heure qu’il est ?",
                 "trans": "Do you have any idea what time it is?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai mon idée sur la question.",
                 "source": "cambridge"
             }
         ],
@@ -6348,29 +5712,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Sa méthode n’est pas convaincante.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "agir avec méthode",
                 "trans": "to be methodical",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "avoir de la méthode dans son enseignement",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une méthode de lecture",
                 "trans": "a primer",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sa méthode d’apprentissage des langues est excellente.",
                 "source": "cambridge"
             }
         ],
@@ -6438,18 +5787,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Les voyages forment la jeunesse.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire trois voyages",
                 "trans": "to make three journeys",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il faudrait au moins une dizaine de voyages pour transférer tout ce sable.",
                 "source": "cambridge"
             }
         ],
@@ -6509,18 +5848,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "s’appuyer sur des preuves jugées",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire preuve de générosité",
                 "trans": "to be generous",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle a fait preuve d’une grande gentillesse envers cet enfant.",
                 "source": "cambridge"
             }
         ],
@@ -6571,11 +5900,6 @@ export const nounsCambridge = new Map([
                 "text": "passer ses journées à travailler",
                 "trans": "to spend one’s days working",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ne ratez rien de la journée portes ouvertes !",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʒuʀne",
@@ -6624,18 +5948,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "construire un muret en pierre locale",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "jeter des pierres",
                 "trans": "to throw rocks",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "recevoir une volée de pierres sur la tête",
                 "source": "cambridge"
             }
         ],
@@ -6681,11 +5995,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "féliciter les mariés",
                 "trans": "to congratulate the newly-weds",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les mariés sont partis en voyage de noces.",
                 "source": "cambridge"
             }
         ],
@@ -6735,18 +6044,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le candidat a réussi tous ses tests d’embauche.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "soumettre un véhicule à des tests",
                 "trans": "to submit a vehicle to some tests",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les véhicules très anciens sont soumis à des tests.",
                 "source": "cambridge"
             },
             {
@@ -6759,11 +6058,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "un test positif / négatif",
                 "trans": "a positive/negative test",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le médecin a demandé de faire un test d’allergie.",
                 "source": "cambridge"
             }
         ],
@@ -6828,11 +6122,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le café ne doit pas bouillir.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "acheter un paquet de café",
                 "trans": "to buy a packet of coffee",
                 "source": "cambridge"
@@ -6845,18 +6134,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "préférer boire une tisane plutôt que du café",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "se retrouver dans un café",
                 "trans": "to meet in a café",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "écrire ses bouquins dans le petit café du coin",
                 "source": "cambridge"
             }
         ],
@@ -6908,29 +6187,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il s’est rendu dans les quatre coins du monde.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il y a du monde.",
                 "trans": "There are a lot of people here.",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Il y avait plein de monde dans ce marché.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il a reçu tout le monde.",
                 "trans": "He received everyone.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tout le monde reconnaît ses qualités d’homme de cœur.",
                 "source": "cambridge"
             }
         ],
@@ -6984,18 +6248,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ne pas s’exposer au soleil lorsqu’il est à son zénith.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "être au soleil",
                 "trans": "to be in the sun",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "s’étendre au soleil pour bronzer",
                 "source": "cambridge"
             }
         ],
@@ -7101,29 +6355,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ses connaissances sont immenses.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "retrouver une vieille connaissance",
                 "trans": "to meet an old acquaintance",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "C’est une connaissance commune qui nous a présentés.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "perdre connaissance",
                 "trans": "to lose consciousness",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "reprendre connaissance après quelques instants",
                 "source": "cambridge"
             }
         ],
@@ -7177,11 +6416,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "réaménager les armoires de la cuisine",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire la cuisine",
                 "trans": "to do the cooking",
                 "source": "cambridge"
@@ -7190,11 +6424,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "un livre de cuisine",
                 "trans": "a cookery book",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’aime bien faire la cuisine.",
                 "source": "cambridge"
             }
         ],
@@ -7254,18 +6483,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le scaphandrier ne dit pas ce qui se cache au fond de la mer.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "aller à la mer",
                 "trans": "to go to the seaside",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "passer ses vacances à la mer",
                 "source": "cambridge"
             }
         ],
@@ -7319,18 +6538,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il me vient à la pensée qu’il est peut-être en danger.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "dire le fond de sa pensée",
                 "trans": "to say what one is really thinking",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je lisais dans ses pensées qu’il n’était pas content.",
                 "source": "cambridge"
             }
         ],
@@ -7380,18 +6589,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Une dizaine de personnes ont assisté à l’accident.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le président en personne",
                 "trans": "the president in person",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est mon frère en personne qui est venu me chercher.",
                 "source": "cambridge"
             }
         ],
@@ -7445,18 +6644,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Les public a été autorisé à poser ses questions.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une question délicate",
                 "trans": "a tricky question",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Cette question doit être étudiée au cours de la prochaine session.",
                 "source": "cambridge"
             },
             {
@@ -7467,18 +6656,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il est question qu’on déjeune avec lui bientôt.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Voilà la personne en question !",
                 "trans": "Here’s the person in question!",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le sujet en question ne sera pas traité avant un an.",
                 "source": "cambridge"
             }
         ],
@@ -7532,18 +6711,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il avait de bonnes raisons de rire.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la raison d’un retard",
                 "trans": "the reason for a delay",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je ne sais pour quelle raison elle est partie.",
                 "source": "cambridge"
             },
             {
@@ -7554,18 +6723,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "C’est en raison de sa maladie qu’il ne vient plus nous voir.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "à raison de trois heures par semaine",
                 "trans": "at the rate of three hours a week",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "acheter des produits à raison de vingt euros l’un",
                 "source": "cambridge"
             }
         ],
@@ -7619,18 +6778,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Lui avez-vous envoyé votre réponse ?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "trouver la bonne réponse",
                 "trans": "to find the right answer",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a réponse à tout.",
                 "source": "cambridge"
             }
         ],
@@ -7680,11 +6829,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Tu ne sais plus parler ? – Tu as avalé ta langue !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la langue maternelle",
                 "trans": "the mother tongue",
                 "source": "cambridge"
@@ -7693,11 +6837,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "la langue française / japonaise / russe",
                 "trans": "the French/Japanese/Russian language",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "On recherche des traducteurs dans toutes les langues.",
                 "source": "cambridge"
             }
         ],
@@ -7828,11 +6967,6 @@ export const nounsCambridge = new Map([
                 "text": "s’inscrire à l’université",
                 "trans": "to enroll at university",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je fréquente l’université de ma région.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ynivɛʀsite",
@@ -7878,11 +7012,6 @@ export const nounsCambridge = new Map([
                 "text": "banc public",
                 "trans": "public bench",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous étions assises sur le même banc de classe.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "bɑ̃",
@@ -7926,13 +7055,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "cuire des pommes de terre au beurre",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "bœʀ",
         "tags": [
             "unit5",
@@ -7979,11 +7102,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "un rôti de bœuf",
                 "trans": "roast beef",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les bœufs ont été amenés à l’abattoir ce matin.",
                 "source": "cambridge"
             }
         ],
@@ -8037,18 +7155,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "manger du chocolat pour le goûter",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "boire un chocolat chaud",
                 "trans": "to drink a cup of hot chocolate",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "servir un chocolat chaud au petit déjeûner",
                 "source": "cambridge"
             }
         ],
@@ -8067,10 +7175,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:03:08.242Z"
         },
-        "unit": "unit5",
-        "module": "2024-04-11-food-nouns",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.120Z"
+        "updated_at": "2025-10-29T17:32:29.120Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -8102,18 +7211,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Elle est toujours entre ciel et terre.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "aller au ciel après sa mort",
                 "trans": "to go to heaven when one dies",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le ciel vous bénira !",
                 "source": "cambridge"
             }
         ],
@@ -8167,18 +7266,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Son rêve est de faire du cinéma.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "aller au cinéma",
                 "trans": "to go to the movies",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Certains cinémas ont plusieurs salles de projection.",
                 "source": "cambridge"
             }
         ],
@@ -8197,10 +7286,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:03:14.973Z"
         },
-        "unit": "unit9",
-        "module": "2024-06-05-reading-9",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.173Z"
+        "updated_at": "2025-10-29T17:32:29.173Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -8232,18 +7322,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le médecin lui a demandé de ne pas fatiguer son cœur.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "graver un cœur sur un arbre",
                 "trans": "to carve a heart into a tree trunk",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "dessiner des cœurs sur des feuilles de papier",
                 "source": "cambridge"
             },
             {
@@ -8254,18 +7334,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "C’est une personne au grand cœur.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "être au cœur d’une affaire",
                 "trans": "to be at the heart of an issue",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "débattre du cœur du problème",
                 "source": "cambridge"
             },
             {
@@ -8276,18 +7346,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il apprenait tout par cœur.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le valet de cœur",
                 "trans": "the knave of hearts",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je n’avais que le roi de cœur.",
                 "source": "cambridge"
             }
         ],
@@ -8341,29 +7401,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "retrouver les corps calcinés après l’incendie",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le corps d’un bâtiment",
                 "trans": "the main part of a building",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Le corps du château a trois cents mètres de long.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le corps enseignant / médical",
                 "trans": "the teaching/medical profession",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le corps militaire prépare la guerre.",
                 "source": "cambridge"
             }
         ],
@@ -8417,18 +7462,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Avez-vous la cote du livre que vous cherchez ?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la cote d’une voiture d’occasion",
                 "trans": "the value of a used car",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Voyez la cote du véhicule sur l’Argus !",
                 "source": "cambridge"
             },
             {
@@ -8439,18 +7474,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Sa cote de popularité est au plus bas.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "couper une pièce aux bonnes cotes",
                 "trans": "to cut a piece to the right dimensions",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les cotes ne sont pas assez visibles pour le découpage.",
                 "source": "cambridge"
             }
         ],
@@ -8510,18 +7535,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "suivre les cours de ce professeur pendant des années",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il a fait cinq voyages au cours de l’année.",
                 "trans": "He’s been on five trips this year.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être interrompu au cours de son allocution",
                 "source": "cambridge"
             },
             {
@@ -8544,18 +7559,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le budget est en cours de préparation.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "remonter le cours d’un fleuve",
                 "trans": "to go up a river",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le cours rapide du Rhône traverse notre village.",
                 "source": "cambridge"
             },
             {
@@ -8572,18 +7577,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Cette devise n’a plus cours depuis de nombreuses années.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le cours du dollar",
                 "trans": "the value of the dollar",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le cours de l’or sera annoncé dans la matinée.",
                 "source": "cambridge"
             }
         ],
@@ -8652,11 +7647,6 @@ export const nounsCambridge = new Map([
                 "text": "Au début, je ne l’ai pas cru.",
                 "trans": "To begin with, I didn’t believe it.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il n’en est qu’à ses débuts.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "deby",
@@ -8709,11 +7699,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "parler du fait de se rendre à la police",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un fait divers",
                 "trans": "a minor news item",
                 "source": "cambridge"
@@ -8726,18 +7711,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "déterminer les faits avec justesse",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Le voleur a été pris sur le fait.",
                 "trans": "The thief was caught red-handed.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être pris sur le fait de mensonge",
                 "source": "cambridge"
             },
             {
@@ -8748,18 +7723,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "souhaiter qu’elle ira directement au fait",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "être tout à fait libre",
                 "trans": "to be totally free",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est tout à fait sûr de ce qu’il dit !",
                 "source": "cambridge"
             }
         ],
@@ -8819,18 +7784,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "détester les films d’horreur",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire développer un film",
                 "trans": "to have a film developed",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "retrouver des rouleaux de films dans un grenier",
                 "source": "cambridge"
             }
         ],
@@ -8880,11 +7835,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "son fils aîné",
                 "trans": "his elder/eldest son",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "prendre son fils par la main",
                 "source": "cambridge"
             }
         ],
@@ -8941,11 +7891,6 @@ export const nounsCambridge = new Map([
                 "text": "C’est mon frère.",
                 "trans": "He’s my brother.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Frères et sœurs se sont réunis pour un anniversaire.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "fʀɛʀ",
@@ -8994,11 +7939,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "du fromage de chèvre",
                 "trans": "goat’s cheese",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "déguster un nouveau fromage",
                 "source": "cambridge"
             }
         ],
@@ -9055,11 +7995,6 @@ export const nounsCambridge = new Map([
                 "text": "des gâteaux secs",
                 "trans": "cookies",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Passe à la pâtisserie prendre quelques gâteaux !",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ɡɑto",
@@ -9112,18 +8047,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "conserver les jus au frais",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "garder le jus de cuisson",
                 "trans": "to keep the cooking juice",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Laisser la viande mijoter dans son jus.",
                 "source": "cambridge"
             }
         ],
@@ -9228,11 +8153,6 @@ export const nounsCambridge = new Map([
                 "text": "du lait écrémé / demi-écrémé / entier",
                 "trans": "skimmed/semi-skimmed/whole milk",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le café au lait de ce matin était froid.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "lɛ",
@@ -9287,11 +8207,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Je le leur donne.",
                 "trans": "I’ll give it to them.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ne leur faites pas de mal !",
                 "source": "cambridge"
             }
         ],
@@ -9396,11 +8311,6 @@ export const nounsCambridge = new Map([
                 "text": "à huit heures du matin",
                 "trans": "at eight in the morning",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’arriverai un de ces quatre matins !",
-                "source": "cambridge"
             }
         ],
         "phonetic": "matɛ̃",
@@ -9449,11 +8359,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Elle est la meilleure dans cette discipline.",
                 "trans": "She’s the best in this discipline.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il aspirait à être le meilleur dans son domaine.",
                 "source": "cambridge"
             }
         ],
@@ -9510,11 +8415,6 @@ export const nounsCambridge = new Map([
                 "text": "J’ai les mêmes.",
                 "trans": "Mine are the same.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est la même que celle que j’ai connue il y a des années.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "mɛm",
@@ -9569,11 +8469,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "J’ai pris les miens.",
                 "trans": "I took mine.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ta décision sera la mienne.",
                 "source": "cambridge"
             }
         ],
@@ -9633,18 +8528,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Elle n’a pas un moment à elle.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "attendre le bon moment",
                 "trans": "to wait for the right moment",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "saisir le moment adéquat",
                 "source": "cambridge"
             },
             {
@@ -9655,29 +8540,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "C’est au moment où il est monté sur l’estrade qu’on lui a jeté des tomates.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "au moment du réveil",
                 "trans": "when you wake up",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Il était très ému au moment de la cérémonie.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il peut arriver à tout moment.",
                 "trans": "He may arrive at any moment.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il posait des questions à tout moment.",
                 "source": "cambridge"
             }
         ],
@@ -9696,10 +8566,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:04:39.281Z"
         },
-        "unit": "unit6",
-        "module": "2024-04-25-top-200-nouns",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.129Z"
+        "updated_at": "2025-10-29T17:32:29.129Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -9731,18 +8602,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "J’ai quelques soupçons quant à ses motifs.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "les motifs d’un papier peint",
                 "trans": "the patterns on wallpaper",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les motifs décoratifs du salon ont déteint.",
                 "source": "cambridge"
             }
         ],
@@ -9804,11 +8665,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Je ne connais pas le nom de cette plante.",
                 "trans": "I don’t know the name of this plant.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle a accolé son nom de jeune fille à celui de son époux.",
                 "source": "cambridge"
             }
         ],
@@ -9874,18 +8730,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Cette année nous irons dans le nord.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "l’Amérique du Nord",
                 "trans": "North America",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai acheté ça en Irlande du Nord.",
                 "source": "cambridge"
             }
         ],
@@ -9938,11 +8784,6 @@ export const nounsCambridge = new Map([
                 "text": "Ce sont les nôtres.",
                 "trans": "They are ours.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Croyez-vous qu’ils seront des nôtres à la fête ?",
-                "source": "cambridge"
             }
         ],
         "phonetic": "nɔtʀ",
@@ -9991,11 +8832,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "un pain complet",
                 "trans": "whole wheat bread",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je vais acheter le pain, je reviens de suite !",
                 "source": "cambridge"
             }
         ],
@@ -10049,18 +8885,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "se promener dans le parc de son quartier",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Le bébé joue dans le parc.",
                 "trans": "The baby is playing in the playpen.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le bac à sable se trouve dans le parc près de chez nous.",
                 "source": "cambridge"
             }
         ],
@@ -10079,10 +8905,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:05:06.053Z"
         },
-        "unit": "unit9",
-        "module": "2024-06-05-reading-9",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.169Z"
+        "updated_at": "2025-10-29T17:32:29.169Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -10110,11 +8937,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "être père de famille",
                 "trans": "to have a family",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Son père est un homme bien connu pour son intelligence.",
                 "source": "cambridge"
             }
         ],
@@ -10216,18 +9038,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "rapporter des poissons récemment pêchés",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Elle est Poissons.",
                 "trans": "She’s Pisces.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous sommes tous les deux Poissons.",
                 "source": "cambridge"
             }
         ],
@@ -10325,11 +9137,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Les porcs ne sont pas encore sortis de l’étable.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "manger du porc",
                 "trans": "to eat pork",
                 "source": "cambridge"
@@ -10338,11 +9145,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "rôti de porc",
                 "trans": "roast pork",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "commander un bon jambonneau de porc",
                 "source": "cambridge"
             }
         ],
@@ -10396,18 +9198,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Des poulets enfermés dans de petites cages.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "manger du poulet",
                 "trans": "to eat chicken",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il nous a servi un beau poulet à la broche.",
                 "source": "cambridge"
             }
         ],
@@ -10457,11 +9249,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "au printemps",
                 "trans": "in spring",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous nous rencontrerons au printemps prochain.",
                 "source": "cambridge"
             }
         ],
@@ -10515,29 +9302,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Quel est le prix de cette table ?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "obtenir le premier prix",
                 "trans": "to get first prize",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Il a reçu le prix Renaudot pour son dernier livre.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "courir le Grand Prix",
                 "trans": "to race in the Grand Prix",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a de plus obtenu un prix d’athlétisme .",
                 "source": "cambridge"
             },
             {
@@ -10554,18 +9326,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il est prêt à y mettre le prix.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il veut à tout prix te parler.",
                 "trans": "He wants to talk to you at any price.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il voulait à tout prix que nous déjeunions avec lui.",
                 "source": "cambridge"
             }
         ],
@@ -10619,18 +9381,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ses difficultés posent problème.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un problème d’algèbre",
                 "trans": "an algebra problem",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il n’arrive pas à faire ses problèmes, je dois l’aider.",
                 "source": "cambridge"
             }
         ],
@@ -10649,10 +9401,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:05:45.176Z"
         },
-        "unit": "unit4",
-        "module": "2024-03-30-reading-4",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.099Z"
+        "updated_at": "2025-10-29T17:32:29.099Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -10694,7 +9447,7 @@ export const nounsCambridge = new Map([
             "2024-04-13-reading-5"
         ],
         "created_at": "2025-10-24T03:25:46.452Z",
-        "updated_at": "2025-10-29T17:32:29.122Z",
+        "updated_at": "2025-10-30T21:26:31.979Z",
         "sources": [
             "language_academy",
             "cambridge"
@@ -10702,9 +9455,10 @@ export const nounsCambridge = new Map([
         "verified": false,
         "partOfSpeech": "noun",
         "gender": "masculine",
-        "unit": "unit5",
-        "module": "2024-04-13-reading-5",
-        "lesson": null
+        "unit": "unit1",
+        "module": "7",
+        "lesson": null,
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -10738,11 +9492,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "du riz complet",
                 "trans": "brown rice",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’adore le riz aux lentilles.",
                 "source": "cambridge"
             }
         ],
@@ -10792,11 +9541,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "mettre son savoir en pratique",
                 "trans": "to put one’s knowledge into practice",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "l’étendue de son savoir",
                 "source": "cambridge"
             }
         ],
@@ -10856,18 +9600,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Quel plaisir de sentir le goût du sel de mer sur la peau !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "La situation ne manquait pas de sel.",
                 "trans": "The situation had a certain piquancy.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est ce qui fait tout le sel du spectacle.",
                 "source": "cambridge"
             }
         ],
@@ -10923,11 +9657,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Ce n’est pas ton idée, c’est la sienne.",
                 "trans": "That’s not your idea, it’s his/hers.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est parti avec un manteau qui n’était pas le sien.",
                 "source": "cambridge"
             }
         ],
@@ -10993,18 +9722,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il a été tout sucre tout miel avec moi.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "mettre deux sucres dans son café",
                 "trans": "to put two lumps of sugar in one’s coffee",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Non merci, je ne mets pas de sucre dans mon thé.",
                 "source": "cambridge"
             }
         ],
@@ -11079,11 +9798,6 @@ export const nounsCambridge = new Map([
                 "text": "l’Amérique du Sud",
                 "trans": "South America",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je voudrais aller vers le sud, là où il fait plus chaud.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "syd",
@@ -11136,11 +9850,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Avec le temps, tout ira bien.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "en temps de paix",
                 "trans": "in peace time",
                 "source": "cambridge"
@@ -11159,18 +9868,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "C’était le bon vieux temps !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire plusieurs choses en même temps",
                 "trans": "to do several things at the same time",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est impossible de manger et parler en même temps.",
                 "source": "cambridge"
             },
             {
@@ -11181,18 +9880,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ses enfants vont le voir de temps en temps.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il se plaint tout le temps.",
                 "trans": "He complains all the time.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il grogne tout le temps.",
                 "source": "cambridge"
             },
             {
@@ -11203,18 +9892,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Dépêche-toi si tu veux arriver à temps.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il est temps de partir.",
                 "trans": "It’s time to go.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il n’est plus temps de se lamenter.",
                 "source": "cambridge"
             },
             {
@@ -11225,29 +9904,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Dans le temps nous voyagions en carrosse.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Quel temps fait-il ?",
                 "trans": "What’s the weather like?",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Sortir avec le temps qu’il fait !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "valse à trois temps",
                 "trans": "waltz in three-four time",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est une musique à deux temps.",
                 "source": "cambridge"
             }
         ],
@@ -11301,18 +9965,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ils vendent du thé de Chine.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "boire une tasse de thé",
                 "trans": "to drink a cup of tea",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "mettre quelques gouttes de citron dans son thé",
                 "source": "cambridge"
             }
         ],
@@ -11362,11 +10016,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "C’est le tien, pas le mien !",
                 "trans": "It’s yours, not mine.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "À la tienne !",
                 "source": "cambridge"
             }
         ],
@@ -11432,29 +10081,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Pensez-vous prendre le train ou l’avion ?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "aller bon train",
                 "trans": "to be going well",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Au train où il travaille, il n’aura pas fini de si tôt !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Je suis en train de dîner.",
                 "trans": "I’m having dinner.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’étais juste en train d’arroser le jardin lorsqu’il est arrivé.",
                 "source": "cambridge"
             }
         ],
@@ -11508,29 +10142,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "On exige de lui un travail intellectuel.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "avoir beaucoup de travail",
                 "trans": "to have a lot of work",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Cette traduction demande des semaines de travail.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "C’est du bon travail.",
                 "trans": "That’s good work.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "être félicité pour son travail de précision",
                 "source": "cambridge"
             },
             {
@@ -11547,18 +10166,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Son travail le préoccupe beaucoup.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le marché du travail",
                 "trans": "the job market",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’industrie du travail manque de main-d’œuvre.",
                 "source": "cambridge"
             },
             {
@@ -11581,18 +10190,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "les travaux saisonniers à la campagne",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Le travail a commencé.",
                 "trans": "She’s gone into labor.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "À peine le travail commencé, l’accouchement a eu lieu.",
                 "source": "cambridge"
             }
         ],
@@ -11644,11 +10243,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Il y a du vent.",
                 "trans": "It’s windy.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "D’où vient ce vent qui nous glace ?",
                 "source": "cambridge"
             }
         ],
@@ -11705,11 +10299,6 @@ export const nounsCambridge = new Map([
                 "text": "boire un verre de vin",
                 "trans": "to drink a glass of wine",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir le vin gai",
-                "source": "cambridge"
             }
         ],
         "phonetic": "vɛ̃",
@@ -11762,18 +10351,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Son visage reflétait une grande colère.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le visage de la misère",
                 "trans": "the face of poverty",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le visage cruel de la dure réalité.",
                 "source": "cambridge"
             }
         ],
@@ -11827,29 +10406,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le vocabulaire s’apprend tout d’abord à la maison.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un vocabulaire français-allemand",
                 "trans": "A French-German vocabulary",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Nous utilisons plutôt un vocabulaire technique.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "enrichir son vocabulaire",
                 "trans": "to enrich one’s vocabulary",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Son vocabulaire est bien pauvre.",
                 "source": "cambridge"
             }
         ],
@@ -11900,11 +10464,6 @@ export const nounsCambridge = new Map([
                 "text": "Voilà mon sac. Où est le vôtre ?",
                 "trans": "Here’s my bag. Where’s yours?",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Mettez-y du vôtre !",
-                "source": "cambridge"
             }
         ],
         "phonetic": "vɔtʀ",
@@ -11953,11 +10512,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "partir en week-end",
                 "trans": "to go away for the weekend",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’Académie conseille de changer le terme “week-end” par “fin de semaine”",
                 "source": "cambridge"
             }
         ],
@@ -12011,29 +10565,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "oublier de mettre les accents sur les lettres",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "l’accent marseillais / québécois",
                 "trans": "the accent typical of Marseille/Quebec",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "L’accent du Nord est typique.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "mettre l’accent sur la qualité",
                 "trans": "to focus on quality",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il faudrait mettre l’accent sur l’efficacité.",
                 "source": "cambridge"
             }
         ],
@@ -12078,13 +10617,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Il faut accorder l’adjectif avec le nom qu’il qualifie.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "adʒɛktif",
         "tags": [
             "unit13",
@@ -12183,11 +10716,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "planter un arbre",
                 "trans": "to plant a tree",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une allée d’arbres qui donnent de l’ombre",
                 "source": "cambridge"
             }
         ],
@@ -12290,11 +10818,6 @@ export const nounsCambridge = new Map([
                 "text": "chien de garde",
                 "trans": "guard dog",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le chien porte la même tenue que sa maîtresse.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʃjɛ̃",
@@ -12343,11 +10866,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "un croissant aux amandes",
                 "trans": "an almond croissant",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "servir des brioches et des croissants au petit déjeuner",
                 "source": "cambridge"
             }
         ],
@@ -12443,18 +10961,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "mourir sans avoir eu d’enfants",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un spectacle pour les enfants",
                 "trans": "a show for children",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "aller promener les enfants",
                 "source": "cambridge"
             }
         ],
@@ -12520,18 +11028,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "C’est un homme de cœur.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "les droits de l’homme",
                 "trans": "human rights",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "étudier les origines de l’homme",
                 "source": "cambridge"
             }
         ],
@@ -12628,18 +11126,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Christmas Day is a bank holiday.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Next Monday is a holiday.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [],
         "sources": [
@@ -12722,11 +11209,6 @@ export const nounsCambridge = new Map([
                 "text": "un livre de poche",
                 "trans": "a paperback",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sa bibliothèque compte un millier de livres.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "livʀ",
@@ -12775,11 +11257,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "deux millions d’euros",
                 "trans": "two million euros",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sa fortune se compte en millions d’euros.",
                 "source": "cambridge"
             }
         ],
@@ -12917,18 +11394,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "habiter un pays démocratique",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le pays de son enfance",
                 "trans": "the area where he spent his childhood",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir le mal du pays",
                 "source": "cambridge"
             }
         ],
@@ -12978,11 +11445,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "conjuguer un verbe",
                 "trans": "to conjugate a verb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le verbe est le principal mot de la phrase.",
                 "source": "cambridge"
             }
         ],
@@ -13036,18 +11498,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La banane n’est pas mûre.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "ranger son portefeuille dans sa banane",
                 "trans": "to put one’s wallet in one’s fanny pack",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "oublier sa banane dans un magasin",
                 "source": "cambridge"
             }
         ],
@@ -13066,10 +11518,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:08:34.887Z"
         },
-        "unit": "unit5",
-        "module": "2024-04-11-food-nouns",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.119Z"
+        "updated_at": "2025-10-29T17:32:29.119Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -13103,11 +11556,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "commander une bière pression",
                 "trans": "to order a draft beer",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Voici votre bière, Monsieur !",
                 "source": "cambridge"
             }
         ],
@@ -13152,13 +11600,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "I’m going to pay for the groceries by credit card.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [],
         "sources": [
@@ -13208,18 +11650,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "être absent pour cause de santé",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il accepte de plaider cette cause.",
                 "trans": "He’s agreed to plead this cause.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir gain de cause n’est pas évident",
                 "source": "cambridge"
             },
             {
@@ -13232,11 +11664,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "remettre en cause une décision",
                 "trans": "to call a decision into question",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il serait bon de remettre en cause cette affaire.",
                 "source": "cambridge"
             }
         ],
@@ -13290,11 +11717,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Avec un peu de chance, nous réussirons !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "avoir de la chance",
                 "trans": "to be lucky",
                 "source": "cambridge"
@@ -13307,18 +11729,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Par chance, nous l’avons retrouvé sain et sauf !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il y a de fortes chances qu’il vienne demain.",
                 "trans": "There’s every chance he’ll come tomorrow.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il n’y a aucune chance qu’il gagne ce concours.",
                 "source": "cambridge"
             }
         ],
@@ -13426,18 +11838,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La subtilité des couleurs charme le regard.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Trèfle et pic sont des couleurs.",
                 "trans": "Clubs and spades are suits.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "les quatre couleurs des jeux de carte",
                 "source": "cambridge"
             }
         ],
@@ -13503,11 +11905,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "maintenir la distance entre deux véhicules",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la commande à distance d’un appareil",
                 "trans": "the remote control of a device",
                 "source": "cambridge"
@@ -13520,18 +11917,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "faire ses achats à distance",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Les faits ont eu lieu à quelques mois de distance.",
                 "trans": "The events took place some months apart.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les incendies de forêt ont éclaté à quelques jours de distances.",
                 "source": "cambridge"
             }
         ],
@@ -13591,18 +11978,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "être tenu à l’écart de la famille",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "avoir de la famille en Espagne",
                 "trans": "to have relatives in Spain",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "les différentes familles de plantes",
                 "source": "cambridge"
             }
         ],
@@ -13662,18 +12039,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "une école pour filles",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Ils sont venus avec leur fille.",
                 "trans": "They came with their daughter.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est leur fille adoptive.",
                 "source": "cambridge"
             }
         ],
@@ -13739,18 +12106,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La fin de l’année approche.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la fin d’une histoire d’amour",
                 "trans": "the end of a love affair",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "la fin d’une carrière intense",
                 "source": "cambridge"
             },
             {
@@ -13761,29 +12118,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "mettre une fin à une longue amitié",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "parler sans fin",
                 "trans": "to speak endlessly",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "avoir des désirs sans fin",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "parvenir à ses fins",
                 "trans": "to achieve one’s aims",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "ne pas arriver à ses fins",
                 "source": "cambridge"
             }
         ],
@@ -13855,18 +12197,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "prendre un repas deux fois par jour",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Des fois, elle pense à lui.",
                 "trans": "She sometimes thinks about him.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Si des fois je le rencontre, je lui dirais ce que je pense !",
                 "source": "cambridge"
             },
             {
@@ -13877,18 +12209,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "interviewer deux personnes à la fois",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Deux fois quatre font huit.",
                 "trans": "Two fours are eight.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Combien font trois fois deux ?",
                 "source": "cambridge"
             }
         ],
@@ -13945,11 +12267,6 @@ export const nounsCambridge = new Map([
                 "text": "Le train entre en gare.",
                 "trans": "The train is entering the station.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La gare est à deux pas de chez nous.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ɡaʀ",
@@ -14002,29 +12319,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "une épaisse glace recouvre le lac",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une glace à la fraise",
                 "trans": "a strawberry ice cream",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "aller chercher une glace dans le congélateur",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "baisser la glace d’une voiture",
                 "trans": "to lower a car window",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "changer la glace avant du véhicule brisée par un caillou",
                 "source": "cambridge"
             },
             {
@@ -14037,11 +12339,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "une armoire à glace",
                 "trans": "a wardrobe with a mirror",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La glace reflétait une jolie fille.",
                 "source": "cambridge"
             }
         ],
@@ -14095,18 +12392,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "boycotter les cours de grammaire",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "acheter une grammaire",
                 "trans": "to buy a grammar book",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "consulter son livre de grammaire à tout bout de champ",
                 "source": "cambridge"
             }
         ],
@@ -14160,29 +12447,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Les leçons de bridge ont lieu deux fois par semaine.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "apprendre ses leçons",
                 "trans": "to do one’s homework",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Il a peine à retenir ses leçons.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Cela lui a servi de leçon.",
                 "trans": "It was a lesson to him.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle lui a donné une bonne leçon de dignité.",
                 "source": "cambridge"
             }
         ],
@@ -14236,18 +12508,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La liaison satellite est interrompue depuis une heure.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "avoir une liaison avec qqn",
                 "trans": "to be in a relationship with sb",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je pense qu’ils ont une liaison mais ils n’en parlent pas.",
                 "source": "cambridge"
             },
             {
@@ -14264,18 +12526,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Veuillez patienter, votre liaison avec la ville aura du retard.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire la liaison",
                 "trans": "to make the liaison",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ses erreurs de liaison étaient la risée de ses collègues.",
                 "source": "cambridge"
             }
         ],
@@ -14335,29 +12587,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "avoir toujours un dictionnaire à portée de la main",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "laver à la main",
                 "trans": "to handwash",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Cette robe du soir a été brodée à la main.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "remettre un colis en mains propres",
                 "trans": "to deliver a package personally",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Veillez à ce que le procès verbal lui soit remis en main propre !",
                 "source": "cambridge"
             }
         ],
@@ -14411,18 +12648,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il a envoyé un bouquet de fleurs à sa mère pour son anniversaire.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la mère des chatons",
                 "trans": "the kittens’ mother",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La mère du lionceau ne le lâchait pas d’un pas.",
                 "source": "cambridge"
             }
         ],
@@ -14479,11 +12706,6 @@ export const nounsCambridge = new Map([
                 "text": "J’ai pris les miens.",
                 "trans": "I took mine.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ta décision sera la mienne.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "mjɛ̃",
@@ -14536,18 +12758,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "ne pas regarder l’heure toutes les minutes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Je reviens dans une minute.",
                 "trans": "I’ll be back in a minute.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le train arrivera dans quelques minutes.",
                 "source": "cambridge"
             }
         ],
@@ -14566,10 +12778,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:10:09.759Z"
         },
-        "unit": "unit6",
-        "module": "2024-04-25-top-200-nouns",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.130Z"
+        "updated_at": "2025-10-29T17:32:29.130Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -14643,18 +12856,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "laisser faire la nature",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "vivre en pleine nature",
                 "trans": "to live out in the countryside",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nos promenades dans la nature nous rendaient heureux.",
                 "source": "cambridge"
             },
             {
@@ -14665,18 +12868,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ce n’est pas dans sa nature de négliger ses amis.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "être de nature timide",
                 "trans": "to be shy by nature",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Son ami est d’une nature exubérante.",
                 "source": "cambridge"
             }
         ],
@@ -14726,11 +12919,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "faire des boules de neige",
                 "trans": "to make snowballs",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La tempête de neige nous a fait renoncer à notre voyage.",
                 "source": "cambridge"
             }
         ],
@@ -14784,18 +12972,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "rassembler toutes les parties de la machine",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une partie d’échecs",
                 "trans": "a game of chess",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous avons été invités à une partie de bridge chez lui.",
                 "source": "cambridge"
             },
             {
@@ -14806,18 +12984,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "vouloir tout ou en partie",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire partie d’un groupe",
                 "trans": "to be part of a group",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il fait partie de la direction de la banque.",
                 "source": "cambridge"
             }
         ],
@@ -14925,11 +13093,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ce garçon ne tient pas en place.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "changer de place",
                 "trans": "to move to another seat",
                 "source": "cambridge"
@@ -14954,18 +13117,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Prenez place, on s’occupe de vous !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "consommer qqch sur place",
                 "trans": "to consume something on site",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "rester cloué sur place de stupéfaction",
                 "source": "cambridge"
             },
             {
@@ -14982,18 +13135,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Je ne voudrais pas être à sa place !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "La mairie est sur la place du village.",
                 "trans": "The town hall is on the village square.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "étaler ses différends sur la place publique",
                 "source": "cambridge"
             },
             {
@@ -15004,29 +13147,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "mettre en première place l’amour de sa famille",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "utiliser un outil à la place d’un autre",
                 "trans": "to use one tool instead of another",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Je suis venu à la place de mon frère malade.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "perdre sa place",
                 "trans": "to lose one’s job",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je ne donnerais pas ma place pour un empire !",
                 "source": "cambridge"
             }
         ],
@@ -15122,18 +13250,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "haut comme trois pommes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "pommes de terre frites",
                 "trans": "French fried potatoes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "aimer les pommes de terre sous toutes leurs formes",
                 "source": "cambridge"
             }
         ],
@@ -15178,13 +13296,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "fried potatoes.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [],
         "sources": [
@@ -15224,11 +13336,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "la population d’une ville",
                 "trans": "the population of a city",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le maire s’est adressé à la population.",
                 "source": "cambridge"
             }
         ],
@@ -15288,11 +13395,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "entendre des portes s’ouvrir et se fermer",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il a mis le réparateur à la prote dès qu’il eut fini.",
                 "trans": "He threw the repair man out as soon as he’d finished.",
                 "source": "cambridge"
@@ -15311,18 +13413,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La porte de l’armoire grince.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "les portes de Paris",
                 "trans": "the former city gates in Paris",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "arriver à la porte de la ville dans la nuit",
                 "source": "cambridge"
             }
         ],
@@ -15376,18 +13468,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Les jeunes recrues étaient en position debout.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "arriver en première position",
                 "trans": "to arrive in first position",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Comme d’habitude, il est arrivé en dernière position !",
                 "source": "cambridge"
             },
             {
@@ -15404,18 +13486,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Je ne pense pas qu’il soit en position de refuser.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une prise de position courageuse",
                 "trans": "a brave stance",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "prendre position en faveur du candidat indépendant",
                 "source": "cambridge"
             }
         ],
@@ -15469,18 +13541,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Je n’oublierai jamais cette rencontre !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une rencontre amicale entre deux équipes",
                 "trans": "a friendly game between two teams",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La rencontre entre les deux boxeurs s’est achevée par un K.O.",
                 "source": "cambridge"
             }
         ],
@@ -15537,11 +13599,6 @@ export const nounsCambridge = new Map([
                 "text": "J’habite au 33, rue des roses.",
                 "trans": "I live at 33, rue des Roses.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est une rue à sens unique.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʀy",
@@ -15594,18 +13651,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "assaisonner la salade d’une vinaigrette",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une salade de riz",
                 "trans": "rice salad",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La salade était composée de légumes frais.",
                 "source": "cambridge"
             }
         ],
@@ -15624,10 +13671,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:11:19.375Z"
         },
-        "unit": "unit5",
-        "module": "2024-04-11-food-nouns",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.118Z"
+        "updated_at": "2025-10-29T17:32:29.118Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -15661,11 +13709,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Ce n’est pas ton idée, c’est la sienne.",
                 "trans": "That’s not your idea, it’s his/hers.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est parti avec un manteau qui n’était pas le sien.",
                 "source": "cambridge"
             }
         ],
@@ -15719,11 +13762,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "J’ai rendez-vous avec ma sœur ce soir.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "sœur Bernadette",
                 "trans": "Sister Bernadette",
                 "source": "cambridge"
@@ -15732,11 +13770,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Elle a été élevée par des sœurs.",
                 "trans": "She was raised by nuns.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les sœurs dirigent le couvent dans lequel elle s’est refugiée.",
                 "source": "cambridge"
             }
         ],
@@ -15796,18 +13829,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La sortie est au fond de la salle.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "à sa sortie de l’hôpital",
                 "trans": "when she left the hospital",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’allais le chercher à la sortie de l’école.",
                 "source": "cambridge"
             },
             {
@@ -15824,18 +13847,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Nous serons de sortie tout le week-end.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la sortie d’un film",
                 "trans": "the release of a movie",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’attends avec impatience la sortie de mon dictionnaire.",
                 "source": "cambridge"
             }
         ],
@@ -15904,11 +13917,6 @@ export const nounsCambridge = new Map([
                 "text": "table à repasser",
                 "trans": "ironing board",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Une immense table trônait au milieu de la salle.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "tabl",
@@ -15926,10 +13934,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:11:36.492Z"
         },
-        "unit": "unit4",
-        "module": "2024-03-24-everyday-nouns",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.094Z"
+        "updated_at": "2025-10-29T17:32:29.094Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -15967,18 +13976,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Alors petite tête comment vas-tu ?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire une drôle de tête",
                 "trans": "to look upset",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il fait sa mauvaise tête.",
                 "source": "cambridge"
             },
             {
@@ -15989,18 +13988,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Est-ce que tu perds la tête !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "se mettre en tête de devenir acteur",
                 "trans": "to get it into one’s head to be an actor",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il s’est mis en tête de gagner beaucoup d’argent.",
                 "source": "cambridge"
             },
             {
@@ -16011,18 +14000,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il sait tout le poème de tête.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "être en tête",
                 "trans": "to be in the lead",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est le numéro 15 qui est arrivé en tête.",
                 "source": "cambridge"
             },
             {
@@ -16033,18 +14012,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Elle a remplacé son père à la tête du parti.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "coûter vingt euros par tête",
                 "trans": "to cost twenty euros per head",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’impôt sur le revenu par tête d’habitants.",
                 "source": "cambridge"
             },
             {
@@ -16061,18 +14030,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "être en tête du défilé des majorettes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la tête d’un clou",
                 "trans": "the head of a nail",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "utiliser des clous sans tête",
                 "source": "cambridge"
             }
         ],
@@ -16122,11 +14081,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "C’est le tien, pas le mien !",
                 "trans": "It’s yours, not mine.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "À la tienne !",
                 "source": "cambridge"
             }
         ],
@@ -16219,11 +14173,6 @@ export const nounsCambridge = new Map([
                 "text": "un morceau de viande",
                 "trans": "a piece of meat",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les enfants préfèrent la viande de poulet.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "vjɑ̃d",
@@ -16276,29 +14225,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "faire miroiter l’espoir d’une vie meilleure",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "raconter sa vie",
                 "trans": "to tell the story of one’s life",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "La biographie retrace la vie de l’écrivain.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "être plein de vie",
                 "trans": "to be full of life",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il y avait une telle vie dans son regard.",
                 "source": "cambridge"
             }
         ],
@@ -16352,18 +14286,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Mes cousins habitent une petite ville très calme.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Elle fait des courses en ville.",
                 "trans": "She does her shopping downtown.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "On se retrouve en ville ce soir ?",
                 "source": "cambridge"
             }
         ],
@@ -16423,18 +14347,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il avait une voix de basse remarquable.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "compter les voix",
                 "trans": "to count the votes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Mon candidat a obtenu le plus grand nombre de voix.",
                 "source": "cambridge"
             }
         ],
@@ -16485,11 +14399,6 @@ export const nounsCambridge = new Map([
                 "text": "un essaim d’abeilles",
                 "trans": "a swarm of bees",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "la disparition progressive des abeilles",
-                "source": "cambridge"
             }
         ],
         "phonetic": "abɛj",
@@ -16533,13 +14442,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "He is taking his girlfriend to the cinema tonight.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [
             "unit1",
@@ -16599,16 +14502,6 @@ export const nounsCambridge = new Map([
                 "text": "les années 1980",
                 "trans": "the 1980s",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les années passent vite.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "fêter la nouvelle année",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ane",
@@ -16667,23 +14560,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "transformer une citrouille en carrosse d’un coup de baguette",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "manger avec des baguettes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une demi-baguette",
                 "trans": "half a baguette",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Achète-moi une baguette en revenant !",
                 "source": "cambridge"
             }
         ],
@@ -16840,29 +14718,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "C’est bien peu de choses !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "autre chose de plus intéressant",
                 "trans": "something more interesting",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "piloter c’est tout autre chose que de conduire !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Faites quelque chose !",
                 "trans": "Do something!",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est quelque chose quand même !",
                 "source": "cambridge"
             }
         ],
@@ -16958,18 +14821,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La femme est l’avenir de l’homme.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il est venu avec sa femme.",
                 "trans": "He came with his wife.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "sa femme est venue le rejoindre",
                 "source": "cambridge"
             }
         ],
@@ -17035,29 +14888,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Aujourd’hui, c’est un jour de fête.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "souhaiter une bonne fête à qqn",
                 "trans": "to wish someone well on their saint’s day",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Le magasin sera fermé pour la fête de la Saint Valentin.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire la fête avec des amis",
                 "trans": "to have a good time with some friends",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Qu’est-ce qu’on attend pour faire la fête !",
                 "source": "cambridge"
             }
         ],
@@ -17114,11 +14952,6 @@ export const nounsCambridge = new Map([
                 "text": "un arbre en fleurs",
                 "trans": "a tree in blossom",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "apporter des fleurs pour la fête",
-                "source": "cambridge"
             }
         ],
         "phonetic": "flœʀ",
@@ -17171,18 +15004,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "mettre une lettre majuscule au début d’une phrase",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "recevoir une lettre",
                 "trans": "to receive a letter",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le ministre a publié une lettre ouverte à la population.",
                 "source": "cambridge"
             },
             {
@@ -17193,18 +15016,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Elle enseigne les belles lettres.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "suivre des conseils à la lettre",
                 "trans": "to follow advice to the letter",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a traduit le texte à la lettre.",
                 "source": "cambridge"
             }
         ],
@@ -17361,11 +15174,6 @@ export const nounsCambridge = new Map([
                 "text": "la semaine prochaine",
                 "trans": "next week",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "travailler toute la semaine à repeindre les murs",
-                "source": "cambridge"
             }
         ],
         "phonetic": "səmɛn",
@@ -17414,11 +15222,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "les syllabes d’un mot",
                 "trans": "the syllables of a word",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "ne pas prononcer une syllabe",
                 "source": "cambridge"
             }
         ],
@@ -17514,18 +15317,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il a garé sa voiture devant notre porte.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la voiture de tête",
                 "trans": "the front car",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La voiture de tête s’est détachée.",
                 "source": "cambridge"
             }
         ],
@@ -17612,18 +15405,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "She’s over a hundred",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a man of a hundred.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [
             "unit11",
@@ -17714,13 +15496,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "a lemon squeezer.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [
             "unit5",
@@ -17773,11 +15549,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Il a rencontré beaucoup de gens.",
                 "trans": "He met a lot of people.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La plupart des gens de mon immeuble sont des amis.",
                 "source": "cambridge"
             }
         ],
@@ -17849,18 +15620,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "faire une omelette avec une dizaine d’œufs",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "des œufs de poisson",
                 "trans": "fish roe",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les tortues pondent leurs œufs dans un trou qu’elles creusent elles-mêmes.",
                 "source": "cambridge"
             }
         ],
@@ -17947,13 +15708,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "a bowl of pasta.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [
             "unit5",
@@ -18049,11 +15804,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "aller aux toilettes",
                 "trans": "to go to the bathroom",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Où sont les toilettes s’il vous plaît ?",
                 "source": "cambridge"
             }
         ],
@@ -18159,29 +15909,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Elle est bien pour son âge.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un homme d’un certain âge",
                 "trans": "a man of a certain age",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Une dame d’un certain âge est montée dans le bus.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "l’âge de la pierre",
                 "trans": "the Stone Age",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir vécu à l’âge du fer",
                 "source": "cambridge"
             }
         ],
@@ -18231,11 +15966,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "les 26 lettres de l’alphabet français",
                 "trans": "the 26 letters of the French alphabet",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il ne connaît même pas son alphabet.",
                 "source": "cambridge"
             }
         ],
@@ -18289,18 +16019,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "faire son apprentissage auprès d’un maître réputé",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire l’apprentissage d’une langue étrangère",
                 "trans": "to learn a foreign language",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "participer à une semaine d’apprentissage",
                 "source": "cambridge"
             }
         ],
@@ -18350,11 +16070,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Je travaille tous les après-midi.",
                 "trans": "I work every afternoon.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’après-midi, il dort !",
                 "source": "cambridge"
             }
         ],
@@ -18461,11 +16176,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "en automne",
                 "trans": "in the fall",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "En automne les arbres perdent leurs feuilles.",
                 "source": "cambridge"
             }
         ],
@@ -18577,18 +16287,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le navire se dirige vers l’est.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "l’Europe de l’Est",
                 "trans": "Eastern Europe",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "venez-vous de l’Est ou de l’Ouest ?",
                 "source": "cambridge"
             }
         ],
@@ -18642,18 +16342,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "L’étude des langue ne l’intéresse pas.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire des études de droit",
                 "trans": "to study law",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "finir ses études en médecine avec succès",
                 "source": "cambridge"
             },
             {
@@ -18664,18 +16354,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "l’étude scientifique du sous-sol",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire ses devoirs en étude",
                 "trans": "to do one’s homework in homeroom",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir deux heures d’étude par jour",
                 "source": "cambridge"
             },
             {
@@ -18692,18 +16372,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "envoyer les élèves à l’étude à l’issue des cours",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une étude de notaire",
                 "trans": "a notary’s office",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’huissier ouvre son étude le matin seulement.",
                 "source": "cambridge"
             }
         ],
@@ -18753,11 +16423,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "couper l’herbe",
                 "trans": "to cut the grass",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’herbe du jardin est trop haute !",
                 "source": "cambridge"
             }
         ],
@@ -18869,18 +16534,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "un spécialiste de l’histoire de la guerre de cent ans",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "lire une histoire à un enfant",
                 "trans": "to read a story to a child",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Dis maman, raconte-moi encore une histoire !",
                 "source": "cambridge"
             },
             {
@@ -18891,18 +16546,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "C’est dingue cette histoire là !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Arrête de raconter des histoires !",
                 "trans": "Stop talking nonsense!",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tu me racontes des histoires, je ne te crois pas !",
                 "source": "cambridge"
             }
         ],
@@ -18952,11 +16597,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "en hiver",
                 "trans": "in winter",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’hiver nous restons au chaud à la maison.",
                 "source": "cambridge"
             }
         ],
@@ -19055,11 +16695,6 @@ export const nounsCambridge = new Map([
                 "text": "un vent d’ouest",
                 "trans": "a west wind",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les fenêtres de la chambres sont orientées à l’ouest.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "wɛst",
@@ -19118,18 +16753,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Que faites-vous dans les jours prochains ?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il grandit de jour en jour.",
                 "trans": "He get’s taller every day.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sa fortune croit de jour en jour.",
                 "source": "cambridge"
             },
             {
@@ -19140,18 +16765,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "long comme un jour sans pain",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il fait jour.",
                 "trans": "It’s light.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le jour se lève, debout !",
                 "source": "cambridge"
             },
             {
@@ -19162,29 +16777,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ce sera ton tour, un jour !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Un jour ou l’autre, il reviendra.",
                 "trans": "He’ll come back one day.",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Je vous assure qu’il se fera arrêter un jour ou l’autre !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "être à jour dans son travail",
                 "trans": "to be on schedule with one’s work",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ses cahiers de devoirs sont à jour.",
                 "source": "cambridge"
             }
         ],
@@ -19636,7 +17236,7 @@ export const nounsCambridge = new Map([
             "2024-03-24-everyday-nouns"
         ],
         "created_at": "2025-10-24T03:21:41.233Z",
-        "updated_at": "2025-10-29T17:32:29.095Z",
+        "updated_at": "2025-10-30T21:26:42.244Z",
         "sources": [
             "language_academy",
             "cambridge"
@@ -19644,9 +17244,10 @@ export const nounsCambridge = new Map([
         "verified": false,
         "partOfSpeech": "noun",
         "gender": "feminine",
-        "unit": "unit4",
-        "module": "2024-03-24-everyday-nouns",
-        "lesson": null
+        "unit": "unit1",
+        "module": "7",
+        "lesson": null,
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -20256,27 +17857,15 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "être d’un abord facile \n                        \n        to be approachable",
-                "trans": "",
+                "lang": "fr",
+                "text": "être d’un abord facile",
+                "trans": "to be approachable",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Son abord ne fut pas difficile.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "les abords de la ville \n                        \n        the outskirts of the city",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous sommes arrivés aux abords du quartier.",
-                "trans": "",
+                "lang": "fr",
+                "text": "les abords de la ville",
+                "trans": "the outskirts of the city",
                 "source": "cambridge"
             }
         ],
@@ -20335,51 +17924,15 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "tir à l’arc \n                        \n        archery",
-                "trans": "",
+                "lang": "fr",
+                "text": "tir à l’arc",
+                "trans": "archery",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Le tir à l’arc est une des épreuves des jeux olympiques.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "les arcs d’une voûte \n                        \n        the arches of a vaulted ceiling",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Douze arcs encadrent l’entrée.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Many methods have been used to measure the arc of a circle.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the Marble Arch in London.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The rainbow formed an arch in the sky.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a bow and arrow.",
-                "trans": "",
+                "lang": "fr",
+                "text": "les arcs d’une voûte",
+                "trans": "the arches of a vaulted ceiling",
                 "source": "cambridge"
             }
         ],
@@ -20545,20 +18098,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "the Norman castles of England and Wales",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Windsor Castle.",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -20668,20 +18208,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "a cock and three hens",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(also adjective) a cock sparrow.",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -20738,63 +18265,27 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "prendre un crédit sur quinze ans \n                        \n        to take out a fifteen year loan",
-                "trans": "",
+                "lang": "fr",
+                "text": "prendre un crédit sur quinze ans",
+                "trans": "to take out a fifteen year loan",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Le banquier a accordé les crédits demandés.",
-                "trans": "",
+                "lang": "fr",
+                "text": "acheter à crédit",
+                "trans": "to buy on credit",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "acheter à crédit \n                        \n        to buy on credit",
-                "trans": "",
+                "lang": "fr",
+                "text": "obtenir des crédits pour la réalisation d’un projet",
+                "trans": "to get funding for a project",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "La vente à crédit est courante chez les commerçants.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "obtenir des crédits pour la réalisation d’un projet \n                        \n        to get funding for a project",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La banque lui refuse des crédits pour la création de sa société.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir du crédit auprès de qqn \n                        \n        to have credence with sb",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Son crédit baisse auprès de la population.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "We don’t give credit at this shop.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Our credits are greater than our debits.",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir du crédit auprès de qqn",
+                "trans": "to have credence with sb",
                 "source": "cambridge"
             }
         ],
@@ -20853,81 +18344,21 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Dis bonjour à la dame ! \n                        \n        Say hi to the lady!",
-                "trans": "",
+                "lang": "fr",
+                "text": "Dis bonjour à la dame !",
+                "trans": "Say hi to the lady!",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "C’est une grande dame de la chanson lyrique.",
-                "trans": "",
+                "lang": "fr",
+                "text": "la dame de trèfle",
+                "trans": "the queen of clubs",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "la dame de trèfle \n                        \n        the queen of clubs",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a jeté sa dame sur la table et s’est levé.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "jouer aux dames \n                        \n        to play checkers",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "les cases noires du jeu de dames",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "There were several dames at the royal wedding.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tell that child to stand up and let that lady sit down",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The lady in the flower shop said that roses are expensive just now",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ladies’ shoes are upstairs in this shop",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(also adjective) a lady doctor.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Be quiet! Ladies do not shout in public.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "I have two aces and a queen.",
-                "trans": "",
+                "lang": "fr",
+                "text": "jouer aux dames",
+                "trans": "to play checkers",
                 "source": "cambridge"
             }
         ],
@@ -21253,105 +18684,27 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "à l’entrée du cinéma \n                        \n        at the entrance to the movie theater",
-                "trans": "",
+                "lang": "fr",
+                "text": "à l’entrée du cinéma",
+                "trans": "at the entrance to the movie theater",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "se retrouver devant l’entrée d’un magasin",
-                "trans": "",
+                "lang": "fr",
+                "text": "L’entrée est interdite.",
+                "trans": "No entry.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "L’entrée est interdite. \n                        \n        No entry.",
-                "trans": "",
+                "lang": "fr",
+                "text": "entrée libre",
+                "trans": "free admission",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "entrée libre \n                        \n        free admission",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’entrée au zoo est gratuite.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Qu’as-tu mangé en entrée ? \n                        \n        What did you have as a starter?",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les entrées ont été très copieuses.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "They charge a high price for admission.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the entrance to the tunnel",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The church has an impressive entrance.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Hamlet now makes his second entrance.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "They were silenced by the entry of the headmaster.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "We can’t go in – the sign says ‘No Entry’.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Don’t bring your bike in here – leave it in the entry.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "We left our coats in the hall.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "This is the way in/out",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "There’s no way through.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Qu’as-tu mangé en entrée ?",
+                "trans": "What did you have as a starter?",
                 "source": "cambridge"
             }
         ],
@@ -21466,57 +18819,21 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "les faces d’un cube \n                        \n        the sides of a cube",
-                "trans": "",
+                "lang": "fr",
+                "text": "les faces d’un cube",
+                "trans": "the sides of a cube",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "jouer à pile ou face",
-                "trans": "",
+                "lang": "fr",
+                "text": "étudier un cas sous toutes ses faces",
+                "trans": "to study a case from all sides",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "étudier un cas sous toutes ses faces \n                        \n        to study a case from all sides",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La face cachée de la science.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une face souriante \n                        \n        a smiling face",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "un homme à double face",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a rock face",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Dice have six faces.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He tossed the penny and it came down heads.",
-                "trans": "",
+                "lang": "fr",
+                "text": "une face souriante",
+                "trans": "a smiling face",
                 "source": "cambridge"
             }
         ],
@@ -21631,21 +18948,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "la faune et la flore \n                        \n        flora and fauna",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "étudier la flore tropicale",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the flora and fauna of Borneo.",
-                "trans": "",
+                "lang": "fr",
+                "text": "la faune et la flore",
+                "trans": "flora and fauna",
                 "source": "cambridge"
             }
         ],
@@ -21758,93 +19063,33 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "avoir l’habitude de fumer après le repas \n                        \n        to be in the habit of smoking after meals",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir l’habitude de fumer après le repas",
+                "trans": "to be in the habit of smoking after meals",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "prendre l’habitude de lire \n                        \n        to get into the habit of reading",
-                "trans": "",
+                "lang": "fr",
+                "text": "prendre l’habitude de lire",
+                "trans": "to get into the habit of reading",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "ne rien changer à ses habitudes les jours fériés",
-                "trans": "",
+                "lang": "fr",
+                "text": "D’habitude, il se lève à six heures.",
+                "trans": "He usually gets up at six.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "D’habitude, il se lève à six heures. \n                        \n        He usually gets up at six.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Comme d’habitude, il est en retard.",
+                "trans": "He’s late as usual.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "D’habitude, il nous rend visite le dimanche.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Comme d’habitude, il est en retard. \n                        \n        He’s late as usual.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Donnez-moi votre programme de la semaine, comme d’habitude.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle a l’habitude de conduire la nuit. \n                        \n        She’s used to driving at night.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a l’habitude de chanter à l’opéra.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "It’s my custom to go for a walk on Saturday mornings",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "religious customs.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He has the habit of going for a walk after dinner",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She has an irritating habit of interrupting people.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "It was his usual practice to rise at 6.00 a.m.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He has some rather unpleasant ways.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Elle a l’habitude de conduire la nuit.",
+                "trans": "She’s used to driving at night.",
                 "source": "cambridge"
             }
         ],
@@ -21962,14 +19207,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "A good holiday will take your mind off your troubles.",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -22025,57 +19263,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Il a une mauvaise influence sur elle. \n                        \n        He’s a bad influence on her.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous verrons quelle sera l’influence de ce médicament sur la maladie.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He carried a lot of clout on the local council",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "financial/political clout.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He used his influence to get her the job",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He should not have driven the car while under the influence of alcohol.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She is a bad influence on him.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The public has some leverage with their representatives in the Senate.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He thinks he has some pull with the headmaster.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Il a une mauvaise influence sur elle.",
+                "trans": "He’s a bad influence on her.",
                 "source": "cambridge"
             }
         ],
@@ -22133,32 +19323,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "You can hear the news on the radio at 9 o’clock",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Is there any news about your friend?",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(also adjective) a news broadcast.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a live newscast.",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -22214,33 +19379,15 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Les enfants jouent dans le jardin. \n                        \n        The children are playing in the yard.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Les enfants jouent dans le jardin.",
+                "trans": "The children are playing in the yard.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "une maison avec jardin \n                        \n        a house with a yard",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il faut cultiver son jardin.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a small garden at the front of the house",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(also adjective) a garden slug.",
-                "trans": "",
+                "lang": "fr",
+                "text": "une maison avec jardin",
+                "trans": "a house with a yard",
                 "source": "cambridge"
             }
         ],
@@ -22360,9 +19507,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "manger des langues-de-chat avec de la glace \n                        \n        to eat langue-de-chat cookies with ice cream",
-                "trans": "",
+                "lang": "fr",
+                "text": "manger des langues-de-chat avec de la glace",
+                "trans": "to eat langue-de-chat cookies with ice cream",
                 "source": "cambridge"
             }
         ],
@@ -22470,15 +19617,15 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "à cinq lieues d’ici \n                        \n        five leagues from here",
-                "trans": "",
+                "lang": "fr",
+                "text": "à cinq lieues d’ici",
+                "trans": "five leagues from here",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "J’étais à mille lieues de l’imaginer. \n                        \n        I was far from imagining that.",
-                "trans": "",
+                "lang": "fr",
+                "text": "J’étais à mille lieues de l’imaginer.",
+                "trans": "I was far from imagining that.",
                 "source": "cambridge"
             }
         ],
@@ -22532,75 +19679,39 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "lieu de naissance \n                        \n        place of birth",
-                "trans": "",
+                "lang": "fr",
+                "text": "lieu de naissance",
+                "trans": "place of birth",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "un lieu public \n                        \n        a public place",
-                "trans": "",
+                "lang": "fr",
+                "text": "un lieu public",
+                "trans": "a public place",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Il s’est réfugié en lieu sûr.",
-                "trans": "",
+                "lang": "fr",
+                "text": "les lieux de l’accident",
+                "trans": "the place where the accident occurred",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "les lieux de l’accident \n                        \n        the place where the accident occurred",
-                "trans": "",
+                "lang": "fr",
+                "text": "manger des fruits au lieu d’une glace",
+                "trans": "to eat fruit instead of ice cream",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "La police est arrivée sur les lieux du cambriolage.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Tu ferais mieux de m’aider au lieu de te moquer.",
+                "trans": "You’d be better off helping instead of laughing at me.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "manger des fruits au lieu d’une glace \n                        \n        to eat fruit instead of ice cream",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "prendre une chambre d’hôtel au lieu de dormir chez l’habitant",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tu ferais mieux de m’aider au lieu de te moquer. \n                        \n        You’d be better off helping instead of laughing at me.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’aurais mieux fait d’aller le voir au lieu de lui téléphoner.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "On a cuisiné ce lieu au court-bouillon. \n                        \n        This hake has been cooked in a court-bouillon.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "These premises are used by the local football team.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "I don’t know his whereabouts.",
-                "trans": "",
+                "lang": "fr",
+                "text": "On a cuisiné ce lieu au court-bouillon.",
+                "trans": "This hake has been cooked in a court-bouillon.",
                 "source": "cambridge"
             }
         ],
@@ -22654,243 +19765,75 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "tracer une ligne \n                        \n        to draw a line",
-                "trans": "",
+                "lang": "fr",
+                "text": "tracer une ligne",
+                "trans": "to draw a line",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Sa ligne n’est pas encore bien droite mais il s’améliore.",
-                "trans": "",
+                "lang": "fr",
+                "text": "la ligne d’horizon",
+                "trans": "the line of the horizon",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "la ligne d’horizon \n                        \n        the line of the horizon",
-                "trans": "",
+                "lang": "fr",
+                "text": "la ligne d’arrivée",
+                "trans": "the finish line",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "la ligne d’arrivée \n                        \n        the finish line",
-                "trans": "",
+                "lang": "fr",
+                "text": "la ligne d’un avion",
+                "trans": "the design of a plane",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "La ligne de démarcation a été franchie.",
-                "trans": "",
+                "lang": "fr",
+                "text": "des lignes pures",
+                "trans": "pure lines",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "la ligne d’un avion \n                        \n        the design of a plane",
-                "trans": "",
+                "lang": "fr",
+                "text": "surveiller sa ligne",
+                "trans": "to watch one’s figure",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "des lignes pures \n                        \n        pure lines",
-                "trans": "",
+                "lang": "fr",
+                "text": "une ligne de chemin de fer / d’autobus",
+                "trans": "a railroad line / bus service",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Cette voiture est réputée pour sa ligne aérodynamique.",
-                "trans": "",
+                "lang": "fr",
+                "text": "une ligne téléphonique",
+                "trans": "a phone line",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "surveiller sa ligne \n                        \n        to watch one’s figure",
-                "trans": "",
+                "lang": "fr",
+                "text": "mettre en ligne",
+                "trans": "to put in a line",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Elle figure sur de nombreux tableaux qui accentuent ses belles lignes.",
-                "trans": "",
+                "lang": "fr",
+                "text": "écrire quelques lignes",
+                "trans": "to write a few lines",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "une ligne de chemin de fer / d’autobus \n                        \n        a railroad line / bus service",
-                "trans": "",
+                "lang": "fr",
+                "text": "la pêche à la ligne",
+                "trans": "line fishing",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Selon le plan de la ligne d’autobus il passe par chez nous.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une ligne téléphonique \n                        \n        a phone line",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La ligne a été rétablie depuis ce matin.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "mettre en ligne \n                        \n        to put in a line",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les enfants, mettez-vous en ligne avant d’entrer en classe !",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "écrire quelques lignes \n                        \n        to write a few lines",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle a juste envoyé quelques lignes pour dire que tout allait bien.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "la pêche à la ligne \n                        \n        line fishing",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Passez nous voir, nous irons à la pêche à la ligne !",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "raconter qqch dans les grandes lignes \n                        \n        to outline sth",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "présenter les grandes lignes de son ouvrage",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The opening batsman walked up to the crease.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She hung the washing on the line",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a fishing-rod and line.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She drew a straight line across the page",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a dotted/wavy line.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The ship had very graceful lines",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "A dancer uses a mirror to improve his line.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a pipeline",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a line of communication",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "All (telephone) lines are engaged.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The letter contained only three lines",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a poem of sixteen lines.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a shipping line.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He was sent to fight on the front line.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "A ridge of high pressure is a long narrow area of high pressure as shown on a weather map.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "lined paper",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a lined face.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "ruled paper.",
-                "trans": "",
+                "lang": "fr",
+                "text": "raconter qqch dans les grandes lignes",
+                "trans": "to outline sth",
                 "source": "cambridge"
             }
         ],
@@ -23059,51 +20002,21 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "C’est ouvert le midi. \n                        \n        It’s open at noon.",
-                "trans": "",
+                "lang": "fr",
+                "text": "C’est ouvert le midi.",
+                "trans": "It’s open at noon.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "se rencontrer le midi pour le repas",
-                "trans": "",
+                "lang": "fr",
+                "text": "Il est midi.",
+                "trans": "It’s noon.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Il est midi. \n                        \n        It’s noon.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il arrive à midi et quart. \n                        \n        He arrives at a quarter after twelve.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La cloche sonne à midi juste.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "We’ll meet you at midday",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(also adjective) a midday meal.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "They arrived at noon.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Il arrive à midi et quart.",
+                "trans": "He arrives at a quarter after twelve.",
                 "source": "cambridge"
             }
         ],
@@ -23271,15 +20184,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "au mois de mai \n                        \n        in May",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les vacances commencent à la fin mois de juin.",
-                "trans": "",
+                "lang": "fr",
+                "text": "au mois de mai",
+                "trans": "in May",
                 "source": "cambridge"
             }
         ],
@@ -23336,14 +20243,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Mount Everest.",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -23449,39 +20349,15 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "moulin à eau / vent \n                        \n        watermill/windmill",
-                "trans": "",
+                "lang": "fr",
+                "text": "moulin à eau / vent",
+                "trans": "watermill/windmill",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "se battre contre des moulins à vent",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "moulin à café \n                        \n        coffee grinder",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Passe-moi le moulin à légumes s’il te plaît !",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a coffee mill",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a pepper mill.",
-                "trans": "",
+                "lang": "fr",
+                "text": "moulin à café",
+                "trans": "coffee grinder",
                 "source": "cambridge"
             }
         ],
@@ -23541,45 +20417,15 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "composer / faire de la musique \n                        \n        to compose / make music",
-                "trans": "",
+                "lang": "fr",
+                "text": "composer / faire de la musique",
+                "trans": "to compose / make music",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "la musique classique \n                        \n        classical music",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il s’est fait un nom dans le monde de la musique.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She prefers classical music to pop music",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She is studying music",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(also adjective) a music lesson.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The pianist has forgotten to bring her music.",
-                "trans": "",
+                "lang": "fr",
+                "text": "la musique classique",
+                "trans": "classical music",
                 "source": "cambridge"
             }
         ],
@@ -23644,21 +20490,14 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "the National History Museum.",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
             "lesson"
         ],
         "created_at": "2025-10-29T01:39:41.852Z",
-        "updated_at": "2025-10-29T01:39:43.777Z",
+        "updated_at": "2025-10-30T21:26:33.283Z",
         "sources": [
             "language_academy",
             "cambridge"
@@ -23685,7 +20524,10 @@ export const nounsCambridge = new Map([
                 "context": "a museum",
                 "frequency": "common"
             }
-        ]
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -23709,69 +20551,27 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "avoir une bonne / mauvaise mémoire \n                        \n        to have a good / bad memory",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir une bonne / mauvaise mémoire",
+                "trans": "to have a good / bad memory",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "perdre la mémoire \n                        \n        to lose one’s memory",
-                "trans": "",
+                "lang": "fr",
+                "text": "perdre la mémoire",
+                "trans": "to lose one’s memory",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Sa mémoire flanche de plus en plus.",
-                "trans": "",
+                "lang": "fr",
+                "text": "garder en mémoire",
+                "trans": "to save",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "garder en mémoire \n                        \n        to save",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Mettre son texte en mémoire pour plus de sécurité.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "choisir son sujet de mémoire \n                        \n        to choose one’s dissertation subject",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle doit présenter son mémoire de philosophie en fin d’année.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He has a good memory for details.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Her memory is full of interesting stories.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He has total recall of the incident.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Students have to submit a 20,000-word dissertation.",
-                "trans": "",
+                "lang": "fr",
+                "text": "choisir son sujet de mémoire",
+                "trans": "to choose one’s dissertation subject",
                 "source": "cambridge"
             }
         ],
@@ -23934,33 +20734,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "vivre en paix avec ses voisins \n                        \n        to live in peace with one’s neighbors",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les pourparlers de paix sont au point mort.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Does our country want peace or war?",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(also adjective) a peace treaty.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "I need some peace and quiet.",
-                "trans": "",
+                "lang": "fr",
+                "text": "vivre en paix avec ses voisins",
+                "trans": "to live in peace with one’s neighbors",
                 "source": "cambridge"
             }
         ],
@@ -24117,81 +20893,27 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "avoir peur de qqch \n                        \n        to be afraid of sth",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir peur de qqch",
+                "trans": "to be afraid of sth",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "avoir peur de faire qqch \n                        \n        to be afraid of doing sth",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir peur de faire qqch",
+                "trans": "to be afraid of doing sth",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "avoir peur que qqn fasse qqch \n                        \n        to be afraid sb will do sth",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir peur que qqn fasse qqch",
+                "trans": "to be afraid sb will do sth",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "faire peur à qqn \n                        \n        to frighten sb",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "N’ayez pas peur ce chien ne mord pas !",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The child is not afraid of the dark",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She was afraid to go to the dentist.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He was afraid of disappointing her.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She was filled with a feeling of angst.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The soldier tried not to show his fear",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She has a deep-seated fear of spiders.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The noise gave me a terrible fright.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The noise gave me a scare.",
-                "trans": "",
+                "lang": "fr",
+                "text": "faire peur à qqn",
+                "trans": "to frighten sb",
                 "source": "cambridge"
             }
         ],
@@ -24413,39 +21135,21 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "oiseau qui se pose sur une branche \n                        \n        bird landing on a branch",
-                "trans": "",
+                "lang": "fr",
+                "text": "oiseau qui se pose sur une branche",
+                "trans": "bird landing on a branch",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "avion qui se pose \n                        \n        plane landing",
-                "trans": "",
+                "lang": "fr",
+                "text": "avion qui se pose",
+                "trans": "plane landing",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Pose-toi là, je reviens tout de suite.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "problème qui se pose \n                        \n        problem that is posed",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La question se pose de savoir s’il répondra ou pas.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The bird alighted on the fence.",
-                "trans": "",
+                "lang": "fr",
+                "text": "problème qui se pose",
+                "trans": "problem that is posed",
                 "source": "cambridge"
             }
         ],
@@ -24502,14 +21206,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "This campaign is good for the firm’s PR.",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -24565,123 +21262,33 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "saint Jean \n                        \n        Saint John",
-                "trans": "",
+                "lang": "fr",
+                "text": "saint Jean",
+                "trans": "Saint John",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "fêter le mardi saint",
-                "trans": "",
+                "lang": "fr",
+                "text": "un lieu saint",
+                "trans": "a holy place",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "un lieu saint \n                        \n        a holy place",
-                "trans": "",
+                "lang": "fr",
+                "text": "C’est une sainte femme.",
+                "trans": "She’s a saint.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "respecter les lieux saints",
-                "trans": "",
+                "lang": "fr",
+                "text": "les reliques d’un saint",
+                "trans": "a saint’s relics",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "C’est une sainte femme. \n                        \n        She’s a saint.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le saint homme est décédé.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "les reliques d’un saint \n                        \n        a saint’s relics",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ne plus savoir à quel saint se vouer.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est un saint. \n                        \n        He’s a saint.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Son père passe pour un sain.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Saint Matthew",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "St John’s Road.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "You really are a saint to put up with her.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the Holy Bible",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "holy ground.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a holy life.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the Blessed Virgin.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "hallowed ground.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He led a saintly life",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a saintly expression.",
-                "trans": "",
+                "lang": "fr",
+                "text": "C’est un saint.",
+                "trans": "He’s a saint.",
                 "source": "cambridge"
             }
         ],
@@ -24952,171 +21559,81 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Quel est le sens de ce mot ? \n                        \n        What does this word mean?",
-                "trans": "",
+                "lang": "fr",
+                "text": "Quel est le sens de ce mot ?",
+                "trans": "What does this word mean?",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Cette phrase n’a pas de sens. \n                        \n        This sentence doesn’t make sense.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Cette phrase n’a pas de sens.",
+                "trans": "This sentence doesn’t make sense.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "sens figuré \n                        \n        figurative meaning",
-                "trans": "",
+                "lang": "fr",
+                "text": "sens figuré",
+                "trans": "figurative meaning",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Ce qu’il dit est plein de sens.",
-                "trans": "",
+                "lang": "fr",
+                "text": "À mon sens, ça ne fonctionnera pas.",
+                "trans": "I don’t think it will work.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "À mon sens, ça ne fonctionnera pas. \n                        \n        I don’t think it will work.",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir le sens des affaires",
+                "trans": "to have business sense",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Il faudrait, à mon sens, refaire le parquet en entier.",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir le sens de l’humour",
+                "trans": "to have a sense of humor",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "avoir le sens des affaires \n                        \n        to have business sense",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir du bon sens",
+                "trans": "to have common sense",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "avoir le sens de l’humour \n                        \n        to have a sense of humor",
-                "trans": "",
+                "lang": "fr",
+                "text": "les organes des sens",
+                "trans": "the sense organs",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "n’avoir aucun sens moral",
-                "trans": "",
+                "lang": "fr",
+                "text": "les cinq sens",
+                "trans": "the five senses",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "avoir du bon sens \n                        \n        to have common sense",
-                "trans": "",
+                "lang": "fr",
+                "text": "La voiture venait en sens inverse.",
+                "trans": "The car was coming from the other direction.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Son bon sens lui permet d’intervenir au bon moment.",
-                "trans": "",
+                "lang": "fr",
+                "text": "dans le sens des aiguilles d’une montre",
+                "trans": "clockwise",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "les organes des sens \n                        \n        the sense organs",
-                "trans": "",
+                "lang": "fr",
+                "text": "une rue à sens unique",
+                "trans": "a one way street",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "les cinq sens \n                        \n        the five senses",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "perdre le sens de l’odorat",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La voiture venait en sens inverse. \n                        \n        The car was coming from the other direction.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "dans le sens des aiguilles d’une montre \n                        \n        clockwise",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "fendre la bûche dans le sens de la largeur",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "une rue à sens unique \n                        \n        a one way street",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "sens interdit \n                        \n        one way street",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La circulation dans le sens Paris-province.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "I couldn’t hear you clearly, but I did catch the drift of what you said.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "What is the meaning of this phrase?",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "What is the meaning of his behaviour?",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "There’s no point (in) asking me – I don’t know.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Dogs have an acute sense of hearing.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a well-developed musical sense",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She has no sense of humour.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Some words have several senses.",
-                "trans": "",
+                "lang": "fr",
+                "text": "sens interdit",
+                "trans": "one way street",
                 "source": "cambridge"
             }
         ],
@@ -25177,189 +21694,81 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "la suite d’une histoire \n                        \n        the next part of a story",
-                "trans": "",
+                "lang": "fr",
+                "text": "la suite d’une histoire",
+                "trans": "the next part of a story",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Je ne pense pas que ce film ait une suite.",
-                "trans": "",
+                "lang": "fr",
+                "text": "une suite d’images",
+                "trans": "a series of pictures",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "une suite d’images \n                        \n        a series of pictures",
-                "trans": "",
+                "lang": "fr",
+                "text": "une suite de catastrophes",
+                "trans": "a series of disasters",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "une suite de catastrophes \n                        \n        a series of disasters",
-                "trans": "",
+                "lang": "fr",
+                "text": "se mettre à la suite",
+                "trans": "to follow on",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "raconter une suite de mésaventures",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir des suites fâcheuses",
+                "trans": "to have unfortunate consequences",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "se mettre à la suite \n                        \n        to follow on",
-                "trans": "",
+                "lang": "fr",
+                "text": "Ils n’ont pas donné suite à ma demande.",
+                "trans": "They didn’t follow up on my request.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Il étaient rangés l’un à la suite de l’autre.",
-                "trans": "",
+                "lang": "fr",
+                "text": "réserver une suite",
+                "trans": "to reserve a suite",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "avoir des suites fâcheuses \n                        \n        to have unfortunate consequences",
-                "trans": "",
+                "lang": "fr",
+                "text": "la suite du roi",
+                "trans": "the king’s retinue",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Leur rencontre a eu une suite heureuse.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Il a trouvé un emploi à la suite de sa formation.",
+                "trans": "He found a job after he finished his training.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Ils n’ont pas donné suite à ma demande. \n                        \n        They didn’t follow up on my request.",
-                "trans": "",
+                "lang": "fr",
+                "text": "jouer trois matchs de suite",
+                "trans": "to play three games in a row",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Il a enfin donné une suite à mon coup de téléphone.",
-                "trans": "",
+                "lang": "fr",
+                "text": "deux jours de suite",
+                "trans": "two days running",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "réserver une suite \n                        \n        to reserve a suite",
-                "trans": "",
+                "lang": "fr",
+                "text": "Je ne l’ai plus revu par la suite.",
+                "trans": "I never saw him again.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "La suite parentale est immense.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "la suite du roi \n                        \n        the king’s retinue",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le ministre et sa suite viennent d’arriver.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a trouvé un emploi à la suite de sa formation. \n                        \n        He found a job after he finished his training.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il m’a écrit à la suite de notre rencontre.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "jouer trois matchs de suite \n                        \n        to play three games in a row",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "deux jours de suite \n                        \n        two days running",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a plu plusieurs jours de suite",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je ne l’ai plus revu par la suite. \n                        \n        I never saw him again.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ce n’est que par la suite que j’ai appris son divorce.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Cette décision fait suite à une enquête. \n                        \n        This decision follows on from an investigation.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Son décès fait suite à une longue maladie.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "This is a continuation of what he said last week.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Was there any follow-up to the letter you wrote to the newspaper?",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The President was flanked by a retinue of officials.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a succession of bad harvests.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a suite of furniture",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He has composed a suite of music for the film.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Then began a train of events which ended in disaster.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Cette décision fait suite à une enquête.",
+                "trans": "This decision follows on from an investigation.",
                 "source": "cambridge"
             }
         ],
@@ -25425,51 +21834,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "une bonne / mauvaise surprise \n                        \n        a pleasant/unpleasant surprise",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "préparer un anniversaire surprise",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "His statement caused some surprise",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Your letter was a pleasant surprise",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "There were some nasty surprises waiting for her when she returned",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He stared at her in surprise",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "To my surprise the door was unlocked",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(also adjective) He paid them a surprise visit.",
-                "trans": "",
+                "lang": "fr",
+                "text": "une bonne / mauvaise surprise",
+                "trans": "a pleasant/unpleasant surprise",
                 "source": "cambridge"
             }
         ],
@@ -25589,285 +21956,93 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "la tour d’une cathédrale \n                        \n        the tower of a cathedral",
-                "trans": "",
+                "lang": "fr",
+                "text": "la tour d’une cathédrale",
+                "trans": "the tower of a cathedral",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "tour de contrôle \n                        \n        control tower",
-                "trans": "",
+                "lang": "fr",
+                "text": "tour de contrôle",
+                "trans": "control tower",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "monter en haut de la tour",
-                "trans": "",
+                "lang": "fr",
+                "text": "vivre dans une tour",
+                "trans": "to live in a tower",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "vivre dans une tour \n                        \n        to live in a tower",
-                "trans": "",
+                "lang": "fr",
+                "text": "prendre une tour",
+                "trans": "to take a rook",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "habiter au 20e étage de la tour",
-                "trans": "",
+                "lang": "fr",
+                "text": "mesurer son tour de taille",
+                "trans": "to measure one’s waist",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "prendre une tour \n                        \n        to take a rook",
-                "trans": "",
+                "lang": "fr",
+                "text": "faire le tour du lac",
+                "trans": "to walk all around the lake",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Il lui a pris toutes ses tours.",
-                "trans": "",
+                "lang": "fr",
+                "text": "faire un tour",
+                "trans": "to go for a walk",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "mesurer son tour de taille \n                        \n        to measure one’s waist",
-                "trans": "",
+                "lang": "fr",
+                "text": "donner un tour de clé",
+                "trans": "to turn the key",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Le chapelier lui a pris le tour de la tête.",
-                "trans": "",
+                "lang": "fr",
+                "text": "tour de magie",
+                "trans": "magic trick",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "faire le tour du lac \n                        \n        to walk all around the lake",
-                "trans": "",
+                "lang": "fr",
+                "text": "attendre son tour pour jouer",
+                "trans": "to wait for one’s turn to play",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Il a fait plusieurs fois le tour du quartier.",
-                "trans": "",
+                "lang": "fr",
+                "text": "C’est ton tour.",
+                "trans": "It’s your turn.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "faire un tour \n                        \n        to go for a walk",
-                "trans": "",
+                "lang": "fr",
+                "text": "prendre la parole à tour de rôle",
+                "trans": "to take it in turn to speak",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Je vais faire un petit tour dehors.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Il est tour à tour drôle ou triste.",
+                "trans": "He’s funny or sad by turns.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "donner un tour de clé \n                        \n        to turn the key",
-                "trans": "",
+                "lang": "fr",
+                "text": "voter au second tour",
+                "trans": "to vote in the second round",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Son sang n’a fait qu’un tour.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "tour de magie \n                        \n        magic trick",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il nous a fait un tour de passe-passe curieux.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "attendre son tour pour jouer \n                        \n        to wait for one’s turn to play",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est ton tour. \n                        \n        It’s your turn.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a laissé passer son tour.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "prendre la parole à tour de rôle \n                        \n        to take it in turn to speak",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Présentez-vous à tour de rôle !",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est tour à tour drôle ou triste. \n                        \n        He’s funny or sad by turns.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le temps était tour à tour couvert ou ensoleillé.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "voter au second tour \n                        \n        to vote in the second round",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Rien ne prévoit qu’il sera élu dès le premier tour.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "affaire qui prend un mauvais tour \n                        \n        matter taking a turn for the worse",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La maladie nous a joué un mauvais tour.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the Tower of London",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a church tower.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "They live in a tower block.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He moved his castle to d5.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the Earth’s circuit round the sun",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "three circuits of the racetrack.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The children thought it a huge joke when the cat stole the fish.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He did it as a prank.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Can I have a ride on your bike?",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Shortly afterwards I did another spell working on the checkout desk.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "After lunch we went for a spin in my new car.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The message was just a trick to get her to leave the room.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The magician performed some clever tricks.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He gave the handle a turn.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "It’s your turn to choose a record",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "You’ll have to wait your turn in the bathroom.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He’s gone for a wander round the shops.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a potter’s wheel",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He was found drunk at the wheel (= steering-wheel) of his car.",
-                "trans": "",
+                "lang": "fr",
+                "text": "affaire qui prend un mauvais tour",
+                "trans": "matter taking a turn for the worse",
                 "source": "cambridge"
             }
         ],
@@ -25980,14 +22155,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "a campaign to encourage more people to use public transport.",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -26038,27 +22206,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "remporter un triomphe \n                        \n        to win",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "fêter le triomphe de la justice dans notre pays",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The battle ended in a triumph for the Romans.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "They went home in triumph.",
-                "trans": "",
+                "lang": "fr",
+                "text": "remporter un triomphe",
+                "trans": "to win",
                 "source": "cambridge"
             }
         ],
@@ -26330,15 +22480,15 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "voyager en van \n                        \n        to travel in a van",
-                "trans": "",
+                "lang": "fr",
+                "text": "voyager en van",
+                "trans": "to travel in a van",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "faire monter une jument dans un van \n                        \n        to get a mare into a horsebox",
-                "trans": "",
+                "lang": "fr",
+                "text": "faire monter une jument dans un van",
+                "trans": "to get a mare into a horsebox",
                 "source": "cambridge"
             }
         ],
@@ -26398,21 +22548,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Ils organisent une fête à l’occasion de sa venue. \n                        \n        They’re organizing a party to celebrate his coming.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sa venue n’a pas arrangé les choses dans la société.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the comings and goings of the people in the street.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Ils organisent une fête à l’occasion de sa venue.",
+                "trans": "They’re organizing a party to celebrate his coming.",
                 "source": "cambridge"
             }
         ],
@@ -26575,21 +22713,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "habiter le centre-ville \n                        \n        to live in the town center",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "ouvrir une rue piétonne au centre-ville",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "You can get a bus from the town centre.",
-                "trans": "",
+                "lang": "fr",
+                "text": "habiter le centre-ville",
+                "trans": "to live in the town center",
                 "source": "cambridge"
             }
         ],
@@ -26746,141 +22872,45 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "avoir une bonne vue \n                        \n        to have good eyesight",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir une bonne vue",
+                "trans": "to have good eyesight",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Sa vue décline depuis quelques temps.",
-                "trans": "",
+                "lang": "fr",
+                "text": "détourner la vue",
+                "trans": "to look away",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "détourner la vue \n                        \n        to look away",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir une belle vue sur la campagne",
+                "trans": "to have a beautiful view of the countryside",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "De honte, il détournait la vue.",
-                "trans": "",
+                "lang": "fr",
+                "text": "une vue du port",
+                "trans": "a view of the harbor",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "avoir une belle vue sur la campagne \n                        \n        to have a beautiful view of the countryside",
-                "trans": "",
+                "lang": "fr",
+                "text": "avoir une vue générale de la situation",
+                "trans": "to have an overall view of the situation",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "De là-haut nous avons une vue magnifique sur la ville.",
-                "trans": "",
+                "lang": "fr",
+                "text": "À première vue, cela semble simple.",
+                "trans": "At first sight it seems simple.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "une vue du port \n                        \n        a view of the harbor",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Dessinez une vue générale du paysage !",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "avoir une vue générale de la situation \n                        \n        to have an overall view of the situation",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a exprimé des vues nouvelles.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "À première vue, cela semble simple. \n                        \n        At first sight it seems simple.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "À première vue, elle a raison.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle a un nouveau poste en vue. \n                        \n        She has a new job in her sights.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai quelqu’un en vue pour votre projet.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "I have good eyesight.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Their house has a wonderful outlook.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a fine prospect.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The blind man had lost his sight in the war.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The boat was within sight of land",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The end of our troubles is in sight.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Your house has a fine view of the hills",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He painted a view of the harbour.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He is slowly losing his vision.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Elle a un nouveau poste en vue.",
+                "trans": "She has a new job in her sights.",
                 "source": "cambridge"
             }
         ],
@@ -26946,27 +22976,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "partir en week-end \n                        \n        to go away for the weekend",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’Académie conseille de changer le terme “week-end” par “fin de semaine”",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "We spent a weekend in Paris",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(also adjective) a weekend trip.",
-                "trans": "",
+                "lang": "fr",
+                "text": "partir en week-end",
+                "trans": "to go away for the weekend",
                 "source": "cambridge"
             }
         ],
@@ -27021,75 +23033,27 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "aller à l’école \n                        \n        to go to school",
-                "trans": "",
+                "lang": "fr",
+                "text": "aller à l’école",
+                "trans": "to go to school",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "école publique / privée \n                        \n        state/private school",
-                "trans": "",
+                "lang": "fr",
+                "text": "école publique / privée",
+                "trans": "state/private school",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "l’école primaire \n                        \n        primary school",
-                "trans": "",
+                "lang": "fr",
+                "text": "l’école primaire",
+                "trans": "primary school",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "une école de danse \n                        \n        a dance school",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "faire l’école buissonnière",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She goes to the school",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He’s not at university – he’s still at school",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "(American) He’s still in school.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The behaviour of this school in public is sometimes not very good.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "She runs a sewing school",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a driving school.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "There are two schools of thought about the treatment of this disease.",
-                "trans": "",
+                "lang": "fr",
+                "text": "une école de danse",
+                "trans": "a dance school",
                 "source": "cambridge"
             }
         ],
@@ -27159,14 +23123,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "apprendre le code de la route à l’auto-école",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -27266,69 +23223,15 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "à mon époque \n                        \n        in my time",
-                "trans": "",
+                "lang": "fr",
+                "text": "à mon époque",
+                "trans": "in my time",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "C’est l’époque des fraises. \n                        \n        It’s strawberry time.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’était la bonne époque !",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "This machine was the wonder of the age",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the Middle Ages.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "There was far less traffic on the roads in my grandfather’s day",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "In the days of steam power, a five-person crew was required if a steam locomotive pulled a single passenger carriage.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The invention of printing marked an epoch in the history of education.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the Victorian era.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "at the time of his wedding",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "breakfast time.",
-                "trans": "",
+                "lang": "fr",
+                "text": "C’est l’époque des fraises.",
+                "trans": "It’s strawberry time.",
                 "source": "cambridge"
             }
         ],
@@ -27443,213 +23346,81 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "C’est mon affaire. \n                        \n        That’s my business.",
-                "trans": "",
+                "lang": "fr",
+                "text": "C’est mon affaire.",
+                "trans": "That’s my business.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Occupe-toi de tes affaires. \n                        \n        Mind your own business.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Occupe-toi de tes affaires.",
+                "trans": "Mind your own business.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "J’en fais mon affaire !",
-                "trans": "",
+                "lang": "fr",
+                "text": "étouffer une affaire",
+                "trans": "to hush up a scandal",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "étouffer une affaire \n                        \n        to hush up a scandal",
-                "trans": "",
+                "lang": "fr",
+                "text": "conclure une affaire",
+                "trans": "to clinch a deal",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "L’affaire a mal tourné.",
-                "trans": "",
+                "lang": "fr",
+                "text": "faire une bonne affaire",
+                "trans": "to get a bargain",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "conclure une affaire \n                        \n        to clinch a deal",
-                "trans": "",
+                "lang": "fr",
+                "text": "créer sa propre affaire",
+                "trans": "to set up one’s own business",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "faire une bonne affaire \n                        \n        to get a bargain",
-                "trans": "",
+                "lang": "fr",
+                "text": "prendre soin de ses affaires",
+                "trans": "to look after one’s personal belongings",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Les affaires sont les affaires !",
-                "trans": "",
+                "lang": "fr",
+                "text": "un homme d’affaires",
+                "trans": "a businessman",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "créer sa propre affaire \n                        \n        to set up one’s own business",
-                "trans": "",
+                "lang": "fr",
+                "text": "Ce tournevis fera l’affaire.",
+                "trans": "This screwdriver will do the job.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "L’affaire est bien gérée.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Nous irons le chercher : c’est l’affaire de quelques heures seulement.",
+                "trans": "We’ll go and get him: it’ll only take a few hours.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "prendre soin de ses affaires \n                        \n        to look after one’s personal belongings",
-                "trans": "",
+                "lang": "fr",
+                "text": "Il fait de cette histoire une affaire d’honneur.",
+                "trans": "He’s making all this into a matter of honor.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Il a ramassé ses affaires et est parti.",
-                "trans": "",
+                "lang": "fr",
+                "text": "instruire une affaire",
+                "trans": "to try a case",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "un homme d’affaires \n                        \n        a businessman",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a fait des affaires en or.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ce tournevis fera l’affaire. \n                        \n        This screwdriver will do the job.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ce costume fait l’affaire.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Nous irons le chercher : c’est l’affaire de quelques heures seulement. \n                        \n        We’ll go and get him: it’ll only take a few hours.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il fait de cette histoire une affaire d’honneur. \n                        \n        He’s making all this into a matter of honor.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "instruire une affaire \n                        \n        to try a case",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’affaire a été présentée au juge.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle est très affairée ces temps-ci. \n                        \n        She’s very busy these days.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the Suez affair.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "financial affairs",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Where I go is entirely my own affair.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "This carpet was a real bargain.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Selling china is my business",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The shop/store does more business at Christmas than at any other time.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He owns his own business.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Make it your business to help him",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Let’s get down to business (= Let’s start the work etc that must be done).",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The judge in this case has been very fair.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a business deal.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "If he catches you leaving early, that’s your lookout!",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "a difficult proposition.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "There has been a tremendous to-do about the missing papers.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Elle est très affairée ces temps-ci.",
+                "trans": "She’s very busy these days.",
                 "source": "cambridge"
             }
         ],
@@ -27701,20 +23472,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "secondary education",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "His lack of education prevented him from getting a good job.",
-                "trans": "",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -27879,105 +23637,45 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "Le compte est bon. \n                        \n        That’s right.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Le compte est bon.",
+                "trans": "That’s right.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Voici votre compte, il est certainement exact.",
-                "trans": "",
+                "lang": "fr",
+                "text": "faire ses comptes",
+                "trans": "to do one’s accounts",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "faire ses comptes \n                        \n        to do one’s accounts",
-                "trans": "",
+                "lang": "fr",
+                "text": "tenir les comptes d’un commerce",
+                "trans": "to do the accounts for a store",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "tenir les comptes d’un commerce \n                        \n        to do the accounts for a store",
-                "trans": "",
+                "lang": "fr",
+                "text": "ouvrir un compte",
+                "trans": "to open an account",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "faire le compte des ventes en fin de journée",
-                "trans": "",
+                "lang": "fr",
+                "text": "tenir compte de son opinion",
+                "trans": "to take account of one’s opinion",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "ouvrir un compte \n                        \n        to open an account",
-                "trans": "",
+                "lang": "fr",
+                "text": "Je m’en rends compte.",
+                "trans": "I realize that.",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "un compte en banque déficitaire",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "tenir compte de son opinion \n                        \n        to take account of one’s opinion",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le patron tient compte de vos remarques.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je m’en rends compte. \n                        \n        I realize that.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "se rendre compte que tout n’est que mensonges",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tout compte fait, tu as raison. \n                        \n        All things considered, you’re right.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Tout compte fait, ses remarques sont justes.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "I have (opened) an account with the local bank.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "I have an account at Smiths.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "They took a count of how many people attended.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "He kept a tally of all the money he spent.",
-                "trans": "",
+                "lang": "fr",
+                "text": "Tout compte fait, tu as raison.",
+                "trans": "All things considered, you’re right.",
                 "source": "cambridge"
             }
         ],
@@ -28038,27 +23736,9 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "un sandwich au comté \n                        \n        a Comté cheese sandwich",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Count Dracula.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the Earl of Essex.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the county of Essex.",
-                "trans": "",
+                "lang": "fr",
+                "text": "un sandwich au comté",
+                "trans": "a Comté cheese sandwich",
                 "source": "cambridge"
             }
         ],
@@ -28139,11 +23819,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le café ne doit pas bouillir.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "acheter un paquet de café",
                 "trans": "to buy a packet of coffee",
                 "source": "cambridge"
@@ -28156,18 +23831,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "préférer boire une tisane plutôt que du café",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "se retrouver dans un café",
                 "trans": "to meet in a café",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "écrire ses bouquins dans le petit café du coin",
                 "source": "cambridge"
             }
         ],
@@ -28188,10 +23853,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:01:43.537Z"
         },
-        "unit": "unit9",
-        "module": "2024-06-05-reading-9",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.168Z"
+        "updated_at": "2025-10-29T17:32:29.168Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -28219,11 +23885,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "passer ses journées à travailler",
                 "trans": "to spend one’s days working",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ne ratez rien de la journée portes ouvertes !",
                 "source": "cambridge"
             }
         ],
@@ -28283,18 +23944,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "vulnérable comme tous les êtres humains",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un être cher",
                 "trans": "a loved one",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "C’est un être d’une bonté inégalable.",
                 "source": "cambridge"
             }
         ],
@@ -28348,18 +23999,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ses idées fixes constituent un handicape pour lui.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "avoir une idée",
                 "trans": "to have an idea",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il me vient tout à coup à l’idée que nous pourrions aller au restaurant.",
                 "source": "cambridge"
             },
             {
@@ -28370,18 +24011,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Ses idées correspondent souvent aux miennes.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "As-tu une idée de l’heure qu’il est ?",
                 "trans": "Do you have any idea what time it is?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "J’ai mon idée sur la question.",
                 "source": "cambridge"
             }
         ],
@@ -28400,10 +24031,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T06:00:44.386Z"
         },
-        "unit": "unit6",
-        "module": "2024-04-24-reading-6",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.134Z"
+        "updated_at": "2025-10-29T17:32:29.134Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -28431,11 +24063,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "féliciter les mariés",
                 "trans": "to congratulate the newly-weds",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les mariés sont partis en voyage de noces.",
                 "source": "cambridge"
             }
         ],
@@ -28486,11 +24113,6 @@ export const nounsCambridge = new Map([
                 "text": "champignon comestible / vénéneux",
                 "trans": "edible/poisonous mushroom",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "mettre des champignons dans la sauce du rôti",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʃɑ̃piɲɔ̃",
@@ -28539,11 +24161,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "s’inscrire à l’université",
                 "trans": "to enroll at university",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je fréquente l’université de ma région.",
                 "source": "cambridge"
             }
         ],
@@ -28597,18 +24214,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il me vient à la pensée qu’il est peut-être en danger.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "dire le fond de sa pensée",
                 "trans": "to say what one is really thinking",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Je lisais dans ses pensées qu’il n’était pas content.",
                 "source": "cambridge"
             }
         ],
@@ -28662,18 +24269,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Lui avez-vous envoyé votre réponse ?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "trouver la bonne réponse",
                 "trans": "to find the right answer",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il a réponse à tout.",
                 "source": "cambridge"
             }
         ],
@@ -28723,11 +24320,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "agir sans arrière-pensée",
                 "trans": "to act without an ulterior motive",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Elle devait avoir une certaine arrière- pensée en disant cela.",
                 "source": "cambridge"
             }
         ],
@@ -28781,29 +24373,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Elle a commencé ses révisions deux mois avant l’examen.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire la révision d’une machine",
                 "trans": "to service a machine",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "La révision du moteur a pris deux jours.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "la révision d’un loyer",
                 "trans": "revising rental charges",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La révision des salaire est en cours.",
                 "source": "cambridge"
             }
         ],
@@ -28906,29 +24483,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Sa méthode n’est pas convaincante.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "agir avec méthode",
                 "trans": "to be methodical",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "avoir de la méthode dans son enseignement",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "une méthode de lecture",
                 "trans": "a primer",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Sa méthode d’apprentissage des langues est excellente.",
                 "source": "cambridge"
             }
         ],
@@ -29024,18 +24586,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "construire un muret en pierre locale",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "jeter des pierres",
                 "trans": "to throw rocks",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "recevoir une volée de pierres sur la tête",
                 "source": "cambridge"
             }
         ],
@@ -29089,18 +24641,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le bordeaux a longtemps été la couleur à la mode.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "boire du bordeaux",
                 "trans": "to drink Bordeaux",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "faire la tournée des chais pour une dégustation de bordeaux",
                 "source": "cambridge"
             }
         ],
@@ -29151,11 +24693,6 @@ export const nounsCambridge = new Map([
                 "text": "faire un rêve",
                 "trans": "to have a dream",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Un rêve devenu réalité.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʀɛv",
@@ -29199,13 +24736,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Le mariage est célébré à la cathédrale.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "katedʀal",
         "tags": [
             "unit10",
@@ -29256,18 +24787,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Attention, les marches sont très hautes !",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "des chaussures de marche",
                 "trans": "walking shoes",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La marche jusqu’au refuge a été pénible.",
                 "source": "cambridge"
             },
             {
@@ -29278,18 +24799,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Nous avons fait une marche le long du fleuve.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "mettre en marche une machine",
                 "trans": "to start a machine",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "L’ordinateur est en marche, tu peux l’utiliser.",
                 "source": "cambridge"
             },
             {
@@ -29300,18 +24811,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Les militaires ont fait une marche forcée d’une trentaine de kilomètres.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Quelle est la marche à suivre ?",
                 "trans": "What’s the procedure?",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Pensez-vous que c’est effectivement la bonne marche à suivre ?",
                 "source": "cambridge"
             }
         ],
@@ -29361,11 +24862,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "la réalité de la vie d’artiste",
                 "trans": "the reality of an artist’s life",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Un pays où se mêlent fantasme et réalité.",
                 "source": "cambridge"
             }
         ],
@@ -29419,18 +24915,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "passer les longues soirées d’hiver près de la cheminée",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "aller à une soirée",
                 "trans": "to go to a party",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La soirée a été très réussie.",
                 "source": "cambridge"
             }
         ],
@@ -29490,29 +24976,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "un système électoral dévastateur",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un système d’alarme",
                 "trans": "the alarm system",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Le système d’appel fonctionne bien.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le système nerveux",
                 "trans": "the nervous system",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "contrôler le système respiratoire",
                 "source": "cambridge"
             }
         ],
@@ -29531,10 +25002,11 @@ export const nounsCambridge = new Map([
             "confidence_score": 0.9,
             "last_updated": "2025-10-23T05:55:23.969Z"
         },
-        "unit": "unit11",
-        "module": "2024-02-12-reading-11",
+        "unit": "unit1",
+        "module": "7",
         "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.201Z"
+        "updated_at": "2025-10-29T17:32:29.201Z",
+        "definition": "Unit 1, Module 7"
     }
   ],
   [
@@ -29557,13 +25029,7 @@ export const nounsCambridge = new Map([
         "register": [],
         "usage_notes": "",
         "regional_variants": [],
-        "examples": [
-            {
-                "lang": "en",
-                "text": "Look up the contents at the beginning of the book.",
-                "source": "cambridge"
-            }
-        ],
+        "examples": [],
         "phonetic": "/ˈɜːθ ˌtəʊn/",
         "tags": [
             "unit11",
@@ -29610,11 +25076,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "étudier la littérature anglaise",
                 "trans": "to study English literature",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Mes moments de bonheur sont réservés à la littérature.",
                 "source": "cambridge"
             }
         ],
@@ -29664,11 +25125,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "la planète Terre",
                 "trans": "the planet Earth",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Notre planète est en danger.",
                 "source": "cambridge"
             }
         ],
@@ -29722,29 +25178,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "La crise touche aussi l’économie du monde.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "un cours d’économie",
                 "trans": "an economics class",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "une leçon d’économie domestique",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire des économies",
                 "trans": "to save",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "des économies de bouts de chandelle",
                 "source": "cambridge"
             }
         ],
@@ -29795,11 +25236,6 @@ export const nounsCambridge = new Map([
                 "text": "prendre le métro",
                 "trans": "to take the subway",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "courir dans les couloirs pour ne pas rater son métro",
-                "source": "cambridge"
             }
         ],
         "phonetic": "metʀo",
@@ -29848,11 +25284,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "une région industrielle",
                 "trans": "an industrial region",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La région est spécialisée dans la culture des châtaignes.",
                 "source": "cambridge"
             }
         ],
@@ -29906,18 +25337,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Le diamant était de toute beauté.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Cette enfant est déjà une vraie beauté.",
                 "trans": "That child is already a real beauty.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est ébloui pour la beauté de sa fiancée.",
                 "source": "cambridge"
             }
         ],
@@ -29968,11 +25389,6 @@ export const nounsCambridge = new Map([
                 "text": "Il est de ma génération.",
                 "trans": "He’s a member of my generation.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Une génération passe et l’autre arrive.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "ʒeneʀasjɔ̃",
@@ -30021,11 +25437,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "déchets recyclables",
                 "trans": "recyclable waste",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "On ne sait que faire des déchets radioactifs.",
                 "source": "cambridge"
             }
         ],
@@ -30079,18 +25490,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "la production d’énergies renouvelables",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "faire qqch avec énergie",
                 "trans": "to do sth energetically",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "mettre toute son énergie à réussir",
                 "source": "cambridge"
             }
         ],
@@ -30140,11 +25541,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "au vingt et unième siècle",
                 "trans": "in the twenty-first century",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Il est né au siècle dernier.",
                 "source": "cambridge"
             }
         ],
@@ -30198,11 +25594,6 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Elle était excellente dans le rôle d’une folle.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "le rôle de parent",
                 "trans": "a parent’s role",
                 "source": "cambridge"
@@ -30215,18 +25606,8 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "avoir un rôle d’observateur dans des élections",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "jouer à tour de rôle",
                 "trans": "to take it in turns to play",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Ils se sont présentés à tour de rôle.",
                 "source": "cambridge"
             }
         ],
@@ -30280,29 +25661,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Nous étions assis loin de la scène.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "assister à la scène",
                 "trans": "to witness the scene",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Nous étions là subjugués devant la scène.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "La scène se déroule à Londres.",
                 "trans": "The action takes place in London.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "La scène se passe dans un salon bourgeois.",
                 "source": "cambridge"
             }
         ],
@@ -30404,29 +25770,14 @@ export const nounsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il est zéro heure dix.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il fait cinq degrés au-dessous de zéro.",
                 "trans": "It’s five below zero.",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "En hiver les températures baissent en-dessous de zéro.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
                 "text": "Il a eu zéro à sa dictée.",
                 "trans": "He got zero in his dictation.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Pour moi c’est zéro !",
                 "source": "cambridge"
             }
         ],
@@ -30519,16 +25870,6 @@ export const nounsCambridge = new Map([
                 "text": "prendre ses vacances en août",
                 "trans": "to take one’s vacation in August",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Le mois d’août a été le plus chaud de l’année.",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "le 31 août",
-                "source": "cambridge"
             }
         ],
         "phonetic": "u(t)",
@@ -30578,11 +25919,6 @@ export const nounsCambridge = new Map([
                 "text": "Il est né en décembre.",
                 "trans": "He was born in December.",
                 "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Décembre est le mois de la fête de Noël.",
-                "source": "cambridge"
             }
         ],
         "phonetic": "desɑ̃bʀ",
@@ -30631,11 +25967,6 @@ export const nounsCambridge = new Map([
                 "lang": "en",
                 "text": "Joyeuses Pâques !",
                 "trans": "Happy Easter!",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "passer Pâques dans la famille à la campagne",
                 "source": "cambridge"
             }
         ],
@@ -30870,63 +26201,21 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
-                "text": "une mise en œuvre \n                        \n        an implementation",
-                "trans": "",
+                "lang": "fr",
+                "text": "une mise en œuvre",
+                "trans": "an implementation",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "Le gros œuvre a été exécuté par un entrepreneur.",
-                "trans": "",
+                "lang": "fr",
+                "text": "œuvre d’art",
+                "trans": "work of art",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
-                "text": "œuvre d’art \n                        \n        work of art",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "Les œuvres de ce sculpteur sont exposées dans un musée.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "lire toute l’œuvre d’un écrivain \n                        \n        to read an author’s entire work",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "recevoir un prix pour l’ensemble de son œuvre",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "His latest composition is a piano concerto.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "The broken window was Simon’s handiwork.",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "the works of Van Gogh / Shakespeare/Mozart",
-                "trans": "",
-                "source": "cambridge"
-            },
-            {
-                "lang": "en",
-                "text": "This work was composed in 1816.",
-                "trans": "",
+                "lang": "fr",
+                "text": "lire toute l’œuvre d’un écrivain",
+                "trans": "to read an author’s entire work",
                 "source": "cambridge"
             }
         ],
@@ -31026,7 +26315,1896 @@ export const nounsCambridge = new Map([
         "created_at": "2025-10-29T19:26:39.256Z",
         "updated_at": "2025-10-29T19:26:39.256Z"
     }
+  ],
+  [
+    "acteur-fr",
+        {
+        "id": "acteur-fr",
+        "lang": "fr",
+        "word": "acteur",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "actor",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:43.415Z",
+        "updated_at": "2025-10-30T21:26:22.802Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "acteurs",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un acteur",
+                "type": "indefinite_article",
+                "context": "an actor",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'acteur",
+                "type": "definite_article",
+                "context": "the actor",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les acteurs",
+                "type": "plural_article",
+                "context": "the actors",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "actrice-fr",
+        {
+        "id": "actrice-fr",
+        "lang": "fr",
+        "word": "actrice",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "actress",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.041Z",
+        "updated_at": "2025-10-30T21:26:24.040Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "actrices",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "une actrice",
+                "type": "indefinite_article",
+                "context": "an actress",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'actrice",
+                "type": "definite_article",
+                "context": "the actress",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les actrices",
+                "type": "plural_article",
+                "context": "the actresses",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "client-fr",
+        {
+        "id": "client-fr",
+        "lang": "fr",
+        "word": "client",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "client",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.042Z",
+        "updated_at": "2025-10-30T21:26:25.395Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "clients",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un client",
+                "type": "indefinite_article",
+                "context": "a client",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le client",
+                "type": "definite_article",
+                "context": "the client",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les clients",
+                "type": "plural_article",
+                "context": "the clients",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "étudiant-fr",
+        {
+        "id": "étudiant-fr",
+        "lang": "fr",
+        "word": "étudiant",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "student",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.042Z",
+        "updated_at": "2025-10-30T21:26:26.722Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "étudiants",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un étudiant",
+                "type": "indefinite_article",
+                "context": "a student",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'étudiant",
+                "type": "definite_article",
+                "context": "the student",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les étudiants",
+                "type": "plural_article",
+                "context": "the students",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "docteur-fr",
+        {
+        "id": "docteur-fr",
+        "lang": "fr",
+        "word": "docteur",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "doctor",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "aller chez le docteur",
+                "trans": "to go to the doctor",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "Elle est docteur.",
+                "trans": "She’s a doctor.",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "être docteur en droit",
+                "trans": "to be a doctor of law",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.042Z",
+        "updated_at": "2025-10-30T21:26:27.987Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "docteurs",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un docteur",
+                "type": "indefinite_article",
+                "context": "a doctor",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le docteur",
+                "type": "definite_article",
+                "context": "the doctor",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les docteurs",
+                "type": "plural_article",
+                "context": "the doctors",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "touriste-fr",
+        {
+        "id": "touriste-fr",
+        "lang": "fr",
+        "word": "touriste",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "tourist",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.042Z",
+        "updated_at": "2025-10-30T21:26:29.203Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "touristes",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un touriste",
+                "type": "indefinite_article",
+                "context": "a tourist",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le touriste",
+                "type": "definite_article",
+                "context": "the tourist",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les touristes",
+                "type": "plural_article",
+                "context": "the tourists",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "hôpital-fr",
+        {
+        "id": "hôpital-fr",
+        "lang": "fr",
+        "word": "hôpital",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "hospital",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "Ils sont allés à l’hôpital en urgence.",
+                "trans": "They rushed to the hospital.",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.042Z",
+        "updated_at": "2025-10-30T21:26:30.775Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "hôpitaux",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un hôpital",
+                "type": "indefinite_article",
+                "context": "a hospital",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'hôpital",
+                "type": "definite_article",
+                "context": "the hospital",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les hôpitaux",
+                "type": "plural_article",
+                "context": "the hospitals",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "banque-fr",
+        {
+        "id": "banque-fr",
+        "lang": "fr",
+        "word": "banque",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "bank",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "compte en banque",
+                "trans": "bank account",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.044Z",
+        "updated_at": "2025-10-30T21:26:34.456Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "banques",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "une banque",
+                "type": "indefinite_article",
+                "context": "a bank",
+                "frequency": "common"
+            },
+            {
+                "phrase": "la banque",
+                "type": "definite_article",
+                "context": "the bank",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les banques",
+                "type": "plural_article",
+                "context": "the banks",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "hôtel-fr",
+        {
+        "id": "hôtel-fr",
+        "lang": "fr",
+        "word": "hôtel",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "hotel",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "réserver une chambre d’hôtel",
+                "trans": "to reserve a hotel room",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "aller à l’hôtel",
+                "trans": "to go to a hotel",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.044Z",
+        "updated_at": "2025-10-30T21:26:35.896Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "hôtels",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un hôtel",
+                "type": "indefinite_article",
+                "context": "a hotel",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'hôtel",
+                "type": "definite_article",
+                "context": "the hotel",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les hôtels",
+                "type": "plural_article",
+                "context": "the hotels",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "garage-fr",
+        {
+        "id": "garage-fr",
+        "lang": "fr",
+        "word": "garage",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "garage",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "garer sa voiture dans le garage",
+                "trans": "to park one’s car in the garage",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "laisser sa voiture au garage pour une révision",
+                "trans": "to leave one’s car at the garage for a service",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.044Z",
+        "updated_at": "2025-10-30T21:26:37.112Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "garages",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un garage",
+                "type": "indefinite_article",
+                "context": "a garage",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le garage",
+                "type": "definite_article",
+                "context": "the garage",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les garages",
+                "type": "plural_article",
+                "context": "the garages",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "station-fr",
+        {
+        "id": "station-fr",
+        "lang": "fr",
+        "word": "station",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "station",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "une station de métro",
+                "trans": "a subway station",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une station de taxis",
+                "trans": "a taxi stand",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une station météorologique",
+                "trans": "a weather station",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une station balnéaire",
+                "trans": "a seaside resort",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une station de ski",
+                "trans": "a ski resort",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.044Z",
+        "updated_at": "2025-10-30T21:26:38.309Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "stations",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "une station",
+                "type": "indefinite_article",
+                "context": "a station",
+                "frequency": "common"
+            },
+            {
+                "phrase": "la station",
+                "type": "definite_article",
+                "context": "the station",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les stations",
+                "type": "plural_article",
+                "context": "the stations",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "téléphone-fr",
+        {
+        "id": "téléphone-fr",
+        "lang": "fr",
+        "word": "téléphone",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "telephone",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "être au téléphone",
+                "trans": "to be on the phone",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "numéro de téléphone",
+                "trans": "phone number",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "donner / passer / recevoir un coup de téléphone",
+                "trans": "to make / make / receive a phone call",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "téléphone fixe / portable",
+                "trans": "landline/cellphone",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.044Z",
+        "updated_at": "2025-10-30T21:26:39.655Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "téléphones",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un téléphone",
+                "type": "indefinite_article",
+                "context": "a telephone",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le téléphone",
+                "type": "definite_article",
+                "context": "the telephone",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les téléphones",
+                "type": "plural_article",
+                "context": "the telephones",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "radio-fr",
+        {
+        "id": "radio-fr",
+        "lang": "fr",
+        "word": "radio",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "radio",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "faire une radio des poumons",
+                "trans": "to do a chest X-ray",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "écouter une émission de radio",
+                "trans": "to listen to a radio show",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "allumer la radio",
+                "trans": "to turn on the radio",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.044Z",
+        "updated_at": "2025-10-30T21:26:40.987Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "radios",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "une radio",
+                "type": "indefinite_article",
+                "context": "a radio",
+                "frequency": "common"
+            },
+            {
+                "phrase": "la radio",
+                "type": "definite_article",
+                "context": "the radio",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les radios",
+                "type": "plural_article",
+                "context": "the radios",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "machine-fr",
+        {
+        "id": "machine-fr",
+        "lang": "fr",
+        "word": "machine",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "machine",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "machine à laver",
+                "trans": "washing machine",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "machine à calculer",
+                "trans": "calculator",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "machine à coudre",
+                "trans": "sewing machine",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:43.461Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "machines",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "une machine",
+                "type": "indefinite_article",
+                "context": "a machine",
+                "frequency": "common"
+            },
+            {
+                "phrase": "la machine",
+                "type": "definite_article",
+                "context": "the machine",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les machines",
+                "type": "plural_article",
+                "context": "the machines",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "programme-fr",
+        {
+        "id": "programme-fr",
+        "lang": "fr",
+        "word": "programme",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "program",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "un programme de télévision",
+                "trans": "a TV schedule",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "programme scolaire",
+                "trans": "school program",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "programme électoral",
+                "trans": "electoral program",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "un changement de programme",
+                "trans": "a change of plan",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "le programme d’un lave-vaisselle",
+                "trans": "the program of a dishwasher",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "un lave-linge programmé pour se mettre en marche à 18 heures",
+                "trans": "a washing machine programmed to switch on at 6 pm",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "un mariage programmé depuis longtemps",
+                "trans": "a wedding that has been planned for a long time",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:44.720Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "programmes",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un programme",
+                "type": "indefinite_article",
+                "context": "a program",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le programme",
+                "type": "definite_article",
+                "context": "the program",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les programmes",
+                "type": "plural_article",
+                "context": "the programs",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "photo-fr",
+        {
+        "id": "photo-fr",
+        "lang": "fr",
+        "word": "photo",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "photo",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "faire de la photo",
+                "trans": "to take photographs",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "prendre une photo",
+                "trans": "to take a photo",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "prendre qqn en photo",
+                "trans": "to take a photo of sb",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "des appareils photo",
+                "trans": "cameras",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:45.990Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "photos",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "une photo",
+                "type": "indefinite_article",
+                "context": "a photo",
+                "frequency": "common"
+            },
+            {
+                "phrase": "la photo",
+                "type": "definite_article",
+                "context": "the photo",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les photos",
+                "type": "plural_article",
+                "context": "the photos",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "situation-fr",
+        {
+        "id": "situation-fr",
+        "lang": "fr",
+        "word": "situation",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "situation",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "la situation économique d’un pays",
+                "trans": "the economic situation of a country",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "avoir une situation stable",
+                "trans": "to have a stable job",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:47.265Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "situations",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "une situation",
+                "type": "indefinite_article",
+                "context": "a situation",
+                "frequency": "common"
+            },
+            {
+                "phrase": "la situation",
+                "type": "definite_article",
+                "context": "the situation",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les situations",
+                "type": "plural_article",
+                "context": "the situations",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "information-fr",
+        {
+        "id": "information-fr",
+        "lang": "fr",
+        "word": "information",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "information",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "l’information du public",
+                "trans": "informing the public",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "chercher des informations sur Internet",
+                "trans": "to look for information on line",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "écouter les informations à la radio",
+                "trans": "to listen to the news on the radio",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "écouter les informations",
+                "trans": "to listen to the news",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:48.518Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "informations",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "une information",
+                "type": "indefinite_article",
+                "context": "an information",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'information",
+                "type": "definite_article",
+                "context": "the information",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les informations",
+                "type": "plural_article",
+                "context": "the information",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "accident-fr",
+        {
+        "id": "accident-fr",
+        "lang": "fr",
+        "word": "accident",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "accident",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "un accident de voiture / de la route / du travail",
+                "trans": "a car accident / a road accident / an industrial accident",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "un accident de parcours",
+                "trans": "a hitch",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:49.761Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "accidents",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un accident",
+                "type": "indefinite_article",
+                "context": "an accident",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'accident",
+                "type": "definite_article",
+                "context": "the accident",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les accidents",
+                "type": "plural_article",
+                "context": "the accidents",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "projet-fr",
+        {
+        "id": "projet-fr",
+        "lang": "fr",
+        "word": "projet",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "project",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "faire des projets de vacances",
+                "trans": "to plan one’s vacation",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "chef de projet",
+                "trans": "project leader",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "un projet de maison",
+                "trans": "a plan for a house",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:51.184Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "projets",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un projet",
+                "type": "indefinite_article",
+                "context": "a project",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le projet",
+                "type": "definite_article",
+                "context": "the project",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les projets",
+                "type": "plural_article",
+                "context": "the projects",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "sujet-fr",
+        {
+        "id": "sujet-fr",
+        "lang": "fr",
+        "word": "sujet",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "subject",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "Elle est sujette aux maux de tête.",
+                "trans": "She’s subject to headaches.",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une information sujette à caution",
+                "trans": "a questionable piece of information",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "le sujet d’une conversation",
+                "trans": "the subject of a conversation",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "Quel est le sujet de ce roman ?",
+                "trans": "What’s the subject of this novel?",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "le sujet d’une dissertation",
+                "trans": "the subject of an essay",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "C’est à quel sujet ?",
+                "trans": "What’s it about?",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "avoir une question au sujet de qqch",
+                "trans": "to have a question about sth",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "C’est un sujet de dispute.",
+                "trans": "It’s a source of disagreement.",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "les sujets du roi",
+                "trans": "the king’s subjects",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "Il est sujet français.",
+                "trans": "He’s a French national.",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:52.451Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "sujets",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un sujet",
+                "type": "indefinite_article",
+                "context": "a subject",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le sujet",
+                "type": "definite_article",
+                "context": "the subject",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les sujets",
+                "type": "plural_article",
+                "context": "the subjects",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "sandwich-fr",
+        {
+        "id": "sandwich-fr",
+        "lang": "fr",
+        "word": "sandwich",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "sandwich",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "un sandwich au poulet",
+                "trans": "a chicken sandwich",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:53.702Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "sandwichs",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un sandwich",
+                "type": "indefinite_article",
+                "context": "a sandwich",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le sandwich",
+                "type": "definite_article",
+                "context": "the sandwich",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les sandwichs",
+                "type": "plural_article",
+                "context": "the sandwiches",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "menu-fr",
+        {
+        "id": "menu-fr",
+        "lang": "fr",
+        "word": "menu",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "menu",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "choisir un plat dans le menu",
+                "trans": "to choose a dish from the menu",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "Qu’est ce qu’il y a au menu ?",
+                "trans": "What’s on the menu?",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "dérouler un menu",
+                "trans": "to scroll down a menu",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une personne menue",
+                "trans": "a slim person",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "de menus morceaux",
+                "trans": "little pieces",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "hacher menu",
+                "trans": "to chop finely",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:25:15.045Z",
+        "updated_at": "2025-10-30T21:26:55.036Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "menus",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "un menu",
+                "type": "indefinite_article",
+                "context": "a menu",
+                "frequency": "common"
+            },
+            {
+                "phrase": "le menu",
+                "type": "definite_article",
+                "context": "the menu",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les menus",
+                "type": "plural_article",
+                "context": "the menus",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
   ]
-]);
-
-export default nounsCambridge;
+]);export default nounsCambridge;

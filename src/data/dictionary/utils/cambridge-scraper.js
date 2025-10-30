@@ -1,6 +1,13 @@
 import fetch from "node-fetch";
 import { JSDOM } from "jsdom";
-import { logger } from "../../../utils/logger";
+// Simple logger for Node.js CLI usage
+const logger = {
+  log: (...args) => console.log(...args),
+  warn: (...args) => console.warn(...args),
+  error: (...args) => console.error(...args),
+  info: (...args) => console.info(...args),
+  debug: (...args) => console.debug(...args),
+};
 
 /**
  * Cambridge Dictionary Scraper

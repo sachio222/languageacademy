@@ -3,7 +3,14 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { CambridgeScraper } from "./cambridge-scraper.js";
 import { WordSchema, validateWord } from "../schemas/word-schema.js";
-import { logger } from "../../../utils/logger";
+// Simple logger for Node.js CLI usage
+const logger = {
+  log: (...args) => console.log(...args),
+  warn: (...args) => console.warn(...args),
+  error: (...args) => console.error(...args),
+  info: (...args) => console.info(...args),
+  debug: (...args) => console.debug(...args),
+};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -580,15 +587,61 @@ export class DefinitionGenerator {
       // Transform examples to proper format if they're strings
       merged.examples = cambridgeData.examples.map((example) => {
         if (typeof example === "string") {
-          return {
-            lang: "en",
-            text: example,
-            trans: "",
-            source: "cambridge",
-          };
+          // Parse the example to extract French text and English translation
+          const lines = example
+            .split("\n")
+            .map((line) => line.trim())
+            .filter((line) => line.length > 0);
+
+          if (lines.length >= 2) {
+            // First line is usually French, second line is English translation
+            const frenchText = lines[0];
+            const englishTranslation = lines.slice(1).join(" ").trim();
+            
+            // Only return example if we have both French text and English translation
+            if (frenchText && englishTranslation) {
+              return {
+                lang: "fr",
+                text: frenchText,
+                trans: englishTranslation,
+                source: "cambridge",
+              };
+            }
+          }
+          // Skip examples without translation
+          return null;
         }
-        return example; // Already in proper format
-      });
+        // Already in proper format - ensure trans field exists
+        if (example && typeof example === "object") {
+          // If missing trans, try to parse from text
+          if (example.text && !example.trans) {
+            const fullText = example.text;
+            const lines = fullText
+              .split("\n")
+              .map((line) => line.trim())
+              .filter((line) => line.length > 0);
+            
+            if (lines.length >= 2) {
+              const englishTranslation = lines.slice(1).join(" ").trim();
+              if (englishTranslation) {
+                return {
+                  ...example,
+                  text: lines[0],
+                  trans: englishTranslation,
+                };
+              }
+            }
+            // Skip if no translation found
+            return null;
+          }
+          // Only return if it has a valid trans field
+          if (example.trans && example.trans.trim()) {
+            return example;
+          }
+          return null;
+        }
+        return null;
+      }).filter(example => example !== null && example.trans && example.trans.trim()); // Remove any entries without valid translation
     }
 
     // Add phonetic if not provided
