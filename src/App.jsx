@@ -103,8 +103,8 @@ function App() {
 
   const isAdmin = user?.id === ADMIN_CLERK_USER_ID || supabaseUser?.id === ADMIN_SUPABASE_USER_ID;
   
-  // Determine if words learned button should be visible (admin only unless made public)
-  const showWordsLearned = isAdmin || isWordsLearnedPublic;
+  // Determine if words learned button should be visible (always visible now)
+  const showWordsLearned = true;
 
   // Function to refresh feedback count (can be called from admin panel)
   const refreshFeedbackCount = async () => {
@@ -610,6 +610,7 @@ function App() {
               onShowReferenceModules={handleShowReferenceModules}
               onShowVocabularyDashboard={handleShowVocabularyDashboard}
               showWordsLearned={showWordsLearned}
+              isAdmin={isAdmin}
             />
             <button
               className="feedback-fab"

@@ -7,7 +7,7 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import '../styles/DashboardHeader.css';
 
-function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned }) {
+function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned, isAdmin }) {
   const { supabaseClient, supabaseUser } = useAuth();
   const analytics = useAnalytics();
   const { moduleProgress } = useSupabaseProgress();
@@ -320,12 +320,13 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
               </div>
             </div>
 
-            {/* Words Learned - Toggleable Visibility */}
+            {/* Words Learned - Always visible, clickable only for admin */}
             {showWordsLearned && (
               <div
-                className="stat-box clickable-stat"
-                onClick={onShowVocabularyDashboard}
-                title="Click to view vocabulary dashboard"
+                className="stat-box"
+                onClick={isAdmin ? onShowVocabularyDashboard : undefined}
+                title={isAdmin ? "Click to view vocabulary dashboard" : "Vocabulary dashboard (admin only)"}
+                style={{ cursor: isAdmin ? 'pointer' : 'default' }}
               >
                 <div className="stat-icon-wrapper">
                   <BookOpen size={20} strokeWidth={2} />

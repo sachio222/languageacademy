@@ -6,7 +6,7 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import React, { useState, useEffect } from 'react';
 
-function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned }) {
+function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned, isAdmin }) {
   const { moduleProgress } = useSupabaseProgress();
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'split'
   const [selectedModuleId, setSelectedModuleId] = useState(null);
@@ -155,6 +155,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
         onShowReferenceModules={onShowReferenceModules}
         onShowVocabularyDashboard={onShowVocabularyDashboard}
         showWordsLearned={showWordsLearned}
+        isAdmin={isAdmin}
       />
 
       <div className="lesson-list-header">
