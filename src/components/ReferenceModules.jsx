@@ -14,6 +14,9 @@ const getIconForModule = (lesson) => {
   if (title.includes('francophonie')) return Globe;
   if (title.includes('chiffre')) return Hash;
   if (title.includes('spelling') || title.includes('pattern')) return BookOpen;
+  if (title.includes('cognate')) return BookOpen;
+  if (title.includes('liaison') || title.includes('flow')) return BookOpen;
+  if (title.includes('verb pattern') || title.includes('verb pattern')) return BookOpen;
   return BookOpen; // default
 };
 
@@ -28,6 +31,9 @@ const getImageForModule = (lesson) => {
   if (title.includes('francophonie')) return "https://images.unsplash.com/photo-1662009868204-4128942c9835?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
   if (title.includes('chiffre')) return "https://images.unsplash.com/photo-1642516303080-431f6681f864?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
   if (title.includes('spelling') || title.includes('pattern')) return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('cognate') || title.includes('share many words')) return "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('liaison') || title.includes('flow')) return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
+  if (title.includes('verb pattern') || title.includes('understanding verb')) return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
   return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80"; // default
 };
 
@@ -38,6 +44,7 @@ const getCategoryForModule = (lesson) => {
   if (title.includes('jours') || title.includes('mois')) return "Time & Dates";
   if (title.includes('fête') || title.includes('francophonie') || title.includes('chiffre')) return "Culture";
   if (title.includes('couleur')) return "Vocabulary";
+  if (title.includes('cognate') || title.includes('liaison') || title.includes('verb pattern') || title.includes('flow') || title.includes('understanding verb')) return "Learning Guides";
   return "Reference";
 };
 
@@ -51,7 +58,7 @@ const ReferenceModules = ({ onModuleSelect, onBack }) => {
   // Map lessons to display format with icons/images
   const referenceModules = referenceLessons.map(lesson => ({
     id: lesson.id,
-    title: lesson.title.replace(/^Reference [IVX]+: /, ''), // Remove "Reference I:" prefix
+    title: lesson.title.replace(/^Reference [IVXCL]+: /, ''), // Remove "Reference I:" prefix (supports up to XX)
     description: lesson.description,
     icon: getIconForModule(lesson),
     image: getImageForModule(lesson),

@@ -9,6 +9,7 @@ import { module3_etre } from "./etre.js";
 import { module4_avoir } from "./avoir.js";
 import { articles } from "./articles.js";
 import { basicNouns } from "./basic-nouns.js";
+import { cognatesHelpModule } from "./cognates-help.js";
 import { plurals } from "./plurals.js";
 import { liaisonHelpModule } from "./liaison-help.js";
 import { connectors } from "./connectors.js";
@@ -32,11 +33,12 @@ export const unit1Config = {
     module4_avoir, // 4. Essential Verb - avoir (to have)
     articles, // 5. Articles - un/une, le/la/les
     basicNouns, // 6. Basic Nouns - Foundation Vocabulary
-    plurals, // 7. Plurals - Multiple Things
-    liaisonHelpModule, // 8. Liaison Help - French Flow
-    connectors, // 9. Connectors - et, mais, ou, aussi, très
-    reading1, // 10. Reading Comprehension 1
-    unit1Practice, // 11. Unit 1 Practice
-    unit1Exam, // 12. Unit 1 Final Exam
+    cognatesHelpModule, // 7. Cognates Help - French and English Share Many Words
+    plurals, // 8. Plurals - Multiple Things
+    liaisonHelpModule, // 9. Liaison Help - French Flow
+    connectors, // 10. Connectors - et, mais, ou, aussi, très
+    reading1, // 11. Reading Comprehension 1
+    unit1Practice, // 12. Unit 1 Practice
+    unit1Exam, // 13. Unit 1 Final Exam
   ],
 };

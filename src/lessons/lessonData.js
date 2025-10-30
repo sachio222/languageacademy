@@ -33,7 +33,7 @@ const allLessons = moduleConfigs.map((config, index) => {
     moduleId >= referenceUnit.lessonRange[0] &&
     moduleId <= referenceUnit.lessonRange[1];
 
-  const romanNumerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
+  const romanNumerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX"];
   let finalTitle = lesson.title;
 
   if (isReferenceModule && referenceUnit) {
