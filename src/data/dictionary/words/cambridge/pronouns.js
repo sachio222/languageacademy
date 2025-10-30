@@ -62,15 +62,13 @@ export const pronounsCambridge = new Map([
         "informal",
         "unit1",
         "2024-01-01-pronouns",
-        "unit7",
-        "2024-04-29-comprendre"
     ],
     "sources": [
         "manual"
     ],
     "verified": false,
-    "unit": "unit7",
-    "module": "2024-04-29-comprendre",
+    "unit": "unit1",
+    "module": "2024-01-01-pronouns",
     "lesson": null,
     "updated_at": "2025-10-29T17:32:29.139Z"
 }],
@@ -709,8 +707,7 @@ export const pronounsCambridge = new Map([
         "singular",
         "unit1",
         "2024-01-01-pronouns",
-        "unit7",
-        "2024-04-29-comprendre"
+
     ],
     "sources": [
         "cambridge"
@@ -1342,8 +1339,8 @@ export const pronounsCambridge = new Map([
         "confidence_score": 0.9,
         "last_updated": "2025-10-23T05:23:07.086Z"
     },
-    "unit": "unit7",
-    "module": "2024-05-05-on-and-people",
+    "unit": "unit1",
+    "module": "2024-01-01-pronouns",
     "lesson": null,
     "updated_at": "2025-10-29T17:32:29.135Z"
 }],
