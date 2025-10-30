@@ -7,7 +7,7 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import '../styles/DashboardHeader.css';
 
-function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard }) {
+function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned }) {
   const { supabaseClient, supabaseUser } = useAuth();
   const analytics = useAnalytics();
   const { moduleProgress } = useSupabaseProgress();
@@ -320,20 +320,22 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
               </div>
             </div>
 
-            {/* Words Learned */}
-            <div
-              className="stat-box clickable-stat"
-              onClick={onShowVocabularyDashboard}
-              title="Click to view vocabulary dashboard"
-            >
-              <div className="stat-icon-wrapper">
-                <BookOpen size={20} strokeWidth={2} />
+            {/* Words Learned - Toggleable Visibility */}
+            {showWordsLearned && (
+              <div
+                className="stat-box clickable-stat"
+                onClick={onShowVocabularyDashboard}
+                title="Click to view vocabulary dashboard"
+              >
+                <div className="stat-icon-wrapper">
+                  <BookOpen size={20} strokeWidth={2} />
+                </div>
+                <div className="stat-info">
+                  <div className="stat-value">{stats.wordsLearned}</div>
+                  <div className="stat-label">Words Learned</div>
+                </div>
               </div>
-              <div className="stat-info">
-                <div className="stat-value">{stats.wordsLearned}</div>
-                <div className="stat-label">Words Learned</div>
-              </div>
-            </div>
+            )}
           </div>
 
           {/* Reference Link */}

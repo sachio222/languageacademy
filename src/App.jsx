@@ -78,6 +78,9 @@ function App() {
 
   // Check if we're in dev mode
   const isDevMode = import.meta.env.VITE_DEV_MODE === 'true';
+  
+  // Toggle for words learned button visibility (set to 'true' to make it public)
+  const isWordsLearnedPublic = import.meta.env.VITE_WORDS_LEARNED_PUBLIC === 'true';
 
   // Get auth info for admin access control
   const { user, supabaseUser, supabaseClient } = useAuth();
@@ -99,6 +102,9 @@ function App() {
   const ADMIN_SUPABASE_USER_ID = '35e33bec-de10-4d70-86a3-c992fc7655dc';
 
   const isAdmin = user?.id === ADMIN_CLERK_USER_ID || supabaseUser?.id === ADMIN_SUPABASE_USER_ID;
+  
+  // Determine if words learned button should be visible (admin only unless made public)
+  const showWordsLearned = isAdmin || isWordsLearnedPublic;
 
   // Function to refresh feedback count (can be called from admin panel)
   const refreshFeedbackCount = async () => {
@@ -603,6 +609,7 @@ function App() {
               completedExercises={completedExercises}
               onShowReferenceModules={handleShowReferenceModules}
               onShowVocabularyDashboard={handleShowVocabularyDashboard}
+              showWordsLearned={showWordsLearned}
             />
             <button
               className="feedback-fab"
