@@ -314,6 +314,8 @@ function App() {
         }}
         onShowDetails={() => setShowCookieModal(true)}
         forceShow={forceShowBanner}
+        supabaseClient={supabaseClient}
+        supabaseUser={supabaseUser}
         key={forceShowBanner ? 'force-show' : 'normal'}
       />
 
@@ -327,6 +329,8 @@ function App() {
           // Close the banner when consent is saved via modal
           setForceShowBanner(false);
         }}
+        supabaseClient={supabaseClient}
+        supabaseUser={supabaseUser}
       />
     </div>
   );

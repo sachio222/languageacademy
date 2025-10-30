@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { revokeClarityConsent } from '../utils/clarity';
+import { saveCookieConsentToDB } from '../utils/cookieConsentTracking';
 import '../styles/CookieBanner.css';
 
 export const CONSENT_KEY = 'clarity-consent';
@@ -12,7 +13,7 @@ const isClarityConfigured = () => {
   return CLARITY_PROJECT_ID && (isProduction || !isLocalhost);
 };
 
-function CookieBanner({ onConsent, onShowDetails, forceShow = false }) {
+function CookieBanner({ onConsent, onShowDetails, forceShow = false, supabaseClient, supabaseUser }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -64,15 +65,27 @@ function CookieBanner({ onConsent, onShowDetails, forceShow = false }) {
     };
   }, [forceShow]);
 
-  const handleAccept = () => {
+  const handleAccept = async () => {
     localStorage.setItem(CONSENT_KEY, 'accepted');
     setShow(false);
+
+    // Save to database if user is authenticated
+    if (supabaseClient && supabaseUser) {
+      await saveCookieConsentToDB(supabaseClient, supabaseUser, 'accepted');
+    }
+
     onConsent(true);
   };
 
-  const handleReject = () => {
+  const handleReject = async () => {
     localStorage.setItem(CONSENT_KEY, 'rejected');
     setShow(false);
+
+    // Save to database if user is authenticated
+    if (supabaseClient && supabaseUser) {
+      await saveCookieConsentToDB(supabaseClient, supabaseUser, 'rejected');
+    }
+
     // Disable Clarity tracking immediately
     revokeClarityConsent();
     onConsent(false);

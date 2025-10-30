@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { CONSENT_KEY } from './CookieBanner';
 import { initializeClarity, revokeClarityConsent } from '../utils/clarity';
+import { saveCookieConsentToDB } from '../utils/cookieConsentTracking';
 import '../styles/CookieSettingsModal.css';
 
-function CookieSettingsModal({ isOpen, onClose, onConsentChange }) {
+function CookieSettingsModal({ isOpen, onClose, onConsentChange, supabaseClient, supabaseUser }) {
   const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
   const [originalAnalyticsEnabled, setOriginalAnalyticsEnabled] = useState(false);
 
@@ -20,15 +21,23 @@ function CookieSettingsModal({ isOpen, onClose, onConsentChange }) {
     setAnalyticsEnabled(!analyticsEnabled);
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
+    const consent = analyticsEnabled ? 'accepted' : 'rejected';
+    
+    // Save to localStorage
+    localStorage.setItem(CONSENT_KEY, consent);
+    
+    // Save to database if user is authenticated
+    if (supabaseClient && supabaseUser) {
+      await saveCookieConsentToDB(supabaseClient, supabaseUser, consent);
+    }
+    
     if (analyticsEnabled) {
       // Enable analytics
-      localStorage.setItem(CONSENT_KEY, 'accepted');
       initializeClarity();
       onConsentChange && onConsentChange(true);
     } else {
       // Disable analytics
-      localStorage.setItem(CONSENT_KEY, 'rejected');
       revokeClarityConsent();
       onConsentChange && onConsentChange(false);
     }
