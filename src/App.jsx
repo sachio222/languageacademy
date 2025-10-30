@@ -23,7 +23,7 @@ import './styles/OfflineIndicator.css';
 import './styles/DevMode.css';
 import './styles/DashboardHeader.css';
 import './styles/ReferenceModules.css';
-import { logger } from "/utils/logger";
+import { logger } from "./utils/logger";
 
 function App() {
   // Initialize currentLesson from URL query string with validation
