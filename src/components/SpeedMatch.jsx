@@ -136,14 +136,15 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
       setGameState(GAME_STATES.CORRECT);
       setScore(score + 1);
       setAnswers([...answers, ANSWER_TYPES.CORRECT]);
+
+      // Auto-advance only for correct answers if enabled
+      if (autoAdvance) {
+        setTimeout(() => nextQuestion(), GAME_CONFIG.AUTO_ADVANCE_DELAY);
+      }
     } else {
       setGameState(GAME_STATES.WRONG);
       setAnswers([...answers, ANSWER_TYPES.WRONG]);
-    }
-
-    // Auto-advance if enabled, otherwise wait for user to click Next
-    if (autoAdvance) {
-      setTimeout(() => nextQuestion(), GAME_CONFIG.AUTO_ADVANCE_DELAY);
+      // Always pause for wrong answers - no auto-advance
     }
   };
 
@@ -244,9 +245,9 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
             <h3>⚡️ Speed Match</h3>
             <p>Quick-Fire Matching Challenge</p>
             <div className="speed-match-instructions">
-              <h2>How to Play</h2>
+              <h2>How it works</h2>
               <ul>
-                <li>You'll see a French word or phrase</li>
+                <li>You'll review a French word or phrase</li>
                 <li>Pick the correct English translation from 4 options</li>
                 <li>Choose your difficulty level below</li>
                 <li>Try to get as many correct as possible!</li>
@@ -442,13 +443,14 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
             </div>
 
             {/* Continue Button */}
-            {!autoAdvance && (gameState === GAME_STATES.CORRECT || gameState === GAME_STATES.WRONG || gameState === GAME_STATES.TIMEUP) && (
-              <div className="speed-match-continue">
-                <button onClick={nextQuestion} className="speed-match-button">
-                  Continue
-                </button>
-              </div>
-            )}
+            {((!autoAdvance && (gameState === GAME_STATES.CORRECT || gameState === GAME_STATES.WRONG || gameState === GAME_STATES.TIMEUP)) ||
+              (gameState === GAME_STATES.WRONG)) && (
+                <div className="speed-match-continue">
+                  <button onClick={nextQuestion} className="speed-match-button">
+                    {gameState === GAME_STATES.WRONG ? "Understood" : "Continue"}
+                  </button>
+                </div>
+              )}
 
           </div>
         )}
