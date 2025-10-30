@@ -5,7 +5,7 @@ import { SupabaseProgressProvider } from './contexts/SupabaseProgressContext'
 import App from './App.jsx'
 import { initializePerformanceMonitoring } from './utils/performanceMonitor'
 import clarity from '@microsoft/clarity'
-import { logger } from "/utils/logger";
+import { logger } from "./utils/logger";
 
 // Import your publishable key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
