@@ -338,7 +338,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
       )}
 
       <aside className={`left-nav ${isCollapsed ? 'collapsed' : ''} ${mobileNavOpen ? 'open' : ''}`}>
-        {!isCollapsed && (
+        {(!isCollapsed || mobileNavOpen) && (
           <>
             {/* Mobile Close Button */}
             {mobileNavOpen && (
@@ -581,8 +581,8 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
           </>
         )}
 
-        {/* Collapsed state - show unit icons */}
-        {isCollapsed && (
+        {/* Collapsed state - show unit icons (but not on mobile when nav is open) */}
+        {isCollapsed && !mobileNavOpen && (
           <div className="nav-collapsed-content">
             <button
               className="nav-collapse-btn nav-expand-btn"
