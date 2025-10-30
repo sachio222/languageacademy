@@ -299,7 +299,7 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           <div className="module-prefix">Module {moduleId}</div>
           <h1>Cognates - French and English Share Many Words</h1>
           <p className="cognates-subtitle">
-            You might be surprised to learn that thousands of English words come from French! 
+            You might be surprised to learn that thousands of English words come from French!
             These similar words are called "cognates" and they can give you a huge head start in learning French.
           </p>
           <div className="listen-prompt">
@@ -312,23 +312,23 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
         <section className="cognates-section">
           <h2>What Are Cognates?</h2>
           <p className="section-intro">
-            <strong>Cognates</strong> are words that look and sound similar in two languages because 
-            they share the same origin. English and French share thousands of cognates because 
+            <strong>Cognates</strong> are words that look and sound similar in two languages because
+            they share the same origin. English and French share thousands of cognates because
             French significantly influenced English after the Norman Conquest in 1066.
           </p>
 
           <div className="insight-box">
             <p>
-              <strong>Did you know?</strong> Around 30% of English words come from French or Latin, 
-              and many of them are almost identical in both languages. This means you already know 
+              <strong>Did you know?</strong> Around 30% of English words come from French or Latin,
+              and many of them are almost identical in both languages. This means you already know
               far more French vocabulary than you realize!
             </p>
           </div>
 
           <div className="key-takeaway">
             <p>
-              <strong>This is great news!</strong> These cognates aren't just similar—they're 
-              <em>almost identical</em>. Once you learn a few pronunciation differences, you'll 
+              <strong>This is great news!</strong> These cognates aren't just similar—they're
+              <em>almost identical</em>. Once you learn a few pronunciation differences, you'll
               recognize hundreds of French words immediately.
             </p>
           </div>
@@ -356,9 +356,9 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="cognates-grid">
             {cognatesData.peopleAndRoles.map((item, idx) => (
-              <div 
-                key={idx} 
-                className="cognate-item" 
+              <div
+                key={idx}
+                className="cognate-item"
                 onClick={() => speakText(item.french)}
               >
                 <div className="cognate-content">
@@ -393,9 +393,9 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="cognates-grid">
             {cognatesData.placesAndInstitutions.map((item, idx) => (
-              <div 
-                key={idx} 
-                className="cognate-item" 
+              <div
+                key={idx}
+                className="cognate-item"
                 onClick={() => speakText(item.french)}
               >
                 <div className="cognate-content">
@@ -430,9 +430,9 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="cognates-grid">
             {cognatesData.objectsAndThings.map((item, idx) => (
-              <div 
-                key={idx} 
-                className="cognate-item" 
+              <div
+                key={idx}
+                className="cognate-item"
                 onClick={() => speakText(item.french)}
               >
                 <div className="cognate-content">
@@ -467,9 +467,9 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="cognates-grid">
             {cognatesData.conceptsAndAbstracts.map((item, idx) => (
-              <div 
-                key={idx} 
-                className="cognate-item" 
+              <div
+                key={idx}
+                className="cognate-item"
                 onClick={() => speakText(item.french)}
               >
                 <div className="cognate-content">
@@ -504,9 +504,9 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="cognates-grid">
             {cognatesData.foodAndDrink.map((item, idx) => (
-              <div 
-                key={idx} 
-                className="cognate-item" 
+              <div
+                key={idx}
+                className="cognate-item"
                 onClick={() => speakText(item.french)}
               >
                 <div className="cognate-content">
@@ -536,9 +536,9 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
         <section className="cognates-section">
           <div className="key-takeaway">
             <p>
-              <strong>Remember:</strong> These are just a few examples! There are thousands more 
-              cognates between English and French. Every time you recognize a cognate, you're 
-              building your French vocabulary effortlessly. Keep an eye out for these similar words 
+              <strong>Remember:</strong> These are just a few examples! There are thousands more
+              cognates between English and French. Every time you recognize a cognate, you're
+              building your French vocabulary effortlessly. Keep an eye out for these similar words
               as you continue learning!
             </p>
           </div>

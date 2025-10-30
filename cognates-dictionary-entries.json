@@ -1,0 +1,1397 @@
+[
+  {
+    "word": "acteur",
+    "translation": "actor",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "acteurs",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un acteur",
+        "type": "indefinite_article",
+        "context": "an actor",
+        "frequency": "common"
+      },
+      {
+        "phrase": "l'acteur",
+        "type": "definite_article",
+        "context": "the actor",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les acteurs",
+        "type": "plural_article",
+        "context": "the actors",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "actrice",
+    "translation": "actress",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "actrices",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une actrice",
+        "type": "indefinite_article",
+        "context": "an actress",
+        "frequency": "common"
+      },
+      {
+        "phrase": "l'actrice",
+        "type": "definite_article",
+        "context": "the actress",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les actrices",
+        "type": "plural_article",
+        "context": "the actresses",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "artiste",
+    "translation": "artist",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "artistes",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un artiste",
+        "type": "indefinite_article",
+        "context": "an artist",
+        "frequency": "common"
+      },
+      {
+        "phrase": "l'artiste",
+        "type": "definite_article",
+        "context": "the artist",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les artistes",
+        "type": "plural_article",
+        "context": "the artists",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "client",
+    "translation": "client",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "clients",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un client",
+        "type": "indefinite_article",
+        "context": "a client",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le client",
+        "type": "definite_article",
+        "context": "the client",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les clients",
+        "type": "plural_article",
+        "context": "the clients",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "étudiant",
+    "translation": "student",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "étudiants",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un étudiant",
+        "type": "indefinite_article",
+        "context": "a student",
+        "frequency": "common"
+      },
+      {
+        "phrase": "l'étudiant",
+        "type": "definite_article",
+        "context": "the student",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les étudiants",
+        "type": "plural_article",
+        "context": "the students",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "docteur",
+    "translation": "doctor",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "docteurs",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un docteur",
+        "type": "indefinite_article",
+        "context": "a doctor",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le docteur",
+        "type": "definite_article",
+        "context": "the doctor",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les docteurs",
+        "type": "plural_article",
+        "context": "the doctors",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "professeur",
+    "translation": "professor",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "professeurs",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un professeur",
+        "type": "indefinite_article",
+        "context": "a professor",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le professeur",
+        "type": "definite_article",
+        "context": "the professor",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les professeurs",
+        "type": "plural_article",
+        "context": "the professors",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "touriste",
+    "translation": "tourist",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "touristes",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un touriste",
+        "type": "indefinite_article",
+        "context": "a tourist",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le touriste",
+        "type": "definite_article",
+        "context": "the tourist",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les touristes",
+        "type": "plural_article",
+        "context": "the tourists",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "hôpital",
+    "translation": "hospital",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "hôpitaux",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un hôpital",
+        "type": "indefinite_article",
+        "context": "a hospital",
+        "frequency": "common"
+      },
+      {
+        "phrase": "l'hôpital",
+        "type": "definite_article",
+        "context": "the hospital",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les hôpitaux",
+        "type": "plural_article",
+        "context": "the hospitals",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "restaurant",
+    "translation": "restaurant",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "restaurants",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un restaurant",
+        "type": "indefinite_article",
+        "context": "a restaurant",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le restaurant",
+        "type": "definite_article",
+        "context": "the restaurant",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les restaurants",
+        "type": "plural_article",
+        "context": "the restaurants",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "musée",
+    "translation": "museum",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "musées",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un musée",
+        "type": "indefinite_article",
+        "context": "a museum",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le musée",
+        "type": "definite_article",
+        "context": "the museum",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les musées",
+        "type": "plural_article",
+        "context": "the museums",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "banque",
+    "translation": "bank",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "banques",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une banque",
+        "type": "indefinite_article",
+        "context": "a bank",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la banque",
+        "type": "definite_article",
+        "context": "the bank",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les banques",
+        "type": "plural_article",
+        "context": "the banks",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "hôtel",
+    "translation": "hotel",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "hôtels",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un hôtel",
+        "type": "indefinite_article",
+        "context": "a hotel",
+        "frequency": "common"
+      },
+      {
+        "phrase": "l'hôtel",
+        "type": "definite_article",
+        "context": "the hotel",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les hôtels",
+        "type": "plural_article",
+        "context": "the hotels",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "cinéma",
+    "translation": "cinema",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "cinémas",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un cinéma",
+        "type": "indefinite_article",
+        "context": "a cinema",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le cinéma",
+        "type": "definite_article",
+        "context": "the cinema",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les cinémas",
+        "type": "plural_article",
+        "context": "the cinemas",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "parc",
+    "translation": "park",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "parcs",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un parc",
+        "type": "indefinite_article",
+        "context": "a park",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le parc",
+        "type": "definite_article",
+        "context": "the park",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les parcs",
+        "type": "plural_article",
+        "context": "the parks",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "garage",
+    "translation": "garage",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "garages",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un garage",
+        "type": "indefinite_article",
+        "context": "a garage",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le garage",
+        "type": "definite_article",
+        "context": "the garage",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les garages",
+        "type": "plural_article",
+        "context": "the garages",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "station",
+    "translation": "station",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "stations",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une station",
+        "type": "indefinite_article",
+        "context": "a station",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la station",
+        "type": "definite_article",
+        "context": "the station",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les stations",
+        "type": "plural_article",
+        "context": "the stations",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "téléphone",
+    "translation": "telephone",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "téléphones",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un téléphone",
+        "type": "indefinite_article",
+        "context": "a telephone",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le téléphone",
+        "type": "definite_article",
+        "context": "the telephone",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les téléphones",
+        "type": "plural_article",
+        "context": "the telephones",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "radio",
+    "translation": "radio",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "radios",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une radio",
+        "type": "indefinite_article",
+        "context": "a radio",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la radio",
+        "type": "definite_article",
+        "context": "the radio",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les radios",
+        "type": "plural_article",
+        "context": "the radios",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "carte",
+    "translation": "card/map",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "cartes",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une carte",
+        "type": "indefinite_article",
+        "context": "a card/map",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la carte",
+        "type": "definite_article",
+        "context": "the card/map",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les cartes",
+        "type": "plural_article",
+        "context": "the cards/maps",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "table",
+    "translation": "table",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "tables",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une table",
+        "type": "indefinite_article",
+        "context": "a table",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la table",
+        "type": "definite_article",
+        "context": "the table",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les tables",
+        "type": "plural_article",
+        "context": "the tables",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "minute",
+    "translation": "minute",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "minutes",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une minute",
+        "type": "indefinite_article",
+        "context": "a minute",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la minute",
+        "type": "definite_article",
+        "context": "the minute",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les minutes",
+        "type": "plural_article",
+        "context": "the minutes",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "machine",
+    "translation": "machine",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "machines",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une machine",
+        "type": "indefinite_article",
+        "context": "a machine",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la machine",
+        "type": "definite_article",
+        "context": "the machine",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les machines",
+        "type": "plural_article",
+        "context": "the machines",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "problème",
+    "translation": "problem",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "problèmes",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un problème",
+        "type": "indefinite_article",
+        "context": "a problem",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le problème",
+        "type": "definite_article",
+        "context": "the problem",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les problèmes",
+        "type": "plural_article",
+        "context": "the problems",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "programme",
+    "translation": "program",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "programmes",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un programme",
+        "type": "indefinite_article",
+        "context": "a program",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le programme",
+        "type": "definite_article",
+        "context": "the program",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les programmes",
+        "type": "plural_article",
+        "context": "the programs",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "photo",
+    "translation": "photo",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "photos",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une photo",
+        "type": "indefinite_article",
+        "context": "a photo",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la photo",
+        "type": "definite_article",
+        "context": "the photo",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les photos",
+        "type": "plural_article",
+        "context": "the photos",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "idée",
+    "translation": "idea",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "idées",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une idée",
+        "type": "indefinite_article",
+        "context": "an idea",
+        "frequency": "common"
+      },
+      {
+        "phrase": "l'idée",
+        "type": "definite_article",
+        "context": "the idea",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les idées",
+        "type": "plural_article",
+        "context": "the ideas",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "situation",
+    "translation": "situation",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "situations",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une situation",
+        "type": "indefinite_article",
+        "context": "a situation",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la situation",
+        "type": "definite_article",
+        "context": "the situation",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les situations",
+        "type": "plural_article",
+        "context": "the situations",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "conversation",
+    "translation": "conversation",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "conversations",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une conversation",
+        "type": "indefinite_article",
+        "context": "a conversation",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la conversation",
+        "type": "definite_article",
+        "context": "the conversation",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les conversations",
+        "type": "plural_article",
+        "context": "the conversations",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "information",
+    "translation": "information",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "informations",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une information",
+        "type": "indefinite_article",
+        "context": "an information",
+        "frequency": "common"
+      },
+      {
+        "phrase": "l'information",
+        "type": "definite_article",
+        "context": "the information",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les informations",
+        "type": "plural_article",
+        "context": "the information",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "accident",
+    "translation": "accident",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "accidents",
+    "noun_articles": {
+      "definite": "l'",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un accident",
+        "type": "indefinite_article",
+        "context": "an accident",
+        "frequency": "common"
+      },
+      {
+        "phrase": "l'accident",
+        "type": "definite_article",
+        "context": "the accident",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les accidents",
+        "type": "plural_article",
+        "context": "the accidents",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "projet",
+    "translation": "project",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "projets",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un projet",
+        "type": "indefinite_article",
+        "context": "a project",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le projet",
+        "type": "definite_article",
+        "context": "the project",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les projets",
+        "type": "plural_article",
+        "context": "the projects",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "moment",
+    "translation": "moment",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "moments",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un moment",
+        "type": "indefinite_article",
+        "context": "a moment",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le moment",
+        "type": "definite_article",
+        "context": "the moment",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les moments",
+        "type": "plural_article",
+        "context": "the moments",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "sujet",
+    "translation": "subject",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "sujets",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un sujet",
+        "type": "indefinite_article",
+        "context": "a subject",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le sujet",
+        "type": "definite_article",
+        "context": "the subject",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les sujets",
+        "type": "plural_article",
+        "context": "the subjects",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "système",
+    "translation": "system",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "systèmes",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un système",
+        "type": "indefinite_article",
+        "context": "a system",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le système",
+        "type": "definite_article",
+        "context": "the system",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les systèmes",
+        "type": "plural_article",
+        "context": "the systems",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "café",
+    "translation": "coffee",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "cafés",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un café",
+        "type": "indefinite_article",
+        "context": "a coffee",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le café",
+        "type": "definite_article",
+        "context": "the coffee",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les cafés",
+        "type": "plural_article",
+        "context": "the coffees",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "chocolat",
+    "translation": "chocolate",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "chocolats",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un chocolat",
+        "type": "indefinite_article",
+        "context": "a chocolate",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le chocolat",
+        "type": "definite_article",
+        "context": "the chocolate",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les chocolats",
+        "type": "plural_article",
+        "context": "the chocolates",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "sandwich",
+    "translation": "sandwich",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "sandwichs",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un sandwich",
+        "type": "indefinite_article",
+        "context": "a sandwich",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le sandwich",
+        "type": "definite_article",
+        "context": "the sandwich",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les sandwichs",
+        "type": "plural_article",
+        "context": "the sandwiches",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "salade",
+    "translation": "salad",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "salades",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une salade",
+        "type": "indefinite_article",
+        "context": "a salad",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la salade",
+        "type": "definite_article",
+        "context": "the salad",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les salades",
+        "type": "plural_article",
+        "context": "the salads",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "banane",
+    "translation": "banana",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "feminine",
+    "plural_form": "bananes",
+    "noun_articles": {
+      "definite": "la",
+      "indefinite": "une",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "une banane",
+        "type": "indefinite_article",
+        "context": "a banana",
+        "frequency": "common"
+      },
+      {
+        "phrase": "la banane",
+        "type": "definite_article",
+        "context": "the banana",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les bananes",
+        "type": "plural_article",
+        "context": "the bananas",
+        "frequency": "common"
+      }
+    ]
+  },
+  {
+    "word": "menu",
+    "translation": "menu",
+    "partOfSpeech": "noun",
+    "unit": "unit1",
+    "module": "7",
+    "gender": "masculine",
+    "plural_form": "menus",
+    "noun_articles": {
+      "definite": "le",
+      "indefinite": "un",
+      "plural": "les"
+    },
+    "noun_phrases": [
+      {
+        "phrase": "un menu",
+        "type": "indefinite_article",
+        "context": "a menu",
+        "frequency": "common"
+      },
+      {
+        "phrase": "le menu",
+        "type": "definite_article",
+        "context": "the menu",
+        "frequency": "common"
+      },
+      {
+        "phrase": "les menus",
+        "type": "plural_article",
+        "context": "the menus",
+        "frequency": "common"
+      }
+    ]
+  }
+]
+

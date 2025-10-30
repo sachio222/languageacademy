@@ -498,6 +498,25 @@ export class DefinitionGenerator {
       logger.log(`  ✅ Added module: ${module}`);
     }
 
+    // Add unit/module info to definition if provided
+    if (unit && module) {
+      const unitModuleInfo = `Unit ${unit.replace('unit', '')}, Module ${module}`;
+      if (entryData.definition) {
+        entryData.definition = `${entryData.definition} (${unitModuleInfo})`;
+      } else {
+        entryData.definition = unitModuleInfo;
+      }
+      logger.log(`  ✅ Added unit/module info to definition: ${unitModuleInfo}`);
+    } else if (unit) {
+      const unitInfo = `Unit ${unit.replace('unit', '')}`;
+      if (entryData.definition) {
+        entryData.definition = `${entryData.definition} (${unitInfo})`;
+      } else {
+        entryData.definition = unitInfo;
+      }
+      logger.log(`  ✅ Added unit info to definition: ${unitInfo}`);
+    }
+
     if (tags && Array.isArray(tags)) {
       // Merge with existing tags, avoiding duplicates
       const existingTags = entryData.tags || [];
