@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { BookOpen } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext'
+import { useAnalytics } from '../hooks/useAnalytics'
 import LandingPage from './LandingPage'
 import WelcomePage from './WelcomePage'
 import '../styles/Landing.css'
@@ -10,6 +11,7 @@ import '../styles/Landing.css'
 function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
   const { isAuthenticated, loading, supabaseUser } = useAuth()
   const { markWelcomeAsSeen } = useSupabaseProgress()
+  const analytics = useAnalytics() // Track sessions on all authenticated pages
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)

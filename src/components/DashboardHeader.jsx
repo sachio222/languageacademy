@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useAnalytics } from '../hooks/useAnalytics';
 import { useAuth } from '../hooks/useAuth';
 import { lessons } from '../lessons/lessonData';
 import { Flame, CheckCircle, Clock, BookOpen, BookMarked } from 'lucide-react';
@@ -10,7 +9,6 @@ import { logger } from "../utils/logger";
 
 function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned, isAdmin }) {
   const { supabaseClient, supabaseUser } = useAuth();
-  const analytics = useAnalytics();
   const { moduleProgress } = useSupabaseProgress();
   const [stats, setStats] = useState({
     lessonsCompleted: 0,

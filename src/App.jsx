@@ -12,7 +12,6 @@ import OfflineIndicator from './components/OfflineIndicator';
 import FeedbackForm from './components/FeedbackForm';
 import FeedbackAdmin from './components/FeedbackAdmin';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
-import { useAnalytics } from './hooks/useAnalytics';
 import { useOfflineSync } from './hooks/useOfflineSync';
 import { useAuth } from './hooks/useAuth';
 import { lessons, unitStructure } from './lessons/lessonData';
@@ -88,7 +87,6 @@ function App() {
 
   // Supabase progress tracking (works in both dev and production mode)
   const supabaseProgress = useSupabaseProgress();
-  const analytics = useAnalytics();
   const offlineSync = useOfflineSync();
 
   // Track new feedback count for admin badge
