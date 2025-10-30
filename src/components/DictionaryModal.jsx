@@ -178,7 +178,7 @@ function DictionaryModal({ isOpen, onClose }) {
       <div className="dictionary-modal-container" onClick={(e) => e.stopPropagation()}>
         {/* Header */}
         <div className="dictionary-modal-header">
-          <h1 className="dictionary-modal-title">French Dictionary</h1>
+          <h1 className="dictionary-modal-title"> French Unit Dictionary</h1>
           <div className="dictionary-header-search">
             <input
               type="text"

@@ -1,12 +1,13 @@
 import { SignIn, SignUp, UserButton, useUser } from '@clerk/clerk-react'
 import { useState, useEffect } from 'react'
+import { BookOpen } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext'
 import LandingPage from './LandingPage'
 import WelcomePage from './WelcomePage'
 import '../styles/Landing.css'
 
-function AuthWrapper({ children, onBackToLanding }) {
+function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
   const { isAuthenticated, loading, supabaseUser } = useAuth()
   const { markWelcomeAsSeen } = useSupabaseProgress()
   const [showSignUp, setShowSignUp] = useState(false)
@@ -29,6 +30,13 @@ function AuthWrapper({ children, onBackToLanding }) {
     setShowAuthForms(false)
     if (onBackToLanding) {
       onBackToLanding()
+    }
+  }
+
+  // Handle opening dictionary
+  const handleOpenDictionary = () => {
+    if (onOpenDictionary) {
+      onOpenDictionary()
     }
   }
 
@@ -174,16 +182,25 @@ function AuthWrapper({ children, onBackToLanding }) {
 
   return (
     <div className="authenticated-app">
-      <div className="auth-header-bar">
-        <UserButton
-          appearance={{
-            elements: {
-              avatarBox: "w-8 h-8"
-            }
-          }}
-          showName={!isMobile}
-          afterSignOutUrl="/"
-        />
+      <div className="auth-header-container">
+        <button
+          className="dictionary-link-btn"
+          onClick={handleOpenDictionary}
+          title="Open Dictionary"
+        >
+          <BookOpen size={20} />
+        </button>
+        <div className="auth-header-bar">
+          <UserButton
+            appearance={{
+              elements: {
+                avatarBox: "w-8 h-8"
+              }
+            }}
+            showName={!isMobile}
+            afterSignOutUrl="/"
+          />
+        </div>
       </div>
       {children}
     </div>

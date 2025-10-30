@@ -274,6 +274,15 @@ function App() {
     window.history.pushState({}, '', url);
   };
 
+  // Handle opening dictionary
+  const handleOpenDictionary = () => {
+    setCurrentLesson('dictionary');
+    // Update URL to reflect dictionary state
+    const url = new URL(window.location);
+    url.searchParams.set('dictionary', 'true');
+    window.history.pushState({}, '', url);
+  };
+
   const handleExerciseComplete = async (exerciseId, moduleId, unitId, userAnswer, correctAnswer, timeSpent = 0, hintUsed = false, isCorrect = null) => {
     if (!isAuthenticated) {
       console.log('Exercise completed but user not authenticated');
@@ -667,7 +676,7 @@ function App() {
   return isDevMode ? (
     <DevModeWrapper>{content}</DevModeWrapper>
   ) : (
-    <AuthWrapper onBackToLanding={handleBackToLanding}>{content}</AuthWrapper>
+    <AuthWrapper onBackToLanding={handleBackToLanding} onOpenDictionary={handleOpenDictionary}>{content}</AuthWrapper>
   );
 }
 
