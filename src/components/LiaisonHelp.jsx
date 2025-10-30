@@ -3,6 +3,7 @@ import { Check, X } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import './LiaisonHelp.css';
+import { logger } from "../utils/logger";
 
 /**
  * Select the best available voice for French
@@ -85,7 +86,7 @@ function selectBestVoice(voices, language) {
  */
 function speakText(text) {
   if (!('speechSynthesis' in window)) {
-    console.warn('Speech synthesis not supported');
+    logger.warn('Speech synthesis not supported');
     return;
   }
 
@@ -104,7 +105,7 @@ function speakText(text) {
     const bestVoice = selectBestVoice(voices, utterance.lang);
     if (bestVoice) {
       utterance.voice = bestVoice;
-      console.log(`Liaison TTS: ${bestVoice.name} (${bestVoice.lang}) - "${text}"`);
+      logger.log(`Liaison TTS: ${bestVoice.name} (${bestVoice.lang}) - "${text}"`);
     }
     window.speechSynthesis.speak(utterance);
   };
@@ -155,7 +156,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           }
         });
         setUnderstoodSections(understoodSet);
-        console.log('LiaisonHelp: Loaded understood sections:', understoodSet);
+        logger.log('LiaisonHelp: Loaded understood sections:', understoodSet);
       } catch (error) {
         console.error('Error loading understood liaison sections:', error);
       } finally {
@@ -167,7 +168,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
   const toggleUnderstood = async (sectionIndex) => {
-    console.log('LiaisonHelp: toggleUnderstood called', sectionIndex);
+    logger.log('LiaisonHelp: toggleUnderstood called', sectionIndex);
     const isCurrentlyUnderstood = understoodSections.has(sectionIndex);
     const newUnderstood = !isCurrentlyUnderstood;
 
@@ -191,14 +192,14 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           return;
         }
         const termName = `liaison-${section.id}`;
-        console.log('LiaisonHelp: Saving to Supabase...', { moduleId, sectionIndex, termName, newUnderstood });
+        logger.log('LiaisonHelp: Saving to Supabase...', { moduleId, sectionIndex, termName, newUnderstood });
         await updateConceptUnderstanding(
           moduleId,
           sectionIndex,
           termName,
           newUnderstood
         );
-        console.log('LiaisonHelp: Saved successfully');
+        logger.log('LiaisonHelp: Saved successfully');
       } catch (error) {
         console.error('LiaisonHelp: Error saving:', error);
         // Revert optimistic update on error

@@ -4,6 +4,7 @@ import SpeakButton from './SpeakButton';
 import { frenchPhonics } from '../data/frenchPhonics';
 import { getTTSText } from '../utils/ttsUtils';
 import '../styles/PhonicsView.css';
+import { logger } from "../utils/logger";
 
 /**
  * Select the best available voice for a given language
@@ -200,7 +201,7 @@ function PhonicsView() {
         const bestVoice = selectBestVoice(voices, utterance.lang);
         if (bestVoice) {
           utterance.voice = bestVoice;
-          console.log(`PhonicsView TTS: ${bestVoice.name} (${bestVoice.lang})`);
+          logger.log(`PhonicsView TTS: ${bestVoice.name} (${bestVoice.lang})`);
         }
         window.speechSynthesis.speak(utterance);
       });
@@ -208,7 +209,7 @@ function PhonicsView() {
       const bestVoice = selectBestVoice(voices, utterance.lang);
       if (bestVoice) {
         utterance.voice = bestVoice;
-        console.log(`PhonicsView TTS: ${bestVoice.name} (${bestVoice.lang})`);
+        logger.log(`PhonicsView TTS: ${bestVoice.name} (${bestVoice.lang})`);
       }
       window.speechSynthesis.speak(utterance);
     }

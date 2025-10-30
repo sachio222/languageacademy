@@ -3,6 +3,7 @@ import { ChevronDown, ChevronRight } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { getTTSText } from '../utils/ttsUtils';
 import { renderGenderSplitText, getGenderClass, hasGenderSplit } from '../utils/genderSplitUtils.jsx';
+import { logger } from "../utils/logger";
 
 /**
  * Select the best available voice for a given language
@@ -164,7 +165,7 @@ function VocabularyReference({ vocabulary, title }) {
                         const bestVoice = selectBestVoice(voices, utterance.lang);
                         if (bestVoice) {
                           utterance.voice = bestVoice;
-                          console.log(`Vocab row TTS: ${bestVoice.name} (${bestVoice.lang})`);
+                          logger.log(`Vocab row TTS: ${bestVoice.name} (${bestVoice.lang})`);
                         }
                         window.speechSynthesis.speak(utterance);
                       });
@@ -172,7 +173,7 @@ function VocabularyReference({ vocabulary, title }) {
                       const bestVoice = selectBestVoice(voices, utterance.lang);
                       if (bestVoice) {
                         utterance.voice = bestVoice;
-                        console.log(`Vocab row TTS: ${bestVoice.name} (${bestVoice.lang})`);
+                        logger.log(`Vocab row TTS: ${bestVoice.name} (${bestVoice.lang})`);
                       }
                       window.speechSynthesis.speak(utterance);
                     }

@@ -3,6 +3,7 @@ import { Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import './VerbPatternHelp.css';
+import { logger } from "../utils/logger";
 
 /**
  * Select the best available voice for French
@@ -85,7 +86,7 @@ function selectBestVoice(voices, language) {
  */
 function speakText(text) {
   if (!('speechSynthesis' in window)) {
-    console.warn('Speech synthesis not supported');
+    logger.warn('Speech synthesis not supported');
     return;
   }
 
@@ -104,7 +105,7 @@ function speakText(text) {
     const bestVoice = selectBestVoice(voices, utterance.lang);
     if (bestVoice) {
       utterance.voice = bestVoice;
-      console.log(`Help TTS: ${bestVoice.name} (${bestVoice.lang}) - "${text}"`);
+      logger.log(`Help TTS: ${bestVoice.name} (${bestVoice.lang}) - "${text}"`);
     }
     window.speechSynthesis.speak(utterance);
   };
@@ -165,9 +166,9 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
           }
         });
         setUnderstoodSections(understoodSet);
-        console.log('VerbPatternHelp: Loaded understood sections:', understoodSet);
+        logger.log('VerbPatternHelp: Loaded understood sections:', understoodSet);
       } catch (error) {
-        console.error('Error loading understood verb pattern sections:', error);
+        logger.error('Error loading understood verb pattern sections:', error);
       } finally {
         setLoading(false);
       }
@@ -177,7 +178,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
   const toggleUnderstood = async (sectionIndex) => {
-    console.log('VerbPatternHelp: toggleUnderstood called', sectionIndex);
+    logger.log('VerbPatternHelp: toggleUnderstood called', sectionIndex);
     const isCurrentlyUnderstood = understoodSections.has(sectionIndex);
     const newUnderstood = !isCurrentlyUnderstood;
 
@@ -197,20 +198,20 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
       try {
         const section = verbPatternSections[sectionIndex];
         if (!section) {
-          console.error('VerbPatternHelp: Section not found at index:', sectionIndex);
+          logger.error('VerbPatternHelp: Section not found at index:', sectionIndex);
           return;
         }
         const termName = `verb-pattern-${section.id}`;
-        console.log('VerbPatternHelp: Saving to Supabase...', { moduleId, sectionIndex, termName, newUnderstood });
+        logger.log('VerbPatternHelp: Saving to Supabase...', { moduleId, sectionIndex, termName, newUnderstood });
         await updateConceptUnderstanding(
           moduleId,
           sectionIndex,
           termName,
           newUnderstood
         );
-        console.log('VerbPatternHelp: Saved successfully');
+        logger.log('VerbPatternHelp: Saved successfully');
       } catch (error) {
-        console.error('VerbPatternHelp: Error saving:', error);
+        logger.error('VerbPatternHelp: Error saving:', error);
         // Revert optimistic update on error
         setUnderstoodSections(prev => {
           const newSet = new Set(prev);
@@ -1150,7 +1151,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
         <button className="btn-continue" onClick={() => {
           // Use existing module completion pattern
           if (onModuleComplete && lesson) {
-            console.log('VerbPatternHelp: Marking module as completed and going to next');
+            logger.log('VerbPatternHelp: Marking module as completed and going to next');
             onModuleComplete(lesson.id, 100, 0, true); // moduleId, score, timeSpent, goToNext
           } else {
             // Fallback to original behavior

@@ -1,5 +1,6 @@
 import { Volume2 } from "lucide-react";
 import { getTTSText } from "../utils/ttsUtils";
+import { logger } from "../utils/logger";
 
 /**
  * Detect if user is on Safari
@@ -132,13 +133,13 @@ function SpeakButton({
           const bestVoice = selectBestVoice(voices, utterance.lang);
           if (bestVoice) {
             utterance.voice = bestVoice;
-            console.log(`Using voice: ${bestVoice.name} (${bestVoice.lang})`);
+            logger.log(`Using voice: ${bestVoice.name} (${bestVoice.lang})`);
 
             // Show helpful tip for Safari users with basic voices
             if (isSafari() && !bestVoice.name.toLowerCase().includes('enhanced') &&
               !bestVoice.name.toLowerCase().includes('premium') &&
               !bestVoice.name.toLowerCase().includes('compact')) {
-              console.log(`💡 Safari TTS Tip: For better French pronunciation, go to System Settings > Accessibility > Spoken Content > System Voice and download enhanced French voices like "Amélie" or "Thomas (French)"`);
+              logger.log(`💡 Safari TTS Tip: For better French pronunciation, go to System Settings > Accessibility > Spoken Content > System Voice and download enhanced French voices like "Amélie" or "Thomas (French)"`);
             }
           }
           window.speechSynthesis.speak(utterance);
@@ -147,13 +148,13 @@ function SpeakButton({
         const bestVoice = selectBestVoice(voices, utterance.lang);
         if (bestVoice) {
           utterance.voice = bestVoice;
-          console.log(`Using voice: ${bestVoice.name} (${bestVoice.lang})`);
+          logger.log(`Using voice: ${bestVoice.name} (${bestVoice.lang})`);
 
           // Show helpful tip for Safari users with basic voices
           if (isSafari() && !bestVoice.name.toLowerCase().includes('enhanced') &&
             !bestVoice.name.toLowerCase().includes('premium') &&
             !bestVoice.name.toLowerCase().includes('compact')) {
-            console.log(`💡 Safari TTS Tip: For better French pronunciation, go to System Settings > Accessibility > Spoken Content > System Voice and download enhanced French voices like "Amélie" or "Thomas (French)"`);
+            logger.log(`💡 Safari TTS Tip: For better French pronunciation, go to System Settings > Accessibility > Spoken Content > System Voice and download enhanced French voices like "Amélie" or "Thomas (French)"`);
           }
         }
         window.speechSynthesis.speak(utterance);

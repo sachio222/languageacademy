@@ -4,6 +4,7 @@
 import React from 'react';
 import { convertYearToFrench, convertNumberToFrench } from './numberTTSUtilsFr';
 import { detectExplicitYear, detectNumber, generateNumberKey } from './numberRegexUtils';
+import { logger } from "../../utils/logger";
 
 // ============================================================================
 // RENDERING FUNCTIONS
@@ -129,7 +130,7 @@ export const checkExplicitYearMatch = (remainingText, charPosition, context) => 
 
     return null;
   } catch (error) {
-    console.error("Error checking explicit year match:", error);
+    logger.error("Error checking explicit year match:", error);
     return null;
   }
 };
@@ -151,7 +152,7 @@ export const checkNumberMatch = (remainingText, charPosition, context) => {
 
     return null;
   } catch (error) {
-    console.error("Error checking number match:", error);
+    logger.error("Error checking number match:", error);
     return null;
   }
 };

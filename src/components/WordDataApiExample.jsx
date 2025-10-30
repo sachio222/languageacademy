@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useWordDataApi, useWordSearch } from '../hooks/useWordDataApi';
+import { logger } from "../utils/logger";
 
 /**
  * Example component demonstrating the Word Data API
@@ -37,7 +38,7 @@ export const WordDataApiExample = () => {
       const related = await getRelatedWords(word.id);
       setRelatedWords(related);
     } catch (err) {
-      console.error('Failed to load word details:', err);
+      logger.error('Failed to load word details:', err);
     }
   };
 
@@ -49,18 +50,18 @@ export const WordDataApiExample = () => {
   const handleUnitFilter = async (unit) => {
     try {
       const unitResults = await getWordsByUnit(unit, { limit: 20 });
-      console.log(`Words in ${unit}:`, unitResults);
+      logger.log(`Words in ${unit}:`, unitResults);
     } catch (err) {
-      console.error('Failed to load unit words:', err);
+      logger.error('Failed to load unit words:', err);
     }
   };
 
   const handleModuleFilter = async (module) => {
     try {
       const moduleResults = await getWordsByModule(module, { limit: 20 });
-      console.log(`Words in ${module}:`, moduleResults);
+      logger.log(`Words in ${module}:`, moduleResults);
     } catch (err) {
-      console.error('Failed to load module words:', err);
+      logger.error('Failed to load module words:', err);
     }
   };
 
@@ -75,7 +76,7 @@ export const WordDataApiExample = () => {
         setAvailableUnits(units);
         setAvailableModules(modules);
       } catch (err) {
-        console.error('Failed to load curriculum data:', err);
+        logger.error('Failed to load curriculum data:', err);
       }
     };
     loadCurriculumData();

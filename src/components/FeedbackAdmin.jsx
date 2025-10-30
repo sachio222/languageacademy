@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import './FeedbackAdmin.css';
+import { logger } from "../utils/logger";
 
 const FeedbackAdmin = ({ onFeedbackChange }) => {
   const { supabaseClient } = useAuth();

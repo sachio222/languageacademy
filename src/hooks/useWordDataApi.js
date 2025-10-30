@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import * as wordDataApi from '../api/wordDataApi';
+import { logger } from "../utils/logger";
 
 /**
  * Hook for accessing word data via API
@@ -82,7 +83,7 @@ export const useWordSearch = (initialSearchTerm = '', initialOptions = {}) => {
       const searchResults = await searchWords(searchTerm, options);
       setResults(searchResults);
     } catch (err) {
-      console.error('Search failed:', err);
+      logger.error('Search failed:', err);
     }
   }, [searchTerm, options, searchWords]);
 

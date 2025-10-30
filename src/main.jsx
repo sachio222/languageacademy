@@ -5,6 +5,7 @@ import { SupabaseProgressProvider } from './contexts/SupabaseProgressContext'
 import App from './App.jsx'
 import { initializePerformanceMonitoring } from './utils/performanceMonitor'
 import clarity from '@microsoft/clarity'
+import { logger } from "/utils/logger";
 
 // Import your publishable key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -23,12 +24,12 @@ const isLocalhost = window.location.hostname === 'localhost' || window.location.
 
 // Only initialize Clarity if we have a project ID and we're not in development mode
 if (CLARITY_PROJECT_ID && (isProduction || !isLocalhost)) {
-  console.log('Initializing Microsoft Clarity for:', window.location.hostname)
+  logger.log('Initializing Microsoft Clarity for:', window.location.hostname)
   clarity.init(CLARITY_PROJECT_ID)
 } else if (CLARITY_PROJECT_ID) {
-  console.log('Clarity not initialized - development mode detected')
+  logger.log('Clarity not initialized - development mode detected')
 } else {
-  console.log('Clarity not initialized - no project ID found')
+  logger.log('Clarity not initialized - no project ID found')
 }
 
 // Always wrap with provider - the hook inside handles auth timing

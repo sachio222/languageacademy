@@ -4,6 +4,7 @@ import FrenchCharacterPicker from './FrenchCharacterPicker';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { Award } from 'lucide-react';
+import { logger } from "../utils/logger";
 
 /**
  * Module Exam - Comprehensive test to solidify learning

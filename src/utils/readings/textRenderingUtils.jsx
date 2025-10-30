@@ -2,6 +2,7 @@ import { readingVocabulary as wordTranslations } from "../../components/readingV
 import { multiWordPhrases } from "../../components/readingVocabularyPhrases";
 import { useDictionary } from "../../hooks/useDictionary";
 import { wikipediaEntries } from "../../data/wikipediaEntries";
+import { logger } from "../../utils/logger";
 import {
   checkExplicitYearMatch,
   checkNumberMatch,
@@ -110,7 +111,7 @@ const processContractionMatch = (contractionMatch, remainingText, charPosition, 
     // Split the contraction: "d'argent" -> "d'" + "argent" or "qu'est-ce que" -> "qu'" + "est-ce que"
     const apostropheIndex = fullMatch.indexOf("'");
     if (apostropheIndex === -1) {
-      console.error("Invalid contraction format - no apostrophe found:", fullMatch);
+      logger.error("Invalid contraction format - no apostrophe found:", fullMatch);
       return {
         element: <span key={uniqueKey}>{fullMatch}</span>,
         remainingText: remainingText.slice(fullLength),
@@ -158,7 +159,7 @@ const processContractionMatch = (contractionMatch, remainingText, charPosition, 
       charPosition: charPosition + fullLength
     };
   } catch (error) {
-    console.error("Error processing contraction match:", error);
+    logger.error("Error processing contraction match:", error);
     return {
       element: <span key={uniqueKey}>{fullMatch}</span>,
       remainingText: remainingText.slice(1),
@@ -360,7 +361,7 @@ const checkMultiWordPhrases = (remainingText, charPosition, context) => {
     }
     return null;
   } catch (error) {
-    console.error("Error checking multi-word phrases:", error);
+    logger.error("Error checking multi-word phrases:", error);
     return null;
   }
 };
@@ -404,7 +405,7 @@ const processItalics = (remainingText, charPosition, context) => {
     }
     return null;
   } catch (error) {
-    console.error("Error processing italic match:", error);
+    logger.error("Error processing italic match:", error);
     return null;
   }
 };
@@ -427,7 +428,7 @@ const processSubheader = (subheaderMatch, context) => {
       </h3>
     );
   } catch (error) {
-    console.error("Error processing subheader:", error);
+    logger.error("Error processing subheader:", error);
     return <span>Error processing subheader</span>;
   }
 };
@@ -444,7 +445,7 @@ const processHorizontalRule = (context) => {
       <hr className="horizontal-rule" />
     );
   } catch (error) {
-    console.error("Error processing horizontal rule:", error);
+    logger.error("Error processing horizontal rule:", error);
     return <span>Error processing horizontal rule</span>;
   }
 };
@@ -472,7 +473,7 @@ const processOtherMatch = (otherMatch, remainingText, charPosition, context) => 
       charPosition: charPosition + otherMatch[1].length
     };
   } catch (error) {
-    console.error("Error processing other match:", error);
+    logger.error("Error processing other match:", error);
     return {
       element: <span>Error processing other</span>,
       remainingText: remainingText.slice(1),
@@ -530,7 +531,7 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
       }
     }
     
-    console.warn(`Missing translation for: "${word}"`);
+    logger.warn(`Missing translation for: "${word}"`);
     const element = createMissingTranslationElement(word, uniqueKey);
     return {
       element,
@@ -538,7 +539,7 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
       charPosition: charPosition + wordLength
     };
   } catch (error) {
-    console.error("Error processing word match:", error);
+    logger.error("Error processing word match:", error);
     return {
       element: <span key={uniqueKey}>{word}</span>,
       remainingText: remainingText.slice(1),
@@ -653,7 +654,7 @@ const processDialogue = (speakerMatch, text, context) => {
       </>
     );
   } catch (error) {
-    console.error("Error processing dialogue:", error);
+    logger.error("Error processing dialogue:", error);
     return <span>Error processing dialogue</span>;
   }
 };
@@ -839,7 +840,7 @@ const getVerbContextAwareTranslation = (word, dictionaryEntry, context) => {
 
   for (const pattern of negativePatterns) {
     if (contextLower.includes(pattern)) {
-      console.log(`🎯 Verb negative context match: "${cleanWord}" in "${pattern}"`);
+      logger.log(`🎯 Verb negative context match: "${cleanWord}" in "${pattern}"`);
 
       const baseTranslation = dictionaryEntry.translations?.[0]?.text || '';
       return {

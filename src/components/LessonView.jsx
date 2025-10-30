@@ -16,6 +16,7 @@ import LiaisonHelp from './LiaisonHelp';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { logger } from "../utils/logger";
 
 function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
   // Helper to get initial exercise index from URL (1-based to 0-based) with validation
@@ -307,7 +308,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       return;
     }
 
-    console.log('handleNextModule - Current lesson ID:', lesson.id, 'Title:', lesson.title);
+    logger.log('handleNextModule - Current lesson ID:', lesson.id, 'Title:', lesson.title);
 
     if (!onModuleComplete) {
       console.error('onModuleComplete callback not provided!');
@@ -316,7 +317,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     // Pass lesson.id explicitly, with goToNext flag
     const currentModuleId = lesson.id;
-    console.log('Calling onModuleComplete with moduleId:', currentModuleId);
+    logger.log('Calling onModuleComplete with moduleId:', currentModuleId);
     onModuleComplete(currentModuleId, 100, moduleTimeSpent || 0, true);
   };
 
@@ -347,7 +348,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
       // For unit exams, help modules, and fill-in-blank, also clear the module_progress completion
       if (lesson.isUnitExam || lesson.isHelpModule || lesson.isFillInTheBlank) {
-        console.log('[DEBUG] Clearing module completion from module_progress');
+        logger.log('[DEBUG] Clearing module completion from module_progress');
         const { error: progressError } = await supabaseClient
           .from('module_progress')
           .delete()
@@ -359,7 +360,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
       // For help modules, also clear concept understanding (the "Understood" checkmarks)
       if (lesson.isHelpModule) {
-        console.log('[DEBUG] Clearing concept understanding for help module');
+        logger.log('[DEBUG] Clearing concept understanding for help module');
         const { error: conceptError } = await supabaseClient
           .from('concept_understanding')
           .delete()

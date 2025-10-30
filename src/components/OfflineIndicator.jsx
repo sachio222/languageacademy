@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useOfflineSync } from '../hooks/useOfflineSync'
 import { formatDuration } from '../utils/progressSync'
+import { logger } from "../utils/logger";
 
 /**
  * Component that shows offline status and pending sync actions

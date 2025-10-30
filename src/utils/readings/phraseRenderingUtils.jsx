@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { detectExplicitPhrase, generatePhraseKey } from './phraseRegexUtils';
+import { logger } from "../../utils/logger";
 
 // ============================================================================
 // RENDERING FUNCTIONS
@@ -79,7 +80,7 @@ export const checkExplicitPhraseMatch = (remainingText, charPosition, context) =
 
     return null;
   } catch (error) {
-    console.error("Error checking explicit phrase match:", error);
+    logger.error("Error checking explicit phrase match:", error);
     return null;
   }
 };

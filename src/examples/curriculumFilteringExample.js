@@ -4,12 +4,13 @@
  */
 
 import * as wordDataApi from '../api/wordDataApi';
+import { logger } from "../utils/logger";
 
 // Example 1: Get all words from Unit 1
 export const getUnit1Words = async () => {
   try {
     const results = await wordDataApi.getWordsByUnit('unit1', { limit: 20 });
-    console.log(`Unit 1 has ${results.total} words:`, results.words);
+    logger.log(`Unit 1 has ${results.total} words:`, results.words);
     return results;
   } catch (error) {
     console.error('Failed to get Unit 1 words:', error);
@@ -24,7 +25,7 @@ export const getUnit2Verbs = async () => {
       partOfSpeech: 'verb',
       limit: 50
     });
-    console.log(`Unit 2 has ${results.total} verbs:`, results.words);
+    logger.log(`Unit 2 has ${results.total} verbs:`, results.words);
     return results;
   } catch (error) {
     console.error('Failed to get Unit 2 verbs:', error);
@@ -35,7 +36,7 @@ export const getUnit2Verbs = async () => {
 export const getPronounsModuleWords = async () => {
   try {
     const results = await wordDataApi.getWordsByModule('2024-01-01-pronouns');
-    console.log(`Pronouns module has ${results.total} words:`, results.words);
+    logger.log(`Pronouns module has ${results.total} words:`, results.words);
     return results;
   } catch (error) {
     console.error('Failed to get pronouns module words:', error);
@@ -46,7 +47,7 @@ export const getPronounsModuleWords = async () => {
 export const getAllUnits = async () => {
   try {
     const units = await wordDataApi.getAvailableUnits();
-    console.log('Available units:', units);
+    logger.log('Available units:', units);
     return units;
   } catch (error) {
     console.error('Failed to get available units:', error);
@@ -57,7 +58,7 @@ export const getAllUnits = async () => {
 export const getAllModules = async () => {
   try {
     const modules = await wordDataApi.getAvailableModules();
-    console.log('Available modules:', modules);
+    logger.log('Available modules:', modules);
     return modules;
   } catch (error) {
     console.error('Failed to get available modules:', error);
@@ -73,7 +74,7 @@ export const getUnit3A1Verbs = async () => {
       cefrLevel: 'A1',
       limit: 30
     });
-    console.log(`Unit 3 A1 verbs: ${results.total} found`, results.words);
+    logger.log(`Unit 3 A1 verbs: ${results.total} found`, results.words);
     return results;
   } catch (error) {
     console.error('Failed to get Unit 3 A1 verbs:', error);
@@ -87,7 +88,7 @@ export const searchInUnit1 = async (searchTerm) => {
       unit: 'unit1',
       limit: 10
     });
-    console.log(`Search "${searchTerm}" in Unit 1: ${results.total} found`, results.words);
+    logger.log(`Search "${searchTerm}" in Unit 1: ${results.total} found`, results.words);
     return results;
   } catch (error) {
     console.error(`Failed to search "${searchTerm}" in Unit 1:`, error);
@@ -112,7 +113,7 @@ export const getCurriculumStats = async () => {
       modulesByWordCount: modules.sort((a, b) => b.count - a.count)
     };
 
-    console.log('Curriculum Statistics:', stats);
+    logger.log('Curriculum Statistics:', stats);
     return stats;
   } catch (error) {
     console.error('Failed to get curriculum stats:', error);
@@ -129,7 +130,7 @@ export const getAdvancedFilteredWords = async () => {
       difficulty: '1',
       limit: 25
     });
-    console.log('Advanced filtered words:', results);
+    logger.log('Advanced filtered words:', results);
     return results;
   } catch (error) {
     console.error('Failed to get advanced filtered words:', error);
@@ -149,7 +150,7 @@ export const getWordsFromMultipleUnits = async (unitIds) => {
       return [...acc, ...result.words];
     }, []);
 
-    console.log(`Words from units ${unitIds.join(', ')}:`, combinedWords);
+    logger.log(`Words from units ${unitIds.join(', ')}:`, combinedWords);
     return combinedWords;
   } catch (error) {
     console.error('Failed to get words from multiple units:', error);
@@ -158,7 +159,7 @@ export const getWordsFromMultipleUnits = async (unitIds) => {
 
 // Usage examples:
 export const runExamples = async () => {
-  console.log('=== Curriculum Filtering Examples ===\n');
+  logger.log('=== Curriculum Filtering Examples ===\n');
 
   // Get basic unit data
   await getUnit1Words();

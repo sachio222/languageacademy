@@ -3,6 +3,7 @@ import { ChevronDown, ChevronRight } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { getTTSText } from '../utils/ttsUtils';
 import '../styles/PhonicsReference.css';
+import { logger } from "../utils/logger";
 
 /**
  * Select the best available voice for a given language
@@ -123,7 +124,7 @@ function PhonicsReference({ phonicsData }) {
         const bestVoice = selectBestVoice(voices, utterance.lang);
         if (bestVoice) {
           utterance.voice = bestVoice;
-          console.log(`Phonics TTS: ${bestVoice.name} (${bestVoice.lang})`);
+          logger.log(`Phonics TTS: ${bestVoice.name} (${bestVoice.lang})`);
         }
         window.speechSynthesis.speak(utterance);
       });
@@ -131,7 +132,7 @@ function PhonicsReference({ phonicsData }) {
       const bestVoice = selectBestVoice(voices, utterance.lang);
       if (bestVoice) {
         utterance.voice = bestVoice;
-        console.log(`Phonics TTS: ${bestVoice.name} (${bestVoice.lang})`);
+        logger.log(`Phonics TTS: ${bestVoice.name} (${bestVoice.lang})`);
       }
       window.speechSynthesis.speak(utterance);
     }

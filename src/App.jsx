@@ -23,6 +23,7 @@ import './styles/OfflineIndicator.css';
 import './styles/DevMode.css';
 import './styles/DashboardHeader.css';
 import './styles/ReferenceModules.css';
+import { logger } from "/utils/logger";
 
 function App() {
   // Initialize currentLesson from URL query string with validation
@@ -296,7 +297,7 @@ function App() {
 
   const handleExerciseComplete = async (exerciseId, moduleId, unitId, userAnswer, correctAnswer, timeSpent = 0, hintUsed = false, isCorrect = null) => {
     if (!isAuthenticated) {
-      console.log('Exercise completed but user not authenticated');
+      logger.log('Exercise completed but user not authenticated');
       return;
     }
 
@@ -329,8 +330,8 @@ function App() {
   };
 
   const handleModuleComplete = async (moduleId, examScore, timeSpent, goToNext = false) => {
-    console.log('Module complete - moduleId:', moduleId, 'type:', typeof moduleId, 'score:', examScore, 'goToNext:', goToNext);
-    console.log('[DEBUG] handleModuleComplete called!');
+    logger.log('Module complete - moduleId:', moduleId, 'type:', typeof moduleId, 'score:', examScore, 'goToNext:', goToNext);
+    logger.log('[DEBUG] handleModuleComplete called!');
 
     if (!moduleId) {
       console.error('handleModuleComplete called with null/undefined moduleId');
@@ -342,18 +343,18 @@ function App() {
         const lesson = lessons.find(l => l.id === moduleId);
         const unitInfo = getUnitForLesson(moduleId);
 
-        console.log('[DEBUG] Found lesson:', lesson ? lesson.title : 'NOT FOUND');
-        console.log('[DEBUG] Found unitInfo:', unitInfo ? unitInfo.title : 'NOT FOUND');
-        console.log('[DEBUG] lesson.isUnitExam:', lesson?.isUnitExam);
+        logger.log('[DEBUG] Found lesson:', lesson ? lesson.title : 'NOT FOUND');
+        logger.log('[DEBUG] Found unitInfo:', unitInfo ? unitInfo.title : 'NOT FOUND');
+        logger.log('[DEBUG] lesson.isUnitExam:', lesson?.isUnitExam);
 
         if (lesson && unitInfo) {
           // Debug logging for unit exams
           if (lesson.isUnitExam) {
-            console.log(`[DEBUG] Unit exam completion - moduleId: ${moduleId}`);
-            console.log(`[DEBUG] lesson.exercises?.length:`, lesson.exercises?.length);
-            console.log(`[DEBUG] lesson.exerciseConfig?.items?.length:`, lesson.exerciseConfig?.items?.length);
-            console.log(`[DEBUG] lesson.isUnitExam:`, lesson.isUnitExam);
-            console.log(`[DEBUG] examScore:`, examScore);
+            logger.log(`[DEBUG] Unit exam completion - moduleId: ${moduleId}`);
+            logger.log(`[DEBUG] lesson.exercises?.length:`, lesson.exercises?.length);
+            logger.log(`[DEBUG] lesson.exerciseConfig?.items?.length:`, lesson.exerciseConfig?.items?.length);
+            logger.log(`[DEBUG] lesson.isUnitExam:`, lesson.isUnitExam);
+            logger.log(`[DEBUG] examScore:`, examScore);
           }
 
           // For unit exams, use the actual exercise count from exerciseConfig if exercises array is empty
@@ -371,7 +372,7 @@ function App() {
           }
 
           if (lesson.isUnitExam) {
-            console.log(`[DEBUG] Using actualExerciseCount: ${actualExerciseCount}`);
+            logger.log(`[DEBUG] Using actualExerciseCount: ${actualExerciseCount}`);
           }
 
           // Update module progress
@@ -409,11 +410,11 @@ function App() {
     }
 
     if (goToNext) {
-      console.log('goToNext is true, finding next module after:', moduleId);
+      logger.log('goToNext is true, finding next module after:', moduleId);
 
       // Go to next module - find the next lesson in sequence
       const currentIndex = lessons.findIndex(l => l.id === moduleId);
-      console.log('Current module index in lessons array:', currentIndex, 'Total lessons:', lessons.length);
+      logger.log('Current module index in lessons array:', currentIndex, 'Total lessons:', lessons.length);
 
       if (currentIndex === -1) {
         console.error('Current module not found in lessons array. moduleId:', moduleId, 'Type:', typeof moduleId);
@@ -435,10 +436,10 @@ function App() {
       }
 
       const nextModule = lessons[currentIndex + 1];
-      console.log('Next module:', nextModule ? `ID ${nextModule.id} - ${nextModule.title}` : 'NONE (end of lessons)');
+      logger.log('Next module:', nextModule ? `ID ${nextModule.id} - ${nextModule.title}` : 'NONE (end of lessons)');
 
       if (nextModule && nextModule.id) {
-        console.log('✓ Navigating from module', moduleId, 'to', nextModule.id);
+        logger.log('✓ Navigating from module', moduleId, 'to', nextModule.id);
         setCurrentLesson(nextModule.id);
 
         // Clean slate: set new module and clear all module-specific params
@@ -459,7 +460,7 @@ function App() {
         }
       } else {
         // No more modules - completed all!
-        console.log('Completed all modules!');
+        logger.log('Completed all modules!');
         alert('🎉 Congratulations! You\'ve completed all available modules!');
         setCurrentLesson(null);
 

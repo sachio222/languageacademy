@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Check } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
+import { logger } from "../utils/logger";
 
 function ConceptPane({ concepts, moduleId }) {
   const [understoodConcepts, setUnderstoodConcepts] = useState(new Set());

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SpeakButton from './SpeakButton';
 import './VerbPatternModal.css';
+import { logger } from "../utils/logger";
 
 /**
  * Select the best available voice for French
@@ -83,7 +84,7 @@ function selectBestVoice(voices, language) {
  */
 function speakText(text) {
   if (!('speechSynthesis' in window)) {
-    console.warn('Speech synthesis not supported');
+    logger.warn('Speech synthesis not supported');
     return;
   }
 
@@ -102,7 +103,7 @@ function speakText(text) {
     const bestVoice = selectBestVoice(voices, utterance.lang);
     if (bestVoice) {
       utterance.voice = bestVoice;
-      console.log(`Modal TTS: ${bestVoice.name} (${bestVoice.lang}) - "${text}"`);
+      logger.log(`Modal TTS: ${bestVoice.name} (${bestVoice.lang}) - "${text}"`);
     }
     window.speechSynthesis.speak(utterance);
   };

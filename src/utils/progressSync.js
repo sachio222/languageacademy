@@ -154,7 +154,7 @@ export const LocalStorageManager = {
     try {
       localStorage.setItem(key, JSON.stringify(value))
     } catch (error) {
-      console.warn('Failed to save to localStorage:', error)
+      logger.warn('Failed to save to localStorage:', error)
     }
   },
   
@@ -163,7 +163,7 @@ export const LocalStorageManager = {
       const item = localStorage.getItem(key)
       return item ? JSON.parse(item) : null
     } catch (error) {
-      console.warn('Failed to read from localStorage:', error)
+      logger.warn('Failed to read from localStorage:', error)
       return null
     }
   },
@@ -172,7 +172,7 @@ export const LocalStorageManager = {
     try {
       localStorage.removeItem(key)
     } catch (error) {
-      console.warn('Failed to remove from localStorage:', error)
+      logger.warn('Failed to remove from localStorage:', error)
     }
   }
 }

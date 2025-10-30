@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import { JSDOM } from "jsdom";
+import { logger } from "../../../utils/logger";
 
 /**
  * Cambridge Dictionary Scraper
@@ -25,15 +26,15 @@ class CambridgeScraper {
   async scrapeWord(frenchWord) {
     const url = `${this.baseUrl}/${encodeURIComponent(frenchWord)}`;
 
-    console.log(`🔍 Scraping: ${frenchWord}`);
-    console.log(`📖 URL: ${url}`);
+    logger.log(`🔍 Scraping: ${frenchWord}`);
+    logger.log(`📖 URL: ${url}`);
 
     try {
       const response = await fetch(url, { headers: this.headers });
 
       if (!response.ok) {
         if (response.status === 404) {
-          console.log(`❌ Word not found: ${frenchWord}`);
+          logger.log(`❌ Word not found: ${frenchWord}`);
           return { word: frenchWord, found: false, error: "Word not found" };
         }
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -46,7 +47,7 @@ class CambridgeScraper {
       // Extract data using the CSS selectors we identified
       const result = this.extractWordData(document, frenchWord);
 
-      console.log(`✅ Successfully scraped: ${frenchWord}`);
+      logger.log(`✅ Successfully scraped: ${frenchWord}`);
       return result;
     } catch (error) {
       console.error(`❌ Error scraping ${frenchWord}:`, error.message);
@@ -135,19 +136,19 @@ class CambridgeScraper {
   async scrapeWords(words) {
     const results = [];
 
-    console.log(`🚀 Starting to scrape ${words.length} words...`);
-    console.log("=".repeat(50));
+    logger.log(`🚀 Starting to scrape ${words.length} words...`);
+    logger.log("=".repeat(50));
 
     for (let i = 0; i < words.length; i++) {
       const word = words[i];
-      console.log(`\n📝 Word ${i + 1}/${words.length}: ${word}`);
+      logger.log(`\n📝 Word ${i + 1}/${words.length}: ${word}`);
 
       const result = await this.scrapeWord(word);
       results.push(result);
 
       // Add delay between requests to be respectful
       if (i < words.length - 1) {
-        console.log(`⏳ Waiting ${this.delay}ms before next request...`);
+        logger.log(`⏳ Waiting ${this.delay}ms before next request...`);
         await new Promise((resolve) => setTimeout(resolve, this.delay));
       }
     }
@@ -205,27 +206,27 @@ async function testScraper() {
   // Test words
   const testWords = ["maintenant", "bonjour", "merci", "au revoir", "comment"];
 
-  console.log("🧪 Testing Cambridge Dictionary Scraper");
-  console.log("=".repeat(50));
+  logger.log("🧪 Testing Cambridge Dictionary Scraper");
+  logger.log("=".repeat(50));
 
   const results = await scraper.scrapeWords(testWords);
 
-  console.log("\n📊 SCRAPING RESULTS");
-  console.log("=".repeat(50));
+  logger.log("\n📊 SCRAPING RESULTS");
+  logger.log("=".repeat(50));
 
   results.forEach((result) => {
-    console.log(scraper.formatWordData(result));
+    logger.log(scraper.formatWordData(result));
   });
 
   // Summary
   const successful = results.filter((r) => r.found).length;
   const failed = results.filter((r) => !r.found).length;
 
-  console.log("\n📈 SUMMARY");
-  console.log("-".repeat(20));
-  console.log(`✅ Successful: ${successful}`);
-  console.log(`❌ Failed: ${failed}`);
-  console.log(`📊 Total: ${results.length}`);
+  logger.log("\n📈 SUMMARY");
+  logger.log("-".repeat(20));
+  logger.log(`✅ Successful: ${successful}`);
+  logger.log(`❌ Failed: ${failed}`);
+  logger.log(`📊 Total: ${results.length}`);
 
   return results;
 }

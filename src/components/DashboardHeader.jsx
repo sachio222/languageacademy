@@ -6,6 +6,7 @@ import { Flame, CheckCircle, Clock, BookOpen, BookMarked } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import '../styles/DashboardHeader.css';
+import { logger } from "../utils/logger";
 
 function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned, isAdmin }) {
   const { supabaseClient, supabaseUser } = useAuth();

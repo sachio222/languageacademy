@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { supabase } from '../lib/supabase';
 import './FeedbackForm.css';
+import { logger } from "../utils/logger";
 
 const FeedbackForm = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({

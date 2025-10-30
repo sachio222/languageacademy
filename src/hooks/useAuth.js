@@ -1,6 +1,7 @@
 import { useUser, useClerk, useSession } from "@clerk/clerk-react";
 import { useState, useEffect } from "react";
 import { supabase, createClerkSupabaseClient } from "../lib/supabase";
+import { logger } from "../utils/logger";
 
 export const useAuth = () => {
   const isDevMode = import.meta.env.VITE_DEV_MODE === "true";
@@ -47,11 +48,11 @@ export const useAuth = () => {
 
           if (signInError) {
             // If sign in fails, account might not exist yet
-            console.log(
+            logger.log(
               "Dev account doesn't exist yet. You need to create it first."
             );
-            console.log("Run this in your browser console:");
-            console.log(`
+            logger.log("Run this in your browser console:");
+            logger.log(`
 // Create dev account (run once):
 const { data, error } = await supabase.auth.signUp({
   email: 'dev.user@example.com',
@@ -63,7 +64,7 @@ const { data, error } = await supabase.auth.signUp({
     }
   }
 });
-console.log('Dev account created:', data);
+logger.log('Dev account created:', data);
             `);
             setLoading(false);
             return;
@@ -109,7 +110,7 @@ console.log('Dev account created:', data);
             setSupabaseUser(updatedProfile);
           }
         } catch (error) {
-          console.error("Error with dev account:", error);
+          logger.error("Error with dev account:", error);
         }
         setLoading(false);
         return;
@@ -167,7 +168,7 @@ console.log('Dev account created:', data);
             setSupabaseUser(updatedProfile);
           }
         } catch (error) {
-          console.error("Error syncing user profile:", error);
+          logger.error("Error syncing user profile:", error);
         }
       } else {
         setSupabaseUser(null);
@@ -184,7 +185,7 @@ console.log('Dev account created:', data);
       await signOut();
       setSupabaseUser(null);
     } catch (error) {
-      console.error("Error signing out:", error);
+      logger.error("Error signing out:", error);
     }
   };
 

@@ -45,7 +45,7 @@ class PerformanceMonitor {
     
     // Log slow operations
     if (duration > 1000) { // > 1 second
-      console.warn(`Slow operation detected: ${operation} took ${duration.toFixed(2)}ms`)
+      logger.warn(`Slow operation detected: ${operation} took ${duration.toFixed(2)}ms`)
     }
   }
 
@@ -257,11 +257,11 @@ export const initializePerformanceMonitoring = () => {
   monitorNetworkRequests()
   
   // Log performance summary every 30 seconds in development
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     setInterval(() => {
       const stats = performanceMonitor.getAllStats()
       if (Object.keys(stats).length > 0) {
-        console.log('Performance Summary:', stats)
+        logger.log('Performance Summary:', stats)
       }
     }, 30000)
   }

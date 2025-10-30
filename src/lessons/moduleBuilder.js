@@ -4,6 +4,7 @@
  */
 
 import { pronouns } from "./vocabularyData.js";
+import { logger } from "../utils/logger";
 
 /**
  * Build exercises from module configuration
@@ -119,7 +120,7 @@ export function buildExercises(moduleId, exerciseConfig) {
     });
   } else if (exerciseConfig.type === "custom") {
     // Custom exercises (e.g., question words, unit exams)
-    console.log(
+    logger.log(
       `[DEBUG] Processing custom exercises, items count: ${
         exerciseConfig.items?.length || 0
       }`
@@ -140,7 +141,7 @@ export function buildExercises(moduleId, exerciseConfig) {
       exerciseNumber++;
     });
 
-    console.log(`[DEBUG] Custom exercises built: ${exercises.length} total`);
+    logger.log(`[DEBUG] Custom exercises built: ${exercises.length} total`);
   }
 
   return exercises;
@@ -182,9 +183,9 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
 
   // Debug logging for unit exams
   if (moduleConfig.isUnitExam) {
-    console.log(`[DEBUG] Building unit exam: ${moduleConfig.title}`);
-    console.log(`[DEBUG] Has exerciseConfig:`, !!moduleConfig.exerciseConfig);
-    console.log(
+    logger.log(`[DEBUG] Building unit exam: ${moduleConfig.title}`);
+    logger.log(`[DEBUG] Has exerciseConfig:`, !!moduleConfig.exerciseConfig);
+    logger.log(
       `[DEBUG] exerciseConfig.items length:`,
       moduleConfig.exerciseConfig?.items?.length || 0
     );
@@ -198,7 +199,7 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
 
     // Debug logging for unit exams
     if (moduleConfig.isUnitExam) {
-      console.log(
+      logger.log(
         `[DEBUG] buildExercises returned ${exercises.length} exercises`
       );
     }
@@ -241,10 +242,10 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
 
   // Debug logging for unit exams
   if (moduleConfig.isUnitExam) {
-    console.log(
+    logger.log(
       `[DEBUG] Final lesson exercises length: ${lesson.exercises.length}`
     );
-    console.log(`[DEBUG] Lesson built successfully for unit exam`);
+    logger.log(`[DEBUG] Lesson built successfully for unit exam`);
   }
 
   return lesson;

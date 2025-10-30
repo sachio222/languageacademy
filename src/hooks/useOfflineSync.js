@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { LocalStorageManager, isOnline } from '../utils/progressSync'
 import { useSupabaseProgress } from './useSupabaseProgress'
+import { logger } from "../utils/logger";
 
 /**
  * Hook for handling offline synchronization of progress data
@@ -81,7 +82,7 @@ export const useOfflineSync = () => {
         await executeAction(action)
         successfulActions.push(action.id)
       } catch (error) {
-        console.error('Failed to sync action:', action, error)
+        logger.error('Failed to sync action:', action, error)
         failedActions.push(action)
       }
     }

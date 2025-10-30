@@ -73,6 +73,7 @@ import SpeakButton from './SpeakButton';
 import { ChevronDown } from 'lucide-react';
 import { getModuleId } from '../lessons/moduleIdResolver';
 import '../styles/DictionaryModal.css';
+import { logger } from "../utils/logger";
 
 // Helper function to normalize accented characters to base letters for header grouping
 const getBaseLetterForHeader = (word) => {
@@ -645,7 +646,7 @@ function DictionaryModal({ isOpen, onClose }) {
                               newUrl.searchParams.set('word', variantWord.word);
                               window.history.pushState({}, '', newUrl);
                             } else {
-                              console.warn(`Could not find variant word: ${variant.text}`);
+                              logger.warn(`Could not find variant word: ${variant.text}`);
                             }
                           }}
                         >
@@ -706,7 +707,7 @@ function DictionaryModal({ isOpen, onClose }) {
                                 newUrl.searchParams.set('word', relatedWord.word);
                                 window.history.pushState({}, '', newUrl);
                               } else {
-                                console.warn(`Could not find related word: ${relationship.targetWord} (ID: ${relationship.targetId})`);
+                                logger.warn(`Could not find related word: ${relationship.targetWord} (ID: ${relationship.targetId})`);
                               }
                             }}
                           >

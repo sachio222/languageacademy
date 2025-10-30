@@ -23,6 +23,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import readline from "readline";
+import { logger } from "../../../utils/logger";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -116,7 +117,7 @@ function parseArgs() {
 
 // Function to show help
 function showHelp() {
-  console.log(`
+  logger.log(`
 📚 Add Word to Dictionary Utility
 
 USAGE:
@@ -206,36 +207,36 @@ function askQuestion(rl, question) {
 
 // Interactive mode
 async function interactiveMode() {
-  console.log("🎯 Interactive Word Addition Mode");
-  console.log("Let's add a new word to the dictionary!\n");
+  logger.log("🎯 Interactive Word Addition Mode");
+  logger.log("Let's add a new word to the dictionary!\n");
 
   const rl = createPrompt();
 
   try {
     const word = await askQuestion(rl, "French word: ");
     if (!word) {
-      console.log("❌ Word is required");
+      logger.log("❌ Word is required");
       return;
     }
 
-    console.log(
+    logger.log(
       `\nPart of speech options: ${VALID_PARTS_OF_SPEECH.join(", ")}`
     );
     const partOfSpeech = await askQuestion(rl, "Part of speech: ");
     if (!VALID_PARTS_OF_SPEECH.includes(partOfSpeech)) {
-      console.log("❌ Invalid part of speech");
+      logger.log("❌ Invalid part of speech");
       return;
     }
 
     const translation = await askQuestion(rl, "English translation: ");
     if (!translation) {
-      console.log("❌ Translation is required");
+      logger.log("❌ Translation is required");
       return;
     }
 
     const definition = await askQuestion(rl, "Definition/context (optional): ");
 
-    console.log(`\nCEFR levels: ${VALID_CEFR_LEVELS.join(", ")}`);
+    logger.log(`\nCEFR levels: ${VALID_CEFR_LEVELS.join(", ")}`);
     const cefr = (await askQuestion(rl, `CEFR level (default: A1): `)) || "A1";
 
     const difficulty = await askQuestion(rl, "Difficulty 1-5 (default: 2): ");
@@ -243,7 +244,7 @@ async function interactiveMode() {
 
     let gender = "none";
     if (partOfSpeech === "noun") {
-      console.log(`\nGender options: ${VALID_GENDERS.join(", ")}`);
+      logger.log(`\nGender options: ${VALID_GENDERS.join(", ")}`);
       gender = (await askQuestion(rl, "Gender: ")) || "none";
     }
 
@@ -343,7 +344,7 @@ function addEntryToFile(entry, targetFile) {
   try {
     // Check if file exists, if not create it
     if (!fs.existsSync(targetPath)) {
-      console.log(`📝 Creating new file: ${targetFile}`);
+      logger.log(`📝 Creating new file: ${targetFile}`);
       const varName = targetFile.replace(".js", "");
       const header = `/**
  * ${varName.charAt(0).toUpperCase() + varName.slice(1)} Dictionary
@@ -366,7 +367,7 @@ export default ${varName};`;
 
     const parseResult = parseDictionaryFile(targetPath);
     if (!parseResult) {
-      console.log(`❌ Failed to parse ${targetFile}`);
+      logger.log(`❌ Failed to parse ${targetFile}`);
       return false;
     }
 
@@ -375,7 +376,7 @@ export default ${varName};`;
     // Check if word already exists
     const existingEntry = entries.find((e) => e[1].word === entry[1].word);
     if (existingEntry) {
-      console.log(
+      logger.log(
         `⚠️  Word "${entry[1].word}" already exists in ${targetFile}`
       );
       return false;
@@ -439,7 +440,7 @@ function updateFrequencyArray(targetFile, newEntry) {
     // Get current frequency array
     const frequencyMatch = content.match(frequencyRegex);
     if (!frequencyMatch) {
-      console.log(`⚠️  No frequency array found in ${targetFile}`);
+      logger.log(`⚠️  No frequency array found in ${targetFile}`);
       return false;
     }
 
@@ -472,14 +473,14 @@ function updateFrequencyArray(targetFile, newEntry) {
 
 // Main function to add word to dictionary
 async function addWordToDictionary(options) {
-  console.log(`\n=== ADDING WORD TO DICTIONARY ===`);
-  console.log(`Word: ${options.word}`);
-  console.log(`Part of speech: ${options.partOfSpeech}`);
-  console.log(`Translation: ${options.translation}`);
-  console.log(`CEFR level: ${options.cefr}`);
-  console.log(`Difficulty: ${options.difficulty}`);
-  console.log(`Gender: ${options.gender}`);
-  console.log(`Source: ${options.source}\n`);
+  logger.log(`\n=== ADDING WORD TO DICTIONARY ===`);
+  logger.log(`Word: ${options.word}`);
+  logger.log(`Part of speech: ${options.partOfSpeech}`);
+  logger.log(`Translation: ${options.translation}`);
+  logger.log(`CEFR level: ${options.cefr}`);
+  logger.log(`Difficulty: ${options.difficulty}`);
+  logger.log(`Gender: ${options.gender}`);
+  logger.log(`Source: ${options.source}\n`);
 
   // Create dictionary entry
   const entry = createDictionaryEntry(options);
@@ -489,20 +490,20 @@ async function addWordToDictionary(options) {
 
   // Add to dictionary file
   if (addEntryToFile(entry, targetFile)) {
-    console.log(`✅ Added "${options.word}" to ${targetFile}`);
+    logger.log(`✅ Added "${options.word}" to ${targetFile}`);
 
     // Update frequency array
     if (updateFrequencyArray(targetFile, entry)) {
-      console.log(`✅ Updated frequency array in ${targetFile}`);
+      logger.log(`✅ Updated frequency array in ${targetFile}`);
     } else {
-      console.log(`⚠️  Failed to update frequency array in ${targetFile}`);
+      logger.log(`⚠️  Failed to update frequency array in ${targetFile}`);
     }
 
-    console.log(`\n🎉 Successfully added "${options.word}" to the dictionary!`);
-    console.log(`📁 File: src/data/dictionary/words/${targetFile}`);
-    console.log(`🆔 ID: ${entry[0]}`);
+    logger.log(`\n🎉 Successfully added "${options.word}" to the dictionary!`);
+    logger.log(`📁 File: src/data/dictionary/words/${targetFile}`);
+    logger.log(`🆔 ID: ${entry[0]}`);
   } else {
-    console.log(`❌ Failed to add "${options.word}" to dictionary`);
+    logger.log(`❌ Failed to add "${options.word}" to dictionary`);
   }
 }
 
@@ -522,9 +523,9 @@ async function main() {
 
   const errors = validateOptions(options);
   if (errors.length > 0) {
-    console.log("❌ Validation errors:");
-    errors.forEach((error) => console.log(`  - ${error}`));
-    console.log("\nUse --help for usage information");
+    logger.log("❌ Validation errors:");
+    errors.forEach((error) => logger.log(`  - ${error}`));
+    logger.log("\nUse --help for usage information");
     return;
   }
 

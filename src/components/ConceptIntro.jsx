@@ -5,6 +5,7 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { getTTSText } from '../utils/ttsUtils';
 import { renderGenderSplitText, getGenderClass, hasGenderSplit } from '../utils/genderSplitUtils.jsx';
+import { logger } from "../utils/logger";
 
 /**
  * Select the best available voice for a given language
@@ -152,7 +153,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
 
   // Functions for managing understood concepts
   const toggleUnderstood = async (conceptIndex) => {
-    console.log('ConceptIntro: toggleUnderstood called', conceptIndex);
+    logger.log('ConceptIntro: toggleUnderstood called', conceptIndex);
     const isCurrentlyUnderstood = understoodConcepts.has(conceptIndex);
     const newUnderstood = !isCurrentlyUnderstood;
 
@@ -170,14 +171,14 @@ function ConceptIntro({ lesson, onStartStudying }) {
     // Save to Supabase
     if (isAuthenticated && moduleId && lesson.concepts[conceptIndex]) {
       try {
-        console.log('ConceptIntro: Saving to Supabase...');
+        logger.log('ConceptIntro: Saving to Supabase...');
         await updateConceptUnderstanding(
           moduleId,
           conceptIndex,
           lesson.concepts[conceptIndex].term,
           newUnderstood
         );
-        console.log('ConceptIntro: Saved successfully');
+        logger.log('ConceptIntro: Saved successfully');
       } catch (error) {
         console.error('ConceptIntro: Error saving:', error);
         // Revert on error
@@ -285,7 +286,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
                               const bestVoice = selectBestVoice(voices, utterance.lang);
                               if (bestVoice) {
                                 utterance.voice = bestVoice;
-                                console.log(`Concept vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
+                                logger.log(`Concept vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
                               }
                               window.speechSynthesis.speak(utterance);
                             });
@@ -293,7 +294,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
                             const bestVoice = selectBestVoice(voices, utterance.lang);
                             if (bestVoice) {
                               utterance.voice = bestVoice;
-                              console.log(`Concept vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
+                              logger.log(`Concept vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
                             }
                             window.speechSynthesis.speak(utterance);
                           }

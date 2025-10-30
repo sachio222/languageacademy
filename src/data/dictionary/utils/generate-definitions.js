@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { CambridgeScraper } from "./cambridge-scraper.js";
 import { WordSchema, validateWord } from "../schemas/word-schema.js";
+import { logger } from "../../../utils/logger";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -201,13 +202,13 @@ export class DefinitionGenerator {
     const words = Array.isArray(input) ? input : [input];
     const results = [];
 
-    console.log(`🚀 Generating definitions for ${words.length} words...`);
+    logger.log(`🚀 Generating definitions for ${words.length} words...`);
 
     // Phase 1: Create basic entries and add to files
-    console.log(`\n📝 Phase 1: Creating basic entries and adding to files...`);
+    logger.log(`\n📝 Phase 1: Creating basic entries and adding to files...`);
     for (let i = 0; i < words.length; i++) {
       const wordInput = words[i];
-      console.log(
+      logger.log(
         `\n📝 Processing ${i + 1}/${words.length}: ${wordInput.word}`
       );
 
@@ -239,19 +240,19 @@ export class DefinitionGenerator {
     }
 
     // Add all basic entries to files first
-    console.log(`\n📁 Adding basic entries to dictionary files...`);
+    logger.log(`\n📁 Adding basic entries to dictionary files...`);
     const addResults = await this.addToFiles(results, options);
 
     // Phase 2: Enhance with Cambridge data if enabled
     if (options.autoScrape !== false) {
-      console.log(`\n🔍 Phase 2: Enhancing entries with Cambridge data...`);
+      logger.log(`\n🔍 Phase 2: Enhancing entries with Cambridge data...`);
 
       for (let i = 0; i < results.length; i++) {
         const result = results[i];
 
         // Skip redirect entries for Cambridge scraping (they don't need it)
         if (result.redirect_to) {
-          console.log(
+          logger.log(
             `\n🔍 Skipping Cambridge enhancement for redirect entry: ${result.word}`
           );
           continue;
@@ -260,7 +261,7 @@ export class DefinitionGenerator {
         if (!result.success) continue;
 
         const wordInput = words[i];
-        console.log(
+        logger.log(
           `\n🔍 Enhancing ${i + 1}/${words.length}: ${wordInput.word}`
         );
 
@@ -285,7 +286,7 @@ export class DefinitionGenerator {
    * @param {string} partOfSpeech - The part of speech to target
    */
   async enhanceWithCambridgeData(entry, partOfSpeech) {
-    console.log(
+    logger.log(
       `🔍 Auto-scraping Cambridge data for: ${entry.word} (${
         partOfSpeech || "any"
       })`
@@ -300,9 +301,9 @@ export class DefinitionGenerator {
       // Update the entry in the appropriate file
       await this.updateEntryInFile(enhancedEntry);
 
-      console.log(`✅ Cambridge data merged and updated for: ${entry.word}`);
+      logger.log(`✅ Cambridge data merged and updated for: ${entry.word}`);
     } else {
-      console.log(`⚠️  No Cambridge data found for: ${entry.word}`);
+      logger.log(`⚠️  No Cambridge data found for: ${entry.word}`);
     }
   }
 
@@ -331,9 +332,9 @@ export class DefinitionGenerator {
       // Write updated file
       await this.writeDictionaryFile(targetPath, fileData, entry.partOfSpeech);
 
-      console.log(`📝 Updated "${entry.word}" in ${targetFile}`);
+      logger.log(`📝 Updated "${entry.word}" in ${targetFile}`);
     } else {
-      console.log(
+      logger.log(
         `⚠️  Entry "${entry.word}" not found in ${targetFile} for updating`
       );
     }
@@ -440,7 +441,7 @@ export class DefinitionGenerator {
 
     // Auto-scrape Cambridge if enabled (default)
     if (options.autoScrape !== false) {
-      console.log(
+      logger.log(
         `🔍 Auto-scraping Cambridge data for: ${word} (${
           partOfSpeech || "any"
         })`
@@ -450,9 +451,9 @@ export class DefinitionGenerator {
       if (cambridgeData.found) {
         // Merge Cambridge data with user data (user data takes precedence)
         entryData = this.mergeCambridgeData(entryData, cambridgeData);
-        console.log(`✅ Cambridge data merged for: ${word}`);
+        logger.log(`✅ Cambridge data merged for: ${word}`);
       } else {
-        console.log(`⚠️  No Cambridge data found for: ${word}`);
+        logger.log(`⚠️  No Cambridge data found for: ${word}`);
       }
     }
 
@@ -489,12 +490,12 @@ export class DefinitionGenerator {
     // Handle unit, module, and tags
     if (unit) {
       entryData.unit = unit;
-      console.log(`  ✅ Added unit: ${unit}`);
+      logger.log(`  ✅ Added unit: ${unit}`);
     }
 
     if (module) {
       entryData.module = module;
-      console.log(`  ✅ Added module: ${module}`);
+      logger.log(`  ✅ Added module: ${module}`);
     }
 
     if (tags && Array.isArray(tags)) {
@@ -502,13 +503,13 @@ export class DefinitionGenerator {
       const existingTags = entryData.tags || [];
       const newTags = [...new Set([...existingTags, ...tags])];
       entryData.tags = newTags;
-      console.log(`  ✅ Added tags: ${tags.join(", ")}`);
+      logger.log(`  ✅ Added tags: ${tags.join(", ")}`);
     }
 
     // Validate the entry
     const validation = validateWord(entryData);
     if (!validation.success) {
-      console.warn(`⚠️  Validation warnings for ${word}:`, validation.errors);
+      logger.warn(`⚠️  Validation warnings for ${word}:`, validation.errors);
       // Continue anyway - validation errors are often just missing optional fields
     }
 
@@ -543,7 +544,7 @@ export class DefinitionGenerator {
     if (merged.partOfSpeech && userTranslations.length > 0) {
       // If user provided both part of speech AND translation, don't add Cambridge translations
       // This prevents mixing conflicting translations (e.g., "est" as verb "is" vs noun "east")
-      console.log(
+      logger.log(
         `🔍 Skipping Cambridge translations for ${merged.word} (${merged.partOfSpeech}) - user provided specific translation`
       );
       cambridgeTranslations = [];
@@ -640,7 +641,7 @@ export class DefinitionGenerator {
       details: [],
     };
 
-    console.log(`\n📁 Adding ${entries.length} entries to dictionary files...`);
+    logger.log(`\n📁 Adding ${entries.length} entries to dictionary files...`);
 
     for (const entryResult of entries) {
       // Handle redirect entries (they don't have success/entry wrapper)
@@ -745,7 +746,7 @@ export class DefinitionGenerator {
         data.word === entry.word && data.partOfSpeech === entry.partOfSpeech
     );
     if (existingEntry) {
-      console.log(
+      logger.log(
         `⚠️  Word "${entry.word}" (${entry.partOfSpeech}) already exists in ${targetFile}`
       );
       return false;
@@ -758,7 +759,7 @@ export class DefinitionGenerator {
     // Write updated file
     await this.writeDictionaryFile(targetPath, fileData, entry.partOfSpeech);
 
-    console.log(`✅ Added "${entry.word}" to ${targetFile}`);
+    logger.log(`✅ Added "${entry.word}" to ${targetFile}`);
     return true;
   }
 
@@ -808,7 +809,7 @@ export class DefinitionGenerator {
       try {
         entries = eval(mapContent);
       } catch (evalError) {
-        console.warn(
+        logger.warn(
           `Warning: Could not parse entries in ${filePath}, starting with empty array`
         );
         entries = [];
@@ -850,7 +851,7 @@ export default ${varName}Cambridge;
 `;
 
     fs.writeFileSync(filePath, content);
-    console.log(`📝 Created new dictionary file: ${fileName}.js`);
+    logger.log(`📝 Created new dictionary file: ${fileName}.js`);
   }
 
   /**
@@ -1114,7 +1115,7 @@ export default ${varName}Cambridge;
       default:
         // For other parts of speech, apply any relevant fields that were provided
         if (verb_phrases && Array.isArray(verb_phrases)) {
-          console.warn(
+          logger.warn(
             `⚠️  verb_phrases provided for ${partOfSpeech}, but this field is typically for verbs`
           );
           entryData.verb_phrases = verb_phrases;
@@ -1135,7 +1136,7 @@ export default ${varName}Cambridge;
     // Add user-provided verb phrases
     if (verb_phrases && Array.isArray(verb_phrases)) {
       entryData.verb_phrases.push(...verb_phrases);
-      console.log(
+      logger.log(
         `  ✅ Added ${verb_phrases.length} user-provided verb phrases`
       );
     }
@@ -1154,7 +1155,7 @@ export default ${varName}Cambridge;
     //     context: `not ${entryData.word}`,
     //     frequency: "common",
     //   });
-    //   console.log(`  ✅ Auto-added negative form: ${negativePhrase}`);
+    //   logger.log(`  ✅ Auto-added negative form: ${negativePhrase}`);
     // }
   }
 
@@ -1166,18 +1167,18 @@ export default ${varName}Cambridge;
   applyNounFields(entryData, { plural_form, noun_articles, noun_phrases }) {
     if (plural_form) {
       entryData.plural_form = plural_form;
-      console.log(`  ✅ Added plural form: ${plural_form}`);
+      logger.log(`  ✅ Added plural form: ${plural_form}`);
     }
 
     if (noun_articles && typeof noun_articles === "object") {
       entryData.noun_articles = noun_articles;
       const articleCount = Object.keys(noun_articles).length;
-      console.log(`  ✅ Added ${articleCount} noun articles`);
+      logger.log(`  ✅ Added ${articleCount} noun articles`);
     }
 
     if (noun_phrases && Array.isArray(noun_phrases)) {
       entryData.noun_phrases = noun_phrases;
-      console.log(`  ✅ Added ${noun_phrases.length} noun phrases`);
+      logger.log(`  ✅ Added ${noun_phrases.length} noun phrases`);
     }
   }
 
@@ -1190,12 +1191,12 @@ export default ${varName}Cambridge;
     if (adjective_forms && typeof adjective_forms === "object") {
       entryData.adjective_forms = adjective_forms;
       const formCount = Object.keys(adjective_forms).length;
-      console.log(`  ✅ Added ${formCount} adjective forms`);
+      logger.log(`  ✅ Added ${formCount} adjective forms`);
     }
 
     if (adjective_phrases && Array.isArray(adjective_phrases)) {
       entryData.adjective_phrases = adjective_phrases;
-      console.log(`  ✅ Added ${adjective_phrases.length} adjective phrases`);
+      logger.log(`  ✅ Added ${adjective_phrases.length} adjective phrases`);
     }
   }
 
@@ -1270,13 +1271,13 @@ export default ${varName}Cambridge;
       ...rest,
     };
 
-    console.log(
+    logger.log(
       `  ✅ Generated redirect entry: ${word} → ${redirect_to} (${redirect_type})`
     );
 
     // Note: The main entry's variants array should be updated separately
     // This ensures bidirectional relationship: redirect → main entry, main entry → variants
-    console.log(
+    logger.log(
       `  📝 Note: Add "${word}" to variants array of "${redirect_to}" entry`
     );
 
@@ -1293,7 +1294,7 @@ export default ${varName}Cambridge;
   addVariantToMainEntry(mainEntryId, variantWord, variantType, dictionaryMap) {
     const mainEntry = dictionaryMap.get(mainEntryId);
     if (!mainEntry) {
-      console.warn(
+      logger.warn(
         `⚠️  Main entry "${mainEntryId}" not found for variant "${variantWord}"`
       );
       return;
@@ -1309,7 +1310,7 @@ export default ${varName}Cambridge;
       (v) => v.text === variantWord
     );
     if (existingVariant) {
-      console.log(
+      logger.log(
         `  ℹ️  Variant "${variantWord}" already exists in "${mainEntryId}"`
       );
       return;
@@ -1322,7 +1323,7 @@ export default ${varName}Cambridge;
       note: `${variantType} form`,
     });
 
-    console.log(`  ✅ Added variant "${variantWord}" to "${mainEntryId}"`);
+    logger.log(`  ✅ Added variant "${variantWord}" to "${mainEntryId}"`);
   }
 
   /**

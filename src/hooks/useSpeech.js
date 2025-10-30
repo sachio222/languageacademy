@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import { getTTSText } from "../utils/ttsUtils";
+import { logger } from "../utils/logger";
 
 /**
  * Custom hook for text-to-speech functionality
@@ -140,7 +141,7 @@ export function useSpeech() {
           const bestVoice = getVoiceForLanguage(lang);
           if (bestVoice) {
             utterance.voice = bestVoice;
-            console.log(
+            logger.log(
               `Individual word TTS: ${bestVoice.name} (${bestVoice.lang})`
             );
           }
@@ -150,7 +151,7 @@ export function useSpeech() {
         const bestVoice = getVoiceForLanguage(lang);
         if (bestVoice) {
           utterance.voice = bestVoice;
-          console.log(
+          logger.log(
             `Individual word TTS: ${bestVoice.name} (${bestVoice.lang})`
           );
         }

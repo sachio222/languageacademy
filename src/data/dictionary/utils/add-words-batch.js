@@ -34,6 +34,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { logger } from "../../../utils/logger";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -78,7 +79,7 @@ function parseArgs() {
 
 // Function to show help
 function showHelp() {
-  console.log(`
+  logger.log(`
 📚 Batch Add Words to Dictionary Utility
 
 USAGE:
@@ -182,7 +183,7 @@ function validateWordData(wordData) {
 async function addWordToDictionary(options) {
   // This would be the same function from add-word-to-dictionary.js
   // For now, we'll simulate the addition
-  console.log(`  ✅ Would add "${options.word}" (${options.partOfSpeech})`);
+  logger.log(`  ✅ Would add "${options.word}" (${options.partOfSpeech})`);
   return true;
 }
 
@@ -196,19 +197,19 @@ async function main() {
   }
 
   if (!options.file) {
-    console.log("❌ File path is required (--file)");
-    console.log("Use --help for usage information");
+    logger.log("❌ File path is required (--file)");
+    logger.log("Use --help for usage information");
     return;
   }
 
   if (!fs.existsSync(options.file)) {
-    console.log(`❌ File not found: ${options.file}`);
+    logger.log(`❌ File not found: ${options.file}`);
     return;
   }
 
-  console.log(`📚 Batch Adding Words from ${options.file}`);
-  console.log(`Format: ${options.format}`);
-  console.log(`Dry run: ${options.dryRun}\n`);
+  logger.log(`📚 Batch Adding Words from ${options.file}`);
+  logger.log(`Format: ${options.format}`);
+  logger.log(`Dry run: ${options.dryRun}\n`);
 
   // Parse file
   let words = null;
@@ -217,16 +218,16 @@ async function main() {
   } else if (options.format === "csv") {
     words = parseCSVFile(options.file);
   } else {
-    console.log("❌ Invalid format. Use 'json' or 'csv'");
+    logger.log("❌ Invalid format. Use 'json' or 'csv'");
     return;
   }
 
   if (!words || !Array.isArray(words)) {
-    console.log("❌ Invalid file format or empty file");
+    logger.log("❌ Invalid file format or empty file");
     return;
   }
 
-  console.log(`Found ${words.length} words to process\n`);
+  logger.log(`Found ${words.length} words to process\n`);
 
   let successCount = 0;
   let errorCount = 0;
@@ -234,21 +235,21 @@ async function main() {
 
   for (let i = 0; i < words.length; i++) {
     const wordData = words[i];
-    console.log(
+    logger.log(
       `Processing ${i + 1}/${words.length}: ${wordData.word || "unknown"}`
     );
 
     // Validate word data
     const validationErrors = validateWordData(wordData);
     if (validationErrors.length > 0) {
-      console.log(`  ❌ Validation errors: ${validationErrors.join(", ")}`);
+      logger.log(`  ❌ Validation errors: ${validationErrors.join(", ")}`);
       errorCount++;
       errors.push(`${wordData.word}: ${validationErrors.join(", ")}`);
       continue;
     }
 
     if (options.dryRun) {
-      console.log(
+      logger.log(
         `  🔍 Would add: ${wordData.word} (${wordData.partOfSpeech}) - ${wordData.translation}`
       );
       successCount++;
@@ -269,28 +270,28 @@ async function main() {
         await addWordToDictionary(wordOptions);
         successCount++;
       } catch (error) {
-        console.log(`  ❌ Error adding word: ${error.message}`);
+        logger.log(`  ❌ Error adding word: ${error.message}`);
         errorCount++;
         errors.push(`${wordData.word}: ${error.message}`);
       }
     }
   }
 
-  console.log(`\n=== BATCH PROCESSING COMPLETE ===`);
-  console.log(`Total words processed: ${words.length}`);
-  console.log(`Successfully added: ${successCount}`);
-  console.log(`Errors: ${errorCount}`);
+  logger.log(`\n=== BATCH PROCESSING COMPLETE ===`);
+  logger.log(`Total words processed: ${words.length}`);
+  logger.log(`Successfully added: ${successCount}`);
+  logger.log(`Errors: ${errorCount}`);
 
   if (errors.length > 0) {
-    console.log(`\nErrors encountered:`);
-    errors.forEach((error) => console.log(`  - ${error}`));
+    logger.log(`\nErrors encountered:`);
+    errors.forEach((error) => logger.log(`  - ${error}`));
   }
 
   if (options.dryRun) {
-    console.log(`\n🔍 This was a dry run. No words were actually added.`);
-    console.log(`Remove --dry-run to actually add the words.`);
+    logger.log(`\n🔍 This was a dry run. No words were actually added.`);
+    logger.log(`Remove --dry-run to actually add the words.`);
   } else {
-    console.log(`\n🎉 Batch word addition complete!`);
+    logger.log(`\n🎉 Batch word addition complete!`);
   }
 }
 

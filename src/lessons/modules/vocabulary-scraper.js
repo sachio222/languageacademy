@@ -24,6 +24,7 @@ import { unit10Config } from "./unit10/unit-config.js";
 import { unit11Config } from "./unit11/unit-config.js";
 import { unit12Config } from "./unit12/unit-config.js";
 import { referenceConfig } from "./reference/unit-config.js";
+import { logger } from "../../utils/logger";
 
 const unitConfigs = [
   unit1Config,
@@ -73,7 +74,7 @@ function processUnit(unitConfig, unitIndex) {
   const unitIcon = unitConfig.metadata.icon;
   const unitColor = unitConfig.metadata.color;
 
-  console.log(`\n📚 Processing ${unitTitle}...`);
+  logger.log(`\n📚 Processing ${unitTitle}...`);
 
   const allVocabulary = [];
   const moduleVocabulary = {};
@@ -88,9 +89,9 @@ function processUnit(unitConfig, unitIndex) {
         moduleOrder: moduleIndex + 1,
         vocabulary: moduleVocab,
       };
-      console.log(`  ✅ ${module.title}: ${moduleVocab.length} words`);
+      logger.log(`  ✅ ${module.title}: ${moduleVocab.length} words`);
     } else {
-      console.log(`  ⚠️  ${module.title}: No vocabulary found`);
+      logger.log(`  ⚠️  ${module.title}: No vocabulary found`);
     }
   });
 
@@ -318,7 +319,7 @@ ${allUnitData
  * Main execution
  */
 async function main() {
-  console.log("🚀 Starting vocabulary scraping...\n");
+  logger.log("🚀 Starting vocabulary scraping...\n");
 
   const allUnitData = [];
   const masterOutputDir = path.join(__dirname, "..", "..", "vocabulary");
@@ -349,7 +350,7 @@ async function main() {
 
     const unitFilePath = path.join(unitFolder, unitFileName);
     fs.writeFileSync(unitFilePath, unitContent);
-    console.log(
+    logger.log(
       `  📝 Generated: ${unitFileName} in ${unitFolder
         .split("/")
         .slice(-2)
@@ -361,13 +362,13 @@ async function main() {
   const summaryContent = generateSummaryFile(allUnitData);
   const summaryFilePath = path.join(masterOutputDir, "all_units_vocabulary.js");
   fs.writeFileSync(summaryFilePath, summaryContent);
-  console.log(`\n📝 Generated: all_units_vocabulary.js in src/vocabulary/`);
+  logger.log(`\n📝 Generated: all_units_vocabulary.js in src/vocabulary/`);
 
   // Print final summary
-  console.log("\n🎉 Vocabulary scraping complete!");
-  console.log(`\n📊 Summary:`);
-  console.log(`   Total units: ${allUnitData.length}`);
-  console.log(
+  logger.log("\n🎉 Vocabulary scraping complete!");
+  logger.log(`\n📊 Summary:`);
+  logger.log(`   Total units: ${allUnitData.length}`);
+  logger.log(
     `   Total vocabulary: ${allUnitData.reduce(
       (sum, unit) => sum + unit.totalVocabulary,
       0
@@ -375,18 +376,18 @@ async function main() {
   );
 
   allUnitData.forEach((unit) => {
-    console.log(
+    logger.log(
       `   Unit ${unit.unitNumber}: ${unit.totalVocabulary} words (${
         Object.keys(unit.moduleVocabulary).length
       } modules)`
     );
   });
 
-  console.log(`\n📁 Files generated:`);
-  console.log(
+  logger.log(`\n📁 Files generated:`);
+  logger.log(
     `   - Unit vocabulary files: in respective unit folders (modules/unit#/)`
   );
-  console.log(
+  logger.log(
     `   - Master summary file: src/vocabulary/all_units_vocabulary.js`
   );
 }

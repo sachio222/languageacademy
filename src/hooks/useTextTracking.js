@@ -1,5 +1,6 @@
 import { useCallback, useRef } from "react";
 import { useAuth } from "./useAuth";
+import { logger } from "../utils/logger";
 
 /**
  * Hook for tracking detailed text entry patterns
@@ -87,7 +88,7 @@ export const useTextTracking = () => {
           timestamp,
         };
       } catch (error) {
-        console.error("Error tracking text entry:", error);
+        logger.error("Error tracking text entry:", error);
       }
     },
     [authLoading, supabaseUser, supabaseClient]
@@ -163,7 +164,7 @@ export const useTextTracking = () => {
 
         return data;
       } catch (error) {
-        console.error("Error fetching text entry analytics:", error);
+        logger.error("Error fetching text entry analytics:", error);
         return null;
       }
     },

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
+import { logger } from "../utils/logger";
 
 export const useAnalytics = () => {
   const {
@@ -42,7 +43,7 @@ export const useAnalytics = () => {
     );
     const uniqueDates = [...new Set(sessionDates)];
 
-    console.log("Streak calculation (client-side fallback):", {
+    logger.analytics("Streak calculation (client-side fallback):", {
       totalSessions: sessions.length,
       uniqueDatesCount: uniqueDates.length,
       uniqueDates: uniqueDates.slice(0, 10),
@@ -68,7 +69,7 @@ export const useAnalytics = () => {
       }
     }
 
-    console.log("Streak calculated:", streak);
+    logger.analytics("Streak calculated:", streak);
 
     await supabaseClient
       .from("user_profiles")
@@ -95,7 +96,7 @@ export const useAnalytics = () => {
       );
 
       if (dateError) {
-        console.log(
+        logger.analytics(
           "RPC not available, falling back to client-side calculation"
         );
         // Fallback to client-side calculation if RPC doesn't exist yet
@@ -105,7 +106,7 @@ export const useAnalytics = () => {
       // dateData should be array of date strings like ["2025-10-17", "2025-10-16", ...]
       const uniqueDates = dateData.map((row) => row.session_date);
 
-      console.log("Streak calculation (database):", {
+      logger.analytics("Streak calculation (database):", {
         uniqueDatesCount: uniqueDates.length,
         uniqueDates: uniqueDates.slice(0, 10), // Show first 10
         now: new Date().toISOString(),
@@ -142,7 +143,7 @@ export const useAnalytics = () => {
         }
       }
 
-      console.log("Streak calculated:", streak);
+      logger.analytics("Streak calculated:", streak);
 
       // Update user profile with new streak
       const { error: updateError } = await supabaseClient
@@ -154,7 +155,7 @@ export const useAnalytics = () => {
 
       return streak;
     } catch (err) {
-      console.error("Error updating streak:", err);
+      logger.error("Error updating streak:", err);
       return 0;
     } finally {
       isCalculatingStreak.current = false;
@@ -184,7 +185,7 @@ export const useAnalytics = () => {
 
         // If there's a session within the last hour, reuse it
         if (recentSessions && recentSessions.length > 0) {
-          console.log(
+          logger.analytics(
             "Reusing existing session from",
             recentSessions[0].session_start
           );
@@ -211,7 +212,7 @@ export const useAnalytics = () => {
 
         if (error) throw error;
 
-        console.log("Created new session");
+        logger.analytics("Created new session");
         setCurrentSession(data);
         sessionRef.current = data;
 
@@ -220,7 +221,7 @@ export const useAnalytics = () => {
           updateStreak();
         }, 500);
       } catch (err) {
-        console.error("Error starting session:", err);
+        logger.error("Error starting session:", err);
       }
     };
 
@@ -234,7 +235,7 @@ export const useAnalytics = () => {
           .update({ last_active_at: new Date().toISOString() })
           .eq("id", supabaseUser.id);
       } catch (err) {
-        console.error("Error updating activity:", err);
+        logger.error("Error updating activity:", err);
       }
     };
 
@@ -276,7 +277,7 @@ export const useAnalytics = () => {
       sessionRef.current = null;
       setCurrentSession(null);
     } catch (err) {
-      console.error("Error ending session:", err);
+      logger.error("Error ending session:", err);
     }
   }, [supabaseClient]);
 
@@ -307,7 +308,7 @@ export const useAnalytics = () => {
           if (updateError) throw updateError;
         }
       } catch (err) {
-        console.error("Error tracking module visit:", err);
+        logger.error("Error tracking module visit:", err);
       }
     },
     [supabaseClient]
@@ -342,7 +343,7 @@ export const useAnalytics = () => {
 
         if (updateError) throw updateError;
       } catch (err) {
-        console.error("Error tracking exercise attempt:", err);
+        logger.error("Error tracking exercise attempt:", err);
       }
     },
     [supabaseClient]
@@ -375,7 +376,7 @@ export const useAnalytics = () => {
 
         if (updateError) throw updateError;
       } catch (err) {
-        console.error("Error updating study time:", err);
+        logger.error("Error updating study time:", err);
       }
     },
     [supabaseUser, supabaseClient]
@@ -453,7 +454,7 @@ export const useAnalytics = () => {
         },
       };
     } catch (err) {
-      console.error("Error getting analytics summary:", err);
+      logger.error("Error getting analytics summary:", err);
       return null;
     }
   }, [supabaseUser, supabaseClient]);

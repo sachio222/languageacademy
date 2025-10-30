@@ -5,6 +5,7 @@ import { Award } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
+import { logger } from "../utils/logger";
 
 /**
  * Unit Exam - Comprehensive test covering an entire unit
@@ -45,7 +46,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
   useEffect(() => {
     const markComplete = async () => {
       if (results && results.passed && !completionCalled && isAuthenticated && supabaseProgress && lesson) {
-        console.log('[DEBUG] Marking unit exam complete in database');
+        logger.log('[DEBUG] Marking unit exam complete in database');
         setCompletionCalled(true);
 
         try {
@@ -62,9 +63,9 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
             0 // timeSpent (can be improved later)
           );
 
-          console.log('[DEBUG] Unit exam marked complete in database');
+          logger.log('[DEBUG] Unit exam marked complete in database');
         } catch (error) {
-          console.error('Error marking unit exam complete:', error);
+          logger.error('Error marking unit exam complete:', error);
         }
       }
     };
@@ -521,7 +522,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
                     // Reset completion status in database
                     if (isAuthenticated && supabaseProgress && lesson) {
                       try {
-                        console.log('[DEBUG] Resetting unit exam completion in database');
+                        logger.log('[DEBUG] Resetting unit exam completion in database');
                         const moduleId = extractModuleId(lesson);
                         const unitInfo = { id: unitNumber }; // Create minimal unitInfo
 
@@ -536,7 +537,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
                           0 // timeSpent
                         );
 
-                        console.log('[DEBUG] Unit exam completion cleared from database');
+                        logger.log('[DEBUG] Unit exam completion cleared from database');
                       } catch (error) {
                         console.error('Error resetting unit exam completion:', error);
                       }

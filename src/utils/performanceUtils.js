@@ -4,6 +4,7 @@
 
 import * as originalApi from '../api/wordDataApi';
 import * as optimizedApi from '../api/wordDataApiOptimized';
+import { logger } from "../utils/logger";
 
 /**
  * Measure execution time of a function
@@ -68,10 +69,10 @@ export const compareApiPerformance = async (testCases = []) => {
   const tests = testCases.length > 0 ? testCases : defaultTestCases;
   const results = [];
 
-  console.log('🚀 Starting API Performance Comparison...\n');
+  logger.log('🚀 Starting API Performance Comparison...\n');
 
   for (const test of tests) {
-    console.log(`Testing: ${test.name}`);
+    logger.log(`Testing: ${test.name}`);
     
     // Test original API
     const originalResult = await measureTime(test.fn, originalApi);
@@ -99,9 +100,9 @@ export const compareApiPerformance = async (testCases = []) => {
     
     results.push(testResult);
     
-    console.log(`  Original: ${originalResult.executionTime.toFixed(2)}ms (${testResult.original.resultCount} results)`);
-    console.log(`  Optimized: ${optimizedResult.executionTime.toFixed(2)}ms (${testResult.optimized.resultCount} results)`);
-    console.log(`  Improvement: ${improvement.toFixed(1)}% (${testResult.speedup.toFixed(1)}x faster)\n`);
+    logger.log(`  Original: ${originalResult.executionTime.toFixed(2)}ms (${testResult.original.resultCount} results)`);
+    logger.log(`  Optimized: ${optimizedResult.executionTime.toFixed(2)}ms (${testResult.optimized.resultCount} results)`);
+    logger.log(`  Improvement: ${improvement.toFixed(1)}% (${testResult.speedup.toFixed(1)}x faster)\n`);
   }
 
   // Calculate overall statistics
@@ -110,11 +111,11 @@ export const compareApiPerformance = async (testCases = []) => {
   const maxSpeedup = Math.max(...results.map(r => r.speedup));
   const minSpeedup = Math.min(...results.map(r => r.speedup));
 
-  console.log('📊 Performance Summary:');
-  console.log(`  Average Improvement: ${avgImprovement.toFixed(1)}%`);
-  console.log(`  Average Speedup: ${avgSpeedup.toFixed(1)}x`);
-  console.log(`  Best Speedup: ${maxSpeedup.toFixed(1)}x`);
-  console.log(`  Worst Speedup: ${minSpeedup.toFixed(1)}x`);
+  logger.log('📊 Performance Summary:');
+  logger.log(`  Average Improvement: ${avgImprovement.toFixed(1)}%`);
+  logger.log(`  Average Speedup: ${avgSpeedup.toFixed(1)}x`);
+  logger.log(`  Best Speedup: ${maxSpeedup.toFixed(1)}x`);
+  logger.log(`  Worst Speedup: ${minSpeedup.toFixed(1)}x`);
 
   return {
     results,
@@ -145,7 +146,7 @@ export const measureMemoryUsage = () => {
  * Load testing utility
  */
 export const loadTest = async (api, testFunction, iterations = 100) => {
-  console.log(`🔄 Running load test with ${iterations} iterations...`);
+  logger.log(`🔄 Running load test with ${iterations} iterations...`);
   
   const times = [];
   const startTime = performance.now();
@@ -155,7 +156,7 @@ export const loadTest = async (api, testFunction, iterations = 100) => {
     times.push(executionTime);
     
     if (i % 10 === 0) {
-      console.log(`  Completed ${i}/${iterations} iterations`);
+      logger.log(`  Completed ${i}/${iterations} iterations`);
     }
   }
   
@@ -164,12 +165,12 @@ export const loadTest = async (api, testFunction, iterations = 100) => {
   const minTime = Math.min(...times);
   const maxTime = Math.max(...times);
   
-  console.log(`Load test completed:`);
-  console.log(`  Total time: ${totalTime.toFixed(2)}ms`);
-  console.log(`  Average time: ${avgTime.toFixed(2)}ms`);
-  console.log(`  Min time: ${minTime.toFixed(2)}ms`);
-  console.log(`  Max time: ${maxTime.toFixed(2)}ms`);
-  console.log(`  Requests/second: ${(iterations / (totalTime / 1000)).toFixed(2)}`);
+  logger.log(`Load test completed:`);
+  logger.log(`  Total time: ${totalTime.toFixed(2)}ms`);
+  logger.log(`  Average time: ${avgTime.toFixed(2)}ms`);
+  logger.log(`  Min time: ${minTime.toFixed(2)}ms`);
+  logger.log(`  Max time: ${maxTime.toFixed(2)}ms`);
+  logger.log(`  Requests/second: ${(iterations / (totalTime / 1000)).toFixed(2)}`);
   
   return {
     totalTime,
@@ -185,7 +186,7 @@ export const loadTest = async (api, testFunction, iterations = 100) => {
  * Cache performance analysis
  */
 export const analyzeCachePerformance = async () => {
-  console.log('📈 Analyzing cache performance...');
+  logger.log('📈 Analyzing cache performance...');
   
   // Clear caches
   if (optimizedApi.clearCache) {
@@ -194,19 +195,19 @@ export const analyzeCachePerformance = async () => {
   
   // First call (cold cache)
   const coldResult = await measureTime(() => optimizedApi.searchWords('', { limit: 50 }));
-  console.log(`Cold cache: ${coldResult.executionTime.toFixed(2)}ms`);
+  logger.log(`Cold cache: ${coldResult.executionTime.toFixed(2)}ms`);
   
   // Second call (warm cache)
   const warmResult = await measureTime(() => optimizedApi.searchWords('', { limit: 50 }));
-  console.log(`Warm cache: ${warmResult.executionTime.toFixed(2)}ms`);
+  logger.log(`Warm cache: ${warmResult.executionTime.toFixed(2)}ms`);
   
   const cacheSpeedup = coldResult.executionTime / warmResult.executionTime;
-  console.log(`Cache speedup: ${cacheSpeedup.toFixed(1)}x`);
+  logger.log(`Cache speedup: ${cacheSpeedup.toFixed(1)}x`);
   
   // Get cache stats
   const stats = optimizedApi.getPerformanceStats();
   if (stats) {
-    console.log('Cache statistics:', stats);
+    logger.log('Cache statistics:', stats);
   }
   
   return {
@@ -221,7 +222,7 @@ export const analyzeCachePerformance = async () => {
  * Run comprehensive performance analysis
  */
 export const runPerformanceAnalysis = async () => {
-  console.log('🔍 Running comprehensive performance analysis...\n');
+  logger.log('🔍 Running comprehensive performance analysis...\n');
   
   // API comparison
   const comparison = await compareApiPerformance();
@@ -232,10 +233,10 @@ export const runPerformanceAnalysis = async () => {
   // Memory usage
   const memoryUsage = measureMemoryUsage();
   if (memoryUsage) {
-    console.log('\n💾 Memory Usage:');
-    console.log(`  Used: ${(memoryUsage.used / 1024 / 1024).toFixed(2)} MB`);
-    console.log(`  Total: ${(memoryUsage.total / 1024 / 1024).toFixed(2)} MB`);
-    console.log(`  Limit: ${(memoryUsage.limit / 1024 / 1024).toFixed(2)} MB`);
+    logger.log('\n💾 Memory Usage:');
+    logger.log(`  Used: ${(memoryUsage.used / 1024 / 1024).toFixed(2)} MB`);
+    logger.log(`  Total: ${(memoryUsage.total / 1024 / 1024).toFixed(2)} MB`);
+    logger.log(`  Limit: ${(memoryUsage.limit / 1024 / 1024).toFixed(2)} MB`);
   }
   
   return {

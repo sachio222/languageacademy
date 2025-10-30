@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
+import { logger } from "../utils/logger";
 
 export const useSupabaseProgress = () => {
   const {
@@ -77,7 +78,7 @@ export const useSupabaseProgress = () => {
 
         setError(null);
       } catch (err) {
-        console.error("Error loading progress data:", err);
+        logger.error("Error loading progress data:", err);
         setError(err.message);
       } finally {
         setLoading(false);
@@ -213,7 +214,7 @@ export const useSupabaseProgress = () => {
 
         return correct;
       } catch (err) {
-        console.error("Error completing exercise:", err);
+        logger.error("Error completing exercise:", err);
         // Revert optimistic update on error
         setCompletedExercises((prev) => {
           const newSet = new Set(prev);
@@ -276,7 +277,7 @@ export const useSupabaseProgress = () => {
 
         return data;
       } catch (err) {
-        console.error("Error updating module progress:", err);
+        logger.error("Error updating module progress:", err);
         throw err;
       }
     },
@@ -329,7 +330,7 @@ export const useSupabaseProgress = () => {
 
         return data;
       } catch (err) {
-        console.error("Error updating unit progress:", err);
+        logger.error("Error updating unit progress:", err);
         throw err;
       }
     },
@@ -366,7 +367,7 @@ export const useSupabaseProgress = () => {
           if (error) throw error;
         }
       } catch (err) {
-        console.error("Error updating concept understanding:", err);
+        logger.error("Error updating concept understanding:", err);
         throw err;
       }
     },
@@ -427,7 +428,7 @@ export const useSupabaseProgress = () => {
         if (error) throw error;
         return data;
       } catch (err) {
-        console.error("Error recording exam attempt:", err);
+        logger.error("Error recording exam attempt:", err);
         throw err;
       }
     },
@@ -447,7 +448,7 @@ export const useSupabaseProgress = () => {
       if (error) throw error;
       return true;
     } catch (err) {
-      console.error("Error marking welcome as seen:", err);
+      logger.error("Error marking welcome as seen:", err);
       return false;
     }
   }, [isAuthenticated, supabaseUser, supabaseClient]);

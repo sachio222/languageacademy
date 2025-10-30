@@ -6,6 +6,7 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { getTTSText } from '../utils/ttsUtils';
 import '../styles/LeftNav.css';
+import { logger } from "../utils/logger";
 
 /**
  * Select the best available voice for a given language
@@ -514,7 +515,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                               const bestVoice = selectBestVoice(voices, utterance.lang);
                               if (bestVoice) {
                                 utterance.voice = bestVoice;
-                                console.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
+                                logger.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
                               }
                               window.speechSynthesis.speak(utterance);
                             });
@@ -522,7 +523,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                             const bestVoice = selectBestVoice(voices, utterance.lang);
                             if (bestVoice) {
                               utterance.voice = bestVoice;
-                              console.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
+                              logger.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
                             }
                             window.speechSynthesis.speak(utterance);
                           }
