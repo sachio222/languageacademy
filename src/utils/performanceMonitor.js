@@ -44,10 +44,50 @@ class PerformanceMonitor {
       callback(operation, metric)
     })
     
-    // Log slow operations
+    // Enhanced slow operation logging with context
     if (duration > 1000) { // > 1 second
-      logger.warn(`Slow operation detected: ${operation} took ${duration.toFixed(2)}ms`)
+      const context = this.getOperationContext(operation, metadata)
+      logger.warn(`Slow operation detected: ${operation} took ${duration.toFixed(2)}ms${context}`)
+    } else if (duration > 500) { // > 500ms - moderate warning
+      const context = this.getOperationContext(operation, metadata)
+      logger.log(`Moderate operation: ${operation} took ${duration.toFixed(2)}ms${context}`)
     }
+  }
+
+  // Get contextual information for operations
+  getOperationContext(operation, metadata) {
+    const contexts = []
+    
+    if (metadata.url) {
+      const url = new URL(metadata.url)
+      contexts.push(` (${url.pathname})`)
+    }
+    
+    if (metadata.method) {
+      contexts.push(` [${metadata.method}]`)
+    }
+    
+    if (metadata.error) {
+      contexts.push(` [ERROR: ${metadata.error}]`)
+    }
+    
+    if (metadata.retryCount) {
+      contexts.push(` [retry ${metadata.retryCount}]`)
+    }
+    
+    // Add timing context for network requests
+    if (operation === 'network_request') {
+      const now = Date.now()
+      const timeSinceStart = now - (this.appStartTime || now)
+      contexts.push(` [${Math.round(timeSinceStart/1000)}s after app start]`)
+    }
+    
+    return contexts.join('')
+  }
+
+  // Track app start time for context
+  setAppStartTime() {
+    this.appStartTime = Date.now()
   }
 
   // Get statistics for an operation
@@ -254,6 +294,9 @@ export const analyzeBundleSize = () => {
 
 // Initialize all monitoring
 export const initializePerformanceMonitoring = () => {
+  // Track app start time for context
+  performanceMonitor.setAppStartTime()
+  
   initWebVitalsMonitoring()
   monitorNetworkRequests()
   

@@ -17,15 +17,8 @@ export const useAnalytics = () => {
     useAnalyticsTracking(sessionRef);
   const { getAnalyticsSummary } = useAnalyticsSummary();
 
-  // Update streak when session starts (preserving original behavior)
-  useEffect(() => {
-    if (currentSession && isAuthenticated) {
-      // Still update streak (but it should be cached now)
-      setTimeout(() => {
-        updateStreak();
-      }, 500);
-    }
-  }, [currentSession, isAuthenticated, updateStreak]);
+  // Note: Streak calculation is handled by useStreak hook internally
+  // No need to duplicate it here
 
   return {
     currentSession,

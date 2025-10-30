@@ -14,7 +14,6 @@ import FeedbackAdmin from './components/FeedbackAdmin';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
 import { useAuth } from './hooks/useAuth';
-import { useAnalytics } from './hooks/useAnalytics';
 import { lessons, unitStructure } from './lessons/lessonData';
 import { extractModuleId, extractUnitId, LocalStorageManager } from './utils/progressSync';
 import './styles/App.css';
@@ -89,7 +88,6 @@ function App() {
   // Supabase progress tracking (works in both dev and production mode)
   const supabaseProgress = useSupabaseProgress();
   const offlineSync = useOfflineSync();
-  const analytics = useAnalytics();
 
   // Track new feedback count for admin badge
   const [newFeedbackCount, setNewFeedbackCount] = useState(0);
@@ -220,10 +218,7 @@ function App() {
 
     window.scrollTo(0, 0);
 
-    // Track module visit for analytics
-    if (isAuthenticated) {
-      analytics.trackModuleVisit(extractModuleId({ id: lessonId }));
-    }
+    // Analytics tracking is handled by AuthWrapper
   };
 
   const handleBack = () => {
@@ -315,12 +310,7 @@ function App() {
         isCorrect  // Pass through the test runner's result
       );
 
-      // Track analytics
-      await analytics.trackExerciseAttempt(exerciseId, result);
-
-      if (timeSpent > 0) {
-        await analytics.updateStudyTime(timeSpent);
-      }
+      // Analytics tracking is handled by AuthWrapper
 
       return result;
     } catch (error) {
@@ -454,10 +444,7 @@ function App() {
 
         window.scrollTo(0, 0);
 
-        // Track analytics for new module
-        if (isAuthenticated) {
-          analytics.trackModuleVisit(extractModuleId(nextModule));
-        }
+        // Analytics tracking is handled by AuthWrapper
       } else {
         // No more modules - completed all!
         logger.log('Completed all modules!');
