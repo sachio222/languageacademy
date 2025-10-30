@@ -337,7 +337,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
         />
       )}
 
-      <aside className={`left-nav ${isCollapsed ? 'collapsed' : ''} ${mobileNavOpen ? 'open' : ''}`}>
+      <aside className={`left-nav ${isCollapsed && !mobileNavOpen ? 'collapsed' : ''} ${mobileNavOpen ? 'open' : ''}`}>
         {(!isCollapsed || mobileNavOpen) && (
           <>
             {/* Mobile Close Button */}

@@ -507,6 +507,12 @@
     touch-action: pan-y;
   }
 
+  /* Override collapsed width on mobile */
+  .left-nav.collapsed {
+    width: 85vw !important;
+    max-width: 380px !important;
+  }
+
   .left-nav.open {
     transform: translateX(0);
   }
