@@ -314,6 +314,7 @@ function App() {
         }}
         onShowDetails={() => setShowCookieModal(true)}
         forceShow={forceShowBanner}
+        key={forceShowBanner ? 'force-show' : 'normal'}
       />
 
       <CookieSettingsModal
@@ -323,6 +324,8 @@ function App() {
           if (accepted) {
             initializeClarity();
           }
+          // Close the banner when consent is saved via modal
+          setForceShowBanner(false);
         }}
       />
     </div>

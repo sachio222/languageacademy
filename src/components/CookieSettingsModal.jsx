@@ -32,6 +32,10 @@ function CookieSettingsModal({ isOpen, onClose, onConsentChange }) {
       revokeClarityConsent();
       onConsentChange && onConsentChange(false);
     }
+    
+    // Dispatch event to notify banner that consent was saved
+    window.dispatchEvent(new Event('cookieConsentSaved'));
+    
     onClose();
   };
 

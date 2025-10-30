@@ -33,7 +33,35 @@ function CookieBanner({ onConsent, onShowDetails, forceShow = false }) {
         }, 2000);
         return () => clearTimeout(timer);
       }
+    } else if (consent !== null && !forceShow) {
+      // If consent exists and not forced to show, hide the banner
+      setShow(false);
     }
+  }, [forceShow]);
+
+  // Listen for consent changes from the modal
+  useEffect(() => {
+    const handleConsentChange = () => {
+      const consent = localStorage.getItem(CONSENT_KEY);
+      if (consent !== null && !forceShow) {
+        // Close banner if consent was saved and we're not forcing it to show
+        setShow(false);
+      }
+    };
+
+    // Check immediately
+    handleConsentChange();
+
+    // Listen for storage changes (in case consent is updated from another tab/window)
+    window.addEventListener('storage', handleConsentChange);
+
+    // Listen for custom event for same-tab updates
+    window.addEventListener('cookieConsentSaved', handleConsentChange);
+
+    return () => {
+      window.removeEventListener('storage', handleConsentChange);
+      window.removeEventListener('cookieConsentSaved', handleConsentChange);
+    };
   }, [forceShow]);
 
   const handleAccept = () => {
