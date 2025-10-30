@@ -6,6 +6,9 @@ import React from 'react';
 import { getTTSText } from '../ttsUtils';
 import { wikipediaEntries } from '../../data/wikipediaEntries';
 
+
+const SHOW_WORD_DATA = false;
+
 // Tooltip configuration constants
 const TOOLTIP_STYLES = {
   METADATA: { fontSize: '0.8em', opacity: 0.7 },
@@ -20,7 +23,7 @@ const createRegularTooltipContent = (translation, partOfSpeech, wordData) => {
   return (
     <>
       {translation}
-      {partOfSpeech && (
+      {SHOW_WORD_DATA && partOfSpeech && (
         <span style={TOOLTIP_STYLES.PART_OF_SPEECH}>
           {' '}({partOfSpeech})
         </span>
