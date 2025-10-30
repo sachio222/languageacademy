@@ -66,6 +66,7 @@ function App() {
   };
 
   const [currentLesson, setCurrentLesson] = useState(getInitialLesson);
+  const [previousLesson, setPreviousLesson] = useState(null);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [showFeedbackAdmin, setShowFeedbackAdmin] = useState(() => {
@@ -276,6 +277,10 @@ function App() {
 
   // Handle opening dictionary
   const handleOpenDictionary = () => {
+    // Store the current lesson before switching to dictionary
+    if (currentLesson !== 'dictionary') {
+      setPreviousLesson(currentLesson);
+    }
     setCurrentLesson('dictionary');
     // Update URL to reflect dictionary state
     const url = new URL(window.location);
@@ -584,7 +589,9 @@ function App() {
                 url.searchParams.delete('dictionary');
                 url.searchParams.delete('word');
                 window.history.pushState({}, '', url);
-                setCurrentLesson(null);
+                // Restore the previous lesson or go to main page if no previous lesson
+                setCurrentLesson(previousLesson);
+                setPreviousLesson(null);
               }}
             />
           </div>
