@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Nouns
- * Generated: 2025-10-30T21:26:56.069Z
- * Successfully scraped: 493/493
+ * Generated: 2025-10-30T21:33:15.259Z
+ * Successfully scraped: 495/495
  */
 
 export const nounsCambridge = new Map([
@@ -28206,5 +28206,138 @@ export const nounsCambridge = new Map([
         "module": "7",
         "definition": "Unit 1, Module 7"
     }
+  ],
+  [
+    "buffet-fr",
+        {
+        "id": "buffet-fr",
+        "lang": "fr",
+        "word": "buffet",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "buffet",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "ranger les assiettes dans le buffet",
+                "trans": "to put the plates in the sideboard",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "un buffet froid",
+                "trans": "a cold buffet",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:33:14.514Z",
+        "updated_at": "2025-10-30T21:33:15.030Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "buffets",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le buffet",
+                "type": "definite_article",
+                "context": "the buffet",
+                "frequency": "common"
+            },
+            {
+                "phrase": "un buffet",
+                "type": "indefinite_article",
+                "context": "a buffet",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "ballet-fr",
+        {
+        "id": "ballet-fr",
+        "lang": "fr",
+        "word": "ballet",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "ballet",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-10-30T21:33:14.518Z",
+        "updated_at": "2025-10-30T21:33:15.251Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "ballets",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le ballet",
+                "type": "definite_article",
+                "context": "the ballet",
+                "frequency": "common"
+            },
+            {
+                "phrase": "un ballet",
+                "type": "indefinite_article",
+                "context": "a ballet",
+                "frequency": "common"
+            }
+        ],
+        "unit": "unit1",
+        "module": "7",
+        "definition": "Unit 1, Module 7"
+    }
   ]
-]);export default nounsCambridge;
+]);
+
+export default nounsCambridge;

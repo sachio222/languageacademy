@@ -125,29 +125,29 @@ function speakText(text) {
  */
 function getGenderFromFrench(frenchText) {
   if (!frenchText) return null;
-  
+
   const textLower = frenchText.toLowerCase().trim();
-  
+
   // Check for feminine indefinite article
   if (textLower.startsWith("une ")) {
     return "feminine";
   }
-  
+
   // Check for masculine indefinite article
   if (textLower.startsWith("un ")) {
     return "masculine";
   }
-  
+
   // Check for feminine definite article
   if (textLower.startsWith("la ")) {
     return "feminine";
   }
-  
+
   // Check for masculine definite articles
   if (textLower.startsWith("le ") || textLower.startsWith("les ")) {
     return "masculine";
   }
-  
+
   // Check for l' (can be either gender, check specific words)
   if (textLower.startsWith("l'")) {
     // Common feminine words with l'
@@ -163,12 +163,12 @@ function getGenderFromFrench(frenchText) {
     // Default to masculine for l' if not in our lists
     return "masculine";
   }
-  
+
   // Plural articles don't indicate gender
   if (textLower.startsWith("des ")) {
     return null;
   }
-  
+
   return null;
 }
 
@@ -220,7 +220,8 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       { french: "une machine", english: "machine" },
       { french: "un problème", english: "problem" },
       { french: "un programme", english: "program" },
-      { french: "une photo", english: "photo" }
+      { french: "une photo", english: "photo" },
+      { french: "un ballet", english: "ballet" }
     ],
     conceptsAndAbstracts: [
       { french: "une idée", english: "idea" },
@@ -239,7 +240,8 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       { french: "un sandwich", english: "sandwich" },
       { french: "une salade", english: "salad" },
       { french: "une banane", english: "banana" },
-      { french: "un menu", english: "menu" }
+      { french: "un menu", english: "menu" },
+      { french: "un buffet", english: "buffet" }
     ]
   };
 
