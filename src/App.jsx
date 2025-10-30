@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import AuthWrapper from './components/AuthWrapper';
 import DevModeWrapper from './components/DevModeWrapper';
 import LeftNav from './components/LeftNav';
@@ -10,6 +11,9 @@ import SafariTTSHelper from './components/SafariTTSHelper';
 import OfflineIndicator from './components/OfflineIndicator';
 import FeedbackForm from './components/FeedbackForm';
 import FeedbackAdmin from './components/FeedbackAdmin';
+import CookieBanner from './components/CookieBanner';
+import CookieSettingsModal from './components/CookieSettingsModal';
+import { initializeClarity } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
 import { useAuth } from './hooks/useAuth';
@@ -32,6 +36,10 @@ function App() {
   
   // Determine if words learned button should be visible (always visible now)
   const showWordsLearned = true;
+
+  // Cookie settings modal state
+  const [showCookieModal, setShowCookieModal] = useState(false);
+  const [forceShowBanner, setForceShowBanner] = useState(false);
 
   // Get auth info
   const { user, supabaseUser } = useAuth();
@@ -266,7 +274,27 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>Built with love • Inspired by cognitive science research  • Grammar Linting Enabled</p>
+        <p>
+          Built with love • Inspired by cognitive science research • Grammar Linting Enabled
+          {' • '}
+          <button
+            onClick={() => setForceShowBanner(true)}
+            className="cookie-manage-link"
+            style={{
+              background: 'none',
+              border: 'none',
+              color: 'inherit',
+              textDecoration: 'underline',
+              cursor: 'pointer',
+              fontSize: 'inherit',
+              fontFamily: 'inherit',
+              padding: 0,
+              margin: 0
+            }}
+          >
+            Manage Cookies
+          </button>
+        </p>
       </footer>
 
       <SafariTTSHelper />
@@ -275,6 +303,27 @@ function App() {
       <FeedbackForm
         isOpen={navigation.showFeedbackForm}
         onClose={() => navigation.setShowFeedbackForm(false)}
+      />
+
+      <CookieBanner
+        onConsent={(accepted) => {
+          if (accepted) {
+            initializeClarity();
+          }
+          setForceShowBanner(false);
+        }}
+        onShowDetails={() => setShowCookieModal(true)}
+        forceShow={forceShowBanner}
+      />
+
+      <CookieSettingsModal
+        isOpen={showCookieModal}
+        onClose={() => setShowCookieModal(false)}
+        onConsentChange={(accepted) => {
+          if (accepted) {
+            initializeClarity();
+          }
+        }}
       />
     </div>
   );
