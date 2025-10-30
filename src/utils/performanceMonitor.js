@@ -1,4 +1,5 @@
 // Performance monitoring utilities
+import { logger } from './logger';
 
 /**
  * Performance metrics tracker

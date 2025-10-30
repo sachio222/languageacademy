@@ -125,7 +125,7 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
           streakDays: profile?.streak_days || 0
         });
       } catch (error) {
-        console.error('Error loading dashboard stats:', error);
+        logger.error('Error loading dashboard stats:', error);
       } finally {
         setLoading(false);
       }

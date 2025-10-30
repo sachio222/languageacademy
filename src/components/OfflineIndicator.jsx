@@ -25,7 +25,7 @@ function OfflineIndicator() {
         setLastSyncTime(Date.now())
       }
     } catch (error) {
-      console.error('Sync failed:', error)
+      logger.error('Sync failed:', error)
     }
   }
 

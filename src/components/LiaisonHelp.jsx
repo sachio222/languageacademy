@@ -158,7 +158,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
         setUnderstoodSections(understoodSet);
         logger.log('LiaisonHelp: Loaded understood sections:', understoodSet);
       } catch (error) {
-        console.error('Error loading understood liaison sections:', error);
+        logger.error('Error loading understood liaison sections:', error);
       } finally {
         setLoading(false);
       }
@@ -188,7 +188,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       try {
         const section = liaisonSections[sectionIndex];
         if (!section) {
-          console.error('LiaisonHelp: Section not found at index:', sectionIndex);
+          logger.error('LiaisonHelp: Section not found at index:', sectionIndex);
           return;
         }
         const termName = `liaison-${section.id}`;
@@ -201,7 +201,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
         );
         logger.log('LiaisonHelp: Saved successfully');
       } catch (error) {
-        console.error('LiaisonHelp: Error saving:', error);
+        logger.error('LiaisonHelp: Error saving:', error);
         // Revert optimistic update on error
         setUnderstoodSections(prev => {
           const newSet = new Set(prev);

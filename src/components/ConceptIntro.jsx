@@ -142,7 +142,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
         const understoodSet = new Set(data.map(c => c.concept_index));
         setUnderstoodConcepts(understoodSet);
       } catch (error) {
-        console.error('Error loading understood concepts:', error);
+        logger.error('Error loading understood concepts:', error);
       } finally {
         setLoading(false);
       }
@@ -180,7 +180,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
         );
         logger.log('ConceptIntro: Saved successfully');
       } catch (error) {
-        console.error('ConceptIntro: Error saving:', error);
+        logger.error('ConceptIntro: Error saving:', error);
         // Revert on error
         setUnderstoodConcepts(prev => {
           const newSet = new Set(prev);

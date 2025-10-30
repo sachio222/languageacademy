@@ -187,7 +187,7 @@ function ModuleExam({ lesson, onPassExam, onRetryLesson, unitInfo }) {
           passed
         );
       } catch (error) {
-        console.error('Error recording exam attempt:', error);
+        logger.error('Error recording exam attempt:', error);
       }
     }
 

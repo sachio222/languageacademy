@@ -121,7 +121,7 @@ function App() {
         setNewFeedbackCount(count || 0);
       }
     } catch (error) {
-      console.error('Error fetching feedback count:', error);
+      logger.error('Error fetching feedback count:', error);
     }
   };
 
@@ -142,7 +142,7 @@ function App() {
         }
       } catch (error) {
         if (!cancelled) {
-          console.error('Error fetching feedback count:', error);
+          logger.error('Error fetching feedback count:', error);
         }
       }
     };
@@ -324,7 +324,7 @@ function App() {
 
       return result;
     } catch (error) {
-      console.error('Error completing exercise:', error);
+      logger.error('Error completing exercise:', error);
       return false;
     }
   };
@@ -334,7 +334,7 @@ function App() {
     logger.log('[DEBUG] handleModuleComplete called!');
 
     if (!moduleId) {
-      console.error('handleModuleComplete called with null/undefined moduleId');
+      logger.error('handleModuleComplete called with null/undefined moduleId');
       return;
     }
 
@@ -405,7 +405,7 @@ function App() {
           );
         }
       } catch (error) {
-        console.error('Error updating module progress:', error);
+        logger.error('Error updating module progress:', error);
       }
     }
 
@@ -417,8 +417,8 @@ function App() {
       logger.log('Current module index in lessons array:', currentIndex, 'Total lessons:', lessons.length);
 
       if (currentIndex === -1) {
-        console.error('Current module not found in lessons array. moduleId:', moduleId, 'Type:', typeof moduleId);
-        console.error('Available lesson IDs:', lessons.map(l => l.id));
+        logger.error('Current module not found in lessons array. moduleId:', moduleId, 'Type:', typeof moduleId);
+        logger.error('Available lesson IDs:', lessons.map(l => l.id));
         alert('Error: Could not find current module. Returning to module list.');
         setCurrentLesson(null);
 

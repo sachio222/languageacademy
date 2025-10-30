@@ -1,6 +1,8 @@
 // Text regex detection utilities
 // Handles regex patterns and detection logic for text formatting
 
+import { logger } from "../../utils/logger";
+
 // ============================================================================
 // REGEX PATTERNS
 // ============================================================================
@@ -55,7 +57,7 @@ export const checkSpeakerMatch = (text) => {
   try {
     return text.match(SPEAKER_PATTERN);
   } catch (error) {
-    console.error("Error checking speaker match:", error);
+    logger.error("Error checking speaker match:", error);
     return null;
   }
 };
@@ -69,7 +71,7 @@ export const checkSubheaderMatch = (text) => {
   try {
     return text.match(SUBHEADER_PATTERN);
   } catch (error) {
-    console.error("Error checking subheader match:", error);
+    logger.error("Error checking subheader match:", error);
     return null;
   }
 };
@@ -83,7 +85,7 @@ export const checkHorizontalRuleMatch = (text) => {
   try {
     return text.match(HORIZONTAL_RULE_PATTERN);
   } catch (error) {
-    console.error("Error checking horizontal rule match:", error);
+    logger.error("Error checking horizontal rule match:", error);
     return null;
   }
 };
@@ -97,7 +99,7 @@ export const checkWordMatch = (text) => {
   try {
     return text.match(WORD_PATTERN);
   } catch (error) {
-    console.error("Error checking word match:", error);
+    logger.error("Error checking word match:", error);
     return null;
   }
 };
@@ -111,7 +113,7 @@ export const checkOtherMatch = (text) => {
   try {
     return text.match(OTHER_PATTERN);
   } catch (error) {
-    console.error("Error checking other match:", error);
+    logger.error("Error checking other match:", error);
     return null;
   }
 };
@@ -125,7 +127,7 @@ export const checkItalicMatch = (text) => {
   try {
     return text.match(ITALIC_PATTERN);
   } catch (error) {
-    console.error("Error checking italic match:", error);
+    logger.error("Error checking italic match:", error);
     return null;
   }
 };

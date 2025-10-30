@@ -37,7 +37,7 @@ const FeedbackAdmin = ({ onFeedbackChange }) => {
           setFeedback(filteredData || []);
         }
       } catch (error) {
-        if (!cancelled) console.error('Error fetching feedback:', error);
+        if (!cancelled) logger.error('Error fetching feedback:', error);
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -69,7 +69,7 @@ const FeedbackAdmin = ({ onFeedbackChange }) => {
 
       setFeedback(filteredData || []);
     } catch (error) {
-      console.error('Error fetching feedback:', error);
+      logger.error('Error fetching feedback:', error);
     } finally {
       setLoading(false);
     }
@@ -92,7 +92,7 @@ const FeedbackAdmin = ({ onFeedbackChange }) => {
         onFeedbackChange();
       }
     } catch (error) {
-      console.error('Error updating status:', error);
+      logger.error('Error updating status:', error);
     }
   };
 
@@ -117,7 +117,7 @@ const FeedbackAdmin = ({ onFeedbackChange }) => {
         onFeedbackChange();
       }
     } catch (error) {
-      console.error('Error deleting feedback:', error);
+      logger.error('Error deleting feedback:', error);
     }
   };
 

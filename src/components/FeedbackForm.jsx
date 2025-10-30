@@ -54,7 +54,7 @@ const FeedbackForm = ({ isOpen, onClose }) => {
         setSubmitStatus(null);
       }, 2000);
     } catch (error) {
-      console.error('Error submitting feedback:', error);
+      logger.error('Error submitting feedback:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

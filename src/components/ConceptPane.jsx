@@ -30,7 +30,7 @@ function ConceptPane({ concepts, moduleId }) {
         const understoodSet = new Set(data.map(c => c.concept_index));
         setUnderstoodConcepts(understoodSet);
       } catch (error) {
-        console.error('Error loading understood concepts:', error);
+        logger.error('Error loading understood concepts:', error);
       } finally {
         setLoading(false);
       }
@@ -64,7 +64,7 @@ function ConceptPane({ concepts, moduleId }) {
           newUnderstood
         );
       } catch (error) {
-        console.error('Error updating concept understanding:', error);
+        logger.error('Error updating concept understanding:', error);
         // Revert optimistic update on error
         setUnderstoodConcepts(prev => {
           const newSet = new Set(prev);

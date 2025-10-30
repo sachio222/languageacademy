@@ -297,21 +297,21 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       // Reload page to refresh state
       window.location.reload();
     } catch (err) {
-      console.error('Error resetting module:', err);
+      logger.error('Error resetting module:', err);
       alert('Failed to reset module. Please try again.');
     }
   };
 
   const handleNextModule = () => {
     if (!lesson || !lesson.id) {
-      console.error('No lesson or lesson ID available');
+      logger.error('No lesson or lesson ID available');
       return;
     }
 
     logger.log('handleNextModule - Current lesson ID:', lesson.id, 'Title:', lesson.title);
 
     if (!onModuleComplete) {
-      console.error('onModuleComplete callback not provided!');
+      logger.error('onModuleComplete callback not provided!');
       return;
     }
 
@@ -373,7 +373,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       // Reload page to refresh state
       window.location.reload();
     } catch (err) {
-      console.error('Error resetting module:', err);
+      logger.error('Error resetting module:', err);
       alert('Failed to reset module. Please try again.');
     } finally {
       setResetting(false);

@@ -539,7 +539,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
 
                         logger.log('[DEBUG] Unit exam completion cleared from database');
                       } catch (error) {
-                        console.error('Error resetting unit exam completion:', error);
+                        logger.error('Error resetting unit exam completion:', error);
                       }
                     }
                   }}
