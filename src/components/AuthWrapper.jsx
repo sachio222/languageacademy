@@ -154,7 +154,7 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
                     card: "shadow-none border border-gray-200 rounded-lg",
                   }
                 }}
-                afterSignUpUrl="/"
+                fallbackRedirectUrl="/"
               />
             ) : (
               <SignIn
@@ -164,7 +164,7 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
                     card: "shadow-none border border-gray-200 rounded-lg",
                   }
                 }}
-                afterSignInUrl="/"
+                fallbackRedirectUrl="/"
               />
             )}
           </div>
@@ -198,7 +198,7 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
               }
             }}
             showName={!isMobile}
-            afterSignOutUrl="/"
+            fallbackRedirectUrl="/"
           />
         </div>
       </div>
