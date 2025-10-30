@@ -181,68 +181,63 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   // Define the cognates sections that can be marked as understood
   const cognatesSections = [
     { id: 'what-are-cognates', title: 'What Are Cognates?', index: 0 },
-    { id: 'people-and-roles', title: 'People and Roles', index: 1 },
-    { id: 'places-and-institutions', title: 'Places and Institutions', index: 2 },
-    { id: 'objects-and-things', title: 'Objects and Things', index: 3 },
-    { id: 'concepts-and-abstracts', title: 'Concepts and Abstracts', index: 4 },
-    { id: 'food-and-drink', title: 'Food and Drink', index: 5 }
+    { id: 'exactly-the-same', title: 'Exactly the Same', index: 1 },
+    { id: 'almost-identical', title: 'Almost Identical', index: 2 },
+    { id: 'very-similar', title: 'Very Similar', index: 3 }
   ];
 
-  // Cognates data organized by category
-  const cognatesData = {
-    peopleAndRoles: [
-      { french: "un acteur", english: "actor" },
-      { french: "une actrice", english: "actress" },
-      { french: "un artiste", english: "artist" },
-      { french: "un client", english: "client" },
-      { french: "un étudiant", english: "student" },
-      { french: "un docteur", english: "doctor" },
-      { french: "un professeur", english: "professor" },
-      { french: "un touriste", english: "tourist" }
-    ],
-    placesAndInstitutions: [
-      { french: "un hôpital", english: "hospital" },
+  // Cognates organized by similarity level - SIMPLE AND DIRECT
+  const cognatesBySimilarity = {
+    exact: [
       { french: "un restaurant", english: "restaurant" },
-      { french: "un musée", english: "museum" },
-      { french: "une banque", english: "bank" },
-      { french: "un hôtel", english: "hotel" },
-      { french: "un cinéma", english: "cinema" },
-      { french: "un parc", english: "park" },
       { french: "un garage", english: "garage" },
-      { french: "une station", english: "station" }
-    ],
-    objectsAndThings: [
-      { french: "un téléphone", english: "telephone" },
+      { french: "une station", english: "station" },
       { french: "une radio", english: "radio" },
-      { french: "une carte", english: "card/map" },
       { french: "une table", english: "table" },
       { french: "une minute", english: "minute" },
       { french: "une machine", english: "machine" },
-      { french: "un problème", english: "problem" },
-      { french: "un programme", english: "program" },
       { french: "une photo", english: "photo" },
-      { french: "un ballet", english: "ballet" }
-    ],
-    conceptsAndAbstracts: [
-      { french: "une idée", english: "idea" },
+      { french: "un menu", english: "menu" },
+      { french: "un buffet", english: "buffet" },
+      { french: "un ballet", english: "ballet" },
       { french: "une situation", english: "situation" },
       { french: "une conversation", english: "conversation" },
       { french: "une information", english: "information" },
       { french: "un accident", english: "accident" },
-      { french: "un projet", english: "project" },
       { french: "un moment", english: "moment" },
-      { french: "un sujet", english: "subject" },
-      { french: "un système", english: "system" }
-    ],
-    foodAndDrink: [
-      { french: "un café", english: "coffee" },
-      { french: "un chocolat", english: "chocolate" },
       { french: "un sandwich", english: "sandwich" },
+      { french: "un client", english: "client" },
+    ],
+    almost: [
+      { french: "un café", english: "café" },
+      { french: "un hôtel", english: "hotel" },
+      { french: "un cinéma", english: "cinema" },
+      { french: "un téléphone", english: "telephone" },
+      { french: "un parc", english: "park" },
+      { french: "un programme", english: "program" },
+      { french: "un problème", english: "problem" },
+      { french: "un système", english: "system" },
       { french: "une salade", english: "salad" },
+      { french: "un chocolat", english: "chocolate" },
+    ],
+    similar: [
+
+      { french: "une banque", english: "bank" },
+      { french: "un docteur", english: "doctor" },
+      { french: "un professeur", english: "professor" },
+      { french: "un acteur", english: "actor" },
+      { french: "une actrice", english: "actress" },
+      { french: "un touriste", english: "tourist" },
+      { french: "un artiste", english: "artist" },
+      { french: "un hôpital", english: "hospital" },
+      { french: "un musée", english: "museum" },
+      { french: "un projet", english: "project" },
+      { french: "un sujet", english: "subject" },
+      { french: "une idée", english: "idea" },
       { french: "une banane", english: "banana" },
-      { french: "un menu", english: "menu" },
-      { french: "un buffet", english: "buffet" }
-    ]
+      { french: "une carte", english: "card/map" },
+      { french: "un étudiant", english: "student" },
+    ],
   };
 
   // Load understood sections from database when component loads
@@ -358,10 +353,12 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
             You might be surprised to learn that thousands of English words come from French!
             These similar words are called "cognates" and they can give you a huge head start in learning French.
           </p>
+
           <div className="listen-prompt">
             <span className="speaker-icon">🔊</span>
-            <h3>Listen! Hear how similar these words sound</h3>
+            <h3>Listen! They make look similar, but they sound... oh, la la!</h3>
           </div>
+
         </header>
 
         {/* Section 1: What Are Cognates? */}
@@ -375,19 +372,12 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="insight-box">
             <p>
-              <strong>Did you know?</strong> Around 30% of English words come from French or Latin,
+              <strong>Did you know?</strong> Over 30% of English words come from French or Latin,
               and many of them are almost identical in both languages. This means you already know
-              far more French vocabulary than you realize!
+              far more French vocabulary than you realize! Here are a few to kick start your vocabulary.
             </p>
           </div>
 
-          <div className="key-takeaway">
-            <p>
-              <strong>This is great news!</strong> These cognates aren't just similar—they're
-              <em>almost identical</em>. Once you learn a few pronunciation differences, you'll
-              recognize hundreds of French words immediately.
-            </p>
-          </div>
 
           <div className="section-footer">
             <button
@@ -403,15 +393,17 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
-        {/* Section 2: People and Roles */}
+
+
+        {/* Section 2: Exactly the Same */}
         <section className="cognates-section">
-          <h2>People and Roles</h2>
+          <h2>Exactly the Same</h2>
           <p className="section-intro">
-            Many words for people and professions are nearly identical:
+            These words are <strong>identical</strong> in both languages! Just listen to how different they sound:
           </p>
 
           <div className="cognates-grid">
-            {cognatesData.peopleAndRoles.map((item, idx) => (
+            {cognatesBySimilarity.exact.map((item, idx) => (
               <div
                 key={idx}
                 className="cognate-item"
@@ -443,15 +435,15 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
-        {/* Section 3: Places and Institutions */}
+        {/* Section 3: Almost Identical */}
         <section className="cognates-section">
-          <h2>Places and Institutions</h2>
+          <h2>Almost Identical</h2>
           <p className="section-intro">
-            Places you visit every day often have the same names:
+            These words are almost the same, with just minor spelling differences (like accents):
           </p>
 
           <div className="cognates-grid">
-            {cognatesData.placesAndInstitutions.map((item, idx) => (
+            {cognatesBySimilarity.almost.map((item, idx) => (
               <div
                 key={idx}
                 className="cognate-item"
@@ -483,15 +475,15 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
-        {/* Section 4: Objects and Things */}
+        {/* Section 4: Very Similar */}
         <section className="cognates-section">
-          <h2>Objects and Things</h2>
+          <h2>Very Similar</h2>
           <p className="section-intro">
-            Everyday objects you use often share the same names:
+            These words share the same root and meaning, with clear patterns you can learn:
           </p>
 
           <div className="cognates-grid">
-            {cognatesData.objectsAndThings.map((item, idx) => (
+            {cognatesBySimilarity.similar.map((item, idx) => (
               <div
                 key={idx}
                 className="cognate-item"
@@ -518,86 +510,6 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
               }}
             >
               {understoodSections.has(3) && <Check size={16} />}
-              Understood
-            </button>
-          </div>
-        </section>
-
-        {/* Section 5: Concepts and Abstracts */}
-        <section className="cognates-section">
-          <h2>Concepts and Abstracts</h2>
-          <p className="section-intro">
-            Abstract ideas and concepts are often the same:
-          </p>
-
-          <div className="cognates-grid">
-            {cognatesData.conceptsAndAbstracts.map((item, idx) => (
-              <div
-                key={idx}
-                className="cognate-item"
-                onClick={() => speakText(item.french)}
-              >
-                <div className="cognate-content">
-                  <div className={`cognate-french ${(() => {
-                    const gender = getGenderFromFrench(item.french);
-                    return gender === 'feminine' ? 'feminine' : gender === 'masculine' ? 'masculine' : '';
-                  })()}`}>{item.french}</div>
-                  <div className="cognate-english">{item.english}</div>
-                </div>
-                <SpeakButton text={item.french} language="fr-FR" size="small" />
-              </div>
-            ))}
-          </div>
-
-          <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(4) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(4);
-              }}
-            >
-              {understoodSections.has(4) && <Check size={16} />}
-              Understood
-            </button>
-          </div>
-        </section>
-
-        {/* Section 6: Food and Drink */}
-        <section className="cognates-section">
-          <h2>Food and Drink</h2>
-          <p className="section-intro">
-            Many food words are identical or very similar:
-          </p>
-
-          <div className="cognates-grid">
-            {cognatesData.foodAndDrink.map((item, idx) => (
-              <div
-                key={idx}
-                className="cognate-item"
-                onClick={() => speakText(item.french)}
-              >
-                <div className="cognate-content">
-                  <div className={`cognate-french ${(() => {
-                    const gender = getGenderFromFrench(item.french);
-                    return gender === 'feminine' ? 'feminine' : gender === 'masculine' ? 'masculine' : '';
-                  })()}`}>{item.french}</div>
-                  <div className="cognate-english">{item.english}</div>
-                </div>
-                <SpeakButton text={item.french} language="fr-FR" size="small" />
-              </div>
-            ))}
-          </div>
-
-          <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(5) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(5);
-              }}
-            >
-              {understoodSections.has(5) && <Check size={16} />}
               Understood
             </button>
           </div>

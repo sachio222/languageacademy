@@ -600,13 +600,13 @@ export class DefinitionGenerator {
             
             // Only return example if we have both French text and English translation
             if (frenchText && englishTranslation) {
-              return {
+          return {
                 lang: "fr",
                 text: frenchText,
                 trans: englishTranslation,
-                source: "cambridge",
-              };
-            }
+            source: "cambridge",
+          };
+        }
           }
           // Skip examples without translation
           return null;
