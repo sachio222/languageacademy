@@ -1,9 +1,11 @@
 import { useCallback } from "react";
 import { useAuth } from "./useAuth";
+import { useSupabaseClient } from "./useSupabaseClient";
 import { logger } from "../utils/logger";
 
 export const useStudyTime = () => {
-  const { supabaseUser, supabaseClient, profile } = useAuth();
+  const { supabaseUser, profile } = useAuth();
+  const supabaseClient = useSupabaseClient();
 
   // Update user study time
   const updateStudyTime = useCallback(

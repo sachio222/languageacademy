@@ -1,6 +1,7 @@
 import { useUser, useClerk, useSession } from "@clerk/clerk-react";
 import { useState, useEffect } from "react";
-import { supabase, createClerkSupabaseClient } from "../lib/supabase";
+import { supabase } from "../lib/supabase";
+import { useSupabaseClient } from "./useSupabaseClient";
 import { logger } from "../utils/logger";
 
 export const useAuth = () => {
@@ -9,16 +10,16 @@ export const useAuth = () => {
   const { session } = useSession();
   const { signOut } = useClerk();
   const [supabaseUser, setSupabaseUser] = useState(null);
-  const [supabaseClient, setSupabaseClient] = useState(supabase);
   const [clientReady, setClientReady] = useState(false);
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
 
-  // Create Supabase client with Clerk session token (OFFICIAL METHOD)
+  // Use the shared Supabase client
+  const supabaseClient = useSupabaseClient();
+
+  // Set client ready state
   useEffect(() => {
     if (session) {
-      const client = createClerkSupabaseClient(session);
-      setSupabaseClient(client);
       setClientReady(true);
     } else {
       setClientReady(false);
@@ -183,12 +184,13 @@ logger.log('Dev account created:', data);
     };
 
     syncUserProfile();
-  }, [user, isSignedIn, userLoaded, isDevMode, supabaseClient, clientReady]);
+  }, [user, isSignedIn, userLoaded, isDevMode, clientReady]);
 
   const handleSignOut = async () => {
     try {
       await signOut();
       setSupabaseUser(null);
+      setProfile(null);
     } catch (error) {
       logger.error("Error signing out:", error);
     }

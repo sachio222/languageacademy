@@ -3,6 +3,7 @@ import { checkAnswer } from '../linter/frenchLinter';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
 import { Award } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
+import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { logger } from "../utils/logger";
@@ -12,7 +13,8 @@ import { logger } from "../utils/logger";
  * Tests ability to write complete French sentences from scratch
  */
 function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
-  const { isAuthenticated, supabaseUser, supabaseClient } = useAuth();
+  const { isAuthenticated, supabaseUser } = useAuth();
+  const supabaseClient = useSupabaseClient();
   const supabaseProgress = useSupabaseProgress();
   // Helper to get initial section index from URL (1-based to 0-based) with validation
   const getInitialSectionIndex = () => {

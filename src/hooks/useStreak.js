@@ -1,10 +1,12 @@
 import { useCallback, useRef } from "react";
 import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
+import { useSupabaseClient } from "./useSupabaseClient";
 import { logger } from "../utils/logger";
 
 export const useStreak = () => {
-  const { supabaseUser, supabaseClient, profile } = useAuth();
+  const { supabaseUser, profile } = useAuth();
+  const supabaseClient = useSupabaseClient();
   const isCalculatingStreak = useRef(false);
 
   // Fallback: Calculate streak client-side if database function doesn't exist

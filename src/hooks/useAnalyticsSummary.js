@@ -1,10 +1,12 @@
 import { useCallback } from "react";
 import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
+import { useSupabaseClient } from "./useSupabaseClient";
 import { logger } from "../utils/logger";
 
 export const useAnalyticsSummary = () => {
-  const { supabaseUser, supabaseClient, profile } = useAuth();
+  const { supabaseUser, profile } = useAuth();
+  const supabaseClient = useSupabaseClient();
 
   // Get user analytics summary
   const getAnalyticsSummary = useCallback(async () => {

@@ -1,15 +1,16 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
+import { useSupabaseClient } from "./useSupabaseClient";
 import { logger } from "../utils/logger";
 
 export const useSession = () => {
   const {
     supabaseUser,
-    supabaseClient,
     isAuthenticated,
     loading: authLoading,
   } = useAuth();
+  const supabaseClient = useSupabaseClient();
   
   const [currentSession, setCurrentSession] = useState(null);
   const sessionRef = useRef(null);

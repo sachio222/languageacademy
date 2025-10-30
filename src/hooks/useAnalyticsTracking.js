@@ -1,10 +1,11 @@
 import { useCallback } from "react";
 import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
+import { useSupabaseClient } from "./useSupabaseClient";
 import { logger } from "../utils/logger";
 
 export const useAnalyticsTracking = (sessionRef) => {
-  const { supabaseClient } = useAuth();
+  const supabaseClient = useSupabaseClient();
 
   // Track module visit
   const trackModuleVisit = useCallback(

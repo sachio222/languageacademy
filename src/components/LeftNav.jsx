@@ -558,7 +558,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                           <div className="nav-vocab-lessons">
                             {vocab.lessons.map(lesson => (
                               <button
-                                key={lesson.id}
+                                key={`${vocab.french}-${lesson.id}`}
                                 className="nav-vocab-lesson-link"
                                 onClick={() => {
                                   onLessonSelect(lesson.id);

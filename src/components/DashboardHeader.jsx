@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
+import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { lessons } from '../lessons/lessonData';
 import { Flame, CheckCircle, Clock, BookOpen, BookMarked } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
@@ -8,7 +9,8 @@ import '../styles/DashboardHeader.css';
 import { logger } from "../utils/logger";
 
 function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned, isAdmin }) {
-  const { supabaseClient, supabaseUser, profile } = useAuth();
+  const { supabaseUser, profile } = useAuth();
+  const supabaseClient = useSupabaseClient();
   const { moduleProgress } = useSupabaseProgress();
   const [stats, setStats] = useState({
     lessonsCompleted: 0,
