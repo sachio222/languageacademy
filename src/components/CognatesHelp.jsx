@@ -398,7 +398,7 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
         <section className="cognates-section">
           <h2>Exactly the Same</h2>
           <p className="section-intro">
-            These words are <strong>identical</strong> in both languages! Just listen to how different they sound:
+            These words look <strong>identical</strong> in both languages! Just listen to how different they sound:
           </p>
 
           <div className="cognates-grid">
