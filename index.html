@@ -53,6 +53,77 @@
       type="image/svg+xml"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>"
     />
+    
+    <!-- Critical CSS - Inline to prevent FOUC -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+          "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: #f8fafc;
+        min-height: 100vh;
+        color: #1e293b;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      .app {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      
+      .app-header {
+        background: #ffffff;
+        padding: 0 1.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        z-index: 100;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+      }
+      
+      .app-header h1 {
+        font-size: 1.25rem;
+        color: #1e293b;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+      }
+      
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #1e293b;
+        cursor: pointer;
+        padding: 0.5rem;
+        margin-right: 1rem;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+      
+      @media (max-width: 768px) {
+        .mobile-menu-btn {
+          display: block;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
