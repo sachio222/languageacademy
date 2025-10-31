@@ -24,6 +24,7 @@ import { useAdmin } from './hooks/useAdmin';
 import { useModuleCompletion } from './hooks/useModuleCompletion';
 import { lessons } from './lessons/lessonData';
 import { markBetaWelcomeAsSeen } from './utils/betaWelcomeTracking';
+import { resetWelcomeFlags } from './utils/resetWelcomeFlags';
 import './styles/App.css';
 import './styles/Auth.css';
 import './styles/OfflineIndicator.css';
@@ -58,6 +59,11 @@ function App() {
   const completedExercises = supabaseProgress?.completedExercises || new Set();
   const isAuthenticated = supabaseProgress?.isAuthenticated || false;
 
+  // Custom hooks for different concerns
+  const navigation = useNavigation();
+  const admin = useAdmin();
+  const moduleCompletion = useModuleCompletion();
+
   // Check if beta welcome modal should be shown
   useEffect(() => {
     // Always allow URL parameter override for testing
@@ -77,25 +83,14 @@ function App() {
       return;
     }
 
-    // Check if user has already seen the beta welcome
+    // Only show if they have NOT seen the pilot welcome message before
     if (supabaseUser.has_seen_beta_welcome === true) {
-      return;
-    }
-
-    // Only show for new users (no completed exercises)
-    const hasCompletedExercises = completedExercises.size > 0;
-    if (hasCompletedExercises) {
       return;
     }
 
     // All criteria met - show the beta welcome modal
     setShowBetaNotice(true);
-  }, [isAuthenticated, supabaseUser, supabaseClient, completedExercises, isDevMode]);
-
-  // Custom hooks for different concerns
-  const navigation = useNavigation();
-  const admin = useAdmin();
-  const moduleCompletion = useModuleCompletion();
+  }, [isAuthenticated, supabaseUser, supabaseClient, isDevMode]);
 
   // Exercise completion handler
   const handleExerciseComplete = async (exerciseId, moduleId, unitId, userAnswer, correctAnswer, timeSpent = 0, hintUsed = false, isCorrect = null) => {
@@ -138,6 +133,33 @@ function App() {
       navigation.setCurrentLesson,
       navigation.urlManager
     );
+  };
+
+  // Admin: Reset welcome flags to simulate first-time experience
+  const handleResetWelcomeFlags = async () => {
+    if (!isAuthenticated || !supabaseUser || !supabaseClient) {
+      logger.error('Cannot reset welcome flags: User not authenticated');
+      return;
+    }
+
+    const confirmed = window.confirm(
+      'Reset welcome screens to simulate first-time experience?\n\n' +
+      'This will:\n' +
+      '• Show the welcome screen again\n' +
+      '• Show the pilot welcome modal again\n\n' +
+      'Your progress will NOT be affected.'
+    );
+
+    if (!confirmed) return;
+
+    const success = await resetWelcomeFlags(supabaseClient, supabaseUser);
+    
+    if (success) {
+      // Reload page to show welcome screen
+      window.location.reload();
+    } else {
+      alert('Failed to reset welcome flags. Please try again.');
+    }
   };
 
   // Wrap content in DevModeWrapper if in dev mode
@@ -205,13 +227,22 @@ function App() {
               💬
             </button>
             {admin.isAdmin && (
-              <button
-                className="admin-btn"
-                onClick={navigation.handleShowAdmin}
-                title="Admin Panel"
-              >
-                ⚙️
-              </button>
+              <>
+                <button
+                  className="admin-reset-btn"
+                  onClick={handleResetWelcomeFlags}
+                  title="Simulate First-Time Experience (Reset Welcome Screens)"
+                >
+                  🔄
+                </button>
+                <button
+                  className="admin-btn"
+                  onClick={navigation.handleShowAdmin}
+                  title="Admin Panel"
+                >
+                  ⚙️
+                </button>
+              </>
             )}
           </div>
         ) : navigation.currentLesson === 'vocabulary' ? (
@@ -225,16 +256,25 @@ function App() {
               💬
             </button>
             {admin.isAdmin && (
-              <button
-                className="admin-btn"
-                onClick={navigation.handleShowAdmin}
-                title="View Feedback Admin"
-              >
-                📊
-                {admin.newFeedbackCount > 0 && (
-                  <span className="admin-badge">{admin.newFeedbackCount}</span>
-                )}
-              </button>
+              <>
+                <button
+                  className="admin-reset-btn"
+                  onClick={handleResetWelcomeFlags}
+                  title="Simulate First-Time Experience (Reset Welcome Screens)"
+                >
+                  🔄
+                </button>
+                <button
+                  className="admin-btn"
+                  onClick={navigation.handleShowAdmin}
+                  title="View Feedback Admin"
+                >
+                  📊
+                  {admin.newFeedbackCount > 0 && (
+                    <span className="admin-badge">{admin.newFeedbackCount}</span>
+                  )}
+                </button>
+              </>
             )}
           </div>
         ) : navigation.currentLesson === 'dictionary' ? (
@@ -263,16 +303,25 @@ function App() {
               💬
             </button>
             {admin.isAdmin && (
-              <button
-                className="admin-btn"
-                onClick={navigation.handleShowAdmin}
-                title="View Feedback Admin"
-              >
-                📊
-                {admin.newFeedbackCount > 0 && (
-                  <span className="admin-badge">{admin.newFeedbackCount}</span>
-                )}
-              </button>
+              <>
+                <button
+                  className="admin-reset-btn"
+                  onClick={handleResetWelcomeFlags}
+                  title="Simulate First-Time Experience (Reset Welcome Screens)"
+                >
+                  🔄
+                </button>
+                <button
+                  className="admin-btn"
+                  onClick={navigation.handleShowAdmin}
+                  title="View Feedback Admin"
+                >
+                  📊
+                  {admin.newFeedbackCount > 0 && (
+                    <span className="admin-badge">{admin.newFeedbackCount}</span>
+                  )}
+                </button>
+              </>
             )}
           </div>
         ) : (
@@ -306,6 +355,27 @@ function App() {
                 >
                   💬
                 </button>
+                {admin.isAdmin && (
+                  <>
+                    <button
+                      className="admin-reset-btn"
+                      onClick={handleResetWelcomeFlags}
+                      title="Simulate First-Time Experience (Reset Welcome Screens)"
+                    >
+                      🔄
+                    </button>
+                    <button
+                      className="admin-btn"
+                      onClick={navigation.handleShowAdmin}
+                      title="View Feedback Admin"
+                    >
+                      📊
+                      {admin.newFeedbackCount > 0 && (
+                        <span className="admin-badge">{admin.newFeedbackCount}</span>
+                      )}
+                    </button>
+                  </>
+                )}
               </div>
             );
           })()

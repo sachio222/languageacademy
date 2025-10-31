@@ -51,13 +51,12 @@
 
 /* Header with Institutional Styling */
 .beta-notice-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  width: 100%;
+  padding: 1rem 3rem;
   flex-shrink: 0;
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .beta-notice-header-title {
@@ -69,9 +68,19 @@
   line-height: 1.2;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 2rem;
+}
+
+.beta-notice-pilot-text {
+  display: inline;
 }
 
 .beta-notice-close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
   background: transparent;
   border: none;
   color: #999999;
@@ -273,15 +282,11 @@
   }
 
   .beta-notice-header {
-    padding: 1.5rem 1.5rem 1.25rem 1.5rem;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.75rem;
+    padding: 1.5rem 3rem 1.25rem 1.5rem;
   }
 
   .beta-notice-header-title {
-    font-size: 1.25rem;
-    flex: 1;
+    font-size: 0.875rem;
   }
 
   .beta-notice-close-btn {

@@ -25,7 +25,9 @@ function BetaNoticeModal({ isOpen, onClose }) {
     <div className="beta-notice-backdrop" onClick={handleBackdropClick}>
       <div className="beta-notice-modal">
         <div className="beta-notice-header">
-          <h1 className="beta-notice-header-title">Welcome pilot users!</h1>
+          <h1 className="beta-notice-header-title">
+            Welcome <span className="beta-notice-pilot-text">pilot</span> users!
+          </h1>
           <button
             className="beta-notice-close-btn"
             onClick={onClose}
