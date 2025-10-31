@@ -353,11 +353,6 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
             These similar words are called "cognates" and they can give you a huge head start in learning French.
           </p>
 
-          <div className="listen-prompt">
-            <span className="speaker-icon">🔊</span>
-            <h3>Listen! They make look similar, but they sound... oh, la la!</h3>
-          </div>
-
         </header>
 
         {/* Section 1: What Are Cognates? */}
@@ -400,6 +395,11 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           <p className="section-intro">
             These words look <strong>identical</strong> in both languages! Just listen to how different they sound:
           </p>
+
+          <div className="listen-prompt">
+            <span className="speaker-icon">🔊</span>
+            <h3>Listen! They may look similar, but they sound... oh, la la!</h3>
+          </div>
 
           <div className="cognates-grid">
             {cognatesBySimilarity.exact.map((item, idx) => (
