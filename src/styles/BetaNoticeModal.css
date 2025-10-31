@@ -1,0 +1,352 @@
+/* Beta Notice Modal - Academic/Institutional Style */
+
+.beta-notice-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 1rem;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.beta-notice-modal {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.2);
+  max-width: 580px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.25s ease;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Header with Institutional Styling */
+.beta-notice-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  flex-shrink: 0;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 0.5rem;
+}
+
+.beta-notice-header-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.03em;
+  margin: 0;
+  line-height: 1.2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", sans-serif;
+}
+
+.beta-notice-close-btn {
+  background: transparent;
+  border: none;
+  color: #999999;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.15s ease;
+  line-height: 1;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beta-notice-close-btn:hover {
+  background: #f7f9fc;
+  color: #1a1a1a;
+}
+
+/* Content Styling - Academic/Traditional */
+.beta-notice-content {
+  padding: 0 2rem 2rem 2rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.beta-notice-intro-section {
+  margin-top: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.beta-notice-logo {
+  max-width: 120px;
+  height: auto;
+  margin: 0 auto 1.5rem auto;
+  display: block;
+}
+
+.beta-notice-intro {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.beta-notice-body {
+  margin-bottom: 1.5rem;
+}
+
+.beta-notice-body p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.beta-notice-body p:last-of-type {
+  margin-bottom: 0;
+}
+
+.beta-notice-intro strong {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.beta-notice-body strong {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.beta-notice-request {
+  background: #fafbfc;
+  border-left: 3px solid #3b82f6;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.beta-notice-request p {
+  margin-bottom: 0.75rem !important;
+  color: #1a1a1a;
+  font-size: 0.9375rem;
+}
+
+.beta-notice-request ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.beta-notice-request li {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #665665;
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.beta-notice-request li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.beta-notice-request li:last-child {
+  margin-bottom: 0;
+}
+
+.beta-notice-closing {
+  font-style: italic;
+  color: #665665;
+}
+
+.beta-notice-signature {
+  margin-top: 1.5rem !important;
+  text-align: right;
+}
+
+.beta-notice-signature-message {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+.beta-notice-signature-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.beta-notice-signature-title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #665665;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Actions */
+.beta-notice-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.beta-notice-continue-btn {
+  padding: 0.875rem 1.75rem;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border: none;
+  background: #3b82f6;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-width: 160px;
+}
+
+.beta-notice-continue-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.beta-notice-continue-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .beta-notice-backdrop {
+    padding: 0.5rem;
+    align-items: flex-end;
+  }
+
+  .beta-notice-modal {
+    max-width: 100%;
+    border-radius: 16px 16px 0 0;
+    max-height: 95vh;
+  }
+
+  .beta-notice-header {
+    padding: 1.5rem 1.5rem 1.25rem 1.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .beta-notice-header-title {
+    font-size: 1.25rem;
+    flex: 1;
+  }
+
+  .beta-notice-close-btn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .beta-notice-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .beta-notice-intro-section {
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .beta-notice-logo {
+    max-width: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .beta-notice-intro {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  .beta-notice-body p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .beta-notice-request {
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+  }
+
+  .beta-notice-request li {
+    font-size: 0.8125rem;
+    padding-left: 1rem;
+  }
+
+  .beta-notice-signature {
+    margin-top: 1.25rem !important;
+    text-align: center;
+  }
+
+  .beta-notice-signature-message {
+    font-size: 0.9375rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .beta-notice-signature-name {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .beta-notice-signature-title {
+    font-size: 0.8125rem;
+  }
+
+  .beta-notice-continue-btn {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+  }
+}

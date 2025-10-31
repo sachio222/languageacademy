@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AuthWrapper from './components/AuthWrapper';
 import DevModeWrapper from './components/DevModeWrapper';
 import LeftNav from './components/LeftNav';
@@ -13,6 +13,7 @@ import FeedbackForm from './components/FeedbackForm';
 import FeedbackAdmin from './components/FeedbackAdmin';
 import CookieBanner from './components/CookieBanner';
 import CookieSettingsModal from './components/CookieSettingsModal';
+import BetaNoticeModal from './components/BetaNoticeModal';
 import { initializeClarity } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -40,6 +41,17 @@ function App() {
   // Cookie settings modal state
   const [showCookieModal, setShowCookieModal] = useState(false);
   const [forceShowBanner, setForceShowBanner] = useState(false);
+  
+  // Beta notice modal state - check URL parameter
+  const [showBetaNotice, setShowBetaNotice] = useState(false);
+
+  // Check for betawelcome URL parameter
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('betawelcome') === 'true') {
+      setShowBetaNotice(true);
+    }
+  }, []);
 
   // Get auth info
   const { user, supabaseUser } = useAuth();
@@ -331,6 +343,11 @@ function App() {
         }}
         supabaseClient={supabaseClient}
         supabaseUser={supabaseUser}
+      />
+
+      <BetaNoticeModal
+        isOpen={showBetaNotice}
+        onClose={() => setShowBetaNotice(false)}
       />
     </div>
   );
