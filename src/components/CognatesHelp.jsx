@@ -223,6 +223,8 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     similar: [
 
       { french: "une banque", english: "bank" },
+      { french: "une banane", english: "banana" },
+      { french: "une carte", english: "card/map" },
       { french: "un docteur", english: "doctor" },
       { french: "un professeur", english: "professor" },
       { french: "un acteur", english: "actor" },
@@ -234,9 +236,6 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       { french: "un projet", english: "project" },
       { french: "un sujet", english: "subject" },
       { french: "une idée", english: "idea" },
-      { french: "une banane", english: "banana" },
-      { french: "une carte", english: "card/map" },
-      { french: "un étudiant", english: "student" },
     ],
   };
 
