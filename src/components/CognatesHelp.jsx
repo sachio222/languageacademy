@@ -522,7 +522,7 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
               It's very awkward to skip it like in English, for example: "I want coffee".
               <br></br><br></br>
               Instead, you must say, "I want <strong>a</strong> coffee", or "I want <strong>some</strong> coffee",
-              and the articles you use must be gendered. Je veux <strong>un</strong> café, or Je veux <strong>du</strong> café.
+              and the articles you use must be gendered: Je veux <strong>un</strong> café, or Je veux <strong>du</strong> café.
 
             </p>
 
