@@ -32,8 +32,8 @@ export const unit1Config = {
     module3_etre, // 3. Essential Verb - être (to be)
     module4_avoir, // 4. Essential Verb - avoir (to have)
     articles, // 5. Articles - un/une, le/la/les
-    basicNouns, // 6. Basic Nouns - Foundation Vocabulary
-    cognatesHelpModule, // 7. Cognates Help - French and English Share Many Words
+    cognatesHelpModule, // 6. Cognates Help - French and English Share Many Words
+    basicNouns, // 7. Basic Nouns - Foundation Vocabulary
     plurals, // 8. Plurals - Multiple Things
     liaisonHelpModule, // 9. Liaison Help - French Flow
     connectors, // 10. Connectors - et, mais, ou, aussi, très
