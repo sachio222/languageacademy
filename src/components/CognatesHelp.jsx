@@ -516,13 +516,22 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
         {/* Closing Note */}
         <section className="cognates-section">
-          <div className="key-takeaway">
+          <div className="insight-box">
             <p>
-              <strong>Remember:</strong> These are just a few examples! There are thousands more
-              cognates between English and French. Every time you recognize a cognate, you're
-              building your French vocabulary effortlessly. Keep an eye out for these similar words
-              as you continue learning!
+              <strong>Remember:</strong> Each noun has a gender, so you should remember them along with their gendered articles (un, une, le, la, les).
+              It's very awkward to skip it like in English, for example: "I want coffee".
+              <br></br><br></br>
+              Instead, you must say, "I want <strong>a</strong> coffee", or "I want <strong>some</strong> coffee",
+              and the articles you use must be gendered. Je veux <strong>un</strong> café, or Je veux <strong>du</strong> café.
+
             </p>
+
+          </div>
+        </section>
+        <section className="cognates-section">
+          <div className="key-takeaway">
+            <p>There are thousands of cognates between English and French. Every time you recognize a cognate, you're
+              building your French vocabulary effortlessly!</p>
           </div>
         </section>
 
