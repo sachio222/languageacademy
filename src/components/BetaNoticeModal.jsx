@@ -43,14 +43,14 @@ function BetaNoticeModal({ isOpen, onClose }) {
               className="beta-notice-logo"
             />
             <p className="beta-notice-intro">
-              Welcome to Language Academy's <strong>official pre-market release beta test</strong>.
+              Welcome to Language Academy's <strong>official pre-market release pilot test</strong>.
             </p>
           </div>
 
           <div className="beta-notice-body">
             <p>
               This is a free, pre-production version of our language learning platform.
-              As beta testers, you are among the first to experience our innovative approach
+              As pilot testers, you are among the first to experience our innovative approach
               to language acquisition, informed by cognitive science research and modern
               pedagogical principles.
             </p>

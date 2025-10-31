@@ -23,6 +23,7 @@ import { useNavigation } from './hooks/useNavigation';
 import { useAdmin } from './hooks/useAdmin';
 import { useModuleCompletion } from './hooks/useModuleCompletion';
 import { lessons } from './lessons/lessonData';
+import { markBetaWelcomeAsSeen } from './utils/betaWelcomeTracking';
 import './styles/App.css';
 import './styles/Auth.css';
 import './styles/OfflineIndicator.css';
@@ -42,16 +43,8 @@ function App() {
   const [showCookieModal, setShowCookieModal] = useState(false);
   const [forceShowBanner, setForceShowBanner] = useState(false);
   
-  // Beta notice modal state - check URL parameter
+  // Beta notice modal state
   const [showBetaNotice, setShowBetaNotice] = useState(false);
-
-  // Check for betawelcome URL parameter
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('betawelcome') === 'true') {
-      setShowBetaNotice(true);
-    }
-  }, []);
 
   // Get auth info
   const { user, supabaseUser } = useAuth();
@@ -64,6 +57,40 @@ function App() {
   // Use Supabase data in both modes (with safe defaults)
   const completedExercises = supabaseProgress?.completedExercises || new Set();
   const isAuthenticated = supabaseProgress?.isAuthenticated || false;
+
+  // Check if beta welcome modal should be shown
+  useEffect(() => {
+    // Always allow URL parameter override for testing
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('pilotwelcome') === 'true') {
+      setShowBetaNotice(true);
+      return;
+    }
+
+    // Only show in production mode
+    if (isDevMode) {
+      return;
+    }
+
+    // Only show for authenticated users
+    if (!isAuthenticated || !supabaseUser || !supabaseClient) {
+      return;
+    }
+
+    // Check if user has already seen the beta welcome
+    if (supabaseUser.has_seen_beta_welcome === true) {
+      return;
+    }
+
+    // Only show for new users (no completed exercises)
+    const hasCompletedExercises = completedExercises.size > 0;
+    if (hasCompletedExercises) {
+      return;
+    }
+
+    // All criteria met - show the beta welcome modal
+    setShowBetaNotice(true);
+  }, [isAuthenticated, supabaseUser, supabaseClient, completedExercises, isDevMode]);
 
   // Custom hooks for different concerns
   const navigation = useNavigation();
@@ -347,7 +374,13 @@ function App() {
 
       <BetaNoticeModal
         isOpen={showBetaNotice}
-        onClose={() => setShowBetaNotice(false)}
+        onClose={async () => {
+          setShowBetaNotice(false);
+          // Mark beta welcome as seen in database for authenticated users
+          if (isAuthenticated && supabaseUser && supabaseClient) {
+            await markBetaWelcomeAsSeen(supabaseClient, supabaseUser);
+          }
+        }}
       />
     </div>
   );
