@@ -188,3 +188,57 @@ export function getGenderClass(note, isForSplit = false) {
   if (noteLower.includes("masculine")) return "masculine";
   return "";
 }
+
+/**
+ * Determine gender from French text (checks for articles)
+ * @param {string} frenchText - The French text (e.g., "un acteur", "une actrice")
+ * @returns {string|null} - "feminine", "masculine", or null if cannot determine
+ */
+export function getGenderFromFrench(frenchText) {
+  if (!frenchText) return null;
+
+  const textLower = frenchText.toLowerCase().trim();
+
+  // Check for feminine indefinite article
+  if (textLower.startsWith("une ")) {
+    return "feminine";
+  }
+
+  // Check for masculine indefinite article
+  if (textLower.startsWith("un ")) {
+    return "masculine";
+  }
+
+  // Check for feminine definite article
+  if (textLower.startsWith("la ")) {
+    return "feminine";
+  }
+
+  // Check for masculine definite articles
+  if (textLower.startsWith("le ") || textLower.startsWith("les ")) {
+    return "masculine";
+  }
+
+  // Check for l' (can be either gender, check specific words)
+  if (textLower.startsWith("l'")) {
+    // Common feminine words with l'
+    const feminineLWords = ["l'eau", "l'école", "l'université", "l'église", "l'île", "l'heure", "l'idée"];
+    if (feminineLWords.some(word => textLower.startsWith(word))) {
+      return "feminine";
+    }
+    // Common masculine words with l'
+    const masculineLWords = ["l'hôtel", "l'hôpital", "l'ami", "l'étudiant", "l'artiste", "l'acteur"];
+    if (masculineLWords.some(word => textLower.startsWith(word))) {
+      return "masculine";
+    }
+    // Default to masculine for l' if not in our lists
+    return "masculine";
+  }
+
+  // Plural articles don't indicate gender
+  if (textLower.startsWith("des ")) {
+    return null;
+  }
+
+  return null;
+}

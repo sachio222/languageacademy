@@ -2,181 +2,17 @@ import { useState, useEffect } from 'react';
 import { Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useSpeech } from '../hooks/useSpeech';
+import { getGenderFromFrench } from '../utils/genderSplitUtils';
 import './CognatesHelp.css';
 import { logger } from "../utils/logger";
-
-/**
- * Select the best available voice for French
- * Same logic as LiaisonHelp for consistency
- */
-function selectBestVoice(voices, language) {
-  const langCode = language.split("-")[0];
-  const matchingVoices = voices.filter((v) => v.lang.startsWith(langCode));
-
-  if (matchingVoices.length === 0) return null;
-
-  // Priority 1: Google voices (Chrome - usually highest quality)
-  const googleVoice = matchingVoices.find((v) => v.name.includes("Google"));
-  if (googleVoice) return googleVoice;
-
-  // Priority 2: Safari/macOS enhanced voices
-  if (langCode === 'fr') {
-    const safariEnhancedVoice = matchingVoices.find((v) => {
-      const nameLower = v.name.toLowerCase();
-      return nameLower.includes("amélie") ||
-        nameLower.includes("amelie") ||
-        nameLower.includes("thomas") ||
-        nameLower.includes("audrey") ||
-        nameLower.includes("marie") ||
-        nameLower.includes("enhanced") ||
-        nameLower.includes("premium") ||
-        nameLower.includes("neural") ||
-        (nameLower.includes("compact") && nameLower.includes("fr"));
-    });
-    if (safariEnhancedVoice) return safariEnhancedVoice;
-  }
-
-  // Priority 3: General enhanced voices
-  const enhancedVoice = matchingVoices.find(
-    (v) =>
-      v.name.toLowerCase().includes("enhanced") ||
-      v.name.toLowerCase().includes("premium") ||
-      v.name.toLowerCase().includes("neural") ||
-      v.name.toLowerCase().includes("compact")
-  );
-  if (enhancedVoice) return enhancedVoice;
-
-  // Priority 4: Female voices (often sound more natural)
-  const femaleVoice = matchingVoices.find(
-    (v) =>
-      v.name.toLowerCase().includes("female") ||
-      v.name.toLowerCase().includes("samantha") ||
-      v.name.toLowerCase().includes("karen") ||
-      v.name.toLowerCase().includes("fiona") ||
-      v.name.toLowerCase().includes("amelie") ||
-      v.name.toLowerCase().includes("amélie") ||
-      v.name.toLowerCase().includes("paulina") ||
-      v.name.toLowerCase().includes("marie") ||
-      v.name.toLowerCase().includes("celine") ||
-      v.name.toLowerCase().includes("céline") ||
-      v.name.toLowerCase().includes("audrey") ||
-      v.name.toLowerCase().includes("aurelie") ||
-      v.name.toLowerCase().includes("aurélie")
-  );
-  if (femaleVoice) return femaleVoice;
-
-  // Priority 5: Avoid low-quality voices
-  const decentVoice = matchingVoices.find(
-    (v) =>
-      !v.name.toLowerCase().includes("alex") &&
-      !v.name.toLowerCase().includes("fred") &&
-      !v.name.toLowerCase().includes("ralf") &&
-      !v.name.toLowerCase().includes("male") &&
-      !v.name.toLowerCase().includes("daniel") &&
-      !v.name.toLowerCase().includes("junior")
-  );
-  if (decentVoice) return decentVoice;
-
-  // Last resort: Return first matching voice
-  return matchingVoices[0];
-}
-
-/**
- * Speak text with high-quality voice selection
- */
-function speakText(text) {
-  if (!('speechSynthesis' in window)) {
-    logger.warn('Speech synthesis not supported');
-    return;
-  }
-
-  window.speechSynthesis.cancel();
-
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'fr-FR';
-  utterance.rate = 0.9;
-  utterance.pitch = 1.0;
-  utterance.volume = 1.0;
-
-  let voices = window.speechSynthesis.getVoices();
-
-  const speakWithVoice = () => {
-    voices = window.speechSynthesis.getVoices();
-    const bestVoice = selectBestVoice(voices, utterance.lang);
-    if (bestVoice) {
-      utterance.voice = bestVoice;
-      logger.log(`Cognates TTS: ${bestVoice.name} (${bestVoice.lang}) - "${text}"`);
-    }
-    window.speechSynthesis.speak(utterance);
-  };
-
-  // Handle async voice loading (some browsers load voices asynchronously)
-  if (voices.length === 0) {
-    window.speechSynthesis.addEventListener("voiceschanged", speakWithVoice, { once: true });
-  } else {
-    speakWithVoice();
-  }
-}
-
-/**
- * Determine gender from French text (checks for articles)
- * @param {string} frenchText - The French text (e.g., "un acteur", "une actrice")
- * @returns {string|null} - "feminine", "masculine", or null if cannot determine
- */
-function getGenderFromFrench(frenchText) {
-  if (!frenchText) return null;
-
-  const textLower = frenchText.toLowerCase().trim();
-
-  // Check for feminine indefinite article
-  if (textLower.startsWith("une ")) {
-    return "feminine";
-  }
-
-  // Check for masculine indefinite article
-  if (textLower.startsWith("un ")) {
-    return "masculine";
-  }
-
-  // Check for feminine definite article
-  if (textLower.startsWith("la ")) {
-    return "feminine";
-  }
-
-  // Check for masculine definite articles
-  if (textLower.startsWith("le ") || textLower.startsWith("les ")) {
-    return "masculine";
-  }
-
-  // Check for l' (can be either gender, check specific words)
-  if (textLower.startsWith("l'")) {
-    // Common feminine words with l'
-    const feminineLWords = ["l'eau", "l'école", "l'université", "l'église", "l'île", "l'heure", "l'idée"];
-    if (feminineLWords.some(word => textLower.startsWith(word))) {
-      return "feminine";
-    }
-    // Common masculine words with l'
-    const masculineLWords = ["l'hôtel", "l'hôpital", "l'ami", "l'étudiant", "l'artiste", "l'acteur"];
-    if (masculineLWords.some(word => textLower.startsWith(word))) {
-      return "masculine";
-    }
-    // Default to masculine for l' if not in our lists
-    return "masculine";
-  }
-
-  // Plural articles don't indicate gender
-  if (textLower.startsWith("des ")) {
-    return null;
-  }
-
-  return null;
-}
 
 const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   const [understoodSections, setUnderstoodSections] = useState(new Set());
   const [loading, setLoading] = useState(true);
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
+  const { speak } = useSpeech();
 
   // Define the cognates sections that can be marked as understood
   const cognatesSections = [
@@ -406,7 +242,7 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
               <div
                 key={idx}
                 className="cognate-item"
-                onClick={() => speakText(item.french)}
+                onClick={() => speak(item.french, 'fr-FR')}
               >
                 <div className="cognate-content">
                   <div className={`cognate-french ${(() => {
@@ -446,7 +282,7 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
               <div
                 key={idx}
                 className="cognate-item"
-                onClick={() => speakText(item.french)}
+                onClick={() => speak(item.french, 'fr-FR')}
               >
                 <div className="cognate-content">
                   <div className={`cognate-french ${(() => {
@@ -486,7 +322,7 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
               <div
                 key={idx}
                 className="cognate-item"
-                onClick={() => speakText(item.french)}
+                onClick={() => speak(item.french, 'fr-FR')}
               >
                 <div className="cognate-content">
                   <div className={`cognate-french ${(() => {
