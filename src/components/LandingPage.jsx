@@ -17,6 +17,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
       <section className="landing-hero">
         <div className="hero-background"></div>
         <div className="landing-container">
+          <img src="/img/logov1.png" alt="Language Academy" className="landing-logo" />
           <div className="hero-badge">For serious learners</div>
           <h1 className="hero-title">
             Learn French through
@@ -303,6 +304,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
       {/* Final CTA */}
       <section className="landing-cta-section">
         <div className="landing-container">
+          <img src="/img/logov2.png" alt="Language Academy" className="cta-logo" />
           <h2 className="cta-title">Start learning structurally</h2>
           <p className="cta-subtitle">
             Get early access to experience the full method.
