@@ -7,10 +7,10 @@ function WelcomePage({ onContinue }) {
       {/* Hero */}
       <section className="welcome-hero">
         <div className="welcome-container">
-          <h2 className="app-logo" title="Back to landing page">🎓 Language Academy</h2>
+          <img src="/img/logov1.png" alt="Language Academy" className="welcome-logo" />
           <h1 className="welcome-title">Welcome to French: Part I</h1>
           <p className="welcome-subtitle">
-            A 1,000-year journey from Latin to the language of over 300 million speakers worldwide
+            Language Academy helps you join the 1,000-year journey from Latin to the language of over 300 million speakers worldwide
           </p>
         </div>
       </section>
@@ -451,8 +451,7 @@ function WelcomePage({ onContinue }) {
       {/* CTA */}
       <section className="welcome-cta-section">
         <div className="welcome-container">
-          <h3 className="app-logo" title="Back to landing page">🎓 Language Academy</h3>
-          <br />
+          <img src="/img/logov2.png" alt="Language Academy" className="welcome-cta-logo" />
           <h2 className="welcome-cta-title">Ready to Begin?</h2>
           <p className="welcome-cta-subtitle">
             Start with Module 1 and experience the compositional approach to French.
