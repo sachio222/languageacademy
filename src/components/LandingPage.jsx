@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Reading11Preview from './Reading11Preview'
 import ExercisePreview from './ExercisePreview'
+import Testimonials from './Testimonials'
 import '../styles/Landing.css'
 
 function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
@@ -49,6 +50,9 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
           )}
         </div>
       </section>
+
+      {/* Testimonials and Ratings */}
+      <Testimonials />
 
       {/* Your Goal - Reading 11 Preview (Show outcome first!) */}
       <section className="landing-section">

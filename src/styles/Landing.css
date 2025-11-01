@@ -178,6 +178,80 @@
   background: #f0f4f8;
 }
 
+/* Testimonials Section */
+.testimonials-section {
+  background: #fafbfc;
+  /* Add your styles here */
+}
+
+.testimonials-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+
+.testimonial-card {
+  flex: 1;
+  max-width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 2.75rem 2.5rem 2.25rem;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  /* Add your styles here */
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+  border-color: #d0d0d0;
+}
+
+.testimonial-text {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  font-size: 1.125rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5;
+  position: relative;
+  color: #1f1f1f;
+  flex-grow: 1;
+  /* Add your styles here */
+}
+
+.testimonial-rating {
+  margin-bottom: 1rem;
+  margin-top: auto;
+  /* Add your styles here */
+}
+
+.stars {
+  font-size: 1.125rem;
+  color: #002659;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  /* Add your styles here */
+}
+
+.testimonial-name {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 0;
+  letter-spacing: 0.02em;
+  /* Add your styles here */
+}
+
 .section-title {
   font-size: 2.25rem;
   font-weight: 600;
@@ -743,6 +817,16 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .testimonials-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -902,6 +986,33 @@
   .section-intro {
     font-size: 1rem;
     margin-bottom: 2rem;
+  }
+
+  .testimonials-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+    padding: 2.25rem 1.75rem 2rem;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .stars {
+    font-size: 1rem;
+    color: #002659;
+    letter-spacing: 0.15rem;
+  }
+
+  .testimonial-name {
+    font-size: 0.8125rem;
   }
 
   .landing-section {
