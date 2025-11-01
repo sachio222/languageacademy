@@ -11,7 +11,7 @@ export const unit3Vocabulary = {
     unitNumber: 3,
     title: "Unit 3: Movement & Possession",
     description: "Master motion verbs (go, come, leave), object pronouns (it/them), and possessives (mine, yours)",
-    icon: "🎯",
+    icon: "🏃",
     color: "#06b6d4",
     totalVocabulary: 79,
   },

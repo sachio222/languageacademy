@@ -11,7 +11,7 @@ export const unit9Vocabulary = {
     unitNumber: 9,
     title: "Unit 9: Discourse & Past Tense",
     description: "Complete storytelling mastery: causal/spatial words (parce que, près de), passé composé (j'ai mangé, je suis allé), imparfait (j'étais, il faisait), and the critical PC vs IMP distinction",
-    icon: "📖",
+    icon: "⏳",
     color: "#ef4444",
     totalVocabulary: 294,
   },

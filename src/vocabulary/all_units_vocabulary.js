@@ -49,7 +49,7 @@ export const vocabularySummary = {
       "unitNumber": 5,
       "title": "Unit 5: Time & Taste",
       "description": "Talk about the past (I was, I had), express preferences and opinions, order food, and add nuance with conditionals",
-      "icon": "⏳",
+      "icon": "⌚",
       "color": "#ec4899",
       "totalVocabulary": 203,
       "moduleCount": 11
@@ -58,7 +58,7 @@ export const vocabularySummary = {
       "unitNumber": 6,
       "title": "Unit 6: Basic Fluency",
       "description": "Advanced communication verbs (say, take, give, put, ask), progressive tenses, expressing needs, and comprehensive vocabulary",
-      "icon": "💬",
+      "icon": "👌",
       "color": "#10b981",
       "totalVocabulary": 209,
       "moduleCount": 10
@@ -67,7 +67,7 @@ export const vocabularySummary = {
       "unitNumber": 7,
       "title": "Unit 7: Knowledge & Learning",
       "description": "Express understanding, thinking, and learning: comprendre (understand), savoir (know), penser (think), plus discourse markers for natural speech",
-      "icon": "🧠",
+      "icon": "📖",
       "color": "#f97316",
       "totalVocabulary": 224,
       "moduleCount": 12
@@ -85,7 +85,7 @@ export const vocabularySummary = {
       "unitNumber": 9,
       "title": "Unit 9: Discourse & Past Tense",
       "description": "Complete storytelling mastery: causal/spatial words (parce que, près de), passé composé (j'ai mangé, je suis allé), imparfait (j'étais, il faisait), and the critical PC vs IMP distinction",
-      "icon": "📖",
+      "icon": "⏳",
       "color": "#ef4444",
       "totalVocabulary": 294,
       "moduleCount": 12

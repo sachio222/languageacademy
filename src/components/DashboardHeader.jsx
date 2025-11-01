@@ -174,15 +174,15 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
   // Get unit info for the next lesson
   const getUnitForLesson = (lessonId) => {
     const unitStructure = [
-      { id: 1, title: 'Unit 1', lessonRange: [1, 11], icon: '🎯' },
-      { id: 2, title: 'Unit 2', lessonRange: [12, 24], icon: '🗣️' },
-      { id: 3, title: 'Unit 3', lessonRange: [25, 39], icon: '⏱️' },
+      { id: 1, title: 'Unit 1', lessonRange: [1, 11], icon: '🧩' },
+      { id: 2, title: 'Unit 2', lessonRange: [12, 24], icon: '✍️' },
+      { id: 3, title: 'Unit 3', lessonRange: [25, 39], icon: '🏃' },
       { id: 4, title: 'Unit 4', lessonRange: [40, 52], icon: '💬' },
-      { id: 5, title: 'Unit 5', lessonRange: [53, 64], icon: '🎨' },
-      { id: 6, title: 'Unit 6', lessonRange: [65, 78], icon: '🚀' },
-      { id: 7, title: 'Unit 7', lessonRange: [79, 92], icon: '🌍' },
+      { id: 5, title: 'Unit 5', lessonRange: [53, 64], icon: '⌚' },
+      { id: 6, title: 'Unit 6', lessonRange: [65, 78], icon: '👌' },
+      { id: 7, title: 'Unit 7', lessonRange: [79, 92], icon: '📖' },
       { id: 8, title: 'Unit 8', lessonRange: [93, 107], icon: '💡' },
-      { id: 9, title: 'Unit 9', lessonRange: [108, 123], icon: '🎭' },
+      { id: 9, title: 'Unit 9', lessonRange: [108, 123], icon: '⏳' },
       { id: 10, title: 'Unit 10', lessonRange: [124, 138], icon: '🏆' }
     ];
 

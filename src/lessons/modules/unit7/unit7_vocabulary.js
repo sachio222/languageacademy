@@ -11,7 +11,7 @@ export const unit7Vocabulary = {
     unitNumber: 7,
     title: "Unit 7: Knowledge & Learning",
     description: "Express understanding, thinking, and learning: comprendre (understand), savoir (know), penser (think), plus discourse markers for natural speech",
-    icon: "🧠",
+    icon: "📖",
     color: "#f97316",
     totalVocabulary: 224,
   },

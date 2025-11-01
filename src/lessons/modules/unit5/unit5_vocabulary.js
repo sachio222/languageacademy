@@ -11,7 +11,7 @@ export const unit5Vocabulary = {
     unitNumber: 5,
     title: "Unit 5: Time & Taste",
     description: "Talk about the past (I was, I had), express preferences and opinions, order food, and add nuance with conditionals",
-    icon: "⏳",
+    icon: "⌚",
     color: "#ec4899",
     totalVocabulary: 203,
   },

@@ -23,7 +23,7 @@ export const unit1Config = {
     title: "Unit 1: Essential Grammar",
     description:
       "Master pronouns (I, you, he), être (to be), avoir (to have), articles, basic nouns, and connectors",
-    icon: "🏗️",
+    icon: "🧩",
     color: "#3b82f6",
   },
   modules: [

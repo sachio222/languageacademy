@@ -23,7 +23,7 @@ export const unit2Config = {
     title: "Unit 2: Asking & Describing",
     description:
       "Ask questions, use demonstratives (this/that), essential verbs (want/can/see), add descriptions with adjectives and prepositions",
-    icon: "🧩",
+    icon: "✍️",
     color: "#8b5cf6",
   },
   modules: [

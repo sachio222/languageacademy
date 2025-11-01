@@ -27,7 +27,7 @@ const unitDefinitions = [
     title: "Unit 1: Essential Grammar",
     description:
       "Master pronouns (I, you, he), être (to be), avoir (to have), articles, basic nouns, and connectors",
-    icon: "🏗️",
+    icon: "🧩",
     color: "#3b82f6",
   },
   {
@@ -37,7 +37,7 @@ const unitDefinitions = [
     title: "Unit 2: Asking & Describing",
     description:
       "Ask questions, use demonstratives (this/that), essential verbs (want/can/see), add descriptions with adjectives and prepositions",
-    icon: "🧩",
+    icon: "✍️",
     color: "#8b5cf6",
   },
   {
@@ -67,7 +67,7 @@ const unitDefinitions = [
     title: "Unit 5: Time & Taste",
     description:
       "Talk about the past (I was, I had), express preferences and opinions, order food, and add nuance with conditionals",
-    icon: "⏳",
+    icon: "⌚",
     color: "#ec4899",
   },
   {
@@ -77,7 +77,7 @@ const unitDefinitions = [
     title: "Unit 6: Basic Fluency",
     description:
       "Advanced communication verbs (say, take, put, ask), progressive tenses, expressing needs, and comprehensive vocabulary",
-    icon: "💬",
+    icon: "👌",
     color: "#10b981",
   },
   {
@@ -87,7 +87,7 @@ const unitDefinitions = [
     title: "Unit 7: Knowledge & Learning",
     description:
       "Express understanding, thinking, and learning: comprendre (understand), savoir (know), penser (think), plus discourse markers for natural speech",
-    icon: "🧠",
+    icon: "📖",
     color: "#f97316",
   },
   {
@@ -107,7 +107,7 @@ const unitDefinitions = [
     title: "Unit 9: Discourse & Past Tense",
     description:
       "Complete storytelling mastery: causal/spatial words (parce que, près de), passé composé (j'ai mangé, je suis allé), imparfait (j'étais, il faisait), and the critical PC vs IMP distinction",
-    icon: "📖",
+    icon: "⏳",
     color: "#ef4444",
   },
   {

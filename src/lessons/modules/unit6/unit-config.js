@@ -21,7 +21,7 @@ export const unit6Config = {
     title: "Unit 6: Basic Fluency",
     description:
       "Advanced communication verbs (say, take, give, put, ask), progressive tenses, expressing needs, and comprehensive vocabulary",
-    icon: "💬",
+    icon: "👌",
     color: "#10b981",
   },
   modules: [
