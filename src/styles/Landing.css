@@ -60,7 +60,7 @@
 
 .landing-logo {
   display: block;
-  max-width: 118px;
+  max-width: 100px;
   height: auto;
   margin: 0 auto 2.5rem;
   animation: fadeInDown 0.6s ease;
