@@ -49,6 +49,16 @@ body {
   color: #1e293b;
   font-weight: 600;
   letter-spacing: -0.025em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-logo-icon {
+  height: 32px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Mobile Menu Button */

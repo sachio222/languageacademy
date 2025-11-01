@@ -179,7 +179,8 @@ function App() {
           style={{ cursor: 'pointer' }}
           title="Back to landing page"
         >
-          🎓 Language Academy
+          <img src="/img/logov2.png" alt="" className="app-logo-icon" />
+          Language Academy
         </h1>
       </header>
 
