@@ -16,7 +16,7 @@ function Testimonials() {
           </div>
           <div className="testimonial-card">
             <p className="testimonial-text">
-              I tried learning French multiple times and kept giving up. Without structure, it felt hopeless I was memorizing random words with no clear path forward. This finally gives me a roadmap.
+              I tried learning French multiple times and kept giving up. Without structure, it felt hopeless. I was memorizing random words with no clear path forward. This finally gives me a roadmap.
             </p>
             <div className="testimonial-rating">
               <span className="stars">★★★★★</span>
