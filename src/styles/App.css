@@ -51,7 +51,7 @@ body {
   letter-spacing: -0.025em;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .app-logo-icon {
@@ -452,6 +452,10 @@ body:has(.left-nav.collapsed) .app-footer {
   .lesson-list-header {
     padding: 1rem 0.5rem;
     margin-bottom: 2rem;
+  }
+
+  .app-header h1 {
+    gap: 0.5rem;
   }
 }
 
