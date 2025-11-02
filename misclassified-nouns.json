@@ -1,0 +1,1484 @@
+{
+  "summary": {
+    "correctNouns": 307,
+    "totalMisclassified": 291,
+    "totalAnalyzed": 598
+  },
+  "nonNouns": {
+    "articles": [
+      {
+        "word": "l",
+        "english": "the (before vowel)",
+        "definition": "le/la → l"
+      },
+      {
+        "word": "du",
+        "english": "of/from the (masc)",
+        "definition": "de + le = du (masculine)"
+      },
+      {
+        "word": "au",
+        "english": "to/at the (masc)",
+        "definition": "à + le = au (masculine) - section divider"
+      },
+      {
+        "word": "aux",
+        "english": "to/at the (plural)",
+        "definition": "à + les = aux (plural)"
+      }
+    ],
+    "pronouns": [
+      {
+        "word": "ça",
+        "english": "that/it",
+        "definition": "most common word!"
+      },
+      {
+        "word": "ce",
+        "english": "this/that (masc + consonant)",
+        "definition": "before b, c, d, f, g, k, l, m, n, p, r, s, t, v, w, z"
+      },
+      {
+        "word": "cet",
+        "english": "this/that (masc + vowel)",
+        "definition": "before a, e, i, o, u, silent h"
+      },
+      {
+        "word": "cette",
+        "english": "this/that (feminine)",
+        "definition": "any feminine noun"
+      },
+      {
+        "word": "ces",
+        "english": "these/those (plural)",
+        "definition": "any plural"
+      },
+      {
+        "word": "ceci",
+        "english": "this (formal)",
+        "definition": "formal, rare"
+      },
+      {
+        "word": "cela",
+        "english": "that (formal)",
+        "definition": "formal, use ça instead"
+      },
+      {
+        "word": "moi",
+        "english": "me (stressed)",
+        "definition": "after prepositions"
+      },
+      {
+        "word": "toi",
+        "english": "you (stressed, informal)",
+        "definition": "pour toi = for you"
+      },
+      {
+        "word": "soi",
+        "english": "oneself",
+        "definition": "stressed pronoun"
+      }
+    ],
+    "verbs": [
+      {
+        "word": "j",
+        "english": "I",
+        "definition": "worry about someone"
+      },
+      {
+        "word": "Bordeaux",
+        "english": "Bordeaux (famous wine city in southwest France)",
+        "definition": ""
+      },
+      {
+        "word": "soit",
+        "english": "is/be (subjunctive)",
+        "definition": ""
+      },
+      {
+        "word": "sois",
+        "english": "are/be (subjunctive, tu)",
+        "definition": ""
+      },
+      {
+        "word": "soyons",
+        "english": "are/be (subjunctive, nous)",
+        "definition": ""
+      },
+      {
+        "word": "soient",
+        "english": "are/be (subjunctive, ils/elles)",
+        "definition": ""
+      },
+      {
+        "word": "vienne",
+        "english": "comes/come (subjunctive)",
+        "definition": ""
+      },
+      {
+        "word": "ait",
+        "english": "has/have (subjunctive)",
+        "definition": ""
+      },
+      {
+        "word": "aies",
+        "english": "have (subjunctive, tu)",
+        "definition": ""
+      },
+      {
+        "word": "essaie",
+        "english": "try (subjunctive)",
+        "definition": ""
+      },
+      {
+        "word": "essaies",
+        "english": "try (subjunctive, tu)",
+        "definition": ""
+      },
+      {
+        "word": "réussisse",
+        "english": "succeeds/succeed (subjunctive)",
+        "definition": ""
+      },
+      {
+        "word": "réussissions",
+        "english": "succeed (subjunctive, nous)",
+        "definition": ""
+      },
+      {
+        "word": "sache",
+        "english": "knows/know (subjunctive)",
+        "definition": ""
+      },
+      {
+        "word": "saches",
+        "english": "know (subjunctive, tu)",
+        "definition": ""
+      },
+      {
+        "word": "voient",
+        "english": "see (subjunctive, ils/elles)",
+        "definition": ""
+      },
+      {
+        "word": "puisse",
+        "english": "can (subjunctive, je)",
+        "definition": ""
+      },
+      {
+        "word": "puissions",
+        "english": "can (subjunctive, nous)",
+        "definition": ""
+      },
+      {
+        "word": "rêver",
+        "english": "to dream",
+        "definition": ""
+      },
+      {
+        "word": "achèterais",
+        "english": "would buy",
+        "definition": ""
+      },
+      {
+        "word": "voyagerais",
+        "english": "would travel",
+        "definition": ""
+      },
+      {
+        "word": "serais",
+        "english": "would be",
+        "definition": ""
+      },
+      {
+        "word": "change",
+        "english": "changes / change",
+        "definition": ""
+      },
+      {
+        "word": "essayer",
+        "english": "to try",
+        "definition": ""
+      },
+      {
+        "word": "adorent",
+        "english": "love (ils/elles)",
+        "definition": ""
+      },
+      {
+        "word": "essayé",
+        "english": "tried",
+        "definition": ""
+      },
+      {
+        "word": "réussi",
+        "english": "succeeded",
+        "definition": ""
+      },
+      {
+        "word": "renoncerais",
+        "english": "would give up",
+        "definition": ""
+      },
+      {
+        "word": "aider",
+        "english": "to help",
+        "definition": ""
+      },
+      {
+        "word": "brillaient",
+        "english": "were shining",
+        "definition": ""
+      },
+      {
+        "word": "dois",
+        "english": "must",
+        "definition": ""
+      },
+      {
+        "word": "continuer",
+        "english": "to continue",
+        "definition": ""
+      },
+      {
+        "word": "appeler",
+        "english": "to call",
+        "definition": ""
+      },
+      {
+        "word": "demande",
+        "english": "ask (I)",
+        "definition": ""
+      },
+      {
+        "word": "devenir",
+        "english": "to become",
+        "definition": ""
+      },
+      {
+        "word": "deviennent",
+        "english": "become (ils/elles)",
+        "definition": ""
+      },
+      {
+        "word": "retrouvé",
+        "english": "found again",
+        "definition": ""
+      },
+      {
+        "word": "existe",
+        "english": "exists",
+        "definition": ""
+      },
+      {
+        "word": "savoir",
+        "english": "to know",
+        "definition": ""
+      },
+      {
+        "word": "peuvent",
+        "english": "can (ils/elles)",
+        "definition": ""
+      },
+      {
+        "word": "tournez",
+        "english": "turn (formal command)",
+        "definition": "from tourner - vous form"
+      },
+      {
+        "word": "tourne",
+        "english": "turn (informal command)",
+        "definition": "from tourner - tu form"
+      },
+      {
+        "word": "allez",
+        "english": "go (formal command)",
+        "definition": "from aller - directions context"
+      },
+      {
+        "word": "va",
+        "english": "go (informal command)",
+        "definition": "from aller - casual directions"
+      },
+      {
+        "word": "continuez",
+        "english": "continue (formal)",
+        "definition": "keep going forward"
+      },
+      {
+        "word": "continue",
+        "english": "continue (informal)",
+        "definition": "keep going forward"
+      },
+      {
+        "word": "donner",
+        "english": "to give",
+        "definition": "⭐ Rank 24 - extremely high frequency"
+      },
+      {
+        "word": "écouter",
+        "english": "to listen",
+        "definition": "⭐ Rank 65 - regular -ER verb"
+      },
+      {
+        "word": "regarder",
+        "english": "to watch / to look at",
+        "definition": "⭐ Rank 66 - regular -ER verb"
+      },
+      {
+        "word": "évoluer",
+        "english": "to evolve",
+        "definition": "development/change"
+      },
+      {
+        "word": "admirer",
+        "english": "to admire",
+        "definition": "appreciation verb"
+      },
+      {
+        "word": "créent",
+        "english": "create",
+        "definition": "ils/elles form of créer"
+      },
+      {
+        "word": "inspirent",
+        "english": "inspire",
+        "definition": "ils/elles form"
+      },
+      {
+        "word": "dépend",
+        "english": "depends",
+        "definition": "from dépendre"
+      },
+      {
+        "word": "exportent",
+        "english": "export",
+        "definition": "sell abroad"
+      },
+      {
+        "word": "fonctionne",
+        "english": "functions/works",
+        "definition": "operates well"
+      },
+      {
+        "word": "connectent",
+        "english": "connect",
+        "definition": "link together"
+      },
+      {
+        "word": "permet",
+        "english": "allows/permits",
+        "definition": "enables"
+      },
+      {
+        "word": "profiter",
+        "english": "to enjoy/benefit from",
+        "definition": "take advantage"
+      },
+      {
+        "word": "préfèrent",
+        "english": "prefer",
+        "definition": "ils/elles form of préférer"
+      },
+      {
+        "word": "découvrir",
+        "english": "to discover",
+        "definition": "exploration verb"
+      },
+      {
+        "word": "communiquent",
+        "english": "communicate",
+        "definition": "ils/elles form"
+      },
+      {
+        "word": "garde",
+        "english": "keeps/maintains",
+        "definition": "preserves"
+      },
+      {
+        "word": "protéger",
+        "english": "to protect",
+        "definition": "safeguard"
+      },
+      {
+        "word": "utiliser",
+        "english": "to use",
+        "definition": "employ/make use of"
+      },
+      {
+        "word": "recycler",
+        "english": "to recycle",
+        "definition": "environmental action"
+      },
+      {
+        "word": "économiser",
+        "english": "to save/conserve",
+        "definition": "use less"
+      },
+      {
+        "word": "montrent",
+        "english": "show",
+        "definition": "demonstrate"
+      },
+      {
+        "word": "participe",
+        "english": "participates",
+        "definition": "takes part in"
+      },
+      {
+        "word": "rencontrer",
+        "english": "to meet",
+        "definition": "encounter/meet with"
+      },
+      {
+        "word": "discutent",
+        "english": "discuss",
+        "definition": "talk about seriously"
+      },
+      {
+        "word": "combine",
+        "english": "combines",
+        "definition": "mixes together"
+      },
+      {
+        "word": "jouer",
+        "english": "to play",
+        "definition": "perform/take part"
+      },
+      {
+        "word": "chercher",
+        "english": "to look for / to search",
+        "definition": "⭐ Rank 57 - regular -ER verb"
+      },
+      {
+        "word": "trouver",
+        "english": "to find",
+        "definition": "⭐ Rank 58 - regular -ER verb"
+      },
+      {
+        "word": "attendre",
+        "english": "to wait / to wait for",
+        "definition": "⭐ Rank 67 - regular -RE verb"
+      },
+      {
+        "word": "arriver",
+        "english": "to arrive",
+        "definition": "⭐ Rank 69 - regular -ER verb"
+      },
+      {
+        "word": "rester",
+        "english": "to stay / to remain",
+        "definition": "⭐ Rank 70 - regular -ER verb"
+      },
+      {
+        "word": "nager",
+        "english": "to swim",
+        "definition": "regular -ER verb - aquatic movement"
+      },
+      {
+        "word": "sauter",
+        "english": "to jump",
+        "definition": "regular -ER verb - vertical movement"
+      },
+      {
+        "word": "voler",
+        "english": "to fly",
+        "definition": "regular -ER verb - aerial movement"
+      },
+      {
+        "word": "courir",
+        "english": "to run",
+        "definition": "⭐ irregular -IR verb - fast ground movement"
+      },
+      {
+        "word": "marcher",
+        "english": "to walk",
+        "definition": "regular -ER verb - slow ground movement"
+      },
+      {
+        "word": "grimper",
+        "english": "to climb",
+        "definition": "regular -ER verb - upward movement"
+      },
+      {
+        "word": "briller",
+        "english": "to shine",
+        "definition": "regular -ER verb - light emission"
+      },
+      {
+        "word": "pousser",
+        "english": "to grow / to push",
+        "definition": "regular -ER verb - plant growth or pushing"
+      },
+      {
+        "word": "pleuvoir",
+        "english": "to rain",
+        "definition": "⭐ irregular - ONLY uses "
+      },
+      {
+        "word": "souffler",
+        "english": "to blow",
+        "definition": "regular -ER verb - wind action or blowing"
+      },
+      {
+        "word": "vent souffle",
+        "english": "the wind blows",
+        "definition": "common phrase"
+      },
+      {
+        "word": "tomber",
+        "english": "to fall",
+        "definition": "regular -ER verb - uses être in passé composé!"
+      },
+      {
+        "word": "vent",
+        "english": "the wind",
+        "definition": "masculine - for "
+      },
+      {
+        "word": "partir",
+        "english": "to leave",
+        "definition": "verb"
+      },
+      {
+        "word": "viens",
+        "english": "come",
+        "definition": "imperative from venir"
+      },
+      {
+        "word": "manger",
+        "english": "to eat",
+        "definition": "verb"
+      },
+      {
+        "word": "était",
+        "english": "was",
+        "definition": "être imperfect - il/elle"
+      },
+      {
+        "word": "boire",
+        "english": "to drink",
+        "definition": "irregular verb"
+      },
+      {
+        "word": "payer",
+        "english": "to pay",
+        "definition": "regular verb"
+      },
+      {
+        "word": "apprendre",
+        "english": "to learn",
+        "definition": "follows same pattern as prendre"
+      },
+      {
+        "word": "comprendre",
+        "english": "to understand",
+        "definition": "rank 61 - essential verb!"
+      },
+      {
+        "word": "prendre",
+        "english": "to take",
+        "definition": "also: to take time"
+      },
+      {
+        "word": "comprends",
+        "english": "understand (you/I)",
+        "definition": "from comprendre"
+      },
+      {
+        "word": "mettre",
+        "english": "to put",
+        "definition": "irregular verb"
+      },
+      {
+        "word": "demander",
+        "english": "to ask",
+        "definition": "regular -ER verb"
+      },
+      {
+        "word": "dire",
+        "english": "to say/tell",
+        "definition": "irregular verb"
+      },
+      {
+        "word": "finir",
+        "english": "to finish",
+        "definition": "-IR verb"
+      },
+      {
+        "word": "fais",
+        "english": "do/make (you)",
+        "definition": "from faire"
+      },
+      {
+        "word": "début",
+        "english": "beginning / start",
+        "definition": "masculine - au début (at the beginning)"
+      },
+      {
+        "word": "fait",
+        "english": "fact",
+        "definition": "masculine - un fait (a fact)"
+      },
+      {
+        "word": "quoi",
+        "english": "like / you know (filler at end)",
+        "definition": "⭐⭐⭐ end-of-sentence emphasis"
+      },
+      {
+        "word": "connaissance",
+        "english": "knowledge (what you know)",
+        "definition": "feminine noun - from connaître"
+      },
+      {
+        "word": "pensée",
+        "english": "thought / thinking",
+        "definition": "feminine noun - from penser"
+      },
+      {
+        "word": "on doit",
+        "english": "we must / one must",
+        "definition": "On doit étudier"
+      },
+      {
+        "word": "on dit",
+        "english": "we say / people say",
+        "definition": "On dit que... (People say that...)"
+      },
+      {
+        "word": "gens disent",
+        "english": "people say",
+        "definition": "plural verb "
+      },
+      {
+        "word": "gens pensent",
+        "english": "people think",
+        "definition": "general opinion"
+      },
+      {
+        "word": "apprend",
+        "english": "learns",
+        "definition": "3rd person"
+      },
+      {
+        "word": "étudier",
+        "english": "to study",
+        "definition": "Unit 7 verb"
+      },
+      {
+        "word": "étudie",
+        "english": "studies",
+        "definition": "3rd person"
+      },
+      {
+        "word": "comprend",
+        "english": "understands",
+        "definition": "3rd person"
+      },
+      {
+        "word": "comprenez",
+        "english": "understand",
+        "definition": "formal/plural"
+      },
+      {
+        "word": "sais",
+        "english": "know",
+        "definition": "1st person"
+      },
+      {
+        "word": "sait",
+        "english": "knows",
+        "definition": "3rd person"
+      },
+      {
+        "word": "connaître",
+        "english": "to know (people/places)",
+        "definition": "Unit 7 verb"
+      },
+      {
+        "word": "connais",
+        "english": "know",
+        "definition": "1st person"
+      },
+      {
+        "word": "penser",
+        "english": "to think",
+        "definition": "Unit 7 verb"
+      },
+      {
+        "word": "croire",
+        "english": "to believe",
+        "definition": "Unit 7 verb"
+      },
+      {
+        "word": "croit",
+        "english": "believes",
+        "definition": "3rd person"
+      },
+      {
+        "word": "réviser",
+        "english": "to review",
+        "definition": "Unit 7 verb"
+      },
+      {
+        "word": "révise",
+        "english": "review(s)",
+        "definition": "present"
+      },
+      {
+        "word": "cherche",
+        "english": "look(s) for",
+        "definition": "present"
+      },
+      {
+        "word": "trouve",
+        "english": "find(s)",
+        "definition": "present"
+      },
+      {
+        "word": "faites",
+        "english": "do/make",
+        "definition": "faire - vous form"
+      },
+      {
+        "word": "dormir",
+        "english": "to sleep",
+        "definition": "⭐ Rank 54 - regular -IR verb"
+      },
+      {
+        "word": "travailler",
+        "english": "to work",
+        "definition": "⭐ Rank 55 - regular -ER verb"
+      },
+      {
+        "word": "vivre",
+        "english": "to live",
+        "definition": "⭐ Rank 56 - irregular verb"
+      },
+      {
+        "word": "devoirs",
+        "english": "homework",
+        "definition": ""
+      },
+      {
+        "word": "fenêtres",
+        "english": "the windows",
+        "definition": ""
+      },
+      {
+        "word": "rencontre",
+        "english": "the meeting",
+        "definition": ""
+      }
+    ],
+    "adjectives": [
+      {
+        "word": "différente",
+        "english": "different (fem)",
+        "definition": ""
+      },
+      {
+        "word": "difficile",
+        "english": "difficult",
+        "definition": ""
+      },
+      {
+        "word": "excellente",
+        "english": "excellent (fem)",
+        "definition": ""
+      },
+      {
+        "word": "magnifique",
+        "english": "magnificent",
+        "definition": ""
+      },
+      {
+        "word": "reconnaissante",
+        "english": "grateful (fem)",
+        "definition": ""
+      },
+      {
+        "word": "historiques",
+        "english": "historic",
+        "definition": "adjective"
+      },
+      {
+        "word": "éducatif",
+        "english": "educational",
+        "definition": "adjective"
+      },
+      {
+        "word": "reconnu",
+        "english": "recognized",
+        "definition": "past participle"
+      },
+      {
+        "word": "primaire",
+        "english": "primary/elementary",
+        "definition": "school level"
+      },
+      {
+        "word": "populaire",
+        "english": "popular",
+        "definition": "adjective"
+      },
+      {
+        "word": "plaisir",
+        "english": "pleasure",
+        "definition": "masculine noun"
+      },
+      {
+        "word": "public",
+        "english": "public",
+        "definition": "adjective"
+      },
+      {
+        "word": "rapides",
+        "english": "fast",
+        "definition": "speed adjective"
+      },
+      {
+        "word": "internationales",
+        "english": "international",
+        "definition": "between countries"
+      },
+      {
+        "word": "européennes",
+        "english": "European",
+        "definition": "of Europe"
+      },
+      {
+        "word": "mondiales",
+        "english": "global/world",
+        "definition": "worldwide"
+      },
+      {
+        "word": "économiques",
+        "english": "economic",
+        "definition": "related to economy"
+      },
+      {
+        "word": "politiques",
+        "english": "political",
+        "definition": "related to politics"
+      },
+      {
+        "word": "culturelles",
+        "english": "cultural",
+        "definition": "related to culture"
+      },
+      {
+        "word": "moderne",
+        "english": "modern",
+        "definition": "contemporary"
+      },
+      {
+        "word": "historique",
+        "english": "historic",
+        "definition": "from history"
+      },
+      {
+        "word": "significatif",
+        "english": "significant",
+        "definition": "important/meaningful"
+      },
+      {
+        "word": "enrichissent",
+        "english": "enrich",
+        "definition": "make richer/better"
+      },
+      {
+        "word": "rapide",
+        "english": "fast",
+        "definition": "l"
+      },
+      {
+        "word": "meilleur",
+        "english": "the best",
+        "definition": "superlative"
+      },
+      {
+        "word": "pire",
+        "english": "worse",
+        "definition": "same form both genders"
+      },
+      {
+        "word": "même",
+        "english": "same / even",
+        "definition": "comparison - le même livre (the same book)"
+      },
+      {
+        "word": "meilleure",
+        "english": "the best (fem)",
+        "definition": "superlative"
+      },
+      {
+        "word": "génial",
+        "english": "awesome / great",
+        "definition": "France slang"
+      },
+      {
+        "word": "contents",
+        "english": "happy",
+        "definition": "adjective - masculine plural"
+      },
+      {
+        "word": "première fois",
+        "english": "the first time",
+        "definition": "fois = time/occasion"
+      },
+      {
+        "word": "contente",
+        "english": "happy",
+        "definition": "feminine adjective"
+      },
+      {
+        "word": "bon",
+        "english": "well / so (discourse use)",
+        "definition": "new use! (you know "
+      },
+      {
+        "word": "meilleures",
+        "english": "better (fem plural)",
+        "definition": "comparative"
+      },
+      {
+        "word": "typique",
+        "english": "typical",
+        "definition": "adjective"
+      },
+      {
+        "word": "proche",
+        "english": "close, near",
+        "definition": "adjective - être proche de"
+      },
+      {
+        "word": "lointain(e)",
+        "english": "distant, faraway",
+        "definition": "adjective - opposite of proche"
+      },
+      {
+        "word": "même problème",
+        "english": "the same problem",
+        "definition": ""
+      },
+      {
+        "word": "français",
+        "english": "French",
+        "definition": ""
+      },
+      {
+        "word": "film était excellent",
+        "english": "the film was excellent",
+        "definition": ""
+      },
+      {
+        "word": "excellent",
+        "english": "excellent",
+        "definition": ""
+      },
+      {
+        "word": "française",
+        "english": "French (feminine)",
+        "definition": ""
+      },
+      {
+        "word": "délicieux",
+        "english": "delicious",
+        "definition": ""
+      },
+      {
+        "word": "dernier café",
+        "english": "one last coffee",
+        "definition": ""
+      },
+      {
+        "word": "dernier",
+        "english": "last",
+        "definition": ""
+      },
+      {
+        "word": "fatigué",
+        "english": "tired",
+        "definition": ""
+      },
+      {
+        "word": "heureux",
+        "english": "happy",
+        "definition": ""
+      },
+      {
+        "word": "journée parfaite",
+        "english": "a perfect day",
+        "definition": ""
+      },
+      {
+        "word": "parfait",
+        "english": "perfect",
+        "definition": ""
+      }
+    ],
+    "adverbs": [
+      {
+        "word": "vraiment",
+        "english": "really, truly",
+        "definition": "⭐ most common!"
+      },
+      {
+        "word": "sérieusement",
+        "english": "seriously",
+        "definition": "emphasis"
+      },
+      {
+        "word": "lentement",
+        "english": "slowly",
+        "definition": "parler lentement"
+      },
+      {
+        "word": "rapidement",
+        "english": "quickly",
+        "definition": "courir rapidement"
+      },
+      {
+        "word": "facilement",
+        "english": "easily",
+        "definition": "comprendre facilement"
+      },
+      {
+        "word": "complètement",
+        "english": "completely",
+        "definition": "complètement fini"
+      },
+      {
+        "word": "probablement",
+        "english": "probably",
+        "definition": "expressing likelihood"
+      },
+      {
+        "word": "simplement",
+        "english": "simply",
+        "definition": ""
+      },
+      {
+        "word": "encore",
+        "english": "again / still",
+        "definition": ""
+      },
+      {
+        "word": "demain",
+        "english": "tomorrow",
+        "definition": ""
+      },
+      {
+        "word": "internationalement",
+        "english": "internationally",
+        "definition": "manner adverb"
+      },
+      {
+        "word": "activement",
+        "english": "actively",
+        "definition": "manner adverb"
+      },
+      {
+        "word": "régulièrement",
+        "english": "regularly",
+        "definition": "on regular basis"
+      },
+      {
+        "word": "ici",
+        "english": "here",
+        "definition": "this location, nearby"
+      },
+      {
+        "word": "là",
+        "english": "there",
+        "definition": "that location"
+      },
+      {
+        "word": "là-bas",
+        "english": "over there",
+        "definition": "farther away"
+      },
+      {
+        "word": "partout",
+        "english": "everywhere",
+        "definition": "all places"
+      },
+      {
+        "word": "maintenant",
+        "english": "now",
+        "definition": "time adverb"
+      },
+      {
+        "word": "aujourd",
+        "english": "today",
+        "definition": "time adverb"
+      },
+      {
+        "word": "hier",
+        "english": "yesterday",
+        "definition": "previous day"
+      },
+      {
+        "word": "vachement",
+        "english": "really/very",
+        "definition": "🇫🇷 France - c"
+      },
+      {
+        "word": "hyper",
+        "english": "super/really",
+        "definition": "🇫🇷 France - c"
+      },
+      {
+        "word": "top",
+        "english": "top / the best",
+        "definition": "universal slang"
+      },
+      {
+        "word": "super",
+        "english": "great/super",
+        "definition": "exclamation"
+      },
+      {
+        "word": "déjà",
+        "english": "already",
+        "definition": "time adverb"
+      },
+      {
+        "word": "ainsi",
+        "english": "thus / in this way",
+        "definition": "more formal than donc"
+      },
+      {
+        "word": "bah",
+        "english": "well...",
+        "definition": "filler/hesitation - informal!"
+      },
+      {
+        "word": "alors",
+        "english": "so / then",
+        "definition": "you know this! now discourse use"
+      },
+      {
+        "word": "ensuite",
+        "english": "next / then",
+        "definition": "sequence"
+      },
+      {
+        "word": "finalement",
+        "english": "finally",
+        "definition": "sequence"
+      },
+      {
+        "word": "enfin",
+        "english": "at last / finally",
+        "definition": "relief or conclusion"
+      },
+      {
+        "word": "soudain",
+        "english": "suddenly",
+        "definition": ""
+      },
+      {
+        "word": "dehors",
+        "english": "outside",
+        "definition": ""
+      }
+    ],
+    "prepositions": [
+      {
+        "word": "devant",
+        "english": "in front of / before",
+        "definition": "devant la maison"
+      },
+      {
+        "word": "derrière",
+        "english": "behind",
+        "definition": "derrière la porte"
+      },
+      {
+        "word": "pendant",
+        "english": "during / for",
+        "definition": "preposition"
+      },
+      {
+        "word": "après",
+        "english": "after",
+        "definition": "sequence"
+      },
+      {
+        "word": "avant",
+        "english": "before",
+        "definition": "preposition"
+      },
+      {
+        "word": "parmi",
+        "english": "among",
+        "definition": "among multiple things/people"
+      }
+    ],
+    "conjunctions": [
+      {
+        "word": "qui",
+        "english": "who",
+        "definition": "ask about people"
+      },
+      {
+        "word": "où",
+        "english": "where",
+        "definition": "with accent!"
+      },
+      {
+        "word": "quand",
+        "english": "when",
+        "definition": "ask about time"
+      },
+      {
+        "word": "comment",
+        "english": "how",
+        "definition": "ask about method"
+      },
+      {
+        "word": "pourquoi",
+        "english": "why",
+        "definition": "ask for reasons"
+      },
+      {
+        "word": "combien",
+        "english": "how much/many",
+        "definition": "ask about quantity/price"
+      },
+      {
+        "word": "comme",
+        "english": "as, since",
+        "definition": "MUST start sentence - formal"
+      }
+    ],
+    "commands": [
+      {
+        "word": "Allons-y!",
+        "english": "Let",
+        "definition": "imperative phrase ⭐ very common expression"
+      },
+      {
+        "word": "Donne-le-moi!",
+        "english": "Give it to me!",
+        "definition": "⭐ command + object + indirect"
+      },
+      {
+        "word": "Regarde-moi!",
+        "english": "Look at me!",
+        "definition": "command + moi"
+      },
+      {
+        "word": "Écoute-le!",
+        "english": "Listen to him!",
+        "definition": "command + object"
+      },
+      {
+        "word": "Mange!",
+        "english": "Eat!",
+        "definition": "⭐ command from manger"
+      },
+      {
+        "word": "Parle!",
+        "english": "Speak!",
+        "definition": "command from parler"
+      },
+      {
+        "word": "Écoute!",
+        "english": "Listen!",
+        "definition": "command from écouter"
+      },
+      {
+        "word": "Regarde!",
+        "english": "Look! / Watch!",
+        "definition": "command from regarder"
+      },
+      {
+        "word": "Pense!",
+        "english": "Think!",
+        "definition": "command from penser"
+      },
+      {
+        "word": "Viens!",
+        "english": "Come!",
+        "definition": "command from venir"
+      },
+      {
+        "word": "Prends!",
+        "english": "Take!",
+        "definition": "command from prendre"
+      },
+      {
+        "word": "Mangez!",
+        "english": "Eat! (formal/plural)",
+        "definition": "command from manger"
+      },
+      {
+        "word": "Parlez!",
+        "english": "Speak! (formal/plural)",
+        "definition": "command from parler"
+      },
+      {
+        "word": "Écoutez!",
+        "english": "Listen! (formal/plural)",
+        "definition": "⭐ very common!"
+      },
+      {
+        "word": "Regardez!",
+        "english": "Look! (formal/plural)",
+        "definition": "command from regarder"
+      },
+      {
+        "word": "Venez!",
+        "english": "Come! (formal/plural)",
+        "definition": "command from venir"
+      },
+      {
+        "word": "Prenez!",
+        "english": "Take! (formal/plural)",
+        "definition": "command from prendre"
+      },
+      {
+        "word": "Dépêche-toi!",
+        "english": "Hurry up!",
+        "definition": "command form (preview!)"
+      },
+      {
+        "word": "Sois!",
+        "english": "Be! (informal)",
+        "definition": "⭐ être command - tu form"
+      },
+      {
+        "word": "Soyez!",
+        "english": "Be! (formal/plural)",
+        "definition": "être command - vous form"
+      },
+      {
+        "word": "Aie!",
+        "english": "Have! (informal)",
+        "definition": "avoir command - tu form"
+      },
+      {
+        "word": "Ayez!",
+        "english": "Have! (formal/plural)",
+        "definition": "avoir command - vous form"
+      },
+      {
+        "word": "Va!",
+        "english": "Go! (informal)",
+        "definition": "⭐ aller command - tu form"
+      },
+      {
+        "word": "Allez!",
+        "english": "Go! (formal/plural)",
+        "definition": "aller command - vous form"
+      }
+    ],
+    "expressions": [
+      {
+        "word": "merci",
+        "english": "thank you",
+        "definition": "gratitude"
+      },
+      {
+        "word": "oui",
+        "english": "yes",
+        "definition": "affirmative"
+      },
+      {
+        "word": "non",
+        "english": "no",
+        "definition": "negative"
+      },
+      {
+        "word": "pardon",
+        "english": "excuse me / sorry",
+        "definition": "apology"
+      },
+      {
+        "word": "salut",
+        "english": "hi / bye",
+        "definition": "informal greeting"
+      },
+      {
+        "word": "excusez-moi",
+        "english": "excuse me",
+        "definition": "get attention"
+      }
+    ],
+    "phrases": [
+      {
+        "word": "Tour Eiffel",
+        "english": "The Eiffel Tower (iconic Paris landmark)",
+        "definition": ""
+      },
+      {
+        "word": "soleil brille",
+        "english": "the sun shines",
+        "definition": "common phrase"
+      },
+      {
+        "word": "plantes poussent",
+        "english": "plants grow",
+        "definition": "common phrase"
+      },
+      {
+        "word": "pluie tombe",
+        "english": "rain falls / it",
+        "definition": "common expression"
+      },
+      {
+        "word": "carte de crédit",
+        "english": "credit card",
+        "definition": "feminine - essential for shopping!"
+      },
+      {
+        "word": "carafe d",
+        "english": "carafe of water",
+        "definition": "feminine - free water at restaurants!"
+      },
+      {
+        "word": "pomme de terre",
+        "english": "potato",
+        "definition": "feminine - literally "
+      },
+      {
+        "word": "on va",
+        "english": "we",
+        "definition": "⭐ very common! "
+      },
+      {
+        "word": "on s",
+        "english": "we",
+        "definition": "group activity"
+      },
+      {
+        "word": "long de",
+        "english": "along",
+        "definition": "following a length/path"
+      },
+      {
+        "word": "café était",
+        "english": "the café was",
+        "definition": ""
+      },
+      {
+        "word": "cinéma était",
+        "english": "the cinema was",
+        "definition": ""
+      },
+      {
+        "word": "peu plus",
+        "english": "a bit more/longer",
+        "definition": ""
+      },
+      {
+        "word": "meilleures journées",
+        "english": "the best days",
+        "definition": ""
+      }
+    ]
+  }
+}
