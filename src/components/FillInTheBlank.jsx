@@ -2,7 +2,7 @@
  * Fill In The Blank - Typeform-style interactive sentence completion
  * Users fill in blanks one sentence at a time with a clean, centered UI
  */
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { checkAnswer } from '../linter/frenchLinter';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
 import '../styles/FillInTheBlank.css';
@@ -92,37 +92,12 @@ function FillInTheBlank({ module, onComplete, onBack }) {
     return () => window.removeEventListener('popstate', handlePopState);
   }, [sentences.length]);
 
-  // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyboardNav = (e) => {
-      // Don't interfere if user is typing in an input
-      if (document.activeElement?.tagName === 'INPUT') {
-        return;
-      }
-
-      if (e.key === 'ArrowLeft' && currentSentenceIndex > 0) {
-        e.preventDefault();
-        const newIndex = currentSentenceIndex - 1;
-        setCurrentSentenceIndex(newIndex);
-        updateSentenceInUrl(newIndex);
-      } else if (e.key === 'ArrowRight' && currentSentenceIndex < sentences.length - 1) {
-        e.preventDefault();
-        const newIndex = currentSentenceIndex + 1;
-        setCurrentSentenceIndex(newIndex);
-        updateSentenceInUrl(newIndex);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyboardNav);
-    return () => window.removeEventListener('keydown', handleKeyboardNav);
-  }, [currentSentenceIndex, sentences.length]);
-
   const handleAnswerChange = (sentenceIdx, blankIdx, value) => {
     const key = `${sentenceIdx}-${blankIdx}`;
     setAnswers(prev => ({ ...prev, [key]: value }));
   };
 
-  const handleCheckAnswer = () => {
+  const handleCheckAnswer = useCallback(() => {
     if (!currentSentence) return;
 
     // Check each blank
@@ -164,7 +139,54 @@ function FillInTheBlank({ module, onComplete, onBack }) {
         setShowResults(true);
       }, 1200);
     }
-  };
+  }, [currentSentence, currentSentenceIndex, answers, shakeKey, isLastSentence]);
+
+  const handleNext = useCallback(() => {
+    if (!currentSentence || currentSentenceIndex >= sentences.length - 1) return;
+
+    // Check if all blanks for current sentence are already checked and correct
+    const allBlanksChecked = currentSentence.blanks.every((blank, idx) => {
+      const key = `${currentSentenceIndex}-${idx}`;
+      return feedback[key] === 'checked';
+    });
+    const allBlanksCorrect = currentSentence.blanks.every((blank, idx) => {
+      const key = `${currentSentenceIndex}-${idx}`;
+      return isCorrect[key] === true;
+    });
+
+    if (allBlanksChecked && allBlanksCorrect) {
+      // Already checked and correct, advance immediately
+      const newIndex = currentSentenceIndex + 1;
+      setCurrentSentenceIndex(newIndex);
+      updateSentenceInUrl(newIndex);
+    } else {
+      // Check answer first - handleCheckAnswer will auto-advance if all correct
+      handleCheckAnswer();
+    }
+  }, [currentSentence, currentSentenceIndex, sentences.length, feedback, isCorrect, handleCheckAnswer]);
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyboardNav = (e) => {
+      // Don't interfere if user is typing in an input
+      if (document.activeElement?.tagName === 'INPUT') {
+        return;
+      }
+
+      if (e.key === 'ArrowLeft' && currentSentenceIndex > 0) {
+        e.preventDefault();
+        const newIndex = currentSentenceIndex - 1;
+        setCurrentSentenceIndex(newIndex);
+        updateSentenceInUrl(newIndex);
+      } else if (e.key === 'ArrowRight' && currentSentenceIndex < sentences.length - 1) {
+        e.preventDefault();
+        handleNext();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyboardNav);
+    return () => window.removeEventListener('keydown', handleKeyboardNav);
+  }, [currentSentenceIndex, sentences.length, handleNext]);
 
   const handleKeyDown = (e, sentenceIdx, blankIdx) => {
     if (e.key === 'Enter') {
@@ -272,6 +294,8 @@ function FillInTheBlank({ module, onComplete, onBack }) {
             }}
             placeholder=""
             autoComplete="off"
+            autoCapitalize="none"
+            autoCorrect="off"
             spellCheck="false"
             style={{ width: `${blank.answer.length * 30 + 80}px` }}
           />
@@ -397,11 +421,7 @@ function FillInTheBlank({ module, onComplete, onBack }) {
                 {currentSentenceIndex < sentences.length - 1 && (
                   <button
                     className="nav-btn nav-btn-next"
-                    onClick={() => {
-                      const newIndex = currentSentenceIndex + 1;
-                      setCurrentSentenceIndex(newIndex);
-                      updateSentenceInUrl(newIndex);
-                    }}
+                    onClick={handleNext}
                     aria-label="Next sentence"
                   >
                     →
