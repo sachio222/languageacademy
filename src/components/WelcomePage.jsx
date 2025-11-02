@@ -10,7 +10,7 @@ function WelcomePage({ onContinue }) {
           <img src="/img/logov1.png" alt="Language Academy" className="welcome-logo" />
           <h1 className="welcome-title">Welcome to French: Part I</h1>
           <p className="welcome-subtitle">
-            Language Academy helps you join the 1,000-year journey from Latin to the language of over 300 million speakers worldwide
+            Language Academy helps you partake in a 1,000-year journey from Latin to the language of over 300 million speakers worldwide
           </p>
         </div>
       </section>
