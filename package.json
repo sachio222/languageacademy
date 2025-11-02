@@ -4,8 +4,8 @@
   "description": "Interactive French learning platform with grammar linting",
   "main": "index.js",
   "scripts": {
+    "build": "./prepare-historical-css.sh",
     "dev": "vite",
-    "build": "vite build",
     "preview": "vite preview",
     "vocab:sort": "node scripts/alphabetize-vocabulary.js",
     "vocab:validate": "node scripts/validate-vocabulary.js"
