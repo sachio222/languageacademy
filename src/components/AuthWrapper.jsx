@@ -128,7 +128,10 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
       <div className="auth-container">
         <div className="auth-content">
           <div className="auth-header">
-            <h1>🎓 Language Academy</h1>
+            <h1>
+              <img src="/img/logov2.png" alt="" className="auth-logo-icon" />
+              Language Academy
+            </h1>
             <p>Create your account to start learning</p>
           </div>
 

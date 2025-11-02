@@ -60,9 +60,20 @@
 .auth-header h1 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   color: #1a1a1a;
   letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.auth-logo-icon {
+  height: 51px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .auth-header p {
