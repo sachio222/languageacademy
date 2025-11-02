@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./prepare-historical-css.sh",
+    "vite:build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
     "vocab:sort": "node scripts/alphabetize-vocabulary.js",

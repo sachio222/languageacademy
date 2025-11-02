@@ -71,6 +71,7 @@
   letter-spacing: -0.04em;
   margin: 0 0 1.25rem;
   color: #1a1a1a;
+  /* comment */
   animation: fadeInUp 0.7s ease 0.1s backwards;
 }
 
