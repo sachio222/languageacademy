@@ -116,7 +116,8 @@ function DictionaryModal({ isOpen, onClose }) {
     allWords,
     partOfSpeechOptions,
     cefrLevelOptions,
-    difficultyOptions
+    difficultyOptions,
+    isLoading
   } = dictionary;
 
   const {
@@ -173,6 +174,27 @@ function DictionaryModal({ isOpen, onClose }) {
   }, [selectedWord, scrollToSelected]);
 
   if (!isOpen) return null;
+
+  if (isLoading) {
+    return (
+      <div className="dictionary-modal-backdrop" onClick={onClose}>
+        <div className="dictionary-modal-container" onClick={(e) => e.stopPropagation()}>
+          <div className="dictionary-modal-header">
+            <h1 className="dictionary-modal-title"> French Unit Dictionary</h1>
+            <button className="dictionary-modal-close" onClick={onClose}>
+              ×
+            </button>
+          </div>
+          <div className="dictionary-loading-state">
+            <div className="loading-spinner">
+              <div className="spinner"></div>
+              <p>Loading dictionary...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="dictionary-modal-backdrop" onClick={onClose}>

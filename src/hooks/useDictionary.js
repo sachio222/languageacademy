@@ -24,6 +24,7 @@ export const useDictionary = () => {
     // Data
     allWords: dictionaryData.allWords,
     filteredWords: searchData.filteredWords,
+    isLoading: dictionaryData.isLoading,
     
     // Filter options
     partOfSpeechOptions: dictionaryData.partOfSpeechOptions,

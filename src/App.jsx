@@ -1,19 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import AuthWrapper from './components/AuthWrapper';
 import DevModeWrapper from './components/DevModeWrapper';
 import LeftNav from './components/LeftNav';
 import LessonList from './components/LessonList';
 import LessonView from './components/LessonView';
-import ReferenceModules from './components/ReferenceModules';
-import VocabularyDashboard from './components/VocabularyDashboard';
-import DictionaryModal from './components/DictionaryModal';
 import SafariTTSHelper from './components/SafariTTSHelper';
 import OfflineIndicator from './components/OfflineIndicator';
-import FeedbackForm from './components/FeedbackForm';
-import FeedbackAdmin from './components/FeedbackAdmin';
 import CookieBanner from './components/CookieBanner';
-import CookieSettingsModal from './components/CookieSettingsModal';
-import BetaNoticeModal from './components/BetaNoticeModal';
+
+// Lazy load heavy/conditional components
+const ReferenceModules = lazy(() => import('./components/ReferenceModules'));
+const VocabularyDashboard = lazy(() => import('./components/VocabularyDashboard'));
+const DictionaryModal = lazy(() => import('./components/DictionaryModal'));
+const FeedbackForm = lazy(() => import('./components/FeedbackForm'));
+const FeedbackAdmin = lazy(() => import('./components/FeedbackAdmin'));
+const CookieSettingsModal = lazy(() => import('./components/CookieSettingsModal'));
+const BetaNoticeModal = lazy(() => import('./components/BetaNoticeModal'));
 import { initializeClarity } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -198,7 +200,9 @@ function App() {
       <main className="app-main">
         {navigation.showFeedbackAdmin ? (
           <div className="feedback-admin-wrapper">
-            <FeedbackAdmin onFeedbackChange={admin.refreshFeedbackCount} />
+            <Suspense fallback={<div className="loading-spinner">Loading admin panel...</div>}>
+              <FeedbackAdmin onFeedbackChange={admin.refreshFeedbackCount} />
+            </Suspense>
             <button
               className="feedback-fab"
               onClick={() => navigation.setShowFeedbackForm(true)}
@@ -216,10 +220,12 @@ function App() {
           </div>
         ) : navigation.currentLesson === 'reference' ? (
           <div className="main-content-wrapper">
-            <ReferenceModules
-              onModuleSelect={navigation.handleLessonSelect}
-              onBack={navigation.handleBack}
-            />
+            <Suspense fallback={<div className="loading-spinner">Loading reference modules...</div>}>
+              <ReferenceModules
+                onModuleSelect={navigation.handleLessonSelect}
+                onBack={navigation.handleBack}
+              />
+            </Suspense>
             <button
               className="feedback-fab"
               onClick={() => navigation.setShowFeedbackForm(true)}
@@ -248,7 +254,9 @@ function App() {
           </div>
         ) : navigation.currentLesson === 'vocabulary' ? (
           <div className="main-content-wrapper">
-            <VocabularyDashboard completedExercises={completedExercises} />
+            <Suspense fallback={<div className="loading-spinner">Loading vocabulary dashboard...</div>}>
+              <VocabularyDashboard completedExercises={completedExercises} />
+            </Suspense>
             <button
               className="feedback-fab"
               onClick={() => navigation.setShowFeedbackForm(true)}
@@ -280,10 +288,12 @@ function App() {
           </div>
         ) : navigation.currentLesson === 'dictionary' ? (
           <div className="main-content-wrapper">
-            <DictionaryModal
-              isOpen={true}
-              onClose={navigation.handleCloseDictionary}
-            />
+            <Suspense fallback={<div className="loading-spinner">Loading dictionary...</div>}>
+              <DictionaryModal
+                isOpen={true}
+                onClose={navigation.handleCloseDictionary}
+              />
+            </Suspense>
           </div>
         ) : !navigation.currentLesson ? (
           <div className="main-content-wrapper">
@@ -410,10 +420,14 @@ function App() {
       <SafariTTSHelper />
       {!isDevMode && <OfflineIndicator />}
 
-      <FeedbackForm
-        isOpen={navigation.showFeedbackForm}
-        onClose={() => navigation.setShowFeedbackForm(false)}
-      />
+      {navigation.showFeedbackForm && (
+        <Suspense fallback={null}>
+          <FeedbackForm
+            isOpen={navigation.showFeedbackForm}
+            onClose={() => navigation.setShowFeedbackForm(false)}
+          />
+        </Suspense>
+      )}
 
       <CookieBanner
         onConsent={(accepted) => {
@@ -429,30 +443,38 @@ function App() {
         key={forceShowBanner ? 'force-show' : 'normal'}
       />
 
-      <CookieSettingsModal
-        isOpen={showCookieModal}
-        onClose={() => setShowCookieModal(false)}
-        onConsentChange={(accepted) => {
-          if (accepted) {
-            initializeClarity();
-          }
-          // Close the banner when consent is saved via modal
-          setForceShowBanner(false);
-        }}
-        supabaseClient={supabaseClient}
-        supabaseUser={supabaseUser}
-      />
+      {showCookieModal && (
+        <Suspense fallback={null}>
+          <CookieSettingsModal
+            isOpen={showCookieModal}
+            onClose={() => setShowCookieModal(false)}
+            onConsentChange={(accepted) => {
+              if (accepted) {
+                initializeClarity();
+              }
+              // Close the banner when consent is saved via modal
+              setForceShowBanner(false);
+            }}
+            supabaseClient={supabaseClient}
+            supabaseUser={supabaseUser}
+          />
+        </Suspense>
+      )}
 
-      <BetaNoticeModal
-        isOpen={showBetaNotice}
-        onClose={async () => {
-          setShowBetaNotice(false);
-          // Mark beta welcome as seen in database for authenticated users
-          if (isAuthenticated && supabaseUser && supabaseClient) {
-            await markBetaWelcomeAsSeen(supabaseClient, supabaseUser);
-          }
-        }}
-      />
+      {showBetaNotice && (
+        <Suspense fallback={null}>
+          <BetaNoticeModal
+            isOpen={showBetaNotice}
+            onClose={async () => {
+              setShowBetaNotice(false);
+              // Mark beta welcome as seen in database for authenticated users
+              if (isAuthenticated && supabaseUser && supabaseClient) {
+                await markBetaWelcomeAsSeen(supabaseClient, supabaseUser);
+              }
+            }}
+          />
+        </Suspense>
+      )}
     </div>
   );
 
