@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/assets/:file.css",
+      "destination": "/historical-css/:file.css"
+    }
+  ]
+}
