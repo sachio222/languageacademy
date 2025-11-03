@@ -15,6 +15,12 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
+  
+  // Handle direct login from landing page
+  const handleLogin = () => {
+    setShowSignUp(false)
+    setShowAuthForms(true)
+  }
   const [showWelcome, setShowWelcome] = useState(() => {
     // Check URL parameter first
     const params = new URLSearchParams(window.location.search)
@@ -117,9 +123,13 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
     // Show landing page first, then auth forms
     if (!showAuthForms) {
       return <LandingPage
-        onGetStarted={() => setShowAuthForms(true)}
+        onGetStarted={() => {
+          setShowSignUp(true)
+          setShowAuthForms(true)
+        }}
         isAuthenticated={isAuthenticated}
         onBackToApp={() => setShowLanding(false)}
+        onLogin={handleLogin}
       />
     }
 

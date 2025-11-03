@@ -4,7 +4,7 @@ import ExercisePreview from './ExercisePreview'
 import Testimonials from './Testimonials'
 import '../styles/Landing.css'
 
-function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
+function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
   const [email, setEmail] = useState('')
 
   const handleSubmit = (e) => {
@@ -40,9 +40,14 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
             </>
           ) : (
             <>
-              <button className="cta-primary" onClick={onGetStarted}>
-                Start Free Trial
-              </button>
+              <div className="hero-cta-group">
+                <button className="cta-secondary" onClick={onLogin}>
+                  Sign In
+                </button>
+                <button className="cta-primary" onClick={onGetStarted}>
+                  Start Free Trial
+                </button>
+              </div>
               <p className="hero-caption">
                 Early access • No credit card required
               </p>
@@ -325,9 +330,14 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp }) {
             </>
           ) : (
             <>
-              <button className="cta-primary large" onClick={onGetStarted}>
-                Start Free Trial
-              </button>
+              <div className="hero-cta-group">
+                <button className="cta-secondary large" onClick={onLogin}>
+                  Sign In
+                </button>
+                <button className="cta-primary large" onClick={onGetStarted}>
+                  Start Free Trial
+                </button>
+              </div>
               <p className="cta-note">
                 No credit card required • Early access available
               </p>
