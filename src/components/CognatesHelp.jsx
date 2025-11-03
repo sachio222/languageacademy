@@ -3,6 +3,7 @@ import { Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSpeech } from '../hooks/useSpeech';
+import { useSoundEffects } from '../hooks/useSoundEffects';
 import { getGenderFromFrench } from '../utils/genderSplitUtils';
 import './CognatesHelp.css';
 import { logger } from "../utils/logger";
@@ -13,6 +14,7 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
   const { speak } = useSpeech();
+  const { playPop } = useSoundEffects();
 
   // Define the cognates sections that can be marked as understood
   const cognatesSections = [
@@ -115,6 +117,11 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     logger.log('CognatesHelp: toggleUnderstood called', sectionIndex);
     const isCurrentlyUnderstood = understoodSections.has(sectionIndex);
     const newUnderstood = !isCurrentlyUnderstood;
+
+    // Play pop sound when marking as understood
+    if (newUnderstood) {
+      playPop();
+    }
 
     // Optimistic update
     setUnderstoodSections(prev => {

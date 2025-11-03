@@ -1165,7 +1165,7 @@ body:has(.left-nav.collapsed) .app-footer {
 .lesson-header {
   background: #ffffff;
   color: #1e293b;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0.75rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -1177,7 +1177,7 @@ body:has(.left-nav.collapsed) .app-footer {
   display: none;
   background: #ffffff;
   color: #1e293b;
-  padding: 1rem;
+  padding: 1rem 0.25rem;
   border-bottom: 1px solid #e2e8f0;
   align-items: center;
   gap: 1rem;
