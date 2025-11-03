@@ -163,6 +163,34 @@ function DictionaryModal({ isOpen, onClose }) {
   // Track if selection came from relationship click
   const [scrollToSelected, setScrollToSelected] = React.useState(false);
 
+  // Swipe gesture tracking for mobile details panel
+  const [swipeStart, setSwipeStart] = React.useState(null);
+  const [swipeOffset, setSwipeOffset] = React.useState(0);
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  const swipeDistanceRef = React.useRef(0);
+  const scrollContainerRef = React.useRef(null);
+  const touchStartPositionRef = React.useRef({ y: 0, onHeader: false, scrollTop: 0 });
+
+
+  // Reset swipe state whenever selected word changes
+  useEffect(() => {
+    // Reset all swipe-related state
+    setSwipeStart(null);
+    setSwipeOffset(0);
+    setIsExpanded(false);
+    swipeDistanceRef.current = 0;
+    touchStartPositionRef.current = { y: 0, onHeader: false, scrollTop: 0 };
+    
+    // Reset scroll position when new word is selected
+    // Use a small timeout to ensure ref is available after render
+    const timeoutId = setTimeout(() => {
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollTop = 0;
+      }
+    }, 0);
+    
+    return () => clearTimeout(timeoutId);
+  }, [selectedWord]);
 
   // Scroll to selected word in the word list when selection changes from relationship
   useEffect(() => {
@@ -180,10 +208,12 @@ function DictionaryModal({ isOpen, onClose }) {
       <div className="dictionary-modal-backdrop" onClick={onClose}>
         <div className="dictionary-modal-container" onClick={(e) => e.stopPropagation()}>
           <div className="dictionary-modal-header">
-            <h1 className="dictionary-modal-title"> French Unit Dictionary</h1>
-            <button className="dictionary-modal-close" onClick={onClose}>
-              ×
-            </button>
+            <div className="dictionary-header-top">
+              <h1 className="dictionary-modal-title"> French Unit Dictionary</h1>
+              <button className="dictionary-modal-close" onClick={onClose}>
+                ×
+              </button>
+            </div>
           </div>
           <div className="dictionary-loading-state">
             <div className="loading-spinner">
@@ -201,7 +231,12 @@ function DictionaryModal({ isOpen, onClose }) {
       <div className="dictionary-modal-container" onClick={(e) => e.stopPropagation()}>
         {/* Header */}
         <div className="dictionary-modal-header">
-          <h1 className="dictionary-modal-title"> French Unit Dictionary</h1>
+          <div className="dictionary-header-top">
+            <h1 className="dictionary-modal-title"> French Unit Dictionary</h1>
+            <button className="dictionary-modal-close" onClick={onClose}>
+              ×
+            </button>
+          </div>
           <div className="dictionary-header-search">
             <input
               type="text"
@@ -220,9 +255,6 @@ function DictionaryModal({ isOpen, onClose }) {
               </button>
             )}
           </div>
-          <button className="dictionary-modal-close" onClick={onClose}>
-            ×
-          </button>
         </div>
 
         {/* Filters */}
@@ -240,38 +272,6 @@ function DictionaryModal({ isOpen, onClose }) {
                 {partOfSpeechOptions.map(option => (
                   <option key={option} value={option}>
                     {option === 'all' ? 'All Parts of Speech' : option}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="dictionary-filter-group">
-              <label className="dictionary-filter-label" htmlFor="cefr-level-filter">CEFR Level</label>
-              <select
-                id="cefr-level-filter"
-                value={selectedCefrLevel}
-                onChange={(e) => setSelectedCefrLevel(e.target.value)}
-                className="dictionary-filter-select-small"
-                aria-label="Filter by CEFR level"
-              >
-                {cefrLevelOptions.map(option => (
-                  <option key={option} value={option}>
-                    {option === 'all' ? 'All Levels' : option}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="dictionary-filter-group">
-              <label className="dictionary-filter-label" htmlFor="difficulty-filter">Difficulty</label>
-              <select
-                id="difficulty-filter"
-                value={selectedDifficulty}
-                onChange={(e) => setSelectedDifficulty(e.target.value)}
-                className="dictionary-filter-select-small"
-                aria-label="Filter by difficulty"
-              >
-                {difficultyOptions.map(option => (
-                  <option key={option} value={option}>
-                    {option === 'all' ? 'All Difficulties' : option}
                   </option>
                 ))}
               </select>
@@ -395,9 +395,170 @@ function DictionaryModal({ isOpen, onClose }) {
           </div>
 
           {/* Word Details */}
-          <div className="dictionary-word-details">
-            {selectedWord ? (
-              <div className="dictionary-word-details-content">
+          {selectedWord && (
+            <>
+              <div 
+                className="dictionary-details-backdrop" 
+                onClick={() => {
+                  setSelectedWord(null);
+                  setIsExpanded(false);
+                }}
+              />
+              <div 
+                key={selectedWord?.id || 'details'}
+                className={`dictionary-word-details ${isExpanded ? 'expanded' : ''}`}
+                style={swipeOffset !== 0 ? { transform: `translateY(${swipeOffset}px)` } : { transform: 'none' }}
+                onTouchStart={(e) => {
+                  const touch = e.touches[0];
+                  const target = e.target;
+                  const isOnHeader = target.closest('.dictionary-details-header') !== null;
+                  const scrollContainer = scrollContainerRef.current;
+                  const isAtTop = scrollContainer ? scrollContainer.scrollTop === 0 : true;
+                  
+                  // Only allow swipe if starting on header OR content is at top
+                  if (isOnHeader || isAtTop) {
+                    setSwipeStart(touch.clientY);
+                    setSwipeOffset(0);
+                    swipeDistanceRef.current = 0;
+                    touchStartPositionRef.current = {
+                      y: touch.clientY,
+                      onHeader: isOnHeader,
+                      scrollTop: scrollContainer?.scrollTop || 0
+                    };
+                  } else {
+                    setSwipeStart(null);
+                  }
+                }}
+                onTouchMove={(e) => {
+                  if (swipeStart === null) return;
+                  
+                  const touch = e.touches[0];
+                  const currentY = touch.clientY;
+                  const deltaY = currentY - swipeStart;
+                  const scrollContainer = scrollContainerRef.current;
+                  const scrollTop = scrollContainer?.scrollTop || 0;
+                  const initialScrollTop = touchStartPositionRef.current.scrollTop;
+                  
+                  const startedOnHeader = touchStartPositionRef.current.onHeader;
+                  const wasAtTop = initialScrollTop === 0;
+                  const isAtTop = scrollTop === 0;
+                  
+                  // If content has scrolled, cancel swipe gesture immediately
+                  if (scrollTop !== initialScrollTop) {
+                    setSwipeStart(null);
+                    setSwipeOffset(0);
+                    swipeDistanceRef.current = 0;
+                    return;
+                  }
+                  
+                  // If user started on header
+                  if (startedOnHeader) {
+                    e.preventDefault();
+                    
+                    // Swipe down - close panel
+                    if (deltaY > 0) {
+                      setSwipeOffset(deltaY);
+                      swipeDistanceRef.current = deltaY;
+                      return;
+                    }
+                    
+                    // Swipe up - expand panel
+                    if (deltaY < 0 && !isExpanded) {
+                      const swipeUpDistance = Math.abs(deltaY);
+                      // Track swipe up for expansion (negative offset means moving up)
+                      swipeDistanceRef.current = deltaY;
+                      // Don't update swipeOffset for expansion, use isExpanded state instead
+                      return;
+                    }
+                    
+                    // Swipe down when expanded - collapse back
+                    if (deltaY > 0 && isExpanded) {
+                      setSwipeOffset(deltaY);
+                      swipeDistanceRef.current = deltaY;
+                      return;
+                    }
+                  }
+                  
+                  // If content was at top when started AND still at top, allow swipe-down
+                  if (wasAtTop && isAtTop && deltaY > 0 && !startedOnHeader) {
+                    e.preventDefault();
+                    setSwipeOffset(deltaY);
+                    swipeDistanceRef.current = deltaY;
+                    return;
+                  }
+                  
+                  // If already swiping down and user moves finger up, allow canceling
+                  if (swipeOffset > 0 && deltaY < 0) {
+                    e.preventDefault();
+                    const newOffset = Math.max(0, swipeOffset + deltaY);
+                    setSwipeOffset(newOffset);
+                    swipeDistanceRef.current = newOffset;
+                    return;
+                  }
+                  
+                  // Otherwise, let normal scrolling happen (don't prevent default)
+                }}
+                onTouchEnd={() => {
+                  const distance = swipeDistanceRef.current;
+                  const startedOnHeader = touchStartPositionRef.current.onHeader;
+                  
+                  if (startedOnHeader) {
+                    // Swipe down - close if far enough
+                    if (distance > 100) {
+                      setSelectedWord(null);
+                      setIsExpanded(false);
+                    }
+                    // Swipe down when expanded - collapse back to 70vh
+                    else if (distance > 50 && isExpanded) {
+                      setIsExpanded(false);
+                      setSwipeOffset(0);
+                    }
+                    // Swipe up - expand if far enough (negative means up)
+                    else if (distance < -100 && !isExpanded) {
+                      setIsExpanded(true);
+                      setSwipeOffset(0);
+                    }
+                    // Small swipe up when collapsed - expand
+                    else if (distance < -30 && !isExpanded) {
+                      setIsExpanded(true);
+                      setSwipeOffset(0);
+                    }
+                    // Reset
+                    else {
+                      setSwipeOffset(0);
+                    }
+                  } else {
+                    // Not started on header - handle normal swipe down
+                    if (distance > 100) {
+                      setSelectedWord(null);
+                    } else if (swipeOffset > 0) {
+                      // Snap back if not swiped far enough
+                      setSwipeOffset(0);
+                    }
+                  }
+                  
+                  setSwipeStart(null);
+                  swipeDistanceRef.current = 0;
+                  touchStartPositionRef.current = { y: 0, onHeader: false, scrollTop: 0 };
+                }}
+              >
+                <div className="dictionary-details-header">
+                  <div className="dictionary-details-drag-handle" />
+                    <button 
+                      className="dictionary-details-close"
+                      onClick={() => {
+                        setSelectedWord(null);
+                        setIsExpanded(false);
+                      }}
+                      aria-label="Close word details"
+                    >
+                      ×
+                    </button>
+                </div>
+              <div 
+                className="dictionary-word-details-content"
+                ref={scrollContainerRef}
+              >
                 <div className="dictionary-word-header">
                   <div className="dictionary-word-title-container">
                     <h2 className="dictionary-word-title">
@@ -897,12 +1058,9 @@ function DictionaryModal({ isOpen, onClose }) {
                   </div>
                 </div>
               </div>
-            ) : (
-              <div className="dictionary-empty-state">
-                <p>Select a word to view its details</p>
               </div>
-            )}
-          </div>
+            </>
+          )}
         </div>
       </div>
     </div>

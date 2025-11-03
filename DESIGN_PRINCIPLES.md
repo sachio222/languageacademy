@@ -302,6 +302,7 @@ When designing a new component:
 - [ ] Layout is clean and uncluttered
 - [ ] White space is embraced, not feared
 - [ ] Component follows mobile-first approach
+- [ ] Screen Real Estate is devoted to content not excessive padding and margin on mobile
 - [ ] Interactions feel smooth and natural
 
 ---

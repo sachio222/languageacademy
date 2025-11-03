@@ -1,7 +1,7 @@
 /**
- * Module: venir (to come)
- * Essential motion verb
- * Irregular conjugation pattern
+ * venir (to come) - COGNITIVE SCIENCE UPGRADE
+ * Implements active recall, composition, and interleaved practice
+ * Based on pedagogical analysis principles
  */
 
 import { venirConjugations } from "../../vocabularyData.js";
@@ -10,90 +10,367 @@ export const venirModule = {
   moduleKey: "2024-01-26-venir", // Permanent identifier - never changes
   title: "Essential Verb - venir (to come)",
   description:
-    "Essential motion verb: je viens (I come), tu viens (you come), il vient (he comes)",
+    "Master arrival through active recall and composition practice!",
 
   concepts: [
     {
       term: "venir = to come",
-      definition: "Irregular verb for coming or arriving",
-      example: "Very common! Used constantly in conversation",
-    },
-    {
-      term: "Conjugation Pattern",
       definition:
-        "Stem changes: je/tu viens, il vient, nous venons, ils viennent",
-      example: "Notice: je and tu use same form (viens)",
+        "Essential irregular verb for coming or arriving! One of the most common verbs in French. Used constantly in conversation.",
+      example:
+        "'I am coming' (Je viens), 'Who is coming?' (Qui vient?), 'I come from Paris' (Je viens de Paris)",
     },
     {
-      term: "Using with Previous Vocabulary",
-      definition: "Combine with prepositions and nouns you already know",
-      example:
-        "Common patterns: 'qui vient?' (who's coming?), simple statements",
+      term: "Irregular Conjugation Pattern",
+      definition:
+        "Notice the pattern: je/tu both use 'viens', then il/elle use 'vient', nous uses 'venons', and ils/elles use 'viennent' with double 'n'!",
+      example: "je viens, tu viens, il vient, nous venons, vous venez, ils viennent",
+    },
+    {
+      term: "Composition Power",
+      definition:
+        "Combine venir with previous modules for infinite expressions. For example, to say 'I want to come' you can say 'je veux venir'.",
+      example: "je viens + de ça, nous venons + avec vous, ils viennent + voir",
     },
   ],
 
   vocabularyReference: [
     { french: "venir", english: "to come", note: "infinitive form" },
-    { french: "je viens", english: "I come / I'm coming", note: "venir" },
-    { french: "tu viens", english: "you come (informal)", note: "same as je!" },
+    {
+      french: "je viens",
+      english: "I come / I'm coming",
+      note: "venir - irregular!",
+    },
+    {
+      french: "tu viens",
+      english: "you come (informal)",
+      note: "same as je!",
+    },
     { french: "il vient", english: "he comes", note: "different ending" },
     { french: "elle vient", english: "she comes", note: "same as il" },
-    { french: "nous venons", english: "we come", note: "regular -ons" },
-    { french: "vous venez", english: "you come (formal)", note: "regular -ez" },
-    { french: "ils viennent", english: "they come (masc)", note: "double n!" },
+    {
+      french: "nous venons",
+      english: "we come",
+      note: "regular -ons pattern",
+    },
+    {
+      french: "vous venez",
+      english: "you come (formal)",
+      note: "regular -ez pattern",
+    },
+    {
+      french: "ils viennent",
+      english: "they come (masc)",
+      note: "double n!",
+    },
     { french: "elles viennent", english: "they come (fem)", note: "double n!" },
   ],
 
+  // UPGRADED: Custom exercises for sophisticated learning
   exerciseConfig: {
-    type: "mixed",
+    type: "custom",
     items: [
+      // Phase 1: Simple conjugations with known vocabulary
       {
-        verb: "venir",
-        conjugations: venirConjugations,
-        key: "je",
-        context: "Say you're coming",
+        instruction: "Say what you do",
+        prompt: "I come",
+        hint: "je viens",
+        expectedAnswer: "je viens",
+        wrongAnswers: [
+          {
+            answer: "je vient",
+            feedback: "Je takes 'viens', not 'vient'. Remember: je viens, il vient",
+          },
+          {
+            answer: "tu viens",
+            feedback: "That's 'you come', not 'I come'. Focus on the pronoun!",
+          },
+        ],
       },
       {
-        verb: "venir",
-        conjugations: venirConjugations,
-        key: "tu",
-        context: "Tell your friend they're coming",
+        instruction: "Say what you do",
+        prompt: "you come (informal)",
+        hint: "tu viens",
+        expectedAnswer: "tu viens",
+        wrongAnswers: [
+          {
+            answer: "tu vient",
+            feedback: "Tu takes 'viens', not 'vient'. Pattern: je viens, tu viens",
+          },
+        ],
       },
       {
-        verb: "venir",
-        conjugations: venirConjugations,
-        key: "il",
-        context: "Say he's coming",
+        instruction: "Say what he does",
+        prompt: "he comes",
+        hint: "il vient",
+        expectedAnswer: "il vient",
+        wrongAnswers: [
+          {
+            answer: "il viens",
+            feedback: "Il takes 'vient', not 'viens'. Remember: il vient, elle vient",
+          },
+        ],
       },
       {
-        verb: "venir",
-        conjugations: venirConjugations,
-        key: "elle",
-        context: "Say she's coming",
+        instruction: "Say what she does",
+        prompt: "she comes",
+        hint: "elle vient",
+        expectedAnswer: "elle vient",
+        wrongAnswers: [
+          {
+            answer: "elle viens",
+            feedback: "Elle takes 'vient', not 'viens'. Same as il vient",
+          },
+        ],
       },
       {
-        verb: "venir",
-        conjugations: venirConjugations,
-        key: "nous",
-        context: "Say we're coming",
+        instruction: "Say what we do",
+        prompt: "we come",
+        hint: "nous venons",
+        expectedAnswer: "nous venons",
+        wrongAnswers: [
+          {
+            answer: "nous viens",
+            feedback: "Nous takes 'venons', not 'viens'. Completely different!",
+          },
+          {
+            answer: "nous vient",
+            feedback: "Nous takes 'venons', not 'vient'. Regular -ons pattern!",
+          },
+        ],
       },
       {
-        verb: "venir",
-        conjugations: venirConjugations,
-        key: "vous",
-        context: "Say you're coming (formal)",
+        instruction: "Say what you do (formal)",
+        prompt: "you come (formal)",
+        hint: "vous venez",
+        expectedAnswer: "vous venez",
+        wrongAnswers: [
+          {
+            answer: "vous viens",
+            feedback: "Vous takes 'venez', not 'viens'. Regular -ez pattern!",
+          },
+          {
+            answer: "vous vient",
+            feedback: "Vous takes 'venez', not 'vient'. Remember: vous venez",
+          },
+        ],
       },
       {
-        verb: "venir",
-        conjugations: venirConjugations,
-        key: "ils",
-        context: "Say they're coming (masculine)",
+        instruction: "Say what they do (masculine)",
+        prompt: "they come (masculine)",
+        hint: "ils viennent",
+        expectedAnswer: "ils viennent",
+        wrongAnswers: [
+          {
+            answer: "ils viens",
+            feedback: "Ils takes 'viennent', not 'viens'. Double 'n'!",
+          },
+          {
+            answer: "ils vient",
+            feedback: "Ils takes 'viennent', not 'vient'. Double 'n'!",
+          },
+        ],
       },
       {
-        verb: "venir",
-        conjugations: venirConjugations,
-        key: "elles",
-        context: "Say they're coming (feminine)",
+        instruction: "Say what they do (feminine)",
+        prompt: "they come (feminine)",
+        hint: "elles viennent",
+        expectedAnswer: "elles viennent",
+        wrongAnswers: [
+          {
+            answer: "elles viens",
+            feedback: "Elles takes 'viennent', not 'viens'. Double 'n'!",
+          },
+          {
+            answer: "elles vient",
+            feedback: "Elles takes 'viennent', not 'vient'. Double 'n'!",
+          },
+        ],
+      },
+
+      // Phase 2: Simple compositions with ça and prepositions (from previous modules)
+      {
+        instruction: "Say what you do with that",
+        prompt: "I come with that",
+        hint: "je viens + avec ça",
+        expectedAnswer: "je viens avec ça",
+        wrongAnswers: [
+          {
+            answer: "je vient avec ça",
+            feedback:
+              "Je takes 'viens', not 'vient'. Remember: je viens, il vient",
+          },
+        ],
+      },
+      {
+        instruction: "Say what you come from",
+        prompt: "I come from there",
+        hint: "je viens de là",
+        expectedAnswer: "je viens de là",
+        acceptableAnswers: ["je viens de là-bas"],
+        wrongAnswers: [
+          {
+            answer: "je vient de là",
+            feedback: "Je takes 'viens', not 'vient'. Remember: je viens",
+          },
+        ],
+      },
+      {
+        instruction: "Say what he does with that",
+        prompt: "He comes with that",
+        hint: "il vient + avec ça",
+        expectedAnswer: "il vient avec ça",
+        wrongAnswers: [
+          {
+            answer: "il viens avec ça",
+            feedback: "Il takes 'vient', not 'viens'. Remember: il vient, elle vient",
+          },
+        ],
+      },
+      {
+        instruction: "Say what we are doing",
+        prompt: "We come with you",
+        hint: "nous venons + avec vous",
+        expectedAnswer: "nous venons avec vous",
+        wrongAnswers: [
+          {
+            answer: "nous viens avec vous",
+            feedback: "Nous takes 'venons', not 'viens'. Completely different!",
+          },
+        ],
+      },
+
+      // Phase 3: Composition with questions (from previous modules)
+      {
+        instruction: "Ask who is coming",
+        prompt: "Who is coming?",
+        hint: "qui vient",
+        expectedAnswer: "qui vient?",
+        acceptableAnswers: ["qui est-ce qui vient?"],
+        wrongAnswers: [
+          {
+            answer: "quoi vient?",
+            feedback: "Use 'qui' for 'who', not 'quoi'. Try: qui vient?",
+          },
+        ],
+      },
+      {
+        instruction: "Ask where someone is coming from",
+        prompt: "Where do you come from?",
+        hint: "d'où viens-tu",
+        expectedAnswer: "d'où viens-tu?",
+        acceptableAnswers: ["d'où est-ce que tu viens?"],
+        wrongAnswers: [
+          {
+            answer: "où viens-tu?",
+            feedback: "Need 'de' with 'où'! Try: d'où viens-tu?",
+          },
+        ],
+      },
+      {
+        instruction: "Ask what someone comes with",
+        prompt: "What do you come with?",
+        hint: "avec quoi viens-tu",
+        expectedAnswer: "avec quoi viens-tu?",
+        acceptableAnswers: ["avec quoi est-ce que tu viens?", "tu viens avec quoi?"],
+        wrongAnswers: [
+          {
+            answer: "quoi viens-tu?",
+            feedback: "Need 'avec'! Try: avec quoi viens-tu?",
+          },
+        ],
+      },
+
+      // Phase 4: Composition with vouloir (from previous modules)
+      {
+        instruction: "Say what you want to come",
+        prompt: "I want to come",
+        hint: "je veux venir",
+        expectedAnswer: "je veux venir",
+        wrongAnswers: [
+          {
+            answer: "je viens",
+            feedback: "This needs vouloir! Try: je veux venir",
+          },
+        ],
+      },
+      {
+        instruction: "Ask if someone wants to come",
+        prompt: "Do you want to come?",
+        hint: "veux-tu venir",
+        expectedAnswer: "veux-tu venir?",
+        acceptableAnswers: ["est-ce que tu veux venir?"],
+        wrongAnswers: [
+          {
+            answer: "viens-tu?",
+            feedback: "This needs vouloir! Try: veux-tu venir?",
+          },
+        ],
+      },
+      {
+        instruction: "Say what you want to come with",
+        prompt: "I want to come with that",
+        hint: "je veux venir + avec ça",
+        expectedAnswer: "je veux venir avec ça",
+        wrongAnswers: [
+          {
+            answer: "je viens avec ça",
+            feedback: "This needs vouloir! Try: je veux venir avec ça",
+          },
+        ],
+      },
+
+      // Phase 5: Composition with pouvoir (from previous modules)
+      {
+        instruction: "Ask if someone can come",
+        prompt: "Can you come?",
+        hint: "peux-tu venir",
+        expectedAnswer: "peux-tu venir?",
+        acceptableAnswers: ["est-ce que tu peux venir?"],
+        wrongAnswers: [
+          {
+            answer: "viens-tu?",
+            feedback: "This needs pouvoir! Try: peux-tu venir?",
+          },
+        ],
+      },
+      {
+        instruction: "Say what you can come",
+        prompt: "I can come with that",
+        hint: "je peux venir + avec ça",
+        expectedAnswer: "je peux venir avec ça",
+        wrongAnswers: [
+          {
+            answer: "je viens avec ça",
+            feedback: "This needs pouvoir! Try: je peux venir avec ça",
+          },
+        ],
+      },
+
+      // Phase 6: Composition with voir (from previous modules)
+      {
+        instruction: "Say what you come to see",
+        prompt: "I come to see that",
+        hint: "je viens voir + ça",
+        expectedAnswer: "je viens voir ça",
+        wrongAnswers: [
+          {
+            answer: "je viens voir de ça",
+            feedback: "No 'de' needed here! Try: je viens voir ça",
+          },
+        ],
+      },
+      {
+        instruction: "Ask what someone comes to see",
+        prompt: "What do you come to see?",
+        hint: "qu'est-ce que tu viens voir",
+        expectedAnswer: "qu'est-ce que tu viens voir?",
+        wrongAnswers: [
+          {
+            answer: "qu'est-ce que tu vois?",
+            feedback: "This needs venir! Try: qu'est-ce que tu viens voir?",
+          },
+        ],
       },
     ],
   },
