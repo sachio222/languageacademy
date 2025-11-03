@@ -259,18 +259,20 @@ export const pouvoirModule = {
       },
       {
         instruction: "Say what she can be",
-        prompt: "She can be a woman",
-        hint: "Use 'pouvoir' in the present for 'elle' + infinitive 'être' + 'a woman'.",
-        expectedAnswer: "elle peut être une femme",
+        prompt: "She can be an artist",
+        hint: "Use 'pouvoir' in the present for 'elle' + infinitive 'être' + a profession.",
+        expectedAnswer: "elle peut être artiste",
+        acceptableAnswers: ["elle peut être une artiste"],
         wrongAnswers: [
           {
-            answer: "elle est une femme",
-            feedback: "This needs pouvoir! Try: elle peut être une femme",
+            answer: "elle est artiste",
+            feedback:
+              "The English says 'can be', so you need 'pouvoir' + infinitive: elle peut être artiste.",
           },
           {
-            answer: "elle peux être une femme",
+            answer: "elle peut être un artiste",
             feedback:
-              "Elle takes 'peut', not 'peux'. Remember: elle peut, il peut.",
+              "In French you usually drop the article with professions, and for 'she' you’d say 'une artiste' if you use an article at all.",
           },
         ],
       },
