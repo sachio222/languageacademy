@@ -1319,9 +1319,16 @@ body:has(.left-nav.collapsed) .app-footer {
 /* Lesson Content */
 .lesson-content {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr minmax(auto, 300px);
   gap: 0;
   min-height: 600px;
+}
+
+/* Shrink grid when sidebar is collapsed (desktop only) */
+@media (min-width: 969px) {
+  .lesson-content:has(.right-pane.sidebar-collapsed) {
+    grid-template-columns: 1fr minmax(auto, 100px);
+  }
 }
 
 .left-pane {
@@ -1335,6 +1342,12 @@ body:has(.left-nav.collapsed) .app-footer {
   overflow-y: auto;
   max-height: calc(100vh);
   padding: 0rem;
+}
+
+/* Collapsed state - make it narrow */
+.right-pane.sidebar-collapsed {
+  max-width: 100px;
+  width: auto;
 }
 
 /* Concept Pane */
@@ -1402,6 +1415,7 @@ body:has(.left-nav.collapsed) .app-footer {
   font-weight: 600;
   letter-spacing: -0.01em;
   flex: 1;
+  max-width: calc(100% - 24px - 0.75rem);
 }
 
 .concept-item .concept-check {
@@ -2322,6 +2336,14 @@ body:has(.left-nav.collapsed) .navigation-buttons {
     max-height: none;
     overflow-y: visible;
     order: 2;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* On mobile, collapsed sidebar should still be full width but compact */
+  .right-pane.sidebar-collapsed {
+    max-width: 100%;
+    width: 100%;
   }
 
   .concept-item {

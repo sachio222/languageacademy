@@ -3,6 +3,103 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  padding-top: 3.5rem; /* Space for close button */
+}
+
+/* Remove top padding when tabs are present (tabs handle their own spacing) */
+.right-sidebar:has(.sidebar-tabs) {
+  padding-top: 0;
+}
+
+/* Collapsed state - centered vertically */
+.right-sidebar-collapsed {
+  justify-content: center;
+  align-items: center;
+  margin-top: -5rem;
+  padding: 1rem 0.5rem;
+  padding-top: 1rem;
+  width: 100%;
+  max-width: 100px;
+}
+
+/* Help Toggle Button - Clean & Minimal */
+.help-toggle-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  width: auto;
+}
+
+.help-toggle-button:hover {
+  background: #fafbfc;
+}
+
+.help-toggle-button:active {
+  background: #f7f9fc;
+}
+
+.help-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  line-height: 1;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.help-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #665665;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+/* Close Button */
+.help-close-button {
+  position: absolute;
+  top: calc(0.75rem + 0.625rem + 0.4375rem);
+  right: 0.75rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: #999999;
+  transition: all 0.15s ease;
+  z-index: 20;
+  padding: 0;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.help-close-button:hover {
+  background: #fafbfc;
+  color: #665665;
+}
+
+.help-close-button:active {
+  background: #f7f9fc;
 }
 
 /* Tab Navigation - Segmented Control Style (matching LeftNav) */
@@ -10,6 +107,7 @@
   display: flex;
   gap: 0.5rem;
   padding: 0.75rem;
+  padding-right: 3.5rem; /* Space for close button */
   background: #f8fafc;
   border-bottom: 1px solid #e2e8f0;
   position: sticky;
@@ -89,8 +187,49 @@
     height: auto;
   }
 
+  .right-sidebar-collapsed {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border-top: 1px solid #e2e8f0;
+    background: #fafbfc;
+  }
+
+  .help-toggle-button {
+    padding: 0.75rem 1rem;
+    flex-direction: row;
+    gap: 0.75rem;
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  .help-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.375rem;
+    flex-shrink: 0;
+  }
+
+  .help-text {
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  .help-close-button {
+    top: 0.625rem;
+    right: 0.625rem;
+    width: 26px;
+    height: 26px;
+    font-size: 1.125rem;
+  }
+
   .sidebar-tabs {
     padding: 0.5rem 0.75rem;
+    padding-right: 3rem; /* Space for close button on mobile */
     gap: 0.375rem;
     background: #f8fafc;
     border-bottom: 1px solid #e2e8f0;
