@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SpeakButton from './SpeakButton';
 import { detectLanguage } from '../hooks/useSpeech';
 import { usePageTime } from '../hooks/usePageTime';
@@ -7,8 +7,8 @@ import { usePageTime } from '../hooks/usePageTime';
  * Study Mode - Learn before you test
  * Flashcard-style learning with answers revealed
  */
-function StudyMode({ exercises, onFinishStudying }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, updateExerciseInUrl }) {
+  const [currentIndex, setCurrentIndex] = useState(currentExerciseIndex);
   const [isRevealed, setIsRevealed] = useState(false);
 
   // Track page time for study time analytics
@@ -32,13 +32,22 @@ function StudyMode({ exercises, onFinishStudying }) {
     );
   }
 
+  // Sync with URL parameter changes (for browser back/forward)
+  useEffect(() => {
+    setCurrentIndex(currentExerciseIndex);
+  }, [currentExerciseIndex]);
+
   const currentExercise = exercises[currentIndex];
   const progress = ((currentIndex + 1) / exercises.length) * 100;
 
   const handleNext = () => {
     if (currentIndex < exercises.length - 1) {
-      setCurrentIndex(currentIndex + 1);
+      const newIndex = currentIndex + 1;
+      setCurrentIndex(newIndex);
       setIsRevealed(false);
+      if (updateExerciseInUrl) {
+        updateExerciseInUrl(newIndex);
+      }
     } else {
       onFinishStudying();
     }
@@ -46,8 +55,12 @@ function StudyMode({ exercises, onFinishStudying }) {
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
+      const newIndex = currentIndex - 1;
+      setCurrentIndex(newIndex);
       setIsRevealed(false);
+      if (updateExerciseInUrl) {
+        updateExerciseInUrl(newIndex);
+      }
     }
   };
 

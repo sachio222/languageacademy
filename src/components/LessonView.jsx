@@ -697,6 +697,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           <StudyMode
             exercises={lesson.exercises}
             onFinishStudying={handleFinishStudying}
+            currentExerciseIndex={currentExerciseIndex}
+            updateExerciseInUrl={updateExerciseInUrl}
           />
         </div>
       ) : showSpeedMatch ? (

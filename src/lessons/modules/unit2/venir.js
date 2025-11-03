@@ -9,8 +9,7 @@ import { venirConjugations } from "../../vocabularyData.js";
 export const venirModule = {
   moduleKey: "2024-01-26-venir", // Permanent identifier - never changes
   title: "Essential Verb - venir (to come)",
-  description:
-    "Master arrival through active recall and composition practice!",
+  description: "Master arrival through active recall and composition practice!",
 
   concepts: [
     {
@@ -24,7 +23,8 @@ export const venirModule = {
       term: "Irregular Conjugation Pattern",
       definition:
         "Notice the pattern: je/tu both use 'viens', then il/elle use 'vient', nous uses 'venons', and ils/elles use 'viennent' with double 'n'!",
-      example: "je viens, tu viens, il vient, nous venons, vous venez, ils viennent",
+      example:
+        "je viens, tu viens, il vient, nous venons, vous venez, ils viennent",
     },
     {
       term: "Composition Power",
@@ -74,12 +74,13 @@ export const venirModule = {
       {
         instruction: "Say what you do",
         prompt: "I come",
-        hint: "je viens",
+        hint: "Conjugate 'venir' in the present for 'je'.",
         expectedAnswer: "je viens",
         wrongAnswers: [
           {
             answer: "je vient",
-            feedback: "Je takes 'viens', not 'vient'. Remember: je viens, il vient",
+            feedback:
+              "Je takes 'viens', not 'vient'. Remember: je viens, il vient",
           },
           {
             answer: "tu viens",
@@ -90,31 +91,33 @@ export const venirModule = {
       {
         instruction: "Say what you do",
         prompt: "you come (informal)",
-        hint: "tu viens",
+        hint: "Conjugate 'venir' in the present for 'tu'.",
         expectedAnswer: "tu viens",
         wrongAnswers: [
           {
             answer: "tu vient",
-            feedback: "Tu takes 'viens', not 'vient'. Pattern: je viens, tu viens",
+            feedback:
+              "Tu takes 'viens', not 'vient'. Pattern: je viens, tu viens",
           },
         ],
       },
       {
         instruction: "Say what he does",
         prompt: "he comes",
-        hint: "il vient",
+        hint: "Conjugate 'venir' in the present for 'il'.",
         expectedAnswer: "il vient",
         wrongAnswers: [
           {
             answer: "il viens",
-            feedback: "Il takes 'vient', not 'viens'. Remember: il vient, elle vient",
+            feedback:
+              "Il takes 'vient', not 'viens'. Remember: il vient, elle vient",
           },
         ],
       },
       {
         instruction: "Say what she does",
         prompt: "she comes",
-        hint: "elle vient",
+        hint: "Conjugate 'venir' in the present for 'elle'.",
         expectedAnswer: "elle vient",
         wrongAnswers: [
           {
@@ -126,7 +129,7 @@ export const venirModule = {
       {
         instruction: "Say what we do",
         prompt: "we come",
-        hint: "nous venons",
+        hint: "Conjugate 'venir' in the present for 'nous' (regular -ons ending).",
         expectedAnswer: "nous venons",
         wrongAnswers: [
           {
@@ -142,7 +145,7 @@ export const venirModule = {
       {
         instruction: "Say what you do (formal)",
         prompt: "you come (formal)",
-        hint: "vous venez",
+        hint: "Conjugate 'venir' in the present for 'vous' (regular -ez ending).",
         expectedAnswer: "vous venez",
         wrongAnswers: [
           {
@@ -158,7 +161,7 @@ export const venirModule = {
       {
         instruction: "Say what they do (masculine)",
         prompt: "they come (masculine)",
-        hint: "ils viennent",
+        hint: "Conjugate 'venir' in the present for 'ils' with double 'n'.",
         expectedAnswer: "ils viennent",
         wrongAnswers: [
           {
@@ -174,7 +177,7 @@ export const venirModule = {
       {
         instruction: "Say what they do (feminine)",
         prompt: "they come (feminine)",
-        hint: "elles viennent",
+        hint: "Conjugate 'venir' in the present for 'elles' with double 'n'.",
         expectedAnswer: "elles viennent",
         wrongAnswers: [
           {
@@ -190,9 +193,9 @@ export const venirModule = {
 
       // Phase 2: Simple compositions with ça and prepositions (from previous modules)
       {
-        instruction: "Say what you do with that",
-        prompt: "I come with that",
-        hint: "je viens + avec ça",
+        instruction: "Say that you are coming with that",
+        prompt: "I am coming with it",
+        hint: "Start with 'I come' in French, then add 'with that'.",
         expectedAnswer: "je viens avec ça",
         wrongAnswers: [
           {
@@ -203,34 +206,36 @@ export const venirModule = {
         ],
       },
       {
-        instruction: "Say what you come from",
-        prompt: "I come from there",
-        hint: "je viens de là",
-        expectedAnswer: "je viens de là",
-        acceptableAnswers: ["je viens de là-bas"],
+        instruction: "Say where you are coming from",
+        prompt: "I am coming from my house",
+        hint: "Start with 'I come from' in French, then add 'my house'.",
+        expectedAnswer: "je viens de chez moi",
+        acceptableAnswers: ["je viens de ma maison"],
         wrongAnswers: [
           {
-            answer: "je vient de là",
-            feedback: "Je takes 'viens', not 'vient'. Remember: je viens",
+            answer: "je vient de chez moi",
+            feedback:
+              "Je takes 'viens', not 'vient'. Remember: je viens, il vient.",
           },
         ],
       },
       {
-        instruction: "Say what he does with that",
-        prompt: "He comes with that",
-        hint: "il vient + avec ça",
-        expectedAnswer: "il vient avec ça",
+        instruction: "Say what he does with her cat",
+        prompt: "He is coming with her cat",
+        hint: "Start with 'he comes' in French, then add 'with her cat'.",
+        expectedAnswer: "il vient avec son chat",
         wrongAnswers: [
           {
-            answer: "il viens avec ça",
-            feedback: "Il takes 'vient', not 'viens'. Remember: il vient, elle vient",
+            answer: "il viens avec son chat",
+            feedback:
+              "Il takes 'vient', not 'viens'. Remember: il vient, elle vient",
           },
         ],
       },
       {
         instruction: "Say what we are doing",
-        prompt: "We come with you",
-        hint: "nous venons + avec vous",
+        prompt: "We are coming with you",
+        hint: "Start with 'we come' in French, then add 'with you'.",
         expectedAnswer: "nous venons avec vous",
         wrongAnswers: [
           {
@@ -244,7 +249,7 @@ export const venirModule = {
       {
         instruction: "Ask who is coming",
         prompt: "Who is coming?",
-        hint: "qui vient",
+        hint: "Use 'qui' as the subject and conjugate 'venir' like 'il/elle'.",
         expectedAnswer: "qui vient?",
         acceptableAnswers: ["qui est-ce qui vient?"],
         wrongAnswers: [
@@ -257,7 +262,7 @@ export const venirModule = {
       {
         instruction: "Ask where someone is coming from",
         prompt: "Where do you come from?",
-        hint: "d'où viens-tu",
+        hint: "Use 'd'où' (from where) and conjugate 'venir' for 'tu'.",
         expectedAnswer: "d'où viens-tu?",
         acceptableAnswers: ["d'où est-ce que tu viens?"],
         wrongAnswers: [
@@ -270,9 +275,12 @@ export const venirModule = {
       {
         instruction: "Ask what someone comes with",
         prompt: "What do you come with?",
-        hint: "avec quoi viens-tu",
+        hint: "Use 'avec quoi' (with what) and conjugate 'venir' for 'tu'.",
         expectedAnswer: "avec quoi viens-tu?",
-        acceptableAnswers: ["avec quoi est-ce que tu viens?", "tu viens avec quoi?"],
+        acceptableAnswers: [
+          "avec quoi est-ce que tu viens?",
+          "tu viens avec quoi?",
+        ],
         wrongAnswers: [
           {
             answer: "quoi viens-tu?",
@@ -285,7 +293,7 @@ export const venirModule = {
       {
         instruction: "Say what you want to come",
         prompt: "I want to come",
-        hint: "je veux venir",
+        hint: "Use 'vouloir' in the present for 'je' + infinitive 'venir'.",
         expectedAnswer: "je veux venir",
         wrongAnswers: [
           {
@@ -297,7 +305,7 @@ export const venirModule = {
       {
         instruction: "Ask if someone wants to come",
         prompt: "Do you want to come?",
-        hint: "veux-tu venir",
+        hint: "Turn 'you want to come' into a yes/no question with 'tu' and 'venir'.",
         expectedAnswer: "veux-tu venir?",
         acceptableAnswers: ["est-ce que tu veux venir?"],
         wrongAnswers: [
@@ -310,7 +318,7 @@ export const venirModule = {
       {
         instruction: "Say what you want to come with",
         prompt: "I want to come with that",
-        hint: "je veux venir + avec ça",
+        hint: "Use 'vouloir' in the present for 'je' + infinitive 'venir' + 'with that'.",
         expectedAnswer: "je veux venir avec ça",
         wrongAnswers: [
           {
@@ -324,7 +332,7 @@ export const venirModule = {
       {
         instruction: "Ask if someone can come",
         prompt: "Can you come?",
-        hint: "peux-tu venir",
+        hint: "Use 'pouvoir' in the present for 'tu' + infinitive 'venir' and make it a question.",
         expectedAnswer: "peux-tu venir?",
         acceptableAnswers: ["est-ce que tu peux venir?"],
         wrongAnswers: [
@@ -335,14 +343,14 @@ export const venirModule = {
         ],
       },
       {
-        instruction: "Say what you can come",
-        prompt: "I can come with that",
-        hint: "je peux venir + avec ça",
-        expectedAnswer: "je peux venir avec ça",
+        instruction: "Say what you can do",
+        prompt: "I can come to the hotel",
+        hint: "Use 'pouvoir' in the present for 'je' + infinitive 'venir' + 'to the hotel'.",
+        expectedAnswer: "je peux venir à l'hôtel",
         wrongAnswers: [
           {
-            answer: "je viens avec ça",
-            feedback: "This needs pouvoir! Try: je peux venir avec ça",
+            answer: "je viens à l'hôtel",
+            feedback: "This needs pouvoir! Try: je peux venir à l'hôtel",
           },
         ],
       },
@@ -350,25 +358,27 @@ export const venirModule = {
       // Phase 6: Composition with voir (from previous modules)
       {
         instruction: "Say what you come to see",
-        prompt: "I come to see that",
-        hint: "je viens voir + ça",
-        expectedAnswer: "je viens voir ça",
+        prompt: "I am coming to see you",
+        hint: "Use 'venir' in the present for 'je' + infinitive 'voir' + 'you'.",
+        expectedAnswer: "je viens te voir",
+        acceptableAnswers: ["je viens vous voir"],
         wrongAnswers: [
           {
-            answer: "je viens voir de ça",
-            feedback: "No 'de' needed here! Try: je viens voir ça",
+            answer: "je viens voir toi",
+            feedback: "Use the pronoun before the verb: je viens te voir.",
           },
         ],
       },
       {
-        instruction: "Ask what someone comes to see",
-        prompt: "What do you come to see?",
-        hint: "qu'est-ce que tu viens voir",
-        expectedAnswer: "qu'est-ce que tu viens voir?",
+        instruction: "Ask why someone came to you",
+        prompt: "Why did you come to me?",
+        hint: "Use 'pourquoi' to ask 'why' and 'venir' in the past (passé composé) for 'tu' plus 'to me'.",
+        expectedAnswer: "pourquoi es-tu venu vers moi?",
         wrongAnswers: [
           {
-            answer: "qu'est-ce que tu vois?",
-            feedback: "This needs venir! Try: qu'est-ce que tu viens voir?",
+            answer: "pourquoi tu viens vers moi?",
+            feedback:
+              "Use the past for 'did come' with 'venir': pourquoi es-tu venu vers moi?",
           },
         ],
       },
