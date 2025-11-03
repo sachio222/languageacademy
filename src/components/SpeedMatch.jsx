@@ -54,7 +54,8 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   const [timer, setTimer] = useState(GAME_CONFIG.TIMER_DURATION);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [autoAdvance, setAutoAdvance] = useState(true);
-  const [difficulty, setDifficulty] = useState('medium'); // easy, medium, hard
+  const [showDecimal, setShowDecimal] = useState(false);
+  const [difficulty, setDifficulty] = useState('medium'); // none, easy, medium, hard
 
   // Track page time for study time analytics
   const pageId = `speedmatch-${vocabulary.length}-words`;
@@ -102,13 +103,17 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
     switch (difficulty) {
       case 'easy': return 5000; // 5 seconds
       case 'hard': return 2000; // 2 seconds
+      case 'none': return null; // No time limit
       default: return GAME_CONFIG.TIMER_DURATION; // 3 seconds (medium)
     }
   };
 
+  const hasTimeLimit = difficulty !== 'none';
+
   // Start the actual test after preview
   const startTest = () => {
-    setTimer(getTimerDuration());
+    const duration = getTimerDuration();
+    setTimer(duration !== null ? duration : 0);
     setAnswerOptions(generateNewOptions());
     setGameState(GAME_STATES.PLAYING);
   };
@@ -116,6 +121,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   // Timer countdown
   useEffect(() => {
     if (gameState !== GAME_STATES.PLAYING) return;
+    if (!hasTimeLimit) return; // Skip timer countdown if no time limit
 
     if (timer > 0) {
       const timeout = setTimeout(() => setTimer(timer - GAME_CONFIG.TIMER_INTERVAL), GAME_CONFIG.TIMER_INTERVAL);
@@ -129,7 +135,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
         setTimeout(() => nextQuestion(), GAME_CONFIG.AUTO_ADVANCE_DELAY);
       }
     }
-  }, [timer, gameState, answers, autoAdvance]);
+  }, [timer, gameState, answers, autoAdvance, hasTimeLimit]);
 
   // Handle answer selection
   const handleAnswer = (option) => {
@@ -167,15 +173,26 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
 
   const getTimerClass = () => {
     let classes = "speed-match-timer-number";
-    if (timer === 0) classes += " timer-danger";
+    if (!hasTimeLimit) classes += " timer-no-limit";
+    else if (timer === 0) classes += " timer-danger";
     else if (timer <= 1000) classes += " timer-warning"; // Last 1 second
     else classes += " timer-normal";
-    if (timer > 0) classes += " pulse";
+    if (timer > 0 && hasTimeLimit) classes += " pulse";
     return classes;
   };
 
   const formatTimer = () => {
-    const seconds = Math.floor(timer / 1000);
+    if (!hasTimeLimit) {
+      return null;
+    }
+    // When showing only seconds, use Math.ceil so it shows the same number for a full second
+    // e.g., 3000ms -> 3, 2999ms -> 3, 2001ms -> 3, 2000ms -> 2
+    const seconds = showDecimal
+      ? Math.floor(timer / 1000)
+      : Math.ceil(timer / 1000);
+    if (!showDecimal) {
+      return <span className="speed-match-timer-integer">{seconds}</span>;
+    }
     const hundredths = Math.floor((timer % 1000) / 10);
     return (
       <>
@@ -228,25 +245,35 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
         <button className="btn-back-to-study btn-skip" onClick={() => window.history.back()}>
           ← Back to Study Mode
         </button>
-        <button className="btn-skip" onClick={onFinish}>
-          Skip Speed Match →
-        </button>
+        {(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
+          <div className="speed-match-intro-center">
+            <div className="speed-match-stars">
+              {renderStars()}
+            </div>
+            <div className="speed-match-progress">
+              {score} / {currentIndex + 1}
+            </div>
+          </div>
+        )}
+        <div className="speed-match-intro-right">
+          <button className="btn-skip" onClick={onFinish}>
+            Skip Speed Match →
+          </button>
+        </div>
+        {gameState !== GAME_STATES.FINISHED && (
+          <button
+            onClick={restartGame}
+            className="speed-match-restart btn-skip"
+            title="Restart Game"
+          >
+            <RotateCcw size={16} /> Restart round
+          </button>
+        )}
       </div>
       <div className="speed-match-content">
         {/* Ready Screen */}
         {gameState === GAME_STATES.READY && (
           <div className="speed-match-ready study-header">
-
-
-            <div className="speed-match-header">
-              <div className="speed-match-stars">
-                {renderStars()}
-              </div>
-              <div className="speed-match-progress">
-                0 / {vocabulary.length}
-              </div>
-            </div>
-
             <h3>⚡️ Speed Match</h3>
             <p>Quick-Fire Matching Challenge</p>
             <div className="speed-match-instructions">
@@ -292,6 +319,16 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
                     />
                     <span className="difficulty-label">Hard - 2 seconds</span>
                   </label>
+                  <label className="difficulty-option">
+                    <input
+                      type="radio"
+                      name="difficulty"
+                      value="none"
+                      checked={difficulty === 'none'}
+                      onChange={(e) => setDifficulty(e.target.value)}
+                    />
+                    <span className="difficulty-label">No time limit</span>
+                  </label>
                 </div>
               </div>
 
@@ -316,34 +353,6 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
         {/* Preview Screen - Show word before test */}
         {gameState === GAME_STATES.PREVIEW && (
           <div className="speed-match-preview">
-            {/* <div className="speed-match-intro">
-              <button className="btn-back-to-study" onClick={() => window.history.back()}>
-                ← Back to Study Mode
-              </button>
-              <button className="btn-skip" onClick={onFinish}>
-                Skip Speed Match →
-              </button>
-            </div> */}
-
-            <div className="speed-match-header">
-              <button
-                onClick={restartGame}
-                className="speed-match-restart"
-                title="Restart Game"
-              >
-                <RotateCcw size={16} /> Restart
-              </button>
-              <div className="speed-match-header-center">
-                <div className="speed-match-stars">
-                  {renderStars()}
-                </div>
-                <div className="speed-match-progress">
-                  {score} / {currentIndex + 1}
-                </div>
-              </div>
-              <div></div>
-            </div>
-
             <div className="speed-match-word-card">
               <div className="speed-match-word-label">
                 Speed match
@@ -364,54 +373,31 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
         {/* Playing Screen */}
         {isPlayingState && (
           <div className="speed-match-playing">
-            {/* <div className="speed-match-intro">
-              <button className="btn-back-to-study" onClick={() => window.history.back()}>
-                ← Back to Study Mode
-              </button>
-              <button className="btn-skip" onClick={onFinish}>
-                Skip Speed Match →
-              </button>
-            </div> */}
-
-            {/* Header */}
-            <div className="speed-match-header">
-              <button
-                onClick={restartGame}
-                className="speed-match-restart"
-                title="Restart Game"
-              >
-                <RotateCcw size={16} /> Restart
-              </button>
-              <div className="speed-match-header-center">
-                <div className="speed-match-stars">
-                  {renderStars()}
-                </div>
-                <div className="speed-match-progress">
-                  {score} / {currentIndex + 1}
-                </div>
-              </div>
-              <div></div>
-            </div>
-
             {/* Timer / Feedback */}
             <div className="speed-match-timer">
               {gameState === GAME_STATES.PLAYING ? (
-                <div className={getTimerClass()}>
-                  {formatTimer()}
-                </div>
+                hasTimeLimit ? (
+                  <div className={getTimerClass()}>
+                    {formatTimer()}
+                  </div>
+                ) : null
               ) : gameState === GAME_STATES.CORRECT ? (
                 <div className="speed-match-feedback-correct">
                   Correct!
-                  <div className="speed-match-time">
-                    {formatTimer()}
-                  </div>
+                  {hasTimeLimit && (
+                    <div className="speed-match-time">
+                      {formatTimer()}
+                    </div>
+                  )}
                 </div>
               ) : gameState === GAME_STATES.WRONG ? (
                 <div className="speed-match-feedback-wrong">
                   Incorrect
-                  <div className="speed-match-time">
-                    {formatTimer()}
-                  </div>
+                  {hasTimeLimit && (
+                    <div className="speed-match-time">
+                      {formatTimer()}
+                    </div>
+                  )}
                 </div>
               ) : gameState === GAME_STATES.TIMEUP ? (
                 <div className="speed-match-feedback-wrong">
@@ -452,7 +438,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
               (gameState === GAME_STATES.WRONG)) && (
                 <div className="speed-match-continue">
                   <button onClick={nextQuestion} className="speed-match-button">
-                    {gameState === GAME_STATES.WRONG ? "Understood" : "Continue"}
+                    {gameState === GAME_STATES.WRONG ? "Got it" : "Continue"}
                   </button>
                 </div>
               )}
