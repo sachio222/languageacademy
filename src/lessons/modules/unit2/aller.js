@@ -16,19 +16,20 @@ export const allerModule = {
     {
       term: "aller = to go",
       definition:
-        "Completely irregular verb - one of the most common in French!",
+        "Completely irregular verb - one of the most common in French! Essential for talking about movement and future plans. ",
       example:
-        "Used constantly! Essential for talking about movement and future plans",
+        "'I am going in the house' (Je vais dans la maison), 'I am going to eat' (Je vais manger)",
     },
     {
       term: "Irregular Conjugation",
-      definition: "Every form is different - must memorize each one!",
+      definition:
+        "Every form is different - but it shouldn't be too hard to remember!",
       example: "je vais, tu vas, il va, nous allons, vous allez, ils vont",
     },
     {
       term: "Composition Power",
       definition:
-        "Combine aller with previous modules for infinite expressions",
+        "Combine aller with previous modules for infinite expressions. For example, to say 'I am going to leave' you can say 'je vais partir'.",
       example: "je vais + ça, nous allons + être, ils vont + avoir",
     },
   ],
@@ -190,25 +191,29 @@ export const allerModule = {
       // Phase 2: Simple compositions with ça (from previous modules)
       {
         instruction: "Say what you do with that",
-        prompt: "I go with that",
-        hint: "je vais + avec ça",
-        expectedAnswer: "je vais avec ça",
+        prompt: "I am going with them",
+        hint: "je vais + avec eux",
+        expectedAnswer: "je vais avec eux",
+        acceptableAnswers: ["je vais avec eux?", "je vais avec elles?"],
         wrongAnswers: [
           {
-            answer: "je va avec ça",
-            feedback: "Je takes 'vais', not 'va'. Remember: je vais, il va",
+            answer: "je va avec eux",
+            feedback:
+              "Je takes 'vais', not 'va'. Remember: je vais, elles vont",
           },
         ],
       },
       {
-        instruction: "Ask what someone does with that",
-        prompt: "What do you go with?",
-        hint: "qu'est-ce que tu vas avec",
-        expectedAnswer: "qu'est-ce que tu vas avec?",
+        instruction: "Ask what someone goes with",
+        prompt: "What are you going with?",
+        hint: "tu vas avec quoi",
+        expectedAnswer: "tu vas avec quoi?",
+        acceptableAnswers: ["avec quoi tu vas?", "tu vas avec quoi ?"],
         wrongAnswers: [
           {
             answer: "que vas-tu avec?",
-            feedback: "More common: qu'est-ce que tu vas avec?",
+            feedback:
+              "In French you pull 'avec' up: tu vas avec quoi ? / avec quoi tu vas ?",
           },
         ],
       },
@@ -225,13 +230,13 @@ export const allerModule = {
         ],
       },
       {
-        instruction: "Say what we do with that",
-        prompt: "We go with that",
-        hint: "nous allons + avec ça",
-        expectedAnswer: "nous allons avec ça",
+        instruction: "Say what we are doing with transport",
+        prompt: "We are going with my car",
+        hint: "nous allons avec ma voiture",
+        expectedAnswer: "nous allons avec ma voiture",
         wrongAnswers: [
           {
-            answer: "nous vais avec ça",
+            answer: "nous vais avec ma voiture",
             feedback: "Nous takes 'allons', not 'vais'. Completely different!",
           },
         ],
@@ -239,26 +244,31 @@ export const allerModule = {
 
       // Phase 3: Composition with vouloir (from previous modules)
       {
-        instruction: "Ask what someone wants to go",
-        prompt: "What do you want to go?",
-        hint: "qu'est-ce que tu veux aller",
-        expectedAnswer: "qu'est-ce que tu veux aller?",
+        instruction: "Ask who someone wants to go",
+        prompt: "Who do you want to go?",
+        hint: "who + question maker + you + want + to go",
+        expectedAnswer: "qui est-ce que tu veux aller?",
+        acceptableAnswers: [
+          "qui est-ce que tu veux aller?",
+          "qui veux-tu aller?",
+        ],
         wrongAnswers: [
           {
             answer: "que vas-tu?",
-            feedback: "This needs vouloir! Try: qu'est-ce que tu veux aller?",
+            feedback:
+              "This needs vouloir and 'who'! Try: qui est-ce que tu veux aller?",
           },
         ],
       },
       {
         instruction: "Say what you want to go",
-        prompt: "I want to go with that",
-        hint: "je veux aller + avec ça",
-        expectedAnswer: "je veux aller avec ça",
+        prompt: "I want to go with her",
+        hint: "je veux aller + avec elle",
+        expectedAnswer: "je veux aller avec elle",
         wrongAnswers: [
           {
-            answer: "je vais avec ça",
-            feedback: "This needs vouloir! Try: je veux aller avec ça",
+            answer: "je vais avec elle",
+            feedback: "This needs vouloir! Try: je veux aller avec elle",
           },
         ],
       },
@@ -333,6 +343,10 @@ export const allerModule = {
         prompt: "What are you going to have?",
         hint: "qu'est-ce que tu vas avoir",
         expectedAnswer: "qu'est-ce que tu vas avoir?",
+        acceptableAnswers: [
+          "qu'est-ce que tu vas avoir?",
+          "qu'est-ce que tu as?",
+        ],
         wrongAnswers: [
           {
             answer: "qu'est-ce que tu as?",
