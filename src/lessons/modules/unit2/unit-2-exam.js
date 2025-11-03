@@ -257,6 +257,7 @@ export const unit2Exam = {
         prompt: "they (feminine) are at Ladurée",
         hint: "elles sont + chez + Ladurée (famous macaron shop)",
         expectedAnswer: "elles sont chez Ladurée",
+        acceptableAnswers: ["elles sont à Ladurée"],
         wrongAnswers: [
           {
             answer: "elles sont à Ladurée",
