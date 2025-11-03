@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react';
 import { useSoundEffects } from '../hooks/useSoundEffects';
+import './UnderstoodButton.css';
 
 /**
  * Reusable Understood button component with sound effect

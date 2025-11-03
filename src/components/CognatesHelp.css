@@ -205,37 +205,7 @@
   margin-top: 2rem;
 }
 
-.understood-btn {
-  background: transparent;
-  border: 2px solid #e0e0e0;
-  color: #665665;
-  padding: 0.75rem 1.5rem;
-  border-radius: 10px;
-  font-size: 1rem; /* Matches design principles: 16px */
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  letter-spacing: -0.01em;
-}
-
-.understood-btn:hover {
-  border-color: #15803d;
-  color: #15803d;
-  background: #f0fdf4;
-}
-
-.understood-btn.understood {
-  background: #f0fdf4;
-  border-color: #15803d;
-  color: #15803d;
-}
-
-.understood-btn.understood:hover {
-  background: #dcfce7;
-}
+/* Understood button styles moved to UnderstoodButton.css */
 
 /* Continue Button */
 .cognates-footer {
@@ -297,9 +267,7 @@
     font-size: 1.25rem;
   }
 
-  .understood-btn {
-    font-size: 1.125rem; /* Larger on mobile: 18px */
-  }
+  /* Mobile font size for understood-btn handled in UnderstoodButton.css */
 
   .cognates-grid {
     grid-template-columns: 1fr;

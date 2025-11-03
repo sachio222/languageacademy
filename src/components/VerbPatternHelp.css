@@ -703,10 +703,7 @@
     margin-top: 1rem;
   }
 
-  .section-understood .understood-btn {
-    padding: 0.5rem 0.875rem;
-    font-size: 1.0625rem; /* Larger on mobile: 17px */
-  }
+  /* Mobile font size for understood-btn handled in UnderstoodButton.css */
 }
 
 /* Section Understood Button */
@@ -718,35 +715,4 @@
   border-top: 1px solid #f0f0f0;
 }
 
-.section-understood .understood-btn {
-  background: transparent;
-  border: 1px solid #e0e0e0;
-  color: #665665;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: 1rem; /* Matches design principles: 16px */
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  letter-spacing: -0.01em;
-}
-
-.section-understood .understood-btn:hover {
-  border-color: #15803d;
-  color: #15803d;
-  background: #f7f9fc;
-}
-
-.section-understood .understood-btn.understood {
-  background: rgba(59, 246, 96, 0.1);
-  border-color: #76ba8f;
-  color: #15803d;
-}
-
-.section-understood .understood-btn.understood:hover {
-  background: rgba(59, 246, 96, 0.2);
-  border-color: #15803d;
-}
+/* Understood button styles moved to UnderstoodButton.css */

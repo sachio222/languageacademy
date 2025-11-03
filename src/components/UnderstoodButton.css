@@ -1,0 +1,40 @@
+.understood-btn {
+  background: transparent;
+  border: 2px solid #e0e0e0;
+  color: #665665;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.875rem; /* Smaller: 14px */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.understood-btn:hover {
+  border-color: #e0e0e0;
+  color: #665665;
+  background: #f7f9fc;
+}
+
+.understood-btn.understood {
+  background: #f0fdf4;
+  border-color: #15803d;
+  color: #15803d;
+}
+
+.understood-btn.understood:hover {
+  background: #dcfce7;
+  border-color: #15803d;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .understood-btn {
+    font-size: 0.9375rem; /* Mobile: 15px */
+  }
+}
+

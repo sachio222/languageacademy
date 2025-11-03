@@ -327,35 +327,10 @@
 }
 
 /* Understood Button */
+/* Understood button styles moved to UnderstoodButton.css */
 .understood-btn {
-  background: transparent;
-  border: 1px solid #e0e0e0;
-  color: #665665;
-  padding: 0.375rem 0.75rem;
-  border-radius: 8px;
-  font-size: 0.9375rem; /* Increased to match design principles: 15px */
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.15s ease;
   margin-top: 1rem;
   align-self: flex-end;
-}
-
-.understood-btn:hover {
-  border-color: #15803d;
-  color: #15803d;
-  background: #f7f9fc;
-}
-
-.understood-btn.understood {
-  background: rgba(59, 246, 96, 0.1);
-  border-color: #76ba8f;
-  color: #15803d;
-}
-
-.understood-btn.understood:hover {
-  background: rgba(59, 246, 96, 0.291);
-  border-color: #15803d;
 }
 
 /* Concepts Header with Progress */
@@ -513,9 +488,7 @@
 }
 
 @media (max-width: 768px) {
-  .understood-btn {
-    font-size: 1rem; /* Larger on mobile: 16px (matches design principles) */
-  }
+  /* Mobile font size for understood-btn handled in UnderstoodButton.css */
   .intro-container {
     padding: 0.5rem 0.25rem;
   }
