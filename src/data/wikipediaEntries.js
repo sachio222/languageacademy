@@ -176,7 +176,7 @@ export const wikipediaEntries = {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/320px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg",
     url: "https://en.wikipedia.org/wiki/Tuileries_Garden",
   },
-  "au Jardin des Tuileries": {
+  "Jardin des Tuileries": {
     name: "Jardin des Tuileries",
     description:
       "Historic public garden in Paris, created in 1564, located between the Louvre and Place de la Concorde",
@@ -200,7 +200,7 @@ export const wikipediaEntries = {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Palais_du_Luxembourg_October_21%2C_2010.jpg/960px-Palais_du_Luxembourg_October_21%2C_2010.jpg",
     url: "https://en.wikipedia.org/wiki/Luxembourg_Gardens",
   },
-  "au Jardin du Luxembourg": {
+  "Jardin du Luxembourg": {
     name: "Jardin du Luxembourg",
     description:
       "Second largest public park in Paris, created in 1612, featuring formal gardens, palace, and fountains",
