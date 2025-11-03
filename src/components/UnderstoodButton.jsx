@@ -6,7 +6,7 @@ import './UnderstoodButton.css';
  * Reusable Understood button component with sound effect
  * Handles the sound playback when marking as understood
  */
-function UnderstoodButton({ isUnderstood, onClick, className = '' }) {
+function UnderstoodButton({ isUnderstood, onClick, className = '', fullWidth = false }) {
   const { playPop } = useSoundEffects();
 
   const handleClick = (e) => {
@@ -22,7 +22,7 @@ function UnderstoodButton({ isUnderstood, onClick, className = '' }) {
 
   return (
     <button
-      className={`understood-btn ${isUnderstood ? 'understood' : ''} ${className}`.trim()}
+      className={`understood-btn ${isUnderstood ? 'understood' : ''} ${fullWidth ? 'full-width' : ''} ${className}`.trim()}
       onClick={handleClick}
     >
       {isUnderstood && <Check size={16} />}

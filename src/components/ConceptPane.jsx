@@ -117,6 +117,7 @@ function ConceptPane({ concepts, moduleId }) {
               <UnderstoodButton
                 isUnderstood={isUnderstood}
                 onClick={() => toggleUnderstood(idx)}
+                fullWidth={true}
               />
             </div>
           );

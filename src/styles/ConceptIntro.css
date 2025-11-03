@@ -333,6 +333,10 @@
   align-self: flex-end;
 }
 
+.understood-btn.full-width {
+  align-self: stretch;
+}
+
 /* Concepts Header with Progress */
 .concepts-header-content {
   display: flex;

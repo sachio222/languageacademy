@@ -1419,8 +1419,11 @@ body:has(.left-nav.collapsed) .app-footer {
 
 /* Understood button styles moved to UnderstoodButton.css */
 .concept-item .understood-btn {
-  margin-top: 0.75rem;
   align-self: flex-end;
+}
+
+.concept-item .understood-btn.full-width {
+  align-self: stretch;
 }
 
 .concept-definition {
