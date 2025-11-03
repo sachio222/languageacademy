@@ -234,14 +234,16 @@
 
 .vocabulary-summary-item {
   display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  padding: 0.875rem 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
   background: transparent;
-  border-radius: 0;
+  border-radius: 8px;
   border: none;
   border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.15s ease;
+  transition: all 0.15s ease;
+  cursor: pointer;
 }
 
 .vocabulary-summary-item:last-child {
@@ -249,7 +251,18 @@
 }
 
 .vocabulary-summary-item:hover {
-  background: #fafbfc;
+  background: #f7f9fc;
+}
+
+.clickable-row:active {
+  transform: scale(0.98);
+}
+
+.vocab-content {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex: 1;
 }
 
 .vocab-french {
@@ -258,6 +271,19 @@
   font-size: 1rem;
   letter-spacing: -0.015em;
   min-width: 120px;
+}
+
+.vocab-speak-btn-container {
+  flex-shrink: 0;
+}
+
+.vocab-speak-btn {
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.vocabulary-summary-item:hover .vocab-speak-btn {
+  opacity: 1;
 }
 
 /* Gender split coloring for masculine/feminine pairs */
@@ -290,7 +316,7 @@
 
 /* Modal Footer */
 .modal-footer {
-  padding: 2rem 3rem 3rem;
+  padding: 0rem 3rem 3rem;
   display: flex;
   gap: 0.75rem;
   flex-direction: column;
@@ -418,7 +444,11 @@
   }
 
   .vocabulary-summary-item {
-    padding: 0.75rem 0;
+    padding: 0.75rem 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .vocab-content {
     gap: 0.625rem;
   }
 
