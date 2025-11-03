@@ -86,7 +86,7 @@ function selectBestVoice(voices, language) {
  * Shows all vocabulary for current lesson
  */
 function VocabularyReference({ vocabulary, title }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   if (!vocabulary || vocabulary.length === 0) {
     return null;
