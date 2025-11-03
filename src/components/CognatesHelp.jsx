@@ -183,7 +183,7 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       <div className="cognates-container">
         <header className="cognates-header">
           <div className="module-prefix">Module {moduleId}</div>
-          <h1>Cognates - French and English Share Many Words</h1>
+          <h1>Words you might know already...</h1>
           <p className="cognates-subtitle">
             You might be surprised to learn that thousands of English words come from French!
             These similar words are called "cognates" and they can give you a huge head start in learning French.
