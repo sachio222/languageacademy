@@ -74,23 +74,6 @@
     justify-content: flex-end;
   }
 
-  .speed-match-intro .speed-match-restart.btn-skip {
-    order: 4;
-    position: fixed;
-    bottom: 2rem;
-    left: 1rem;
-    right: 1rem;
-    width: auto;
-    justify-content: center;
-    margin-top: 0;
-    padding: 0.625rem 1rem;
-    border: 1px solid #e0e0e0;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-  }
-
   .speed-match-intro .btn-skip,
   .speed-match-intro .btn-back-to-study {
     font-size: 0.875rem;
@@ -99,12 +82,6 @@
 
   .speed-match-intro .speed-match-restart.btn-skip {
     font-size: 0.875rem;
-  }
-
-  /* Add padding to bottom of content to prevent overlap */
-  .speed-match-content {
-    padding-top: 1rem;
-    padding-bottom: 5rem;
   }
 }
 
@@ -186,8 +163,7 @@
   cursor: pointer;
   transition: all 0.15s ease;
   margin-top: 0.75rem;
-  width: 100%;
-  display: block;
+  display: inline-block;
 }
 
 .speed-match-button-secondary:hover {
