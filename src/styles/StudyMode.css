@@ -50,6 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  max-height: 2.45rem;
 }
 
 .btn-skip-small:hover {
@@ -547,6 +548,12 @@
   .btn-skip,
   .btn-back-to-concepts {
     padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-skip-small {
+    padding: 0.25rem;
+    min-height: 2rem;
     font-size: 0.875rem;
   }
 
