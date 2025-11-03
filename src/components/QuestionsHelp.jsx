@@ -281,7 +281,7 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           <h2>Inversion: The Elegant Way</h2>
           <p className="section-intro">
             For formal situations, French flips the verb and subject with a hyphen.
-            It sounds sophisticated and is common in writing.
+            It is quite easy to do and is considered more sophisticated and is common in writing. Here is an example of how to do it:
           </p>
 
           <div className="inversion-demo">
