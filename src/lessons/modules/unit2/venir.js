@@ -270,6 +270,11 @@ export const venirModule = {
             answer: "où viens-tu?",
             feedback: "Need 'de' with 'où'! Try: d'où viens-tu?",
           },
+          {
+            answer: "d'où viens tu?",
+            feedback:
+              "In questions with inversion, you must use a hyphen: d'où viens-tu?",
+          },
         ],
       },
       {
@@ -286,6 +291,11 @@ export const venirModule = {
             answer: "quoi viens-tu?",
             feedback: "Need 'avec'! Try: avec quoi viens-tu?",
           },
+          {
+            answer: "avec quoi viens tu?",
+            feedback:
+              "In questions with inversion, you must use a hyphen: avec quoi viens-tu?",
+          },
         ],
       },
 
@@ -300,6 +310,11 @@ export const venirModule = {
             answer: "je viens",
             feedback: "This needs vouloir! Try: je veux venir",
           },
+          {
+            answer: "je veux viens",
+            feedback:
+              "When you use two verbs together in French, the second one usually stays in the infinitive. Here: je veux venir.",
+          },
         ],
       },
       {
@@ -313,6 +328,16 @@ export const venirModule = {
             answer: "viens-tu?",
             feedback: "This needs vouloir! Try: veux-tu venir?",
           },
+          {
+            answer: "veux tu venir?",
+            feedback:
+              "In questions with inversion, you must use a hyphen: veux-tu venir?",
+          },
+          {
+            answer: "veux-tu viens?",
+            feedback:
+              "When two verbs go together, the second one stays in the infinitive. Here: veux-tu venir?",
+          },
         ],
       },
       {
@@ -324,6 +349,11 @@ export const venirModule = {
           {
             answer: "je viens avec ça",
             feedback: "This needs vouloir! Try: je veux venir avec ça",
+          },
+          {
+            answer: "je veux viens avec ça",
+            feedback:
+              "When you chain two verbs, the second verb should be in the infinitive. Here: je veux venir avec ça.",
           },
         ],
       },
@@ -340,6 +370,16 @@ export const venirModule = {
             answer: "viens-tu?",
             feedback: "This needs pouvoir! Try: peux-tu venir?",
           },
+          {
+            answer: "peux tu venir?",
+            feedback:
+              "In questions with inversion, you must use a hyphen: peux-tu venir?",
+          },
+          {
+            answer: "peux-tu viens?",
+            feedback:
+              "In verb + verb combinations, the second verb stays in the infinitive. Here: peux-tu venir?",
+          },
         ],
       },
       {
@@ -351,6 +391,11 @@ export const venirModule = {
           {
             answer: "je viens à l'hôtel",
             feedback: "This needs pouvoir! Try: je peux venir à l'hôtel",
+          },
+          {
+            answer: "je peux viens à l'hôtel",
+            feedback:
+              "With two verbs together, keep the second one in the infinitive. Here: je peux venir à l'hôtel.",
           },
         ],
       },
@@ -367,18 +412,28 @@ export const venirModule = {
             answer: "je viens voir toi",
             feedback: "Use the pronoun before the verb: je viens te voir.",
           },
+          {
+            answer: "je viens te vois",
+            feedback:
+              "In verb + verb structures, the second verb is infinitive. Here: je viens te voir.",
+          },
         ],
       },
       {
-        instruction: "Ask why someone came to you",
-        prompt: "Why did you come to me?",
-        hint: "Use 'pourquoi' to ask 'why' and 'venir' in the past (passé composé) for 'tu' plus 'to me'.",
-        expectedAnswer: "pourquoi es-tu venu vers moi?",
+        instruction: "Ask why someone is coming to see you",
+        prompt: "Why are you coming to see me?",
+        hint: "Use 'pourquoi' to ask 'why' and 'venir' in the present for 'tu' plus 'to see me' (me voir).",
+        expectedAnswer: "pourquoi viens-tu me voir?",
         wrongAnswers: [
           {
-            answer: "pourquoi tu viens vers moi?",
+            answer: "pourquoi es-tu venu me voir?",
             feedback:
-              "Use the past for 'did come' with 'venir': pourquoi es-tu venu vers moi?",
+              "Use the present for 'are coming': pourquoi viens-tu me voir?",
+          },
+          {
+            answer: "pourquoi viens tu me voir?",
+            feedback:
+              "In questions with inversion, you must use a hyphen: pourquoi viens-tu me voir?",
           },
         ],
       },
