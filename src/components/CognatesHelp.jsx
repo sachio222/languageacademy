@@ -354,8 +354,8 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
         <section className="cognates-section">
           <div className="insight-box">
             <p>
-              <strong>Remember:</strong> Each noun has a gender, so you should remember them along with their gendered articles (un, une, le, la, les).
-              It's very awkward to skip it like in English, for example: "I want coffee".
+              <strong>Remember:</strong> Each noun has a gender, so remember them along with their gendered articles (un, une, le, la, les).
+              It's very awkward to skip the article like in English, for example: "I want coffee".
               <br></br><br></br>
               Instead, you must say, "I want <strong>a</strong> coffee", or "I want <strong>some</strong> coffee",
               and the articles you use must be gendered: Je veux <strong>un</strong> café, or Je veux <strong>du</strong> café.
