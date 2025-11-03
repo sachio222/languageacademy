@@ -10,6 +10,7 @@ import { vouloirModule } from "./vouloir.js";
 import { pouvoirModule } from "./pouvoir.js";
 import { voirModule } from "./voir.js";
 import { module6_questions } from "./questions.js";
+import { questionsHelpModule } from "./questions-help.js";
 import { stressedPronouns } from "./stressed-pronouns.js";
 import { prepositions } from "./prepositions.js";
 import { adjectives } from "./adjectives.js";
@@ -34,11 +35,12 @@ export const unit2Config = {
     pouvoirModule, // 16. Essential Verb - pouvoir (can)
     voirModule, // 17. Essential Verb - voir (to see)
     module6_questions, // 18. Questions - Where, What, How
-    stressedPronouns, // 19. Stressed Pronouns - moi, toi, lui
-    prepositions, // 20. Prepositions - Spatial & Relational Words
-    adjectives, // 21. Common Adjectives - Describing Things
-    reading2, // 22. Reading Comprehension 2
-    unit2Practice, // 23. Unit 2 Practice
-    unit2Exam, // 24. Unit 2 Final Exam
+    questionsHelpModule, // 19. Questions Help - How to Ask Questions
+    stressedPronouns, // 20. Stressed Pronouns - moi, toi, lui
+    prepositions, // 21. Prepositions - Spatial & Relational Words
+    adjectives, // 22. Common Adjectives - Describing Things
+    reading2, // 23. Reading Comprehension 2
+    unit2Practice, // 24. Unit 2 Practice
+    unit2Exam, // 25. Unit 2 Final Exam
   ],
 };

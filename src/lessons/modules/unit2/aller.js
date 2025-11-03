@@ -218,14 +218,14 @@ export const allerModule = {
         ],
       },
       {
-        instruction: "Say what he does with that",
-        prompt: "He goes with that",
-        hint: "il va + avec ça",
-        expectedAnswer: "il va avec ça",
+        instruction: "Say that he is going with you",
+        prompt: "He is going with me",
+        hint: "Use 'il va' plus 'avec moi'.",
+        expectedAnswer: "il va avec moi",
         wrongAnswers: [
           {
-            answer: "il vais avec ça",
-            feedback: "Il takes 'va', not 'vais'. Remember: il va, elle va",
+            answer: "il vais avec moi",
+            feedback: "Il takes 'va', not 'vais'. Remember: il va, elle va.",
           },
         ],
       },

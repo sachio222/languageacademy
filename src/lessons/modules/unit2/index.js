@@ -6,6 +6,7 @@ export { vouloirModule } from "./vouloir.js";
 export { pouvoirModule } from "./pouvoir.js";
 export { voirModule } from "./voir.js";
 export { module6_questions } from "./questions.js";
+export { questionsHelpModule } from "./questions-help.js";
 export { stressedPronouns } from "./stressed-pronouns.js";
 export { prepositions } from "./prepositions.js";
 export { adjectives } from "./adjectives.js";

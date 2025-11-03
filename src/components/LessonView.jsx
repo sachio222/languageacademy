@@ -14,6 +14,7 @@ import PhonicsView from './PhonicsView';
 import VerbPatternHelp from './VerbPatternHelp';
 import LiaisonHelp from './LiaisonHelp';
 import CognatesHelp from './CognatesHelp';
+import QuestionsHelp from './QuestionsHelp';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
@@ -623,6 +624,13 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           />
         ) : lesson.moduleKey?.includes('cognates-help') ? (
           <CognatesHelp
+            onComplete={handleNextModule}
+            moduleId={lesson.id}
+            lesson={lesson}
+            onModuleComplete={onModuleComplete}
+          />
+        ) : lesson.moduleKey?.includes('questions-help') ? (
+          <QuestionsHelp
             onComplete={handleNextModule}
             moduleId={lesson.id}
             lesson={lesson}
