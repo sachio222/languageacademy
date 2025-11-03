@@ -298,6 +298,7 @@ export const pouvoirModule = {
         prompt: "They can want a cat",
         hint: "Use 'pouvoir' in the present for 'ils' + infinitive 'vouloir' + 'a cat'.",
         expectedAnswer: "ils peuvent vouloir un chat",
+        acceptableAnswers: ["elles peuvent vouloir un chat"],
         wrongAnswers: [
           {
             answer: "ils veulent un chat",
