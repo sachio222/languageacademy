@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
+import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import './VerbPatternHelp.css';
 import { logger } from "../utils/logger";
@@ -269,16 +270,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
             </p>
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(0) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(0);
-              }}
-            >
-              {understoodSections.has(0) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(0)}
+              onClick={() => toggleUnderstood(0)}
+            />
           </div>
         </div>
 
@@ -445,16 +440,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
             </p>
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(1) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(1);
-              }}
-            >
-              {understoodSections.has(1) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(1)}
+              onClick={() => toggleUnderstood(1)}
+            />
           </div>
         </div>
 
@@ -558,16 +547,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
             </p>
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(2) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(2);
-              }}
-            >
-              {understoodSections.has(2) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(2)}
+              onClick={() => toggleUnderstood(2)}
+            />
           </div>
         </div>
 
@@ -676,16 +659,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
             </p>
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(3) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(3);
-              }}
-            >
-              {understoodSections.has(3) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(3)}
+              onClick={() => toggleUnderstood(3)}
+            />
           </div>
         </div>
 
@@ -779,16 +756,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
             </p>
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(4) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(4);
-              }}
-            >
-              {understoodSections.has(4) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(4)}
+              onClick={() => toggleUnderstood(4)}
+            />
           </div>
         </div>
 
@@ -865,16 +836,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
             </p>
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(5) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(5);
-              }}
-            >
-              {understoodSections.has(5) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(5)}
+              onClick={() => toggleUnderstood(5)}
+            />
           </div>
         </div>
 
@@ -938,16 +903,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
             </p>
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(7) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(7);
-              }}
-            >
-              {understoodSections.has(7) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(7)}
+              onClick={() => toggleUnderstood(7)}
+            />
           </div>
         </div>
 
@@ -992,16 +951,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
             </p>
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(8) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(8);
-              }}
-            >
-              {understoodSections.has(8) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(8)}
+              onClick={() => toggleUnderstood(8)}
+            />
           </div>
         </div>
 
@@ -1063,16 +1016,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
             </p>
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(6) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(6);
-              }}
-            >
-              {understoodSections.has(6) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(6)}
+              onClick={() => toggleUnderstood(6)}
+            />
           </div>
         </div>
 
@@ -1130,16 +1077,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
 
           </div>
           <div className="section-understood">
-            <button
-              className={`understood-btn ${understoodSections.has(9) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(9);
-              }}
-            >
-              {understoodSections.has(9) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(9)}
+              onClick={() => toggleUnderstood(9)}
+            />
           </div>
         </div>
       </div>

@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
+import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSpeech } from '../hooks/useSpeech';
-import { useSoundEffects } from '../hooks/useSoundEffects';
 import { getGenderFromFrench } from '../utils/genderSplitUtils';
 import './CognatesHelp.css';
 import { logger } from "../utils/logger";
@@ -14,7 +13,6 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
   const { speak } = useSpeech();
-  const { playPop } = useSoundEffects();
 
   // Define the cognates sections that can be marked as understood
   const cognatesSections = [
@@ -118,11 +116,6 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     const isCurrentlyUnderstood = understoodSections.has(sectionIndex);
     const newUnderstood = !isCurrentlyUnderstood;
 
-    // Play pop sound when marking as understood
-    if (newUnderstood) {
-      playPop();
-    }
-
     // Optimistic update
     setUnderstoodSections(prev => {
       const newSet = new Set(prev);
@@ -217,16 +210,10 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
 
           <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(0) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(0);
-              }}
-            >
-              {understoodSections.has(0) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(0)}
+              onClick={() => toggleUnderstood(0)}
+            />
           </div>
         </section>
 
@@ -264,16 +251,10 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
 
           <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(1) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(1);
-              }}
-            >
-              {understoodSections.has(1) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(1)}
+              onClick={() => toggleUnderstood(1)}
+            />
           </div>
         </section>
 
@@ -304,16 +285,10 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
 
           <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(2) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(2);
-              }}
-            >
-              {understoodSections.has(2) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(2)}
+              onClick={() => toggleUnderstood(2)}
+            />
           </div>
         </section>
 
@@ -344,16 +319,10 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
 
           <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(3) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(3);
-              }}
-            >
-              {understoodSections.has(3) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(3)}
+              onClick={() => toggleUnderstood(3)}
+            />
           </div>
         </section>
 

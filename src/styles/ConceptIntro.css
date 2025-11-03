@@ -333,7 +333,7 @@
   color: #665665;
   padding: 0.375rem 0.75rem;
   border-radius: 8px;
-  font-size: 0.75rem;
+  font-size: 0.9375rem; /* Increased to match design principles: 15px */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -513,6 +513,9 @@
 }
 
 @media (max-width: 768px) {
+  .understood-btn {
+    font-size: 1rem; /* Larger on mobile: 16px (matches design principles) */
+  }
   .intro-container {
     padding: 0.5rem 0.25rem;
   }

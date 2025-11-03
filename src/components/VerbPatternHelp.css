@@ -705,7 +705,7 @@
 
   .section-understood .understood-btn {
     padding: 0.5rem 0.875rem;
-    font-size: 0.8125rem;
+    font-size: 1.0625rem; /* Larger on mobile: 17px */
   }
 }
 
@@ -724,7 +724,7 @@
   color: #665665;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  font-size: 0.875rem;
+  font-size: 1rem; /* Matches design principles: 16px */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;

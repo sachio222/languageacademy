@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Check } from 'lucide-react';
+import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { logger } from "../utils/logger";
@@ -113,15 +114,10 @@ function ConceptPane({ concepts, moduleId }) {
                 <strong>Example</strong>
                 <code>{concept.example}</code>
               </div>
-              <button
-                className={`understood-btn ${isUnderstood ? 'understood' : ''}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleUnderstood(idx);
-                }}
-              >
-                Understood
-              </button>
+              <UnderstoodButton
+                isUnderstood={isUnderstood}
+                onClick={() => toggleUnderstood(idx)}
+              />
             </div>
           );
         })}

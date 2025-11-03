@@ -1,6 +1,7 @@
 import { useState, useEffect, Fragment } from 'react';
 import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
+import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { getTTSText } from '../utils/ttsUtils';
@@ -381,15 +382,10 @@ function ConceptIntro({ lesson, onStartStudying }) {
                           <strong>Example</strong>
                           <code>{concept.example}</code>
                         </div>
-                        <button
-                          className={`understood-btn ${isUnderstood ? 'understood' : ''}`}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleUnderstood(idx);
-                          }}
-                        >
-                          Understood
-                        </button>
+                        <UnderstoodButton
+                          isUnderstood={isUnderstood}
+                          onClick={() => toggleUnderstood(idx)}
+                        />
                       </div>
                     </div>
                   );

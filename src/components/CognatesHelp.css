@@ -211,7 +211,7 @@
   color: #665665;
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
-  font-size: 0.9375rem;
+  font-size: 1rem; /* Matches design principles: 16px */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -295,6 +295,10 @@
 
   .cognates-section h2 {
     font-size: 1.25rem;
+  }
+
+  .understood-btn {
+    font-size: 1.125rem; /* Larger on mobile: 18px */
   }
 
   .cognates-grid {

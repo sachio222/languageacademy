@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Check, X } from 'lucide-react';
 import SpeakButton from './SpeakButton';
+import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import './LiaisonHelp.css';
 import { logger } from "../utils/logger";
@@ -298,16 +299,10 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
 
           <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(0) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(0);
-              }}
-            >
-              {understoodSections.has(0) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(0)}
+              onClick={() => toggleUnderstood(0)}
+            />
           </div>
         </section>
 
@@ -375,16 +370,10 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
 
           <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(1) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(1);
-              }}
-            >
-              {understoodSections.has(1) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(1)}
+              onClick={() => toggleUnderstood(1)}
+            />
           </div>
         </section>
 
@@ -437,16 +426,10 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
 
           <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(1) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(1);
-              }}
-            >
-              {understoodSections.has(1) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(1)}
+              onClick={() => toggleUnderstood(1)}
+            />
           </div>
         </section>
 
@@ -508,16 +491,10 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
 
           <div className="section-footer">
-            <button
-              className={`understood-btn ${understoodSections.has(2) ? 'understood' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleUnderstood(2);
-              }}
-            >
-              {understoodSections.has(2) && <Check size={16} />}
-              Understood
-            </button>
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(2)}
+              onClick={() => toggleUnderstood(2)}
+            />
           </div>
         </section>
 

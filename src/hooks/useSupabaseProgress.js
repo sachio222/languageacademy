@@ -346,12 +346,17 @@ export const useSupabaseProgress = () => {
         if (understood) {
           const { error } = await supabaseClient
             .from(TABLES.CONCEPT_UNDERSTANDING)
-            .upsert({
-              user_id: supabaseUser.id,
-              module_id: moduleId,
-              concept_index: conceptIndex,
-              concept_term: conceptTerm,
-            })
+            .upsert(
+              {
+                user_id: supabaseUser.id,
+                module_id: moduleId,
+                concept_index: conceptIndex,
+                concept_term: conceptTerm,
+              },
+              {
+                onConflict: "user_id,module_id,concept_index",
+              }
+            )
             .select();
 
           if (error) throw error;

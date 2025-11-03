@@ -1423,7 +1423,7 @@ body:has(.left-nav.collapsed) .app-footer {
   color: #665665;
   padding: 0.375rem 0.75rem;
   border-radius: 8px;
-  font-size: 0.75rem;
+  font-size: 0.9375rem; /* Increased to match design principles: 15px */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -2313,6 +2313,10 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   }
 
   /* Sidebar becomes overlay - handled in LeftNav.css */
+
+  .concept-item .understood-btn {
+    font-size: 1rem; /* Larger on mobile: 16px (matches design principles) */
+  }
 }
 
 @media (max-width: 968px) {
