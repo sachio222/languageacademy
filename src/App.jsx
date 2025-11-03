@@ -38,14 +38,14 @@ import { logger } from "./utils/logger";
 function App() {
   // Check if we're in dev mode
   const isDevMode = import.meta.env.VITE_DEV_MODE === 'true';
-  
+
   // Determine if words learned button should be visible (always visible now)
   const showWordsLearned = true;
 
   // Cookie settings modal state
   const [showCookieModal, setShowCookieModal] = useState(false);
   const [forceShowBanner, setForceShowBanner] = useState(false);
-  
+
   // Beta notice modal state
   const [showBetaNotice, setShowBetaNotice] = useState(false);
 
@@ -155,7 +155,7 @@ function App() {
     if (!confirmed) return;
 
     const success = await resetWelcomeFlags(supabaseClient, supabaseUser);
-    
+
     if (success) {
       // Reload page to show welcome screen
       window.location.reload();
@@ -395,7 +395,7 @@ function App() {
 
       <footer className="app-footer">
         <p>
-          Built with love • Inspired by cognitive science research • Grammar Linting Enabled
+          Built with love • Inspired by cognitive science research
           {' • '}
           <button
             onClick={() => setForceShowBanner(true)}
