@@ -354,7 +354,19 @@ function ReportCardAdmin() {
           </button>
           <button
             className="action-button primary"
-            onClick={() => setShowInsights(!showInsights)}
+            onClick={() => {
+              const newValue = !showInsights;
+              setShowInsights(newValue);
+              // Scroll to panel when opening
+              if (newValue) {
+                setTimeout(() => {
+                  const panel = document.querySelector('.insights-panel');
+                  if (panel) {
+                    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }, 100);
+              }
+            }}
           >
             <Mail size={18} />
             <span>Communication Insights</span>
@@ -481,7 +493,7 @@ function ReportCardAdmin() {
               <div className="insight-card">
                 <h3>Re-engagement Needed</h3>
                 <p className="insight-count">
-                  {students.filter(s => s.stats.engagementStatus === 'inactive').length} students
+                  {students.filter(s => s?.stats?.engagementStatus === 'inactive').length} students
                 </p>
                 <button
                   className="insight-action"
@@ -497,7 +509,7 @@ function ReportCardAdmin() {
               <div className="insight-card">
                 <h3>At Risk (3-7 days)</h3>
                 <p className="insight-count">
-                  {students.filter(s => s.stats.engagementStatus === 'at-risk').length} students
+                  {students.filter(s => s?.stats?.engagementStatus === 'at-risk').length} students
                 </p>
                 <button
                   className="insight-action"
@@ -513,7 +525,7 @@ function ReportCardAdmin() {
               <div className="insight-card">
                 <h3>Active & Engaged</h3>
                 <p className="insight-count">
-                  {students.filter(s => s.stats.engagementStatus === 'active' || s.stats.engagementStatus === 'recent').length} students
+                  {students.filter(s => s?.stats?.engagementStatus === 'active' || s?.stats?.engagementStatus === 'recent').length} students
                 </p>
                 <button
                   className="insight-action"
