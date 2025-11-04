@@ -20847,7 +20847,7 @@ export const nounsCambridge = new Map([
         "translations": [
             {
                 "lang": "en",
-                "text": "paintings",
+                "text": "paintings/paints",
                 "source": "language_academy",
                 "confidence": 0.95
             }
@@ -20855,9 +20855,22 @@ export const nounsCambridge = new Map([
         "relationships": [],
         "etymology": "",
         "register": [],
-        "usage_notes": "",
+        "usage_notes": "Can mean multiple paintings (artworks) or multiple types/colors of paint (substance)",
         "regional_variants": [],
-        "examples": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "mes peintures",
+                "trans": "my paintings",
+                "source": "language_academy"
+            },
+            {
+                "lang": "fr",
+                "text": "des peintures vertes et bleues",
+                "trans": "green and blue paints",
+                "source": "language_academy"
+            }
+        ],
         "phonetic": "",
         "cefr_level": "A1",
         "tags": [
@@ -20883,7 +20896,13 @@ export const nounsCambridge = new Map([
             {
                 "phrase": "les peintures",
                 "type": "definite_article",
-                "context": "the paintings",
+                "context": "the paintings/paints",
+                "frequency": "common"
+            },
+            {
+                "phrase": "des peintures",
+                "type": "indefinite_article",
+                "context": "some paintings/paints",
                 "frequency": "common"
             }
         ],
