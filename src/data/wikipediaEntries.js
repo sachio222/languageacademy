@@ -908,7 +908,7 @@ export const wikipediaEntries = {
       "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
     url: "https://en.wikipedia.org/wiki/Absinthe",
   },
-  "une absinthe": {
+  absinthe: {
     name: "Absinthe",
     description:
       "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
@@ -923,5 +923,29 @@ export const wikipediaEntries = {
     image:
       "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
     url: "https://en.wikipedia.org/wiki/Absinthe",
+  },
+  "Terrasse du café le soir": {
+    name: "Terrasse du café le soir (Café Terrace at Night)",
+    description:
+      "Famous 1888 painting by Vincent van Gogh, depicting a café terrace in Arles at night with stars and warm yellow lights",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg/500px-Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg",
+    url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night",
+  },
+  "terrasse du café le soir": {
+    name: "Terrasse du café le soir (Café Terrace at Night)",
+    description:
+      "Famous 1888 painting by Vincent van Gogh, depicting a café terrace in Arles at night with stars and warm yellow lights",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg/500px-Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg",
+    url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night",
+  },
+  "la Terrasse du café le soir": {
+    name: "Terrasse du café le soir (Café Terrace at Night)",
+    description:
+      "Famous 1888 painting by Vincent van Gogh, depicting a café terrace in Arles at night with stars and warm yellow lights",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg/500px-Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg",
+    url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night",
   },
 };

@@ -1080,7 +1080,7 @@ export const pronounsCambridge = new Map([
     "translations": [
         {
             "lang": "en",
-            "text": "he",
+            "text": "they (masculine)",
             "confidence": 0.9,
             "source": "cambridge"
         }

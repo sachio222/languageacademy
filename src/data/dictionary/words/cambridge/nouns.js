@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Nouns
- * Generated: 2025-11-03T22:06:59.850Z
- * Successfully scraped: 501/501
+ * Generated: 2025-11-04T03:31:08.514Z
+ * Successfully scraped: 503/503
  */
 
 export const nounsCambridge = new Map([
@@ -28704,6 +28704,121 @@ export const nounsCambridge = new Map([
         "verified": false,
         "created_at": "2025-11-03T22:06:57.420Z",
         "updated_at": "2025-11-03T22:06:57.420Z"
+    }
+  ],
+  [
+    "absinthe-fr",
+        {
+        "id": "absinthe-fr",
+        "lang": "fr",
+        "word": "absinthe",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "absinthe",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Je veux une absinthe",
+                "trans": "I want an absinthe",
+                "lang": "en"
+            },
+            {
+                "text": "J'aime l'absinthe",
+                "trans": "I like absinthe",
+                "lang": "en"
+            },
+            {
+                "text": "Le serveur apporte leurs absinthes",
+                "trans": "The waiter brings their absinthes",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-11-04T03:31:08.086Z",
+        "updated_at": "2025-11-04T03:31:08.506Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "absinthes",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "une absinthe",
+                "type": "indefinite_article",
+                "context": "an absinthe",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'absinthe",
+                "type": "definite_article",
+                "context": "the absinthe",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les absinthes",
+                "type": "plural_article",
+                "context": "the absinthes",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "absinthes-fr",
+        {
+        "id": "absinthes-fr",
+        "lang": "fr",
+        "word": "absinthes",
+        "partOfSpeech": "noun",
+        "redirect_to": "absinthe-fr",
+        "redirect_type": "plural_form",
+        "base_word": "absinthe",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "leurs absinthes",
+                "trans": "their absinthes",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-11-04T03:31:08.090Z",
+        "updated_at": "2025-11-04T03:31:08.090Z"
     }
   ]
 ]);

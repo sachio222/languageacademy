@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Verbs
- * Generated: 2025-11-03T22:07:36.666Z
- * Successfully scraped: 1409/1409
+ * Generated: 2025-11-04T03:31:08.758Z
+ * Successfully scraped: 1410/1410
  */
 
 export const verbsCambridge = new Map([
@@ -83049,6 +83049,80 @@ export const verbsCambridge = new Map([
                 "phrase": "on sourit",
                 "type": "pronoun_verb",
                 "context": "one smiles/we smile",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "revient-fr",
+        {
+        "id": "revient-fr",
+        "lang": "fr",
+        "word": "revient",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "comes back / returns",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [
+            {
+                "type": "conjugation_pair",
+                "targetId": "revenir-fr",
+                "targetWord": "revenir",
+                "note": "infinitive form"
+            }
+        ],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "Il revient au café",
+                "trans": "He returns to the café",
+                "lang": "en"
+            },
+            {
+                "text": "Elle revient demain",
+                "trans": "She's coming back tomorrow",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-11-04T03:31:08.090Z",
+        "updated_at": "2025-11-04T03:31:08.735Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "verb",
+        "infinitive": "revenir",
+        "verb_phrases": [
+            {
+                "phrase": "il revient",
+                "type": "pronoun_verb",
+                "context": "he comes back / he returns",
+                "frequency": "common"
+            },
+            {
+                "phrase": "elle revient",
+                "type": "pronoun_verb",
+                "context": "she comes back / she returns",
+                "frequency": "common"
+            },
+            {
+                "phrase": "il revient au café",
+                "type": "compound",
+                "context": "he returns to the café",
                 "frequency": "common"
             }
         ]

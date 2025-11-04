@@ -665,5 +665,54 @@ export const interjectionsCambridge = new Map([
         }
     ],
     "partOfSpeech": "interjection"
+}],
+  ["hum-fr", {
+    "id": "hum-fr",
+    "lang": "fr",
+    "word": "hum",
+    "partOfSpeech": "interjection",
+    "translations": [
+        {
+            "lang": "en",
+            "text": "hmm / huh / expressing thought or hesitation",
+            "confidence": 0.95,
+            "source": "language_academy"
+        }
+    ],
+    "relationships": [],
+    "etymology": "",
+    "register": ["neutral", "informal"],
+    "usage_notes": "Interjection expressing thought, hesitation, or acknowledgment. Often used when thinking before responding.",
+    "regional_variants": [],
+    "examples": [
+        {
+            "text": "Hum ? Oui, c'était très bon, » dit Vincent.",
+            "trans": "Hum? Yes, it was very good, » says Vincent.",
+            "lang": "en",
+            "source": "language_academy"
+        }
+    ],
+    "phonetic": "",
+    "tags": [
+        "lesson",
+        "interjection",
+        "unit5",
+        "2024-04-13-reading-5"
+    ],
+    "created_at": "2025-11-04T03:31:08.090Z",
+    "updated_at": "2025-11-04T03:31:08.735Z",
+    "sources": [
+        "language_academy"
+    ],
+    "verified": false,
+    "cefr_level": "A1",
+    "frequency": {
+        "rank": 5000,
+        "score": 0.3,
+        "corpus": "lesson",
+        "perMillion": 50,
+        "percentile": 30
+    },
+    "difficulty": 1
 }]
 ]);
