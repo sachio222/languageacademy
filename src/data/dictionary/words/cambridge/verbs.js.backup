@@ -28340,14 +28340,14 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "un meuble en bois",
-                "trans": "a piece of wooden furniture",
+                "text": "un meuble en bois \n                        \n        a piece of wooden furniture",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "couper du bois",
-                "trans": "to cut wood",
+                "text": "couper du bois \n                        \n        to cut wood",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -28358,14 +28358,14 @@ export const verbsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "un bois de chênes",
-                "trans": "an oak wood",
+                "text": "un bois de chênes \n                        \n        an oak wood",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "se promener dans les bois",
-                "trans": "to walk in the woods",
+                "text": "se promener dans les bois \n                        \n        to walk in the woods",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -29561,14 +29561,14 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "faire une demande à qqn",
-                "trans": "to ask sb for something",
+                "text": "faire une demande à qqn \n                        \n        to ask sb for something",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "les demandes d’emploi",
-                "trans": "job applications",
+                "text": "les demandes d’emploi \n                        \n        job applications",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -29579,14 +29579,14 @@ export const verbsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Cet article est très demandé cet hiver.",
-                "trans": "This item is very much in demand this winter.",
+                "text": "Cet article est très demandé cet hiver. \n                        \n        This item is very much in demand this winter.",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "une célébrité très demandée",
-                "trans": "a celebrity who is very much in demand",
+                "text": "une célébrité très demandée \n                        \n        a celebrity who is very much in demand",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -30587,14 +30587,14 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "faire une demande à qqn",
-                "trans": "to ask sb for something",
+                "text": "faire une demande à qqn \n                        \n        to ask sb for something",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "les demandes d’emploi",
-                "trans": "job applications",
+                "text": "les demandes d’emploi \n                        \n        job applications",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -30605,14 +30605,14 @@ export const verbsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Cet article est très demandé cet hiver.",
-                "trans": "This item is very much in demand this winter.",
+                "text": "Cet article est très demandé cet hiver. \n                        \n        This item is very much in demand this winter.",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "une célébrité très demandée",
-                "trans": "a celebrity who is very much in demand",
+                "text": "une célébrité très demandée \n                        \n        a celebrity who is very much in demand",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -32870,8 +32870,8 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "L’été est fini.",
-                "trans": "Summer is over.",
+                "text": "L’été est fini. \n                        \n        Summer is over.",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -78580,8 +78580,8 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "être assis par terre",
-                "trans": "to be sitting on the ground",
+                "text": "être assis par terre \n                        \n        to be sitting on the ground",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -78655,20 +78655,20 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "l’assise d’un bâtiment",
-                "trans": "the foundations of a building",
+                "text": "l’assise d’un bâtiment \n                        \n        the foundations of a building",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "l’assise en paille d’une chaise",
-                "trans": "the straw seat of a chair",
+                "text": "l’assise en paille d’une chaise \n                        \n        the straw seat of a chair",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "l’assise d’un projet",
-                "trans": "the basis for a project",
+                "text": "l’assise d’un projet \n                        \n        the basis for a project",
+                "trans": "",
                 "source": "cambridge"
             }
         ],
@@ -78849,14 +78849,14 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "une combine pour payer moins d’impôts",
-                "trans": "a scheme for paying less tax",
+                "text": "une combine pour payer moins d’impôts \n                        \n        a scheme for paying less tax",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "décrocher le combiné",
-                "trans": "to pick up the phone",
+                "text": "décrocher le combiné \n                        \n        to pick up the phone",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -78954,8 +78954,8 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "passer une commande",
-                "trans": "to place an order",
+                "text": "passer une commande \n                        \n        to place an order",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -78966,8 +78966,8 @@ export const verbsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "une commande à distance",
-                "trans": "a remote control",
+                "text": "une commande à distance \n                        \n        a remote control",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -79804,14 +79804,14 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "rester sur un pied en gardant la jambe levée",
-                "trans": "to stand on one foot with the other leg raised",
+                "text": "rester sur un pied en gardant la jambe levée \n                        \n        to stand on one foot with the other leg raised",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Tu es déjà levé ?",
-                "trans": "Are you up already?",
+                "text": "Tu es déjà levé ? \n                        \n        Are you up already?",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -80010,8 +80010,8 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "un pense-bête destiné à ne pas oublier l’anniversaire de qqn",
-                "trans": "a reminder not to forget sb’s birthday",
+                "text": "un pense-bête destiné à ne pas oublier l’anniversaire de qqn \n                        \n        a reminder not to forget sb’s birthday",
+                "trans": "",
                 "source": "cambridge"
             }
         ],
@@ -80147,8 +80147,8 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "un pense-bête destiné à ne pas oublier l’anniversaire de qqn",
-                "trans": "a reminder not to forget sb’s birthday",
+                "text": "un pense-bête destiné à ne pas oublier l’anniversaire de qqn \n                        \n        a reminder not to forget sb’s birthday",
+                "trans": "",
                 "source": "cambridge"
             }
         ],
@@ -80397,20 +80397,20 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "le reste d’une somme d’argent",
-                "trans": "the remainder of a sum of money",
+                "text": "le reste d’une somme d’argent \n                        \n        the remainder of a sum of money",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "finir le reste du gâteau",
-                "trans": "to finish the rest of the cake",
+                "text": "finir le reste du gâteau \n                        \n        to finish the rest of the cake",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Il travaille six mois et voyage le reste de l’année.",
-                "trans": "He works for six months and travels for the rest of the year.",
+                "text": "Il travaille six mois et voyage le reste de l’année. \n                        \n        He works for six months and travels for the rest of the year.",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -80421,8 +80421,8 @@ export const verbsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "manger les restes",
-                "trans": "to eat the leftovers",
+                "text": "manger les restes \n                        \n        to eat the leftovers",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -80433,8 +80433,8 @@ export const verbsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "les restes d’un monument",
-                "trans": "the ruins of a monument",
+                "text": "les restes d’un monument \n                        \n        the ruins of a monument",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -80445,8 +80445,8 @@ export const verbsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "Il est tard, du reste, je dois partir.",
-                "trans": "It’s late, what’s more I have to leave.",
+                "text": "Il est tard, du reste, je dois partir. \n                        \n        It’s late, what’s more I have to leave.",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -81290,26 +81290,26 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "faire preuve d’une grande écoute",
-                "trans": "to be a very good listener",
+                "text": "faire preuve d’une grande écoute \n                        \n        to be a very good listener",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "Cette mère est à l’écoute de ses enfants.",
-                "trans": "That mother really listens to what her children have to say.",
+                "text": "Cette mère est à l’écoute de ses enfants. \n                        \n        That mother really listens to what her children have to say.",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "l’écoute gratuite d’un album",
-                "trans": "listening to an album free",
+                "text": "l’écoute gratuite d’un album \n                        \n        listening to an album free",
+                "trans": "",
                 "source": "cambridge"
             },
             {
                 "lang": "en",
-                "text": "présenter une émission à une heure de grande écoute",
-                "trans": "to present a program during prime time",
+                "text": "présenter une émission à une heure de grande écoute \n                        \n        to present a program during prime time",
+                "trans": "",
                 "source": "cambridge"
             }
         ],
@@ -81447,8 +81447,8 @@ export const verbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "un plan très étudié",
-                "trans": "a very carefully prepared plan",
+                "text": "un plan très étudié \n                        \n        a very carefully prepared plan",
+                "trans": "",
                 "source": "cambridge"
             }
         ],

@@ -8302,8 +8302,8 @@ export const adjectivesCambridge = new Map([
     "examples": [
         {
             "lang": "en",
-            "text": "pendant plusieurs jours",
-            "trans": "for several days",
+            "text": "pendant plusieurs jours \n                        \n        for several days",
+            "trans": "",
             "source": "cambridge"
         },
         {
@@ -8314,8 +8314,8 @@ export const adjectivesCambridge = new Map([
         },
         {
             "lang": "en",
-            "text": "travailler à plusieurs",
-            "trans": "to work in a group",
+            "text": "travailler à plusieurs \n                        \n        to work in a group",
+            "trans": "",
             "source": "cambridge"
         },
         {
@@ -8385,8 +8385,8 @@ export const adjectivesCambridge = new Map([
     "examples": [
         {
             "lang": "en",
-            "text": "école primaire",
-            "trans": "primary school",
+            "text": "école primaire \n                        \n        primary school",
+            "trans": "",
             "source": "cambridge"
         },
         {
@@ -8397,8 +8397,8 @@ export const adjectivesCambridge = new Map([
         },
         {
             "lang": "en",
-            "text": "les couleurs primaires",
-            "trans": "primary colors",
+            "text": "les couleurs primaires \n                        \n        primary colors",
+            "trans": "",
             "source": "cambridge"
         },
         {

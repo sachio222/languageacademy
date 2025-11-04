@@ -1,0 +1,26 @@
+{
+  "totalFixed": 47,
+  "fixedFiles": [
+    {
+      "file": "adjectives.js",
+      "fixedCount": 4,
+      "backupPath": "src/data/dictionary/words/cambridge/adjectives.js.backup"
+    },
+    {
+      "file": "adverbs.js",
+      "fixedCount": 4,
+      "backupPath": "src/data/dictionary/words/cambridge/adverbs.js.backup"
+    },
+    {
+      "file": "interjections.js",
+      "fixedCount": 3,
+      "backupPath": "src/data/dictionary/words/cambridge/interjections.js.backup"
+    },
+    {
+      "file": "verbs.js",
+      "fixedCount": 36,
+      "backupPath": "src/data/dictionary/words/cambridge/verbs.js.backup"
+    }
+  ],
+  "timestamp": "2025-11-04T22:08:07.875Z"
+}

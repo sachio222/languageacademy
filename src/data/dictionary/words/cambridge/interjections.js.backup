@@ -609,20 +609,20 @@ export const interjectionsCambridge = new Map([
     "examples": [
         {
             "lang": "en",
-            "text": "Oh ! Comme c’est beau !",
-            "trans": "Oh! That’s so beautiful!",
+            "text": "Oh ! Comme c’est beau ! \n                        \n        Oh! That’s so beautiful!",
+            "trans": "",
             "source": "cambridge"
         },
         {
             "lang": "en",
-            "text": "Oh ! Une montgolfière !",
-            "trans": "Oh! A hot air balloon!",
+            "text": "Oh ! Une montgolfière ! \n                        \n        Oh! A hot air balloon!",
+            "trans": "",
             "source": "cambridge"
         },
         {
             "lang": "en",
-            "text": "Oh ! Quel culot !",
-            "trans": "Oh! How dare you!",
+            "text": "Oh ! Quel culot ! \n                        \n        Oh! How dare you!",
+            "trans": "",
             "source": "cambridge"
         },
         {

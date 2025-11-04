@@ -3954,8 +3954,8 @@ export const adverbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "être d’un abord facile",
-                "trans": "to be approachable",
+                "text": "être d’un abord facile \n                        \n        to be approachable",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -3966,8 +3966,8 @@ export const adverbsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "les abords de la ville",
-                "trans": "the outskirts of the city",
+                "text": "les abords de la ville \n                        \n        the outskirts of the city",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -4082,8 +4082,8 @@ export const adverbsCambridge = new Map([
         "examples": [
             {
                 "lang": "en",
-                "text": "pendant plusieurs jours",
-                "trans": "for several days",
+                "text": "pendant plusieurs jours \n                        \n        for several days",
+                "trans": "",
                 "source": "cambridge"
             },
             {
@@ -4094,8 +4094,8 @@ export const adverbsCambridge = new Map([
             },
             {
                 "lang": "en",
-                "text": "travailler à plusieurs",
-                "trans": "to work in a group",
+                "text": "travailler à plusieurs \n                        \n        to work in a group",
+                "trans": "",
                 "source": "cambridge"
             },
             {
