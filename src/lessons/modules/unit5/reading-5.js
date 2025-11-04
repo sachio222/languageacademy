@@ -56,7 +56,7 @@ Ils l'aiment.
 
 Vincent regarde autour du café.
 
-« Ce café est très beau, » dit Vincent. « Je veux faire quelque chose. »
+« Ce café est très beau, » il dit. « Je veux faire quelque chose. »
 
 « Qu'est-ce que tu veux faire ? » demande Paul.
 
@@ -123,7 +123,7 @@ They like it.
 
 Vincent looks around the café.
 
-"This café is very beautiful," says Vincent. "I want to do something."
+"This café is very beautiful," he says. "I want to do something."
 
 "What do you want to do?" asks Paul.
 
