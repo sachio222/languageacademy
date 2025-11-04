@@ -19,6 +19,8 @@ import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { usePageTime } from '../hooks/usePageTime';
+import { useModuleTime } from '../hooks/useModuleTime';
+import { getUnitIdForLesson } from '../utils/unitHelpers';
 import { logger } from "../utils/logger";
 
 function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
@@ -113,11 +115,16 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const [resetting, setResetting] = useState(false);
   const [moduleTimeSpent, setModuleTimeSpent] = useState(0);
 
-  // Track page time for study time analytics
+  // Track page time for study time analytics (global total)
   const pageId = `lesson-${lesson.id}`;
   const { totalTime: pageTime, isTracking } = usePageTime(pageId, true);
 
-  // Track time spent on module
+  // Track module and unit specific time with proper idle detection
+  const moduleId = lesson.id?.toString() || 'unknown';
+  const unitId = getUnitIdForLesson(lesson.id);
+  const { totalTime: moduleTime, isTracking: isTrackingModule } = useModuleTime(moduleId, unitId, true);
+
+  // Legacy module time tracking (will be removed)
   const moduleStartTimeRef = useRef(Date.now());
 
   const { supabaseClient, supabaseUser, isAuthenticated, moduleProgress } = useSupabaseProgress();
@@ -264,9 +271,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     updateViewInUrl(null); // Clear view when showing completion modal
     updateExerciseInUrl(0);
 
-    // Update database with exam score and time
+    // Update database with exam score (time is tracked by useModuleTime)
     if (onModuleComplete) {
-      onModuleComplete(lesson.id, examScore, timeSpent, false);
+      onModuleComplete(lesson.id, examScore, 0, false); // timeSpent = 0, managed by useModuleTime
     }
   };
 
@@ -325,7 +332,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     // Pass lesson.id explicitly, with goToNext flag
     const currentModuleId = lesson.id;
     logger.log('Calling onModuleComplete with moduleId:', currentModuleId);
-    onModuleComplete(currentModuleId, 100, moduleTimeSpent || 0, true);
+    onModuleComplete(currentModuleId, 100, 0, true); // timeSpent = 0, managed by useModuleTime
   };
 
   const handleResetModule = async () => {

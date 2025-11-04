@@ -74,6 +74,10 @@ function ReportCardAdmin() {
           aVal = a.stats.accuracy || 0;
           bVal = b.stats.accuracy || 0;
           break;
+        case 'total_time':
+          aVal = a.total_study_time_seconds || 0;
+          bVal = b.total_study_time_seconds || 0;
+          break;
         case 'last_active':
           aVal = a.last_active_at ? new Date(a.last_active_at).getTime() : 0;
           bVal = b.last_active_at ? new Date(b.last_active_at).getTime() : 0;
@@ -201,13 +205,14 @@ function ReportCardAdmin() {
   
   // Export to CSV
   const exportToCSV = (studentsList) => {
-    const headers = ['Name', 'Email', 'Streak', 'Modules', 'Accuracy', 'Status', 'Last Active'];
+    const headers = ['Name', 'Email', 'Streak', 'Modules', 'Accuracy', 'Total Time', 'Status', 'Last Active'];
     const rows = studentsList.map(s => [
       `${s.first_name || ''} ${s.last_name || ''}`.trim() || s.preferred_name || '',
       s.email || '',
       s.streak_days || 0,
       s.stats.modulesCompleted || 0,
       `${s.stats.accuracy || 0}%`,
+      formatDuration(s.total_study_time_seconds || 0),
       s.stats.engagementStatus,
       formatRelativeTime(s.last_active_at)
     ]);
@@ -399,6 +404,10 @@ function ReportCardAdmin() {
                 <span>Accuracy</span>
                 {getSortIcon('accuracy')}
               </th>
+              <th onClick={() => handleSort('total_time')} className="sortable">
+                <span>Total Time</span>
+                {getSortIcon('total_time')}
+              </th>
               <th onClick={() => handleSort('last_active')} className="sortable">
                 <span>Last Active</span>
                 {getSortIcon('last_active')}
@@ -412,7 +421,7 @@ function ReportCardAdmin() {
           <tbody>
             {filteredStudents.length === 0 ? (
               <tr>
-                <td colSpan="7" className="empty-row">
+                <td colSpan="8" className="empty-row">
                   {searchQuery || filterStatus !== 'all' 
                     ? 'No students match your filters'
                     : 'No students enrolled yet'}
@@ -433,6 +442,7 @@ function ReportCardAdmin() {
                   <td>{student.streak_days || 0}</td>
                   <td>{student.stats.modulesCompleted || 0}</td>
                   <td>{student.stats.accuracy || 0}%</td>
+                  <td>{formatDuration(student.total_study_time_seconds || 0)}</td>
                   <td>{formatRelativeTime(student.last_active_at)}</td>
                   <td>{getStatusBadge(student.stats.engagementStatus)}</td>
                 </tr>

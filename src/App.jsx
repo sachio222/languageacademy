@@ -242,6 +242,13 @@ function App() {
                   🔄
                 </button>
                 <button
+                  className="admin-report-btn"
+                  onClick={navigation.handleShowReportCardAdmin}
+                  title="View Report Card Admin"
+                >
+                  📋
+                </button>
+                <button
                   className="admin-btn"
                   onClick={navigation.handleShowAdmin}
                   title="View Feedback Admin"
@@ -331,6 +338,13 @@ function App() {
                   🔄
                 </button>
                 <button
+                  className="admin-report-btn"
+                  onClick={navigation.handleShowReportCardAdmin}
+                  title="View Report Card Admin"
+                >
+                  📋
+                </button>
+                <button
                   className="admin-btn"
                   onClick={navigation.handleShowAdmin}
                   title="View Feedback Admin"
@@ -379,6 +393,13 @@ function App() {
                   title="Simulate First-Time Experience (Reset Welcome Screens)"
                 >
                   🔄
+                </button>
+                <button
+                  className="admin-report-btn"
+                  onClick={navigation.handleShowReportCardAdmin}
+                  title="View Report Card Admin"
+                >
+                  📋
                 </button>
                 <button
                   className="admin-btn"

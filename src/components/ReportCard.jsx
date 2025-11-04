@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, Flame, TrendingUp, BookOpen, Clock, Award, Target, Download } from 'lucide-react';
 import { useReportCardData } from '../hooks/useReportCardData';
 import { calculateCommunicationInsights } from '../utils/communicationInsights';
+import { verifyTimeTracking } from '../utils/timeTrackingTest';
 import { lessons } from '../lessons/lessonData';
 import '../styles/ReportCard.css';
 
@@ -18,11 +19,17 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
   const [activeTab, setActiveTab] = useState('activity');
   const [performanceExpanded, setPerformanceExpanded] = useState(false);
   const [showAllActivity, setShowAllActivity] = useState(false);
+  const [expandedUnits, setExpandedUnits] = useState(new Set());
   
   const { data, loading, error, refetch } = useReportCardData(userId, {
     includeDetailedProgress: true,
     timeRange
   });
+  
+  // Verify time tracking consistency (development only)
+  if (data && process.env.NODE_ENV === 'development') {
+    verifyTimeTracking(data);
+  }
   
   // Format duration
   const formatDuration = (seconds) => {
@@ -421,21 +428,40 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
                 <p className="empty-message">No vocabulary learned yet</p>
               ) : (
                 <div className="vocabulary-by-unit">
-                  {Object.entries(vocabulary.byUnit).map(([unitId, words]) => (
-                    <div key={unitId} className="unit-vocabulary">
-                      <h3 className="unit-vocabulary-title">
-                        {unitId.replace('unit', 'Unit ')} ({words.length} words)
-                      </h3>
-                      <div className="vocabulary-words">
-                        {words.slice(0, 20).map((word, idx) => (
-                          <span key={idx} className="vocabulary-word">{word}</span>
-                        ))}
-                        {words.length > 20 && (
-                          <span className="vocabulary-more">+{words.length - 20} more</span>
-                        )}
+                  {Object.entries(vocabulary.byUnit).map(([unitId, words]) => {
+                    const isExpanded = expandedUnits.has(unitId);
+                    const displayWords = isExpanded ? words : words.slice(0, 20);
+                    const hasMore = words.length > 20;
+                    
+                    return (
+                      <div key={unitId} className="unit-vocabulary">
+                        <h3 className="unit-vocabulary-title">
+                          {unitId.replace('unit', 'Unit ')} ({words.length} words)
+                        </h3>
+                        <div className="vocabulary-words">
+                          {displayWords.map((word, idx) => (
+                            <span key={idx} className="vocabulary-word">{word}</span>
+                          ))}
+                          {hasMore && (
+                            <button
+                              className="vocabulary-more"
+                              onClick={() => {
+                                const newExpanded = new Set(expandedUnits);
+                                if (isExpanded) {
+                                  newExpanded.delete(unitId);
+                                } else {
+                                  newExpanded.add(unitId);
+                                }
+                                setExpandedUnits(newExpanded);
+                              }}
+                            >
+                              {isExpanded ? 'Show less' : `+${words.length - 20} more`}
+                            </button>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>

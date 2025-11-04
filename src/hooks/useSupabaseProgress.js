@@ -246,24 +246,30 @@ export const useSupabaseProgress = () => {
           studyCompleted &&
           examScore !== null;
 
+        // Build update object without time_spent_seconds (managed by useModuleTime)
+        const updateData = {
+          user_id: supabaseUser.id,
+          module_id: moduleId,
+          unit_id: unitId,
+          total_exercises: totalExercises,
+          completed_exercises: completedCount,
+          study_mode_completed: studyCompleted,
+          exam_score: examScore,
+          completed_at: isCompleted ? new Date().toISOString() : null,
+        };
+
+        // Only include time_spent_seconds if it's provided (for backward compatibility)
+        // The new useModuleTime hook manages time separately
+        if (timeSpent > 0) {
+          logger.warn(`updateModuleProgress called with timeSpent=${timeSpent}. Time should be managed by useModuleTime hook.`);
+          // Don't include time_spent_seconds - let useModuleTime handle it
+        }
+
         const { data, error } = await supabaseClient
           .from(TABLES.MODULE_PROGRESS)
-          .upsert(
-            {
-              user_id: supabaseUser.id,
-              module_id: moduleId,
-              unit_id: unitId,
-              total_exercises: totalExercises,
-              completed_exercises: completedCount,
-              study_mode_completed: studyCompleted,
-              exam_score: examScore,
-              time_spent_seconds: timeSpent,
-              completed_at: isCompleted ? new Date().toISOString() : null,
-            },
-            {
-              onConflict: "user_id,module_id",
-            }
-          )
+          .upsert(updateData, {
+            onConflict: "user_id,module_id",
+          })
           .select()
           .single();
 
@@ -300,23 +306,29 @@ export const useSupabaseProgress = () => {
         const isCompleted =
           completedCount >= totalModules && examScore !== null;
 
+        // Build update object without time_spent_seconds (managed by useModuleTime)
+        const updateData = {
+          user_id: supabaseUser.id,
+          unit_id: unitId,
+          unit_name: unitName,
+          total_modules: totalModules,
+          completed_modules: completedCount,
+          unit_exam_score: examScore,
+          completed_at: isCompleted ? new Date().toISOString() : null,
+        };
+
+        // Only include time_spent_seconds if it's provided (for backward compatibility)
+        // The new useModuleTime hook manages unit time separately
+        if (timeSpent > 0) {
+          logger.warn(`updateUnitProgress called with timeSpent=${timeSpent}. Time should be managed by useModuleTime hook.`);
+          // Don't include time_spent_seconds - let useModuleTime handle it
+        }
+
         const { data, error } = await supabaseClient
           .from(TABLES.UNIT_PROGRESS)
-          .upsert(
-            {
-              user_id: supabaseUser.id,
-              unit_id: unitId,
-              unit_name: unitName,
-              total_modules: totalModules,
-              completed_modules: completedCount,
-              unit_exam_score: examScore,
-              time_spent_seconds: timeSpent,
-              completed_at: isCompleted ? new Date().toISOString() : null,
-            },
-            {
-              onConflict: "user_id,unit_id",
-            }
-          )
+          .upsert(updateData, {
+            onConflict: "user_id,unit_id",
+          })
           .select()
           .single();
 
