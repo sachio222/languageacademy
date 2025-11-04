@@ -42,7 +42,7 @@ export const useUrlManager = () => {
     const url = new URL(window.location);
     url.searchParams.set('module', lessonId);
     // Clean other params
-    ['view', 'exercise', 'sentence', 'question', 'section'].forEach(param => 
+    ['view', 'exercise', 'sentence', 'question', 'section', 'report-card', 'report-card-admin'].forEach(param => 
       url.searchParams.delete(param)
     );
     window.history.pushState({}, '', url);
@@ -52,7 +52,7 @@ export const useUrlManager = () => {
   const setReference = useCallback(() => {
     const url = new URL(window.location);
     url.searchParams.set('reference', 'true');
-    ['module', 'view', 'exercise', 'sentence', 'question', 'section'].forEach(param => 
+    ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'report-card', 'report-card-admin'].forEach(param => 
       url.searchParams.delete(param)
     );
     window.history.pushState({}, '', url);
@@ -62,7 +62,7 @@ export const useUrlManager = () => {
   const setVocabulary = useCallback(() => {
     const url = new URL(window.location);
     url.searchParams.set('vocabulary', 'true');
-    ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'reference'].forEach(param => 
+    ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'reference', 'report-card', 'report-card-admin'].forEach(param => 
       url.searchParams.delete(param)
     );
     window.history.pushState({}, '', url);
@@ -72,6 +72,9 @@ export const useUrlManager = () => {
   const setDictionary = useCallback(() => {
     const url = new URL(window.location);
     url.searchParams.set('dictionary', 'true');
+    ['report-card', 'report-card-admin'].forEach(param => 
+      url.searchParams.delete(param)
+    );
     window.history.pushState({}, '', url);
   }, []);
 
