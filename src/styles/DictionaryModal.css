@@ -544,7 +544,6 @@
   color: #111827;
 }
 
-
 /* Dictionary Speaker Button Styles */
 .dictionary-speak-button {
   background: none;
@@ -803,7 +802,8 @@
     z-index: 100;
     animation: slideUp 0.25s ease-out;
     touch-action: pan-y;
-    transition: transform 0.2s ease-out, height 0.3s ease-out, border-radius 0.3s ease-out;
+    transition: transform 0.2s ease-out, height 0.3s ease-out,
+      border-radius 0.3s ease-out;
     transform: translateY(0);
   }
 
@@ -949,42 +949,42 @@
     font-size: 0.875rem;
   }
 
-/* Tiny devices - extra small screens */
-@media (max-width: 480px) {
-  .dictionary-modal-header {
-    padding: 0.75rem;
+  /* Tiny devices - extra small screens */
+  @media (max-width: 480px) {
+    .dictionary-modal-header {
+      padding: 0.75rem;
+    }
+
+    .dictionary-modal-title {
+      font-size: 0.75rem;
+    }
+
+    .dictionary-modal-filters {
+      padding: 0.75rem;
+    }
+
+    .dictionary-filter-select-small,
+    .dictionary-sort-select {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+
+    .dictionary-sort-label {
+      font-size: 0.75rem;
+    }
   }
 
-  .dictionary-modal-title {
-    font-size: 0.75rem;
-  }
+  /* Tablet adjustments */
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .dictionary-modal-container {
+      max-width: 90%;
+    }
 
-  .dictionary-modal-filters {
-    padding: 0.75rem;
-  }
-
-  .dictionary-filter-select-small,
-  .dictionary-sort-select {
-    font-size: 1rem;
-    padding: 0.5rem;
-  }
-
-  .dictionary-sort-label {
-    font-size: 0.75rem;
+    .dictionary-filters-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
-
-/* Tablet adjustments */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .dictionary-modal-container {
-    max-width: 90%;
-  }
-
-  .dictionary-filters-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 
 /* Verb Phrases */
 .dictionary-word-verb-phrases {
