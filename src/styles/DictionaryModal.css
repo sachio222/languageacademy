@@ -33,7 +33,7 @@
   padding: 1rem 1.25rem;
   border-bottom: 1px solid #f0f0f0;
   background: white;
-  gap: 1.5rem;
+  position: relative;
 }
 
 .dictionary-header-top {
@@ -42,6 +42,13 @@
   justify-content: space-between;
   width: 100%;
   gap: 1.5rem;
+}
+
+.dictionary-header-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
 }
 
 .dictionary-modal-title {
@@ -56,6 +63,7 @@
   flex: 1;
   max-width: 32rem;
   position: relative;
+  margin: 0 auto;
 }
 
 .dictionary-header-search-input {
@@ -677,21 +685,41 @@
 
   .dictionary-modal-header {
     padding: 1rem;
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: stretch;
   }
 
   .dictionary-header-top {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
     width: 100%;
   }
 
   .dictionary-modal-title {
     font-size: 0.875rem;
+    padding-right: 2.5rem;
+    line-height: 1.5;
+    margin: 0;
+    display: inline-block;
   }
 
   .dictionary-header-search {
     max-width: 100%;
+    margin: 0;
+  }
+
+  .dictionary-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.3125rem;
+    width: 1.5rem;
+    padding: 0;
+    margin: 0;
+    line-height: 1.3125rem;
+    font-size: 1.25rem;
   }
 
   .dictionary-modal-filters {

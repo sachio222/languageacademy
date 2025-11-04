@@ -844,4 +844,84 @@ export const wikipediaEntries = {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg/500px-Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg",
     url: "https://en.wikipedia.org/wiki/Saint-Germain-des-Pr%C3%A9s",
   },
+  "Paul Gauguin": {
+    name: "Paul Gauguin",
+    description:
+      "French Post-Impressionist painter (1848-1903), friend of Van Gogh, famous for his paintings of Tahiti and use of bold colors",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Paul_Gauguin_1891.png/500px-Paul_Gauguin_1891.png",
+    url: "https://en.wikipedia.org/wiki/Paul_Gauguin",
+  },
+  "paul gauguin": {
+    name: "Paul Gauguin",
+    description:
+      "French Post-Impressionist painter (1848-1903), friend of Van Gogh, famous for his paintings of Tahiti and use of bold colors",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Paul_Gauguin_1891.png/500px-Paul_Gauguin_1891.png",
+    url: "https://en.wikipedia.org/wiki/Paul_Gauguin",
+  },
+  Arles: {
+    name: "Arles",
+    description:
+      "City in southern France, UNESCO World Heritage site, famous for Roman ruins and where Vincent van Gogh painted many masterpieces",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/FranceArlesArenes_07-2010.jpg/330px-FranceArlesArenes_07-2010.jpg",
+    url: "https://en.wikipedia.org/wiki/Arles",
+  },
+  arles: {
+    name: "Arles",
+    description:
+      "City in southern France, UNESCO World Heritage site, famous for Roman ruins and where Vincent van Gogh painted many masterpieces",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/FranceArlesArenes_07-2010.jpg/330px-FranceArlesArenes_07-2010.jpg",
+    url: "https://en.wikipedia.org/wiki/Arles",
+  },
+  "à Arles": {
+    name: "Arles",
+    description:
+      "City in southern France, UNESCO World Heritage site, famous for Roman ruins and where Vincent van Gogh painted many masterpieces",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/FranceArlesArenes_07-2010.jpg/330px-FranceArlesArenes_07-2010.jpg",
+    url: "https://en.wikipedia.org/wiki/Arles",
+  },
+  absinthe: {
+    name: "Absinthe",
+    description:
+      "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+    url: "https://en.wikipedia.org/wiki/Absinthe",
+  },
+  Absinthe: {
+    name: "Absinthe",
+    description:
+      "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+    url: "https://en.wikipedia.org/wiki/Absinthe",
+  },
+  absinthes: {
+    name: "Absinthe",
+    description:
+      "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+    url: "https://en.wikipedia.org/wiki/Absinthe",
+  },
+  "une absinthe": {
+    name: "Absinthe",
+    description:
+      "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+    url: "https://en.wikipedia.org/wiki/Absinthe",
+  },
+  "l'absinthe": {
+    name: "Absinthe",
+    description:
+      "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+    url: "https://en.wikipedia.org/wiki/Absinthe",
+  },
 };

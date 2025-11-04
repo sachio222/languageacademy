@@ -233,27 +233,27 @@ function DictionaryModal({ isOpen, onClose }) {
         <div className="dictionary-modal-header">
           <div className="dictionary-header-top">
             <h1 className="dictionary-modal-title"> French Unit Dictionary</h1>
+            <div className="dictionary-header-search">
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search words or translations..."
+                className="dictionary-header-search-input"
+              />
+              {searchTerm && (
+                <button
+                  className="dictionary-search-clear"
+                  onClick={() => setSearchTerm('')}
+                  type="button"
+                >
+                  ×
+                </button>
+              )}
+            </div>
             <button className="dictionary-modal-close" onClick={onClose}>
               ×
             </button>
-          </div>
-          <div className="dictionary-header-search">
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search words or translations..."
-              className="dictionary-header-search-input"
-            />
-            {searchTerm && (
-              <button
-                className="dictionary-search-clear"
-                onClick={() => setSearchTerm('')}
-                type="button"
-              >
-                ×
-              </button>
-            )}
           </div>
         </div>
 

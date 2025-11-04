@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Nouns
- * Generated: 2025-10-30T21:33:15.259Z
- * Successfully scraped: 495/495
+ * Generated: 2025-11-03T22:06:59.850Z
+ * Successfully scraped: 501/501
  */
 
 export const nounsCambridge = new Map([
@@ -11803,13 +11803,12 @@ export const nounsCambridge = new Map([
         "id": "couleur-fr",
         "lang": "fr",
         "word": "couleur",
-        "partOfSpeech": "noun",
         "translations": [
             {
                 "lang": "en",
                 "text": "color",
-                "confidence": 0.9,
-                "source": "cambridge"
+                "source": "language_academy",
+                "confidence": 0.95
             }
         ],
         "relationships": [],
@@ -11819,49 +11818,70 @@ export const nounsCambridge = new Map([
         "regional_variants": [],
         "examples": [
             {
-                "lang": "en",
+                "lang": "fr",
                 "text": "De quelle couleur sont ses yeux ?",
                 "trans": "What color are his eyes?",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
+                "lang": "fr",
                 "text": "un pull de toutes les couleurs",
                 "trans": "a multi-colored sweater",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
+                "lang": "fr",
                 "text": "un film en couleur",
                 "trans": "a color movie",
                 "source": "cambridge"
             },
             {
-                "lang": "en",
+                "lang": "fr",
                 "text": "Trèfle et pic sont des couleurs.",
                 "trans": "Clubs and spades are suits.",
                 "source": "cambridge"
             }
         ],
-        "phonetic": "kulœʀ",
+        "phonetic": "",
+        "cefr_level": "A1",
         "tags": [
-            "unit13",
-            "2024-04-05-colors"
+            "lesson"
         ],
+        "created_at": "2025-11-03T22:06:57.390Z",
+        "updated_at": "2025-11-03T22:06:58.448Z",
         "sources": [
+            "language_academy",
             "cambridge"
         ],
         "verified": false,
-        "cambridge_data": {
-            "scraped_at": "2025-10-23T06:09:01.591Z",
-            "url": "https://dictionary.cambridge.org/dictionary/french-english/couleur",
-            "confidence_score": 0.9,
-            "last_updated": "2025-10-23T06:09:01.591Z"
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "couleurs",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
         },
-        "unit": "unit13",
-        "module": "2024-04-05-colors",
-        "lesson": null,
-        "updated_at": "2025-10-29T17:32:29.246Z"
+        "noun_phrases": [
+            {
+                "phrase": "la couleur",
+                "type": "definite_article",
+                "context": "the color",
+                "frequency": "common"
+            },
+            {
+                "phrase": "une couleur",
+                "type": "indefinite_article",
+                "context": "a color",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les couleurs",
+                "type": "plural_article",
+                "context": "the colors",
+                "frequency": "common"
+            }
+        ]
     }
   ],
   [
@@ -28336,6 +28356,354 @@ export const nounsCambridge = new Map([
         "unit": "unit1",
         "module": "7",
         "definition": "Unit 1, Module 7"
+    }
+  ],
+  [
+    "couleurs-fr",
+        {
+        "id": "couleurs-fr",
+        "lang": "fr",
+        "word": "couleurs",
+        "partOfSpeech": "noun",
+        "redirect_to": "couleur-fr",
+        "redirect_type": "plural_form",
+        "base_word": "couleur",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-11-03T22:06:27.605Z",
+        "updated_at": "2025-11-03T22:06:27.605Z"
+    }
+  ],
+  [
+    "étoile-fr",
+        {
+        "id": "étoile-fr",
+        "lang": "fr",
+        "word": "étoile",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "star",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "dormir à la belle étoile",
+                "trans": "to sleep under the stars",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "être né sous une bonne / une mauvaise étoile",
+                "trans": "to be born under a lucky / an unlucky star",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "mettre une étoile en haut d’un sapin de Noël",
+                "trans": "to put a star on top of a Christmas tree",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une étoile du cinéma",
+                "trans": "a movie star",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une nuit étoilée",
+                "trans": "a starry night",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une mosaïque étoilée",
+                "trans": "a star-shaped mosaic",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "la bannière étoilée des États-Unis",
+                "trans": "the Star-Spangled Banner",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-11-03T22:06:57.407Z",
+        "updated_at": "2025-11-03T22:06:58.935Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "étoiles",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "l'étoile",
+                "type": "definite_article",
+                "context": "the star",
+                "frequency": "common"
+            },
+            {
+                "phrase": "une étoile",
+                "type": "indefinite_article",
+                "context": "a star",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les étoiles",
+                "type": "plural_article",
+                "context": "the stars",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "étoiles-fr",
+        {
+        "id": "étoiles-fr",
+        "lang": "fr",
+        "word": "étoiles",
+        "partOfSpeech": "noun",
+        "redirect_to": "étoile-fr",
+        "redirect_type": "plural_form",
+        "base_word": "étoile",
+        "gender": "feminine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-11-03T22:06:27.606Z",
+        "updated_at": "2025-11-03T22:06:27.606Z"
+    }
+  ],
+  [
+    "peinture-fr",
+        {
+        "id": "peinture-fr",
+        "lang": "fr",
+        "word": "peinture",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "paint/painting",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "de la peinture à l’huile",
+                "trans": "oil paint",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "La peinture du mur prendra deux jours.",
+                "trans": "It will take two days to paint the wall.",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "accrocher une peinture au mur",
+                "trans": "to hang a painting on the wall",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-11-03T22:06:57.408Z",
+        "updated_at": "2025-11-03T22:06:59.210Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "feminine",
+        "plural_form": "peintures",
+        "noun_articles": {
+            "definite": "la",
+            "indefinite": "une",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "la peinture",
+                "type": "definite_article",
+                "context": "the paint/painting",
+                "frequency": "common"
+            },
+            {
+                "phrase": "une peinture",
+                "type": "indefinite_article",
+                "context": "a paint/painting",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les peintures",
+                "type": "plural_article",
+                "context": "the paints/paintings",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "serveur-fr",
+        {
+        "id": "serveur-fr",
+        "lang": "fr",
+        "word": "serveur",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "server/waiter",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "envoyer des données sur le serveur",
+                "trans": "to send data to the server",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-11-03T22:06:57.420Z",
+        "updated_at": "2025-11-03T22:06:59.831Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "serveurs",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le serveur",
+                "type": "definite_article",
+                "context": "the server/waiter",
+                "frequency": "common"
+            },
+            {
+                "phrase": "un serveur",
+                "type": "indefinite_article",
+                "context": "a server/waiter",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les serveurs",
+                "type": "plural_article",
+                "context": "the servers/waiters",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "serveurs-fr",
+        {
+        "id": "serveurs-fr",
+        "lang": "fr",
+        "word": "serveurs",
+        "partOfSpeech": "noun",
+        "redirect_to": "serveur-fr",
+        "redirect_type": "plural_form",
+        "base_word": "serveur",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-11-03T22:06:57.420Z",
+        "updated_at": "2025-11-03T22:06:57.420Z"
     }
   ]
 ]);

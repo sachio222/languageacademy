@@ -134,11 +134,9 @@
   animation: fadeInUp 0.7s ease 0.4s backwards;
 }
 
-/* Buttons */
-.cta-primary {
-  background: #3b82f6;
-  color: white;
-  border: none;
+/* Buttons - Base Styles */
+.cta-primary,
+.cta-secondary {
   padding: 1.125rem 2.5rem;
   font-size: 1.0625rem;
   font-weight: 600;
@@ -146,9 +144,15 @@
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
   animation: fadeInUp 0.7s ease 0.3s backwards;
   position: relative;
+}
+
+.cta-primary {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }
 
 .cta-primary:hover {
@@ -160,36 +164,26 @@
   transform: translateY(0);
 }
 
-.cta-primary.large {
-  padding: 1.25rem 2.5rem;
-  font-size: 1.125rem;
-}
-
-/* Secondary Button (Ghost Style) */
 .cta-secondary {
   background: transparent;
   color: #665665;
   border: 1px solid #e0e0e0;
-  padding: 1.125rem 2.5rem;
-  font-size: 1.0625rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  animation: fadeInUp 0.7s ease 0.3s backwards;
 }
 
 .cta-secondary:hover {
   background: #f7f9fc;
   border-color: #d0d0d0;
   color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cta-secondary:active {
   background: #f0f0f0;
+  transform: translateY(0);
 }
 
+.cta-primary.large,
 .cta-secondary.large {
   padding: 1.25rem 2.5rem;
   font-size: 1.125rem;
@@ -1013,11 +1007,7 @@
     margin-top: 0.875rem;
   }
 
-  .cta-primary {
-    padding: 0.875rem 1.75rem;
-    font-size: 0.9375rem;
-  }
-
+  .cta-primary,
   .cta-secondary {
     padding: 0.875rem 1.75rem;
     font-size: 0.9375rem;
@@ -1031,6 +1021,14 @@
   .hero-cta-group .cta-primary,
   .hero-cta-group .cta-secondary {
     width: 100%;
+  }
+
+  .hero-cta-group .cta-primary {
+    order: 1;
+  }
+
+  .hero-cta-group .cta-secondary {
+    order: 2;
   }
 
   .section-title {
@@ -1231,7 +1229,8 @@
     font-size: 0.8125rem;
   }
 
-  .cta-primary.large {
+  .cta-primary.large,
+  .cta-secondary.large {
     padding: 0.875rem 1.75rem;
     font-size: 0.9375rem;
   }

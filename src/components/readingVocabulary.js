@@ -33,4 +33,8 @@ export const readingVocabulary = {
     translation: "The Editers",
     partOfSpeech: "restaurant",
   },
+  Vincent: {
+    translation: "Vincent",
+    partOfSpeech: "name",
+  },
 };

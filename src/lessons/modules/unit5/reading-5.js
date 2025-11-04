@@ -1,470 +1,327 @@
 /**
  * Reading Comprehension 5
- * Unit 5 vocabulary: comparisons, slang, conditionals, past tense, food, aimer, manger, boire
- * ONLY uses vocabulary from modules 1-58!
+ * Unit 5 vocabulary: comparisons, past tense, aimer, boire
+ * ONLY uses vocabulary from Units 1-5 + proper nouns + cognates!
  */
 
 export const reading5 = {
   moduleKey: "2024-04-13-reading-5", // Permanent identifier - never changes
-  title: "Reading Comprehension 5 - Le Meilleur Restaurant",
+  title: "Reading Comprehension 5 - Vincent van Gogh à Arles",
   description:
-    "Unit 5 mastery! An article about a restaurant experience using comparisons, past tense, and food vocabulary.",
+    "Unit 5 mastery! A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin.",
 
   skipStudyMode: true,
   isReadingComprehension: true,
   concepts: [
     {
-      term: "Food and Memory Milestone",
+      term: "Art and History Milestone",
       definition:
-        "You can now read complex French stories about food, past experiences, and cultural memories",
+        "You can now read French stories about famous artists, historical moments, and cultural experiences",
       example:
-        "Story featuring comparisons (plus...que, moins...que), conditionals (si), aimer verb, past tense (passé composé), and food vocabulary",
+        "Story featuring Vincent van Gogh, Paul Gauguin, and the creation of a masterpiece in Arles",
     },
     {
-      term: "Cultural Memory",
+      term: "French Art Culture",
       definition:
-        "Experience how French people talk about food, family, and shared experiences",
+        "Experience French art history through the story of Van Gogh painting in southern France",
       example:
-        "Grandmother's cooking, family traditions, food preferences, and nostalgic memories",
+        "Famous artists, cafés, absinthe, painting at night - authentic cultural context",
     },
     {
       term: "Past Tense Narrative",
       definition:
         "Learn to follow and understand French stories that use past tense naturally",
       example:
-        "j'ai mangé, nous avons bu, il est venu, elle a fait - authentic past tense usage in context",
+        "hier, c'était, nous avons mangé - authentic past tense usage in context",
     },
   ],
 
   readingPassage: {
-    title: "Le Meilleur Restaurant de Paris (The Best Restaurant in Paris)",
-    text: `Hier, j'étais avec mon ami Pierre. Nous avions faim. «Pierre, je veux manger maintenant!»
+    title: "Vincent van Gogh et Paul Gauguin à Arles",
+    text: `Vincent van Gogh et Paul Gauguin sont à Arles. Ils sont au café. C'est le soir.
 
-«Moi aussi! Nous devrions aller au restaurant,» Pierre a dit.
+"Qu'est-ce que tu veux boire?" demande Paul.
 
-«Oui ! Nous pourrions aller au meilleur restaurant!» j'ai dit.
+"Je veux une absinthe," dit Vincent.
 
-Le restaurant était sur la grande place. C'était un petit restaurant, mais c'était génial! Tout le monde était là. Nous avons vu des hommes, des femmes et des enfants.
+"Moi aussi. J'aime l'absinthe," dit Paul.
 
-**La femme:** Bonjour! Qu'est-ce que vous voudriez?
+Le serveur apporte leurs absinthes. Vincent regarde autour du café.
 
-**Pierre:** Nous voudrions du pain et de l'eau, s'il vous plaît. Et une pizza aussi!
+"Ce café est très beau," dit Vincent. "Je veux faire quelque chose."
 
-**Moi:** Et je voudrais un expresso, s'il vous plaît.
+"Qu'est-ce que tu veux faire?" demande Paul.
 
-**La femme:** Très bien! Voilà votre pain et votre eau.
+"Je veux faire une peinture de ce café la nuit."
 
-Le pain était très bon. J'ai mangé du pain avec du beurre. Pierre a mangé une baguette. Nous avons bu de l'eau et du café. C'était trop bon!
+"Bonne idée!" dit Paul. "Ce café est plus beau la nuit que le jour."
 
-«Ce restaurant est meilleur que les autres restaurants!» Pierre a dit.
+Vincent dit, "Oui! Les couleurs sont meilleures le soir. Et les étoiles sont belles."
 
-«Oui ! C'est le meilleur! Je devrais venir ici toujours! J'aime ce restaurant!»
+Vincent va à son hôtel. Il cherche ses peintures. Il vient au café.
 
-Nous avons mangé la pizza. Elle était grande et très bonne. Nous avons bu du vin aussi. C'était la meilleure pizza de ma vie!
+"Hier, nous avons mangé ici," dit Paul.
 
-«Tu vois,» Pierre a dit, «je ne vais jamais aux autres restaurants. Ce restaurant est top!»
+"Oui, c'était très bon," dit Vincent. "Aujourd'hui, je fais ma peinture."
 
-«C'est vachement bon ici!»
+Vincent fait sa peinture. Paul boit son absinthe.
 
-Nous avions trop mangé. Nous étions très contents, mais nous ne pouvions pas manger plus.
+"Comment tu fais ça?" demande Paul. "Tu vois les couleurs la nuit?"
 
-«L'addition, s'il vous plaît!» Pierre a dit à la femme.
+"Oui, je vois tout," dit Vincent. "Je vois le café, je vois les étoiles, je vois les gens."
 
-«Vous voulez payer maintenant? Bon!»
+Paul dit, "Tu es un grand artiste, Vincent."
 
-«Je paie!» j'ai dit à Pierre.
+"Merci, mon ami," dit Vincent. "J'aime Arles. Arles est belle. Ce café est mon café préféré."
 
-«Non, non! Moi, je paie! Tu es mon ami.»
+Ils boivent leurs absinthes. Vincent continue sa peinture du café la nuit.
 
-«Bon. Merci Pierre! Tu es le meilleur ami!»
+Paul dit, "Cette peinture est meilleure que tes autres peintures."
 
-Maintenant, je vais toujours à ce restaurant. C'est le même restaurant où Pierre et moi avons mangé hier. Je viens ici avec mes amis. Tout le monde aime ce restaurant.
+Vincent sourit. "Peut-être. Nous allons voir."
 
-Tu devrais aller à ce restaurant! C'est sur la grande place. Tu pourrais manger du pain, de la pizza, et boire du bon vin. C'est génial!
+Ils sont au café toute la nuit. Vincent fait sa peinture. Paul est avec lui.
 
-**Fin.**`,
-    translation: `Yesterday, I was with my friend Pierre. We were hungry. "Pierre, I want to eat now!"
+C'est une bonne nuit à Arles.
 
-"Me too! We should go to the restaurant," Pierre said.
+Fin.`,
+    translation: `Vincent van Gogh and Paul Gauguin are in Arles. They are at the café. It's evening.
 
-"Yes! We could go to the best restaurant!" I said.
+"What do you want to drink?" Paul asks.
 
-The restaurant was on the big square. It was a small restaurant, but it was awesome! Everybody was there. We saw men, women and children.
+"I want an absinthe," says Vincent.
 
-**The woman:** Hello! What would you like?
+"Me too. I like absinthe," says Paul.
 
-**Pierre:** We would like bread and water, please. And a pizza too!
+The waiter brings their absinthes. Vincent looks around the café.
 
-**Me:** And I would like an espresso, please.
+"This café is very beautiful," says Vincent. "I want to do something."
 
-**The woman:** Very good! Here is your bread and your water.
+"What do you want to do?" asks Paul.
 
-The bread was very good. I ate bread with butter. Pierre ate a baguette. We drank water and coffee. It was too good!
+"I want to make a painting of this café at night."
 
-"This restaurant is better than the other restaurants!" Pierre said.
+"Good idea!" says Paul. "This café is more beautiful at night than during the day."
 
-"Yes! It's the best! I should come here always! I like this restaurant!"
+Vincent says, "Yes! The colors are better in the evening. And the stars are beautiful."
 
-We ate the pizza. It was big and very good. We drank wine too. It was the best pizza of my life!
+Vincent goes to his hotel. He looks for his paintings. He comes to the café.
 
-"You see," Pierre said, "I never go to the other restaurants. This restaurant is top!"
+"Yesterday, we ate here," says Paul.
 
-"It's really good here!"
+"Yes, it was very good," says Vincent. "Today, I'm making my painting."
 
-We had eaten too much. We were very happy, but we could not eat more.
+Vincent makes his painting. Paul drinks his absinthe.
 
-"The bill, please!" Pierre said to the woman.
+"How do you do that?" asks Paul. "You see the colors at night?"
 
-"You want to pay now? Good!"
+"Yes, I see everything," says Vincent. "I see the café, I see the stars, I see the people."
 
-"I'll pay!" I said to Pierre.
+Paul says, "You are a great artist, Vincent."
 
-"No, no! Me, I'll pay! You're my friend."
+"Thank you, my friend," says Vincent. "I love Arles. Arles is beautiful. This café is my favorite café."
 
-"Okay. Thank you Pierre! You're the best friend!"
+They drink their absinthes. Vincent continues his painting of the café at night.
 
-Now, I always go to this restaurant. It's the same restaurant where Pierre and I ate yesterday. I come here with my friends. Everybody likes this restaurant.
+Paul says, "This painting is better than your other paintings."
 
-You should go to this restaurant! It's on the big square. You could eat bread, pizza, and drink good wine. It's awesome!
+Vincent smiles. "Maybe. We'll see."
+
+They are at the café all night. Vincent makes his painting. Paul is with him.
+
+It's a good night in Arles.
 
 **The End.**`,
   },
 
   vocabularyReference: [
-    // Past tense - être
-    { french: "j'étais", english: "I was", note: "être imperfect" },
-    { french: "était", english: "was", note: "être imperfect - il/elle" },
-    { french: "c'était", english: "it was", note: "very common expression" },
+    // Proper nouns
     {
-      french: "nous étions",
-      english: "we were",
-      note: "être imperfect - nous",
+      french: "Vincent van Gogh",
+      english: "Vincent van Gogh",
+      note: "famous Dutch painter (1853-1890)",
+    },
+    {
+      french: "Paul Gauguin",
+      english: "Paul Gauguin",
+      note: "French post-impressionist painter, Van Gogh's friend",
+    },
+    {
+      french: "Arles",
+      english: "Arles",
+      note: "city in southern France where Van Gogh painted",
     },
 
-    // Past tense - avoir
-    { french: "nous avions", english: "we had", note: "avoir imperfect" },
+    // Cognates (exact English-French matches)
     {
-      french: "avions faim",
-      english: "were hungry",
-      note: "avoir faim in past",
+      french: "absinthe",
+      english: "absinthe",
+      note: "anise-flavored spirit popular with artists",
     },
-    { french: "avions mangé", english: "had eaten", note: "pluperfect" },
+    { french: "artiste", english: "artist", note: "cognate" },
+    { french: "café", english: "café", note: "cognate - coffee shop/drink" },
+    { french: "hôtel", english: "hotel", note: "cognate" },
+    { french: "couleurs", english: "colors", note: "cognate" },
 
-    // Passé composé
-    { french: "j'ai mangé", english: "I ate", note: "passé composé - manger" },
-    { french: "a mangé", english: "ate", note: "passé composé - il/elle" },
+    // Past tense
+    {
+      french: "c'était",
+      english: "it was",
+      note: "être imperfect - very common",
+    },
     { french: "nous avons mangé", english: "we ate", note: "passé composé" },
-    {
-      french: "nous avons bu",
-      english: "we drank",
-      note: "passé composé - boire (irregular!)",
-    },
-    {
-      french: "nous avons vu",
-      english: "we saw",
-      note: "passé composé - voir",
-    },
-    { french: "a dit", english: "said", note: "passé composé - dire (NEW!)" },
-    {
-      french: "j'ai dit",
-      english: "I said",
-      note: "passé composé - dire (NEW!)",
-    },
-
-    // Food & drink verbs
-    { french: "manger", english: "to eat", note: "essential verb" },
-    { french: "boire", english: "to drink", note: "irregular verb" },
-    { french: "j'aime", english: "I like / I love", note: "emotion verb" },
-    { french: "payer", english: "to pay", note: "regular verb" },
-    { french: "je paie", english: "I pay", note: "present tense" },
-
-    // Conditionals
-    {
-      french: "nous devrions",
-      english: "we should",
-      note: "conditional - devoir",
-    },
-    { french: "je devrais", english: "I should", note: "conditional - devoir" },
-    {
-      french: "tu devrais",
-      english: "you should",
-      note: "conditional - devoir",
-    },
-    {
-      french: "nous pourrions",
-      english: "we could",
-      note: "conditional - pouvoir",
-    },
-    {
-      french: "nous ne pouvions pas",
-      english: "we could not",
-      note: "imperfect negative",
-    },
-    {
-      french: "tu pourrais",
-      english: "you could",
-      note: "conditional - pouvoir",
-    },
-    {
-      french: "vous voudriez",
-      english: "you would like (formal)",
-      note: "conditional - vouloir",
-    },
-    {
-      french: "je voudrais",
-      english: "I would like",
-      note: "conditional - vouloir",
-    },
-    {
-      french: "nous voudrions",
-      english: "we would like",
-      note: "conditional - vouloir",
-    },
+    { french: "hier", english: "yesterday", note: "time word" },
+    { french: "aujourd'hui", english: "today", note: "time word" },
 
     // Comparisons
-    { french: "le meilleur", english: "the best (masc)", note: "superlative" },
-    { french: "meilleur que", english: "better than", note: "comparison" },
-    { french: "la meilleure", english: "the best (fem)", note: "superlative" },
-    { french: "plus", english: "more", note: "comparison" },
-    { french: "trop", english: "too much", note: "intensity" },
-    { french: "le même", english: "the same", note: "comparison" },
-    { french: "tout le monde", english: "everybody", note: "expression" },
-
-    // Slang
-    { french: "génial", english: "awesome / great", note: "France slang" },
-    { french: "top", english: "top / the best", note: "universal slang" },
-    { french: "vachement", english: "really / very", note: "France slang" },
-
-    // Food nouns
-    { french: "le pain", english: "bread", note: "essential food" },
-    { french: "l'eau", english: "water", note: "essential drink" },
-    { french: "une pizza", english: "a pizza", note: "popular food" },
-    { french: "un expresso", english: "an espresso", note: "strong coffee" },
-    { french: "une baguette", english: "a baguette", note: "French bread" },
-    { french: "le beurre", english: "butter", note: "with bread" },
-    { french: "le café", english: "coffee", note: "drink" },
-    { french: "le vin", english: "wine", note: "drink" },
-
-    // Other key words
-    { french: "le restaurant", english: "the restaurant", note: "place" },
-    { french: "faim", english: "hunger", note: "avoir faim = to be hungry" },
-    { french: "la vie", english: "life", note: "abstract noun" },
-    { french: "l'addition", english: "the bill", note: "at restaurant" },
-    { french: "votre", english: "your (formal)", note: "possessive - vous" },
-    { french: "où", english: "where", note: "location/question" },
     {
-      french: "contents",
-      english: "happy",
-      note: "adjective - masculine plural",
+      french: "plus beau que",
+      english: "more beautiful than",
+      note: "comparison",
     },
-    { french: "aussi", english: "also / too", note: "addition" },
-    { french: "moi aussi", english: "me too", note: "agreement" },
+    {
+      french: "meilleure que",
+      english: "better than (fem)",
+      note: "comparison",
+    },
+    { french: "meilleures", english: "better (plural)", note: "comparison" },
+
+    // Essential verbs from Units 1-5
+    { french: "boire", english: "to drink", note: "Unit 5 verb" },
+    { french: "faire", english: "to do/make", note: "Unit 4 verb" },
+    { french: "aimer", english: "to like/love", note: "Unit 5 verb" },
+    { french: "vouloir", english: "to want", note: "Unit 2 verb" },
+    { french: "aller", english: "to go", note: "Unit 3 verb" },
+    { french: "venir", english: "to come", note: "Unit 3 verb" },
+    { french: "voir", english: "to see", note: "Unit 2 verb" },
+    { french: "chercher", english: "to look for", note: "Unit 4 verb" },
+    { french: "continuer", english: "to continue", note: "Unit 4 verb" },
+
+    // Other key vocabulary
+    { french: "le soir", english: "evening", note: "time of day" },
+    { french: "la nuit", english: "night", note: "time of day" },
+    { french: "le jour", english: "day", note: "time of day" },
+    { french: "les étoiles", english: "the stars", note: "night sky" },
+    { french: "peinture", english: "painting", note: "artwork" },
+    { french: "toute la nuit", english: "all night", note: "duration" },
+    { french: "peut-être", english: "maybe", note: "possibility" },
+    { french: "mon ami", english: "my friend", note: "possessive + noun" },
+    { french: "préféré", english: "favorite", note: "preference" },
   ],
 
   exerciseConfig: {
     type: "custom",
     items: [
       {
-        instruction: "How were the narrator and Pierre feeling?",
-        prompt: "Nous avions ___",
-        hint: "They were hungry (avoir + hunger)",
-        expectedAnswer: "faim",
-        acceptableAnswers: [
-          "nous avions faim",
-          "avions faim",
-          "ils avaient faim",
-        ],
+        instruction: "Where are Vincent and Paul?",
+        prompt: "Ils sont à ___",
+        hint: "City in southern France",
+        expectedAnswer: "Arles",
+        acceptableAnswers: ["à Arles", "au café"],
         wrongAnswers: [],
       },
       {
-        instruction: "What did Pierre say about the restaurant?",
-        prompt: "Le ___ restaurant de Paris",
-        hint: "The best (superlative)",
-        expectedAnswer: "le meilleur",
-        acceptableAnswers: [
-          "meilleur",
-          "meilleur restaurant",
-          "le meilleur restaurant",
-          "le meilleur restaurant de Paris",
-          "ça est le meilleur restaurant de Paris",
-        ],
+        instruction: "What does Vincent want to drink?",
+        prompt: "Je veux une ___",
+        hint: "Anise-flavored spirit popular with artists",
+        expectedAnswer: "absinthe",
+        acceptableAnswers: ["une absinthe"],
         wrongAnswers: [],
       },
       {
-        instruction: "What slang did the narrator use?",
-        prompt: "C'est ___!",
-        hint: "French slang for 'awesome'",
-        expectedAnswer: "génial",
-        acceptableAnswers: ["c'est génial"],
+        instruction: "What does Vincent want to make?",
+        prompt: "Je veux faire une ___",
+        hint: "Artwork",
+        expectedAnswer: "peinture",
+        acceptableAnswers: ["une peinture", "peinture de ce café"],
         wrongAnswers: [],
       },
       {
-        instruction: "What conditional did they use?",
-        prompt: "Nous ___ aller",
-        hint: "We should go",
-        expectedAnswer: "devrions",
-        acceptableAnswers: ["nous devrions", "nous devrions aller"],
+        instruction: "When is the café more beautiful?",
+        prompt: "Ce café est plus beau ___ que le jour",
+        hint: "At night",
+        expectedAnswer: "la nuit",
+        acceptableAnswers: ["nuit", "le soir"],
         wrongAnswers: [],
       },
       {
-        instruction: "Where was the restaurant?",
-        prompt: "Sur la grande ___",
-        hint: "Square/place",
-        expectedAnswer: "sur la grande place",
-        acceptableAnswers: ["place", "la grande place", "grande place"],
+        instruction: "What are better in the evening?",
+        prompt: "Les ___ sont meilleures le soir",
+        hint: "What painters work with",
+        expectedAnswer: "couleurs",
+        acceptableAnswers: ["les couleurs"],
         wrongAnswers: [],
       },
       {
-        instruction: "What was the restaurant like?",
-        prompt: "C'était ___!",
-        hint: "French slang for awesome",
-        expectedAnswer: "génial",
-        acceptableAnswers: ["c'est génial", "c'était génial"],
-
+        instruction: "Where does Vincent go to get his painting supplies?",
+        prompt: "Vincent va à son ___",
+        hint: "Where he's staying",
+        expectedAnswer: "hôtel",
+        acceptableAnswers: ["son hôtel"],
         wrongAnswers: [],
       },
       {
-        instruction: "What did Pierre order?",
-        prompt: "Du pain, de l'eau, et une ___",
-        hint: "Italian food",
-        expectedAnswer: "du pain de l'eau et une pizza",
-        acceptableAnswers: [
-          "pizza",
-          "pain eau et pizza",
-          "pain, eau et pizza",
-          "une pizza",
-          "du pain de l'eau et une pizza",
-          "du pain et de l'eau et une pizza",
-          "du pain et de la pizza et de l'eau",
-          "du pain et de l'eau et une pizza",
-          "une pizza de pain et de l'eau",
-          "de pain et de pizza et de l'eau",
-          "pain, eau et pizza",
-        ],
+        instruction: "When did they eat at the café?",
+        prompt: "___, nous avons mangé ici",
+        hint: "Yesterday",
+        expectedAnswer: "Hier",
+        acceptableAnswers: ["hier"],
         wrongAnswers: [],
       },
       {
-        instruction: "What kind of coffee did the narrator want?",
-        prompt: "Je voudrais un ___",
-        hint: "Espresso (in French)",
-        expectedAnswer: "un expresso",
-        acceptableAnswers: ["expresso", "café", "un expresso", "un café"],
+        instruction: "What was the food like yesterday?",
+        prompt: "C'___ très bon",
+        hint: "It was (past tense)",
+        expectedAnswer: "était",
+        acceptableAnswers: ["c'était", "c'était très bon"],
         wrongAnswers: [],
       },
       {
-        instruction: "What did they eat the bread with?",
-        prompt: "Du pain avec du ___",
-        hint: "Butter",
-        expectedAnswer: "du beurre",
-        acceptableAnswers: ["beurre"],
+        instruction: "What does Vincent see at night?",
+        prompt: "Je vois le café, je vois les ___",
+        hint: "In the night sky",
+        expectedAnswer: "étoiles",
+        acceptableAnswers: ["les étoiles"],
         wrongAnswers: [],
       },
       {
-        instruction: "What did Pierre eat?",
-        prompt: "Pierre a mangé une ___",
-        hint: "French bread",
-        expectedAnswer: "une baguette",
-        acceptableAnswers: ["baguette", "Pierre a mangé une baguette"],
+        instruction: "What does Paul say about Vincent?",
+        prompt: "Tu es un grand ___",
+        hint: "Painter/creator",
+        expectedAnswer: "artiste",
+        acceptableAnswers: ["un grand artiste"],
         wrongAnswers: [],
       },
       {
-        instruction: "How did the narrator describe the food?",
-        prompt: "C'était ___ bon!",
-        hint: "Too (much)",
-        expectedAnswer: "trop bon",
-        acceptableAnswers: [],
+        instruction: "What city does Vincent love?",
+        prompt: "J'aime ___",
+        hint: "The city where they are",
+        expectedAnswer: "Arles",
+        acceptableAnswers: ["j'aime Arles"],
         wrongAnswers: [],
       },
       {
-        instruction: "How did Pierre compare this restaurant to others?",
-        prompt: "Ce restaurant est ___ que les autres",
+        instruction: "How does Paul compare this painting to Vincent's others?",
+        prompt: "Cette peinture est ___ que tes autres peintures",
         hint: "Better than",
-        expectedAnswer: "meilleur que les autres",
-        acceptableAnswers: ["meilleur"],
+        expectedAnswer: "meilleure",
+        acceptableAnswers: ["meilleure que", "plus belle"],
         wrongAnswers: [],
       },
       {
-        instruction: "What was the best thing?",
-        prompt: "La ___ pizza de ma vie",
-        hint: "The best (feminine)",
-        expectedAnswer: "la meilleure pizza",
-        acceptableAnswers: ["pizza"],
+        instruction: "Who is Paul Gauguin?",
+        prompt: "Paul Gauguin est un ___",
+        hint: "His profession",
+        expectedAnswer: "artiste",
+        acceptableAnswers: ["un artiste", "ami"],
         wrongAnswers: [],
       },
       {
-        instruction: "What slang did Pierre use?",
-        prompt: "Ce restaurant est ___!",
-        hint: "Universal slang for 'the best'",
-        expectedAnswer: "top",
-        wrongAnswers: [],
-      },
-      {
-        instruction: "What French slang intensity word was used?",
-        prompt: "C'est ___ bon ici!",
-        hint: "France slang for 'really'",
-        expectedAnswer: "vachement",
-        wrongAnswers: [],
-      },
-      {
-        instruction: "Why couldn't they eat more?",
-        prompt: "Nous ne ___ pas manger plus",
-        hint: "Could not (conditional past)",
-        expectedAnswer: "nous avions trop mangé",
-        acceptableAnswers: [
-          "trop mangé",
-          "ils avaient trop mangé",
-          "nous ne pouvions pas",
-          "ils ne pouvaient pas",
-        ],
-        wrongAnswers: [],
-      },
-      {
-        instruction: "What did they ask for at the end?",
-        prompt: "_____, s'il vous plaît!",
-        hint: "The bill/check",
-        expectedAnswer: "l'addition",
-        acceptableAnswers: ["l'addition s'il vous plaît"],
-        wrongAnswers: [],
-      },
-      {
-        instruction: "How often does the narrator visit this restaurant now?",
-        prompt: "Je vais ___ à ce restaurant",
-        hint: "Always",
-        expectedAnswer: "toujours",
-        acceptableAnswers: [
-          "je vais toujours",
-          "je vais toujours à ce restaurant",
-          "il va toujours",
-        ],
-        wrongAnswers: [],
-      },
-      {
-        instruction: "Is it the same restaurant where they ate yesterday?",
-        prompt: "C'est le ___ restaurant",
-        hint: "The same",
-        expectedAnswer: "oui",
-        acceptableAnswers: [
-          "le même restaurant",
-          "même",
-          "le même",
-          "c'est le même restaurant",
-        ],
-        wrongAnswers: [],
-      },
-      {
-        instruction: "Who does the narrator come to this restaurant with now?",
-        prompt: "Tu ___ aller à ce restaurant",
-        hint: "You should (conditional)",
-        expectedAnswer: "avec mes amis",
-        acceptableAnswers: ["mes amis", "ses amis", "amis", "avec ses amis"],
-        wrongAnswers: [],
-      },
-      {
-        instruction: "What can you drink at this restaurant?",
-        prompt: "Tu ___ manger du pain",
-        hint: "You could (conditional)",
-        expectedAnswer: "du bon vin",
-        acceptableAnswers: ["vin", "du vin", "de l'eau"],
+        instruction: "How long are they at the café?",
+        prompt: "Ils sont au café ___ la nuit",
+        hint: "All night",
+        expectedAnswer: "toute",
+        acceptableAnswers: ["toute la nuit"],
         wrongAnswers: [],
       },
     ],

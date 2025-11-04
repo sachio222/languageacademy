@@ -331,7 +331,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
           ) : (
             <>
               <div className="hero-cta-group">
-                <button className="cta-secondary large" onClick={onLogin}>
+                <button className="cta-secondary" onClick={onLogin}>
                   Sign In
                 </button>
                 <button className="cta-primary large" onClick={onGetStarted}>
