@@ -1,7 +1,7 @@
 /**
  * Cambridge Dictionary Scraped Nouns
- * Generated: 2025-11-04T03:31:08.514Z
- * Successfully scraped: 503/503
+ * Generated: 2025-11-04T15:41:22.746Z
+ * Successfully scraped: 506/506
  */
 
 export const nounsCambridge = new Map([
@@ -28819,6 +28819,233 @@ export const nounsCambridge = new Map([
         "verified": false,
         "created_at": "2025-11-04T03:31:08.090Z",
         "updated_at": "2025-11-04T03:31:08.090Z"
+    }
+  ],
+  [
+    "tableau-fr",
+        {
+        "id": "tableau-fr",
+        "lang": "fr",
+        "word": "tableau",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "painting/board/table",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "accrocher un tableau au mur",
+                "trans": "to hang a painting on the wall",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "un tableau d’affichage",
+                "trans": "a noticeboard",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "aller au tableau",
+                "trans": "to go up to the blackboard",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "remplir un tableau",
+                "trans": "to fill out a chart",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "faire un tableau inquiétant de la situation",
+                "trans": "to provide a worrying description of the situation",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-11-04T15:20:13.874Z",
+        "updated_at": "2025-11-04T15:20:14.269Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "plural_form": "tableaux",
+        "noun_articles": {
+            "definite": "le",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "le tableau",
+                "type": "definite_article",
+                "context": "the painting/board",
+                "frequency": "common"
+            },
+            {
+                "phrase": "un tableau",
+                "type": "indefinite_article",
+                "context": "a painting/board",
+                "frequency": "common"
+            },
+            {
+                "phrase": "un tableau noir",
+                "type": "definite_article",
+                "context": "blackboard",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "art-fr",
+        {
+        "id": "art-fr",
+        "lang": "fr",
+        "word": "art",
+        "translations": [
+            {
+                "lang": "en",
+                "text": "art",
+                "source": "language_academy",
+                "confidence": 0.95
+            }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "lang": "fr",
+                "text": "l’art moderne",
+                "trans": "modern art",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "les arts plastiques",
+                "trans": "the plastic arts",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "une œuvre d’art",
+                "trans": "an artwork",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "l’art militaire",
+                "trans": "the art of war",
+                "source": "cambridge"
+            },
+            {
+                "lang": "fr",
+                "text": "Il a l’art de faire rire tout le monde.",
+                "trans": "He has the knack of making everyone laugh.",
+                "source": "cambridge"
+            }
+        ],
+        "phonetic": "",
+        "cefr_level": "A1",
+        "tags": [
+            "lesson"
+        ],
+        "created_at": "2025-11-04T15:20:13.878Z",
+        "updated_at": "2025-11-04T15:20:14.524Z",
+        "sources": [
+            "language_academy",
+            "cambridge"
+        ],
+        "verified": false,
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "noun_articles": {
+            "definite": "l'",
+            "indefinite": "un",
+            "plural": "les"
+        },
+        "noun_phrases": [
+            {
+                "phrase": "l'art",
+                "type": "definite_article",
+                "context": "art",
+                "frequency": "common"
+            },
+            {
+                "phrase": "les arts",
+                "type": "plural_article",
+                "context": "the arts",
+                "frequency": "common"
+            },
+            {
+                "phrase": "l'art moderne",
+                "type": "definite_article",
+                "context": "modern art",
+                "frequency": "common"
+            }
+        ]
+    }
+  ],
+  [
+    "tableaux-fr",
+        {
+        "id": "tableaux-fr",
+        "lang": "fr",
+        "word": "tableaux",
+        "partOfSpeech": "noun",
+        "redirect_to": "tableau-fr",
+        "redirect_type": "plural_form",
+        "base_word": "tableau",
+        "gender": "masculine",
+        "number": "plural",
+        "translations": [],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+            {
+                "text": "les tableaux",
+                "trans": "the paintings/boards",
+                "lang": "en"
+            },
+            {
+                "text": "des tableaux",
+                "trans": "some paintings/boards",
+                "lang": "en"
+            }
+        ],
+        "phonetic": "",
+        "tags": [
+            "redirect"
+        ],
+        "sources": [
+            "language_academy"
+        ],
+        "verified": false,
+        "created_at": "2025-11-04T15:41:22.736Z",
+        "updated_at": "2025-11-04T15:41:22.737Z"
     }
   ]
 ]);

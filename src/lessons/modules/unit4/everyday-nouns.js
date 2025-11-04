@@ -135,6 +135,21 @@ export const everydayNouns = {
       english: "the bill/check",
       note: "feminine (addition) - at restaurants",
     },
+    {
+      french: "le tableau",
+      english: "painting/board/table",
+      note: "masculine - can mean painting, board, or table",
+    },
+    {
+      french: "l'art",
+      english: "art",
+      note: "masculine (art) - the arts, visual arts",
+    },
+    {
+      french: "les tableaux",
+      english: "paintings/boards/tables",
+      note: "masculine plural - plural of tableau",
+    },
   ],
 
   exerciseConfig: {

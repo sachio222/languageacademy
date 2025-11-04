@@ -38,7 +38,7 @@ export const reading5 = {
 
   readingPassage: {
     title: "La fée verte (The Green Fairy)",
-    text: `![img/reading5/reading5-realcafe1.jpeg|90%]
+    text: `![img/reading5/reading5-realcafe1.jpeg|75%]
 
 *Vincent van Gogh et Paul Gauguin parlent dans un café à Arles.*
 
@@ -60,7 +60,7 @@ Vincent regarde autour du café.
 
 « Qu'est-ce que tu veux faire ? » demande Paul.
 
-« Je veux faire une peinture de ce café la nuit. »
+« Je veux faire un tableau de ce café la nuit. »
 
 « Bonne idée ! » dit Paul. « Ce café est plus beau la nuit que le jour. »
 
@@ -76,9 +76,9 @@ Vincent dit : « Oui ! Les couleurs sont meilleures le soir. Et les étoiles son
 
 « Hier, nous avons mangé ici, » dit Paul.
 
-« Hum ? Oui, c'était très bon, » dit Vincent. « Aujourd'hui, je fais ma peinture. »
+« Hum ? Oui, c'était très bon, » dit Vincent. « Aujourd'hui, je vais faire mon tableau. »
 
-Vincent fait sa peinture. Paul boit son absinthe.
+Vincent fait son tableau. Paul boit son absinthe.
 
 « Comment tu fais ça ? » demande Paul. « Tu vois les couleurs la nuit ? »
 
@@ -92,15 +92,15 @@ Paul dit : « Tu es un grand artiste, Vincent. »
 
 « Merci, mon ami, » dit Vincent. « J'aime Arles. Arles est belle. Ce café est mon café préféré. »
 
-Ils boivent beaucoup de leurs absinthes. Vincent continue sa peinture du café la nuit.
+Ils boivent beaucoup de leurs absinthes. Vincent continue son tableau du café la nuit.
 
-Paul dit : « Cette peinture est meilleure que tes autres peintures. »
+Paul dit : « Ce tableau est meilleur que tes autres tableaux. »
 
 Vincent sourit. « Peut-être. Nous allons voir. »
 
 ![img/reading5/reading5-vangogh-gaugain-chatting-terrace.jpeg|50%]
 
-*Ils sont au café toute la nuit. Vincent fait sa peinture. Paul boit son absinthe avec lui.*
+*Ils sont au café toute la nuit. Vincent fait son tableau. Paul boit son absinthe avec lui.*
 
 C'est une bonne nuit à Arles.
 
@@ -145,7 +145,7 @@ Vincent says, "Yes! The colors are better in the evening. And the stars are beau
 
 "Yesterday, we ate here," says Paul.
 
-"Hum? Yes, it was very good," says Vincent. "Today, I'm making my painting."
+"Hum? Yes, it was very good," says Vincent. "Today, I'm going to make my painting."
 
 Vincent makes his painting. Paul drinks his absinthe.
 
@@ -162,15 +162,15 @@ Paul says, "You are a great artist, Vincent."
 
 "Thank you, my friend," says Vincent. "I love Arles. Arles is beautiful. This café is my favorite café."
 
-They drink a lot of their absinthes. Vincent continues his painting of the café at night.
+They drink a lot of their absinthes. Vincent continues his painting (tableau) of the café at night.
 
-Paul says, "This painting is better than your other paintings."
+Paul says, "This painting (tableau) is better than your other paintings (tableaux)."
 
 Vincent smiles. "Maybe. We'll see."
 
 ![img/reading5/reading5-vangogh-gaugain-chatting-terrace.jpeg|45%]
 
-They are at the café all night. Vincent makes his painting. Paul drinks his absinthe with him.
+They are at the café all night. Vincent makes his painting (tableau). Paul drinks his absinthe with him.
 
 It's a good night in Arles.
 
@@ -250,7 +250,12 @@ It's a good night in Arles.
     { french: "la nuit", english: "night", note: "time of day" },
     { french: "le jour", english: "day", note: "time of day" },
     { french: "les étoiles", english: "the stars", note: "night sky" },
-    { french: "peinture", english: "painting", note: "artwork" },
+    {
+      french: "tableau",
+      english: "painting",
+      note: "artwork (completed painting)",
+    },
+    { french: "tableaux", english: "paintings", note: "plural of tableau" },
     { french: "toute la nuit", english: "all night", note: "duration" },
     { french: "peut-être", english: "maybe", note: "possibility" },
     { french: "mon ami", english: "my friend", note: "possessive + noun" },
@@ -284,10 +289,10 @@ It's a good night in Arles.
       },
       {
         instruction: "What does Vincent want to make?",
-        prompt: "Je veux faire une ___",
+        prompt: "Je veux faire un ___",
         hint: "Artwork",
-        expectedAnswer: "peinture",
-        acceptableAnswers: ["une peinture", "peinture de ce café"],
+        expectedAnswer: "tableau",
+        acceptableAnswers: ["un tableau", "tableau de ce café"],
         wrongAnswers: [],
       },
       {
@@ -376,14 +381,14 @@ It's a good night in Arles.
       },
       {
         instruction: "How does Paul compare this painting to Vincent's others?",
-        prompt: "Cette peinture est ___ que tes autres peintures",
+        prompt: "Ce tableau est ___ que tes autres tableaux",
         hint: "Better than",
-        expectedAnswer: "le meilleure",
+        expectedAnswer: "meilleur",
         acceptableAnswers: [
-          "meilleure",
-          "plus belle",
-          "meilleure que tes autres peintures",
-          "meilleure que ses autres peintures",
+          "meilleur",
+          "plus beau",
+          "meilleur que tes autres tableaux",
+          "meilleur que ses autres tableaux",
         ],
         wrongAnswers: [],
       },

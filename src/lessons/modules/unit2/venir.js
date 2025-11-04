@@ -32,6 +32,13 @@ export const venirModule = {
         "Combine venir with previous modules for infinite expressions. For example, to say 'I want to come' you can say 'je veux venir'.",
       example: "je viens + de ça, nous venons + avec vous, ils viennent + voir",
     },
+    {
+      term: "The re- Prefix",
+      definition:
+        "Adding 're-' to a verb means 'again' or 'back'. So 'revenir' means 'to come back' or 'to return'. It follows the same conjugation pattern as 'venir' - just add 're-' before each form!",
+      example:
+        "venir → revenir (to come → to come back), je viens → je reviens, il vient → il revient",
+    },
   ],
 
   vocabularyReference: [
@@ -64,6 +71,35 @@ export const venirModule = {
       note: "double n!",
     },
     { french: "elles viennent", english: "they come (fem)", note: "double n!" },
+    { french: "revenir", english: "to come back / to return", note: "re- + venir" },
+    {
+      french: "je reviens",
+      english: "I come back / I'm coming back",
+      note: "revenir - same pattern as venir!",
+    },
+    {
+      french: "tu reviens",
+      english: "you come back (informal)",
+      note: "same as je!",
+    },
+    { french: "il revient", english: "he comes back", note: "different ending" },
+    { french: "elle revient", english: "she comes back", note: "same as il" },
+    {
+      french: "nous revenons",
+      english: "we come back",
+      note: "regular -ons pattern",
+    },
+    {
+      french: "vous revenez",
+      english: "you come back (formal)",
+      note: "regular -ez pattern",
+    },
+    {
+      french: "ils reviennent",
+      english: "they come back (masc)",
+      note: "double n!",
+    },
+    { french: "elles reviennent", english: "they come back (fem)", note: "double n!" },
   ],
 
   // UPGRADED: Custom exercises for sophisticated learning

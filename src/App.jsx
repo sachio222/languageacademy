@@ -467,6 +467,14 @@ function App() {
             isOpen={showBetaNotice}
             onClose={async () => {
               setShowBetaNotice(false);
+              // Remove pilotwelcome query parameter from URL
+              const urlParams = new URLSearchParams(window.location.search);
+              if (urlParams.get('pilotwelcome') === 'true') {
+                urlParams.delete('pilotwelcome');
+                const newUrl = new URL(window.location);
+                newUrl.search = urlParams.toString();
+                window.history.replaceState({}, '', newUrl);
+              }
               // Mark beta welcome as seen in database for authenticated users
               if (isAuthenticated && supabaseUser && supabaseClient) {
                 await markBetaWelcomeAsSeen(supabaseClient, supabaseUser);
