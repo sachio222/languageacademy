@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, Flame, TrendingUp, BookOpen, Clock, Award, Target, Download } from 'lucide-react';
 import { useReportCardData } from '../hooks/useReportCardData';
 import { calculateCommunicationInsights } from '../utils/communicationInsights';
+import { lessons } from '../lessons/lessonData';
 import '../styles/ReportCard.css';
 
 /**
@@ -14,25 +15,14 @@ import '../styles/ReportCard.css';
  */
 function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) {
   const [timeRange, setTimeRange] = useState('all');
-  const [expandedSections, setExpandedSections] = useState({
-    progress: false,
-    activity: false,
-    vocabulary: false,
-    performance: false
-  });
+  const [activeTab, setActiveTab] = useState('activity');
+  const [performanceExpanded, setPerformanceExpanded] = useState(false);
+  const [showAllActivity, setShowAllActivity] = useState(false);
   
   const { data, loading, error, refetch } = useReportCardData(userId, {
     includeDetailedProgress: true,
     timeRange
   });
-  
-  // Toggle section expansion
-  const toggleSection = (section) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
-  };
   
   // Format duration
   const formatDuration = (seconds) => {
@@ -70,6 +60,30 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
       month: 'short',
       day: 'numeric'
     });
+  };
+  
+  // Helper function to find lesson by module_id
+  const findLessonByModuleId = (moduleId) => {
+    if (!moduleId) return null;
+    const moduleIdStr = String(moduleId);
+    const isNumeric = /^\d+$/.test(moduleIdStr);
+    
+    if (isNumeric) {
+      const moduleIdNum = parseInt(moduleIdStr, 10);
+      return lessons.find((l) => l.id === moduleIdNum);
+    } else {
+      return lessons.find((l) => l.moduleKey === moduleId);
+    }
+  };
+  
+  // Get module display name with number (without "Module" prefix)
+  const getModuleDisplayName = (moduleId) => {
+    const lesson = findLessonByModuleId(moduleId);
+    if (lesson && lesson.title) {
+      // Remove "Module " prefix if it exists
+      return lesson.title.replace(/^Module\s+/, '');
+    }
+    return `${moduleId}`;
   };
   
   // Handle PDF export
@@ -265,180 +279,176 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
         </div>
       </div>
       
-      {/* Progress Overview Section */}
-      <section className="report-section">
-        <button
-          className="section-header"
-          onClick={() => toggleSection('progress')}
-          aria-expanded={expandedSections.progress}
-        >
-          <div className="section-title">
-            <TrendingUp size={20} />
-            <h2>Progress Overview</h2>
-          </div>
-          <div className="section-summary">
-            {progress.completedModulesCount} / {progress.totalModulesCount} modules
-          </div>
-          <ChevronDown
-            size={20}
-            className={`chevron ${expandedSections.progress ? 'expanded' : ''}`}
-          />
-        </button>
+      {/* Tabbed Section */}
+      <section className="report-section report-section-tabs">
+        <div className="tabs-header">
+          <button
+            className={`tab-button ${activeTab === 'activity' ? 'active' : ''}`}
+            onClick={() => setActiveTab('activity')}
+          >
+            <Clock size={18} />
+            <span>Recent Activity</span>
+          </button>
+          <button
+            className={`tab-button ${activeTab === 'overview' ? 'active' : ''}`}
+            onClick={() => setActiveTab('overview')}
+          >
+            <TrendingUp size={18} />
+            <span>Overview</span>
+          </button>
+          <button
+            className={`tab-button ${activeTab === 'vocabulary' ? 'active' : ''}`}
+            onClick={() => setActiveTab('vocabulary')}
+          >
+            <BookOpen size={18} />
+            <span>Vocabulary</span>
+          </button>
+        </div>
         
-        {expandedSections.progress && (
-          <div className="section-content">
-            <div className="progress-stats">
-              <div className="progress-stat">
-                <span className="stat-label">Modules Completed</span>
-                <span className="stat-value">{progress.completedModulesCount} / {progress.totalModulesCount}</span>
-              </div>
-              <div className="progress-stat">
-                <span className="stat-label">Units Completed</span>
-                <span className="stat-value">{progress.completedUnitsCount}</span>
-              </div>
+        <div className="tabs-content">
+          {/* Recent Activity Tab */}
+          {activeTab === 'activity' && (
+            <div className="tab-panel">
+              {recentActivity.modules.length === 0 && recentActivity.exams.length === 0 ? (
+                <p className="empty-message">No recent activity</p>
+              ) : (
+                <>
+                  <div className="activity-table-container">
+                    <table className="activity-table">
+                      <thead>
+                        <tr>
+                          <th>Module</th>
+                          <th>Time Spent</th>
+                          <th>Completed</th>
+                          <th>Score</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {(showAllActivity ? recentActivity.modules : recentActivity.modules.slice(0, 20)).map(module => (
+                          <tr key={module.id} className="activity-row">
+                            <td className="activity-module">{getModuleDisplayName(module.module_id)}</td>
+                            <td className="activity-time">{formatDuration(module.time_spent_seconds || 0)}</td>
+                            <td className="activity-date">{formatRelativeTime(module.completed_at)}</td>
+                            <td className="activity-score">
+                              {module.exam_score !== null ? `${module.exam_score}%` : '—'}
+                            </td>
+                          </tr>
+                        ))}
+                        {(showAllActivity ? recentActivity.exams : recentActivity.exams.slice(0, 20)).map(exam => (
+                          <tr key={exam.id} className="activity-row">
+                            <td className="activity-module">{exam.exam_type}</td>
+                            <td className="activity-time">—</td>
+                            <td className="activity-date">{formatRelativeTime(exam.completed_at)}</td>
+                            <td className="activity-score">{exam.score_percentage}%</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  {(recentActivity.modules.length > 20 || recentActivity.exams.length > 20) && (
+                    <div className="activity-show-more">
+                      <button
+                        className="show-more-button"
+                        onClick={() => setShowAllActivity(!showAllActivity)}
+                      >
+                        {showAllActivity 
+                          ? `Show less (showing ${recentActivity.modules.length + recentActivity.exams.length} items)`
+                          : `Show all (${recentActivity.modules.length + recentActivity.exams.length} items)`
+                        }
+                      </button>
+                    </div>
+                  )}
+                </>
+              )}
             </div>
-            
-            <div className="unit-progress-list">
-              {progress.unitProgress.map(unit => (
-                <div key={unit.id} className="unit-progress-item">
-                  <div className="unit-header">
-                    <span className="unit-icon">{unit.icon}</span>
-                    <span className="unit-title">{unit.title}</span>
-                    <span className="unit-percentage">{unit.percentage}%</span>
+          )}
+          
+          {/* Overview Tab */}
+          {activeTab === 'overview' && (
+            <div className="tab-panel">
+              <div className="chart-header">
+                <h3 className="chart-title">Time & Progress by Unit</h3>
+                <div className="chart-legend">
+                  <div className="legend-item">
+                    <div className="legend-color" style={{ background: '#3b82f6' }}></div>
+                    <span>Study Time</span>
                   </div>
-                  <div className="unit-progress-bar">
-                    <div
-                      className="unit-progress-fill"
-                      style={{ width: `${unit.percentage}%` }}
-                    />
-                  </div>
-                  <div className="unit-details">
-                    <span>{unit.completed} / {unit.total} modules</span>
-                    {unit.examScore !== null && (
-                      <span className="exam-score">Exam: {unit.examScore}%</span>
-                    )}
+                  <div className="legend-item">
+                    <div className="legend-color" style={{ background: '#10b981' }}></div>
+                    <span>Completion</span>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </section>
-      
-      {/* Recent Activity Section */}
-      <section className="report-section">
-        <button
-          className="section-header"
-          onClick={() => toggleSection('activity')}
-          aria-expanded={expandedSections.activity}
-        >
-          <div className="section-title">
-            <Clock size={20} />
-            <h2>Recent Activity</h2>
-          </div>
-          <div className="section-summary">
-            {recentActivity.modules.length} recent modules
-          </div>
-          <ChevronDown
-            size={20}
-            className={`chevron ${expandedSections.activity ? 'expanded' : ''}`}
-          />
-        </button>
-        
-        {expandedSections.activity && (
-          <div className="section-content">
-            {recentActivity.modules.length === 0 ? (
-              <p className="empty-message">No recent activity</p>
-            ) : (
-              <div className="activity-list">
-                {recentActivity.modules.map(module => (
-                  <div key={module.id} className="activity-item">
-                    <div className="activity-icon">✓</div>
-                    <div className="activity-content">
-                      <div className="activity-title">{module.module_id}</div>
-                      <div className="activity-date">
-                        {formatRelativeTime(module.completed_at)}
+              </div>
+              
+              <div className="unit-chart">
+                {(() => {
+                  const maxTime = Math.max(...progress.unitProgress.map(u => u.studyTime || 0), 1);
+                  
+                  return progress.unitProgress.map(unit => (
+                    <div key={unit.id} className="chart-column">
+                      <div className="chart-bars">
+                        <div 
+                          className="chart-bar time-bar"
+                          style={{ height: `${((unit.studyTime || 0) / maxTime) * 100}%` }}
+                          title={`${formatDuration(unit.studyTime || 0)}`}
+                        >
+                          <span className="bar-value">{formatDuration(unit.studyTime || 0)}</span>
+                        </div>
+                        <div 
+                          className="chart-bar completion-bar"
+                          style={{ height: `${unit.percentage}%` }}
+                          title={`${unit.percentage}% complete`}
+                        >
+                          <span className="bar-value">{unit.percentage}%</span>
+                        </div>
+                      </div>
+                      <div className="chart-label">
+                        <span className="chart-icon">{unit.icon}</span>
+                        <span className="chart-unit-title">{unit.title}</span>
+                        <span className="chart-modules">{unit.completed}/{unit.total}</span>
                       </div>
                     </div>
-                    {module.exam_score !== null && (
-                      <div className="activity-score">{module.exam_score}%</div>
-                    )}
-                  </div>
-                ))}
+                  ));
+                })()}
               </div>
-            )}
-            
-            {recentActivity.exams.length > 0 && (
-              <>
-                <h3 className="subsection-title">Recent Exams</h3>
-                <div className="exam-list">
-                  {recentActivity.exams.map(exam => (
-                    <div key={exam.id} className="exam-item">
-                      <div className="exam-type">{exam.exam_type}</div>
-                      <div className="exam-score">{exam.score_percentage}%</div>
-                      <div className="exam-date">{formatRelativeTime(exam.completed_at)}</div>
+            </div>
+          )}
+          
+          {/* Vocabulary Tab */}
+          {activeTab === 'vocabulary' && (
+            <div className="tab-panel">
+              {Object.keys(vocabulary.byUnit).length === 0 ? (
+                <p className="empty-message">No vocabulary learned yet</p>
+              ) : (
+                <div className="vocabulary-by-unit">
+                  {Object.entries(vocabulary.byUnit).map(([unitId, words]) => (
+                    <div key={unitId} className="unit-vocabulary">
+                      <h3 className="unit-vocabulary-title">
+                        {unitId.replace('unit', 'Unit ')} ({words.length} words)
+                      </h3>
+                      <div className="vocabulary-words">
+                        {words.slice(0, 20).map((word, idx) => (
+                          <span key={idx} className="vocabulary-word">{word}</span>
+                        ))}
+                        {words.length > 20 && (
+                          <span className="vocabulary-more">+{words.length - 20} more</span>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
-              </>
-            )}
-          </div>
-        )}
-      </section>
-      
-      {/* Vocabulary Section */}
-      <section className="report-section">
-        <button
-          className="section-header"
-          onClick={() => toggleSection('vocabulary')}
-          aria-expanded={expandedSections.vocabulary}
-        >
-          <div className="section-title">
-            <BookOpen size={20} />
-            <h2>Vocabulary</h2>
-          </div>
-          <div className="section-summary">
-            {vocabulary.totalWords} words learned
-          </div>
-          <ChevronDown
-            size={20}
-            className={`chevron ${expandedSections.vocabulary ? 'expanded' : ''}`}
-          />
-        </button>
-        
-        {expandedSections.vocabulary && (
-          <div className="section-content">
-            {Object.keys(vocabulary.byUnit).length === 0 ? (
-              <p className="empty-message">No vocabulary learned yet</p>
-            ) : (
-              <div className="vocabulary-by-unit">
-                {Object.entries(vocabulary.byUnit).map(([unitId, words]) => (
-                  <div key={unitId} className="unit-vocabulary">
-                    <h3 className="unit-vocabulary-title">
-                      {unitId.replace('unit', 'Unit ')} ({words.length} words)
-                    </h3>
-                    <div className="vocabulary-words">
-                      {words.slice(0, 20).map((word, idx) => (
-                        <span key={idx} className="vocabulary-word">{word}</span>
-                      ))}
-                      {words.length > 20 && (
-                        <span className="vocabulary-more">+{words.length - 20} more</span>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
+              )}
+            </div>
+          )}
+        </div>
       </section>
       
       {/* Performance Section */}
       <section className="report-section">
         <button
           className="section-header"
-          onClick={() => toggleSection('performance')}
-          aria-expanded={expandedSections.performance}
+          onClick={() => setPerformanceExpanded(!performanceExpanded)}
+          aria-expanded={performanceExpanded}
         >
           <div className="section-title">
             <Award size={20} />
@@ -449,11 +459,11 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
           </div>
           <ChevronDown
             size={20}
-            className={`chevron ${expandedSections.performance ? 'expanded' : ''}`}
+            className={`chevron ${performanceExpanded ? 'expanded' : ''}`}
           />
         </button>
         
-        {expandedSections.performance && (
+        {performanceExpanded && (
           <div className="section-content">
             {performance.strengths.length > 0 && (
               <>

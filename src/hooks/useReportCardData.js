@@ -265,9 +265,9 @@ export const useReportCardData = (userId = null, options = {}) => {
     const unitProgress = calculateUnitProgress(modules, units);
 
     // Recent activity (use filtered data)
-    const recentModules = modulesForActivity.slice(0, 10);
-    const recentExams = exams.slice(0, 10);
-    const recentSessions = sessions.slice(0, 10);
+    const recentModules = modulesForActivity;
+    const recentExams = exams;
+    const recentSessions = sessions;
 
     // Vocabulary breakdown
     const vocabularyByUnit = groupVocabularyByUnit(completedModules);
@@ -448,6 +448,12 @@ export const useReportCardData = (userId = null, options = {}) => {
         (m) => m.completed_at != null && m.completed_at !== ""
       ).length;
 
+      // Calculate total study time for this unit from unitModules
+      const studyTime = unitModules.reduce(
+        (sum, m) => sum + (m.time_spent_seconds || 0),
+        0
+      );
+
       // Debug logging for first unit
       if (unit.id === "unit1") {
         logger.log(`[ReportCard] Unit ${unit.id}:`, {
@@ -455,6 +461,7 @@ export const useReportCardData = (userId = null, options = {}) => {
           unitModules: unitModules.length,
           completedCount,
           totalCount,
+          studyTime,
           sampleModules: unitModules.slice(0, 3).map((m) => ({
             module_id: m.module_id,
             completed_at: m.completed_at,
@@ -470,6 +477,7 @@ export const useReportCardData = (userId = null, options = {}) => {
         total: totalCount,
         percentage:
           totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0,
+        studyTime: studyTime,
         examScore: unitData?.unit_exam_score,
         completedAt: unitData?.completed_at,
       };

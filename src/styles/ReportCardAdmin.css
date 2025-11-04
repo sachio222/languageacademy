@@ -628,10 +628,23 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding-left: 2rem;
-  padding-right: 2rem;
   margin-left: 0;
   margin-right: 0;
+}
+
+.modal-content .report-section-tabs {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.modal-content .tabs-header {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.modal-content .tabs-content {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .modal-content .report-card > * {
