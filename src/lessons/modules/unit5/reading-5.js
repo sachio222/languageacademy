@@ -72,6 +72,8 @@ Vincent dit : « Oui ! Les couleurs sont meilleures le soir. Et les étoiles son
 
 *Vincent part pour son hôtel. Il trouve ses peintures. Il revient au café.*
 
+---
+
 « Hier, nous avons mangé ici, » dit Paul.
 
 « Hum ? Oui, c'était très bon, » dit Vincent. « Aujourd'hui, je fais ma peinture. »
@@ -137,7 +139,9 @@ Vincent says, "Yes! The colors are better in the evening. And the stars are beau
 
 ![img/reading5/reading5-vangogh-leaves.jpeg|65%]
 
-Vincent leaves for his hotel. He finds his paints. He returns to the café.
+*Vincent leaves for his hotel. He finds his paints. He returns to the café*
+
+---
 
 "Yesterday, we ate here," says Paul.
 

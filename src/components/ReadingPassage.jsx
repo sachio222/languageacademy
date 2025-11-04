@@ -125,6 +125,9 @@ function ReadingPassage({ passage }) {
               return (
                 <div key={pIdx} className="paragraph-block paragraph-subheader">
                   {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords)}
+                  {showTranslation && englishParagraphs[pIdx] && (
+                    <p className="english-translation">{stripMarkdown(englishParagraphs[pIdx])}</p>
+                  )}
                 </div>
               );
             }
