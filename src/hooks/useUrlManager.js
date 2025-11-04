@@ -9,10 +9,14 @@ export const useUrlManager = () => {
     const referenceParam = params.get('reference');
     const vocabularyParam = params.get('vocabulary');
     const dictionaryParam = params.get('dictionary');
+    const reportCardParam = params.get('report-card');
+    const reportCardAdminParam = params.get('report-card-admin');
 
     if (referenceParam === 'true') return 'reference';
     if (vocabularyParam === 'true') return 'vocabulary';
     if (dictionaryParam === 'true') return 'dictionary';
+    if (reportCardParam === 'true') return 'report-card';
+    if (reportCardAdminParam === 'true') return 'report-card-admin';
 
     if (moduleParam) {
       const moduleId = parseInt(moduleParam, 10);
@@ -28,7 +32,7 @@ export const useUrlManager = () => {
   // Clean all URL parameters
   const cleanUrl = useCallback(() => {
     const url = new URL(window.location);
-    const paramsToDelete = ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'reference', 'vocabulary', 'dictionary'];
+    const paramsToDelete = ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'reference', 'vocabulary', 'dictionary', 'report-card', 'report-card-admin'];
     paramsToDelete.forEach(param => url.searchParams.delete(param));
     window.history.replaceState({}, '', url);
   }, []);
@@ -71,6 +75,26 @@ export const useUrlManager = () => {
     window.history.pushState({}, '', url);
   }, []);
 
+  // Set report card in URL
+  const setReportCard = useCallback(() => {
+    const url = new URL(window.location);
+    url.searchParams.set('report-card', 'true');
+    ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'reference', 'vocabulary'].forEach(param => 
+      url.searchParams.delete(param)
+    );
+    window.history.pushState({}, '', url);
+  }, []);
+
+  // Set report card admin in URL
+  const setReportCardAdmin = useCallback(() => {
+    const url = new URL(window.location);
+    url.searchParams.set('report-card-admin', 'true');
+    ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'reference', 'vocabulary'].forEach(param => 
+      url.searchParams.delete(param)
+    );
+    window.history.pushState({}, '', url);
+  }, []);
+
   // Set admin in URL
   const setAdmin = useCallback((isAdmin) => {
     const url = new URL(window.location);
@@ -87,12 +111,21 @@ export const useUrlManager = () => {
     const params = new URLSearchParams(window.location.search);
     const moduleParam = params.get('module');
     const referenceParam = params.get('reference');
+    const vocabularyParam = params.get('vocabulary');
+    const reportCardParam = params.get('report-card');
+    const reportCardAdminParam = params.get('report-card-admin');
     const adminParam = params.get('admin');
 
     setShowFeedbackAdmin(adminParam === 'true');
 
     if (referenceParam === 'true') {
       setCurrentLesson('reference');
+    } else if (vocabularyParam === 'true') {
+      setCurrentLesson('vocabulary');
+    } else if (reportCardParam === 'true') {
+      setCurrentLesson('report-card');
+    } else if (reportCardAdminParam === 'true') {
+      setCurrentLesson('report-card-admin');
     } else if (moduleParam) {
       const moduleId = parseInt(moduleParam, 10);
       if (!isNaN(moduleId) && moduleId > 0 && lessons.find(l => l.id === moduleId)) {
@@ -113,6 +146,8 @@ export const useUrlManager = () => {
     setReference,
     setVocabulary,
     setDictionary,
+    setReportCard,
+    setReportCardAdmin,
     setAdmin,
     handlePopState
   };

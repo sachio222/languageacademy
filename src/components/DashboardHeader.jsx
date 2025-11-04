@@ -8,7 +8,7 @@ import { extractModuleId } from '../utils/progressSync';
 import '../styles/DashboardHeader.css';
 import { logger } from "../utils/logger";
 
-function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, showWordsLearned, isAdmin }) {
+function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, onShowReportCard, showWordsLearned, isAdmin }) {
   const { supabaseUser, profile } = useAuth();
   const supabaseClient = useSupabaseClient();
   const { moduleProgress } = useSupabaseProgress();

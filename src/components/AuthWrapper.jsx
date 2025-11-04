@@ -1,6 +1,6 @@
 import { SignIn, SignUp, UserButton, useUser } from '@clerk/clerk-react'
 import { useState, useEffect } from 'react'
-import { BookOpen } from 'lucide-react'
+import { BookOpen, FileBarChart } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext'
 import { useAnalytics } from '../hooks/useAnalytics'
@@ -8,7 +8,7 @@ import LandingPage from './LandingPage'
 import WelcomePage from './WelcomePage'
 import '../styles/Landing.css'
 
-function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
+function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReportCard }) {
   const { isAuthenticated, loading, supabaseUser } = useAuth()
   const { markWelcomeAsSeen } = useSupabaseProgress()
   const analytics = useAnalytics() // Track sessions on all authenticated pages
@@ -195,9 +195,25 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary }) {
     )
   }
 
+  // Handle opening report card
+  const handleShowReportCard = () => {
+    if (onShowReportCard) {
+      onShowReportCard()
+    }
+  }
+
   return (
     <div className="authenticated-app">
       <div className="auth-header-container">
+        {onShowReportCard && (
+          <button
+            className="dictionary-link-btn"
+            onClick={handleShowReportCard}
+            title="View Progress Report"
+          >
+            <FileBarChart size={20} />
+          </button>
+        )}
         <button
           className="dictionary-link-btn"
           onClick={handleOpenDictionary}

@@ -46,6 +46,16 @@ export const useNavigation = () => {
     urlManager.setVocabulary();
   }, [urlManager]);
 
+  const handleShowReportCard = useCallback(() => {
+    setCurrentLesson('report-card');
+    urlManager.setReportCard();
+  }, [urlManager]);
+
+  const handleShowReportCardAdmin = useCallback(() => {
+    setCurrentLesson('report-card-admin');
+    urlManager.setReportCardAdmin();
+  }, [urlManager]);
+
   const handleBackToLanding = useCallback(() => {
     setCurrentLesson(null);
     urlManager.cleanUrl();
@@ -100,6 +110,8 @@ export const useNavigation = () => {
     handleBack,
     handleShowReferenceModules,
     handleShowVocabularyDashboard,
+    handleShowReportCard,
+    handleShowReportCardAdmin,
     handleBackToLanding,
     handleOpenDictionary,
     handleCloseDictionary,

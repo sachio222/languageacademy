@@ -16,6 +16,8 @@ const FeedbackForm = lazy(() => import('./components/FeedbackForm'));
 const FeedbackAdmin = lazy(() => import('./components/FeedbackAdmin'));
 const CookieSettingsModal = lazy(() => import('./components/CookieSettingsModal'));
 const BetaNoticeModal = lazy(() => import('./components/BetaNoticeModal'));
+const ReportCardStudent = lazy(() => import('./components/ReportCardStudent'));
+const ReportCardAdmin = lazy(() => import('./components/ReportCardAdmin'));
 import { initializeClarity } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -218,6 +220,61 @@ function App() {
               ← Back to Lessons
             </button>
           </div>
+        ) : navigation.currentLesson === 'report-card' ? (
+          <div className="main-content-wrapper">
+            <Suspense fallback={<div className="loading-spinner">Loading report card...</div>}>
+              <ReportCardStudent />
+            </Suspense>
+            <button
+              className="feedback-fab"
+              onClick={() => navigation.setShowFeedbackForm(true)}
+              title="Give Early Feedback"
+            >
+              💬
+            </button>
+            {admin.isAdmin && (
+              <>
+                <button
+                  className="admin-reset-btn"
+                  onClick={handleResetWelcomeFlags}
+                  title="Simulate First-Time Experience (Reset Welcome Screens)"
+                >
+                  🔄
+                </button>
+                <button
+                  className="admin-btn"
+                  onClick={navigation.handleShowAdmin}
+                  title="View Feedback Admin"
+                >
+                  📊
+                  {admin.newFeedbackCount > 0 && (
+                    <span className="admin-badge">{admin.newFeedbackCount}</span>
+                  )}
+                </button>
+              </>
+            )}
+          </div>
+        ) : navigation.currentLesson === 'report-card-admin' ? (
+          <div className="main-content-wrapper">
+            {admin.isAdmin ? (
+              <Suspense fallback={<div className="loading-spinner">Loading admin dashboard...</div>}>
+                <ReportCardAdmin />
+              </Suspense>
+            ) : (
+              <div className="error-screen">
+                <h2>⚠️ Access Denied</h2>
+                <p>You do not have permission to view this page.</p>
+                <button onClick={navigation.handleBack}>Go Back</button>
+              </div>
+            )}
+            <button
+              className="feedback-fab"
+              onClick={() => navigation.setShowFeedbackForm(true)}
+              title="Give Early Feedback"
+            >
+              💬
+            </button>
+          </div>
         ) : navigation.currentLesson === 'reference' ? (
           <div className="main-content-wrapper">
             <Suspense fallback={<div className="loading-spinner">Loading reference modules...</div>}>
@@ -303,6 +360,7 @@ function App() {
               completedExercises={completedExercises}
               onShowReferenceModules={navigation.handleShowReferenceModules}
               onShowVocabularyDashboard={navigation.handleShowVocabularyDashboard}
+              onShowReportCard={navigation.handleShowReportCard}
               showWordsLearned={showWordsLearned}
               isAdmin={admin.isAdmin}
             />
@@ -489,7 +547,13 @@ function App() {
   return isDevMode ? (
     <DevModeWrapper>{content}</DevModeWrapper>
   ) : (
-    <AuthWrapper onBackToLanding={navigation.handleBackToLanding} onOpenDictionary={navigation.handleOpenDictionary}>{content}</AuthWrapper>
+    <AuthWrapper 
+      onBackToLanding={navigation.handleBackToLanding} 
+      onOpenDictionary={navigation.handleOpenDictionary}
+      onShowReportCard={navigation.handleShowReportCard}
+    >
+      {content}
+    </AuthWrapper>
   );
 }
 
