@@ -20,13 +20,14 @@ export default defineConfig({
         // Manual chunking to split vendor libraries
         manualChunks: (id) => {
           // Split dictionary data into its own chunk (it's very large)
-          // Exclude registry.js to prevent circular dependencies
+          // Exclude registry.js and index.js to prevent circular dependencies
           if ((id.includes('data/dictionary/words/cambridge') || 
                id.includes('DictionaryModal') ||
                id.includes('useDictionary') ||
                id.includes('useDictionaryData') ||
                id.includes('useDictionarySearch')) &&
-              !id.includes('registry')) {
+              !id.includes('registry') &&
+              !id.includes('data/dictionary/index.js')) {
             return 'dictionary';
           }
           // Split react-force-graph into its own chunk (it's large)
