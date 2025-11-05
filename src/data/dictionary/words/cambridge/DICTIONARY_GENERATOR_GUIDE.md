@@ -1,8 +1,18 @@
-# Dictionary Generator Guide
+# Dictionary Generator Guide (DEPRECATED)
 
-## Overview
+> ⚠️ **DEPRECATED**: This guide is for the old Cambridge .js file system.
+> 
+> **For the new database workflow**, see: [`/DICTIONARY_DATABASE_GUIDE.md`](/DICTIONARY_DATABASE_GUIDE.md)
+> 
+> **Use**: `node add-words-to-database.js` instead of `generate-lesson-words.js`
+
+---
+
+## Overview (Legacy)
 
 The Dictionary Generator is a comprehensive tool for creating and managing dictionary entries in the Language Academy application. It supports all parts of speech with specialized fields for verbs, nouns, adjectives, and more.
+
+**Note**: This tool generates .js files. The modern workflow adds words directly to the Supabase database.
 
 ## Quick Start
 

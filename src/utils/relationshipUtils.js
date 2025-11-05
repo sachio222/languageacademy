@@ -241,12 +241,34 @@ export const generateAllRelationships = (word, wordMaps) => {
   // Generate noun form relationships (base → noun forms)
   const nounFormRelationships = generateNounFormRelationshipsOptimized(word, byBaseWord);
 
+  // For conjugations, also include the base verb's STORED conjugation relationships (siblings)
+  let siblingConjugationRelationships = [];
+  if (word.infinitive && word.word !== word.infinitive && word.partOfSpeech === 'verb') {
+    // This is a conjugation, not the infinitive itself
+    // Find the base verb by word text and use its STORED relationships from the database
+    const baseVerb = byWordText.get(word.infinitive.toLowerCase());
+    
+    if (baseVerb) {
+      // Use the base verb's STORED relationships from database (not generated ones)
+      // These already have the proper notes like "present - je", "past - il", etc.
+      const storedBaseRelationships = baseVerb.relationships || [];
+      siblingConjugationRelationships = storedBaseRelationships.filter(rel => 
+        rel.type === 'conjugation_pair' && rel.targetId !== word.id
+      );
+    }
+  }
+
   // Combine with existing relationships
   const existingRelationships = word.relationships || [];
+  
+  // For verbs with stored relationships, prefer those over generated ones
+  const hasStoredConjugationRels = existingRelationships.some(rel => rel.type === 'conjugation_pair');
+  
   const allRelationships = [
     ...existingRelationships,
-    ...infinitiveRelationships,
-    ...conjugationRelationships,
+    ...(hasStoredConjugationRels ? [] : infinitiveRelationships),
+    ...(hasStoredConjugationRels ? [] : conjugationRelationships),
+    ...siblingConjugationRelationships,
     ...baseWordRelationships,
     ...adjectiveFormRelationships,
     ...nounBaseWordRelationships,
