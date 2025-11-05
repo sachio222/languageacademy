@@ -18,7 +18,7 @@ const CookieSettingsModal = lazy(() => import('./components/CookieSettingsModal'
 const BetaNoticeModal = lazy(() => import('./components/BetaNoticeModal'));
 const ReportCardStudent = lazy(() => import('./components/ReportCardStudent'));
 const ReportCardAdmin = lazy(() => import('./components/ReportCardAdmin'));
-import { initializeClarity } from './utils/clarity';
+import { initializeClarity, identifyClarityUser, setClarityTag, trackClarityEvent, upgradeClaritySession } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
 import { useAuth } from './hooks/useAuth';
@@ -67,6 +67,53 @@ function App() {
   const navigation = useNavigation();
   const admin = useAdmin();
   const moduleCompletion = useModuleCompletion();
+
+  // Identify user in Clarity when authenticated
+  useEffect(() => {
+    if (!isAuthenticated || !supabaseUser) return;
+    
+    // Identify user with their Supabase ID
+    const userId = supabaseUser.id;
+    const email = supabaseUser.email || 'unknown';
+    const friendlyName = email.split('@')[0]; // Use email username as friendly name
+    
+    identifyClarityUser(userId, null, null, friendlyName);
+    
+    // Set custom tags for user segmentation
+    setClarityTag('userType', supabaseUser.role || 'student');
+    setClarityTag('hasSeenBetaWelcome', supabaseUser.has_seen_beta_welcome ? 'yes' : 'no');
+  }, [isAuthenticated, supabaseUser]);
+
+  // Track navigation to special views in Clarity
+  useEffect(() => {
+    if (!navigation.currentLesson) return;
+    
+    if (navigation.currentLesson === 'vocabulary') {
+      trackClarityEvent('vocabularyDashboardOpened');
+      setClarityTag('currentView', 'vocabulary');
+      upgradeClaritySession('vocabulary dashboard access');
+    } else if (navigation.currentLesson === 'reference') {
+      trackClarityEvent('referenceModulesOpened');
+      setClarityTag('currentView', 'reference');
+    } else if (navigation.currentLesson === 'dictionary') {
+      trackClarityEvent('dictionaryOpened');
+      setClarityTag('currentView', 'dictionary');
+    } else if (navigation.currentLesson === 'report-card') {
+      trackClarityEvent('reportCardOpened');
+      setClarityTag('currentView', 'reportCard');
+    } else if (navigation.currentLesson === 'report-card-admin') {
+      trackClarityEvent('reportCardAdminOpened');
+      setClarityTag('currentView', 'reportCardAdmin');
+    }
+  }, [navigation.currentLesson]);
+
+  // Track feedback form opens
+  useEffect(() => {
+    if (navigation.showFeedbackForm) {
+      trackClarityEvent('feedbackFormOpened');
+      upgradeClaritySession('feedback form opened');
+    }
+  }, [navigation.showFeedbackForm]);
 
   // Check if beta welcome modal should be shown
   useEffect(() => {

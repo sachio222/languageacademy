@@ -6,6 +6,7 @@
 import { useState, useEffect } from "react";
 import { RotateCcw } from 'lucide-react';
 import { usePageTime } from '../hooks/usePageTime';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../utils/clarity';
 import "../styles/SpeedMatch.css";
 
 // Helper component to format option text with lighter parentheses
@@ -87,6 +88,11 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
     setAnswers([]);
     setSelectedAnswer(null);
     setGameState(GAME_STATES.PREVIEW);
+    
+    // Track game start in Clarity
+    trackClarityEvent('speedMatchStarted');
+    setClarityTag('speedMatchDifficulty', difficulty);
+    setClarityTag('speedMatchWordCount', vocabulary.length.toString());
   };
 
   // Restart to ready screen
@@ -147,6 +153,9 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
       setGameState(GAME_STATES.CORRECT);
       setScore(score + 1);
       setAnswers([...answers, ANSWER_TYPES.CORRECT]);
+      
+      // Track correct answer
+      trackClarityEvent('speedMatchCorrectAnswer');
 
       // Auto-advance only for correct answers if enabled
       if (autoAdvance) {
@@ -155,6 +164,10 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
     } else {
       setGameState(GAME_STATES.WRONG);
       setAnswers([...answers, ANSWER_TYPES.WRONG]);
+      
+      // Track wrong answer
+      trackClarityEvent('speedMatchWrongAnswer');
+      
       // Always pause for wrong answers - no auto-advance
     }
   };
@@ -163,6 +176,20 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   const nextQuestion = () => {
     if (currentIndex + 1 >= vocabulary.length) {
       setGameState(GAME_STATES.FINISHED);
+      
+      // Track game completion in Clarity
+      const finalScore = score + (selectedAnswer?.french === currentWord.french ? 1 : 0);
+      const percentageScore = Math.round((finalScore / vocabulary.length) * 100);
+      
+      trackClarityEvent('speedMatchCompleted');
+      setClarityTag('speedMatchScore', `${finalScore}/${vocabulary.length}`);
+      setClarityTag('speedMatchPercentage', `${percentageScore}%`);
+      
+      // Upgrade session for high scores
+      if (percentageScore >= 90) {
+        upgradeClaritySession('high speed match score');
+      }
+      
       return;
     }
 

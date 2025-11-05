@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
 import { logger } from "../utils/logger";
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from "../utils/clarity";
 
 export const useSupabaseProgress = () => {
   const {
@@ -202,6 +203,21 @@ export const useSupabaseProgress = () => {
           });
 
         if (insertError) throw insertError;
+
+        // Track in Clarity
+        if (correct) {
+          trackClarityEvent('exerciseCompleted');
+          setClarityTag('lastExerciseUnit', unitId);
+          setClarityTag('usedHint', hintUsed ? 'yes' : 'no');
+          
+          // Upgrade session for first-time completions
+          if (attemptNumber === 1) {
+            upgradeClaritySession('first exercise completion');
+          }
+        } else {
+          trackClarityEvent('exerciseFailed');
+          setClarityTag('struggledWithExercise', exerciseId);
+        }
 
         // If incorrect, revert optimistic update
         if (!correct) {

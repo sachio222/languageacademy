@@ -22,6 +22,7 @@ import { usePageTime } from '../hooks/usePageTime';
 import { useModuleTime } from '../hooks/useModuleTime';
 import { getUnitIdForLesson } from '../utils/unitHelpers';
 import { logger } from "../utils/logger";
+import { trackClarityEvent, setClarityTag } from '../utils/clarity';
 
 function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
   // Helper to get initial exercise index from URL (1-based to 0-based) with validation
@@ -543,6 +544,23 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     // Reset module start time when lesson changes
     moduleStartTimeRef.current = Date.now();
+    
+    // Track module view in Clarity
+    trackClarityEvent('moduleViewed');
+    setClarityTag('currentModule', lesson.title);
+    setClarityTag('currentUnit', unitInfo?.title || 'Unknown');
+    
+    if (isUnitExam) {
+      setClarityTag('moduleType', 'unitExam');
+    } else if (isReading) {
+      setClarityTag('moduleType', 'reading');
+    } else if (isFillInBlank) {
+      setClarityTag('moduleType', 'fillInBlank');
+    } else if (isHelpModule) {
+      setClarityTag('moduleType', 'helpModule');
+    } else {
+      setClarityTag('moduleType', 'standard');
+    }
   }, [lesson.id]); // Only run when lesson changes
 
   // Close modal without navigating

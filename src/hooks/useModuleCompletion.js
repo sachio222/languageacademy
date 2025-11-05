@@ -3,6 +3,7 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { lessons, unitStructure } from '../lessons/lessonData';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { logger } from '../utils/logger';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../utils/clarity';
 
 export const useModuleCompletion = () => {
   const supabaseProgress = useSupabaseProgress();
@@ -77,6 +78,19 @@ export const useModuleCompletion = () => {
             examScore,
             timeSpent
           );
+
+          // Track module completion in Clarity
+          if (isUnitExam) {
+            trackClarityEvent('unitExamCompleted');
+            setClarityTag('lastUnitExam', unitInfo.title);
+            setClarityTag('examScore', examScore !== null ? examScore.toString() : 'N/A');
+            upgradeClaritySession('unit exam completed');
+          } else if (isHelpModule) {
+            trackClarityEvent('helpModuleCompleted');
+          } else {
+            trackClarityEvent('moduleCompleted');
+            setClarityTag('lastModule', lesson.title);
+          }
 
           // Update unit progress
           const unitLessons = lessons.filter(l => {

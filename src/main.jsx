@@ -4,7 +4,7 @@ import { ClerkProvider } from '@clerk/clerk-react'
 import { SupabaseProgressProvider } from './contexts/SupabaseProgressContext'
 import App from './App.jsx'
 import { initializePerformanceMonitoring } from './utils/performanceMonitor'
-import { initializeClarity } from './utils/clarity';
+import { initializeClarity, trackUTMParameters } from './utils/clarity';
 import { logger } from "./utils/logger";
 
 // Import your publishable key
@@ -19,6 +19,10 @@ initializePerformanceMonitoring()
 
 // Auto-initialize Clarity if consent already given (for returning users)
 initializeClarity()
+
+// Track UTM parameters and referrer for campaign tracking
+// This runs immediately to capture initial landing page parameters
+trackUTMParameters()
 
 // Always wrap with provider - the hook inside handles auth timing
 function AppWithProviders() {
