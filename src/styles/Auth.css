@@ -268,4 +268,9 @@
     width: 32px;
     height: 32px;
   }
+
+  /* Hide report card button on smallest screens */
+  .report-card-header-btn {
+    display: none;
+  }
 }

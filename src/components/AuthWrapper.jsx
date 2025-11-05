@@ -207,7 +207,7 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
       <div className="auth-header-container">
         {onShowReportCard && (
           <button
-            className="dictionary-link-btn"
+            className="dictionary-link-btn report-card-header-btn"
             onClick={handleShowReportCard}
             title="View Progress Report"
           >
