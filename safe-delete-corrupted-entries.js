@@ -183,8 +183,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const results = validateAndDelete();
   
   if (results.totalDeleted > 0) {
-    console.log('\\n🤔 Write cleaned files? (You can review the maps first)');
-    console.log('   To write files: uncomment the writeCleanedFiles() call');
-    // writeCleanedFiles();
+    console.log('\n📝 Writing cleaned files to disk...');
+    writeCleanedFiles();
   }
 }
