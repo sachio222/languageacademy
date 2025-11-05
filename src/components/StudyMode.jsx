@@ -96,7 +96,7 @@ function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, upda
             className="reveal-btn"
             onClick={() => setIsRevealed(true)}
           >
-            🔍 Reveal Answer
+            🔍 Click to Reveal Answer
           </button>
         ) : (
           <div className="flashcard-back">
