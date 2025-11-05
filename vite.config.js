@@ -32,10 +32,7 @@ export default defineConfig({
           if (id.includes('react-force-graph')) {
             return 'force-graph';
           }
-          // Split Clerk auth library
-          if (id.includes('@clerk')) {
-            return 'clerk';
-          }
+          // Keep Clerk with vendor chunk to prevent initialization issues
           // Split Supabase library
           if (id.includes('@supabase')) {
             return 'supabase';
@@ -44,7 +41,7 @@ export default defineConfig({
           if (id.includes('@tanstack/react-query')) {
             return 'react-query';
           }
-          // Split other large node_modules into vendor chunk
+          // Split other large node_modules into vendor chunk (includes Clerk)
           if (id.includes('node_modules')) {
             return 'vendor';
           }
