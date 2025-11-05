@@ -680,6 +680,16 @@
   justify-content: center;
   padding: 4rem 2rem;
   text-align: center;
+  isolation: isolate;
+  transform: none;
+}
+
+.admin-loading .loading-spinner {
+  transform-origin: center center;
+  will-change: transform;
+  isolation: isolate;
+  position: relative;
+  display: block;
 }
 
 .admin-loading p,
