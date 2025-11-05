@@ -307,6 +307,13 @@ function App() {
                   🔄
                 </button>
                 <button
+                  className="admin-report-btn"
+                  onClick={navigation.handleShowReportCardAdmin}
+                  title="View Report Card Admin"
+                >
+                  📋
+                </button>
+                <button
                   className="admin-btn"
                   onClick={navigation.handleShowAdmin}
                   title="Admin Panel"
@@ -453,6 +460,13 @@ function App() {
                       title="Simulate First-Time Experience (Reset Welcome Screens)"
                     >
                       🔄
+                    </button>
+                    <button
+                      className="admin-report-btn"
+                      onClick={navigation.handleShowReportCardAdmin}
+                      title="View Report Card Admin"
+                    >
+                      📋
                     </button>
                     <button
                       className="admin-btn"
