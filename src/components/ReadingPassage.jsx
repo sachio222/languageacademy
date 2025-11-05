@@ -57,7 +57,7 @@ function ReadingPassage({ passage }) {
   const [tooltipPosition, setTooltipPosition] = useState({ shift: 0, arrowShift: 0, isVisible: false });
   const wordRefs = useRef({});
   const { speak } = useSpeech();
-  const { allWords } = useDictionary();
+  const { allWords, isLoading } = useDictionary();
 
   // Reset speaker colors when component mounts (new reading session)
   useEffect(() => {
@@ -124,7 +124,7 @@ function ReadingPassage({ passage }) {
             if (subheaderMatch) {
               return (
                 <div key={pIdx} className="paragraph-block paragraph-subheader">
-                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords)}
+                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords, isLoading)}
                   {showTranslation && englishParagraphs[pIdx] && (
                     <p className="english-translation">{stripMarkdown(englishParagraphs[pIdx])}</p>
                   )}
@@ -137,7 +137,7 @@ function ReadingPassage({ passage }) {
             if (horizontalRuleMatch) {
               return (
                 <div key={pIdx} className="paragraph-block paragraph-horizontal-rule">
-                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords)}
+                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords, isLoading)}
                 </div>
               );
             }
@@ -146,7 +146,7 @@ function ReadingPassage({ passage }) {
             return (
               <div key={pIdx} className="paragraph-block paragraph-with-audio">
                 <p className="french-text">
-                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords)}
+                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords, isLoading)}
                 </p>
                 {/* Per-paragraph speaker button - appears on hover */}
                 <div className="paragraph-audio-btn">

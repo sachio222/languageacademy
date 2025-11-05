@@ -42,7 +42,8 @@ export const renderInteractiveText = (
   hoveredWord,
   tooltipPosition,
   speak,
-  allWords = []
+  allWords = [],
+  isLoading = false
 ) => {
 
   // Create a context object to avoid passing the same parameters repeatedly
@@ -54,6 +55,7 @@ export const renderInteractiveText = (
     tooltipPosition,
     speak,
     allWords,
+    isLoading,
     fullText: text  // Add full text for context analysis
   };
 
@@ -529,6 +531,15 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
       if (fallbackResult) {
         return fallbackResult;
       }
+    }
+    
+    // If dictionary is still loading, return plain text instead of missing translation styling
+    if (context.isLoading) {
+      return {
+        element: <span key={uniqueKey}>{word}</span>,
+        remainingText: remainingText.slice(wordLength),
+        charPosition: charPosition + wordLength
+      };
     }
     
     logger.warn(`Missing translation for: "${word}"`);
