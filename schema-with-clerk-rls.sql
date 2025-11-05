@@ -54,7 +54,7 @@ CREATE TABLE module_progress (
   unit_id TEXT NOT NULL,
   started_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   completed_at TIMESTAMP WITH TIME ZONE,
-  total_exercises INTEGER NOT NULL,
+  total_exercises INTEGER DEFAULT 0,
   completed_exercises INTEGER DEFAULT 0,
   study_mode_completed BOOLEAN DEFAULT FALSE,
   exam_score INTEGER,
