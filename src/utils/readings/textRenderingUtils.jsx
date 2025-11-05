@@ -523,8 +523,8 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
         remainingText: remainingText.slice(wordLength),
         charPosition: charPosition + wordLength
       };
-    } 
-    
+    }
+
     // Fallback for hyphenated words: try individual words if compound word not found
     if (word.includes('-')) {
       const fallbackResult = processHyphenatedWordFallback(word, wordLength, uniqueKey, context, allWords, contextString, remainingText, charPosition);
@@ -532,7 +532,7 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
         return fallbackResult;
       }
     }
-    
+
     // If dictionary is still loading, return plain text instead of missing translation styling
     if (context.isLoading) {
       return {
@@ -541,7 +541,7 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
         charPosition: charPosition + wordLength
       };
     }
-    
+
     logger.warn(`Missing translation for: "${word}"`);
     const element = createMissingTranslationElement(word, uniqueKey);
     return {
@@ -572,33 +572,33 @@ const processWordMatch = (wordMatch, remainingText, charPosition, context) => {
 const processHyphenatedWordFallback = (word, wordLength, uniqueKey, context, allWords, contextString, remainingText, charPosition) => {
   const { paragraphIndex } = context;
   const wordParts = word.split('-');
-  
+
   // Only proceed if we have at least 2 parts
   if (wordParts.length < 2) {
     return null;
   }
-  
+
   // Try to find translations for each part
   const partData = wordParts.map(part => {
     const partContext = getContextString(context, 0, part.length, part);
     return getWordTranslation(part, allWords, partContext);
   });
-  
+
   // Check if all parts have translations
   const allPartsTranslated = partData.every(data => data?.translation);
-  
+
   if (allPartsTranslated) {
     // Create a combined translation
     const combinedTranslation = partData
       .map(data => data.translation)
       .join(' ');
-    
+
     // Create a single interactive element for the full hyphenated word
     const element = createInteractiveWordElement(
-      word, 
-      combinedTranslation, 
-      uniqueKey, 
-      context, 
+      word,
+      combinedTranslation,
+      uniqueKey,
+      context,
       'compound',
       {
         parts: wordParts.map((part, index) => ({
@@ -608,14 +608,14 @@ const processHyphenatedWordFallback = (word, wordLength, uniqueKey, context, all
         }))
       }
     );
-    
+
     return {
       element,
       remainingText: remainingText.slice(wordLength),
       charPosition: charPosition + wordLength
     };
   }
-  
+
   return null;
 };
 
@@ -869,12 +869,12 @@ const getVerbContextAwareTranslation = (word, dictionaryEntry, context) => {
  */
 const CONTRACTION_RULES = {
   "d'": {
-    noun: (wordTranslation) => wordTranslation, // d'argent = "money"
+    noun: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}`, // d'argent = "of/from money"
     verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}`
   },
   "l'": {
     noun: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}`, // l'eau = "the water"
-    verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}`
+    verb: (contractionTranslation, wordTranslation) => `${wordTranslation} him/her/it` // l'appelle = "call him/her/it"
   },
   "j'": {
     verb: (contractionTranslation, wordTranslation) => `${contractionTranslation} ${wordTranslation}` // j'ai = "I have"
