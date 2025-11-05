@@ -2,10 +2,14 @@ import { useState } from 'react'
 import Reading11Preview from './Reading11Preview'
 import ExercisePreview from './ExercisePreview'
 import Testimonials from './Testimonials'
+import PrivacyPolicy from './PrivacyPolicy'
+import TermsOfService from './TermsOfService'
 import '../styles/Landing.css'
 
 function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
   const [email, setEmail] = useState('')
+  const [showPrivacy, setShowPrivacy] = useState(false)
+  const [showTerms, setShowTerms] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -349,9 +353,28 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
       {/* Footer */}
       <footer className="landing-footer">
         <div className="landing-container">
-          <p>Built with love • Inspired by cognitive science research</p>
+          <p>
+            Built with love • Inspired by cognitive science research
+          </p>
+          <div className="footer-links">
+            <button onClick={() => setShowPrivacy(true)} className="footer-link">
+              Privacy
+            </button>
+            <span className="footer-separator">•</span>
+            <button onClick={() => setShowTerms(true)} className="footer-link">
+              Terms
+            </button>
+            <span className="footer-separator">•</span>
+            <a href="mailto:support@languageacademy.io" className="footer-link">
+              Contact
+            </a>
+          </div>
         </div>
       </footer>
+
+      {/* Legal Modals */}
+      {showPrivacy && <PrivacyPolicy onClose={() => setShowPrivacy(false)} />}
+      {showTerms && <TermsOfService onClose={() => setShowTerms(false)} />}
     </div>
   )
 }

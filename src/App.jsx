@@ -554,6 +554,16 @@ function App() {
           >
             Manage Cookies
           </button>
+          {' • '}
+          <a 
+            href="mailto:support@languageacademy.io"
+            style={{
+              color: 'inherit',
+              textDecoration: 'none'
+            }}
+          >
+            Contact
+          </a>
         </p>
       </footer>
 

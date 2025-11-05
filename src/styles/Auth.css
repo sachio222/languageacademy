@@ -270,7 +270,7 @@
   }
 
   /* Hide report card button on smallest screens */
-  .report-card-header-btn {
+  /* .report-card-header-btn {
     display: none;
-  }
+  } */
 }
