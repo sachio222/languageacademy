@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react';
-import { loadDictionaryData, generateFilterOptions } from '../utils/dictionaryUtils';
+import { generateFilterOptions } from '../utils/dictionaryUtils';
 import { generateAllRelationships, createWordMaps } from '../utils/relationshipUtils';
 import { supabase } from '../lib/supabase';
 import { useSupabaseClient } from './useSupabaseClient';
@@ -17,7 +17,7 @@ let dictionaryLoadPromise = null;
 
 /**
  * Transform database entry to word object format
- * Creates the same structure as mergeWords() does for file-based entries
+ * Creates the structure expected by DictionaryModal with merged part-of-speech data
  */
 const transformDbEntry = (dbEntry) => {
   const partOfSpeech = dbEntry.part_of_speech || 'unknown';
@@ -115,13 +115,6 @@ const loadDictionaryDataFromDb = async (supabaseClient = null) => {
             hint: error.hint,
             code: error.code
           });
-          
-          // If RLS error, fallback to files immediately
-          if (error.code === '42501' || error.message?.includes('permission denied') || error.message?.includes('row-level security')) {
-            console.warn('RLS policy blocking access, falling back to files');
-            throw new Error('RLS_POLICY_BLOCKED');
-          }
-          
           throw error;
         }
         
@@ -141,14 +134,13 @@ const loadDictionaryDataFromDb = async (supabaseClient = null) => {
       console.log(`Loaded ${allEntries.length} entries from database`);
       
       if (allEntries.length === 0) {
-        console.warn('No entries found in database, falling back to files');
         throw new Error('No dictionary entries found in database');
       }
       
       // Transform database entries to word objects
       let words = allEntries.map(transformDbEntry);
       
-      // Merge words with same text but different parts of speech (like file-based system)
+      // Merge words with same text but different parts of speech
       // This ensures words with multiple meanings are properly merged
       // mergeWords() groups by word text (lowercase), so "a" (alphabet) and "a" (verb) will merge
       const { mergeWords } = await import('../utils/dictionaryUtils');
@@ -169,27 +161,8 @@ const loadDictionaryDataFromDb = async (supabaseClient = null) => {
       return allWords;
     } catch (error) {
       console.error('Failed to load dictionary from database:', error);
-      console.warn('Falling back to file-based loading...');
-      
-      // Fallback to file-based loading if database fails
-      try {
-        const { loadAllDictionaries } = await import('../data/dictionary/registry');
-        const dictionaries = loadAllDictionaries();
-        const mergedWords = loadDictionaryData(dictionaries);
-        const wordMaps = createWordMaps(mergedWords);
-        
-        const allWords = mergedWords.map(word => ({
-          ...word,
-          relationships: generateAllRelationships(word, wordMaps)
-        }));
-        
-        dictionaryCache = allWords;
-        console.log(`Loaded ${allWords.length} entries from files (fallback)`);
-        return allWords;
-      } catch (fallbackError) {
-        console.error('Fallback to files also failed:', fallbackError);
-        throw fallbackError;
-      }
+      console.error('Dictionary loading failed. Please check database connection and RLS policies.');
+      throw error;
     }
   })();
   
@@ -197,39 +170,8 @@ const loadDictionaryDataFromDb = async (supabaseClient = null) => {
 };
 
 /**
- * Lazy load dictionary data from files (legacy fallback)
- */
-const loadDictionaryDataLazy = async () => {
-  if (dictionaryCache) {
-    return dictionaryCache;
-  }
-  
-  if (dictionaryLoadPromise) {
-    return dictionaryLoadPromise;
-  }
-  
-  dictionaryLoadPromise = (async () => {
-    // Dynamic import - this will be code-split by Vite
-    const { loadAllDictionaries } = await import('../data/dictionary/registry');
-    const dictionaries = loadAllDictionaries();
-    const mergedWords = loadDictionaryData(dictionaries);
-    const wordMaps = createWordMaps(mergedWords);
-    
-    const allWords = mergedWords.map(word => ({
-      ...word,
-      relationships: generateAllRelationships(word, wordMaps)
-    }));
-    
-    dictionaryCache = allWords;
-    return allWords;
-  })();
-  
-  return dictionaryLoadPromise;
-};
-
-/**
  * Hook for loading and processing dictionary data
- * Now loads from Supabase database with graceful fallback to files
+ * Loads exclusively from Supabase database
  */
 export const useDictionaryData = () => {
   const [allWords, setAllWords] = useState([]);
@@ -239,14 +181,22 @@ export const useDictionaryData = () => {
   useEffect(() => {
     let cancelled = false;
     
-    // Load from database (with fallback to files)
+    // Load from database only
     // Use authenticated client if available (may bypass RLS)
-    loadDictionaryDataFromDb(supabaseClient).then(words => {
-      if (!cancelled) {
-        setAllWords(words);
-        setIsLoading(false);
-      }
-    });
+    loadDictionaryDataFromDb(supabaseClient)
+      .then(words => {
+        if (!cancelled) {
+          setAllWords(words);
+          setIsLoading(false);
+        }
+      })
+      .catch(error => {
+        if (!cancelled) {
+          console.error('Dictionary loading failed:', error);
+          setAllWords([]);
+          setIsLoading(false);
+        }
+      });
     
     return () => {
       cancelled = true;
