@@ -3,7 +3,9 @@
  * High-performance vocabulary lookup system with O(1) access
  */
 
-// Import all word categories from Cambridge structure
+// DEPRECATED: Cambridge files moved to database - no longer imported here
+// Keeping files for reference but not loading them in production
+/*
 import { nounsCambridge } from "./words/cambridge/nouns.js";
 import { verbsCambridge } from "./words/cambridge/verbs.js";
 import { adjectivesCambridge } from "./words/cambridge/adjectives.js";
@@ -16,52 +18,44 @@ import { interjectionsCambridge } from "./words/cambridge/interjections.js";
 import { interrogativesCambridge } from "./words/cambridge/interrogatives.js";
 import { alphabetCambridge } from "./words/cambridge/alphabet.js";
 import { expressionsCambridge } from "./words/cambridge/expressions.js";
+*/
 
 // Import phrases and relationships
 import { phrases } from "./phrases.js";
 import { relationships, relationshipsByType } from "./relationships.js";
 
 /**
- * Master word dictionary - combines all word categories
+ * Master word dictionary - NOW EMPTY (using database instead)
+ * Keeping for backward compatibility but no longer populated
  */
 export const dictionary = new Map([
-  ...nounsCambridge,
-  ...verbsCambridge,
-  ...adjectivesCambridge,
-  ...adverbsCambridge,
-  ...pronounsCambridge,
-  ...articlesCambridge,
-  ...prepositionsCambridge,
-  ...conjunctionsCambridge,
-  ...interjectionsCambridge,
-  ...interrogativesCambridge,
-  ...alphabetCambridge,
-  ...expressionsCambridge,
+  // Cambridge data moved to Supabase database
+  // All dictionary lookups now use useDictionary hook
 ]);
 
 /**
- * Pre-computed lookup indices for O(1) performance
+ * Pre-computed lookup indices - DEPRECATED (using database)
  */
 export const indices = {
-  // By part of speech
+  // By part of speech - now empty (using database)
   byPartOfSpeech: {
-    noun: nounsCambridge,
-    verb: verbsCambridge,
-    adjective: adjectivesCambridge,
-    adverb: adverbsCambridge,
-    pronoun: pronounsCambridge,
-    article: articlesCambridge,
-    preposition: prepositionsCambridge,
-    conjunction: conjunctionsCambridge,
-    interjection: interjectionsCambridge,
-    interrogative: interrogativesCambridge,
-    alphabet: alphabetCambridge,
-    expression: expressionsCambridge,
+    noun: new Map(),
+    verb: new Map(),
+    adjective: new Map(),
+    adverb: new Map(),
+    pronoun: new Map(),
+    article: new Map(),
+    preposition: new Map(),
+    conjunction: new Map(),
+    interjection: new Map(),
+    interrogative: new Map(),
+    alphabet: new Map(),
+    expression: new Map(),
   },
 
   // By language
   byLanguage: new Map([
-    ["fr", new Map()], // Will be populated during build
+    ["fr", new Map()],
     ["en", new Map()],
     ["es", new Map()],
   ]),

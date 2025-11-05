@@ -1,20 +1,15 @@
 /**
- * Dictionary registry using cambridge index file
- * Dynamically derives dictionary names from object keys
+ * Dictionary registry - DEPRECATED
+ * Cambridge dictionaries moved to Supabase database
  */
 
-import * as CambridgeDictionaries from './words/cambridge';
+// DEPRECATED: No longer importing cambridge files
+// import * as CambridgeDictionaries from './words/cambridge';
 
 /**
- * Load all dictionaries synchronously
- * Dynamically creates dictionary entries from CambridgeDictionaries object
+ * Load all dictionaries - DEPRECATED (returns empty array)
+ * All dictionary data now loaded from Supabase database via useDictionary hook
  */
 export const loadAllDictionaries = () => {
-  return Object.entries(CambridgeDictionaries)
-    .map(([key, data]) => {
-      // Convert camelCase to kebab-case for dictionary names
-      const name = key.replace(/([A-Z])/g, '-$1').toLowerCase().replace('cambridge-', '');
-      return { name, data };
-    })
-    .filter(({ data }) => data); // Filter out any undefined data
+  return []; // Empty - using database instead
 };
