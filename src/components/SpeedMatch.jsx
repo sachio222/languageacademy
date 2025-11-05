@@ -248,15 +248,26 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
         <div className="speed-match-intro-center">
           {(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
             <>
+              <div className="speed-match-controls">
+                <div className="speed-match-progress">
+                  {score} / {currentIndex + 1}
+                </div>
+                {gameState !== GAME_STATES.READY && gameState !== GAME_STATES.FINISHED && (
+                  <button
+                    onClick={restartGame}
+                    className="speed-match-restart btn-skip"
+                    title="Restart Game"
+                  >
+                    <RotateCcw size={16} /> Restart round
+                  </button>
+                )}
+              </div>
               <div className="speed-match-stars">
                 {renderStars()}
               </div>
-              <div className="speed-match-progress">
-                {score} / {currentIndex + 1}
-              </div>
             </>
           )}
-          {gameState !== GAME_STATES.READY && gameState !== GAME_STATES.FINISHED && (
+          {gameState !== GAME_STATES.READY && gameState !== GAME_STATES.FINISHED && !(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
             <button
               onClick={restartGame}
               className="speed-match-restart btn-skip"

@@ -55,6 +55,12 @@
   gap: 0.5rem;
 }
 
+.speed-match-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 @media (max-width: 768px) {
   .speed-match-intro {
     margin-bottom: 0.75rem;
@@ -64,8 +70,20 @@
   .speed-match-intro-center {
     order: 3;
     width: 100%;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
     margin-top: 0.5rem;
+  }
+
+  .speed-match-controls {
+    width: 100%;
+    justify-content: center;
+    position: relative;
+  }
+
+  .speed-match-progress {
+    position: absolute;
+    right: 0;
   }
 
   .speed-match-intro-right {
