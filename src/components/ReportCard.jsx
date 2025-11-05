@@ -13,8 +13,9 @@ import '../styles/ReportCard.css';
  * @param {string} userId - Student user ID (if null, shows current user)
  * @param {function} onExportPDF - Optional callback for PDF export
  * @param {boolean} isAdminView - Whether this is admin viewing another student
+ * @param {function} onBack - Optional callback for back navigation
  */
-function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) {
+function ReportCard({ userId = null, onExportPDF = null, isAdminView = false, onBack = null }) {
   const [timeRange, setTimeRange] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
   const [performanceExpanded, setPerformanceExpanded] = useState(false);
@@ -197,6 +198,11 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
     <div className="report-card">
       {/* Header */}
       <div className="report-card-header">
+        {onBack && (
+          <button className="report-card-back-btn" onClick={onBack}>
+            ← Back to Modules
+          </button>
+        )}
         <div className="header-content">
           <h1 className="report-title">
             {isAdminView ? `${studentName}'s Report Card` : 'Your Report Card'}

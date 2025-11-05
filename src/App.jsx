@@ -223,7 +223,7 @@ function App() {
         ) : navigation.currentLesson === 'report-card' ? (
           <div className="main-content-wrapper">
             <Suspense fallback={<div className="loading-spinner">Loading report card...</div>}>
-              <ReportCardStudent />
+              <ReportCardStudent onBack={navigation.handleBack} />
             </Suspense>
             <button
               className="feedback-fab"
@@ -265,7 +265,7 @@ function App() {
           <div className="main-content-wrapper">
             {admin.isAdmin ? (
               <Suspense fallback={<div className="loading-spinner">Loading admin dashboard...</div>}>
-                <ReportCardAdmin />
+                <ReportCardAdmin onBack={navigation.handleBack} />
               </Suspense>
             ) : (
               <div className="error-screen">

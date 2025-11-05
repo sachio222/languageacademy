@@ -12,6 +12,25 @@
   margin-bottom: 2.5rem;
 }
 
+.report-card-back-btn {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  color: #665665;
+  padding: 0.625rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  transition: all 0.15s ease;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.report-card-back-btn:hover {
+  background: #f7f9fc;
+  color: #1a1a1a;
+  border-color: #e0e0e0;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;

@@ -20,7 +20,7 @@ import { calculateCommunicationInsights, calculateBatchInsights } from '../utils
 import ReportCard from './ReportCard';
 import '../styles/ReportCardAdmin.css';
 
-function ReportCardAdmin() {
+function ReportCardAdmin({ onBack = null }) {
   const { students, loading, error, pagination, nextPage, prevPage, goToPage } = useAllStudentsData();
   
   const [searchQuery, setSearchQuery] = useState('');
@@ -250,6 +250,11 @@ function ReportCardAdmin() {
   return (
     <div className="report-card-admin">
       <div className="admin-header">
+        {onBack && (
+          <button className="report-card-back-btn" onClick={onBack}>
+            ← Back to Modules
+          </button>
+        )}
         <h1>Student Report Cards</h1>
         <p className="admin-subtitle">Monitor progress and engagement across all students</p>
       </div>
