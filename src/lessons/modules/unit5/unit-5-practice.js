@@ -44,7 +44,7 @@ export const unit5Practice = {
   sentences: [
     // Past tense - être
     {
-      text: "Hier, j' avec mon ami.",
+      text: "Hier, j'  avec mon ami.",
       instruction: "Complete: 'Yesterday, I was with my friend'",
       blanks: [
         {
