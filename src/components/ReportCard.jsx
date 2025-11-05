@@ -16,21 +16,21 @@ import '../styles/ReportCard.css';
  */
 function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) {
   const [timeRange, setTimeRange] = useState('all');
-  const [activeTab, setActiveTab] = useState('activity');
+  const [activeTab, setActiveTab] = useState('overview');
   const [performanceExpanded, setPerformanceExpanded] = useState(false);
   const [showAllActivity, setShowAllActivity] = useState(false);
   const [expandedUnits, setExpandedUnits] = useState(new Set());
-  
+
   const { data, loading, error, refetch } = useReportCardData(userId, {
     includeDetailedProgress: true,
     timeRange
   });
-  
+
   // Verify time tracking consistency (development only)
   if (data && process.env.NODE_ENV === 'development') {
     verifyTimeTracking(data);
   }
-  
+
   // Format duration
   const formatDuration = (seconds) => {
     if (seconds < 60) return `${seconds}s`;
@@ -42,23 +42,23 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
     const minutes = Math.floor((seconds % 3600) / 60);
     return minutes > 0 ? `${hours}h ${minutes}m` : `${hours}h`;
   };
-  
+
   // Format relative time
   const formatRelativeTime = (dateString) => {
     if (!dateString) return 'Never';
-    
+
     const date = new Date(dateString);
     const now = new Date();
     const diffMs = now - date;
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-    
+
     if (diffDays === 0) return 'Today';
     if (diffDays === 1) return 'Yesterday';
     if (diffDays < 7) return `${diffDays} days ago`;
     if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
     return `${Math.floor(diffDays / 30)} months ago`;
   };
-  
+
   // Format date
   const formatDate = (dateString) => {
     if (!dateString) return 'N/A';
@@ -68,13 +68,13 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
       day: 'numeric'
     });
   };
-  
+
   // Helper function to find lesson by module_id
   const findLessonByModuleId = (moduleId) => {
     if (!moduleId) return null;
     const moduleIdStr = String(moduleId);
     const isNumeric = /^\d+$/.test(moduleIdStr);
-    
+
     if (isNumeric) {
       const moduleIdNum = parseInt(moduleIdStr, 10);
       return lessons.find((l) => l.id === moduleIdNum);
@@ -82,7 +82,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
       return lessons.find((l) => l.moduleKey === moduleId);
     }
   };
-  
+
   // Get module display name with number (without "Module" prefix)
   const getModuleDisplayName = (moduleId) => {
     const lesson = findLessonByModuleId(moduleId);
@@ -92,7 +92,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
     }
     return `${moduleId}`;
   };
-  
+
   // Handle PDF export
   const handleExportPDF = async () => {
     if (onExportPDF) {
@@ -109,25 +109,25 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
       }
     }
   };
-  
+
   // Generate PDF
   const generatePDF = (reportData, jsPDF) => {
     const doc = new jsPDF();
     const { profile, heroStats, progress } = reportData;
-    
+
     const studentName = profile.first_name
       ? `${profile.first_name} ${profile.last_name || ''}`.trim()
       : profile.preferred_name || profile.email;
-    
+
     // Title
     doc.setFontSize(20);
     doc.text('Progress Report Card', 105, 20, { align: 'center' });
-    
+
     // Student info
     doc.setFontSize(12);
     doc.text(`Student: ${studentName}`, 20, 35);
     doc.text(`Generated: ${formatDate(new Date().toISOString())}`, 20, 42);
-    
+
     // Hero stats
     doc.setFontSize(14);
     doc.text('Summary', 20, 55);
@@ -136,18 +136,18 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
     doc.text(`Streak: ${heroStats.streakDays} days`, 20, 72);
     doc.text(`Accuracy: ${heroStats.accuracy}%`, 20, 79);
     doc.text(`Words Learned: ${heroStats.wordsLearned}`, 20, 86);
-    
+
     // Progress
     doc.setFontSize(14);
     doc.text('Progress', 20, 100);
     doc.setFontSize(10);
     doc.text(`Modules Completed: ${progress.completedModulesCount} / ${progress.totalModulesCount}`, 20, 110);
     doc.text(`Units Completed: ${progress.completedUnitsCount}`, 20, 117);
-    
+
     // Save
     doc.save(`report-card-${studentName.replace(/\s+/g, '-').toLowerCase()}.pdf`);
   };
-  
+
   // Loading state
   if (loading) {
     return (
@@ -159,7 +159,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
       </div>
     );
   }
-  
+
   // Error state
   if (error) {
     return (
@@ -173,7 +173,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
       </div>
     );
   }
-  
+
   // Empty state
   if (!data) {
     return (
@@ -186,13 +186,13 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
       </div>
     );
   }
-  
+
   const { profile, heroStats, progress, recentActivity, vocabulary, performance } = data;
-  
+
   const studentName = profile.first_name
     ? `${profile.first_name} ${profile.last_name || ''}`.trim()
     : profile.preferred_name || 'Student';
-  
+
   return (
     <div className="report-card">
       {/* Header */}
@@ -229,7 +229,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
                 Last 90 Days
               </button>
             </div>
-            
+
             {/* PDF Export Button (desktop only) */}
             <button
               className="export-pdf-button desktop-only"
@@ -242,7 +242,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
           </div>
         </div>
       </div>
-      
+
       {/* Hero Stats */}
       <div className="hero-stats">
         <div className="stat-card">
@@ -254,7 +254,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
             <div className="stat-label">Study Time</div>
           </div>
         </div>
-        
+
         <div className={`stat-card ${heroStats.streakDays > 0 ? 'streak-active' : ''}`}>
           <div className="stat-icon">
             <Flame />
@@ -264,7 +264,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
             <div className="stat-label">Day Streak</div>
           </div>
         </div>
-        
+
         <div className="stat-card">
           <div className="stat-icon">
             <Target />
@@ -274,7 +274,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
             <div className="stat-label">Accuracy</div>
           </div>
         </div>
-        
+
         <div className="stat-card">
           <div className="stat-icon">
             <BookOpen />
@@ -285,23 +285,23 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
           </div>
         </div>
       </div>
-      
+
       {/* Tabbed Section */}
       <section className="report-section report-section-tabs">
         <div className="tabs-header">
-          <button
-            className={`tab-button ${activeTab === 'activity' ? 'active' : ''}`}
-            onClick={() => setActiveTab('activity')}
-          >
-            <Clock size={18} />
-            <span>Recent Activity</span>
-          </button>
           <button
             className={`tab-button ${activeTab === 'overview' ? 'active' : ''}`}
             onClick={() => setActiveTab('overview')}
           >
             <TrendingUp size={18} />
             <span>Overview</span>
+          </button>
+          <button
+            className={`tab-button ${activeTab === 'activity' ? 'active' : ''}`}
+            onClick={() => setActiveTab('activity')}
+          >
+            <Clock size={18} />
+            <span>Recent Activity</span>
           </button>
           <button
             className={`tab-button ${activeTab === 'vocabulary' ? 'active' : ''}`}
@@ -311,7 +311,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
             <span>Vocabulary</span>
           </button>
         </div>
-        
+
         <div className="tabs-content">
           {/* Recent Activity Tab */}
           {activeTab === 'activity' && (
@@ -358,7 +358,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
                         className="show-more-button"
                         onClick={() => setShowAllActivity(!showAllActivity)}
                       >
-                        {showAllActivity 
+                        {showAllActivity
                           ? `Show less (showing ${recentActivity.modules.length + recentActivity.exams.length} items)`
                           : `Show all (${recentActivity.modules.length + recentActivity.exams.length} items)`
                         }
@@ -369,7 +369,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
               )}
             </div>
           )}
-          
+
           {/* Overview Tab */}
           {activeTab === 'overview' && (
             <div className="tab-panel">
@@ -386,22 +386,22 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
                   </div>
                 </div>
               </div>
-              
+
               <div className="unit-chart">
                 {(() => {
                   const maxTime = Math.max(...progress.unitProgress.map(u => u.studyTime || 0), 1);
-                  
+
                   return progress.unitProgress.map(unit => (
                     <div key={unit.id} className="chart-column">
                       <div className="chart-bars">
-                        <div 
+                        <div
                           className="chart-bar time-bar"
                           style={{ height: `${((unit.studyTime || 0) / maxTime) * 100}%` }}
                           title={`${formatDuration(unit.studyTime || 0)}`}
                         >
                           <span className="bar-value">{formatDuration(unit.studyTime || 0)}</span>
                         </div>
-                        <div 
+                        <div
                           className="chart-bar completion-bar"
                           style={{ height: `${unit.percentage}%` }}
                           title={`${unit.percentage}% complete`}
@@ -420,7 +420,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
               </div>
             </div>
           )}
-          
+
           {/* Vocabulary Tab */}
           {activeTab === 'vocabulary' && (
             <div className="tab-panel">
@@ -432,7 +432,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
                     const isExpanded = expandedUnits.has(unitId);
                     const displayWords = isExpanded ? words : words.slice(0, 20);
                     const hasMore = words.length > 20;
-                    
+
                     return (
                       <div key={unitId} className="unit-vocabulary">
                         <h3 className="unit-vocabulary-title">
@@ -468,7 +468,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
           )}
         </div>
       </section>
-      
+
       {/* Performance Section */}
       <section className="report-section">
         <button
@@ -488,7 +488,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
             className={`chevron ${performanceExpanded ? 'expanded' : ''}`}
           />
         </button>
-        
+
         {performanceExpanded && (
           <div className="section-content">
             {performance.strengths.length > 0 && (
@@ -505,7 +505,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
                 </div>
               </>
             )}
-            
+
             {performance.weaknesses.length > 0 && (
               <>
                 <h3 className="subsection-title weaknesses-title">Areas to Improve (&lt;70% accuracy)</h3>
@@ -520,7 +520,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false }) 
                 </div>
               </>
             )}
-            
+
             {performance.strengths.length === 0 && performance.weaknesses.length === 0 && (
               <p className="empty-message">Complete more modules to see performance insights</p>
             )}

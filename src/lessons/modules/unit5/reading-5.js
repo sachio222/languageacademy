@@ -38,21 +38,31 @@ export const reading5 = {
 
   readingPassage: {
     title: "La fée verte (The Green Fairy)",
-    text: `![img/reading5/reading5-realcafe1.jpeg|75%]
+    subtitle:
+      "La ville d'Arles. Vincent van Gogh et Paul Gauguin se retrouvent à leur café préféré pour boire leur boisson favorite, l'absinthe. On dit parfois qu'elle fait voir des fées vertes.",
+    subtitleTranslation:
+      "The city of Arles. Vincent van Gogh and Paul Gauguin meet at their favorite café to drink their favorite drink, absinthe. It is sometimes said to make one see green fairies.",
+    text: `![img/reading5/reading5-realcafe1.jpeg|75%|Vincent van Gogh et Paul Gauguin parlent dans un café à Arles.]
 
-*Vincent van Gogh et Paul Gauguin parlent dans un café à Arles.*
+« Salut Vincent ! » dit Paul.
+
+« Salut Paul, mon ami ! » dit Vincent.
+
+« Comment ça va ? » demande Paul.
+
+« Bien, et toi ? »
+
+« Très bien, merci. Nous avons mangé ici hier, » dit Paul.
+
+« Oui. C'était bon, » dit Vincent.
 
 « Qu'est-ce que tu veux boire ? » demande Paul.
 
-« Je veux une absinthe, » dit Vincent.
+« Je veux une absinthe, quoi d'autre ? » dit Vincent.
 
 « Moi aussi. J'aime l'absinthe, » dit Paul.
 
-Le serveur apporte leurs absinthes. Ils boivent beaucoup.
-
-![img/reading5/reading5-vangogh-gaugain-chatting-after-absinthe.jpeg|65%]
-
-*Ils l'aiment.*
+![img/reading5/reading5-vangogh-gaugain-chatting-after-absinthe.jpeg|65%|Le serveur apporte leurs absinthes. Ils boivent beaucoup. Ils l'aiment.]
 
 Vincent regarde autour du café.
 
@@ -62,21 +72,23 @@ Vincent regarde autour du café.
 
 « Je veux faire un tableau de ce café la nuit. »
 
-« Bonne idée ! » dit Paul. « Ce café est plus beau la nuit que le jour. »
+« Bonne idée ! » dit Paul. « Ce café est plus beau la nuit que le jour, n'est-ce pas ? »
 
 Vincent dit : « Oui ! Les couleurs sont meilleures le soir. Et les étoiles sont belles. »
 
 « Excusez-moi, » dit Vincent. « Je vais à mon hôtel. Je vais chercher mes peintures. »
 
-![img/reading5/reading5-vangogh-leaves.jpeg|65%]
+« Maintenant ? » demande Paul.
 
-*Vincent part pour son hôtel. Il trouve ses peintures. Il revient au café.*
+« Oui... ce soir... » dit Vincent.
+
+« Ah, j'adore ça ! » dit Paul.
+
+![img/reading5/reading5-vangogh-leaves.jpeg|65%|Vincent part pour son hôtel. Il trouve ses peintures. Il revient au café.]
 
 ---
 
-« Hier, nous avons mangé ici, » dit Paul.
-
-« Hum ? Oui, c'était très bon, » dit Vincent. « Aujourd'hui, je vais faire mon tableau. »
+## Deux heures plus tard
 
 Vincent fait son tableau. Paul boit son absinthe.
 
@@ -84,9 +96,7 @@ Vincent fait son tableau. Paul boit son absinthe.
 
 « Oui, je vois tout, » dit Vincent. « Je vois le café, je vois les étoiles, je vois les gens. »
 
-![img/reading5/reading5-vangogh-looking around-terrace.jpeg|65%]
-
-*Ils boivent encore de l'absinthe.*
+![img/reading5/reading5-vangogh-looking around-terrace.jpeg|65%|Ils boivent encore de l'absinthe.]
 
 Paul dit : « Tu es un grand artiste, Vincent. »
 
@@ -98,30 +108,34 @@ Paul dit : « Ce tableau est meilleur que tes autres tableaux. »
 
 Vincent sourit. « Peut-être. Nous allons voir. »
 
-![img/reading5/reading5-vangogh-gaugain-chatting-terrace.jpeg|50%]
-
-*Ils sont au café toute la nuit. Vincent fait son tableau. Paul boit son absinthe avec lui.*
+![img/reading5/reading5-vangogh-gaugain-chatting-terrace.jpeg|50%|Ils sont au café toute la nuit. Vincent fait son tableau. Paul boit son absinthe avec lui.]
 
 C'est une bonne nuit à Arles.
 
 « Je l'appelle : Terrasse du café le soir, » dit Vincent.
 
 Fin.`,
-    translation: `![img/reading5/reading5-realcafe1.jpeg|65%]
+    translation: `![img/reading5/reading5-realcafe1.jpeg|65%|Vincent van Gogh and Paul Gauguin are talking in a café in Arles.]
 
-Vincent van Gogh and Paul Gauguin are talking in a café in Arles.
+"Hi Vincent!" says Paul.
+
+"Hi Paul, my friend!" says Vincent.
+
+"How are you?" asks Paul.
+
+"Good, and you?"
+
+"Very good, thanks. We ate here yesterday," says Paul.
+
+"Yes. It was good," says Vincent.
 
 "What do you want to drink?" Paul asks.
 
-"I want an absinthe," says Vincent.
+"I want an absinthe, what else?" says Vincent.
 
 "Me too. I like absinthe," says Paul.
 
-The waiter brings their absinthes. They drink a lot.
-
-![img/reading5/reading5-vangogh-gaugain-chatting-after-absinthe.jpeg|65%]
-
-They like it.
+![img/reading5/reading5-vangogh-gaugain-chatting-after-absinthe.jpeg|65%|The waiter brings their absinthes. They drink a lot. They like it.]
 
 Vincent looks around the café.
 
@@ -131,21 +145,23 @@ Vincent looks around the café.
 
 "I want to make a painting of this café at night."
 
-"Good idea!" says Paul. "This café is more beautiful at night than during the day."
+"Good idea!" says Paul. "This café is more beautiful at night than during the day, isn't it?"
 
 Vincent says, "Yes! The colors are better in the evening. And the stars are beautiful."
 
 "Excuse me," says Vincent. "I'm going to my hotel. I'm going to look for my paints."
 
-![img/reading5/reading5-vangogh-leaves.jpeg|65%]
+"Right now?" asks Paul.
 
-*Vincent leaves for his hotel. He finds his paints. He returns to the café*
+"Yes... this evening..." says Vincent.
+
+"Ah, I love it!" says Paul.
+
+![img/reading5/reading5-vangogh-leaves.jpeg|65%|Vincent leaves for his hotel. He finds his paints. He returns to the café]
 
 ---
 
-"Yesterday, we ate here," says Paul.
-
-"Hum? Yes, it was very good," says Vincent. "Today, I'm going to make my painting."
+## Two hours later
 
 Vincent makes his painting. Paul drinks his absinthe.
 
@@ -153,10 +169,7 @@ Vincent makes his painting. Paul drinks his absinthe.
 
 "Yes, I see everything," says Vincent. "I see the café, I see the stars, I see the people."
 
-
-![img/reading5/reading5-vangogh-looking around-terrace.jpeg|65%]
-
-*They drink more absinthe.*
+![img/reading5/reading5-vangogh-looking around-terrace.jpeg|65%|They drink more absinthe.]
 
 Paul says, "You are a great artist, Vincent."
 
@@ -168,9 +181,7 @@ Paul says, "This painting (tableau) is better than your other paintings (tableau
 
 Vincent smiles. "Maybe. We'll see."
 
-![img/reading5/reading5-vangogh-gaugain-chatting-terrace.jpeg|45%]
-
-They are at the café all night. Vincent makes his painting (tableau). Paul drinks his absinthe with him.
+![img/reading5/reading5-vangogh-gaugain-chatting-terrace.jpeg|45%|They are at the café all night. Vincent makes his painting (tableau). Paul drinks his absinthe with him.]
 
 It's a good night in Arles.
 

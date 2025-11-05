@@ -17,7 +17,8 @@
  * - **Years**: `{1871}` - Explicit year marking for French pronunciation
  * - **Subheaders**: `## Section Title` - Styled section headers
  * - **Horizontal Rules**: `---` - Clean visual separators
- * - **Images**: `![path/to/image.jpg]` - Embedded images
+ * - **Images**: `![path/to/image.jpg]` or `![path|75%]` - Embedded images
+ *   - With captions: `![path|75%|Caption text here]` - Centered caption below image
  * - **Italics**: `_text_` - Emphasized text
  * - **Phrases**: `[multi-word phrase]` - Explicit phrase highlighting
  * - **Speakers**: `**Speaker:**` - Dialogue labels
@@ -78,6 +79,14 @@ function ReadingPassage({ passage }) {
       <div className="passage-header">
         <div className="passage-meta">Reading Comprehension</div>
         <h1>{passage.title}</h1>
+        {passage.subtitle && (
+          <>
+            <p className="passage-subtitle">{passage.subtitle}</p>
+            {showTranslation && passage.subtitleTranslation && (
+              <p className="passage-subtitle english-translation">{passage.subtitleTranslation}</p>
+            )}
+          </>
+        )}
         <div className="passage-controls">
           <button
             className="btn-translation"
@@ -107,14 +116,29 @@ function ReadingPassage({ passage }) {
               const imageInfo = extractImageInfo(paragraph);
               if (!imageInfo) return null;
 
+              // Get English caption from corresponding translation paragraph
+              const englishImageInfo = englishParagraphs[pIdx] && isImageMarker(englishParagraphs[pIdx]) 
+                ? extractImageInfo(englishParagraphs[pIdx]) 
+                : null;
+
               return (
                 <div key={pIdx} className="paragraph-block paragraph-image">
                   <img
                     src={`/${imageInfo.path}`}
-                    alt={`Reading illustration ${pIdx + 1}`}
+                    alt={imageInfo.caption || `Reading illustration ${pIdx + 1}`}
                     className="reading-image"
                     style={imageInfo.style}
                   />
+                  {imageInfo.caption && (
+                    <>
+                      <p className="image-caption">
+                        {renderInteractiveText(imageInfo.caption, `caption-${pIdx}`, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords, isLoading)}
+                      </p>
+                      {showTranslation && englishImageInfo?.caption && (
+                        <p className="image-caption english-translation">{englishImageInfo.caption}</p>
+                      )}
+                    </>
+                  )}
                 </div>
               );
             }
@@ -122,9 +146,12 @@ function ReadingPassage({ passage }) {
             // Check if this paragraph is a subheader (starts with ##)
             const subheaderMatch = paragraph.match(/^##\s*(.+)$/);
             if (subheaderMatch) {
+              const subheaderText = subheaderMatch[1]; // Extract text without ##
               return (
                 <div key={pIdx} className="paragraph-block paragraph-subheader">
-                  {renderInteractiveText(paragraph, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords, isLoading)}
+                  <h3 className="subheader">
+                    {renderInteractiveText(subheaderText, pIdx, wordRefs, setHoveredWord, hoveredWord, tooltipPosition, speak, allWords, isLoading)}
+                  </h3>
                   {showTranslation && englishParagraphs[pIdx] && (
                     <p className="english-translation">{stripMarkdown(englishParagraphs[pIdx])}</p>
                   )}
