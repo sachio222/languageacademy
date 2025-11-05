@@ -1,0 +1,985 @@
+{
+  "timestamp": "2025-11-04T22:38:20.721Z",
+  "cambridgeTotal": 2364,
+  "databaseTotal": 2293,
+  "inserted": 0,
+  "failed": 71,
+  "stillMissing": 71,
+  "failures": [
+    {
+      "id": "f-vrier-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "février-fr",
+        "lang": "fr",
+        "word": "février",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "February",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "fevʀije",
+        "tags": [
+          "unit13",
+          "2024-04-03-days-months"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:50:04.700Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/février",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:50:04.700Z"
+        }
+      }
+    },
+    {
+      "id": "ao-t-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "août-fr",
+        "lang": "fr",
+        "word": "août",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "August",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "prendre ses vacances en août",
+            "trans": "to take one’s vacation in August",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "u(t)",
+        "tags": [
+          "unit13",
+          "2024-04-03-days-months"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:50:31.130Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/août",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:50:31.130Z"
+        }
+      }
+    },
+    {
+      "id": "d-cembre-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "décembre-fr",
+        "lang": "fr",
+        "word": "décembre",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "December",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "Il est né en décembre.",
+            "trans": "He was born in December.",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "desɑ̃bʀ",
+        "tags": [
+          "unit13",
+          "2024-04-03-days-months"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:50:50.247Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/décembre",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:50:50.247Z"
+        }
+      }
+    },
+    {
+      "id": "p-ques-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "Pâques-fr",
+        "lang": "fr",
+        "word": "Pâques",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "Easter",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "Joyeuses Pâques !",
+            "trans": "Happy Easter!",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "/ˈɜːθ ˌtəʊn/",
+        "tags": [
+          "unit13",
+          "2024-04-04-holidays"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:50:59.075Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/Pâques",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:50:59.075Z"
+        }
+      }
+    },
+    {
+      "id": "no-l-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "Noël-fr",
+        "lang": "fr",
+        "word": "Noël",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "Christmas",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "nɔɛl",
+        "tags": [
+          "unit13",
+          "2024-04-04-holidays"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:51:03.736Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/Noël",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:51:03.736Z"
+        }
+      }
+    },
+    {
+      "id": "halloween-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "Halloween-fr",
+        "lang": "fr",
+        "word": "Halloween",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "Halloween",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "/ˈɜːθ ˌtəʊn/",
+        "tags": [
+          "unit13",
+          "2024-04-04-holidays"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:51:07.307Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/Halloween",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:51:07.307Z"
+        }
+      }
+    },
+    {
+      "id": "f-minin-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "féminin-fr",
+        "lang": "fr",
+        "word": "féminin",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "feminine",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "Le féminin de “vendeur” est “vendeuse”.",
+            "trans": "The feminine of “vendeur” is “vendeuse”.",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "feminɛ̃",
+        "tags": [
+          "unit13",
+          "2024-04-07-language-stats"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:51:16.014Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/féminin",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:51:16.014Z"
+        }
+      }
+    },
+    {
+      "id": "z-ro-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "zéro-fr",
+        "lang": "fr",
+        "word": "zéro",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "zero",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "mesurer zéro mètre dix",
+            "trans": "to be ten centimeters long",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "gagner par deux buts à zéro",
+            "trans": "to win two goals to nil",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "Il fait cinq degrés au-dessous de zéro.",
+            "trans": "It’s five below zero.",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "Il a eu zéro à sa dictée.",
+            "trans": "He got zero in his dictation.",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "zeʀo",
+        "tags": [
+          "unit13",
+          "2024-04-02-numbers"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:51:20.183Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/zéro",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:51:20.183Z"
+        }
+      }
+    },
+    {
+      "id": "paris-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "Paris-fr",
+        "lang": "fr",
+        "word": "Paris",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "mushroom",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "champignon comestible / vénéneux",
+            "trans": "edible/poisonous mushroom",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "ʃɑ̃piɲɔ̃",
+        "tags": [
+          "unit7",
+          "2024-04-30-connaitre"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:52:54.802Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/Paris",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:52:54.802Z"
+        }
+      }
+    },
+    {
+      "id": "bordeaux-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "Bordeaux-fr",
+        "lang": "fr",
+        "word": "Bordeaux",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "wine color",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "peindre les murs en bordeaux",
+            "trans": "to paint the walls wine color",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "boire du bordeaux",
+            "trans": "to drink Bordeaux",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "bɔʀdo",
+        "tags": [
+          "unit10",
+          "2024-02-01-reading-10"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:53:08.219Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/Bordeaux",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:53:08.219Z"
+        }
+      }
+    },
+    {
+      "id": "r-ve-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "rêve-fr",
+        "lang": "fr",
+        "word": "rêve",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "dream",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "faire un rêve",
+            "trans": "to have a dream",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "ʀɛv",
+        "tags": [
+          "unit10",
+          "2024-02-01-reading-10"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:53:18.429Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/rêve",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:53:18.429Z"
+        }
+      }
+    },
+    {
+      "id": "cath-drale-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "cathédrale-fr",
+        "lang": "fr",
+        "word": "cathédrale",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "cathedral",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "katedʀal",
+        "tags": [
+          "unit10",
+          "2024-02-01-reading-10"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:53:33.838Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/cathédrale",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:53:33.838Z"
+        }
+      }
+    },
+    {
+      "id": "march--fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "marché-fr",
+        "lang": "fr",
+        "word": "marché",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "step",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "monter les marches",
+            "trans": "to walk up the steps",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "des chaussures de marche",
+            "trans": "walking shoes",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "une marche à travers la forêt",
+            "trans": "a walk through the forest",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "mettre en marche une machine",
+            "trans": "to start a machine",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "être dans le sens de la marche",
+            "trans": "to be facing the way the train is going",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "Quelle est la marche à suivre ?",
+            "trans": "What’s the procedure?",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "maʀʃ",
+        "tags": [
+          "unit10",
+          "2024-02-01-reading-10"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:54:09.949Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/marché",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:54:09.949Z"
+        }
+      }
+    },
+    {
+      "id": "r-alit--fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "réalité-fr",
+        "lang": "fr",
+        "word": "réalité",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "reality",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "la réalité de la vie d’artiste",
+            "trans": "the reality of an artist’s life",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "ʀealite",
+        "tags": [
+          "unit10",
+          "2024-02-01-reading-10"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:54:44.456Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/réalité",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:54:44.456Z"
+        }
+      }
+    },
+    {
+      "id": "soir-e-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "soirée-fr",
+        "lang": "fr",
+        "word": "soirée",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "evening",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "Il m’a appelé dans la soirée.",
+            "trans": "He called me during the evening.",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "aller à une soirée",
+            "trans": "to go to a party",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "swaʀe",
+        "tags": [
+          "unit10",
+          "2024-02-01-reading-10"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:54:47.830Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/soirée",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:54:47.830Z"
+        }
+      }
+    },
+    {
+      "id": "syst-me-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "système-fr",
+        "lang": "fr",
+        "word": "système",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "system",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "le système éducatif",
+            "trans": "the education system",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "le système politique",
+            "trans": "the political system",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "un système d’alarme",
+            "trans": "the alarm system",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "le système nerveux",
+            "trans": "the nervous system",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "sistɛm",
+        "tags": [
+          "unit11",
+          "2024-02-12-reading-11"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:55:23.969Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/système",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:55:23.969Z"
+        }
+      }
+    },
+    {
+      "id": "mati-res-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "matières-fr",
+        "lang": "fr",
+        "word": "matières",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "contents",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [],
+        "phonetic": "/ˈɜːθ ˌtəʊn/",
+        "tags": [
+          "unit11",
+          "2024-02-12-reading-11"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:55:29.169Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/matières",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:55:29.169Z"
+        }
+      }
+    },
+    {
+      "id": "litt-rature-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "littérature-fr",
+        "lang": "fr",
+        "word": "littérature",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "literature",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "étudier la littérature anglaise",
+            "trans": "to study English literature",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "liteʀatyʀ",
+        "tags": [
+          "unit11",
+          "2024-02-12-reading-11"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:55:36.351Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/littérature",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:55:36.351Z"
+        }
+      }
+    },
+    {
+      "id": "plan-te-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "planète-fr",
+        "lang": "fr",
+        "word": "planète",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "planet",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "la planète Terre",
+            "trans": "the planet Earth",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "planɛt",
+        "tags": [
+          "unit11",
+          "2024-02-12-reading-11"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:55:55.511Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/planète",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:55:55.511Z"
+        }
+      }
+    },
+    {
+      "id": "-conomie-fr",
+      "error": "duplicate key value violates unique constraint \"dictionary_words_pkey\"",
+      "entry": {
+        "id": "économie-fr",
+        "lang": "fr",
+        "word": "économie",
+        "partOfSpeech": "noun",
+        "translations": [
+          {
+            "lang": "en",
+            "text": "economy",
+            "confidence": 0.9,
+            "source": "cambridge"
+          }
+        ],
+        "relationships": [],
+        "etymology": "",
+        "register": [],
+        "usage_notes": "",
+        "regional_variants": [],
+        "examples": [
+          {
+            "lang": "en",
+            "text": "l’économie d’un pays",
+            "trans": "a country’s economy",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "un cours d’économie",
+            "trans": "an economics class",
+            "source": "cambridge"
+          },
+          {
+            "lang": "en",
+            "text": "faire des économies",
+            "trans": "to save",
+            "source": "cambridge"
+          }
+        ],
+        "phonetic": "ekɔnɔmi",
+        "tags": [
+          "unit11",
+          "2024-02-12-reading-11"
+        ],
+        "sources": [
+          "cambridge"
+        ],
+        "verified": false,
+        "cambridge_data": {
+          "scraped_at": "2025-10-23T05:56:08.325Z",
+          "url": "https://dictionary.cambridge.org/dictionary/french-english/économie",
+          "confidence_score": 0.9,
+          "last_updated": "2025-10-23T05:56:08.325Z"
+        }
+      }
+    }
+  ]
+}
