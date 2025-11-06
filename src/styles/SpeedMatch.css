@@ -34,62 +34,77 @@
 
 .speed-match-intro {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  gap: 1.5rem;
   margin-bottom: 1.25rem;
-  gap: 1rem;
 }
 
-.speed-match-intro-center {
+.speed-match-intro-left {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  flex: 1;
+}
+
+.speed-match-intro-stats {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 1.5rem;
 }
 
 .speed-match-intro-right {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.speed-match-controls {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
+  justify-content: flex-end;
 }
 
 @media (max-width: 768px) {
   .speed-match-intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
     margin-bottom: 0.75rem;
-    flex-wrap: wrap;
   }
 
-  .speed-match-intro-center {
-    order: 3;
-    width: 100%;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .speed-match-controls {
-    width: 100%;
-    justify-content: space-between;
+  /* First row: buttons evenly spaced */
+  .speed-match-intro-left {
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .speed-match-intro-right {
-    order: 2;
-    flex: 1;
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
     justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  /* Use a spacer to create even spacing between all buttons */
+  .speed-match-intro-left::after {
+    content: "";
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Second row: stats */
+  .speed-match-intro-stats {
+    grid-row: 2;
+    grid-column: 1;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .speed-match-intro .btn-skip,
   .speed-match-intro .btn-back-to-study {
     font-size: 0.875rem;
     padding: 0.5rem 0.75rem;
+    white-space: nowrap;
   }
 
   .speed-match-intro .speed-match-restart.btn-skip {
@@ -313,6 +328,7 @@
   font-size: 0.9375rem;
   color: #665665;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .speed-match-score-value {
@@ -484,6 +500,15 @@
   font-weight: 600;
   color: #1a1a1a;
   letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  line-height: 1.2; /* Better line height for alignment */
+}
+
+.speed-match-word > span {
+  display: inline-block; /* Ensure proper baseline alignment */
 }
 
 @media (max-width: 768px) {
@@ -495,6 +520,12 @@
 .speed-match-word.small {
   font-size: 1.5rem;
   font-weight: 500;
+  gap: 0.75rem;
+  line-height: 1.2;
+}
+
+.speed-match-word.small > span {
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
@@ -787,4 +818,21 @@
 
 .speed-match-preview-actions {
   text-align: center;
+}
+
+/* Speaker button styling for speed match */
+.speed-match-speaker {
+  flex-shrink: 0;
+  margin-top: 0 !important; /* Override default margin-top from speak-btn-large */
+  align-self: center; /* Ensure vertical centering */
+}
+
+.speed-match-word .speed-match-speaker {
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.speed-match-word:hover .speed-match-speaker,
+.speed-match-speaker:hover {
+  opacity: 1;
 }

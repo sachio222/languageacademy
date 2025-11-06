@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { RotateCcw } from 'lucide-react';
 import { usePageTime } from '../hooks/usePageTime';
 import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../utils/clarity';
+import SpeakButton from './SpeakButton';
 import "../styles/SpeedMatch.css";
 
 // Helper component to format option text with lighter parentheses
@@ -269,44 +270,31 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   return (
     <div className={`speed-match-container embedded ${isPlayingState ? "playing" : ""}`}>
       <div className="speed-match-intro">
-        <button className="btn-back-to-study btn-skip" onClick={() => window.history.back()}>
-          ← Back to Study Mode
-        </button>
-        {(gameState === GAME_STATES.PREVIEW || isPlayingState || (gameState !== GAME_STATES.READY && gameState !== GAME_STATES.FINISHED)) && (
-          <div className="speed-match-intro-center">
-            {(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
-              <>
-                <div className="speed-match-controls">
-                  <div className="speed-match-progress">
-                    {score} / {currentIndex + 1}
-                  </div>
-                  {gameState !== GAME_STATES.READY && gameState !== GAME_STATES.FINISHED && (
-                    <button
-                      onClick={restartGame}
-                      className="speed-match-restart btn-skip"
-                      title="Restart Game"
-                    >
-                      <RotateCcw size={16} /> Restart round
-                    </button>
-                  )}
-                </div>
-                <div className="speed-match-stars">
-                  {renderStars()}
-                </div>
-              </>
-            )}
-            {gameState !== GAME_STATES.READY && gameState !== GAME_STATES.FINISHED && !(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
-              <button
-                onClick={restartGame}
-                className="speed-match-restart btn-skip"
-                title="Restart Game"
-              >
-                <RotateCcw size={16} /> Restart round
-              </button>
-            )}
+        <div className="speed-match-intro-left">
+          <button className="btn-back-to-study btn-skip" onClick={() => window.history.back()}>
+            ← Back to Study Mode
+          </button>
+        </div>
+        {(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
+          <div className="speed-match-intro-stats">
+            <div className="speed-match-progress">
+              {score} / {currentIndex + 1}
+            </div>
+            <div className="speed-match-stars">
+              {renderStars()}
+            </div>
           </div>
         )}
         <div className="speed-match-intro-right">
+          {gameState !== GAME_STATES.READY && gameState !== GAME_STATES.FINISHED && (
+            <button
+              onClick={restartGame}
+              className="speed-match-restart btn-skip"
+              title="Restart Game"
+            >
+              <RotateCcw size={16} /> Restart round
+            </button>
+          )}
           <button className="btn-skip" onClick={onFinish}>
             Skip Speed Match →
           </button>
@@ -400,7 +388,13 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
                 Speed match
               </div>
               <div className="speed-match-word">
-                {currentWord?.french}
+                <span>{currentWord?.french}</span>
+                <SpeakButton
+                  text={currentWord?.french}
+                  language="fr-FR"
+                  size="large"
+                  className="speed-match-speaker"
+                />
               </div>
             </div>
 
@@ -471,7 +465,13 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
                 Match this word
               </div>
               <div className="speed-match-word small">
-                {currentWord?.french}
+                <span>{currentWord?.french}</span>
+                <SpeakButton
+                  text={currentWord?.french}
+                  language="fr-FR"
+                  size="medium"
+                  className="speed-match-speaker"
+                />
               </div>
             </div>
 
