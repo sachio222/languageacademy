@@ -109,7 +109,7 @@ function SpeakButton({
 }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [userVoice, setUserVoice] = useState(null);
-  const [userSpeed, setUserSpeed] = useState(1.0);
+  const [userSpeed, setUserSpeed] = useState(0.9);
 
   // Load user preferences
   useEffect(() => {

@@ -5,7 +5,7 @@ import '../styles/SoundSettingsModal.css';
 function SoundSettingsModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedVoice, setSelectedVoice] = useState('');
-  const [speed, setSpeed] = useState(1.0);
+  const [speed, setSpeed] = useState(0.9);
   const [voices, setVoices] = useState([]);
 
   // Load available voices
@@ -139,7 +139,7 @@ function SoundSettingsModal() {
 
   const resetToDefault = () => {
     // Reset to default speed
-    const defaultSpeed = 1.0;
+    const defaultSpeed = 0.9;
     setSpeed(defaultSpeed);
     localStorage.setItem('tts-speed', defaultSpeed.toString());
 
@@ -325,18 +325,40 @@ function SoundSettingsModal() {
                   type="range"
                   min="0.25"
                   max="1.5"
-                  step="0.25"
+                  step="0.05"
                   value={speed}
                   onChange={handleSpeedChange}
                   className="sound-setting-slider"
                 />
                 <div className="speed-labels">
-                  <span>0.25x</span>
-                  <span>0.5x</span>
-                  <span>0.75x</span>
-                  <span>1.0x</span>
-                  <span>1.25x</span>
-                  <span>1.5x</span>
+                  <span 
+                    onClick={() => handleSpeedChange({ target: { value: '0.25' } })}
+                    className={Math.abs(speed - 0.25) < 0.01 ? 'active' : ''}
+                  >0.25x</span>
+                  <span 
+                    onClick={() => handleSpeedChange({ target: { value: '0.5' } })}
+                    className={Math.abs(speed - 0.5) < 0.01 ? 'active' : ''}
+                  >0.5x</span>
+                  <span 
+                    onClick={() => handleSpeedChange({ target: { value: '0.75' } })}
+                    className={Math.abs(speed - 0.75) < 0.01 ? 'active' : ''}
+                  >0.75x</span>
+                  <span 
+                    onClick={() => handleSpeedChange({ target: { value: '0.9' } })}
+                    className={Math.abs(speed - 0.9) < 0.01 ? 'active' : ''}
+                  >0.9x</span>
+                  <span 
+                    onClick={() => handleSpeedChange({ target: { value: '1.0' } })}
+                    className={Math.abs(speed - 1.0) < 0.01 ? 'active' : ''}
+                  >1.0x</span>
+                  <span 
+                    onClick={() => handleSpeedChange({ target: { value: '1.25' } })}
+                    className={Math.abs(speed - 1.25) < 0.01 ? 'active' : ''}
+                  >1.25x</span>
+                  <span 
+                    onClick={() => handleSpeedChange({ target: { value: '1.5' } })}
+                    className={Math.abs(speed - 1.5) < 0.01 ? 'active' : ''}
+                  >1.5x</span>
                 </div>
               </div>
 

@@ -207,6 +207,27 @@
 .speed-labels span {
   flex: 1;
   text-align: center;
+  cursor: pointer;
+  padding: 0.25rem 0.125rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.speed-labels span:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.speed-labels span:active {
+  background: rgba(59, 130, 246, 0.2);
+  transform: scale(0.95);
+}
+
+.speed-labels span.active {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+  font-weight: 600;
 }
 
 /* Action Buttons Container */

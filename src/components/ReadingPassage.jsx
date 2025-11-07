@@ -101,13 +101,24 @@ function ReadingPassage({ passage }) {
       <div className="passage-content">
         {/* Read entire passage button - above first paragraph */}
         <div className="passage-audio-header">
-          <SpeakButton
-            text={stripMarkdown(passage.text)}
-            language="fr-FR"
-            size="medium"
-            ariaLabel="Read entire passage aloud"
-          />
-          <span className="audio-label">Listen to entire passage</span>
+          <button
+            className="passage-audio-button"
+            onClick={(e) => {
+              // Trigger the SpeakButton click
+              const speakBtn = e.currentTarget.querySelector('.speak-btn');
+              if (speakBtn) {
+                speakBtn.click();
+              }
+            }}
+          >
+            <SpeakButton
+              text={stripMarkdown(passage.text)}
+              language="fr-FR"
+              size="medium"
+              ariaLabel="Read entire passage aloud"
+            />
+            <span className="audio-label">Listen to entire passage</span>
+          </button>
           <SoundSettingsModal />
         </div>
 
