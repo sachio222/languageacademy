@@ -2800,6 +2800,16 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   background: rgba(59, 130, 246, 0.15);
 }
 
+/* Stop icon - outline by default, solid on hover */
+.speak-btn .stop-icon {
+  fill: none;
+  transition: fill 0.2s ease;
+}
+
+.speak-btn:hover .stop-icon {
+  fill: currentColor;
+}
+
 /* Size variants */
 .speak-btn-small {
   padding: 0.25rem;

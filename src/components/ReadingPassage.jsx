@@ -38,6 +38,7 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import SpeakButton from './SpeakButton';
+import SoundSettingsModal from './SoundSettingsModal';
 import { useSpeech } from '../hooks/useSpeech';
 import { useDictionary } from '../hooks/useDictionary';
 import { isImageMarker, extractImageInfo } from '../utils/readings/imgUtils';
@@ -107,6 +108,7 @@ function ReadingPassage({ passage }) {
             ariaLabel="Read entire passage aloud"
           />
           <span className="audio-label">Listen to entire passage</span>
+          <SoundSettingsModal />
         </div>
 
         <div className="passage-french">
