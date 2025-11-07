@@ -80,21 +80,6 @@ export const createInteractiveWordElement = (text, translation, uniqueKey, conte
   const wikiEntry = wikipediaEntries[text] || wikipediaEntries[text.toLowerCase()];
   const isHovered = hoveredWord === uniqueKey;
 
-  const handleClick = (e) => {
-    // On mobile, show tooltip on click; on desktop, just play sound
-    const isMobile = window.innerWidth <= 640;
-    if (isMobile) {
-      // Toggle tooltip on mobile (show if hidden, hide if shown)
-      if (hoveredWord === uniqueKey) {
-        setHoveredWord(null);
-      } else {
-        setHoveredWord(uniqueKey);
-      }
-    }
-    // Always play sound
-    speak(getTTSText(text), "fr-FR");
-  };
-
   return (
     <span
       key={uniqueKey}
@@ -104,7 +89,7 @@ export const createInteractiveWordElement = (text, translation, uniqueKey, conte
       className="interactive-word"
       onMouseEnter={() => setHoveredWord(uniqueKey)}
       onMouseLeave={() => setHoveredWord(null)}
-      onClick={handleClick}
+      onClick={() => speak(getTTSText(text), "fr-FR")}
       style={{ cursor: "pointer" }}
     >
       {text}

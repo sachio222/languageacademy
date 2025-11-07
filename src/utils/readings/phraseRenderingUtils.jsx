@@ -23,21 +23,6 @@ export const renderPhraseElement = (phraseResult, context, remainingText, charPo
   const uniqueKey = generatePhraseKey(paragraphIndex, charPosition);
   const phraseText = phraseResult.phrase;
 
-  const handleClick = () => {
-    // On mobile, show tooltip on click; on desktop, just play sound
-    const isMobile = window.innerWidth <= 640;
-    if (isMobile) {
-      // Toggle tooltip on mobile (show if hidden, hide if shown)
-      if (hoveredWord === uniqueKey) {
-        setHoveredWord(null);
-      } else {
-        setHoveredWord(uniqueKey);
-      }
-    }
-    // Always play sound
-    speak(phraseText, "fr-FR");
-  };
-
   const element = (
     <span
       key={uniqueKey}
@@ -47,7 +32,7 @@ export const renderPhraseElement = (phraseResult, context, remainingText, charPo
       className="interactive-word phrase"
       onMouseEnter={() => setHoveredWord(uniqueKey)}
       onMouseLeave={() => setHoveredWord(null)}
-      onClick={handleClick}
+      onClick={() => speak(phraseText, "fr-FR")}
       style={{ cursor: "pointer" }}
       title={`Phrase: ${phraseText}`}
     >

@@ -25,9 +25,7 @@ export const calculateTooltipPosition = (
 
   // Use requestAnimationFrame to measure in next frame
   requestAnimationFrame(() => {
-    // Check for both wiki tooltips and regular word tooltips
-    const tooltipElement = wordElement.querySelector(".wiki-tooltip") || 
-                          wordElement.querySelector(".word-tooltip");
+    const tooltipElement = wordElement.querySelector(".wiki-tooltip");
     if (!tooltipElement) return;
 
     const wordRect = wordElement.getBoundingClientRect();
