@@ -11,7 +11,9 @@ export const useUrlManager = () => {
     const dictionaryParam = params.get('dictionary');
     const reportCardParam = params.get('report-card');
     const reportCardAdminParam = params.get('report-card-admin');
+    const wotdParam = params.get('wotd') || params.get('word-of-the-day');
 
+    if (wotdParam) return 'word-of-the-day';
     if (referenceParam === 'true') return 'reference';
     if (vocabularyParam === 'true') return 'vocabulary';
     if (dictionaryParam === 'true') return 'dictionary';
@@ -32,7 +34,7 @@ export const useUrlManager = () => {
   // Clean all URL parameters
   const cleanUrl = useCallback(() => {
     const url = new URL(window.location);
-    const paramsToDelete = ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'reference', 'vocabulary', 'dictionary', 'report-card', 'report-card-admin'];
+    const paramsToDelete = ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'reference', 'vocabulary', 'dictionary', 'report-card', 'report-card-admin', 'wotd', 'word-of-the-day', 'date', 'utm_source', 'utm_medium', 'utm_campaign'];
     paramsToDelete.forEach(param => url.searchParams.delete(param));
     window.history.replaceState({}, '', url);
   }, []);
@@ -109,6 +111,19 @@ export const useUrlManager = () => {
     window.history.pushState({}, '', url);
   }, []);
 
+  // Set word of the day in URL
+  const setWordOfTheDay = useCallback((date = null) => {
+    const url = new URL(window.location);
+    url.searchParams.set('wotd', 'true');
+    if (date) {
+      url.searchParams.set('date', date);
+    }
+    ['module', 'view', 'exercise', 'sentence', 'question', 'section', 'reference', 'vocabulary', 'report-card', 'report-card-admin'].forEach(param => 
+      url.searchParams.delete(param)
+    );
+    window.history.pushState({}, '', url);
+  }, []);
+
   // Handle browser back/forward navigation
   const handlePopState = useCallback((setCurrentLesson, setShowFeedbackAdmin) => {
     const params = new URLSearchParams(window.location.search);
@@ -117,11 +132,14 @@ export const useUrlManager = () => {
     const vocabularyParam = params.get('vocabulary');
     const reportCardParam = params.get('report-card');
     const reportCardAdminParam = params.get('report-card-admin');
+    const wotdParam = params.get('wotd') || params.get('word-of-the-day');
     const adminParam = params.get('admin');
 
     setShowFeedbackAdmin(adminParam === 'true');
 
-    if (referenceParam === 'true') {
+    if (wotdParam) {
+      setCurrentLesson('word-of-the-day');
+    } else if (referenceParam === 'true') {
       setCurrentLesson('reference');
     } else if (vocabularyParam === 'true') {
       setCurrentLesson('vocabulary');
@@ -151,6 +169,7 @@ export const useUrlManager = () => {
     setDictionary,
     setReportCard,
     setReportCardAdmin,
+    setWordOfTheDay,
     setAdmin,
     handlePopState
   };

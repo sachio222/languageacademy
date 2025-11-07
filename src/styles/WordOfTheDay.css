@@ -1,0 +1,419 @@
+/* Word of the Day - Clean, minimal design following design principles */
+
+.wotd-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 2.5rem 1.5rem;
+}
+
+.wotd-container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Loading & Error States */
+.wotd-loading,
+.wotd-error {
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.wotd-error h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.wotd-error p {
+  font-size: 1rem;
+  color: #665665;
+}
+
+/* Header */
+.wotd-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.wotd-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #665665;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.wotd-title {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.wotd-date {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #665665;
+  margin: 0.75rem 0 0 0;
+  letter-spacing: -0.015em;
+}
+
+/* Challenge Section */
+.wotd-challenge {
+  margin-bottom: 3rem;
+}
+
+/* Word Display */
+.wotd-word-display {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 2rem 0;
+}
+
+.wotd-word-display-title {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.wotd-word-phonetic {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #665665;
+  font-family: 'Courier New', monospace;
+  margin-top: 0.5rem;
+}
+
+.wotd-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.wotd-pos {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #665665;
+  font-style: italic;
+}
+
+.wotd-difficulty {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #665665;
+  letter-spacing: -0.01em;
+}
+
+/* Question Section */
+.wotd-question-section {
+  margin-top: 2.5rem;
+}
+
+.wotd-question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.025em;
+}
+
+/* Multiple Choice Buttons */
+.wotd-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.wotd-choice-button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #1a1a1a;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.wotd-choice-button:hover {
+  background: #f7f9fc;
+  border-color: #3b82f6;
+}
+
+.wotd-dont-know-button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #665665;
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.wotd-dont-know-button:hover {
+  background: #f7f9fc;
+}
+
+/* Buttons */
+.wotd-button-primary {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  background: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.wotd-button-primary:hover {
+  opacity: 0.9;
+}
+
+.wotd-button-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.wotd-button-ghost {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #665665;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.wotd-button-ghost:hover {
+  background: #f7f9fc;
+}
+
+/* Auth Prompt */
+.wotd-auth-prompt {
+  text-align: center;
+  padding: 1.5rem 0 0 0;
+}
+
+.wotd-auth-message {
+  font-size: 0.875rem;
+  color: #665665;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Result Section */
+.wotd-result {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.wotd-result.correct {
+  background: #f0fdf4;
+}
+
+.wotd-result.incorrect {
+  background: #fef2f2;
+}
+
+.wotd-result-content {
+  text-align: center;
+}
+
+.wotd-result-icon {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.wotd-result.correct .wotd-result-icon {
+  color: #22c55e;
+}
+
+.wotd-result.incorrect .wotd-result-icon {
+  color: #ef4444;
+}
+
+.wotd-result-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.025em;
+}
+
+.wotd-result.correct .wotd-result-title {
+  color: #166534;
+}
+
+.wotd-result.incorrect .wotd-result-title {
+  color: #991b1b;
+}
+
+.wotd-result-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.7;
+}
+
+/* Word Section */
+.wotd-word-section {
+  margin-bottom: 2.5rem;
+}
+
+.wotd-word-header {
+  margin-bottom: 1rem;
+}
+
+.wotd-word-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.wotd-word-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
+.wotd-speak-button {
+  flex-shrink: 0;
+}
+
+.wotd-word-phonetic {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #665665;
+  font-family: 'Courier New', monospace;
+}
+
+.wotd-translation {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.wotd-pos {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #665665;
+  font-style: italic;
+}
+
+.wotd-translation-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+}
+
+/* Examples Section */
+.wotd-examples-section {
+  margin-top: 2.5rem;
+}
+
+.wotd-examples-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.025em;
+}
+
+.wotd-examples-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wotd-example {
+  padding: 1.25rem;
+  background: #fafbfc;
+  border-radius: 8px;
+}
+
+.wotd-example-fr {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.wotd-example-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+}
+
+.wotd-example-speak {
+  flex-shrink: 0;
+}
+
+.wotd-example-en {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #665665;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wotd-page {
+    padding: 1.5rem 1rem;
+  }
+  
+  .wotd-header {
+    margin-bottom: 2rem;
+  }
+  
+  .wotd-title {
+    font-size: 3rem;
+  }
+  
+  .wotd-word-display-title {
+    font-size: 2.5rem;
+  }
+  
+  .wotd-word-title {
+    font-size: 2rem;
+  }
+  
+  .wotd-question {
+    font-size: 1.125rem;
+  }
+  
+  .wotd-choice-button {
+    padding: 0.875rem 1.25rem;
+  }
+}
+

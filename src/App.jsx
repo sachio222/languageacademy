@@ -18,6 +18,7 @@ const CookieSettingsModal = lazy(() => import('./components/CookieSettingsModal'
 const BetaNoticeModal = lazy(() => import('./components/BetaNoticeModal'));
 const ReportCardStudent = lazy(() => import('./components/ReportCardStudent'));
 const ReportCardAdmin = lazy(() => import('./components/ReportCardAdmin'));
+const WordOfTheDay = lazy(() => import('./components/WordOfTheDay'));
 import { initializeClarity, identifyClarityUser, setClarityTag, trackClarityEvent, upgradeClaritySession } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -54,6 +55,18 @@ function App() {
   // Get auth info
   const { user, supabaseUser } = useAuth();
   const supabaseClient = useSupabaseClient();
+
+  // Check if accessing Word of the Day without auth - render standalone
+  const urlParams = new URLSearchParams(window.location.search);
+  const isWordOfTheDay = urlParams.get('wotd') || urlParams.get('word-of-the-day');
+  
+  if (isWordOfTheDay && !user) {
+    return (
+      <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
+        <WordOfTheDay />
+      </Suspense>
+    );
+  }
 
   // Supabase progress tracking (works in both dev and production mode)
   const supabaseProgress = useSupabaseProgress();
@@ -418,6 +431,12 @@ function App() {
                 isOpen={true}
                 onClose={navigation.handleCloseDictionary}
               />
+            </Suspense>
+          </div>
+        ) : navigation.currentLesson === 'word-of-the-day' ? (
+          <div className="main-content-wrapper">
+            <Suspense fallback={<div className="loading-spinner">Loading word of the day...</div>}>
+              <WordOfTheDay />
             </Suspense>
           </div>
         ) : !navigation.currentLesson ? (
