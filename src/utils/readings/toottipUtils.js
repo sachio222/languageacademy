@@ -20,13 +20,21 @@ export const calculateTooltipPosition = (
   const wordElement = wordRefs.current[hoveredWord];
   if (!wordElement) return;
 
+  // Check if this is a regular word tooltip - if so, skip positioning logic
+  const hasRegularTooltip = wordElement.querySelector(".word-tooltip");
+  if (hasRegularTooltip) {
+    // Regular tooltips don't need complex positioning, show immediately
+    setTooltipPosition({ shift: 0, arrowShift: 0, isVisible: true });
+    return;
+  }
+
+  // Only Wikipedia tooltips need complex positioning logic
   // Start with hidden tooltip so we can measure it
   setTooltipPosition({ shift: 0, arrowShift: 0, isVisible: false });
 
   // Use requestAnimationFrame to measure in next frame
   requestAnimationFrame(() => {
-    // Look for both regular tooltips and Wikipedia tooltips
-    const tooltipElement = wordElement.querySelector(".wiki-tooltip, .word-tooltip");
+    const tooltipElement = wordElement.querySelector(".wiki-tooltip");
     if (!tooltipElement) return;
 
     const wordRect = wordElement.getBoundingClientRect();
