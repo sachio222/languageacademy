@@ -18,17 +18,30 @@ function SoundSettingsModal() {
       
       // Only update if we actually have voices
       if (frenchVoices.length > 0) {
+        // Deduplicate voices by name and language (Safari and other browsers can return duplicates)
+        const seenVoices = new Map();
+        const uniqueVoices = [];
+        
+        for (const voice of frenchVoices) {
+          // Use name + lang as unique key to handle duplicates
+          const key = `${voice.name}|${voice.lang}`;
+          if (!seenVoices.has(key)) {
+            seenVoices.set(key, true);
+            uniqueVoices.push(voice);
+          }
+        }
+        
         // Preferred voices in priority order
         const preferredVoiceNames = ['google', 'amélie', 'amelie', 'marie', 'thomas'];
         
         // Filter to only show preferred voices if any are available
-        const preferredVoices = frenchVoices.filter(v => {
+        const preferredVoices = uniqueVoices.filter(v => {
           const nameLower = v.name.toLowerCase();
           return preferredVoiceNames.some(preferred => nameLower.includes(preferred));
         });
         
         // Use preferred voices if available, otherwise show all
-        const voicesToShow = preferredVoices.length > 0 ? preferredVoices : frenchVoices;
+        const voicesToShow = preferredVoices.length > 0 ? preferredVoices : uniqueVoices;
         setVoices(voicesToShow);
 
         // Load saved preferences
@@ -101,9 +114,12 @@ function SoundSettingsModal() {
     setSelectedVoice(voiceName);
     localStorage.setItem('tts-voice', voiceName);
     
+    // Preserve current speed when changing voice
+    const currentSpeed = speed; // Explicitly preserve speed
+    
     // Dispatch custom event to notify other components
     window.dispatchEvent(new CustomEvent('tts-settings-changed', {
-      detail: { voice: voiceName, speed }
+      detail: { voice: voiceName, speed: currentSpeed }
     }));
   };
 
@@ -182,17 +198,30 @@ function SoundSettingsModal() {
     );
     
     if (frenchVoices.length > 0) {
+      // Deduplicate voices by name and language (Safari and other browsers can return duplicates)
+      const seenVoices = new Map();
+      const uniqueVoices = [];
+      
+      for (const voice of frenchVoices) {
+        // Use name + lang as unique key to handle duplicates
+        const key = `${voice.name}|${voice.lang}`;
+        if (!seenVoices.has(key)) {
+          seenVoices.set(key, true);
+          uniqueVoices.push(voice);
+        }
+      }
+      
       // Preferred voices in priority order
       const preferredVoiceNames = ['google', 'amélie', 'amelie', 'marie', 'thomas'];
       
       // Filter to only show preferred voices if any are available
-      const preferredVoices = frenchVoices.filter(v => {
+      const preferredVoices = uniqueVoices.filter(v => {
         const nameLower = v.name.toLowerCase();
         return preferredVoiceNames.some(preferred => nameLower.includes(preferred));
       });
       
       // Use preferred voices if available, otherwise show all
-      const voicesToShow = preferredVoices.length > 0 ? preferredVoices : frenchVoices;
+      const voicesToShow = preferredVoices.length > 0 ? preferredVoices : uniqueVoices;
       setVoices(voicesToShow);
       
       // Set to first voice if none selected
@@ -229,17 +258,30 @@ function SoundSettingsModal() {
       );
       
       if (frenchVoices.length > 0) {
+        // Deduplicate voices by name and language (Safari and other browsers can return duplicates)
+        const seenVoices = new Map();
+        const uniqueVoices = [];
+        
+        for (const voice of frenchVoices) {
+          // Use name + lang as unique key to handle duplicates
+          const key = `${voice.name}|${voice.lang}`;
+          if (!seenVoices.has(key)) {
+            seenVoices.set(key, true);
+            uniqueVoices.push(voice);
+          }
+        }
+        
         // Preferred voices in priority order
         const preferredVoiceNames = ['google', 'amélie', 'amelie', 'marie', 'thomas'];
         
         // Filter to only show preferred voices if any are available
-        const preferredVoices = frenchVoices.filter(v => {
+        const preferredVoices = uniqueVoices.filter(v => {
           const nameLower = v.name.toLowerCase();
           return preferredVoiceNames.some(preferred => nameLower.includes(preferred));
         });
         
         // Use preferred voices if available, otherwise show all
-        const voicesToShow = preferredVoices.length > 0 ? preferredVoices : frenchVoices;
+        const voicesToShow = preferredVoices.length > 0 ? preferredVoices : uniqueVoices;
         setVoices(voicesToShow);
         
         // Set to first voice if none selected
