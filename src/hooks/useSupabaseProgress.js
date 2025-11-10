@@ -297,6 +297,66 @@ export const useSupabaseProgress = () => {
           [moduleId]: data,
         }));
 
+        // Handle module completion (sync + send email)
+        if (data.completed_at) {
+          try {
+            const { data: userProfile } = await supabaseClient
+              .from('user_profiles')
+              .select('email, preferred_name, first_name')
+              .eq('id', supabaseUser.id)
+              .single();
+
+            if (userProfile) {
+              // Sync to MailerLite for segment management
+              try {
+                await supabaseClient.functions.invoke('sync-to-mailerlite', {
+                  body: {
+                    event: 'module_completed',
+                    user_id: supabaseUser.id,
+                    email: userProfile.email,
+                    name: userProfile.preferred_name || userProfile.first_name,
+                    metadata: {
+                      group: 'Module Completers',
+                      module_id: moduleId,
+                      modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1
+                    }
+                  }
+                });
+              } catch (syncError) {
+                logger.error('Error syncing to MailerLite:', syncError);
+                // Continue even if sync fails
+              }
+
+              // Send congrats email via Resend
+              try {
+                const { emailTemplates } = await import('../utils/emailTemplates.js');
+                const template = emailTemplates.lessonComplete(
+                  userProfile.preferred_name || userProfile.first_name || 'there',
+                  `Module ${moduleId}`, // Could fetch actual title
+                  moduleId
+                );
+
+                await supabaseClient.functions.invoke('send-resend-email', {
+                  body: {
+                    to: userProfile.email,
+                    subject: template.subject,
+                    html: template.html,
+                    email_type: 'lesson_complete',
+                    user_id: supabaseUser.id,
+                    metadata: { module_id: moduleId }
+                  }
+                });
+              } catch (emailError) {
+                logger.error('Error sending completion email:', emailError);
+                // Continue even if email fails
+              }
+            }
+          } catch (error) {
+            logger.error('Error handling module completion:', error);
+            // Continue - don't let email errors break progress tracking
+          }
+        }
+
         return data;
       } catch (err) {
         logger.error("Error updating module progress:", err);

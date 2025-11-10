@@ -230,8 +230,10 @@ function ReportCardAdmin({ onBack = null }) {
     return (
       <div className="report-card-admin">
         <div className="admin-loading">
-          <div className="loading-spinner"></div>
-          <p>Loading student data...</p>
+          <div className="loading-spinner">
+            <div className="spinner"></div>
+            <p>Loading student data...</p>
+          </div>
         </div>
       </div>
     );

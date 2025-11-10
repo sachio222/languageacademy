@@ -314,14 +314,6 @@ function App() {
             >
               💬
             </button>
-            <AdminButtons
-              isAdmin={admin.isAdmin}
-              newFeedbackCount={admin.newFeedbackCount}
-              onResetWelcome={handleResetWelcomeFlags}
-              onShowReportCardAdmin={navigation.handleShowReportCardAdmin}
-              onShowFeedbackAdmin={navigation.handleShowAdmin}
-              onShowCommunicationAdmin={navigation.handleShowCommunicationAdmin}
-            />
           </div>
         ) : navigation.currentLesson === 'report-card-admin' ? (
           <div className="main-content-wrapper">
@@ -359,38 +351,6 @@ function App() {
             >
               💬
             </button>
-            {admin.isAdmin && (
-              <>
-                <button
-                  className="admin-reset-btn"
-                  onClick={handleResetWelcomeFlags}
-                  title="Simulate First-Time Experience (Reset Welcome Screens)"
-                >
-                  🔄
-                </button>
-                <button
-                  className="admin-report-btn"
-                  onClick={navigation.handleShowReportCardAdmin}
-                  title="View Report Card Admin"
-                >
-                  📋
-                </button>
-                <button
-                  className="admin-btn"
-                  onClick={navigation.handleShowAdmin}
-                  title="Admin Panel"
-                >
-                  ⚙️
-                </button>
-                <button
-                  className="admin-btn"
-                  onClick={navigation.handleShowCommunicationAdmin}
-                  title="Communication Admin (Emails)"
-                >
-                  📧
-                </button>
-              </>
-            )}
           </div>
         ) : navigation.currentLesson === 'vocabulary' ? (
           <div className="main-content-wrapper">
@@ -404,14 +364,6 @@ function App() {
             >
               💬
             </button>
-            <AdminButtons
-              isAdmin={admin.isAdmin}
-              newFeedbackCount={admin.newFeedbackCount}
-              onResetWelcome={handleResetWelcomeFlags}
-              onShowReportCardAdmin={navigation.handleShowReportCardAdmin}
-              onShowFeedbackAdmin={navigation.handleShowAdmin}
-              onShowCommunicationAdmin={navigation.handleShowCommunicationAdmin}
-            />
           </div>
         ) : navigation.currentLesson === 'dictionary' ? (
           <div className="main-content-wrapper">
@@ -447,14 +399,17 @@ function App() {
             >
               💬
             </button>
-            <AdminButtons
-              isAdmin={admin.isAdmin}
-              newFeedbackCount={admin.newFeedbackCount}
-              onResetWelcome={handleResetWelcomeFlags}
-              onShowReportCardAdmin={navigation.handleShowReportCardAdmin}
-              onShowFeedbackAdmin={navigation.handleShowAdmin}
-              onShowCommunicationAdmin={navigation.handleShowCommunicationAdmin}
-            />
+            {!navigation.currentLesson && (
+              <AdminButtons
+                key="modules-page-admin-buttons"
+                isAdmin={admin.isAdmin}
+                newFeedbackCount={admin.newFeedbackCount}
+                onResetWelcome={handleResetWelcomeFlags}
+                onShowReportCardAdmin={navigation.handleShowReportCardAdmin}
+                onShowFeedbackAdmin={navigation.handleShowAdmin}
+                onShowCommunicationAdmin={navigation.handleShowCommunicationAdmin}
+              />
+            )}
           </div>
         ) : (
           (() => {
@@ -487,34 +442,6 @@ function App() {
                 >
                   💬
                 </button>
-                {admin.isAdmin && (
-                  <>
-                    <button
-                      className="admin-reset-btn"
-                      onClick={handleResetWelcomeFlags}
-                      title="Simulate First-Time Experience (Reset Welcome Screens)"
-                    >
-                      🔄
-                    </button>
-                    <button
-                      className="admin-report-btn"
-                      onClick={navigation.handleShowReportCardAdmin}
-                      title="View Report Card Admin"
-                    >
-                      📋
-                    </button>
-                    <button
-                      className="admin-btn"
-                      onClick={navigation.handleShowAdmin}
-                      title="View Feedback Admin"
-                    >
-                      📊
-                      {admin.newFeedbackCount > 0 && (
-                        <span className="admin-badge">{admin.newFeedbackCount}</span>
-                      )}
-                    </button>
-                  </>
-                )}
               </div>
             );
           })()

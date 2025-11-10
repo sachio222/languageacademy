@@ -412,6 +412,35 @@
   line-height: 1.6;
 }
 
+.test-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.test-email-btn {
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.test-email-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.test-email-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .communication-admin {

@@ -154,6 +154,24 @@ logger.log('Dev account created:', data);
             if (insertError) throw insertError;
             setSupabaseUser(newProfile);
             setProfile(newProfile);
+
+            // Sync new user to MailerLite
+            try {
+              await supabaseClient.functions.invoke('sync-to-mailerlite', {
+                body: {
+                  event: 'signup',
+                  user_id: newProfile.id,
+                  email: user.emailAddresses?.[0]?.emailAddress,
+                  name: user.firstName,
+                  metadata: {
+                    group: 'All Users'
+                  }
+                }
+              });
+            } catch (syncError) {
+              logger.error('Error syncing to MailerLite:', syncError);
+              // Don't fail signup if MailerLite sync fails
+            }
           } else {
             // Update existing profile with latest Clerk data
             const { data: updatedProfile, error: updateError } =

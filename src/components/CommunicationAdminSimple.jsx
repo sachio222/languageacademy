@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { logger } from '../utils/logger';
 import './CommunicationAdmin.css';
 
 const CommunicationAdmin = () => {
-  const { supabaseClient } = useAuth();
+  const supabaseClient = useSupabaseClient();
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({ total: 0, today: 0, thisWeek: 0 });
-  const [testLoading, setTestLoading] = useState(false);
 
   useEffect(() => {
     if (!supabaseClient) return;
@@ -55,61 +54,6 @@ const CommunicationAdmin = () => {
     });
   };
 
-  const handleTestResend = async () => {
-    setTestLoading(true);
-    
-    // Debug: Check if client exists
-    if (!supabaseClient) {
-      alert('❌ No Supabase client - not authenticated?');
-      setTestLoading(false);
-      return;
-    }
-    
-    try {
-      console.log('VITE_SUPABASE_URL:', import.meta.env.VITE_SUPABASE_URL);
-      console.log('VITE_SUPABASE_ANON_KEY exists:', !!import.meta.env.VITE_SUPABASE_ANON_KEY);
-      
-      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-resend-email`;
-      console.log('Full URL:', url);
-      
-      const requestBody = {
-        to: 'brainpowerux@gmail.com',
-        subject: 'Test Email from Language Academy', 
-        html: '<h1>Hello from Resend!</h1><p>This is a test email to verify Resend integration is working.</p><p>If you received this, everything is connected properly!</p>',
-        email_type: 'test',
-        metadata: { test: true }
-      };
-      
-      const bodyString = JSON.stringify(requestBody);
-      console.log('Request body object:', requestBody);
-      console.log('Request body JSON:', bodyString);
-      console.log('Body length:', bodyString.length);
-      
-      // Call directly using same env vars as rest of app
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-          'Content-Type': 'application/json'
-        },
-        body: bodyString
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        alert('✅ Test email sent via Resend! Check brainpowerux@gmail.com');
-        loadLogs(); // Refresh logs to show the send
-      } else {
-        alert('❌ ' + (result.reason || result.error || 'Unknown error'));
-      }
-    } catch (error) {
-      alert('❌ Error: ' + error.message);
-    } finally {
-      setTestLoading(false);
-    }
-  };
-
   return (
     <div className="communication-admin">
       <div className="communication-admin-header">
@@ -134,16 +78,6 @@ const CommunicationAdmin = () => {
               <h3>This Week</h3>
               <p className="stat-number">{stats.thisWeek}</p>
             </div>
-          </div>
-
-          <div className="test-section">
-            <button 
-              onClick={handleTestResend}
-              disabled={testLoading}
-              className="test-email-btn"
-            >
-              {testLoading ? 'Sending...' : 'Test Resend Email to brainpowerux@gmail.com'}
-            </button>
           </div>
 
           <div className="email-logs-section">

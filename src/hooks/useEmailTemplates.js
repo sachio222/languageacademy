@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useSupabaseClient } from './useSupabaseClient';
+import { useAuth } from './useAuth';
 import { logger } from '../utils/logger';
 
 export const useEmailTemplates = () => {
-  const supabaseClient = useSupabaseClient();
+  const { supabaseClient } = useAuth();
   const [templates, setTemplates] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

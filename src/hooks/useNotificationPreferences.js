@@ -1,11 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from './useAuth';
-import { useSupabaseClient } from './useSupabaseClient';
 import { logger } from '../utils/logger';
 
 export const useNotificationPreferences = () => {
-  const { supabaseUser, isAuthenticated } = useAuth();
-  const supabaseClient = useSupabaseClient();
+  const { supabaseUser, isAuthenticated, supabaseClient } = useAuth();
   const [preferences, setPreferences] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
