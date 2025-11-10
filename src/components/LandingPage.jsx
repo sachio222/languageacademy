@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Reading11Preview from './Reading11Preview'
 import ExercisePreview from './ExercisePreview'
-import Testimonials from './Testimonials'
+// import Testimonials from './Testimonials'
 import PrivacyPolicy from './PrivacyPolicy'
 import TermsOfService from './TermsOfService'
 import '../styles/Landing.css'
@@ -61,7 +61,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
       </section>
 
       {/* Testimonials and Ratings */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* Your Goal - Reading 11 Preview (Show outcome first!) */}
       <section className="landing-section">
