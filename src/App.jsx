@@ -7,6 +7,7 @@ import LessonView from './components/LessonView';
 import SafariTTSHelper from './components/SafariTTSHelper';
 import OfflineIndicator from './components/OfflineIndicator';
 import CookieBanner from './components/CookieBanner';
+import AdminButtons from './components/AdminButtons';
 
 // Lazy load heavy/conditional components
 const ReferenceModules = lazy(() => import('./components/ReferenceModules'));
@@ -14,6 +15,7 @@ const VocabularyDashboard = lazy(() => import('./components/VocabularyDashboard'
 const DictionaryModal = lazy(() => import('./components/DictionaryModal'));
 const FeedbackForm = lazy(() => import('./components/FeedbackForm'));
 const FeedbackAdmin = lazy(() => import('./components/FeedbackAdmin'));
+const CommunicationAdmin = lazy(() => import('./components/CommunicationAdmin'));
 const CookieSettingsModal = lazy(() => import('./components/CookieSettingsModal'));
 const BetaNoticeModal = lazy(() => import('./components/BetaNoticeModal'));
 const ReportCardStudent = lazy(() => import('./components/ReportCardStudent'));
@@ -260,7 +262,27 @@ function App() {
       />
 
       <main className="app-main">
-        {navigation.showFeedbackAdmin ? (
+        {navigation.showCommunicationAdmin ? (
+          <div className="communication-admin-wrapper">
+            <Suspense fallback={<div className="loading-spinner">Loading communication admin...</div>}>
+              <CommunicationAdmin />
+            </Suspense>
+            <button
+              className="feedback-fab"
+              onClick={() => navigation.setShowFeedbackForm(true)}
+              title="Give Early Feedback"
+            >
+              💬
+            </button>
+            <button
+              className="admin-close-btn"
+              onClick={navigation.handleCloseCommunicationAdmin}
+              title="Close Communication Admin"
+            >
+              ← Back to Lessons
+            </button>
+          </div>
+        ) : navigation.showFeedbackAdmin ? (
           <div className="feedback-admin-wrapper">
             <Suspense fallback={<div className="loading-spinner">Loading admin panel...</div>}>
               <FeedbackAdmin onFeedbackChange={admin.refreshFeedbackCount} />
@@ -292,34 +314,14 @@ function App() {
             >
               💬
             </button>
-            {admin.isAdmin && (
-              <>
-                <button
-                  className="admin-reset-btn"
-                  onClick={handleResetWelcomeFlags}
-                  title="Simulate First-Time Experience (Reset Welcome Screens)"
-                >
-                  🔄
-                </button>
-                <button
-                  className="admin-report-btn"
-                  onClick={navigation.handleShowReportCardAdmin}
-                  title="View Report Card Admin"
-                >
-                  📋
-                </button>
-                <button
-                  className="admin-btn"
-                  onClick={navigation.handleShowAdmin}
-                  title="View Feedback Admin"
-                >
-                  📊
-                  {admin.newFeedbackCount > 0 && (
-                    <span className="admin-badge">{admin.newFeedbackCount}</span>
-                  )}
-                </button>
-              </>
-            )}
+            <AdminButtons
+              isAdmin={admin.isAdmin}
+              newFeedbackCount={admin.newFeedbackCount}
+              onResetWelcome={handleResetWelcomeFlags}
+              onShowReportCardAdmin={navigation.handleShowReportCardAdmin}
+              onShowFeedbackAdmin={navigation.handleShowAdmin}
+              onShowCommunicationAdmin={navigation.handleShowCommunicationAdmin}
+            />
           </div>
         ) : navigation.currentLesson === 'report-card-admin' ? (
           <div className="main-content-wrapper">
@@ -380,6 +382,13 @@ function App() {
                 >
                   ⚙️
                 </button>
+                <button
+                  className="admin-btn"
+                  onClick={navigation.handleShowCommunicationAdmin}
+                  title="Communication Admin (Emails)"
+                >
+                  📧
+                </button>
               </>
             )}
           </div>
@@ -395,34 +404,14 @@ function App() {
             >
               💬
             </button>
-            {admin.isAdmin && (
-              <>
-                <button
-                  className="admin-reset-btn"
-                  onClick={handleResetWelcomeFlags}
-                  title="Simulate First-Time Experience (Reset Welcome Screens)"
-                >
-                  🔄
-                </button>
-                <button
-                  className="admin-report-btn"
-                  onClick={navigation.handleShowReportCardAdmin}
-                  title="View Report Card Admin"
-                >
-                  📋
-                </button>
-                <button
-                  className="admin-btn"
-                  onClick={navigation.handleShowAdmin}
-                  title="View Feedback Admin"
-                >
-                  📊
-                  {admin.newFeedbackCount > 0 && (
-                    <span className="admin-badge">{admin.newFeedbackCount}</span>
-                  )}
-                </button>
-              </>
-            )}
+            <AdminButtons
+              isAdmin={admin.isAdmin}
+              newFeedbackCount={admin.newFeedbackCount}
+              onResetWelcome={handleResetWelcomeFlags}
+              onShowReportCardAdmin={navigation.handleShowReportCardAdmin}
+              onShowFeedbackAdmin={navigation.handleShowAdmin}
+              onShowCommunicationAdmin={navigation.handleShowCommunicationAdmin}
+            />
           </div>
         ) : navigation.currentLesson === 'dictionary' ? (
           <div className="main-content-wrapper">
@@ -458,34 +447,14 @@ function App() {
             >
               💬
             </button>
-            {admin.isAdmin && (
-              <>
-                <button
-                  className="admin-reset-btn"
-                  onClick={handleResetWelcomeFlags}
-                  title="Simulate First-Time Experience (Reset Welcome Screens)"
-                >
-                  🔄
-                </button>
-                <button
-                  className="admin-report-btn"
-                  onClick={navigation.handleShowReportCardAdmin}
-                  title="View Report Card Admin"
-                >
-                  📋
-                </button>
-                <button
-                  className="admin-btn"
-                  onClick={navigation.handleShowAdmin}
-                  title="View Feedback Admin"
-                >
-                  📊
-                  {admin.newFeedbackCount > 0 && (
-                    <span className="admin-badge">{admin.newFeedbackCount}</span>
-                  )}
-                </button>
-              </>
-            )}
+            <AdminButtons
+              isAdmin={admin.isAdmin}
+              newFeedbackCount={admin.newFeedbackCount}
+              onResetWelcome={handleResetWelcomeFlags}
+              onShowReportCardAdmin={navigation.handleShowReportCardAdmin}
+              onShowFeedbackAdmin={navigation.handleShowAdmin}
+              onShowCommunicationAdmin={navigation.handleShowCommunicationAdmin}
+            />
           </div>
         ) : (
           (() => {
