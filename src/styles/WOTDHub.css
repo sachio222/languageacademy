@@ -1,0 +1,1680 @@
+/* Word of the Day Hub - Following DESIGN_PRINCIPLES.md */
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Base */
+.wotd-hub {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.wotd-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #665665;
+}
+
+.wotd-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/* Navigation Header - Stripe/Linear inspired */
+.wotd-nav-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 100;
+  padding: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.wotd-nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.wotd-nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.wotd-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-self: center;
+}
+
+.wotd-nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.wotd-nav-link {
+  background: transparent;
+  border: none;
+  color: #665665;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.wotd-nav-link:hover {
+  color: #1a1a1a;
+  background: #fafbfc;
+}
+
+.wotd-nav-arrow {
+  font-size: 1rem;
+}
+
+.wotd-logo-small {
+  height: 38px;
+  width: auto;
+}
+
+.wotd-nav-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.2;
+}
+
+.wotd-nav-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+}
+
+.wotd-nav-subtitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #999999;
+  letter-spacing: 0;
+}
+
+.wotd-signin-btn {
+  background: transparent;
+  color: #665665;
+  border: none;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.wotd-signin-btn:hover {
+  background: #fafbfc;
+  color: #1a1a1a;
+}
+
+.wotd-signup-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.wotd-signup-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+}
+
+.wotd-modules-btn {
+  background: transparent;
+  color: #665665;
+  border: 1px solid #e0e0e0;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.wotd-modules-btn:hover {
+  background: #fafbfc;
+  color: #1a1a1a;
+  border-color: #3b82f6;
+}
+
+.wotd-user-avatar {
+  display: flex;
+  align-items: center;
+}
+
+/* Date Navigation */
+.wotd-date-nav {
+  background: #fafbfc;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 2rem 0;
+}
+
+.wotd-nav-arrow-mobile {
+  display: none;
+}
+
+.wotd-date-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.wotd-current-date {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  text-align: center;
+  flex: 1;
+}
+
+.wotd-day-nav-btn {
+  background: transparent;
+  border: none;
+  color: #665665;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.wotd-day-nav-btn:hover:not(:disabled) {
+  color: #1a1a1a;
+  background: #f7f9fc;
+  transform: scale(1.02);
+}
+
+.wotd-day-nav-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.wotd-day-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Answer Feedback Banner - Editorial elegance (NYT/FT style) */
+.wotd-feedback {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  animation: fadeInUp 0.5s ease;
+  position: relative;
+}
+
+.wotd-feedback-dismiss {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  color: #999999;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.15s ease;
+}
+
+.wotd-feedback-dismiss:hover {
+  background: #f0f0f0;
+  color: #1a1a1a;
+}
+
+.wotd-feedback-correct {
+  background: #fafbfc;
+}
+
+.wotd-feedback-incorrect {
+  background: #fafbfc;
+}
+
+.wotd-feedback-neutral {
+  background: #fafbfc;
+}
+
+.wotd-feedback-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wotd-feedback-visual {
+  margin-bottom: 1.25rem;
+}
+
+.wotd-feedback-icon-large {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+}
+
+.wotd-icon-correct {
+  border-color: #16a34a;
+  color: #16a34a;
+}
+
+.wotd-icon-incorrect {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.wotd-icon-neutral {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.wotd-feedback-icon-large svg {
+  display: block;
+}
+
+.wotd-feedback-text {
+  flex: 1;
+}
+
+.wotd-feedback-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.wotd-feedback-subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #665665;
+  margin: 0 0 1rem 0;
+}
+
+.wotd-streak-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #fafbfc;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.wotd-streak-checks {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #16a34a;
+  line-height: 1;
+}
+
+.wotd-streak-checks svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.wotd-streak-text {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+
+/* Hero Section - Compact but grouped */
+.wotd-hero {
+  padding: 3rem 0 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+  animation: fadeInUp 0.6s ease 0.1s backwards;
+}
+
+.wotd-word-display {
+  margin-bottom: 1.5rem;
+}
+
+.wotd-word {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 0 0 0.75rem;
+  color: #1a1a1a;
+  transition: color 0.15s ease;
+  cursor: default;
+  user-select: all;
+}
+
+.wotd-word:hover {
+  color: #3b82f6;
+}
+
+.wotd-pronunciation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.wotd-phonetic {
+  font-size: 1.25rem;
+  color: #999999;
+  font-weight: 400;
+}
+
+.wotd-translation-main {
+  font-size: 1.625rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.wotd-pos-badge {
+  margin-bottom: 0.75rem;
+}
+
+.wotd-badge-minimal {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: transparent;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #999999;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+}
+
+/* Share Section */
+.wotd-share-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.wotd-share-btn {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #665665;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.wotd-share-btn svg {
+  display: block;
+}
+
+.wotd-share-twitter {
+  font-size: 0.9375rem;
+}
+
+.wotd-share-btn:hover {
+  background: #f7f9fc;
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.12);
+}
+
+/* Sections - Tighter grouping */
+.wotd-section {
+  padding: 2rem 0;
+}
+
+.wotd-section:last-child {
+  border-bottom: none;
+}
+
+.wotd-section-heading {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+}
+
+.wotd-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+}
+
+/* Definition Card - Integrated with hero */
+.wotd-definition-card {
+  background: #fafbfc;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  max-width: 700px;
+  margin: 1rem auto 0;
+  transition: all 0.15s ease;
+}
+
+.wotd-definition-card:hover {
+  background: #f7f9fc;
+  border-color: #e0e0e0;
+}
+
+.wotd-definition-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #665665;
+  margin: 0;
+}
+
+/* Multiple Definitions */
+.wotd-definitions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.wotd-definition-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.wotd-def-sense {
+  font-weight: 700;
+  color: #3b82f6;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.wotd-def-text {
+  font-size: 1rem;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.wotd-def-example {
+  font-size: 0.875rem;
+  color: #999999;
+  font-style: italic;
+}
+
+/* Examples List - Compact and grouped */
+.wotd-examples-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wotd-example-item {
+  padding: 1.25rem 1.5rem;
+  background: #fafbfc;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.15s ease;
+  cursor: default;
+}
+
+.wotd-example-item:hover {
+  background: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+  transform: translateY(-2px);
+}
+
+.wotd-example-french {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.375rem;
+}
+
+.wotd-example-text {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+}
+
+.wotd-example-english {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #665665;
+  margin-bottom: 0.25rem;
+}
+
+.wotd-example-context {
+  font-size: 0.75rem;
+  color: #999999;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* CTA Section */
+.wotd-cta-section {
+  padding: 4rem 0;
+  background: #f7f9fc;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.wotd-cta-card {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.wotd-cta-card h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+}
+
+.wotd-cta-card p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #665665;
+  margin: 0 0 2rem;
+}
+
+.wotd-cta-button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 1.125rem 2.5rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.wotd-cta-button:hover {
+  background: #2563eb;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Usage Notes Card - Inline with content */
+.wotd-note-card {
+  background: #f7f9fc;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border-left: 3px solid #3b82f6;
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+}
+
+.wotd-note-card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #665665;
+  margin: 0;
+}
+
+/* Related Words - Compact inline list */
+.wotd-related-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.wotd-related-item {
+  padding: 0.75rem 1.25rem;
+  background: #fafbfc;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.wotd-related-item:hover {
+  background: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.12);
+  transform: translateY(-2px);
+}
+
+.wotd-related-item:active {
+  transform: translateY(-1px);
+}
+
+.wotd-related-word {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+}
+
+.wotd-related-translation {
+  font-size: 0.9375rem;
+  color: #665665;
+}
+
+.wotd-related-type {
+  font-size: 0.8125rem;
+  color: #999999;
+  font-style: italic;
+}
+
+/* Subsection Titles */
+.wotd-subsection-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  color: #665665;
+}
+
+/* Grammar Section */
+.wotd-grammar-card {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: #f7f9fc;
+  border-radius: 8px;
+  border-left: 3px solid #3b82f6;
+  transition: all 0.15s ease;
+}
+
+.wotd-grammar-card:hover {
+  background: #f0f5ff;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.08);
+}
+
+.wotd-grammar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wotd-grammar-list li {
+  font-size: 0.9375rem;
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.wotd-grammar-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+/* Collocations Section */
+.wotd-collocations-section {
+  margin-top: 1.5rem;
+}
+
+.wotd-collocations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.wotd-collocation-item {
+  padding: 0.5rem 1rem;
+  background: #fafbfc;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.wotd-collocation-item:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.1);
+}
+
+.wotd-collocation-item:active {
+  transform: translateY(0);
+}
+
+/* Idioms Section */
+.wotd-idioms-section {
+  margin-top: 1.5rem;
+}
+
+.wotd-idioms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.wotd-idiom-item {
+  padding: 1rem 1.25rem;
+  background: #fffbf0;
+  border-left: 3px solid #f59e0b;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  transition: all 0.15s ease;
+  cursor: default;
+}
+
+.wotd-idiom-item:hover {
+  background: #fffef5;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+  transform: translateX(3px);
+}
+
+.wotd-idiom-item:active {
+  transform: translateX(2px);
+}
+
+.wotd-idiom-expression-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.wotd-idiom-expression {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-style: italic;
+}
+
+.wotd-idiom-meaning {
+  font-size: 0.9375rem;
+  color: #665665;
+}
+
+.wotd-idiom-level {
+  font-size: 0.75rem;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* Etymology Section */
+.wotd-etymology-card {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #fafbfc 100%);
+  border-radius: 8px;
+  border: 1px solid #d1fae5;
+  transition: all 0.15s ease;
+}
+
+.wotd-etymology-card:hover {
+  background: linear-gradient(135deg, #ecfdf5 0%, #f7f9fc 100%);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
+}
+
+.wotd-etymology-text {
+  font-size: 0.9375rem;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.6;
+}
+
+.wotd-etymology-text strong {
+  color: #059669;
+  font-style: italic;
+}
+
+.wotd-etymology-evolution {
+  font-size: 0.875rem;
+  color: #665665;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.6;
+  font-family: "Georgia", serif;
+}
+
+.wotd-etymology-note {
+  font-size: 0.8125rem;
+  color: #999999;
+  margin: 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Metadata Reference Section */
+.wotd-metadata-card {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: #fafbfc;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.15s ease;
+}
+
+.wotd-metadata-card:hover {
+  background: #f7f9fc;
+  border-color: #d0d0d0;
+}
+
+.wotd-metadata-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.wotd-metadata-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  font-size: 0.875rem;
+}
+
+.wotd-metadata-label {
+  font-weight: 600;
+  color: #665665;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.wotd-metadata-value {
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.wotd-freq-badge {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Footer Navigation */
+.wotd-footer-nav {
+  padding: 3rem 0;
+  background: #fafbfc;
+  border-top: 1px solid #f0f0f0;
+}
+
+.wotd-footer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.wotd-footer-nav-btn {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #1a1a1a;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.875rem 1.5rem;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+}
+
+.wotd-footer-nav-btn:hover:not(:disabled) {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.12);
+  transform: translateY(-1px);
+}
+
+.wotd-footer-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.wotd-footer-link {
+  background: transparent;
+  border: none;
+  color: #3b82f6;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  text-decoration: underline;
+}
+
+.wotd-footer-link:hover {
+  color: #2563eb;
+}
+
+/* Archive View */
+.wotd-archive-view {
+  padding: 5rem 0;
+  min-height: 100vh;
+}
+
+.wotd-archive-title {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  margin: 0 0 1rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.wotd-archive-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #665665;
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+/* Archive Filters */
+.wotd-archive-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.wotd-filter-select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  color: #1a1a1a;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.wotd-filter-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.wotd-search-box {
+  flex: 1;
+  min-width: 200px;
+}
+
+.wotd-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  color: #1a1a1a;
+  background: #ffffff;
+  transition: all 0.15s ease;
+}
+
+.wotd-search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.wotd-search-input::placeholder {
+  color: #999999;
+}
+
+/* Archive List */
+.wotd-archive-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.wotd-archive-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  animation: fadeInUp 0.5s ease backwards;
+}
+
+.wotd-archive-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.wotd-archive-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wotd-archive-item:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.wotd-archive-item:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.wotd-archive-item:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.wotd-archive-item:hover {
+  background: #fafbfc;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+  transform: translateY(-2px);
+}
+
+.wotd-archive-item:active {
+  transform: translateY(-1px);
+}
+
+.wotd-archive-date {
+  flex-shrink: 0;
+  width: 80px;
+  text-align: center;
+  padding: 0.75rem;
+  background: #fafbfc;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.wotd-archive-month {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.wotd-archive-year {
+  font-size: 0.75rem;
+  color: #999999;
+}
+
+.wotd-archive-word-info {
+  flex: 1;
+}
+
+.wotd-archive-word {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.25rem;
+}
+
+.wotd-archive-translation {
+  font-size: 1rem;
+  color: #665665;
+}
+
+.wotd-archive-meta {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wotd-archive-badge {
+  padding: 0.375rem 0.75rem;
+  background: #f7f9fc;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #665665;
+}
+
+.wotd-archive-view-btn {
+  background: transparent;
+  border: none;
+  color: #3b82f6;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0.5rem 1rem;
+}
+
+.wotd-archive-view-btn:hover {
+  color: #2563eb;
+  transform: translateX(4px);
+}
+
+/* Load More */
+.wotd-archive-load-more {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.wotd-load-more-btn {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #1a1a1a;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.875rem 2rem;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+}
+
+.wotd-load-more-btn:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.12);
+}
+
+/* Archive CTA */
+.wotd-archive-cta {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+  background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.wotd-archive-cta h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+}
+
+.wotd-archive-cta p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #665665;
+  margin: 0 0 2rem;
+}
+
+.wotd-email-capture {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.wotd-email-input {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #1a1a1a;
+  background: #ffffff;
+  transition: all 0.15s ease;
+}
+
+.wotd-email-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.wotd-email-submit {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.wotd-email-submit:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.wotd-email-disclaimer {
+  font-size: 0.875rem;
+  color: #999999;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wotd-container {
+    padding: 0 1.25rem;
+  }
+
+  .wotd-nav-container {
+    padding: 0 1.25rem;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 0.75rem;
+    height: 60px;
+  }
+
+  .wotd-nav-left {
+    justify-content: flex-start;
+  }
+
+  .wotd-nav-center {
+    gap: 0.625rem;
+  }
+
+  .wotd-nav-title-group {
+    display: none;
+  }
+
+  .wotd-logo-small {
+    height: 36px;
+  }
+
+  .wotd-nav-link {
+    padding: 0.5rem 0.625rem;
+    font-size: 0.875rem;
+  }
+
+  .wotd-signin-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+
+  .wotd-signup-btn {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .wotd-modules-btn {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .wotd-nav-right {
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+
+  .wotd-feedback {
+    padding: 2rem 0;
+  }
+
+  .wotd-feedback-dismiss {
+    top: 1rem;
+    right: 1rem;
+    width: 28px;
+    height: 28px;
+    font-size: 1.5rem;
+  }
+
+  .wotd-feedback-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .wotd-feedback-visual {
+    margin: 0 auto;
+  }
+
+  .wotd-feedback-icon-large {
+    width: 48px;
+    height: 48px;
+  }
+
+  .wotd-feedback-icon-large svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .wotd-feedback-title {
+    font-size: 1.375rem;
+  }
+
+  .wotd-feedback-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .wotd-word {
+    font-size: 3rem;
+  }
+
+  .wotd-phonetic {
+    font-size: 1.125rem;
+  }
+
+  .wotd-translation-main {
+    font-size: 1.375rem;
+  }
+
+  .wotd-section-heading {
+    font-size: 1.375rem;
+  }
+
+  .wotd-date-nav {
+    padding: 1rem 0;
+  }
+
+  .wotd-date-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .wotd-current-date {
+    font-size: 0.9375rem;
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .wotd-day-nav-btn {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wotd-nav-arrow-mobile {
+    display: block;
+  }
+
+  .wotd-day-nav-btn .wotd-nav-text {
+    display: none;
+  }
+
+  .wotd-day-nav-btn .wotd-nav-arrow-mobile {
+    color: #1a1a1a;
+  }
+
+  .wotd-day-nav-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+
+  .wotd-day-nav-btn:disabled .wotd-nav-arrow-mobile {
+    color: #999999;
+  }
+
+  .wotd-footer-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .wotd-footer-nav-btn {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wotd-footer-nav-btn .wotd-nav-text {
+    display: none;
+  }
+
+  .wotd-footer-nav-btn .wotd-nav-arrow-mobile {
+    display: block;
+  }
+
+  .wotd-footer-link {
+    font-size: 0.875rem;
+    padding: 0.625rem 1rem;
+  }
+
+  .wotd-related-words {
+    grid-template-columns: 1fr;
+  }
+
+  .wotd-archive-filters {
+    flex-direction: column;
+  }
+
+  .wotd-filter-select,
+  .wotd-search-box {
+    width: 100%;
+  }
+
+  .wotd-archive-item {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .wotd-archive-date {
+    width: auto;
+  }
+
+  .wotd-archive-view-btn {
+    align-self: flex-end;
+  }
+
+  .wotd-email-capture {
+    flex-direction: column;
+  }
+
+  .wotd-email-input,
+  .wotd-email-submit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .wotd-container {
+    padding: 0 1rem;
+  }
+
+  .wotd-nav-container {
+    padding: 0 1rem;
+  }
+
+  .wotd-hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .wotd-word {
+    font-size: 2.5rem;
+  }
+
+  .wotd-section {
+    padding: 2rem 0;
+  }
+
+  .wotd-section-heading {
+    font-size: 1.375rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .wotd-example-text {
+    font-size: 1.125rem;
+  }
+
+  .wotd-definition-card,
+  .wotd-example-item,
+  .wotd-note-card {
+    padding: 1.5rem;
+  }
+
+  .wotd-cta-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .wotd-cta-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .wotd-cta-card p {
+    font-size: 1rem;
+  }
+
+  .wotd-feedback-icon-large {
+    width: 44px;
+    height: 44px;
+  }
+
+  .wotd-feedback-icon-large svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .wotd-feedback-title {
+    font-size: 1.25rem;
+  }
+
+  .wotd-feedback-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .wotd-archive-view {
+    padding: 3rem 0;
+  }
+
+  .wotd-archive-title {
+    font-size: 2rem;
+  }
+
+  .wotd-archive-subtitle {
+    font-size: 1rem;
+  }
+
+  .wotd-archive-item {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .wotd-archive-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .wotd-archive-cta h3 {
+    font-size: 1.375rem;
+  }
+}

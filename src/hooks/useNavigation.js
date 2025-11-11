@@ -13,6 +13,10 @@ export const useNavigation = () => {
     const params = new URLSearchParams(window.location.search);
     return params.get('admin') === 'true';
   });
+  const [showCommunicationAdmin, setShowCommunicationAdmin] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('communication-admin') === 'true';
+  });
 
   // Handle browser back/forward buttons
   useEffect(() => {
@@ -87,6 +91,21 @@ export const useNavigation = () => {
     urlManager.setAdmin(false);
   }, [urlManager]);
 
+  const handleShowCommunicationAdmin = useCallback(() => {
+    setShowCommunicationAdmin(true);
+    const params = new URLSearchParams(window.location.search);
+    params.set('communication-admin', 'true');
+    window.history.pushState({}, '', `${window.location.pathname}?${params.toString()}`);
+  }, []);
+
+  const handleCloseCommunicationAdmin = useCallback(() => {
+    setShowCommunicationAdmin(false);
+    const params = new URLSearchParams(window.location.search);
+    params.delete('communication-admin');
+    const newSearch = params.toString();
+    window.history.pushState({}, '', `${window.location.pathname}${newSearch ? '?' + newSearch : ''}`);
+  }, []);
+
   return {
     // State
     currentLesson,
@@ -96,6 +115,7 @@ export const useNavigation = () => {
     showReferenceModules,
     showFeedbackForm,
     showFeedbackAdmin,
+    showCommunicationAdmin,
     
     // Setters
     setCurrentLesson,
@@ -104,6 +124,7 @@ export const useNavigation = () => {
     setShowReferenceModules,
     setShowFeedbackForm,
     setShowFeedbackAdmin,
+    setShowCommunicationAdmin,
     
     // Handlers
     handleLessonSelect,
@@ -117,6 +138,8 @@ export const useNavigation = () => {
     handleCloseDictionary,
     handleShowAdmin,
     handleCloseAdmin,
+    handleShowCommunicationAdmin,
+    handleCloseCommunicationAdmin,
     
     // URL Manager
     urlManager

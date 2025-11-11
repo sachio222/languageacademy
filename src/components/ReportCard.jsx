@@ -154,8 +154,10 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false, on
     return (
       <div className="report-card">
         <div className="report-card-loading">
-          <div className="loading-spinner"></div>
-          <p>Loading report card...</p>
+          <div className="loading-spinner">
+            <div className="spinner"></div>
+            <p>Loading report card...</p>
+          </div>
         </div>
       </div>
     );

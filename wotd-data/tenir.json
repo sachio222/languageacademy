@@ -1,0 +1,130 @@
+{
+  "date": "2025-11-10",
+  "word_id": "tenir-fr",
+  "word": "tenir",
+  "phonetic": "tə.niʁ",
+  "part_of_speech": "verb",
+  "translation": "to hold",
+  "definitions": [
+    {
+      "sense": "1",
+      "text": "To hold or keep something physically in one's hands or possession",
+      "register": "universal",
+      "example": "Je tiens la tasse."
+    },
+    {
+      "sense": "2",
+      "text": "To keep, maintain, or continue a state or condition",
+      "register": "common",
+      "example": "Je tiens ma promesse."
+    },
+    {
+      "sense": "3",
+      "text": "To operate or run (a business or establishment)",
+      "register": "common",
+      "example": "Elle tient un café."
+    }
+  ],
+  "examples": [
+    {
+      "french": "Je tiens un livre dans ma main.",
+      "english": "I am holding a book in my hand.",
+      "context": "Physical action · A1",
+      "note": "Basic literal usage"
+    },
+    {
+      "french": "Tiens-moi la porte, s'il te plaît.",
+      "english": "Hold the door for me, please.",
+      "context": "Polite request · A2",
+      "note": "Imperative form"
+    },
+    {
+      "french": "Elle tient toujours ses promesses.",
+      "english": "She always keeps her promises.",
+      "context": "Abstract meaning · A2",
+      "note": "Moral or figurative holding"
+    },
+    {
+      "french": "Ils tiennent un petit restaurant au centre-ville.",
+      "english": "They run a small restaurant downtown.",
+      "context": "Business context · B1",
+      "note": "Meaning shifts to operating an establishment"
+    },
+    {
+      "french": "Ce projet tient grâce à ton organisation.",
+      "english": "This project holds together thanks to your organization.",
+      "context": "Figurative stability · B2",
+      "note": "Indicates sustaining or maintaining coherence"
+    }
+  ],
+  "grammar": [
+    "Irregular verb of the -tenir group (tenir, venir, retenir, etc.)",
+    "Conjugated with the auxiliary 'avoir' in compound tenses (j'ai tenu)",
+    "Imperative forms are irregular: tiens, tenons, tenez"
+  ],
+  "collocations": [
+    "tenir bon (to hold firm/resist)",
+    "tenir à quelqu'un (to care about someone)",
+    "tenir compte de (to take into account)",
+    "tenir debout (to stand upright)",
+    "tenir parole (to keep one's word)"
+  ],
+  "idioms": [
+    {
+      "expression": "tenir le coup",
+      "meaning": "to endure; to hold up under pressure",
+      "level": "B1"
+    },
+    {
+      "expression": "tenir la route",
+      "meaning": "to be solid, reliable, or make sense",
+      "level": "B2"
+    },
+    {
+      "expression": "se tenir au courant",
+      "meaning": "to stay informed",
+      "level": "A2"
+    },
+    {
+      "expression": "tenir quelqu'un au courant",
+      "meaning": "to keep someone informed",
+      "level": "A2"
+    }
+  ],
+  "etymology": {
+    "origin": "Latin tenēre",
+    "period": "Attested 10th century",
+    "evolution": "Latin \"tenēre\" (to hold) → Vulgar Latin \"tenēre\" → Old French \"tenir\" → Modern French \"tenir\"",
+    "note": "Shares root with English 'tenacious' and 'tenant'; semantic field relates to possession and stability"
+  },
+  "related_words": [
+    {
+      "word": "venir",
+      "translation": "to come",
+      "relationship": "same conjugation family"
+    },
+    {
+      "word": "retenir",
+      "translation": "to retain / to recall",
+      "relationship": "derivative"
+    },
+    {
+      "word": "porter",
+      "translation": "to carry",
+      "relationship": "approximate physical-action synonym"
+    }
+  ],
+  "difficulty_level": "B1",
+  "difficulty_label": "A1-C2 · Common",
+  "frequency_rank": "#120",
+  "frequency_note": "High-frequency verb appearing across everyday speech, literature, and formal writing.",
+  "usage_notes": "Tenir is extremely common and flexible, with both literal and figurative meanings. Mastery of its idiomatic forms (tenir à, tenir compte de) is essential for authentic intermediate-level expression. The -tenir family of verbs requires memorization due to irregular stems.",
+  "correct_answer": "to hold",
+  "wrong_options": [
+    "to take",
+    "to find",
+    "to bring"
+  ],
+  "social_hook": "This verb is everywhere in French, from holding objects to keeping promises—do you already use it?"
+}
+
