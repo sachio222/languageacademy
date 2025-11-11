@@ -1,7 +1,7 @@
 # Word of the Day (WOTD) Implementation
 
 ## Overview
-Complete WOTD content hub and lead magnet system built with professional design matching Language Academy's style.
+Definitive word reference and learning hub - the most comprehensive French word resource on the web. Designed to surpass Oxford, Cambridge, WordReference, and all competitors with authoritative linguistic depth combined with elegant design.
 
 ## ✅ Completed Features
 
@@ -16,15 +16,19 @@ Complete WOTD content hub and lead magnet system built with professional design 
 ### 2. **WOTD Hub Component** (`src/components/WOTDHub.jsx`)
 Complete content hub with:
 
-#### Single Word View
+#### Single Word View - World-Class Reference
 - **Answer feedback banner** - Shows if user got it right/wrong (from email)
-- **Hero section** - Large word (4.5rem, weight 300), pronunciation with audio
-- **Meta badges** - Part of speech, difficulty level, frequency
-- **Definition card** - Clean, readable explanation
-- **4+ examples** - French + English with audio, context labels
-- **Usage notes** - Etymology and practical tips
-- **Related words** - 3-4 connected vocabulary items
-- **Share buttons** - Twitter, Facebook, copy link
+- **Hero section** - Large word (3.5rem, weight 300), IPA pronunciation with audio
+- **Meta badges** - Part of speech, CEFR level range, **frequency rank** (#8 badge)
+- **Multiple definitions** - Numbered senses with register labels (universal, common, grammatical)
+- **5+ contextual examples** - French + English with audio, context + proficiency labels
+- **Grammar notes** - Irregularity patterns, auxiliary verbs, construction notes
+- **Collocations** - Common word combinations (aller à pied, aller voir, etc.)
+- **Idioms & Expressions** - 3+ idioms with literal + actual meanings
+- **Etymology** - Latin roots, historical evolution, linguistic notes
+- **Usage frequency** - Rank among all French words, corpus data
+- **Related words** - With relationship types (antonym, related motion, etc.)
+- **Share buttons** - Twitter (𝕏), Facebook, copy link
 - **Prev/Next navigation** - Browse between days
 
 #### Archive View

@@ -52,40 +52,92 @@ function WOTDHub() {
       word: 'aller',
       phonetic: 'a.le',
       part_of_speech: 'verb',
-      difficulty_level: 'A2',
-      difficulty_label: 'A2 Level',
+      difficulty_level: 'A1',
+      difficulty_label: 'A1-C2 · Essential',
       translation: 'to go',
-      definition: 'To move from one place to another; to travel',
+      frequency_rank: '#8',
+      frequency_note: '8th most common word in French',
+      definition: 'To move from one place to another; to proceed in a particular direction',
+      definitions: [
+        { sense: '1', text: 'To move or travel to a place', register: 'universal', example: 'Je vais à Paris' },
+        { sense: '2', text: 'To express state of health or well-being', register: 'common', example: 'Comment allez-vous ?' },
+        { sense: '3', text: 'To form the immediate future (auxiliary)', register: 'grammatical', example: 'Je vais partir' }
+      ],
+      etymology: {
+        origin: 'Latin ambulāre',
+        period: '9th century',
+        evolution: 'From Latin "ambulāre" (to walk) → Vulgar Latin "*alāre" → Old French "aler" → Modern French "aller"',
+        note: 'Highly irregular due to multiple Latin roots preserved in conjugation'
+      },
+      grammar: [
+        'Irregular verb · Three stems: all-, v-, ir-',
+        'Auxiliary: être (in compound tenses)',
+        'Forms futur proche: aller + infinitive'
+      ],
+      collocations: [
+        'aller à pied (walk)',
+        'aller en voiture (drive)',
+        'aller voir (go see)',
+        'aller chercher (fetch)',
+        'aller de soi (go without saying)'
+      ],
       correct_answer: 'to go',
       wrong_options: ['to have', 'to want', 'to make'],
       examples: [
         {
-          french: 'Je vais au cinéma.',
-          english: "I'm going to the cinema.",
-          context: 'present tense'
+          french: 'Je vais au cinéma ce soir.',
+          english: "I'm going to the cinema tonight.",
+          context: 'Movement · A1',
+          note: 'Basic directional usage'
         },
         {
           french: 'Comment allez-vous ?',
           english: 'How are you?',
-          context: 'formal greeting'
+          context: 'Well-being · A1',
+          note: 'Formal register'
         },
         {
           french: 'Nous allons partir demain.',
           english: "We're going to leave tomorrow.",
-          context: 'near future'
+          context: 'Near future · A2',
+          note: 'Futur proche construction'
         },
         {
-          french: 'Elle va bien.',
-          english: "She's doing well.",
-          context: 'expression'
+          french: 'Ça va bien, merci.',
+          english: "It's going well, thanks.",
+          context: 'Expression · A1',
+          note: 'Most common greeting response'
+        },
+        {
+          french: 'Cette robe vous va parfaitement.',
+          english: 'This dress suits you perfectly.',
+          context: 'Fit/suitability · B1',
+          note: 'Extended meaning'
+        }
+      ],
+      idioms: [
+        {
+          expression: 'Ça va de soi',
+          meaning: 'That goes without saying',
+          level: 'B2'
+        },
+        {
+          expression: 'Aller droit au but',
+          meaning: 'Get straight to the point',
+          level: 'B1'
+        },
+        {
+          expression: 'Allez-y !',
+          meaning: 'Go ahead! Help yourself!',
+          level: 'A2'
         }
       ],
       related_words: [
-        { word: 'venir', translation: 'to come' },
-        { word: 'partir', translation: 'to leave' },
-        { word: 'arriver', translation: 'to arrive' }
+        { word: 'venir', translation: 'to come', relationship: 'antonym' },
+        { word: 'partir', translation: 'to leave', relationship: 'motion' },
+        { word: 'arriver', translation: 'to arrive', relationship: 'motion' }
       ],
-      usage_notes: 'Aller is one of the most common verbs in French and is irregular. It\'s used to form the near future tense (aller + infinitive).'
+      usage_notes: 'Essential high-frequency verb ranked 8th in all French text. Appears in the top 100 most common words across spoken and written French. Critical for expressing movement, well-being, and future actions. Highly irregular conjugation requires dedicated study at all proficiency levels.'
     };
     
     setWordData(mockData);
@@ -269,7 +321,7 @@ function WOTDHub() {
             </div>
           )}
 
-          {/* Word Hero Section */}
+          {/* Word Hero Section - Grouped with definition */}
           <section className="wotd-hero">
             <div className="wotd-container">
               <div className="wotd-word-display">
@@ -283,12 +335,27 @@ function WOTDHub() {
                     className="wotd-speak-btn"
                   />
                 </div>
-                <div className="wotd-meta-badges">
-                  <span className="wotd-badge">{wordData.part_of_speech}</span>
-                  <span className="wotd-badge">{wordData.difficulty_label}</span>
-                  <span className="wotd-badge">Common</span>
-                </div>
                 <div className="wotd-translation-main">{wordData.translation}</div>
+                <div className="wotd-pos-badge">
+                  <span className="wotd-badge-minimal">{wordData.part_of_speech}</span>
+                </div>
+              </div>
+
+              {/* TIER 1: Detailed Definitions */}
+              <div className="wotd-definition-card">
+                {wordData.definitions && wordData.definitions.length > 0 ? (
+                  <div className="wotd-definitions-list">
+                    {wordData.definitions.map((def, idx) => (
+                      <div key={idx} className="wotd-definition-item">
+                        <span className="wotd-def-sense">{def.sense}.</span>
+                        <span className="wotd-def-text">{def.text}</span>
+                        <span className="wotd-def-example">"{def.example}"</span>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="wotd-definition-text">{wordData.definition}</p>
+                )}
               </div>
 
               {/* Share Buttons */}
@@ -318,20 +385,10 @@ function WOTDHub() {
             </div>
           </section>
 
-          {/* Definition Section */}
+          {/* TIER 2: Examples - How to use it */}
           <section className="wotd-section">
             <div className="wotd-container">
-              <div className="wotd-definition-card">
-                <h3 className="wotd-section-title">Definition</h3>
-                <p className="wotd-definition-text">{wordData.definition}</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Examples Section */}
-          <section className="wotd-section">
-            <div className="wotd-container">
-              <h2 className="wotd-section-heading">Examples in Context</h2>
+              <h2 className="wotd-section-heading">Usage Examples</h2>
               <div className="wotd-examples-list">
                 {wordData.examples.map((example, index) => (
                   <div key={index} className="wotd-example-item">
@@ -349,10 +406,115 @@ function WOTDHub() {
                   </div>
                 ))}
               </div>
+
+              {/* TIER 3: Deep Usage - Grammar, Collocations, Idioms */}
+              {/* Grammar Notes */}
+              {wordData.grammar && wordData.grammar.length > 0 && (
+                <div className="wotd-grammar-card">
+                  <h3 className="wotd-subsection-title">Grammar</h3>
+                  <ul className="wotd-grammar-list">
+                    {wordData.grammar.map((note, idx) => (
+                      <li key={idx}>{note}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Collocations */}
+              {wordData.collocations && wordData.collocations.length > 0 && (
+                <div className="wotd-collocations-section">
+                  <h3 className="wotd-subsection-title">Common Combinations</h3>
+                  <div className="wotd-collocations-list">
+                    {wordData.collocations.map((collocation, idx) => (
+                      <span key={idx} className="wotd-collocation-item">{collocation}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Idioms & Expressions */}
+              {wordData.idioms && wordData.idioms.length > 0 && (
+                <div className="wotd-idioms-section">
+                  <h3 className="wotd-subsection-title">Idioms & Expressions</h3>
+                  <div className="wotd-idioms-list">
+                    {wordData.idioms.map((idiom, idx) => (
+                      <div key={idx} className="wotd-idiom-item">
+                        <div className="wotd-idiom-expression">{idiom.expression}</div>
+                        <div className="wotd-idiom-meaning">→ {idiom.meaning}</div>
+                        <span className="wotd-idiom-level">{idiom.level}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* TIER 4: Reference Information - Metadata */}
+              {/* Frequency & Level Info */}
+              {(wordData.frequency_rank || wordData.difficulty_label) && (
+                <div className="wotd-metadata-card">
+                  <h3 className="wotd-subsection-title">Reference Information</h3>
+                  <div className="wotd-metadata-list">
+                    {wordData.difficulty_label && (
+                      <div className="wotd-metadata-item">
+                        <span className="wotd-metadata-label">CEFR Level:</span>
+                        <span className="wotd-metadata-value">{wordData.difficulty_label}</span>
+                      </div>
+                    )}
+                    {wordData.frequency_rank && (
+                      <div className="wotd-metadata-item">
+                        <span className="wotd-metadata-label">Frequency:</span>
+                        <span className="wotd-metadata-value">
+                          <span className="wotd-freq-badge">{wordData.frequency_rank}</span>
+                          {wordData.frequency_note}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Etymology */}
+              {wordData.etymology && (
+                <div className="wotd-etymology-card">
+                  <h3 className="wotd-subsection-title">Etymology</h3>
+                  <p className="wotd-etymology-text">
+                    <strong>{wordData.etymology.origin}</strong> ({wordData.etymology.period})
+                  </p>
+                  <p className="wotd-etymology-evolution">{wordData.etymology.evolution}</p>
+                  {wordData.etymology.note && (
+                    <p className="wotd-etymology-note">{wordData.etymology.note}</p>
+                  )}
+                </div>
+              )}
+
+              {/* Usage Notes */}
+              {wordData.usage_notes && (
+                <div className="wotd-note-card">
+                  <p>{wordData.usage_notes}</p>
+                </div>
+              )}
+
+              {/* Related Words */}
+              {wordData.related_words && wordData.related_words.length > 0 && (
+                <div style={{ marginTop: '1.5rem' }}>
+                  <h3 className="wotd-subsection-title">Related Words</h3>
+                  <div className="wotd-related-words">
+                    {wordData.related_words.map((related, index) => (
+                      <div key={index} className="wotd-related-item">
+                        <span className="wotd-related-word">{related.word}</span>
+                        <span className="wotd-related-translation">{related.translation}</span>
+                        {related.relationship && (
+                          <span className="wotd-related-type">({related.relationship})</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </section>
 
-          {/* Conversion CTA #1 */}
+          {/* Conversion CTA - After all content */}
           {!user && (
             <section className="wotd-cta-section">
               <div className="wotd-container">
@@ -360,35 +522,6 @@ function WOTDHub() {
                   <h3>Want to learn more?</h3>
                   <p>Join 10,000+ learners mastering French with structured lessons</p>
                   <button className="wotd-cta-button">Start Learning Free</button>
-                </div>
-              </div>
-            </section>
-          )}
-
-          {/* Usage Notes */}
-          {wordData.usage_notes && (
-            <section className="wotd-section">
-              <div className="wotd-container">
-                <div className="wotd-note-card">
-                  <h3 className="wotd-section-title">Usage Notes</h3>
-                  <p>{wordData.usage_notes}</p>
-                </div>
-              </div>
-            </section>
-          )}
-
-          {/* Related Words */}
-          {wordData.related_words && wordData.related_words.length > 0 && (
-            <section className="wotd-section">
-              <div className="wotd-container">
-                <h2 className="wotd-section-heading">Related Words</h2>
-                <div className="wotd-related-words">
-                  {wordData.related_words.map((related, index) => (
-                    <div key={index} className="wotd-related-item">
-                      <span className="wotd-related-word">{related.word}</span>
-                      <span className="wotd-related-translation">{related.translation}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
             </section>
