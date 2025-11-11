@@ -322,16 +322,16 @@ function WOTDHub() {
       // Format the data for the archive view
       const formattedWords = words.map(word => {
         const date = new Date(word.date);
-        return {
+      return {
           date: word.date,
-          monthDay: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-          year: date.getFullYear(),
+        monthDay: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+        year: date.getFullYear(),
           word: word.word,
           translation: word.translation,
           type: word.part_of_speech,
           level: word.difficulty_level
-        };
-      });
+      };
+    });
 
       setArchiveWords(formattedWords);
       setArchiveLoading(false);
@@ -827,29 +827,29 @@ function WOTDHub() {
                 </div>
               ) : (
                 archiveWords.map((item, index) => (
-                  <div
-                    key={index}
-                    className="wotd-archive-item"
-                    onClick={() => {
-                      setCurrentDate(item.date);
-                      setView('single');
-                      loadWordData(item.date);
-                    }}
-                  >
-                    <div className="wotd-archive-date">
-                      <div className="wotd-archive-month">{item.monthDay}</div>
-                      <div className="wotd-archive-year">{item.year}</div>
-                    </div>
-                    <div className="wotd-archive-word-info">
-                      <div className="wotd-archive-word">{item.word}</div>
-                      <div className="wotd-archive-translation">{item.translation}</div>
-                    </div>
-                    <div className="wotd-archive-meta">
-                      <span className="wotd-archive-badge">{item.type}</span>
-                      <span className="wotd-archive-badge">{item.level}</span>
-                    </div>
-                    <button className="wotd-archive-view-btn">View →</button>
+                <div
+                  key={index}
+                  className="wotd-archive-item"
+                  onClick={() => {
+                    setCurrentDate(item.date);
+                    setView('single');
+                    loadWordData(item.date);
+                  }}
+                >
+                  <div className="wotd-archive-date">
+                    <div className="wotd-archive-month">{item.monthDay}</div>
+                    <div className="wotd-archive-year">{item.year}</div>
                   </div>
+                  <div className="wotd-archive-word-info">
+                    <div className="wotd-archive-word">{item.word}</div>
+                    <div className="wotd-archive-translation">{item.translation}</div>
+                  </div>
+                  <div className="wotd-archive-meta">
+                    <span className="wotd-archive-badge">{item.type}</span>
+                    <span className="wotd-archive-badge">{item.level}</span>
+                  </div>
+                  <button className="wotd-archive-view-btn">View →</button>
+                </div>
                 ))
               )}
             </div>
