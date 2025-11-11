@@ -25,26 +25,26 @@ function WOTDHub() {
     const answerParam = params.get('answer');
     const wordParam = params.get('word');
     const correctKeyParam = params.get('correct'); // Which letter is correct
-    
+
     // Set date first
     const targetDate = dateParam || new Date().toISOString().split('T')[0];
     setCurrentDate(targetDate);
-    
+
     // Set answer if from email
     if (answerParam) {
       console.log('User answered:', answerParam);
       setUserAnswer(answerParam);
     }
-    
+
     // Store correct key for validation
     if (correctKeyParam) {
       console.log('Correct answer is:', correctKeyParam);
       sessionStorage.setItem(`wotd_correct_${targetDate}`, correctKeyParam);
     }
-    
+
     // Load word data
     loadWordData(targetDate);
-    
+
     // Load streak from localStorage (for non-auth users)
     if (!user) {
       const savedStreak = localStorage.getItem('wotd_streak');
@@ -56,7 +56,7 @@ function WOTDHub() {
 
   const loadWordData = async (date) => {
     setLoading(true);
-    
+
     try {
       // Fetch from Supabase
       const { data: wordData, error } = await supabase
@@ -188,7 +188,7 @@ function WOTDHub() {
       ],
       usage_notes: 'Essential high-frequency verb ranked 8th in all French text. Appears in the top 100 most common words across spoken and written French. Critical for expressing movement, well-being, and future actions. Highly irregular conjugation requires dedicated study at all proficiency levels.'
     };
-    
+
     setWordData(mockData);
     updateProgress(date);
     setLoading(false);
@@ -202,7 +202,7 @@ function WOTDHub() {
         viewedList.push(date);
         setViewedWords(viewedList);
         localStorage.setItem('wotd_viewed', JSON.stringify(viewedList));
-        
+
         // Update streak
         const newStreak = streakCount + 1;
         setStreakCount(newStreak);
@@ -217,7 +217,7 @@ function WOTDHub() {
     const newDate = date.toISOString().split('T')[0];
     setCurrentDate(newDate);
     loadWordData(newDate);
-    
+
     // Update URL
     const params = new URLSearchParams(window.location.search);
     params.set('date', newDate);
@@ -225,9 +225,9 @@ function WOTDHub() {
   };
 
   const handleShare = (platform) => {
-    const url = `https://languageacademy.app?wotd=true&date=${currentDate}`;
+    const url = `https://languageacademy.io?wotd=true&date=${currentDate}`;
     const text = `I just learned "${wordData.word}" (${wordData.translation}) in French! 🇫🇷`;
-    
+
     switch (platform) {
       case 'twitter':
         window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
@@ -244,17 +244,17 @@ function WOTDHub() {
 
   const getAnswerFeedback = () => {
     if (!userAnswer || !wordData) return null;
-    
+
     const isDontKnow = userAnswer === 'X';
-    
+
     // Get the correct answer key from sessionStorage
     const correctKey = sessionStorage.getItem(`wotd_correct_${currentDate}`);
     console.log('Validating - User answer:', userAnswer, 'Correct key:', correctKey);
-    
+
     const isCorrect = correctKey ? (userAnswer === correctKey) : false;
-    
+
     console.log('Is correct?', isCorrect);
-    
+
     return {
       isCorrect,
       isDontKnow,
@@ -291,7 +291,7 @@ function WOTDHub() {
       const date = new Date();
       date.setDate(date.getDate() - i);
       const word = mockWords[i % mockWords.length];
-      
+
       return {
         date: date.toISOString().split('T')[0],
         monthDay: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
@@ -317,7 +317,7 @@ function WOTDHub() {
       <header className="wotd-nav-header">
         <div className="wotd-nav-container">
           <div className="wotd-nav-left">
-            <button 
+            <button
               className="wotd-nav-link"
               onClick={() => setView(view === 'archive' ? 'single' : 'archive')}
             >
@@ -338,7 +338,7 @@ function WOTDHub() {
           <div className="wotd-nav-right">
             {user ? (
               <>
-                <button 
+                <button
                   className="wotd-modules-btn"
                   onClick={() => window.location.href = '/'}
                 >
@@ -376,7 +376,7 @@ function WOTDHub() {
           <div className="wotd-date-nav">
             <div className="wotd-container">
               <div className="wotd-date-controls">
-                <button 
+                <button
                   className="wotd-day-nav-btn wotd-day-prev"
                   onClick={() => navigateDay(-1)}
                   aria-label="Previous day"
@@ -387,7 +387,7 @@ function WOTDHub() {
                   <span className="wotd-nav-text">← Previous Day</span>
                 </button>
                 <div className="wotd-current-date">{formatDate(currentDate)}</div>
-                <button 
+                <button
                   className="wotd-day-nav-btn wotd-day-next"
                   onClick={() => navigateDay(1)}
                   disabled={currentDate >= new Date().toISOString().split('T')[0]}
@@ -406,7 +406,7 @@ function WOTDHub() {
           {feedback && showFeedback && (
             <div className={`wotd-feedback wotd-feedback-${feedback.className}`}>
               <div className="wotd-container">
-                <button 
+                <button
                   className="wotd-feedback-dismiss"
                   onClick={() => {
                     setShowFeedback(false);
@@ -414,8 +414,8 @@ function WOTDHub() {
                     const params = new URLSearchParams(window.location.search);
                     params.delete('answer');
                     params.delete('correct');
-                    const newUrl = params.toString() ? 
-                      `${window.location.pathname}?${params.toString()}` : 
+                    const newUrl = params.toString() ?
+                      `${window.location.pathname}?${params.toString()}` :
                       window.location.pathname;
                     window.history.replaceState({}, '', newUrl);
                   }}
@@ -513,21 +513,21 @@ function WOTDHub() {
 
               {/* Share Buttons */}
               <div className="wotd-share-section">
-                <button 
+                <button
                   className="wotd-share-btn wotd-share-twitter"
                   onClick={() => handleShare('twitter')}
                   title="Share on Twitter"
                 >
                   𝕏
                 </button>
-                <button 
+                <button
                   className="wotd-share-btn"
                   onClick={() => handleShare('facebook')}
                   title="Share on Facebook"
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
                 </button>
-                <button 
+                <button
                   className="wotd-share-btn"
                   onClick={() => handleShare('copy')}
                   title="Copy Link"
@@ -700,7 +700,7 @@ function WOTDHub() {
           <section className="wotd-footer-nav">
             <div className="wotd-container">
               <div className="wotd-footer-controls">
-                <button 
+                <button
                   className="wotd-footer-nav-btn wotd-footer-prev"
                   onClick={() => navigateDay(-1)}
                   aria-label="Previous word"
@@ -710,13 +710,13 @@ function WOTDHub() {
                   </svg>
                   <span className="wotd-nav-text">← Previous Word</span>
                 </button>
-                <button 
+                <button
                   className="wotd-footer-link"
                   onClick={() => setView('archive')}
                 >
                   View All Words
                 </button>
-                <button 
+                <button
                   className="wotd-footer-nav-btn wotd-footer-next"
                   onClick={() => navigateDay(1)}
                   disabled={currentDate >= new Date().toISOString().split('T')[0]}
@@ -737,7 +737,7 @@ function WOTDHub() {
           <div className="wotd-container">
             <h1 className="wotd-archive-title">Word Archive</h1>
             <p className="wotd-archive-subtitle">365 French words to master</p>
-            
+
             {/* Filter Bar */}
             <div className="wotd-archive-filters">
               <select className="wotd-filter-select">
@@ -755,8 +755,8 @@ function WOTDHub() {
                 <option value="expression">Expressions</option>
               </select>
               <div className="wotd-search-box">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   placeholder="Search words..."
                   className="wotd-search-input"
                 />
@@ -767,8 +767,8 @@ function WOTDHub() {
             <div className="wotd-archive-list">
               {/* Mock archive items - will be replaced with real data */}
               {generateMockArchive().map((item, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="wotd-archive-item"
                   onClick={() => {
                     setCurrentDate(item.date);
@@ -804,8 +804,8 @@ function WOTDHub() {
                 <h3>Get daily words in your inbox</h3>
                 <p>Never miss a word. Join 10,000+ learners getting daily French lessons.</p>
                 <div className="wotd-email-capture">
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     placeholder="your@email.com"
                     className="wotd-email-input"
                   />

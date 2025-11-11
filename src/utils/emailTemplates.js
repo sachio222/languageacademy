@@ -1,7 +1,7 @@
 // Email Templates - Simple HTML templates for Resend
 // NOTE: These are basic placeholders - improve the design/copy when ready
 
-const APP_URL = 'https://languageacademy.app';
+const APP_URL = "https://languageacademy.io";
 
 const baseStyles = `
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
@@ -24,7 +24,7 @@ export const emailTemplates = {
         <p><a href="${APP_URL}/lessons" style="color: #2563eb;">Continue Learning →</a></p>
         <p style="color: #665665; font-size: 14px;">Bonne continuation!<br>Language Academy</p>
       </div>
-    `
+    `,
   }),
 
   // Module nudge (sent via Resend for abandoned modules)
@@ -39,12 +39,22 @@ export const emailTemplates = {
         <p><a href="${APP_URL}/lessons?module=${moduleId}" style="color: #2563eb;">Continue ${moduleTitle} →</a></p>
         <p style="color: #665665; font-size: 14px;">You can do it!<br>Language Academy</p>
       </div>
-    `
+    `,
   }),
 
   // Word of the day quiz (sent via n8n/Resend)
   // Airbnb-style: clean, minimal, logo in footer
-  wordOfTheDay: (word, pronunciation, optionA, optionB, optionC, optionD, wordId, partOfSpeech = 'word', difficultyLabel = '') => ({
+  wordOfTheDay: (
+    word,
+    pronunciation,
+    optionA,
+    optionB,
+    optionC,
+    optionD,
+    wordId,
+    partOfSpeech = "word",
+    difficultyLabel = ""
+  ) => ({
     subject: `🇫🇷 Your French Word: ${word}`,
     html: `
       <!DOCTYPE html>
@@ -73,7 +83,13 @@ export const emailTemplates = {
                   <td style="padding: 0 0 48px 0; text-align: center; border-bottom: 1px solid #f0f0f0;">
                     <h1 style="margin: 0 0 12px 0; font-size: 42px; font-weight: 300; letter-spacing: -0.03em; color: #1a1a1a;">${word}</h1>
                     <div style="font-size: 16px; color: #999999; margin-bottom: 8px;">/${pronunciation}/</div>
-                    ${partOfSpeech ? `<div style="display: inline-block; padding: 4px 12px; background: #fafbfc; border-radius: 12px; font-size: 13px; color: #665665; margin-top: 8px;">${partOfSpeech}${difficultyLabel ? ' • ' + difficultyLabel : ''}</div>` : ''}
+                    ${
+                      partOfSpeech
+                        ? `<div style="display: inline-block; padding: 4px 12px; background: #fafbfc; border-radius: 12px; font-size: 13px; color: #665665; margin-top: 8px;">${partOfSpeech}${
+                            difficultyLabel ? " • " + difficultyLabel : ""
+                          }</div>`
+                        : ""
+                    }
                   </td>
                 </tr>
 
@@ -90,7 +106,9 @@ export const emailTemplates = {
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <td style="padding-bottom: 12px;">
-                          <a href="${APP_URL}?wotd=true&word=${wordId}&answer=A&date=${new Date().toISOString().split('T')[0]}" 
+                          <a href="${APP_URL}?wotd=true&word=${wordId}&answer=A&date=${
+      new Date().toISOString().split("T")[0]
+    }" 
                              style="display: block; padding: 18px 24px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #1a1a1a; font-size: 16px; font-weight: 500; text-align: center; transition: all 0.15s ease;">
                             ${optionA}
             </a>
@@ -98,7 +116,9 @@ export const emailTemplates = {
                       </tr>
                       <tr>
                         <td style="padding-bottom: 12px;">
-                          <a href="${APP_URL}?wotd=true&word=${wordId}&answer=B&date=${new Date().toISOString().split('T')[0]}" 
+                          <a href="${APP_URL}?wotd=true&word=${wordId}&answer=B&date=${
+      new Date().toISOString().split("T")[0]
+    }" 
                              style="display: block; padding: 18px 24px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #1a1a1a; font-size: 16px; font-weight: 500; text-align: center;">
                             ${optionB}
             </a>
@@ -106,7 +126,9 @@ export const emailTemplates = {
                       </tr>
                       <tr>
                         <td style="padding-bottom: 12px;">
-                          <a href="${APP_URL}?wotd=true&word=${wordId}&answer=C&date=${new Date().toISOString().split('T')[0]}" 
+                          <a href="${APP_URL}?wotd=true&word=${wordId}&answer=C&date=${
+      new Date().toISOString().split("T")[0]
+    }" 
                              style="display: block; padding: 18px 24px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #1a1a1a; font-size: 16px; font-weight: 500; text-align: center;">
                             ${optionC}
             </a>
@@ -114,7 +136,9 @@ export const emailTemplates = {
                       </tr>
                       <tr>
                         <td style="padding-bottom: 12px;">
-                          <a href="${APP_URL}?wotd=true&word=${wordId}&answer=D&date=${new Date().toISOString().split('T')[0]}" 
+                          <a href="${APP_URL}?wotd=true&word=${wordId}&answer=D&date=${
+      new Date().toISOString().split("T")[0]
+    }" 
                              style="display: block; padding: 18px 24px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #1a1a1a; font-size: 16px; font-weight: 500; text-align: center;">
                             ${optionD}
             </a>
@@ -127,7 +151,9 @@ export const emailTemplates = {
                 <!-- Don't Know Option -->
                 <tr>
                   <td style="padding: 0 0 48px 0; text-align: center;">
-                    <a href="${APP_URL}?wotd=true&word=${wordId}&answer=X&date=${new Date().toISOString().split('T')[0]}" 
+                    <a href="${APP_URL}?wotd=true&word=${wordId}&answer=X&date=${
+      new Date().toISOString().split("T")[0]
+    }" 
                        style="display: inline-block; padding: 0; background: none; border: none; text-decoration: underline; color: #999999; font-size: 15px;">
               I don't know
             </a>
@@ -138,7 +164,7 @@ export const emailTemplates = {
                 <tr>
                   <td style="padding: 48px 0 0 0; border-top: 1px solid #f0f0f0; text-align: center;">
                     <div style="padding: 24px 0 16px 0;">
-                      <img src="https://languageacademy.app/img/logov2.png" alt="Language Academy" style="height: 32px; width: auto; margin-bottom: 12px;" />
+                      <img src="https://languageacademy.io/img/logov2.png" alt="Language Academy" style="height: 32px; width: auto; margin-bottom: 12px;" />
                       <div style="font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: #1a1a1a; margin-bottom: 4px;">Language Academy</div>
                       <div style="font-size: 13px; color: #999999;">Learn French, one word at a time</div>
                     </div>
@@ -161,7 +187,7 @@ export const emailTemplates = {
         </table>
       </body>
       </html>
-    `
+    `,
   }),
 
   // Weekly vocabulary summary (sent via n8n/Resend)
@@ -176,7 +202,12 @@ export const emailTemplates = {
         <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
           <h3 style="margin: 0 0 16px 0;">Words You Learned This Week:</h3>
           <ul style="margin: 0; padding-left: 20px;">
-            ${wordsLearned.map(word => `<li><strong>${word.french}</strong> - ${word.english}</li>`).join('')}
+            ${wordsLearned
+              .map(
+                (word) =>
+                  `<li><strong>${word.french}</strong> - ${word.english}</li>`
+              )
+              .join("")}
           </ul>
           <p style="margin: 16px 0 0 0; color: #665665; font-size: 14px;">Total vocabulary: ${totalWords} words</p>
         </div>
@@ -184,8 +215,6 @@ export const emailTemplates = {
         <p><a href="${APP_URL}/lessons" style="color: #2563eb;">Keep Learning →</a></p>
         <p style="color: #665665; font-size: 14px;">Bravo!<br>Language Academy</p>
       </div>
-    `
-  })
+    `,
+  }),
 };
-
-

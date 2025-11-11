@@ -25,9 +25,9 @@ In your Supabase SQL Editor, run these scripts **in order**:
 Run this query to confirm all tables exist:
 
 ```sql
-SELECT table_name 
-FROM information_schema.tables 
-WHERE table_schema = 'public' 
+SELECT table_name
+FROM information_schema.tables
+WHERE table_schema = 'public'
   AND table_name IN (
     'notification_preferences',
     'email_templates',
@@ -46,8 +46,8 @@ In Supabase Dashboard → Edge Functions → Secrets, add:
 
 ```
 MAILERLITE_API_KEY=your_mailerlite_api_key_here
-APP_URL=https://languageacademy.app
-FROM_EMAIL=noreply@languageacademy.app
+APP_URL=https://languageacademy.io
+FROM_EMAIL=noreply@languageacademy.io
 FROM_NAME=Language Academy
 ```
 
@@ -181,13 +181,14 @@ SELECT * FROM cron.job_run_details ORDER BY start_time DESC LIMIT 10;
 
 ### 4.2 Configure Sender Email
 
-1. In MailerLite, verify your sender domain (languageacademy.app)
+1. In MailerLite, verify your sender domain (languageacademy.io)
 2. Set up DKIM/SPF records for deliverability
 3. Use verified email as FROM_EMAIL in environment variables
 
 ## Step 5: Deploy Frontend Components
 
 The frontend components are already created in:
+
 - `src/components/CommunicationAdmin.jsx` - Admin dashboard
 - `src/components/NotificationSettings.jsx` - User preferences
 - `src/hooks/useNotificationPreferences.js` - Preferences management
@@ -272,7 +273,7 @@ VALUES (
   'user-id-here',
   'welcome',
   NOW(),
-  '{"user_name": "Test User", "first_lesson_url": "https://languageacademy.app/lessons"}'::jsonb
+  '{"user_name": "Test User", "first_lesson_url": "https://languageacademy.io/lessons"}'::jsonb
 );
 ```
 
@@ -306,6 +307,7 @@ The system is designed to support n8n workflows. When ready:
 ## Monitoring
 
 Set up monitoring for:
+
 - Email delivery rates (from MailerLite)
 - Failed emails in email_logs
 - Queue backlog in email_queue
@@ -314,8 +316,8 @@ Set up monitoring for:
 ## Support
 
 If you encounter issues:
+
 1. Check Supabase Edge Function logs
 2. Check email_logs for error details
 3. Verify all environment variables are set
 4. Test MailerLite API key separately
-

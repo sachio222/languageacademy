@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { useNotificationPreferences } from '../hooks/useNotificationPreferences';
-import { useEmailTemplates } from '../hooks/useEmailTemplates';
 import '../styles/NotificationSettings.css';
 
 function NotificationSettings({ isOpen, onClose }) {
   const { preferences, loading, saving, updatePreferences, toggleAllEmails } = useNotificationPreferences();
-  const { templates } = useEmailTemplates();
   const [localPrefs, setLocalPrefs] = useState(null);
   const [hasChanges, setHasChanges] = useState(false);
 
@@ -132,22 +130,6 @@ function NotificationSettings({ isOpen, onClose }) {
                 </p>
 
                 <div className="notification-settings-toggle-list">
-                  <div className="notification-settings-toggle-row">
-                    <div className="notification-settings-toggle-info">
-                      <h4>Welcome Emails</h4>
-                      <p>Get a friendly welcome when you join</p>
-                    </div>
-                    <label className="notification-toggle-switch">
-                      <input
-                        type="checkbox"
-                        checked={localPrefs?.welcome_email || false}
-                        onChange={() => handleToggle('welcome_email')}
-                        disabled={!localPrefs?.email_enabled || saving}
-                      />
-                      <span className="notification-toggle-slider"></span>
-                    </label>
-                  </div>
-
                   <div className="notification-settings-toggle-row">
                     <div className="notification-settings-toggle-info">
                       <h4>Word of the Day</h4>

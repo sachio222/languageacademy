@@ -7,31 +7,37 @@ A complete, extensible email communication system with 3 automatic emails, user 
 ## 📁 Files Created
 
 ### Database (Run Manually in Supabase SQL Editor)
+
 1. **`email-system-schema.sql`** - Creates all tables, indexes, RLS policies, and initial templates
 2. **`email-system-default-prefs.sql`** - Sets default preferences for existing users
 3. **`email-system-triggers.sql`** - Auto-queue welcome emails on user signup
 
 ### Edge Functions (Deploy via Supabase Dashboard)
+
 1. **`supabase/functions/send-email/index.ts`** - Sends emails via MailerLite
 2. **`supabase/functions/process-email-queue/index.ts`** - Processes pending emails (runs every 10 min)
 3. **`supabase/functions/check-review-reminders/index.ts`** - Finds modules to review (runs daily)
 4. **`supabase/functions/check-module-nudges/index.ts`** - Finds abandoned modules (runs daily)
 
 ### Frontend Components
+
 1. **`src/components/CommunicationAdmin.jsx`** - Admin dashboard with 4 tabs
 2. **`src/components/CommunicationAdmin.css`** - Styling
 3. **`src/components/NotificationSettings.jsx`** - User preferences modal
 4. **`src/components/NotificationSettings.css`** - Styling
 
 ### Hooks
+
 1. **`src/hooks/useNotificationPreferences.js`** - Manage user email preferences
 2. **`src/hooks/useEmailTemplates.js`** - Load templates and manage queue
 
 ### Documentation
+
 1. **`EMAIL_SYSTEM_SETUP.md`** - Complete setup guide with pg_cron configuration
 2. **`N8N_WORKFLOWS_GUIDE.md`** - Future enhancement guide for Word of Day, etc.
 
 ### Updated Files
+
 1. **`src/hooks/useNavigation.js`** - Added CommunicationAdmin navigation
 2. **`src/App.jsx`** - Added routing and admin button
 
@@ -39,14 +45,12 @@ A complete, extensible email communication system with 3 automatic emails, user 
 
 ### 3 Automatic Emails
 
-1. **Welcome Email** 
+1. **Welcome Email**
    - Sent immediately when user signs up
    - Triggered by database trigger
-   
 2. **Review Reminder**
    - Sent 2 days after module completion
    - Supports spaced repetition learning
-   
 3. **Module Nudge**
    - Sent when module is >80% complete but abandoned for 2+ days
    - Encourages completion
@@ -56,6 +60,7 @@ A complete, extensible email communication system with 3 automatic emails, user 
 Access at: `?communication-admin=true` or click 📧 button
 
 **4 Tabs:**
+
 - **Overview**: Stats, recent activity
 - **Manual Send**: Send any template to any user(s)
 - **Email Logs**: View all sent emails with filters
@@ -64,6 +69,7 @@ Access at: `?communication-admin=true` or click 📧 button
 ### User Preferences
 
 Users can control which emails they receive:
+
 - Master email toggle (turns off everything)
 - Individual toggles per email type
 - Timezone selection
@@ -81,6 +87,7 @@ Users can control which emails they receive:
 ### 1. Database Setup (You Do This Manually)
 
 In Supabase SQL Editor, run in order:
+
 ```bash
 1. email-system-schema.sql
 2. email-system-default-prefs.sql
@@ -90,10 +97,11 @@ In Supabase SQL Editor, run in order:
 ### 2. Environment Variables
 
 Add to Supabase Edge Functions secrets:
+
 ```
 MAILERLITE_API_KEY=your_key_here
-APP_URL=https://languageacademy.app
-FROM_EMAIL=noreply@languageacademy.app
+APP_URL=https://languageacademy.io
+FROM_EMAIL=noreply@languageacademy.io
 FROM_NAME=Language Academy
 ```
 
@@ -111,6 +119,7 @@ supabase functions deploy check-module-nudges
 See `EMAIL_SYSTEM_SETUP.md` for complete pg_cron setup instructions.
 
 Schedule these functions to run:
+
 - `process-email-queue` - Every 10 minutes
 - `check-review-reminders` - Daily at 9am UTC
 - `check-module-nudges` - Daily at 10am UTC
@@ -122,6 +131,7 @@ Your frontend is already updated! Just deploy as usual.
 ## 📧 How It Works
 
 ### Welcome Email Flow
+
 ```
 New User Signup
   ↓
@@ -139,6 +149,7 @@ Logged in email_logs
 ```
 
 ### Review Reminder Flow
+
 ```
 Module Completed (2 days ago)
   ↓
@@ -152,6 +163,7 @@ send-email → MailerLite → email_logs
 ```
 
 ### Manual Send Flow
+
 ```
 Admin selects template + users
   ↓
@@ -207,7 +219,7 @@ Templates tab shows all templates. Currently view-only, but you can add CRUD ope
 ### Easy to Add
 
 - Weekly digests
-- Streak celebrations  
+- Streak celebrations
 - Birthday emails
 - Content update notifications
 - Promotional campaigns
@@ -216,21 +228,25 @@ Templates tab shows all templates. Currently view-only, but you can add CRUD ope
 ## 📊 Monitoring
 
 ### Check Email Queue
+
 ```sql
 SELECT * FROM email_queue WHERE status = 'pending';
 ```
 
 ### Check Failed Emails
+
 ```sql
 SELECT * FROM email_queue WHERE status = 'failed' ORDER BY created_at DESC;
 ```
 
 ### View Recent Logs
+
 ```sql
 SELECT * FROM email_logs ORDER BY sent_at DESC LIMIT 20;
 ```
 
 ### Check pg_cron Jobs
+
 ```sql
 SELECT * FROM cron.job;
 SELECT * FROM cron.job_run_details ORDER BY start_time DESC LIMIT 10;
@@ -254,17 +270,20 @@ SELECT * FROM cron.job_run_details ORDER BY start_time DESC LIMIT 10;
 ## 🆘 Troubleshooting
 
 ### Emails Not Sending?
+
 1. Check email_queue - are emails being queued?
 2. Check pg_cron is running: `SELECT * FROM cron.job;`
 3. Verify MAILERLITE_API_KEY in Edge Function secrets
 4. Check Edge Function logs in Supabase dashboard
 
 ### Template Variables Not Working?
+
 - Use `{{variable}}` syntax (double curly braces)
 - Check available_variables in template
 - Verify metadata includes all required variables
 
 ### User Not Receiving Emails?
+
 - Check notification_preferences - are they opted in?
 - Check email_logs for delivery status
 - Verify email address in user_profiles
@@ -290,10 +309,10 @@ SELECT * FROM cron.job_run_details ORDER BY start_time DESC LIMIT 10;
 **The system is complete and ready to deploy!** 🚀
 
 All code is written, all files are created. You just need to:
+
 1. Run the SQL scripts manually
 2. Deploy the Edge Functions
 3. Set up pg_cron
 4. Add environment variables
 
 Then emails will start flowing automatically!
-

@@ -1,47 +1,24 @@
-import { useState, useEffect, useCallback } from 'react';
-import { useAuth } from './useAuth';
-import { logger } from '../utils/logger';
+import { useState, useEffect } from 'react';
 
+// Note: We don't store email templates in the database
+// Templates are managed in docs/email-system/templates/
+// This hook is kept for future use if needed
 export const useEmailTemplates = () => {
-  const { supabaseClient } = useAuth();
   const [templates, setTemplates] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Load all active templates
-  const loadTemplates = useCallback(async () => {
-    if (!supabaseClient) return;
-
-    try {
-      setLoading(true);
-      const { data, error: fetchError } = await supabaseClient
-        .from('email_templates')
-        .select('*')
-        .eq('active', true)
-        .order('template_type');
-
-      if (fetchError) throw fetchError;
-
-      setTemplates(data || []);
-      setError(null);
-    } catch (err) {
-      logger.error('Error loading email templates:', err);
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  }, [supabaseClient]);
-
-  // Load templates on mount
   useEffect(() => {
-    loadTemplates();
-  }, [loadTemplates]);
+    // No-op: templates are managed as files
+    setTemplates([]);
+    setLoading(false);
+  }, []);
 
   return {
     templates,
     loading,
     error,
-    refresh: loadTemplates,
+    refresh: () => {},
   };
 };
 

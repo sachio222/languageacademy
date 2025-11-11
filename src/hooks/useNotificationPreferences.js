@@ -32,7 +32,7 @@ export const useNotificationPreferences = () => {
             .insert({
               user_id: supabaseUser.id,
               email_enabled: true,
-              welcome_email: true,
+              word_of_day: true,
               review_reminders: true,
               module_nudges: true,
               timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'
