@@ -51,7 +51,7 @@
 .auth-content {
   background: transparent;
   max-width: 500px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .auth-header {
@@ -217,7 +217,7 @@
 /* Tablet and mobile adjustments */
 @media (max-width: 768px) {
   .auth-container {
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 1.25rem;
     align-items: flex-start;
     padding-top: 2.5rem;
   }
@@ -267,7 +267,7 @@
   }
 
   .auth-content {
-    width: 100%;
+    /* width: 100%; */
     max-width: 100%;
   }
 
