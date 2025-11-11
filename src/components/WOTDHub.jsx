@@ -284,7 +284,10 @@ function WOTDHub() {
           </div>
           <div className="wotd-nav-right">
             {!user && (
-              <button className="wotd-signup-btn">Sign Up Free</button>
+              <>
+                <button className="wotd-signin-btn">Sign In</button>
+                <button className="wotd-signup-btn">Sign Up Free</button>
+              </>
             )}
           </div>
         </div>
@@ -297,18 +300,26 @@ function WOTDHub() {
             <div className="wotd-container">
               <div className="wotd-date-controls">
                 <button 
-                  className="wotd-day-nav-btn"
+                  className="wotd-day-nav-btn wotd-day-prev"
                   onClick={() => navigateDay(-1)}
+                  aria-label="Previous day"
                 >
-                  ← Previous Day
+                  <svg className="wotd-nav-arrow-mobile" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                  <span className="wotd-nav-text">← Previous Day</span>
                 </button>
                 <div className="wotd-current-date">{formatDate(currentDate)}</div>
                 <button 
-                  className="wotd-day-nav-btn"
+                  className="wotd-day-nav-btn wotd-day-next"
                   onClick={() => navigateDay(1)}
                   disabled={currentDate >= new Date().toISOString().split('T')[0]}
+                  aria-label="Next day"
                 >
-                  Next Day →
+                  <span className="wotd-nav-text">Next Day →</span>
+                  <svg className="wotd-nav-arrow-mobile" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </button>
               </div>
             </div>
@@ -331,18 +342,16 @@ function WOTDHub() {
                           <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                         </svg>
                       ) : (
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
-                          <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                          <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
                       )}
                     </div>
                   </div>
                   <div className="wotd-feedback-text">
                     <h2 className="wotd-feedback-title">
-                      {feedback.isCorrect ? 'Excellent!' : feedback.isDontKnow ? 'No worries!' : 'Almost there!'}
+                      {feedback.isCorrect ? 'Excellent!' : feedback.isDontKnow ? 'No worries!' : 'You\'re learning!'}
                     </h2>
                     <p className="wotd-feedback-subtitle">
                       {feedback.isCorrect ? (
@@ -350,7 +359,7 @@ function WOTDHub() {
                       ) : feedback.isDontKnow ? (
                         <>Learning happens one word at a time. Here's the answer:</>
                       ) : (
-                        <>Don't worry - the best way to learn is through mistakes.</>
+                        <>Every mistake is progress. Now you'll remember this word even better.</>
                       )}
                     </p>
                     {!user && streakCount > 0 && feedback.isCorrect && (
@@ -582,10 +591,14 @@ function WOTDHub() {
             <div className="wotd-container">
               <div className="wotd-footer-controls">
                 <button 
-                  className="wotd-footer-nav-btn"
+                  className="wotd-footer-nav-btn wotd-footer-prev"
                   onClick={() => navigateDay(-1)}
+                  aria-label="Previous word"
                 >
-                  ← Previous Word
+                  <svg className="wotd-nav-arrow-mobile" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                  <span className="wotd-nav-text">← Previous Word</span>
                 </button>
                 <button 
                   className="wotd-footer-link"
@@ -594,11 +607,15 @@ function WOTDHub() {
                   View All Words
                 </button>
                 <button 
-                  className="wotd-footer-nav-btn"
+                  className="wotd-footer-nav-btn wotd-footer-next"
                   onClick={() => navigateDay(1)}
                   disabled={currentDate >= new Date().toISOString().split('T')[0]}
+                  aria-label="Next word"
                 >
-                  Next Word →
+                  <span className="wotd-nav-text">Next Word →</span>
+                  <svg className="wotd-nav-arrow-mobile" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </button>
               </div>
             </div>

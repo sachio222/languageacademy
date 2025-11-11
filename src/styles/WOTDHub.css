@@ -92,6 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 0.75rem;
 }
 
 .wotd-nav-link {
@@ -119,7 +120,7 @@
 }
 
 .wotd-logo-small {
-  height: 32px;
+  height: 38px;
   width: auto;
 }
 
@@ -131,7 +132,7 @@
 }
 
 .wotd-nav-title {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #1a1a1a;
   letter-spacing: -0.015em;
@@ -142,6 +143,25 @@
   font-weight: 500;
   color: #999999;
   letter-spacing: 0;
+}
+
+.wotd-signin-btn {
+  background: transparent;
+  color: #665665;
+  border: none;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.wotd-signin-btn:hover {
+  background: #fafbfc;
+  color: #1a1a1a;
 }
 
 .wotd-signup-btn {
@@ -168,6 +188,10 @@
   background: #fafbfc;
   border-bottom: 1px solid #f0f0f0;
   padding: 2rem 0;
+}
+
+.wotd-nav-arrow-mobile {
+  display: none;
 }
 
 .wotd-date-controls {
@@ -255,8 +279,8 @@
 }
 
 .wotd-icon-incorrect {
-  border-color: #dc2626;
-  color: #dc2626;
+  border-color: #3b82f6;
+  color: #3b82f6;
 }
 
 .wotd-icon-neutral {
@@ -812,7 +836,7 @@
   color: #665665;
   margin: 0 0 0.5rem 0;
   line-height: 1.6;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
 }
 
 .wotd-etymology-note {
@@ -1022,11 +1046,21 @@
   animation: fadeInUp 0.5s ease backwards;
 }
 
-.wotd-archive-item:nth-child(1) { animation-delay: 0.05s; }
-.wotd-archive-item:nth-child(2) { animation-delay: 0.1s; }
-.wotd-archive-item:nth-child(3) { animation-delay: 0.15s; }
-.wotd-archive-item:nth-child(4) { animation-delay: 0.2s; }
-.wotd-archive-item:nth-child(5) { animation-delay: 0.25s; }
+.wotd-archive-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.wotd-archive-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wotd-archive-item:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.wotd-archive-item:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.wotd-archive-item:nth-child(5) {
+  animation-delay: 0.25s;
+}
 
 .wotd-archive-item:hover {
   border-color: #3b82f6;
@@ -1206,14 +1240,22 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .wotd-container {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
   }
 
   .wotd-nav-container {
-    padding: 0 1rem;
-    grid-template-columns: auto 1fr auto;
-    gap: 1rem;
-    height: 56px;
+    padding: 0 1.25rem;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 0.75rem;
+    height: 60px;
+  }
+
+  .wotd-nav-left {
+    justify-content: flex-start;
+  }
+
+  .wotd-nav-center {
+    gap: 0.625rem;
   }
 
   .wotd-nav-title-group {
@@ -1221,12 +1263,27 @@
   }
 
   .wotd-logo-small {
-    height: 28px;
+    height: 36px;
+  }
+
+  .wotd-nav-link {
+    padding: 0.5rem 0.625rem;
+    font-size: 0.875rem;
+  }
+
+  .wotd-signin-btn {
+    display: none;
   }
 
   .wotd-signup-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.8125rem;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  .wotd-nav-right {
+    gap: 0;
+    justify-content: flex-end;
   }
 
   .wotd-feedback {
@@ -1277,25 +1334,87 @@
     font-size: 1.375rem;
   }
 
+  .wotd-date-nav {
+    padding: 1rem 0;
+  }
+
   .wotd-date-controls {
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
+  }
+
+  .wotd-current-date {
+    font-size: 0.9375rem;
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
   }
 
   .wotd-day-nav-btn {
-    width: 100%;
-    text-align: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wotd-nav-arrow-mobile {
+    display: block;
+  }
+
+  .wotd-day-nav-btn .wotd-nav-text {
+    display: none;
+  }
+
+  .wotd-day-nav-btn .wotd-nav-arrow-mobile {
+    color: #1a1a1a;
+  }
+
+  .wotd-day-nav-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+
+  .wotd-day-nav-btn:disabled .wotd-nav-arrow-mobile {
+    color: #999999;
   }
 
   .wotd-footer-controls {
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
   }
 
-  .wotd-footer-nav-btn,
+  .wotd-footer-nav-btn {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wotd-footer-nav-btn .wotd-nav-text {
+    display: none;
+  }
+
+  .wotd-footer-nav-btn .wotd-nav-arrow-mobile {
+    display: block;
+  }
+
   .wotd-footer-link {
-    width: 100%;
-    text-align: center;
+    font-size: 0.875rem;
+    padding: 0.625rem 1rem;
   }
 
   .wotd-related-words {
@@ -1425,4 +1544,3 @@
     font-size: 1.375rem;
   }
 }
-
