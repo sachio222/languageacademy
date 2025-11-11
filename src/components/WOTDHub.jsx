@@ -408,7 +408,17 @@ function WOTDHub() {
               <div className="wotd-container">
                 <button 
                   className="wotd-feedback-dismiss"
-                  onClick={() => setShowFeedback(false)}
+                  onClick={() => {
+                    setShowFeedback(false);
+                    // Clean URL params
+                    const params = new URLSearchParams(window.location.search);
+                    params.delete('answer');
+                    params.delete('correct');
+                    const newUrl = params.toString() ? 
+                      `${window.location.pathname}?${params.toString()}` : 
+                      window.location.pathname;
+                    window.history.replaceState({}, '', newUrl);
+                  }}
                   aria-label="Dismiss feedback"
                 >
                   ×
