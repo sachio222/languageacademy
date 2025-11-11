@@ -1,0 +1,163 @@
+/* Unsubscribe Page - Clean and minimal */
+
+.unsubscribe-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafbfc;
+  padding: 2rem 1rem;
+}
+
+.unsubscribe-container {
+  max-width: 500px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.unsubscribe-logo {
+  height: 48px;
+  width: auto;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.unsubscribe-content h1,
+.unsubscribe-success h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+}
+
+.unsubscribe-content p,
+.unsubscribe-success p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #665665;
+  margin: 0 0 2rem;
+}
+
+.unsubscribe-note {
+  font-size: 0.9375rem;
+  color: #999999;
+  margin: 0 0 2rem;
+}
+
+.unsubscribe-email-input {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.unsubscribe-email-input label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #665665;
+  margin-bottom: 0.5rem;
+}
+
+.unsubscribe-email-input input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1a1a1a;
+  transition: all 0.15s ease;
+}
+
+.unsubscribe-email-input input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.unsubscribe-btn-primary {
+  display: block;
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.unsubscribe-btn-primary:hover:not(:disabled) {
+  background: #2563eb;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.unsubscribe-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.unsubscribe-btn-secondary {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: #665665;
+  border: 1px solid #e0e0e0;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.unsubscribe-btn-secondary:hover {
+  background: #fafbfc;
+  color: #1a1a1a;
+  border-color: #3b82f6;
+}
+
+.unsubscribe-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.unsubscribe-link {
+  display: inline-block;
+  color: #999999;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-top: 1rem;
+  transition: color 0.15s ease;
+}
+
+.unsubscribe-link:hover {
+  color: #665665;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .unsubscribe-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .unsubscribe-content h1,
+  .unsubscribe-success h1 {
+    font-size: 1.625rem;
+  }
+}
+

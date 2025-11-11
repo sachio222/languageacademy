@@ -22,6 +22,7 @@ const ReportCardStudent = lazy(() => import('./components/ReportCardStudent'));
 const ReportCardAdmin = lazy(() => import('./components/ReportCardAdmin'));
 const WordOfTheDay = lazy(() => import('./components/WordOfTheDay'));
 const WOTDHub = lazy(() => import('./components/WOTDHub'));
+const UnsubscribePage = lazy(() => import('./components/UnsubscribePage'));
 import { initializeClarity, identifyClarityUser, setClarityTag, trackClarityEvent, upgradeClaritySession } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -59,10 +60,21 @@ function App() {
   const { user, supabaseUser } = useAuth();
   const supabaseClient = useSupabaseClient();
 
-  // Check if accessing Word of the Day - render standalone hub
+  // Check URL params for special pages
   const urlParams = new URLSearchParams(window.location.search);
   const isWordOfTheDay = urlParams.get('wotd') || urlParams.get('word-of-the-day');
+  const isUnsubscribe = urlParams.get('unsubscribe');
   
+  // Unsubscribe page (standalone, no auth required)
+  if (isUnsubscribe !== null) {
+    return (
+      <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
+        <UnsubscribePage />
+      </Suspense>
+    );
+  }
+  
+  // Word of the Day hub (standalone, no auth required)
   if (isWordOfTheDay) {
     return (
       <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
