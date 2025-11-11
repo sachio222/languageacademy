@@ -5,16 +5,19 @@
 Replace `YOUR_PROJECT_URL` with your Supabase project URL (e.g., `https://feewuhbtaowgpasszyjp.supabase.co`)
 
 ### **1. Create WOTD**
+
 ```
 POST https://YOUR_PROJECT_URL/functions/v1/create-wotd
 ```
 
 ### **2. Get Used Words (Check Duplicates)**
+
 ```
 GET https://YOUR_PROJECT_URL/functions/v1/get-used-words
 ```
 
 ### **3. Get WOTD by Date**
+
 ```
 GET https://YOUR_PROJECT_URL/functions/v1/get-wotd?date=2025-11-10
 ```
@@ -73,15 +76,20 @@ GET https://YOUR_PROJECT_URL/functions/v1/get-wotd?date=2025-11-10
 **Type:** HTTP Request  
 **Method:** GET  
 **URL:** `https://YOUR_PROJECT_URL/functions/v1/get-used-words`  
-**Authentication:** None (public endpoint)  
+**Authentication:** Generic Credential Type (or None)  
 **Headers:**
+
 ```json
 {
-  "apikey": "{{$env.SUPABASE_ANON_KEY}}"
+  "Authorization": "Bearer {{$env.SUPABASE_ANON_KEY}}",
+  "Content-Type": "application/json"
 }
 ```
 
+**Note:** The `Authorization` header MUST start with `Bearer ` followed by your anon key.
+
 **Output:**
+
 ```json
 {
   "success": true,
@@ -101,6 +109,7 @@ GET https://YOUR_PROJECT_URL/functions/v1/get-wotd?date=2025-11-10
 **URL:** `https://api.anthropic.com/v1/messages` (or OpenAI)
 
 **Headers:**
+
 ```json
 {
   "x-api-key": "{{$env.ANTHROPIC_API_KEY}}",
@@ -110,6 +119,7 @@ GET https://YOUR_PROJECT_URL/functions/v1/get-wotd?date=2025-11-10
 ```
 
 **Body:**
+
 ```json
 {
   "model": "claude-3-5-sonnet-20241022",
@@ -124,20 +134,32 @@ GET https://YOUR_PROJECT_URL/functions/v1/get-wotd?date=2025-11-10
 ```
 
 **Code node before LLM to prepare:**
+
 ```javascript
 // Suggest next word (you'll need a word list)
-const commonWords = ['faire', 'être', 'avoir', 'pouvoir', 'devoir', 'vouloir', 'savoir', 'dire', 'prendre', 'venir'];
+const commonWords = [
+  "faire",
+  "être",
+  "avoir",
+  "pouvoir",
+  "devoir",
+  "vouloir",
+  "savoir",
+  "dire",
+  "prendre",
+  "venir",
+];
 const usedWords = $node["Get Used Words"].json.used_words;
-const availableWords = commonWords.filter(w => !usedWords.includes(w));
+const availableWords = commonWords.filter((w) => !usedWords.includes(w));
 
 const tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
-const targetDate = tomorrow.toISOString().split('T')[0];
+const targetDate = tomorrow.toISOString().split("T")[0];
 
 return {
-  suggested_word: availableWords[0] || 'faire',
+  suggested_word: availableWords[0] || "faire",
   target_date: targetDate,
-  used_words: usedWords
+  used_words: usedWords,
 };
 ```
 
@@ -147,23 +169,24 @@ return {
 
 **Type:** Code  
 **JavaScript:**
-```javascript
+
+````javascript
 const llmResponse = $input.item.json;
 const content = llmResponse.content[0].text; // Claude format
 // const content = llmResponse.choices[0].message.content; // OpenAI format
 
 // Extract JSON from response (might have markdown)
-const jsonMatch = content.match(/```json\n([\s\S]+?)\n```/) || 
-                  content.match(/(\{[\s\S]+\})/);
+const jsonMatch =
+  content.match(/```json\n([\s\S]+?)\n```/) || content.match(/(\{[\s\S]+\})/);
 
 if (!jsonMatch) {
-  throw new Error('No JSON found in LLM response');
+  throw new Error("No JSON found in LLM response");
 }
 
 const wordData = JSON.parse(jsonMatch[1] || jsonMatch[0]);
 
 return { json: wordData };
-```
+````
 
 ---
 
@@ -174,6 +197,7 @@ return { json: wordData };
 **URL:** `https://YOUR_PROJECT_URL/functions/v1/create-wotd`  
 **Authentication:** None  
 **Headers:**
+
 ```json
 {
   "apikey": "{{$env.SUPABASE_ANON_KEY}}",
@@ -182,12 +206,15 @@ return { json: wordData };
 ```
 
 **Body:**
+
 ```json
 {{$json}}
 ```
+
 (Passes the entire word data object from previous node)
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -209,6 +236,7 @@ return { json: wordData };
 **Method:** GET  
 **URL:** `https://YOUR_PROJECT_URL/functions/v1/get-wotd?date={{$json.data.date}}`  
 **Headers:**
+
 ```json
 {
   "apikey": "{{$env.SUPABASE_ANON_KEY}}"
@@ -216,6 +244,7 @@ return { json: wordData };
 ```
 
 **Use this data for email:**
+
 - `word`, `phonetic`, `translation`
 - `correct_answer` → optionA
 - `wrong_options[0]` → optionB
@@ -226,33 +255,47 @@ return { json: wordData };
 
 ## 🔐 Authentication
 
-All endpoints use Supabase anon key in header:
+All endpoints require this header format:
+
 ```
-apikey: your-supabase-anon-key
+Authorization: Bearer your-supabase-anon-key
 ```
 
-No additional auth needed - RLS policies handle permissions.
+**IMPORTANT:** Must include `Bearer ` prefix!
+
+**In n8n:**
+
+- Header name: `Authorization`
+- Header value: `Bearer {{$env.SUPABASE_ANON_KEY}}`
+
+Or use n8n's built-in "Header Auth" credential:
+
+- Name: `Authorization`
+- Value: `Bearer YOUR_ANON_KEY`
 
 ---
 
 ## 📊 Testing Endpoints
 
 ### Test Get Used Words:
+
 ```bash
 curl https://YOUR_PROJECT_URL/functions/v1/get-used-words \
-  -H "apikey: YOUR_ANON_KEY"
+  -H "Authorization: Bearer YOUR_ANON_KEY"
 ```
 
 ### Test Get WOTD:
+
 ```bash
 curl "https://YOUR_PROJECT_URL/functions/v1/get-wotd?date=2025-11-10" \
-  -H "apikey: YOUR_ANON_KEY"
+  -H "Authorization: Bearer YOUR_ANON_KEY"
 ```
 
 ### Test Create WOTD:
+
 ```bash
 curl -X POST https://YOUR_PROJECT_URL/functions/v1/create-wotd \
-  -H "apikey: YOUR_ANON_KEY" \
+  -H "Authorization: Bearer YOUR_ANON_KEY" \
   -H "Content-Type: application/json" \
   -d @wotd-data/tenir.json
 ```
@@ -262,6 +305,7 @@ curl -X POST https://YOUR_PROJECT_URL/functions/v1/create-wotd \
 ## 🎯 n8n Environment Variables
 
 Set these in n8n:
+
 ```
 SUPABASE_URL=https://feewuhbtaowgpasszyjp.supabase.co
 SUPABASE_ANON_KEY=your-anon-key
@@ -273,12 +317,14 @@ ANTHROPIC_API_KEY=your-claude-key
 ## 🚀 Quick Start
 
 1. Deploy functions:
+
 ```bash
 supabase functions deploy get-used-words
 supabase functions deploy get-wotd
 ```
 
 2. Test in n8n:
+
    - Add HTTP Request node
    - GET `https://YOUR_URL/functions/v1/get-used-words`
    - Execute to see current words
@@ -290,6 +336,7 @@ supabase functions deploy get-wotd
 ## 📅 Suggested Word List (Top 100 Frequency)
 
 For n8n to cycle through:
+
 ```
 être, avoir, faire, dire, pouvoir, aller, voir, savoir, vouloir, venir,
 devoir, prendre, trouver, donner, falloir, parler, aimer, passer, mettre,
@@ -301,4 +348,3 @@ changer, jouer, tourner, commencer, devenir, essayer, revenir, offrir, compter
 ```
 
 Each gets rich treatment like "tenir" and "aller"!
-
