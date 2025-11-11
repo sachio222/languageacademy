@@ -21,6 +21,7 @@ const BetaNoticeModal = lazy(() => import('./components/BetaNoticeModal'));
 const ReportCardStudent = lazy(() => import('./components/ReportCardStudent'));
 const ReportCardAdmin = lazy(() => import('./components/ReportCardAdmin'));
 const WordOfTheDay = lazy(() => import('./components/WordOfTheDay'));
+const WOTDHub = lazy(() => import('./components/WOTDHub'));
 import { initializeClarity, identifyClarityUser, setClarityTag, trackClarityEvent, upgradeClaritySession } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -58,14 +59,14 @@ function App() {
   const { user, supabaseUser } = useAuth();
   const supabaseClient = useSupabaseClient();
 
-  // Check if accessing Word of the Day without auth - render standalone
+  // Check if accessing Word of the Day - render standalone hub
   const urlParams = new URLSearchParams(window.location.search);
   const isWordOfTheDay = urlParams.get('wotd') || urlParams.get('word-of-the-day');
   
-  if (isWordOfTheDay && !user) {
+  if (isWordOfTheDay) {
     return (
       <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
-        <WordOfTheDay />
+        <WOTDHub />
       </Suspense>
     );
   }
@@ -377,7 +378,7 @@ function App() {
         ) : navigation.currentLesson === 'word-of-the-day' ? (
           <div className="main-content-wrapper">
             <Suspense fallback={<div className="loading-spinner">Loading word of the day...</div>}>
-              <WordOfTheDay />
+              <WOTDHub />
             </Suspense>
           </div>
         ) : !navigation.currentLesson ? (
