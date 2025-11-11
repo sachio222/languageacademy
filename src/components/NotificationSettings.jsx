@@ -177,28 +177,6 @@ function NotificationSettings({ isOpen, onClose }) {
                       <span className="notification-toggle-slider"></span>
                     </label>
                   </div>
-
-                  {/* Dynamic templates from database */}
-                  {templates.filter(t => !['welcome', 'review_reminder', 'module_nudge'].includes(t.template_type)).map(template => {
-                    const prefKey = template.template_type.replace(/-/g, '_');
-                    return (
-                      <div key={template.id} className="notification-settings-toggle-row">
-                        <div className="notification-settings-toggle-info">
-                          <h4>{template.template_name}</h4>
-                          <p>{template.trigger_type === 'automatic' ? 'Automatic' : 'Manual'} email</p>
-                        </div>
-                        <label className="notification-toggle-switch">
-                          <input
-                            type="checkbox"
-                            checked={localPrefs?.[prefKey] !== false}
-                            onChange={() => handleToggle(prefKey)}
-                            disabled={!localPrefs?.email_enabled || saving}
-                          />
-                          <span className="notification-toggle-slider"></span>
-                        </label>
-                      </div>
-                    );
-                  })}
                 </div>
               </div>
 

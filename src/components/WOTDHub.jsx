@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useClerk, UserButton } from '@clerk/clerk-react';
+import { Mail } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import SpeakButton from './SpeakButton';
+import NotificationSettings from './NotificationSettings';
 import '../styles/WOTDHub.css';
 
 function WOTDHub() {
@@ -17,6 +19,11 @@ function WOTDHub() {
   const [streakCount, setStreakCount] = useState(0);
   const [viewedWords, setViewedWords] = useState([]);
   const [showFeedback, setShowFeedback] = useState(true);
+  const [showNotificationSettings, setShowNotificationSettings] = useState(() => {
+    // Check if settings param is in URL
+    const params = new URLSearchParams(window.location.search)
+    return params.has('settings')
+  });
 
   // Parse URL params
   useEffect(() => {
@@ -353,7 +360,15 @@ function WOTDHub() {
                     }}
                     showName={false}
                     fallbackRedirectUrl="/"
-                  />
+                  >
+                    <UserButton.MenuItems>
+                      <UserButton.Action
+                        label="Email Preferences"
+                        labelIcon={<Mail size={16} />}
+                        onClick={() => setShowNotificationSettings(true)}
+                      />
+                    </UserButton.MenuItems>
+                  </UserButton>
                 </div>
               </>
             ) : (
@@ -819,6 +834,10 @@ function WOTDHub() {
           </div>
         </div>
       )}
+      <NotificationSettings 
+        isOpen={showNotificationSettings}
+        onClose={() => setShowNotificationSettings(false)}
+      />
     </div>
   );
 }

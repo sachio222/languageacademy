@@ -1,11 +1,12 @@
 import { SignIn, SignUp, UserButton, useUser } from '@clerk/clerk-react'
 import { useState, useEffect } from 'react'
-import { BookOpen, FileBarChart } from 'lucide-react'
+import { BookOpen, FileBarChart, Mail, BarChart3 } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext'
 import { useAnalytics } from '../hooks/useAnalytics'
 import LandingPage from './LandingPage'
 import WelcomePage from './WelcomePage'
+import NotificationSettings from './NotificationSettings'
 import '../styles/Landing.css'
 
 function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReportCard }) {
@@ -31,6 +32,11 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
     return false
   })
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+  const [showNotificationSettings, setShowNotificationSettings] = useState(() => {
+    // Check if settings param is in URL
+    const params = new URLSearchParams(window.location.search)
+    return params.has('settings')
+  })
 
   // Handle navigation back to landing page
   const handleBackToLanding = () => {
@@ -205,15 +211,6 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
   return (
     <div className="authenticated-app">
       <div className="auth-header-container">
-        {onShowReportCard && (
-          <button
-            className="dictionary-link-btn report-card-header-btn"
-            onClick={handleShowReportCard}
-            title="View Progress Report"
-          >
-            <FileBarChart size={20} />
-          </button>
-        )}
         <button
           className="dictionary-link-btn"
           onClick={handleOpenDictionary}
@@ -230,9 +227,28 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
             }}
             showName={!isMobile}
             fallbackRedirectUrl="/"
-          />
+          >
+            <UserButton.MenuItems>
+              {onShowReportCard && (
+                <UserButton.Action
+                  label="My Report Card"
+                  labelIcon={<BarChart3 size={16} />}
+                  onClick={handleShowReportCard}
+                />
+              )}
+              <UserButton.Action
+                label="Email Preferences"
+                labelIcon={<Mail size={16} />}
+                onClick={() => setShowNotificationSettings(true)}
+              />
+            </UserButton.MenuItems>
+          </UserButton>
         </div>
       </div>
+      <NotificationSettings 
+        isOpen={showNotificationSettings}
+        onClose={() => setShowNotificationSettings(false)}
+      />
       {children}
     </div>
   )
