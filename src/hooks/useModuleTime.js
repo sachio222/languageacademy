@@ -87,25 +87,25 @@ export const useModuleTime = (moduleId, unitId, isActive = true) => {
         .eq('unit_id', unitId)
         .single();
 
-      if (fetchError && fetchError.code !== 'PGRST116') {
-        throw fetchError;
+      // If no progress exists yet, skip - it will be created by updateUnitProgress later
+      if (fetchError && fetchError.code === 'PGRST116') {
+        logger.analytics(`Unit ${unitId} progress doesn't exist yet, skipping time update`);
+        return;
       }
+
+      if (fetchError) throw fetchError;
 
       const currentTime = currentProgress?.time_spent_seconds || 0;
       const newTotalTime = currentTime + additionalSeconds;
 
-      // Upsert with cumulative time
+      // UPDATE only (don't insert new rows without unit_name)
       const { error: updateError } = await supabaseClient
         .from(TABLES.UNIT_PROGRESS)
-        .upsert({
-          user_id: supabaseUser.id,
-          unit_id: unitId,
+        .update({
           time_spent_seconds: newTotalTime,
-          // Don't overwrite other fields if they exist
-        }, {
-          onConflict: 'user_id,unit_id',
-          ignoreDuplicates: false
-        });
+        })
+        .eq('user_id', supabaseUser.id)
+        .eq('unit_id', unitId);
 
       if (updateError) throw updateError;
 
