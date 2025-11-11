@@ -23,6 +23,7 @@ const ReportCardAdmin = lazy(() => import('./components/ReportCardAdmin'));
 const WordOfTheDay = lazy(() => import('./components/WordOfTheDay'));
 const WOTDHub = lazy(() => import('./components/WOTDHub'));
 const UnsubscribePage = lazy(() => import('./components/UnsubscribePage'));
+const NotificationSettings = lazy(() => import('./components/NotificationSettings'));
 import { initializeClarity, identifyClarityUser, setClarityTag, trackClarityEvent, upgradeClaritySession } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -55,6 +56,12 @@ function App() {
 
   // Beta notice modal state
   const [showBetaNotice, setShowBetaNotice] = useState(false);
+  
+  // Notification settings modal state
+  const [showNotificationSettings, setShowNotificationSettings] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('settings') !== null && params.get('section') === 'notifications';
+  });
 
   // Get auth info
   const { user, supabaseUser } = useAuth();
@@ -64,6 +71,7 @@ function App() {
   const urlParams = new URLSearchParams(window.location.search);
   const isWordOfTheDay = urlParams.get('wotd') || urlParams.get('word-of-the-day');
   const isUnsubscribe = urlParams.get('unsubscribe');
+  const showSettings = urlParams.get('settings') !== null;
   
   // Unsubscribe page (standalone, no auth required)
   if (isUnsubscribe !== null) {
@@ -557,6 +565,24 @@ function App() {
               if (isAuthenticated && supabaseUser && supabaseClient) {
                 await markBetaWelcomeAsSeen(supabaseClient, supabaseUser);
               }
+            }}
+          />
+        </Suspense>
+      )}
+
+      {showNotificationSettings && (
+        <Suspense fallback={null}>
+          <NotificationSettings
+            isOpen={showNotificationSettings}
+            onClose={() => {
+              setShowNotificationSettings(false);
+              // Remove settings params from URL
+              const urlParams = new URLSearchParams(window.location.search);
+              urlParams.delete('settings');
+              urlParams.delete('section');
+              const newUrl = new URL(window.location);
+              newUrl.search = urlParams.toString();
+              window.history.replaceState({}, '', newUrl);
             }}
           />
         </Suspense>

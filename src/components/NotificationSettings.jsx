@@ -150,6 +150,22 @@ function NotificationSettings({ isOpen, onClose }) {
 
                   <div className="notification-settings-toggle-row">
                     <div className="notification-settings-toggle-info">
+                      <h4>Word of the Day</h4>
+                      <p>Daily French word with quiz, examples, and etymology</p>
+                    </div>
+                    <label className="notification-toggle-switch">
+                      <input
+                        type="checkbox"
+                        checked={localPrefs?.word_of_day !== false}
+                        onChange={() => handleToggle('word_of_day')}
+                        disabled={!localPrefs?.email_enabled || saving}
+                      />
+                      <span className="notification-toggle-slider"></span>
+                    </label>
+                  </div>
+
+                  <div className="notification-settings-toggle-row">
+                    <div className="notification-settings-toggle-info">
                       <h4>Review Reminders</h4>
                       <p>Spaced repetition reminders to review completed modules (sent 2 days after completion)</p>
                     </div>

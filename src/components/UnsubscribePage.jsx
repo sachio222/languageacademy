@@ -7,7 +7,7 @@ function UnsubscribePage() {
   const { user, supabaseUser } = useAuth();
   const supabase = useSupabaseClient();
   const [emailType, setEmailType] = useState('wotd');
-  const [status, setStatus] = useState('loading'); // loading, success, error
+  const [status, setStatus] = useState('ready'); // ready, loading, success, error
   const [email, setEmail] = useState('');
 
   useEffect(() => {
