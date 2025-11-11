@@ -7,10 +7,11 @@
 ```
 ┌─────────────────────────────────────────────┐
 │         TIER 1: CRITICAL (Hero)             │
-│  • Word (aller)                             │
-│  • Pronunciation + Audio                     │
-│  • Part of speech (subtle, minimal)         │
-│  • DEFINITIONS (numbered senses)  ← PRIMARY │
+│  • Word (aller) - 3.5rem, weight 300        │
+│  • Pronunciation + Audio (/a.le/)           │
+│  • Translation (to go) - 1.625rem BOLD      │
+│  • Part of speech (subtle: "verb")          │
+│  • DEFINITIONS (numbered senses)            │
 │  • Share buttons                             │
 └─────────────────────────────────────────────┘
                     ↓
@@ -108,19 +109,36 @@ Same-color items perceived as related → faster scanning
 4. Explore related words
 5. **Done** - expert-level knowledge ✓
 
+## UI Excellence: Header & Feedback
+
+### **Navigation Header** (Stripe/Linear Standard)
+- **Three-column grid:** Nav left, brand center, CTA right
+- **Perfect alignment:** 64px height, clean spacing
+- **Logo + dual labels:** "Language Academy" / "Word of the Day"
+- **Hover states:** Subtle background change
+- **Mobile-adaptive:** Logo-only on small screens
+
+### **Feedback Banner** (Duolingo/Khan Academy Standard)
+- **Gradient icons:** 80px circles with shadows
+- **Proper SVG icons:** Checkmark, book, smiley face
+- **Encouraging copy:** "Excellent!" not just "Correct"
+- **Streak display:** Golden gradient badge with 🔥 
+- **Color bar:** 4px top accent matching state
+- **Professional messaging:** Educational, never condescending
+
 ## Why This Beats Competitors
 
 ### **Oxford/Cambridge:**
 - **Them:** Definitions at top, but only 1-2 basic ones
-- **Us:** Multiple senses with register labels, inline examples
+- **Us:** Translation first (instant answer) → Multiple senses with register labels
 
 ### **WordReference:**
 - **Them:** Translation first, examples mixed with forum posts
-- **Us:** Structured definitions → curated examples → linguistic depth
+- **Us:** Translation → Definitions → Curated examples → Linguistic depth (all organized)
 
 ### **Duolingo/Babbel:**
-- **Them:** Basic translation only
-- **Us:** Full linguistic treatment, but organized by learning priority
+- **Them:** Basic translation + simple feedback
+- **Us:** Full linguistic treatment + world-class feedback UI that encourages continued learning
 
 ## Design Philosophy
 

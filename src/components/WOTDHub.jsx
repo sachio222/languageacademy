@@ -260,23 +260,33 @@ function WOTDHub() {
 
   return (
     <div className="wotd-hub">
-      {/* Navigation Header */}
+      {/* Navigation Header - World-class */}
       <header className="wotd-nav-header">
         <div className="wotd-nav-container">
-          <button 
-            className="wotd-nav-link"
-            onClick={() => setView(view === 'archive' ? 'single' : 'archive')}
-          >
-            {view === 'archive' ? '← Back to Word' : 'View Archive'}
-          </button>
-          <div className="wotd-nav-title">
-            <img src="/img/logov2.png" alt="" className="wotd-logo-small" />
-            <span>Word of the Day</span>
-            <span className="wotd-flag">🇫🇷</span>
+          <div className="wotd-nav-left">
+            <button 
+              className="wotd-nav-link"
+              onClick={() => setView(view === 'archive' ? 'single' : 'archive')}
+            >
+              {view === 'archive' ? (
+                <><span className="wotd-nav-arrow">←</span> Today's Word</>
+              ) : (
+                'Archive'
+              )}
+            </button>
           </div>
-          {!user && (
-            <button className="wotd-signup-btn">Sign Up</button>
-          )}
+          <div className="wotd-nav-center">
+            <img src="/img/logov2.png" alt="Language Academy" className="wotd-logo-small" />
+            <div className="wotd-nav-title-group">
+              <span className="wotd-nav-title">Language Academy</span>
+              <span className="wotd-nav-subtitle">Word of the Day</span>
+            </div>
+          </div>
+          <div className="wotd-nav-right">
+            {!user && (
+              <button className="wotd-signup-btn">Sign Up Free</button>
+            )}
+          </div>
         </div>
       </header>
 
@@ -304,16 +314,56 @@ function WOTDHub() {
             </div>
           </div>
 
-          {/* Answer Feedback (if from email) */}
+          {/* Answer Feedback - Celebration/Encouragement */}
           {feedback && (
             <div className={`wotd-feedback wotd-feedback-${feedback.className}`}>
               <div className="wotd-container">
                 <div className="wotd-feedback-content">
-                  <div className="wotd-feedback-icon">{feedback.icon}</div>
-                  <div className="wotd-feedback-message">
-                    <h2>{feedback.message}</h2>
+                  <div className="wotd-feedback-visual">
+                    <div className={`wotd-feedback-icon-large wotd-icon-${feedback.className}`}>
+                      {feedback.isCorrect ? (
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      ) : feedback.isDontKnow ? (
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                      ) : (
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+                          <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                          <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg>
+                      )}
+                    </div>
+                  </div>
+                  <div className="wotd-feedback-text">
+                    <h2 className="wotd-feedback-title">
+                      {feedback.isCorrect ? 'Excellent!' : feedback.isDontKnow ? 'No worries!' : 'Almost there!'}
+                    </h2>
+                    <p className="wotd-feedback-subtitle">
+                      {feedback.isCorrect ? (
+                        <>You got it right. Keep building that vocabulary!</>
+                      ) : feedback.isDontKnow ? (
+                        <>Learning happens one word at a time. Here's the answer:</>
+                      ) : (
+                        <>Don't worry - the best way to learn is through mistakes.</>
+                      )}
+                    </p>
                     {!user && streakCount > 0 && feedback.isCorrect && (
-                      <p className="wotd-streak">🔥 {streakCount} day streak!</p>
+                      <div className="wotd-streak-badge">
+                        <div className="wotd-streak-checks">
+                          {Array.from({ length: streakCount }).map((_, i) => (
+                            <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          ))}
+                        </div>
+                        <span className="wotd-streak-text">{streakCount} {streakCount === 1 ? 'day' : 'days'}</span>
+                      </div>
                     )}
                   </div>
                 </div>
