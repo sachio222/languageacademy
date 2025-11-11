@@ -11,6 +11,10 @@ function WOTDHub() {
   const { user } = useAuth();
   const { openSignIn, openSignUp } = useClerk();
   const supabase = useSupabaseClient();
+  
+  // WOTD feature launch date - don't allow navigation before this
+  const WOTD_START_DATE = '2025-11-10';
+  
   const [view, setView] = useState('single'); // 'single' or 'archive'
   const [currentDate, setCurrentDate] = useState(null);
   const [wordData, setWordData] = useState(null);
@@ -19,6 +23,8 @@ function WOTDHub() {
   const [streakCount, setStreakCount] = useState(0);
   const [viewedWords, setViewedWords] = useState([]);
   const [showFeedback, setShowFeedback] = useState(true);
+  const [archiveWords, setArchiveWords] = useState([]);
+  const [archiveLoading, setArchiveLoading] = useState(false);
   const [showNotificationSettings, setShowNotificationSettings] = useState(() => {
     // Check if settings param is in URL
     const params = new URLSearchParams(window.location.search)
@@ -60,6 +66,13 @@ function WOTDHub() {
       setViewedWords(savedViewed ? JSON.parse(savedViewed) : []);
     }
   }, [user]);
+
+  // Load archive data when switching to archive view
+  useEffect(() => {
+    if (view === 'archive' && archiveWords.length === 0) {
+      loadArchiveData();
+    }
+  }, [view]);
 
   const loadWordData = async (date) => {
     setLoading(true);
@@ -222,6 +235,13 @@ function WOTDHub() {
     const date = new Date(currentDate);
     date.setDate(date.getDate() + direction);
     const newDate = date.toISOString().split('T')[0];
+    
+    // Don't allow navigation before start date or after today
+    const today = new Date().toISOString().split('T')[0];
+    if (newDate < WOTD_START_DATE || newDate > today) {
+      return;
+    }
+    
     setCurrentDate(newDate);
     loadWordData(newDate);
 
@@ -281,31 +301,44 @@ function WOTDHub() {
     });
   };
 
-  const generateMockArchive = () => {
-    // Generate mock archive data for demonstration
-    const mockWords = [
-      { word: 'aller', translation: 'to go', type: 'verb', level: 'A2' },
-      { word: 'faire', translation: 'to make/do', type: 'verb', level: 'A2' },
-      { word: 'être', translation: 'to be', type: 'verb', level: 'A1' },
-      { word: 'avoir', translation: 'to have', type: 'verb', level: 'A1' },
-      { word: 'bonjour', translation: 'hello', type: 'expression', level: 'A1' },
-      { word: 'maison', translation: 'house', type: 'noun', level: 'A1' },
-      { word: 'beau', translation: 'beautiful', type: 'adjective', level: 'A2' },
-      { word: 'vouloir', translation: 'to want', type: 'verb', level: 'A2' },
-    ];
+  const loadArchiveData = async () => {
+    setArchiveLoading(true);
+    
+    try {
+      // Fetch all WOTD entries from launch date to today, ordered by date descending
+      const { data: words, error } = await supabase
+        .from('word_of_the_day')
+        .select('date, word, translation, part_of_speech, difficulty_level')
+        .gte('date', WOTD_START_DATE)
+        .lte('date', new Date().toISOString().split('T')[0])
+        .order('date', { ascending: false });
 
-    return Array.from({ length: 15 }, (_, i) => {
-      const date = new Date();
-      date.setDate(date.getDate() - i);
-      const word = mockWords[i % mockWords.length];
+      if (error) {
+        console.error('Error loading archive:', error);
+        setArchiveLoading(false);
+        return;
+      }
 
-      return {
-        date: date.toISOString().split('T')[0],
-        monthDay: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-        year: date.getFullYear(),
-        ...word
-      };
-    });
+      // Format the data for the archive view
+      const formattedWords = words.map(word => {
+        const date = new Date(word.date);
+        return {
+          date: word.date,
+          monthDay: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+          year: date.getFullYear(),
+          word: word.word,
+          translation: word.translation,
+          type: word.part_of_speech,
+          level: word.difficulty_level
+        };
+      });
+
+      setArchiveWords(formattedWords);
+      setArchiveLoading(false);
+    } catch (err) {
+      console.error('Unexpected error loading archive:', err);
+      setArchiveLoading(false);
+    }
   };
 
   if (loading || !wordData) {
@@ -394,6 +427,7 @@ function WOTDHub() {
                 <button
                   className="wotd-day-nav-btn wotd-day-prev"
                   onClick={() => navigateDay(-1)}
+                  disabled={currentDate <= WOTD_START_DATE}
                   aria-label="Previous day"
                 >
                   <svg className="wotd-nav-arrow-mobile" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -718,6 +752,7 @@ function WOTDHub() {
                 <button
                   className="wotd-footer-nav-btn wotd-footer-prev"
                   onClick={() => navigateDay(-1)}
+                  disabled={currentDate <= WOTD_START_DATE}
                   aria-label="Previous word"
                 >
                   <svg className="wotd-nav-arrow-mobile" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -751,7 +786,11 @@ function WOTDHub() {
         <div className="wotd-archive-view">
           <div className="wotd-container">
             <h1 className="wotd-archive-title">Word Archive</h1>
-            <p className="wotd-archive-subtitle">365 French words to master</p>
+            <p className="wotd-archive-subtitle">
+              {archiveWords.length > 0 
+                ? `${archiveWords.length} French ${archiveWords.length === 1 ? 'word' : 'words'} to master`
+                : 'Building your French vocabulary'}
+            </p>
 
             {/* Filter Bar */}
             <div className="wotd-archive-filters">
@@ -780,32 +819,39 @@ function WOTDHub() {
 
             {/* Archive List */}
             <div className="wotd-archive-list">
-              {/* Mock archive items - will be replaced with real data */}
-              {generateMockArchive().map((item, index) => (
-                <div
-                  key={index}
-                  className="wotd-archive-item"
-                  onClick={() => {
-                    setCurrentDate(item.date);
-                    setView('single');
-                    loadWordData(item.date);
-                  }}
-                >
-                  <div className="wotd-archive-date">
-                    <div className="wotd-archive-month">{item.monthDay}</div>
-                    <div className="wotd-archive-year">{item.year}</div>
-                  </div>
-                  <div className="wotd-archive-word-info">
-                    <div className="wotd-archive-word">{item.word}</div>
-                    <div className="wotd-archive-translation">{item.translation}</div>
-                  </div>
-                  <div className="wotd-archive-meta">
-                    <span className="wotd-archive-badge">{item.type}</span>
-                    <span className="wotd-archive-badge">{item.level}</span>
-                  </div>
-                  <button className="wotd-archive-view-btn">View →</button>
+              {archiveLoading ? (
+                <div className="wotd-loading">Loading archive...</div>
+              ) : archiveWords.length === 0 ? (
+                <div className="wotd-archive-empty">
+                  <p>No words available yet. Check back soon!</p>
                 </div>
-              ))}
+              ) : (
+                archiveWords.map((item, index) => (
+                  <div
+                    key={index}
+                    className="wotd-archive-item"
+                    onClick={() => {
+                      setCurrentDate(item.date);
+                      setView('single');
+                      loadWordData(item.date);
+                    }}
+                  >
+                    <div className="wotd-archive-date">
+                      <div className="wotd-archive-month">{item.monthDay}</div>
+                      <div className="wotd-archive-year">{item.year}</div>
+                    </div>
+                    <div className="wotd-archive-word-info">
+                      <div className="wotd-archive-word">{item.word}</div>
+                      <div className="wotd-archive-translation">{item.translation}</div>
+                    </div>
+                    <div className="wotd-archive-meta">
+                      <span className="wotd-archive-badge">{item.type}</span>
+                      <span className="wotd-archive-badge">{item.level}</span>
+                    </div>
+                    <button className="wotd-archive-view-btn">View →</button>
+                  </div>
+                ))
+              )}
             </div>
 
             {/* Load More */}
