@@ -672,9 +672,15 @@ function WOTDHub() {
                 <div className="wotd-cta-card">
                   <h3>Want to learn more?</h3>
                   <p>Join 10,000+ learners mastering French with structured lessons</p>
-                  <button className="wotd-cta-button" onClick={() => openSignUp()}>
-                    Start Learning Free
-                  </button>
+                  <div className="wotd-cta-buttons">
+                    <button className="wotd-cta-secondary" onClick={() => openSignIn()}>
+                      Sign In
+                    </button>
+                    <button className="wotd-cta-primary" onClick={() => openSignUp()}>
+                      Start Learning Free
+                    </button>
+                  </div>
+                  <p className="wotd-cta-caption">Early access • No credit card required</p>
                 </div>
               </div>
             </section>

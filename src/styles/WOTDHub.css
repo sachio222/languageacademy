@@ -679,12 +679,39 @@
   margin: 0 0 2rem;
 }
 
-.wotd-cta-button {
+.wotd-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.wotd-cta-secondary {
+  background: transparent;
+  color: #665665;
+  border: 1px solid #e0e0e0;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.wotd-cta-secondary:hover {
+  background: #fafbfc;
+  color: #1a1a1a;
+  border-color: #3b82f6;
+}
+
+.wotd-cta-primary {
   background: #3b82f6;
   color: white;
   border: none;
-  padding: 1.125rem 2.5rem;
-  font-size: 1.0625rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   border-radius: 10px;
@@ -693,10 +720,17 @@
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
-.wotd-cta-button:hover {
+.wotd-cta-primary:hover {
   background: #2563eb;
   box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
   transform: translateY(-1px);
+}
+
+.wotd-cta-caption {
+  font-size: 0.9375rem;
+  color: #999999;
+  margin: 0;
+  font-weight: 400;
 }
 
 /* Usage Notes Card - Inline with content */
@@ -1393,13 +1427,12 @@
   }
 
   .wotd-signin-btn {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.8125rem;
+    display: none;
   }
 
   .wotd-signup-btn {
-    padding: 0.5rem 0.875rem;
-    font-size: 0.8125rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
   }
 
   .wotd-modules-btn {
@@ -1634,6 +1667,23 @@
 
   .wotd-cta-card p {
     font-size: 1rem;
+  }
+
+  .wotd-cta-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .wotd-cta-secondary {
+    order: 2;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
+
+  .wotd-cta-primary {
+    order: 1;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
   }
 
   .wotd-feedback-icon-large {
