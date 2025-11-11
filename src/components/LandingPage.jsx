@@ -22,7 +22,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
       <section className="landing-hero">
         <div className="hero-background"></div>
         <div className="landing-container">
-          <img src="/img/logov1.png" alt="Language Academy" className="landing-logo" />
+          <img src="/img/logov2.png" alt="Language Academy" className="landing-logo" />
           <div className="hero-badge">For serious learners</div>
           <h1 className="hero-title">
             Learn French through
