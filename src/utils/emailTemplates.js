@@ -93,7 +93,7 @@ export const emailTemplates = {
                           <a href="${APP_URL}?wotd=true&word=${wordId}&answer=A&date=${new Date().toISOString().split('T')[0]}" 
                              style="display: block; padding: 18px 24px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #1a1a1a; font-size: 16px; font-weight: 500; text-align: center; transition: all 0.15s ease;">
                             ${optionA}
-                          </a>
+            </a>
                         </td>
                       </tr>
                       <tr>
@@ -101,7 +101,7 @@ export const emailTemplates = {
                           <a href="${APP_URL}?wotd=true&word=${wordId}&answer=B&date=${new Date().toISOString().split('T')[0]}" 
                              style="display: block; padding: 18px 24px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #1a1a1a; font-size: 16px; font-weight: 500; text-align: center;">
                             ${optionB}
-                          </a>
+            </a>
                         </td>
                       </tr>
                       <tr>
@@ -109,7 +109,7 @@ export const emailTemplates = {
                           <a href="${APP_URL}?wotd=true&word=${wordId}&answer=C&date=${new Date().toISOString().split('T')[0]}" 
                              style="display: block; padding: 18px 24px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #1a1a1a; font-size: 16px; font-weight: 500; text-align: center;">
                             ${optionC}
-                          </a>
+            </a>
                         </td>
                       </tr>
                       <tr>
@@ -117,7 +117,7 @@ export const emailTemplates = {
                           <a href="${APP_URL}?wotd=true&word=${wordId}&answer=D&date=${new Date().toISOString().split('T')[0]}" 
                              style="display: block; padding: 18px 24px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #1a1a1a; font-size: 16px; font-weight: 500; text-align: center;">
                             ${optionD}
-                          </a>
+            </a>
                         </td>
                       </tr>
                     </table>
@@ -129,8 +129,8 @@ export const emailTemplates = {
                   <td style="padding: 0 0 48px 0; text-align: center;">
                     <a href="${APP_URL}?wotd=true&word=${wordId}&answer=X&date=${new Date().toISOString().split('T')[0]}" 
                        style="display: inline-block; padding: 0; background: none; border: none; text-decoration: underline; color: #999999; font-size: 15px;">
-                      I don't know
-                    </a>
+              I don't know
+            </a>
                   </td>
                 </tr>
 
@@ -148,10 +148,10 @@ export const emailTemplates = {
                       <a href="${APP_URL}/settings?section=notifications" style="color: #999999; text-decoration: none; font-size: 14px; margin: 0 12px;">Preferences</a>
                       <span style="color: #e0e0e0;">|</span>
                       <a href="${APP_URL}/unsubscribe?type=wotd" style="color: #999999; text-decoration: none; font-size: 14px; margin: 0 12px;">Unsubscribe</a>
-                    </div>
+          </div>
                     <div style="padding: 16px 0 0 0; font-size: 12px; color: #cccccc;">
                       © ${new Date().getFullYear()} Language Academy. All rights reserved.
-                    </div>
+        </div>
                   </td>
                 </tr>
 

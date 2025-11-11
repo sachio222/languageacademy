@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useClerk, UserButton } from '@clerk/clerk-react';
 import { useAuth } from '../hooks/useAuth';
+import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import SpeakButton from './SpeakButton';
 import '../styles/WOTDHub.css';
 
 function WOTDHub() {
   const { user } = useAuth();
   const { openSignIn, openSignUp } = useClerk();
+  const supabase = useSupabaseClient();
   const [view, setView] = useState('single'); // 'single' or 'archive'
   const [currentDate, setCurrentDate] = useState(null);
   const [wordData, setWordData] = useState(null);
@@ -47,8 +49,39 @@ function WOTDHub() {
   const loadWordData = async (date) => {
     setLoading(true);
     
-    // TODO: Replace with real Supabase query
-    // For now, mock data
+    try {
+      // Fetch from Supabase
+      const { data: wordData, error } = await supabase
+        .from('word_of_the_day')
+        .select('*')
+        .eq('date', date)
+        .single();
+
+      if (error && error.code !== 'PGRST116') {
+        console.error('Error loading WOTD:', error);
+        setLoading(false);
+        return;
+      }
+
+      // If no word found for this date, use mock data as fallback
+      if (!wordData) {
+        console.log('No word found for', date, '- using mock data');
+        loadMockData(date);
+        return;
+      }
+
+      setWordData(wordData);
+      updateProgress(date);
+      setLoading(false);
+
+    } catch (err) {
+      console.error('Unexpected error loading WOTD:', err);
+      loadMockData(date);
+    }
+  };
+
+  const loadMockData = (date) => {
+    // Fallback mock data
     const mockData = {
       id: 'aller-fr',
       date: date,
@@ -149,10 +182,7 @@ function WOTDHub() {
     };
     
     setWordData(mockData);
-    
-    // Update viewed words and streak
     updateProgress(date);
-    
     setLoading(false);
   };
 
