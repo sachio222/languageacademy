@@ -24,15 +24,23 @@ function WOTDHub() {
     const dateParam = params.get('date');
     const answerParam = params.get('answer');
     const wordParam = params.get('word');
+    const correctKeyParam = params.get('correct'); // Which letter is correct
+    
+    // Set date first
+    const targetDate = dateParam || new Date().toISOString().split('T')[0];
+    setCurrentDate(targetDate);
     
     // Set answer if from email
     if (answerParam) {
+      console.log('User answered:', answerParam);
       setUserAnswer(answerParam);
     }
     
-    // Set date (from URL or today)
-    const targetDate = dateParam || new Date().toISOString().split('T')[0];
-    setCurrentDate(targetDate);
+    // Store correct key for validation
+    if (correctKeyParam) {
+      console.log('Correct answer is:', correctKeyParam);
+      sessionStorage.setItem(`wotd_correct_${targetDate}`, correctKeyParam);
+    }
     
     // Load word data
     loadWordData(targetDate);
@@ -235,15 +243,22 @@ function WOTDHub() {
   };
 
   const getAnswerFeedback = () => {
-    if (!userAnswer) return null;
+    if (!userAnswer || !wordData) return null;
     
-    const isCorrect = userAnswer === 'A'; // Assuming A is always correct in mock
     const isDontKnow = userAnswer === 'X';
+    
+    // Get the correct answer key from sessionStorage
+    const correctKey = sessionStorage.getItem(`wotd_correct_${currentDate}`);
+    console.log('Validating - User answer:', userAnswer, 'Correct key:', correctKey);
+    
+    const isCorrect = correctKey ? (userAnswer === correctKey) : false;
+    
+    console.log('Is correct?', isCorrect);
     
     return {
       isCorrect,
       isDontKnow,
-      message: isDontKnow ? "Here's the answer" : (isCorrect ? "Correct!" : "Not quite"),
+      message: isDontKnow ? "Here's the answer" : (isCorrect ? "Excellent!" : "You're learning!"),
       icon: isDontKnow ? "📖" : (isCorrect ? "✓" : "×"),
       className: isDontKnow ? "neutral" : (isCorrect ? "correct" : "incorrect")
     };
