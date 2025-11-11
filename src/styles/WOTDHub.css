@@ -183,6 +183,31 @@
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
 }
 
+.wotd-modules-btn {
+  background: transparent;
+  color: #665665;
+  border: 1px solid #e0e0e0;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.wotd-modules-btn:hover {
+  background: #fafbfc;
+  color: #1a1a1a;
+  border-color: #3b82f6;
+}
+
+.wotd-user-avatar {
+  display: flex;
+  align-items: center;
+}
+
 /* Date Navigation */
 .wotd-date-nav {
   background: #fafbfc;
@@ -217,7 +242,7 @@
   font-size: 0.9375rem;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.15s ease;
+  transition: all 0.15s ease;
   padding: 0.5rem 1rem;
   border-radius: 6px;
 }
@@ -225,6 +250,11 @@
 .wotd-day-nav-btn:hover:not(:disabled) {
   color: #1a1a1a;
   background: #f7f9fc;
+  transform: scale(1.02);
+}
+
+.wotd-day-nav-btn:active:not(:disabled) {
+  transform: scale(0.98);
 }
 
 .wotd-day-nav-btn:disabled {
@@ -237,6 +267,32 @@
   padding: 2.5rem 0;
   border-bottom: 1px solid #f0f0f0;
   animation: fadeInUp 0.5s ease;
+  position: relative;
+}
+
+.wotd-feedback-dismiss {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  color: #999999;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.15s ease;
+}
+
+.wotd-feedback-dismiss:hover {
+  background: #f0f0f0;
+  color: #1a1a1a;
 }
 
 .wotd-feedback-correct {
@@ -365,6 +421,13 @@
   letter-spacing: -0.04em;
   margin: 0 0 0.75rem;
   color: #1a1a1a;
+  transition: color 0.15s ease;
+  cursor: default;
+  user-select: all;
+}
+
+.wotd-word:hover {
+  color: #3b82f6;
 }
 
 .wotd-pronunciation {
@@ -480,6 +543,12 @@
   border: 1px solid #f0f0f0;
   max-width: 700px;
   margin: 1rem auto 0;
+  transition: all 0.15s ease;
+}
+
+.wotd-definition-card:hover {
+  background: #f7f9fc;
+  border-color: #e0e0e0;
 }
 
 .wotd-definition-text {
@@ -536,12 +605,15 @@
   background: #fafbfc;
   border-radius: 8px;
   border: 1px solid #f0f0f0;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
+  cursor: default;
 }
 
 .wotd-example-item:hover {
+  background: #ffffff;
   border-color: #3b82f6;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+  transform: translateY(-2px);
 }
 
 .wotd-example-french {
@@ -662,13 +734,19 @@
   display: inline-flex;
   align-items: baseline;
   gap: 0.5rem;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .wotd-related-item:hover {
+  background: #ffffff;
   border-color: #3b82f6;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.12);
+  transform: translateY(-2px);
+}
+
+.wotd-related-item:active {
   transform: translateY(-1px);
 }
 
@@ -710,6 +788,12 @@
   background: #f7f9fc;
   border-radius: 8px;
   border-left: 3px solid #3b82f6;
+  transition: all 0.15s ease;
+}
+
+.wotd-grammar-card:hover {
+  background: #f0f5ff;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.08);
 }
 
 .wotd-grammar-list {
@@ -757,11 +841,18 @@
   color: #1a1a1a;
   white-space: nowrap;
   transition: all 0.15s ease;
+  cursor: pointer;
 }
 
 .wotd-collocation-item:hover {
   border-color: #3b82f6;
   background: #eff6ff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.1);
+}
+
+.wotd-collocation-item:active {
+  transform: translateY(0);
 }
 
 /* Idioms Section */
@@ -784,10 +875,23 @@
   flex-direction: column;
   gap: 0.375rem;
   transition: all 0.15s ease;
+  cursor: default;
 }
 
 .wotd-idiom-item:hover {
+  background: #fffef5;
   box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+  transform: translateX(3px);
+}
+
+.wotd-idiom-item:active {
+  transform: translateX(2px);
+}
+
+.wotd-idiom-expression-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .wotd-idiom-expression {
@@ -817,6 +921,12 @@
   background: linear-gradient(135deg, #f0fdf4 0%, #fafbfc 100%);
   border-radius: 8px;
   border: 1px solid #d1fae5;
+  transition: all 0.15s ease;
+}
+
+.wotd-etymology-card:hover {
+  background: linear-gradient(135deg, #ecfdf5 0%, #f7f9fc 100%);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
 }
 
 .wotd-etymology-text {
@@ -854,6 +964,12 @@
   background: #fafbfc;
   border-radius: 8px;
   border: 1px solid #e0e0e0;
+  transition: all 0.15s ease;
+}
+
+.wotd-metadata-card:hover {
+  background: #f7f9fc;
+  border-color: #d0d0d0;
 }
 
 .wotd-metadata-list {
@@ -1042,7 +1158,7 @@
   border: 1px solid #f0f0f0;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   animation: fadeInUp 0.5s ease backwards;
 }
 
@@ -1063,9 +1179,14 @@
 }
 
 .wotd-archive-item:hover {
+  background: #fafbfc;
   border-color: #3b82f6;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
   transform: translateY(-2px);
+}
+
+.wotd-archive-item:active {
+  transform: translateY(-1px);
 }
 
 .wotd-archive-date {
@@ -1272,22 +1393,35 @@
   }
 
   .wotd-signin-btn {
-    display: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
   }
 
   .wotd-signup-btn {
-    padding: 0.625rem 1rem;
-    font-size: 0.875rem;
-    white-space: nowrap;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .wotd-modules-btn {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
   }
 
   .wotd-nav-right {
-    gap: 0;
+    gap: 0.5rem;
     justify-content: flex-end;
   }
 
   .wotd-feedback {
     padding: 2rem 0;
+  }
+
+  .wotd-feedback-dismiss {
+    top: 1rem;
+    right: 1rem;
+    width: 28px;
+    height: 28px;
+    font-size: 1.5rem;
   }
 
   .wotd-feedback-content {

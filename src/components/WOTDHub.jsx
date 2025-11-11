@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useClerk, UserButton } from '@clerk/clerk-react';
 import { useAuth } from '../hooks/useAuth';
 import SpeakButton from './SpeakButton';
 import '../styles/WOTDHub.css';
 
 function WOTDHub() {
   const { user } = useAuth();
+  const { openSignIn, openSignUp } = useClerk();
   const [view, setView] = useState('single'); // 'single' or 'archive'
   const [currentDate, setCurrentDate] = useState(null);
   const [wordData, setWordData] = useState(null);
@@ -12,6 +14,7 @@ function WOTDHub() {
   const [loading, setLoading] = useState(true);
   const [streakCount, setStreakCount] = useState(0);
   const [viewedWords, setViewedWords] = useState([]);
+  const [showFeedback, setShowFeedback] = useState(true);
 
   // Parse URL params
   useEffect(() => {
@@ -117,9 +120,14 @@ function WOTDHub() {
       ],
       idioms: [
         {
-          expression: 'Ça va de soi',
-          meaning: 'That goes without saying',
-          level: 'B2'
+          expression: 'Allez-y !',
+          meaning: 'Go ahead! Help yourself!',
+          level: 'A2'
+        },
+        {
+          expression: 'Allons-y !',
+          meaning: 'Let\'s go! Come on!',
+          level: 'A2'
         },
         {
           expression: 'Aller droit au but',
@@ -127,9 +135,9 @@ function WOTDHub() {
           level: 'B1'
         },
         {
-          expression: 'Allez-y !',
-          meaning: 'Go ahead! Help yourself!',
-          level: 'A2'
+          expression: 'Ça va de soi',
+          meaning: 'That goes without saying',
+          level: 'B2'
         }
       ],
       related_words: [
@@ -283,10 +291,34 @@ function WOTDHub() {
             </div>
           </div>
           <div className="wotd-nav-right">
-            {!user && (
+            {user ? (
               <>
-                <button className="wotd-signin-btn">Sign In</button>
-                <button className="wotd-signup-btn">Sign Up Free</button>
+                <button 
+                  className="wotd-modules-btn"
+                  onClick={() => window.location.href = '/'}
+                >
+                  Modules
+                </button>
+                <div className="wotd-user-avatar">
+                  <UserButton
+                    appearance={{
+                      elements: {
+                        avatarBox: "w-8 h-8"
+                      }
+                    }}
+                    showName={false}
+                    fallbackRedirectUrl="/"
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <button className="wotd-signin-btn" onClick={() => openSignIn()}>
+                  Sign In
+                </button>
+                <button className="wotd-signup-btn" onClick={() => openSignUp()}>
+                  Sign Up Free
+                </button>
               </>
             )}
           </div>
@@ -326,9 +358,16 @@ function WOTDHub() {
           </div>
 
           {/* Answer Feedback - Celebration/Encouragement */}
-          {feedback && (
+          {feedback && showFeedback && (
             <div className={`wotd-feedback wotd-feedback-${feedback.className}`}>
               <div className="wotd-container">
+                <button 
+                  className="wotd-feedback-dismiss"
+                  onClick={() => setShowFeedback(false)}
+                  aria-label="Dismiss feedback"
+                >
+                  ×
+                </button>
                 <div className="wotd-feedback-content">
                   <div className="wotd-feedback-visual">
                     <div className={`wotd-feedback-icon-large wotd-icon-${feedback.className}`}>
@@ -498,7 +537,15 @@ function WOTDHub() {
                   <div className="wotd-idioms-list">
                     {wordData.idioms.map((idiom, idx) => (
                       <div key={idx} className="wotd-idiom-item">
-                        <div className="wotd-idiom-expression">{idiom.expression}</div>
+                        <div className="wotd-idiom-expression-row">
+                          <span className="wotd-idiom-expression">{idiom.expression}</span>
+                          <SpeakButton
+                            text={idiom.expression}
+                            language="fr-FR"
+                            size="small"
+                            className="wotd-idiom-speak"
+                          />
+                        </div>
                         <div className="wotd-idiom-meaning">→ {idiom.meaning}</div>
                         <span className="wotd-idiom-level">{idiom.level}</span>
                       </div>
@@ -580,7 +627,9 @@ function WOTDHub() {
                 <div className="wotd-cta-card">
                   <h3>Want to learn more?</h3>
                   <p>Join 10,000+ learners mastering French with structured lessons</p>
-                  <button className="wotd-cta-button">Start Learning Free</button>
+                  <button className="wotd-cta-button" onClick={() => openSignUp()}>
+                    Start Learning Free
+                  </button>
                 </div>
               </div>
             </section>
@@ -699,7 +748,9 @@ function WOTDHub() {
                     placeholder="your@email.com"
                     className="wotd-email-input"
                   />
-                  <button className="wotd-email-submit">Subscribe</button>
+                  <button className="wotd-email-submit" onClick={() => openSignUp()}>
+                    Subscribe
+                  </button>
                 </div>
                 <p className="wotd-email-disclaimer">No spam. Unsubscribe anytime.</p>
               </div>
