@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { logger } from '../utils/logger';
+import { emailTemplates } from '../utils/emailTemplates';
 import './CommunicationAdmin.css';
 
 const CommunicationAdmin = () => {
@@ -110,6 +111,78 @@ const CommunicationAdmin = () => {
     }
   };
 
+  const handleTestWOTD = async () => {
+    setTestLoading(true);
+    
+    if (!supabaseClient) {
+      alert('❌ No Supabase client - not authenticated?');
+      setTestLoading(false);
+      return;
+    }
+    
+    try {
+      // Stub data for WOTD test
+      const testData = {
+        word: 'aller',
+        pronunciation: 'a.le',
+        optionA: 'to go',      // correct answer
+        optionB: 'to have',
+        optionC: 'to want',
+        optionD: 'to make',
+        wordId: 'aller-fr',
+        partOfSpeech: 'verb',
+        difficultyLabel: 'A2 Level'
+      };
+
+      // Generate the email HTML using our template
+      const { subject, html } = emailTemplates.wordOfTheDay(
+        testData.word,
+        testData.pronunciation,
+        testData.optionA,
+        testData.optionB,
+        testData.optionC,
+        testData.optionD,
+        testData.wordId,
+        testData.partOfSpeech,
+        testData.difficultyLabel
+      );
+
+      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-resend-email`;
+      
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          to: 'brainpowerux@gmail.com',
+          subject: subject,
+          html: html,
+          email_type: 'word_of_day',
+          metadata: { 
+            word: testData.word,
+            word_id: testData.wordId,
+            test: true 
+          }
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert('✅ WOTD email sent! Check brainpowerux@gmail.com');
+        loadLogs();
+      } else {
+        alert('❌ ' + (result.reason || result.error || 'Unknown error'));
+      }
+    } catch (error) {
+      alert('❌ Error: ' + error.message);
+    } finally {
+      setTestLoading(false);
+    }
+  };
+
   return (
     <div className="communication-admin">
       <div className="communication-admin-header">
@@ -142,7 +215,14 @@ const CommunicationAdmin = () => {
               disabled={testLoading}
               className="test-email-btn"
             >
-              {testLoading ? 'Sending...' : 'Test Resend Email to brainpowerux@gmail.com'}
+              {testLoading ? 'Sending...' : 'Test Simple Email'}
+            </button>
+            <button 
+              onClick={handleTestWOTD}
+              disabled={testLoading}
+              className="test-email-btn wotd-btn"
+            >
+              {testLoading ? 'Sending...' : 'Test Word of the Day Email'}
             </button>
           </div>
 

@@ -418,6 +418,9 @@
   background: #f9fafb;
   border-radius: 8px;
   border: 1px solid #e5e7eb;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .test-email-btn {
@@ -439,6 +442,18 @@
 .test-email-btn:disabled {
   background-color: #93c5fd;
   cursor: not-allowed;
+}
+
+.test-email-btn.wotd-btn {
+  background-color: #059669;
+}
+
+.test-email-btn.wotd-btn:hover:not(:disabled) {
+  background-color: #047857;
+}
+
+.test-email-btn.wotd-btn:disabled {
+  background-color: #6ee7b7;
 }
 
 /* Mobile Responsive */
