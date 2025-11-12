@@ -8,6 +8,7 @@ import SafariTTSHelper from './components/SafariTTSHelper';
 import OfflineIndicator from './components/OfflineIndicator';
 import CookieBanner from './components/CookieBanner';
 import AdminButtons from './components/AdminButtons';
+import { Analytics } from "@vercel/analytics/next"
 
 // Lazy load heavy/conditional components
 const ReferenceModules = lazy(() => import('./components/ReferenceModules'));
@@ -56,7 +57,7 @@ function App() {
 
   // Beta notice modal state
   const [showBetaNotice, setShowBetaNotice] = useState(false);
-  
+
   // Notification settings modal state
   const [showNotificationSettings, setShowNotificationSettings] = useState(() => {
     const params = new URLSearchParams(window.location.search);
@@ -72,7 +73,7 @@ function App() {
   const isWordOfTheDay = urlParams.get('wotd') || urlParams.get('word-of-the-day');
   const isUnsubscribe = urlParams.get('unsubscribe');
   const showSettings = urlParams.get('settings') !== null;
-  
+
   // Unsubscribe page (standalone, no auth required)
   if (isUnsubscribe !== null) {
     return (
@@ -81,7 +82,7 @@ function App() {
       </Suspense>
     );
   }
-  
+
   // Word of the Day hub (standalone, no auth required)
   if (isWordOfTheDay) {
     return (
@@ -107,14 +108,14 @@ function App() {
   // Identify user in Clarity when authenticated
   useEffect(() => {
     if (!isAuthenticated || !supabaseUser) return;
-    
+
     // Identify user with their Supabase ID
     const userId = supabaseUser.id;
     const email = supabaseUser.email || 'unknown';
     const friendlyName = email.split('@')[0]; // Use email username as friendly name
-    
+
     identifyClarityUser(userId, null, null, friendlyName);
-    
+
     // Set custom tags for user segmentation
     setClarityTag('userType', supabaseUser.role || 'student');
     setClarityTag('hasSeenBetaWelcome', supabaseUser.has_seen_beta_welcome ? 'yes' : 'no');
@@ -123,7 +124,7 @@ function App() {
   // Track navigation to special views in Clarity
   useEffect(() => {
     if (!navigation.currentLesson) return;
-    
+
     if (navigation.currentLesson === 'vocabulary') {
       trackClarityEvent('vocabularyDashboardOpened');
       setClarityTag('currentView', 'vocabulary');
@@ -491,7 +492,7 @@ function App() {
             Manage Cookies
           </button>
           {' • '}
-          <a 
+          <a
             href="mailto:support@languageacademy.io"
             style={{
               color: 'inherit',
@@ -593,8 +594,8 @@ function App() {
   return isDevMode ? (
     <DevModeWrapper>{content}</DevModeWrapper>
   ) : (
-    <AuthWrapper 
-      onBackToLanding={navigation.handleBackToLanding} 
+    <AuthWrapper
+      onBackToLanding={navigation.handleBackToLanding}
       onOpenDictionary={navigation.handleOpenDictionary}
       onShowReportCard={navigation.handleShowReportCard}
     >

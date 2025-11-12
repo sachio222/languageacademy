@@ -129,7 +129,11 @@ serve(async (req) => {
         from: "Language Academy <support@languageacademy.io>",
         to: to, // String, not array
         subject: subject,
-        html: html
+        html: html,
+        headers: {
+          "List-Unsubscribe": `<https://languageacademy.io?unsubscribe&type=${email_type}${user_id ? '&user=' + user_id : ''}>`,
+          "List-Unsubscribe-Post": "List-Unsubscribe=One-Click"
+        }
       })
     });
 

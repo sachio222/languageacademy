@@ -25,6 +25,7 @@
     "@supabase/supabase-js": "^2.74.0",
     "@tanstack/react-query": "^5.90.5",
     "@tanstack/react-query-devtools": "^5.90.2",
+    "@vercel/analytics": "^1.5.0",
     "edge-tts-client": "^1.0.2",
     "jsdom": "^27.0.1",
     "jspdf": "^2.5.2",
