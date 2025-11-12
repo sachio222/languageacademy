@@ -6,6 +6,7 @@ import App from './App.jsx'
 import { initializePerformanceMonitoring } from './utils/performanceMonitor'
 import { initializeClarity, trackUTMParameters } from './utils/clarity';
 import { logger } from "./utils/logger";
+import { Analytics } from '@vercel/analytics/react';
 
 // Import your publishable key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -36,6 +37,7 @@ function AppWithProviders() {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
     <AppWithProviders />
+    <Analytics />
   </ClerkProvider>
 )
 

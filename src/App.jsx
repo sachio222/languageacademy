@@ -8,7 +8,6 @@ import SafariTTSHelper from './components/SafariTTSHelper';
 import OfflineIndicator from './components/OfflineIndicator';
 import CookieBanner from './components/CookieBanner';
 import AdminButtons from './components/AdminButtons';
-import { Analytics } from "@vercel/analytics/next"
 
 // Lazy load heavy/conditional components
 const ReferenceModules = lazy(() => import('./components/ReferenceModules'));
