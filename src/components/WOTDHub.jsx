@@ -243,11 +243,16 @@ function WOTDHub() {
     }
     
     setCurrentDate(newDate);
+    setUserAnswer(null); // Clear answer when navigating to different day
+    setShowFeedback(true); // Reset feedback visibility
     loadWordData(newDate);
 
-    // Update URL
+    // Update URL - clear answer-related params when navigating to different day
     const params = new URLSearchParams(window.location.search);
     params.set('date', newDate);
+    params.delete('answer');
+    params.delete('correct');
+    params.delete('word');
     window.history.pushState({}, '', `${window.location.pathname}?${params.toString()}`);
   };
 
@@ -832,8 +837,17 @@ function WOTDHub() {
                   className="wotd-archive-item"
                   onClick={() => {
                     setCurrentDate(item.date);
+                    setUserAnswer(null); // Clear answer when navigating from archive
+                    setShowFeedback(true); // Reset feedback visibility
                     setView('single');
                     loadWordData(item.date);
+                    // Clear answer-related params when navigating from archive
+                    const params = new URLSearchParams(window.location.search);
+                    params.set('date', item.date);
+                    params.delete('answer');
+                    params.delete('correct');
+                    params.delete('word');
+                    window.history.pushState({}, '', `${window.location.pathname}?${params.toString()}`);
                   }}
                 >
                   <div className="wotd-archive-date">
