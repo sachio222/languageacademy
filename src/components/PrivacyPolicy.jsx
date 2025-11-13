@@ -85,6 +85,22 @@ function PrivacyPolicy({ onClose }) {
             <li>Opt out of marketing communications</li>
             <li>Export your learning data</li>
           </ul>
+          <p>
+            <strong>Data Deletion:</strong> If you signed in using Facebook, you can request data deletion 
+            by following our{' '}
+            <a href="?data-deletion" onClick={(e) => {
+              e.preventDefault();
+              // This will be handled by parent component
+              window.location.href = '?data-deletion';
+            }}>
+              Data Deletion Instructions
+            </a>
+            {' '}or by emailing us at{' '}
+            <a href="mailto:support@languageacademy.io?subject=Data%20Deletion%20Request">
+              support@languageacademy.io
+            </a>
+            .
+          </p>
         </section>
 
         <section>

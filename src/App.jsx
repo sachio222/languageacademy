@@ -26,6 +26,7 @@ const UnsubscribePage = lazy(() => import('./components/UnsubscribePage'));
 const NotificationSettings = lazy(() => import('./components/NotificationSettings'));
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./components/TermsOfService'));
+const DataDeletionPage = lazy(() => import('./components/DataDeletionPage'));
 import { initializeClarity, identifyClarityUser, setClarityTag, trackClarityEvent, upgradeClaritySession } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -73,6 +74,10 @@ function App() {
   const [showTerms, setShowTerms] = useState(() => {
     const params = new URLSearchParams(window.location.search);
     return params.get('terms') !== null;
+  });
+  const [showDataDeletion, setShowDataDeletion] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('data-deletion') !== null;
   });
 
   // Get auth info
@@ -191,12 +196,13 @@ function App() {
     setShowBetaNotice(true);
   }, [isAuthenticated, supabaseUser, supabaseClient, isDevMode]);
 
-  // Handle URL changes for privacy/terms modals
+  // Handle URL changes for privacy/terms/data-deletion modals
   useEffect(() => {
     const handlePopState = () => {
       const urlParams = new URLSearchParams(window.location.search);
       setShowPrivacy(urlParams.get('privacy') !== null);
       setShowTerms(urlParams.get('terms') !== null);
+      setShowDataDeletion(urlParams.get('data-deletion') !== null);
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -211,6 +217,9 @@ function App() {
     }
     if (urlParams.get('terms') !== null && !showTerms) {
       setShowTerms(true);
+    }
+    if (urlParams.get('data-deletion') !== null && !showDataDeletion) {
+      setShowDataDeletion(true);
     }
   }, []);
 
@@ -663,6 +672,22 @@ function App() {
               // Remove terms query parameter from URL
               const urlParams = new URLSearchParams(window.location.search);
               urlParams.delete('terms');
+              const newUrl = new URL(window.location);
+              newUrl.search = urlParams.toString();
+              window.history.replaceState({}, '', newUrl);
+            }}
+          />
+        </Suspense>
+      )}
+
+      {showDataDeletion && (
+        <Suspense fallback={null}>
+          <DataDeletionPage
+            onClose={() => {
+              setShowDataDeletion(false);
+              // Remove data-deletion query parameter from URL
+              const urlParams = new URLSearchParams(window.location.search);
+              urlParams.delete('data-deletion');
               const newUrl = new URL(window.location);
               newUrl.search = urlParams.toString();
               window.history.replaceState({}, '', newUrl);

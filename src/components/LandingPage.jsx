@@ -4,6 +4,7 @@ import ExercisePreview from './ExercisePreview'
 // import Testimonials from './Testimonials'
 import PrivacyPolicy from './PrivacyPolicy'
 import TermsOfService from './TermsOfService'
+import DataDeletionPage from './DataDeletionPage'
 import '../styles/Landing.css'
 
 function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
@@ -16,13 +17,18 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
     const params = new URLSearchParams(window.location.search);
     return params.get('terms') !== null;
   })
+  const [showDataDeletion, setShowDataDeletion] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('data-deletion') !== null;
+  })
 
-  // Handle URL changes for privacy/terms modals
+  // Handle URL changes for privacy/terms/data-deletion modals
   useEffect(() => {
     const handlePopState = () => {
       const urlParams = new URLSearchParams(window.location.search);
       setShowPrivacy(urlParams.get('privacy') !== null);
       setShowTerms(urlParams.get('terms') !== null);
+      setShowDataDeletion(urlParams.get('data-deletion') !== null);
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -37,6 +43,9 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
     }
     if (urlParams.get('terms') !== null && !showTerms) {
       setShowTerms(true);
+    }
+    if (urlParams.get('data-deletion') !== null && !showDataDeletion) {
+      setShowDataDeletion(true);
     }
   }, []);
 
@@ -442,6 +451,19 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
             // Remove terms query parameter from URL
             const urlParams = new URLSearchParams(window.location.search);
             urlParams.delete('terms');
+            const newUrl = new URL(window.location);
+            newUrl.search = urlParams.toString();
+            window.history.replaceState({}, '', newUrl);
+          }}
+        />
+      )}
+      {showDataDeletion && (
+        <DataDeletionPage
+          onClose={() => {
+            setShowDataDeletion(false);
+            // Remove data-deletion query parameter from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.delete('data-deletion');
             const newUrl = new URL(window.location);
             newUrl.search = urlParams.toString();
             window.history.replaceState({}, '', newUrl);
