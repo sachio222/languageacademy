@@ -61,3 +61,4 @@ None required! Works out of the box.
 - **Render:** Free tier available
 - **Self-hosted:** $0 if you have a VPS
 
+

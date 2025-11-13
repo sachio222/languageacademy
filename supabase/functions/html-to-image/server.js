@@ -78,8 +78,57 @@ app.post('/api/html-to-image', async (req, res) => {
     const word = req.body.word || 'slide';
     const slideNumber = req.body.slideNumber || req.body.slide_number || '0';
     const date = req.body.date || new Date().toISOString().split('T')[0];
-    const fileName = `${date}-${word}-slide-${slideNumber}.png`;
-    const filePath = path.join(outputDir, fileName);
+    
+    // Base folder name: date-word
+    const baseFolderName = `${date}-${word}`;
+    
+    // Strategy: Always try base folder first. If it exists and is complete, find next available.
+    // All slides in same batch will use same folder name, so they'll naturally group together.
+    let wordFolder = path.join(outputDir, baseFolderName);
+    let counter = 0;
+    
+    // Check if base folder exists and is complete
+    if (fs.existsSync(wordFolder)) {
+      const slide1Path = path.join(wordFolder, 'slide-1.png');
+      const slide2Path = path.join(wordFolder, 'slide-2.png');
+      const slide3Path = path.join(wordFolder, 'slide-3.png');
+      const slide4Path = path.join(wordFolder, 'slide-4.png');
+      
+      // If all 4 slides exist, this batch is complete - find next available folder
+      if (fs.existsSync(slide1Path) && fs.existsSync(slide2Path) && 
+          fs.existsSync(slide3Path) && fs.existsSync(slide4Path)) {
+        counter = 1;
+        wordFolder = path.join(outputDir, `${baseFolderName}-${counter}`);
+        
+        // Keep incrementing until we find an incomplete or non-existent folder
+        while (fs.existsSync(wordFolder)) {
+          const testSlide1 = path.join(wordFolder, 'slide-1.png');
+          const testSlide2 = path.join(wordFolder, 'slide-2.png');
+          const testSlide3 = path.join(wordFolder, 'slide-3.png');
+          const testSlide4 = path.join(wordFolder, 'slide-4.png');
+          
+          // If this folder is also complete, try next
+          if (fs.existsSync(testSlide1) && fs.existsSync(testSlide2) && 
+              fs.existsSync(testSlide3) && fs.existsSync(testSlide4)) {
+            counter++;
+            wordFolder = path.join(outputDir, `${baseFolderName}-${counter}`);
+          } else {
+            // Found incomplete folder, use it
+            break;
+          }
+        }
+      }
+      // If base folder exists but is incomplete, use it (all slides will use same base name)
+    }
+    
+    // Create folder if it doesn't exist
+    if (!fs.existsSync(wordFolder)) {
+      fs.mkdirSync(wordFolder, { recursive: true });
+    }
+    
+    // Simple filename inside the folder
+    const fileName = `slide-${slideNumber}.png`;
+    const filePath = path.join(wordFolder, fileName);
     
     fs.writeFileSync(filePath, buffer);
     console.log(`✅ Saved image to: ${filePath}`);

@@ -24,6 +24,8 @@ const WordOfTheDay = lazy(() => import('./components/WordOfTheDay'));
 const WOTDHub = lazy(() => import('./components/WOTDHub'));
 const UnsubscribePage = lazy(() => import('./components/UnsubscribePage'));
 const NotificationSettings = lazy(() => import('./components/NotificationSettings'));
+const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
+const TermsOfService = lazy(() => import('./components/TermsOfService'));
 import { initializeClarity, identifyClarityUser, setClarityTag, trackClarityEvent, upgradeClaritySession } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -61,6 +63,16 @@ function App() {
   const [showNotificationSettings, setShowNotificationSettings] = useState(() => {
     const params = new URLSearchParams(window.location.search);
     return params.get('settings') !== null && params.get('section') === 'notifications';
+  });
+
+  // Legal pages modal state
+  const [showPrivacy, setShowPrivacy] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('privacy') !== null;
+  });
+  const [showTerms, setShowTerms] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('terms') !== null;
   });
 
   // Get auth info
@@ -178,6 +190,29 @@ function App() {
     // All criteria met - show the beta welcome modal
     setShowBetaNotice(true);
   }, [isAuthenticated, supabaseUser, supabaseClient, isDevMode]);
+
+  // Handle URL changes for privacy/terms modals
+  useEffect(() => {
+    const handlePopState = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      setShowPrivacy(urlParams.get('privacy') !== null);
+      setShowTerms(urlParams.get('terms') !== null);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Sync modal state with URL params on mount and URL changes
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('privacy') !== null && !showPrivacy) {
+      setShowPrivacy(true);
+    }
+    if (urlParams.get('terms') !== null && !showTerms) {
+      setShowTerms(true);
+    }
+  }, []);
 
   // Exercise completion handler
   const handleExerciseComplete = async (exerciseId, moduleId, unitId, userAnswer, correctAnswer, timeSpent = 0, hintUsed = false, isCorrect = null) => {
@@ -492,7 +527,41 @@ function App() {
           </button>
           {' • '}
           <a
-            href="mailto:support@languageacademy.io"
+            href="?privacy"
+            onClick={(e) => {
+              e.preventDefault();
+              setShowPrivacy(true);
+              const url = new URL(window.location);
+              url.searchParams.set('privacy', '');
+              window.history.pushState({}, '', url);
+            }}
+            style={{
+              color: 'inherit',
+              textDecoration: 'none'
+            }}
+          >
+            Privacy
+          </a>
+          {' • '}
+          <a
+            href="?terms"
+            onClick={(e) => {
+              e.preventDefault();
+              setShowTerms(true);
+              const url = new URL(window.location);
+              url.searchParams.set('terms', '');
+              window.history.pushState({}, '', url);
+            }}
+            style={{
+              color: 'inherit',
+              textDecoration: 'none'
+            }}
+          >
+            Terms
+          </a>
+          {' • '}
+          <a
+            href="mailto:support@languageacademy.io?subject=Contact%20from%20Language%20Academy"
             style={{
               color: 'inherit',
               textDecoration: 'none'
@@ -565,6 +634,38 @@ function App() {
               if (isAuthenticated && supabaseUser && supabaseClient) {
                 await markBetaWelcomeAsSeen(supabaseClient, supabaseUser);
               }
+            }}
+          />
+        </Suspense>
+      )}
+
+      {showPrivacy && (
+        <Suspense fallback={null}>
+          <PrivacyPolicy
+            onClose={() => {
+              setShowPrivacy(false);
+              // Remove privacy query parameter from URL
+              const urlParams = new URLSearchParams(window.location.search);
+              urlParams.delete('privacy');
+              const newUrl = new URL(window.location);
+              newUrl.search = urlParams.toString();
+              window.history.replaceState({}, '', newUrl);
+            }}
+          />
+        </Suspense>
+      )}
+
+      {showTerms && (
+        <Suspense fallback={null}>
+          <TermsOfService
+            onClose={() => {
+              setShowTerms(false);
+              // Remove terms query parameter from URL
+              const urlParams = new URLSearchParams(window.location.search);
+              urlParams.delete('terms');
+              const newUrl = new URL(window.location);
+              newUrl.search = urlParams.toString();
+              window.history.replaceState({}, '', newUrl);
             }}
           />
         </Suspense>

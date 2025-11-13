@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Reading11Preview from './Reading11Preview'
 import ExercisePreview from './ExercisePreview'
 // import Testimonials from './Testimonials'
@@ -8,8 +8,37 @@ import '../styles/Landing.css'
 
 function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
   const [email, setEmail] = useState('')
-  const [showPrivacy, setShowPrivacy] = useState(false)
-  const [showTerms, setShowTerms] = useState(false)
+  const [showPrivacy, setShowPrivacy] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('privacy') !== null;
+  })
+  const [showTerms, setShowTerms] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('terms') !== null;
+  })
+
+  // Handle URL changes for privacy/terms modals
+  useEffect(() => {
+    const handlePopState = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      setShowPrivacy(urlParams.get('privacy') !== null);
+      setShowTerms(urlParams.get('terms') !== null);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Sync modal state with URL params on mount
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('privacy') !== null && !showPrivacy) {
+      setShowPrivacy(true);
+    }
+    if (urlParams.get('terms') !== null && !showTerms) {
+      setShowTerms(true);
+    }
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -357,15 +386,35 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
             Built with love • Inspired by cognitive science research
           </p>
           <div className="footer-links">
-            <button onClick={() => setShowPrivacy(true)} className="footer-link">
+            <a
+              href="?privacy"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowPrivacy(true);
+                const url = new URL(window.location);
+                url.searchParams.set('privacy', '');
+                window.history.pushState({}, '', url);
+              }}
+              className="footer-link"
+            >
               Privacy
-            </button>
+            </a>
             <span className="footer-separator">•</span>
-            <button onClick={() => setShowTerms(true)} className="footer-link">
+            <a
+              href="?terms"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowTerms(true);
+                const url = new URL(window.location);
+                url.searchParams.set('terms', '');
+                window.history.pushState({}, '', url);
+              }}
+              className="footer-link"
+            >
               Terms
-            </button>
+            </a>
             <span className="footer-separator">•</span>
-            <a href="mailto:support@languageacademy.io" className="footer-link">
+            <a href="mailto:support@languageacademy.io?subject=Contact%20from%20Language%20Academy" className="footer-link">
               Contact
             </a>
           </div>
@@ -373,8 +422,32 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
       </footer>
 
       {/* Legal Modals */}
-      {showPrivacy && <PrivacyPolicy onClose={() => setShowPrivacy(false)} />}
-      {showTerms && <TermsOfService onClose={() => setShowTerms(false)} />}
+      {showPrivacy && (
+        <PrivacyPolicy
+          onClose={() => {
+            setShowPrivacy(false);
+            // Remove privacy query parameter from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.delete('privacy');
+            const newUrl = new URL(window.location);
+            newUrl.search = urlParams.toString();
+            window.history.replaceState({}, '', newUrl);
+          }}
+        />
+      )}
+      {showTerms && (
+        <TermsOfService
+          onClose={() => {
+            setShowTerms(false);
+            // Remove terms query parameter from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.delete('terms');
+            const newUrl = new URL(window.location);
+            newUrl.search = urlParams.toString();
+            window.history.replaceState({}, '', newUrl);
+          }}
+        />
+      )}
     </div>
   )
 }
