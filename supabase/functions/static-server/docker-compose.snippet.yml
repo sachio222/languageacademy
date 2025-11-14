@@ -1,0 +1,45 @@
+# Add this to your existing docker-compose.yml where you have n8n and cloudflared
+
+services:
+  static-server:
+    build: ./path/to/languageacademy/supabase/functions/static-server
+    container_name: static-server
+    ports:
+      - "3001:3001"
+    networks:
+      - n8n-network  # IMPORTANT: Use the SAME network as n8n and cloudflared
+    volumes:
+      # Mount the directory where images are saved
+      - ~/Desktop/instagram-slides:/root/Desktop/instagram-slides
+    environment:
+      - PORT=3001
+    depends_on:
+      # Wait for cloudflared to start (but don't require it to be healthy)
+      - cloudflared
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/health').then(r=>r.json()).then(d=>{if(d.status!=='ready'&&d.uptime>120)throw new Error('Not ready after 120s')})"]
+      interval: 10s
+      timeout: 5s
+      start_period: 120s  # Give it 2 minutes to auto-configure
+      retries: 3
+
+# Make sure your cloudflared service looks something like this:
+# (adjust the name if yours is different)
+#
+# cloudflared:
+#   image: cloudflare/cloudflared:latest
+#   container_name: n8n-cloudflared  # or just "cloudflared"
+#   command: tunnel --url http://static-server:3001 --metrics 0.0.0.0:2000
+#   ports:
+#     - "2000:2000"  # Metrics port
+#   networks:
+#     - n8n-network
+#   restart: unless-stopped
+
+# Make sure all services use the same network:
+networks:
+  n8n-network:
+    name: n8n-network
+    driver: bridge
+

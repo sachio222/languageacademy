@@ -1,3 +1,8 @@
+// ⚠️ DEPRECATED - DO NOT USE ⚠️
+// This file is NOT used by the n8n workflow
+// The actual server is at: /Users/jupiter/dev/docker/n8n-plus/html-to-image/server.js
+// This is just a reference/template for deploying to external services
+
 // HTML to Image Service using Puppeteer
 // Deploy to Vercel, Railway, Render, or any Node.js host
 
@@ -89,23 +94,25 @@ app.post('/api/html-to-image', async (req, res) => {
     
     // Check if base folder exists and is complete
     if (fs.existsSync(wordFolder)) {
-      const slide1Path = path.join(wordFolder, 'slide-1.png');
-      const slide2Path = path.join(wordFolder, 'slide-2.png');
-      const slide3Path = path.join(wordFolder, 'slide-3.png');
-      const slide4Path = path.join(wordFolder, 'slide-4.png');
+      const slide1Path = path.join(wordFolder, `${baseFolderName}-slide-1.png`);
+      const slide2Path = path.join(wordFolder, `${baseFolderName}-slide-2.png`);
+      const slide3Path = path.join(wordFolder, `${baseFolderName}-slide-3.png`);
+      const slide4Path = path.join(wordFolder, `${baseFolderName}-slide-4.png`);
       
       // If all 4 slides exist, this batch is complete - find next available folder
       if (fs.existsSync(slide1Path) && fs.existsSync(slide2Path) && 
           fs.existsSync(slide3Path) && fs.existsSync(slide4Path)) {
         counter = 1;
-        wordFolder = path.join(outputDir, `${baseFolderName}-${counter}`);
+        const nextFolderName = `${baseFolderName}-${counter}`;
+        wordFolder = path.join(outputDir, nextFolderName);
         
         // Keep incrementing until we find an incomplete or non-existent folder
         while (fs.existsSync(wordFolder)) {
-          const testSlide1 = path.join(wordFolder, 'slide-1.png');
-          const testSlide2 = path.join(wordFolder, 'slide-2.png');
-          const testSlide3 = path.join(wordFolder, 'slide-3.png');
-          const testSlide4 = path.join(wordFolder, 'slide-4.png');
+          const currentFolderName = `${baseFolderName}-${counter}`;
+          const testSlide1 = path.join(wordFolder, `${currentFolderName}-slide-1.png`);
+          const testSlide2 = path.join(wordFolder, `${currentFolderName}-slide-2.png`);
+          const testSlide3 = path.join(wordFolder, `${currentFolderName}-slide-3.png`);
+          const testSlide4 = path.join(wordFolder, `${currentFolderName}-slide-4.png`);
           
           // If this folder is also complete, try next
           if (fs.existsSync(testSlide1) && fs.existsSync(testSlide2) && 
@@ -126,8 +133,8 @@ app.post('/api/html-to-image', async (req, res) => {
       fs.mkdirSync(wordFolder, { recursive: true });
     }
     
-    // Simple filename inside the folder
-    const fileName = `slide-${slideNumber}.png`;
+    // Filename format: {date}-{word}-slide-{number}.png
+    const fileName = `${date}-${word}-slide-${slideNumber}.png`;
     const filePath = path.join(wordFolder, fileName);
     
     fs.writeFileSync(filePath, buffer);
@@ -179,7 +186,10 @@ app.post('/api/html-to-image', async (req, res) => {
       image: base64,
       filePath: filePath,
       fileName: fileName,
-      savedTo: outputDir
+      savedTo: outputDir,
+      word: word,
+      date: date,
+      slide_number: slideNumber
     });
 
   } catch (error) {

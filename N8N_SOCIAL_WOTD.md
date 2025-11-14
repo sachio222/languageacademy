@@ -67,6 +67,59 @@ Creates a 4-slide carousel post for Word of the Day on Instagram using Pexels im
 
 ---
 
+## 🚀 Infrastructure Setup (Docker Services)
+
+Before setting up the workflow, you need three Docker services running:
+
+### Required Services:
+
+1. **n8n** - Workflow automation platform
+2. **cloudflared** - Creates public tunnel to expose images
+3. **static-server** - Auto-detects tunnel URL and serves images ⭐ NEW
+
+### Quick Setup:
+
+```bash
+# 1. Build static-server
+cd supabase/functions/static-server
+docker build -t static-server:latest .
+
+# 2. Add to docker-compose.yml (see docker-compose.snippet.yml)
+# 3. Start services
+docker-compose up -d
+
+# 4. Verify auto-detection worked
+curl http://localhost:3001/health
+```
+
+**Expected response:**
+
+```json
+{
+  "status": "ready",
+  "configured": true,
+  "tunnelUrl": "https://abc123xyz.trycloudflare.com",
+  "autoInitSucceeded": true
+}
+```
+
+### What's Different?
+
+**🎉 No more manual tunnel URL configuration!**
+
+- **Old way:** n8n had to fetch cloudflared metrics and configure static-server every time
+- **New way:** static-server auto-detects on startup, n8n just checks if it's ready
+
+**Benefits:**
+
+- ⚡ Faster workflow execution (skips 3 nodes when auto-detection works)
+- 🛡️ Resilient (falls back to manual if auto-detection fails)
+- 🔄 Zero maintenance (auto-configures on every Docker restart)
+
+**📖 Full setup guide:** See `/supabase/functions/DOCKER_SETUP_GUIDE.md`
+
+---
+
 ## Calling This Workflow from Another Workflow
 
 When calling this workflow from another workflow (e.g., from "Verify WOTD"), you **must** map the inputs explicitly.
@@ -322,9 +375,11 @@ if (usedPexelsIds.size > 0) {
   );
 }
 
-// Get Pexels API response from HTTP Request node
-const pexelsResponse = $("Get Pexels Image").first().json;
-const pexelsData = pexelsResponse;
+// Get Pexels API response from Merge (could be original search OR broader search)
+const mergedData = $input.all();
+// Find the item with photos array (the Pexels response)
+const pexelsItem = mergedData.find((item) => item.json.photos);
+const pexelsData = pexelsItem ? pexelsItem.json : mergedData[0].json;
 
 if (!pexelsData.photos || pexelsData.photos.length === 0) {
   throw new Error(`No images found in Pexels response`);
@@ -435,92 +490,15 @@ return {
 
 **Purpose:** If all images from the word-specific search are used, try a broader generic search to find different images.
 
----
-
-## Node 3e: Filter Fallback Results (Code)
-
-**Type:** Code  
-**Language:** JavaScript  
-**Placement:** After Node 3d (Broader Search HTTP Request)
-
-**Purpose:** Filter the broader search results to find an unused image.
-
-```javascript
-// Get WOTD data
-const wotdData = $("When Executed by Another Workflow").first().json;
-const wotd = wotdData.data || wotdData;
-const word = wotd.word;
-
-// Get list of used image IDs from Airtable
-const usedImages = $("Get Used Images from Airtable").all();
-// Normalize all IDs to strings for consistent comparison
-const usedPexelsIds = new Set(
-  usedImages
-    .map((item) => {
-      // Handle different Airtable response structures
-      const id =
-        item.json.fields?.pexels_id || item.json.pexels_id || item.json.id;
-      return id ? String(id).trim() : null;
-    })
-    .filter((id) => id != null && id !== "")
-);
-
-// Get broader search results from Node 3d
-const fallbackResponse = $("Broader Search").first().json;
-const fallbackData = fallbackResponse;
-
-if (!fallbackData.photos || fallbackData.photos.length === 0) {
-  throw new Error(`No images found in fallback search`);
-}
-
-// Find first unused image from broader search
-let selectedPhoto = null;
-for (const photo of fallbackData.photos) {
-  const photoId = String(photo.id).trim();
-  const isUsed = usedPexelsIds.has(photoId);
-
-  console.log(`Fallback: Checking photo ID: ${photoId}, Used: ${isUsed}`);
-
-  if (!isUsed) {
-    selectedPhoto = photo;
-    console.log(`Fallback: Selected unused photo: ${photoId}`);
-    break;
-  }
-}
-
-// If still all used, use first from fallback
-if (!selectedPhoto) {
-  console.warn(`All fallback images also used. Using first fallback image.`);
-  selectedPhoto = fallbackData.photos[0];
-}
-
-// Build search query for reference
-const searchQuery = "french culture OR france OR paris";
-
-// Return selected image data (same format as Node 3b)
-return {
-  json: {
-    pexels_id: selectedPhoto.id.toString(),
-    image_url: selectedPhoto.src.large2x,
-    thumbnail_url: selectedPhoto.src.medium,
-    photographer: selectedPhoto.photographer,
-    photographer_url: selectedPhoto.photographer_url,
-    search_query: searchQuery,
-    word: word,
-    used_date: wotd.date || new Date().toISOString().split("T")[0],
-    is_fallback: false, // This is from fallback search, but it's a fresh unused image
-    _wotd: wotd,
-  },
-};
-```
-
 **Workflow Structure:**
 
 ```
-Node 3b (Filter) → IF (is_fallback?)
-  ├─ TRUE → Node 3d (Broader Search) → Node 3e (Filter Fallback) → Node 4
-  └─ FALSE → Node 4 (Store Image)
+Get Pexels Image → Merge → Filter → Check if Fallback → FALSE → Store Image
+                     ↑                      ↓ TRUE
+                     └── Broader Search ────┘
 ```
+
+**How it works:** When Broader Search runs, it loops back to Merge as Input 1. The same "Filter out used images" node handles both original and broader search results.
 
 ---
 
@@ -630,14 +608,8 @@ n8n has a built-in database node, but it's less user-friendly for viewing/managi
 const wotdData = $("When Executed by Another Workflow").first().json;
 const wotd = wotdData.data || wotdData; // Handle nested data structure
 
-// Get Pexels image - could be from Node 3b (Filter) or Node 3e (Filter Fallback)
-// Try Node 3e first (fallback path), then Node 3b (normal path)
-let pexelsImageData = null;
-try {
-  pexelsImageData = $("Filter Fallback Results").first().json;
-} catch (e) {
-  pexelsImageData = $("Filter Out Used Images").first().json;
-}
+// Get Pexels image from Filter node (handles both normal and fallback paths)
+const pexelsImageData = $("Filter Out Used Images").first().json;
 const pexelsImage = pexelsImageData.image_url;
 
 // Debug: log to verify data structure
@@ -1177,135 +1149,167 @@ If you just want to see one slide at a time in n8n:
 
 ---
 
-### 4d. HTML to Image API (Free Options)
-
-You have several free options for converting HTML to images:
-
-#### Option 1: ScreenshotAPI.net (Free Tier - Recommended)
+## Node 6: Check Tunnel Status (Smart Auto-Detection)
 
 **Type:** HTTP Request  
+**Placement:** RIGHT AFTER "Collect All HTML Slides" - BEFORE "Split Out"  
 **Method:** GET  
-**URL:** `https://shot.screenshotapi.net/screenshot`
+**URL:** `http://static-server:3001/tunnel-status`
 
-**Query Parameters:**
+**What this does:** Checks if static-server has auto-configured the tunnel URL on startup.
 
+**Response:**
+
+```json
+{
+  "configured": true,
+  "tunnelUrl": "https://abc123.trycloudflare.com",
+  "autoInitAttempted": true,
+  "autoInitSucceeded": true
+}
 ```
-token: YOUR_FREE_API_TOKEN (get at screenshotapi.net)
-url: data:text/html;charset=utf-8,{{ encodeURIComponent($json.html) }}
-width: 1080
-height: 1080
-file_type: png
-wait_for_event: load
-```
 
-**Response Handling:** The API returns JSON with a `screenshot` field containing the image URL. Add a "Set" node after this to extract the URL:
+---
 
-**Set Node:**
+## Node 6a: Check If Manual Setup Needed (IF Node)
 
-- Name: `imageUrl`
-- Value: `{{ $json.screenshot }}`
+**Type:** IF  
+**Placement:** After "Check Tunnel Status"
 
-**Note:** Free tier includes 100 screenshots/month. Sign up at screenshotapi.net for a free API token.
+**Condition:** `{{ $json.configured }}` equals `false`
 
-#### Option 2: htmlcsstoimage.com (Free Tier)
+**What this does:** If auto-detection failed, we'll manually configure it. If it succeeded, we skip straight to image generation.
+
+**Branches:**
+
+- **TRUE** (not configured) → Go to Node 6b (Manual Setup)
+- **FALSE** (already configured) → Skip to Node 6d (Split Out)
+
+---
+
+## Node 6b: Get Tunnel URL from Cloudflared (Manual Fallback)
 
 **Type:** HTTP Request  
-**Method:** POST  
-**URL:** `https://hcti.io/v1/image`
+**Placement:** Only runs if Node 6a = TRUE (manual setup needed)  
+**Method:** GET  
+**URL:** `http://n8n-cloudflared:2000/metrics`
 
-**Authentication:** Basic Auth
+**Response Format:** String
 
-- Username: Your User ID (sign up at htmlcsstoimage.com)
-- Password: Your API Key
+Gets cloudflared metrics which contains the current tunnel URL.
 
-**Body:**
+**Settings:**
 
-```json
-{
-  "html": "{{ $json.html }}",
-  "width": 1080,
-  "height": 1080
+- **Retry On Fail:** Yes
+- **Max Retries:** 3
+- **Retry Wait:** 2000ms (2 seconds)
+
+---
+
+## Node 6b2: Extract and Set Tunnel URL (Manual Fallback)
+
+**Type:** Code  
+**Placement:** After "Get Tunnel URL" (Node 6b)
+
+```javascript
+// Extract tunnel URL from cloudflared metrics
+const metrics = $input.first().json;
+const metricsText =
+  typeof metrics === "string" ? metrics : JSON.stringify(metrics);
+const tunnelMatch = metricsText.match(
+  /https:\/\/[a-z0-9-]+\.trycloudflare\.com/
+);
+
+if (!tunnelMatch) {
+  console.error("No tunnel URL found in metrics");
+  throw new Error("Tunnel URL not found - cloudflared may not be ready yet");
 }
+
+const tunnelUrl = tunnelMatch[0];
+console.log("Manually extracted tunnel URL:", tunnelUrl);
+
+return { json: { tunnelUrl: tunnelUrl } };
 ```
 
-**Note:** Free tier includes 50 images/month.
+---
 
-#### Option 3: Local Self-Hosted Service (Recommended for Development)
-
-If you're running `language-academy-html-to-image` locally on your machine, use `host.docker.internal` to access it from n8n running in Docker.
+## Node 6b3: Set Tunnel URL in Static Server (Manual Fallback)
 
 **Type:** HTTP Request  
+**Placement:** After "Extract Tunnel URL" (Node 6b2)  
 **Method:** POST  
-**URL:** `http://host.docker.internal:3000/api/html-to-image`
+**URL:** `http://static-server:3001/set-tunnel-url`
 
-**Body:**
+**Body (JSON):**
 
 ```json
 {
-  "html": {{ JSON.stringify($json.html) }},
-  "width": 1080,
-  "height": 1080,
-  "slide_number": {{ $json.slide_number }},
-  "word": "{{ $('Collect All HTML Slides').first().json.word }}",
-  "date": "{{ $('When Executed by Another Workflow').first().json.data.date }}"
+  "url": "{{ $json.tunnelUrl }}"
 }
 ```
 
-**Note:**
+**Response:**
 
-- `host.docker.internal` is a special DNS name that resolves to the host machine's IP from within Docker containers
-- Make sure your local server is running on port 3000
-- The service should return an image URL or base64 data URL in the response
+```json
+{
+  "success": true,
+  "tunnelUrl": "https://abc123.trycloudflare.com",
+  "method": "manual"
+}
+```
 
-#### Option 4: Self-Hosted Puppeteer Service (Deployed - Unlimited Free)
+After this node completes, the static-server is manually configured and ready.
 
-A complete self-hosted solution is included in `supabase/functions/html-to-image/`. Deploy to Vercel (free) for unlimited usage.
+---
 
-**Setup:**
+## 🎯 Summary: Auto vs Manual Flow
 
-1. Go to `supabase/functions/html-to-image/`
-2. Deploy to Vercel: `vercel` (or connect GitHub repo)
-3. Get your deployment URL
+**✅ Auto-Detection Path (90% of the time):**
+
+```
+Check Tunnel Status → Already configured → Split Out → Convert to Image
+```
+
+**🔧 Manual Fallback Path (if auto fails):**
+
+```
+Check Tunnel Status → Not configured → Get from Cloudflared → Extract URL → Set in Static Server → Split Out → Convert to Image
+```
+
+**Benefits:**
+
+- ⚡ Faster: Skips 3 nodes when auto-detection works
+- 🛡️ Resilient: Falls back to manual if needed
+- 🔍 Visible: You can see which path was used in logs
+- 🚀 Zero maintenance: Auto-detects on every Docker restart
+
+---
+
+## Node 6d: Split Out (Item Lists)
+
+**Type:** Item Lists → Split Out  
+**Placement:** Connect from "Collect All HTML Slides" (goes to "Convert to Image")  
+**Field to Split:** `slides`
+
+Splits the 4 slides into separate items for the next node to loop through.
+
+---
+
+## Node 6e: Convert to Image
 
 **Type:** HTTP Request  
+**Placement:** After "Split Out"  
 **Method:** POST  
-**URL:** `YOUR_VERCEL_URL/api/html-to-image`
+**URL:** `http://n8n-plus:3000/api/html-to-image`  
+**Mode:** Run Once for Each Item
 
-**Body:**
-
-```json
-{
-  "html": "{{ $json.html }}",
-  "width": 1080,
-  "height": 1080
-}
-```
-
-**Body (with Supabase Storage upload):**
+**Body (JSON):**
 
 ```json
-{
-  "html": "{{ $json.html }}",
-  "width": 1080,
-  "height": 1080,
-  "upload_to_storage": true
-}
+ u
 ```
 
-**Environment Variables (for Supabase Storage):**
-
-- `SUPABASE_URL`: Your Supabase project URL
-- `SUPABASE_SERVICE_ROLE_KEY`: Your Supabase service role key
-
-**Response:** Returns a public URL directly (e.g., `https://your-project.supabase.co/storage/v1/object/public/instagram-slides/...`)
-
-**Setup:**
-
-1. Create a storage bucket named `instagram-slides` in Supabase Storage
-2. Set it to public
-3. Deploy the service with environment variables set
-
-**Note:** The loop will run 4 times (once per slide), generating 4 images. Vercel free tier is very generous for this use case. If you don't set `upload_to_storage: true`, it returns a base64 data URL instead.
+**Response:** Returns `{ "url": "https://tunnel.trycloudflare.com/images/..." }` - public URL ready for Instagram.
 
 ---
 
@@ -1315,13 +1319,43 @@ A complete self-hosted solution is included in `supabase/functions/html-to-image
 
 ```javascript
 const images = $input.all();
-const originalData = $("Prepare 4 Slides").first().json;
+
+// Get tunnel URL from Check Tunnel Status
+const tunnelData = $("Check Tunnel Status").first().json;
+const tunnelUrl = tunnelData.tunnelUrl;
+
+// Get word/date from first image (Convert to Image returns this)
+const firstImage = images[0].json;
+const word = firstImage.word;
+const date = firstImage.date;
+
+console.log("Tunnel URL:", tunnelUrl);
+console.log("Word:", word);
+console.log("Date:", date);
+console.log("Images received:", images.length);
+
+// Construct public URLs using tunnel URL + file paths from server response
+const imageUrls = images.map((img, index) => {
+  const imgData = img.json;
+  const filePath = imgData.filePath; // e.g., "/shared/images/languageacademy/socials/2025-11-16-utiliser/2025-11-16-utiliser-slide-1.png"
+
+  // Extract just the folder and filename (last 2 parts of path)
+  const pathParts = filePath.split("/");
+  const folder = pathParts[pathParts.length - 2]; // e.g., "2025-11-16-utiliser"
+  const filename = pathParts[pathParts.length - 1]; // e.g., "2025-11-16-utiliser-slide-1.png"
+
+  // Static server serves /app/images/languageacademy/socials at /images/
+  const publicUrl = `${tunnelUrl}/images/${folder}/${filename}`;
+
+  console.log(`Image ${index + 1}: ${publicUrl}`);
+  return publicUrl;
+});
 
 return {
   json: {
-    word: originalData.word,
-    date: originalData.date,
-    imageUrls: images.map((img) => img.json.url),
+    word: word,
+    date: date,
+    imageUrls: imageUrls,
   },
 };
 ```
@@ -1386,8 +1420,8 @@ return {
     captionLength: caption.length,
     hashtagCount: (caption.match(/#/g) || []).length,
     // Add location for Instagram API
-    location_id: "213385402", // Paris, France
-    location_name: "Paris, France",
+    // location_id: "213385402", // Paris, France
+    // location_name: "Paris, France",
   },
 };
 ```
@@ -1409,14 +1443,7 @@ return {
 
 **Yes, you can skip the Facebook Graph node entirely!** Just use HTTP Request nodes. Much simpler.
 
-### What You Need (From Graph API Explorer)
-
-1. **Instagram Business Account ID:** `886081941249744` (you already have this!)
-2. **Long-Lived Access Token:** `EAAB...` (get from Step 6 in the setup guide)
-
-That's it! No need to configure Facebook Graph API credentials in n8n.
-
----
+#
 
 ### Step 1: Prepare Image URLs for Upload
 
@@ -1426,21 +1453,23 @@ That's it! No need to configure Facebook Graph API credentials in n8n.
 **Purpose:** Prepare each image URL as a separate item so n8n can loop through them.
 
 ```javascript
-const data = $json;
-const imageUrls = data.imageUrls;
+// Get data from previous node - use $input.first() instead of $json for "Run Once for All Items" mode
+const data = $input.first().json;
+const imageUrls = data.imageUrls; // Already converted to public URLs by "Collect Image URLs" node
 const captionData = $("Generate Instagram Caption").first().json;
+
+console.log("Image URLs for Instagram:", imageUrls);
 
 // Create array of upload items (one per image)
 const uploadItems = imageUrls.map((url, index) => ({
   image_url: url,
   is_carousel_item: true,
   slide_number: index + 1,
-  // Add location only to first image
-  location_id: index === 0 ? captionData.location_id : null,
   // Keep caption and metadata for later
   caption: captionData.caption,
   word: captionData.word,
   date: captionData.date,
+  location_id: index === 0 ? captionData.location_id : null, // Only first image gets location
 }));
 
 // Return as separate items (n8n will auto-loop)
@@ -1530,16 +1559,32 @@ return {
 
 **Replace `886081941249744` with your Instagram Business Account ID!**
 
-**Body (JSON):**
+**Specify Body:** Fixed (not "Using JSON")
 
-```json
-{
-  "media_type": "CAROUSEL",
-  "children": "{{ $json.children }}",
-  "caption": "{{ $json.caption }}",
-  "access_token": "YOUR_LONG_LIVED_TOKEN_HERE",
-  "location_id": "{{ $json.location_id }}"
-}
+**Add these fields manually:**
+
+| Key            | Value                        |
+| -------------- | ---------------------------- |
+| `media_type`   | `CAROUSEL`                   |
+| `children`     | `{{ $json.children }}`       |
+| `caption`      | `{{ $json.caption }}`        |
+| `access_token` | `YOUR_LONG_LIVED_TOKEN_HERE` |
+| `location_id`  | `{{ $json.location_id }}`    |
+
+**Why Fixed mode?** The caption contains newlines and emojis that break JSON syntax. Fixed mode properly escapes them.
+
+**Alternative - Using Expression mode:**
+
+Switch "Specify Body" to "Using Expression" and use:
+
+```javascript
+({
+  media_type: "CAROUSEL",
+  children: $json.children,
+  caption: $json.caption,
+  access_token: "YOUR_LONG_LIVED_TOKEN_HERE",
+  location_id: $json.location_id,
+});
 ```
 
 **Response:** Returns `{ "id": "987654321" }` - this is your carousel container ID (also called `creation_id`).
@@ -1568,38 +1613,53 @@ return {
 
 ---
 
-## Alternative: Using n8n Credentials (Even Simpler!)
+## 🔐 Using n8n Credentials (Recommended!)
 
-Instead of hardcoding the token, store it in n8n credentials:
+Instead of hardcoding the token, store it securely in n8n credentials:
 
-### Setup Credential
+### Setup: Create Instagram Credential
 
 1. In n8n, go to **Credentials** → **Add Credential**
-2. Search for **"Generic Credential Type"** or **"Header Auth"**
-3. Create a credential named "Instagram Access Token"
-4. Store your token there
+2. Search for **"Generic Credential Type"**
+3. Click **"Add Credential"**
+4. Set these values:
+   - **Credential Name:** `instagram_access_token` (or any name you prefer)
+   - **Generic Credential Fields:**
+     - **Name:** `access_token`
+     - **Value:** Your long-lived Instagram access token (starts with `EAAL...`)
+5. Click **"Save"**
 
-### Use in HTTP Request Nodes
+### Usage: Reference in HTTP Request Nodes
 
-**In Step 2, 4, and 5 (HTTP Request nodes):**
+**In all HTTP Request nodes (Step 2, Step 4, Step 5), replace:**
 
-- **Authentication:** Header Auth
-- **Credential:** Select "Instagram Access Token"
-- **Name:** `Authorization`
-- **Value:** `Bearer YOUR_TOKEN` (or just `YOUR_TOKEN`)
+```
+"access_token": "YOUR_LONG_LIVED_TOKEN_HERE"
+```
 
-**OR** use Query Auth:
+**With:**
 
-- **Authentication:** Query Auth
-- **Name:** `access_token`
-- **Value:** `{{ $credentials.instagramToken }}` (if you stored it as a generic credential)
+```
+"access_token": "{{ $credentials.instagram_access_token.access_token }}"
+```
 
-**OR** simplest - just use n8n's **"Generic Credential Type"**:
+**Full example for Step 4 (Expression mode):**
 
-1. Create credential: **Type:** Generic Credential Type
-2. **Name:** `instagram_token`
-3. **Value:** Your token
-4. In HTTP Request body: `"access_token": "{{ $credentials.instagram_token }}"`
+```javascript
+({
+  media_type: "CAROUSEL",
+  children: $json.children,
+  caption: $json.caption,
+  access_token: $credentials.instagram_access_token.access_token,
+  location_id: $json.location_id,
+});
+```
+
+**Benefits:**
+
+- ✅ More secure (no hardcoded tokens in workflow)
+- ✅ Easier to update token when it expires
+- ✅ Can reuse same credential across multiple workflows
 
 ---
 
@@ -1622,477 +1682,6 @@ Publish Carousel Post (HTTP Request)
 ```
 
 ---
-
-## Troubleshooting HTTP Request Method
-
-### "Invalid OAuth Access Token"
-
-- Token expired - get a new one from Graph API Explorer
-- Token doesn't have `instagram_content_publish` permission
-- **Solution:** Go back to Graph API Explorer, get new token with all permissions
-
-### "Invalid parameter"
-
-- Check that `children` is comma-separated IDs: `"123,456,789,012"`
-- Make sure `media_type` is exactly `"CAROUSEL"` (all caps)
-- Verify image URLs are publicly accessible (not localhost)
-
-### "Media container not found"
-
-- The `creation_id` from Step 4 must be used immediately (don't wait too long)
-- Make sure you're using the carousel container ID, not individual media IDs
-
-### "Rate limit exceeded"
-
-- Instagram has rate limits (100 posts per hour per account)
-- If you hit this, wait an hour or reduce posting frequency
-
-### "Invalid Request: Request parameters are invalid: Invalid platform app"
-
-This means your Facebook App isn't configured for Instagram API access. Here's how to fix it:
-
-#### Step 1: Add Instagram Graph API Product
-
-1. Go to [Facebook Developers](https://developers.facebook.com/)
-2. Select your app
-3. In the left sidebar, click **"Add Product"** (or go to **"Products"** → **"Add Product"**)
-4. Find **"Instagram Graph API"** in the list
-5. Click **"Set Up"** or **"Add"**
-
-#### Step 2: Configure Instagram Graph API
-
-1. After adding the product, you'll see **"Instagram Graph API"** in your left sidebar
-2. Click on it
-3. You should see your Instagram Business Account listed (if connected)
-4. If not, you'll need to connect it:
-   - Make sure your Instagram account is a Business account
-   - Make sure it's connected to your Facebook Page
-   - The connection should appear automatically
-
-#### Step 3: Verify App Settings
-
-1. Go to **"Settings"** → **"Basic"** in your app
-2. Make sure **"App ID"** and **"App Secret"** are visible
-3. Under **"App Domains"**, you can add your domain (optional for testing)
-4. Click **"Save Changes"**
-
-#### Step 4: Check App Mode
-
-1. At the top of your app dashboard, look for **"App Mode"**
-2. If it says **"Development"**, that's fine for testing with your own account
-3. For production, you'll need to switch to **"Live"** mode (requires app review)
-
-#### Step 5: Get New Token After Adding Product
-
-After adding Instagram Graph API product:
-
-1. Go back to [Graph API Explorer](https://developers.facebook.com/tools/explorer/)
-2. Make sure your app is selected in the **"Meta App"** dropdown
-3. Click **"Get Token"** → **"Get User Access Token"**
-4. Check these permissions:
-   - ✅ `instagram_basic`
-   - ✅ `instagram_content_publish`
-   - ✅ `pages_show_list`
-   - ✅ `pages_read_engagement`
-5. Generate a new token
-6. Convert to long-lived token (Step 6 in setup guide)
-
-#### Step 6: Test Again
-
-Try your HTTP Request again with the new token. The error should be gone.
-
-**Common Causes:**
-
-- ❌ Instagram Graph API product not added to app
-- ❌ Using token from wrong app (check Meta App dropdown in Graph API Explorer)
-- ❌ App in wrong mode (should be Development or Live, not restricted)
-- ❌ Instagram account not properly connected to Facebook Page
-
-**Still Not Working?**
-
-If you still get the error after adding the product:
-
-1. **Wait 5-10 minutes** - Facebook sometimes needs time to propagate changes
-2. **Clear your browser cache** and try again
-3. **Create a new app** and start fresh:
-   - Create new app → Add Instagram Graph API → Get token
-   - Sometimes a fresh app works better
-4. **Check App Review Status:**
-   - Go to **"App Review"** → **"Permissions and Features"**
-   - Make sure `instagram_basic` and `instagram_content_publish` are listed
-   - If they show as "In Development", that's fine for your own account
-
----
-
-## Why HTTP Request is Simpler
-
-✅ **No Facebook Graph API credential setup**  
-✅ **Just need the token** (get it once from Graph API Explorer)  
-✅ **More control** over the exact API calls  
-✅ **Easier to debug** (see exact request/response)  
-✅ **Works the same** - it's just HTTP under the hood anyway!
-
-The Facebook Graph node is just a wrapper around HTTP requests - using HTTP Request directly gives you the same result with less configuration.
-
----
-
-## Complete Workflow Summary
-
-1. **Trigger** - Receives WOTD data from parent workflow
-2. **Get Used Images from Airtable** - Fetch list of previously used Pexels image IDs
-3. **Get Pexels Image (HTTP Request)** - Fetch 15 images using word-specific query
-   3b. **Filter Out Used Images (Code)** - Select first unused image from the 15 results
-   3c. **IF: is_fallback?** - Check if fallback search is needed
-   - **TRUE** → Node 3d → Node 3e → Node 4
-   - **FALSE** → Node 4
-     3d. **Broader Search HTTP Request** - Fetch 15 images with generic query (only if needed)
-     3e. **Filter Fallback Results (Code)** - Select unused image from broader search
-4. **Store Image in Airtable** - Save selected image to prevent future reuse
-5. **Prepare 4 Slides** - Structure data for Word, Definition, Examples, CTA
-6. **Generate Images** - Loop through slides, create HTML, convert to images
-7. **Collect URLs** - Gather all 4 image URLs
-   7b. **Generate Instagram Caption** - Create optimized caption with hashtags
-8. **Upload to Instagram** - Create media containers
-9. **Publish** - Post carousel to Instagram
-
----
-
-## Design Notes
-
-### White Border
-
-All images have a 40px white border created by the outer padding and inner container border in the HTML.
-
-### Typography
-
-Following your design principles:
-
-- **Word slide**: Thin weight (300), tight letter spacing
-- **Definition slide**: Clean hierarchy, subtle colors
-- **Examples slide**: Generous spacing, subtle divider
-- **CTA slide**: Bold but clean, brand blue background
-
-### Color Palette
-
-- Primary text: `#1a1a1a`
-- Secondary text: `#665665`
-- Tertiary text: `#999999`
-- Borders: `#e0e0e0`
-- Background: `#fafbfc` (subtle)
-- CTA background: `#3b82f6` (brand blue)
-
----
-
-## Facebook Graph API Setup Guide
-
-### Prerequisites
-
-Before you start, make sure you have:
-
-- ✅ A Facebook account (personal or business)
-- ✅ An Instagram Business Account (not personal)
-- ✅ The Instagram account connected to a Facebook Page
-- ✅ Admin access to both the Facebook Page and Instagram account
-
-**Important:** Instagram personal accounts cannot use the Graph API. You must convert to a Business account:
-
-1. Go to Instagram Settings → Account → Switch to Professional Account
-2. Choose "Business"
-3. Connect it to your Facebook Page
-
----
-
-### Step 1: Access Graph API Explorer
-
-1. Go to [Graph API Explorer](https://developers.facebook.com/tools/explorer/)
-2. You'll see a page with:
-   - **User or Page** dropdown (top left)
-   - **Get Token** button
-   - A query builder interface
-
----
-
-### Step 2: Create a Facebook App (If You Don't Have One)
-
-**If you already have a Facebook App, skip to Step 3.**
-
-1. Go to [Facebook Developers](https://developers.facebook.com/)
-2. Click **"My Apps"** → **"Create App"**
-3. Choose **"Business"** as the app type
-4. Fill in:
-   - **App Name:** "Language Academy Instagram" (or whatever you want)
-   - **App Contact Email:** Your email
-5. Click **"Create App"**
-6. Complete the security check (if prompted)
-
-**Note:** You don't need to submit your app for review initially - you can test with your own account first.
-
-**⚠️ IMPORTANT:** After creating your app, you MUST add the Instagram Graph API product (see Step 2b below). Without it, you'll get "Invalid platform app" errors.
-
----
-
-### Step 2b: Add Instagram Graph API Product (REQUIRED!)
-
-**This step is critical!** Your app won't work with Instagram API without this.
-
-**Where to Find "Add Product":**
-
-The location varies depending on your Facebook App Dashboard version:
-
-#### Option 1: Through Use Cases (Newer Dashboard)
-
-If you see "Use cases" in your dashboard:
-
-1. Look at the **"App customization and requirements"** section on your Dashboard
-2. Find **"Manage messaging & content on Instagram"** use case
-3. If it's checked ✅, the Instagram Graph API product is already added!
-4. If it's unchecked, click on it to customize/add it
-5. This will add the Instagram Graph API product automatically
-
-#### Option 2: Through App Settings (Older Dashboard)
-
-1. In the left sidebar, click **"App settings"** (it has a dropdown arrow)
-2. Look for **"Products"** or **"Add Product"** in the dropdown menu
-3. Click **"Add Product"**
-4. Find **"Instagram Graph API"** in the product list
-5. Click **"Set Up"** or **"Add"**
-
-#### Option 3: Direct URL
-
-If you can't find it in the UI, try going directly to:
-
-```
-https://developers.facebook.com/apps/YOUR_APP_ID/add-product/
-```
-
-(Replace `YOUR_APP_ID` with your app ID - you can see it in the browser URL)
-
-#### Option 4: Look for "+" Button
-
-Some dashboards have a **"+"** or **"Add"** button in the top right or in the left sidebar that opens a menu with products.
-
-**After Adding:**
-
-1. You should now see **"Instagram Graph API"** in your left sidebar
-2. Click on it to verify your Instagram Business Account is connected
-3. It should appear automatically if your Instagram is connected to your Facebook Page
-
-**If you get "Invalid platform app" errors later, come back here and make sure this product is added!**
-
-**Note:** If you see "Manage messaging & content on Instagram" checked in your use cases, the product is likely already added. Try getting a new token and testing again.
-
----
-
-### Step 3: Select Your App in Graph API Explorer
-
-1. In Graph API Explorer, look for **"Meta App"** dropdown (top right)
-2. Click it and select your app (or "Graph API Explorer" for testing)
-3. If you don't see your app, make sure you're logged into Facebook Developers with the same account
-
----
-
-### Step 4: Get Your Access Token
-
-#### Option A: Quick Test Token (Short-Lived, Expires in 1 Hour)
-
-1. In Graph API Explorer, click **"Get Token"** dropdown
-2. Select **"Get User Access Token"**
-3. A popup will show permissions - check these:
-   - ✅ `instagram_basic`
-   - ✅ `instagram_content_publish`
-   - ✅ `pages_show_list`
-   - ✅ `pages_read_engagement`
-4. Click **"Generate Access Token"**
-5. Copy the token that appears (it's long, starts with `EAAB...`)
-
-**⚠️ Warning:** This token expires in 1 hour. You'll need a long-lived token for production (see Step 5).
-
-#### Option B: Get Page Access Token (Better for Instagram)
-
-1. Click **"Get Token"** → **"Get User Access Token"**
-2. Check permissions:
-   - ✅ `pages_show_list`
-   - ✅ `pages_read_engagement`
-   - ✅ `instagram_basic`
-   - ✅ `instagram_content_publish`
-3. Generate token
-4. Now query: `me/accounts` (click "Submit" button)
-5. Find your Facebook Page in the response
-6. Copy the `access_token` from your Page object (this is your Page Access Token)
-
----
-
-### Step 5: Get Your Instagram Business Account ID
-
-You need your Instagram Business Account ID (not your username). Here's how:
-
-1. In Graph API Explorer, make sure you have a token selected
-2. In the query field, enter: `me/accounts`
-3. Click **"Submit"**
-4. You'll see a JSON response with your Facebook Pages
-5. Find the page connected to your Instagram account
-6. Copy the `id` of that page (this is your Page ID)
-7. Now query: `{PAGE_ID}?fields=instagram_business_account`
-   - Replace `{PAGE_ID}` with the ID you just copied
-   - Example: `123456789?fields=instagram_business_account`
-8. Click **"Submit"**
-9. You'll see something like:
-   ```json
-   {
-     "instagram_business_account": {
-       "id": "886081941249744"
-     }
-   }
-   ```
-10. **Copy that `id`** - this is your Instagram Business Account ID! Save it for n8n.
-
----
-
-### Step 6: Convert to Long-Lived Token (For Production)
-
-Short-lived tokens expire in 1 hour. For n8n workflows, you need a long-lived token (60 days).
-
-#### Method 1: Using Graph API Explorer
-
-1. In Graph API Explorer, make sure you have your short-lived token
-2. Query: `oauth/access_token?grant_type=fb_exchange_token&client_id={APP_ID}&client_secret={APP_SECRET}&fb_exchange_token={SHORT_TOKEN}`
-   - Replace `{APP_ID}` with your App ID (found in App Dashboard → Settings → Basic)
-   - Replace `{APP_SECRET}` with your App Secret (found in App Dashboard → Settings → Basic → click "Show")
-   - Replace `{SHORT_TOKEN}` with your current access token
-3. Click **"Submit"**
-4. Copy the `access_token` from the response - this is your long-lived token (60 days)
-
-#### Method 2: Using Access Token Tool
-
-1. Go to [Access Token Tool](https://developers.facebook.com/tools/accesstoken/)
-2. Find your app in the list
-3. Click **"Extend Access Token"** next to your token
-4. Copy the extended token
-
-**Note:** Even long-lived tokens expire after 60 days. For permanent tokens, you'll need to:
-
-- Set up token refresh in n8n (using a webhook)
-- Or use a Facebook App with proper permissions and refresh programmatically
-
----
-
-### Step 7: Verify Permissions
-
-Test that your token has the right permissions:
-
-1. In Graph API Explorer, query: `me/permissions`
-2. Verify you see:
-   - `instagram_basic`
-   - `instagram_content_publish`
-   - `pages_show_list`
-
-If any are missing:
-
-1. Click **"Get Token"** → **"Get User Access Token"** again
-2. Re-check the permissions
-3. Generate a new token
-
----
-
-### Step 8: Test Instagram API Access
-
-Before using in n8n, test that you can access your Instagram account:
-
-1. Query: `{INSTAGRAM_ACCOUNT_ID}?fields=username,account_type`
-   - Replace `{INSTAGRAM_ACCOUNT_ID}` with the ID from Step 5
-2. You should see:
-   ```json
-   {
-     "username": "your_instagram_handle",
-     "account_type": "BUSINESS"
-   }
-   ```
-
-If you get an error, check:
-
-- ✅ Instagram account is Business (not Personal)
-- ✅ Instagram is connected to your Facebook Page
-- ✅ You're using the Page Access Token (not User Access Token)
-- ✅ Token has `instagram_basic` permission
-
----
-
-### Step 9: Configure in n8n
-
-Now that you have everything, set up n8n:
-
-1. **In n8n, go to Credentials → Add Credential**
-2. **Search for "Facebook Graph API"**
-3. **Fill in:**
-   - **Access Token:** Your long-lived token from Step 6
-   - **App ID:** Your Facebook App ID (optional, but recommended)
-   - **App Secret:** Your Facebook App Secret (optional, but recommended)
-4. **Test Connection** - n8n will verify the token works
-5. **Save**
-
-**For Facebook Graph API nodes:**
-
-- **Instagram Account ID:** Use the ID from Step 5 (the `instagram_business_account.id`)
-- **Access Token:** Will be automatically used from credentials
-
----
-
-### Step 10: Test Upload (Optional - In Graph API Explorer)
-
-Before using in n8n, test a simple upload:
-
-1. **Create Media Container:**
-
-   - **Method:** POST
-   - **Query:** `{INSTAGRAM_ACCOUNT_ID}/media`
-   - **Body (form-data):**
-     ```
-     image_url: https://example.com/test-image.jpg
-     ```
-   - Click **"Submit"**
-   - Copy the `id` from response (this is your `creation_id`)
-
-2. **Publish Post:**
-   - **Method:** POST
-   - **Query:** `{INSTAGRAM_ACCOUNT_ID}/media_publish`
-   - **Body (form-data):**
-     ```
-     creation_id: {CREATION_ID_FROM_STEP_1}
-     ```
-   - Click **"Submit"**
-   - If successful, you'll see an `id` - that's your published post ID!
-
----
-
-### Troubleshooting
-
-#### "Invalid OAuth Access Token"
-
-- Token expired (get a new one)
-- Wrong token type (use Page Access Token, not User Access Token)
-- Token doesn't have required permissions
-
-#### "Instagram account not found"
-
-- Instagram account is Personal (must be Business)
-- Instagram not connected to Facebook Page
-- Using wrong Account ID
-
-#### "Missing required permission"
-
-- Go back to Step 4 and regenerate token with all permissions checked
-
-#### "Token expires too quickly"
-
-- Short-lived tokens expire in 1 hour
-- Use Step 6 to convert to long-lived token (60 days)
-- For permanent solution, set up token refresh workflow
-
-#### "Can't find my Instagram Account ID"
-
-- Make sure Instagram is connected to Facebook Page
-- Use `me/accounts` → find Page → query `{PAGE_ID}?fields=instagram_business_account`
-- The `id` in `instagram_business_account` is what you need
 
 ---
 
