@@ -31,6 +31,7 @@ function WOTDHub() {
   const [showFeedback, setShowFeedback] = useState(true);
   const [archiveWords, setArchiveWords] = useState([]);
   const [archiveLoading, setArchiveLoading] = useState(false);
+  const [hasNextDay, setHasNextDay] = useState(true); // Track if next day has a word
   const [showNotificationSettings, setShowNotificationSettings] = useState(() => {
     // Check if settings param is in URL
     const params = new URLSearchParams(window.location.search)
@@ -110,6 +111,9 @@ function WOTDHub() {
         setWordData(wordData);
         updateProgress(targetDate);
         
+        // Check if next day has a word
+        checkNextDayExists(targetDate);
+        
         // Update URL to include the date
         const params = new URLSearchParams(window.location.search);
         params.set('date', targetDate);
@@ -155,16 +159,46 @@ function WOTDHub() {
       if (!wordData) {
         console.log('No word found for', date, '- using mock data');
         loadMockData(date);
+        // Check if next day has a word
+        checkNextDayExists(date);
         return;
       }
 
       setWordData(wordData);
       updateProgress(date);
+      
+      // Check if next day has a word
+      checkNextDayExists(date);
+      
       setLoading(false);
 
     } catch (err) {
       console.error('Unexpected error loading WOTD:', err);
       loadMockData(date);
+      checkNextDayExists(date);
+    }
+  };
+
+  const checkNextDayExists = async (date) => {
+    try {
+      // Calculate next day
+      const [year, month, day] = date.split('-').map(Number);
+      const nextDate = new Date(year, month - 1, day);
+      nextDate.setDate(nextDate.getDate() + 1);
+      const nextDateStr = `${nextDate.getFullYear()}-${String(nextDate.getMonth() + 1).padStart(2, '0')}-${String(nextDate.getDate()).padStart(2, '0')}`;
+
+      // Check if word exists for next day
+      const { data, error } = await supabase
+        .from('word_of_the_day')
+        .select('id')
+        .eq('date', nextDateStr)
+        .maybeSingle();
+
+      // Set hasNextDay based on whether a word exists (ignore errors, assume no word exists)
+      setHasNextDay(!error && !!data);
+    } catch (err) {
+      // If check fails, assume no next day exists
+      setHasNextDay(false);
     }
   };
 
@@ -300,15 +334,13 @@ function WOTDHub() {
     // Format as YYYY-MM-DD using local timezone
     const newDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
     
-    const today = getTodayLocal();
-    
     // Don't allow navigation before start date
     if (newDate < WOTD_START_DATE) {
       return;
     }
     
-    // Only block forward navigation past today (allow backward navigation from future dates for testing)
-    if (direction > 0 && newDate > today) {
+    // Block forward navigation only if next day doesn't have a word
+    if (direction > 0 && !hasNextDay) {
       return;
     }
     
@@ -515,7 +547,7 @@ function WOTDHub() {
                 <button
                   className="wotd-day-nav-btn wotd-day-next"
                   onClick={() => navigateDay(1)}
-                  disabled={currentDate >= getTodayLocal()}
+                  disabled={!hasNextDay}
                   aria-label="Next day"
                 >
                   <span className="wotd-nav-text">Next Day →</span>
@@ -845,7 +877,7 @@ function WOTDHub() {
                 <button
                   className="wotd-footer-nav-btn wotd-footer-next"
                   onClick={() => navigateDay(1)}
-                  disabled={currentDate >= getTodayLocal()}
+                  disabled={!hasNextDay}
                   aria-label="Next word"
                 >
                   <span className="wotd-nav-text">Next Word →</span>
