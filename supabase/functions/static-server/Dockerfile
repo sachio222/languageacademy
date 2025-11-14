@@ -21,3 +21,4 @@ HEALTHCHECK --interval=10s --timeout=5s --start-period=60s --retries=3 \
 # Start server
 CMD ["node", "server.js"]
 
+

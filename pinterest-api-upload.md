@@ -19,6 +19,7 @@
   "description": "{{ $json.description }}",
   "link": "{{ $json.link }}",
   "alt_text": "{{ $json.alt_text }}",
+  "note": "{{ $json.note }}",
   "board_id": "YOUR_BOARD_ID_HERE",
   "media_source": {
     "source_type": "image_url",
@@ -27,7 +28,16 @@
 }
 ```
 
-**Note:** The `image_url` will be set after the HTML-to-image conversion (same infrastructure as Instagram).
+**Notes:**
+
+- ✅ The `image_url` is a **public HTTPS URL** (e.g., `https://abc123.trycloudflare.com/images/...`)
+- ✅ Pinterest API **requires publicly accessible URLs** (not base64) - this is exactly what we provide
+- ✅ Same infrastructure as Instagram: html-to-image service → static-server → cloudflared tunnel → public URL
+- ✅ The base64 is only used internally between services; Pinterest receives the public URL
+- The `note` field helps Pinterest categorize your pin internally (doesn't display to users).
+- **Pinterest Best Practice**: Use 3-5 hashtags maximum (quality over quantity). Too many hashtags = spam.
+- Keywords are naturally integrated into description (not stuffed) for organic algorithm boost.
+- Pinterest prioritizes quality content and user value over keyword optimization.
 
 ---
 
@@ -67,6 +77,19 @@ Pinterest API returns:
 
 The `id` field is your Pinterest Pin ID - save this if you want to track analytics later!
 
+**Pin Visibility:**
+
+- ✅ Pin created successfully (you got a pin ID)
+- ⏱️ **Processing delay:** Pinterest can take 2-5 minutes to process and display pins
+- 🔍 **Check your board:** Go to your Pinterest board directly (not your profile)
+- 📍 **Direct pin URL:** `https://www.pinterest.com/pin/{pin_id}/` (replace `{pin_id}` with your actual pin ID)
+
+**If pin doesn't appear after 5 minutes:**
+
+1. Verify pin exists: `GET https://api.pinterest.com/v5/pins/{pin_id}`
+2. Check board visibility (must be public for others to see)
+3. Check Pinterest account type (business accounts may have different visibility)
+
 ---
 
 ## Pinterest OAuth Setup (n8n Credentials)
@@ -79,11 +102,11 @@ The `id` field is your Pinterest Pin ID - save this if you want to track analyti
    - **App name:** Language Academy WOTD
    - **Description:** Automated daily French vocabulary pins
    - **Redirect URI:** `https://YOUR_N8N_URL/rest/oauth2-credential/callback`
-   - **Scopes:** Select these permissions:
-     - ✅ `pins:read` (optional, for analytics)
-     - ✅ `pins:write` (required!)
-     - ✅ `boards:read` (to list boards)
-     - ✅ `boards:write` (optional, if creating boards)
+   - **Scopes:** Select these permissions (REQUIRED):
+     - ✅ `pins:write` (**REQUIRED** - to create pins)
+     - ✅ `boards:write` (**REQUIRED** - to add pins to boards)
+     - ✅ `boards:read` (recommended - to list boards)
+     - ✅ `pins:read` (optional - for analytics)
 4. Click **"Create"**
 5. Copy your **App ID** and **App Secret**
 
@@ -125,14 +148,31 @@ Execute and copy the board ID from the response.
    - **Access Token URL:** `https://api.pinterest.com/v5/oauth/token`
    - **Client ID:** Your Pinterest App ID
    - **Client Secret:** Your Pinterest App Secret
-   - **Scope:** `pins:write,boards:read`
+   - **Scope:** `pins:write,boards:write,boards:read` (**IMPORTANT:** Must include `boards:write`!)
    - **Auth URI Query Parameters:** (leave empty)
    - **Authentication:** Header
 5. Click **"Connect my account"**
 6. Authorize the app in Pinterest
 7. Save
 
-**Important:** Pinterest refresh tokens don't expire! Once you connect, you're set permanently (unless you revoke access).
+**Important Token Info:**
+
+- **Access Token:** Valid for 30 days (n8n auto-refreshes)
+- **Refresh Token:** Valid for 365 days (long-lived)
+- **n8n handles refresh automatically** - you shouldn't need to reauthenticate
+
+**If your token is expiring in 1 hour:**
+
+- ❌ You might be using a temporary test token from Pinterest API Explorer
+- ❌ You might not have OAuth set up correctly
+- ✅ **Solution:** Follow Step 3 above to set up proper OAuth 2.0 in n8n
+- ✅ n8n will automatically use the refresh token to get new access tokens
+
+**Can I use the App Secret instead?**
+
+- ❌ NO - App Secret is only used during OAuth setup
+- ❌ NEVER send App Secret in API requests (security risk)
+- ✅ Use the access token that n8n manages for you via OAuth
 
 ---
 
@@ -240,7 +280,21 @@ If this works, you're ready to integrate with the workflow!
 ### 2. `401 Unauthorized`
 
 **Cause:** OAuth token expired or invalid  
-**Fix:** Re-authenticate in n8n credentials (Click "Reconnect")
+**Fixes:**
+
+1. **If using OAuth 2.0 in n8n (recommended):**
+   - Click "Reconnect" in your Pinterest OAuth credential
+   - n8n will automatically refresh the token
+2. **If token expires in 1 hour (test token issue):**
+
+   - You're likely using a temporary token from Pinterest API Explorer
+   - **Solution:** Set up proper OAuth 2.0 in n8n (see Step 3 in setup section)
+   - OAuth tokens last 30 days and auto-refresh
+
+3. **If using manual access token:**
+   - ❌ Don't do this! Use OAuth 2.0 instead
+   - Manual tokens expire and require manual refresh
+   - OAuth handles this automatically
 
 ### 3. `429 Too Many Requests`
 
@@ -331,14 +385,14 @@ This lets you identify which words/images get the most saves!
 
 After 30 days, compare:
 
-| Metric                  | Instagram                   | Pinterest                       |
-| ----------------------- | --------------------------- | ------------------------------- |
-| **Engagement**          | Likes + Comments            | Saves + Repins                  |
-| **Traffic**             | Profile visits              | Outbound clicks (to WOTD pages) |
-| **Lifespan**            | 48 hours                    | 3-6 months+                     |
-| **Conversion Tracking** | Limited (bio link only)     | Direct (unique URL per pin)     |
-| **Algorithm**           | Recency-based (dies fast)   | Evergreen (resurfaces)          |
-| **Best Performer**      | Visually striking words     | Information-dense words         |
+| Metric                  | Instagram                 | Pinterest                       |
+| ----------------------- | ------------------------- | ------------------------------- |
+| **Engagement**          | Likes + Comments          | Saves + Repins                  |
+| **Traffic**             | Profile visits            | Outbound clicks (to WOTD pages) |
+| **Lifespan**            | 48 hours                  | 3-6 months+                     |
+| **Conversion Tracking** | Limited (bio link only)   | Direct (unique URL per pin)     |
+| **Algorithm**           | Recency-based (dies fast) | Evergreen (resurfaces)          |
+| **Best Performer**      | Visually striking words   | Information-dense words         |
 
 **Expected Results:**
 
@@ -367,4 +421,3 @@ Before asking for help, verify:
 ## Next: Update the Strategy Doc
 
 I'll add this upload node documentation to the main Pinterest strategy guide!
-

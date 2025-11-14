@@ -1337,15 +1337,17 @@ console.log("Images received:", images.length);
 // Construct public URLs using tunnel URL + file paths from server response
 const imageUrls = images.map((img, index) => {
   const imgData = img.json;
-  const filePath = imgData.filePath; // e.g., "/shared/images/languageacademy/socials/2025-11-16-utiliser/2025-11-16-utiliser-slide-1.png"
+  const filePath = imgData.filePath; // e.g., "/shared/images/languageacademy/socials/instagram/2025-11-16-utiliser/2025-11-16-utiliser-slide-1.png"
 
-  // Extract just the folder and filename (last 2 parts of path)
-  const pathParts = filePath.split("/");
+  // Extract subfolder, date-word folder, and filename (last 3 parts of path)
+  const pathParts = filePath.split("/").filter((part) => part !== ""); // Remove empty strings from leading/trailing slashes
+  const subfolder = pathParts[pathParts.length - 3]; // e.g., "instagram"
   const folder = pathParts[pathParts.length - 2]; // e.g., "2025-11-16-utiliser"
   const filename = pathParts[pathParts.length - 1]; // e.g., "2025-11-16-utiliser-slide-1.png"
 
   // Static server serves /app/images/languageacademy/socials at /images/
-  const publicUrl = `${tunnelUrl}/images/${folder}/${filename}`;
+  // Include subfolder (instagram) in the URL path
+  const publicUrl = `${tunnelUrl}/images/${subfolder}/${folder}/${filename}`;
 
   console.log(`Image ${index + 1}: ${publicUrl}`);
   return publicUrl;

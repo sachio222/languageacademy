@@ -15,9 +15,13 @@ function WordOfTheDay() {
   const [loading, setLoading] = useState(true);
   const [showAnswer, setShowAnswer] = useState(false);
   
-  // Get date from URL or use today
+  // Get date from URL or use today - use local timezone
   const urlParams = new URLSearchParams(window.location.search);
-  const targetDate = urlParams.get('date') || new Date().toISOString().split('T')[0];
+  const getTodayLocal = () => {
+    const now = new Date();
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  };
+  const targetDate = urlParams.get('date') || getTodayLocal();
   const source = urlParams.get('utm_source') || 'direct';
   
   useEffect(() => {

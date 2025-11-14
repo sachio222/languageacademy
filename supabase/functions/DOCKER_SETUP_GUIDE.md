@@ -278,3 +278,4 @@ Run the diagnostic script for detailed troubleshooting:
 docker exec -it static-server node test-connectivity.js
 ```
 
+

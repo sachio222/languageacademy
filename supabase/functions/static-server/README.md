@@ -161,3 +161,4 @@ The server will still try to auto-init, but your manual setup will override it i
 2. Try accessing from n8n: `http://static-server:3001/health`
 3. Check docker-compose network configuration
 
+

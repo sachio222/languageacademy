@@ -15,6 +15,12 @@ function WOTDHub() {
   // WOTD feature launch date - don't allow navigation before this
   const WOTD_START_DATE = '2025-11-10';
   
+  // Helper function to get today's date in local timezone as YYYY-MM-DD
+  const getTodayLocal = () => {
+    const now = new Date();
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  };
+  
   const [view, setView] = useState('single'); // 'single' or 'archive'
   const [currentDate, setCurrentDate] = useState(null);
   const [wordData, setWordData] = useState(null);
@@ -39,8 +45,14 @@ function WOTDHub() {
     const wordParam = params.get('word');
     const correctKeyParam = params.get('correct'); // Which letter is correct
 
-    // Set date first
-    const targetDate = dateParam || new Date().toISOString().split('T')[0];
+    // If word param is provided without date, look up the word to find its date
+    if (wordParam && !dateParam) {
+      loadWordByWordId(wordParam);
+      return;
+    }
+
+    // Set date first - use local timezone
+    const targetDate = dateParam || getTodayLocal();
     setCurrentDate(targetDate);
 
     // Set answer if from email
@@ -73,6 +85,54 @@ function WOTDHub() {
       loadArchiveData();
     }
   }, [view]);
+
+  const loadWordByWordId = async (wordId) => {
+    setLoading(true);
+
+    try {
+      // Fetch from Supabase by word_id
+      const { data: wordData, error } = await supabase
+        .from('word_of_the_day')
+        .select('*')
+        .eq('word_id', wordId)
+        .single();
+
+      if (error && error.code !== 'PGRST116') {
+        console.error('Error loading WOTD by word_id:', error);
+        setLoading(false);
+        return;
+      }
+
+      // If word found, navigate to its date
+      if (wordData && wordData.date) {
+        const targetDate = wordData.date;
+        setCurrentDate(targetDate);
+        setWordData(wordData);
+        updateProgress(targetDate);
+        
+        // Update URL to include the date
+        const params = new URLSearchParams(window.location.search);
+        params.set('date', targetDate);
+        params.set('word', wordId); // Keep word param for reference
+        window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+        
+        setLoading(false);
+        return;
+      }
+
+      // If no word found, fall back to today
+      console.log('No word found for word_id', wordId, '- using today');
+      const today = getTodayLocal();
+      setCurrentDate(today);
+      loadWordData(today);
+
+    } catch (err) {
+      console.error('Unexpected error loading WOTD by word_id:', err);
+      const today = getTodayLocal();
+      setCurrentDate(today);
+      loadWordData(today);
+    }
+  };
 
   const loadWordData = async (date) => {
     setLoading(true);
@@ -232,13 +292,23 @@ function WOTDHub() {
   };
 
   const navigateDay = (direction) => {
-    const date = new Date(currentDate);
+    // Parse date parts to avoid timezone issues
+    const [year, month, day] = currentDate.split('-').map(Number);
+    const date = new Date(year, month - 1, day); // month is 0-indexed
     date.setDate(date.getDate() + direction);
-    const newDate = date.toISOString().split('T')[0];
     
-    // Don't allow navigation before start date or after today
-    const today = new Date().toISOString().split('T')[0];
-    if (newDate < WOTD_START_DATE || newDate > today) {
+    // Format as YYYY-MM-DD using local timezone
+    const newDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    
+    const today = getTodayLocal();
+    
+    // Don't allow navigation before start date
+    if (newDate < WOTD_START_DATE) {
+      return;
+    }
+    
+    // Only block forward navigation past today (allow backward navigation from future dates for testing)
+    if (direction > 0 && newDate > today) {
       return;
     }
     
@@ -311,11 +381,12 @@ function WOTDHub() {
     
     try {
       // Fetch all WOTD entries from launch date to today, ordered by date descending
+      const today = getTodayLocal();
       const { data: words, error } = await supabase
         .from('word_of_the_day')
         .select('date, word, translation, part_of_speech, difficulty_level')
         .gte('date', WOTD_START_DATE)
-        .lte('date', new Date().toISOString().split('T')[0])
+        .lte('date', today)
         .order('date', { ascending: false });
 
       if (error) {
@@ -444,7 +515,7 @@ function WOTDHub() {
                 <button
                   className="wotd-day-nav-btn wotd-day-next"
                   onClick={() => navigateDay(1)}
-                  disabled={currentDate >= new Date().toISOString().split('T')[0]}
+                  disabled={currentDate >= getTodayLocal()}
                   aria-label="Next day"
                 >
                   <span className="wotd-nav-text">Next Day →</span>
@@ -774,7 +845,7 @@ function WOTDHub() {
                 <button
                   className="wotd-footer-nav-btn wotd-footer-next"
                   onClick={() => navigateDay(1)}
-                  disabled={currentDate >= new Date().toISOString().split('T')[0]}
+                  disabled={currentDate >= getTodayLocal()}
                   aria-label="Next word"
                 >
                   <span className="wotd-nav-text">Next Word →</span>

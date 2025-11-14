@@ -1512,34 +1512,48 @@ return { json: { tunnelUrl: tunnelUrl } };
 
 **What's Different:** Changed dimensions from 1080x1080 (Instagram) to 1000x1500 (Pinterest). Also added `platform: "pinterest"` for file organization.
 
+**Mode:** Run Once for All Items (important - processes single pin)
+
 **Body (JSON):**
 
 ```json
 {
-  "html": "{{ $json.html }}",
+  "html": "{{ $input.first().json.html }}",
   "width": 1000,
   "height": 1500,
-  "word": "{{ $json.word }}",
-  "date": "{{ $json.date }}",
+  "word": "{{ $input.first().json.word }}",
+  "date": "{{ $input.first().json.date }}",
   "platform": "pinterest"
 }
 ```
+
+**Why `$input.first()`?**
+
+- If Merge2 or previous nodes output multiple items, `$input.first()` ensures we get the first (and only) Pinterest pin HTML
+- `$json.html` can fail if there are multiple items in the input
 
 **Response:**
 
 ```json
 {
   "success": true,
-  "url": "https://abc123.trycloudflare.com/images/2025-11-16-parler/2025-11-16-parler-pinterest.png",
-  "filePath": "/shared/images/languageacademy/socials/2025-11-16-parler/2025-11-16-parler-pinterest.png",
+  "url": "https://abc123.trycloudflare.com/images/2025-11-16-parler/pinterest/2025-11-16-parler-pinterest.png",
+  "filePath": "/shared/images/languageacademy/socials/2025-11-16-parler/pinterest/2025-11-16-parler-pinterest.png",
   "word": "parler",
   "date": "2025-11-16"
 }
 ```
 
-**Purpose:** Converts the HTML to a 1000x1500px PNG image and returns a public URL via the cloudflared tunnel.
+**Purpose:** Converts the HTML to a 1000x1500px PNG image and returns a **public HTTPS URL** via the cloudflared tunnel.
 
-**Note:** The `platform: "pinterest"` parameter helps organize files (optional but recommended).
+**Important:**
+
+- ✅ The `url` field is a **public HTTPS URL** (not base64) - perfect for Pinterest API
+- ✅ Pinterest API requires publicly accessible URLs (which this is)
+- ✅ Same infrastructure as Instagram - uses cloudflared tunnel + static-server
+- ✅ The base64 is only used internally between services, not sent to Pinterest
+
+**Note:** The `platform: "pinterest"` parameter creates the folder structure `date-word/pinterest/` to avoid conflicts with Instagram images.
 
 ---
 
@@ -1549,11 +1563,16 @@ return { json: { tunnelUrl: tunnelUrl } };
 **Language:** JavaScript  
 **Mode:** Run Once for All Items
 
-**Purpose:** Creates SEO-optimized Pinterest metadata (title, description, link, alt text).
+**Purpose:** Creates SEO-optimized Pinterest metadata (title, description, link, alt text) and **collects the image URL** from Node 8.
 
 **What's Different:** Completely new! Instagram uses a simple caption generator. Pinterest needs SEO-optimized titles, rich descriptions, direct WOTD page links, and alt text.
 
 **Copy full code from:** `pinterest-metadata-template.js`
+
+**Important:** This node collects data from TWO previous nodes:
+
+- **WOTD data** from Node 6 (Generate Pinterest Pin HTML) - uses `$("Generate Pinterest Pin HTML")`
+- **Image URL** from Node 8 (Convert HTML to Image) - uses `$json` (current node input)
 
 **Key outputs:**
 
@@ -1566,13 +1585,14 @@ return {
     link: pinLink, // "https://languageacademy.io/?wotd=true&word=parler-fr"
     alt_text: altText, // Accessibility + SEO text
     board_name: boardName, // "French Word of the Day"
+    note: note, // Internal categorization
     // board_id: "PLACEHOLDER", // Set after Pinterest API setup
 
     // Keep data for next node
     word: word,
-    date: data.date,
-    image_url: data.url, // Public URL from Node 8
-    html: data.html,
+    date: date,
+    image_url: imageUrl, // ✅ Public URL collected from Node 8
+    html: htmlData.html, // Pass HTML through from Node 6
 
     // Analytics metadata
     level: level,
@@ -1642,6 +1662,7 @@ https://languageacademy.io/?wotd=true&word=dormir-fr
   "description": "{{ $json.description }}",
   "link": "{{ $json.link }}",
   "alt_text": "{{ $json.alt_text }}",
+  "note": "{{ $json.note }}",
   "board_id": "YOUR_BOARD_ID_HERE",
   "media_source": {
     "source_type": "image_url",
@@ -1654,6 +1675,15 @@ https://languageacademy.io/?wotd=true&word=dormir-fr
 
 - Replace `YOUR_BOARD_ID_HERE` with your actual Pinterest board ID
 - Set up Pinterest OAuth credential in n8n (see `pinterest-api-upload.md`)
+
+**Algorithm Optimization (Pinterest Best Practices):**
+
+- ✅ `note` field helps Pinterest categorize pins (internal use, not visible to users)
+- ✅ **3-5 hashtags ONLY** (Pinterest best practice - quality over quantity, avoids spam)
+- ✅ Natural keyword integration in description (NOT keyword-stuffed)
+- ✅ Focused topics: Learn French, French Vocabulary, Language Learning, ${level}French
+- ✅ Dynamic topic selection based on word level (A1/A2 = beginners, B1+ = intermediate) and part of speech
+- ✅ **Quality content > keyword optimization** (Pinterest prioritizes user value)
 
 **Response:**
 
