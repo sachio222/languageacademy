@@ -199,11 +199,11 @@ If you prefer to create manually, use this schema:
 
 1. Go to [Airtable API](https://airtable.com/api)
 2. Select your base
-3. Copy your **Base ID** (starts with `app...`) appYOUR_BASE_ID_HERE
+3. Copy your **Base ID** (starts with `app...`) - e.g., `appYOUR_BASE_ID_HERE`
 4. Create an API token:
    - Go to [Account Settings](https://airtable.com/account) → Personal access tokens
    - Create a new token with `data.records:read` and `data.records:write` scopes
-   - Copy the token patYOUR_TOKEN_HERE
+   - Copy the token (starts with `pat...`) - e.g., `patYOUR_TOKEN_HERE`
 
 ### Step 4: Add to n8n Credentials
 
