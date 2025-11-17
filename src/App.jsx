@@ -27,6 +27,7 @@ const NotificationSettings = lazy(() => import('./components/NotificationSetting
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./components/TermsOfService'));
 const DataDeletionPage = lazy(() => import('./components/DataDeletionPage'));
+const AbsurdLibrary = lazy(() => import('./components/AbsurdLibrary'));
 import { initializeClarity, identifyClarityUser, setClarityTag, trackClarityEvent, upgradeClaritySession } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -89,12 +90,22 @@ function App() {
   const isWordOfTheDay = urlParams.get('wotd') || urlParams.get('word-of-the-day');
   const isUnsubscribe = urlParams.get('unsubscribe');
   const showSettings = urlParams.get('settings') !== null;
+  const isAbsurdLibrary = urlParams.get('absurd') !== null;
 
   // Unsubscribe page (standalone, no auth required)
   if (isUnsubscribe !== null) {
     return (
       <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
         <UnsubscribePage />
+      </Suspense>
+    );
+  }
+
+  // Absurd Library (standalone, no auth required)
+  if (isAbsurdLibrary) {
+    return (
+      <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
+        <AbsurdLibrary />
       </Suspense>
     );
   }
