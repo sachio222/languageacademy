@@ -31,6 +31,9 @@ function WOTDHub() {
   const [showFeedback, setShowFeedback] = useState(true);
   const [archiveWords, setArchiveWords] = useState([]);
   const [archiveLoading, setArchiveLoading] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [hasMoreWords, setHasMoreWords] = useState(true);
+  const [archiveOffset, setArchiveOffset] = useState(0);
   const [hasNextDay, setHasNextDay] = useState(true); // Track if next day has a word
   const [showNotificationSettings, setShowNotificationSettings] = useState(() => {
     // Check if settings param is in URL
@@ -86,6 +89,14 @@ function WOTDHub() {
       loadArchiveData();
     }
   }, [view]);
+
+  // Function to reset and reload archive
+  const resetArchive = () => {
+    setArchiveWords([]);
+    setArchiveOffset(0);
+    setHasMoreWords(true);
+    loadArchiveData();
+  };
 
   const loadWordByWordId = async (wordId) => {
     setLoading(true);
@@ -408,44 +419,75 @@ function WOTDHub() {
     });
   };
 
-  const loadArchiveData = async () => {
-    setArchiveLoading(true);
+  const loadArchiveData = async (isLoadMore = false) => {
+    if (isLoadMore) {
+      setLoadingMore(true);
+    } else {
+      setArchiveLoading(true);
+      setArchiveOffset(0);
+      setHasMoreWords(true);
+    }
+    
+    const WORDS_PER_PAGE = 20;
+    const offset = isLoadMore ? archiveOffset : 0;
     
     try {
-      // Fetch all WOTD entries from launch date to today, ordered by date descending
+      // Fetch WOTD entries with pagination
       const today = getTodayLocal();
       const { data: words, error } = await supabase
         .from('word_of_the_day')
         .select('date, word, translation, part_of_speech, difficulty_level')
         .gte('date', WOTD_START_DATE)
         .lte('date', today)
-        .order('date', { ascending: false });
+        .order('date', { ascending: false })
+        .range(offset, offset + WORDS_PER_PAGE - 1);
 
       if (error) {
         console.error('Error loading archive:', error);
-        setArchiveLoading(false);
+        if (isLoadMore) {
+          setLoadingMore(false);
+        } else {
+          setArchiveLoading(false);
+        }
         return;
       }
 
       // Format the data for the archive view
       const formattedWords = words.map(word => {
         const date = new Date(word.date);
-      return {
+        return {
           date: word.date,
-        monthDay: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-        year: date.getFullYear(),
+          monthDay: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+          year: date.getFullYear(),
           word: word.word,
           translation: word.translation,
           type: word.part_of_speech,
           level: word.difficulty_level
-      };
-    });
+        };
+      });
 
-      setArchiveWords(formattedWords);
-      setArchiveLoading(false);
+      // Check if there are more words to load
+      const hasMore = words.length === WORDS_PER_PAGE;
+      setHasMoreWords(hasMore);
+
+      if (isLoadMore) {
+        // Append to existing words
+        setArchiveWords(prev => [...prev, ...formattedWords]);
+        setArchiveOffset(offset + WORDS_PER_PAGE);
+        setLoadingMore(false);
+      } else {
+        // Replace words (initial load)
+        setArchiveWords(formattedWords);
+        setArchiveOffset(WORDS_PER_PAGE);
+        setArchiveLoading(false);
+      }
     } catch (err) {
       console.error('Unexpected error loading archive:', err);
-      setArchiveLoading(false);
+      if (isLoadMore) {
+        setLoadingMore(false);
+      } else {
+        setArchiveLoading(false);
+      }
     }
   };
 
@@ -477,11 +519,17 @@ function WOTDHub() {
             </button>
           </div>
           <div className="wotd-nav-center">
-            <img src="/img/logov2.png" alt="Language Academy" className="wotd-logo-small" />
-            <div className="wotd-nav-title-group">
-              <span className="wotd-nav-title">Language Academy</span>
-              <span className="wotd-nav-subtitle">Word of the Day</span>
-            </div>
+            <button 
+              className="wotd-logo-btn"
+              onClick={() => window.location.href = '/'}
+              title="Go to Language Academy home"
+            >
+              <img src="/img/logov2.png" alt="Language Academy" className="wotd-logo-small" />
+              <div className="wotd-nav-title-group">
+                <span className="wotd-nav-title">Language Academy</span>
+                <span className="wotd-nav-subtitle">Word of the Day</span>
+              </div>
+            </button>
           </div>
           <div className="wotd-nav-right">
             {user ? (
@@ -972,9 +1020,17 @@ function WOTDHub() {
             </div>
 
             {/* Load More */}
-            <div className="wotd-archive-load-more">
-              <button className="wotd-load-more-btn">Load More Words</button>
-            </div>
+            {hasMoreWords && (
+              <div className="wotd-archive-load-more">
+                <button 
+                  className="wotd-load-more-btn"
+                  onClick={() => loadArchiveData(true)}
+                  disabled={loadingMore}
+                >
+                  {loadingMore ? 'Loading...' : 'Load More Words'}
+                </button>
+              </div>
+            )}
 
             {/* CTA for non-auth users */}
             {!user && (

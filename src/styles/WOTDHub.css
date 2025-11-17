@@ -88,6 +88,21 @@
   justify-self: center;
 }
 
+.wotd-logo-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.15s ease;
+}
+
+.wotd-logo-btn:hover {
+  opacity: 0.8;
+}
+
 .wotd-nav-right {
   display: flex;
   align-items: center;
@@ -1313,9 +1328,14 @@
   letter-spacing: -0.01em;
 }
 
-.wotd-load-more-btn:hover {
+.wotd-load-more-btn:hover:not(:disabled) {
   border-color: #3b82f6;
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.12);
+}
+
+.wotd-load-more-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /* Archive CTA */
