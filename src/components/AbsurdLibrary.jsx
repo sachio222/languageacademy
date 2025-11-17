@@ -2626,6 +2626,489 @@ function AbsurdLibrary() {
                 </button>
               </div>
 
+              {/* Lab Microscope Analysis */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Lab Analysis</h3>
+                <div className="absurd-illustration-container">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
+
+                    {/* Base platform */}
+                    <ellipse cx="100" cy="170" rx="65" ry="10" fill="#3b82f6" opacity="0.15" />
+                    <rect x="75" y="160" width="50" height="12" rx="3" fill="#3b82f6" opacity="0.2" />
+
+                    {/* Microscope body */}
+                    <rect x="88" y="100" width="24" height="60" rx="3" fill="#3b82f6" opacity="0.25" />
+                    <rect x="90" y="105" width="20" height="50" rx="2" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+
+                    {/* Lens system */}
+                    <circle cx="100" cy="95" r="22" fill="#3b82f6" opacity="0.15" />
+                    <circle cx="100" cy="95" r="16" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="95" r="10" fill="#3b82f6" opacity="0.2" />
+                    <circle cx="100" cy="95" r="5" fill="#3b82f6" />
+
+                    {/* Eyepiece */}
+                    <path d="M85 75 L85 55 Q85 45 100 40 Q115 45 115 55 L115 75" stroke="#3b82f6" strokeWidth="2.5" fill="none" />
+                    <circle cx="100" cy="40" r="10" fill="#3b82f6" opacity="0.2" />
+                    <circle cx="100" cy="40" r="6" fill="#3b82f6" />
+                    <circle cx="100" cy="40" r="3" fill="#fff" opacity="0.6" />
+
+                    {/* Side adjustment knobs */}
+                    <rect x="70" y="75" width="12" height="18" rx="2" fill="#3b82f6" opacity="0.3" />
+                    <rect x="118" y="75" width="12" height="18" rx="2" fill="#3b82f6" opacity="0.3" />
+                    <line x1="76" y1="80" x2="76" y2="88" stroke="#fff" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="124" y1="80" x2="124" y2="88" stroke="#fff" strokeWidth="1.5" opacity="0.4" />
+
+                    {/* Specimen slide */}
+                    <rect x="82" y="155" width="36" height="6" rx="1" fill="#3b82f6" opacity="0.35" />
+                    <circle cx="100" cy="158" r="2" fill="#3b82f6" />
+
+                    {/* Scientific sparkles */}
+                    <path d="M125 30 L127 35 L132 37 L127 39 L125 44 L123 39 L118 37 L123 35 Z" fill="#3b82f6" opacity="0.25" />
+                    <path d="M65 110 L66 113 L69 114 L66 115 L65 118 L64 115 L61 114 L64 113 Z" fill="#3b82f6" opacity="0.2" />
+                    <path d="M140 95 L141 98 L144 99 L141 100 L140 103 L139 100 L136 99 L139 98 Z" fill="#3b82f6" opacity="0.18" />
+
+                    {/* Discovery glow */}
+                    <circle cx="100" cy="95" r="35" fill="#3b82f6" opacity="0.08" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'lab-analysis')}
+                >
+                  {copiedId === 'lab-analysis' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Data Chart Analytics */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Data Insights</h3>
+                <div className="absurd-illustration-container">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
+
+                    {/* Chart background */}
+                    <rect x="40" y="40" width="120" height="120" rx="8" fill="#3b82f6" opacity="0.08" />
+                    <rect x="45" y="45" width="110" height="110" rx="6" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+
+                    {/* Axes */}
+                    <line x1="60" y1="140" x2="140" y2="140" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
+                    <line x1="60" y1="140" x2="60" y2="60" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
+
+                    {/* Grid lines */}
+                    <line x1="60" y1="120" x2="140" y2="120" stroke="#3b82f6" strokeWidth="1" opacity="0.15" />
+                    <line x1="60" y1="100" x2="140" y2="100" stroke="#3b82f6" strokeWidth="1" opacity="0.15" />
+                    <line x1="60" y1="80" x2="140" y2="80" stroke="#3b82f6" strokeWidth="1" opacity="0.15" />
+
+                    {/* Rising trend line */}
+                    <path d="M65 125 L80 110 L95 115 L110 95 L125 80 L140 65" stroke="#3b82f6" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+
+                    {/* Data points */}
+                    <circle cx="65" cy="125" r="5" fill="#3b82f6" />
+                    <circle cx="80" cy="110" r="5" fill="#3b82f6" />
+                    <circle cx="95" cy="115" r="5" fill="#3b82f6" />
+                    <circle cx="110" cy="95" r="5" fill="#3b82f6" />
+                    <circle cx="125" cy="80" r="5" fill="#3b82f6" />
+                    <circle cx="140" cy="65" r="6" fill="#3b82f6" />
+
+                    {/* Bars underneath */}
+                    <rect x="63" y="132" width="5" height="8" rx="1" fill="#3b82f6" opacity="0.2" />
+                    <rect x="78" y="118" width="5" height="22" rx="1" fill="#3b82f6" opacity="0.2" />
+                    <rect x="93" y="122" width="5" height="18" rx="1" fill="#3b82f6" opacity="0.2" />
+                    <rect x="108" y="105" width="5" height="35" rx="1" fill="#3b82f6" opacity="0.2" />
+                    <rect x="123" y="90" width="5" height="50" rx="1" fill="#3b82f6" opacity="0.2" />
+
+                    {/* Trend arrow */}
+                    <path d="M132 58 L145 60 L138 68" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+
+                    {/* Success sparkles */}
+                    <path d="M145 50 L147 55 L152 57 L147 59 L145 64 L143 59 L138 57 L143 55 Z" fill="#3b82f6" opacity="0.25" />
+                    <path d="M55 70 L56 73 L59 74 L56 75 L55 78 L54 75 L51 74 L54 73 Z" fill="#3b82f6" opacity="0.18" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'data-insights')}
+                >
+                  {copiedId === 'data-insights' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Test Tube Experiment */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Experimentation</h3>
+                <div className="absurd-illustration-container">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
+
+                    {/* Shadow base */}
+                    <ellipse cx="100" cy="165" rx="50" ry="8" fill="#3b82f6" opacity="0.12" />
+
+                    {/* Lab flask */}
+                    <path d="M80 40 L80 90 L55 140 Q50 150 55 160 L145 160 Q150 150 145 140 L120 90 L120 40 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+
+                    {/* Flask opening */}
+                    <rect x="75" y="35" width="50" height="8" rx="2" fill="#3b82f6" opacity="0.2" />
+                    <rect x="77" y="37" width="46" height="4" rx="1" fill="#fff" />
+
+                    {/* Liquid inside */}
+                    <path d="M60 140 Q55 145 60 152 L140 152 Q145 145 140 140 L115 95 L85 95 Z" fill="#3b82f6" opacity="0.15" />
+
+                    {/* Bubbles rising */}
+                    <circle cx="90" cy="125" r="6" fill="#3b82f6" opacity="0.35" />
+                    <circle cx="110" cy="135" r="5" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="95" cy="145" r="4" fill="#3b82f6" opacity="0.25" />
+                    <circle cx="105" cy="115" r="4" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="85" cy="140" r="3" fill="#3b82f6" opacity="0.2" />
+                    <circle cx="115" cy="120" r="3" fill="#3b82f6" opacity="0.25" />
+
+                    {/* Bubble trails */}
+                    <path d="M90 130 Q88 120 90 110" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.2" />
+                    <path d="M110 140 Q108 130 110 120" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.2" />
+
+                    {/* Measurement marks */}
+                    <line x1="145" y1="140" x2="155" y2="140" stroke="#3b82f6" strokeWidth="1.5" opacity="0.3" />
+                    <line x1="145" y1="120" x2="153" y2="120" stroke="#3b82f6" strokeWidth="1.5" opacity="0.3" />
+                    <line x1="145" y1="100" x2="155" y2="100" stroke="#3b82f6" strokeWidth="1.5" opacity="0.3" />
+
+                    {/* Steam/vapor curves */}
+                    <path d="M85 30 Q80 20 85 10" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M100 25 Q95 15 100 5" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.2" />
+                    <path d="M115 30 Q120 20 115 10" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+
+                    {/* Scientific sparkles */}
+                    <path d="M60 60 L61 63 L64 64 L61 65 L60 68 L59 65 L56 64 L59 63 Z" fill="#3b82f6" opacity="0.18" />
+                    <path d="M140 60 L141 63 L144 64 L141 65 L140 68 L139 65 L136 64 L139 63 Z" fill="#3b82f6" opacity="0.18" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'experimentation')}
+                >
+                  {copiedId === 'experimentation' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Research Documents */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Documentation</h3>
+                <div className="absurd-illustration-container">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
+
+                    {/* Stacked papers */}
+                    <rect x="50" y="95" width="100" height="80" rx="4" fill="#3b82f6" opacity="0.08" transform="rotate(-3 100 135)" />
+                    <rect x="55" y="85" width="90" height="75" rx="4" fill="#3b82f6" opacity="0.12" transform="rotate(2 100 122)" />
+
+                    {/* Main document */}
+                    <rect x="60" y="50" width="80" height="100" rx="6" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+
+                    {/* Document header */}
+                    <rect x="70" y="60" width="60" height="8" rx="2" fill="#3b82f6" opacity="0.3" />
+
+                    {/* Text lines */}
+                    <line x1="70" y1="80" x2="130" y2="80" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
+                    <line x1="70" y1="90" x2="125" y2="90" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
+                    <line x1="70" y1="100" x2="128" y2="100" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
+                    <line x1="70" y1="110" x2="120" y2="110" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
+                    <line x1="70" y1="120" x2="127" y2="120" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
+
+                    {/* Checkbox list */}
+                    <circle cx="75" cy="135" r="4" fill="none" stroke="#3b82f6" strokeWidth="1.5" />
+                    <path d="M73 134 L75 137 L78 132" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <line x1="85" y1="135" x2="110" y2="135" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" opacity="0.3" />
+
+                    {/* Magnifying glass overlay */}
+                    <circle cx="120" cy="110" r="18" fill="#fff" opacity="0.9" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="120" cy="110" r="10" fill="none" stroke="#3b82f6" strokeWidth="1.5" opacity="0.4" />
+                    <path d="M133 123 L145 135" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
+
+                    {/* Document corner fold */}
+                    <path d="M135 50 L135 60 L145 60 Z" fill="#3b82f6" opacity="0.15" />
+                    <path d="M135 60 L145 60" stroke="#3b82f6" strokeWidth="1.5" opacity="0.3" />
+
+                    {/* Research sparkles */}
+                    <path d="M150 45 L152 50 L157 52 L152 54 L150 59 L148 54 L143 52 L148 50 Z" fill="#3b82f6" opacity="0.25" />
+                    <path d="M50 70 L51 73 L54 74 L51 75 L50 78 L49 75 L46 74 L49 73 Z" fill="#3b82f6" opacity="0.18" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'documentation')}
+                >
+                  {copiedId === 'documentation' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Systematic Process */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">System Flow</h3>
+                <div className="absurd-illustration-container">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
+
+                    {/* Flow nodes */}
+                    <circle cx="100" cy="45" r="18" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="45" r="10" fill="#3b82f6" opacity="0.2" />
+                    <circle cx="100" cy="45" r="5" fill="#3b82f6" />
+
+                    {/* Arrow down */}
+                    <line x1="100" y1="65" x2="100" y2="85" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M95 80 L100 90 L105 80" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+
+                    {/* Processing box */}
+                    <rect x="70" y="90" width="60" height="40" rx="6" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <rect x="75" y="95" width="50" height="30" rx="4" fill="#3b82f6" opacity="0.1" />
+                    <circle cx="90" cy="110" r="3" fill="#3b82f6" opacity="0.4" />
+                    <circle cx="100" cy="110" r="3" fill="#3b82f6" opacity="0.5" />
+                    <circle cx="110" cy="110" r="3" fill="#3b82f6" opacity="0.4" />
+
+                    {/* Split arrows */}
+                    <line x1="100" y1="132" x2="70" y2="155" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M75 150 L65 160 L73 158" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+
+                    <line x1="100" y1="132" x2="130" y2="155" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M125 150 L135 160 L127 158" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+
+                    {/* End nodes */}
+                    <circle cx="65" cy="165" r="12" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="65" cy="165" r="6" fill="#3b82f6" opacity="0.3" />
+                    <path d="M62 164 L64 167 L69 161" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+
+                    <circle cx="135" cy="165" r="12" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="135" cy="165" r="6" fill="#3b82f6" opacity="0.3" />
+                    <path d="M132 164 L134 167 L139 161" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+
+                    {/* Logic sparkles */}
+                    <path d="M140 40 L142 45 L147 47 L142 49 L140 54 L138 49 L133 47 L138 45 Z" fill="#3b82f6" opacity="0.25" />
+                    <path d="M50 110 L51 113 L54 114 L51 115 L50 118 L49 115 L46 114 L49 113 Z" fill="#3b82f6" opacity="0.18" />
+                    <path d="M155 115 L156 118 L159 119 L156 120 L155 123 L154 120 L151 119 L154 118 Z" fill="#3b82f6" opacity="0.18" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'system-flow')}
+                >
+                  {copiedId === 'system-flow' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Thought Bubbles */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Thought Process</h3>
+                <div className="absurd-illustration-container">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
+
+                    {/* Large thought bubble - asymmetric organic shape */}
+                    <ellipse cx="105" cy="70" rx="50" ry="45" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" transform="rotate(-8 105 70)" />
+                    <ellipse cx="105" cy="70" rx="40" ry="35" fill="#3b82f6" opacity="0.08" transform="rotate(-8 105 70)" />
+
+                    {/* Wavy thought lines inside */}
+                    <path d="M80 60 Q90 55 100 60 Q110 65 120 60" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
+                    <path d="M85 75 Q95 70 105 75" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
+
+                    {/* Question mark - slightly tilted */}
+                    <path d="M95 65 Q95 55 105 55 Q115 55 115 65 Q115 70 110 72 L108 78" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" fill="none" transform="rotate(5 105 65)" />
+                    <circle cx="107" cy="85" r="3" fill="#3b82f6" transform="rotate(5 107 85)" />
+
+                    {/* Smaller connecting bubbles - organic placement */}
+                    <circle cx="75" cy="115" r="15" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="75" cy="115" r="8" fill="#3b82f6" opacity="0.12" />
+
+                    <circle cx="55" cy="145" r="10" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="55" cy="145" r="5" fill="#3b82f6" opacity="0.15" />
+
+                    <circle cx="45" cy="165" r="6" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="45" cy="165" r="3" fill="#3b82f6" opacity="0.2" />
+
+                    {/* Floating thinking head - simple abstract */}
+                    <circle cx="50" cy="175" r="12" fill="#3b82f6" opacity="0.15" />
+                    <circle cx="50" cy="172" r="8" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="50" cy="172" r="4" fill="#3b82f6" opacity="0.3" />
+
+                    {/* Decorative floating elements */}
+                    <path d="M140 85 Q145 80 150 85 Q145 90 140 85" fill="#3b82f6" opacity="0.15" />
+                    <circle cx="155" cy="110" r="4" fill="#3b82f6" opacity="0.2" />
+                    <circle cx="165" cy="90" r="3" fill="#3b82f6" opacity="0.18" />
+
+                    {/* Sparkles of insight */}
+                    <path d="M130 50 L132 55 L137 57 L132 59 L130 64 L128 59 L123 57 L128 55 Z" fill="#3b82f6" opacity="0.25" />
+                    <path d="M60 95 L61 98 L64 99 L61 100 L60 103 L59 100 L56 99 L59 98 Z" fill="#3b82f6" opacity="0.18" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'thought-process')}
+                >
+                  {copiedId === 'thought-process' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Organic Connection Web */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Connections</h3>
+                <div className="absurd-illustration-container">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
+
+                    {/* Central node - slightly off-center */}
+                    <circle cx="105" cy="100" r="22" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="105" cy="100" r="15" fill="#3b82f6" opacity="0.15" />
+                    <circle cx="105" cy="100" r="8" fill="#3b82f6" />
+                    <circle cx="105" cy="100" r="4" fill="#fff" opacity="0.7" />
+
+                    {/* Organic connecting curves - not straight lines */}
+                    <path d="M105 78 Q90 60 75 55" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                    <path d="M120 88 Q140 75 155 65" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                    <path d="M127 100 Q145 105 160 110" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                    <path d="M115 118 Q125 140 130 158" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                    <path d="M90 112 Q70 125 55 140" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                    <path d="M83 95 Q60 88 45 85" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+
+                    {/* Outer nodes - varying sizes for organic feel */}
+                    <circle cx="75" cy="55" r="12" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="75" cy="55" r="6" fill="#3b82f6" opacity="0.3" />
+
+                    <circle cx="155" cy="65" r="10" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="155" cy="65" r="5" fill="#3b82f6" opacity="0.25" />
+
+                    <circle cx="160" cy="110" r="14" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="160" cy="110" r="7" fill="#3b82f6" opacity="0.28" />
+
+                    <circle cx="130" cy="158" r="11" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="130" cy="158" r="5" fill="#3b82f6" opacity="0.32" />
+
+                    <circle cx="55" cy="140" r="13" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="55" cy="140" r="6" fill="#3b82f6" opacity="0.27" />
+
+                    <circle cx="45" cy="85" r="9" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="45" cy="85" r="4" fill="#3b82f6" opacity="0.24" />
+
+                    {/* Floating decorative blobs */}
+                    <ellipse cx="135" cy="130" rx="8" ry="12" fill="#3b82f6" opacity="0.1" transform="rotate(25 135 130)" />
+                    <ellipse cx="70" cy="125" rx="6" ry="10" fill="#3b82f6" opacity="0.08" transform="rotate(-15 70 125)" />
+                    <circle cx="170" cy="85" r="5" fill="#3b82f6" opacity="0.12" />
+
+                    {/* Stars */}
+                    <path d="M100 35 L102 40 L107 42 L102 44 L100 49 L98 44 L93 42 L98 40 Z" fill="#3b82f6" opacity="0.25" />
+                    <path d="M30 100 L31 103 L34 104 L31 105 L30 108 L29 105 L26 104 L29 103 Z" fill="#3b82f6" opacity="0.18" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'connections')}
+                >
+                  {copiedId === 'connections' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Floating Books Stack */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Knowledge Stack</h3>
+                <div className="absurd-illustration-container">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
+
+                    {/* Base shadow - wavy */}
+                    <ellipse cx="100" cy="165" rx="55" ry="10" fill="#3b82f6" opacity="0.12" />
+                    <path d="M50 165 Q75 160 100 165 Q125 170 150 165" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.15" />
+
+                    {/* Bottom book - tilted */}
+                    <rect x="60" y="135" width="80" height="20" rx="3" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" transform="rotate(-4 100 145)" />
+                    <rect x="65" y="138" width="70" height="14" rx="2" fill="#3b82f6" opacity="0.1" transform="rotate(-4 100 145)" />
+                    <path d="M68 145 L132 140" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.25" />
+
+                    {/* Middle book - opposite tilt */}
+                    <rect x="55" y="110" width="90" height="22" rx="3" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" transform="rotate(3 100 121)" />
+                    <rect x="60" y="113" width="80" height="16" rx="2" fill="#3b82f6" opacity="0.12" transform="rotate(3 100 121)" />
+                    <path d="M65 121 Q100 118 135 121" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+
+                    {/* Top book - more tilted */}
+                    <rect x="65" y="80" width="70" height="25" rx="3" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" transform="rotate(-6 100 92)" />
+                    <rect x="70" y="84" width="60" height="17" rx="2" fill="#3b82f6" opacity="0.15" transform="rotate(-6 100 92)" />
+                    <path d="M75 92 Q100 88 125 93" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
+
+                    {/* Floating book - really absurd angle */}
+                    <rect x="75" y="45" width="50" height="18" rx="3" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" transform="rotate(12 100 54)" />
+                    <rect x="78" y="48" width="44" height="12" rx="2" fill="#3b82f6" opacity="0.18" transform="rotate(12 100 54)" />
+                    <circle cx="100" cy="54" r="25" fill="#3b82f6" opacity="0.08" />
+
+                    {/* Wavy bookmark ribbons */}
+                    <path d="M110 45 Q112 55 110 65 L110 85" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
+                    <path d="M85 50 Q83 60 85 70 L85 90" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+
+                    {/* Floating page elements - organic shapes */}
+                    <path d="M140 75 Q145 70 150 75 Q145 80 140 75" fill="#3b82f6" opacity="0.15" />
+                    <ellipse cx="50" cy="100" rx="6" ry="10" fill="#3b82f6" opacity="0.12" transform="rotate(-20 50 100)" />
+                    <circle cx="155" cy="115" r="5" fill="#3b82f6" opacity="0.15" />
+
+                    {/* Knowledge sparkles */}
+                    <path d="M100 25 L102 30 L107 32 L102 34 L100 39 L98 34 L93 32 L98 30 Z" fill="#3b82f6" opacity="0.28" />
+                    <path d="M145 55 L146 58 L149 59 L146 60 L145 63 L144 60 L141 59 L144 58 Z" fill="#3b82f6" opacity="0.22" />
+                    <path d="M55 85 L56 88 L59 89 L56 90 L55 93 L54 90 L51 89 L54 88 Z" fill="#3b82f6" opacity="0.18" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'knowledge-stack')}
+                >
+                  {copiedId === 'knowledge-stack' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Puzzle Pieces Coming Together */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Puzzle Solve</h3>
+                <div className="absurd-illustration-container">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
+
+                    {/* Center puzzle piece - organic shape */}
+                    <path d="M90 85 Q85 85 85 90 L85 105 Q85 110 90 110 L95 110 Q95 115 100 115 Q105 115 105 110 L110 110 Q115 110 115 105 L115 90 Q115 85 110 85 L105 85 Q105 80 100 80 Q95 80 95 85 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <path d="M90 90 L110 90 L110 105 L90 105 Z" fill="#3b82f6" opacity="0.15" />
+
+                    {/* Connecting piece from top - floating in */}
+                    <path d="M90 45 Q85 45 85 50 L85 60 Q85 65 90 65 L95 65 Q95 70 100 70 Q105 70 105 65 L110 65 Q115 65 115 60 L115 50 Q115 45 110 45 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" transform="rotate(-8 100 55)" />
+                    <path d="M90 50 L110 50 L110 60 L90 60 Z" fill="#3b82f6" opacity="0.12" transform="rotate(-8 100 55)" />
+
+                    {/* Curved arrow showing movement */}
+                    <path d="M100 68 Q105 75 100 78" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.4" strokeDasharray="3 3" />
+
+                    {/* Side piece - tilted */}
+                    <path d="M140 90 Q135 90 135 95 L135 110 Q135 115 140 115 L150 115 Q155 115 155 110 L155 95 Q155 90 150 90 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" transform="rotate(15 145 102)" />
+                    <path d="M140 95 L150 95 L150 110 L140 110 Z" fill="#3b82f6" opacity="0.18" transform="rotate(15 145 102)" />
+
+                    {/* Another piece from left */}
+                    <path d="M40 90 L60 90 Q65 90 65 95 L65 110 Q65 115 60 115 L40 115 Q35 115 35 110 L35 95 Q35 90 40 90 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" transform="rotate(-12 50 102)" />
+                    <path d="M40 95 L60 95 L60 110 L40 110 Z" fill="#3b82f6" opacity="0.14" transform="rotate(-12 50 102)" />
+
+                    {/* Bottom piece - wavy connection */}
+                    <path d="M85 140 Q80 140 80 145 L80 155 Q80 160 85 160 L115 160 Q120 160 120 155 L120 145 Q120 140 115 140 L110 140 Q110 135 105 135 L95 135 Q90 135 90 140 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" transform="rotate(5 100 147)" />
+                    <path d="M85 145 L115 145 L115 155 L85 155 Z" fill="#3b82f6" opacity="0.16" transform="rotate(5 100 150)" />
+
+                    {/* Floating connecting indicator */}
+                    <circle cx="100" cy="100" r="35" fill="none" stroke="#3b82f6" strokeWidth="1.5" opacity="0.15" strokeDasharray="5 5" />
+
+                    {/* Organic blobs around */}
+                    <ellipse cx="165" cy="65" rx="8" ry="12" fill="#3b82f6" opacity="0.12" transform="rotate(35 165 65)" />
+                    <circle cx="30" cy="130" r="6" fill="#3b82f6" opacity="0.1" />
+                    <path d="M160 140 Q165 135 170 140 Q165 145 160 140" fill="#3b82f6" opacity="0.14" />
+
+                    {/* Aha sparkles */}
+                    <path d="M100 120 L102 125 L107 127 L102 129 L100 134 L98 129 L93 127 L98 125 Z" fill="#3b82f6" opacity="0.25" />
+                    <path d="M125 70 L126 73 L129 74 L126 75 L125 78 L124 75 L121 74 L124 73 Z" fill="#3b82f6" opacity="0.2" />
+                    <path d="M70 65 L71 68 L74 69 L71 70 L70 73 L69 70 L66 69 L69 68 Z" fill="#3b82f6" opacity="0.18" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'puzzle-solve')}
+                >
+                  {copiedId === 'puzzle-solve' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
             </div>
           </section>
 
@@ -2954,6 +3437,196 @@ function AbsurdLibrary() {
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'save')}
                 >
                   {copiedId === 'save' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+            </div>
+          </section>
+
+          {/* Section: Analytical & Lab */}
+          <section className="absurd-section">
+            <h2 className="absurd-section-title">Analytical & Lab Icons</h2>
+            <p className="absurd-section-intro">Icons for analysis, research, and systematic learning</p>
+
+            <div className="absurd-grid">
+
+              {/* Microscope */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Microscope</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <ellipse cx="100" cy="165" rx="55" ry="8" fill="#3b82f6" opacity="0.1" />
+                    <rect x="85" y="155" width="30" height="10" rx="2" fill="#3b82f6" opacity="0.15" />
+                    <rect x="70" y="145" width="60" height="6" rx="2" fill="#3b82f6" opacity="0.2" />
+                    <rect x="92" y="95" width="16" height="50" rx="2" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="95" r="18" fill="#3b82f6" opacity="0.1" />
+                    <circle cx="100" cy="95" r="12" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="95" r="6" fill="#3b82f6" opacity="0.3" />
+                    <path d="M85 80 L85 65 Q85 55 100 50 Q115 55 115 65 L115 80" stroke="#3b82f6" strokeWidth="2.5" fill="none" />
+                    <circle cx="100" cy="50" r="8" fill="#3b82f6" opacity="0.2" />
+                    <circle cx="100" cy="50" r="4" fill="#3b82f6" />
+                    <rect x="75" y="75" width="10" height="15" rx="2" fill="#3b82f6" opacity="0.25" />
+                    <rect x="115" y="75" width="10" height="15" rx="2" fill="#3b82f6" opacity="0.25" />
+                    <path d="M115 35 Q120 30 115 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M85 35 Q80 30 85 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="130" cy="110" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="70" cy="110" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'microscope')}
+                >
+                  {copiedId === 'microscope' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Lab Flask */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Lab Flask</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <ellipse cx="100" cy="160" rx="45" ry="8" fill="#3b82f6" opacity="0.1" />
+                    <path d="M85 45 L85 85 L60 135 Q55 145 60 155 L140 155 Q145 145 140 135 L115 85 L115 45 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <path d="M65 135 Q60 140 65 145 L135 145 Q140 140 135 135" fill="#3b82f6" opacity="0.15" />
+                    <rect x="80" y="40" width="40" height="8" rx="2" fill="#3b82f6" opacity="0.2" />
+                    <circle cx="90" cy="120" r="5" fill="#3b82f6" opacity="0.4" />
+                    <circle cx="105" cy="130" r="4" fill="#3b82f6" opacity="0.35" />
+                    <circle cx="110" cy="115" r="3" fill="#3b82f6" opacity="0.3" />
+                    <path d="M70 140 Q75 135 80 140" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M115 140 Q120 135 125 140" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="75" cy="100" r="2" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="122" cy="105" r="2" fill="#3b82f6" opacity="0.3" />
+                    <path d="M130 30 Q135 25 130 20" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M70 30 Q65 25 70 20" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'lab-flask')}
+                >
+                  {copiedId === 'lab-flask' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Analytics Chart */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Analytics</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <rect x="45" y="45" width="110" height="110" rx="6" fill="#3b82f6" opacity="0.08" />
+                    <line x1="60" y1="140" x2="140" y2="140" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
+                    <line x1="60" y1="140" x2="60" y2="60" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M65 120 L85 100 L105 110 L125 75 L140 65" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <circle cx="65" cy="120" r="5" fill="#3b82f6" />
+                    <circle cx="85" cy="100" r="5" fill="#3b82f6" />
+                    <circle cx="105" cy="110" r="5" fill="#3b82f6" />
+                    <circle cx="125" cy="75" r="5" fill="#3b82f6" />
+                    <circle cx="140" cy="65" r="5" fill="#3b82f6" />
+                    <rect x="63" y="130" width="8" height="10" rx="1" fill="#3b82f6" opacity="0.2" />
+                    <rect x="83" y="115" width="8" height="25" rx="1" fill="#3b82f6" opacity="0.2" />
+                    <rect x="103" y="120" width="8" height="20" rx="1" fill="#3b82f6" opacity="0.2" />
+                    <rect x="123" y="95" width="8" height="45" rx="1" fill="#3b82f6" opacity="0.2" />
+                    <path d="M135 55 L145 60 L140 65" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.4" />
+                    <circle cx="150" cy="120" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="50" cy="70" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'analytics')}
+                >
+                  {copiedId === 'analytics' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Clipboard Checklist */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Checklist</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <rect x="60" y="40" width="80" height="120" rx="6" fill="#3b82f6" opacity="0.08" />
+                    <rect x="70" y="50" width="60" height="100" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <rect x="85" y="35" width="30" height="12" rx="3" fill="#3b82f6" opacity="0.2" />
+                    <circle cx="82" cy="70" r="5" fill="none" stroke="#3b82f6" strokeWidth="2" />
+                    <path d="M80 69 L82 72 L86 67" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <line x1="95" y1="70" x2="120" y2="70" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
+                    <circle cx="82" cy="90" r="5" fill="none" stroke="#3b82f6" strokeWidth="2" />
+                    <path d="M80 89 L82 92 L86 87" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <line x1="95" y1="90" x2="115" y2="90" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
+                    <circle cx="82" cy="110" r="5" fill="none" stroke="#3b82f6" strokeWidth="2" />
+                    <line x1="95" y1="110" x2="120" y2="110" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
+                    <circle cx="82" cy="130" r="5" fill="none" stroke="#3b82f6" strokeWidth="2" />
+                    <line x1="95" y1="130" x2="110" y2="130" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
+                    <path d="M125 25 Q130 20 125 15" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M75 25 Q70 20 75 15" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="145" cy="100" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="55" cy="100" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'checklist')}
+                >
+                  {copiedId === 'checklist' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Magnifying Glass Detail */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Investigation</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="80" cy="80" r="75" fill="#3b82f6" opacity="0.06" />
+                    <circle cx="80" cy="80" r="35" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="80" cy="80" r="45" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.2" />
+                    <circle cx="80" cy="80" r="20" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.15" />
+                    <path d="M107 107 L145 145" stroke="#3b82f6" strokeWidth="3.5" strokeLinecap="round" />
+                    <path d="M112 112 L150 150" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" opacity="0.3" />
+                    <circle cx="80" cy="80" r="12" fill="#3b82f6" opacity="0.1" />
+                    <line x1="75" y1="75" x2="85" y2="85" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
+                    <line x1="85" y1="75" x2="75" y2="85" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
+                    <path d="M60 55 Q55 50 60 45" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M150 155 Q155 160 150 165" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="105" cy="55" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="160" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'investigation')}
+                >
+                  {copiedId === 'investigation' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+              </div>
+
+              {/* Data Metrics */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Metrics</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <rect x="50" y="50" width="100" height="100" rx="6" fill="#3b82f6" opacity="0.08" />
+                    <circle cx="100" cy="85" r="25" fill="none" stroke="#3b82f6" strokeWidth="2.5" />
+                    <path d="M100 60 L100 85 L115 100" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="100" cy="85" r="4" fill="#3b82f6" />
+                    <path d="M75 85 L85 85" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
+                    <path d="M115 85 L125 85" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
+                    <path d="M100 60 L100 70" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
+                    <rect x="65" y="120" width="15" height="20" rx="2" fill="#3b82f6" opacity="0.3" />
+                    <rect x="85" y="115" width="15" height="25" rx="2" fill="#3b82f6" opacity="0.4" />
+                    <rect x="105" y="110" width="15" height="30" rx="2" fill="#3b82f6" opacity="0.5" />
+                    <line x1="60" y1="140" x2="140" y2="140" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
+                    <path d="M130 40 Q135 35 130 30" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M70 40 Q65 35 70 30" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="145" cy="100" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="55" cy="100" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'metrics')}
+                >
+                  {copiedId === 'metrics' ? '✓ Copied!' : 'Copy SVG'}
                 </button>
               </div>
 

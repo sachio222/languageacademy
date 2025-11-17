@@ -9,7 +9,7 @@ import TrophyIllustration from './absurd-illustrations/TrophyIllustration'
 import BookTowerIllustration from './absurd-illustrations/BookTowerIllustration'
 import NeuralNetworkIllustration from './absurd-illustrations/NeuralNetworkIllustration'
 import CompoundGrowthIllustration from './absurd-illustrations/CompoundGrowthIllustration'
-import DecisionTreeIllustration from './absurd-illustrations/DecisionTreeIllustration'
+import PuzzleSolveIllustration from './absurd-illustrations/PuzzleSolveIllustration'
 import '../styles/Landing.css'
 
 function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
@@ -123,7 +123,7 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
 
           <h2 className="section-title">Language learning isn't a game</h2>
           <p className="section-intro">
-            Many apps teach you to chase points and streaks. You memorize isolated phrases
+            Many apps teach you to chase points and streaks. You memorize cheeky phrases
             without understanding structure. After months, you still can't hold a conversation.
           </p>
 
@@ -434,9 +434,9 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
       {/* Who it's for */}
       <section className="landing-section bg-subtle">
         <div className="landing-container">
-          {/* Absurd illustration - Decision Tree */}
+          {/* Absurd illustration - Puzzle Solve */}
           <div className="section-illustration">
-            <DecisionTreeIllustration />
+            <PuzzleSolveIllustration />
           </div>
 
           <h2 className="section-title">Built for analytical learners</h2>
