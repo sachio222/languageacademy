@@ -2307,6 +2307,259 @@ function AbsurdLibrary() {
             </div>
           </section>
 
+          {/* Section: Basic UI States & Feedback */}
+          <section className="absurd-section">
+            <h2 className="absurd-section-title">UI States & Feedback Icons</h2>
+            <p className="absurd-section-intro">Essential icons for status, alerts, and user feedback</p>
+
+            <div className="absurd-grid">
+
+              {/* Info */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Info</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.08" />
+                    <circle cx="100" cy="100" r="60" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.2" />
+                    <circle cx="100" cy="65" r="6" fill="#3b82f6" />
+                    <rect x="94" y="85" width="12" height="45" rx="3" fill="#3b82f6" />
+                    <rect x="88" y="127" width="24" height="8" rx="4" fill="#3b82f6" opacity="0.4" />
+                    <path d="M75 55 Q70 50 75 45" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M125 145 Q130 150 125 155" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="140" cy="60" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="60" cy="140" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Question/Help */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Question</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.08" />
+                    <circle cx="100" cy="100" r="60" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.2" />
+                    <path d="M85 70 Q85 55 100 50 Q115 55 115 70 Q115 80 105 85 L100 95" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" fill="none" />
+                    <circle cx="100" cy="115" r="6" fill="#3b82f6" />
+                    <path d="M80 60 Q75 55 80 50" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M120 140 Q125 145 120 150" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="135" cy="70" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="65" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Warning */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Warning</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <ellipse cx="100" cy="155" rx="65" ry="10" fill="#3b82f6" opacity="0.1" />
+                    <path d="M100 40 L40 145 L160 145 Z" fill="#3b82f6" opacity="0.1" />
+                    <path d="M100 50 L50 140 L150 140 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" strokeLinejoin="round" />
+                    <path d="M100 75 L100 110" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" />
+                    <circle cx="100" cy="125" r="5" fill="#3b82f6" />
+                    <path d="M70 35 Q65 30 70 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M130 35 Q135 30 130 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="155" cy="120" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="45" cy="120" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Error */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Error</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.08" />
+                    <circle cx="100" cy="100" r="60" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.2" />
+                    <path d="M75 75 L125 125" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M125 75 L75 125" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M70 55 Q65 50 70 45" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M130 145 Q135 150 130 155" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="145" cy="55" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="55" cy="145" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Success */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Success</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.08" />
+                    <circle cx="100" cy="100" r="60" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.2" />
+                    <path d="M70 100 L90 120 L130 75" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <circle cx="90" cy="120" r="4" fill="#3b82f6" opacity="0.4" />
+                    <path d="M125 55 Q130 50 125 45" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M75 145 Q70 150 75 155" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="140" cy="65" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="60" cy="110" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Secure/Lock */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Secure</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <ellipse cx="100" cy="155" rx="50" ry="8" fill="#3b82f6" opacity="0.1" />
+                    <rect x="70" y="95" width="60" height="55" rx="6" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <rect x="65" y="100" width="70" height="45" rx="4" fill="#3b82f6" opacity="0.08" />
+                    <path d="M80 95 L80 75 Q80 55 100 55 Q120 55 120 75 L120 95" stroke="#3b82f6" strokeWidth="2.5" fill="none" />
+                    <circle cx="100" cy="115" r="8" fill="#3b82f6" />
+                    <rect x="97" y="120" width="6" height="15" rx="2" fill="#3b82f6" />
+                    <path d="M75 45 Q70 40 75 35" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M125 45 Q130 40 125 35" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="140" cy="110" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="60" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Alert/Bell */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Alert</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <ellipse cx="100" cy="160" rx="40" ry="8" fill="#3b82f6" opacity="0.1" />
+                    <path d="M75 130 Q70 130 70 135 L130 135 Q130 130 125 130" fill="#3b82f6" opacity="0.15" />
+                    <path d="M80 55 Q80 45 100 40 Q120 45 120 55 L120 125 Q120 135 100 135 Q80 135 80 125 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <path d="M75 125 L125 125" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
+                    <rect x="95" y="32" width="10" height="8" rx="3" fill="#3b82f6" opacity="0.3" />
+                    <path d="M90 145 Q90 150 95 152 L105 152 Q110 150 110 145" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" strokeWidth="2" />
+                    <circle cx="115" cy="70" r="8" fill="#3b82f6" opacity="0.5" />
+                    <circle cx="115" cy="70" r="4" fill="#3b82f6" />
+                    <path d="M130 50 Q135 45 130 40" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M70 90 Q65 85 70 80" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Settings/Gear */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Settings</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.08" />
+                    <circle cx="100" cy="100" r="25" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="100" r="15" fill="#3b82f6" opacity="0.2" />
+                    <rect x="93" y="45" width="14" height="20" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <rect x="93" y="135" width="14" height="20" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <rect x="45" y="93" width="20" height="14" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <rect x="135" y="93" width="20" height="14" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2" />
+                    <rect x="63" y="63" width="14" height="14" rx="3" fill="#fff" stroke="#3b82f6" strokeWidth="2" transform="rotate(45 70 70)" />
+                    <rect x="123" y="123" width="14" height="14" rx="3" fill="#fff" stroke="#3b82f6" strokeWidth="2" transform="rotate(45 130 130)" />
+                    <rect x="123" y="63" width="14" height="14" rx="3" fill="#fff" stroke="#3b82f6" strokeWidth="2" transform="rotate(45 130 70)" />
+                    <rect x="63" y="123" width="14" height="14" rx="3" fill="#fff" stroke="#3b82f6" strokeWidth="2" transform="rotate(45 70 130)" />
+                    <circle cx="100" cy="100" r="8" fill="#3b82f6" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Search */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Search</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <circle cx="85" cy="85" r="75" fill="#3b82f6" opacity="0.06" />
+                    <circle cx="85" cy="85" r="40" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="85" cy="85" r="50" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.2" />
+                    <path d="M115 115 L145 145" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M120 120 L150 150" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" opacity="0.3" />
+                    <circle cx="85" cy="85" r="20" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.15" />
+                    <path d="M65 60 Q60 55 65 50" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M150 155 Q155 160 150 165" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="110" cy="60" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="160" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Download */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Download</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <rect x="50" y="45" width="100" height="110" rx="6" fill="#3b82f6" opacity="0.08" />
+                    <path d="M100 50 L100 115" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M75 95 L100 120 L125 95" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <circle cx="100" cy="120" r="6" fill="#3b82f6" opacity="0.4" />
+                    <rect x="60" y="130" width="80" height="25" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <rect x="65" y="135" width="70" height="15" rx="2" fill="#3b82f6" opacity="0.1" />
+                    <path d="M80 35 Q75 30 80 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M120 35 Q125 30 120 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="145" cy="110" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="55" cy="70" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Upload */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Upload</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <rect x="50" y="45" width="100" height="110" rx="6" fill="#3b82f6" opacity="0.08" />
+                    <path d="M100 125 L100 60" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M75 80 L100 55 L125 80" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <circle cx="100" cy="55" r="6" fill="#3b82f6" opacity="0.4" />
+                    <rect x="60" y="130" width="80" height="25" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <rect x="65" y="135" width="70" height="15" rx="2" fill="#3b82f6" opacity="0.1" />
+                    <path d="M80 40 Q75 35 80 30" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M120 40 Q125 35 120 30" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="145" cy="105" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="55" cy="75" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Delete/Trash */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Delete</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <ellipse cx="100" cy="160" rx="45" ry="8" fill="#3b82f6" opacity="0.1" />
+                    <rect x="70" y="65" width="60" height="80" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <rect x="65" y="70" width="70" height="70" rx="3" fill="#3b82f6" opacity="0.08" />
+                    <path d="M85 55 L85 50 Q85 45 90 45 L110 45 Q115 45 115 50 L115 55" stroke="#3b82f6" strokeWidth="2.5" fill="none" />
+                    <rect x="60" y="55" width="80" height="12" rx="3" fill="#3b82f6" opacity="0.2" />
+                    <line x1="85" y1="85" x2="85" y2="125" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" />
+                    <line x1="100" y1="85" x2="100" y2="125" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" />
+                    <line x1="115" y1="85" x2="115" y2="125" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" />
+                    <path d="M75 35 Q70 30 75 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M125 35 Q130 30 125 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Save/Bookmark */}
+              <div className="absurd-card">
+                <h3 className="absurd-card-title">Save</h3>
+                <div className="absurd-illustration-container absurd-phase-icon">
+                  <svg viewBox="0 0 200 200" fill="none">
+                    <rect x="60" y="40" width="80" height="120" rx="6" fill="#3b82f6" opacity="0.08" />
+                    <path d="M70 45 L70 145 L100 120 L130 145 L130 45 Q130 40 125 40 L75 40 Q70 40 70 45 Z" fill="#fff" stroke="#3b82f6" strokeWidth="2.5" />
+                    <circle cx="100" cy="75" r="15" fill="#3b82f6" opacity="0.15" />
+                    <path d="M95 72 L98 77 L105 68" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    <path d="M80 30 Q75 25 80 20" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <path d="M120 30 Q125 25 120 20" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
+                    <circle cx="145" cy="100" r="3" fill="#3b82f6" opacity="0.3" />
+                    <circle cx="55" cy="100" r="3" fill="#3b82f6" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
           {/* Section: 4-Phase Learning */}
           <section className="absurd-section">
             <h2 className="absurd-section-title">4-Phase Learning Cascade</h2>
