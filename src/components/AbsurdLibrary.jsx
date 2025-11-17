@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/AbsurdLibrary.css';
 
 function AbsurdLibrary() {
   const [copiedId, setCopiedId] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const copySvg = (svgElement, id) => {
     const svgCode = svgElement.outerHTML;
@@ -12,10 +13,19 @@ function AbsurdLibrary() {
     });
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="absurd-library">
       {/* Header */}
-      <header className="absurd-header">
+      <header className={`absurd-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="absurd-container">
           <button
             className="absurd-back-btn"
@@ -75,18 +85,13 @@ function AbsurdLibrary() {
                     <path d="M50 160 Q75 155 100 160 Q125 165 150 160" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
-                  className="absurd-copy-btn"
-                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'book-tower')}
-                >
-                  {copiedId === 'book-tower' ? '✓ Copied!' : 'Copy SVG'}
-                </button>
                 <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'book-tower')}
                 >
                   {copiedId === 'book-tower' ? '✓ Copied!' : 'Copy SVG'}
                 </button>
+
               </div>
 
               {/* Brain Zap */}
@@ -130,7 +135,7 @@ function AbsurdLibrary() {
                     <path d="M75 145 L77 150 L82 152 L77 154 L75 159 L73 154 L68 152 L73 150 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'brain-zap')}
                 >
@@ -182,7 +187,7 @@ function AbsurdLibrary() {
                     <path d="M120 18 L122 23 L127 25 L122 27 L120 32 L118 27 L113 25 L118 23 Z" fill="#3b82f6" opacity="0.22" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'plant-growth')}
                 >
@@ -239,7 +244,7 @@ function AbsurdLibrary() {
                     <rect x="25" y="90" width="5" height="5" rx="1" fill="#3b82f6" opacity="0.12" transform="rotate(20 27.5 92.5)" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'balancing-act')}
                 >
@@ -304,7 +309,7 @@ function AbsurdLibrary() {
                     <path d="M165 145 Q170 140 175 145" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.1" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'workshop-tools')}
                 >
@@ -355,7 +360,7 @@ function AbsurdLibrary() {
                     <circle cx="40" cy="100" r="3" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'lightbulb-moment')}
                 >
@@ -403,7 +408,7 @@ function AbsurdLibrary() {
                     <circle cx="102" cy="95" r="3" fill="#fff" opacity="0.6" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'stairway')}
                 >
@@ -450,7 +455,7 @@ function AbsurdLibrary() {
                     <circle cx="40" cy="65" r="2" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'telescope')}
                 >
@@ -496,7 +501,7 @@ function AbsurdLibrary() {
                     <path d="M20 155 Q60 150 100 155 Q140 160 180 155" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'mountain-peak')}
                 >
@@ -545,7 +550,7 @@ function AbsurdLibrary() {
                     <circle cx="140" cy="75" r="2" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'magnet-pull')}
                 >
@@ -590,7 +595,7 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="95" r="35" stroke="#3b82f6" strokeWidth="1" opacity="0.05" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'spiral-vortex')}
                 >
@@ -641,7 +646,7 @@ function AbsurdLibrary() {
                     <circle cx="115" cy="70" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'compass')}
                 >
@@ -690,7 +695,7 @@ function AbsurdLibrary() {
                     <rect x="152" y="75" width="3" height="5" rx="1" fill="#3b82f6" opacity="0.18" transform="rotate(-20 153.5 77.5)" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'trophy')}
                 >
@@ -742,7 +747,7 @@ function AbsurdLibrary() {
                     <path d="M185 70 L187 75 L192 77 L187 79 L185 84 L183 79 L178 77 L183 75 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'checkered-flag')}
                 >
@@ -790,7 +795,7 @@ function AbsurdLibrary() {
                     <ellipse cx="100" cy="165" rx="30" ry="6" fill="#3b82f6" opacity="0.12" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'melting-time')}
                 >
@@ -841,7 +846,7 @@ function AbsurdLibrary() {
                     <path d="M30 110 Q40 105 50 110" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.12" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'rising-balloons')}
                 >
@@ -888,7 +893,7 @@ function AbsurdLibrary() {
                     <path d="M160 85 L161 89 L165 90 L161 91 L160 95 L159 91 L155 90 L159 89 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'tilted-hourglass')}
                 >
@@ -941,7 +946,7 @@ function AbsurdLibrary() {
                     <path d="M48 115 Q43 120 38 115" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'magic-key')}
                 >
@@ -998,7 +1003,7 @@ function AbsurdLibrary() {
                     <path d="M112 117 Q120 112 125 117" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'gift-explosion')}
                 >
@@ -1052,7 +1057,7 @@ function AbsurdLibrary() {
                     <path d="M170 70 Q175 67 180 70" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'sky-islands')}
                 >
@@ -1102,7 +1107,7 @@ function AbsurdLibrary() {
                     <rect x="150" y="115" width="5" height="5" rx="1" fill="#3b82f6" opacity="0.12" transform="rotate(-20 152.5 117.5)" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'puzzle-click')}
                 >
@@ -1153,7 +1158,7 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="150" r="2" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'atom-spin')}
                 >
@@ -1199,7 +1204,7 @@ function AbsurdLibrary() {
                     <circle cx="170" cy="60" r="8" stroke="#3b82f6" strokeWidth="1.5" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'paper-airplane')}
                 >
@@ -1246,7 +1251,7 @@ function AbsurdLibrary() {
                     <path d="M135 110 Q140 100 135 90" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.12" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'spring-bounce')}
                 >
@@ -1301,7 +1306,7 @@ function AbsurdLibrary() {
                     <path d="M160 60 L161 63 L164 64 L161 65 L160 68 L159 65 L156 64 L159 63 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'meshing-gears')}
                 >
@@ -1351,7 +1356,7 @@ function AbsurdLibrary() {
                     <path d="M175 72 L176 76 L180 77 L176 78 L175 82 L174 78 L170 77 L174 76 Z" fill="#3b82f6" opacity="0.22" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'speedometer')}
                 >
@@ -1404,7 +1409,7 @@ function AbsurdLibrary() {
                     <path d="M40 162 Q70 158 100 162 Q130 166 160 162" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.12" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'catapult')}
                 >
@@ -1455,7 +1460,7 @@ function AbsurdLibrary() {
                     <path d="M150 145 Q160 140 170 145" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.12" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'domino-effect')}
                 >
@@ -1504,7 +1509,7 @@ function AbsurdLibrary() {
                     <circle cx="175" cy="108" r="2" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'prism-split')}
                 >
@@ -1553,7 +1558,7 @@ function AbsurdLibrary() {
                     <path d="M125 35 L126 38 L129 39 L126 40 L125 43 L124 40 L121 39 L124 38 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'hot-air-balloon')}
                 >
@@ -1605,7 +1610,7 @@ function AbsurdLibrary() {
                     <circle cx="140" cy="140" r="2" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'dna-helix')}
                 >
@@ -1654,7 +1659,7 @@ function AbsurdLibrary() {
                     <path d="M155 105 L156 108 L159 109 L156 110 L155 113 L154 110 L151 109 L154 108 Z" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'hook-catch')}
                 >
@@ -1716,7 +1721,7 @@ function AbsurdLibrary() {
                     <path d="M100 140 L100 160" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.2" strokeDasharray="3 2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'firework')}
                 >
@@ -1768,7 +1773,7 @@ function AbsurdLibrary() {
                     <path d="M50 95 Q55 90 60 95" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'kickflip')}
                 >
@@ -1822,7 +1827,7 @@ function AbsurdLibrary() {
                     <path d="M25 155 Q62 150 100 155 Q138 160 175 155" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'volcano')}
                 >
@@ -1874,7 +1879,7 @@ function AbsurdLibrary() {
                     <path d="M115 20 L117 25 L122 27 L117 29 L115 34 L113 29 L108 27 L113 25 Z" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'slingshot')}
                 >
@@ -1928,7 +1933,7 @@ function AbsurdLibrary() {
                     <circle cx="68" cy="130" r="2" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'code-functions')}
                 >
@@ -1987,7 +1992,7 @@ function AbsurdLibrary() {
                     <path d="M170 110 L171 113 L174 114 L171 115 L170 118 L169 115 L166 114 L169 113 Z" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'lego-blocks')}
                 >
@@ -2050,7 +2055,7 @@ function AbsurdLibrary() {
                     <path d="M175 100 L176 103 L179 104 L176 105 L175 108 L174 105 L171 104 L174 103 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'neural-network')}
                 >
@@ -2097,7 +2102,7 @@ function AbsurdLibrary() {
                     <path d="M60 145 Q80 140 100 145 Q120 150 140 145" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'memory-waves')}
                 >
@@ -2147,7 +2152,7 @@ function AbsurdLibrary() {
                     <circle cx="170" cy="150" r="3" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'frequency-bars')}
                 >
@@ -2204,7 +2209,7 @@ function AbsurdLibrary() {
                     <path d="M155 145 L156 148 L159 149 L156 150 L155 153 L154 150 L151 149 L154 148 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'schema-blueprint')}
                 >
@@ -2248,7 +2253,7 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="160" r="3" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'interleaved-deck')}
                 >
@@ -2291,7 +2296,7 @@ function AbsurdLibrary() {
                     <path d="M150 100 L151 103 L154 104 L151 105 L150 108 L149 105 L146 104 L149 103 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'shield-guard')}
                 >
@@ -2340,7 +2345,7 @@ function AbsurdLibrary() {
                     <circle cx="170" cy="155" r="3" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'compound-growth')}
                 >
@@ -2388,7 +2393,7 @@ function AbsurdLibrary() {
                     <path d="M130 95 L131 98 L134 99 L131 100 L130 103 L129 100 L126 99 L129 98 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'reading-passage')}
                 >
@@ -2442,7 +2447,7 @@ function AbsurdLibrary() {
                     <circle cx="140" cy="85" r="3" fill="#3b82f6" opacity="0.4" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'ladder-climb')}
                 >
@@ -2498,7 +2503,7 @@ function AbsurdLibrary() {
                     <circle cx="115" cy="115" r="2" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'deep-roots')}
                 >
@@ -2567,7 +2572,7 @@ function AbsurdLibrary() {
                     <path d="M140 80 L141 83 L144 84 L141 85 L140 88 L139 85 L136 84 L139 83 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'decision-tree')}
                 >
@@ -2613,7 +2618,7 @@ function AbsurdLibrary() {
                     <path d="M155 105 L156 108 L159 109 L156 110 L155 113 L154 110 L151 109 L154 108 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'mosaic-pattern')}
                 >
@@ -2648,7 +2653,7 @@ function AbsurdLibrary() {
                     <circle cx="60" cy="140" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'info')}
                 >
@@ -2672,7 +2677,7 @@ function AbsurdLibrary() {
                     <circle cx="65" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'question')}
                 >
@@ -2696,7 +2701,7 @@ function AbsurdLibrary() {
                     <circle cx="45" cy="120" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'warning')}
                 >
@@ -2720,7 +2725,7 @@ function AbsurdLibrary() {
                     <circle cx="55" cy="145" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'error')}
                 >
@@ -2744,7 +2749,7 @@ function AbsurdLibrary() {
                     <circle cx="60" cy="110" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'success')}
                 >
@@ -2769,7 +2774,7 @@ function AbsurdLibrary() {
                     <circle cx="60" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'secure')}
                 >
@@ -2794,7 +2799,7 @@ function AbsurdLibrary() {
                     <path d="M70 90 Q65 85 70 80" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'alert')}
                 >
@@ -2821,7 +2826,7 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="100" r="8" fill="#3b82f6" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'settings')}
                 >
@@ -2846,7 +2851,7 @@ function AbsurdLibrary() {
                     <circle cx="160" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'search')}
                 >
@@ -2871,7 +2876,7 @@ function AbsurdLibrary() {
                     <circle cx="55" cy="70" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'download')}
                 >
@@ -2896,7 +2901,7 @@ function AbsurdLibrary() {
                     <circle cx="55" cy="75" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'upload')}
                 >
@@ -2921,7 +2926,7 @@ function AbsurdLibrary() {
                     <path d="M125 35 Q130 30 125 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'delete')}
                 >
@@ -2944,7 +2949,7 @@ function AbsurdLibrary() {
                     <circle cx="55" cy="100" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'save')}
                 >
@@ -2978,7 +2983,7 @@ function AbsurdLibrary() {
                     <ellipse cx="120" cy="90" rx="5" ry="8" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'concept-introduction')}
                 >
@@ -3003,7 +3008,7 @@ function AbsurdLibrary() {
                     <rect x="50" y="155" width="100" height="8" rx="2" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'study-mode')}
                 >
@@ -3027,7 +3032,7 @@ function AbsurdLibrary() {
                     <path d="M145 75 Q155 65 165 75 Q155 85 145 75" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'practice')}
                 >
@@ -3055,7 +3060,7 @@ function AbsurdLibrary() {
                     <circle cx="45" cy="100" r="4" fill="#3b82f6" opacity="0.4" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'exam')}
                 >
@@ -3081,7 +3086,7 @@ function AbsurdLibrary() {
                     <path d="M145 85 Q155 75 165 85" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'review')}
                 >
@@ -3105,7 +3110,7 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="95" r="4" fill="#3b82f6" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'mastery')}
                 >
@@ -3131,7 +3136,7 @@ function AbsurdLibrary() {
                     <path d="M130 55 L140 60 L135 70" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.4" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'progress')}
                 >
@@ -3154,7 +3159,7 @@ function AbsurdLibrary() {
                     <circle cx="65" cy="60" r="3" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'speed')}
                 >
@@ -3180,7 +3185,7 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="80" r="3" fill="#3b82f6" opacity="0.5" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'understanding')}
                 >
@@ -3204,7 +3209,7 @@ function AbsurdLibrary() {
                     <circle cx="50" cy="60" r="3" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'achievement')}
                 >
@@ -3229,7 +3234,7 @@ function AbsurdLibrary() {
                     <path d="M155 100 L180 100" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'focus')}
                 >
@@ -3253,7 +3258,7 @@ function AbsurdLibrary() {
                     <path d="M85 95 Q100 100 115 95" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'memory')}
                 >
@@ -3275,7 +3280,7 @@ function AbsurdLibrary() {
                     <path d="M85 60 Q80 55 75 60" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'streak')}
                 >
@@ -3300,7 +3305,7 @@ function AbsurdLibrary() {
                     <path d="M125 135 Q130 140 135 135" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'notes')}
                 >
@@ -3328,7 +3333,7 @@ function AbsurdLibrary() {
                     <path d="M108 118 L111 122 L118 113" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'habits')}
                 >
@@ -3363,7 +3368,7 @@ function AbsurdLibrary() {
                     <rect x="65" y="125" width="70" height="3" rx="1.5" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'discrete-chunks')}
                 >
@@ -3389,7 +3394,7 @@ function AbsurdLibrary() {
                     <path d="M90 130 Q100 135 110 130" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'operations')}
                 >
@@ -3416,7 +3421,7 @@ function AbsurdLibrary() {
                     <rect x="85" y="145" width="30" height="3" rx="1.5" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
-                <button 
+                <button
                   className="absurd-copy-btn"
                   onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'composition')}
                 >
