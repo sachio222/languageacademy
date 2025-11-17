@@ -1,0 +1,150 @@
+{
+  "platform": "Facebook",
+  "content_types": ["Single Image Post", "Carousel Post", "Link Post"],
+  "status": "planned",
+  "image_post": {
+    "format": {
+      "recommended_dimensions": "1200x630",
+      "aspect_ratio": "1.91:1",
+      "minimum_dimensions": "600x315",
+      "file_formats": ["JPG", "PNG"],
+      "max_file_size": "4 MB"
+    },
+    "text_limits": {
+      "caption_max": 63206,
+      "caption_optimal": 300,
+      "caption_preview": "2-3 sentences",
+      "hashtags_recommended": "1-3",
+      "hashtags_effective": "Limited (unlike Instagram)"
+    }
+  },
+  "carousel_post": {
+    "format": {
+      "images_per_carousel": "2-10",
+      "recommended_dimensions": "1080x1080",
+      "aspect_ratio": "1:1",
+      "note": "Can reuse Instagram carousel templates"
+    }
+  },
+  "link_post": {
+    "format": {
+      "open_graph_image": "1200x630",
+      "min_dimensions": "600x315",
+      "optimal_dimensions": "1200x630",
+      "aspect_ratio": "1.91:1"
+    },
+    "benefits": [
+      "Auto-generated preview from link",
+      "Drives traffic to website",
+      "Good distribution on Facebook"
+    ]
+  },
+  "audience_characteristics": {
+    "age_range": "30-60+",
+    "engagement_style": "More comments and shares vs likes",
+    "content_preference": "Educational, informative, detailed",
+    "tone": "More formal than Instagram/TikTok"
+  },
+  "design_specs": {
+    "typography": {
+      "larger_fonts_recommended": "Older demographic",
+      "high_contrast_required": "Accessibility",
+      "serif_acceptable": "More formal audience",
+      "min_font_size": "24px for body text"
+    },
+    "layout_preference": "Horizontal/landscape performs better",
+    "colors": {
+      "brand_blue": "#3b82f6",
+      "high_contrast": "Essential for readability"
+    }
+  },
+  "caption_strategy": {
+    "structure": [
+      "Hook (first 2-3 sentences shown before 'See more')",
+      "Educational content/value",
+      "Examples or explanation",
+      "Engagement question",
+      "Call-to-action",
+      "Link to website",
+      "1-3 hashtags (optional)"
+    ],
+    "best_practices": [
+      "First sentences crucial",
+      "Ask questions (drives comments)",
+      "Educational tone",
+      "Include call-to-action",
+      "Link directly in caption (unlike Instagram)",
+      "Minimal hashtags"
+    ],
+    "hashtag_note": "Facebook hashtags have limited impact compared to Instagram"
+  },
+  "posting_strategy": {
+    "best_posting_times": {
+      "weekdays": "9 AM - 3 PM EST",
+      "peak": "1-3 PM EST (lunch break)",
+      "weekends": "12-1 PM EST"
+    },
+    "posting_frequency": "Daily or every other day",
+    "engagement_tactics": [
+      "Ask questions",
+      "Encourage shares ('Tag a friend!')",
+      "Educational content performs well",
+      "Link posts get good distribution"
+    ]
+  },
+  "implementation_options": [
+    {
+      "option": "A",
+      "name": "Custom Facebook template",
+      "format": "1200x630 single image",
+      "pros": ["Optimized for Facebook link previews"],
+      "cons": ["More work", "Another template to maintain"]
+    },
+    {
+      "option": "B",
+      "name": "Reuse Instagram carousel",
+      "format": "4 slides, 1080x1080 each",
+      "pros": ["Zero extra work", "Consistent cross-platform"],
+      "cons": ["Not optimized for Facebook's horizontal format"],
+      "recommendation": "Start here, test performance"
+    },
+    {
+      "option": "C",
+      "name": "Reuse Pinterest pin",
+      "format": "1000x1500 vertical",
+      "pros": ["Minimal work", "Stands out in feed"],
+      "cons": ["Not ideal for Facebook's landscape preference"]
+    }
+  ],
+  "api_info": {
+    "api_name": "Facebook Graph API",
+    "automation_status": "Fully supported",
+    "capabilities": [
+      "Post creation",
+      "Photo upload",
+      "Carousel posts",
+      "Scheduling",
+      "Analytics"
+    ],
+    "authentication": "OAuth 2.0 + Page Access Token",
+    "required_permissions": [
+      "pages_manage_posts",
+      "pages_read_engagement",
+      "publish_to_groups (if posting to groups)"
+    ]
+  },
+  "cross_posting_considerations": {
+    "instagram_owned_by_facebook": true,
+    "options": [
+      "Cross-post from Instagram (built-in feature)",
+      "Post separately with Facebook-optimized caption",
+      "Skip if high audience overlap"
+    ]
+  },
+  "brand_assets": {
+    "logo": "https://languageacademy.io/img/TLA_CoreMark_Blue_tm_v1.1.1.png",
+    "website": "https://languageacademy.io",
+    "page_url": "TBD"
+  }
+}
+

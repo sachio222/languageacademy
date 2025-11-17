@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icon Options - Choose Your Favorite</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 40px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #fafbfc;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 40px;
+        letter-spacing: -0.02em;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+      }
+
+      .option {
+        background: white;
+        border-radius: 12px;
+        padding: 32px;
+        text-align: center;
+        transition: all 0.15s ease;
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+
+      .option:hover {
+        border-color: #3b82f6;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .option-number {
+        font-size: 14px;
+        font-weight: 600;
+        color: #999999;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 20px;
+      }
+
+      .option-name {
+        font-size: 16px;
+        font-weight: 500;
+        color: #665665;
+        margin-bottom: 24px;
+        letter-spacing: -0.01em;
+      }
+
+      .cta-demo {
+        font-size: 28px;
+        font-weight: 500;
+        color: #3b82f6;
+        letter-spacing: -0.01em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Choose Your Icon Style</h1>
+
+      <div class="grid">
+        <!-- Option 1 -->
+        <div class="option" onclick="alert('You selected Option 1: No icon')">
+          <div class="option-number">Option 1</div>
+          <div class="option-name">No icon - pure typography</div>
+          <div class="cta-demo">Comment below</div>
+        </div>
+
+        <!-- Option 2 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 2: Text arrow')"
+        >
+          <div class="option-number">Option 2</div>
+          <div class="option-name">Simple down arrow (text)</div>
+          <div class="cta-demo">Comment below ↓</div>
+        </div>
+
+        <!-- Option 3 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 3: Text chevron')"
+        >
+          <div class="option-number">Option 3</div>
+          <div class="option-name">Down chevron (text)</div>
+          <div class="cta-demo">Comment below ⌄</div>
+        </div>
+
+        <!-- Option 4 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 4: Thin arrow stroke')"
+        >
+          <div class="option-number">Option 4</div>
+          <div class="option-name">Thin arrow (stroke only)</div>
+          <div class="cta-demo">
+            Comment below
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#665665"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path d="M12 5v14m0 0l-6-6m6 6l6-6" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Option 5 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 5: Minimal chevron')"
+        >
+          <div class="option-number">Option 5</div>
+          <div class="option-name">Minimal chevron (stroke)</div>
+          <div class="cta-demo">
+            Comment below
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#665665"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Option 6 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 6: Bold arrow')"
+        >
+          <div class="option-number">Option 6</div>
+          <div class="option-name">Bold arrow (filled)</div>
+          <div class="cta-demo">
+            Comment below
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#665665">
+              <path
+                d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Option 7 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 7: Circle with arrow')"
+        >
+          <div class="option-number">Option 7</div>
+          <div class="option-name">Circle with arrow</div>
+          <div class="cta-demo">
+            Comment below
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#665665"
+              stroke-width="1.5"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v8m0 0l-3-3m3 3l3-3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Option 8 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 8: Simple caret')"
+        >
+          <div class="option-number">Option 8</div>
+          <div class="option-name">Simple caret</div>
+          <div class="cta-demo">
+            Comment below
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="#665665">
+              <path d="M5 8l5 5 5-5z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Option 9 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 9: Geometric arrow')"
+        >
+          <div class="option-number">Option 9</div>
+          <div class="option-name">Geometric arrow</div>
+          <div class="cta-demo">
+            Comment below
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#665665">
+              <path d="M12 14l-6-6h12z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Option 10 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 10: Double chevron')"
+        >
+          <div class="option-number">Option 10</div>
+          <div class="option-name">Double chevron</div>
+          <div class="cta-demo">
+            Comment below
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#665665"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path d="M7 8l5 5 5-5M7 13l5 5 5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Option 11 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 11: Rounded arrow')"
+        >
+          <div class="option-number">Option 11</div>
+          <div class="option-name">Rounded arrow (stroke)</div>
+          <div class="cta-demo">
+            Comment below
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#665665"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 5v14m-5-5l5 5 5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Option 12 -->
+        <div
+          class="option"
+          onclick="alert('You selected Option 12: Material Design')"
+        >
+          <div class="option-number">Option 12</div>
+          <div class="option-name">Material Design arrow</div>
+          <div class="cta-demo">
+            Comment below
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#665665">
+              <path
+                d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

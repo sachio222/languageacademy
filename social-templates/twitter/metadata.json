@@ -1,0 +1,150 @@
+{
+  "platform": "Twitter/X",
+  "content_type": "Tweet with Image",
+  "status": "planned",
+  "format": {
+    "recommended_dimensions": "1200x675",
+    "aspect_ratio": "16:9",
+    "alternative_dimensions": "1080x1080 (square)",
+    "minimum_dimensions": "600x335",
+    "file_formats": ["PNG", "JPG", "GIF", "WebP"],
+    "max_file_size_static": "5 MB",
+    "max_file_size_gif": "15 MB"
+  },
+  "text_limits": {
+    "tweet_standard": 280,
+    "tweet_twitter_blue": 4000,
+    "url_display_length": 23,
+    "alt_text_max": 1000,
+    "hashtags_recommended": "1-2",
+    "hashtags_max_effective": 2
+  },
+  "design_specs": {
+    "optimization": "Timeline quick-scan",
+    "typography": {
+      "word_display": "Large, bold",
+      "minimal_elements": "Avoid clutter",
+      "high_contrast": "Essential for timeline"
+    },
+    "layout_principles": [
+      "Key info visible in 1-2 seconds",
+      "High contrast for fast-scrolling feed",
+      "Minimal text (tweet text complements image)",
+      "Works at small thumbnail size"
+    ],
+    "colors": {
+      "brand_blue": "#3b82f6",
+      "high_contrast_required": true
+    }
+  },
+  "tweet_structure": {
+    "example": "🇫🇷 French Word of the Day: [word]\n\n[phonetic] • [translation]\n\n[Level] [part of speech]\n\nLearn more → [link]\n\n#LearnFrench #FrenchVocabulary",
+    "character_breakdown": {
+      "emoji": "2 chars each",
+      "url": "23 chars (auto-shortened to t.co)",
+      "hashtag": "Counts toward 280 limit",
+      "mention": "Counts toward limit"
+    },
+    "best_practices": [
+      "Front-load key info",
+      "Keep under 280 chars (or use Twitter Blue 4,000)",
+      "Include link to landing page",
+      "1-2 hashtags maximum",
+      "Visual content gets 150% more retweets"
+    ]
+  },
+  "hashtag_strategy": {
+    "recommended_count": "1-2",
+    "impact": "Moderate (not as powerful as Instagram)",
+    "capitalization": "Use for readability (#LearnFrench not #learnfrench)",
+    "placement": "End of tweet",
+    "suggested_hashtags": [
+      "#LearnFrench",
+      "#FrenchVocabulary",
+      "#LanguageLearning",
+      "#WOTD"
+    ]
+  },
+  "posting_strategy": {
+    "best_posting_times": {
+      "weekdays": ["12 PM EST", "3 PM EST", "5-6 PM EST"],
+      "peak": "12 PM (lunch) and 5-6 PM (commute)",
+      "weekends": "9 AM - 12 PM EST"
+    },
+    "posting_frequency": "Daily",
+    "engagement_tactics": [
+      "Ask questions",
+      "Use Twitter polls",
+      "Create threads for deep dives",
+      "Quote tweets (respond to French learners)",
+      "Retweet user examples"
+    ]
+  },
+  "implementation_options": [
+    {
+      "option": "A",
+      "name": "Custom Twitter template",
+      "format": "1200x675 horizontal",
+      "pros": ["Optimized for Twitter timeline"],
+      "cons": ["Another unique template to maintain"]
+    },
+    {
+      "option": "B",
+      "name": "Reuse Instagram definition slide",
+      "format": "1080x1080 square (Instagram slide 2)",
+      "pros": ["Minimal work", "Clean design"],
+      "cons": ["Square format not optimal for Twitter"],
+      "recommendation": "Start here"
+    },
+    {
+      "option": "C",
+      "name": "Text-only tweets",
+      "format": "No image, text + link only",
+      "pros": ["Zero design work"],
+      "cons": ["Lower engagement (no visual)"]
+    }
+  ],
+  "api_info": {
+    "api_name": "Twitter API v2",
+    "automation_status": "Fully supported",
+    "capabilities": [
+      "Tweet creation",
+      "Media upload",
+      "Scheduled tweets (via Ads API or third-party)",
+      "Analytics access"
+    ],
+    "authentication": "OAuth 1.0a or OAuth 2.0",
+    "rate_limits_free_tier": {
+      "tweet_creation": "300 tweets per 3 hours",
+      "media_upload": "300 requests per 15 minutes",
+      "sufficient_for": "Daily WOTD posting"
+    },
+    "required_credentials": [
+      "API Key",
+      "API Secret",
+      "Access Token",
+      "Access Token Secret"
+    ]
+  },
+  "twitter_blue_features": {
+    "available": true,
+    "benefits": [
+      "4,000 character tweets (vs 280)",
+      "Edit tweet capability",
+      "Longer video uploads",
+      "Prioritized ranking in replies"
+    ],
+    "use_case": "More detailed word explanations in tweet text"
+  },
+  "engagement_stats": {
+    "visual_content_boost": "150% more retweets",
+    "optimal_hashtags": "1-2 (more reduces engagement)",
+    "peak_engagement": "Weekday afternoons"
+  },
+  "brand_assets": {
+    "logo": "https://languageacademy.io/img/TLA_CoreMark_Blue_tm_v1.1.1.png",
+    "website": "https://languageacademy.io",
+    "twitter_handle": "TBD"
+  }
+}
+

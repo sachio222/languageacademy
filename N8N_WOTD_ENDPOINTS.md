@@ -127,11 +127,13 @@ GET https://YOUR_PROJECT_URL/functions/v1/get-wotd?date=2025-11-10
   "messages": [
     {
       "role": "user",
-      "content": "You are a French linguistics expert...\n\n[PASTE FULL PROMPT FROM wotd-llm-prompt.md]\n\nGenerate for word: {{$json.suggested_word}} and date: {{$json.target_date}}\n\nIMPORTANT: Do not use any of these already-used words: {{$node[\"Get Used Words\"].json.used_words}}"
+      "content": "[PASTE ENTIRE CONTENT FROM wotd-llm-prompt.md including Section 10: Engagement Slide]\n\nGenerate for word: {{$json.suggested_word}} and date: {{$json.target_date}}\n\nIMPORTANT: Do not use any of these already-used words: {{$node[\"Get Used Words\"].json.used_words}}"
     }
   ]
 }
 ```
+
+**Note:** Make sure you're using the updated `wotd-llm-prompt.md` that includes Section 10 (Engagement Slide).
 
 **Code node before LLM to prepare:**
 
@@ -185,6 +187,15 @@ if (!jsonMatch) {
 
 const wordData = JSON.parse(jsonMatch[1] || jsonMatch[0]);
 
+// Verify engagement_slide field exists
+if (!wordData.engagement_slide) {
+  console.warn("WARNING: engagement_slide missing from LLM response!");
+  console.log("LLM may not have received updated prompt with Section 10");
+}
+
+// Log engagement slide type for debugging
+console.log("Engagement slide type:", wordData.engagement_slide?.type);
+
 return { json: wordData };
 ````
 
@@ -211,7 +222,37 @@ return { json: wordData };
 {{$json}}
 ```
 
-(Passes the entire word data object from previous node)
+**Note:** This passes the entire word data object from Parse LLM Response, including the new `engagement_slide` field.
+
+**⚠️ Database Schema Required:**
+
+Before using this, run this migration:
+
+```sql
+ALTER TABLE word_of_the_day
+ADD COLUMN engagement_slide JSONB;
+```
+
+And update `supabase/functions/create-wotd/index.ts`:
+
+**1. Update Interface (line 50):**
+
+```typescript
+  social_hook?: string;
+  engagement_slide?: {
+    type: string;
+    content: any;
+  };
+  generated_by?: string;
+```
+
+**2. Update Insert Statement (line 152):**
+
+```typescript
+  social_hook: wordData.social_hook || null,
+  engagement_slide: wordData.engagement_slide || null,
+  generated_by: wordData.generated_by || 'manual',
+```
 
 **Response:**
 

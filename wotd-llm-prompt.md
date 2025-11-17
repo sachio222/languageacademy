@@ -8,6 +8,8 @@ You are a French linguistics expert creating authoritative Word of the Day entri
 
 Generate a complete Word of the Day entry for the French word **"[WORD]"** for date **[DATE]**.
 
+**IMPORTANT FOR ENGAGEMENT SLIDE (Requirement #10):** Analyze the word type and choose the BEST engagement format. Don't default to "challenge" for everything! Verbs should get "quiz" with conjugation, confusing words should get "opinion" or "mistake", cognates should get "mnemonic".
+
 ## Requirements:
 
 1. **Multiple definitions** (2-3 numbered senses with different meanings)
@@ -19,6 +21,7 @@ Generate a complete Word of the Day entry for the French word **"[WORD]"** for d
 7. **3 related words** with relationship types
 8. **3 plausible wrong answers** for multiple choice quiz
 9. **Frequency data** if it's a common word (top 1000)
+10. **Engagement slide** - ANALYZE word type! Verbs→quiz, nouns→challenge/mnemonic, confusing pairs→opinion/mistake
 
 ## Output Format:
 
@@ -119,7 +122,13 @@ Return ONLY valid JSON (no markdown, no explanation) in this EXACT structure:
     "plausible wrong answer 2",
     "plausible wrong answer 3"
   ],
-  "social_hook": "Engaging question or hook for social media"
+  "social_hook": "Engaging question or hook for social media",
+  "engagement_slide": {
+    "type": "quiz|challenge|opinion|mnemonic|mistake",
+    "content": {
+      // Type-specific content (see section 10 below)
+    }
+  }
 }
 ```
 
@@ -249,9 +258,212 @@ Return ONLY valid JSON (no markdown, no explanation) in this EXACT structure:
   "usage_notes": "Essential high-frequency verb ranked 8th in all French text. Appears in the top 100 most common words across spoken and written French. Critical for expressing movement, well-being, and future actions. Highly irregular conjugation requires dedicated study at all proficiency levels.",
   "correct_answer": "to go",
   "wrong_options": ["to have", "to want", "to make"],
-  "social_hook": "Can you guess this essential French verb?"
+  "social_hook": "Can you guess this essential French verb?",
+  "engagement_slide": {
+    "type": "quiz",
+    "content": {
+      "question": "Je _____ au cinéma ce soir.",
+      "options": ["vais", "vas", "va"],
+      "correct": "vais"
+    }
+  }
 }
 ```
+
+## More Examples Showing Type Variety:
+
+**Verb (piloter) → QUIZ:**
+
+```json
+{
+  "word": "piloter",
+  "part_of_speech": "verb",
+  ...
+  "engagement_slide": {
+    "type": "quiz",
+    "content": {
+      "question": "Il _____ un avion depuis 10 ans.",
+      "options": ["pilote", "pilotes", "pilotent"],
+      "correct": "pilote"
+    }
+  }
+}
+```
+
+**Cognate (décider) → MNEMONIC:**
+
+```json
+{
+  "word": "décider",
+  "part_of_speech": "verb",
+  ...
+  "engagement_slide": {
+    "type": "mnemonic",
+    "content": {
+      "hook": "'Décider' looks like 'decide'",
+      "connection": "It means the same thing!",
+      "reinforcement": "décider = to decide"
+    }
+  }
+}
+```
+
+**Confusing pair (à/a) → OPINION:**
+
+```json
+{
+  "word": "à",
+  "part_of_speech": "preposition",
+  ...
+  "engagement_slide": {
+    "type": "opinion",
+    "content": {
+      "question": "Tell us your experience",
+      "option_a": "à (with accent)",
+      "option_b": "a (no accent)"
+    }
+  }
+}
+```
+
+---
+
+## 10. Engagement Slide (Instagram Comment Driver)
+
+Generate ONE slide designed to drive Instagram comments.
+
+**⚠️ CRITICAL:** Vary your selection! Don't default to "challenge" for every word. Analyze the word's characteristics and choose the type that creates the BEST learning opportunity.
+
+**Selection Guide (CHOOSE THE BEST FIT - VARY YOUR CHOICES!):**
+
+- **quiz** → Verbs with conjugation patterns, words with multiple meanings, true/false grammar concepts
+  - Example: Fill-in-blank conjugation, multiple choice meanings, true/false about usage
+  - BEST FOR: Verbs (être, avoir, aller, faire), words with multiple senses
+- **challenge** → Common A1-A2 words that beginners can easily practice with
+  - Example: Sentence creation with everyday words
+  - BEST FOR: Simple common words (manger, dormir, aimer, habiter)
+- **opinion** → Words with confusing similar forms or homophones
+  - Example: infinitive vs participle, homophones (à/a, ou/où)
+  - BEST FOR: Words with tricky variations, false friends
+- **mnemonic** → Words that sound like English words or have memorable associations
+  - Example: Sound-alike tricks, visual mnemonics
+  - BEST FOR: Words with English cognates or funny sound similarities
+- **mistake** → Words that have well-documented common learner errors
+  - Example: Article usage, preposition errors, false friends
+  - BEST FOR: Words where learners make predictable mistakes
+  - Keep explanatin concie, not thorough
+
+**IMPORTANT:** Choose different types for different words to keep content fresh and engaging!
+
+**Selection Priority (choose first match):**
+
+1. **Words with common documented errors → MUST use "mistake"**
+2. **Words with English cognates, sound-alikes, common roots → MUST use "mnemonic"**
+3. **Words with confusing forms (infinitive vs participle, homophones) → MUST use "opinion"**
+4. **Verbs without clear conjugation opportunity → MUST use "challenge"**
+5. **If none of the above apply** → Choose "quiz" (for variations/conjugations) OR "challenge" (for versatile words)
+
+### Quiz Format:
+
+Use for words with clear right/wrong answers (conjugations, meanings, usage).
+
+Examples of when to use:
+
+- Verb conjugation: "Je **\_** au cinéma" (vais/vas/va)
+- Multiple meanings: "What does 'aller' mean in: Comment allez-vous?"
+- Grammar rules: "True or false: 'Parler' uses être in passé composé"
+
+```json
+"engagement_slide": {
+  "type": "quiz",
+  "content": {
+    "question": "Complete: Je _____ français tous les jours.",
+    "options": ["parle", "parles", "parlent"],
+    "correct": "parle"
+  }
+}
+```
+
+Note: The template automatically adds "Comment your answer" CTA. Don't include hints or emojis.
+
+### Challenge Format:
+
+Use for common, versatile words learners can practice with.
+
+**IMPORTANT:** Always provide a real example sentence using the word!
+
+```json
+"engagement_slide": {
+  "type": "challenge",
+  "content": {
+    "prompt": "Use 'parler' in your own sentence!",
+    "example": "Je parle français avec mes collègues au travail."
+  }
+}
+```
+
+Note: The template automatically adds "Comment below" CTA. Don't include emojis - they're added automatically.
+
+### Opinion Format:
+
+Use for words with tricky variations that confuse learners.
+
+```json
+"engagement_slide": {
+  "type": "opinion",
+  "content": {
+    "question": "Tell us your experience",
+    "option_a": "parler (infinitive)",
+    "option_b": "parlé (past participle)"
+  }
+}
+```
+
+Note: The template automatically adds "Comment A or B" CTA. The title is always "Which is harder?"
+
+### Mnemonic Format:
+
+Use for words with sound similarities or memorable visual associations.
+
+```json
+"engagement_slide": {
+  "type": "mnemonic",
+  "content": {
+    "hook": "'Parler' sounds like 'parlor'",
+    "connection": "People TALK in a parlor",
+    "reinforcement": "parler = to speak"
+  }
+}
+```
+
+Note: The template automatically adds "Comment your memory trick" CTA.
+
+### Mistake Format:
+
+Use when there's a common, documented learner error.
+
+```json
+"engagement_slide": {
+  "type": "mistake",
+  "content": {
+    "wrong": "Je parle bien français",
+    "correct": "Je parle bien LE français",
+    "rule": "Always use the article with language names"
+  }
+}
+```
+
+Note: The template automatically adds "Have you made this mistake?" CTA.
+
+**Requirements:**
+
+- Use the actual word in prompts (not "this word")
+- Keep questions/challenges achievable and clear
+- Don't include emojis (automatically added by template)
+- Don't include CTAs (automatically added by template)
+- **Follow the Selection Priority above** - don't default to the same type repeatedly
+
+---
 
 ## Quality Guidelines:
 
@@ -262,6 +474,7 @@ Return ONLY valid JSON (no markdown, no explanation) in this EXACT structure:
 - **Cultural:** Include real idioms and expressions
 - **Historical:** Accurate etymology with evolution chain
 - **Quiz:** Wrong answers should be plausible (other common verbs/words, not random)
+- **Engagement:** Choose quiz/challenge/opinion type that best fits this word's learning opportunities
 
 Return ONLY the JSON object, no additional text.
 

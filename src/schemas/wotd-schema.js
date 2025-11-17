@@ -112,6 +112,12 @@ export const WOTDSchema = z.object({
   
   // Social/marketing
   social_hook: z.string().optional(), // For social media posts
+  
+  // Instagram engagement slide (AI-selected)
+  engagement_slide: z.object({
+    type: z.enum(["quiz", "challenge", "opinion", "mnemonic", "mistake"]),
+    content: z.any(),
+  }).optional(),
 });
 
 // Validation helper

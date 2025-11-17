@@ -1,0 +1,146 @@
+{
+  "platform": "Pinterest",
+  "content_type": "Single Pin",
+  "format": {
+    "image_dimensions": "1000x1500",
+    "aspect_ratio": "2:3",
+    "file_format": "PNG",
+    "max_file_size": "20 MB",
+    "recommended_file_size": "< 10 MB"
+  },
+  "text_limits": {
+    "title_max": 100,
+    "title_displayed_in_feed": 60,
+    "description_optimal": 500,
+    "description_max": 800,
+    "description_preview": "50-75",
+    "alt_text_max": 500,
+    "hashtags_recommended": "3-5",
+    "hashtags_max_effective": 5
+  },
+  "design_specs": {
+    "layout": {
+      "total_height": 1500,
+      "hero_section": 500,
+      "examples_section": 500,
+      "cta_section": 500,
+      "description": "Even thirds (500px each section)"
+    },
+    "colors": {
+      "brand_blue": "#3b82f6",
+      "brand_blue_dark": "#2563eb",
+      "text_dark": "#1a1a1a",
+      "text_medium": "#665665",
+      "background_light": "#fafbfc",
+      "white": "#ffffff"
+    },
+    "typography": {
+      "fonts": {
+        "serif": "Playfair Display (headlines, word, translation)",
+        "sans_serif": "Poppins (body, examples, metadata)",
+        "script": "Satisfy (phonetic pronunciation)"
+      },
+      "sizes": {
+        "word_main": "6rem",
+        "phonetic": "2.5rem",
+        "translation": "2.75rem",
+        "examples_french": "2.25rem",
+        "examples_english": "1.875rem",
+        "cta_title": "2.5rem",
+        "cta_subtitle": "1.625rem",
+        "cta_url": "1.625rem"
+      },
+      "weights": {
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600
+      }
+    },
+    "effects": {
+      "glassmorphism": "backdrop-filter: blur(12px)",
+      "text_shadow": "0 2px 16px rgba(0, 0, 0, 0.4)",
+      "overlay": "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6))",
+      "border_accent": "5px solid #3b82f6 (left border on examples)"
+    }
+  },
+  "seo_strategy": {
+    "title_format": "French Word: {word} | Learn \"{translation}\" in French | {level}",
+    "description_structure": [
+      "Hook (first 50-75 chars - shown in feed)",
+      "Value proposition",
+      "Examples",
+      "CTA + benefit",
+      "Learn more CTA",
+      "3-5 hashtags"
+    ],
+    "keyword_targets": [
+      "Learn French",
+      "French Vocabulary",
+      "French {part_of_speech}",
+      "{level} French",
+      "Language Learning"
+    ],
+    "pinterest_topics": [
+      "Learn French",
+      "French Language",
+      "Language Learning",
+      "Study French",
+      "French Vocabulary",
+      "Educational Resources",
+      "Study Tips",
+      "Online Learning",
+      "Self Study",
+      "Language Education"
+    ]
+  },
+  "posting_strategy": {
+    "best_posting_times": ["Evenings", "Weekends"],
+    "posting_frequency": "Daily",
+    "board_strategy": "Single board: 'French Word of the Day'",
+    "engagement_priority": "Saves > Clicks > Impressions",
+    "algorithm_tips": [
+      "Fresh content > Repins",
+      "Original content gets priority",
+      "Consistent posting builds authority",
+      "Rich Pins get extra distribution",
+      "Quality over quantity (hashtags)",
+      "Link to dedicated landing pages"
+    ]
+  },
+  "api_endpoints": {
+    "base_url": "https://api.pinterest.com/v5",
+    "create_pin": "/pins",
+    "boards": "/boards",
+    "user_account": "/user_account"
+  },
+  "brand_assets": {
+    "logo_white": "https://languageacademy.io/img/TLA_CoreMark_White_tm_v1.1.1.png",
+    "website": "https://languageacademy.io",
+    "pin_link_format": "https://languageacademy.io/?wotd=true&word={word}-fr"
+  },
+  "pin_structure": [
+    {
+      "section": 1,
+      "name": "hero",
+      "height": 500,
+      "elements": ["word", "phonetic", "translation", "part_of_speech", "difficulty_level", "background_image"],
+      "design": "Pexels background with overlay, serif typography, badge-style metadata"
+    },
+    {
+      "section": 2,
+      "name": "examples",
+      "height": 500,
+      "elements": ["example_1", "example_2"],
+      "design": "White background, card layout with blue left border, context labels"
+    },
+    {
+      "section": 3,
+      "name": "cta",
+      "height": 500,
+      "elements": ["logo", "headline", "word", "website_url"],
+      "design": "Blue gradient, white logo, glassmorphic URL container"
+    }
+  ]
+}
+

@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Slides Preview - 5 Slide Design System</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #1a1a1a;
+        padding: 40px 20px;
+        min-height: 100vh;
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 60px;
+      }
+
+      .header h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        letter-spacing: -0.02em;
+      }
+
+      .header p {
+        color: #999;
+        font-size: 18px;
+      }
+
+      .slides-container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .slide-wrapper {
+        background: #2a2a2a;
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+        transition: transform 0.15s;
+        width: 100%;
+        max-width: 1080px;
+      }
+
+      .slide-wrapper:hover {
+        transform: translateY(-4px);
+      }
+
+      .slide-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .slide-label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .slide-number {
+        background: #3b82f6;
+        color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .slide-type {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+
+      .slide-description {
+        color: #999;
+        font-size: 14px;
+        font-style: italic;
+      }
+
+      .slide-frame {
+        width: 100%;
+        max-width: 1080px;
+        height: 1080px;
+        border: 2px solid #3a3a3a;
+        border-radius: 16px;
+        overflow: hidden;
+        margin: 0 auto;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        background: white;
+      }
+
+      .slide-meta {
+        margin-top: 20px;
+        padding: 16px;
+        background: #1f1f1f;
+        border-radius: 8px;
+      }
+
+      .slide-meta-item {
+        color: #999;
+        font-size: 13px;
+        margin-bottom: 6px;
+      }
+
+      .slide-meta-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .slide-meta-label {
+        color: #3b82f6;
+        font-weight: 600;
+        margin-right: 8px;
+      }
+
+      /* Individual Slide Styles */
+      .slide-content {
+        width: 1080px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      /* Slide 1: Word */
+      .slide-word {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg?auto=compress&cs=tinysrgb&w=1080");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      .slide-word .word {
+        font-size: 140px;
+        font-weight: 200;
+        letter-spacing: -0.05em;
+        margin: 0 0 24px 0;
+        line-height: 1;
+        text-align: center;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .slide-word .phonetic-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(12px);
+        padding: 16px 32px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .slide-word .phonetic {
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        opacity: 0.98;
+      }
+
+      /* Slide 2: Definition */
+      .slide-definition {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 80px;
+      }
+
+      .slide-definition .word {
+        font-size: 96px;
+        font-weight: 200;
+        letter-spacing: -0.04em;
+        margin: 0 0 60px 0;
+        color: #1a1a1a;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .slide-definition .translation {
+        font-size: 64px;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        color: #665665;
+        margin: 0 0 48px 0;
+        text-align: center;
+        line-height: 1.2;
+      }
+
+      .slide-definition .meta-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: #fafbfc;
+        padding: 20px 40px;
+        border-radius: 60px;
+        border: 1px solid #e0e0e0;
+      }
+
+      .slide-definition .meta {
+        font-size: 28px;
+        font-weight: 500;
+        color: #999999;
+        letter-spacing: -0.01em;
+      }
+
+      .slide-definition .dot {
+        color: #e0e0e0;
+        font-size: 20px;
+      }
+
+      /* Slide 3: Examples */
+      .slide-examples {
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+        gap: 80px;
+      }
+
+      .slide-examples .example {
+        text-align: center;
+        max-width: 800px;
+      }
+
+      .slide-examples .context {
+        font-size: 22px;
+        font-weight: 600;
+        color: #3b82f6;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin: 0 0 32px 0;
+      }
+
+      .slide-examples .french {
+        font-size: 52px;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        margin: 0 0 24px 0;
+        color: #1a1a1a;
+        line-height: 1.3;
+      }
+
+      .slide-examples .english {
+        font-size: 40px;
+        font-weight: 400;
+        color: #665665;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      .slide-examples .divider {
+        width: 120px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
+        margin: 0 auto;
+      }
+
+      /* Slide 4a: Quiz */
+      .slide-quiz {
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+      }
+
+      .slide-quiz .title {
+        font-size: 40px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin-bottom: 64px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
+
+      .slide-quiz .question {
+        font-size: 52px;
+        font-weight: 300;
+        color: #1a1a1a;
+        margin-bottom: 72px;
+        text-align: center;
+        line-height: 1.3;
+        letter-spacing: -0.025em;
+        max-width: 800px;
+      }
+
+      .slide-quiz .options {
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 72px;
+      }
+
+      .slide-quiz .option {
+        font-size: 44px;
+        font-weight: 400;
+        color: #665665;
+        letter-spacing: -0.02em;
+        margin-bottom: 28px;
+        text-align: center;
+        line-height: 1.3;
+      }
+
+      .slide-quiz .option:last-child {
+        margin-bottom: 0;
+      }
+
+      .slide-quiz .cta {
+        font-size: 28px;
+        font-weight: 500;
+        color: #3b82f6;
+        letter-spacing: -0.01em;
+        text-align: center;
+      }
+
+      /* Slide 4b: Challenge */
+      .slide-challenge {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #fafbfc 0%, #ffffff 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+      }
+
+      .slide-challenge .title {
+        font-size: 40px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin-bottom: 64px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
+
+      .slide-challenge .prompt {
+        font-size: 52px;
+        font-weight: 300;
+        color: #1a1a1a;
+        margin-bottom: 80px;
+        text-align: center;
+        line-height: 1.3;
+        letter-spacing: -0.025em;
+        max-width: 800px;
+      }
+
+      .slide-challenge .example-label {
+        font-size: 18px;
+        font-weight: 600;
+        color: #999999;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .slide-challenge .example-text {
+        font-size: 32px;
+        font-weight: 400;
+        color: #665665;
+        letter-spacing: -0.015em;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 80px;
+      }
+
+      .slide-challenge .cta {
+        font-size: 28px;
+        font-weight: 500;
+        color: #3b82f6;
+        letter-spacing: -0.01em;
+        text-align: center;
+      }
+
+      /* Slide 4c: Opinion */
+      .slide-opinion {
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+      }
+
+      .slide-opinion .title {
+        font-size: 40px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin-bottom: 64px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
+
+      .slide-opinion .question {
+        font-size: 44px;
+        font-weight: 300;
+        color: #1a1a1a;
+        margin-bottom: 88px;
+        text-align: center;
+        letter-spacing: -0.025em;
+        line-height: 1.3;
+      }
+
+      .slide-opinion .options-container {
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 80px;
+      }
+
+      .slide-opinion .poll-option {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .slide-opinion .poll-option:last-child {
+        margin-bottom: 0;
+      }
+
+      .slide-opinion .option-label {
+        font-size: 24px;
+        font-weight: 500;
+        color: #3b82f6;
+        margin-bottom: 12px;
+        letter-spacing: -0.01em;
+      }
+
+      .slide-opinion .option-text {
+        font-size: 40px;
+        font-weight: 400;
+        color: #665665;
+        letter-spacing: -0.02em;
+        line-height: 1.3;
+      }
+
+      .slide-opinion .cta {
+        font-size: 28px;
+        font-weight: 500;
+        color: #3b82f6;
+        letter-spacing: -0.01em;
+        text-align: center;
+      }
+
+      /* Slide 4d: Mnemonic */
+      .slide-mnemonic {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+      }
+
+      .slide-mnemonic .title {
+        font-size: 40px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin-bottom: 80px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
+
+      .slide-mnemonic .hook {
+        font-size: 44px;
+        font-weight: 300;
+        color: #1a1a1a;
+        margin-bottom: 48px;
+        text-align: center;
+        letter-spacing: -0.025em;
+        line-height: 1.3;
+      }
+
+      .slide-mnemonic .connection {
+        font-size: 48px;
+        font-weight: 400;
+        color: #665665;
+        margin-bottom: 64px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        line-height: 1.3;
+      }
+
+      .slide-mnemonic .reinforcement {
+        font-size: 36px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin-bottom: 80px;
+        text-align: center;
+        letter-spacing: -0.015em;
+      }
+
+      .slide-mnemonic .cta {
+        font-size: 28px;
+        font-weight: 500;
+        color: #3b82f6;
+        letter-spacing: -0.01em;
+        text-align: center;
+      }
+
+      /* Slide 4e: Mistake */
+      .slide-mistake {
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+      }
+
+      .slide-mistake .title {
+        font-size: 40px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin-bottom: 80px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
+
+      .slide-mistake .comparison {
+        width: 100%;
+        max-width: 750px;
+        margin-bottom: 72px;
+      }
+
+      .slide-mistake .error-item {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .slide-mistake .label {
+        font-size: 20px;
+        font-weight: 600;
+        color: #999999;
+        margin-bottom: 16px;
+        letter-spacing: 0.05em;
+      }
+
+      .slide-mistake .wrong {
+        font-size: 40px;
+        font-weight: 400;
+        color: #665665;
+        letter-spacing: -0.02em;
+        line-height: 1.3;
+        opacity: 0.6;
+        text-decoration: line-through;
+      }
+
+      .slide-mistake .correct {
+        font-size: 44px;
+        font-weight: 400;
+        color: #1a1a1a;
+        letter-spacing: -0.02em;
+        line-height: 1.3;
+      }
+
+      .slide-mistake .rule {
+        font-size: 28px;
+        font-weight: 400;
+        color: #665665;
+        margin-bottom: 72px;
+        text-align: center;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+        font-style: italic;
+        max-width: 700px;
+      }
+
+      .slide-mistake .cta {
+        font-size: 28px;
+        font-weight: 500;
+        color: #3b82f6;
+        letter-spacing: -0.01em;
+        text-align: center;
+      }
+
+      /* Slide 5: CTA */
+      .slide-cta {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 80px;
+        color: white;
+      }
+
+      .slide-cta .logo {
+        width: 180px;
+        height: auto;
+        margin-bottom: 60px;
+      }
+
+      .slide-cta .title {
+        font-size: 56px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        margin: 0 0 16px 0;
+        text-align: center;
+        line-height: 1.25;
+      }
+
+      .slide-cta .subtitle {
+        font-size: 40px;
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        margin: 0 0 64px 0;
+        text-align: center;
+        opacity: 0.95;
+        font-style: italic;
+      }
+
+      .slide-cta .url-container {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        padding: 24px 48px;
+        border-radius: 60px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .slide-cta .url {
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        margin: 0;
+      }
+
+      .instructions {
+        max-width: 800px;
+        margin: 60px auto 0;
+        padding: 32px;
+        background: #2a2a2a;
+        border-radius: 16px;
+        color: #999;
+        text-align: center;
+      }
+
+      .instructions h2 {
+        color: white;
+        margin-bottom: 16px;
+        font-size: 24px;
+      }
+
+      .instructions p {
+        margin-bottom: 12px;
+        line-height: 1.6;
+      }
+
+      .instructions code {
+        background: #1a1a1a;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-family: "Monaco", "Courier New", monospace;
+        color: #3b82f6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Instagram WOTD - 5 Slide Design System</h1>
+      <p>Preview all slides with example data • 1080x1080px</p>
+    </div>
+
+    <div class="slides-container">
+      <!-- Slide 1: Word -->
+      <div class="slide-wrapper">
+        <div class="slide-header">
+          <div class="slide-label">
+            <div class="slide-number">1</div>
+            <div>
+              <div class="slide-type">Word with Background</div>
+              <div class="slide-description">
+                Ultra-thin typography, glassmorphic phonetic pill
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-frame">
+          <div class="slide-content slide-word">
+            <div class="word">parler</div>
+            <div class="phonetic-container">
+              <div class="phonetic">/paʁ.le/</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-meta">
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Type:</span>word
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Background:</span>Pexels image with
+            dark overlay
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Key elements:</span>Large word (140px
+            weight 200), phonetic with glassmorphism
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Definition -->
+      <div class="slide-wrapper">
+        <div class="slide-header">
+          <div class="slide-label">
+            <div class="slide-number">2</div>
+            <div>
+              <div class="slide-type">Definition</div>
+              <div class="slide-description">
+                Clean hierarchy with translation and metadata
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-frame">
+          <div class="slide-content slide-definition">
+            <div class="word">parler</div>
+            <div class="translation">to speak</div>
+            <div class="meta-container">
+              <div class="meta">verb</div>
+              <div class="dot">•</div>
+              <div class="meta">A2</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-meta">
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Type:</span>definition
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Background:</span>Subtle gradient
+            (#ffffff → #f8faff)
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Key elements:</span>Word (96px),
+            translation (64px), pill-shaped meta badges
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Examples -->
+      <div class="slide-wrapper">
+        <div class="slide-header">
+          <div class="slide-label">
+            <div class="slide-number">3</div>
+            <div>
+              <div class="slide-type">Examples</div>
+              <div class="slide-description">
+                Two usage examples with context labels
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-frame">
+          <div class="slide-content slide-examples">
+            <div class="example">
+              <div class="context">Daily Conversation</div>
+              <div class="french">Je parle français tous les jours.</div>
+              <div class="english">I speak French every day.</div>
+            </div>
+            <div class="divider"></div>
+            <div class="example">
+              <div class="context">At Work</div>
+              <div class="french">Elle parle avec ses collègues.</div>
+              <div class="english">She speaks with her colleagues.</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-meta">
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Type:</span>examples
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Background:</span>Clean white
+            (#ffffff)
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Key elements:</span>Context labels
+            (brand blue), French/English pairs, gradient divider
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4a: Quiz -->
+      <div class="slide-wrapper">
+        <div class="slide-header">
+          <div class="slide-label">
+            <div class="slide-number">4a</div>
+            <div>
+              <div class="slide-type">Engagement: Quiz</div>
+              <div class="slide-description">
+                Comment-driving interactive quiz
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-frame">
+          <div class="slide-content slide-quiz">
+            <div class="title">Test yourself</div>
+            <div class="question">Je _____ français tous les jours.</div>
+            <div class="options">
+              <div class="option">A) parle</div>
+              <div class="option">B) parles</div>
+              <div class="option">C) parlent</div>
+            </div>
+            <div class="cta">Comment your answer 👇</div>
+          </div>
+        </div>
+        <div class="slide-meta">
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Type:</span>quiz
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Background:</span>Gradient (#ffffff →
+            #f8faff)
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Expected engagement:</span>5-8%
+            comment rate
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4b: Challenge -->
+      <div class="slide-wrapper">
+        <div class="slide-header">
+          <div class="slide-label">
+            <div class="slide-number">4b</div>
+            <div>
+              <div class="slide-type">Engagement: Challenge</div>
+              <div class="slide-description">Sentence creation prompt</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-frame">
+          <div class="slide-content slide-challenge">
+            <div class="title">Your turn</div>
+            <div class="prompt">Use "parler" in a sentence</div>
+            <div class="example-label">Example</div>
+            <div class="example-text">
+              Je parle avec mes amis chaque weekend.
+            </div>
+            <div class="cta">Comment below 👇</div>
+          </div>
+        </div>
+        <div class="slide-meta">
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Type:</span>challenge
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Background:</span>Clean white
+            (#ffffff)
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Expected engagement:</span>3-5%
+            comment rate
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4c: Opinion -->
+      <div class="slide-wrapper">
+        <div class="slide-header">
+          <div class="slide-label">
+            <div class="slide-number">4c</div>
+            <div>
+              <div class="slide-type">Engagement: Opinion Poll</div>
+              <div class="slide-description">A vs B comparison question</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-frame">
+          <div class="slide-content slide-opinion">
+            <div class="title">Which is harder?</div>
+            <div class="question">Tell us your experience</div>
+            <div class="options-container">
+              <div class="poll-option">
+                <div class="option-label">A</div>
+                <div class="option-text">parler</div>
+              </div>
+              <div class="poll-option">
+                <div class="option-label">B</div>
+                <div class="option-text">parlé</div>
+              </div>
+            </div>
+            <div class="cta">Comment A or B 👇</div>
+          </div>
+        </div>
+        <div class="slide-meta">
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Type:</span>opinion
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Background:</span>Gradient (#f8faff →
+            #ffffff)
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Expected engagement:</span>2-4%
+            comment rate
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4d: Mnemonic -->
+      <div class="slide-wrapper">
+        <div class="slide-header">
+          <div class="slide-label">
+            <div class="slide-number">4d</div>
+            <div>
+              <div class="slide-type">Engagement: Memory Hook</div>
+              <div class="slide-description">Mnemonic device for retention</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-frame">
+          <div class="slide-content slide-mnemonic">
+            <div class="title">Remember it</div>
+            <div class="hook">"Parler" sounds like "parlor"</div>
+            <div class="connection">People TALK in a parlor</div>
+            <div class="reinforcement">parler = to speak</div>
+            <div class="cta">Comment your memory trick 💡</div>
+          </div>
+        </div>
+        <div class="slide-meta">
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Type:</span>mnemonic
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Background:</span>Subtle gradient
+            (#ffffff → #f8faff)
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Expected engagement:</span>2-3%
+            comment rate, high saves
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4e: Mistake -->
+      <div class="slide-wrapper">
+        <div class="slide-header">
+          <div class="slide-label">
+            <div class="slide-number">4e</div>
+            <div>
+              <div class="slide-type">Engagement: Common Mistake</div>
+              <div class="slide-description">
+                Error prevention and correction
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-frame">
+          <div class="slide-content slide-mistake">
+            <div class="title">Don't say this</div>
+            <div class="comparison">
+              <div class="error-item">
+                <div class="label">WRONG</div>
+                <div class="wrong">Je parle bien français</div>
+              </div>
+              <div class="error-item">
+                <div class="label">CORRECT</div>
+                <div class="correct">Je parle bien LE français</div>
+              </div>
+            </div>
+            <div class="rule">Always use the article with language names</div>
+            <div class="cta">Have you made this mistake? 😅</div>
+          </div>
+        </div>
+        <div class="slide-meta">
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Type:</span>mistake
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Background:</span>Clean white
+            (#ffffff)
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Expected engagement:</span>2-3%
+            comment rate, validation-seeking
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: CTA -->
+      <div class="slide-wrapper">
+        <div class="slide-header">
+          <div class="slide-label">
+            <div class="slide-number">5</div>
+            <div>
+              <div class="slide-type">Call to Action</div>
+              <div class="slide-description">
+                Premium conversion slide with logo
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-frame">
+          <div class="slide-content slide-cta">
+            <img
+              src="https://languageacademy.io/img/TLA_CoreMark_White_tm_v1.1.1.png"
+              alt="Language Academy"
+              class="logo"
+            />
+            <div class="title">Master French</div>
+            <div class="subtitle">"parler" and 1000+ words</div>
+            <div class="url-container">
+              <div class="url">languageacademy.io</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-meta">
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Type:</span>cta
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Background:</span>Premium blue
+            gradient (#3b82f6 → #2563eb)
+          </div>
+          <div class="slide-meta-item">
+            <span class="slide-meta-label">Key elements:</span>Logo, headline,
+            featured word, glassmorphic URL
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h2>How to Use This Preview</h2>
+      <p>This page shows all slides with example data for the word "parler".</p>
+      <p>
+        <strong>Note:</strong> Slides 4a-4e are 5 engagement alternatives - the
+        AI will choose ONE based on the word.
+      </p>
+      <p>
+        <strong>Engagement types:</strong> Quiz, Challenge, Opinion, Mnemonic,
+        Mistake
+      </p>
+      <p>
+        <strong>Actual flow:</strong> Slide 1 → Slide 2 → Slide 3 → Slide 4 (one
+        type) → Slide 5
+      </p>
+      <p>To refine designs, edit this HTML file and reload in your browser.</p>
+      <p>Open in browser: <code>open slides-preview.html</code></p>
+    </div>
+  </body>
+</html>

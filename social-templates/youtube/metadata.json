@@ -1,0 +1,163 @@
+{
+  "platform": "YouTube",
+  "content_types": ["Shorts", "Thumbnails", "Long-form (future)"],
+  "status": "planned",
+  "shorts": {
+    "format": {
+      "video_dimensions": "1080x1920",
+      "aspect_ratio": "9:16",
+      "duration_max": 60,
+      "file_formats": ["MP4", "MOV"],
+      "max_file_size": "256 GB or 12 hours"
+    },
+    "text_limits": {
+      "title_max": 100,
+      "title_displayed": 60,
+      "description_max": 5000,
+      "description_preview": 150,
+      "hashtags_recommended": 3,
+      "hashtags_max": 15
+    },
+    "content_structure": [
+      {
+        "segment": "intro",
+        "duration": "5 seconds",
+        "content": "Hook: 'Today's French word is...'"
+      },
+      {
+        "segment": "word_pronunciation",
+        "duration": "10 seconds",
+        "content": "Word display with audio"
+      },
+      {
+        "segment": "definition",
+        "duration": "10 seconds",
+        "content": "Translation and part of speech"
+      },
+      {
+        "segment": "example_1",
+        "duration": "15 seconds",
+        "content": "Usage example with context"
+      },
+      {
+        "segment": "example_2",
+        "duration": "15 seconds",
+        "content": "Second usage scenario"
+      },
+      {
+        "segment": "cta",
+        "duration": "5 seconds",
+        "content": "Subscribe + visit website"
+      }
+    ]
+  },
+  "thumbnails": {
+    "format": {
+      "image_dimensions": "1280x720",
+      "aspect_ratio": "16:9",
+      "preview_size": "320x180",
+      "file_formats": ["JPG", "GIF", "PNG"],
+      "max_file_size": "2 MB"
+    },
+    "design_specs": {
+      "text_size": "Minimum 72px (readable at preview size)",
+      "contrast": "High contrast required",
+      "faces": "Perform well if using presenters",
+      "colors": "Bright, avoid dark/muddy",
+      "style": "Consistent branding across thumbnails"
+    },
+    "best_practices": [
+      "Readable at 320x180 preview",
+      "Emotion or intrigue element",
+      "Max 5-6 words of text",
+      "Avoid misleading/clickbait",
+      "Match video content"
+    ]
+  },
+  "seo_strategy": {
+    "title_format": "French Word: {word} ({translation}) | {level} Level | Daily French",
+    "description_structure": [
+      "Hook + value (first 150 chars)",
+      "Full word details",
+      "Examples",
+      "CTA to website",
+      "3 hashtags (#LearnFrench #Shorts #FrenchVocabulary)"
+    ],
+    "tags": [
+      "learn french",
+      "french vocabulary",
+      "french word of the day",
+      "language learning",
+      "french lessons",
+      "{part_of_speech}",
+      "{level} french"
+    ],
+    "keywords_primary": [
+      "Learn French",
+      "French Vocabulary",
+      "French Word",
+      "Language Learning"
+    ]
+  },
+  "posting_strategy": {
+    "best_posting_times": ["2-4 PM EST", "5-7 PM EST"],
+    "posting_frequency": "Daily (Shorts)",
+    "optimization_tips": [
+      "First 3 seconds crucial (hook)",
+      "Captions essential",
+      "End with CTA",
+      "Loop if possible",
+      "Encourage comments",
+      "Pin helpful comment"
+    ]
+  },
+  "api_info": {
+    "api_name": "YouTube Data API v3",
+    "automation_status": "Fully supported",
+    "capabilities": [
+      "Video upload",
+      "Metadata management",
+      "Thumbnail upload",
+      "Playlist management"
+    ],
+    "authentication": "OAuth 2.0 required",
+    "quota_limit": "10,000 units per day",
+    "upload_cost": "1,600 units per video"
+  },
+  "video_generation_options": [
+    {
+      "approach": "Simple",
+      "method": "Static slides + voiceover",
+      "tools": ["FFmpeg", "Google TTS"]
+    },
+    {
+      "approach": "Medium",
+      "method": "Animated text overlays",
+      "tools": ["Remotion", "FFmpeg"]
+    },
+    {
+      "approach": "Advanced",
+      "method": "Motion graphics",
+      "tools": ["After Effects", "Lottie"]
+    }
+  ],
+  "comparison_to_tiktok": {
+    "similarities": [
+      "Vertical format (9:16)",
+      "Up to 60 seconds",
+      "Algorithm-driven discovery"
+    ],
+    "differences": {
+      "audience": "Slightly older demographic",
+      "discoverability": "SEO + Algorithm (vs pure algorithm)",
+      "monetization": "AdSense eligible immediately",
+      "long_form_integration": "Can promote main channel"
+    }
+  },
+  "brand_assets": {
+    "logo": "https://languageacademy.io/img/TLA_CoreMark_Blue_tm_v1.1.1.png",
+    "website": "https://languageacademy.io",
+    "channel_url": "TBD"
+  }
+}
+
