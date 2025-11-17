@@ -86,44 +86,37 @@
 /* Grid */
 .absurd-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 3rem 2rem;
+  max-width: 900px;
 }
 
 /* Cards */
 .absurd-card {
-  background: #ffffff;
-  border: 1px solid #f0f0f0;
-  border-radius: 12px;
-  padding: 2rem;
-  transition: all 0.15s ease;
-  cursor: pointer;
+  background: transparent;
+  text-align: center;
+  padding: 0;
 }
 
-.absurd-card:hover {
-  border-color: #3b82f6;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
-  transform: translateY(-2px);
+/* Card Title (above illustration) */
+.absurd-card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 1rem;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
 }
 
 /* Illustration Container */
 .absurd-illustration-container {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1.5rem;
-  background: #fafbfc;
-  border-radius: 12px;
-  border: 1px solid #f0f0f0;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  transition: all 0.15s ease;
-}
-
-.absurd-card:hover .absurd-illustration-container {
-  background: #f8faff;
-  border-color: #3b82f6;
+  overflow: visible;
 }
 
 .absurd-illustration-container svg {
@@ -134,45 +127,8 @@
 /* Smaller icons for phase/method illustrations */
 .absurd-phase-icon,
 .absurd-method-icon {
-  width: 100px;
-  height: 100px;
-}
-
-/* Card Info */
-.absurd-card-info {
-  text-align: center;
-}
-
-.absurd-card-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
-  color: #1a1a1a;
-  letter-spacing: -0.015em;
-}
-
-.absurd-card-desc {
-  font-size: 0.9375rem;
-  color: #665665;
-  margin: 0 0 1rem;
-}
-
-/* Tags */
-.absurd-card-meta {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.absurd-tag {
-  padding: 0.375rem 0.75rem;
-  background: #f7f9fc;
-  border-radius: 6px;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #665665;
-  letter-spacing: -0.01em;
+  width: 80px;
+  height: 80px;
 }
 
 /* Usage Card */
