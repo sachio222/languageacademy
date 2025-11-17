@@ -131,6 +131,32 @@
   height: 80px;
 }
 
+/* Copy Button */
+.absurd-copy-btn {
+  margin-top: 1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #999999;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  opacity: 0.5;
+}
+
+.absurd-copy-btn:hover {
+  opacity: 1;
+  color: #3b82f6;
+  border-color: #e0e7ff;
+  background: #f8faff;
+}
+
+.absurd-copy-btn:active {
+  transform: scale(0.95);
+}
+
 /* Usage Card */
 .absurd-usage-card {
   background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
@@ -194,7 +220,7 @@
   border-radius: 4px;
   font-size: 0.875rem;
   color: #3b82f6;
-  font-family: 'Monaco', 'Courier New', monospace;
+  font-family: "Monaco", "Courier New", monospace;
 }
 
 .absurd-usage-note {
@@ -218,7 +244,7 @@
   border-radius: 4px;
   font-size: 0.875rem;
   color: #3b82f6;
-  font-family: 'Monaco', 'Courier New', monospace;
+  font-family: "Monaco", "Courier New", monospace;
   border: 1px solid #e0e7ff;
 }
 
@@ -327,4 +353,3 @@
     height: 80px;
   }
 }
-

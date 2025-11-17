@@ -1,6 +1,17 @@
+import { useState } from 'react';
 import '../styles/AbsurdLibrary.css';
 
 function AbsurdLibrary() {
+  const [copiedId, setCopiedId] = useState(null);
+
+  const copySvg = (svgElement, id) => {
+    const svgCode = svgElement.outerHTML;
+    navigator.clipboard.writeText(svgCode).then(() => {
+      setCopiedId(id);
+      setTimeout(() => setCopiedId(null), 2000);
+    });
+  };
+
   return (
     <div className="absurd-library">
       {/* Header */}
@@ -33,7 +44,7 @@ function AbsurdLibrary() {
               {/* Book Tower */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Book Tower</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-book-tower">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -64,12 +75,24 @@ function AbsurdLibrary() {
                     <path d="M50 160 Q75 155 100 160 Q125 165 150 160" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'book-tower')}
+                >
+                  {copiedId === 'book-tower' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
+                <button
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'book-tower')}
+                >
+                  {copiedId === 'book-tower' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Brain Zap */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Brain Zap</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-brain-zap">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <circle cx="100" cy="90" r="50" fill="#3b82f6" opacity="0.1" />
@@ -107,12 +130,18 @@ function AbsurdLibrary() {
                     <path d="M75 145 L77 150 L82 152 L77 154 L75 159 L73 154 L68 152 L73 150 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'brain-zap')}
+                >
+                  {copiedId === 'brain-zap' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Plant Growth */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Plant Growth</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-plant-growth">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -153,12 +182,18 @@ function AbsurdLibrary() {
                     <path d="M120 18 L122 23 L127 25 L122 27 L120 32 L118 27 L113 25 L118 23 Z" fill="#3b82f6" opacity="0.22" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'plant-growth')}
+                >
+                  {copiedId === 'plant-growth' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Balancing Act */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Balancing Act</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-balancing-act">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -204,12 +239,18 @@ function AbsurdLibrary() {
                     <rect x="25" y="90" width="5" height="5" rx="1" fill="#3b82f6" opacity="0.12" transform="rotate(20 27.5 92.5)" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'balancing-act')}
+                >
+                  {copiedId === 'balancing-act' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Workshop */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Workshop Tools</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-workshop-tools">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -263,12 +304,18 @@ function AbsurdLibrary() {
                     <path d="M165 145 Q170 140 175 145" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.1" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'workshop-tools')}
+                >
+                  {copiedId === 'workshop-tools' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Lightbulb Moment */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Lightbulb Moment</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-lightbulb-moment">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -308,12 +355,18 @@ function AbsurdLibrary() {
                     <circle cx="40" cy="100" r="3" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'lightbulb-moment')}
+                >
+                  {copiedId === 'lightbulb-moment' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Stairway Up */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Stairway</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-stairway">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <circle cx="140" cy="70" r="40" fill="#3b82f6" opacity="0.1" />
@@ -350,12 +403,18 @@ function AbsurdLibrary() {
                     <circle cx="102" cy="95" r="3" fill="#fff" opacity="0.6" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'stairway')}
+                >
+                  {copiedId === 'stairway' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Telescope Stars */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Telescope</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-telescope">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -391,12 +450,18 @@ function AbsurdLibrary() {
                     <circle cx="40" cy="65" r="2" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'telescope')}
+                >
+                  {copiedId === 'telescope' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Mountain Peak */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Mountain Peak</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-mountain-peak">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -431,12 +496,18 @@ function AbsurdLibrary() {
                     <path d="M20 155 Q60 150 100 155 Q140 160 180 155" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'mountain-peak')}
+                >
+                  {copiedId === 'mountain-peak' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Magnet Attraction */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Magnet Pull</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-magnet-pull">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -474,12 +545,18 @@ function AbsurdLibrary() {
                     <circle cx="140" cy="75" r="2" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'magnet-pull')}
+                >
+                  {copiedId === 'magnet-pull' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Spiral Vortex */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Spiral Vortex</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-spiral-vortex">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -513,12 +590,18 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="95" r="35" stroke="#3b82f6" strokeWidth="1" opacity="0.05" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'spiral-vortex')}
+                >
+                  {copiedId === 'spiral-vortex' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Compass Navigation */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Compass</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-compass">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -558,12 +641,18 @@ function AbsurdLibrary() {
                     <circle cx="115" cy="70" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'compass')}
+                >
+                  {copiedId === 'compass' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Trophy Champion */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Trophy</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-trophy">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <circle cx="100" cy="80" r="50" fill="#3b82f6" opacity="0.1" />
@@ -601,12 +690,18 @@ function AbsurdLibrary() {
                     <rect x="152" y="75" width="3" height="5" rx="1" fill="#3b82f6" opacity="0.18" transform="rotate(-20 153.5 77.5)" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'trophy')}
+                >
+                  {copiedId === 'trophy' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Checkered Flag Victory */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Checkered Flag</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-checkered-flag">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.05" />
                     <ellipse cx="120" cy="90" rx="60" ry="70" fill="#3b82f6" opacity="0.08" />
@@ -647,12 +742,18 @@ function AbsurdLibrary() {
                     <path d="M185 70 L187 75 L192 77 L187 79 L185 84 L183 79 L178 77 L183 75 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'checkered-flag')}
+                >
+                  {copiedId === 'checkered-flag' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Melting Clock */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Melting Time</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-melting-time">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -689,12 +790,18 @@ function AbsurdLibrary() {
                     <ellipse cx="100" cy="165" rx="30" ry="6" fill="#3b82f6" opacity="0.12" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'melting-time')}
+                >
+                  {copiedId === 'melting-time' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Balloon Cluster Rising */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Rising Balloons</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-rising-balloons">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -734,12 +841,18 @@ function AbsurdLibrary() {
                     <path d="M30 110 Q40 105 50 110" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.12" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'rising-balloons')}
+                >
+                  {copiedId === 'rising-balloons' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Hourglass Sideways */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Tilted Hourglass</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-tilted-hourglass">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <ellipse cx="115" cy="100" rx="65" ry="75" fill="#3b82f6" opacity="0.09" transform="rotate(15 115 100)" />
@@ -775,12 +888,18 @@ function AbsurdLibrary() {
                     <path d="M160 85 L161 89 L165 90 L161 91 L160 95 L159 91 L155 90 L159 89 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'tilted-hourglass')}
+                >
+                  {copiedId === 'tilted-hourglass' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Key Unlocking */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Magic Key</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-magic-key">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <ellipse cx="130" cy="90" rx="50" ry="60" fill="#3b82f6" opacity="0.1" />
@@ -822,12 +941,18 @@ function AbsurdLibrary() {
                     <path d="M48 115 Q43 120 38 115" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'magic-key')}
+                >
+                  {copiedId === 'magic-key' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Exploding Gift Box */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Gift Explosion</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-gift-explosion">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <circle cx="100" cy="100" r="50" fill="#3b82f6" opacity="0.1" />
@@ -873,12 +998,18 @@ function AbsurdLibrary() {
                     <path d="M112 117 Q120 112 125 117" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'gift-explosion')}
+                >
+                  {copiedId === 'gift-explosion' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Floating Islands */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Sky Islands</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-sky-islands">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -921,12 +1052,18 @@ function AbsurdLibrary() {
                     <path d="M170 70 Q175 67 180 70" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'sky-islands')}
+                >
+                  {copiedId === 'sky-islands' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Puzzle Pieces Connecting */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Puzzle Click</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-puzzle-click">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <circle cx="100" cy="100" r="50" fill="#3b82f6" opacity="0.1" />
@@ -965,12 +1102,18 @@ function AbsurdLibrary() {
                     <rect x="150" y="115" width="5" height="5" rx="1" fill="#3b82f6" opacity="0.12" transform="rotate(-20 152.5 117.5)" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'puzzle-click')}
+                >
+                  {copiedId === 'puzzle-click' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Atom Nucleus */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Atom Spin</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-atom-spin">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1010,12 +1153,18 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="150" r="2" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'atom-spin')}
+                >
+                  {copiedId === 'atom-spin' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Paper Airplane Swoosh */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Paper Airplane</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-paper-airplane">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1050,12 +1199,18 @@ function AbsurdLibrary() {
                     <circle cx="170" cy="60" r="8" stroke="#3b82f6" strokeWidth="1.5" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'paper-airplane')}
+                >
+                  {copiedId === 'paper-airplane' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Spring Coil Bouncing */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Spring Bounce</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-spring-bounce">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <ellipse cx="100" cy="110" rx="40" ry="60" fill="#3b82f6" opacity="0.08" />
@@ -1091,12 +1246,18 @@ function AbsurdLibrary() {
                     <path d="M135 110 Q140 100 135 90" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.12" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'spring-bounce')}
+                >
+                  {copiedId === 'spring-bounce' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Gears Interlocking */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Meshing Gears</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-meshing-gears">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1140,12 +1301,18 @@ function AbsurdLibrary() {
                     <path d="M160 60 L161 63 L164 64 L161 65 L160 68 L159 65 L156 64 L159 63 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'meshing-gears')}
+                >
+                  {copiedId === 'meshing-gears' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Speedometer Redline */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Speedometer</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-speedometer">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <ellipse cx="100" cy="115" rx="70" ry="55" fill="#3b82f6" opacity="0.1" />
@@ -1184,12 +1351,18 @@ function AbsurdLibrary() {
                     <path d="M175 72 L176 76 L180 77 L176 78 L175 82 L174 78 L170 77 L174 76 Z" fill="#3b82f6" opacity="0.22" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'speedometer')}
+                >
+                  {copiedId === 'speedometer' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Catapult Launch */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Catapult</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-catapult">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1231,12 +1404,18 @@ function AbsurdLibrary() {
                     <path d="M40 162 Q70 158 100 162 Q130 166 160 162" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.12" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'catapult')}
+                >
+                  {copiedId === 'catapult' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Domino Chain */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Domino Effect</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-domino-effect">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1276,12 +1455,18 @@ function AbsurdLibrary() {
                     <path d="M150 145 Q160 140 170 145" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.12" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'domino-effect')}
+                >
+                  {copiedId === 'domino-effect' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Prism Rainbow */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Prism Split</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-prism-split">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1319,12 +1504,18 @@ function AbsurdLibrary() {
                     <circle cx="175" cy="108" r="2" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'prism-split')}
+                >
+                  {copiedId === 'prism-split' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Hot Air Balloon Rising */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Hot Air Balloon</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-hot-air-balloon">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1362,12 +1553,18 @@ function AbsurdLibrary() {
                     <path d="M125 35 L126 38 L129 39 L126 40 L125 43 L124 40 L121 39 L124 38 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'hot-air-balloon')}
+                >
+                  {copiedId === 'hot-air-balloon' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* DNA Helix */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">DNA Helix</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-dna-helix">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1408,12 +1605,18 @@ function AbsurdLibrary() {
                     <circle cx="140" cy="140" r="2" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'dna-helix')}
+                >
+                  {copiedId === 'dna-helix' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Fishing Hook Catch */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Hook & Catch</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-hook-catch">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1451,12 +1654,18 @@ function AbsurdLibrary() {
                     <path d="M155 105 L156 108 L159 109 L156 110 L155 113 L154 110 L151 109 L154 108 Z" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'hook-catch')}
+                >
+                  {copiedId === 'hook-catch' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Firework Burst */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Firework</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-firework">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1507,12 +1716,18 @@ function AbsurdLibrary() {
                     <path d="M100 140 L100 160" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.2" strokeDasharray="3 2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'firework')}
+                >
+                  {copiedId === 'firework' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Skateboard Kickflip */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Kickflip</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-kickflip">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1553,12 +1768,18 @@ function AbsurdLibrary() {
                     <path d="M50 95 Q55 90 60 95" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'kickflip')}
+                >
+                  {copiedId === 'kickflip' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Volcano Erupting */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Volcano</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-volcano">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
                     <circle cx="100" cy="70" r="50" fill="#3b82f6" opacity="0.1" />
@@ -1601,12 +1822,18 @@ function AbsurdLibrary() {
                     <path d="M25 155 Q62 150 100 155 Q138 160 175 155" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'volcano')}
+                >
+                  {copiedId === 'volcano' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Slingshot Pull */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Slingshot</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-slingshot">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1647,12 +1874,18 @@ function AbsurdLibrary() {
                     <path d="M115 20 L117 25 L122 27 L117 29 L115 34 L113 29 L108 27 L113 25 Z" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'slingshot')}
+                >
+                  {copiedId === 'slingshot' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Code Function Blocks */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Code Functions</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-code-functions">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1695,12 +1928,18 @@ function AbsurdLibrary() {
                     <circle cx="68" cy="130" r="2" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'code-functions')}
+                >
+                  {copiedId === 'code-functions' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Building Blocks Stacking */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">LEGO Blocks</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-lego-blocks">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1748,12 +1987,18 @@ function AbsurdLibrary() {
                     <path d="M170 110 L171 113 L174 114 L171 115 L170 118 L169 115 L166 114 L169 113 Z" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'lego-blocks')}
+                >
+                  {copiedId === 'lego-blocks' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Neural Network Nodes */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Neural Network</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-neural-network">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1805,12 +2050,18 @@ function AbsurdLibrary() {
                     <path d="M175 100 L176 103 L179 104 L176 105 L175 108 L174 105 L171 104 L174 103 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'neural-network')}
+                >
+                  {copiedId === 'neural-network' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Memory Consolidation */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Memory Waves</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-memory-waves">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1846,12 +2097,18 @@ function AbsurdLibrary() {
                     <path d="M60 145 Q80 140 100 145 Q120 150 140 145" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'memory-waves')}
+                >
+                  {copiedId === 'memory-waves' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Frequency Bars Chart */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Frequency Bars</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-frequency-bars">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1890,12 +2147,18 @@ function AbsurdLibrary() {
                     <circle cx="170" cy="150" r="3" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'frequency-bars')}
+                >
+                  {copiedId === 'frequency-bars' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Schema Blueprint */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Schema Blueprint</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-schema-blueprint">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1941,12 +2204,18 @@ function AbsurdLibrary() {
                     <path d="M155 145 L156 148 L159 149 L156 150 L155 153 L154 150 L151 149 L154 148 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'schema-blueprint')}
+                >
+                  {copiedId === 'schema-blueprint' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Interleaved Cards */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Interleaved Deck</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-interleaved-deck">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -1979,12 +2248,18 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="160" r="3" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'interleaved-deck')}
+                >
+                  {copiedId === 'interleaved-deck' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Shield Protection (No Anxiety) */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Shield Guard</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-shield-guard">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -2016,12 +2291,18 @@ function AbsurdLibrary() {
                     <path d="M150 100 L151 103 L154 104 L151 105 L150 108 L149 105 L146 104 L149 103 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'shield-guard')}
+                >
+                  {copiedId === 'shield-guard' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Compounding Interest Graph */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Compound Growth</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-compound-growth">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -2059,12 +2340,18 @@ function AbsurdLibrary() {
                     <circle cx="170" cy="155" r="3" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'compound-growth')}
+                >
+                  {copiedId === 'compound-growth' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Reading Book Open */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Reading Passage</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-reading-passage">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -2101,12 +2388,18 @@ function AbsurdLibrary() {
                     <path d="M130 95 L131 98 L134 99 L131 100 L130 103 L129 100 L126 99 L129 98 Z" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'reading-passage')}
+                >
+                  {copiedId === 'reading-passage' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Ladder Progression */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Ladder Climb</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-ladder-climb">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -2149,12 +2442,18 @@ function AbsurdLibrary() {
                     <circle cx="140" cy="85" r="3" fill="#3b82f6" opacity="0.4" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'ladder-climb')}
+                >
+                  {copiedId === 'ladder-climb' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Tree Roots Foundation */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Deep Roots</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-deep-roots">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -2199,12 +2498,18 @@ function AbsurdLibrary() {
                     <circle cx="115" cy="115" r="2" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'deep-roots')}
+                >
+                  {copiedId === 'deep-roots' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Binary Decision Tree */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Decision Tree</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-decision-tree">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -2262,12 +2567,18 @@ function AbsurdLibrary() {
                     <path d="M140 80 L141 83 L144 84 L141 85 L140 88 L139 85 L136 84 L139 83 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'decision-tree')}
+                >
+                  {copiedId === 'decision-tree' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Mosaic Tiles Pattern */}
               <div className="absurd-card">
                 <h3 className="absurd-card-title">Mosaic Pattern</h3>
-                <div className="absurd-illustration-container">
+                <div className="absurd-illustration-container" id="svg-mosaic-pattern">
                   <svg viewBox="0 0 200 200" fill="none">
                     <circle cx="100" cy="100" r="85" fill="#3b82f6" opacity="0.06" />
 
@@ -2302,6 +2613,12 @@ function AbsurdLibrary() {
                     <path d="M155 105 L156 108 L159 109 L156 110 L155 113 L154 110 L151 109 L154 108 Z" fill="#3b82f6" opacity="0.18" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'mosaic-pattern')}
+                >
+                  {copiedId === 'mosaic-pattern' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
             </div>
@@ -2331,6 +2648,12 @@ function AbsurdLibrary() {
                     <circle cx="60" cy="140" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'info')}
+                >
+                  {copiedId === 'info' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Question/Help */}
@@ -2349,6 +2672,12 @@ function AbsurdLibrary() {
                     <circle cx="65" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'question')}
+                >
+                  {copiedId === 'question' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Warning */}
@@ -2367,6 +2696,12 @@ function AbsurdLibrary() {
                     <circle cx="45" cy="120" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'warning')}
+                >
+                  {copiedId === 'warning' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Error */}
@@ -2385,6 +2720,12 @@ function AbsurdLibrary() {
                     <circle cx="55" cy="145" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'error')}
+                >
+                  {copiedId === 'error' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Success */}
@@ -2403,6 +2744,12 @@ function AbsurdLibrary() {
                     <circle cx="60" cy="110" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'success')}
+                >
+                  {copiedId === 'success' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Secure/Lock */}
@@ -2422,6 +2769,12 @@ function AbsurdLibrary() {
                     <circle cx="60" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'secure')}
+                >
+                  {copiedId === 'secure' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Alert/Bell */}
@@ -2441,6 +2794,12 @@ function AbsurdLibrary() {
                     <path d="M70 90 Q65 85 70 80" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'alert')}
+                >
+                  {copiedId === 'alert' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Settings/Gear */}
@@ -2462,6 +2821,12 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="100" r="8" fill="#3b82f6" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'settings')}
+                >
+                  {copiedId === 'settings' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Search */}
@@ -2481,6 +2846,12 @@ function AbsurdLibrary() {
                     <circle cx="160" cy="130" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'search')}
+                >
+                  {copiedId === 'search' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Download */}
@@ -2500,6 +2871,12 @@ function AbsurdLibrary() {
                     <circle cx="55" cy="70" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'download')}
+                >
+                  {copiedId === 'download' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Upload */}
@@ -2519,6 +2896,12 @@ function AbsurdLibrary() {
                     <circle cx="55" cy="75" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'upload')}
+                >
+                  {copiedId === 'upload' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Delete/Trash */}
@@ -2538,6 +2921,12 @@ function AbsurdLibrary() {
                     <path d="M125 35 Q130 30 125 25" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'delete')}
+                >
+                  {copiedId === 'delete' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Save/Bookmark */}
@@ -2555,6 +2944,12 @@ function AbsurdLibrary() {
                     <circle cx="55" cy="100" r="3" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'save')}
+                >
+                  {copiedId === 'save' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
             </div>
@@ -2583,6 +2978,12 @@ function AbsurdLibrary() {
                     <ellipse cx="120" cy="90" rx="5" ry="8" fill="#3b82f6" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'concept-introduction')}
+                >
+                  {copiedId === 'concept-introduction' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Study Mode - Book */}
@@ -2602,6 +3003,12 @@ function AbsurdLibrary() {
                     <rect x="50" y="155" width="100" height="8" rx="2" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'study-mode')}
+                >
+                  {copiedId === 'study-mode' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Practice - Checkmark Path */}
@@ -2620,6 +3027,12 @@ function AbsurdLibrary() {
                     <path d="M145 75 Q155 65 165 75 Q155 85 145 75" fill="#3b82f6" opacity="0.15" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'practice')}
+                >
+                  {copiedId === 'practice' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Exam - Badge */}
@@ -2642,6 +3055,12 @@ function AbsurdLibrary() {
                     <circle cx="45" cy="100" r="4" fill="#3b82f6" opacity="0.4" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'exam')}
+                >
+                  {copiedId === 'exam' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Review - Clock */}
@@ -2662,6 +3081,12 @@ function AbsurdLibrary() {
                     <path d="M145 85 Q155 75 165 85" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'review')}
+                >
+                  {copiedId === 'review' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Mastery - Trophy */}
@@ -2680,6 +3105,12 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="95" r="4" fill="#3b82f6" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'mastery')}
+                >
+                  {copiedId === 'mastery' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Progress - Chart */}
@@ -2700,6 +3131,12 @@ function AbsurdLibrary() {
                     <path d="M130 55 L140 60 L135 70" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.4" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'progress')}
+                >
+                  {copiedId === 'progress' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Speed - Lightning */}
@@ -2717,6 +3154,12 @@ function AbsurdLibrary() {
                     <circle cx="65" cy="60" r="3" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'speed')}
+                >
+                  {copiedId === 'speed' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Understanding - Lightbulb */}
@@ -2737,6 +3180,12 @@ function AbsurdLibrary() {
                     <circle cx="100" cy="80" r="3" fill="#3b82f6" opacity="0.5" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'understanding')}
+                >
+                  {copiedId === 'understanding' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Achievement - Star */}
@@ -2755,6 +3204,12 @@ function AbsurdLibrary() {
                     <circle cx="50" cy="60" r="3" fill="#3b82f6" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'achievement')}
+                >
+                  {copiedId === 'achievement' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Focus - Target */}
@@ -2774,6 +3229,12 @@ function AbsurdLibrary() {
                     <path d="M155 100 L180 100" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'focus')}
+                >
+                  {copiedId === 'focus' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Memory - Brain */}
@@ -2792,6 +3253,12 @@ function AbsurdLibrary() {
                     <path d="M85 95 Q100 100 115 95" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'memory')}
+                >
+                  {copiedId === 'memory' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Streak - Fire */}
@@ -2808,6 +3275,12 @@ function AbsurdLibrary() {
                     <path d="M85 60 Q80 55 75 60" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'streak')}
+                >
+                  {copiedId === 'streak' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Notes - Pencil */}
@@ -2827,6 +3300,12 @@ function AbsurdLibrary() {
                     <path d="M125 135 Q130 140 135 135" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'notes')}
+                >
+                  {copiedId === 'notes' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Habits - Calendar */}
@@ -2849,6 +3328,12 @@ function AbsurdLibrary() {
                     <path d="M108 118 L111 122 L118 113" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'habits')}
+                >
+                  {copiedId === 'habits' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
             </div>
@@ -2878,6 +3363,12 @@ function AbsurdLibrary() {
                     <rect x="65" y="125" width="70" height="3" rx="1.5" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'discrete-chunks')}
+                >
+                  {copiedId === 'discrete-chunks' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Learn Operations */}
@@ -2898,6 +3389,12 @@ function AbsurdLibrary() {
                     <path d="M90 130 Q100 135 110 130" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'operations')}
+                >
+                  {copiedId === 'operations' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
               {/* Compose Them */}
@@ -2919,6 +3416,12 @@ function AbsurdLibrary() {
                     <rect x="85" y="145" width="30" height="3" rx="1.5" fill="#3b82f6" opacity="0.2" />
                   </svg>
                 </div>
+                <button 
+                  className="absurd-copy-btn"
+                  onClick={(e) => copySvg(e.currentTarget.previousElementSibling.querySelector('svg'), 'composition')}
+                >
+                  {copiedId === 'composition' ? '✓ Copied!' : 'Copy SVG'}
+                </button>
               </div>
 
             </div>
