@@ -523,23 +523,36 @@
 }
 
 .phase-icon {
-  font-size: 2rem;
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  background: #f8faff;
-  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid #e0e7ff;
-  transition: all 0.3s ease;
+  color: #3b82f6;
+  transition: all 0.15s ease;
+  overflow: hidden;
+}
+
+.phase-icon svg {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.phase-icon-absurd {
+  background: #fafbfc;
+  border: 1px solid #f0f0f0;
 }
 
 .phase-item:hover .phase-icon {
-  background: #3b83f67e;
-  border-color: #3b83f67e;
-  transform: scale(1.1);
+  background: #f8faff;
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }
 
 .phase-content h3 {
@@ -989,7 +1002,8 @@
   }
 
   .phase-icon {
-    font-size: 1.75rem;
+    width: 60px;
+    height: 60px;
   }
 
   .phase-content h3 {
@@ -1166,7 +1180,8 @@
   }
 
   .phase-icon {
-    font-size: 1.5rem;
+    width: 56px;
+    height: 56px;
   }
 
   .phase-content h3 {

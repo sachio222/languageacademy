@@ -213,7 +213,19 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
 
           <div className="phases-list">
             <div className="phase-item">
-              <div className="phase-icon">👁️</div>
+              <div className="phase-icon phase-icon-absurd">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <circle cx="100" cy="100" r="90" fill="#3b82f6" opacity="0.1"/>
+                  <circle cx="100" cy="100" r="45" fill="#3b82f6" opacity="0.15"/>
+                  <path d="M100 45 L100 85" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round"/>
+                  <circle cx="100" cy="100" r="15" fill="#3b82f6"/>
+                  <circle cx="100" cy="100" r="8" fill="#fff"/>
+                  <path d="M60 75 Q80 65 100 75" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                  <path d="M140 75 Q120 65 100 75" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                  <ellipse cx="80" cy="90" rx="5" ry="8" fill="#3b82f6" opacity="0.3"/>
+                  <ellipse cx="120" cy="90" rx="5" ry="8" fill="#3b82f6" opacity="0.3"/>
+                </svg>
+              </div>
               <div className="phase-content">
                 <h3>Concept Introduction</h3>
                 <p>
@@ -224,7 +236,20 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
             </div>
 
             <div className="phase-item">
-              <div className="phase-icon">📚</div>
+              <div className="phase-icon phase-icon-absurd">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <rect x="45" y="40" width="110" height="130" rx="8" fill="#3b82f6" opacity="0.1"/>
+                  <rect x="55" y="50" width="90" height="110" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2.5"/>
+                  <line x1="70" y1="75" x2="130" y2="75" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4"/>
+                  <line x1="70" y1="95" x2="125" y2="95" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4"/>
+                  <line x1="70" y1="115" x2="120" y2="115" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.4"/>
+                  <circle cx="75" cy="135" r="3" fill="#3b82f6"/>
+                  <circle cx="90" cy="135" r="3" fill="#3b82f6"/>
+                  <circle cx="105" cy="135" r="3" fill="#3b82f6"/>
+                  <path d="M55 60 Q100 45 145 60" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3"/>
+                  <rect x="50" y="155" width="100" height="8" rx="2" fill="#3b82f6" opacity="0.2"/>
+                </svg>
+              </div>
               <div className="phase-content">
                 <h3>Study Mode</h3>
                 <p>
@@ -235,7 +260,19 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
             </div>
 
             <div className="phase-item">
-              <div className="phase-icon">✍️</div>
+              <div className="phase-icon phase-icon-absurd">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <rect x="40" y="130" width="120" height="50" rx="6" fill="#3b82f6" opacity="0.1"/>
+                  <path d="M60 140 L80 120 L140 60" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <circle cx="140" cy="60" r="8" fill="#3b82f6"/>
+                  <circle cx="140" cy="60" r="3" fill="#fff"/>
+                  <path d="M50 150 L70 130 L130 70" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.4"/>
+                  <rect x="50" y="140" width="90" height="30" rx="4" fill="#fff" stroke="#3b82f6" strokeWidth="2"/>
+                  <line x1="65" y1="155" x2="110" y2="155" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" opacity="0.3"/>
+                  <circle cx="120" cy="155" r="4" fill="#3b82f6" opacity="0.5"/>
+                  <path d="M145 75 Q155 65 165 75 Q155 85 145 75" fill="#3b82f6" opacity="0.15"/>
+                </svg>
+              </div>
               <div className="phase-content">
                 <h3>Practice</h3>
                 <p>
@@ -246,7 +283,23 @@ function LandingPage({ onGetStarted, isAuthenticated, onBackToApp, onLogin }) {
             </div>
 
             <div className="phase-item">
-              <div className="phase-icon">🎯</div>
+              <div className="phase-icon phase-icon-absurd">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <path d="M100 30 L115 70 L160 70 L120 100 L135 145 L100 120 L65 145 L80 100 L40 70 L85 70 Z" fill="#3b82f6" opacity="0.15"/>
+                  <circle cx="100" cy="100" r="35" fill="none" stroke="#3b82f6" strokeWidth="2.5"/>
+                  <circle cx="100" cy="100" r="50" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.3"/>
+                  <path d="M100 55 L100 75" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round"/>
+                  <path d="M100 125 L100 145" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round"/>
+                  <path d="M145 100 L125 100" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round"/>
+                  <path d="M75 100 L55 100" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round"/>
+                  <circle cx="100" cy="100" r="12" fill="#3b82f6"/>
+                  <path d="M95 98 L98 102 L106 92" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <circle cx="100" cy="45" r="4" fill="#3b82f6" opacity="0.4"/>
+                  <circle cx="100" cy="155" r="4" fill="#3b82f6" opacity="0.4"/>
+                  <circle cx="155" cy="100" r="4" fill="#3b82f6" opacity="0.4"/>
+                  <circle cx="45" cy="100" r="4" fill="#3b82f6" opacity="0.4"/>
+                </svg>
+              </div>
               <div className="phase-content">
                 <h3>Exam</h3>
                 <p>
