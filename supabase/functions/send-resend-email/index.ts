@@ -129,11 +129,7 @@ serve(async (req) => {
         from: "Language Academy <support@languageacademy.io>",
         to: to, // String, not array
         subject: subject,
-        html: html,
-        headers: {
-          "List-Unsubscribe": `<https://languageacademy.io?unsubscribe&type=${email_type}${user_id ? '&user=' + user_id : ''}>`,
-          "List-Unsubscribe-Post": "List-Unsubscribe=One-Click"
-        }
+        html: html
       })
     });
 
@@ -157,13 +153,22 @@ serve(async (req) => {
 
     if (!resendResponse.ok) {
       console.error("Resend API error:", resendData);
+      // Return 200 with success: false so n8n doesn't treat it as an error
+      // This allows "Continue on Error" to work properly
       return new Response(
         JSON.stringify({ 
           success: false, 
           error: resendData,
-          reason: "resend_api_error"
+          reason: "resend_api_error",
+          http_status: resendResponse.status // Include original status for reference
         }),
-        { status: resendResponse.status, headers: { "Content-Type": "application/json" } }
+        { 
+          status: 200, // Always return 200 so n8n doesn't stop the workflow
+          headers: { 
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+          } 
+        }
       );
     }
 
