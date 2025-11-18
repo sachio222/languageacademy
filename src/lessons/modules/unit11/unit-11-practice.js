@@ -15,6 +15,17 @@ export const unit11Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use all top 100 French words in context",
+      "Apply essential daily verbs naturally",
+      "Navigate and communicate practical information"
+    ],
+    realWorldUse: "handle all essential daily situations",
+    nextModuleTeaser: "Take the Unit 11 exam to achieve complete top 100 mastery"
+  },
+
   // Leave empty - not used for fill-in-blank
   concepts: [
     {

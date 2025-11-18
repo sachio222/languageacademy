@@ -11,6 +11,17 @@ export const spatialPrepositionsModule = {
     "Learn to describe where things are: devant (in front of), derrière (behind), entre (between), au-dessus (above), au-dessous (below)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe precise locations (in front of, behind, between)",
+      "Give directions and explain positions",
+      "Say 'The café is in front of the park' in French"
+    ],
+    realWorldUse: "describe locations and give directions",
+    nextModuleTeaser: "Add more spatial relations for complete descriptions"
+  },
+
   concepts: [
     {
       term: "devant - in front of",

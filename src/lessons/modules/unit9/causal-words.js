@@ -11,6 +11,17 @@ export const causalWordsModule = {
     "Learn to explain reasons and causes: parce que (because), car (for), puisque (since), comme (as), grâce à (thanks to), à cause de (because of)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Explain why things happen (because, since, thanks to)",
+      "Give reasons for your actions and decisions",
+      "Connect cause and effect in French"
+    ],
+    realWorldUse: "explain reasons and provide justifications",
+    nextModuleTeaser: "Add spatial prepositions to describe locations"
+  },
+
   concepts: [
     {
       term: "parce que - because (most common)",

@@ -10,6 +10,17 @@ export const opinionPhrasesModule = {
     "Express opinions diplomatically! 'Je pense qu'il vient' (I think he's coming - belief), 'Je ne pense pas qu'il vienne' (I don't think he's coming - doubt). Sound sophisticated!",
   unit: 10,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express opinions diplomatically (I think that...)",
+      "Use subjunctive with negative opinions to show doubt",
+      "Sound sophisticated when sharing viewpoints"
+    ],
+    realWorldUse: "share opinions tactfully",
+    nextModuleTeaser: "Express hypothetical situations"
+  },
+
   concepts: [
     {
       term: "Positive Opinion = Belief",

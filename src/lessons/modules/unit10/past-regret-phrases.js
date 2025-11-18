@@ -10,6 +10,17 @@ export const pastRegretPhrasesModule = {
     "Express regrets about the past! 'Si j'avais su, je serais venu' (If I'd known, I'd have come), 'Si j'avais étudié...' (If I'd studied...). Universal human experience!",
   unit: 10,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express past regrets (If I had known...)",
+      "Talk about what you would have done differently",
+      "Use past perfect conditional naturally"
+    ],
+    realWorldUse: "express regrets and missed opportunities",
+    nextModuleTeaser: "Express 'had already' with j'avais déjà"
+  },
+
   concepts: [
     {
       term: "Expressing Regret",

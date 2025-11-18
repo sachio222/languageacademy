@@ -11,6 +11,18 @@ export const pastTenseCompositionModule = {
     "Practice combining everything: passé composé, imparfait, causal words, spatial prepositions for rich storytelling",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Compose complete past tense narratives",
+      "Combine scene-setting, events, reasons, and locations",
+      "Tell rich, sophisticated stories in French"
+    ],
+    realWorldUse: "tell complete stories with all past tense elements",
+    milestone: "Story composition mastery",
+    nextModuleTeaser: "Test your storytelling with reading comprehension"
+  },
+
   concepts: [
     {
       term: "Complete Narrative Structure",

@@ -10,6 +10,17 @@ export const wishPhrasesModule = {
     "Say what you want OTHERS to do! 'Je veux que tu viennes' (I want you to come), 'Je veux qu'il parte' (I want him to leave). Essential for relationships and work.",
   unit: 10,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express what you want others to do (I want you to...)",
+      "Use subjunctive with wish expressions",
+      "Communicate desires about other people's actions"
+    ],
+    realWorldUse: "express wishes about what others should do",
+    nextModuleTeaser: "Express emotions with je suis content que"
+  },
+
   concepts: [
     {
       term: "Je veux que... - Directing Wishes",

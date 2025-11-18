@@ -11,6 +11,18 @@ export const pcVsImparfaitModule = {
     "Learn when to use each past tense: Passé composé for specific events (J'ai mangé - I ate), Imparfait for descriptions/habits (Il faisait beau - It was nice, Je mangeais tous les jours - I used to eat every day)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Choose the right past tense for every situation",
+      "Tell complete stories mixing actions and descriptions",
+      "Master the most important past tense distinction in French"
+    ],
+    realWorldUse: "tell sophisticated stories about the past",
+    milestone: "Past tense storytelling mastery",
+    nextModuleTeaser: "Practice composing complex past narratives"
+  },
+
   concepts: [
     {
       term: "The Golden Rule",

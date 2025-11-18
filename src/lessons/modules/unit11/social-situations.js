@@ -11,6 +11,17 @@ export const socialSituationsModule = {
     "Essential social verbs: attendre (to wait), arriver (to arrive), rester (to stay). Perfect for appointments, meetings, and social coordination!",
   unit: 11,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Coordinate social situations (I'm waiting, I arrived, I'll stay)",
+      "Talk about meetings and appointments",
+      "Use essential social coordination verbs"
+    ],
+    realWorldUse: "coordinate meetings and social events",
+    nextModuleTeaser: "Master directions and navigation"
+  },
+
   concepts: [
     {
       term: "attendre = to wait (rank 67)",

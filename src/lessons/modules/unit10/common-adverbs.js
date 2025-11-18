@@ -10,6 +10,17 @@ export const commonAdverbsModule = {
     "Add nuance to EVERYTHING you say! 'vraiment' (really), 'sérieusement' (seriously), 'lentement' (slowly), 'rapidement' (quickly). Make your French sound sophisticated!",
   unit: 10,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Add nuance with common adverbs (really, seriously, slowly)",
+      "Modify any verb or adjective for emphasis",
+      "Sound more natural and expressive in French"
+    ],
+    realWorldUse: "add nuance and emphasis to everything you say",
+    nextModuleTeaser: "Express 'while doing' with en + present participle"
+  },
+
   concepts: [
     {
       term: "Add Nuance to Any Verb",

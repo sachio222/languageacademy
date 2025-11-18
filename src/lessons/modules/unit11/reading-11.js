@@ -14,6 +14,19 @@ export const reading11 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
+
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Read official French expositions and articles",
+      "Understand sophisticated cultural and social content",
+      "Comprehend real-world French publications"
+    ],
+    realWorldUse: "read authentic French publications",
+    milestone: "Advanced reading mastery",
+    nextModuleTeaser: "Practice all essential vocabulary"
+  },
+
   concepts: [
     {
       term: "Final Reading Milestone",

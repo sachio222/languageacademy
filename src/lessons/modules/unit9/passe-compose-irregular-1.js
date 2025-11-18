@@ -11,6 +11,17 @@ export const passeComposeIrregular1Module = {
     "Learn the 4 most common irregular past participles: avoir → eu (had), être → été (was/been), faire → fait (did/made), voir → vu (saw)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use the 4 most common irregular past forms (had, was, did, saw)",
+      "Say 'I had time', 'It was good', 'I did it', 'I saw him'",
+      "Form past tense with the most frequent verbs"
+    ],
+    realWorldUse: "describe common past actions",
+    nextModuleTeaser: "Add more irregular past participles"
+  },
+
   concepts: [
     {
       term: "avoir → eu (had)",

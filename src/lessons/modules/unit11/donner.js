@@ -11,6 +11,18 @@ export const donnerModule = {
     "Express giving! 'Je te donne' (I give you), 'Il me donne' (he gives me). Essential for gifts, help, transactions, and sharing. Rank 24 in top 100 French words!",
   unit: 11,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express giving and offering (I give you, he gives me)",
+      "Talk about gifts, help, and sharing",
+      "Use one of the top 25 most common French words"
+    ],
+    realWorldUse: "talk about giving and sharing",
+    milestone: "Top 100 word completion milestone",
+    nextModuleTeaser: "Add daily action verbs"
+  },
+
   concepts: [
     {
       term: "donner = to give",

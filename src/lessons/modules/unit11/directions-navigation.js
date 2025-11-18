@@ -10,6 +10,18 @@ export const directionsNavigationModule = {
     "Essential navigation skills! North/south/east/west, turn left/right, give directions. Perfect for traveling and helping tourists!",
   unit: 11,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Give and understand directions in French",
+      "Use compass directions (north, south, east, west)",
+      "Navigate France and help tourists confidently"
+    ],
+    realWorldUse: "navigate and give directions in France",
+    milestone: "Navigation mastery",
+    nextModuleTeaser: "Test comprehension with cultural reading"
+  },
+
   concepts: [
     {
       term: "Cardinal Directions",

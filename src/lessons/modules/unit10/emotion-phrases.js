@@ -10,6 +10,17 @@ export const emotionPhrasesModule = {
     "Express how you feel about what OTHERS do! 'Je suis content que tu sois là' (I'm happy you're here), 'J'ai peur qu'il parte' (I'm afraid he'll leave). Real relationship language!",
   unit: 10,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express emotions about what others do (I'm happy that...)",
+      "Use subjunctive with emotion expressions",
+      "Communicate feelings about other people's actions"
+    ],
+    realWorldUse: "express emotions about others",
+    nextModuleTeaser: "Share opinions with je pense que"
+  },
+
   concepts: [
     {
       term: "Expressing Emotions About Others",

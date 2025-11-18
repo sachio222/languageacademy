@@ -11,6 +11,18 @@ export const passeComposeEtreModule = {
     "Learn motion verbs that use 'être' in passé composé: je suis allé (I went), je suis venu (I came), je suis parti (I left), je suis arrivé (I arrived)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe movement in the past (I went, I came, I left)",
+      "Use être instead of avoir for motion verbs",
+      "Master DR & MRS VANDERTRAMP verb patterns"
+    ],
+    realWorldUse: "tell stories about where you went",
+    milestone: "Motion verb past tense mastery",
+    nextModuleTeaser: "Learn past participle agreement rules"
+  },
+
   concepts: [
     {
       term: "DR & MRS VANDERTRAMP - Mnemonic for être verbs",

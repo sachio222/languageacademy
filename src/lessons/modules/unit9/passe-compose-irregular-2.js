@@ -11,6 +11,17 @@ export const passeComposeIrregular2Module = {
     "Learn modal verbs and -RE verbs in past tense: vouloir → voulu (wanted), pouvoir → pu (could), devoir → dû (had to), dire → dit (said), prendre → pris (took)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express past desires, abilities, and obligations (wanted, could, had to)",
+      "Say 'I wanted to go', 'I could come', 'I had to work'",
+      "Use irregular past forms for modal and -RE verbs"
+    ],
+    realWorldUse: "describe past intentions and obligations",
+    nextModuleTeaser: "Learn motion verbs with être"
+  },
+
   concepts: [
     {
       term: "Modal verbs with -u ending",

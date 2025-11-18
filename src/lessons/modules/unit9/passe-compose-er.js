@@ -11,6 +11,18 @@ export const passeComposeERModule = {
     "Learn to talk about completed past actions with regular -ER verbs: j'ai parlé (I spoke), j'ai mangé (I ate), j'ai étudié (I studied)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about completed past actions (I spoke, I ate, I studied)",
+      "Form past tense with regular -ER verbs",
+      "Begin telling stories about what you did"
+    ],
+    realWorldUse: "describe completed past actions",
+    milestone: "Past tense foundation",
+    nextModuleTeaser: "Add irregular past participles"
+  },
+
   concepts: [
     {
       term: "Passé Composé = avoir + past participle",

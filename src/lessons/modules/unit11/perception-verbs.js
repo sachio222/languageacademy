@@ -11,6 +11,17 @@ export const perceptionVerbsModule = {
     "Beyond commands! Full conjugations of écouter (to listen) and regarder (to watch/look at). 'J'écoute de la musique' (I listen to music), 'Je regarde la télé' (I watch TV).",
   unit: 11,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about listening and watching (I listen to music, I watch TV)",
+      "Use perception verbs beyond commands",
+      "Express sensory experiences fully"
+    ],
+    realWorldUse: "talk about what you listen to and watch",
+    nextModuleTeaser: "Add social situation verbs"
+  },
+
   concepts: [
     {
       term: "écouter = to listen (rank 65)",

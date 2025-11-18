@@ -11,6 +11,17 @@ export const commonSpecialForms2Module = {
     "More verb forms that appear after 'il faut que...' and 'je veux que...' phrases. vienne (come), parte (leave), puisse (can), sache (know), comprenne (understand). Essential for wishes and commands!",
   unit: 10,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use more special forms for complex expressions",
+      "Express wishes with motion and modal verbs",
+      "Complete your subjunctive verb repertoire"
+    ],
+    realWorldUse: "express complex wishes and necessities",
+    nextModuleTeaser: "Use these forms in necessity phrases"
+  },
+
   concepts: [
     {
       term: "More Verbs That Change After 'que'",

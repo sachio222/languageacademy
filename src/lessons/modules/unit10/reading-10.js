@@ -13,6 +13,19 @@ export const reading10 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
+
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Read sophisticated French texts about dreams and ambitions",
+      "Understand subjunctive and conditional mood in context",
+      "Comprehend B2-level emotional and hypothetical expressions"
+    ],
+    realWorldUse: "read French philosophical and emotional content",
+    milestone: "B2 reading comprehension",
+    nextModuleTeaser: "Practice all B2 expressions"
+  },
+
   concepts: [
     {
       term: "Expertise Reading Milestone",

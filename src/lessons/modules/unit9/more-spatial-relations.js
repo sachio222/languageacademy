@@ -11,6 +11,17 @@ export const moreSpatialRelationsModule = {
     "Learn to describe distance and proximity: près de (near), loin de (far from), à côté de (next to), en face de (across from), autour de (around)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe distance and proximity (near, far from, next to)",
+      "Give detailed directions with spatial relations",
+      "Say 'The café is next to the park' in French"
+    ],
+    realWorldUse: "give precise directions and describe locations",
+    nextModuleTeaser: "Start learning past tense with regular -ER verbs"
+  },
+
   concepts: [
     {
       term: "près de - near, close to",

@@ -10,6 +10,17 @@ export const reciprocalReflexivesModule = {
   description:
     "Express mutual actions: nous nous aimons (we love each other), ils se parlent (they talk to each other), on se voit (we see each other)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express mutual actions (we love each other, they see each other)",
+      "Talk about reciprocal relationships",
+      "Use reflexive pronouns for 'each other' meanings"
+    ],
+    realWorldUse: "describe mutual relationships and actions",
+    nextModuleTeaser: "Master the passé composé vs imparfait distinction"
+  },
+
   concepts: [
     {
       term: "Reciprocal = Each Other",

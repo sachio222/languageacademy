@@ -11,6 +11,17 @@ export const passeComposeAgreementModule = {
     "Learn agreement rules: il est allé (he went) vs elle est allée (she went - add e), ils sont allés (they went - add s) vs elles sont allées (add es)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Make past participles agree with gender and number",
+      "Understand when to add e, s, or es to past participles",
+      "Use agreement rules correctly with être verbs"
+    ],
+    realWorldUse: "write grammatically correct past tense",
+    nextModuleTeaser: "Form imparfait for all verbs"
+  },
+
   concepts: [
     {
       term: "Agreement Rule with être",

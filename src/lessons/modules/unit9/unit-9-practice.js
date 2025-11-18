@@ -14,6 +14,17 @@ export const unit9Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Compose stories with passé composé and imparfait",
+      "Use causal words to explain why things happened",
+      "Apply past tense mastery in realistic narratives"
+    ],
+    realWorldUse: "tell complete stories about the past",
+    nextModuleTeaser: "Take the Unit 9 exam to prove your storytelling mastery"
+  },
+
   // Leave empty - not used for fill-in-blank
   concepts: [
     {

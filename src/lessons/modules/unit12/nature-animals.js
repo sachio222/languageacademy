@@ -10,6 +10,17 @@ export const natureAnimalsModule = {
     "Learn animals and nature vocabulary to ask curious questions about the world: un oiseau (bird), une tortue (turtle), un écureuil (squirrel), le vent (wind), la pluie (rain)",
   unit: 12,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about animals and nature (birds, turtles, squirrels, wind, rain)",
+      "Ask curious questions about the natural world",
+      "Use nature vocabulary for question practice"
+    ],
+    realWorldUse: "discuss nature and animals",
+    nextModuleTeaser: "Add movement verbs for describing nature"
+  },
+
   concepts: [
     {
       term: "Animals for Question-Asking",

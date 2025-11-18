@@ -10,6 +10,18 @@ export const necessityPhrasesModule = {
     "Learn to tell people what needs to happen! Essential phrases for parents, friends, work. 'Il faut que tu manges' (You need to eat), 'Il faut qu'on parte' (We need to leave).",
   unit: 10,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express necessity and requirements (It's necessary that...)",
+      "Tell people what needs to happen",
+      "Use 'il faut que' with subjunctive forms naturally"
+    ],
+    realWorldUse: "express what needs to happen",
+    milestone: "B2 necessity expressions",
+    nextModuleTeaser: "Express wishes with je veux que"
+  },
+
   concepts: [
     {
       term: "Il faut que... - Directed Necessity",

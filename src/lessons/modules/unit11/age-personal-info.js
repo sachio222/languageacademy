@@ -10,6 +10,18 @@ export const agePersonalInfoModule = {
     "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information. Finally complete what should have been in Unit 1!",
   unit: 11,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Say your age and ask someone's age (I'm 25 years old)",
+      "Share personal information and birthdate",
+      "Handle essential personal conversations"
+    ],
+    realWorldUse: "share personal information in French",
+    milestone: "Personal information mastery",
+    nextModuleTeaser: "Complete top 100 words with donner"
+  },
+
   concepts: [
     {
       term: "French Age Expression: J'ai ... ans",

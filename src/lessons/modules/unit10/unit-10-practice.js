@@ -15,6 +15,17 @@ export const unit10Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use B2-level expressions naturally",
+      "Apply subjunctive and conditional structures in context",
+      "Express complex ideas with sophistication"
+    ],
+    realWorldUse: "communicate at B2 level",
+    nextModuleTeaser: "Take the Unit 10 exam to prove your B2 mastery"
+  },
+
   // Leave empty - not used for fill-in-blank
   concepts: [
     {

@@ -11,6 +11,17 @@ export const searchAndFindModule = {
     "Perfect action pair! chercher (to look for) + trouver (to find). 'Je cherche mes clés' → 'J'ai trouvé!' Extremely practical for daily life.",
   unit: 11,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express searching and finding things (I'm looking for, I found)",
+      "Talk about lost items and discoveries",
+      "Use the natural search → find sequence"
+    ],
+    realWorldUse: "search for and find things",
+    nextModuleTeaser: "Add perception verbs to complete sensory vocabulary"
+  },
+
   concepts: [
     {
       term: "chercher = to look for / to search (rank 57)",

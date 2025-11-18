@@ -10,6 +10,18 @@ export const hypotheticalPhrasesModule = {
     "Talk about fantasies and what-ifs! 'Si j'étais riche, j'achèterais...' (If I were rich, I'd buy...), 'Si j'avais le temps, je voyagerais' (If I had time, I'd travel). Everyone loves daydreaming!",
   unit: 10,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express hypothetical situations (If I were..., I would...)",
+      "Talk about daydreams and what-if scenarios",
+      "Use conditional mood naturally"
+    ],
+    realWorldUse: "express hypotheticals and daydreams",
+    milestone: "Hypothetical thinking mastery",
+    nextModuleTeaser: "Express past regrets with si j'avais su"
+  },
+
   concepts: [
     {
       term: "Daydreaming in French",

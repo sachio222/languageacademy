@@ -10,6 +10,17 @@ export const reflexivePastModule = {
   description:
     "Tell stories about your routine in the past: je me suis réveillé(e) (I woke up), elle s'est levée (she got up)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe past routines (I woke up, I got dressed, I left)",
+      "Use être with all reflexive verbs in past tense",
+      "Tell stories about what you did in your daily routine"
+    ],
+    realWorldUse: "describe past daily routines",
+    nextModuleTeaser: "Express mutual actions with reciprocal reflexives"
+  },
+
   concepts: [
     {
       term: "Reflexive Verbs ALWAYS use être in Past",

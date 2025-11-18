@@ -11,6 +11,17 @@ export const commonSpecialForms1Module = {
     "Learn verb forms that appear after 'il faut que...' and 'je veux que...' phrases. sois (be), ait (have), aille (go), fasse (do). Essential for telling people what you want them to do!",
   unit: 10,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use special verb forms for wishes and necessities",
+      "Form the foundation for subjunctive expressions",
+      "Prepare to express complex ideas at B2 level"
+    ],
+    realWorldUse: "build foundation for advanced French expressions",
+    nextModuleTeaser: "Add more special forms"
+  },
+
   concepts: [
     {
       term: "Why These Forms Exist",

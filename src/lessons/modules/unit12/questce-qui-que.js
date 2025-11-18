@@ -11,6 +11,18 @@ export const questceQuiQueModule = {
     "THE BIGGEST distinction in French questions: qu'est-ce qui (what DOES - subject) vs qu'est-ce que (what DO you - object). Master this, ask anything!",
   unit: 12,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Master the critical 'what' question distinction",
+      "Ask 'What does X?' vs 'What do you?' correctly",
+      "Form perfect questions in any situation"
+    ],
+    realWorldUse: "ask any 'what' question correctly",
+    milestone: "Advanced question mastery",
+    nextModuleTeaser: "Master complex 'why' questions"
+  },
+
   concepts: [
     {
       term: "THE Critical Distinction",

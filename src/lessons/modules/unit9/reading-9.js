@@ -13,6 +13,19 @@ export const reading9 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
+
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Read complete French stories in the past tense",
+      "Understand mixed passé composé and imparfait narratives",
+      "Comprehend sophisticated storytelling with causal relationships"
+    ],
+    realWorldUse: "read French stories and narratives",
+    milestone: "Past tense narrative comprehension",
+    nextModuleTeaser: "Practice all past tense skills"
+  },
+
   concepts: [
     {
       term: "Narrative Reading Milestone",

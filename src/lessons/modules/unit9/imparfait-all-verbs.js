@@ -11,6 +11,18 @@ export const imparfaitAllVerbsModule = {
     "Learn to form imparfait for ALL verbs using the 'nous stem' rule: je parlais (I was speaking/used to speak), il faisait beau (it was nice), on allait (we used to go)",
   unit: 9,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Form imparfait for any French verb (was doing, used to do)",
+      "Describe ongoing past actions and habits",
+      "Use the 'nous stem' rule to conjugate all verbs"
+    ],
+    realWorldUse: "describe past habits and ongoing situations",
+    milestone: "Imparfait mastery",
+    nextModuleTeaser: "Learn when to use passé composé vs imparfait"
+  },
+
   concepts: [
     {
       term: "The Golden Rule: nous stem + -ais endings",
