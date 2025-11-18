@@ -12,6 +12,17 @@ export const module9_possessive_pronouns = {
   description:
     "Say 'It's MINE!' or 'That's HERS' - express ownership without repeating the noun.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Say 'It's mine', 'It's yours', 'It's his/hers' in French",
+      "Express ownership without repeating the noun",
+      "Ask 'Is that yours?' or answer 'No, it's theirs'"
+    ],
+    realWorldUse: "claim ownership and clarify who things belong to",
+    nextModuleTeaser: "Combine everything you've learned"
+  },
+
   concepts: [
     {
       term: "Possessive Pronouns",

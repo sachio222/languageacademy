@@ -12,6 +12,18 @@ export const module8_possessive_adjectives = {
   description:
     "Show who owns what: 'my book', 'his cat', 'their house' - essential vocabulary!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Show ownership (my cat, your house, his book, their car)",
+      "Use possessive adjectives with correct gender agreement",
+      "Say 'Where is my book?' or 'I want your car' in French"
+    ],
+    realWorldUse: "talk about who owns what",
+    milestone: "Express ownership and possession",
+    nextModuleTeaser: "Learn possessive pronouns to say 'it's mine'"
+  },
+
   concepts: [
     {
       term: "Possessive Adjectives Overview",

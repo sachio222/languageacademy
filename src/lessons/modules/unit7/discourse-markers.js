@@ -10,6 +10,18 @@ export const discourseMarkersModule = {
   description:
     "Essential connectors for natural speech: donc (so), en fait (actually), bah (well), quoi (like/you know)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Sound like a native speaker with donc, en fait, quoi",
+      "Connect ideas naturally in conversation",
+      "Add conversational flow markers that French people use constantly"
+    ],
+    realWorldUse: "speak with natural French rhythm and flow",
+    milestone: "Natural conversational French",
+    nextModuleTeaser: "Complete modifiers with tout, même, mal"
+  },
+
   concepts: [
     {
       term: "What are discourse markers?",

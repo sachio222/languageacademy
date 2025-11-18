@@ -15,6 +15,19 @@ export const unit11Exam = {
   unitNumber: 11,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use all top 100 French words fluently",
+      "Navigate France with directions and practical phrases",
+      "Understand ~85% of everyday French conversations"
+    ],
+    realWorldUse: "handle any daily situation in France",
+    milestone: "Complete top 100 word mastery",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 12 for advanced question mastery"
+  },
+
   concepts: [
     {
       term: "Advanced Structures Mastery",

@@ -10,6 +10,17 @@ export const learningVerbsModule = {
   description:
     "Express learning and teaching: j'apprends le français (I'm learning French), tu m'enseignes? (are you teaching me?)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about learning and teaching (I learn, you teach)",
+      "Say 'I'm learning French' or 'Who teaches you?'",
+      "Use apprendre (prendre pattern) and enseigner naturally"
+    ],
+    realWorldUse: "discuss learning and education",
+    nextModuleTeaser: "Add studying verbs to complete your learning vocabulary"
+  },
+
   concepts: [
     {
       term: "apprendre = to learn",

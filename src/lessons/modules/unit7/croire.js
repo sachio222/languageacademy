@@ -12,6 +12,17 @@ export const croireModule = {
   description:
     "Express belief and softer opinions: je crois que oui (I believe so), tu crois? (do you believe it?)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express beliefs and tentative opinions (I believe that...)",
+      "Sound more tentative than penser (I think)",
+      "Use croire with que for softer assertions"
+    ],
+    realWorldUse: "express beliefs and tentative opinions",
+    nextModuleTeaser: "Add knowledge nouns to discuss learning concepts"
+  },
+
   concepts: [
     {
       term: "croire = to believe / to think",

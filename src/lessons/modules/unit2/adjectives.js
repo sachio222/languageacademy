@@ -12,6 +12,17 @@ export const adjectives = {
   description:
     "Learn essential adjectives WITH gender agreement: un bon livre (a good book), une grande maison (a big house)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe things as big, small, good, bad, new, old",
+      "Use adjectives with correct gender agreement",
+      "Say 'a good book' or 'a big house' in French"
+    ],
+    realWorldUse: "describe qualities and characteristics of things",
+    nextModuleTeaser: "Practice reading comprehension with everything you've learned"
+  },
+
   concepts: [
     {
       term: "Adjective Gender Agreement - Critical!",

@@ -10,6 +10,17 @@ export const commanderModule = {
   description:
     "Order food, drinks, and products: je commande (I order), commander un café (to order a coffee), commander en ligne (to order online)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Order food and drinks at restaurants",
+      "Order products online or in shops",
+      "Navigate French dining and shopping confidently"
+    ],
+    realWorldUse: "order food, drinks, and products",
+    nextModuleTeaser: "Express needs with avoir besoin de"
+  },
+
   concepts: [
     {
       term: "commander = to order",

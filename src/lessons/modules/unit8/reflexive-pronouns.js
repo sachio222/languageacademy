@@ -10,6 +10,17 @@ export const reflexivePronounsModule = {
   description:
     "Learn reflexive pronouns for daily actions: je me lave (I wash myself), tu te lèves (you get up), il se prépare (he gets ready)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use reflexive pronouns for daily actions",
+      "Understand the pattern for reflexive verbs",
+      "Prepare to describe daily routines in French"
+    ],
+    realWorldUse: "build foundation for daily routine expressions",
+    nextModuleTeaser: "Learn s'appeler to finally introduce yourself properly"
+  },
+
   concepts: [
     {
       term: "Reflexive Pronouns",

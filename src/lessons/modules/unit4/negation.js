@@ -10,6 +10,18 @@ export const negation = {
   description:
     "Say what you DON'T want, DON'T have, or DON'T do! Simple pattern: wrap your verb with ne...pas.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Say what you don't do, don't have, or don't want",
+      "Negate any French sentence with ne...pas",
+      "Express disagreement and refusal politely"
+    ],
+    realWorldUse: "express what you don't do or want",
+    milestone: "Negative expressions mastered",
+    nextModuleTeaser: "Add time words to say when things happen"
+  },
+
   concepts: [
     {
       term: "The Negation Sandwich",

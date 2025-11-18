@@ -13,6 +13,17 @@ export const unit2Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Compose complex sentences with wants, abilities, and questions",
+      "Combine demonstratives, verbs, and adjectives naturally",
+      "Apply Unit 2 vocabulary in realistic contexts"
+    ],
+    realWorldUse: "form complex original French sentences",
+    nextModuleTeaser: "Take the Unit 2 exam to prove your compositional skills"
+  },
+
   concepts: [
     {
       term: "Composition Practice",

@@ -10,6 +10,18 @@ export const top200Nouns = {
   description:
     "Master essential nouns: l'année (year), la fois (time), la personne (person), la famille (family), le cœur (heart), l'histoire (story)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about time periods (year, moment, hour)",
+      "Discuss people and relationships (family, person)",
+      "Express abstract concepts (heart, story, history)"
+    ],
+    realWorldUse: "discuss time, people, and abstract ideas",
+    milestone: "Expanded vocabulary mastery",
+    nextModuleTeaser: "Test comprehension with cultural reading"
+  },
+
   concepts: [
     {
       term: "Time nouns",

@@ -12,6 +12,17 @@ export const questionsHelpModule = {
   // Special flag for help/interstitial modules
   isHelpModule: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Understand the three ways to ask questions in French",
+      "Choose the right question method for each situation",
+      "Build confidence in asking questions naturally"
+    ],
+    realWorldUse: "master French question formation",
+    nextModuleTeaser: "Use stressed pronouns for emphasis"
+  },
+
   // No concepts, vocabulary, or exercises for this help module
   concepts: [],
   vocabularyReference: [],

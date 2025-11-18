@@ -10,6 +10,17 @@ export const conditionals = {
   description:
     "Give advice and express possibility: je devrais (I should), je pourrais (I could)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Give advice with 'should' (tu devrais partir)",
+      "Express possibility with 'could' (je pourrais venir)",
+      "Make suggestions and polite requests"
+    ],
+    realWorldUse: "give advice and express possibilities",
+    nextModuleTeaser: "Add 'would' for even more polite requests"
+  },
+
   concepts: [
     {
       term: "Should = devrais (conditional of devoir)",

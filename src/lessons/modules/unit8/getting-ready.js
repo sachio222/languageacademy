@@ -10,6 +10,17 @@ export const gettingReadyModule = {
   description:
     "Complete your morning routine: je me lave (I wash), je m'habille (I get dressed), je me prépare (I get ready)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe getting ready (I wash, I get dressed, I prepare)",
+      "Talk about morning hygiene and preparation",
+      "Complete your full morning routine description"
+    ],
+    realWorldUse: "describe your complete morning routine",
+    nextModuleTeaser: "Learn daily actions like sleep, work, and live"
+  },
+
   concepts: [
     {
       term: "se laver = to wash oneself",

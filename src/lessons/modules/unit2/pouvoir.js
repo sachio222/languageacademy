@@ -12,6 +12,17 @@ export const pouvoirModule = {
   description:
     "Express what you can do! Master abilities through active recall and composition practice!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express ability and possibility (I can, you can, they can)",
+      "Ask for permission politely in French",
+      "Combine with vouloir to say 'I can want' or 'Can you have?'"
+    ],
+    realWorldUse: "express what you can do and ask permission",
+    nextModuleTeaser: "Add voir to talk about what you see"
+  },
+
   concepts: [
     {
       term: "pouvoir = can/to be able",

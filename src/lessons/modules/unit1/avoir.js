@@ -12,6 +12,17 @@ export const module4_avoir = {
   description:
     'Learn "I have", "you have" - express possession and needs. Super practical!',
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express possession (I have, you have, they have)",
+      "Talk about age and physical states in French",
+      "Use both être and avoir to form different sentences"
+    ],
+    realWorldUse: "express what you have and what you need",
+    nextModuleTeaser: "Combine with ça to have real conversations"
+  },
+
   concepts: [
     {
       term: "avoir = to have",

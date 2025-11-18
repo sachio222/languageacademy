@@ -12,6 +12,17 @@ export const penserModule = {
   description:
     "Express thoughts and opinions: je pense que oui (I think so), qu'est-ce que tu penses? (what do you think?)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express your thoughts and opinions (I think that...)",
+      "Ask what others think (What do you think?)",
+      "Use penser with que to share ideas"
+    ],
+    realWorldUse: "express opinions and thoughts",
+    nextModuleTeaser: "Add croire to express beliefs"
+  },
+
   concepts: [
     {
       term: "penser = to think",

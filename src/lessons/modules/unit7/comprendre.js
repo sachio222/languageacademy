@@ -13,6 +13,17 @@ export const comprendreModule = {
   description:
     "Express understanding: je comprends (I understand), tu comprends? (do you understand?), je ne comprends pas (I don't understand)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express understanding (I understand, do you understand?)",
+      "Say 'I don't understand' when confused",
+      "Use comprendre with que to show comprehension of ideas"
+    ],
+    realWorldUse: "communicate understanding and confusion",
+    nextModuleTeaser: "Add penser to express your thoughts"
+  },
+
   concepts: [
     {
       term: "comprendre = to understand",

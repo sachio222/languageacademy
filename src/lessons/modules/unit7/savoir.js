@@ -13,6 +13,18 @@ export const savoirModule = {
   description:
     "Express knowledge of facts and skills: je sais (I know), je ne sais pas (I don't know), je sais parler (I know how to speak)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express knowledge of facts (I know, I don't know)",
+      "Say what skills you have (I know how to speak French)",
+      "Use the most common phrase in French (je ne sais pas)"
+    ],
+    realWorldUse: "express what you know and don't know",
+    milestone: "Knowledge expression mastery",
+    nextModuleTeaser: "Add connaître to talk about people and places you know"
+  },
+
   concepts: [
     {
       term: "savoir = to know (facts or skills)",

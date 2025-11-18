@@ -10,6 +10,17 @@ export const aimerModule = {
   description:
     "Express what you like and love: j'aime le café (I like coffee), j'aime bien (I like), je t'aime (I love you)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express what you like and love (I like coffee, I love you)",
+      "Distinguish between liking and loving in French",
+      "Use aimer with object pronouns (I love him/her)"
+    ],
+    realWorldUse: "express preferences and affection",
+    nextModuleTeaser: "Learn past tense with être to say 'I was'"
+  },
+
   concepts: [
     {
       term: "aimer = to like OR to love",

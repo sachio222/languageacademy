@@ -9,6 +9,18 @@ export const survivalPhrases = {
   description:
     "Essential phrases for bakeries, cafés, shops, and getting around! These will save you in France.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Order food and drinks politely (Je voudrais...)",
+      "Ask essential questions (How much? Where is...?)",
+      "Navigate shops, cafés, and France successfully"
+    ],
+    realWorldUse: "survive and thrive in France",
+    milestone: "Real-world travel ready",
+    nextModuleTeaser: "Master faire (to do/make) for daily activities"
+  },
+
   concepts: [
     {
       term: "Polite Requests",

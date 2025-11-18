@@ -10,6 +10,17 @@ export const mangerModule = {
   description:
     "Express what you eat: je mange du pain (I eat bread), j'ai mangé (I ate/have eaten)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about eating and meals (I eat, I ate, I've eaten)",
+      "Order food and discuss dietary preferences",
+      "Use past tense to describe what you ate"
+    ],
+    realWorldUse: "talk about food and eating",
+    nextModuleTeaser: "Add boire to talk about drinks"
+  },
+
   concepts: [
     {
       term: "manger = to eat",

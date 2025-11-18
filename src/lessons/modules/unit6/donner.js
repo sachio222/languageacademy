@@ -11,6 +11,17 @@ export const donnerModule = {
   description:
     "Express giving and offering: je donne (I give), tu donnes (you give), il donne (he gives) - essential for daily interactions",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express giving and offering (I give, you give, they give)",
+      "Talk about providing information and help",
+      "Use donner with object pronouns (I give it to him)"
+    ],
+    realWorldUse: "express giving and offering",
+    nextModuleTeaser: "Add mettre to talk about putting and placing"
+  },
+
   concepts: [
     {
       term: "donner = to give",

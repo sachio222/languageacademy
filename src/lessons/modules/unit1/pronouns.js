@@ -11,6 +11,17 @@ export const module1 = {
   description:
     "Master the 9 most essential words in French. These are your foundation - like variables in programming.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use all 9 essential French pronouns (I, you, he, she, we, they)",
+      "Distinguish between formal and informal 'you'",
+      "Understand the foundation for all French sentences"
+    ],
+    realWorldUse: "build every sentence you'll ever speak",
+    nextModuleTeaser: "Combine these with être to make your first real sentences"
+  },
+
   concepts: [
     {
       term: "Subject Pronouns",

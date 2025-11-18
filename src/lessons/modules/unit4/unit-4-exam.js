@@ -14,6 +14,19 @@ export const unit4Exam = {
   unitNumber: 4,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Navigate daily French situations with confidence",
+      "Express negation, time, and location naturally",
+      "Use survival phrases for real-world France"
+    ],
+    realWorldUse: "handle everyday situations in France",
+    milestone: "Practical French mastery",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 5 for past tense and nuance"
+  },
+
   concepts: [
     {
       term: "Everyday Communication Mastery",

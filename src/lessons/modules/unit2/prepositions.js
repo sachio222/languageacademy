@@ -11,6 +11,17 @@ export const prepositions = {
   description:
     "Connect words together! avec (with), dans (in), sur (on), sous (under), devant (in front), derrière (behind), entre (between), à (to/at), de (of/from), pour (for)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe locations (in the house, on the table, under the book)",
+      "Express relationships (with me, for you, to Paris)",
+      "Use stressed pronouns with prepositions naturally"
+    ],
+    realWorldUse: "describe where things are and relationships between people",
+    nextModuleTeaser: "Add adjectives to describe qualities"
+  },
+
   concepts: [
     {
       term: "Prepositions Connect Ideas",

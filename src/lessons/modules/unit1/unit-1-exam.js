@@ -14,6 +14,19 @@ export const unit1Exam = {
   unitNumber: 1,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Have basic conversations with French speakers",
+      "Introduce yourself and talk about what you have",
+      "Understand ~35% of everyday French conversations"
+    ],
+    realWorldUse: "communicate basic needs and introductions",
+    milestone: "Conversational basics achieved",
+    isUnitCompletion: true, // Triggers unit completion email
+    nextModuleTeaser: "Start Unit 2 to ask questions and describe things"
+  },
+
   concepts: [
     {
       term: "Foundation Layer Complete",

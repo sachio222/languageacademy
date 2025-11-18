@@ -15,6 +15,18 @@ export const reading1 = {
   skipStudyMode: true, // Flag to skip study mode and intro
   isReadingComprehension: true, // Flag for special handling
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Read and understand a complete French paragraph",
+      "Recognize sentence patterns using all your vocabulary",
+      "Comprehend French stories and basic conversations"
+    ],
+    realWorldUse: "read simple French texts and understand them",
+    milestone: "First reading comprehension",
+    nextModuleTeaser: "Practice combining everything you've learned"
+  },
+
   concepts: [
     {
       term: "First Reading Milestone",

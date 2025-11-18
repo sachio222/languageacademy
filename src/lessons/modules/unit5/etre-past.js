@@ -10,6 +10,18 @@ export const etrePast = {
   description:
     "Talk about how things were in the past: j'étais (I was), tu étais (you were), il était (he was)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about the past (I was, you were, they were)",
+      "Describe past states and conditions",
+      "Say 'I was happy' or 'We were in Paris' in French"
+    ],
+    realWorldUse: "describe past situations and states",
+    milestone: "Past tense foundation",
+    nextModuleTeaser: "Add avoir in past tense to say 'I had'"
+  },
+
   concepts: [
     {
       term: "Past Tense = Imperfect (Imparfait)",

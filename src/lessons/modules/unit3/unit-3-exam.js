@@ -14,6 +14,19 @@ export const unit3Exam = {
   unitNumber: 3,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express movement and travel naturally in French",
+      "Use object pronouns and possessives fluently",
+      "Understand ~60% of everyday French conversations"
+    ],
+    realWorldUse: "have sophisticated conversations about movement and ownership",
+    milestone: "Advanced conversational French",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 4 for everyday communication"
+  },
+
   concepts: [
     {
       term: "Movement & Possession Mastery",

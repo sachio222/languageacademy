@@ -10,6 +10,19 @@ export const caSurvival = {
   description:
     "Learn 'ça' (that/it) and build your first real conversations! Most useful word in French!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Greet someone and ask how they're doing (ça va?)",
+      "Agree with people (c'est ça - that's right)",
+      "Use ça in conversation (I have that, it's that)"
+    ],
+    realWorldUse: "greet someone and ask how they're doing",
+    milestone: "First real conversations",
+    utilityScore: 8, // From PROGRESSIVE_COMBINATIONS - high utility!
+    nextModuleTeaser: "Add more verbs to express wants and abilities"
+  },
+
   concepts: [
     {
       term: "ça = that/it",

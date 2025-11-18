@@ -14,6 +14,17 @@ export const unit8Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe daily routines with reflexive verbs",
+      "Use temporal words to sequence events",
+      "Apply commands and routine vocabulary naturally"
+    ],
+    realWorldUse: "describe your daily life in French",
+    nextModuleTeaser: "Take the Unit 8 exam to prove your daily life mastery"
+  },
+
   // Leave empty - not used for fill-in-blank
   concepts: [
     {

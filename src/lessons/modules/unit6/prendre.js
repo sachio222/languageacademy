@@ -11,6 +11,17 @@ export const prendreModule = {
   description:
     "Express taking, learning, and understanding: je prends (I take), j'apprends (I learn), je comprends (I understand)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express taking things and transportation (I take the bus)",
+      "Use apprendre to talk about learning",
+      "Use comprendre to express understanding"
+    ],
+    realWorldUse: "talk about taking things and learning",
+    nextModuleTeaser: "Add donner to express giving"
+  },
+
   concepts: [
     {
       term: "prendre = to take",

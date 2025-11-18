@@ -10,6 +10,17 @@ export const mettreModule = {
   description:
     "Express putting and setting: je mets (I put), mettre la table (to set the table), mettre un pantalon (to put on pants)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express putting and placing things (I put, you set)",
+      "Talk about setting the table and putting on clothes",
+      "Use mettre in common daily expressions"
+    ],
+    realWorldUse: "talk about placing things and getting dressed",
+    nextModuleTeaser: "Add demander to ask for things"
+  },
+
   concepts: [
     {
       term: "mettre = to put / to set / to wear",

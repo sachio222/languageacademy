@@ -12,6 +12,17 @@ export const connaitreModule = {
   description:
     "Express knowledge of people and places: je connais Marie (I know Marie), tu connais Paris? (do you know Paris?)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about people you know (I know Marie)",
+      "Discuss places you're familiar with (Do you know Paris?)",
+      "Distinguish between savoir (facts) and connaître (people/places)"
+    ],
+    realWorldUse: "talk about people and places you know",
+    nextModuleTeaser: "Add learning and studying verbs"
+  },
+
   concepts: [
     {
       term: "connaître = to know (people or places)",

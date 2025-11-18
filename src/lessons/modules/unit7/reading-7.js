@@ -13,6 +13,19 @@ export const reading7 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
+
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Read philosophical French texts about learning",
+      "Understand academic and intellectual discourse",
+      "Comprehend cognitive verbs and discourse markers in context"
+    ],
+    realWorldUse: "read French intellectual and educational content",
+    milestone: "Academic comprehension achieved",
+    nextModuleTeaser: "Practice Unit 7 cognitive skills"
+  },
+
   concepts: [
     {
       term: "Academic Reading Milestone",

@@ -10,6 +10,17 @@ export const dailyActions1Module = {
     "Three essential daily verbs: dormir (to sleep), travailler (to work), vivre (to live). Complete your ability to describe daily life and existence!",
   unit: 11,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about sleeping, working, and living",
+      "Describe your daily life and existence",
+      "Say 'I sleep 8 hours', 'I work in Paris', 'I live here'"
+    ],
+    realWorldUse: "describe fundamental daily activities",
+    nextModuleTeaser: "Master commands to give instructions"
+  },
+
   concepts: [
     {
       term: "dormir = to sleep (rank 54)",

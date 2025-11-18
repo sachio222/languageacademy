@@ -10,6 +10,17 @@ export const dailyReflexivesModule = {
   description:
     "Essential reflexive verbs: je me souviens (I remember), je m'amuse (I'm having fun), je me dépêche (I'm hurrying)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about remembering things (I remember, do you remember?)",
+      "Express having fun and enjoyment (I'm having fun)",
+      "Say you're hurrying or in a rush (I'm hurrying)"
+    ],
+    realWorldUse: "describe daily mental and emotional states",
+    nextModuleTeaser: "Learn getting ready and preparation verbs"
+  },
+
   concepts: [
     {
       term: "se souvenir = to remember",

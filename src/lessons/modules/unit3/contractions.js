@@ -10,6 +10,17 @@ export const contractions = {
   description:
     "Learn how 'de' and 'à' combine with articles! Simple rules that make French flow naturally.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use contractions naturally (du, au, de la, à la)",
+      "Say 'some bread', 'at the café', 'of the book' in French",
+      "Make your French flow smoothly with proper contractions"
+    ],
+    realWorldUse: "speak French that sounds natural and fluid",
+    nextModuleTeaser: "Master movement verbs like venir and aller"
+  },
+
   concepts: [
     {
       term: "Contractions with 'de' (of/from)",

@@ -9,6 +9,17 @@ export const stressedPronouns = {
   description:
     "Learn the special pronouns used after words like 'with', 'for', 'without' - different from subject pronouns!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use special pronouns after 'with', 'for', 'without' (avec moi, pour toi)",
+      "Emphasize who you're talking about (c'est moi - it's me)",
+      "Give short emphatic answers (Moi? - Me?)"
+    ],
+    realWorldUse: "emphasize and specify people in conversation",
+    nextModuleTeaser: "Add prepositions to describe locations and relationships"
+  },
+
   concepts: [
     {
       term: "Stressed Pronouns (Pronoms Toniques)",

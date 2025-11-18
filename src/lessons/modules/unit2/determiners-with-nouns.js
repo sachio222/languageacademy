@@ -11,6 +11,18 @@ export const determinersWithNouns = {
   description:
     "Compose functions! this(book) = ce livre, that(house) = cette maison, these(cats) = ces chats",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Say 'this book', 'that house', 'these cats' in French",
+      "Combine demonstratives with nouns like functions",
+      "Form 3-4 word phrases with specific objects"
+    ],
+    realWorldUse: "specify exactly which object you're talking about",
+    milestone: "Functional composition mastered",
+    nextModuleTeaser: "Add vouloir to express what you want"
+  },
+
   concepts: [
     {
       term: "Functional Composition",

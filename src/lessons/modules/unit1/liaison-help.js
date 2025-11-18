@@ -11,6 +11,17 @@ export const liaisonHelpModule = {
   // Special flag for help/interstitial modules
   isHelpModule: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Understand how French words flow together",
+      "Recognize when sounds connect between words",
+      "Sound more natural when speaking French"
+    ],
+    realWorldUse: "speak with natural French rhythm and flow",
+    nextModuleTeaser: "Use connectors to link your ideas"
+  },
+
   // No concepts, vocabulary, or exercises for this help module
   concepts: [],
   vocabularyReference: [],

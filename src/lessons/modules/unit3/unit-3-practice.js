@@ -13,6 +13,17 @@ export const unit3Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Compose sentences with motion verbs and object pronouns",
+      "Use possessives and contractions naturally",
+      "Apply Unit 3 advanced structures in context"
+    ],
+    realWorldUse: "form sophisticated French sentences",
+    nextModuleTeaser: "Take the Unit 3 exam to prove your mastery"
+  },
+
   concepts: [
     {
       term: "Movement & Possession Practice",

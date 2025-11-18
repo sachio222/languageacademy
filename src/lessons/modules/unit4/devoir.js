@@ -12,6 +12,17 @@ export const devoirModule = {
   description:
     "Master expressing obligations through active recall and composition practice!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express obligation and necessity (I must, you have to)",
+      "Talk about responsibilities and duties",
+      "Say 'I must go' or 'You have to see this' in French"
+    ],
+    realWorldUse: "express obligations and what you must do",
+    nextModuleTeaser: "Learn parler to talk about speaking and communication"
+  },
+
   concepts: [
     {
       term: "devoir = must / to have to",

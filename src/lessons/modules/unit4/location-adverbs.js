@@ -10,6 +10,17 @@ export const locationAdverbs = {
   description:
     "Express where things are! From 'here' to 'over there' to 'everywhere'.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Point to locations (here, there, over there, everywhere)",
+      "Express presence across different places",
+      "Say 'I'm here' or 'It's over there' in French"
+    ],
+    realWorldUse: "indicate locations and direct people",
+    nextModuleTeaser: "Add everyday nouns for daily life"
+  },
+
   concepts: [
     {
       term: "Basic Location",

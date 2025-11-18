@@ -10,6 +10,17 @@ export const avoirPast = {
   description:
     "Talk about what you had in the past: j'avais (I had), tu avais (you had), il avait (he had)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express past possession (I had, you had, they had)",
+      "Describe what you possessed in the past",
+      "Combine with être past to tell complete stories"
+    ],
+    realWorldUse: "talk about past possessions and experiences",
+    nextModuleTeaser: "Add food vocabulary for restaurant conversations"
+  },
+
   concepts: [
     {
       term: "Past Tense = Imperfect (Imparfait)",

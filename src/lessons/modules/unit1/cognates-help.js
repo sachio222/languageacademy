@@ -11,6 +11,17 @@ export const cognatesHelpModule = {
   // Special flag for help/interstitial modules
   isHelpModule: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Recognize French words that look like English",
+      "Understand why French isn't as hard as you thought",
+      "Build confidence with familiar word patterns"
+    ],
+    realWorldUse: "quickly expand your vocabulary using cognates",
+    nextModuleTeaser: "Continue building your noun vocabulary"
+  },
+
   // No concepts, vocabulary, or exercises for this help module
   concepts: [],
   vocabularyReference: [],

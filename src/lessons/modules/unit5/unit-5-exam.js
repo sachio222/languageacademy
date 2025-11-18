@@ -14,6 +14,19 @@ export const unit5Exam = {
   unitNumber: 5,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about the past (I was, I had, I went)",
+      "Express preferences and make comparisons",
+      "Order food and navigate French restaurants confidently"
+    ],
+    realWorldUse: "discuss past experiences and express preferences",
+    milestone: "Past tense and nuanced expression achieved",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 6 for advanced communication verbs"
+  },
+
   concepts: [
     {
       term: "Time and Taste Mastery",

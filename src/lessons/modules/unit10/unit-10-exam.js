@@ -15,6 +15,19 @@ export const unit10Exam = {
   unitNumber: 10,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express complex ideas with subjunctive mood",
+      "Use hypothetical and conditional structures fluently",
+      "Communicate at B2 level with nuance and precision"
+    ],
+    realWorldUse: "express complex thoughts and hypothetical situations",
+    milestone: "B2 level mastery achieved",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 11 for complete top 100 word coverage"
+  },
+
   concepts: [
     {
       term: "Mastery and Nuance Achievement",

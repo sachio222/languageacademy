@@ -11,6 +11,18 @@ export const module3_etre = {
   description:
     'Build your first real sentences! "I am", "you are", "he is" - the most useful pattern in French.',
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Say 'I am', 'you are', 'he/she is' in French",
+      "Introduce yourself and describe others",
+      "Form your first complete French sentences"
+    ],
+    realWorldUse: "introduce yourself and describe people",
+    milestone: "First real sentences",
+    nextModuleTeaser: "Add avoir (to have) to express possession"
+  },
+
   concepts: [
     {
       term: "être = to be",

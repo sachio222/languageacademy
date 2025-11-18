@@ -11,6 +11,17 @@ export const famousWords = {
   description:
     "Start here! Learn greetings and internationally known words. You might already know some of these!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Greet someone in French (bonjour, bonsoir)",
+      "Say thank you, please, excuse me",
+      "Recognize internationally known French words"
+    ],
+    realWorldUse: "greet people and be polite",
+    nextModuleTeaser: "Build your first sentences with pronouns"
+  },
+
   concepts: [
     {
       term: "Internationally Recognized Words",

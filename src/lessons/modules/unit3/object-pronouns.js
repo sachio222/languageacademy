@@ -12,6 +12,18 @@ export const module7_object_pronouns = {
   description:
     "Express 'I see HIM', 'She likes IT' - pronouns as objects of verbs.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Say 'I see him/her/it/them' with object pronouns",
+      "Form more concise sentences (I want it vs. I want the book)",
+      "Understand French word order with object pronouns"
+    ],
+    realWorldUse: "speak more concisely and naturally",
+    milestone: "Concise sentence formation",
+    nextModuleTeaser: "Add possessive adjectives to show ownership"
+  },
+
   concepts: [
     {
       term: "Object Pronouns",

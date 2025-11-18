@@ -11,6 +11,18 @@ export const onAndPeopleModule = {
   description:
     "Learn 'on' (we/one/people) and general people vocabulary: on dit (people say), les gens (people), tout le monde (everyone)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use 'on' like a native speaker (we/people/one)",
+      "Talk about people in general (people say, everyone knows)",
+      "Sound more natural with on instead of nous"
+    ],
+    realWorldUse: "speak naturally about people in general",
+    milestone: "Natural French pronoun usage",
+    nextModuleTeaser: "Add discourse markers for conversational flow"
+  },
+
   concepts: [
     {
       term: "on = we / one / people",

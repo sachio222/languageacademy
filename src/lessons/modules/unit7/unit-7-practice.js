@@ -14,6 +14,17 @@ export const unit7Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use cognitive verbs naturally in conversation",
+      "Apply discourse markers for conversational flow",
+      "Express knowledge, thoughts, and beliefs fluently"
+    ],
+    realWorldUse: "communicate intellectual ideas naturally",
+    nextModuleTeaser: "Take the Unit 7 exam to prove your cognitive mastery"
+  },
+
   // Leave empty - not used for fill-in-blank
   concepts: [
     {

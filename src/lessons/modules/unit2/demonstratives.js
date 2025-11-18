@@ -12,6 +12,17 @@ export const module2_demonstratives = {
   description:
     "Point to things and say 'this' or 'that' - essential for everyday communication!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Point to specific things (this, that, these, those)",
+      "Use ça (that/it) in everyday conversation",
+      "Prepare to specify exactly which object you mean"
+    ],
+    realWorldUse: "point to and identify specific objects",
+    nextModuleTeaser: "Combine demonstratives with nouns to say 'this book', 'that cat'"
+  },
+
   concepts: [
     {
       term: "ça - The Most Useful Word!",

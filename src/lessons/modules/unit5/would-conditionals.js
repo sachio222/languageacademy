@@ -10,6 +10,17 @@ export const wouldConditionals = {
   description:
     "Express hypothetical actions: je voudrais (I would like), j'irais (I would go), je ferais (I would do)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Make very polite requests (I would like...)",
+      "Express hypothetical actions (I would go, I would do)",
+      "Sound more sophisticated and polite in French"
+    ],
+    realWorldUse: "make polite requests and express hypotheticals",
+    nextModuleTeaser: "Practice all Unit 5 skills with interactive exercises"
+  },
+
   concepts: [
     {
       term: "Would like = voudrais (conditional of vouloir)",

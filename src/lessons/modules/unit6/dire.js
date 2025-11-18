@@ -10,6 +10,17 @@ export const direModule = {
   description:
     "Express what you say and tell: je dis (I say), tu dis la vérité (you tell the truth), il me dit (he tells me)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express what you say and tell (I say, you tell, they say)",
+      "Report speech and convey information",
+      "Use dire with que to quote what people say"
+    ],
+    realWorldUse: "communicate what you and others say",
+    nextModuleTeaser: "Add prendre for taking things and transportation"
+  },
+
   concepts: [
     {
       term: "dire = to say OR to tell",

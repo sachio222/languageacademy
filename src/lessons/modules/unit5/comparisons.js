@@ -10,6 +10,17 @@ export const comparisons = {
   description:
     "Compare things and express intensity: plus (more), moins (less), meilleur (better), pire (worse), trop (too much), tout (all)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Compare things (better, worse, more, less)",
+      "Express intensity and quantity (too much, very, all)",
+      "Say 'This is better than that' or 'It's the best' in French"
+    ],
+    realWorldUse: "compare and evaluate things",
+    nextModuleTeaser: "Add slang comparisons for natural speech"
+  },
+
   concepts: [
     {
       term: "Basic Comparisons - plus/moins",

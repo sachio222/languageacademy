@@ -10,6 +10,18 @@ export const module10_combining = {
   description:
     "Combine everything you've learned: 'He has it', 'Is that yours?', 'It's theirs' - real French!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Combine object pronouns and possessives in sentences",
+      "Say 'He has it', 'I want it', 'It's mine' naturally",
+      "Form complex sentences with movement, possession, and objects"
+    ],
+    realWorldUse: "have sophisticated conversations about ownership",
+    milestone: "Complex sentence mastery",
+    nextModuleTeaser: "Test your comprehension with cultural reading"
+  },
+
   concepts: [
     {
       term: "Sentence Building",

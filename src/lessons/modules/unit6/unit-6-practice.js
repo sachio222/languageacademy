@@ -14,6 +14,17 @@ export const unit6Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use progressive and future tenses naturally",
+      "Combine communication verbs in complex sentences",
+      "Apply advanced Unit 6 structures in context"
+    ],
+    realWorldUse: "form sophisticated communication",
+    nextModuleTeaser: "Take the Unit 6 exam to prove your fluency"
+  },
+
   // Leave empty - not used for fill-in-blank
   concepts: [
     {

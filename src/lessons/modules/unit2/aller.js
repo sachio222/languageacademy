@@ -12,6 +12,17 @@ export const allerModule = {
   description:
     "Master movement through active recall and composition practice!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express movement and going places (I go, you go, they go)",
+      "Talk about future plans (I'm going to...)",
+      "Say 'Where are you going?' or 'I'm going to Paris'"
+    ],
+    realWorldUse: "talk about movement and future plans",
+    nextModuleTeaser: "Learn verb patterns to master conjugation"
+  },
+
   concepts: [
     {
       term: "aller = to go",

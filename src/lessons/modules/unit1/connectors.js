@@ -12,6 +12,17 @@ export const connectors = {
   description:
     "Connect your thoughts and add emphasis! Learn 'et' (and), 'mais' (but), 'ou' (or), 'aussi' (also/too), 'très' (very).",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Connect ideas with 'and', 'but', 'or' in French",
+      "Add emphasis with 'very' and 'also/too'",
+      "Form more natural, flowing sentences"
+    ],
+    realWorldUse: "make your French sound natural and connected",
+    nextModuleTeaser: "Practice everything you've learned with reading comprehension"
+  },
+
   concepts: [
     {
       term: "et = and",

@@ -10,6 +10,17 @@ export const everydayNouns = {
   description:
     "Essential nouns for everyday conversations: le monde (world), la vie (life), l'eau (water), le pain (bread)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about everyday things (world, life, water, bread, time)",
+      "Use high-frequency nouns in conversation",
+      "Express abstract and concrete concepts naturally"
+    ],
+    realWorldUse: "discuss daily life and the world around you",
+    nextModuleTeaser: "Test comprehension with cultural reading"
+  },
+
   concepts: [
     {
       term: "Abstract vs Concrete Nouns",

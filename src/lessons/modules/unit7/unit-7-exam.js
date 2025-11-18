@@ -14,6 +14,19 @@ export const unit7Exam = {
   unitNumber: 7,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express thinking, knowing, and understanding in French",
+      "Use discourse markers for natural speech (donc, en fait, quoi)",
+      "Discuss learning, beliefs, and knowledge naturally"
+    ],
+    realWorldUse: "express thoughts, knowledge, and opinions",
+    milestone: "Cognitive expression mastery",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 8 for daily routines and reflexive verbs"
+  },
+
   concepts: [
     {
       term: "Knowledge and Learning Mastery",

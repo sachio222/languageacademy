@@ -12,6 +12,19 @@ export const reading5 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
+
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Read French art history stories",
+      "Understand cultural content with past tense",
+      "Comprehend sophisticated narratives about famous artists"
+    ],
+    realWorldUse: "enjoy French cultural and historical content",
+    milestone: "Cultural literacy achieved",
+    nextModuleTeaser: "Practice all your skills with interactive exercises"
+  },
+
   concepts: [
     {
       term: "Art and History Milestone",

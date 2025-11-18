@@ -10,6 +10,17 @@ export const demanderModule = {
   description:
     "Ask for things and information: je demande (I ask), demander de l'aide (to ask for help), demander à quelqu'un (to ask someone)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Ask for things and help (I ask, you ask, they ask)",
+      "Request information and assistance",
+      "Use demander with à and de correctly"
+    ],
+    realWorldUse: "ask for help and information",
+    nextModuleTeaser: "Add commander to order food and products"
+  },
+
   concepts: [
     {
       term: "demander = to ask (for)",

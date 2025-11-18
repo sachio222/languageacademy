@@ -9,6 +9,17 @@ export const negation2 = {
   description:
     "Negate modal verbs and use 'ne...jamais' (never). Express what you can't or won't do!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Say 'I can't', 'I won't', 'I never do' in French",
+      "Negate modal verbs (vouloir, pouvoir, devoir)",
+      "Use ne...jamais to express never"
+    ],
+    realWorldUse: "express refusal and things you never do",
+    nextModuleTeaser: "Add location words to describe where"
+  },
+
   concepts: [
     {
       term: "Negating Modal Verbs",

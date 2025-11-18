@@ -10,6 +10,17 @@ export const commandsVousModule = {
   description:
     "Give formal or plural commands: Mangez! (Eat!), Parlez! (Speak!), Écoutez! (Listen!)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Give formal or plural commands politely",
+      "Instruct groups or strangers (Eat! Speak! Listen!)",
+      "Use vous command form in professional contexts"
+    ],
+    realWorldUse: "give polite instructions",
+    nextModuleTeaser: "Learn irregular commands"
+  },
+
   concepts: [
     {
       term: "vous Commands = Formal or Groups",

@@ -10,6 +10,17 @@ export const irregularCommandsModule = {
   description:
     "Essential irregular commands: Sois! (Be!), Aie! (Have!), Va! (Go!), Fais! (Do/Make!)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use irregular commands (Be!, Have!, Go!, Do!)",
+      "Say common phrases like 'Vas-y!' (Go for it!)",
+      "Master the most frequently used command forms"
+    ],
+    realWorldUse: "give common everyday instructions",
+    nextModuleTeaser: "Combine commands with pronouns"
+  },
+
   concepts: [
     {
       term: "Most Common Verbs = Irregular Commands",

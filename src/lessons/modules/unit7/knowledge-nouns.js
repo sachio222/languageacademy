@@ -10,6 +10,17 @@ export const knowledgeNounsModule = {
   description:
     "Essential nouns for learning: la question (question), la réponse (answer), l'idée (idea), le cours (class)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about academic concepts (question, answer, idea, class)",
+      "Discuss learning and educational contexts",
+      "Use knowledge nouns with cognitive verbs naturally"
+    ],
+    realWorldUse: "discuss education and ideas",
+    nextModuleTeaser: "Add discourse markers to sound like a native"
+  },
+
   concepts: [
     {
       term: "Academic nouns",

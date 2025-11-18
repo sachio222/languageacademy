@@ -10,6 +10,17 @@ export const progressiveTenses = {
   description:
     "Say what you're doing now, what you're going to do, and what you can't/won't/shouldn't do",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express ongoing actions (I'm eating, you're speaking)",
+      "Talk about future plans (I'm going to go, we're going to eat)",
+      "Use future tense for definite future actions"
+    ],
+    realWorldUse: "describe what's happening now and what will happen",
+    nextModuleTeaser: "Master dire to express what you say"
+  },
+
   concepts: [
     {
       term: "être en train de + infinitive",

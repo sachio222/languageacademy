@@ -14,6 +14,19 @@ export const unit2Exam = {
   unitNumber: 2,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Ask and answer questions in French conversations",
+      "Express wants, abilities, and observations",
+      "Understand ~50% of everyday French conversations"
+    ],
+    realWorldUse: "have real two-way conversations",
+    milestone: "Conversational fluency achieved",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 3 to master movement and possession"
+  },
+
   concepts: [
     {
       term: "Composition Layer Mastery",

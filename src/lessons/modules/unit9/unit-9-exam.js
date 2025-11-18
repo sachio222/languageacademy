@@ -14,6 +14,19 @@ export const unit9Exam = {
   unitNumber: 9,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Tell complete stories in the past tense",
+      "Distinguish between passé composé and imparfait",
+      "Use discourse markers for natural storytelling"
+    ],
+    realWorldUse: "tell stories and describe past experiences",
+    milestone: "Past tense storytelling mastery",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 10 for advanced B2 expressions"
+  },
+
   concepts: [
     {
       term: "Past Tenses and Discourse Mastery",

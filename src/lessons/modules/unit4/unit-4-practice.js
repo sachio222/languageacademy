@@ -13,6 +13,17 @@ export const unit4Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use survival phrases and negation naturally",
+      "Combine action verbs with time and location context",
+      "Apply everyday vocabulary in realistic scenarios"
+    ],
+    realWorldUse: "navigate daily French situations",
+    nextModuleTeaser: "Take the Unit 4 exam to prove your practical French"
+  },
+
   concepts: [
     {
       term: "Survival French Practice",

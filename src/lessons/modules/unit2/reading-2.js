@@ -12,6 +12,19 @@ export const reading2 = {
     "An exciting trip through beautiful Normandy! Explore famous places using vocabulary from Units 1 & 2.",
   skipStudyMode: true,
   isReadingComprehension: true,
+
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Read engaging French stories with cultural context",
+      "Understand dialogue and descriptive passages",
+      "Comprehend French at a conversational level"
+    ],
+    realWorldUse: "read French stories and understand cultural content",
+    milestone: "Cultural reading comprehension",
+    nextModuleTeaser: "Practice everything with interactive exercises"
+  },
+
   concepts: [
     {
       term: "Adventure Reading Milestone",

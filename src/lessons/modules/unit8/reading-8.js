@@ -13,6 +13,19 @@ export const reading8 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
+
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Read French stories about daily routines",
+      "Understand reflexive verbs and temporal words in context",
+      "Comprehend narrative sequences and daily life descriptions"
+    ],
+    realWorldUse: "understand French daily life narratives",
+    milestone: "Daily routine comprehension",
+    nextModuleTeaser: "Practice all Unit 8 reflexive skills"
+  },
+
   concepts: [
     {
       term: "Daily Life Reading Milestone",

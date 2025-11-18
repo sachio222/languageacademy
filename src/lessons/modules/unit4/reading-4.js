@@ -12,6 +12,19 @@ export const reading4 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
+
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Follow authentic French café conversations",
+      "Understand survival phrases in context",
+      "Comprehend French with negation and time expressions"
+    ],
+    realWorldUse: "understand real French conversations",
+    milestone: "Authentic conversation comprehension",
+    nextModuleTeaser: "Practice with interactive exercises"
+  },
+
   concepts: [
     {
       term: "Café Conversation Milestone",

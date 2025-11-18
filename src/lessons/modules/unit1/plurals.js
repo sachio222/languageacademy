@@ -10,6 +10,17 @@ export const plurals = {
   description:
     "Learn to make nouns plural: chat → chats, livre → livres. Essential for 'these' and 'those'!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about multiple things (cats, books, friends)",
+      "Transform singular nouns to plural forms",
+      "Say 'I have cats' or 'We have books' in French"
+    ],
+    realWorldUse: "talk about multiple objects and groups",
+    nextModuleTeaser: "Learn demonstratives to point to specific things"
+  },
+
   concepts: [
     {
       term: "Basic Plural Rule",

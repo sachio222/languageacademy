@@ -12,6 +12,17 @@ export const partirModule = {
   description:
     "Master departures through active recall and composition practice!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express leaving and departing (I leave, you leave, they leave)",
+      "Talk about departures and travel",
+      "Combine with venir and aller for complete movement vocabulary"
+    ],
+    realWorldUse: "talk about leaving places and travel",
+    nextModuleTeaser: "Learn object pronouns to say 'I see him/her/it'"
+  },
+
   concepts: [
     {
       term: "partir = to leave / to depart",

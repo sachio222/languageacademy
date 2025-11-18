@@ -11,6 +11,18 @@ export const sAppelerModule = {
   description:
     "Finally learn how to say your name properly! Je m'appelle Marie (My name is Marie), Comment tu t'appelles? (What's your name?)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Introduce yourself properly (My name is...)",
+      "Ask someone's name (What's your name?)",
+      "Use the most important reflexive verb in French"
+    ],
+    realWorldUse: "introduce yourself and ask people's names",
+    milestone: "Proper French introductions",
+    nextModuleTeaser: "Describe your morning routine"
+  },
+
   concepts: [
     {
       term: "s'appeler = to be called / to call oneself",

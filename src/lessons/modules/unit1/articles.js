@@ -10,6 +10,17 @@ export const articles = {
   description:
     "Learn 'the' and 'a/an' in French - essential before learning any nouns!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use 'the' (le, la, les) with masculine, feminine, and plural nouns",
+      "Use 'a/an' (un, une) correctly based on gender",
+      "Understand why French requires articles with every noun"
+    ],
+    realWorldUse: "prepare to talk about real things",
+    nextModuleTeaser: "Add nouns to talk about real objects"
+  },
+
   concepts: [
     {
       term: "Why Articles Matter",

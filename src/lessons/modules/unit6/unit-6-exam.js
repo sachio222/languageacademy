@@ -14,6 +14,19 @@ export const unit6Exam = {
   unitNumber: 6,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express ongoing actions (I'm eating, you're speaking)",
+      "Use advanced communication verbs (say, take, give, put, ask)",
+      "Understand ~70% of everyday French conversations"
+    ],
+    realWorldUse: "communicate with advanced nuance and precision",
+    milestone: "Advanced communication fluency",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 7 for cognitive verbs"
+  },
+
   concepts: [
     {
       term: "Fluency and Mastery Achievement",

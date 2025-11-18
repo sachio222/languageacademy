@@ -10,6 +10,17 @@ export const besoinModule = {
   description:
     "Express what you need: j'ai besoin de (I need), avoir besoin d'aide (to need help), avoir besoin de manger (to need to eat)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express what you need (I need coffee, you need help)",
+      "Talk about needs and necessities in French",
+      "Use avoir besoin de with nouns and verbs"
+    ],
+    realWorldUse: "express needs and necessities",
+    nextModuleTeaser: "Expand vocabulary with top 200 words"
+  },
+
   concepts: [
     {
       term: "avoir besoin de = to need",

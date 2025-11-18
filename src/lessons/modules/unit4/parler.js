@@ -12,6 +12,17 @@ export const parlerModule = {
   description:
     "Express communication! Say what languages you speak and who you talk to. Perfect example of regular -ER verbs!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about languages you speak (I speak French)",
+      "Discuss communication and conversation",
+      "Master the regular -ER verb pattern used by most verbs"
+    ],
+    realWorldUse: "talk about communication and languages",
+    nextModuleTeaser: "Learn chercher and trouver to search and find things"
+  },
+
   concepts: [
     {
       term: "parler = to speak / to talk",

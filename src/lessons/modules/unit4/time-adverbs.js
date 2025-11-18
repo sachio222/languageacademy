@@ -10,6 +10,17 @@ export const timeAdverbs = {
   description:
     "Express when and how often! Add time context to everything you've learned.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Add time context to sentences (now, today, tomorrow, yesterday)",
+      "Express frequency (always, never, sometimes, often)",
+      "Say 'I always go' or 'I never want that' in French"
+    ],
+    realWorldUse: "express when and how often things happen",
+    nextModuleTeaser: "Master more negation with modal verbs"
+  },
+
   concepts: [
     {
       term: "Frequency Adverbs",

@@ -10,6 +10,17 @@ export const foodNouns = {
   description:
     "Essential food vocabulary: une baguette, un croissant, un express (espresso), la pizza, le pain, l'eau, le café, la viande, les légumes",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Order specific foods at French establishments",
+      "Talk about bread, coffee, pastries, and meals",
+      "Navigate French bakeries and cafés confidently"
+    ],
+    realWorldUse: "order food in France",
+    nextModuleTeaser: "Use manger and boire with food vocabulary"
+  },
+
   concepts: [
     {
       term: "Food Genders - Learn the article!",

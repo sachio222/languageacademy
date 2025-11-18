@@ -10,6 +10,17 @@ export const studyingVerbsModule = {
   description:
     "Express studying: j'étudie le français (I'm studying French), je révise mes leçons (I'm reviewing my lessons)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about studying and reviewing (I study, I review)",
+      "Discuss academic work and preparation",
+      "Say 'I'm studying French' or 'I'm reviewing for the exam'"
+    ],
+    realWorldUse: "talk about studying and academic work",
+    nextModuleTeaser: "Master the most important pronoun: on (we/people)"
+  },
+
   concepts: [
     {
       term: "étudier = to study",

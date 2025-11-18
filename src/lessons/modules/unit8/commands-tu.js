@@ -10,6 +10,17 @@ export const commandsTuModule = {
   description:
     "Give informal commands: Mange! (Eat!), Parle! (Speak!), Fais attention! (Be careful!)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Give informal commands to friends and family",
+      "Tell someone to eat, speak, go, do something",
+      "Use command form with -ER and -IR verbs"
+    ],
+    realWorldUse: "give instructions to friends",
+    nextModuleTeaser: "Add formal commands for polite instructions"
+  },
+
   concepts: [
     {
       term: "Imperative Mood = Commands",

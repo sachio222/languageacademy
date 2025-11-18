@@ -11,6 +11,17 @@ export const venirModule = {
   title: "Essential Verb - venir (to come)",
   description: "Master arrival through active recall and composition practice!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express coming and arriving (I come, you come, they come)",
+      "Say 'I come from Paris' or 'Who is coming?'",
+      "Use venir with vouloir and pouvoir"
+    ],
+    realWorldUse: "talk about arrival and origin",
+    nextModuleTeaser: "Add aller to express where you're going"
+  },
+
   concepts: [
     {
       term: "venir = to come",

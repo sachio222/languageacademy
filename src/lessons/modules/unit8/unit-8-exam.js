@@ -14,6 +14,19 @@ export const unit8Exam = {
   unitNumber: 8,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe daily routines (I wake up, I get dressed, I go to bed)",
+      "Give commands and instructions in French",
+      "Express reciprocal actions (we love each other)"
+    ],
+    realWorldUse: "talk about daily life and give directions",
+    milestone: "Daily routine fluency",
+    isUnitCompletion: true,
+    nextModuleTeaser: "Start Unit 9 for past tense mastery"
+  },
+
   concepts: [
     {
       term: "Daily Life and Actions Mastery",

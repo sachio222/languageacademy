@@ -10,6 +10,17 @@ export const morningRoutineModule = {
   description:
     "Describe your morning: je me réveille (I wake up), je me lève (I get up), tu te réveilles à quelle heure? (what time do you wake up?)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Describe your morning routine (I wake up, I get up)",
+      "Talk about daily schedules and timing",
+      "Ask what time someone wakes up or gets up"
+    ],
+    realWorldUse: "talk about morning routines",
+    nextModuleTeaser: "Add more daily reflexive verbs"
+  },
+
   concepts: [
     {
       term: "se réveiller = to wake up",

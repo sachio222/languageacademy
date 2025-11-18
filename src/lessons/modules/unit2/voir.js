@@ -12,6 +12,17 @@ export const voirModule = {
   description:
     "Essential perception verb: je vois (I see), tu vois (you see), il voit (he sees)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about what you see (I see, you see, they see)",
+      "Express perception and observation in French",
+      "Prepare for object pronouns (I see him/her/it)"
+    ],
+    realWorldUse: "describe what you see and perceive",
+    nextModuleTeaser: "Master question words to ask anything"
+  },
+
   concepts: [
     {
       term: "voir = to see",

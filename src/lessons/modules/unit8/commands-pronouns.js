@@ -10,6 +10,17 @@ export const commandsPronounsModule = {
   description:
     "Give commands with objects: Donne-le-moi! (Give it to me!), Regarde-moi! (Look at me!), Ne le fais pas! (Don't do it!)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Give commands with object pronouns (Give it to me!)",
+      "Use pronouns with affirmative and negative commands",
+      "Form complex commands like 'Don't do it!' or 'Look at me!'"
+    ],
+    realWorldUse: "give precise instructions with objects",
+    nextModuleTeaser: "Add temporal words to sequence events"
+  },
+
   concepts: [
     {
       term: "Affirmative Commands: Attach with Hyphens",

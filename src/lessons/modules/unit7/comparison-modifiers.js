@@ -10,6 +10,17 @@ export const comparisonModifiersModule = {
   description:
     "Complete your comparison words: tout le monde (everyone), c'est la même chose (it's the same thing), je comprends mal (I understand poorly)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Use tout for 'all' and 'everyone' (tout le monde)",
+      "Express sameness with même (the same thing)",
+      "Describe how well or poorly you do things (mal, bien)"
+    ],
+    realWorldUse: "add nuance to comparisons and descriptions",
+    nextModuleTeaser: "Test comprehension with cultural reading"
+  },
+
   concepts: [
     {
       term: "tout = all / everything",

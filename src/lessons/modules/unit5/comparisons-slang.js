@@ -10,6 +10,17 @@ export const comparisonsSlang = {
   description:
     "Real-world slang from France, Quebec, and Africa: c'est ouf (crazy), c'est génial (awesome), c'est nul (it sucks), c'est malade (sick)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Understand real French slang (c'est ouf, c'est génial)",
+      "Sound natural with Quebec and African French expressions",
+      "Connect with native speakers using authentic language"
+    ],
+    realWorldUse: "speak like a native with authentic slang",
+    nextModuleTeaser: "Add conditional forms for polite requests"
+  },
+
   concepts: [
     {
       term: "French Slang (France)",

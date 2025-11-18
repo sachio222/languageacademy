@@ -14,6 +14,17 @@ export const unit5Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Compose sentences with past tense and comparisons",
+      "Use conditional forms and food vocabulary naturally",
+      "Apply Unit 5 sophistication in context"
+    ],
+    realWorldUse: "form nuanced French sentences",
+    nextModuleTeaser: "Take the Unit 5 exam to prove your mastery"
+  },
+
   // Leave empty - not used for fill-in-blank
   concepts: [
     {

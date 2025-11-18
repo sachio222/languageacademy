@@ -10,6 +10,17 @@ export const searchFindModule = {
   description:
     "Learn to search and find! chercher (to search/look for) and trouver (to find) - essential for daily life.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express searching and finding (I'm looking for, I found)",
+      "Talk about looking for lost items or locations",
+      "Say 'I'm looking for my keys' or 'I found it!' in French"
+    ],
+    realWorldUse: "search for and find things in daily life",
+    nextModuleTeaser: "Learn negation to say what you don't do"
+  },
+
   concepts: [
     {
       term: "chercher - to search/look for",

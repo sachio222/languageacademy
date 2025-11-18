@@ -26,7 +26,14 @@
           >
             <!-- Header -->
             <tr>
-              <td style="padding: 0 0 32px 0; text-align: center;">
+              <td style="padding: 0 0 40px 0; text-align: center;">
+                <img
+                  src="https://languageacademy.io/img/TLA_CoreMark_Blue_tm_v1.1.1.png"
+                  alt="Language Academy"
+                  height="38"
+                  width="auto"
+                  style="height: 38px; width: auto; margin-bottom: 24px; display: block; margin-left: auto; margin-right: auto;"
+                />
                 <div
                   style="font-size: 13px; font-weight: 500; letter-spacing: 0.5px; color: #999999; text-transform: uppercase; margin-bottom: 16px;"
                 >
@@ -141,50 +148,44 @@
                 >
                   📺 Media You Can Understand
                 </h3>
-                <div
-                  style="padding: 20px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; margin-bottom: 12px;"
-                >
-                  <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <div style="flex: 1;">
-                      <div
-                        style="font-size: 15px; color: #1a1a1a; font-weight: 500; margin-bottom: 4px;"
-                      >
-                        {{media_title_1}}
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding-bottom: 12px;">
+                      <div style="padding: 16px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px;">
+                        <div style="font-size: 15px; color: #1a1a1a; font-weight: 500; margin-bottom: 4px;">
+                          {{media_title_1}}
+                        </div>
+                        <div style="font-size: 13px; color: #665665; margin-bottom: 12px;">
+                          {{media_type_1}} • {{media_level_1}}
+                        </div>
+                        <a
+                          href="{{media_link_1}}"
+                          style="display: inline-block; padding: 8px 16px; background: #fafbfc; color: #3b82f6; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;"
+                        >
+                          Watch →
+                        </a>
                       </div>
-                      <div style="font-size: 13px; color: #665665;">
-                        {{media_type_1}} • {{media_level_1}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding-bottom: 0;">
+                      <div style="padding: 16px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px;">
+                        <div style="font-size: 15px; color: #1a1a1a; font-weight: 500; margin-bottom: 4px;">
+                          {{media_title_2}}
+                        </div>
+                        <div style="font-size: 13px; color: #665665; margin-bottom: 12px;">
+                          {{media_type_2}} • {{media_level_2}}
+                        </div>
+                        <a
+                          href="{{media_link_2}}"
+                          style="display: inline-block; padding: 8px 16px; background: #fafbfc; color: #3b82f6; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;"
+                        >
+                          Listen →
+                        </a>
                       </div>
-                    </div>
-                    <a
-                      href="{{media_link_1}}"
-                      style="padding: 8px 16px; background: #fafbfc; color: #3b82f6; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600; white-space: nowrap; margin-left: 16px;"
-                    >
-                      Watch →
-                    </a>
-                  </div>
-                </div>
-                <div
-                  style="padding: 20px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px; margin-bottom: 12px;"
-                >
-                  <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <div style="flex: 1;">
-                      <div
-                        style="font-size: 15px; color: #1a1a1a; font-weight: 500; margin-bottom: 4px;"
-                      >
-                        {{media_title_2}}
-                      </div>
-                      <div style="font-size: 13px; color: #665665;">
-                        {{media_type_2}} • {{media_level_2}}
-                      </div>
-                    </div>
-                    <a
-                      href="{{media_link_2}}"
-                      style="padding: 8px 16px; background: #fafbfc; color: #3b82f6; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600; white-space: nowrap; margin-left: 16px;"
-                    >
-                      Listen →
-                    </a>
-                  </div>
-                </div>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
 

@@ -12,6 +12,18 @@ export const basicNouns = {
   description:
     "Learn essential nouns WITH articles: un livre (a book), une maison (a house) - includes both genders!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about real things (books, cats, cars, houses)",
+      "Say 'I have a cat' or 'It's a book' in French",
+      "Combine articles + nouns with être and avoir"
+    ],
+    realWorldUse: "name and talk about concrete objects",
+    milestone: "Talk about real things",
+    nextModuleTeaser: "Learn plurals to talk about multiple things"
+  },
+
   concepts: [
     {
       term: "Noun Gender - Critical Concept!",

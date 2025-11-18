@@ -12,6 +12,19 @@ export const reading6 = {
 
   skipStudyMode: true,
   isReadingComprehension: true,
+
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Read complex stories with advanced communication verbs",
+      "Understand French family conversations and planning",
+      "Comprehend progressive tenses and future forms in context"
+    ],
+    realWorldUse: "understand French conversations about planning and communication",
+    milestone: "Advanced communication comprehension",
+    nextModuleTeaser: "Practice all Unit 6 skills"
+  },
+
   concepts: [
     {
       term: "Advanced Communication Milestone",

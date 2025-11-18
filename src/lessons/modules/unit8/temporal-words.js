@@ -11,6 +11,18 @@ export const temporalWordsModule = {
   description:
     "Organize actions in time: pendant (during), avant (before), après (after), d'abord (first), ensuite (then), finalement (finally)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Sequence events in time (first, then, finally)",
+      "Describe when things happen (before, during, after)",
+      "Tell stories with proper temporal flow"
+    ],
+    realWorldUse: "organize and tell stories chronologically",
+    milestone: "Temporal sequencing mastered",
+    nextModuleTeaser: "Test comprehension with daily life reading"
+  },
+
   concepts: [
     {
       term: "Temporal Prepositions",

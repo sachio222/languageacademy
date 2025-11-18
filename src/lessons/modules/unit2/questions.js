@@ -10,6 +10,19 @@ export const module6_questions = {
   description:
     "The power to ask questions! How, what, where, when, who, why - unlock conversations.",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Ask questions with where, what, when, who, how, why",
+      "Say 'Where is the book?' or 'What do you want?'",
+      "Have actual two-way conversations in French"
+    ],
+    realWorldUse: "ask questions and have real conversations",
+    milestone: "Can ask questions",
+    utilityScore: 10, // From PROGRESSIVE_COMBINATIONS - maximum utility!
+    nextModuleTeaser: "Learn stressed pronouns for emphasis"
+  },
+
   concepts: [
     {
       term: "Three Ways to Ask Questions in French",

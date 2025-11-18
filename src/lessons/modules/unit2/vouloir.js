@@ -12,6 +12,19 @@ export const vouloirModule = {
   description:
     "Express what you want! Master desires through active recall and composition practice!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express what you want (I want, you want, they want)",
+      "Make polite requests and express desires",
+      "Say 'I want this book' or 'Do you want that?' in French"
+    ],
+    realWorldUse: "express your wants and make polite requests",
+    milestone: "Express desires and wants",
+    utilityScore: 9, // From PROGRESSIVE_COMBINATIONS - very high utility!
+    nextModuleTeaser: "Add pouvoir to express what you can do"
+  },
+
   concepts: [
     {
       term: "vouloir = to want",

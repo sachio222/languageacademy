@@ -12,6 +12,17 @@ export const faireModule = {
   description:
     "Master the most versatile French verb through active recall and composition practice!",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Express doing and making (I do, you make, they do)",
+      "Talk about activities and tasks in French",
+      "Use faire in common expressions and daily activities"
+    ],
+    realWorldUse: "talk about what you do and make",
+    nextModuleTeaser: "Add devoir to express obligations"
+  },
+
   concepts: [
     {
       term: "faire = to do/make",

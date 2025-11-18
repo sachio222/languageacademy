@@ -13,6 +13,17 @@ export const unit1Practice = {
   isFillInTheBlank: true,
   skipStudyMode: true,
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Compose complete French sentences from scratch",
+      "Combine pronouns, verbs, articles, and nouns naturally",
+      "Apply everything from Unit 1 in context"
+    ],
+    realWorldUse: "form your own original French sentences",
+    nextModuleTeaser: "Take the Unit 1 exam to prove your mastery"
+  },
+
   concepts: [
     {
       term: "Foundation Reinforcement",

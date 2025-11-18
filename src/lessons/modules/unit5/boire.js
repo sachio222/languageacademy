@@ -10,6 +10,17 @@ export const boireModule = {
   description:
     "Express what you drink: je bois du café (I drink coffee), j'ai bu (I drank/have drunk)",
 
+  // Email-specific metadata for reengagement emails
+  emailMetadata: {
+    capabilities: [
+      "Talk about drinking and beverages (I drink, I drank)",
+      "Order drinks at cafés and restaurants",
+      "Describe what you drank using past tense"
+    ],
+    realWorldUse: "order drinks and discuss beverages",
+    nextModuleTeaser: "Practice reading comprehension with food context"
+  },
+
   concepts: [
     {
       term: "boire = to drink",
