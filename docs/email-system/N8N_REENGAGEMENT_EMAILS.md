@@ -117,7 +117,7 @@ return users.map(user => {
 ### Node 3: Send Email
 
 **Template:** `consolidation-24h.html`  
-**Subject:** `🧠 Your brain worked on French while you slept`
+**Subject:** `🇫🇷 Your brain worked on French while you slept`
 
 ---
 
@@ -183,7 +183,7 @@ return users.map(user => {
 ### Node 3: Send Email
 
 **Template:** `stalled-progress-3d.html`  
-**Subject:** `👋 Your French hasn't forgotten you`
+**Subject:** `🇫🇷 Your French hasn't forgotten you`
 
 ---
 
@@ -247,7 +247,7 @@ return users.map(user => {
 ### Node 3: Send Email
 
 **Template:** `decay-prevention-7d.html`  
-**Subject:** `⚡ Quick! Before your brain prunes this`
+**Subject:** `🇫🇷 Quick! Before your brain prunes this`
 
 ---
 
@@ -291,7 +291,7 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;
 ### Node 2: Send Email
 
 **Template:** `unit-completion.html`  
-**Subject:** `🏆 You just achieved {{fluency_milestone}}`
+**Subject:** `🇫🇷 You just achieved {{fluency_milestone}}`
 
 ---
 
@@ -350,7 +350,7 @@ return {
 ### Node 3: Send Email
 
 **Template:** `application-proof.html`  
-**Subject:** `💬 You can now {{real_world_capability}} in French`
+**Subject:** `🇫🇷 You can now {{real_world_capability}} in French`
 
 ---
 
@@ -419,7 +419,7 @@ return users.map(user => {
 ### Node 3: Send Email
 
 **Template:** `pace-reassurance.html`  
-**Subject:** `🎯 Why your pace is actually perfect`
+**Subject:** `🇫🇷 Why your pace is actually perfect`
 
 ---
 

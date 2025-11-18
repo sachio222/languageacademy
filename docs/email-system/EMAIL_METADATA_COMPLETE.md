@@ -237,7 +237,7 @@ WHERE user_id = $1 AND completed = true;
 ```javascript
 {
   to: user.email,
-  subject: `🎉 You completed ${module.module_name}!`,
+  subject: `🇫🇷 You completed ${module.module_name}!`,
   html: moduleCompletionTemplate({
     ...moduleData,
     ...userStats

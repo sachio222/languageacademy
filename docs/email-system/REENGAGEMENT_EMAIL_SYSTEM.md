@@ -21,7 +21,7 @@ Based on your pedagogical foundation, these emails apply the same cognitive scie
 ## 📧 The Email Suite
 
 ### 1. **Module Completion** (Immediate)
-**Subject:** `🎉 You completed {{module_name}}!`  
+**Subject:** `🇫🇷 You completed {{module_name}}!`  
 **Template:** `module-completion.html`  
 **Trigger:** Exam passed (≥80%)  
 **Purpose:** Dopamine reinforcement + quick review
@@ -38,7 +38,7 @@ Based on your pedagogical foundation, these emails apply the same cognitive scie
 ---
 
 ### 2. **24-Hour Consolidation** (Next Day)
-**Subject:** `🧠 Your brain worked on French while you slept`  
+**Subject:** `🇫🇷 Your brain worked on French while you slept`  
 **Template:** `consolidation-24h.html`  
 **Trigger:** 24 hours after module completion  
 **Purpose:** Test sleep consolidation
@@ -54,7 +54,7 @@ Based on your pedagogical foundation, these emails apply the same cognitive scie
 ---
 
 ### 3. **3-Day Stalled Progress** (Day 3 Inactive)
-**Subject:** `👋 Your French hasn't forgotten you`  
+**Subject:** `🇫🇷 Your French hasn't forgotten you`  
 **Template:** `stalled-progress-3d.html`  
 **Trigger:** 3 days without activity  
 **Purpose:** Prevent forgetting curve
@@ -70,7 +70,7 @@ Based on your pedagogical foundation, these emails apply the same cognitive scie
 ---
 
 ### 4. **7-Day Decay Prevention** (Day 7 Post-Module)
-**Subject:** `⚡ Quick! Before your brain prunes this`  
+**Subject:** `🇫🇷 Quick! Before your brain prunes this`  
 **Template:** `decay-prevention-7d.html`  
 **Trigger:** 7 days after module completion  
 **Purpose:** Combat memory decay
@@ -86,7 +86,7 @@ Based on your pedagogical foundation, these emails apply the same cognitive scie
 ---
 
 ### 5. **Unit Completion** (Major Milestone)
-**Subject:** `🏆 You just achieved {{fluency_milestone}}`  
+**Subject:** `🇫🇷 You just achieved {{fluency_milestone}}`  
 **Template:** `unit-completion.html`  
 **Trigger:** Unit exam passed  
 **Purpose:** Major dopamine hit
@@ -103,7 +103,7 @@ Based on your pedagogical foundation, these emails apply the same cognitive scie
 ---
 
 ### 6. **Application Proof** (After High-Utility Modules)
-**Subject:** `💬 You can now {{capability}} in French`  
+**Subject:** `🇫🇷 You can now {{capability}} in French`  
 **Template:** `application-proof.html`  
 **Trigger:** Completion of modules 4, 10, 11  
 **Purpose:** Prove real-world value
@@ -124,7 +124,7 @@ Based on your pedagogical foundation, these emails apply the same cognitive scie
 ---
 
 ### 7. **Pace Reassurance** (Monthly)
-**Subject:** `🎯 Why your pace is actually perfect`  
+**Subject:** `🇫🇷 Why your pace is actually perfect`  
 **Template:** `pace-reassurance.html`  
 **Trigger:** 1st of each month  
 **Purpose:** Prevent comparison dropout

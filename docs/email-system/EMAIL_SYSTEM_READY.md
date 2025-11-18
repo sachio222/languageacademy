@@ -183,7 +183,7 @@ WHERE user_id = $1 AND completed = true;
 ```javascript
 {
   to: user.email,
-  subject: `🎉 You completed ${moduleData.module_name}!`,
+  subject: `🇫🇷 You completed ${moduleData.module_name}!`,
   html: moduleCompletionTemplate.replace(/\{\{(\w+)\}\}/g, (match, key) => {
     return emailData[key] || match;
   }),
@@ -201,7 +201,7 @@ WHERE user_id = $1 AND completed = true;
 if (module.emailMetadata.isUnitCompletion) {
   sendEmail({
     template: "unit-completion.html",
-    subject: `🏆 You just achieved ${module.emailMetadata.milestone}`,
+    subject: `🇫🇷 You just achieved ${module.emailMetadata.milestone}`,
     // ... unit-specific data
   });
 }
@@ -212,7 +212,7 @@ if (module.emailMetadata.isUnitCompletion) {
 if (module.emailMetadata.utilityScore >= 8) {
   sendEmail({
     template: "application-proof.html",
-    subject: `💬 You can now ${module.emailMetadata.realWorldUse} in French`,
+    subject: `🇫🇷 You can now ${module.emailMetadata.realWorldUse} in French`,
     // ... application examples
   });
 }
@@ -362,7 +362,7 @@ All templates match WOTD aesthetic:
 
 ### **Module Completion Email (Module 3: être)**
 
-**Subject:** 🎉 You completed Essential Verb - être (to be)!
+**Subject:** 🇫🇷 You completed Essential Verb - être (to be)!
 
 **Content:**
 ```
@@ -395,7 +395,7 @@ You'll learn to: Express what you have and what you need
 
 ### **Application Proof Email (Module 14: ça Survival)**
 
-**Subject:** 💬 You can now greet someone and ask how they're doing in French
+**Subject:** 🇫🇷 You can now greet someone and ask how they're doing in French
 
 **Content:**
 ```
@@ -426,7 +426,7 @@ and ask how they're doing using Module 14 vocabulary.
 
 ### **Unit Completion Email (Unit 1 Exam)**
 
-**Subject:** 🏆 You just achieved conversational basics
+**Subject:** 🇫🇷 You just achieved conversational basics
 
 **Content:**
 ```

@@ -224,7 +224,7 @@ See `templates/module-completion.html` for full HTML.
 ```javascript
 {
   "to": "{{ $json.email }}",
-  "subject": "🎉 You completed {{$json.module_name}}!",
+  "subject": "🇫🇷 You completed {{$json.module_name}}!",
   "html": "<!-- Paste the module-completion.html template here, replacing {{variables}} -->",
   "email_type": "module_completion",
   "user_id": "{{ $json.user_id }}",
