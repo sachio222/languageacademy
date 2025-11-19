@@ -341,7 +341,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false, on
                       <tbody>
                         {(showAllActivity ? recentActivity.modules : recentActivity.modules.slice(0, 20)).map(module => (
                           <tr key={module.id} className="activity-row">
-                            <td className="activity-module">{getModuleDisplayName(module.module_id)}</td>
+                            <td className="activity-module">{getModuleDisplayName(module.module_key)}</td>
                             <td className="activity-time">{formatDuration(module.time_spent_seconds || 0)}</td>
                             <td className="activity-date">{formatRelativeTime(module.completed_at)}</td>
                             <td className="activity-score">

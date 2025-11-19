@@ -1,0 +1,31 @@
+(node:90087) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/jupiter/dev/woodshed/languageacademy/extract-all-modulekeys.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/jupiter/dev/woodshed/languageacademy/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+VALUES
+  (1, '2024-01-01-famous-words'),
+  (2, '2024-01-12-demonstratives'),
+  (3, '2024-01-25-contractions'),
+  (4, '2024-03-31-survival-phrases'),
+  (5, '2024-04-08-comparisons'),
+  (6, '2024-04-23-progressive-tenses'),
+  (7, '2024-04-20-dire'),
+  (8, '2024-04-22-prendre'),
+  (9, '2024-10-22-donner'),
+  (10, '2024-04-21-mettre'),
+  (11, '2024-04-19-demander'),
+  (12, '2024-04-18-commander'),
+  (13, '2024-04-17-besoin'),
+  (14, '2024-04-25-top-200-nouns'),
+  (15, '2024-04-24-reading-6'),
+  (16, '2024-04-27-unit-6-practice'),
+  (17, '2024-04-26-unit-6-exam'),
+  (18, '2024-05-05-on-and-people'),
+  (19, '2024-05-23-temporal-words'),
+  (20, '2024-05-26-causal-words'),
+  (21, '2024-01-23-common-special-forms-1'),
+  (22, '2024-02-08-age-personal-info'),
+  (23, '2024-03-15-nature-animals'),
+  (24, '2024-04-01-alphabet')
+
+-- Total: 24 modules mapped

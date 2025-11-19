@@ -70,7 +70,7 @@ export const useTextTracking = () => {
         await supabaseClient.from("text_entries").insert({
           user_id: supabaseUser.id,
           exercise_id: exerciseId,
-          module_id: moduleId,
+          module_key: moduleId,
           unit_id: unitId,
           attempt_number: attemptNumber,
           entry_type: entryType,

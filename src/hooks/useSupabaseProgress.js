@@ -66,7 +66,7 @@ export const useSupabaseProgress = () => {
         // Process module progress
         const moduleMap = {};
         moduleData.forEach((module) => {
-          moduleMap[module.module_id] = module;
+          moduleMap[module.module_key] = module;
         });
         setModuleProgress(moduleMap);
 
@@ -130,7 +130,7 @@ export const useSupabaseProgress = () => {
           ) {
             setModuleProgress((prev) => ({
               ...prev,
-              [payload.new.module_id]: payload.new,
+              [payload.new.module_key]: payload.new,
             }));
           }
         }
@@ -192,7 +192,7 @@ export const useSupabaseProgress = () => {
           .insert({
             user_id: supabaseUser.id,
             exercise_id: exerciseId,
-            module_id: moduleId,
+            module_key: moduleId,
             unit_id: unitId,
             attempt_number: attemptNumber,
             is_correct: correct,
@@ -265,7 +265,7 @@ export const useSupabaseProgress = () => {
         // Build update object without time_spent_seconds (managed by useModuleTime)
         const updateData = {
           user_id: supabaseUser.id,
-          module_id: moduleId,
+                module_key: moduleId,
           unit_id: unitId,
           total_exercises: totalExercises,
           completed_exercises: completedCount,
@@ -284,7 +284,7 @@ export const useSupabaseProgress = () => {
         const { data, error } = await supabaseClient
           .from(TABLES.MODULE_PROGRESS)
           .upsert(updateData, {
-            onConflict: "user_id,module_id",
+            onConflict: "user_id,module_key",
           })
           .select()
           .single();
@@ -317,7 +317,7 @@ export const useSupabaseProgress = () => {
                     name: userProfile.preferred_name || userProfile.first_name,
                     metadata: {
                       group: 'Module Completers',
-                      module_id: moduleId,
+                      module_key: moduleId,
                       modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1
                     }
                   }
@@ -343,7 +343,7 @@ export const useSupabaseProgress = () => {
                     html: template.html,
                     email_type: 'lesson_complete',
                     user_id: supabaseUser.id,
-                    metadata: { module_id: moduleId }
+                    metadata: { module_key: moduleId }
                   }
                 });
               } catch (emailError) {
@@ -370,7 +370,7 @@ export const useSupabaseProgress = () => {
                   user_id: supabaseUser.id,
                   email: userProfile.email,
                   name: userProfile.preferred_name || userProfile.first_name || 'Student',
-                  module_id: moduleId,
+                  module_key: moduleId,
                   exam_score: examScore,
                   completed_at: data.completed_at,
                   modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1
@@ -499,12 +499,12 @@ export const useSupabaseProgress = () => {
             .upsert(
               {
                 user_id: supabaseUser.id,
-                module_id: moduleId,
+                module_key: moduleId,
                 concept_index: conceptIndex,
                 concept_term: conceptTerm,
               },
               {
-                onConflict: "user_id,module_id,concept_index",
+                onConflict: "user_id,module_key,concept_index",
               }
             )
             .select();
@@ -515,7 +515,7 @@ export const useSupabaseProgress = () => {
             .from(TABLES.CONCEPT_UNDERSTANDING)
             .delete()
             .eq("user_id", supabaseUser.id)
-            .eq("module_id", moduleId)
+            .eq("module_key", moduleId)
             .eq("concept_index", conceptIndex)
             .select();
 

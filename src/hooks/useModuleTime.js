@@ -42,7 +42,7 @@ export const useModuleTime = (moduleId, unitId, isActive = true) => {
         .from(TABLES.MODULE_PROGRESS)
         .select('time_spent_seconds')
         .eq('user_id', supabaseUser.id)
-        .eq('module_id', moduleId)
+        .eq('module_key', moduleId)
         .single();
 
       if (fetchError && fetchError.code !== 'PGRST116') { // PGRST116 = no rows found
@@ -57,12 +57,12 @@ export const useModuleTime = (moduleId, unitId, isActive = true) => {
         .from(TABLES.MODULE_PROGRESS)
         .upsert({
           user_id: supabaseUser.id,
-          module_id: moduleId,
+          module_key: moduleId,
           unit_id: unitId,
           time_spent_seconds: newTotalTime,
           // Don't overwrite other fields if they exist
         }, {
-          onConflict: 'user_id,module_id',
+          onConflict: 'user_id,module_key',
           ignoreDuplicates: false
         });
 

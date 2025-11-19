@@ -20,7 +20,7 @@ serve(async (req) => {
   );
 
   try {
-    const { user_id, module_id } = await req.json();
+    const { user_id, module_key } = await req.json();
     
     if (!user_id) {
       return new Response(JSON.stringify({
@@ -53,7 +53,7 @@ serve(async (req) => {
     // Get module progress stats
     const { data: progressData, error: progressError } = await supabaseAdmin
       .from('module_progress')
-      .select('module_id, exam_score, completed_at')
+      .select('module_key, exam_score, completed_at')
       .eq('user_id', user_id)
       .not('completed_at', 'is', null)
       .order('completed_at', { ascending: false });
@@ -99,9 +99,10 @@ serve(async (req) => {
     // Get last score
     const lastScore = completedModules.length > 0 ? completedModules[0].exam_score || 85 : 85;
     
-    // Calculate current position (convert module_id to number for max calculation)
-    const currentModule = completedModules.length > 0 ? 
-      Math.max(...completedModules.map(m => parseInt(m.module_id) || 0)) + 1 : 1;
+    // Calculate current position (count completed modules, can't convert moduleKey to number)
+    // Note: module_key is now a string like "2024-01-01-famous-words", not a number
+    // We'll use the count of completed modules as a proxy for position
+    const currentModule = completedModules.length + 1;
     const currentUnit = Math.ceil(currentModule / 12);
     
     // Calculate progress percentage (rough estimate)

@@ -119,9 +119,16 @@ export const validateAnswer = (userAnswer, correctAnswer) => {
 
 /**
  * Extract module/unit IDs from lesson structure
+ * 
+ * Returns moduleKey (stable, never changes) instead of numeric ID.
+ * This ensures stable references that don't break when modules are reordered.
+ * 
+ * Migration completed: Database now uses moduleKeys, so this returns moduleKey.
  */
 export const extractModuleId = (lesson) => {
-  return lesson.id?.toString() || 'unknown'
+  // Use moduleKey (stable, never changes) - database migration completed
+  // Fallback to id for backward compatibility if moduleKey missing
+  return lesson.moduleKey || lesson.id?.toString() || 'unknown'
 }
 
 export const extractUnitId = (unitInfo) => {

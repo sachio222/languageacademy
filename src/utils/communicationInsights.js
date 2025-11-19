@@ -137,11 +137,11 @@ const findReviewOpportunities = (modules, units) => {
       const daysSince = Math.floor((now - completedDate) / (1000 * 60 * 60 * 24));
       
       if (daysSince >= 14 && daysSince <= 60) {
-        const lesson = lessons.find(l => l.moduleKey === module.module_id);
+        const lesson = lessons.find(l => l.moduleKey === module.module_key);
         if (lesson) {
           opportunities.push({
             type: 'module',
-            id: module.module_id,
+            id: module.module_key,
             name: lesson.title,
             daysSinceCompleted: daysSince,
             message: `Review ${lesson.title} (completed ${daysSince} days ago)`
@@ -247,7 +247,7 @@ const identifyReEngagementNeeds = (profile, modules) => {
     .filter(m => m.completed_at)
     .sort((a, b) => new Date(b.completed_at) - new Date(a.completed_at))[0];
   
-  const lastLesson = lastModule ? lessons.find(l => l.moduleKey === lastModule.module_id) : null;
+  const lastLesson = lastModule ? lessons.find(l => l.moduleKey === lastModule.module_key) : null;
   
   // Inactive 3 days
   if (daysSinceActive >= 3 && daysSinceActive < 7) {

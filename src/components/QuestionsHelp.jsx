@@ -35,7 +35,7 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           .from('concept_understanding')
           .select('concept_index, concept_term')
           .eq('user_id', supabaseUser.id)
-          .eq('module_id', moduleId);
+          .eq('module_key', moduleId);
 
         if (error) throw error;
 

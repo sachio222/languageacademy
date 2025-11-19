@@ -369,7 +369,7 @@ export const useReportCardData = (userId = null, options = {}) => {
 
     completedModules.forEach((module) => {
       // Find the lesson by module_id
-      const lesson = findLessonByModuleId(module.module_id);
+      const lesson = findLessonByModuleId(module.module_key);
 
       if (lesson?.vocabularyReference) {
         lesson.vocabularyReference.forEach((vocab) => {
@@ -406,7 +406,7 @@ export const useReportCardData = (userId = null, options = {}) => {
     );
     if (modules.length > 0) {
       logger.log(`[ReportCard] Sample module:`, {
-        module_id: modules[0].module_id,
+        module_key: modules[0].module_key,
         completed_at: modules[0].completed_at,
       });
     }
@@ -433,9 +433,9 @@ export const useReportCardData = (userId = null, options = {}) => {
 
       // Find modules that belong to this unit
       const unitModules = modules.filter((m) => {
-        if (!m || !m.module_id) return false;
+        if (!m || !m.module_key) return false;
 
-        const lesson = findLessonByModuleId(m.module_id);
+        const lesson = findLessonByModuleId(m.module_key);
         if (!lesson) {
           return false;
         }
@@ -463,7 +463,7 @@ export const useReportCardData = (userId = null, options = {}) => {
           totalCount,
           studyTime,
           sampleModules: unitModules.slice(0, 3).map((m) => ({
-            module_id: m.module_id,
+            module_key: m.module_key,
             completed_at: m.completed_at,
           })),
         });
@@ -489,7 +489,7 @@ export const useReportCardData = (userId = null, options = {}) => {
     const byUnit = {};
 
     completedModules.forEach((module) => {
-      const lesson = findLessonByModuleId(module.module_id);
+      const lesson = findLessonByModuleId(module.module_key);
 
       if (lesson?.vocabularyReference) {
         // Determine which unit this lesson belongs to
@@ -535,16 +535,16 @@ export const useReportCardData = (userId = null, options = {}) => {
       // Get modules for this unit
       const unitModuleIds = modules
         .filter((m) => {
-          const lesson = findLessonByModuleId(m.module_id);
+          const lesson = findLessonByModuleId(m.module_key);
           if (!lesson) return false;
 
           return lesson.id >= start && lesson.id <= end;
         })
-        .map((m) => m.module_id);
+        .map((m) => m.module_key);
 
       // Get exercises for these modules
       const unitExercises = exercises.filter((e) =>
-        unitModuleIds.includes(e.module_id)
+        unitModuleIds.includes(e.module_key)
       );
 
       const correct = unitExercises.filter((e) => e.is_correct).length;

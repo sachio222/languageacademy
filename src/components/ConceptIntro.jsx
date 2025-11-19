@@ -136,7 +136,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
           .from('concept_understanding')
           .select('concept_index')
           .eq('user_id', supabaseUser.id)
-          .eq('module_id', moduleId);
+          .eq('module_key', moduleId);
 
         if (error) throw error;
 

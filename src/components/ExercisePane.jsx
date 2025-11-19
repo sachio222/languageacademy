@@ -18,7 +18,8 @@ function ExercisePane({
   onComplete,
   readingPassage,
   onBackToLesson,
-  moduleId,
+  moduleId, // For database operations (moduleKey)
+  displayModuleId, // For UI display (numeric ID)
   unitId
 }) {
   const [userAnswer, setUserAnswer] = useState('');
@@ -264,7 +265,7 @@ function ExercisePane({
       <div className={isReadingModule ? "reading-quiz-section" : ""}>
         <div className="exercise-header">
           <div className="exercise-title-row">
-            <h3>{isReadingModule ? '📖' : '✏️'} Exercise {moduleId}.{exercise.displayNumber}</h3>
+            <h3>{isReadingModule ? '📖' : '✏️'} Exercise {displayModuleId || moduleId}.{exercise.displayNumber}</h3>
             {isCompleted && <span className="badge-done">✓ Done</span>}
           </div>
           {onBackToLesson && (

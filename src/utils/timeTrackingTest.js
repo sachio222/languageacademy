@@ -61,7 +61,7 @@ export const verifyTimeTracking = (reportData) => {
   raw.modules.forEach(module => {
     const time = module.time_spent_seconds || 0;
     if (time > 0) {
-      logger.log(`  Module ${module.module_id}: ${time}s (${formatDuration(time)})`);
+      logger.log(`  Module ${module.module_key}: ${time}s (${formatDuration(time)})`);
     }
   });
   

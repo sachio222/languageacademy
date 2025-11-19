@@ -305,7 +305,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         .from('exercise_completions')
         .delete()
         .eq('user_id', supabaseUser.id)
-        .eq('module_id', modId);
+        .eq('module_key', modId);
 
       if (error) throw error;
 
@@ -357,7 +357,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         .from('exercise_completions')
         .delete()
         .eq('user_id', supabaseUser.id)
-        .eq('module_id', modId);
+        .eq('module_key', modId);
 
       if (error) throw error;
 
@@ -368,7 +368,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           .from('module_progress')
           .delete()
           .eq('user_id', supabaseUser.id)
-          .eq('module_id', modId);
+          .eq('module_key', modId);
 
         if (progressError) throw progressError;
       }
@@ -380,7 +380,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           .from('concept_understanding')
           .delete()
           .eq('user_id', supabaseUser.id)
-          .eq('module_id', modId);
+          .eq('module_key', modId);
 
         if (conceptError) throw conceptError;
       }
@@ -753,6 +753,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
             readingPassage={lesson.readingPassage}
             onBackToLesson={lesson.isReadingComprehension ? null : handleBackToLesson}
             moduleId={extractModuleId(lesson)}
+            displayModuleId={lesson.id}
             unitId={extractUnitId(unitInfo)}
           />
         </div>
@@ -771,6 +772,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
               readingPassage={lesson.readingPassage}
               onBackToLesson={lesson.isReadingComprehension ? null : handleBackToLesson}
               moduleId={extractModuleId(lesson)}
+              displayModuleId={lesson.id}
               unitId={extractUnitId(unitInfo)}
             />
           </div>
