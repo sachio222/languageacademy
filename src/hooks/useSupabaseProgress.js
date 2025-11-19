@@ -366,6 +366,38 @@ export const useSupabaseProgress = () => {
                   webhookUrl: webhookUrl.substring(0, 50) + '...' 
                 });
 
+                // Fetch email metadata from edge function
+                let emailMetadata = null;
+                try {
+                  // Get numeric module ID from moduleKey for edge function lookup
+                  const { getModuleId } = await import('../lessons/moduleIdResolver.js');
+                  const numericModuleId = getModuleId(moduleId);
+                  
+                  if (numericModuleId !== 'UNKNOWN') {
+                    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+                    const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+                    const metadataUrl = `${supabaseUrl}/functions/v1/get-module-email-data?module_id=${numericModuleId}`;
+                    
+                    const metadataResponse = await fetch(metadataUrl, {
+                      headers: {
+                        'Authorization': `Bearer ${supabaseAnonKey}`,
+                        'Content-Type': 'application/json',
+                      },
+                    });
+
+                    if (metadataResponse.ok) {
+                      const metadataData = await metadataResponse.json();
+                      if (metadataData.success && metadataData.data) {
+                        emailMetadata = metadataData.data;
+                        logger.log('Fetched email metadata for module', { moduleId, numericModuleId });
+                      }
+                    }
+                  }
+                } catch (metadataError) {
+                  logger.warn('Failed to fetch email metadata, continuing without it', metadataError);
+                  // Continue without metadata - don't fail the webhook
+                }
+
                 const webhookPayload = {
                   user_id: supabaseUser.id,
                   email: userProfile.email,
@@ -373,7 +405,25 @@ export const useSupabaseProgress = () => {
                   module_key: moduleId,
                   exam_score: examScore,
                   completed_at: data.completed_at,
-                  modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1
+                  modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1,
+                  // Add email metadata if available
+                  ...(emailMetadata && {
+                    module_metadata: {
+                      title: emailMetadata.module?.title,
+                      capabilities: emailMetadata.module?.capabilities,
+                      realWorldUse: emailMetadata.module?.realWorldUse,
+                      milestone: emailMetadata.module?.milestone,
+                      utilityScore: emailMetadata.module?.utilityScore,
+                      isUnitCompletion: emailMetadata.module?.isUnitCompletion,
+                      nextModuleTeaser: emailMetadata.module?.nextModuleTeaser,
+                      unitNumber: emailMetadata.module?.unitNumber,
+                    },
+                    next_module_metadata: emailMetadata.nextModule ? {
+                      title: emailMetadata.nextModule.title,
+                      realWorldUse: emailMetadata.nextModule.realWorldUse,
+                      capabilities: emailMetadata.nextModule.capabilities,
+                    } : null,
+                  }),
                 };
 
                 const response = await fetch(webhookUrl, {
