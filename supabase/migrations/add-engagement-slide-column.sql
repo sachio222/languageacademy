@@ -8,3 +8,4 @@ ADD COLUMN engagement_slide JSONB;
 COMMENT ON COLUMN word_of_the_day.engagement_slide IS 'AI-selected Instagram engagement slide: quiz, challenge, opinion, mnemonic, or mistake with type-specific content';
 
 
+

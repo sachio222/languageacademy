@@ -82,3 +82,4 @@ Once migration is complete:
 - `migrate-module-ids-to-modulekeys.sql` - Main migration script
 - `src/utils/progressSync.js` - Update `extractModuleId()` function (after migration)
 
+

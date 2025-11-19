@@ -38,3 +38,4 @@ function MosaicPatternIllustration() {
 
 export default MosaicPatternIllustration;
 
+

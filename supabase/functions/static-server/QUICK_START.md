@@ -61,3 +61,4 @@ docker exec -it static-server node test-connectivity.js
 
 
 
+
