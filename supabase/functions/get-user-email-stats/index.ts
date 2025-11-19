@@ -53,9 +53,9 @@ serve(async (req) => {
     // Get module progress stats
     const { data: progressData, error: progressError } = await supabaseAdmin
       .from('module_progress')
-      .select('module_id, score, completed_at')
+      .select('module_id, exam_score, completed_at')
       .eq('user_id', user_id)
-      .eq('completed', true)
+      .not('completed_at', 'is', null)
       .order('completed_at', { ascending: false });
 
     if (progressError) {
@@ -97,10 +97,11 @@ serve(async (req) => {
     }
 
     // Get last score
-    const lastScore = completedModules.length > 0 ? completedModules[0].score || 85 : 85;
+    const lastScore = completedModules.length > 0 ? completedModules[0].exam_score || 85 : 85;
     
-    // Calculate current position
-    const currentModule = completedModules.length > 0 ? Math.max(...completedModules.map(m => m.module_id)) + 1 : 1;
+    // Calculate current position (convert module_id to number for max calculation)
+    const currentModule = completedModules.length > 0 ? 
+      Math.max(...completedModules.map(m => parseInt(m.module_id) || 0)) + 1 : 1;
     const currentUnit = Math.ceil(currentModule / 12);
     
     // Calculate progress percentage (rough estimate)

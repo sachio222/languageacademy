@@ -350,6 +350,68 @@ export const useSupabaseProgress = () => {
                 logger.error('Error sending completion email:', emailError);
                 // Continue even if email fails
               }
+
+              // Trigger n8n reengagement email workflow
+              try {
+                const webhookUrl = import.meta.env.VITE_N8N_MODULE_COMPLETION_WEBHOOK;
+                
+                if (!webhookUrl) {
+                  logger.warn('VITE_N8N_MODULE_COMPLETION_WEBHOOK environment variable not set - skipping webhook');
+                  return; // Skip webhook if not configured
+                }
+
+                logger.log('Triggering n8n webhook for module completion', { 
+                  moduleId, 
+                  userId: supabaseUser.id,
+                  webhookUrl: webhookUrl.substring(0, 50) + '...' 
+                });
+
+                const webhookPayload = {
+                  user_id: supabaseUser.id,
+                  email: userProfile.email,
+                  name: userProfile.preferred_name || userProfile.first_name || 'Student',
+                  module_id: moduleId,
+                  exam_score: examScore,
+                  completed_at: data.completed_at,
+                  modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1
+                };
+
+                const response = await fetch(webhookUrl, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(webhookPayload),
+                  // Add timeout to prevent hanging
+                  signal: AbortSignal.timeout(10000) // 10 second timeout
+                });
+
+                if (!response.ok) {
+                  const errorText = await response.text().catch(() => 'Unable to read error response');
+                  throw new Error(`Webhook failed: ${response.status} ${response.statusText} - ${errorText}`);
+                }
+
+                logger.log('Successfully triggered n8n module completion workflow', { 
+                  moduleId, 
+                  userId: supabaseUser.id,
+                  status: response.status 
+                });
+
+              } catch (webhookError) {
+                // More detailed error logging
+                if (webhookError.name === 'AbortError') {
+                  logger.error('n8n webhook timeout (10s) - check webhook URL and n8n instance', { moduleId });
+                } else if (webhookError.message?.includes('Failed to fetch')) {
+                  logger.error('n8n webhook network error - check URL and CORS settings', { 
+                    moduleId, 
+                    error: webhookError.message,
+                    webhookUrl: import.meta.env.VITE_N8N_MODULE_COMPLETION_WEBHOOK?.substring(0, 50) + '...'
+                  });
+                } else {
+                  logger.error('n8n webhook error:', webhookError);
+                }
+                // Continue - don't let webhook errors break progress tracking
+              }
             }
           } catch (error) {
             logger.error('Error handling module completion:', error);

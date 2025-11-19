@@ -287,7 +287,7 @@ return {
 {
   "to": "{{$json.email}}",
   "subject": "🇫🇷 You can now {{$json.real_world_use}} in French",
-  "html": "<!DOCTYPE html>...APPLICATION PROOF TEMPLATE...",
+  "html": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\" /><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /><title>You Can Now Do This!</title></head><body style=\"margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; background-color: #ffffff;\"><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background-color: #ffffff\"><tr><td align=\"center\" style=\"padding: 48px 24px\"><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"max-width: 600px\"><tr><td style=\"padding: 0 0 40px 0; text-align: center\"><img src=\"https://languageacademy.io/img/TLA_CoreMark_Blue_tm_v1.1.1.png\" alt=\"Language Academy\" height=\"38\" width=\"auto\" style=\"height: 38px; width: auto; margin-bottom: 24px; display: block; margin-left: auto; margin-right: auto;\" /><div style=\"font-size: 13px; font-weight: 500; letter-spacing: 0.5px; color: #999999; text-transform: uppercase; margin-bottom: 16px;\">Application Proof</div><div style=\"font-size: 32px; margin-bottom: 8px\">💬</div></td></tr><tr><td style=\"padding: 0 0 40px 0; text-align: center; border-bottom: 1px solid #f0f0f0;\"><div style=\"font-size: 14px; color: #999999; margin-bottom: 12px\">Remember when French felt like random vocabulary?</div><h1 style=\"margin: 0 0 16px 0; font-size: 36px; font-weight: 300; letter-spacing: -0.03em; color: #1a1a1a; line-height: 1.3;\">You can now<br />{{$json.real_world_use}}</h1><p style=\"margin: 0; font-size: 16px; color: #665665; line-height: 1.6;\">in French</p></td></tr><tr><td style=\"padding: 48px 0 0 0\"><h2 style=\"margin: 0 0 24px 0; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; color: #1a1a1a; text-align: center;\">🗣️ Real Conversations You Can Have</h2><div style=\"padding: 32px 24px; background: #f0f9ff; border-radius: 12px; margin-bottom: 16px;\"><div style=\"font-size: 15px; color: #1a1a1a; line-height: 2; font-family: 'Courier New', monospace;\">{{$json.dialog_line_1}}<br /><strong style=\"color: #3b82f6\">{{$json.dialog_line_2}}</strong><br />{{$json.dialog_line_3}}<br /><strong style=\"color: #3b82f6\">{{$json.dialog_line_4}}</strong></div></div><div style=\"padding: 16px; background: #fafbfc; border-radius: 8px; text-align: center;\"><div style=\"font-size: 13px; color: #999999; margin-bottom: 4px\">Blue text = what you just learned</div><div style=\"font-size: 13px; color: #665665\">You're using {{$json.vocab_count}} new words in context</div></div></td></tr><tr><td style=\"padding: 48px 0 48px 0; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; margin-top: 40px;\"><h3 style=\"margin: 0 0 16px 0; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: #1a1a1a; text-align: center;\">✍️ Try This Challenge</h3><p style=\"margin: 0 0 24px 0; font-size: 15px; color: #665665; text-align: center; line-height: 1.6;\">{{$json.challenge_prompt}}</p><div style=\"padding: 24px; background: #fafbfc; border-radius: 12px; border: 2px dashed #e0e0e0; text-align: center; margin-bottom: 24px;\"><div style=\"font-size: 14px; color: #999999; margin-bottom: 8px\">Example response:</div><div style=\"font-size: 16px; color: #1a1a1a; font-style: italic; line-height: 1.7;\">\"{{$json.example_response}}\"</div></div><a href=\"https://languageacademy.io?challenge={{$json.challenge_id}}\" style=\"display: inline-block; width: 100%; padding: 16px; background: #3b82f6; color: #ffffff; text-decoration: none; border-radius: 10px; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; text-align: center; box-sizing: border-box;\">Submit Your Attempt</a></td></tr><tr><td style=\"padding: 48px 0 40px 0\"><h3 style=\"margin: 0 0 24px 0; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: #1a1a1a; text-align: center;\">📺 Media You Can Understand</h3><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-bottom: 12px\"><div style=\"padding: 16px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px;\"><div style=\"font-size: 15px; color: #1a1a1a; font-weight: 500; margin-bottom: 4px;\">{{$json.media_title_1}}</div><div style=\"font-size: 13px; color: #665665; margin-bottom: 12px;\">{{$json.media_type_1}} • {{$json.media_level_1}}</div><a href=\"{{$json.media_link_1}}\" style=\"display: inline-block; padding: 8px 16px; background: #fafbfc; color: #3b82f6; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;\">Watch →</a></div></td></tr><tr><td style=\"padding-bottom: 0\"><div style=\"padding: 16px; background: #ffffff; border: 2px solid #f0f0f0; border-radius: 12px;\"><div style=\"font-size: 15px; color: #1a1a1a; font-weight: 500; margin-bottom: 4px;\">{{$json.media_title_2}}</div><div style=\"font-size: 13px; color: #665665; margin-bottom: 12px;\">{{$json.media_type_2}} • {{$json.media_level_2}}</div><a href=\"{{$json.media_link_2}}\" style=\"display: inline-block; padding: 8px 16px; background: #fafbfc; color: #3b82f6; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;\">Listen →</a></div></td></tr></table></td></tr><tr><td style=\"padding: 48px 0 0 0; border-top: 1px solid #f0f0f0; text-align: center;\"><div style=\"padding: 24px 0 16px 0;\"><img src=\"https://languageacademy.io/img/TLA_CoreMark_Blue_tm_v1.1.1.png\" alt=\"Language Academy\" style=\"height: 38px; width: auto; margin-bottom: 12px;\" /><div style=\"font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: #1a1a1a; margin-bottom: 4px;\">Language Academy</div><div style=\"font-size: 13px; color: #999999;\">Learn French through cognitive science</div></div><div style=\"padding: 16px 0;\"><a href=\"https://languageacademy.io\" style=\"color: #3b82f6; text-decoration: none; font-size: 14px; margin: 0 12px;\">Visit App</a><span style=\"color: #e0e0e0;\">|</span><a href=\"https://languageacademy.io?settings&section=notifications\" style=\"color: #999999; text-decoration: none; font-size: 14px; margin: 0 12px;\">Preferences</a><span style=\"color: #e0e0e0;\">|</span><a href=\"https://languageacademy.io?unsubscribe&type=progress\" style=\"color: #999999; text-decoration: none; font-size: 14px; margin: 0 12px;\">Unsubscribe</a></div><div style=\"padding: 16px 0 0 0; font-size: 12px; color: #cccccc;\">© 2025 Language Academy. All rights reserved.</div></td></tr></table></td></tr></table></body></html>",
   "email_type": "application_proof",
   "user_id": "{{$json.user_id}}",
   "metadata": {
@@ -310,9 +310,12 @@ curl -X POST https://your-n8n-webhook-url/module-completion \
   -H "Content-Type: application/json" \
   -d '{
     "user_id": "your-test-user-id",
+    "email": "test@example.com",
+    "name": "Test User",
     "module_id": 3,
-    "score": 92,
-    "timestamp": "2025-11-17T10:30:00Z"
+    "exam_score": 92,
+    "completed_at": "2025-11-17T10:30:00Z",
+    "modules_completed": 5
   }'
 ```
 
@@ -333,8 +336,12 @@ curl -X POST https://your-n8n-webhook-url/module-completion \
 ```json
 {
   "user_id": "test-user-id",
+  "email": "test@example.com",
+  "name": "Test User",
   "module_id": 15,
-  "score": 88
+  "exam_score": 88,
+  "completed_at": "2025-11-17T10:30:00Z",
+  "modules_completed": 8
 }
 ```
 
@@ -342,7 +349,80 @@ curl -X POST https://your-n8n-webhook-url/module-completion \
 
 ---
 
+## 🔧 **Troubleshooting Webhook Issues**
+
+### **Common Error: "Failed to fetch"**
+
+This error means the webhook request couldn't reach your n8n instance. Check:
+
+1. **Environment Variable Set:**
+
+   ```bash
+   # In your .env file:
+   VITE_N8N_MODULE_COMPLETION_WEBHOOK=https://your-n8n-instance.com/webhook/module-completion
+   ```
+
+2. **n8n Instance Running:**
+
+   - Verify your n8n instance is accessible
+   - Test the webhook URL in browser/Postman
+
+3. **Correct Webhook URL:**
+
+   - Should end with your webhook path (e.g., `/webhook/module-completion`)
+   - Must be the full URL including protocol (`https://`)
+
+4. **CORS Configuration:**
+   - If testing locally, n8n may need CORS headers
+   - Production deployments usually handle this automatically
+
+### **Test Webhook Connection:**
+
+```bash
+# Run the test script
+node test-webhook.js
+```
+
+### **Check Browser Console:**
+
+Look for these log messages:
+
+- ✅ `"Triggering n8n webhook for module completion"` - webhook attempt started
+- ✅ `"Successfully triggered n8n module completion workflow"` - webhook succeeded
+- ❌ `"n8n webhook network error"` - connection failed
+- ⚠️ `"VITE_N8N_MODULE_COMPLETION_WEBHOOK environment variable not set"` - missing config
+
+### **Temporary Disable Webhook:**
+
+If you want to test module completion without the webhook, simply don't set the environment variable:
+
+```bash
+# Comment out or remove this line from .env:
+# VITE_N8N_MODULE_COMPLETION_WEBHOOK=https://...
+```
+
+The app will log a warning but continue working normally.
+
+---
+
 ## 🔧 **Deployment Steps**
+
+### **0. Environment Setup**
+
+Add the n8n webhook URL to your `.env` file:
+
+```bash
+# Add this to your .env file
+VITE_N8N_MODULE_COMPLETION_WEBHOOK=https://your-n8n-instance.com/webhook/module-completion
+```
+
+**Note:** The webhook is automatically triggered when a user completes a module exam with ≥80% score.
+
+**Test your webhook setup:**
+
+```bash
+node test-webhook.js
+```
 
 ### **1. Deploy Edge Functions**
 
