@@ -127,6 +127,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
   // Legacy module time tracking (will be removed)
   const moduleStartTimeRef = useRef(Date.now());
+  
+  // Track if completion has been recorded to prevent duplicates
+  const completionRecordedRef = useRef(false);
 
   const { supabaseClient, supabaseUser, isAuthenticated, moduleProgress } = useSupabaseProgress();
 
@@ -168,6 +171,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       const timeSpentOnModule = Math.round((Date.now() - moduleStartTimeRef.current) / 1000);
       setModuleTimeSpent(timeSpentOnModule);
       setModuleCompleted(true);
+      // Reset completion tracking when modal shows
+      completionRecordedRef.current = false;
     }
 
     return wasSuccessful;
@@ -330,10 +335,20 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       return;
     }
 
-    // Pass lesson.id explicitly, with goToNext flag
-    const currentModuleId = lesson.id;
-    logger.log('Calling onModuleComplete with moduleId:', currentModuleId);
-    onModuleComplete(currentModuleId, 100, 0, true); // timeSpent = 0, managed by useModuleTime
+    // Record completion if not already recorded, then navigate
+    if (!completionRecordedRef.current) {
+      logger.log('Recording module completion on next module click', { moduleId: lesson.id });
+      completionRecordedRef.current = true;
+      // Pass lesson.id explicitly, with goToNext flag
+      const currentModuleId = lesson.id;
+      logger.log('Calling onModuleComplete with moduleId:', currentModuleId);
+      onModuleComplete(currentModuleId, 100, 0, true); // timeSpent = 0, managed by useModuleTime, goToNext = true
+    } else {
+      // Completion already recorded (from modal close), just trigger navigation
+      // onModuleComplete handles navigation when goToNext = true
+      logger.log('Completion already recorded, triggering navigation');
+      onModuleComplete(lesson.id, 100, 0, true); // goToNext = true triggers navigation
+    }
   };
 
   const handleResetModule = async () => {
@@ -563,8 +578,20 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     }
   }, [lesson.id]); // Only run when lesson changes
 
-  // Close modal without navigating
+  // Reset completion tracking when lesson changes
+  useEffect(() => {
+    completionRecordedRef.current = false;
+  }, [lesson.id]);
+
+  // Close modal without navigating - but record completion first
   const handleCloseModal = () => {
+    // Record completion if not already recorded
+    if (!completionRecordedRef.current && lesson && lesson.id && onModuleComplete) {
+      logger.log('Recording module completion on modal close', { moduleId: lesson.id });
+      completionRecordedRef.current = true;
+      // Record completion with score 100 (exercises completed) but don't navigate
+      onModuleComplete(lesson.id, 100, 0, false); // timeSpent = 0 (managed by useModuleTime), goToNext = false
+    }
     setModuleCompleted(false);
   };
 
@@ -575,7 +602,15 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         <ModuleCompleteModal
           lesson={lesson}
           onNextModule={handleNextModule}
-          onBackToModules={onBack}
+          onBackToModules={() => {
+            // Record completion before going back
+            if (!completionRecordedRef.current && lesson && lesson.id && onModuleComplete) {
+              logger.log('Recording module completion on back to modules', { moduleId: lesson.id });
+              completionRecordedRef.current = true;
+              onModuleComplete(lesson.id, 100, 0, false); // goToNext = false
+            }
+            onBack();
+          }}
           onClose={handleCloseModal}
           onTakeExam={handleTakeExam}
           onRetakeExercises={handleRetakeExercises}
