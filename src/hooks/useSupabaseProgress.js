@@ -366,54 +366,68 @@ export const useSupabaseProgress = () => {
                   webhookUrl: webhookUrl.substring(0, 50) + '...' 
                 });
 
-                // Get unit number from frontend source of truth (same as navigation)
-                // This ensures we use the same dynamic unit structure as the UI
+                // Get email metadata directly from module files (same source as UI)
+                // No need for edge function - modules already have emailMetadata
+                // Note: buildLesson doesn't copy emailMetadata, so we need to get it from module configs
+                let emailMetadata = null;
                 let unitNumber = null;
                 let numericModuleId = null;
+                
                 try {
                   const { getModuleId } = await import('../lessons/moduleIdResolver.js');
                   const { getUnitForLesson } = await import('../utils/unitHelpers.js');
+                  const { lessons } = await import('../lessons/lessonData.js');
+                  const { getModuleConfigs } = await import('../lessons/unitConfigLoader.js');
+                  
                   numericModuleId = getModuleId(moduleId);
                   
                   if (numericModuleId !== 'UNKNOWN') {
+                    // Find current lesson in lessons array
+                    const currentLesson = lessons.find(l => l.id === numericModuleId);
+                    
+                    // Get unit number from unit structure
                     const unit = getUnitForLesson(numericModuleId);
                     if (unit && unit.id) {
-                      // unit.id is the numeric unit number (1, 2, 3, etc.) from metadata.id
-                      // generateUnitStructure spreads unitConfig.metadata properties directly
                       unitNumber = unit.id;
-                      logger.log('Calculated unit number from frontend', { moduleId, numericModuleId, unitNumber, unitTitle: unit.title });
                     }
-                  }
-                } catch (unitError) {
-                  logger.warn('Failed to calculate unit number, continuing without it', unitError);
-                }
-
-                // Fetch email metadata from edge function
-                let emailMetadata = null;
-                try {
-                  // Use numericModuleId already calculated above
-                  if (numericModuleId && numericModuleId !== 'UNKNOWN') {
-                    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-                    const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-                    const metadataUrl = `${supabaseUrl}/functions/v1/get-module-email-data?module_id=${numericModuleId}`;
                     
-                    const metadataResponse = await fetch(metadataUrl, {
-                      headers: {
-                        'Authorization': `Bearer ${supabaseAnonKey}`,
-                        'Content-Type': 'application/json',
-                      },
-                    });
-
-                    if (metadataResponse.ok) {
-                      const metadataData = await metadataResponse.json();
-                      if (metadataData.success && metadataData.data) {
-                        emailMetadata = metadataData.data;
-                        logger.log('Fetched email metadata for module', { moduleId, numericModuleId });
-                      }
+                    // Get emailMetadata from original module config (buildLesson doesn't copy it)
+                    const moduleConfigs = getModuleConfigs();
+                    const moduleConfig = moduleConfigs[numericModuleId - 1]; // Array is 0-indexed, IDs are 1-indexed
+                    
+                    if (currentLesson && moduleConfig?.emailMetadata) {
+                      // Strip "Module ##:" prefix from title for email (same as navigation)
+                      const emailTitle = currentLesson.title.replace(/^Module \d+:\s*/, '');
+                      
+                      // Get next module config (if exists)
+                      const nextModuleConfig = moduleConfigs[numericModuleId]; // Next index in array
+                      const nextLesson = lessons.find(l => l.id === numericModuleId + 1);
+                      const nextModuleMetadata = (nextModuleConfig?.emailMetadata && nextLesson) ? {
+                        title: nextLesson.title.replace(/^Module \d+:\s*/, ''),
+                        realWorldUse: nextModuleConfig.emailMetadata.realWorldUse,
+                        capabilities: nextModuleConfig.emailMetadata.capabilities || [],
+                      } : null;
+                      
+                      emailMetadata = {
+                        module: {
+                          id: numericModuleId, // Add ID to match edge function structure
+                          title: emailTitle,
+                          capabilities: moduleConfig.emailMetadata.capabilities || [],
+                          realWorldUse: moduleConfig.emailMetadata.realWorldUse || "continue learning French",
+                          milestone: moduleConfig.emailMetadata.milestone || null,
+                          utilityScore: moduleConfig.emailMetadata.utilityScore || 5,
+                          isUnitCompletion: moduleConfig.emailMetadata.isUnitCompletion || false,
+                          nextModuleTeaser: moduleConfig.emailMetadata.nextModuleTeaser || "Keep building your French skills",
+                          unitNumber: unitNumber,
+                        },
+                        nextModule: nextModuleMetadata,
+                      };
+                      
+                      logger.log('Got email metadata from module files', { moduleId, numericModuleId, unitNumber, hasMetadata: !!moduleConfig.emailMetadata });
                     }
                   }
                 } catch (metadataError) {
-                  logger.warn('Failed to fetch email metadata, continuing without it', metadataError);
+                  logger.warn('Failed to get email metadata from module files, continuing without it', metadataError);
                   // Continue without metadata - don't fail the webhook
                 }
 
@@ -426,8 +440,7 @@ export const useSupabaseProgress = () => {
                   exam_score: examScore,
                   completed_at: data.completed_at,
                   modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1,
-                  // Add email metadata if available
-                  // Use frontend-calculated unitNumber (from same source as navigation) instead of edge function
+                  // Add email metadata if available (now from module files, not edge function)
                   ...(emailMetadata && {
                     module_metadata: {
                       title: emailMetadata.module?.title,
@@ -437,7 +450,7 @@ export const useSupabaseProgress = () => {
                       utilityScore: emailMetadata.module?.utilityScore,
                       isUnitCompletion: emailMetadata.module?.isUnitCompletion,
                       nextModuleTeaser: emailMetadata.module?.nextModuleTeaser,
-                      unitNumber: unitNumber || emailMetadata.module?.unitNumber, // Prefer frontend-calculated unit number
+                      unitNumber: emailMetadata.module?.unitNumber, // From frontend unit structure
                     },
                     next_module_metadata: emailMetadata.nextModule ? {
                       title: emailMetadata.nextModule.title,
