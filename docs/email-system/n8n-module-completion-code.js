@@ -8,11 +8,9 @@ const nextModuleMetadata = webhookData.next_module_metadata || null;
 
 // Build complete module data object with all metadata
 const moduleData = {
-  // IDs
+  // IDs - use numeric module_id from webhook (calculated from frontend source of truth)
   moduleKey: webhookData.module_key,
-  id: moduleMetadata.unitNumber
-    ? (moduleMetadata.unitNumber - 1) * 12 + 1
-    : null, // Approximate numeric ID
+  id: webhookData.module_id || null, // Use actual numeric module ID from webhook
 
   // Core module info from metadata
   title: moduleMetadata.title || `Module ${webhookData.module_key}`,

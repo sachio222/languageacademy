@@ -422,6 +422,7 @@ export const useSupabaseProgress = () => {
                   email: userProfile.email,
                   name: userProfile.preferred_name || userProfile.first_name || 'Student',
                   module_key: moduleId,
+                  module_id: numericModuleId && numericModuleId !== 'UNKNOWN' ? numericModuleId : null, // Add numeric module ID for email template
                   exam_score: examScore,
                   completed_at: data.completed_at,
                   modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1,
