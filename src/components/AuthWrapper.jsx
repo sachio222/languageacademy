@@ -16,7 +16,7 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
-  
+
   // Handle direct login from landing page
   const handleLogin = () => {
     setShowSignUp(false)
@@ -143,13 +143,13 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
     return (
       <div className="auth-container">
         <div className="auth-content">
-          <div className="auth-header">
+          {/* <div className="auth-header">
             <h1>
               <img src="/img/logov2.png" alt="" className="auth-logo-icon" />
               Language Academy
             </h1>
             <p>Create your account to start learning</p>
-          </div>
+          </div> */}
 
           <div className="auth-toggle">
             <button
@@ -245,7 +245,7 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
           </UserButton>
         </div>
       </div>
-      <NotificationSettings 
+      <NotificationSettings
         isOpen={showNotificationSettings}
         onClose={() => setShowNotificationSettings(false)}
       />

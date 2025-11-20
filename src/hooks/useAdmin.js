@@ -9,7 +9,7 @@ export const useAdmin = () => {
   const [newFeedbackCount, setNewFeedbackCount] = useState(0);
 
   // Admin access control - only allow specific user
-  const ADMIN_CLERK_USER_ID = 'user_33nSyBPwjQvGcy5w9GJgCyK5KY0';
+  const ADMIN_CLERK_USER_ID = 'user_35l6XLlv1lfGmaWOdzxlFPNAA0q';
   const ADMIN_SUPABASE_USER_ID = '35e33bec-de10-4d70-86a3-c992fc7655dc';
 
   const isAdmin = user?.id === ADMIN_CLERK_USER_ID || supabaseUser?.id === ADMIN_SUPABASE_USER_ID;
