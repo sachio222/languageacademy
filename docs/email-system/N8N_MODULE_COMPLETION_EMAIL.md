@@ -273,8 +273,10 @@ Add this filter node before sending:
 
 ```
 {{$json.email_enabled}} = true
-AND {{$json.progress_emails}} = true
+AND {{$json.module_completion}} = true
 ```
+
+**Note:** The edge function `send-resend-email` will also check this preference automatically, but it's good practice to check in n8n as well to avoid unnecessary API calls.
 
 ---
 

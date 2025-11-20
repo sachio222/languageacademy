@@ -87,10 +87,11 @@ serve(async (req) => {
     if (user_id) {
       const { data: prefs } = await supabaseAdmin
         .from("notification_preferences")
-        .select("email_enabled")
+        .select("email_enabled, module_completion")
         .eq("user_id", user_id)
         .single();
 
+      // Check master email toggle
       if (prefs && !prefs.email_enabled) {
         console.log(`User ${user_id} has emails disabled - skipping ${email_type}`);
         
@@ -108,6 +109,34 @@ serve(async (req) => {
 
         return new Response(
           JSON.stringify({ success: false, reason: "user_opted_out" }),
+          { 
+            headers: { 
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*"
+            } 
+          }
+        );
+      }
+
+      // Check specific preference for module completion emails
+      if ((email_type === "lesson_complete" || email_type === "module_completion") && 
+          prefs && prefs.module_completion === false) {
+        console.log(`User ${user_id} has module_completion disabled - skipping ${email_type}`);
+        
+        await supabaseAdmin.from("email_logs").insert({
+          user_id,
+          email_type,
+          recipient_email: to,
+          subject,
+          sent_at: new Date().toISOString(),
+          status: "skipped",
+          provider: "resend",
+          failure_reason: "module_completion_disabled",
+          metadata
+        });
+
+        return new Response(
+          JSON.stringify({ success: false, reason: "module_completion_disabled" }),
           { 
             headers: { 
               "Content-Type": "application/json",

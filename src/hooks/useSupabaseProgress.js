@@ -327,25 +327,43 @@ export const useSupabaseProgress = () => {
                 // Continue even if sync fails
               }
 
-              // Send congrats email via Resend
+              // Send congrats email via Resend (check preferences first)
               try {
-                const { emailTemplates } = await import('../utils/emailTemplates.js');
-                const template = emailTemplates.lessonComplete(
-                  userProfile.preferred_name || userProfile.first_name || 'there',
-                  `Module ${moduleId}`, // Could fetch actual title
-                  moduleId
-                );
+                // Check user's email preferences
+                const { data: emailPrefs } = await supabaseClient
+                  .from('notification_preferences')
+                  .select('email_enabled, module_completion')
+                  .eq('user_id', supabaseUser.id)
+                  .single();
 
-                await supabaseClient.functions.invoke('send-resend-email', {
-                  body: {
-                    to: userProfile.email,
-                    subject: template.subject,
-                    html: template.html,
-                    email_type: 'lesson_complete',
-                    user_id: supabaseUser.id,
-                    metadata: { module_key: moduleId }
-                  }
-                });
+                // Only send if user has emails enabled and module_completion preference is true
+                const shouldSendEmail = emailPrefs?.email_enabled !== false && 
+                                       emailPrefs?.module_completion !== false;
+
+                if (shouldSendEmail) {
+                  const { emailTemplates } = await import('../utils/emailTemplates.js');
+                  const template = emailTemplates.lessonComplete(
+                    userProfile.preferred_name || userProfile.first_name || 'there',
+                    `Module ${moduleId}`, // Could fetch actual title
+                    moduleId
+                  );
+
+                  await supabaseClient.functions.invoke('send-resend-email', {
+                    body: {
+                      to: userProfile.email,
+                      subject: template.subject,
+                      html: template.html,
+                      email_type: 'lesson_complete',
+                      user_id: supabaseUser.id,
+                      metadata: { module_key: moduleId }
+                    }
+                  });
+                } else {
+                  logger.log('Skipping module completion email - user preferences disabled', {
+                    email_enabled: emailPrefs?.email_enabled,
+                    module_completion: emailPrefs?.module_completion
+                  });
+                }
               } catch (emailError) {
                 logger.error('Error sending completion email:', emailError);
                 // Continue even if email fails

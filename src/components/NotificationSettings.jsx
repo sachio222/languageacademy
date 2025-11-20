@@ -177,6 +177,22 @@ function NotificationSettings({ isOpen, onClose }) {
                       <span className="notification-toggle-slider"></span>
                     </label>
                   </div>
+
+                  <div className="notification-settings-toggle-row">
+                    <div className="notification-settings-toggle-info">
+                      <h4>Module Completion</h4>
+                      <p>Celebration emails when you complete a module</p>
+                    </div>
+                    <label className="notification-toggle-switch">
+                      <input
+                        type="checkbox"
+                        checked={localPrefs?.module_completion !== false}
+                        onChange={() => handleToggle('module_completion')}
+                        disabled={!localPrefs?.email_enabled || saving}
+                      />
+                      <span className="notification-toggle-slider"></span>
+                    </label>
+                  </div>
                 </div>
               </div>
 

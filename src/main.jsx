@@ -18,6 +18,22 @@ if (!PUBLISHABLE_KEY) {
 // Initialize performance monitoring
 initializePerformanceMonitoring()
 
+// Suppress Clarity-related unhandled promise rejections
+// Microsoft Clarity's iframe can cause "Failed to fetch" errors that don't affect functionality
+window.addEventListener('unhandledrejection', (event) => {
+  const error = event.reason;
+  const errorMessage = error?.message || '';
+  const errorStack = error?.stack || '';
+  
+  // Suppress Clarity-related fetch errors from frame_ant.js
+  if (errorMessage.includes('Failed to fetch') && 
+      (errorStack.includes('frame_ant') || errorStack.includes('clarity'))) {
+    event.preventDefault();
+    // Silently ignore - these errors don't affect functionality
+    return;
+  }
+});
+
 // Auto-initialize Clarity if consent already given (for returning users)
 initializeClarity()
 

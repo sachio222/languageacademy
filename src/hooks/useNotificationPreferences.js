@@ -35,6 +35,7 @@ export const useNotificationPreferences = () => {
               word_of_day: true,
               review_reminders: true,
               module_nudges: true,
+              module_completion: true,
               timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'
             })
             .select()

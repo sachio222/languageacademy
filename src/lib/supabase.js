@@ -9,6 +9,22 @@ if (!supabaseUrl || !supabaseAnonKey) {
   );
 }
 
+// Capture the original fetch before any third-party scripts (like Clarity) can intercept it
+// Microsoft Clarity's iframe can interfere with fetch requests, causing "Failed to fetch" errors
+// By capturing the original fetch early, we ensure Supabase always uses the real fetch API
+const originalFetch = (() => {
+  if (typeof window !== 'undefined' && window.fetch) {
+    return window.fetch.bind(window);
+  }
+  return globalThis.fetch?.bind(globalThis) || fetch;
+})();
+
+// Custom fetch wrapper that uses the original fetch
+// This ensures Supabase requests bypass any Clarity interception
+const customFetch = (url, options = {}) => {
+  return originalFetch(url, options);
+};
+
 // Create Supabase client with Clerk session token support (EXACT FROM DOCS)
 export const createClerkSupabaseClient = (session) => {
   return createClient(supabaseUrl, supabaseAnonKey, {
@@ -16,11 +32,18 @@ export const createClerkSupabaseClient = (session) => {
       const token = await session?.getToken();
       return token ?? null;
     },
+    global: {
+      fetch: customFetch,
+    },
   });
 };
 
 // Default client for non-authenticated use
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  global: {
+    fetch: customFetch,
+  },
+});
 
 // Database schema reference for development
 export const TABLES = {

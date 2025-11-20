@@ -304,6 +304,7 @@ enabled = true
 # Obtain from https://clerk.com/setup/supabase
 domain = "solid-wombat-53.clerk.accounts.dev"
 
+
 # OAuth server configuration
 [auth.oauth_server]
 # Enable OAuth server functionality
