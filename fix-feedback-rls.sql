@@ -13,10 +13,10 @@ CREATE POLICY "Users can insert feedback" ON feedback
 -- Allow admin to SELECT all feedback
 CREATE POLICY "Admin can view all feedback" ON feedback
   FOR SELECT
-  USING (auth.jwt() ->> 'sub' = 'user_33nSyBPwjQvGcy5w9GJgCyK5KY0');
+  USING (auth.jwt() ->> 'sub' = 'user_35l6XLlv1lfGmaWOdzxlFPNAA0q');
 
 -- Allow admin to UPDATE feedback
 CREATE POLICY "Admin can update feedback" ON feedback
   FOR UPDATE
-  USING (auth.jwt() ->> 'sub' = 'user_33nSyBPwjQvGcy5w9GJgCyK5KY0')
-  WITH CHECK (auth.jwt() ->> 'sub' = 'user_33nSyBPwjQvGcy5w9GJgCyK5KY0');
+  USING (auth.jwt() ->> 'sub' = 'user_35l6XLlv1lfGmaWOdzxlFPNAA0q')
+  WITH CHECK (auth.jwt() ->> 'sub' = 'user_35l6XLlv1lfGmaWOdzxlFPNAA0q');

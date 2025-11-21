@@ -11,8 +11,12 @@ export const useAdmin = () => {
   // Admin access control - only allow specific user
   const ADMIN_CLERK_USER_ID = 'user_35l6XLlv1lfGmaWOdzxlFPNAA0q';
   const ADMIN_SUPABASE_USER_ID = '35e33bec-de10-4d70-86a3-c992fc7655dc';
+  const ADMIN_EMAIL = 'jake.krajewski@gmail.com';
 
-  const isAdmin = user?.id === ADMIN_CLERK_USER_ID || supabaseUser?.id === ADMIN_SUPABASE_USER_ID;
+  const isAdmin = 
+    user?.id === ADMIN_CLERK_USER_ID || 
+    supabaseUser?.id === ADMIN_SUPABASE_USER_ID ||
+    (supabaseUser?.email && supabaseUser.email.toLowerCase() === ADMIN_EMAIL.toLowerCase());
 
   // Refresh feedback count
   const refreshFeedbackCount = useCallback(async () => {
