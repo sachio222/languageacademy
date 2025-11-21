@@ -12,6 +12,7 @@ interface EmailRequest {
   email_type: string;
   user_id?: string;
   metadata?: Record<string, any>;
+  headers?: Record<string, string>;
 }
 
 serve(async (req) => {
@@ -47,7 +48,7 @@ serve(async (req) => {
       );
     }
 
-    const { to, subject, html, email_type, user_id, metadata = {} } = requestData;
+    const { to, subject, html, email_type, user_id, metadata = {}, headers = {} } = requestData;
 
     // GRACEFUL CHECK 1: Is Resend configured?
     if (!isResendConfigured) {
@@ -147,6 +148,28 @@ serve(async (req) => {
       }
     }
 
+    // Build unsubscribe URL based on email type
+    const getUnsubscribeUrl = () => {
+      const baseUrl = "https://languageacademy.io";
+      // Map email types to unsubscribe types
+      const typeMap: Record<string, string> = {
+        "module_completion": "progress",
+        "lesson_complete": "progress",
+        "wotd": "wotd",
+        "weekly_summary": "weekly",
+        "lesson": "lesson"
+      };
+      const unsubscribeType = typeMap[email_type] || "progress";
+      return `${baseUrl}?unsubscribe&type=${unsubscribeType}`;
+    };
+
+    // Build email headers with List-Unsubscribe
+    const emailHeaders: Record<string, string> = {
+      ...headers,
+      "List-Unsubscribe": `<${getUnsubscribeUrl()}>`,
+      "List-Unsubscribe-Post": "List-Unsubscribe=One-Click"
+    };
+
     // SEND EMAIL via Resend
     const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -158,7 +181,8 @@ serve(async (req) => {
         from: "Language Academy <progress@send.languageacademy.io>",
         to: to, // String, not array
         subject: subject,
-        html: html
+        html: html,
+        headers: emailHeaders
       })
     });
 
