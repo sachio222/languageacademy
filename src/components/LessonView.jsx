@@ -15,6 +15,8 @@ import VerbPatternHelp from './VerbPatternHelp';
 import LiaisonHelp from './LiaisonHelp';
 import CognatesHelp from './CognatesHelp';
 import QuestionsHelp from './QuestionsHelp';
+import ModuleSelector from './ModuleSelector';
+import ModuleSectionHeader from './ModuleSectionHeader';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
@@ -66,6 +68,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         window.history.replaceState({}, '', url);
       }
       return {
+        showSelector: false,
         showIntro: false,
         isStudying: false,
         studyCompleted: true,
@@ -76,42 +79,45 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     }
 
     // Normal modules: validate view parameter
-    const validViews = ['intro', 'study', 'speedmatch', 'practice', 'exam'];
+    const validViews = ['selector', 'intro', 'study', 'speedmatch', 'practice', 'pronunciation', 'conversation', 'exam'];
 
-    // If view is invalid, clear it and default to intro
-    if (view && !validViews.includes(view)) {
-      const url = new URL(window.location);
-      url.searchParams.delete('view');
-      window.history.replaceState({}, '', url);
-      return { showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
+    // If view is invalid or missing, default to selector
+    if (!view || !validViews.includes(view)) {
+      return { showSelector: true, showIntro: false, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
     }
 
     // Valid views
     switch (view) {
+      case 'selector':
+        return { showSelector: true, showIntro: false, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
       case 'intro':
-        return { showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
+        return { showSelector: false, showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
       case 'study':
-        return { showIntro: false, isStudying: true, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
+        return { showSelector: false, showIntro: false, isStudying: true, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
       case 'speedmatch':
-        return { showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: true, speedMatchCompleted: false, showExam: false };
+        return { showSelector: false, showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: true, speedMatchCompleted: false, showExam: false };
       case 'practice':
-        return { showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: false };
+        return { showSelector: false, showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: false };
+      case 'pronunciation':
+      case 'conversation':
+        return { showSelector: false, showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: false };
       case 'exam':
-        return { showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: true };
+        return { showSelector: false, showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: true };
       default:
-        // Default to intro for normal modules
-        return { showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
+        return { showSelector: true, showIntro: false, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
     }
   };
 
   const initialState = getInitialViewState();
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(getInitialExerciseIndex);
+  const [showSelector, setShowSelector] = useState(initialState.showSelector);
   const [showIntro, setShowIntro] = useState(initialState.showIntro);
   const [isStudying, setIsStudying] = useState(initialState.isStudying);
   const [studyCompleted, setStudyCompleted] = useState(initialState.studyCompleted);
   const [showSpeedMatch, setShowSpeedMatch] = useState(initialState.showSpeedMatch);
   const [speedMatchCompleted, setSpeedMatchCompleted] = useState(initialState.speedMatchCompleted);
   const [showExam, setShowExam] = useState(initialState.showExam);
+  const [currentSection, setCurrentSection] = useState(null);
   const [moduleCompleted, setModuleCompleted] = useState(false);
   const [resetting, setResetting] = useState(false);
   const [moduleTimeSpent, setModuleTimeSpent] = useState(0);
@@ -194,6 +200,83 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     }
   };
 
+  const handleSectionSelect = (view) => {
+    if (view === 'next') {
+      handleNextModule();
+      return;
+    }
+
+    setShowSelector(false);
+    setCurrentSection(view);
+    
+    switch (view) {
+      case 'intro':
+        setShowIntro(true);
+        setIsStudying(false);
+        setStudyCompleted(false);
+        setShowSpeedMatch(false);
+        setSpeedMatchCompleted(false);
+        setShowExam(false);
+        updateViewInUrl('intro');
+        break;
+      case 'study':
+        setShowIntro(false);
+        setIsStudying(true);
+        setStudyCompleted(false);
+        setShowSpeedMatch(false);
+        setSpeedMatchCompleted(false);
+        setShowExam(false);
+        setCurrentExerciseIndex(0);
+        updateViewInUrl('study');
+        updateExerciseInUrl(0);
+        break;
+      case 'speedmatch':
+        setShowIntro(false);
+        setIsStudying(false);
+        setStudyCompleted(true);
+        setShowSpeedMatch(true);
+        setSpeedMatchCompleted(false);
+        setShowExam(false);
+        updateViewInUrl('speedmatch');
+        break;
+      case 'practice':
+        setShowIntro(false);
+        setIsStudying(false);
+        setStudyCompleted(true);
+        setShowSpeedMatch(false);
+        setSpeedMatchCompleted(true);
+        setShowExam(false);
+        setCurrentExerciseIndex(0);
+        updateViewInUrl('practice');
+        updateExerciseInUrl(0);
+        break;
+      case 'pronunciation':
+      case 'conversation':
+        // Placeholder for future sections
+        setShowIntro(false);
+        setIsStudying(false);
+        setStudyCompleted(true);
+        setShowSpeedMatch(false);
+        setSpeedMatchCompleted(true);
+        setShowExam(false);
+        updateViewInUrl(view);
+        break;
+      default:
+        setShowSelector(true);
+        updateViewInUrl('selector');
+    }
+  };
+
+  const handleBackToSelector = () => {
+    setShowSelector(true);
+    setShowIntro(false);
+    setIsStudying(false);
+    setShowSpeedMatch(false);
+    setShowExam(false);
+    setCurrentSection(null);
+    updateViewInUrl('selector');
+  };
+
   const handleStartStudying = () => {
     setShowIntro(false);
     setIsStudying(true);
@@ -254,12 +337,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   };
 
   const handleBackToConcepts = () => {
-    setShowIntro(true);
-    setIsStudying(false);
-    setStudyCompleted(false);
-    setCurrentExerciseIndex(0);
-    updateViewInUrl('intro');
-    updateExerciseInUrl(0);
+    handleBackToSelector();
   };
 
   const handleTakeExam = () => {
@@ -448,34 +526,70 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
         // Update view state based on URL
         switch (view) {
+          case 'selector':
+            setShowSelector(true);
+            setShowIntro(false);
+            setIsStudying(false);
+            setStudyCompleted(false);
+            setShowSpeedMatch(false);
+            setShowExam(false);
+            break;
           case 'intro':
+            setShowSelector(false);
             setShowIntro(true);
             setIsStudying(false);
             setStudyCompleted(false);
+            setShowSpeedMatch(false);
             setShowExam(false);
             break;
           case 'study':
+            setShowSelector(false);
             setShowIntro(false);
             setIsStudying(true);
             setStudyCompleted(false);
+            setShowSpeedMatch(false);
+            setShowExam(false);
+            break;
+          case 'speedmatch':
+            setShowSelector(false);
+            setShowIntro(false);
+            setIsStudying(false);
+            setStudyCompleted(true);
+            setShowSpeedMatch(true);
             setShowExam(false);
             break;
           case 'practice':
+            setShowSelector(false);
             setShowIntro(false);
             setIsStudying(false);
             setStudyCompleted(true);
+            setShowSpeedMatch(false);
             setShowExam(false);
             break;
-          case 'exam':
+          case 'pronunciation':
+          case 'conversation':
+            setShowSelector(false);
             setShowIntro(false);
             setIsStudying(false);
             setStudyCompleted(true);
+            setShowSpeedMatch(false);
+            setShowExam(false);
+            setCurrentSection(view);
+            break;
+          case 'exam':
+            setShowSelector(false);
+            setShowIntro(false);
+            setIsStudying(false);
+            setStudyCompleted(true);
+            setShowSpeedMatch(false);
             setShowExam(true);
             break;
           default:
-            setShowIntro(true);
+            setShowSelector(true);
+            setShowIntro(false);
             setIsStudying(false);
             setStudyCompleted(false);
+            setShowSpeedMatch(false);
             setShowExam(false);
         }
       }
@@ -510,48 +624,86 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     // For special module types, always go straight to practice
     if (isReading || isUnitExam || isFillInBlank || isPhonics || isHelpModule) {
+      setShowSelector(false);
       setShowIntro(false);
       setIsStudying(false);
       setStudyCompleted(true);
+      setShowSpeedMatch(false);
       setShowExam(false);
       setModuleCompleted(false);
       setCurrentExerciseIndex(exerciseIndex);
       // Don't update URL for special modules - they don't have views
     } else {
-      // Normal modules: use URL view or default to intro
+      // Normal modules: use URL view or default to selector
       switch (urlView) {
+        case 'selector':
+          setShowSelector(true);
+          setShowIntro(false);
+          setIsStudying(false);
+          setStudyCompleted(false);
+          setShowSpeedMatch(false);
+          setShowExam(false);
+          break;
         case 'intro':
+          setShowSelector(false);
           setShowIntro(true);
           setIsStudying(false);
           setStudyCompleted(false);
+          setShowSpeedMatch(false);
           setShowExam(false);
           break;
         case 'study':
+          setShowSelector(false);
           setShowIntro(false);
           setIsStudying(true);
           setStudyCompleted(false);
+          setShowSpeedMatch(false);
+          setShowExam(false);
+          break;
+        case 'speedmatch':
+          setShowSelector(false);
+          setShowIntro(false);
+          setIsStudying(false);
+          setStudyCompleted(true);
+          setShowSpeedMatch(true);
           setShowExam(false);
           break;
         case 'practice':
+          setShowSelector(false);
           setShowIntro(false);
           setIsStudying(false);
           setStudyCompleted(true);
+          setShowSpeedMatch(false);
           setShowExam(false);
           break;
-        case 'exam':
+        case 'pronunciation':
+        case 'conversation':
+          setShowSelector(false);
           setShowIntro(false);
           setIsStudying(false);
           setStudyCompleted(true);
+          setShowSpeedMatch(false);
+          setShowExam(false);
+          setCurrentSection(urlView);
+          break;
+        case 'exam':
+          setShowSelector(false);
+          setShowIntro(false);
+          setIsStudying(false);
+          setStudyCompleted(true);
+          setShowSpeedMatch(false);
           setShowExam(true);
           break;
         default:
-          // Default to intro
-          setShowIntro(true);
+          // Default to selector
+          setShowSelector(true);
+          setShowIntro(false);
           setIsStudying(false);
           setStudyCompleted(false);
+          setShowSpeedMatch(false);
           setShowExam(false);
-          // Set URL to intro as default
-          updateViewInUrl('intro');
+          // Set URL to selector as default
+          updateViewInUrl('selector');
       }
       setModuleCompleted(false);
       setCurrentExerciseIndex(exerciseIndex);
@@ -645,10 +797,14 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           </button>
         )}
         <div className="exercise-progress">
-          {showIntro ? (
+          {showSelector ? (
+            <span>📋 Module Menu</span>
+          ) : showIntro ? (
             <span>📖 Introduction</span>
           ) : isStudying ? (
             <span>📚 Study Mode</span>
+          ) : showSpeedMatch ? (
+            <span>⚡ Speed Match</span>
           ) : showExam ? (
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Award size={18} style={{ color: '#f59e0b' }} />
@@ -706,18 +862,27 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         )
       ) : lesson.isPhonicsReference ? (
         <PhonicsView />
+      ) : showSelector && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (
+        <ModuleSelector
+          lesson={lesson}
+          onSectionSelect={handleSectionSelect}
+          moduleProgress={moduleProgress || {}}
+          completedExercises={completedExercises}
+        />
       ) : showIntro && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (
-        <div className="intro-container">
-          <div className="intro-skip">
-            <button className="btn-skip" onClick={handleSkipIntro}>
-              Skip to Practice →
-            </button>
-          </div>
-          <ConceptIntro
-            lesson={lesson}
-            onStartStudying={handleStartStudying}
+        <>
+          <ModuleSectionHeader
+            sectionId="intro"
+            isCompleted={studyCompleted || (moduleProgress?.[extractModuleId(lesson)]?.completed_exercises > 0)}
+            onBack={handleBackToSelector}
           />
-        </div>
+          <div className="intro-container">
+            <ConceptIntro
+              lesson={lesson}
+              onStartStudying={handleStartStudying}
+            />
+          </div>
+        </>
       ) : lesson.isFillInTheBlank ? (
         <div className="fill-in-blank-container">
           <FillInTheBlank
@@ -748,32 +913,55 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           unitInfo={unitInfo}
         />
       ) : isStudying ? (
-        <div className="study-container">
-          <div className="study-intro">
-            <button className="btn-back-to-concepts" onClick={handleBackToConcepts}>
-              ← Back to Concepts
-            </button>
-            <div className="study-skip-group">
-              <button className="btn-skip-small" onClick={handleFinishStudying}>
-                ⚡
-              </button>
-              <button className="btn-skip" onClick={handleSkipStudy}>
-                Skip Study Mode →
-              </button>
-            </div>
+        <>
+          <ModuleSectionHeader
+            sectionId="study"
+            isCompleted={studyCompleted}
+            onBack={handleBackToSelector}
+          />
+          <div className="study-container">
+            <StudyMode
+              exercises={lesson.exercises}
+              onFinishStudying={handleFinishStudying}
+              currentExerciseIndex={currentExerciseIndex}
+              updateExerciseInUrl={updateExerciseInUrl}
+            />
           </div>
-          <StudyMode
-            exercises={lesson.exercises}
-            onFinishStudying={handleFinishStudying}
-            currentExerciseIndex={currentExerciseIndex}
-            updateExerciseInUrl={updateExerciseInUrl}
+        </>
+      ) : showSpeedMatch ? (
+        <div>
+          <ModuleSectionHeader
+            sectionId="speedmatch"
+            isCompleted={speedMatchCompleted}
+            onBack={handleBackToSelector}
+          />
+          <SpeedMatch
+            vocabulary={lesson.vocabularyReference}
+            onFinish={handleFinishSpeedMatch}
           />
         </div>
-      ) : showSpeedMatch ? (
-        <SpeedMatch
-          vocabulary={lesson.vocabularyReference}
-          onFinish={handleFinishSpeedMatch}
-        />
+      ) : currentSection === 'pronunciation' ? (
+        <div>
+          <ModuleSectionHeader
+            sectionId="pronunciation"
+            isCompleted={false}
+            onBack={handleBackToSelector}
+          />
+          <div style={{ padding: '2rem', textAlign: 'center' }}>
+            <p>Pronunciation section coming soon!</p>
+          </div>
+        </div>
+      ) : currentSection === 'conversation' ? (
+        <div>
+          <ModuleSectionHeader
+            sectionId="conversation"
+            isCompleted={false}
+            onBack={handleBackToSelector}
+          />
+          <div style={{ padding: '2rem', textAlign: 'center' }}>
+            <p>Conversation section coming soon!</p>
+          </div>
+        </div>
       ) : lesson.isReadingComprehension ? (
         <div className="reading-module-layout">
           <ExercisePane
@@ -793,8 +981,14 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           />
         </div>
       ) : (
-        <div className="lesson-content">
-          <div className="left-pane">
+        <>
+          <ModuleSectionHeader
+            sectionId="practice"
+            isCompleted={moduleProgress?.[extractModuleId(lesson)]?.completed_exercises >= (lesson.exercises?.length || 0)}
+            onBack={handleBackToSelector}
+          />
+          <div className="lesson-content">
+            <div className="left-pane">
             <ExercisePane
               exercise={currentExercise}
               onNext={handleNext}
@@ -805,21 +999,22 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
               onComplete={handleExerciseCompleteWrapper}
               studyCompleted={studyCompleted}
               readingPassage={lesson.readingPassage}
-              onBackToLesson={lesson.isReadingComprehension ? null : handleBackToLesson}
+              onBackToLesson={lesson.isReadingComprehension ? null : handleBackToSelector}
               moduleId={extractModuleId(lesson)}
               displayModuleId={lesson.id}
               unitId={extractUnitId(unitInfo)}
             />
           </div>
 
-          <div className="right-pane">
-            <RightSidebar
-              concepts={lesson.concepts}
-              vocabulary={vocabularyItems}
-              moduleId={extractModuleId(lesson)}
-            />
+            <div className="right-pane">
+              <RightSidebar
+                concepts={lesson.concepts}
+                vocabulary={vocabularyItems}
+                moduleId={extractModuleId(lesson)}
+              />
+            </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

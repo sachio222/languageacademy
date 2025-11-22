@@ -214,7 +214,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
             {modulePrefix}
           </div>
         )}
-        <h2>📖 {mainTitle}</h2>
+        <h2>{mainTitle}</h2>
         <p className="intro-description">{lesson.description}</p>
       </div>
 

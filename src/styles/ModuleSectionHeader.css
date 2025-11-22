@@ -1,0 +1,179 @@
+/* Module Section Header - Full-width header for section pages */
+
+.module-section-header {
+  position: relative;
+  width: 100%;
+  min-height: 120px;
+  border-radius: 0;
+  overflow: hidden;
+  background: var(--section-color);
+  margin-bottom: 2rem;
+}
+
+/* Background Image */
+.module-section-header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  will-change: opacity;
+  backface-visibility: hidden;
+}
+
+/* Scrim Overlay for Text Readability */
+.module-section-header-scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content Overlay */
+.module-section-header-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+  min-height: 120px;
+}
+
+/* Back Button */
+.module-section-header-back {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border: none;
+  color: #ffffff;
+  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+
+.module-section-header-back:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-2px);
+}
+
+.module-section-header-back:active {
+  transform: translateX(0);
+}
+
+/* Title Wrapper - Absolutely positioned for true center */
+.module-section-header-title-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Title */
+.module-section-header-title {
+  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Status Indicator */
+.module-section-header-status {
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.module-section-header-status .status-checkmark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.module-section-header-status .status-circle-dashed {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .module-section-header {
+    min-height: 100px;
+  }
+
+  .module-section-header-content {
+    padding: 1rem 1.25rem;
+    min-height: 100px;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .module-section-header-back {
+    font-size: 0.875rem;
+    padding: 0.625rem 1rem;
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .module-section-header-title-wrapper {
+    order: 2;
+    position: static;
+    transform: none;
+    width: auto;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .module-section-header-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .module-section-header-status {
+    order: 3;
+    flex: 0 0 auto;
+  }
+
+  .module-section-header-status .status-checkmark,
+  .module-section-header-status .status-circle-dashed {
+    width: 32px;
+    height: 32px;
+  }
+
+  .module-section-header-status .status-checkmark svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
