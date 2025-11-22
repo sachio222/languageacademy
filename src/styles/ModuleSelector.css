@@ -97,6 +97,18 @@
   cursor: not-allowed;
 }
 
+/* Locked section styles */
+.module-selector-card.locked {
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+.module-selector-card.locked:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 /* Active state (purple background) */
 .module-selector-card.active {
   background: var(--section-color);

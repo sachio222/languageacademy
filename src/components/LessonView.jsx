@@ -20,9 +20,11 @@ import ModuleSectionHeader from './ModuleSectionHeader';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useSectionProgress } from '../hooks/useSectionProgress';
 import { usePageTime } from '../hooks/usePageTime';
 import { useModuleTime } from '../hooks/useModuleTime';
 import { getUnitIdForLesson } from '../utils/unitHelpers';
+import { getSectionStatus } from '../config/sectionRegistry';
 import { logger } from "../utils/logger";
 import { trackClarityEvent, setClarityTag } from '../utils/clarity';
 
@@ -138,6 +140,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const completionRecordedRef = useRef(false);
 
   const { supabaseClient, supabaseUser, isAuthenticated, moduleProgress } = useSupabaseProgress();
+  const { sectionProgress, loading: sectionLoading, isSectionCompleted } = useSectionProgress();
 
   if (!lesson) return null;
 
@@ -146,6 +149,11 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
   // Generate vocabulary reference from lesson
   const vocabularyItems = lesson.vocabularyReference || [];
+
+  // Get actual completion status from database for section headers
+  const lessonModuleId = extractModuleId(lesson);
+  const isFlashCardsCompleted = isSectionCompleted(lessonModuleId, 'flash-cards');
+  const isVocabIntroCompleted = isSectionCompleted(lessonModuleId, 'vocabulary-intro');
 
   // Helper to update URL view parameter
   const updateViewInUrl = (view) => {
@@ -867,13 +875,15 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           lesson={lesson}
           onSectionSelect={handleSectionSelect}
           moduleProgress={moduleProgress || {}}
+          sectionProgress={sectionProgress}
           completedExercises={completedExercises}
         />
       ) : showIntro && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (
         <>
           <ModuleSectionHeader
             sectionId="intro"
-            isCompleted={studyCompleted || (moduleProgress?.[extractModuleId(lesson)]?.completed_exercises > 0)}
+            moduleId={lessonModuleId}
+            lesson={lesson}
             onBack={handleBackToSelector}
           />
           <div className="intro-container">
@@ -916,7 +926,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         <>
           <ModuleSectionHeader
             sectionId="study"
-            isCompleted={studyCompleted}
+            moduleId={lessonModuleId}
+            lesson={lesson}
             onBack={handleBackToSelector}
           />
           <div className="study-container">
@@ -925,6 +936,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
               onFinishStudying={handleFinishStudying}
               currentExerciseIndex={currentExerciseIndex}
               updateExerciseInUrl={updateExerciseInUrl}
+              lesson={lesson}
             />
           </div>
         </>
@@ -932,19 +944,22 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         <div>
           <ModuleSectionHeader
             sectionId="speedmatch"
-            isCompleted={speedMatchCompleted}
+            moduleId={lessonModuleId}
+            lesson={lesson}
             onBack={handleBackToSelector}
           />
           <SpeedMatch
             vocabulary={lesson.vocabularyReference}
             onFinish={handleFinishSpeedMatch}
+            lesson={lesson}
           />
         </div>
       ) : currentSection === 'pronunciation' ? (
         <div>
           <ModuleSectionHeader
             sectionId="pronunciation"
-            isCompleted={false}
+            moduleId={lessonModuleId}
+            lesson={lesson}
             onBack={handleBackToSelector}
           />
           <div style={{ padding: '2rem', textAlign: 'center' }}>
@@ -955,7 +970,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         <div>
           <ModuleSectionHeader
             sectionId="conversation"
-            isCompleted={false}
+            moduleId={lessonModuleId}
+            lesson={lesson}
             onBack={handleBackToSelector}
           />
           <div style={{ padding: '2rem', textAlign: 'center' }}>
@@ -984,7 +1000,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         <>
           <ModuleSectionHeader
             sectionId="practice"
-            isCompleted={moduleProgress?.[extractModuleId(lesson)]?.completed_exercises >= (lesson.exercises?.length || 0)}
+            moduleId={lessonModuleId}
+            lesson={lesson}
             onBack={handleBackToSelector}
           />
           <div className="lesson-content">

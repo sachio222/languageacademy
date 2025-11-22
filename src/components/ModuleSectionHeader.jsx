@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Check } from 'lucide-react';
+import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { SECTION_REGISTRY } from '../config/sectionRegistry';
 import '../styles/ModuleSectionHeader.css';
 
 // Lazy load images for performance
@@ -35,40 +38,47 @@ const LazyImage = ({ src, alt, className, style }) => {
 /**
  * Module Section Header - Full-width header for section pages
  * Matches the selector card design (color, image, checkmark)
+ * Now automatically checks completion status from database
  */
 
 const SECTION_CONFIG = {
   'intro': {
+    id: 'vocabulary-intro',
     label: 'Vocabulary Intro',
     color: '#8B5CF6',
     pexelsImage: 'https://images.pexels.com/photos/5905708/pexels-photo-5905708.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
     hasImage: true,
   },
   'study': {
+    id: 'flash-cards',
     label: 'Flash Cards',
     color: '#3B82F6',
     pexelsImage: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
     hasImage: true,
   },
   'speedmatch': {
+    id: 'speed-match',
     label: 'Speed Match',
     color: '#10B981',
     pexelsImage: 'https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
     hasImage: true,
   },
   'practice': {
+    id: 'writing',
     label: 'Writing',
     color: '#F59E0B',
     pexelsImage: 'https://images.pexels.com/photos/210661/pexels-photo-210661.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
     hasImage: true,
   },
   'pronunciation': {
+    id: 'pronunciation',
     label: 'Pronunciation',
     color: '#EF4444',
     pexelsImage: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
     hasImage: true,
   },
   'conversation': {
+    id: 'conversation',
     label: 'Conversation',
     color: '#06B6D4',
     pexelsImage: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
@@ -76,8 +86,25 @@ const SECTION_CONFIG = {
   },
 };
 
-function ModuleSectionHeader({ sectionId, isCompleted, onBack }) {
+function ModuleSectionHeader({ sectionId, moduleId, lesson, onBack }) {
   const config = SECTION_CONFIG[sectionId] || SECTION_CONFIG['intro'];
+  
+  // Get reactive state from hooks
+  const { sectionProgress } = useSectionProgress();
+  const { moduleProgress } = useSupabaseProgress();
+  
+  // Calculate completion status (will re-render when state changes)
+  const sectionRegistryId = config.id;
+  const section = SECTION_REGISTRY[sectionRegistryId];
+  const moduleSectionProgress = sectionProgress?.[moduleId] || {};
+  const moduleProgressData = moduleProgress?.[moduleId];
+  
+  // This calculation happens on every render, so it's reactive
+  const isCompleted = section?.getCompletionStatus?.(
+    moduleProgressData,
+    moduleSectionProgress,
+    lesson
+  ) === 'completed';
 
   return (
     <div 

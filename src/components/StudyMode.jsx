@@ -1,19 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import SpeakButton from './SpeakButton';
 import { detectLanguage } from '../hooks/useSpeech';
 import { usePageTime } from '../hooks/usePageTime';
+import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { extractModuleId } from '../utils/progressSync';
+import { logger } from '../utils/logger';
 
 /**
  * Study Mode - Learn before you test
  * Flashcard-style learning with answers revealed
  */
-function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, updateExerciseInUrl }) {
+function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, updateExerciseInUrl, lesson }) {
   const [currentIndex, setCurrentIndex] = useState(currentExerciseIndex);
   const [isRevealed, setIsRevealed] = useState(false);
+  const completionCalled = useRef(false);
 
   // Track page time for study time analytics
   const pageId = `studymode-${exercises?.length || 0}-exercises`;
   const { totalTime: pageTime, isTracking } = usePageTime(pageId, true);
+
+  // Section progress tracking
+  const { completeSectionProgress } = useSectionProgress();
+  const { isAuthenticated } = useSupabaseProgress();
+  
+  // Extract moduleId from lesson
+  const moduleId = lesson ? extractModuleId(lesson) : null;
 
   // Safety check for empty exercises
   if (!exercises || exercises.length === 0) {
@@ -36,6 +48,26 @@ function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, upda
   useEffect(() => {
     setCurrentIndex(currentExerciseIndex);
   }, [currentExerciseIndex]);
+
+  // Auto-complete study-mode section when viewing the last flashcard
+  useEffect(() => {
+    const isLastCard = currentIndex === exercises.length - 1;
+    
+    if (isLastCard && !completionCalled.current && isAuthenticated && moduleId) {
+      completionCalled.current = true;
+      
+      logger.log('StudyMode: Auto-completing flash-cards section - last flashcard viewed');
+      
+      completeSectionProgress(moduleId, 'flash-cards', {
+        flashcards_viewed: exercises.length,
+        completion_method: 'viewed_all_flashcards'
+      }).then(result => {
+        logger.log('StudyMode: Section completion successful', result);
+      }).catch(error => {
+        logger.error('StudyMode: Error completing flash-cards section:', error);
+      });
+    }
+  }, [currentIndex, exercises.length, isAuthenticated, moduleId, completeSectionProgress]);
 
   const currentExercise = exercises[currentIndex];
   const progress = ((currentIndex + 1) / exercises.length) * 100;

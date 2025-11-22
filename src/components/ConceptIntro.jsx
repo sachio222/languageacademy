@@ -3,6 +3,8 @@ import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSectionTime } from '../hooks/useSectionTime';
 import { extractModuleId } from '../utils/progressSync';
 import { getTTSText } from '../utils/ttsUtils';
 import { renderGenderSplitText, getGenderClass, hasGenderSplit } from '../utils/genderSplitUtils.jsx';
@@ -123,6 +125,10 @@ function ConceptIntro({ lesson, onStartStudying }) {
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
 
+  // Section progress and time tracking
+  const { updateSectionProgress, completeSectionProgress } = useSectionProgress();
+  const { totalTime, isTracking } = useSectionTime(moduleId, 'vocabulary-intro', true);
+
   // Load understood concepts from database when module loads
   useEffect(() => {
     const loadUnderstoodConcepts = async () => {
@@ -203,6 +209,39 @@ function ConceptIntro({ lesson, onStartStudying }) {
     const percentage = Math.round((understood / total) * 100);
     return { understood, total, percentage };
   };
+
+  // Auto-complete vocabulary intro section when all concepts are understood
+  useEffect(() => {
+    const allConceptsUnderstood = lesson.concepts &&
+      lesson.concepts.length > 0 &&
+      understoodConcepts.size === lesson.concepts.length;
+
+    logger.log('ConceptIntro: Checking auto-completion', {
+      hasLessonConcepts: !!lesson.concepts,
+      conceptsLength: lesson.concepts?.length || 0,
+      understoodCount: understoodConcepts.size,
+      allConceptsUnderstood,
+      isAuthenticated,
+      moduleId
+    });
+
+    if (allConceptsUnderstood && isAuthenticated && moduleId) {
+      logger.log('ConceptIntro: Auto-completing vocabulary intro section...');
+
+      // Update section progress to mark intro as complete
+      completeSectionProgress(moduleId, 'vocabulary-intro', {
+        concepts_understood: understoodConcepts.size,
+        total_concepts: lesson.concepts.length,
+        completion_method: 'all_concepts_understood'
+      }).then(result => {
+        logger.log('ConceptIntro: Section completion successful', result);
+      }).catch(error => {
+        logger.error('ConceptIntro: Error completing vocabulary intro section:', error);
+      });
+
+      logger.log('ConceptIntro: Vocabulary intro section auto-completed - all concepts understood');
+    }
+  }, [understoodConcepts, lesson.concepts, isAuthenticated, moduleId, completeSectionProgress]);
 
   const { modulePrefix, mainTitle } = splitTitle(lesson.title);
 
@@ -361,33 +400,35 @@ function ConceptIntro({ lesson, onStartStudying }) {
             </div>
 
             {showConcepts && (
-              <div className="concepts-intro-grid">
+              <div className="concepts-intro-list">
                 {lesson.concepts.map((concept, idx) => {
                   const isUnderstood = understoodConcepts.has(idx);
                   return (
-                    <div key={idx} className={`concept-intro-card ${isUnderstood ? 'understood' : ''}`}>
-                      <div className="concept-card-header">
-                        <h4>{concept.term}</h4>
+                    <section key={idx} className={`concept-section ${isUnderstood ? 'understood' : ''}`}>
+                      <div className="concept-section-header">
+                        <h2>{concept.term}</h2>
                         {isUnderstood && (
-                          <div className="concept-check">
-                            <Check size={20} />
+                          <div className="concept-check-badge">
+                            <Check size={18} />
                           </div>
                         )}
                       </div>
-                      <div className="concept-card-body">
-                        <p className="concept-intro-definition">
+                      <div className="concept-section-content">
+                        <p className="concept-definition">
                           {concept.definition}
                         </p>
-                        <div className="concept-intro-example">
-                          <strong>Example</strong>
-                          <code>{concept.example}</code>
+                        <div className="concept-example-block">
+                          <div className="example-label">Example</div>
+                          <div className="example-text">{concept.example}</div>
                         </div>
+                      </div>
+                      <div className="concept-section-footer">
                         <UnderstoodButton
                           isUnderstood={isUnderstood}
                           onClick={() => toggleUnderstood(idx)}
                         />
                       </div>
-                    </div>
+                    </section>
                   );
                 })}
               </div>

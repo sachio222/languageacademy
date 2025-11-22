@@ -1,6 +1,6 @@
 import { useState, useEffect, Suspense, lazy } from 'react';
 import AuthWrapper from './components/AuthWrapper';
-import DevModeWrapper from './components/DevModeWrapper';
+// Removed DevModeWrapper - using proper Clerk development
 import LeftNav from './components/LeftNav';
 import LessonList from './components/LessonList';
 import LessonView from './components/LessonView';
@@ -49,7 +49,7 @@ import { logger } from "./utils/logger";
 
 function App() {
   // Check if we're in dev mode
-  const isDevMode = import.meta.env.VITE_DEV_MODE === 'true';
+  // Removed custom dev mode - using proper Clerk development instance
 
   // Determine if words learned button should be visible (always visible now)
   const showWordsLearned = true;
@@ -188,10 +188,7 @@ function App() {
       return;
     }
 
-    // Only show in production mode
-    if (isDevMode) {
-      return;
-    }
+    // Show for all users (removed dev mode check)
 
     // Only show for authenticated users
     if (!isAuthenticated || !supabaseUser || !supabaseClient) {
@@ -205,7 +202,7 @@ function App() {
 
     // All criteria met - show the beta welcome modal
     setShowBetaNotice(true);
-  }, [isAuthenticated, supabaseUser, supabaseClient, isDevMode]);
+  }, [isAuthenticated, supabaseUser, supabaseClient]);
 
   // Handle URL changes for privacy/terms/data-deletion modals
   useEffect(() => {
@@ -593,7 +590,7 @@ function App() {
       </footer>
 
       <SafariTTSHelper />
-      {!isDevMode && <OfflineIndicator />}
+      <OfflineIndicator />
 
       {navigation.showFeedbackForm && (
         <Suspense fallback={null}>
@@ -727,9 +724,7 @@ function App() {
     </div>
   );
 
-  return isDevMode ? (
-    <DevModeWrapper>{content}</DevModeWrapper>
-  ) : (
+  return (
     <AuthWrapper
       onBackToLanding={navigation.handleBackToLanding}
       onOpenDictionary={navigation.handleOpenDictionary}

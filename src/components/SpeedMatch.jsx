@@ -3,10 +3,14 @@
  * Appears after study mode completion
  */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { RotateCcw } from 'lucide-react';
 import { usePageTime } from '../hooks/usePageTime';
+import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { extractModuleId } from '../utils/progressSync';
 import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../utils/clarity';
+import { logger } from '../utils/logger';
 import SpeakButton from './SpeakButton';
 import "../styles/SpeedMatch.css";
 
@@ -48,7 +52,7 @@ const GAME_STATES = {
   FINISHED: 'finished'
 };
 
-export default function SpeedMatch({ vocabulary, onFinish }) {
+export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
   const [gameState, setGameState] = useState(GAME_STATES.READY);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -58,10 +62,16 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   const [autoAdvance, setAutoAdvance] = useState(true);
   const [showDecimal, setShowDecimal] = useState(false);
   const [difficulty, setDifficulty] = useState('medium'); // none, easy, medium, hard
+  const completionCalled = useRef(false);
 
   // Track page time for study time analytics
   const pageId = `speedmatch-${vocabulary.length}-words`;
   const { totalTime: pageTime, isTracking } = usePageTime(pageId, true);
+
+  // Section progress tracking
+  const { completeSectionProgress } = useSectionProgress();
+  const { isAuthenticated } = useSupabaseProgress();
+  const moduleId = lesson ? extractModuleId(lesson) : null;
 
   const currentWord = vocabulary[currentIndex];
   const [answerOptions, setAnswerOptions] = useState([]);
@@ -178,10 +188,11 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
     if (currentIndex + 1 >= vocabulary.length) {
       setGameState(GAME_STATES.FINISHED);
       
-      // Track game completion in Clarity
+      // Calculate final score (including current answer)
       const finalScore = score + (selectedAnswer?.french === currentWord.french ? 1 : 0);
       const percentageScore = Math.round((finalScore / vocabulary.length) * 100);
       
+      // Track game completion in Clarity
       trackClarityEvent('speedMatchCompleted');
       setClarityTag('speedMatchScore', `${finalScore}/${vocabulary.length}`);
       setClarityTag('speedMatchPercentage', `${percentageScore}%`);
@@ -189,6 +200,24 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
       // Upgrade session for high scores
       if (percentageScore >= 90) {
         upgradeClaritySession('high speed match score');
+      }
+      
+      // Save section completion immediately
+      if (isAuthenticated && moduleId && !completionCalled.current) {
+        completionCalled.current = true;
+        
+        logger.log('SpeedMatch: Auto-completing speed-match section - game finished');
+        
+        completeSectionProgress(moduleId, 'speed-match', {
+          score: finalScore,
+          total: vocabulary.length,
+          accuracy: percentageScore,
+          completion_method: 'game_completed'
+        }).then(result => {
+          logger.log('SpeedMatch: Section completion successful', result);
+        }).catch(error => {
+          logger.error('SpeedMatch: Error completing speed-match section:', error);
+        });
       }
       
       return;
