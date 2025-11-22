@@ -3,7 +3,7 @@ import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useSectionTime } from '../hooks/useSectionTime';
 import { extractModuleId } from '../utils/progressSync';
 import { getTTSText } from '../utils/ttsUtils';

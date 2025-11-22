@@ -20,7 +20,7 @@ import ModuleSectionHeader from './ModuleSectionHeader';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { usePageTime } from '../hooks/usePageTime';
 import { useModuleTime } from '../hooks/useModuleTime';
 import { getUnitIdForLesson } from '../utils/unitHelpers';

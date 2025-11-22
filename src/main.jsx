@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ClerkProvider } from '@clerk/clerk-react'
 import { SupabaseProgressProvider } from './contexts/SupabaseProgressContext'
+import { SectionProgressProvider } from './contexts/SectionProgressContext'
 import App from './App.jsx'
 import { initializePerformanceMonitoring } from './utils/performanceMonitor'
 import { initializeClarity, trackUTMParameters } from './utils/clarity';
@@ -45,7 +46,9 @@ trackUTMParameters()
 function AppWithProviders() {
   return (
     <SupabaseProgressProvider>
-      <App />
+      <SectionProgressProvider>
+        <App />
+      </SectionProgressProvider>
     </SupabaseProgressProvider>
   );
 }

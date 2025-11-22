@@ -6,13 +6,28 @@
 import { useState, useEffect, useRef } from "react";
 import { RotateCcw } from 'lucide-react';
 import { usePageTime } from '../hooks/usePageTime';
-import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../utils/clarity';
 import { logger } from '../utils/logger';
 import SpeakButton from './SpeakButton';
 import "../styles/SpeedMatch.css";
+
+// Helper function to split module title
+const splitTitle = (title) => {
+  const moduleMatch = title.match(/^(Module \d+|Reference [IVX]+):\s*(.*)$/);
+  if (moduleMatch) {
+    return {
+      modulePrefix: moduleMatch[1],
+      mainTitle: moduleMatch[2]
+    };
+  }
+  return {
+    modulePrefix: null,
+    mainTitle: title
+  };
+};
 
 // Helper component to format option text with lighter parentheses
 const OptionText = ({ text }) => {
@@ -296,6 +311,9 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
 
   const isPlayingState = [GAME_STATES.PLAYING, GAME_STATES.CORRECT, GAME_STATES.WRONG, GAME_STATES.TIMEUP].includes(gameState);
 
+  // Extract module prefix from lesson title
+  const { modulePrefix } = lesson ? splitTitle(lesson.title) : { modulePrefix: null };
+
   return (
     <div className={`speed-match-container embedded ${isPlayingState ? "playing" : ""}`}>
       <div className="speed-match-intro">
@@ -333,8 +351,13 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
         {/* Ready Screen */}
         {gameState === GAME_STATES.READY && (
           <div className="speed-match-ready study-header">
-            <h3>⚡️ Speed Match</h3>
-            <p>Quick-Fire Matching Challenge</p>
+            {modulePrefix && (
+              <div className="module-prefix">
+                {modulePrefix}
+              </div>
+            )}
+            <h2>⚡️ Speed Match</h2>
+            <p className="study-description">Quick-Fire Matching Challenge</p>
             <div className="speed-match-instructions">
               <h2>How it works</h2>
               <ul>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Check } from 'lucide-react';
-import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { SECTION_REGISTRY } from '../config/sectionRegistry';
 import '../styles/ModuleSectionHeader.css';
