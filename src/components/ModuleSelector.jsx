@@ -96,7 +96,8 @@ const SECTIONS = [
     label: 'Next\nModule →',
     view: 'next',
     color: '#6B7280', // Grey
-    hasImage: false,
+    pexelsImage: 'https://images.pexels.com/photos/22765125/pexels-photo-22765125.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+    hasImage: true,
     isSpecial: true,
   },
 ];

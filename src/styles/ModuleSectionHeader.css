@@ -3,7 +3,7 @@
 .module-section-header {
   position: relative;
   width: 100%;
-  min-height: 120px;
+  min-height: 156px;
   border-radius: 0;
   overflow: hidden;
   background: var(--section-color);
@@ -48,7 +48,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 2.5rem;
-  min-height: 120px;
+  min-height: 156px;
 }
 
 /* Back Button */
