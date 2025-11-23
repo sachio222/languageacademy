@@ -49,16 +49,16 @@
   margin-bottom: 1.5rem;
 }
 
-/* Tablet: 4 columns */
+/* Tablet: 2 columns */
 @media (max-width: 968px) {
   .module-selector-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.875rem;
   }
 }
 
-/* Mobile: Stack vertically */
-@media (max-width: 768px) {
+/* Mobile: Stack vertically (1 column) */
+@media (max-width: 640px) {
   .module-selector {
     padding: 1.5rem 1rem;
   }
