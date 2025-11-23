@@ -100,7 +100,7 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
     setAnswers([]);
     setSelectedAnswer(null);
     setGameState(GAME_STATES.PREVIEW);
-    
+
     // Track game start in Clarity
     trackClarityEvent('speedMatchStarted');
     setClarityTag('speedMatchDifficulty', difficulty);
@@ -165,7 +165,7 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
       setGameState(GAME_STATES.CORRECT);
       setScore(score + 1);
       setAnswers([...answers, ANSWER_TYPES.CORRECT]);
-      
+
       // Track correct answer
       trackClarityEvent('speedMatchCorrectAnswer');
 
@@ -176,10 +176,10 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
     } else {
       setGameState(GAME_STATES.WRONG);
       setAnswers([...answers, ANSWER_TYPES.WRONG]);
-      
+
       // Track wrong answer
       trackClarityEvent('speedMatchWrongAnswer');
-      
+
       // Always pause for wrong answers - no auto-advance
     }
   };
@@ -188,27 +188,27 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
   const nextQuestion = () => {
     if (currentIndex + 1 >= vocabulary.length) {
       setGameState(GAME_STATES.FINISHED);
-      
+
       // Calculate final score (including current answer)
       const finalScore = score + (selectedAnswer?.french === currentWord.french ? 1 : 0);
       const percentageScore = Math.round((finalScore / vocabulary.length) * 100);
-      
+
       // Track game completion in Clarity
       trackClarityEvent('speedMatchCompleted');
       setClarityTag('speedMatchScore', `${finalScore}/${vocabulary.length}`);
       setClarityTag('speedMatchPercentage', `${percentageScore}%`);
-      
+
       // Upgrade session for high scores
       if (percentageScore >= 90) {
         upgradeClaritySession('high speed match score');
       }
-      
+
       // Save section completion immediately
       if (isAuthenticated && moduleId && !completionCalled.current) {
         completionCalled.current = true;
-        
+
         logger.log('SpeedMatch: Auto-completing speed-match section - game finished');
-        
+
         completeSectionProgress(moduleId, 'speed-match', {
           score: finalScore,
           total: vocabulary.length,
@@ -220,7 +220,7 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
           logger.error('SpeedMatch: Error completing speed-match section:', error);
         });
       }
-      
+
       return;
     }
 
@@ -302,19 +302,23 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
 
   return (
     <div className={`speed-match-container embedded ${isPlayingState ? "playing" : ""}`}>
+      {/* Stars and Progress Header - Show during preview and playing */}
+      {(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
+        <div className="speed-match-stats-header">
+          <div className="speed-match-stars">
+            {renderStars()}
+          </div>
+          <div className="speed-match-progress">
+            {score} / {currentIndex + 1}
+          </div>
+        </div>
+      )}
       <div className="speed-match-content">
         {/* Ready Screen */}
         {gameState === GAME_STATES.READY && (
           <div className="speed-match-ready study-header">
-            {modulePrefix && (
-              <div className="module-prefix">
-                {modulePrefix}
-              </div>
-            )}
-            <h2>⚡️ Speed Match</h2>
-            <p className="study-description">Quick-Fire Matching Challenge</p>
             <div className="speed-match-instructions">
-              <h2>How it works</h2>
+              <h2>⚡️ How it works</h2>
               <ul>
                 <li>You'll review a French word or phrase</li>
                 <li>Pick the correct English translation from 4 options</li>
@@ -392,7 +396,7 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
           <div className="speed-match-preview">
             <div className="speed-match-word-card">
               <div className="speed-match-word-label">
-                Speed match
+                CHOOSE THE MATCH
               </div>
               <div className="speed-match-word">
                 <span>{currentWord?.french}</span>

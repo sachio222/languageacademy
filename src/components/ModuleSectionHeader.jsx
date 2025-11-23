@@ -3,6 +3,7 @@ import { Check } from 'lucide-react';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { SECTION_REGISTRY } from '../config/sectionRegistry';
+import { splitTitle } from '../utils/moduleUtils';
 import '../styles/ModuleSectionHeader.css';
 
 // Lazy load images for performance
@@ -60,7 +61,7 @@ const SECTION_CONFIG = {
     id: 'speed-match',
     label: 'Speed Match',
     color: '#10B981',
-    pexelsImage: 'https://images.pexels.com/photos/159618/still-life-school-retro-ink-159618.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
+    pexelsImage: 'https://images.pexels.com/photos/13633156/pexels-photo-13633156.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
     hasImage: true,
   },
   'practice': {
@@ -106,6 +107,9 @@ function ModuleSectionHeader({ sectionId, moduleId, lesson, onBack }) {
     lesson
   ) === 'completed';
 
+  // Extract module prefix from lesson title
+  const { modulePrefix } = lesson ? splitTitle(lesson.title) : { modulePrefix: null };
+
   return (
     <div 
       className="module-section-header"
@@ -142,6 +146,11 @@ function ModuleSectionHeader({ sectionId, moduleId, lesson, onBack }) {
         </button>
         
         <div className="module-section-header-title-wrapper">
+          {modulePrefix && (
+            <div className="module-section-header-prefix">
+              {modulePrefix}
+            </div>
+          )}
           <div className="module-section-header-title">
             {config.label}
           </div>
