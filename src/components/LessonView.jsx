@@ -1030,7 +1030,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
               onComplete={handleExerciseCompleteWrapper}
               studyCompleted={studyCompleted}
               readingPassage={lesson.readingPassage}
-              onBackToLesson={lesson.isReadingComprehension ? null : handleBackToSelector}
+              onBackToLesson={null}
               moduleId={extractModuleId(lesson)}
               displayModuleId={lesson.id}
               unitId={extractUnitId(unitInfo)}

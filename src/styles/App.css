@@ -1115,7 +1115,8 @@ body:has(.left-nav.collapsed) .app-footer {
   color: #1e293b;
   margin: 0;
   letter-spacing: -0.025em;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .btn-back {
@@ -1164,7 +1165,8 @@ body:has(.left-nav.collapsed) .app-footer {
   letter-spacing: -0.015em;
   color: #1e293b;
   margin: 0;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 /* Responsive title behavior */
@@ -1248,6 +1250,8 @@ body:has(.left-nav.collapsed) .app-footer {
   overflow-y: auto;
   max-height: calc(100vh);
   padding: 0rem;
+  padding-top: 2rem;
+  margin-top: -2rem;
 }
 
 /* Collapsed state - make it narrow */
@@ -1339,6 +1343,7 @@ body:has(.left-nav.collapsed) .app-footer {
 
 /* Understood button styles moved to UnderstoodButton.css */
 .concept-item .understood-btn {
+  margin-top: 1rem;
   align-self: flex-end;
 }
 
@@ -1435,7 +1440,8 @@ body:has(.left-nav.collapsed) .app-footer {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.03em;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .badge-done {

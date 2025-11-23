@@ -4,7 +4,7 @@ import VocabularyReference from './VocabularyReference';
 import './RightSidebar.css';
 
 function RightSidebar({ concepts, vocabulary, moduleId }) {
-  const [activeTab, setActiveTab] = useState('concepts');
+  const [activeTab, setActiveTab] = useState('vocab');
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Notify parent when collapsed state changes

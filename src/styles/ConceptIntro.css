@@ -40,7 +40,8 @@
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .intro-header h2 {
@@ -49,11 +50,12 @@
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: -0.03em;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   line-height: 1.2;
 }
 
-.intro-description {
+.concept-intro .intro-description {
   color: #665665;
   font-size: 1rem;
   line-height: 1.6;
@@ -97,7 +99,8 @@
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: -0.03em;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .intro-section-header .toggle-btn {
@@ -224,39 +227,39 @@
   max-width: 800px;
 }
 
-.concept-section {
+.concept-intro .concept-section {
   padding: 2.5rem 0;
   border-bottom: 1px solid #f0f0f0;
   animation: fadeInUp 0.6s ease backwards;
 }
 
-.concept-section:first-child {
+.concept-intro .concept-section:first-child {
   padding-top: 0;
   animation-delay: 0.1s;
 }
 
-.concept-section:nth-child(2) {
+.concept-intro .concept-section:nth-child(2) {
   animation-delay: 0.2s;
 }
 
-.concept-section:nth-child(3) {
+.concept-intro .concept-section:nth-child(3) {
   animation-delay: 0.3s;
 }
 
-.concept-section:nth-child(4) {
+.concept-intro .concept-section:nth-child(4) {
   animation-delay: 0.4s;
 }
 
-.concept-section:nth-child(5) {
+.concept-intro .concept-section:nth-child(5) {
   animation-delay: 0.5s;
 }
 
-.concept-section:last-child {
+.concept-intro .concept-section:last-child {
   border-bottom: none;
   padding-bottom: 0;
 }
 
-.concept-section-header {
+.concept-intro .concept-section-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -264,7 +267,7 @@
   gap: 1rem;
 }
 
-.concept-section h2 {
+.concept-intro .concept-section h2 {
   font-size: 1.5rem;
   font-weight: 600;
   color: #1a1a1a;
@@ -272,10 +275,11 @@
   margin: 0;
   line-height: 1.3;
   flex: 1;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
-.concept-check-badge {
+.concept-intro .concept-check-badge {
   color: #15803d;
   background: rgba(22, 163, 74, 0.1);
   border-radius: 50%;
@@ -287,32 +291,32 @@
   flex-shrink: 0;
 }
 
-.concept-section-content {
+.concept-intro .concept-section-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.concept-definition {
-  color: #1a1a1a;
+.concept-intro .concept-definition {
+  color: #717171;
   font-size: 1rem;
   line-height: 1.7;
   margin: 0;
 }
 
-.concept-definition strong {
+.concept-intro .concept-definition strong {
   font-weight: 600;
   color: #1a1a1a;
 }
 
-.concept-example-block {
+.concept-intro .concept-example-block {
   background: #fafbfc;
   border-radius: 12px;
   padding: 1.5rem;
   border: 1px solid #f0f0f0;
 }
 
-.example-label {
+.concept-intro .example-label {
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -321,33 +325,33 @@
   margin-bottom: 0.75rem;
 }
 
-.example-text {
+.concept-intro .example-text {
   color: #1a1a1a;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.8;
   font-style: italic;
   white-space: pre-wrap;
   margin: 0;
 }
 
-.concept-section-footer {
+.concept-intro .concept-section-footer {
   display: flex;
   justify-content: flex-end;
   padding-top: 2rem;
-  border-top: 1px solid #f0f0f0;
-  margin-top: 2.5rem;
+  /* border-top: 1px solid #f0f0f0; */
+  /* margin-top: 2.5rem; */
 }
 
 /* Warning concept styling for grammar errors */
-.concept-section h2:has-text("⚠️"),
-.concept-section h2:contains("⚠️") {
+.concept-intro .concept-section h2:has-text("⚠️"),
+.concept-intro .concept-section h2:contains("⚠️") {
   color: #dc2626;
 }
 
 /* Understood Button */
 /* Understood button styles moved to UnderstoodButton.css */
-.understood-btn {
-  margin-top: 1rem;
+.concept-intro.understood-btn {
+  /* margin-top: 0.5rem; */
   align-self: flex-end;
 }
 
@@ -356,14 +360,14 @@
 }
 
 /* Concepts Header with Progress */
-.concepts-header-content {
+.concept-intro .concepts-header-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0;
 }
 
-.concepts-progress {
+.concept-intro .concepts-progress {
   color: #665665;
   font-size: 0.875rem;
   font-weight: 400;
@@ -492,11 +496,11 @@
     padding-top: 1.25rem;
   }
 
-  .concept-section {
+  .concept-intro .concept-section {
     padding: 2rem 0;
   }
 
-  .concept-section h2 {
+  .concept-intro .concept-section h2 {
     font-size: 1.375rem;
   }
 
@@ -539,8 +543,8 @@
     letter-spacing: -0.02em;
   }
 
-  .intro-description {
-    font-size: 0.9375rem;
+  .concept-intro .intro-description {
+    font-size: 1rem;
   }
 
   .intro-content {
@@ -551,23 +555,23 @@
     padding-top: 1rem;
   }
 
-  .concept-section {
+  .concept-intro .concept-section {
     padding: 2rem 0;
   }
 
-  .concept-section h2 {
+  .concept-intro .concept-section h2 {
     font-size: 1.25rem;
   }
 
-  .concept-section-content {
+  .concept-intro .concept-section-content {
     gap: 1.25rem;
   }
 
-  .concept-example-block {
+  .concept-intro .concept-example-block {
     padding: 1.25rem;
   }
 
-  .concept-section-footer {
+  .concept-intro .concept-section-footer {
     padding-top: 1.5rem;
     margin-top: 2rem;
   }
@@ -607,8 +611,8 @@
     letter-spacing: -0.02em;
   }
 
-  .intro-description {
-    font-size: 0.875rem;
+  .concept-intro .intro-description {
+    font-size: 1rem;
   }
 
   .intro-content {
@@ -619,36 +623,36 @@
     padding-top: 0.75rem;
   }
 
-  .concept-section {
+  .concept-intro .concept-section {
     padding: 1.5rem 0;
   }
 
-  .concept-section h2 {
+  .concept-intro .concept-section h2 {
     font-size: 1.125rem;
   }
 
-  .concept-section-header {
+  .concept-intro .concept-section-header {
     margin-bottom: 1.25rem;
   }
 
-  .concept-check-badge {
+  .concept-intro .concept-check-badge {
     width: 28px;
     height: 28px;
   }
 
-  .concept-definition {
-    font-size: 0.9375rem;
+  .concept-intro .concept-definition {
+    font-size: 1rem;
   }
 
-  .concept-example-block {
+  .concept-intro .concept-example-block {
     padding: 1rem;
   }
 
-  .example-text {
-    font-size: 0.875rem;
+  .concept-intro .example-text {
+    font-size: 0.9375rem;
   }
 
-  .concept-section-footer {
+  .concept-intro .concept-section-footer {
     padding-top: 1.5rem;
     margin-top: 1.5rem;
   }
