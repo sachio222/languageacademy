@@ -275,35 +275,28 @@
 
 /* Premium Card Styles - Following DESIGN_PRINCIPLES.md */
 .module-selector-card.premium {
-  opacity: 0.95;
   cursor: default;
 }
 
 .module-selector-card.premium:hover {
   transform: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  opacity: 1;
+  filter: grayscale(0);
 }
 
-.module-selector-card.premium .module-selector-card-image {
-  opacity: 0.7;
-  filter: saturate(0.6);
-}
-
-.module-selector-card.premium .module-selector-card-scrim {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.65) 100%
-  );
-}
-
-/* Premium Badges Container */
+/* Premium Badges Container - Hidden by default, shown on hover */
 .premium-badges {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: flex-start;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.module-selector-card.premium:hover .premium-badges {
+  opacity: 1;
 }
 
 /* Premium Badge - Minimal, elegant */

@@ -152,11 +152,11 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
           const isLocked = status === 'locked';
 
           const isPremiumCard = section.isPremium || section.comingSoon;
-
+          
           return (
             <button
               key={section.id}
-              className={`module-selector-card ${status} ${isActive ? 'active' : ''} ${isLocked ? 'locked' : ''} ${isPremiumCard ? 'premium' : ''}`}
+              className={`module-selector-card ${status} ${isActive ? 'active' : ''} ${(isLocked || isPremiumCard) ? 'locked' : ''} ${isPremiumCard ? 'premium' : ''}`}
               onClick={() => handleSectionClick(section)}
               disabled={isDisabled || isPremiumCard}
               style={{
