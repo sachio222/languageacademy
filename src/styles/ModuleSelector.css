@@ -292,7 +292,6 @@
   gap: 0.5rem;
   align-items: flex-start;
   opacity: 0;
-  transition: opacity 0.15s ease;
 }
 
 .module-selector-card.premium:hover .premium-badges {
