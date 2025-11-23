@@ -302,37 +302,6 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
 
   return (
     <div className={`speed-match-container embedded ${isPlayingState ? "playing" : ""}`}>
-      <div className="speed-match-intro">
-        <div className="speed-match-intro-left">
-          <button className="btn-back-to-study btn-skip" onClick={() => window.history.back()}>
-            ← Back to Study Mode
-          </button>
-        </div>
-        {(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
-          <div className="speed-match-intro-stats">
-            <div className="speed-match-progress">
-              {score} / {currentIndex + 1}
-            </div>
-            <div className="speed-match-stars">
-              {renderStars()}
-            </div>
-          </div>
-        )}
-        <div className="speed-match-intro-right">
-          {gameState !== GAME_STATES.READY && gameState !== GAME_STATES.FINISHED && (
-            <button
-              onClick={restartGame}
-              className="speed-match-restart btn-skip"
-              title="Restart Game"
-            >
-              <RotateCcw size={16} /> Restart round
-            </button>
-          )}
-          <button className="btn-skip" onClick={onFinish}>
-            Skip Speed Match →
-          </button>
-        </div>
-      </div>
       <div className="speed-match-content">
         {/* Ready Screen */}
         {gameState === GAME_STATES.READY && (

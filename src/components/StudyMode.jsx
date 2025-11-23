@@ -120,14 +120,15 @@ function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, upda
         )}
         <h2>📚 Study Mode - Learn First!</h2>
         <p className="study-description">Review all answers before testing yourself</p>
-        <div className="study-progress-bar">
-          <div className="study-progress-fill" style={{ width: `${progress}%` }} />
+        <div className="study-progress-container">
+          <div className="study-progress-bar">
+            <div className="study-progress-fill" style={{ width: `${progress}%` }} />
+          </div>
+          <span className="study-progress-text">
+            {currentIndex + 1} of {exercises.length}
+          </span>
         </div>
-        <span className="study-progress-text">
-          {currentIndex + 1} of {exercises.length}
-        </span>
       </div>
-
       <div className="flashcard">
         <div className="flashcard-front">
           <div className="flashcard-label">Question:</div>

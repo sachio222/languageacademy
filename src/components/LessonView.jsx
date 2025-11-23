@@ -140,7 +140,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const completionRecordedRef = useRef(false);
 
   const { supabaseClient, supabaseUser, isAuthenticated, moduleProgress } = useSupabaseProgress();
-  const { sectionProgress, loading: sectionLoading, isSectionCompleted } = useSectionProgress();
+  const { sectionProgress, loading: sectionLoading, isSectionCompleted, completeSectionProgress } = useSectionProgress();
 
   if (!lesson) return null;
 
@@ -181,6 +181,20 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     // If this was the last exercise AND it was completed successfully, show modal
     if (isLastExercise && wasSuccessful && studyCompleted && !lesson.isFillInTheBlank) {
+      // Complete the writing section immediately when last exercise is completed
+      if (isAuthenticated && lessonModuleId) {
+        logger.log('LessonView: Auto-completing writing section - last exercise completed');
+        
+        completeSectionProgress(lessonModuleId, 'writing', {
+          exercises_completed: lesson.exercises.length,
+          completion_method: 'all_exercises_completed'
+        }).then(result => {
+          logger.log('LessonView: Writing section completion successful', result);
+        }).catch(error => {
+          logger.error('LessonView: Error completing writing section:', error);
+        });
+      }
+      
       // Calculate time spent
       const timeSpentOnModule = Math.round((Date.now() - moduleStartTimeRef.current) / 1000);
       setModuleTimeSpent(timeSpentOnModule);

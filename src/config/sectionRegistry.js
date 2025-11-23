@@ -76,7 +76,7 @@ export const SECTION_REGISTRY = {
     label: 'Speed\nMatch',
     view: 'speedmatch',
     color: '#10B981',
-    pexelsImage: 'https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+    pexelsImage: 'https://images.pexels.com/photos/159618/still-life-school-retro-ink-159618.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
     hasImage: true,
     order: 3,
     enabled: true,

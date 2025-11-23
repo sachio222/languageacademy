@@ -1435,6 +1435,7 @@ body:has(.left-nav.collapsed) .app-footer {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.03em;
+  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .badge-done {
