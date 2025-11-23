@@ -141,9 +141,11 @@ function ModuleSectionHeader({ sectionId, moduleId, lesson, onBack }) {
       
       {/* Content */}
       <div className="module-section-header-content">
-        <button className="module-section-header-back" onClick={onBack}>
-          ← Back to Menu
-        </button>
+        {sectionId !== 'practice' && (
+          <button className="module-section-header-back" onClick={onBack}>
+            ← Back to Menu
+          </button>
+        )}
         
         <div className="module-section-header-title-wrapper">
           {modulePrefix && (

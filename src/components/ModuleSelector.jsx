@@ -187,7 +187,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                       <Check size={16} />
                     </div>
                   )}
-                  {!isCompleted && !isActive && (
+                  {!isCompleted && (
                     <div className="status-circle-dashed" />
                   )}
                 </div>
