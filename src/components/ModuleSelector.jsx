@@ -205,7 +205,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                         <div className="coming-soon-badge">Coming Soon</div>
                       )}
                     </div>
-                  ) : (
+                  ) : !section.isSpecial ? (
                     <>
                       {isCompleted && (
                         <div className="status-checkmark">
@@ -216,7 +216,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                         <div className="status-circle-dashed" />
                       )}
                     </>
-                  )}
+                  ) : null}
                 </div>
                 
                 {/* Label - Bottom */}

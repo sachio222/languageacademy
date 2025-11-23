@@ -532,7 +532,7 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
                 Play Again
               </button>
               <button onClick={onFinish} className="speed-match-button-secondary">
-                Continue to Practice →
+                Continue to Writing Practice →
               </button>
             </div>
           </div>

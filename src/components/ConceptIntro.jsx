@@ -343,7 +343,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
           </button>
         )}
         <button className="btn-primary btn-large" onClick={onStartStudying}>
-          Start Studying →
+          Study Mode →
         </button>
       </div>
     </div>
