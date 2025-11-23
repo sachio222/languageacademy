@@ -283,8 +283,7 @@ function ExercisePane({
 
         <div className="code-editor">
           <div className={`editor-header ${getEditorStatus()}`}>
-            <span>answer.fr</span>
-            <span className="editor-language">French</span>
+            <span>French</span>
 
             {!testResults ? (
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.5rem', minWidth: '240px' }}>

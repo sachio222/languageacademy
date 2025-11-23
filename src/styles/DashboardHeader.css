@@ -285,6 +285,7 @@
   font-weight: 500;
   color: #665665;
   letter-spacing: -0.01em;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 /* Progress Circle in Stat Box */

@@ -149,7 +149,9 @@ export const SECTION_REGISTRY = {
       "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
     hasImage: true,
     order: 5,
-    enabled: false, // Feature flag - easily enable when ready
+    enabled: true,
+    isPremium: true,
+    comingSoon: true,
 
     getCompletionStatus: (moduleProgress, sectionProgress, lesson) => {
       const sectionData = sectionProgress?.["pronunciation"];
@@ -183,7 +185,9 @@ export const SECTION_REGISTRY = {
       "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
     hasImage: true,
     order: 6,
-    enabled: false, // Feature flag
+    enabled: true,
+    isPremium: true,
+    comingSoon: true,
 
     getCompletionStatus: (moduleProgress, sectionProgress, lesson) => {
       const sectionData = sectionProgress?.["conversation"];
@@ -223,9 +227,9 @@ export const SECTION_REGISTRY = {
       lesson,
       allSections
     ) => {
-      // Check if all non-special, enabled sections are complete
+      // Check if all non-special, enabled, non-premium sections are complete
       const regularSections = allSections.filter(
-        (s) => !s.isSpecial && s.enabled
+        (s) => !s.isSpecial && s.enabled && !s.isPremium && !s.comingSoon
       );
       const allComplete = regularSections.every(
         (section) =>

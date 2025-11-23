@@ -96,9 +96,15 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
   const currentSection = getCurrentSection();
 
   const handleSectionClick = (section) => {
+    // Prevent click on premium/coming soon sections
+    if (section.isPremium || section.comingSoon) {
+      logger.log(`Section ${section.id} is coming soon`);
+      return;
+    }
+
     if (section.isSpecial) {
       const allComplete = availableSections
-        .filter(s => !s.isSpecial)
+        .filter(s => !s.isSpecial && !s.isPremium && !s.comingSoon)
         .every(s => getSectionStatusForLesson(s) === 'completed');
       
       if (!allComplete) {
@@ -145,16 +151,24 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
           const isDisabled = status === 'disabled' || status === 'locked';
           const isLocked = status === 'locked';
 
+          const isPremiumCard = section.isPremium || section.comingSoon;
+          
           return (
             <button
               key={section.id}
-              className={`module-selector-card ${status} ${isActive ? 'active' : ''} ${isLocked ? 'locked' : ''}`}
+              className={`module-selector-card ${status} ${isActive ? 'active' : ''} ${isLocked ? 'locked' : ''} ${isPremiumCard ? 'premium' : ''}`}
               onClick={() => handleSectionClick(section)}
-              disabled={isDisabled}
+              disabled={isDisabled || isPremiumCard}
               style={{
                 '--section-color': section.color,
               }}
-              title={isLocked ? 'Complete previous sections to unlock' : ''}
+              title={
+                isPremiumCard 
+                  ? 'Coming Soon - Premium Feature' 
+                  : isLocked 
+                    ? 'Complete previous sections to unlock' 
+                    : ''
+              }
             >
               {/* Background Image */}
               {section.hasImage && section.pexelsImage ? (
@@ -182,13 +196,26 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
               <div className="module-selector-card-content">
                 {/* Status Indicator - Top */}
                 <div className="module-selector-card-status">
-                  {isCompleted && (
-                    <div className="status-checkmark">
-                      <Check size={16} />
+                  {isPremiumCard ? (
+                    <div className="premium-badges">
+                      {section.isPremium && (
+                        <div className="premium-badge">Premium</div>
+                      )}
+                      {section.comingSoon && (
+                        <div className="coming-soon-badge">Coming Soon</div>
+                      )}
                     </div>
-                  )}
-                  {!isCompleted && (
-                    <div className="status-circle-dashed" />
+                  ) : (
+                    <>
+                      {isCompleted && (
+                        <div className="status-checkmark">
+                          <Check size={16} />
+                        </div>
+                      )}
+                      {!isCompleted && (
+                        <div className="status-circle-dashed" />
+                      )}
+                    </>
                   )}
                 </div>
                 
