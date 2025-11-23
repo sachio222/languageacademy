@@ -9,6 +9,7 @@ import { extractModuleId } from '../utils/progressSync';
 import { getTTSText } from '../utils/ttsUtils';
 import { renderGenderSplitText, getGenderClass, hasGenderSplit } from '../utils/genderSplitUtils.jsx';
 import { logger } from "../utils/logger";
+import { splitTitle } from '../utils/moduleUtils';
 
 /**
  * Select the best available voice for a given language
@@ -91,21 +92,6 @@ function selectBestVoice(voices, language) {
  * Shows all vocabulary and concepts before study mode
  * Based on cognitive science: exposure → encoding → retrieval
  */
-
-// Helper function to split module title
-const splitTitle = (title) => {
-  const moduleMatch = title.match(/^(Module \d+|Reference [IVX]+):\s*(.*)$/);
-  if (moduleMatch) {
-    return {
-      modulePrefix: moduleMatch[1],
-      mainTitle: moduleMatch[2]
-    };
-  }
-  return {
-    modulePrefix: null,
-    mainTitle: title
-  };
-};
 
 function ConceptIntro({ lesson, onStartStudying }) {
   const [showVocab, setShowVocab] = useState(true);

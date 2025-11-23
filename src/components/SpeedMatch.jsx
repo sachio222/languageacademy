@@ -11,23 +11,9 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../utils/clarity';
 import { logger } from '../utils/logger';
+import { splitTitle } from '../utils/moduleUtils';
 import SpeakButton from './SpeakButton';
 import "../styles/SpeedMatch.css";
-
-// Helper function to split module title
-const splitTitle = (title) => {
-  const moduleMatch = title.match(/^(Module \d+|Reference [IVX]+):\s*(.*)$/);
-  if (moduleMatch) {
-    return {
-      modulePrefix: moduleMatch[1],
-      mainTitle: moduleMatch[2]
-    };
-  }
-  return {
-    modulePrefix: null,
-    mainTitle: title
-  };
-};
 
 // Helper component to format option text with lighter parentheses
 const OptionText = ({ text }) => {

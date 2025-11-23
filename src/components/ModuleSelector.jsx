@@ -3,6 +3,7 @@ import { Check } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { logger } from '../utils/logger';
+import { splitTitle } from '../utils/moduleUtils';
 import { 
   SECTION_REGISTRY, 
   getActiveSections, 
@@ -48,21 +49,6 @@ const LazyImage = ({ src, alt, className, style }) => {
 
 // Sections now loaded from centralized registry
 // This allows for flexible section management and easy addition/removal
-
-// Helper function to split module title (same as ConceptIntro)
-const splitTitle = (title) => {
-  const moduleMatch = title.match(/^(Module \d+|Reference [IVX]+):\s*(.*)$/);
-  if (moduleMatch) {
-    return {
-      modulePrefix: moduleMatch[1],
-      mainTitle: moduleMatch[2]
-    };
-  }
-  return {
-    modulePrefix: null,
-    mainTitle: title
-  };
-};
 
 function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgress, completedExercises }) {
   const { isAuthenticated } = useSupabaseProgress();

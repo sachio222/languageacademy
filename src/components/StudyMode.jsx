@@ -6,26 +6,12 @@ import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { logger } from '../utils/logger';
+import { splitTitle } from '../utils/moduleUtils';
 
 /**
  * Study Mode - Learn before you test
  * Flashcard-style learning with answers revealed
  */
-
-// Helper function to split module title
-const splitTitle = (title) => {
-  const moduleMatch = title.match(/^(Module \d+|Reference [IVX]+):\s*(.*)$/);
-  if (moduleMatch) {
-    return {
-      modulePrefix: moduleMatch[1],
-      mainTitle: moduleMatch[2]
-    };
-  }
-  return {
-    modulePrefix: null,
-    mainTitle: title
-  };
-};
 
 function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, updateExerciseInUrl, lesson }) {
   const [currentIndex, setCurrentIndex] = useState(currentExerciseIndex);
