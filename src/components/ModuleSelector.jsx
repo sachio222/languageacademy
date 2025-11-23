@@ -152,7 +152,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
           const isLocked = status === 'locked';
 
           const isPremiumCard = section.isPremium || section.comingSoon;
-          
+
           return (
             <button
               key={section.id}
@@ -207,14 +207,14 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                     </div>
                   ) : !section.isSpecial ? (
                     <>
-                      {isCompleted && (
-                        <div className="status-checkmark">
-                          <Check size={16} />
-                        </div>
-                      )}
-                      {!isCompleted && (
-                        <div className="status-circle-dashed" />
-                      )}
+                  {isCompleted && (
+                    <div className="status-checkmark">
+                      <Check size={16} />
+                    </div>
+                  )}
+                  {!isCompleted && (
+                    <div className="status-circle-dashed" />
+                  )}
                     </>
                   ) : null}
                 </div>

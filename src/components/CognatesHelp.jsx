@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';

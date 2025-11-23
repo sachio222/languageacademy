@@ -146,7 +146,7 @@ export const SECTION_REGISTRY = {
     view: "pronunciation",
     color: "#EF4444",
     pexelsImage:
-      "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "https://images.pexels.com/photos/164960/pexels-photo-164960.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
     hasImage: true,
     order: 5,
     enabled: true,
@@ -182,7 +182,7 @@ export const SECTION_REGISTRY = {
     view: "conversation",
     color: "#06B6D4",
     pexelsImage:
-      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "https://images.pexels.com/photos/3886091/pexels-photo-3886091.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
     hasImage: true,
     order: 6,
     enabled: true,

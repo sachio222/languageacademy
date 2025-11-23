@@ -80,6 +80,7 @@
   letter-spacing: -0.025em;
   margin: 0 0 0.75rem 0;
   line-height: 1.3;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .cognates-section .section-intro {
