@@ -1,86 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { selectBestVoice } from '../utils/ttsUtils';
+import { toggleSetItem } from '../utils/vocabularyUtils';
 import './VerbPatternHelp.css';
 import { logger } from "../utils/logger";
-
-/**
- * Select the best available voice for French
- * Same logic as ConceptIntro for consistent quality
- */
-function selectBestVoice(voices, language) {
-  const langCode = language.split("-")[0];
-  const matchingVoices = voices.filter((v) => v.lang.startsWith(langCode));
-
-  if (matchingVoices.length === 0) return null;
-
-  // Priority 1: Google voices (Chrome - usually highest quality)
-  const googleVoice = matchingVoices.find((v) => v.name.includes("Google"));
-  if (googleVoice) return googleVoice;
-
-  // Priority 2: Safari/macOS enhanced voices
-  if (langCode === 'fr') {
-    const safariEnhancedVoice = matchingVoices.find((v) => {
-      const nameLower = v.name.toLowerCase();
-      return nameLower.includes("amélie") ||
-        nameLower.includes("amelie") ||
-        nameLower.includes("thomas") ||
-        nameLower.includes("audrey") ||
-        nameLower.includes("marie") ||
-        nameLower.includes("enhanced") ||
-        nameLower.includes("premium") ||
-        nameLower.includes("neural") ||
-        (nameLower.includes("compact") && nameLower.includes("fr"));
-    });
-    if (safariEnhancedVoice) return safariEnhancedVoice;
-  }
-
-  // Priority 3: General enhanced voices
-  const enhancedVoice = matchingVoices.find(
-    (v) =>
-      v.name.toLowerCase().includes("enhanced") ||
-      v.name.toLowerCase().includes("premium") ||
-      v.name.toLowerCase().includes("neural") ||
-      v.name.toLowerCase().includes("compact")
-  );
-  if (enhancedVoice) return enhancedVoice;
-
-  // Priority 4: Female voices (often sound more natural)
-  const femaleVoice = matchingVoices.find(
-    (v) =>
-      v.name.toLowerCase().includes("female") ||
-      v.name.toLowerCase().includes("samantha") ||
-      v.name.toLowerCase().includes("karen") ||
-      v.name.toLowerCase().includes("fiona") ||
-      v.name.toLowerCase().includes("amelie") ||
-      v.name.toLowerCase().includes("amélie") ||
-      v.name.toLowerCase().includes("paulina") ||
-      v.name.toLowerCase().includes("marie") ||
-      v.name.toLowerCase().includes("celine") ||
-      v.name.toLowerCase().includes("céline") ||
-      v.name.toLowerCase().includes("audrey") ||
-      v.name.toLowerCase().includes("aurelie") ||
-      v.name.toLowerCase().includes("aurélie")
-  );
-  if (femaleVoice) return femaleVoice;
-
-  // Priority 5: Avoid low-quality voices
-  const decentVoice = matchingVoices.find(
-    (v) =>
-      !v.name.toLowerCase().includes("alex") &&
-      !v.name.toLowerCase().includes("fred") &&
-      !v.name.toLowerCase().includes("ralph") &&
-      !v.name.toLowerCase().includes("male") &&
-      !v.name.toLowerCase().includes("daniel") &&
-      !v.name.toLowerCase().includes("junior")
-  );
-  if (decentVoice) return decentVoice;
-
-  // Last resort: Return first matching voice
-  return matchingVoices[0];
-}
 
 /**
  * Speak text with high-quality voice selection
@@ -178,21 +104,13 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
     loadUnderstoodSections();
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
-  const toggleUnderstood = async (sectionIndex) => {
+  const toggleUnderstood = useCallback(async (sectionIndex) => {
     logger.log('VerbPatternHelp: toggleUnderstood called', sectionIndex);
     const isCurrentlyUnderstood = understoodSections.has(sectionIndex);
     const newUnderstood = !isCurrentlyUnderstood;
 
     // Optimistic update
-    setUnderstoodSections(prev => {
-      const newSet = new Set(prev);
-      if (newUnderstood) {
-        newSet.add(sectionIndex);
-      } else {
-        newSet.delete(sectionIndex);
-      }
-      return newSet;
-    });
+    setUnderstoodSections(prev => toggleSetItem(prev, sectionIndex, newUnderstood));
 
     // Sync with Supabase if authenticated
     if (isAuthenticated && moduleId && updateConceptUnderstanding) {
@@ -214,18 +132,10 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
       } catch (error) {
         logger.error('VerbPatternHelp: Error saving:', error);
         // Revert optimistic update on error
-        setUnderstoodSections(prev => {
-          const newSet = new Set(prev);
-          if (isCurrentlyUnderstood) {
-            newSet.add(sectionIndex);
-          } else {
-            newSet.delete(sectionIndex);
-          }
-          return newSet;
-        });
+        setUnderstoodSections(prev => toggleSetItem(prev, sectionIndex, isCurrentlyUnderstood));
       }
     }
-  };
+  }, [understoodSections, isAuthenticated, moduleId, updateConceptUnderstanding, verbPatternSections]);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);

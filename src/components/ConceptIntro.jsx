@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect, Fragment, useMemo, useCallback } from 'react';
 import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
@@ -6,86 +6,11 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useSectionTime } from '../hooks/useSectionTime';
 import { extractModuleId } from '../utils/progressSync';
-import { getTTSText } from '../utils/ttsUtils';
+import { getTTSText, selectBestVoice } from '../utils/ttsUtils';
 import { renderGenderSplitText, getGenderClass, hasGenderSplit } from '../utils/genderSplitUtils.jsx';
+import { isNewVocabSection, createVocabRowClickHandler, toggleSetItem } from '../utils/vocabularyUtils';
 import { logger } from "../utils/logger";
 import { splitTitle } from '../utils/moduleUtils';
-
-/**
- * Select the best available voice for a given language
- * Same logic as SpeakButton for consistent quality
- */
-function selectBestVoice(voices, language) {
-  const langCode = language.split("-")[0];
-  const matchingVoices = voices.filter((v) => v.lang.startsWith(langCode));
-
-  if (matchingVoices.length === 0) return null;
-
-  // Priority 1: Google voices (Chrome - usually highest quality)
-  const googleVoice = matchingVoices.find((v) => v.name.includes("Google"));
-  if (googleVoice) return googleVoice;
-
-  // Priority 2: Safari/macOS enhanced voices (look for specific high-quality French voices)
-  if (langCode === 'fr') {
-    const safariEnhancedVoice = matchingVoices.find((v) => {
-      const nameLower = v.name.toLowerCase();
-      return nameLower.includes("amélie") ||
-        nameLower.includes("amelie") ||
-        nameLower.includes("thomas") ||
-        nameLower.includes("audrey") ||
-        nameLower.includes("marie") ||
-        nameLower.includes("enhanced") ||
-        nameLower.includes("premium") ||
-        nameLower.includes("neural") ||
-        (nameLower.includes("compact") && nameLower.includes("fr"));
-    });
-    if (safariEnhancedVoice) return safariEnhancedVoice;
-  }
-
-  // Priority 3: General enhanced voices
-  const enhancedVoice = matchingVoices.find(
-    (v) =>
-      v.name.toLowerCase().includes("enhanced") ||
-      v.name.toLowerCase().includes("premium") ||
-      v.name.toLowerCase().includes("neural") ||
-      v.name.toLowerCase().includes("compact")
-  );
-  if (enhancedVoice) return enhancedVoice;
-
-  // Priority 4: Female voices (often sound more natural)
-  const femaleVoice = matchingVoices.find(
-    (v) =>
-      v.name.toLowerCase().includes("female") ||
-      v.name.toLowerCase().includes("samantha") ||
-      v.name.toLowerCase().includes("karen") ||
-      v.name.toLowerCase().includes("fiona") ||
-      v.name.toLowerCase().includes("amelie") ||
-      v.name.toLowerCase().includes("amélie") ||
-      v.name.toLowerCase().includes("paulina") ||
-      v.name.toLowerCase().includes("marie") ||
-      v.name.toLowerCase().includes("celine") ||
-      v.name.toLowerCase().includes("céline") ||
-      v.name.toLowerCase().includes("audrey") ||
-      v.name.toLowerCase().includes("aurelie") ||
-      v.name.toLowerCase().includes("aurélie")
-  );
-  if (femaleVoice) return femaleVoice;
-
-  // Priority 5: Avoid low-quality voices
-  const decentVoice = matchingVoices.find(
-    (v) =>
-      !v.name.toLowerCase().includes("alex") &&
-      !v.name.toLowerCase().includes("fred") &&
-      !v.name.toLowerCase().includes("ralph") &&
-      !v.name.toLowerCase().includes("male") &&
-      !v.name.toLowerCase().includes("daniel") &&
-      !v.name.toLowerCase().includes("junior")
-  );
-  if (decentVoice) return decentVoice;
-
-  // Last resort: Return first matching voice
-  return matchingVoices[0];
-}
 
 /**
  * Concept Introduction - Initial exposure phase
@@ -113,7 +38,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
 
   // Section progress and time tracking
   const { updateSectionProgress, completeSectionProgress } = useSectionProgress();
-  const { totalTime, isTracking } = useSectionTime(moduleId, 'vocabulary-intro', true);
+  useSectionTime(moduleId, 'vocabulary-intro', true);
 
   // Load understood concepts from database when module loads
   useEffect(() => {
@@ -145,21 +70,13 @@ function ConceptIntro({ lesson, onStartStudying }) {
   }, [lesson.id, moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
   // Functions for managing understood concepts
-  const toggleUnderstood = async (conceptIndex) => {
+  const toggleUnderstood = useCallback(async (conceptIndex) => {
     logger.log('ConceptIntro: toggleUnderstood called', conceptIndex);
     const isCurrentlyUnderstood = understoodConcepts.has(conceptIndex);
     const newUnderstood = !isCurrentlyUnderstood;
 
     // Optimistic update
-    setUnderstoodConcepts(prev => {
-      const newSet = new Set(prev);
-      if (newUnderstood) {
-        newSet.add(conceptIndex);
-      } else {
-        newSet.delete(conceptIndex);
-      }
-      return newSet;
-    });
+    setUnderstoodConcepts(prev => toggleSetItem(prev, conceptIndex, newUnderstood));
 
     // Save to Supabase
     if (isAuthenticated && moduleId && lesson.concepts[conceptIndex]) {
@@ -175,26 +92,21 @@ function ConceptIntro({ lesson, onStartStudying }) {
       } catch (error) {
         logger.error('ConceptIntro: Error saving:', error);
         // Revert on error
-        setUnderstoodConcepts(prev => {
-          const newSet = new Set(prev);
-          if (isCurrentlyUnderstood) {
-            newSet.add(conceptIndex);
-          } else {
-            newSet.delete(conceptIndex);
-          }
-          return newSet;
-        });
+        setUnderstoodConcepts(prev => toggleSetItem(prev, conceptIndex, isCurrentlyUnderstood));
       }
     }
-  };
+  }, [understoodConcepts, isAuthenticated, moduleId, lesson.concepts, updateConceptUnderstanding]);
 
-  const getProgressStats = () => {
+  const getProgressStats = useCallback(() => {
     if (!lesson.concepts || lesson.concepts.length === 0) return { understood: 0, total: 0, percentage: 0 };
     const total = lesson.concepts.length;
     const understood = understoodConcepts.size;
     const percentage = Math.round((understood / total) * 100);
     return { understood, total, percentage };
-  };
+  }, [lesson.concepts, understoodConcepts.size]);
+
+  // Memoize progress stats to avoid recalculating
+  const progressStats = useMemo(() => getProgressStats(), [getProgressStats]);
 
   // Auto-complete vocabulary intro section when all concepts are understood
   useEffect(() => {
@@ -271,61 +183,16 @@ function ConceptIntro({ lesson, onStartStudying }) {
                     {vocabularyItems.map((item, idx) => {
                       const isSplitWord = hasGenderSplit(item.french, item.note);
                       const genderClass = getGenderClass(item.note, isSplitWord);
+                      const needsDivider = isNewVocabSection(item, idx);
 
-                      // Detect if this is the start of a new verb/section
-                      const isNewSection = (item, index) => {
-                        if (index === 0) return false;
-                        const note = (item.note || '').toLowerCase();
-                        // ONLY check note field - don't guess from french word!
-                        return note.includes('regular -er verb') ||
-                          note.includes('regular -ir verb') ||
-                          note.includes('irregular -ir verb') ||
-                          note.includes('irregular verb') ||
-                          note.includes('impersonal') ||
-                          note.includes('causative') ||
-                          note.includes('section divider');
-                      };
-                      const needsDivider = isNewSection(item, idx);
-
-                      const handleRowClick = (e) => {
-                        if (!item.french) return;
-
-                        // Use ttsText if available, otherwise apply global TTS corrections
-                        const speechText = item.ttsText || getTTSText(item.french);
-
-                        // Use same high-quality voice selection as SpeakButton
-                        if ('speechSynthesis' in window) {
-                          window.speechSynthesis.cancel();
-
-                          const utterance = new SpeechSynthesisUtterance(speechText);
-                          utterance.lang = 'fr-FR';
-                          utterance.rate = 0.9;
-                          utterance.pitch = 1.0;
-                          utterance.volume = 1.0;
-
-                          let voices = window.speechSynthesis.getVoices();
-
-                          // Handle async voice loading (some browsers load voices asynchronously)
-                          if (voices.length === 0) {
-                            window.speechSynthesis.addEventListener("voiceschanged", () => {
-                              voices = window.speechSynthesis.getVoices();
-                              const bestVoice = selectBestVoice(voices, utterance.lang);
-                              if (bestVoice) {
-                                utterance.voice = bestVoice;
-                                logger.log(`Concept vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
-                              }
-                              window.speechSynthesis.speak(utterance);
-                            });
-                          } else {
-                            const bestVoice = selectBestVoice(voices, utterance.lang);
-                            if (bestVoice) {
-                              utterance.voice = bestVoice;
-                              logger.log(`Concept vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
-                            }
-                            window.speechSynthesis.speak(utterance);
-                          }
-                        }
-                      };
+                      // Create handler outside of JSX for better performance
+                      const handleRowClick = createVocabRowClickHandler(
+                        item.french,
+                        item.ttsText,
+                        getTTSText,
+                        selectBestVoice,
+                        logger
+                      );
 
                       return (
                         <Fragment key={`vocab-${idx}`}>
@@ -377,7 +244,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
               <div className="concepts-header-content">
                 <h3>💡 Key Concepts</h3>
                 <div className="concepts-progress">
-                  {getProgressStats().understood}/{getProgressStats().total} understood ({getProgressStats().percentage}%)
+                  {progressStats.understood}/{progressStats.total} understood ({progressStats.percentage}%)
                 </div>
               </div>
               <button className="toggle-btn">

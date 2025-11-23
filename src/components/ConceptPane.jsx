@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Check } from 'lucide-react';
 import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
+import { toggleSetItem } from '../utils/vocabularyUtils';
 import { logger } from "../utils/logger";
 
 function ConceptPane({ concepts, moduleId }) {
@@ -40,20 +41,12 @@ function ConceptPane({ concepts, moduleId }) {
     loadUnderstoodConcepts();
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
-  const toggleUnderstood = async (conceptIndex) => {
+  const toggleUnderstood = useCallback(async (conceptIndex) => {
     const isCurrentlyUnderstood = understoodConcepts.has(conceptIndex);
     const newUnderstood = !isCurrentlyUnderstood;
 
     // Optimistic update
-    setUnderstoodConcepts(prev => {
-      const newSet = new Set(prev);
-      if (newUnderstood) {
-        newSet.add(conceptIndex);
-      } else {
-        newSet.delete(conceptIndex);
-      }
-      return newSet;
-    });
+    setUnderstoodConcepts(prev => toggleSetItem(prev, conceptIndex, newUnderstood));
 
     // Sync with Supabase if authenticated
     if (isAuthenticated && moduleId && concepts[conceptIndex] && updateConceptUnderstanding) {
@@ -67,33 +60,28 @@ function ConceptPane({ concepts, moduleId }) {
       } catch (error) {
         logger.error('Error updating concept understanding:', error);
         // Revert optimistic update on error
-        setUnderstoodConcepts(prev => {
-          const newSet = new Set(prev);
-          if (isCurrentlyUnderstood) {
-            newSet.add(conceptIndex);
-          } else {
-            newSet.delete(conceptIndex);
-          }
-          return newSet;
-        });
+        setUnderstoodConcepts(prev => toggleSetItem(prev, conceptIndex, isCurrentlyUnderstood));
       }
     }
-  };
+  }, [understoodConcepts, isAuthenticated, moduleId, concepts, updateConceptUnderstanding]);
 
-  const getProgressStats = () => {
+  const getProgressStats = useCallback(() => {
     if (!concepts || concepts.length === 0) return { understood: 0, total: 0, percentage: 0 };
     const total = concepts.length;
     const understood = understoodConcepts.size;
     const percentage = Math.round((understood / total) * 100);
     return { understood, total, percentage };
-  };
+  }, [concepts, understoodConcepts.size]);
+
+  // Memoize progress stats to avoid recalculating
+  const progressStats = useMemo(() => getProgressStats(), [getProgressStats]);
 
   return (
     <div className="concept-pane">
       <div className="concept-pane-header">
         <h3>📚 Concepts</h3>
         <div className="concepts-progress">
-          {getProgressStats().understood}/{getProgressStats().total} understood ({getProgressStats().percentage}%)
+          {progressStats.understood}/{progressStats.total} understood ({progressStats.percentage}%)
         </div>
       </div>
       <div className="concepts-list">

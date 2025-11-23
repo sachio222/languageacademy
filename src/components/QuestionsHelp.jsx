@@ -58,21 +58,13 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     loadUnderstoodSections();
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
-  const toggleUnderstood = async (sectionIndex) => {
+  const toggleUnderstood = useCallback(async (sectionIndex) => {
     logger.log('QuestionsHelp: toggleUnderstood called', sectionIndex);
     const isCurrentlyUnderstood = understoodSections.has(sectionIndex);
     const newUnderstood = !isCurrentlyUnderstood;
 
     // Optimistic update
-    setUnderstoodSections(prev => {
-      const newSet = new Set(prev);
-      if (newUnderstood) {
-        newSet.add(sectionIndex);
-      } else {
-        newSet.delete(sectionIndex);
-      }
-      return newSet;
-    });
+    setUnderstoodSections(prev => toggleSetItem(prev, sectionIndex, newUnderstood));
 
     // Sync with Supabase if authenticated
     if (isAuthenticated && moduleId && updateConceptUnderstanding) {
@@ -94,18 +86,10 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       } catch (error) {
         logger.error('QuestionsHelp: Error saving:', error);
         // Revert optimistic update on error
-        setUnderstoodSections(prev => {
-          const newSet = new Set(prev);
-          if (isCurrentlyUnderstood) {
-            newSet.add(sectionIndex);
-          } else {
-            newSet.delete(sectionIndex);
-          }
-          return newSet;
-        });
+        setUnderstoodSections(prev => toggleSetItem(prev, sectionIndex, isCurrentlyUnderstood));
       }
     }
-  };
+  }, [understoodSections, isAuthenticated, moduleId, updateConceptUnderstanding, questionSections]);
 
   if (loading) {
     return (
