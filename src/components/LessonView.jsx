@@ -24,6 +24,7 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { usePageTime } from '../hooks/usePageTime';
 import { useModuleTime } from '../hooks/useModuleTime';
+import { useSectionTime } from '../hooks/useSectionTime';
 import { getUnitIdForLesson } from '../utils/unitHelpers';
 import { getSectionStatus, getActiveSections, isSectionAvailable } from '../config/sectionRegistry';
 import { logger } from "../utils/logger";
@@ -130,9 +131,29 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const { totalTime: pageTime, isTracking } = usePageTime(pageId, true);
 
   // Track module and unit specific time with proper idle detection
-  const moduleId = lesson.id?.toString() || 'unknown';
+  const moduleId = extractModuleId(lesson);
   const unitId = getUnitIdForLesson(lesson.id);
   const { totalTime: moduleTime, isTracking: isTrackingModule } = useModuleTime(moduleId, unitId, true);
+
+  // Track section-specific time based on current URL view
+  const getCurrentSectionId = () => {
+    const params = new URLSearchParams(window.location.search);
+    const currentView = params.get('view') || 'selector';
+
+    const sectionMap = {
+      // 'selector': null,  // Don't track time on menu/selector screen
+      'intro': 'vocabulary-intro',
+      'study': 'flash-cards',        // Fixed: study view = flash-cards section
+      'practice': 'writing',
+      'speedmatch': 'speed-match',   // Fixed: speedmatch view = speed-match section
+      'exam': 'exam'
+    };
+
+    return sectionMap[currentView] || null;
+  };
+
+  const currentSectionId = getCurrentSectionId();
+  useSectionTime(moduleId, currentSectionId, !!currentSectionId);
 
   // Legacy module time tracking (will be removed)
   const moduleStartTimeRef = useRef(Date.now());

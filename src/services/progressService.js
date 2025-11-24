@@ -9,6 +9,7 @@
  */
 
 import { logger } from "../utils/logger";
+import { lessons } from "../lessons/lessonData";
 
 export class ProgressService {
   constructor(supabaseClient) {
@@ -177,22 +178,63 @@ export class ProgressService {
         };
       });
 
-      // Enrich modules with section data
-      const enrichedModules = (modules || []).map((module) => ({
-        ...module,
-        sections_detail: sectionsByModule[module.module_key] || {},
-        sections_completed: Object.values(
-          sectionsByModule[module.module_key] || {}
-        ).filter((s) => s.completed_at).length,
-        total_sections: Object.keys(sectionsByModule[module.module_key] || {})
-          .length,
-        completion_percentage:
-          module.total_exercises > 0
-            ? Math.round(
-                (module.completed_exercises / module.total_exercises) * 100
-              )
-            : 0,
-      }));
+      // Enrich modules with section data and hierarchical time calculation
+      const enrichedModules = (modules || [])
+        .map((module) => {
+          const moduleSections = sectionsByModule[module.module_key] || {};
+          const sectionTimes = Object.values(moduleSections);
+
+          // Calculate total section time
+          const totalSectionTime = sectionTimes.reduce(
+            (sum, section) => sum + (section.time_spent || 0),
+            0
+          );
+
+          // Hierarchical time logic:
+          // 1. If module has sections with time data, use sum of section times
+          // 2. Otherwise, use module time (for fill-in-blank, exams, help, reference, etc.)
+          const displayTime =
+            totalSectionTime > 0
+              ? totalSectionTime
+              : module.time_spent_seconds || 0;
+
+          return {
+            ...module,
+            sections_detail: moduleSections,
+            sections_completed: sectionTimes.filter((s) => s.completed_at)
+              .length,
+            total_sections: sectionTimes.length,
+            // Use hierarchical time for display
+            time_spent_seconds: displayTime,
+            // Keep original module time for reference
+            module_time_original: module.time_spent_seconds,
+            // Add metadata about time source
+            time_source: totalSectionTime > 0 ? "sections" : "module",
+            completion_percentage:
+              module.total_exercises > 0
+                ? Math.round(
+                    (module.completed_exercises / module.total_exercises) * 100
+                  )
+                : 0,
+          };
+        })
+        .sort((a, b) => {
+          // Sort by lesson order (same as nav)
+          const lessonA = lessons.find((l) => l.moduleKey === a.module_key);
+          const lessonB = lessons.find((l) => l.moduleKey === b.module_key);
+
+          // If both lessons found, sort by their id (which represents pedagogical order)
+          if (lessonA && lessonB) {
+            return lessonA.id - lessonB.id;
+          }
+
+          // If only one lesson found, put the found one first
+          if (lessonA) return -1;
+          if (lessonB) return 1;
+
+          // If neither found, sort by module_key as fallback
+          return a.module_key.localeCompare(b.module_key);
+        });
 
       logger.log("[ProgressService] Fetched unit modules", {
         userId,

@@ -51,7 +51,7 @@ export const TABLES = {
   EXERCISE_COMPLETIONS: "exercise_completions",
   CONCEPT_UNDERSTANDING: "concept_understanding",
   MODULE_PROGRESS: "module_progress",
-  UNIT_PROGRESS: "unit_progress",
+  // UNIT_PROGRESS: "unit_progress", // DEPRECATED - unit progress now calculated from module_progress
   USER_SESSIONS: "user_sessions",
   EXAM_ATTEMPTS: "exam_attempts",
   SECTION_PROGRESS: "section_progress",

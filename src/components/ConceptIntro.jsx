@@ -4,7 +4,6 @@ import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
-import { useSectionTime } from '../hooks/useSectionTime';
 import { extractModuleId } from '../utils/progressSync';
 import { getTTSText, selectBestVoice } from '../utils/ttsUtils';
 import { renderGenderSplitText, getGenderClass, hasGenderSplit } from '../utils/genderSplitUtils.jsx';
@@ -37,9 +36,8 @@ function ConceptIntro({ lesson, onStartStudying }) {
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
 
-  // Section progress and time tracking
+  // Section progress tracking
   const { updateSectionProgress, completeSectionProgress } = useSectionProgress();
-  useSectionTime(moduleId, 'vocabulary-intro', true);
 
   // Load understood concepts from database when module loads
   useEffect(() => {

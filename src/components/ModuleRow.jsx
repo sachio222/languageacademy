@@ -73,7 +73,7 @@ const ModuleRow = ({ module, userId }) => {
             <div className="module-row-stat">
               <span className="module-row-stat-label">Time</span>
               <span className="module-row-stat-value">
-                {formatDuration(module.time_spent || 0)}
+                {formatDuration(module.time_spent_seconds || 0)}
               </span>
             </div>
 

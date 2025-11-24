@@ -177,23 +177,10 @@ export const useReportCardData = (userId = null, options = {}) => {
     return data || [];
   };
 
-  // Fetch unit progress
+  // Unit progress is now calculated from module_progress - no separate table
   const fetchUnits = async (userId, timeFilter) => {
-    let query = supabaseClient
-      .from(TABLES.UNIT_PROGRESS)
-      .select("*")
-      .eq("user_id", userId);
-
-    if (timeFilter) {
-      query = query.gte("started_at", timeFilter);
-    }
-
-    const { data, error } = await query.order("started_at", {
-      ascending: false,
-    });
-
-    if (error) throw error;
-    return data || [];
+    // Return empty array since unit progress is calculated dynamically from module_progress
+    return [];
   };
 
   // Fetch exam attempts

@@ -74,46 +74,12 @@ export const useModuleTime = (moduleId, unitId, isActive = true) => {
     }
   }, [supabaseUser, supabaseClient, moduleId, unitId]);
 
-  // Update unit time in database
+  // Unit time is now calculated from module_progress - no separate tracking needed
   const updateUnitTime = useCallback(async (additionalSeconds) => {
-    if (!supabaseUser || !unitId || additionalSeconds <= 0) return;
-
-    try {
-      // Get current unit progress
-      const { data: currentProgress, error: fetchError } = await supabaseClient
-        .from(TABLES.UNIT_PROGRESS)
-        .select('time_spent_seconds')
-        .eq('user_id', supabaseUser.id)
-        .eq('unit_id', unitId)
-        .single();
-
-      // If no progress exists yet, skip - it will be created by updateUnitProgress later
-      if (fetchError && fetchError.code === 'PGRST116') {
-        logger.analytics(`Unit ${unitId} progress doesn't exist yet, skipping time update`);
-        return;
-      }
-
-      if (fetchError) throw fetchError;
-
-      const currentTime = currentProgress?.time_spent_seconds || 0;
-      const newTotalTime = currentTime + additionalSeconds;
-
-      // UPDATE only (don't insert new rows without unit_name)
-      const { error: updateError } = await supabaseClient
-        .from(TABLES.UNIT_PROGRESS)
-        .update({
-          time_spent_seconds: newTotalTime,
-        })
-        .eq('user_id', supabaseUser.id)
-        .eq('unit_id', unitId);
-
-      if (updateError) throw updateError;
-
-      logger.analytics(`Updated unit ${unitId} time: +${additionalSeconds}s (total: ${newTotalTime}s)`);
-    } catch (err) {
-      logger.error('Error updating unit time:', err);
-    }
-  }, [supabaseUser, supabaseClient, unitId]);
+    // This function is now a no-op since unit time is calculated dynamically
+    // from module_progress data in the new ProgressService
+    logger.analytics(`Unit time update skipped - unit time now calculated from module times`);
+  }, []);
 
   // Start tracking time
   const startTracking = useCallback(() => {

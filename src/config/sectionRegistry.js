@@ -16,26 +16,18 @@ export const SECTION_REGISTRY = {
     order: 1,
     enabled: true,
 
-    // Completion logic function
+    // Completion logic function - pure section-based (legacy fallbacks removed)
     getCompletionStatus: (moduleProgress, sectionProgress, lesson) => {
       const sectionData = sectionProgress?.["vocabulary-intro"];
 
       // Check if explicitly completed via section tracking
       if (sectionData?.completed_at) return "completed";
 
-      // Legacy: Check if all concepts understood (new logic we discussed)
+      // Check if all concepts understood
       if (lesson.concepts && lesson.concepts.length > 0) {
         const conceptsUnderstood =
           sectionData?.progress_data?.concepts_understood || 0;
         if (conceptsUnderstood >= lesson.concepts.length) return "completed";
-      }
-
-      // Legacy: Complete if study mode or practice started
-      if (
-        moduleProgress?.study_mode_completed ||
-        moduleProgress?.completed_exercises > 0
-      ) {
-        return "completed";
       }
 
       return "active"; // First section is always active
@@ -63,11 +55,8 @@ export const SECTION_REGISTRY = {
     getCompletionStatus: (moduleProgress, sectionProgress, lesson) => {
       const sectionData = sectionProgress?.["flash-cards"];
 
-      // Check section-specific completion
+      // Check section-specific completion only
       if (sectionData?.completed_at) return "completed";
-
-      // Legacy: Check module progress
-      if (moduleProgress?.study_mode_completed) return "completed";
 
       return "incomplete";
     },
@@ -96,8 +85,8 @@ export const SECTION_REGISTRY = {
         return "completed";
       }
 
-      // Legacy fallback: assume completed if practice started (old logic)
-      if (moduleProgress?.completed_exercises > 0) return "completed";
+      // Also accept completion without score (for migrated data)
+      if (sectionData?.completed_at) return "completed";
 
       return "incomplete";
     },
@@ -124,13 +113,8 @@ export const SECTION_REGISTRY = {
     getCompletionStatus: (moduleProgress, sectionProgress, lesson) => {
       const sectionData = sectionProgress?.["writing"];
 
-      // Check section-specific completion
+      // Check section-specific completion only
       if (sectionData?.completed_at) return "completed";
-
-      // Check if all exercises completed
-      const totalExercises = lesson.exercises?.length || 0;
-      if (moduleProgress?.completed_exercises >= totalExercises)
-        return "completed";
 
       return "incomplete";
     },

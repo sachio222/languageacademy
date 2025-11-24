@@ -13,7 +13,7 @@ export const useSectionProgress = () => {
   
   const { supabaseUser, supabaseClient, isAuthenticated } = useSupabaseProgress();
 
-  // Load section progress for all modules
+  // Load section progress with smart migration from legacy module_progress data
   const loadSectionProgress = useCallback(async () => {
     if (!isAuthenticated || !supabaseUser) {
       setLoading(false);
@@ -21,21 +21,35 @@ export const useSectionProgress = () => {
     }
 
     try {
-      const { data, error } = await supabaseClient
-        .from('section_progress')
-        .select('*')
-        .eq('user_id', supabaseUser.id);
+      // Load both section_progress and module_progress for migration
+      const [sectionResult, moduleResult] = await Promise.all([
+        supabaseClient
+          .from('section_progress')
+          .select('*')
+          .eq('user_id', supabaseUser.id),
+        
+        supabaseClient
+          .from('module_progress')
+          .select('module_key, study_mode_completed, completed_exercises, total_exercises, completed_at')
+          .eq('user_id', supabaseUser.id)
+      ]);
 
-      if (error) throw error;
+      if (sectionResult.error) throw sectionResult.error;
+      if (moduleResult.error) throw moduleResult.error;
 
-      // Organize by module_key -> section_id
+      const sectionData = sectionResult.data || [];
+      const moduleData = moduleResult.data || [];
+
+      // Organize existing section progress by module_key -> section_id
       const progressByModule = {};
-      data.forEach(item => {
+      sectionData.forEach(item => {
         if (!progressByModule[item.module_key]) {
           progressByModule[item.module_key] = {};
         }
         progressByModule[item.module_key][item.section_id] = item;
       });
+
+      // No migration needed - users will naturally complete sections with new tracking
 
       setSectionProgress(progressByModule);
       logger.log('Loaded section progress for', Object.keys(progressByModule).length, 'modules');

@@ -51,13 +51,8 @@ export const useSupabaseProgress = () => {
 
         if (moduleError) throw moduleError;
 
-        // Load unit progress
-        const { data: unitData, error: unitError } = await supabaseClient
-          .from(TABLES.UNIT_PROGRESS)
-          .select("*")
-          .eq("user_id", supabaseUser.id);
-
-        if (unitError) throw unitError;
+        // Unit progress is now calculated from module_progress - no separate query needed
+        const unitData = []; // Empty array since we calculate unit progress dynamically
 
         // Process exercise completions
         const completedSet = new Set(exerciseData.map((e) => e.exercise_id));
@@ -530,63 +525,17 @@ export const useSupabaseProgress = () => {
     [supabaseUser, supabaseClient]
   );
 
-  // Update unit progress
+  // Unit progress is now calculated from module_progress - no separate table needed
   const updateUnitProgress = useCallback(
-    async (
-      unitId,
-      unitName,
-      totalModules,
-      completedCount,
-      examScore = null,
-      timeSpent = 0
-    ) => {
-      if (!supabaseUser) return;
-
-      try {
-        const isCompleted =
-          completedCount >= totalModules && examScore !== null;
-
-        // Build update object without time_spent_seconds (managed by useModuleTime)
-        const updateData = {
-          user_id: supabaseUser.id,
-          unit_id: unitId,
-          unit_name: unitName,
-          total_modules: totalModules,
-          completed_modules: completedCount,
-          unit_exam_score: examScore,
-          completed_at: isCompleted ? new Date().toISOString() : null,
-        };
-
-        // Only include time_spent_seconds if it's provided (for backward compatibility)
-        // The new useModuleTime hook manages unit time separately
-        if (timeSpent > 0) {
-          logger.warn(`updateUnitProgress called with timeSpent=${timeSpent}. Time should be managed by useModuleTime hook.`);
-          // Don't include time_spent_seconds - let useModuleTime handle it
-        }
-
-        const { data, error } = await supabaseClient
-          .from(TABLES.UNIT_PROGRESS)
-          .upsert(updateData, {
-            onConflict: "user_id,unit_id",
-          })
-          .select()
-          .single();
-
-        if (error) throw error;
-
-        // Update local state
-        setUnitProgress((prev) => ({
-          ...prev,
-          [unitId]: data,
-        }));
-
-        return data;
-      } catch (err) {
-        logger.error("Error updating unit progress:", err);
-        throw err;
-      }
+    async (unitId, unitName, totalModules, completedCount, examScore = null, timeSpent = 0) => {
+      // This function is now a no-op since unit progress is calculated dynamically
+      // from module_progress data in the new ProgressService
+      logger.log(`updateUnitProgress called but skipped - unit progress now calculated from module_progress`, {
+        unitId, unitName, totalModules, completedCount, examScore
+      });
+      return null;
     },
-    [supabaseUser, supabaseClient]
+    []
   );
 
   // Mark concept as understood

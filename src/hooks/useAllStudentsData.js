@@ -93,7 +93,7 @@ export const useAllStudentsData = () => {
           .eq('user_id', profile.id),
         
         supabaseClient
-          .from(TABLES.UNIT_PROGRESS)
+          .from("module_progress") // Calculate unit progress from module_progress instead
           .select('*')
           .eq('user_id', profile.id)
       ]);

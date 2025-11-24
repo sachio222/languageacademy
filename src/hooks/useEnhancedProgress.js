@@ -362,8 +362,7 @@ export const useRecentActivity = (userId = null, limit = 20) => {
       setData(activity);
 
       logger.log('[useRecentActivity] Fetched recent activity', { 
-        modules: activity.modules.length,
-        exams: activity.exams.length
+        modules: activity.modules.length
       });
     } catch (err) {
       logger.error('[useRecentActivity] Error fetching recent activity:', err);
