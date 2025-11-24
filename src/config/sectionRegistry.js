@@ -215,7 +215,7 @@ export const SECTION_REGISTRY = {
     view: "next",
     color: "#6B7280",
     pexelsImage:
-      "https://images.pexels.com/photos/22765125/pexels-photo-22765125.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "https://images.pexels.com/photos/442584/pexels-photo-442584.jpeg",
     hasImage: true,
     order: 999,
     enabled: true,
