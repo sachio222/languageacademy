@@ -230,18 +230,33 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     // If this was the last exercise AND it was completed successfully, show modal
     if (isLastExercise && wasSuccessful && studyCompleted && !lesson.isFillInTheBlank) {
-      // Complete the writing section immediately when last exercise is completed
+      // Complete the appropriate section based on module type
       if (isAuthenticated && lessonModuleId) {
-        logger.log('LessonView: Auto-completing writing section - last exercise completed');
+        if (lesson.isReadingComprehension) {
+          // Complete reading-passage section for reading comprehension modules
+          logger.log('LessonView: Auto-completing reading-passage section - all exercises completed');
 
-        completeSectionProgress(lessonModuleId, 'writing', {
-          exercises_completed: lesson.exercises.length,
-          completion_method: 'all_exercises_completed'
-        }).then(result => {
-          logger.log('LessonView: Writing section completion successful', result);
-        }).catch(error => {
-          logger.error('LessonView: Error completing writing section:', error);
-        });
+          completeSectionProgress(lessonModuleId, 'reading-passage', {
+            exercises_completed: lesson.exercises.length,
+            completion_method: 'all_exercises_completed'
+          }).then(result => {
+            logger.log('LessonView: Reading-passage section completion successful', result);
+          }).catch(error => {
+            logger.error('LessonView: Error completing reading-passage section:', error);
+          });
+        } else {
+          // Complete writing section for standard modules
+          logger.log('LessonView: Auto-completing writing section - last exercise completed');
+
+          completeSectionProgress(lessonModuleId, 'writing', {
+            exercises_completed: lesson.exercises.length,
+            completion_method: 'all_exercises_completed'
+          }).then(result => {
+            logger.log('LessonView: Writing section completion successful', result);
+          }).catch(error => {
+            logger.error('LessonView: Error completing writing section:', error);
+          });
+        }
       }
 
       // Calculate time spent

@@ -5,9 +5,11 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { checkAnswer } from '../linter/frenchLinter';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import '../styles/FillInTheBlank.css';
 
 function FillInTheBlank({ module, onComplete, onBack }) {
+  const { completeSectionProgress } = useSectionProgress();
   // Helper to get initial sentence index from URL (1-based to 0-based) with validation
   const getInitialSentenceIndex = () => {
     const params = new URLSearchParams(window.location.search);
@@ -233,7 +235,28 @@ function FillInTheBlank({ module, onComplete, onBack }) {
     updateSentenceInUrl(0);
   };
 
-  const handleFinish = () => {
+  const handleFinish = async () => {
+    // Mark practice-exercises section complete if passed
+    if (passed && module.moduleKey && completeSectionProgress) {
+      try {
+        const correctCount = Object.values(isCorrect).filter(Boolean).length;
+        const totalBlanks = sentences.reduce((sum, s) => sum + s.blanks.length, 0);
+        const score = Math.round((correctCount / totalBlanks) * 100);
+        
+        await completeSectionProgress(module.moduleKey, 'practice-exercises', {
+          sentences_completed: sentences.length,
+          correct_answers: correctCount,
+          total_blanks: totalBlanks,
+          score: score,
+          completion_method: 'all_sentences_completed'
+        });
+        
+        logger.log('FillInTheBlank: Marked practice-exercises section complete');
+      } catch (error) {
+        logger.error('FillInTheBlank: Error marking section complete:', error);
+      }
+    }
+    
     if (passed && onComplete) {
       onComplete(passed);
     } else if (!passed && onBack) {

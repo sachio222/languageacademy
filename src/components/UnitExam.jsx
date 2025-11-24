@@ -5,6 +5,7 @@ import { Award } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { logger } from "../utils/logger";
 
@@ -16,6 +17,7 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
   const { isAuthenticated, supabaseUser } = useAuth();
   const supabaseClient = useSupabaseClient();
   const supabaseProgress = useSupabaseProgress();
+  const { completeSectionProgress } = useSectionProgress();
   // Helper to get initial section index from URL (1-based to 0-based) with validation
   const getInitialSectionIndex = () => {
     const params = new URLSearchParams(window.location.search);
@@ -64,6 +66,14 @@ function UnitExam({ lesson, unitNumber, onPassExam, onRetryUnit }) {
             Math.round((results.totalCorrect / results.totalQuestions) * 100), // examScore
             0 // timeSpent (can be improved later)
           );
+
+          // Mark exam-questions section complete
+          await completeSectionProgress(moduleId, 'exam-questions', {
+            questions_answered: results.totalQuestions,
+            correct_answers: results.totalCorrect,
+            score: Math.round((results.totalCorrect / results.totalQuestions) * 100),
+            completion_method: 'exam_passed'
+          });
 
           logger.log('[DEBUG] Unit exam marked complete in database');
         } catch (error) {
