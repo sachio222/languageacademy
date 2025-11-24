@@ -5,7 +5,8 @@
 
 import React from 'react';
 import { X, Clock, CheckCircle, Circle } from 'lucide-react';
-import { SECTION_REGISTRY } from '../config/sectionRegistry';
+import { SECTION_REGISTRY, getActiveSections, isSectionAvailable } from '../config/sectionRegistry';
+import { lessons } from '../lessons/lessonData';
 import '../styles/ModuleSectionDetails.css';
 
 const ModuleSectionDetails = ({ moduleKey, sectionsDetail, userId, onClose }) => {
@@ -23,8 +24,12 @@ const ModuleSectionDetails = ({ moduleKey, sectionsDetail, userId, onClose }) =>
     return secs > 0 ? `${minutes}m ${secs}s` : `${minutes}m`;
   };
 
-  // Get all available sections from registry
-  const allSections = Object.values(SECTION_REGISTRY)
+  // Get lesson object to determine available sections
+  const lesson = lessons.find(l => l.moduleKey === moduleKey);
+  
+  // Get only sections available for this specific module type
+  const availableSections = getActiveSections()
+    .filter(section => isSectionAvailable(section.id, lesson))
     .filter(s => !s.isSpecial && !s.comingSoon)
     .sort((a, b) => a.order - b.order);
 
@@ -42,7 +47,7 @@ const ModuleSectionDetails = ({ moduleKey, sectionsDetail, userId, onClose }) =>
       </div>
 
       <div className="section-details-list">
-        {allSections.map(section => {
+        {availableSections.map(section => {
           const sectionData = sections[section.id];
           const isCompleted = sectionData?.completed_at;
           const timeSpent = sectionData?.time_spent || 0;

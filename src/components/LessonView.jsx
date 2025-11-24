@@ -135,17 +135,25 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const unitId = getUnitIdForLesson(lesson.id);
   const { totalTime: moduleTime, isTracking: isTrackingModule } = useModuleTime(moduleId, unitId, true);
 
-  // Track section-specific time based on current URL view
+  // Track section-specific time based on current URL view and module type
   const getCurrentSectionId = () => {
     const params = new URLSearchParams(window.location.search);
     const currentView = params.get('view') || 'selector';
 
+    // For special module types, use their dedicated sections
+    if (lesson.isFillInTheBlank) return 'practice-exercises';
+    if (lesson.isUnitExam) return 'exam-questions';
+    if (lesson.isHelpModule) return 'interactive-help';
+    if (lesson.isReadingComprehension) return 'reading-passage';
+    if (lesson.isPhonicsReference) return 'reference-content';
+
+    // For standard modules, use URL-based mapping
     const sectionMap = {
       // 'selector': null,  // Don't track time on menu/selector screen
       'intro': 'vocabulary-intro',
-      'study': 'flash-cards',        // Fixed: study view = flash-cards section
+      'study': 'flash-cards',
       'practice': 'writing',
-      'speedmatch': 'speed-match',   // Fixed: speedmatch view = speed-match section
+      'speedmatch': 'speed-match',
       'exam': 'exam'
     };
 

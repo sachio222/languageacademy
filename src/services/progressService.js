@@ -190,13 +190,9 @@ export class ProgressService {
             0
           );
 
-          // Hierarchical time logic:
-          // 1. If module has sections with time data, use sum of section times
-          // 2. Otherwise, use module time (for fill-in-blank, exams, help, reference, etc.)
-          const displayTime =
-            totalSectionTime > 0
-              ? totalSectionTime
-              : module.time_spent_seconds || 0;
+          // Enhanced report card: Use ONLY section time sums
+          // No module time fallback - pure section-based time tracking
+          const displayTime = totalSectionTime;
 
           return {
             ...module,
@@ -204,12 +200,12 @@ export class ProgressService {
             sections_completed: sectionTimes.filter((s) => s.completed_at)
               .length,
             total_sections: sectionTimes.length,
-            // Use hierarchical time for display
+            // Use pure section time for enhanced report card
             time_spent_seconds: displayTime,
-            // Keep original module time for reference
+            // Keep original module time for debugging/comparison
             module_time_original: module.time_spent_seconds,
-            // Add metadata about time source
-            time_source: totalSectionTime > 0 ? "sections" : "module",
+            // Always section-based now
+            time_source: "sections",
             completion_percentage:
               module.total_exercises > 0
                 ? Math.round(
