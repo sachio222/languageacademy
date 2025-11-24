@@ -23,6 +23,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
   const [showConcepts, setShowConcepts] = useState(true);
   const [understoodConcepts, setUnderstoodConcepts] = useState(new Set());
   const [loading, setLoading] = useState(true);
+  const [showIncompleteWarning, setShowIncompleteWarning] = useState(false);
 
   const vocabularyItems = lesson.vocabularyReference || [];
   const isFirstLesson = lesson.id === 1;
@@ -342,7 +343,39 @@ function ConceptIntro({ lesson, onStartStudying }) {
             Not sure what to do? Click here
           </button>
         )}
-        <button className="btn-primary btn-large" onClick={onStartStudying}>
+        
+        {showIncompleteWarning && (
+          <div className="incomplete-warning">
+            {(() => {
+              const totalConcepts = lesson.concepts?.length || 0;
+              const remaining = totalConcepts - understoodConcepts.size;
+              const baseMessage = "Please mark all key concepts as understood before continuing";
+              
+              if (remaining === 0 || understoodConcepts.size === 0) {
+                return baseMessage;
+              } else if (remaining === 1) {
+                return `${baseMessage} - 1 more to go!`;
+              } else {
+                return `${baseMessage} - ${remaining} more to go!`;
+              }
+            })()}
+          </div>
+        )}
+        
+        <button 
+          className="btn-primary btn-large" 
+          onClick={() => {
+            const totalConcepts = lesson.concepts?.length || 0;
+            const allUnderstood = understoodConcepts.size === totalConcepts && totalConcepts > 0;
+            
+            if (!allUnderstood && totalConcepts > 0) {
+              setShowIncompleteWarning(true);
+              setTimeout(() => setShowIncompleteWarning(false), 4000);
+            } else {
+              onStartStudying();
+            }
+          }}
+        >
           Study Mode →
         </button>
       </div>

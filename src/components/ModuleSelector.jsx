@@ -4,11 +4,11 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
 import { logger } from '../utils/logger';
 import { splitTitle } from '../utils/moduleUtils';
-import { 
-  SECTION_REGISTRY, 
-  getActiveSections, 
-  isSectionAvailable, 
-  getSectionStatus 
+import {
+  SECTION_REGISTRY,
+  getActiveSections,
+  isSectionAvailable,
+  getSectionStatus
 } from '../config/sectionRegistry';
 import '../styles/ModuleSelector.css';
 
@@ -54,18 +54,18 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
   const { isAuthenticated } = useSupabaseProgress();
   const moduleId = extractModuleId(lesson);
   const { modulePrefix, mainTitle } = splitTitle(lesson.title);
-  
+
   // Get available sections for this lesson
   const availableSections = getActiveSections()
     .filter(section => isSectionAvailable(section.id, lesson));
-  
+
   // Get section status using centralized logic
   const getSectionStatusForLesson = (section) => {
     const progress = moduleProgress?.[moduleId];
     const moduleSectionProgress = sectionProgress?.[moduleId] || {};
-    
+
     const status = getSectionStatus(section.id, progress, moduleSectionProgress, lesson);
-    
+
     // Debug logging for vocabulary-intro
     if (section.id === 'vocabulary-intro') {
       logger.log('ModuleSelector: vocabulary-intro status check', {
@@ -78,7 +78,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
         hasVocabIntroData: !!moduleSectionProgress['vocabulary-intro']
       });
     }
-    
+
     return status;
   };
 
@@ -106,12 +106,12 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
       const allComplete = availableSections
         .filter(s => !s.isSpecial && !s.isPremium && !s.comingSoon)
         .every(s => getSectionStatusForLesson(s) === 'completed');
-      
+
       if (!allComplete) {
         logger.log('Next Module disabled - not all sections complete');
         return;
       }
-      
+
       // Navigate to next module
       onSectionSelect('next');
       return;
@@ -141,6 +141,34 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
         {lesson.description && (
           <p className="module-selector-description">{lesson.description}</p>
         )}
+
+        {/* Vocabulary Preview */}
+        {lesson.vocabularyReference && lesson.vocabularyReference.length > 0 && (
+          <div className="vocab-preview">
+            <div className="vocab-preview-label">You'll learn:</div>
+            <div className="vocab-preview-words">
+              {lesson.vocabularyReference.slice(0, 3).map((word, idx) => (
+                <button
+                  key={idx}
+                  className="vocab-preview-item"
+                  onClick={() => onSectionSelect('intro')}
+                >
+                  <span className="vocab-preview-french">{word.french}</span>
+                  <span className="vocab-preview-dot">•</span>
+                  <span className="vocab-preview-english">{word.english}</span>
+                </button>
+              ))}
+              {lesson.vocabularyReference.length > 3 && (
+                <button
+                  className="vocab-preview-more"
+                  onClick={() => onSectionSelect('intro')}
+                >
+                  See {lesson.vocabularyReference.length - 3} more...
+                </button>
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="module-selector-grid">
@@ -163,10 +191,10 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                 '--section-color': section.color,
               }}
               title={
-                isPremiumCard 
-                  ? 'Coming Soon - Premium Feature' 
-                  : isLocked 
-                    ? 'Complete previous sections to unlock' 
+                isPremiumCard
+                  ? 'Coming Soon - Premium Feature'
+                  : isLocked
+                    ? 'Complete previous sections to unlock'
                     : ''
               }
             >
@@ -184,14 +212,14 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                   <div className="module-selector-card-scrim" />
                 </>
               ) : (
-                <div 
+                <div
                   className="module-selector-card-image"
                   style={{
                     backgroundColor: section.color,
                   }}
                 />
               )}
-              
+
               {/* Content Overlay */}
               <div className="module-selector-card-content">
                 {/* Status Indicator - Top */}
@@ -207,18 +235,18 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                     </div>
                   ) : !section.isSpecial ? (
                     <>
-                  {isCompleted && (
-                    <div className="status-checkmark">
-                      <Check size={16} />
-                    </div>
-                  )}
-                  {!isCompleted && (
-                    <div className="status-circle-dashed" />
-                  )}
+                      {isCompleted && (
+                        <div className="status-checkmark">
+                          <Check size={16} />
+                        </div>
+                      )}
+                      {!isCompleted && (
+                        <div className="status-circle-dashed" />
+                      )}
                     </>
                   ) : null}
                 </div>
-                
+
                 {/* Label - Bottom */}
                 <div className="module-selector-card-label">
                   {section.label.split('\n').map((line, i) => (

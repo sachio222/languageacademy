@@ -70,7 +70,7 @@
 }
 
 .nav-collapsed-unit:hover .collapsed-unit-icon {
-  transform: scale(1.05);
+  transform: scale(1.5);
 }
 
 .collapsed-unit-progress {
@@ -299,7 +299,7 @@
 }
 
 .nav-unit-header:hover .nav-unit-icon {
-  transform: scale(1.1);
+  transform: scale(1.25);
 }
 
 .nav-unit-title {
@@ -408,7 +408,7 @@
 }
 
 .nav-lesson:hover .nav-lesson-exam-icon {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .nav-lesson.active .nav-lesson-exam-icon {
@@ -429,7 +429,7 @@
 }
 
 .nav-lesson:hover .nav-lesson-reading-icon {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .nav-lesson.active .nav-lesson-reading-icon {
@@ -450,7 +450,7 @@
 }
 
 .nav-lesson:hover .nav-lesson-practice-icon {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .nav-lesson.active .nav-lesson-practice-icon {
@@ -486,7 +486,7 @@
 }
 
 .nav-lesson:hover .nav-lesson-check {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .nav-lesson-progress {

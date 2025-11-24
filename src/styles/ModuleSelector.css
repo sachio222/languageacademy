@@ -21,7 +21,8 @@
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .module-selector-title {
@@ -30,7 +31,8 @@
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: -0.03em;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   line-height: 1.2;
 }
 
@@ -39,7 +41,112 @@
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
+  margin-bottom: 1.5rem;
   font-weight: 400;
+}
+
+/* Vocabulary Preview */
+.vocab-preview {
+  margin-top: 1.25rem;
+}
+
+.vocab-preview-label {
+  font-size: 0.875rem;
+  color: #665665;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.vocab-preview-words {
+  display: flex;
+  gap: 0.625rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-top: 0.5rem;
+}
+
+.vocab-preview-words::-webkit-scrollbar {
+  display: none;
+}
+
+.vocab-preview-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  background: #fafbfc;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  transition: all 0.15s ease-out;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.vocab-preview-item:hover {
+  border-color: #3b82f6;
+  background: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.15);
+}
+
+.vocab-preview-item:active {
+  transform: translateY(0);
+}
+
+.vocab-preview-french {
+  color: #1a1a1a;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.vocab-preview-dot {
+  color: #e0e0e0;
+  font-size: 0.5rem;
+  line-height: 1;
+}
+
+.vocab-preview-english {
+  color: #665665;
+  letter-spacing: -0.01em;
+}
+
+.vocab-preview-more {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1rem;
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  color: #3b82f6;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  white-space: nowrap;
+}
+
+.vocab-preview-more:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.vocab-preview-more:active {
+  transform: translateY(0);
 }
 
 .module-selector-grid {
@@ -188,7 +295,8 @@
 
 /* Card Label - positioned at bottom */
 .module-selector-card-label {
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
@@ -210,7 +318,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #10B981;
+  background: #10b981;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,16 +414,16 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  
+
   /* Minimal glass morphism effect */
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
-  
+
   /* Subtle shadow for depth */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  
+
   /* Smooth appearance */
   transition: all 0.15s ease;
 }
@@ -328,16 +436,16 @@
   font-weight: 500;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  
+
   /* Slightly different styling to differentiate */
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #ffffff;
-  
+
   /* Subtle shadow */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  
+
   transition: all 0.15s ease;
 }
 
@@ -346,11 +454,10 @@
   .premium-badges {
     gap: 0.375rem;
   }
-  
+
   .premium-badge,
   .coming-soon-badge {
     padding: 0.3rem 0.625rem;
     font-size: 0.6875rem;
   }
 }
-

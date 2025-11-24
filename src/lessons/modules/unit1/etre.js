@@ -16,11 +16,11 @@ export const module3_etre = {
     capabilities: [
       "Say 'I am', 'you are', 'he/she is' in French",
       "Introduce yourself and describe others",
-      "Form your first complete French sentences"
+      "Form your first complete French sentences",
     ],
     realWorldUse: "introduce yourself and describe people",
     milestone: "First real sentences",
-    nextModuleTeaser: "Add avoir (to have) to express possession"
+    nextModuleTeaser: "Add avoir (to have) to express possession",
   },
 
   concepts: [
@@ -32,14 +32,16 @@ export const module3_etre = {
     {
       term: "Conjugation Pattern",
       definition:
-        "Each pronoun gets a unique verb form - you must memorize all 8!",
-      example: "8 different forms to learn in this module",
+        "Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!",
+      example:
+        "je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont",
     },
     {
       term: "Practical Usage",
       definition:
-        'Use with adjectives: "I am happy" or professions: "I am a student"',
-      example: "Combine with adjectives to describe yourself and others",
+        'Use with adjectives: "I am happy" or professions: "I am a student", or locations: "I am in Paris"',
+      example:
+        "Je suis heureux (I am happy), Je suis étudiant (I am a student), Je suis à Paris (I am in Paris)",
     },
   ],
 
