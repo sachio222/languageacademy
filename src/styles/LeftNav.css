@@ -229,7 +229,8 @@
   color: #1e293b;
   text-transform: uppercase;
   letter-spacing: 0.025em;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .nav-unit-chevron {
@@ -336,7 +337,7 @@
 
 .nav-lesson-title {
   flex: 1;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #475569;
   line-height: 1.4;
 }

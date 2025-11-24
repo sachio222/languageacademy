@@ -1233,7 +1233,7 @@ body:has(.left-nav.collapsed) .app-footer {
   color: #64748b;
   padding: 0.625rem 1.25rem;
   border-radius: 6px;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
