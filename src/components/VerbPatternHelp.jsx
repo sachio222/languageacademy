@@ -2,8 +2,9 @@ import { useState, useEffect, useCallback } from 'react';
 import { Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
+import IncompleteWarning from './IncompleteWarning';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { useSectionProgress } from '../contexts/SectionProgressContext';
+import { useHelpModuleCompletion } from '../hooks/useHelpModuleCompletion';
 import { extractModuleId } from '../utils/progressSync';
 import { selectBestVoice } from '../utils/ttsUtils';
 import { toggleSetItem } from '../utils/vocabularyUtils';
@@ -51,10 +52,8 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
   const [currentPage, setCurrentPage] = useState(1);
   const [understoodSections, setUnderstoodSections] = useState(new Set());
   const [loading, setLoading] = useState(true);
-  const [showIncompleteWarning, setShowIncompleteWarning] = useState(false);
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
-  const { completeSectionProgress } = useSectionProgress();
   
   const lessonModuleId = extractModuleId(lesson);
 
@@ -72,6 +71,9 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
     { id: 'etre-most-irregular', title: 'The Most Irregular: être', index: 8 },
     { id: 'why-this-matters', title: 'Why This Matters', index: 9 }
   ];
+  
+  // Derive total sections from array (indices 0-9 = 10 sections)
+  const totalSections = verbPatternSections.length;
 
   // Load understood sections from database when component loads
   useEffect(() => {
@@ -149,24 +151,13 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Auto-complete interactive-help section when all sections understood
-  useEffect(() => {
-    const allSectionsUnderstood = understoodSections.size === verbPatternSections.length;
-
-    if (allSectionsUnderstood && isAuthenticated && lessonModuleId) {
-      logger.log('VerbPatternHelp: Auto-completing interactive-help section...');
-
-      completeSectionProgress(lessonModuleId, 'interactive-help', {
-        sections_understood: understoodSections.size,
-        total_sections: verbPatternSections.length,
-        completion_method: 'all_sections_understood'
-      }).then(result => {
-        logger.log('VerbPatternHelp: Section completion successful', result);
-      }).catch(error => {
-        logger.error('VerbPatternHelp: Error completing interactive-help section:', error);
-      });
-    }
-  }, [understoodSections, verbPatternSections.length, isAuthenticated, lessonModuleId, completeSectionProgress]);
+  // Use shared help module completion logic
+  const { showIncompleteWarning, getWarningMessage, handleComplete } = useHelpModuleCompletion(
+    lessonModuleId,
+    understoodSections,
+    totalSections,
+    isAuthenticated
+  );
 
   const renderPage1 = () => (
     <>
@@ -1020,35 +1011,14 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
         </div>
       </div>
 
-      {showIncompleteWarning && (
-        <div className="incomplete-warning">
-          {(() => {
-            const totalSections = verbPatternSections.length;
-            const remaining = totalSections - understoodSections.size;
-            const baseMessage = "Please mark all sections as understood before continuing";
-            
-            if (remaining === 0 || understoodSections.size === 0) {
-              return baseMessage;
-            } else if (remaining === 1) {
-              return `${baseMessage} - 1 more to go!`;
-            } else {
-              return `${baseMessage} - ${remaining} more to go!`;
-            }
-          })()}
-        </div>
-      )}
+      <IncompleteWarning show={showIncompleteWarning} message={getWarningMessage()} />
 
       <div className="help-footer">
         <button className="btn-back" onClick={() => handlePageChange(2)}>
           ← Previous
         </button>
-        <button className="btn-continue" onClick={() => {
-          const allUnderstood = understoodSections.size === verbPatternSections.length;
-          
-          if (!allUnderstood) {
-            setShowIncompleteWarning(true);
-            setTimeout(() => setShowIncompleteWarning(false), 4000);
-          } else {
+        <button className="btn-primary btn-large" onClick={() => {
+          handleComplete(() => {
             // Use existing module completion pattern
             if (onModuleComplete && lesson) {
               logger.log('VerbPatternHelp: Marking module as completed and going to next');
@@ -1057,9 +1027,9 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
               // Fallback to original behavior
               onComplete();
             }
-          }
+          });
         }}>
-          Continue to Next Module →
+          Continue Learning →
         </button>
       </div>
     </>

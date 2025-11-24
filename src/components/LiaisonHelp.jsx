@@ -2,8 +2,9 @@ import { useState, useEffect, useCallback } from 'react';
 import { Check, X } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
+import IncompleteWarning from './IncompleteWarning';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { useSectionProgress } from '../contexts/SectionProgressContext';
+import { useHelpModuleCompletion } from '../hooks/useHelpModuleCompletion';
 import { extractModuleId } from '../utils/progressSync';
 import { selectBestVoice } from '../utils/ttsUtils';
 import { toggleSetItem } from '../utils/vocabularyUtils';
@@ -50,10 +51,8 @@ function speakText(text) {
 const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   const [understoodSections, setUnderstoodSections] = useState(new Set());
   const [loading, setLoading] = useState(true);
-  const [showIncompleteWarning, setShowIncompleteWarning] = useState(false);
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
-  const { completeSectionProgress } = useSectionProgress();
 
   const lessonModuleId = extractModuleId(lesson);
 
@@ -61,8 +60,12 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   const liaisonSections = [
     { id: 'french-words-connect', title: 'French Words Connect', index: 0 },
     { id: 'silent-letters-wake-up', title: 'Silent Letters Wake Up', index: 1 },
-    { id: 'you-already-know', title: 'You Already Know This!', index: 2 }
+    { id: 'you-already-know', title: 'You Already Know This!', index: 2 },
+    { id: 'listen-practice', title: 'Listen and Practice', index: 3 }
   ];
+
+  // Derive total sections from array (indices 0-3 = 4 sections)
+  const totalSections = liaisonSections.length;
 
   // Load understood sections from database when component loads
   useEffect(() => {
@@ -100,6 +103,14 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     loadUnderstoodSections();
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
+  // Use shared help module completion logic
+  const { showIncompleteWarning, getWarningMessage, handleComplete } = useHelpModuleCompletion(
+    lessonModuleId,
+    understoodSections,
+    totalSections,
+    isAuthenticated
+  );
+
   const toggleUnderstood = useCallback(async (sectionIndex) => {
     logger.log('LiaisonHelp: toggleUnderstood called', sectionIndex);
     const isCurrentlyUnderstood = understoodSections.has(sectionIndex);
@@ -132,12 +143,6 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       }
     }
   }, [understoodSections, isAuthenticated, moduleId, updateConceptUnderstanding, liaisonSections]);
-
-  const handleComplete = () => {
-    if (onComplete) {
-      onComplete();
-    }
-  };
 
   if (loading) {
     return (
@@ -414,9 +419,17 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
+        <IncompleteWarning show={showIncompleteWarning} message={getWarningMessage()} />
+
         <footer className="liaison-footer">
-          <button className="btn-continue" onClick={handleComplete}>
-            Continue Learning
+          <button className="btn-primary btn-large" onClick={() => {
+            handleComplete(() => {
+              if (onComplete) {
+                onComplete();
+              }
+            });
+          }}>
+            Continue Learning →
           </button>
         </footer>
       </div>

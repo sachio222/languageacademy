@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import UnderstoodButton from './UnderstoodButton';
 import SpeakButton from './SpeakButton';
+import IncompleteWarning from './IncompleteWarning';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { useSectionProgress } from '../contexts/SectionProgressContext';
+import { useHelpModuleCompletion } from '../hooks/useHelpModuleCompletion';
 import { useSpeech } from '../hooks/useSpeech';
 import { extractModuleId } from '../utils/progressSync';
 import './QuestionsHelp.css';
@@ -22,10 +23,8 @@ const toggleSetItem = (set, item, shouldAdd) => {
 const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   const [understoodSections, setUnderstoodSections] = useState(new Set());
   const [loading, setLoading] = useState(true);
-  const [showIncompleteWarning, setShowIncompleteWarning] = useState(false);
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
-  const { completeSectionProgress } = useSectionProgress();
   const { speak } = useSpeech();
   
   const lessonModuleId = extractModuleId(lesson);
@@ -38,6 +37,9 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     { id: 'method-3-inversion', title: 'Method 3: Inversion (Formal)', index: 3 },
     { id: 'when-to-use', title: 'When to Use Each Method', index: 4 }
   ];
+  
+  // Derive total sections from actual UnderstoodButton indices (0-4 = 5 sections)
+  const totalSections = questionSections.length;
 
   // Load understood sections from database when component loads
   useEffect(() => {
@@ -75,6 +77,14 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     loadUnderstoodSections();
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
+  // Use shared help module completion logic
+  const { showIncompleteWarning, getWarningMessage, handleComplete } = useHelpModuleCompletion(
+    lessonModuleId,
+    understoodSections,
+    totalSections,
+    isAuthenticated
+  );
+
   const toggleUnderstood = useCallback(async (sectionIndex) => {
     logger.log('QuestionsHelp: toggleUnderstood called', sectionIndex);
     const isCurrentlyUnderstood = understoodSections.has(sectionIndex);
@@ -108,24 +118,7 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     }
   }, [understoodSections, isAuthenticated, moduleId, updateConceptUnderstanding, questionSections]);
 
-  // Auto-complete interactive-help section when all sections understood
-  useEffect(() => {
-    const allSectionsUnderstood = understoodSections.size === questionSections.length;
-
-    if (allSectionsUnderstood && isAuthenticated && lessonModuleId) {
-      logger.log('QuestionsHelp: Auto-completing interactive-help section...');
-
-      completeSectionProgress(lessonModuleId, 'interactive-help', {
-        sections_understood: understoodSections.size,
-        total_sections: questionSections.length,
-        completion_method: 'all_sections_understood'
-      }).then(result => {
-        logger.log('QuestionsHelp: Section completion successful', result);
-      }).catch(error => {
-        logger.error('QuestionsHelp: Error completing interactive-help section:', error);
-      });
-    }
-  }, [understoodSections, questionSections.length, isAuthenticated, lessonModuleId, completeSectionProgress]);
+  // Auto-completion effect removed - now handled by useHelpModuleCompletion hook
 
   if (loading) {
     return (
@@ -392,42 +385,21 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
-        {showIncompleteWarning && (
-          <div className="incomplete-warning">
-            {(() => {
-              const totalSections = questionSections.length;
-              const remaining = totalSections - understoodSections.size;
-              const baseMessage = "Please mark all sections as understood before continuing";
-              
-              if (remaining === 0 || understoodSections.size === 0) {
-                return baseMessage;
-              } else if (remaining === 1) {
-                return `${baseMessage} - 1 more to go!`;
-              } else {
-                return `${baseMessage} - ${remaining} more to go!`;
-              }
-            })()}
-          </div>
-        )}
+        <IncompleteWarning show={showIncompleteWarning} message={getWarningMessage()} />
 
         <div className="questions-footer">
           <button
-            className="btn-continue"
+            className="btn-primary btn-large"
             onClick={() => {
-              const allUnderstood = understoodSections.size === questionSections.length;
-              
-              if (!allUnderstood) {
-                setShowIncompleteWarning(true);
-                setTimeout(() => setShowIncompleteWarning(false), 4000);
-              } else {
+              handleComplete(() => {
                 if (onModuleComplete) {
                   onModuleComplete(lesson.moduleKey);
                 }
                 onComplete();
-              }
+              });
             }}
           >
-            Continue →
+            Continue Learning →
           </button>
         </div>
       </div>

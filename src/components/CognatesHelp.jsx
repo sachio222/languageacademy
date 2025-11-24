@@ -1,18 +1,34 @@
 import { useState, useEffect, useCallback } from 'react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
+import IncompleteWarning from './IncompleteWarning';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useHelpModuleCompletion } from '../hooks/useHelpModuleCompletion';
+import { extractModuleId } from '../utils/progressSync';
 import { useSpeech } from '../hooks/useSpeech';
 import { getGenderFromFrench } from '../utils/genderSplitUtils';
 import './CognatesHelp.css';
 import { logger } from "../utils/logger";
 
+// Helper function to toggle set items
+const toggleSetItem = (set, item, shouldAdd) => {
+  const newSet = new Set(set);
+  if (shouldAdd) {
+    newSet.add(item);
+  } else {
+    newSet.delete(item);
+  }
+  return newSet;
+};
+
 const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   const [understoodSections, setUnderstoodSections] = useState(new Set());
   const [loading, setLoading] = useState(true);
   const supabaseProgress = useSupabaseProgress();
-  const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
+  const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser} = supabaseProgress || {};
   const { speak } = useSpeech();
+  
+  const lessonModuleId = extractModuleId(lesson);
 
   // Define the cognates sections that can be marked as understood
   const cognatesSections = [
@@ -21,6 +37,9 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     { id: 'almost-identical', title: 'Almost Identical', index: 2 },
     { id: 'very-similar', title: 'Very Similar', index: 3 }
   ];
+  
+  // Derive total sections from array (indices 0-3 = 4 sections)
+  const totalSections = cognatesSections.length;
 
   // Cognates organized by similarity level - SIMPLE AND DIRECT
   const cognatesBySimilarity = {
