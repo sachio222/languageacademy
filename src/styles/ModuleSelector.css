@@ -361,6 +361,11 @@
     font-size: 0.9375rem;
   }
 
+  /* Make cards shorter on mobile - rectangular instead of square */
+  .module-selector-card {
+    aspect-ratio: 1.618;
+  }
+
   .module-selector-card-content {
     padding: 1.25rem;
   }
