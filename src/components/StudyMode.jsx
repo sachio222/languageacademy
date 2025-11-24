@@ -195,7 +195,7 @@ function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, upda
           className="btn-nav btn-primary"
           onClick={handleNext}
         >
-          {currentIndex === exercises.length - 1 ? '✓ Start Exercises' : 'Next →'}
+          {currentIndex === exercises.length - 1 ? '✓ Start Speed Round' : 'Next →'}
         </button>
       </div>
     </div>
