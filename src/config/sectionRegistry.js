@@ -344,9 +344,9 @@ export const SECTION_REGISTRY = {
       lesson,
       allSections
     ) => {
-      // Check if all non-special, enabled, non-premium sections are complete
+      // Check if all non-special, enabled, non-premium sections AVAILABLE FOR THIS LESSON are complete
       const regularSections = allSections.filter(
-        (s) => !s.isSpecial && s.enabled && !s.isPremium && !s.comingSoon
+        (s) => !s.isSpecial && s.enabled && !s.isPremium && !s.comingSoon && isSectionAvailable(s.id, lesson)
       );
       const allComplete = regularSections.every(
         (section) =>

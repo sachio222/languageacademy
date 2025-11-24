@@ -10,7 +10,7 @@
  * - Proper caching and separation of concerns
  */
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { ChevronLeft, Flame, TrendingUp, BookOpen, Clock, Award, Download } from 'lucide-react';
 import { 
   useHeroStats, 
@@ -25,10 +25,35 @@ import { generateDynamicUnitStructure } from '../lessons/unitStructureGenerator'
 import { getLessonByModuleKey } from '../utils/moduleKeyMapper';
 import '../styles/ReportCardEnhanced.css';
 
+// LocalStorage key for persisting expanded units
+const EXPANDED_UNITS_STORAGE_KEY = 'reportCard_expandedUnits';
+
 function ReportCard({ userId = null, onExportPDF = null, isAdminView = false, onBack = null }) {
   const [activeTab, setActiveTab] = useState('overview');
-  const [expandedUnits, setExpandedUnits] = useState(new Set());
+  
+  // Initialize expandedUnits from localStorage
+  const [expandedUnits, setExpandedUnits] = useState(() => {
+    try {
+      const stored = localStorage.getItem(EXPANDED_UNITS_STORAGE_KEY);
+      if (stored) {
+        return new Set(JSON.parse(stored));
+      }
+    } catch (error) {
+      console.warn('Failed to load expanded units from localStorage:', error);
+    }
+    return new Set();
+  });
+  
   const [showAllActivity, setShowAllActivity] = useState(false);
+
+  // Persist expandedUnits to localStorage whenever it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem(EXPANDED_UNITS_STORAGE_KEY, JSON.stringify([...expandedUnits]));
+    } catch (error) {
+      console.warn('Failed to save expanded units to localStorage:', error);
+    }
+  }, [expandedUnits]);
 
   // Fetch data using separated hooks
   const { data: profile, loading: profileLoading } = useUserProfile(userId);

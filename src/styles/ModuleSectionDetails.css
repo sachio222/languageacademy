@@ -37,6 +37,7 @@
   color: #1a1a1a;
   margin: 0;
   letter-spacing: -0.015em;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .section-details-close {
@@ -118,6 +119,7 @@
   font-weight: 500;
   color: #1a1a1a;
   letter-spacing: -0.01em;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .section-detail-stats {

@@ -3,6 +3,8 @@ import { Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
+import { extractModuleId } from '../utils/progressSync';
 import { selectBestVoice } from '../utils/ttsUtils';
 import { toggleSetItem } from '../utils/vocabularyUtils';
 import './VerbPatternHelp.css';
@@ -49,8 +51,12 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
   const [currentPage, setCurrentPage] = useState(1);
   const [understoodSections, setUnderstoodSections] = useState(new Set());
   const [loading, setLoading] = useState(true);
+  const [showIncompleteWarning, setShowIncompleteWarning] = useState(false);
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
+  const { completeSectionProgress } = useSectionProgress();
+  
+  const lessonModuleId = extractModuleId(lesson);
 
   // Define the verb pattern sections that can be marked as understood
   // Note: The order matters for concept_index in the database
@@ -142,6 +148,25 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
     // Scroll to top when changing pages
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  // Auto-complete interactive-help section when all sections understood
+  useEffect(() => {
+    const allSectionsUnderstood = understoodSections.size === verbPatternSections.length;
+
+    if (allSectionsUnderstood && isAuthenticated && lessonModuleId) {
+      logger.log('VerbPatternHelp: Auto-completing interactive-help section...');
+
+      completeSectionProgress(lessonModuleId, 'interactive-help', {
+        sections_understood: understoodSections.size,
+        total_sections: verbPatternSections.length,
+        completion_method: 'all_sections_understood'
+      }).then(result => {
+        logger.log('VerbPatternHelp: Section completion successful', result);
+      }).catch(error => {
+        logger.error('VerbPatternHelp: Error completing interactive-help section:', error);
+      });
+    }
+  }, [understoodSections, verbPatternSections.length, isAuthenticated, lessonModuleId, completeSectionProgress]);
 
   const renderPage1 = () => (
     <>
@@ -995,18 +1020,43 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
         </div>
       </div>
 
+      {showIncompleteWarning && (
+        <div className="incomplete-warning">
+          {(() => {
+            const totalSections = verbPatternSections.length;
+            const remaining = totalSections - understoodSections.size;
+            const baseMessage = "Please mark all sections as understood before continuing";
+            
+            if (remaining === 0 || understoodSections.size === 0) {
+              return baseMessage;
+            } else if (remaining === 1) {
+              return `${baseMessage} - 1 more to go!`;
+            } else {
+              return `${baseMessage} - ${remaining} more to go!`;
+            }
+          })()}
+        </div>
+      )}
+
       <div className="help-footer">
         <button className="btn-back" onClick={() => handlePageChange(2)}>
           ← Previous
         </button>
         <button className="btn-continue" onClick={() => {
-          // Use existing module completion pattern
-          if (onModuleComplete && lesson) {
-            logger.log('VerbPatternHelp: Marking module as completed and going to next');
-            onModuleComplete(lesson.id, 100, 0, true); // moduleId, score, timeSpent, goToNext
+          const allUnderstood = understoodSections.size === verbPatternSections.length;
+          
+          if (!allUnderstood) {
+            setShowIncompleteWarning(true);
+            setTimeout(() => setShowIncompleteWarning(false), 4000);
           } else {
-            // Fallback to original behavior
-            onComplete();
+            // Use existing module completion pattern
+            if (onModuleComplete && lesson) {
+              logger.log('VerbPatternHelp: Marking module as completed and going to next');
+              onModuleComplete(lesson.id, 100, 0, true); // moduleId, score, timeSpent, goToNext
+            } else {
+              // Fallback to original behavior
+              onComplete();
+            }
           }
         }}>
           Continue to Next Module →

@@ -3,6 +3,8 @@ import { Check, X } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
+import { extractModuleId } from '../utils/progressSync';
 import { selectBestVoice } from '../utils/ttsUtils';
 import { toggleSetItem } from '../utils/vocabularyUtils';
 import './LiaisonHelp.css';
@@ -48,8 +50,12 @@ function speakText(text) {
 const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   const [understoodSections, setUnderstoodSections] = useState(new Set());
   const [loading, setLoading] = useState(true);
+  const [showIncompleteWarning, setShowIncompleteWarning] = useState(false);
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
+  const { completeSectionProgress } = useSectionProgress();
+
+  const lessonModuleId = extractModuleId(lesson);
 
   // Define the liaison sections that can be marked as understood
   const liaisonSections = [
@@ -337,8 +343,8 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="section-footer">
             <UnderstoodButton
-              isUnderstood={understoodSections.has(1)}
-              onClick={() => toggleUnderstood(1)}
+              isUnderstood={understoodSections.has(2)}
+              onClick={() => toggleUnderstood(2)}
             />
           </div>
         </section>
@@ -402,8 +408,8 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
 
           <div className="section-footer">
             <UnderstoodButton
-              isUnderstood={understoodSections.has(2)}
-              onClick={() => toggleUnderstood(2)}
+              isUnderstood={understoodSections.has(3)}
+              onClick={() => toggleUnderstood(3)}
             />
           </div>
         </section>

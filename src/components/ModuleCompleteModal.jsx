@@ -155,7 +155,7 @@ function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onClose, o
             className={showNextButton ? "btn-secondary" : "btn-primary"}
             onClick={onBackToModules}
           >
-            Back to Modules
+            Back to Home
           </button>
         </div>
       </div>

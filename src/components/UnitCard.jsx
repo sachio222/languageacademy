@@ -9,12 +9,15 @@ import React from 'react';
 import { ChevronDown, BookOpen } from 'lucide-react';
 import { useUnitModules } from '../hooks/useEnhancedProgress';
 import ModuleRow from './ModuleRow';
+import { lessons } from '../lessons/lessonData';
+import { splitTitle } from '../utils/moduleUtils';
 import '../styles/UnitCard.css';
 
 const UnitCard = ({ unit, userId, isExpanded, onToggle }) => {
-  // Lazy-load modules only when expanded
+  // Load modules always to show completed preview when collapsed
+  // This is a strategic tradeoff: slight initial load for better UX
   const { data: modules, loading } = useUnitModules(userId, unit.unit_id, {
-    enabled: isExpanded
+    enabled: true // Always fetch to show preview
   });
 
   // Format duration
@@ -86,6 +89,32 @@ const UnitCard = ({ unit, userId, isExpanded, onToggle }) => {
           style={{ width: `${completionPercentage}%` }}
         />
       </div>
+
+      {/* Collapsed Preview: Show completed modules */}
+      {!isExpanded && modules && modules.length > 0 && (
+        <div className="unit-card-preview">
+          {modules
+            .filter(m => m.completed_at) // Only show completed
+            .slice(0, 6) // Max 6 to keep clean
+            .map(module => {
+              const lesson = lessons.find(l => l.moduleKey === module.module_key);
+              const fullTitle = lesson?.title || module.module_key;
+              const { mainTitle } = splitTitle(fullTitle);
+              
+              return (
+                <div key={module.module_key} className="unit-card-preview-badge">
+                  <span className="preview-badge-check">✓</span>
+                  <span className="preview-badge-title">{mainTitle}</span>
+                </div>
+              );
+            })}
+          {modules.filter(m => m.completed_at).length > 6 && (
+            <div className="unit-card-preview-more">
+              +{modules.filter(m => m.completed_at).length - 6} more
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Expandable Module List */}
       {isExpanded && (

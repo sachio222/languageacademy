@@ -1,17 +1,34 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import UnderstoodButton from './UnderstoodButton';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useSpeech } from '../hooks/useSpeech';
+import { extractModuleId } from '../utils/progressSync';
 import './QuestionsHelp.css';
 import { logger } from "../utils/logger";
+
+// Helper function to toggle set items
+const toggleSetItem = (set, item, shouldAdd) => {
+  const newSet = new Set(set);
+  if (shouldAdd) {
+    newSet.add(item);
+  } else {
+    newSet.delete(item);
+  }
+  return newSet;
+};
 
 const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   const [understoodSections, setUnderstoodSections] = useState(new Set());
   const [loading, setLoading] = useState(true);
+  const [showIncompleteWarning, setShowIncompleteWarning] = useState(false);
   const supabaseProgress = useSupabaseProgress();
   const { updateConceptUnderstanding, isAuthenticated, supabaseClient, supabaseUser } = supabaseProgress || {};
+  const { completeSectionProgress } = useSectionProgress();
   const { speak } = useSpeech();
+  
+  const lessonModuleId = extractModuleId(lesson);
 
   // Define the question sections that can be marked as understood
   const questionSections = [
@@ -90,6 +107,25 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       }
     }
   }, [understoodSections, isAuthenticated, moduleId, updateConceptUnderstanding, questionSections]);
+
+  // Auto-complete interactive-help section when all sections understood
+  useEffect(() => {
+    const allSectionsUnderstood = understoodSections.size === questionSections.length;
+
+    if (allSectionsUnderstood && isAuthenticated && lessonModuleId) {
+      logger.log('QuestionsHelp: Auto-completing interactive-help section...');
+
+      completeSectionProgress(lessonModuleId, 'interactive-help', {
+        sections_understood: understoodSections.size,
+        total_sections: questionSections.length,
+        completion_method: 'all_sections_understood'
+      }).then(result => {
+        logger.log('QuestionsHelp: Section completion successful', result);
+      }).catch(error => {
+        logger.error('QuestionsHelp: Error completing interactive-help section:', error);
+      });
+    }
+  }, [understoodSections, questionSections.length, isAuthenticated, lessonModuleId, completeSectionProgress]);
 
   if (loading) {
     return (
@@ -356,17 +392,42 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
+        {showIncompleteWarning && (
+          <div className="incomplete-warning">
+            {(() => {
+              const totalSections = questionSections.length;
+              const remaining = totalSections - understoodSections.size;
+              const baseMessage = "Please mark all sections as understood before continuing";
+              
+              if (remaining === 0 || understoodSections.size === 0) {
+                return baseMessage;
+              } else if (remaining === 1) {
+                return `${baseMessage} - 1 more to go!`;
+              } else {
+                return `${baseMessage} - ${remaining} more to go!`;
+              }
+            })()}
+          </div>
+        )}
+
         <div className="questions-footer">
           <button
             className="btn-continue"
             onClick={() => {
-              if (onModuleComplete) {
-                onModuleComplete(lesson.moduleKey);
+              const allUnderstood = understoodSections.size === questionSections.length;
+              
+              if (!allUnderstood) {
+                setShowIncompleteWarning(true);
+                setTimeout(() => setShowIncompleteWarning(false), 4000);
+              } else {
+                if (onModuleComplete) {
+                  onModuleComplete(lesson.moduleKey);
+                }
+                onComplete();
               }
-              onComplete();
             }}
           >
-            Continue
+            Continue →
           </button>
         </div>
       </div>

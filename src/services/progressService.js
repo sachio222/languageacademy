@@ -11,6 +11,48 @@
 import { logger } from "../utils/logger";
 import { lessons } from "../lessons/lessonData";
 
+// Passing score threshold (80%)
+const PASSING_SCORE = 80;
+
+// Sections that require passing scores to be considered complete
+const SECTIONS_WITH_SCORES = [
+  "speed-match",
+  "practice-exercises",
+  "exam-questions",
+  "module-exam",
+];
+
+/**
+ * Check if a section is truly complete:
+ * - For sections with scores: Must have completed_at AND score >= 80%
+ * - For other sections: Just needs completed_at
+ */
+const isSectionComplete = (sectionId, sectionData) => {
+  if (!sectionData?.completed_at) return false;
+
+  // Check if this section type requires a passing score
+  if (SECTIONS_WITH_SCORES.includes(sectionId)) {
+    // Extract score/accuracy from progress_data JSONB field
+    let percentage = 0;
+    if (sectionData.progress_data) {
+      const progressData =
+        typeof sectionData.progress_data === "string"
+          ? JSON.parse(sectionData.progress_data)
+          : sectionData.progress_data;
+      // Speed Match uses 'accuracy', exams might use 'score' or 'percentage'
+      percentage =
+        progressData?.accuracy ||
+        progressData?.percentage ||
+        progressData?.score ||
+        0;
+    }
+    return percentage >= PASSING_SCORE;
+  }
+
+  // Non-scored sections just need completed_at
+  return true;
+};
+
 export class ProgressService {
   constructor(supabaseClient) {
     this.client = supabaseClient;
@@ -40,14 +82,15 @@ export class ProgressService {
 
           this.client
             .from("module_progress")
-            .select("module_key")
+            .select("module_key, time_spent_seconds, completed_at")
             .eq("user_id", userId)
             .not("completed_at", "is", null),
 
           // Calculate total study time from section_progress (single source of truth)
+          // For migrated data, fall back to module_progress.time_spent_seconds
           this.client
             .from("section_progress")
-            .select("time_spent_seconds")
+            .select("time_spent_seconds, module_key")
             .eq("user_id", userId),
         ]);
 
@@ -56,11 +99,23 @@ export class ProgressService {
       const completedModules = modulesResult.data || [];
       const sections = sectionsResult.data || [];
 
-      // Calculate total study time from section_progress (single source of truth)
-      const totalStudyTime = sections.reduce(
-        (sum, section) => sum + (section.time_spent_seconds || 0),
-        0
-      );
+      // Calculate total study time - use section time if available, otherwise module time
+      const sectionTimeByModule = {};
+      sections.forEach((section) => {
+        if (!sectionTimeByModule[section.module_key]) {
+          sectionTimeByModule[section.module_key] = 0;
+        }
+        sectionTimeByModule[section.module_key] +=
+          section.time_spent_seconds || 0;
+      });
+
+      // For each completed module, use section time if > 0, otherwise fall back to module time
+      let totalStudyTime = 0;
+      completedModules.forEach((module) => {
+        const sectionTime = sectionTimeByModule[module.module_key] || 0;
+        const moduleTime = module.time_spent_seconds || 0;
+        totalStudyTime += sectionTime > 0 ? sectionTime : moduleTime;
+      });
 
       // Calculate accuracy
       const correctCount = exercises.filter((e) => e.is_correct).length;
@@ -126,9 +181,28 @@ export class ProgressService {
           section.time_spent_seconds || 0;
       });
 
-      // Only include modules that have section activity
+      // Include modules with section activity OR completed modules (for migrated data)
       const modulesWithActivity = (modules || []).filter((module) => {
-        return modulesSectionTime[module.module_key] > 0;
+        const hasSectionTime = modulesSectionTime[module.module_key] > 0;
+        const isCompleted = module.completed_at !== null;
+        return hasSectionTime || isCompleted;
+      });
+
+      // Also fetch section progress to calculate section-based completion
+      const { data: allSections, error: allSectionsError } = await this.client
+        .from("section_progress")
+        .select("module_key, section_id, completed_at, progress_data")
+        .eq("user_id", userId);
+
+      if (allSectionsError) throw allSectionsError;
+
+      // Group sections by module_key for completion calculations
+      const sectionsByModuleKey = {};
+      (allSections || []).forEach((section) => {
+        if (!sectionsByModuleKey[section.module_key]) {
+          sectionsByModuleKey[section.module_key] = [];
+        }
+        sectionsByModuleKey[section.module_key].push(section);
       });
 
       // Group by unit_id and aggregate (only modules with section activity)
@@ -139,19 +213,35 @@ export class ProgressService {
           unitMap[unitId] = {
             unit_id: unitId,
             total_modules: 0,
-            completed_modules: 0,
+            completed_modules: 0, // Calculated from sections, not module.completed_at
             total_time_spent: 0,
             section_stats: { total_sections: 0, completed_sections: 0 },
           };
         }
 
+        const moduleSections = sectionsByModuleKey[module.module_key] || [];
+
+        // Count only sections that meet completion criteria (including passing scores)
+        const completedSections = moduleSections.filter((s) =>
+          isSectionComplete(s.section_id, s)
+        );
+
+        // Module is "completed" if ALL its sections are completed (100%) with passing scores
+        const moduleIsComplete =
+          moduleSections.length > 0 &&
+          completedSections.length === moduleSections.length;
+
         unitMap[unitId].total_modules += 1;
-        if (module.completed_at) {
+        if (moduleIsComplete) {
           unitMap[unitId].completed_modules += 1;
         }
-        // Sum section-based time for unit totals
+        // Sum time for unit totals - use section time if available, otherwise module time (for migrated data)
         const moduleSectionTime = modulesSectionTime[module.module_key] || 0;
-        unitMap[unitId].total_time_spent += moduleSectionTime;
+        const timeToAdd =
+          moduleSectionTime > 0
+            ? moduleSectionTime
+            : module.time_spent_seconds || 0;
+        unitMap[unitId].total_time_spent += timeToAdd;
       });
 
       // Return units with calculated section-based time
@@ -240,9 +330,12 @@ export class ProgressService {
             0
           );
 
-          // Enhanced report card: Use ONLY section time sums
-          // No module time fallback - pure section-based time tracking
-          const displayTime = totalSectionTime;
+          // Migration support: Fall back to module time when section times are all 0
+          // This indicates migrated data where section-level time is N/A
+          const hasSectionTimeData = totalSectionTime > 0;
+          const displayTime = hasSectionTimeData
+            ? totalSectionTime
+            : module.time_spent_seconds || 0;
 
           return {
             ...module,
@@ -250,24 +343,26 @@ export class ProgressService {
             sections_completed: sectionTimes.filter((s) => s.completed_at)
               .length,
             total_sections: sectionTimes.length,
-            // Use pure section time for enhanced report card
+            // Use section time if available, otherwise fall back to module time
             time_spent_seconds: displayTime,
-            // Keep original module time for debugging/comparison
+            // Keep original module time for debugging/comparison (LEGACY)
             module_time_original: module.time_spent_seconds,
-            // Always section-based now
-            time_source: "sections",
-            completion_percentage:
+            // Indicate time source for display
+            time_source: hasSectionTimeData ? "sections" : "module",
+            // LEGACY FIELDS BELOW - Not used in Enhanced Report Card
+            // Kept for backward compatibility with old components
+            _legacy_completion_percentage:
               module.total_exercises > 0
                 ? Math.round(
                     (module.completed_exercises / module.total_exercises) * 100
                   )
                 : 0,
+            _legacy_completed_at: module.completed_at,
           };
         })
         .filter((module) => {
-          // Enhanced report card: Only show modules with section activity
-          // Pure section-based - ignore module completion status
-          return module.time_spent_seconds > 0;
+          // Show modules with either section activity OR module completion (for migrated data)
+          return module.time_spent_seconds > 0 || module.completed_at !== null;
         })
         .sort((a, b) => {
           // Sort by lesson order (same as nav)
@@ -343,11 +438,14 @@ export class ProgressService {
           section.time_spent_seconds || 0;
       });
 
-      // Enrich modules with section-based time
+      // Enrich modules with section-based time (single source of truth)
       const enrichedModules = (modules || []).map((module) => ({
         ...module,
-        // Use section-based time (single source of truth)
-        time_spent_seconds: moduleSectionTime[module.module_key] || 0,
+        // Use section-based time if available, otherwise fall back to module time (for migrated data)
+        time_spent_seconds:
+          moduleSectionTime[module.module_key] > 0
+            ? moduleSectionTime[module.module_key]
+            : module.time_spent_seconds || 0,
       }));
 
       const activity = {
