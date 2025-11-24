@@ -207,16 +207,38 @@ export class ProgressService {
 
       // Group by unit_id and aggregate (only modules with section activity)
       const unitMap = {};
+
+      // First, initialize all units with their ACTUAL total module count from lesson structure
+      // Import is at top of file already
+      const {
+        generateDynamicUnitStructure,
+      } = require("../lessons/unitStructureGenerator");
+      const unitStructure = generateDynamicUnitStructure(lessons);
+
+      unitStructure.forEach((unit) => {
+        const [startLesson, endLesson] = unit.lessonRange;
+        const totalModulesInUnit = endLesson - startLesson + 1;
+
+        unitMap[unit.id.toString()] = {
+          unit_id: unit.id.toString(),
+          total_modules: totalModulesInUnit, // Actual total from lesson structure
+          completed_modules: 0,
+          total_time_spent: 0,
+          section_stats: { total_sections: 0, completed_sections: 0 },
+        };
+      });
+
+      // Now process user's module progress
       modulesWithActivity.forEach((module) => {
         const unitId = module.unit_id;
+
+        // Skip if this unit doesn't exist in structure (shouldn't happen)
         if (!unitMap[unitId]) {
-          unitMap[unitId] = {
+          logger.warn("[ProgressService] Module with unknown unit_id:", {
+            module_key: module.module_key,
             unit_id: unitId,
-            total_modules: 0,
-            completed_modules: 0, // Calculated from sections, not module.completed_at
-            total_time_spent: 0,
-            section_stats: { total_sections: 0, completed_sections: 0 },
-          };
+          });
+          return;
         }
 
         const moduleSections = sectionsByModuleKey[module.module_key] || [];
@@ -231,7 +253,7 @@ export class ProgressService {
           moduleSections.length > 0 &&
           completedSections.length === moduleSections.length;
 
-        unitMap[unitId].total_modules += 1;
+        // Only increment completed_modules count, total_modules already set from structure
         if (moduleIsComplete) {
           unitMap[unitId].completed_modules += 1;
         }
