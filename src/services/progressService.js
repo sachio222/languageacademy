@@ -10,6 +10,7 @@
 
 import { logger } from "../utils/logger";
 import { lessons } from "../lessons/lessonData";
+import { generateDynamicUnitStructure } from "../lessons/unitStructureGenerator";
 
 // Passing score threshold (80%)
 const PASSING_SCORE = 80;
@@ -207,38 +208,35 @@ export class ProgressService {
 
       // Group by unit_id and aggregate (only modules with section activity)
       const unitMap = {};
-
-      // First, initialize all units with their ACTUAL total module count from lesson structure
-      // Import is at top of file already
-      const {
-        generateDynamicUnitStructure,
-      } = require("../lessons/unitStructureGenerator");
       const unitStructure = generateDynamicUnitStructure(lessons);
 
-      unitStructure.forEach((unit) => {
-        const [startLesson, endLesson] = unit.lessonRange;
-        const totalModulesInUnit = endLesson - startLesson + 1;
-
-        unitMap[unit.id.toString()] = {
-          unit_id: unit.id.toString(),
-          total_modules: totalModulesInUnit, // Actual total from lesson structure
-          completed_modules: 0,
-          total_time_spent: 0,
-          section_stats: { total_sections: 0, completed_sections: 0 },
-        };
-      });
-
-      // Now process user's module progress
+      // Process user's module progress and initialize units as needed
       modulesWithActivity.forEach((module) => {
         const unitId = module.unit_id;
 
-        // Skip if this unit doesn't exist in structure (shouldn't happen)
+        // Initialize unit if not already done (only for units with activity)
         if (!unitMap[unitId]) {
-          logger.warn("[ProgressService] Module with unknown unit_id:", {
-            module_key: module.module_key,
+          const unitInfo = unitStructure.find(
+            (u) => u.id.toString() === unitId
+          );
+          if (!unitInfo) {
+            logger.warn("[ProgressService] Module with unknown unit_id:", {
+              module_key: module.module_key,
+              unit_id: unitId,
+            });
+            return;
+          }
+
+          const [startLesson, endLesson] = unitInfo.lessonRange;
+          const totalModulesInUnit = endLesson - startLesson + 1;
+
+          unitMap[unitId] = {
             unit_id: unitId,
-          });
-          return;
+            total_modules: totalModulesInUnit, // Actual total from lesson structure
+            completed_modules: 0,
+            total_time_spent: 0,
+            section_stats: { total_sections: 0, completed_sections: 0 },
+          };
         }
 
         const moduleSections = sectionsByModuleKey[module.module_key] || [];
