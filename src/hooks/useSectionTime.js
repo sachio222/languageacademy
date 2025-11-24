@@ -186,3 +186,4 @@ export const useSectionTime = (moduleId, sectionId, isActive = true) => {
     stopTracking
   };
 };
+

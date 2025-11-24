@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Home } from 'lucide-react';
 import ExercisePane from './ExercisePane';
 import ConceptPane from './ConceptPane';
 import ConceptIntro from './ConceptIntro';
@@ -24,7 +25,7 @@ import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { usePageTime } from '../hooks/usePageTime';
 import { useModuleTime } from '../hooks/useModuleTime';
 import { getUnitIdForLesson } from '../utils/unitHelpers';
-import { getSectionStatus } from '../config/sectionRegistry';
+import { getSectionStatus, getActiveSections, isSectionAvailable } from '../config/sectionRegistry';
 import { logger } from "../utils/logger";
 import { trackClarityEvent, setClarityTag } from '../utils/clarity';
 
@@ -135,7 +136,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
   // Legacy module time tracking (will be removed)
   const moduleStartTimeRef = useRef(Date.now());
-  
+
   // Track if completion has been recorded to prevent duplicates
   const completionRecordedRef = useRef(false);
 
@@ -146,6 +147,25 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
   const currentExercise = lesson.exercises?.[currentExerciseIndex];
   const isLastExercise = currentExerciseIndex === (lesson.exercises?.length || 0) - 1;
+
+  // Calculate completed sections for selector view
+  const getSectionCount = () => {
+    if (!showSelector) return { completed: 0, total: 0 };
+
+    const lessonModuleId = extractModuleId(lesson);
+    const availableSections = getActiveSections()
+      .filter(section => isSectionAvailable(section.id, lesson))
+      .filter(section => !section.isPremium && !section.comingSoon && !section.isSpecial);
+
+    const completedCount = availableSections.filter(section => {
+      const status = getSectionStatus(section.id, moduleProgress?.[lessonModuleId], sectionProgress?.[lessonModuleId] || {}, lesson);
+      return status === 'completed';
+    }).length;
+
+    return { completed: completedCount, total: availableSections.length };
+  };
+
+  const sectionCount = getSectionCount();
 
   // Generate vocabulary reference from lesson
   const vocabularyItems = lesson.vocabularyReference || [];
@@ -184,7 +204,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       // Complete the writing section immediately when last exercise is completed
       if (isAuthenticated && lessonModuleId) {
         logger.log('LessonView: Auto-completing writing section - last exercise completed');
-        
+
         completeSectionProgress(lessonModuleId, 'writing', {
           exercises_completed: lesson.exercises.length,
           completion_method: 'all_exercises_completed'
@@ -194,7 +214,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           logger.error('LessonView: Error completing writing section:', error);
         });
       }
-      
+
       // Calculate time spent
       const timeSpentOnModule = Math.round((Date.now() - moduleStartTimeRef.current) / 1000);
       setModuleTimeSpent(timeSpentOnModule);
@@ -230,7 +250,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     setShowSelector(false);
     setCurrentSection(view);
-    
+
     switch (view) {
       case 'intro':
         setShowIntro(true);
@@ -733,12 +753,12 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     // Reset module start time when lesson changes
     moduleStartTimeRef.current = Date.now();
-    
+
     // Track module view in Clarity
     trackClarityEvent('moduleViewed');
     setClarityTag('currentModule', lesson.title);
     setClarityTag('currentUnit', unitInfo?.title || 'Unknown');
-    
+
     if (isUnitExam) {
       setClarityTag('moduleType', 'unitExam');
     } else if (isReading) {
@@ -796,7 +816,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
       <div className="lesson-header">
         <button className="btn-back" onClick={onBack}>
-          ← Back to Modules
+          <Home size={18} />
         </button>
         <div className="lesson-title-container">
           {unitInfo && !unitInfo.isReference && (
@@ -820,7 +840,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         )}
         <div className="exercise-progress">
           {showSelector ? (
-            <span>📋 Module Menu</span>
+            <span>{sectionCount.completed}/{sectionCount.total} Done</span>
           ) : showIntro ? (
             <span>📖 Introduction</span>
           ) : isStudying ? (
@@ -1020,22 +1040,22 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           />
           <div className="lesson-content">
             <div className="left-pane">
-            <ExercisePane
-              exercise={currentExercise}
-              onNext={handleNext}
-              onPrevious={handlePrevious}
-              isFirstExercise={currentExerciseIndex === 0}
-              isLastExercise={isLastExercise}
-              isCompleted={completedExercises.has(currentExercise.id)}
-              onComplete={handleExerciseCompleteWrapper}
-              studyCompleted={studyCompleted}
-              readingPassage={lesson.readingPassage}
-              onBackToLesson={null}
-              moduleId={extractModuleId(lesson)}
-              displayModuleId={lesson.id}
-              unitId={extractUnitId(unitInfo)}
-            />
-          </div>
+              <ExercisePane
+                exercise={currentExercise}
+                onNext={handleNext}
+                onPrevious={handlePrevious}
+                isFirstExercise={currentExerciseIndex === 0}
+                isLastExercise={isLastExercise}
+                isCompleted={completedExercises.has(currentExercise.id)}
+                onComplete={handleExerciseCompleteWrapper}
+                studyCompleted={studyCompleted}
+                readingPassage={lesson.readingPassage}
+                onBackToLesson={null}
+                moduleId={extractModuleId(lesson)}
+                displayModuleId={lesson.id}
+                unitId={extractUnitId(unitInfo)}
+              />
+            </div>
 
             <div className="right-pane">
               <RightSidebar

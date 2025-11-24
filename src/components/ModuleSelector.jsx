@@ -152,7 +152,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
           const isLocked = status === 'locked';
 
           const isPremiumCard = section.isPremium || section.comingSoon;
-          
+
           return (
             <button
               key={section.id}
