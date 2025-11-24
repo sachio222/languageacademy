@@ -24,11 +24,12 @@ export class ProgressService {
   async getHeroStats(userId) {
     try {
       // Query tables directly - no RPC needed
-      const [profileResult, exercisesResult, modulesResult] = await Promise.all(
-        [
+      // Use section_progress as single source of truth for study time
+      const [profileResult, exercisesResult, modulesResult, sectionsResult] =
+        await Promise.all([
           this.client
             .from("user_profiles")
-            .select("total_study_time_seconds, streak_days")
+            .select("streak_days")
             .eq("id", userId)
             .single(),
 
@@ -42,12 +43,24 @@ export class ProgressService {
             .select("module_key")
             .eq("user_id", userId)
             .not("completed_at", "is", null),
-        ]
-      );
+
+          // Calculate total study time from section_progress (single source of truth)
+          this.client
+            .from("section_progress")
+            .select("time_spent_seconds")
+            .eq("user_id", userId),
+        ]);
 
       const profile = profileResult.data;
       const exercises = exercisesResult.data || [];
       const completedModules = modulesResult.data || [];
+      const sections = sectionsResult.data || [];
+
+      // Calculate total study time from section_progress (single source of truth)
+      const totalStudyTime = sections.reduce(
+        (sum, section) => sum + (section.time_spent_seconds || 0),
+        0
+      );
 
       // Calculate accuracy
       const correctCount = exercises.filter((e) => e.is_correct).length;
@@ -57,7 +70,7 @@ export class ProgressService {
           : 0;
 
       const stats = {
-        total_study_time: profile?.total_study_time_seconds || 0,
+        total_study_time: totalStudyTime, // Section-based calculation (single source of truth)
         streak_days: profile?.streak_days || 0,
         accuracy,
         words_learned: completedModules.length * 10, // Approximate
@@ -88,9 +101,39 @@ export class ProgressService {
 
       if (error) throw error;
 
-      // Group by unit_id and aggregate
+      // Pre-check which modules have section activity to avoid creating empty units
+      const moduleKeys = (modules || []).map((m) => m.module_key);
+      let sectionsData = [];
+
+      if (moduleKeys.length > 0) {
+        const { data: sections, error: sectionsError } = await this.client
+          .from("section_progress")
+          .select("module_key, time_spent_seconds")
+          .eq("user_id", userId)
+          .in("module_key", moduleKeys);
+
+        if (sectionsError) throw sectionsError;
+        sectionsData = sections || [];
+      }
+
+      // Calculate which modules have section activity
+      const modulesSectionTime = {};
+      sectionsData.forEach((section) => {
+        if (!modulesSectionTime[section.module_key]) {
+          modulesSectionTime[section.module_key] = 0;
+        }
+        modulesSectionTime[section.module_key] +=
+          section.time_spent_seconds || 0;
+      });
+
+      // Only include modules that have section activity
+      const modulesWithActivity = (modules || []).filter((module) => {
+        return modulesSectionTime[module.module_key] > 0;
+      });
+
+      // Group by unit_id and aggregate (only modules with section activity)
       const unitMap = {};
-      (modules || []).forEach((module) => {
+      modulesWithActivity.forEach((module) => {
         const unitId = module.unit_id;
         if (!unitMap[unitId]) {
           unitMap[unitId] = {
@@ -106,17 +149,24 @@ export class ProgressService {
         if (module.completed_at) {
           unitMap[unitId].completed_modules += 1;
         }
-        unitMap[unitId].total_time_spent += module.time_spent_seconds || 0;
+        // Sum section-based time for unit totals
+        const moduleSectionTime = modulesSectionTime[module.module_key] || 0;
+        unitMap[unitId].total_time_spent += moduleSectionTime;
       });
 
-      // Convert to array and calculate percentages
-      const units = Object.values(unitMap).map((unit) => ({
-        ...unit,
-        completion_percentage:
-          unit.total_modules > 0
-            ? Math.round((unit.completed_modules / unit.total_modules) * 100)
-            : 0,
-      }));
+      // Return units with calculated section-based time
+      const units = Object.values(unitMap)
+        .map((unit) => ({
+          ...unit,
+          completion_percentage:
+            unit.total_modules > 0
+              ? Math.round((unit.completed_modules / unit.total_modules) * 100)
+              : 0,
+        }))
+        .filter((unit) => {
+          // Only show units that have modules (after filtering for section activity)
+          return unit.total_modules > 0;
+        });
 
       logger.log("[ProgressService] Fetched unit progress", {
         userId,
@@ -214,6 +264,11 @@ export class ProgressService {
                 : 0,
           };
         })
+        .filter((module) => {
+          // Enhanced report card: Only show modules with section activity
+          // Pure section-based - ignore module completion status
+          return module.time_spent_seconds > 0;
+        })
         .sort((a, b) => {
           // Sort by lesson order (same as nav)
           const lessonA = lessons.find((l) => l.moduleKey === a.module_key);
@@ -263,8 +318,40 @@ export class ProgressService {
 
       if (error) throw error;
 
+      // Enrich modules with section-based time (single source of truth)
+      const moduleKeys = (modules || []).map((m) => m.module_key);
+      let sectionsData = [];
+
+      if (moduleKeys.length > 0) {
+        const { data: sections, error: sectionsError } = await this.client
+          .from("section_progress")
+          .select("module_key, time_spent_seconds")
+          .eq("user_id", userId)
+          .in("module_key", moduleKeys);
+
+        if (sectionsError) throw sectionsError;
+        sectionsData = sections || [];
+      }
+
+      // Calculate section time per module
+      const moduleSectionTime = {};
+      sectionsData.forEach((section) => {
+        if (!moduleSectionTime[section.module_key]) {
+          moduleSectionTime[section.module_key] = 0;
+        }
+        moduleSectionTime[section.module_key] +=
+          section.time_spent_seconds || 0;
+      });
+
+      // Enrich modules with section-based time
+      const enrichedModules = (modules || []).map((module) => ({
+        ...module,
+        // Use section-based time (single source of truth)
+        time_spent_seconds: moduleSectionTime[module.module_key] || 0,
+      }));
+
       const activity = {
-        modules: modules || [],
+        modules: enrichedModules,
       };
 
       logger.log("[ProgressService] Fetched recent activity", {

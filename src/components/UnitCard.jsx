@@ -33,6 +33,10 @@ const UnitCard = ({ unit, userId, isExpanded, onToggle }) => {
   const completionPercentage = unit.completion_percentage || 0;
   const totalModules = unit.total_modules || 0;
   const completedModules = unit.completed_modules || 0;
+  
+  // Always use unit.total_time_spent - it's already correctly calculated from section times
+  // No need to recalculate from modules (redundant and causes race conditions)
+  const unitTime = unit.total_time_spent || 0;
 
   return (
     <div className="unit-card">
@@ -61,7 +65,7 @@ const UnitCard = ({ unit, userId, isExpanded, onToggle }) => {
 
           <div className="unit-card-stat">
             <span className="unit-card-stat-value">
-              {formatDuration(unit.total_time_spent || 0)}
+              {formatDuration(unitTime)}
             </span>
             <span className="unit-card-stat-label">Study Time</span>
           </div>

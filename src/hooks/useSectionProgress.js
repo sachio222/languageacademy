@@ -24,8 +24,8 @@ export const useSectionProgress = () => {
       // Load both section_progress and module_progress for migration
       const [sectionResult, moduleResult] = await Promise.all([
         supabaseClient
-          .from('section_progress')
-          .select('*')
+        .from('section_progress')
+        .select('*')
           .eq('user_id', supabaseUser.id),
         
         supabaseClient

@@ -68,15 +68,30 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false, on
           icon: unitMeta?.icon || '📚',
           color: unitMeta?.color || '#3b82f6',
           description: unitMeta?.description || '',
+          // Preserve total_time_spent from getUnitProgress (calculated from section times)
+          // Don't overwrite - it's already correctly calculated
         };
       })
       .filter(Boolean) // Remove null entries
       .sort((a, b) => parseInt(a.unit_id) - parseInt(b.unit_id));
   }, [unitProgress, unitStructure]);
 
-  // Aggregate loading states
-  const loading = profileLoading || heroStatsLoading;
-  const hasData = heroStats && enrichedUnits;
+  // Filter units to only show those with section activity
+  const enrichedUnitsWithTime = useMemo(() => {
+    if (!enrichedUnits) return [];
+
+    // Only show units that will have modules with section activity
+    return enrichedUnits.filter(unit => {
+      // A unit should only show if it has modules that would appear in the enhanced report card
+      // Since modules are filtered by section activity, we need to check if this unit would have any modules
+      return unit.total_modules > 0; // Keep for now, will be filtered when modules are loaded
+    });
+  }, [enrichedUnits]);
+
+  // Aggregate loading states - must check ALL data sources
+  const loading = profileLoading || heroStatsLoading || unitProgressLoading;
+  // Only show empty state if we're done loading AND have no data
+  const hasData = !loading && heroStats && enrichedUnits && enrichedUnits.length > 0;
 
   // Format duration
   const formatDuration = (seconds) => {
@@ -240,7 +255,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false, on
           {activeTab === 'overview' && (
             <div className="tab-panel">
               <div className="unit-grid">
-                {enrichedUnits.map(unit => (
+                {enrichedUnitsWithTime.map(unit => (
                   <UnitCard
                     key={unit.unit_id}
                     unit={unit}
@@ -260,7 +275,7 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false, on
                 <div className="activity-loading">
                   <span>Loading activity...</span>
                 </div>
-              ) : recentActivity && (recentActivity.modules.length > 0 || recentActivity.exams.length > 0) ? (
+              ) : recentActivity && recentActivity.modules.length > 0 ? (
                 <>
                   <div className="activity-table-container">
                     <table className="activity-table">
@@ -283,26 +298,18 @@ function ReportCard({ userId = null, onExportPDF = null, isAdminView = false, on
                             </td>
                           </tr>
                         ))}
-                        {(showAllActivity ? recentActivity.exams : recentActivity.exams.slice(0, 20)).map(exam => (
-                          <tr key={exam.id} className="activity-row">
-                            <td className="activity-module">{exam.exam_type}</td>
-                            <td className="activity-time">—</td>
-                            <td className="activity-date">{formatRelativeTime(exam.completed_at)}</td>
-                            <td className="activity-score">{exam.score_percentage}%</td>
-                          </tr>
-                        ))}
                       </tbody>
                     </table>
                   </div>
-                  {(recentActivity.modules.length > 20 || recentActivity.exams.length > 20) && (
+                  {recentActivity.modules.length > 20 && (
                     <div className="activity-show-more">
                       <button
                         className="show-more-button"
                         onClick={() => setShowAllActivity(!showAllActivity)}
                       >
                         {showAllActivity
-                          ? `Show less (showing ${recentActivity.modules.length + recentActivity.exams.length} items)`
-                          : `Show all (${recentActivity.modules.length + recentActivity.exams.length} items)`
+                          ? `Show less (showing ${recentActivity.modules.length} items)`
+                          : `Show all (${recentActivity.modules.length} items)`
                         }
                       </button>
                     </div>
