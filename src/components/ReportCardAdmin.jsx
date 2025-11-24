@@ -17,7 +17,7 @@ import {
 import { useAllStudentsData } from '../hooks/useAllStudentsData';
 import { useReportCardData } from '../hooks/useReportCardData';
 import { calculateCommunicationInsights, calculateBatchInsights } from '../utils/communicationInsights';
-import ReportCard from './ReportCard';
+import ReportCard from './ReportCardEnhanced';
 import '../styles/ReportCardAdmin.css';
 
 function ReportCardAdmin({ onBack = null }) {

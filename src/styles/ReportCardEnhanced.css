@@ -1,0 +1,379 @@
+/**
+ * ReportCardEnhanced Styles
+ * Following DESIGN_PRINCIPLES.md precisely:
+ * - Generous spacing (2.5-3rem between sections)
+ * - Grayscale foundation (#1a1a1a, #665665, #999999)
+ * - Clean typography hierarchy
+ * - Minimal borders and shadows
+ * - Hero stats without card containers
+ */
+
+.report-card-enhanced {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 3rem;
+  background: white;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.report-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.report-card-back-btn {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  color: #665665;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.15s ease;
+  border-radius: 8px;
+}
+
+.report-card-back-btn:hover {
+  color: #1a1a1a;
+  background: #f7f9fc;
+}
+
+.report-card-title-section {
+  flex: 1;
+}
+
+.report-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+.report-subtitle {
+  font-size: 0.9375rem;
+  color: #665665;
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+}
+
+.report-card-export-btn {
+  background: #3b82f6;
+  border: none;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.01em;
+  transition: opacity 0.15s ease;
+}
+
+.report-card-export-btn:hover {
+  opacity: 0.9;
+}
+
+/* Hero Stats - No card containers, horizontal layout */
+.hero-stats-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 3rem;
+}
+
+.hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-stat-icon {
+  color: #665665;
+}
+
+.hero-stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hero-stat-value {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.hero-stat-label {
+  font-size: 0.875rem;
+  color: #665665;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* Tabs Section */
+.report-tabs-section {
+  margin-bottom: 3rem;
+}
+
+.report-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  color: #665665;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
+}
+
+.tab-button:hover {
+  color: #1a1a1a;
+  background: #f7f9fc;
+}
+
+.tab-button.active {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+}
+
+.tabs-content {
+  padding-top: 1.5rem;
+}
+
+.tab-panel {
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Unit Grid */
+.unit-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Activity Table */
+.activity-table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+.activity-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.activity-table thead {
+  background: #fafbfc;
+}
+
+.activity-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #665665;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.activity-row {
+  transition: background 0.15s ease;
+}
+
+.activity-row:hover {
+  background: #fafbfc;
+}
+
+.activity-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9375rem;
+  color: #1a1a1a;
+}
+
+.activity-table tr:last-child td {
+  border-bottom: none;
+}
+
+.activity-module {
+  font-weight: 500;
+}
+
+.activity-time {
+  color: #665665;
+}
+
+.activity-date {
+  color: #665665;
+}
+
+.activity-score {
+  font-weight: 600;
+  color: #10b981;
+}
+
+.activity-show-more {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.show-more-button {
+  background: none;
+  border: 1px solid #e0e0e0;
+  padding: 0.75rem 1.5rem;
+  color: #665665;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.show-more-button:hover {
+  background: #f7f9fc;
+  border-color: #665665;
+  color: #1a1a1a;
+}
+
+/* Loading States */
+.report-card-loading,
+.report-card-empty,
+.activity-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 1.5rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f0f0f0;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.report-card-loading p,
+.report-card-empty p,
+.activity-loading span {
+  font-size: 1.125rem;
+  color: #665665;
+  font-weight: 500;
+}
+
+.report-card-empty span {
+  font-size: 0.9375rem;
+  color: #999999;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #999999;
+  font-size: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .report-card-enhanced {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .report-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .report-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-stats-section {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+    justify-content: space-between;
+  }
+
+  .hero-stat {
+    width: calc(50% - 1rem);
+  }
+
+  .hero-stat-value {
+    font-size: 2rem;
+  }
+
+  .report-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-button {
+    padding: 0.875rem 1.25rem;
+    white-space: nowrap;
+  }
+
+  .activity-table th,
+  .activity-table td {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .activity-table th {
+    font-size: 0.6875rem;
+  }
+}
+

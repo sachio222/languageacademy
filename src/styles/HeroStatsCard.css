@@ -1,0 +1,44 @@
+/**
+ * HeroStatsCard Styles
+ * Minimal, elegant stat display
+ */
+
+.hero-stats-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+}
+
+.hero-stats-card-icon {
+  flex-shrink: 0;
+}
+
+.hero-stats-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hero-stats-card-value {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.hero-stats-card-label {
+  font-size: 0.875rem;
+  color: #665665;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-stats-card-value {
+    font-size: 2rem;
+  }
+}
+

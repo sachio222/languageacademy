@@ -1,0 +1,140 @@
+/**
+ * ModuleRow Styles
+ * Following DESIGN_PRINCIPLES.md: generous spacing, minimal borders, clean typography
+ */
+
+.module-row {
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.module-row:hover {
+  background: #fafbfc;
+}
+
+.module-row:last-child {
+  border-bottom: none;
+}
+
+.module-row.completed {
+  opacity: 1;
+}
+
+.module-row-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.module-row-info {
+  flex: 1;
+  min-width: 0; /* Allow text truncation */
+}
+
+.module-row-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.module-row-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.module-row-badge {
+  font-size: 0.875rem;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.module-row-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.module-row-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.module-row-stat-label {
+  font-size: 0.75rem;
+  color: #999999;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.module-row-stat-value {
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.module-row-expand {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #665665;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.module-row-expand:hover {
+  color: #1a1a1a;
+}
+
+.module-row-expand svg {
+  transition: transform 0.15s ease;
+}
+
+.module-row-expand svg.rotated {
+  transform: rotate(90deg);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .module-row {
+    padding: 1.25rem 0;
+  }
+
+  .module-row-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .module-row-stats {
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .module-row-stat {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .module-row-expand {
+    position: absolute;
+    top: 1.25rem;
+    right: 0;
+  }
+}
+
