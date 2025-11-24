@@ -9,17 +9,18 @@ export const module1 = {
   moduleKey: "2024-01-01-pronouns", // Permanent identifier - never changes
   title: "Core Pronouns - The Building Blocks",
   description:
-    "Master the 9 most essential words in French. These are your foundation - like variables in programming.",
+    "Master the 9 most essential words in French. These are your foundation - they communicate who is talking, who they are talking to, and who you're talking about.",
 
   // Email-specific metadata for reengagement emails
   emailMetadata: {
     capabilities: [
       "Use all 9 essential French pronouns (I, you, he, she, we, they)",
       "Distinguish between formal and informal 'you'",
-      "Understand the foundation for all French sentences"
+      "Understand the foundation for all French sentences",
     ],
     realWorldUse: "build every sentence you'll ever speak",
-    nextModuleTeaser: "Combine these with être to make your first real sentences"
+    nextModuleTeaser:
+      "Combine these with être to make your first real sentences",
   },
 
   concepts: [

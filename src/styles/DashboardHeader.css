@@ -271,6 +271,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .stat-value-small {
@@ -278,6 +279,7 @@
   font-weight: 600;
   color: #1a1a1a;
   letter-spacing: -0.01em;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .stat-label {
@@ -285,6 +287,7 @@
   font-weight: 500;
   color: #665665;
   letter-spacing: -0.01em;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 /* Progress Circle in Stat Box */

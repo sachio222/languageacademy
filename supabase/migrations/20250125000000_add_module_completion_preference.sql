@@ -13,3 +13,4 @@ WHERE module_completion IS NULL;
 -- Add comment for documentation
 COMMENT ON COLUMN notification_preferences.module_completion IS 'User preference for receiving module completion celebration emails';
 
+

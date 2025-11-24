@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Home } from 'lucide-react';
 import ExercisePane from './ExercisePane';
 import ConceptPane from './ConceptPane';
 import ConceptIntro from './ConceptIntro';
@@ -15,12 +16,16 @@ import VerbPatternHelp from './VerbPatternHelp';
 import LiaisonHelp from './LiaisonHelp';
 import CognatesHelp from './CognatesHelp';
 import QuestionsHelp from './QuestionsHelp';
+import ModuleSelector from './ModuleSelector';
+import ModuleSectionHeader from './ModuleSectionHeader';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { usePageTime } from '../hooks/usePageTime';
 import { useModuleTime } from '../hooks/useModuleTime';
 import { getUnitIdForLesson } from '../utils/unitHelpers';
+import { getSectionStatus, getActiveSections, isSectionAvailable } from '../config/sectionRegistry';
 import { logger } from "../utils/logger";
 import { trackClarityEvent, setClarityTag } from '../utils/clarity';
 
@@ -66,6 +71,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         window.history.replaceState({}, '', url);
       }
       return {
+        showSelector: false,
         showIntro: false,
         isStudying: false,
         studyCompleted: true,
@@ -76,42 +82,45 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
     }
 
     // Normal modules: validate view parameter
-    const validViews = ['intro', 'study', 'speedmatch', 'practice', 'exam'];
+    const validViews = ['selector', 'intro', 'study', 'speedmatch', 'practice', 'pronunciation', 'conversation', 'exam'];
 
-    // If view is invalid, clear it and default to intro
-    if (view && !validViews.includes(view)) {
-      const url = new URL(window.location);
-      url.searchParams.delete('view');
-      window.history.replaceState({}, '', url);
-      return { showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
+    // If view is invalid or missing, default to selector
+    if (!view || !validViews.includes(view)) {
+      return { showSelector: true, showIntro: false, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
     }
 
     // Valid views
     switch (view) {
+      case 'selector':
+        return { showSelector: true, showIntro: false, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
       case 'intro':
-        return { showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
+        return { showSelector: false, showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
       case 'study':
-        return { showIntro: false, isStudying: true, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
+        return { showSelector: false, showIntro: false, isStudying: true, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
       case 'speedmatch':
-        return { showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: true, speedMatchCompleted: false, showExam: false };
+        return { showSelector: false, showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: true, speedMatchCompleted: false, showExam: false };
       case 'practice':
-        return { showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: false };
+        return { showSelector: false, showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: false };
+      case 'pronunciation':
+      case 'conversation':
+        return { showSelector: false, showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: false };
       case 'exam':
-        return { showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: true };
+        return { showSelector: false, showIntro: false, isStudying: false, studyCompleted: true, showSpeedMatch: false, speedMatchCompleted: true, showExam: true };
       default:
-        // Default to intro for normal modules
-        return { showIntro: true, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
+        return { showSelector: true, showIntro: false, isStudying: false, studyCompleted: false, showSpeedMatch: false, speedMatchCompleted: false, showExam: false };
     }
   };
 
   const initialState = getInitialViewState();
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(getInitialExerciseIndex);
+  const [showSelector, setShowSelector] = useState(initialState.showSelector);
   const [showIntro, setShowIntro] = useState(initialState.showIntro);
   const [isStudying, setIsStudying] = useState(initialState.isStudying);
   const [studyCompleted, setStudyCompleted] = useState(initialState.studyCompleted);
   const [showSpeedMatch, setShowSpeedMatch] = useState(initialState.showSpeedMatch);
   const [speedMatchCompleted, setSpeedMatchCompleted] = useState(initialState.speedMatchCompleted);
   const [showExam, setShowExam] = useState(initialState.showExam);
+  const [currentSection, setCurrentSection] = useState(null);
   const [moduleCompleted, setModuleCompleted] = useState(false);
   const [resetting, setResetting] = useState(false);
   const [moduleTimeSpent, setModuleTimeSpent] = useState(0);
@@ -127,19 +136,44 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
   // Legacy module time tracking (will be removed)
   const moduleStartTimeRef = useRef(Date.now());
-  
+
   // Track if completion has been recorded to prevent duplicates
   const completionRecordedRef = useRef(false);
 
   const { supabaseClient, supabaseUser, isAuthenticated, moduleProgress } = useSupabaseProgress();
+  const { sectionProgress, loading: sectionLoading, isSectionCompleted, completeSectionProgress } = useSectionProgress();
 
   if (!lesson) return null;
 
   const currentExercise = lesson.exercises?.[currentExerciseIndex];
   const isLastExercise = currentExerciseIndex === (lesson.exercises?.length || 0) - 1;
 
+  // Calculate completed sections for selector view
+  const getSectionCount = () => {
+    if (!showSelector) return { completed: 0, total: 0 };
+
+    const lessonModuleId = extractModuleId(lesson);
+    const availableSections = getActiveSections()
+      .filter(section => isSectionAvailable(section.id, lesson))
+      .filter(section => !section.isPremium && !section.comingSoon && !section.isSpecial);
+
+    const completedCount = availableSections.filter(section => {
+      const status = getSectionStatus(section.id, moduleProgress?.[lessonModuleId], sectionProgress?.[lessonModuleId] || {}, lesson);
+      return status === 'completed';
+    }).length;
+
+    return { completed: completedCount, total: availableSections.length };
+  };
+
+  const sectionCount = getSectionCount();
+
   // Generate vocabulary reference from lesson
   const vocabularyItems = lesson.vocabularyReference || [];
+
+  // Get actual completion status from database for section headers
+  const lessonModuleId = extractModuleId(lesson);
+  const isFlashCardsCompleted = isSectionCompleted(lessonModuleId, 'flash-cards');
+  const isVocabIntroCompleted = isSectionCompleted(lessonModuleId, 'vocabulary-intro');
 
   // Helper to update URL view parameter
   const updateViewInUrl = (view) => {
@@ -167,6 +201,20 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     // If this was the last exercise AND it was completed successfully, show modal
     if (isLastExercise && wasSuccessful && studyCompleted && !lesson.isFillInTheBlank) {
+      // Complete the writing section immediately when last exercise is completed
+      if (isAuthenticated && lessonModuleId) {
+        logger.log('LessonView: Auto-completing writing section - last exercise completed');
+
+        completeSectionProgress(lessonModuleId, 'writing', {
+          exercises_completed: lesson.exercises.length,
+          completion_method: 'all_exercises_completed'
+        }).then(result => {
+          logger.log('LessonView: Writing section completion successful', result);
+        }).catch(error => {
+          logger.error('LessonView: Error completing writing section:', error);
+        });
+      }
+
       // Calculate time spent
       const timeSpentOnModule = Math.round((Date.now() - moduleStartTimeRef.current) / 1000);
       setModuleTimeSpent(timeSpentOnModule);
@@ -192,6 +240,83 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       setCurrentExerciseIndex(newIndex);
       updateExerciseInUrl(newIndex);
     }
+  };
+
+  const handleSectionSelect = (view) => {
+    if (view === 'next') {
+      handleNextModule();
+      return;
+    }
+
+    setShowSelector(false);
+    setCurrentSection(view);
+
+    switch (view) {
+      case 'intro':
+        setShowIntro(true);
+        setIsStudying(false);
+        setStudyCompleted(false);
+        setShowSpeedMatch(false);
+        setSpeedMatchCompleted(false);
+        setShowExam(false);
+        updateViewInUrl('intro');
+        break;
+      case 'study':
+        setShowIntro(false);
+        setIsStudying(true);
+        setStudyCompleted(false);
+        setShowSpeedMatch(false);
+        setSpeedMatchCompleted(false);
+        setShowExam(false);
+        setCurrentExerciseIndex(0);
+        updateViewInUrl('study');
+        updateExerciseInUrl(0);
+        break;
+      case 'speedmatch':
+        setShowIntro(false);
+        setIsStudying(false);
+        setStudyCompleted(true);
+        setShowSpeedMatch(true);
+        setSpeedMatchCompleted(false);
+        setShowExam(false);
+        updateViewInUrl('speedmatch');
+        break;
+      case 'practice':
+        setShowIntro(false);
+        setIsStudying(false);
+        setStudyCompleted(true);
+        setShowSpeedMatch(false);
+        setSpeedMatchCompleted(true);
+        setShowExam(false);
+        setCurrentExerciseIndex(0);
+        updateViewInUrl('practice');
+        updateExerciseInUrl(0);
+        break;
+      case 'pronunciation':
+      case 'conversation':
+        // Placeholder for future sections
+        setShowIntro(false);
+        setIsStudying(false);
+        setStudyCompleted(true);
+        setShowSpeedMatch(false);
+        setSpeedMatchCompleted(true);
+        setShowExam(false);
+        updateViewInUrl(view);
+        break;
+      default:
+        setShowSelector(true);
+        updateViewInUrl('selector');
+    }
+  };
+
+  const handleBackToSelector = () => {
+    setShowSelector(true);
+    setShowIntro(false);
+    setIsStudying(false);
+    setShowSpeedMatch(false);
+    setShowExam(false);
+    setCurrentSection(null);
+    updateViewInUrl('selector');
   };
 
   const handleStartStudying = () => {
@@ -254,12 +379,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   };
 
   const handleBackToConcepts = () => {
-    setShowIntro(true);
-    setIsStudying(false);
-    setStudyCompleted(false);
-    setCurrentExerciseIndex(0);
-    updateViewInUrl('intro');
-    updateExerciseInUrl(0);
+    handleBackToSelector();
   };
 
   const handleTakeExam = () => {
@@ -448,34 +568,70 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
         // Update view state based on URL
         switch (view) {
+          case 'selector':
+            setShowSelector(true);
+            setShowIntro(false);
+            setIsStudying(false);
+            setStudyCompleted(false);
+            setShowSpeedMatch(false);
+            setShowExam(false);
+            break;
           case 'intro':
+            setShowSelector(false);
             setShowIntro(true);
             setIsStudying(false);
             setStudyCompleted(false);
+            setShowSpeedMatch(false);
             setShowExam(false);
             break;
           case 'study':
+            setShowSelector(false);
             setShowIntro(false);
             setIsStudying(true);
             setStudyCompleted(false);
+            setShowSpeedMatch(false);
+            setShowExam(false);
+            break;
+          case 'speedmatch':
+            setShowSelector(false);
+            setShowIntro(false);
+            setIsStudying(false);
+            setStudyCompleted(true);
+            setShowSpeedMatch(true);
             setShowExam(false);
             break;
           case 'practice':
+            setShowSelector(false);
             setShowIntro(false);
             setIsStudying(false);
             setStudyCompleted(true);
+            setShowSpeedMatch(false);
             setShowExam(false);
             break;
-          case 'exam':
+          case 'pronunciation':
+          case 'conversation':
+            setShowSelector(false);
             setShowIntro(false);
             setIsStudying(false);
             setStudyCompleted(true);
+            setShowSpeedMatch(false);
+            setShowExam(false);
+            setCurrentSection(view);
+            break;
+          case 'exam':
+            setShowSelector(false);
+            setShowIntro(false);
+            setIsStudying(false);
+            setStudyCompleted(true);
+            setShowSpeedMatch(false);
             setShowExam(true);
             break;
           default:
-            setShowIntro(true);
+            setShowSelector(true);
+            setShowIntro(false);
             setIsStudying(false);
             setStudyCompleted(false);
+            setShowSpeedMatch(false);
             setShowExam(false);
         }
       }
@@ -510,48 +666,86 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     // For special module types, always go straight to practice
     if (isReading || isUnitExam || isFillInBlank || isPhonics || isHelpModule) {
+      setShowSelector(false);
       setShowIntro(false);
       setIsStudying(false);
       setStudyCompleted(true);
+      setShowSpeedMatch(false);
       setShowExam(false);
       setModuleCompleted(false);
       setCurrentExerciseIndex(exerciseIndex);
       // Don't update URL for special modules - they don't have views
     } else {
-      // Normal modules: use URL view or default to intro
+      // Normal modules: use URL view or default to selector
       switch (urlView) {
+        case 'selector':
+          setShowSelector(true);
+          setShowIntro(false);
+          setIsStudying(false);
+          setStudyCompleted(false);
+          setShowSpeedMatch(false);
+          setShowExam(false);
+          break;
         case 'intro':
+          setShowSelector(false);
           setShowIntro(true);
           setIsStudying(false);
           setStudyCompleted(false);
+          setShowSpeedMatch(false);
           setShowExam(false);
           break;
         case 'study':
+          setShowSelector(false);
           setShowIntro(false);
           setIsStudying(true);
           setStudyCompleted(false);
+          setShowSpeedMatch(false);
+          setShowExam(false);
+          break;
+        case 'speedmatch':
+          setShowSelector(false);
+          setShowIntro(false);
+          setIsStudying(false);
+          setStudyCompleted(true);
+          setShowSpeedMatch(true);
           setShowExam(false);
           break;
         case 'practice':
+          setShowSelector(false);
           setShowIntro(false);
           setIsStudying(false);
           setStudyCompleted(true);
+          setShowSpeedMatch(false);
           setShowExam(false);
           break;
-        case 'exam':
+        case 'pronunciation':
+        case 'conversation':
+          setShowSelector(false);
           setShowIntro(false);
           setIsStudying(false);
           setStudyCompleted(true);
+          setShowSpeedMatch(false);
+          setShowExam(false);
+          setCurrentSection(urlView);
+          break;
+        case 'exam':
+          setShowSelector(false);
+          setShowIntro(false);
+          setIsStudying(false);
+          setStudyCompleted(true);
+          setShowSpeedMatch(false);
           setShowExam(true);
           break;
         default:
-          // Default to intro
-          setShowIntro(true);
+          // Default to selector
+          setShowSelector(true);
+          setShowIntro(false);
           setIsStudying(false);
           setStudyCompleted(false);
+          setShowSpeedMatch(false);
           setShowExam(false);
-          // Set URL to intro as default
-          updateViewInUrl('intro');
+          // Set URL to selector as default
+          updateViewInUrl('selector');
       }
       setModuleCompleted(false);
       setCurrentExerciseIndex(exerciseIndex);
@@ -559,12 +753,12 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
     // Reset module start time when lesson changes
     moduleStartTimeRef.current = Date.now();
-    
+
     // Track module view in Clarity
     trackClarityEvent('moduleViewed');
     setClarityTag('currentModule', lesson.title);
     setClarityTag('currentUnit', unitInfo?.title || 'Unknown');
-    
+
     if (isUnitExam) {
       setClarityTag('moduleType', 'unitExam');
     } else if (isReading) {
@@ -622,7 +816,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
 
       <div className="lesson-header">
         <button className="btn-back" onClick={onBack}>
-          ← Back to Modules
+          <Home size={18} />
         </button>
         <div className="lesson-title-container">
           {unitInfo && !unitInfo.isReference && (
@@ -645,10 +839,14 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           </button>
         )}
         <div className="exercise-progress">
-          {showIntro ? (
+          {showSelector ? (
+            <span>{sectionCount.completed}/{sectionCount.total} Done</span>
+          ) : showIntro ? (
             <span>📖 Introduction</span>
           ) : isStudying ? (
             <span>📚 Study Mode</span>
+          ) : showSpeedMatch ? (
+            <span>⚡ Speed Match</span>
           ) : showExam ? (
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Award size={18} style={{ color: '#f59e0b' }} />
@@ -706,18 +904,29 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         )
       ) : lesson.isPhonicsReference ? (
         <PhonicsView />
+      ) : showSelector && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (
+        <ModuleSelector
+          lesson={lesson}
+          onSectionSelect={handleSectionSelect}
+          moduleProgress={moduleProgress || {}}
+          sectionProgress={sectionProgress}
+          completedExercises={completedExercises}
+        />
       ) : showIntro && !lesson.isReadingComprehension && !lesson.isUnitExam && !lesson.isFillInTheBlank ? (
-        <div className="intro-container">
-          <div className="intro-skip">
-            <button className="btn-skip" onClick={handleSkipIntro}>
-              Skip to Practice →
-            </button>
-          </div>
-          <ConceptIntro
+        <>
+          <ModuleSectionHeader
+            sectionId="intro"
+            moduleId={lessonModuleId}
             lesson={lesson}
-            onStartStudying={handleStartStudying}
+            onBack={handleBackToSelector}
           />
-        </div>
+          <div className="intro-container">
+            <ConceptIntro
+              lesson={lesson}
+              onStartStudying={handleStartStudying}
+            />
+          </div>
+        </>
       ) : lesson.isFillInTheBlank ? (
         <div className="fill-in-blank-container">
           <FillInTheBlank
@@ -748,32 +957,61 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           unitInfo={unitInfo}
         />
       ) : isStudying ? (
-        <div className="study-container">
-          <div className="study-intro">
-            <button className="btn-back-to-concepts" onClick={handleBackToConcepts}>
-              ← Back to Concepts
-            </button>
-            <div className="study-skip-group">
-              <button className="btn-skip-small" onClick={handleFinishStudying}>
-                ⚡
-              </button>
-              <button className="btn-skip" onClick={handleSkipStudy}>
-                Skip Study Mode →
-              </button>
-            </div>
+        <>
+          <ModuleSectionHeader
+            sectionId="study"
+            moduleId={lessonModuleId}
+            lesson={lesson}
+            onBack={handleBackToSelector}
+          />
+          <div className="study-container">
+            <StudyMode
+              exercises={lesson.exercises}
+              onFinishStudying={handleFinishStudying}
+              currentExerciseIndex={currentExerciseIndex}
+              updateExerciseInUrl={updateExerciseInUrl}
+              lesson={lesson}
+            />
           </div>
-          <StudyMode
-            exercises={lesson.exercises}
-            onFinishStudying={handleFinishStudying}
-            currentExerciseIndex={currentExerciseIndex}
-            updateExerciseInUrl={updateExerciseInUrl}
+        </>
+      ) : showSpeedMatch ? (
+        <div>
+          <ModuleSectionHeader
+            sectionId="speedmatch"
+            moduleId={lessonModuleId}
+            lesson={lesson}
+            onBack={handleBackToSelector}
+          />
+          <SpeedMatch
+            vocabulary={lesson.vocabularyReference}
+            onFinish={handleFinishSpeedMatch}
+            lesson={lesson}
           />
         </div>
-      ) : showSpeedMatch ? (
-        <SpeedMatch
-          vocabulary={lesson.vocabularyReference}
-          onFinish={handleFinishSpeedMatch}
-        />
+      ) : currentSection === 'pronunciation' ? (
+        <div>
+          <ModuleSectionHeader
+            sectionId="pronunciation"
+            moduleId={lessonModuleId}
+            lesson={lesson}
+            onBack={handleBackToSelector}
+          />
+          <div style={{ padding: '2rem', textAlign: 'center' }}>
+            <p>Pronunciation section coming soon!</p>
+          </div>
+        </div>
+      ) : currentSection === 'conversation' ? (
+        <div>
+          <ModuleSectionHeader
+            sectionId="conversation"
+            moduleId={lessonModuleId}
+            lesson={lesson}
+            onBack={handleBackToSelector}
+          />
+          <div style={{ padding: '2rem', textAlign: 'center' }}>
+            <p>Conversation section coming soon!</p>
+          </div>
+        </div>
       ) : lesson.isReadingComprehension ? (
         <div className="reading-module-layout">
           <ExercisePane
@@ -793,33 +1031,41 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           />
         </div>
       ) : (
-        <div className="lesson-content">
-          <div className="left-pane">
-            <ExercisePane
-              exercise={currentExercise}
-              onNext={handleNext}
-              onPrevious={handlePrevious}
-              isFirstExercise={currentExerciseIndex === 0}
-              isLastExercise={isLastExercise}
-              isCompleted={completedExercises.has(currentExercise.id)}
-              onComplete={handleExerciseCompleteWrapper}
-              studyCompleted={studyCompleted}
-              readingPassage={lesson.readingPassage}
-              onBackToLesson={lesson.isReadingComprehension ? null : handleBackToLesson}
-              moduleId={extractModuleId(lesson)}
-              displayModuleId={lesson.id}
-              unitId={extractUnitId(unitInfo)}
-            />
-          </div>
+        <>
+          <ModuleSectionHeader
+            sectionId="practice"
+            moduleId={lessonModuleId}
+            lesson={lesson}
+            onBack={handleBackToSelector}
+          />
+          <div className="lesson-content">
+            <div className="left-pane">
+              <ExercisePane
+                exercise={currentExercise}
+                onNext={handleNext}
+                onPrevious={handlePrevious}
+                isFirstExercise={currentExerciseIndex === 0}
+                isLastExercise={isLastExercise}
+                isCompleted={completedExercises.has(currentExercise.id)}
+                onComplete={handleExerciseCompleteWrapper}
+                studyCompleted={studyCompleted}
+                readingPassage={lesson.readingPassage}
+                onBackToLesson={null}
+                moduleId={extractModuleId(lesson)}
+                displayModuleId={lesson.id}
+                unitId={extractUnitId(unitInfo)}
+              />
+            </div>
 
-          <div className="right-pane">
-            <RightSidebar
-              concepts={lesson.concepts}
-              vocabulary={vocabularyItems}
-              moduleId={extractModuleId(lesson)}
-            />
+            <div className="right-pane">
+              <RightSidebar
+                concepts={lesson.concepts}
+                vocabulary={vocabularyItems}
+                moduleId={extractModuleId(lesson)}
+              />
+            </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

@@ -38,10 +38,17 @@ export const useAllStudentsData = () => {
       const from = (page - 1) * pagination.perPage;
       const to = from + pagination.perPage - 1;
       
-      // Fetch user profiles
-      const { data: profiles, error: profilesError, count } = await supabaseClient
+      // Fetch total count separately to ensure we get the full count
+      const { count, error: countError } = await supabaseClient
         .from(TABLES.USER_PROFILES)
-        .select('*', { count: 'exact' })
+        .select('*', { count: 'exact', head: true });
+      
+      if (countError) throw countError;
+      
+      // Fetch user profiles for current page
+      const { data: profiles, error: profilesError } = await supabaseClient
+        .from(TABLES.USER_PROFILES)
+        .select('*')
         .order('created_at', { ascending: false })
         .range(from, to);
       

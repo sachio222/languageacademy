@@ -3,10 +3,15 @@
  * Appears after study mode completion
  */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { RotateCcw } from 'lucide-react';
 import { usePageTime } from '../hooks/usePageTime';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { extractModuleId } from '../utils/progressSync';
 import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../utils/clarity';
+import { logger } from '../utils/logger';
+import { splitTitle } from '../utils/moduleUtils';
 import SpeakButton from './SpeakButton';
 import "../styles/SpeedMatch.css";
 
@@ -48,7 +53,7 @@ const GAME_STATES = {
   FINISHED: 'finished'
 };
 
-export default function SpeedMatch({ vocabulary, onFinish }) {
+export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
   const [gameState, setGameState] = useState(GAME_STATES.READY);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -58,10 +63,16 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   const [autoAdvance, setAutoAdvance] = useState(true);
   const [showDecimal, setShowDecimal] = useState(false);
   const [difficulty, setDifficulty] = useState('medium'); // none, easy, medium, hard
+  const completionCalled = useRef(false);
 
   // Track page time for study time analytics
   const pageId = `speedmatch-${vocabulary.length}-words`;
   const { totalTime: pageTime, isTracking } = usePageTime(pageId, true);
+
+  // Section progress tracking
+  const { completeSectionProgress } = useSectionProgress();
+  const { isAuthenticated } = useSupabaseProgress();
+  const moduleId = lesson ? extractModuleId(lesson) : null;
 
   const currentWord = vocabulary[currentIndex];
   const [answerOptions, setAnswerOptions] = useState([]);
@@ -89,7 +100,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
     setAnswers([]);
     setSelectedAnswer(null);
     setGameState(GAME_STATES.PREVIEW);
-    
+
     // Track game start in Clarity
     trackClarityEvent('speedMatchStarted');
     setClarityTag('speedMatchDifficulty', difficulty);
@@ -154,7 +165,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
       setGameState(GAME_STATES.CORRECT);
       setScore(score + 1);
       setAnswers([...answers, ANSWER_TYPES.CORRECT]);
-      
+
       // Track correct answer
       trackClarityEvent('speedMatchCorrectAnswer');
 
@@ -165,10 +176,10 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
     } else {
       setGameState(GAME_STATES.WRONG);
       setAnswers([...answers, ANSWER_TYPES.WRONG]);
-      
+
       // Track wrong answer
       trackClarityEvent('speedMatchWrongAnswer');
-      
+
       // Always pause for wrong answers - no auto-advance
     }
   };
@@ -177,20 +188,39 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
   const nextQuestion = () => {
     if (currentIndex + 1 >= vocabulary.length) {
       setGameState(GAME_STATES.FINISHED);
-      
-      // Track game completion in Clarity
+
+      // Calculate final score (including current answer)
       const finalScore = score + (selectedAnswer?.french === currentWord.french ? 1 : 0);
       const percentageScore = Math.round((finalScore / vocabulary.length) * 100);
-      
+
+      // Track game completion in Clarity
       trackClarityEvent('speedMatchCompleted');
       setClarityTag('speedMatchScore', `${finalScore}/${vocabulary.length}`);
       setClarityTag('speedMatchPercentage', `${percentageScore}%`);
-      
+
       // Upgrade session for high scores
       if (percentageScore >= 90) {
         upgradeClaritySession('high speed match score');
       }
-      
+
+      // Save section completion immediately
+      if (isAuthenticated && moduleId && !completionCalled.current) {
+        completionCalled.current = true;
+
+        logger.log('SpeedMatch: Auto-completing speed-match section - game finished');
+
+        completeSectionProgress(moduleId, 'speed-match', {
+          score: finalScore,
+          total: vocabulary.length,
+          accuracy: percentageScore,
+          completion_method: 'game_completed'
+        }).then(result => {
+          logger.log('SpeedMatch: Section completion successful', result);
+        }).catch(error => {
+          logger.error('SpeedMatch: Error completing speed-match section:', error);
+        });
+      }
+
       return;
     }
 
@@ -267,47 +297,28 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
 
   const isPlayingState = [GAME_STATES.PLAYING, GAME_STATES.CORRECT, GAME_STATES.WRONG, GAME_STATES.TIMEUP].includes(gameState);
 
+  // Extract module prefix from lesson title
+  const { modulePrefix } = lesson ? splitTitle(lesson.title) : { modulePrefix: null };
+
   return (
     <div className={`speed-match-container embedded ${isPlayingState ? "playing" : ""}`}>
-      <div className="speed-match-intro">
-        <div className="speed-match-intro-left">
-          <button className="btn-back-to-study btn-skip" onClick={() => window.history.back()}>
-            ← Back to Study Mode
-          </button>
-        </div>
-        {(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
-          <div className="speed-match-intro-stats">
-            <div className="speed-match-progress">
-              {score} / {currentIndex + 1}
-            </div>
-            <div className="speed-match-stars">
-              {renderStars()}
-            </div>
+      {/* Stars and Progress Header - Show during preview and playing */}
+      {(gameState === GAME_STATES.PREVIEW || isPlayingState) && (
+        <div className="speed-match-stats-header">
+          <div className="speed-match-stars">
+            {renderStars()}
           </div>
-        )}
-        <div className="speed-match-intro-right">
-          {gameState !== GAME_STATES.READY && gameState !== GAME_STATES.FINISHED && (
-            <button
-              onClick={restartGame}
-              className="speed-match-restart btn-skip"
-              title="Restart Game"
-            >
-              <RotateCcw size={16} /> Restart round
-            </button>
-          )}
-          <button className="btn-skip" onClick={onFinish}>
-            Skip Speed Match →
-          </button>
+          <div className="speed-match-progress">
+            {score} / {currentIndex + 1}
+          </div>
         </div>
-      </div>
+      )}
       <div className="speed-match-content">
         {/* Ready Screen */}
         {gameState === GAME_STATES.READY && (
           <div className="speed-match-ready study-header">
-            <h3>⚡️ Speed Match</h3>
-            <p>Quick-Fire Matching Challenge</p>
             <div className="speed-match-instructions">
-              <h2>How it works</h2>
+              <h2>⚡️ How it works</h2>
               <ul>
                 <li>You'll review a French word or phrase</li>
                 <li>Pick the correct English translation from 4 options</li>
@@ -385,7 +396,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
           <div className="speed-match-preview">
             <div className="speed-match-word-card">
               <div className="speed-match-word-label">
-                Speed match
+                CHOOSE THE MATCH
               </div>
               <div className="speed-match-word">
                 <span>{currentWord?.french}</span>
@@ -521,7 +532,7 @@ export default function SpeedMatch({ vocabulary, onFinish }) {
                 Play Again
               </button>
               <button onClick={onFinish} className="speed-match-button-secondary">
-                Continue to Practice →
+                Continue to Writing Practice →
               </button>
             </div>
           </div>

@@ -107,7 +107,7 @@ function ReportCardAdmin({ onBack = null }) {
   const overviewStats = useMemo(() => {
     if (students.length === 0) {
       return {
-        totalStudents: 0,
+        totalStudents: pagination.total || 0,
         avgCompletionRate: 0,
         avgStudyTime: 0,
         totalModules: 0,
@@ -129,13 +129,13 @@ function ReportCardAdmin({ onBack = null }) {
     }, { active: 0, atRisk: 0, inactive: 0 });
     
     return {
-      totalStudents: students.length,
+      totalStudents: pagination.total || 0,
       avgCompletionRate: Math.round((totalModules / students.length) * 100) / 100,
       avgStudyTime: Math.round(totalStudyTime / students.length),
       totalModules,
       ...engagementCounts
     };
-  }, [students]);
+  }, [students, pagination.total]);
   
   // Handle sort
   const handleSort = (field) => {

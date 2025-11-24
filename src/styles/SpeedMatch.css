@@ -21,6 +21,24 @@
   min-height: 100vh;
 }
 
+.speed-match-stats-header {
+  width: 100%;
+  max-width: 54rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .speed-match-stats-header {
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+}
+
 .speed-match-content {
   max-width: 54rem;
   width: 100%;
@@ -114,31 +132,49 @@
 
 /* Ready Screen */
 .speed-match-ready {
-  text-align: center;
-  padding-top: 4rem; /* Space for navigation */
+  text-align: left;
+  /* padding-top: 4rem; */
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 /* Remove fixed header styles - no longer needed */
 
-.speed-match-ready h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  letter-spacing: -0.025em;
+.module-prefix {
+  color: #999999;
+  font-size: 0.875rem;
+  font-weight: 400;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
-.speed-match-ready p {
-  font-size: 1rem;
+.speed-match-ready h2 {
+  color: #1a1a1a;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.2;
+}
+
+.speed-match-ready .study-description {
   color: #665665;
-  font-weight: 400;
+  font-size: 1rem;
   margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
 .speed-match-instructions {
   background: #fafbfc;
   border-radius: 12px;
   padding: 2.5rem;
+  text-align: center;
 }
 
 .speed-match-instructions h2 {
@@ -147,6 +183,7 @@
   color: #1a1a1a;
   letter-spacing: -0.015em;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .speed-match-instructions ul {
@@ -165,7 +202,6 @@
 
 .speed-match-button {
   background: #3b82f6;
-  /* margin-top: 0.5rem; */
   color: white;
   font-size: 1rem;
   font-weight: 600;
@@ -175,7 +211,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: opacity 0.15s ease;
-  margin-right: 0.5rem;
+  display: inline-block;
 }
 
 .speed-match-button-secondary {
@@ -208,6 +244,8 @@
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1rem;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .difficulty-options {
@@ -401,6 +439,8 @@
   font-weight: 300;
   letter-spacing: -0.04em;
   transition: all 0.15s ease;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -488,6 +528,8 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .speed-match-word-label.small {
@@ -554,7 +596,7 @@
   font-size: 2rem;
   font-weight: 200;
   padding: 3rem 2rem;
-  border: 2px solid #6b7280;
+  border: 1px solid #6b7280;
   border-radius: 12px;
   cursor: grab;
   transition: all 0.15s ease;
@@ -567,6 +609,8 @@
   transform: translateY(10px) scale(1);
   animation: slideUpFadeIn 0.15s ease-out forwards;
   width: 100%;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -677,6 +721,8 @@
   font-weight: 600;
   color: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   letter-spacing: -0.025em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -691,6 +737,8 @@
   color: #ef4444;
   letter-spacing: -0.025em;
   margin-bottom: 0.5rem;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -727,6 +775,8 @@
   color: #1a1a1a;
   letter-spacing: -0.025em;
   margin-bottom: 2.5rem;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -780,6 +830,8 @@
   color: #3b82f6;
   letter-spacing: -0.04em;
   margin-bottom: 2rem;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .speed-match-message {
@@ -787,12 +839,16 @@
   color: #665665;
   font-weight: 500;
   margin-bottom: 1rem;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .speed-match-accuracy {
   font-size: 0.9375rem;
   color: #999999;
   margin-bottom: 2rem;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 /* Continue Button */

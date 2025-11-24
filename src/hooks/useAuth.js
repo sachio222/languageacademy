@@ -5,7 +5,6 @@ import { useSupabaseClient } from "./useSupabaseClient";
 import { logger } from "../utils/logger";
 
 export const useAuth = () => {
-  const isDevMode = import.meta.env.VITE_DEV_MODE === "true";
   const { user, isLoaded: userLoaded, isSignedIn } = useUser();
   const { session } = useSession();
   const { signOut } = useClerk();
@@ -30,97 +29,12 @@ export const useAuth = () => {
   useEffect(() => {
     const syncUserProfile = async () => {
       // Don't sync until Clerk is fully loaded
-      if (!isDevMode && !userLoaded) {
+      if (!userLoaded) {
         setLoading(false);
         return;
       }
 
-      // Dev mode: Sign in with dev account using Supabase Auth
-      if (isDevMode) {
-        try {
-          const devEmail = "dev.user@example.com";
-          const devPassword = "DevPassword123!";
-
-          // Try to sign in
-          const { data: signInData, error: signInError } =
-            await supabase.auth.signInWithPassword({
-              email: devEmail,
-              password: devPassword,
-            });
-
-          if (signInError) {
-            // If sign in fails, account might not exist yet
-            logger.log(
-              "Dev account doesn't exist yet. You need to create it first."
-            );
-            logger.log("Run this in your browser console:");
-            logger.log(`
-// Create dev account (run once):
-const { data, error } = await supabase.auth.signUp({
-  email: 'dev.user@example.com',
-  password: 'DevPassword123!',
-  options: {
-    data: {
-      first_name: 'Dev',
-      last_name: 'User'
-    }
-  }
-});
-logger.log('Dev account created:', data);
-            `);
-            setLoading(false);
-            return;
-          }
-
-          // Now create/update user profile
-          const userId = signInData.user.id;
-
-          const { data: existingProfile, error: fetchError } = await supabase
-            .from("user_profiles")
-            .select("*")
-            .eq("clerk_user_id", userId)
-            .single();
-
-          if (fetchError && fetchError.code !== "PGRST116") {
-            throw fetchError;
-          }
-
-          if (!existingProfile) {
-            const { data: newProfile, error: insertError } = await supabase
-              .from("user_profiles")
-              .insert({
-                clerk_user_id: userId,
-                email: devEmail,
-                first_name: "Dev",
-                last_name: "User",
-                preferred_name: "Dev User",
-              })
-              .select()
-              .single();
-
-            if (insertError) throw insertError;
-            setSupabaseUser(newProfile);
-            setProfile(newProfile);
-          } else {
-            const { data: updatedProfile, error: updateError } = await supabase
-              .from("user_profiles")
-              .update({ last_active_at: new Date().toISOString() })
-              .eq("clerk_user_id", userId)
-              .select()
-              .single();
-
-            if (updateError) throw updateError;
-            setSupabaseUser(updatedProfile);
-            setProfile(updatedProfile);
-          }
-        } catch (error) {
-          logger.error("Error with dev account:", error);
-        }
-        setLoading(false);
-        return;
-      }
-
-      // Production: only sync if user is signed in AND client is ready with token
+      // Only sync if user is signed in AND client is ready with token
       if (isSignedIn && user && clientReady) {
         try {
           // Check if user profile exists in Supabase
@@ -202,7 +116,7 @@ logger.log('Dev account created:', data);
     };
 
     syncUserProfile();
-  }, [user, isSignedIn, userLoaded, isDevMode, clientReady]);
+    }, [user, isSignedIn, userLoaded, clientReady]);
 
   const handleSignOut = async () => {
     try {
@@ -215,13 +129,11 @@ logger.log('Dev account created:', data);
   };
 
   return {
-    user: isDevMode
-      ? { id: "dev-user", firstName: "Dev", lastName: "User" }
-      : user, // Clerk user or dev user
+    user, // Clerk user
     supabaseUser, // Supabase user profile
     supabaseClient, // Supabase client with Clerk token
-    isAuthenticated: isDevMode ? true : isSignedIn,
-    loading: loading || (!isDevMode && !userLoaded),
+    isAuthenticated: isSignedIn,
+    loading: loading || !userLoaded,
     signOut: handleSignOut,
     profile, // User profile data for all hooks to use
   };

@@ -7,6 +7,6 @@ DROP POLICY IF EXISTS "Admin can update feedback" ON feedback;
 
 CREATE POLICY "Admin can update feedback" ON feedback
   FOR UPDATE
-  USING (auth.jwt() ->> 'sub' = 'user_33nSyBPwjQvGcy5w9GJgCyK5KY0')
-  WITH CHECK (auth.jwt() ->> 'sub' = 'user_33nSyBPwjQvGcy5w9GJgCyK5KY0');
+  USING (auth.jwt() ->> 'sub' = 'user_35l6XLlv1lfGmaWOdzxlFPNAA0q')
+  WITH CHECK (auth.jwt() ->> 'sub' = 'user_35l6XLlv1lfGmaWOdzxlFPNAA0q');
 

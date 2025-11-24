@@ -1,27 +1,53 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import SpeakButton from './SpeakButton';
 import { detectLanguage } from '../hooks/useSpeech';
 import { usePageTime } from '../hooks/usePageTime';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { extractModuleId } from '../utils/progressSync';
+import { logger } from '../utils/logger';
+import { splitTitle } from '../utils/moduleUtils';
 
 /**
  * Study Mode - Learn before you test
  * Flashcard-style learning with answers revealed
  */
-function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, updateExerciseInUrl }) {
+
+// Constants
+const DEFAULT_ANSWER_LANGUAGE = 'fr-FR';
+
+function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, updateExerciseInUrl, lesson }) {
   const [currentIndex, setCurrentIndex] = useState(currentExerciseIndex);
   const [isRevealed, setIsRevealed] = useState(false);
+  const completionCalled = useRef(false);
 
   // Track page time for study time analytics
   const pageId = `studymode-${exercises?.length || 0}-exercises`;
-  const { totalTime: pageTime, isTracking } = usePageTime(pageId, true);
+  usePageTime(pageId, true);
+
+  // Section progress tracking
+  const { completeSectionProgress } = useSectionProgress();
+  const { isAuthenticated } = useSupabaseProgress();
+
+  // Extract moduleId and title parts from lesson
+  const moduleId = lesson ? extractModuleId(lesson) : null;
+  const { modulePrefix } = useMemo(
+    () => (lesson ? splitTitle(lesson.title) : { modulePrefix: null }),
+    [lesson]
+  );
 
   // Safety check for empty exercises
   if (!exercises || exercises.length === 0) {
     return (
       <div className="study-mode">
         <div className="study-header">
-          <h3>📚 Study Mode</h3>
-          <p>No exercises available for this module.</p>
+          {modulePrefix && (
+            <div className="module-prefix">
+              {modulePrefix}
+            </div>
+          )}
+          <h2>📚 Study Mode</h2>
+          <p className="study-description">No exercises available for this module.</p>
         </div>
         <div className="study-navigation">
           <button className="btn-nav btn-primary" onClick={onFinishStudying}>
@@ -37,46 +63,72 @@ function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, upda
     setCurrentIndex(currentExerciseIndex);
   }, [currentExerciseIndex]);
 
+  // Auto-complete study-mode section when viewing the last flashcard
+  useEffect(() => {
+    const isLastCard = currentIndex === exercises.length - 1;
+
+    if (isLastCard && !completionCalled.current && isAuthenticated && moduleId) {
+      completionCalled.current = true;
+
+      logger.log('StudyMode: Auto-completing flash-cards section - last flashcard viewed');
+
+      completeSectionProgress(moduleId, 'flash-cards', {
+        flashcards_viewed: exercises.length,
+        completion_method: 'viewed_all_flashcards'
+      }).then(result => {
+        logger.log('StudyMode: Section completion successful', result);
+      }).catch(error => {
+        logger.error('StudyMode: Error completing flash-cards section:', error);
+      });
+    }
+  }, [currentIndex, exercises.length, isAuthenticated, moduleId, completeSectionProgress]);
+
   const currentExercise = exercises[currentIndex];
   const progress = ((currentIndex + 1) / exercises.length) * 100;
 
-  const handleNext = () => {
-    if (currentIndex < exercises.length - 1) {
-      const newIndex = currentIndex + 1;
-      setCurrentIndex(newIndex);
-      setIsRevealed(false);
-      if (updateExerciseInUrl) {
-        updateExerciseInUrl(newIndex);
-      }
-    } else {
+  // Navigation handler - consolidates next/previous logic
+  const handleNavigate = (direction) => {
+    const isNext = direction === 'next';
+    const newIndex = isNext ? currentIndex + 1 : currentIndex - 1;
+
+    if (isNext && currentIndex >= exercises.length - 1) {
       onFinishStudying();
+      return;
+    }
+
+    if (!isNext && currentIndex <= 0) {
+      return;
+    }
+
+    setCurrentIndex(newIndex);
+    setIsRevealed(false);
+    if (updateExerciseInUrl) {
+      updateExerciseInUrl(newIndex);
     }
   };
 
-  const handlePrevious = () => {
-    if (currentIndex > 0) {
-      const newIndex = currentIndex - 1;
-      setCurrentIndex(newIndex);
-      setIsRevealed(false);
-      if (updateExerciseInUrl) {
-        updateExerciseInUrl(newIndex);
-      }
-    }
-  };
+  const handleNext = () => handleNavigate('next');
+  const handlePrevious = () => handleNavigate('previous');
 
   return (
     <div className="study-mode">
       <div className="study-header">
-        <h3>📚 Study Mode - Learn First!</h3>
-        <p>Review all answers before testing yourself</p>
-        <div className="study-progress-bar">
-          <div className="study-progress-fill" style={{ width: `${progress}%` }} />
+        {modulePrefix && (
+          <div className="module-prefix">
+            {modulePrefix}
+          </div>
+        )}
+        <h2>📚 Study Mode - Learn First!</h2>
+        <p className="study-description">Review all answers before testing yourself</p>
+        <div className="study-progress-container">
+          <div className="study-progress-bar">
+            <div className="study-progress-fill" style={{ width: `${progress}%` }} />
+          </div>
+          <span className="study-progress-text">
+            {currentIndex + 1} of {exercises.length}
+          </span>
         </div>
-        <span className="study-progress-text">
-          {currentIndex + 1} of {exercises.length}
-        </span>
       </div>
-
       <div className="flashcard">
         <div className="flashcard-front">
           <div className="flashcard-label">Question:</div>
@@ -106,7 +158,7 @@ function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, upda
               <SpeakButton
                 text={currentExercise.expectedAnswer}
                 ttsText={currentExercise.ttsText}
-                language="fr-FR"
+                language={DEFAULT_ANSWER_LANGUAGE}
                 size="large"
                 className="flashcard-speaker"
               />

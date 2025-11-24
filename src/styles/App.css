@@ -376,6 +376,8 @@ body:has(.left-nav.collapsed) .app-footer {
   font-weight: 600;
   letter-spacing: -0.03em;
   color: #222222;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .lesson-list-header p {
@@ -390,7 +392,7 @@ body:has(.left-nav.collapsed) .app-footer {
 .lessons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 .lesson-card {
@@ -429,6 +431,8 @@ body:has(.left-nav.collapsed) .app-footer {
   flex: 1;
   line-height: 1.3;
   letter-spacing: -0.01em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .lesson-exam-icon {
@@ -650,6 +654,8 @@ body:has(.left-nav.collapsed) .app-footer {
   color: #1a1a1a;
   text-transform: uppercase;
   letter-spacing: 0.025em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .split-unit-count {
@@ -728,7 +734,7 @@ body:has(.left-nav.collapsed) .app-footer {
 .split-lesson-title {
   flex: 1;
   font-size: 0.9375rem;
-  color: #1a1a1a;
+  color: #717171;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: -0.01em;
@@ -828,6 +834,8 @@ body:has(.left-nav.collapsed) .app-footer {
   color: #1a1a1a;
   letter-spacing: -0.02em;
   margin: 0;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .split-detail-badge {
@@ -1115,18 +1123,23 @@ body:has(.left-nav.collapsed) .app-footer {
   color: #1e293b;
   margin: 0;
   letter-spacing: -0.025em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .btn-back {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   color: #64748b;
-  padding: 0.625rem 1.25rem;
+  padding: 0.5rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9375rem;
   transition: all 0.2s;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+  width: auto;
 }
 
 .btn-back:hover {
@@ -1154,6 +1167,8 @@ body:has(.left-nav.collapsed) .app-footer {
   border: 1px solid;
   white-space: nowrap;
   letter-spacing: -0.01em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .lesson-header h2 {
@@ -1163,6 +1178,8 @@ body:has(.left-nav.collapsed) .app-footer {
   letter-spacing: -0.015em;
   color: #1e293b;
   margin: 0;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 /* Responsive title behavior */
@@ -1246,6 +1263,8 @@ body:has(.left-nav.collapsed) .app-footer {
   overflow-y: auto;
   max-height: calc(100vh);
   padding: 0rem;
+  padding-top: 2rem;
+  margin-top: -2rem;
 }
 
 /* Collapsed state - make it narrow */
@@ -1337,6 +1356,7 @@ body:has(.left-nav.collapsed) .app-footer {
 
 /* Understood button styles moved to UnderstoodButton.css */
 .concept-item .understood-btn {
+  margin-top: 1rem;
   align-self: flex-end;
 }
 
@@ -1433,6 +1453,8 @@ body:has(.left-nav.collapsed) .app-footer {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.03em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .badge-done {
@@ -1456,8 +1478,10 @@ body:has(.left-nav.collapsed) .app-footer {
 .exercise-instruction p {
   margin: 0.75rem 0;
   color: #1a1a1a;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.7;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .exercise-instruction p:first-child {
@@ -2063,6 +2087,8 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   font-weight: 600;
   margin: 0;
   letter-spacing: -0.02em;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .unit-badge-complete {

@@ -54,4 +54,5 @@ export const TABLES = {
   UNIT_PROGRESS: "unit_progress",
   USER_SESSIONS: "user_sessions",
   EXAM_ATTEMPTS: "exam_attempts",
+  SECTION_PROGRESS: "section_progress",
 };

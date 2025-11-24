@@ -38,6 +38,7 @@ function UnsubscribePage() {
         word_of_day: emailType === 'wotd' ? false : (existingPrefs?.word_of_day ?? true),
         weekly_summary: emailType === 'weekly' ? false : (existingPrefs?.weekly_summary ?? true),
         lesson_complete: emailType === 'lesson' ? false : (existingPrefs?.lesson_complete ?? true),
+        module_completion: emailType === 'progress' ? false : (existingPrefs?.module_completion ?? true),
         email_enabled: existingPrefs?.email_enabled ?? true,
       };
 
@@ -64,6 +65,7 @@ function UnsubscribePage() {
       case 'wotd': return 'Word of the Day';
       case 'weekly': return 'Weekly Summary';
       case 'lesson': return 'Lesson Completion';
+      case 'progress': return 'Progress Updates';
       default: return 'Email';
     }
   };
