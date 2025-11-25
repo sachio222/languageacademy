@@ -30,37 +30,39 @@ const VocabItem = ({ index, style, vocab, onLessonSelect, mobileNavOpen, onClose
   const item = vocab[index];
 
   const handleSpeak = useCallback(() => {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
+    if (!('speechSynthesis' in window)) return;
 
-      const speechText = getTTSText(item.french);
-      const utterance = new SpeechSynthesisUtterance(speechText);
-      utterance.lang = 'fr-FR';
-      utterance.rate = 0.9;
-      utterance.pitch = 1.0;
-      utterance.volume = 1.0;
+    window.speechSynthesis.cancel();
 
-      let voices = window.speechSynthesis.getVoices();
+    const speechText = getTTSText(item.french);
+    const utterance = new SpeechSynthesisUtterance(speechText);
+    utterance.lang = 'fr-FR';
+    utterance.rate = 0.9;
+    utterance.pitch = 1.0;
+    utterance.volume = 1.0;
 
-      // Handle async voice loading (some browsers load voices asynchronously)
-      if (voices.length === 0) {
-        window.speechSynthesis.addEventListener("voiceschanged", () => {
-          voices = window.speechSynthesis.getVoices();
-          const bestVoice = selectBestVoice(voices, utterance.lang);
-          if (bestVoice) {
-            utterance.voice = bestVoice;
-            logger.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
-          }
-          window.speechSynthesis.speak(utterance);
-        });
-      } else {
+    let voices = window.speechSynthesis.getVoices();
+
+    // Handle async voice loading (some browsers load voices asynchronously)
+    if (voices.length === 0) {
+      const handleVoicesChanged = () => {
+        voices = window.speechSynthesis.getVoices();
         const bestVoice = selectBestVoice(voices, utterance.lang);
         if (bestVoice) {
           utterance.voice = bestVoice;
           logger.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
         }
         window.speechSynthesis.speak(utterance);
+        window.speechSynthesis.removeEventListener("voiceschanged", handleVoicesChanged);
+      };
+      window.speechSynthesis.addEventListener("voiceschanged", handleVoicesChanged);
+    } else {
+      const bestVoice = selectBestVoice(voices, utterance.lang);
+      if (bestVoice) {
+        utterance.voice = bestVoice;
+        logger.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
       }
+      window.speechSynthesis.speak(utterance);
     }
   }, [item.french]);
 
@@ -120,7 +122,6 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
   const [stickyHeaders, setStickyHeaders] = useState(new Set());
   const [vocabListHeight, setVocabListHeight] = useState(600);
   const navContentRef = useRef(null);
-  const vocabListRef = useRef(null);
 
   // Auto-expand unit containing current lesson
   useEffect(() => {
@@ -524,28 +525,26 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                 </div>
               ) : (
                 // Vocabulary Index View
-                <div className="nav-vocab" ref={vocabListRef}>
+                <div className="nav-vocab">
                   {filteredVocab.length === 0 ? (
                     <div className="nav-empty">
                       No vocabulary found for "{searchQuery}"
                     </div>
                   ) : (
-                    <div style={{ height: vocabListHeight, width: '100%' }}>
-                      <List
-                        height={vocabListHeight}
-                        rowCount={filteredVocab.length}
-                        rowHeight={130}
-                        width="100%"
-                        overscanCount={5}
-                        rowProps={{
-                          vocab: filteredVocab,
-                          onLessonSelect,
-                          mobileNavOpen,
-                          onCloseMobileNav
-                        }}
-                        rowComponent={VocabItem}
-                      />
-                    </div>
+                    <List
+                      height={vocabListHeight}
+                      rowCount={filteredVocab.length}
+                      rowHeight={130}
+                      width="100%"
+                      overscanCount={5}
+                      rowProps={{
+                        vocab: filteredVocab,
+                        onLessonSelect,
+                        mobileNavOpen,
+                        onCloseMobileNav
+                      }}
+                      rowComponent={VocabItem}
+                    />
                   )}
                 </div>
               )}

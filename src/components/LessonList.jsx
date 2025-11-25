@@ -4,11 +4,11 @@ import { Award, BookOpen, TextCursorInput, Sparkles, Grid3x3, List, ChevronDown,
 import DashboardHeader from './DashboardHeader';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferenceModules, onShowVocabularyDashboard, onShowReportCard, showWordsLearned, isAdmin }) {
   const { moduleProgress } = useSupabaseProgress();
-  const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'split'
+  const [viewMode, setViewMode] = useState('split'); // 'grid' or 'split'
   const [selectedModuleId, setSelectedModuleId] = useState(null);
 
 
@@ -88,8 +88,10 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
     return null; // All lessons complete
   };
 
-  // Get the next lesson ID for highlighting
-  const nextLessonId = findNextIncompleteLesson();
+  // Get the next lesson ID for highlighting (memoized to recalculate when progress changes)
+  const nextLessonId = useMemo(() => {
+    return findNextIncompleteLesson();
+  }, [moduleProgress, completedExercises, lessons]);
 
   // Track which units have collapsed completed modules (by default, all are collapsed)
   const [collapsedCompletedInUnits, setCollapsedCompletedInUnits] = useState(
@@ -109,6 +111,20 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
       setHasInitializedCollapse(true);
     }
   }, [moduleProgress, completedExercises, hasInitializedCollapse]);
+
+  // Auto-select next lesson when in split view and no lesson is selected
+  // Wait for progress data to be loaded before selecting
+  useEffect(() => {
+    if (
+      viewMode === 'split' && 
+      !selectedModuleId && 
+      nextLessonId &&
+      moduleProgress && 
+      Object.keys(moduleProgress).length > 0
+    ) {
+      setSelectedModuleId(nextLessonId);
+    }
+  }, [viewMode, selectedModuleId, nextLessonId, moduleProgress]);
 
   // Toggle showing completed modules for a unit
   const toggleShowCompleted = (unitId) => {
@@ -167,18 +183,18 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
           </div>
           <div className="view-toggle">
             <button
-              className={`view-toggle-btn ${viewMode === 'grid' ? 'active' : ''}`}
-              onClick={() => handleViewModeChange('grid')}
-              title="Grid view"
-            >
-              <Grid3x3 size={18} />
-            </button>
-            <button
               className={`view-toggle-btn ${viewMode === 'split' ? 'active' : ''}`}
               onClick={() => handleViewModeChange('split')}
               title="Split view"
             >
               <List size={18} />
+            </button>
+            <button
+              className={`view-toggle-btn ${viewMode === 'grid' ? 'active' : ''}`}
+              onClick={() => handleViewModeChange('grid')}
+              title="Grid view"
+            >
+              <Grid3x3 size={18} />
             </button>
           </div>
         </div>
