@@ -78,7 +78,7 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
   // Use shared help module completion logic
-  const { showIncompleteWarning, getWarningMessage, handleComplete } = useHelpModuleCompletion(
+  const { showIncompleteWarning, warningKey, getWarningMessage, handleComplete } = useHelpModuleCompletion(
     lessonModuleId,
     understoodSections,
     totalSections,
@@ -385,7 +385,7 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
-        <IncompleteWarning show={showIncompleteWarning} message={getWarningMessage()} />
+        <IncompleteWarning key={warningKey} show={showIncompleteWarning} message={getWarningMessage()} />
 
         <div className="questions-footer">
           <button

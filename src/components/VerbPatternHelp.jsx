@@ -152,7 +152,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
   };
 
   // Use shared help module completion logic
-  const { showIncompleteWarning, getWarningMessage, handleComplete } = useHelpModuleCompletion(
+  const { showIncompleteWarning, warningKey, getWarningMessage, handleComplete } = useHelpModuleCompletion(
     lessonModuleId,
     understoodSections,
     totalSections,
@@ -1011,7 +1011,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
         </div>
       </div>
 
-      <IncompleteWarning show={showIncompleteWarning} message={getWarningMessage()} />
+      <IncompleteWarning key={warningKey} show={showIncompleteWarning} message={getWarningMessage()} />
 
       <div className="help-footer">
         <button className="btn-primary btn-large" onClick={() => {
