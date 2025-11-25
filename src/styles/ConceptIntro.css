@@ -24,6 +24,7 @@
   padding: 3rem;
   box-shadow: none;
   border: none;
+  position: relative;
 }
 
 .intro-header {
@@ -468,43 +469,6 @@
 
 .btn-help-link:hover {
   color: #1a1a1a;
-}
-
-/* Incomplete Warning - Gentle Airbnb Style */
-.incomplete-warning {
-  padding: 0.875rem 1.25rem;
-  background: linear-gradient(135deg, #fef3cd 0%, #fef5d4 100%);
-  border: 1px solid #f4e0a1;
-  border-radius: 10px;
-  color: #8b7355;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  text-align: center;
-  animation: gentleFadeIn 0.3s ease-out, gentleFadeOut 0.3s ease-out 3.7s forwards;
-  box-shadow: 0 2px 8px rgba(139, 115, 85, 0.08);
-}
-
-@keyframes gentleFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes gentleFadeOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
 }
 
 /* Responsive */

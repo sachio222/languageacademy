@@ -1,7 +1,8 @@
-import { useState, useEffect, Fragment, useMemo, useCallback } from 'react';
+import { useState, useEffect, Fragment, useMemo, useCallback, useRef } from 'react';
 import { ChevronDown, ChevronRight, Check } from 'lucide-react';
 import SpeakButton from './SpeakButton';
 import UnderstoodButton from './UnderstoodButton';
+import IncompleteWarning from './IncompleteWarning';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { extractModuleId } from '../utils/progressSync';
@@ -23,6 +24,8 @@ function ConceptIntro({ lesson, onStartStudying }) {
   const [understoodConcepts, setUnderstoodConcepts] = useState(new Set());
   const [loading, setLoading] = useState(true);
   const [showIncompleteWarning, setShowIncompleteWarning] = useState(false);
+  const [warningKey, setWarningKey] = useState(0);
+  const timeoutRef = useRef(null);
 
   const vocabularyItems = lesson.vocabularyReference || [];
   const isFirstLesson = lesson.id === 1;
@@ -106,6 +109,30 @@ function ConceptIntro({ lesson, onStartStudying }) {
 
   // Memoize progress stats to avoid recalculating
   const progressStats = useMemo(() => getProgressStats(), [getProgressStats]);
+
+  // Generate warning message
+  const getWarningMessage = useCallback(() => {
+    const totalConcepts = lesson.concepts?.length || 0;
+    const remaining = totalConcepts - understoodConcepts.size;
+    const baseMessage = "Please mark all key concepts as understood before continuing";
+    
+    if (remaining === 0 || understoodConcepts.size === 0) {
+      return baseMessage;
+    } else if (remaining === 1) {
+      return `${baseMessage} - 1 more to go!`;
+    } else {
+      return `${baseMessage} - ${remaining} more to go!`;
+    }
+  }, [lesson.concepts, understoodConcepts.size]);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   // Auto-complete vocabulary intro section when all concepts are understood
   useEffect(() => {
@@ -342,23 +369,7 @@ function ConceptIntro({ lesson, onStartStudying }) {
           </button>
         )}
         
-        {showIncompleteWarning && (
-          <div className="incomplete-warning">
-            {(() => {
-              const totalConcepts = lesson.concepts?.length || 0;
-              const remaining = totalConcepts - understoodConcepts.size;
-              const baseMessage = "Please mark all key concepts as understood before continuing";
-              
-              if (remaining === 0 || understoodConcepts.size === 0) {
-                return baseMessage;
-              } else if (remaining === 1) {
-                return `${baseMessage} - 1 more to go!`;
-              } else {
-                return `${baseMessage} - ${remaining} more to go!`;
-              }
-            })()}
-          </div>
-        )}
+        <IncompleteWarning key={warningKey} show={showIncompleteWarning} message={getWarningMessage()} />
         
         <button 
           className="btn-primary btn-large" 
@@ -367,9 +378,35 @@ function ConceptIntro({ lesson, onStartStudying }) {
             const allUnderstood = understoodConcepts.size === totalConcepts && totalConcepts > 0;
             
             if (!allUnderstood && totalConcepts > 0) {
-              setShowIncompleteWarning(true);
-              setTimeout(() => setShowIncompleteWarning(false), 4000);
+              // Clear any existing timeout
+              if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+                timeoutRef.current = null;
+              }
+              
+              // Reset warning state first
+              setShowIncompleteWarning(false);
+              
+              // Increment key to force component remount and reset animation
+              // Use requestAnimationFrame to ensure state updates are processed
+              requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                  setWarningKey(prev => prev + 1);
+                  setShowIncompleteWarning(true);
+                  
+                  timeoutRef.current = setTimeout(() => {
+                    setShowIncompleteWarning(false);
+                    timeoutRef.current = null;
+                  }, 4000);
+                });
+              });
             } else {
+              // Clear timeout if all understood
+              if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+                timeoutRef.current = null;
+              }
+              setShowIncompleteWarning(false);
               onStartStudying();
             }
           }}

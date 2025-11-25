@@ -1,6 +1,6 @@
 /**
- * IncompleteWarning - Shared warning component for help modules
- * Shows when user tries to continue without marking all sections understood
+ * IncompleteWarning - Shared warning component
+ * Shows when user tries to continue without completing required actions
  */
 
 import React from 'react';

@@ -73,19 +73,22 @@ export const useHelpModuleCompletion = (
         timeoutRef.current = null;
       }
       
+      // Reset warning state first
+      setShowIncompleteWarning(false);
+      
       // Increment key to force component remount and reset animation
-      setWarningKey(prev => prev + 1);
-      setShowIncompleteWarning(true);
-      
-      // Clear existing timeout
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-      
-      timeoutRef.current = setTimeout(() => {
-        setShowIncompleteWarning(false);
-        timeoutRef.current = null;
-      }, 4000);
+      // Use requestAnimationFrame to ensure state updates are processed
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setWarningKey(prev => prev + 1);
+          setShowIncompleteWarning(true);
+          
+          timeoutRef.current = setTimeout(() => {
+            setShowIncompleteWarning(false);
+            timeoutRef.current = null;
+          }, 4000);
+        });
+      });
       
       return false;
     } else {
