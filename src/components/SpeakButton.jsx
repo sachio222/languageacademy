@@ -135,14 +135,16 @@ function SpeakButton({
       if (voices.length === 0) {
         window.speechSynthesis.addEventListener("voiceschanged", () => {
           voices = window.speechSynthesis.getVoices();
-          // Prefer user-selected voice, otherwise auto-select best
-          const bestVoice = userVoice || selectBestVoice(voices, utterance.lang);
+          // Use user-selected voice only if it matches the language, otherwise auto-select best for the language
+          const langCode = utterance.lang.split("-")[0];
+          const userVoiceMatchesLang = userVoice && userVoice.lang.startsWith(langCode);
+          const bestVoice = userVoiceMatchesLang ? userVoice : selectBestVoice(voices, utterance.lang);
           if (bestVoice) {
             utterance.voice = bestVoice;
             logger.log(`Using voice: ${bestVoice.name} (${bestVoice.lang})`);
 
             // Show helpful tip for Safari users with basic voices
-            if (!userVoice && isSafari() && !bestVoice.name.toLowerCase().includes('enhanced') &&
+            if (!userVoiceMatchesLang && isSafari() && !bestVoice.name.toLowerCase().includes('enhanced') &&
               !bestVoice.name.toLowerCase().includes('premium') &&
               !bestVoice.name.toLowerCase().includes('compact')) {
               logger.log(`💡 Safari TTS Tip: For better French pronunciation, go to System Settings > Accessibility > Spoken Content > System Voice and download enhanced French voices like "Amélie" or "Thomas (French)"`);
@@ -151,14 +153,16 @@ function SpeakButton({
           window.speechSynthesis.speak(utterance);
         });
       } else {
-        // Prefer user-selected voice, otherwise auto-select best
-        const bestVoice = userVoice || selectBestVoice(voices, utterance.lang);
+        // Use user-selected voice only if it matches the language, otherwise auto-select best for the language
+        const langCode = utterance.lang.split("-")[0];
+        const userVoiceMatchesLang = userVoice && userVoice.lang.startsWith(langCode);
+        const bestVoice = userVoiceMatchesLang ? userVoice : selectBestVoice(voices, utterance.lang);
         if (bestVoice) {
           utterance.voice = bestVoice;
           logger.log(`Using voice: ${bestVoice.name} (${bestVoice.lang})`);
 
           // Show helpful tip for Safari users with basic voices
-          if (!userVoice && isSafari() && !bestVoice.name.toLowerCase().includes('enhanced') &&
+          if (!userVoiceMatchesLang && isSafari() && !bestVoice.name.toLowerCase().includes('enhanced') &&
             !bestVoice.name.toLowerCase().includes('premium') &&
             !bestVoice.name.toLowerCase().includes('compact')) {
             logger.log(`💡 Safari TTS Tip: For better French pronunciation, go to System Settings > Accessibility > Spoken Content > System Voice and download enhanced French voices like "Amélie" or "Thomas (French)"`);
