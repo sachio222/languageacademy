@@ -1,6 +1,9 @@
-import { useState, useMemo, useEffect, useRef } from 'react';
+import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, ChevronDown, Award, BookOpen, TextCursorInput, Sparkles } from 'lucide-react';
+import * as ReactWindow from 'react-window';
 import { unitStructure } from '../lessons/lessonData';
+
+const { List } = ReactWindow;
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
@@ -22,6 +25,92 @@ const getNavTitle = (title) => {
   return title.replace(/^Module \d+:\s*/, '');
 };
 
+// Vocabulary item component for virtualization
+const VocabItem = ({ index, style, vocab, onLessonSelect, mobileNavOpen, onCloseMobileNav }) => {
+  const item = vocab[index];
+
+  const handleSpeak = useCallback(() => {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+
+      const speechText = getTTSText(item.french);
+      const utterance = new SpeechSynthesisUtterance(speechText);
+      utterance.lang = 'fr-FR';
+      utterance.rate = 0.9;
+      utterance.pitch = 1.0;
+      utterance.volume = 1.0;
+
+      let voices = window.speechSynthesis.getVoices();
+
+      // Handle async voice loading (some browsers load voices asynchronously)
+      if (voices.length === 0) {
+        window.speechSynthesis.addEventListener("voiceschanged", () => {
+          voices = window.speechSynthesis.getVoices();
+          const bestVoice = selectBestVoice(voices, utterance.lang);
+          if (bestVoice) {
+            utterance.voice = bestVoice;
+            logger.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
+          }
+          window.speechSynthesis.speak(utterance);
+        });
+      } else {
+        const bestVoice = selectBestVoice(voices, utterance.lang);
+        if (bestVoice) {
+          utterance.voice = bestVoice;
+          logger.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
+        }
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+  }, [item.french]);
+
+  return (
+    <div style={{ ...style, paddingLeft: '0.75rem', paddingRight: '0.75rem' }}>
+      <div className="nav-vocab-item">
+        <div
+          className="nav-vocab-word"
+          onClick={handleSpeak}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              handleSpeak();
+            }
+          }}
+        >
+          <div className="nav-vocab-text">
+            <span className="nav-vocab-french">{item.french}</span>
+            <span className="nav-vocab-english">{item.english}</span>
+          </div>
+          <SpeakButton
+            text={item.french}
+            language="fr-FR"
+            size="medium"
+            className="nav-vocab-speaker"
+          />
+        </div>
+        <div className="nav-vocab-lessons">
+          {item.lessons.map(lesson => (
+            <button
+              key={`${item.french}-${lesson.id}`}
+              className="nav-vocab-lesson-link"
+              onClick={() => {
+                onLessonSelect(lesson.id);
+                if (mobileNavOpen) {
+                  onCloseMobileNav();
+                }
+              }}
+            >
+              #{lesson.id}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, isCollapsed, onToggleCollapse, mobileNavOpen, onCloseMobileNav }) {
   const { moduleProgress } = useSupabaseProgress();
   const [searchQuery, setSearchQuery] = useState('');
@@ -29,7 +118,9 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
   const [collapsedUnits, setCollapsedUnits] = useState(new Set(unitStructure.map(unit => unit.id)));
   const [activeTab, setActiveTab] = useState('tree'); // 'tree' or 'vocab'
   const [stickyHeaders, setStickyHeaders] = useState(new Set());
+  const [vocabListHeight, setVocabListHeight] = useState(600);
   const navContentRef = useRef(null);
+  const vocabListRef = useRef(null);
 
   // Auto-expand unit containing current lesson
   useEffect(() => {
@@ -176,6 +267,23 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
       document.body.style.touchAction = '';
     };
   }, [mobileNavOpen]);
+
+  // Update vocabulary list height when container size changes
+  useEffect(() => {
+    if (!navContentRef.current || activeTab !== 'vocab') return;
+
+    const updateHeight = () => {
+      if (navContentRef.current) {
+        setVocabListHeight(navContentRef.current.clientHeight);
+      }
+    };
+
+    updateHeight();
+    const resizeObserver = new ResizeObserver(updateHeight);
+    resizeObserver.observe(navContentRef.current);
+
+    return () => resizeObserver.disconnect();
+  }, [activeTab, isCollapsed, mobileNavOpen]);
 
   // Build vocabulary index
   const vocabularyIndex = useMemo(() => {
@@ -416,92 +524,28 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                 </div>
               ) : (
                 // Vocabulary Index View
-                <div className="nav-vocab">
+                <div className="nav-vocab" ref={vocabListRef}>
                   {filteredVocab.length === 0 ? (
                     <div className="nav-empty">
                       No vocabulary found for "{searchQuery}"
                     </div>
                   ) : (
-                    filteredVocab.map((vocab, idx) => {
-                      const handleSpeak = (e) => {
-                        if ('speechSynthesis' in window) {
-                          window.speechSynthesis.cancel();
-
-                          const speechText = getTTSText(vocab.french);
-                          const utterance = new SpeechSynthesisUtterance(speechText);
-                          utterance.lang = 'fr-FR';
-                          utterance.rate = 0.9;
-                          utterance.pitch = 1.0;
-                          utterance.volume = 1.0;
-
-                          let voices = window.speechSynthesis.getVoices();
-
-                          // Handle async voice loading (some browsers load voices asynchronously)
-                          if (voices.length === 0) {
-                            window.speechSynthesis.addEventListener("voiceschanged", () => {
-                              voices = window.speechSynthesis.getVoices();
-                              const bestVoice = selectBestVoice(voices, utterance.lang);
-                              if (bestVoice) {
-                                utterance.voice = bestVoice;
-                                logger.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
-                              }
-                              window.speechSynthesis.speak(utterance);
-                            });
-                          } else {
-                            const bestVoice = selectBestVoice(voices, utterance.lang);
-                            if (bestVoice) {
-                              utterance.voice = bestVoice;
-                              logger.log(`LeftNav vocab TTS: ${bestVoice.name} (${bestVoice.lang})`);
-                            }
-                            window.speechSynthesis.speak(utterance);
-                          }
-                        }
-                      };
-
-                      return (
-                        <div key={idx} className="nav-vocab-item">
-                          <div
-                            className="nav-vocab-word"
-                            onClick={handleSpeak}
-                            role="button"
-                            tabIndex={0}
-                            onKeyDown={(e) => {
-                              if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                handleSpeak();
-                              }
-                            }}
-                          >
-                            <div className="nav-vocab-text">
-                              <span className="nav-vocab-french">{vocab.french}</span>
-                              <span className="nav-vocab-english">{vocab.english}</span>
-                            </div>
-                            <SpeakButton
-                              text={vocab.french}
-                              language="fr-FR"
-                              size="medium"
-                              className="nav-vocab-speaker"
-                            />
-                          </div>
-                          <div className="nav-vocab-lessons">
-                            {vocab.lessons.map(lesson => (
-                              <button
-                                key={`${vocab.french}-${lesson.id}`}
-                                className="nav-vocab-lesson-link"
-                                onClick={() => {
-                                  onLessonSelect(lesson.id);
-                                  if (mobileNavOpen) {
-                                    onCloseMobileNav();
-                                  }
-                                }}
-                              >
-                                #{lesson.id}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      );
-                    })
+                    <div style={{ height: vocabListHeight, width: '100%' }}>
+                      <List
+                        height={vocabListHeight}
+                        rowCount={filteredVocab.length}
+                        rowHeight={130}
+                        width="100%"
+                        overscanCount={5}
+                        rowProps={{
+                          vocab: filteredVocab,
+                          onLessonSelect,
+                          mobileNavOpen,
+                          onCloseMobileNav
+                        }}
+                        rowComponent={VocabItem}
+                      />
+                    </div>
                   )}
                 </div>
               )}

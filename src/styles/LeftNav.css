@@ -553,7 +553,9 @@
 
 /* Vocabulary View */
 .nav-vocab {
-  padding: 0.75rem;
+  padding: 0.75rem 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 .nav-vocab-item {
