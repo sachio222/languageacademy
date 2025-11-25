@@ -1099,12 +1099,15 @@ body:has(.left-nav.collapsed) .app-footer {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   color: #64748b;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.875rem;
   transition: all 0.2s;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+  width: auto;
 }
 
 .btn-back-mobile:hover {

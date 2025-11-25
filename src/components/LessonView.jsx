@@ -909,7 +909,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
       {/* Mobile Simplified Header */}
       <div className="lesson-header-mobile">
         <button className="btn-back-mobile" onClick={onBack}>
-          Modules
+          <Home size={18} />
         </button>
         <div className="lesson-title-mobile">
           <h2>Module {lesson.id}</h2>
