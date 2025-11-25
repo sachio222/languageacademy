@@ -151,7 +151,7 @@
 
   .module-section-header-content {
     padding: 1.25rem 1.25rem;
-    min-height: 140px;
+    min-height: 160px;
     flex-wrap: wrap;
     gap: 0.75rem;
   }
@@ -166,8 +166,8 @@
 
   /* Replace "Back to Menu" with just "Back" on mobile */
   .module-section-header-back::before {
-    content: "← BACK";
-    font-size: 0.875rem;
+    content: "←";
+    font-size: 0.925rem;
   }
 
   .module-section-header-title-wrapper {
