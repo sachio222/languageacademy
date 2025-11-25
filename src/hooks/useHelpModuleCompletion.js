@@ -5,7 +5,7 @@
  * Reused by: VerbPatternHelp, QuestionsHelp, LiaisonHelp, CognatesHelp
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { logger } from '../utils/logger';
 
@@ -16,7 +16,18 @@ export const useHelpModuleCompletion = (
   isAuthenticated
 ) => {
   const [showIncompleteWarning, setShowIncompleteWarning] = useState(false);
+  const [warningKey, setWarningKey] = useState(0);
+  const timeoutRef = useRef(null);
   const { completeSectionProgress } = useSectionProgress();
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   // Auto-complete interactive-help section when all sections understood
   useEffect(() => {
@@ -56,10 +67,34 @@ export const useHelpModuleCompletion = (
     const allUnderstood = understoodSections.size === totalSections;
     
     if (!allUnderstood) {
+      // Clear any existing timeout
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+      
+      // Increment key to force component remount and reset animation
+      setWarningKey(prev => prev + 1);
       setShowIncompleteWarning(true);
-      setTimeout(() => setShowIncompleteWarning(false), 4000);
+      
+      // Clear existing timeout
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+      
+      timeoutRef.current = setTimeout(() => {
+        setShowIncompleteWarning(false);
+        timeoutRef.current = null;
+      }, 4000);
+      
       return false;
     } else {
+      // Clear timeout if all understood
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+      setShowIncompleteWarning(false);
       if (onSuccess) onSuccess();
       return true;
     }
@@ -67,6 +102,7 @@ export const useHelpModuleCompletion = (
 
   return {
     showIncompleteWarning,
+    warningKey,
     getWarningMessage,
     handleComplete,
     isComplete: understoodSections.size === totalSections

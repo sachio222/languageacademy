@@ -456,6 +456,13 @@ body:has(.left-nav.collapsed) .app-footer {
   stroke-width: 2;
 }
 
+.lesson-help-icon {
+  color: #06b6d4;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  stroke-width: 2;
+}
+
 .badge-complete {
   color: #10b981;
   font-size: 1.125rem;
@@ -731,6 +738,10 @@ body:has(.left-nav.collapsed) .app-footer {
   color: #8b5cf6;
 }
 
+.split-lesson-icon.help {
+  color: #06b6d4;
+}
+
 .split-lesson-title {
   flex: 1;
   font-size: 0.9375rem;
@@ -825,6 +836,10 @@ body:has(.left-nav.collapsed) .app-footer {
 
 .split-detail-icon.practice {
   color: #8b5cf6;
+}
+
+.split-detail-icon.help {
+  color: #06b6d4;
 }
 
 .split-detail-header h2 {

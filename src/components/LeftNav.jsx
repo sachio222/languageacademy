@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, ChevronDown, Award, BookOpen, TextCursorInput } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown, Award, BookOpen, TextCursorInput, Sparkles } from 'lucide-react';
 import { unitStructure } from '../lessons/lessonData';
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
@@ -379,6 +379,10 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                                       ) : lesson.isFillInTheBlank ? (
                                         <span className="nav-lesson-practice-icon">
                                           <TextCursorInput size={16} />
+                                        </span>
+                                      ) : lesson.isHelpModule ? (
+                                        <span className="nav-lesson-help-icon">
+                                          <Sparkles size={16} />
                                         </span>
                                       ) : (
                                         <span className="nav-lesson-number">

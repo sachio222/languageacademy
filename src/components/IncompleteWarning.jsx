@@ -7,10 +7,8 @@ import React from 'react';
 import './IncompleteWarning.css';
 
 const IncompleteWarning = ({ message, show }) => {
-  if (!show) return null;
-  
   return (
-    <div className="incomplete-warning">
+    <div className={`incomplete-warning ${show ? 'show' : ''}`}>
       {message}
     </div>
   );

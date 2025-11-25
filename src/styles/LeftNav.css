@@ -461,6 +461,27 @@
   stroke-width: 2;
 }
 
+.nav-lesson-help-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #06b6d4;
+  min-width: 1.5rem;
+  transition: transform 0.15s ease-out;
+}
+
+.nav-lesson:hover .nav-lesson-help-icon {
+  transform: scale(1.15);
+}
+
+.nav-lesson.active .nav-lesson-help-icon {
+  color: #06b6d4;
+}
+
+.nav-lesson-help-icon svg {
+  stroke-width: 2;
+}
+
 .nav-lesson-title {
   flex: 1;
   font-size: 0.875rem;
@@ -805,13 +826,15 @@
 
   .nav-lesson-exam-icon,
   .nav-lesson-reading-icon,
-  .nav-lesson-practice-icon {
+  .nav-lesson-practice-icon,
+  .nav-lesson-help-icon {
     min-width: 1.5rem;
   }
 
   .nav-lesson-exam-icon svg,
   .nav-lesson-reading-icon svg,
-  .nav-lesson-practice-icon svg {
+  .nav-lesson-practice-icon svg,
+  .nav-lesson-help-icon svg {
     width: 14px;
     height: 14px;
   }

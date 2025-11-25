@@ -41,6 +41,14 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   // Derive total sections from array (indices 0-3 = 4 sections)
   const totalSections = cognatesSections.length;
 
+  // Use shared help module completion logic
+  const { showIncompleteWarning, warningKey, getWarningMessage, handleComplete } = useHelpModuleCompletion(
+    lessonModuleId,
+    understoodSections,
+    totalSections,
+    isAuthenticated
+  );
+
   // Cognates organized by similarity level - SIMPLE AND DIRECT
   const cognatesBySimilarity = {
     exact: [
@@ -162,12 +170,6 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       }
     }
   }, [understoodSections, isAuthenticated, moduleId, updateConceptUnderstanding, cognatesSections]);
-
-  const handleComplete = () => {
-    if (onComplete) {
-      onComplete();
-    }
-  };
 
   if (loading) {
     return (
@@ -350,8 +352,16 @@ const CognatesHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
+        <IncompleteWarning key={warningKey} show={showIncompleteWarning} message={getWarningMessage()} />
+
         <footer className="cognates-footer">
-          <button className="btn-continue" onClick={handleComplete}>
+          <button className="btn-continue" onClick={() => {
+            handleComplete(() => {
+              if (onComplete) {
+                onComplete();
+              }
+            });
+          }}>
             Continue Learning
           </button>
         </footer>

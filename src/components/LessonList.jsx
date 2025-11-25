@@ -1,6 +1,6 @@
 import { calculateLessonProgress } from '../lessons/testRunner';
 import { unitStructure } from '../lessons/lessonData';
-import { Award, BookOpen, TextCursorInput, Grid3x3, List, ChevronDown, ChevronUp, BadgeCheck } from 'lucide-react';
+import { Award, BookOpen, TextCursorInput, Sparkles, Grid3x3, List, ChevronDown, ChevronUp, BadgeCheck } from 'lucide-react';
 import DashboardHeader from './DashboardHeader';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
@@ -255,6 +255,9 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                           {lesson.isFillInTheBlank && (
                             <TextCursorInput size={20} className="lesson-practice-icon" />
                           )}
+                          {lesson.isHelpModule && (
+                            <Sparkles size={20} className="lesson-help-icon" />
+                          )}
                           <h3>{lesson.title}</h3>
                           {isComplete && <span className="badge-complete">✓</span>}
                         </div>
@@ -341,7 +344,8 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                           {lesson.isUnitExam && <Award size={16} className="split-lesson-icon exam" />}
                           {lesson.isReadingComprehension && <BookOpen size={16} className="split-lesson-icon reading" />}
                           {lesson.isFillInTheBlank && <TextCursorInput size={16} className="split-lesson-icon practice" />}
-                          {!lesson.isUnitExam && !lesson.isReadingComprehension && !lesson.isFillInTheBlank && (
+                          {lesson.isHelpModule && <Sparkles size={16} className="split-lesson-icon help" />}
+                          {!lesson.isUnitExam && !lesson.isReadingComprehension && !lesson.isFillInTheBlank && !lesson.isHelpModule && (
                             <span className="split-lesson-number">{lesson.id}</span>
                           )}
                           <span className="split-lesson-title">{lesson.title.replace(/^Module \d+:\s*/, '')}</span>
@@ -383,7 +387,8 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                           {lesson.isUnitExam && <Award size={14} className="split-lesson-icon exam" />}
                           {lesson.isReadingComprehension && <BookOpen size={14} className="split-lesson-icon reading" />}
                           {lesson.isFillInTheBlank && <TextCursorInput size={14} className="split-lesson-icon practice" />}
-                          {!lesson.isUnitExam && !lesson.isReadingComprehension && !lesson.isFillInTheBlank && (
+                          {lesson.isHelpModule && <Sparkles size={14} className="split-lesson-icon help" />}
+                          {!lesson.isUnitExam && !lesson.isReadingComprehension && !lesson.isFillInTheBlank && !lesson.isHelpModule && (
                             <span className="split-lesson-number">{lesson.id}</span>
                           )}
                           <span className="split-lesson-title">{lesson.title.replace(/^Module \d+:\s*/, '')}</span>
@@ -418,6 +423,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                     {lesson.isUnitExam && <Award size={24} className="split-detail-icon exam" />}
                     {lesson.isReadingComprehension && <BookOpen size={24} className="split-detail-icon reading" />}
                     {lesson.isFillInTheBlank && <TextCursorInput size={24} className="split-detail-icon practice" />}
+                    {lesson.isHelpModule && <Sparkles size={24} className="split-detail-icon help" />}
                     <h2>{lesson.title}</h2>
                     {isComplete && <span className="split-detail-badge">✓ Complete</span>}
                   </div>

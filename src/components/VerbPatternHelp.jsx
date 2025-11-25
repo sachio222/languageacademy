@@ -1014,9 +1014,6 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
       <IncompleteWarning show={showIncompleteWarning} message={getWarningMessage()} />
 
       <div className="help-footer">
-        <button className="btn-back" onClick={() => handlePageChange(2)}>
-          ← Previous
-        </button>
         <button className="btn-primary btn-large" onClick={() => {
           handleComplete(() => {
             // Use existing module completion pattern

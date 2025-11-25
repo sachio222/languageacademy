@@ -104,7 +104,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
   }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
 
   // Use shared help module completion logic
-  const { showIncompleteWarning, getWarningMessage, handleComplete } = useHelpModuleCompletion(
+  const { showIncompleteWarning, warningKey, getWarningMessage, handleComplete } = useHelpModuleCompletion(
     lessonModuleId,
     understoodSections,
     totalSections,
@@ -419,7 +419,7 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           </div>
         </section>
 
-        <IncompleteWarning show={showIncompleteWarning} message={getWarningMessage()} />
+        <IncompleteWarning key={warningKey} show={showIncompleteWarning} message={getWarningMessage()} />
 
         <footer className="liaison-footer">
           <button className="btn-primary btn-large" onClick={() => {
