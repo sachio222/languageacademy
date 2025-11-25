@@ -93,6 +93,29 @@ body {
   .mobile-menu-btn {
     display: block;
   }
+
+  .app-logo-icon {
+    height: 36px;
+  }
+
+  /* Hide text and center logo on mobile */
+  .app-logo-text {
+    display: none;
+  }
+
+  .app-header {
+    justify-content: center;
+    position: relative;
+  }
+
+  .app-logo {
+    margin: 0 auto;
+  }
+
+  .mobile-menu-btn {
+    position: absolute;
+    left: 1rem;
+  }
 }
 
 /* Main Content Wrapper */

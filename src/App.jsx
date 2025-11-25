@@ -319,7 +319,7 @@ function App() {
           title="Back to landing page"
         >
           <img src="/img/logov2.png" alt="" className="app-logo-icon" />
-          Language Academy
+          <span className="app-logo-text">Language Academy</span>
         </h1>
       </header>
 
