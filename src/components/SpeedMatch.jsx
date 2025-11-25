@@ -343,20 +343,20 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
                     className="speed-match-instructions-header"
                     onClick={() => setShowHelp(!showHelp)}
                   >
-                    <h2>⚡️ How it works</h2>
+              <h2>⚡️ How it works</h2>
                     <button className="speed-match-toggle-btn">
                       {showHelp ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
                     </button>
                   </div>
 
                   {showHelp && (
-                    <ul>
-                      <li>You'll review a French word or phrase</li>
-                      <li>Pick the correct English translation from 4 options</li>
-                      <li>Choose your difficulty level below</li>
-                      <li>Try to get as many correct as possible!</li>
-                      <li>Repeat as needed.</li>
-                    </ul>
+              <ul>
+                <li>You'll review a French word or phrase</li>
+                <li>Pick the correct English translation from 4 options</li>
+                <li>Choose your difficulty level below</li>
+                <li>Try to get as many correct as possible!</li>
+                <li>Repeat as needed.</li>
+              </ul>
                   )}
                 </>
               )}

@@ -28,6 +28,7 @@ import { useSectionTime } from '../hooks/useSectionTime';
 import { getUnitIdForLesson } from '../utils/unitHelpers';
 import { getSectionStatus, getActiveSections, isSectionAvailable } from '../config/sectionRegistry';
 import { logger } from "../utils/logger";
+import { splitTitle } from '../utils/moduleUtils';
 import { trackClarityEvent, setClarityTag } from '../utils/clarity';
 
 function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
@@ -912,7 +913,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           <Home size={18} />
         </button>
         <div className="lesson-title-mobile">
-          <h2>Module {lesson.id}</h2>
+          <h2>{splitTitle(lesson.title).mainTitle}</h2>
         </div>
       </div>
 
