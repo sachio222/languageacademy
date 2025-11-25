@@ -363,6 +363,7 @@
 
   /* Make cards shorter on mobile - rectangular instead of square */
   .module-selector-card {
+    /* aspect-ratio: 2.272; */
     aspect-ratio: 1.618;
   }
 
