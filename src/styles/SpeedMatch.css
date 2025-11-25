@@ -187,10 +187,11 @@
 }
 
 .speed-match-instructions ul {
-  list-style: none;
+  list-style: disc;
   text-align: left;
   max-width: 28rem;
   margin: 0 auto 2rem;
+  padding-left: 1.5rem;
 }
 
 .speed-match-instructions li {
@@ -198,6 +199,73 @@
   color: #665665;
   line-height: 1.6;
   margin-bottom: 0.75rem;
+  padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .speed-match-instructions ul {
+    list-style-position: outside;
+    padding-left: 0;
+  }
+
+  .speed-match-instructions li {
+    padding-left: 0.25rem;
+  }
+}
+
+.btn-help-link {
+  background: none;
+  border: none;
+  color: #665665;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s;
+  display: block;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.btn-help-link:hover {
+  color: #1a1a1a;
+}
+
+/* Collapsible header for How it works section */
+.speed-match-instructions-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.speed-match-instructions-header h2 {
+  margin: 0;
+  flex: 1;
+  /* Inherit original h2 styling from .speed-match-instructions h2 */
+  font-size: 1.618rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+  text-align: center;
+}
+
+.speed-match-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #999999;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+  margin-left: 1rem;
+}
+
+.speed-match-toggle-btn:hover {
+  color: #665665;
 }
 
 .speed-match-button {

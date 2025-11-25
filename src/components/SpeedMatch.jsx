@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect, useRef } from "react";
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw, ChevronDown, ChevronRight } from 'lucide-react';
 import { usePageTime } from '../hooks/usePageTime';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
@@ -64,6 +64,11 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
   const [showDecimal, setShowDecimal] = useState(false);
   const [difficulty, setDifficulty] = useState('medium'); // none, easy, medium, hard
   const completionCalled = useRef(false);
+
+  // Help section state - show by default on first lesson
+  const isFirstLesson = lesson?.id === 1;
+  const [helpRequested, setHelpRequested] = useState(false);
+  const [showHelp, setShowHelp] = useState(isFirstLesson);
 
   // Track page time for study time analytics
   const pageId = `speedmatch-${vocabulary.length}-words`;
@@ -318,15 +323,43 @@ export default function SpeedMatch({ vocabulary, onFinish, lesson }) {
         {gameState === GAME_STATES.READY && (
           <div className="speed-match-ready study-header">
             <div className="speed-match-instructions">
-              <h2>⚡️ How it works</h2>
-              <ul>
-                <li>You'll review a French word or phrase</li>
-                <li>Pick the correct English translation from 4 options</li>
-                <li>Choose your difficulty level below</li>
-                <li>Try to get as many correct as possible!</li>
-                <li>Repeat as needed.</li>
-              </ul>
+              {/* Instructions link - show on subsequent lessons when collapsed */}
+              {!isFirstLesson && (!helpRequested || !showHelp) && (
+                <button
+                  className="btn-help-link"
+                  onClick={() => {
+                    setHelpRequested(true);
+                    setShowHelp(true);
+                  }}
+                >
+                  Need help? Here's how it works.
+                </button>
+              )}
 
+              {/* How it works section - always show header on first lesson, or when expanded on subsequent lessons */}
+              {(isFirstLesson || (helpRequested && showHelp)) && (
+                <>
+                  <div
+                    className="speed-match-instructions-header"
+                    onClick={() => setShowHelp(!showHelp)}
+                  >
+                    <h2>⚡️ How it works</h2>
+                    <button className="speed-match-toggle-btn">
+                      {showHelp ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+                    </button>
+                  </div>
+
+                  {showHelp && (
+                    <ul>
+                      <li>You'll review a French word or phrase</li>
+                      <li>Pick the correct English translation from 4 options</li>
+                      <li>Choose your difficulty level below</li>
+                      <li>Try to get as many correct as possible!</li>
+                      <li>Repeat as needed.</li>
+                    </ul>
+                  )}
+                </>
+              )}
               <div className="speed-match-difficulty">
                 <h3>Difficulty</h3>
                 <div className="difficulty-options">
