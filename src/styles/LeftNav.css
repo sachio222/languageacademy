@@ -18,6 +18,16 @@
   width: 64px;
 }
 
+/* Hide text containers when nav is collapsed to prevent reflow */
+.left-nav.collapsed .nav-unit-title,
+.left-nav.collapsed .nav-lesson-title {
+  width: 0;
+  min-width: 0;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
 /* Collapsed Content - Icon View */
 .nav-collapsed-content {
   display: flex;
@@ -303,7 +313,6 @@
 }
 
 .nav-unit-title {
-  flex: 1;
   font-size: 0.8125rem;
   font-weight: 600;
   color: #1a1a1a;
@@ -313,6 +322,14 @@
     sans-serif;
   position: relative;
   z-index: 1;
+  /* Fixed width to prevent reflow during nav expansion */
+  width: 220px;
+  min-width: 220px;
+  max-width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: width 0.15s ease-out, opacity 0.15s ease-out;
 }
 
 .nav-unit-chevron {
@@ -483,12 +500,18 @@
 }
 
 .nav-lesson-title {
-  flex: 1;
   font-size: 0.875rem;
   color: #665665;
   line-height: 1.5;
   letter-spacing: -0.01em;
-  transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out, width 0.15s ease-out, opacity 0.15s ease-out;
+  /* Fixed width to prevent reflow during nav expansion */
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .nav-lesson:hover .nav-lesson-title {
