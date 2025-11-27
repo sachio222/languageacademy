@@ -234,6 +234,10 @@ function ExercisePane({
       // Don't trigger if user is typing in textarea
       if (e.target.tagName === 'TEXTAREA') return;
 
+      // Don't trigger if a modal is open (check for modal overlay in DOM)
+      const modalOverlay = document.querySelector('.modal-overlay');
+      if (modalOverlay) return;
+
       // Left arrow for Previous
       if (e.key === 'ArrowLeft' && !isFirstExercise) {
         e.preventDefault();

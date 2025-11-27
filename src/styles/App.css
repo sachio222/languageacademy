@@ -378,7 +378,8 @@ body:has(.left-nav.collapsed) .app-footer {
 @media (max-width: 768px) {
   .lesson-list-header {
     padding: 1rem 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    flex-shrink: 0; /* Don't shrink header */
   }
 
   .app-header h1 {
@@ -649,6 +650,15 @@ body:has(.left-nav.collapsed) .app-footer {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   overflow-y: auto;
   max-height: calc(100vh - 300px);
+}
+
+/* Hide backdrop and close button on desktop */
+.split-detail-backdrop {
+  display: none;
+}
+
+.split-detail-close-btn {
+  display: none;
 }
 
 /* Split View - Unit Sections */
@@ -1050,12 +1060,127 @@ span.split-lesson-title {
     justify-content: center;
   }
 
+  .lesson-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .lesson-list-header {
+    flex-shrink: 0;
+  }
+
+  .split-view-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    gap: 0;
+    overflow: hidden;
+  }
+
   .split-view-list {
-    max-height: 350px;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Mobile backdrop overlay */
+  .split-detail-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Mobile bottom overlay for detail panel */
+  .split-view-detail {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 85vh;
+    border-radius: 20px 20px 0 0;
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .split-view-detail.mobile-open {
+    transform: translateY(0);
   }
 
   .split-detail-content {
     padding: 1.5rem;
+    padding-top: 1.5rem;
+    position: relative;
+  }
+
+  .split-detail-header {
+    padding-right: 3rem; /* Make room for close button */
+  }
+
+  /* Mobile close button */
+  .split-detail-close-btn {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.15s ease;
+    pointer-events: auto;
+    color: #1a1a1a;
+  }
+
+  .split-detail-close-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+    flex-shrink: 0;
+    color: #1a1a1a !important;
+  }
+
+  .split-detail-close-btn svg * {
+    stroke: #1a1a1a !important;
+    stroke-width: 2.5 !important;
+    fill: none !important;
+  }
+
+  .split-detail-close-btn svg path {
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+  }
+
+  .split-detail-close-btn:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+  }
+
+  .split-detail-close-btn:active {
+    transform: scale(0.95);
   }
 
   .split-detail-action-row {
@@ -2294,7 +2419,10 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 @media (max-width: 768px) {
   .app-main {
     padding: 1.5rem 0.5rem;
-    padding-top: calc(0.5rem + 0px);
+    padding-top: calc(0.5rem + 60px);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
 
   .lesson-content {

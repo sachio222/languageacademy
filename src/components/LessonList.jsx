@@ -1,6 +1,6 @@
 import { calculateLessonProgress } from '../lessons/testRunner';
 import { unitStructure } from '../lessons/lessonData';
-import { Award, BookOpen, TextCursorInput, Sparkles, Grid3x3, List, ChevronDown, ChevronUp, BadgeCheck } from 'lucide-react';
+import { Award, BookOpen, TextCursorInput, Sparkles, Grid3x3, List, ChevronDown, ChevronUp, BadgeCheck, X } from 'lucide-react';
 import DashboardHeader from './DashboardHeader';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
@@ -10,12 +10,14 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
   const { moduleProgress } = useSupabaseProgress();
   const [viewMode, setViewMode] = useState('split'); // 'grid' or 'split'
   const [selectedModuleId, setSelectedModuleId] = useState(null);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
 
 
   // Handle view mode change and auto-select next lesson
   const handleViewModeChange = (newViewMode) => {
     setViewMode(newViewMode);
-    if (newViewMode === 'split' && !selectedModuleId) {
+    // Don't auto-select on mobile to avoid blocking the screen
+    if (newViewMode === 'split' && !selectedModuleId && !isMobile) {
       const nextLessonId = findNextIncompleteLesson();
       if (nextLessonId) {
         setSelectedModuleId(nextLessonId);
@@ -112,19 +114,30 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
     }
   }, [moduleProgress, completedExercises, hasInitializedCollapse]);
 
+  // Track window size for mobile detection
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Auto-select next lesson when in split view and no lesson is selected
   // Wait for progress data to be loaded before selecting
+  // Skip auto-selection on mobile to avoid blocking the screen
   useEffect(() => {
     if (
       viewMode === 'split' && 
       !selectedModuleId && 
       nextLessonId &&
       moduleProgress && 
-      Object.keys(moduleProgress).length > 0
+      Object.keys(moduleProgress).length > 0 &&
+      !isMobile // Don't auto-select on mobile
     ) {
       setSelectedModuleId(nextLessonId);
     }
-  }, [viewMode, selectedModuleId, nextLessonId, moduleProgress]);
+  }, [viewMode, selectedModuleId, nextLessonId, moduleProgress, isMobile]);
 
   // Toggle showing completed modules for a unit
   const toggleShowCompleted = (unitId) => {
@@ -423,78 +436,103 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
               );
             })}
           </div>
-          <div className="split-view-detail">
-            {selectedModuleId ? (() => {
-              const lesson = lessons.find(l => l.id === selectedModuleId);
-              if (!lesson) return null;
-
-              const completed = getCompletedCount(lesson);
-              const total = getExerciseCount(lesson);
-              const progress = calculateLessonProgress(completed, total);
-              const isComplete = progress === 100;
-
-              return (
-                <div className="split-detail-content">
-                  <div className="split-detail-header">
-                    {lesson.isUnitExam && <Award size={24} className="split-detail-icon exam" />}
-                    {lesson.isReadingComprehension && <BookOpen size={24} className="split-detail-icon reading" />}
-                    {lesson.isFillInTheBlank && <TextCursorInput size={24} className="split-detail-icon practice" />}
-                    {lesson.isHelpModule && <Sparkles size={24} className="split-detail-icon help" />}
-                    <h2>{lesson.title}</h2>
-                    {isComplete && <span className="split-detail-badge">✓ Complete</span>}
-                  </div>
-
-                  <p className="split-detail-description">{lesson.description}</p>
-
-                  <div className="split-detail-action-row">
-                    <div className="split-detail-stats-inline">
-                      <div className="split-stat-inline">
-                        <span className="split-stat-value-inline">{completed}/{total}</span>
-                        <span className="split-stat-label-inline">Exercises</span>
-                      </div>
-                      <div className="split-stat-inline">
-                        <span className="split-stat-value-inline">{progress}%</span>
-                        <span className="split-stat-label-inline">Complete</span>
-                      </div>
-                    </div>
-                    <button
-                      className="split-detail-start-btn"
-                      onClick={() => onLessonSelect(lesson.id)}
-                    >
-                      {isComplete ? 'Review Lesson' : 'Start'}
-                    </button>
-                  </div>
-
-                  <div className="split-detail-progress">
-                    <div className="split-detail-progress-bar">
-                      <div
-                        className="split-detail-progress-fill"
-                        style={{ width: `${progress}%` }}
-                      />
-                    </div>
-                  </div>
-
-                  {lesson.concepts && lesson.concepts.length > 0 && (
-                    <div className="split-detail-concepts">
-                      <h3>Key Concepts</h3>
-                      <ul>
-                        {lesson.concepts.map((concept, idx) => (
-                          <li key={idx}>
-                            <strong>{concept.term}</strong>
-                            {concept.definition && `: ${concept.definition}`}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              );
-            })() : (
-              <div className="split-detail-empty">
-                <p>Select a lesson to view details</p>
-              </div>
+          <>
+            {/* Mobile backdrop overlay */}
+            {selectedModuleId && (
+              <div 
+                className="split-detail-backdrop"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedModuleId(null);
+                }}
+              />
             )}
-          </div>
+            
+            <div className={`split-view-detail ${selectedModuleId ? 'mobile-open' : ''}`}>
+              {selectedModuleId ? (() => {
+                const lesson = lessons.find(l => l.id === selectedModuleId);
+                if (!lesson) return null;
+
+                const completed = getCompletedCount(lesson);
+                const total = getExerciseCount(lesson);
+                const progress = calculateLessonProgress(completed, total);
+                const isComplete = progress === 100;
+
+                return (
+                  <div className="split-detail-content">
+                    {/* Mobile close button */}
+                    <button
+                      className="split-detail-close-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedModuleId(null);
+                      }}
+                      aria-label="Close"
+                    >
+                      <X size={20} />
+                    </button>
+
+                    <div className="split-detail-header">
+                      {lesson.isUnitExam && <Award size={24} className="split-detail-icon exam" />}
+                      {lesson.isReadingComprehension && <BookOpen size={24} className="split-detail-icon reading" />}
+                      {lesson.isFillInTheBlank && <TextCursorInput size={24} className="split-detail-icon practice" />}
+                      {lesson.isHelpModule && <Sparkles size={24} className="split-detail-icon help" />}
+                      <h2>{lesson.title}</h2>
+                      {isComplete && <span className="split-detail-badge">✓ Complete</span>}
+                    </div>
+
+                    <p className="split-detail-description">{lesson.description}</p>
+
+                    <div className="split-detail-action-row">
+                      <div className="split-detail-stats-inline">
+                        <div className="split-stat-inline">
+                          <span className="split-stat-value-inline">{completed}/{total}</span>
+                          <span className="split-stat-label-inline">Exercises</span>
+                        </div>
+                        <div className="split-stat-inline">
+                          <span className="split-stat-value-inline">{progress}%</span>
+                          <span className="split-stat-label-inline">Complete</span>
+                        </div>
+                      </div>
+                      <button
+                        className="split-detail-start-btn"
+                        onClick={() => onLessonSelect(lesson.id)}
+                      >
+                        {isComplete ? 'Review Lesson' : 'Start'}
+                      </button>
+                    </div>
+
+                    <div className="split-detail-progress">
+                      <div className="split-detail-progress-bar">
+                        <div
+                          className="split-detail-progress-fill"
+                          style={{ width: `${progress}%` }}
+                        />
+                      </div>
+                    </div>
+
+                    {lesson.concepts && lesson.concepts.length > 0 && (
+                      <div className="split-detail-concepts">
+                        <h3>Key Concepts</h3>
+                        <ul>
+                          {lesson.concepts.map((concept, idx) => (
+                            <li key={idx}>
+                              <strong>{concept.term}</strong>
+                              {concept.definition && `: ${concept.definition}`}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                );
+              })() : (
+                <div className="split-detail-empty">
+                  <p>Select a lesson to view details</p>
+                </div>
+              )}
+            </div>
+          </>
         </div>
       )}
     </div>

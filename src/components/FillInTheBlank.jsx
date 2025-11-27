@@ -175,6 +175,10 @@ function FillInTheBlank({ module, onComplete, onBack }) {
         return;
       }
 
+      // Don't trigger if a modal is open (check for modal overlay in DOM)
+      const modalOverlay = document.querySelector('.modal-overlay');
+      if (modalOverlay) return;
+
       if (e.key === 'ArrowLeft' && currentSentenceIndex > 0) {
         e.preventDefault();
         const newIndex = currentSentenceIndex - 1;
