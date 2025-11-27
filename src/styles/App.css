@@ -2291,10 +2291,10 @@ body:has(.left-nav.collapsed) .navigation-buttons {
   /* Mobile font size for understood-btn handled in UnderstoodButton.css */
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .app-main {
     padding: 1.5rem 0.5rem;
-    padding-top: calc(1.5rem + 60px); /* Account for fixed header */
+    padding-top: calc(0.5rem + 0px);
   }
 
   .lesson-content {
@@ -2424,7 +2424,7 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 @media (max-width: 640px) {
   .app-main {
     padding: 0.5rem 0.25rem;
-    padding-top: calc(0.5rem + 60px);
+    /* padding-top: calc(0.5rem + 60px); */
   }
 
   .unit-section {
