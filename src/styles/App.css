@@ -1140,8 +1140,11 @@ span.split-lesson-title {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
@@ -1153,25 +1156,27 @@ span.split-lesson-title {
     transition: all 0.15s ease;
     pointer-events: auto;
     color: #1a1a1a;
+    font-size: 14px;
+    box-sizing: border-box;
   }
 
   .split-detail-close-btn svg {
-    width: 20px !important;
-    height: 20px !important;
-    display: block !important;
+    width: 1em !important;
+    height: 1em !important;
+    display: block;
     flex-shrink: 0;
-    color: #1a1a1a !important;
+    color: #1a1a1a;
   }
 
   .split-detail-close-btn svg * {
-    stroke: #1a1a1a !important;
-    stroke-width: 2.5 !important;
-    fill: none !important;
+    stroke: #1a1a1a;
+    stroke-width: 2.5;
+    fill: none;
   }
 
   .split-detail-close-btn svg path {
-    stroke-linecap: round !important;
-    stroke-linejoin: round !important;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .split-detail-close-btn:hover {

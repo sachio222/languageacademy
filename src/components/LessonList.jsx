@@ -128,10 +128,10 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
   // Skip auto-selection on mobile to avoid blocking the screen
   useEffect(() => {
     if (
-      viewMode === 'split' && 
-      !selectedModuleId && 
+      viewMode === 'split' &&
+      !selectedModuleId &&
       nextLessonId &&
-      moduleProgress && 
+      moduleProgress &&
       Object.keys(moduleProgress).length > 0 &&
       !isMobile // Don't auto-select on mobile
     ) {
@@ -439,7 +439,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
           <>
             {/* Mobile backdrop overlay */}
             {selectedModuleId && (
-              <div 
+              <div
                 className="split-detail-backdrop"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -447,7 +447,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                 }}
               />
             )}
-            
+
             <div className={`split-view-detail ${selectedModuleId ? 'mobile-open' : ''}`}>
               {selectedModuleId ? (() => {
                 const lesson = lessons.find(l => l.id === selectedModuleId);
@@ -469,7 +469,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                       }}
                       aria-label="Close"
                     >
-                      <X size={20} />
+                      <X />
                     </button>
 
                     <div className="split-detail-header">
