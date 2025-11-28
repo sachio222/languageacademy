@@ -69,6 +69,9 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 .vocab-preview-words::-webkit-scrollbar {
@@ -168,6 +171,7 @@
 @media (max-width: 640px) {
   .module-selector {
     padding: 1.5rem 1rem;
+    max-width: 100%;
   }
 
   .module-selector-grid {

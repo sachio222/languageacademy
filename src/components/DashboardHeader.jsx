@@ -4,7 +4,8 @@ import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { lessons } from '../lessons/lessonData';
 import { Flame, CheckCircle, Clock, BookOpen, BookMarked } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { extractModuleId } from '../utils/progressSync';
+import { useSectionProgress } from '../hooks/useSectionProgress';
+import { getModuleCompletionStatus, getExerciseCount } from '../utils/moduleCompletion';
 import '../styles/DashboardHeader.css';
 import { logger } from "../utils/logger";
 
@@ -12,6 +13,7 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
   const { supabaseUser, profile } = useAuth();
   const supabaseClient = useSupabaseClient();
   const { moduleProgress } = useSupabaseProgress();
+  const { sectionProgress } = useSectionProgress();
   const [stats, setStats] = useState({
     lessonsCompleted: 0,
     totalLessons: lessons.length,
@@ -22,42 +24,15 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
   });
   const [loading, setLoading] = useState(true);
 
-  // Helper to get exercise count for different module types
-  const getExerciseCount = (lesson) => {
-    if (lesson.isFillInTheBlank && lesson.sentences) {
-      return lesson.sentences.length;
-    }
-    if (lesson.isUnitExam && lesson.exerciseConfig?.items) {
-      return lesson.exerciseConfig.items.length;
-    }
-    if (lesson.isHelpModule) {
-      // Help modules are considered "1 exercise" for completion purposes
-      return 1;
-    }
-    return lesson.exercises?.length || 0;
-  };
-
-  // Helper to get completed exercise count
-  const getCompletedCount = (lesson) => {
-    // For fill-in-blank, exams, and help modules, check module_progress table
-    if (lesson.isFillInTheBlank || lesson.isUnitExam || lesson.isHelpModule) {
-      const modId = extractModuleId(lesson);
-      const modProgress = moduleProgress?.[modId];
-      // If module is marked complete, return total count
-      return modProgress?.completed_at ? getExerciseCount(lesson) : 0;
-    }
-    // Normal modules: count individual exercises
-    return lesson.exercises?.filter(ex => completedExercises.has(ex.id)).length || 0;
-  };
-
-  // Find next lesson to continue
+  // Find next lesson to continue using unified completion service
   const getNextLesson = () => {
     // Find first incomplete lesson
     for (const lesson of lessons) {
-      const total = getExerciseCount(lesson);
+      const completionStatus = getModuleCompletionStatus(lesson, sectionProgress, moduleProgress);
+      const total = completionStatus.totalCount || getExerciseCount(lesson);
       if (total === 0) continue;
 
-      const completed = getCompletedCount(lesson);
+      const completed = completionStatus.completedCount;
 
       if (completed < total) {
         return {
@@ -86,22 +61,18 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
           return;
         }
 
-        // Count completed lessons
+        // Count completed lessons using unified completion service
         const lessonsCompleted = lessons.filter(lesson => {
-          const total = getExerciseCount(lesson);
-          if (total === 0) return false;
-          const completed = getCompletedCount(lesson);
-          return completed === total;
+          const completionStatus = getModuleCompletionStatus(lesson, sectionProgress, moduleProgress);
+          return completionStatus.isComplete;
         }).length;
 
         const totalLessons = lessons.length;
 
-        // Count unique words learned from completed lessons
+        // Count unique words learned from completed lessons using unified completion service
         const completedLessons = lessons.filter(lesson => {
-          const total = getExerciseCount(lesson);
-          if (total === 0) return false;
-          const completed = getCompletedCount(lesson);
-          return completed === total;
+          const completionStatus = getModuleCompletionStatus(lesson, sectionProgress, moduleProgress);
+          return completionStatus.isComplete;
         });
 
         const uniqueWords = new Set();
@@ -129,7 +100,7 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
     };
 
     loadStats();
-  }, [supabaseUser, supabaseClient, completedExercises, profile]);
+  }, [supabaseUser, supabaseClient, profile, sectionProgress, moduleProgress]);
 
   // Format time duration
   const formatDuration = (seconds) => {
@@ -194,11 +165,12 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
 
   const nextUnitInfo = nextLessonInfo ? getUnitForLesson(nextLessonInfo.lesson.id) : null;
 
-  // Calculate exercises completed in current lesson
+  // Calculate exercises completed in current lesson using unified completion service
   const getExerciseProgress = (lesson) => {
     if (!lesson) return { completed: 0, total: 0 };
-    const total = getExerciseCount(lesson);
-    const completed = getCompletedCount(lesson);
+    const completionStatus = getModuleCompletionStatus(lesson, sectionProgress, moduleProgress);
+    const total = completionStatus.totalCount || getExerciseCount(lesson);
+    const completed = completionStatus.completedCount;
     return { completed, total };
   };
 

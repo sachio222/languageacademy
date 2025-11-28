@@ -12,47 +12,15 @@ import ModuleSectionDetails from './ModuleSectionDetails';
 import { lessons } from '../lessons/lessonData';
 import { splitTitle } from '../utils/moduleUtils';
 import { SECTION_REGISTRY } from '../config/sectionRegistry';
+import { 
+  isSectionComplete, 
+  getModuleCompletionFromSectionsDetail,
+  parseSectionsDetail 
+} from '../utils/moduleCompletion';
 import '../styles/ModuleRow.css';
 
 // LocalStorage key for persisting expanded modules
 const EXPANDED_MODULES_STORAGE_KEY = 'reportCard_expandedModules';
-
-// Passing score threshold (80%)
-const PASSING_SCORE = 80;
-
-// Sections that require passing scores
-const SECTIONS_WITH_SCORES = [
-  'speed-match',
-  'practice-exercises', 
-  'exam-questions',
-  'module-exam'
-];
-
-/**
- * Check if a section is truly complete:
- * - For sections with scores: Must have completed_at AND score >= 80%
- * - For other sections: Just needs completed_at
- */
-const isSectionComplete = (sectionId, sectionData) => {
-  if (!sectionData?.completed_at) return false;
-  
-  // Check if this section type requires a passing score
-  if (SECTIONS_WITH_SCORES.includes(sectionId)) {
-    // Extract score/accuracy from progress_data JSONB field
-    let percentage = 0;
-    if (sectionData.progress_data) {
-      const progressData = typeof sectionData.progress_data === 'string' 
-        ? JSON.parse(sectionData.progress_data)
-        : sectionData.progress_data;
-      // Speed Match uses 'accuracy', exams might use 'score' or 'percentage'
-      percentage = progressData?.accuracy || progressData?.percentage || progressData?.score || 0;
-    }
-    return percentage >= PASSING_SCORE;
-  }
-  
-  // Non-scored sections just need completed_at
-  return true;
-};
 
 const ModuleRow = ({ module, userId }) => {
   // Initialize showDetails from localStorage
@@ -120,45 +88,18 @@ const ModuleRow = ({ module, userId }) => {
   // Use the same splitTitle logic as other components
   const { mainTitle } = splitTitle(fullTitle);
 
-  // Calculate completion from sections_detail (NEW DATA) - not legacy module fields
-  const calculateSectionBasedCompletion = () => {
-    if (!module.sections_detail) return { percentage: 0, isCompleted: false, lastCompletedDate: null };
-    
-    const sections = typeof module.sections_detail === 'string' 
-      ? JSON.parse(module.sections_detail) 
-      : module.sections_detail;
-
-    const sectionEntries = Object.entries(sections);
-    if (sectionEntries.length === 0) return { percentage: 0, isCompleted: false, lastCompletedDate: null };
-
-    // Count only sections that meet completion criteria (including passing scores)
-    const completedSections = sectionEntries.filter(([sectionId, data]) => 
-      isSectionComplete(sectionId, data)
-    );
-    
-    const percentage = Math.round((completedSections.length / sectionEntries.length) * 100);
-    const isCompleted = percentage === 100;
-    
-    // Get most recent completion date from truly completed sections
-    const lastCompletedDate = completedSections.length > 0
-      ? completedSections.reduce((latest, [_, data]) => {
-          const sectionDate = new Date(data.completed_at);
-          return sectionDate > latest ? sectionDate : latest;
-        }, new Date(0))
-      : null;
-
-    return { percentage, isCompleted, lastCompletedDate };
-  };
-
-  const { percentage: completionPercentage, isCompleted, lastCompletedDate } = calculateSectionBasedCompletion();
+  // Calculate completion using unified completion service
+  const { 
+    percentage: completionPercentage, 
+    isComplete: isCompleted, 
+    lastCompletedDate 
+  } = getModuleCompletionFromSectionsDetail(module, lesson);
 
   // Parse sections to show completed ones (with passing scores)
   const getCompletedSections = () => {
     if (!module.sections_detail) return [];
     
-    const sections = typeof module.sections_detail === 'string' 
-      ? JSON.parse(module.sections_detail) 
-      : module.sections_detail;
+    const sections = parseSectionsDetail(module.sections_detail);
 
     return Object.entries(sections)
       .filter(([sectionId, data]) => isSectionComplete(sectionId, data))

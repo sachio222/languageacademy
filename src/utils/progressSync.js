@@ -24,8 +24,10 @@ export const calculateUnitProgress = (lessons, completedExercises) => {
 
 /**
  * Get module completion status from Supabase data
+ * @deprecated Use getModuleCompletionStatus from moduleCompletion.js instead (uses section_progress)
+ * This function is kept for backward compatibility but should not be used for new code
  */
-export const getModuleCompletionStatus = (moduleId, moduleProgress, completedExercises, totalExercises) => {
+export const getModuleCompletionStatusLegacy = (moduleId, moduleProgress, completedExercises, totalExercises) => {
   const progress = moduleProgress[moduleId]
   if (!progress) return { completed: false, score: null, timeSpent: 0 }
   

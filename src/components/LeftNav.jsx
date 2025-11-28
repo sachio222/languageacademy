@@ -6,7 +6,8 @@ import { unitStructure } from '../lessons/lessonData';
 const { List } = ReactWindow;
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { extractModuleId } from '../utils/progressSync';
+import { useSectionProgress } from '../hooks/useSectionProgress';
+import { getModuleCompletionStatus, getModuleCompletionPercentage, getExerciseCount } from '../utils/moduleCompletion';
 import { getTTSText, selectBestVoice } from '../utils/ttsUtils';
 import '../styles/LeftNav.css';
 import { logger } from "../utils/logger";
@@ -115,6 +116,7 @@ const VocabItem = ({ index, style, vocab, onLessonSelect, mobileNavOpen, onClose
 
 function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, isCollapsed, onToggleCollapse, mobileNavOpen, onCloseMobileNav }) {
   const { moduleProgress } = useSupabaseProgress();
+  const { sectionProgress } = useSectionProgress();
   const [searchQuery, setSearchQuery] = useState('');
   // Initialize all units as collapsed (accordion starts closed)
   const [collapsedUnits, setCollapsedUnits] = useState(new Set(unitStructure.map(unit => unit.id)));
@@ -323,40 +325,14 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
     );
   }, [vocabularyIndex, searchQuery]);
 
-  // Helper to get exercise count for different module types
-  const getExerciseCount = (lesson) => {
-    if (lesson.isFillInTheBlank && lesson.sentences) {
-      return lesson.sentences.length;
-    }
-    if (lesson.isUnitExam && lesson.exerciseConfig?.items) {
-      return lesson.exerciseConfig.items.length;
-    }
-    if (lesson.isHelpModule) {
-      // Help modules are considered "1 exercise" for completion purposes
-      return 1;
-    }
-    return lesson.exercises?.length || 0;
-  };
-
-  // Helper to get completed exercise count
-  const getCompletedCount = (lesson) => {
-    // For fill-in-blank, exams, and help modules, check module_progress table
-    if (lesson.isFillInTheBlank || lesson.isUnitExam || lesson.isHelpModule) {
-      const modId = extractModuleId(lesson);
-      const modProgress = moduleProgress?.[modId];
-      // If module is marked complete, return total count
-      return modProgress?.completed_at ? getExerciseCount(lesson) : 0;
-    }
-    // Normal modules: count individual exercises
-    return lesson.exercises?.filter(ex => completedExercises.has(ex.id)).length || 0;
-  };
-
-  // Calculate completion for a lesson
+  // Calculate completion for a lesson using unified completion service
   const getLessonCompletion = (lesson) => {
-    const total = getExerciseCount(lesson);
-    if (total === 0) return 0;
-    const completed = getCompletedCount(lesson);
-    return Math.round((completed / total) * 100);
+    return getModuleCompletionPercentage(lesson, sectionProgress, moduleProgress);
+  };
+  
+  // Check if lesson is complete using unified completion service
+  const isLessonComplete = (lesson) => {
+    return getModuleCompletionStatus(lesson, sectionProgress, moduleProgress).isComplete;
   };
 
   return (
@@ -463,7 +439,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                               {unitLessons.map(lesson => {
                                 const isActive = currentLesson === lesson.id;
                                 const completion = getLessonCompletion(lesson);
-                                const isComplete = completion === 100;
+                                const isComplete = isLessonComplete(lesson);
 
                                 return (
                                   <div
@@ -564,11 +540,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
             </button>
             {unitStructure.map(unit => {
               const unitLessons = getLessonsForUnit(unit);
-              const completed = unitLessons.filter(lesson => {
-                const completedCount = getCompletedCount(lesson);
-                const totalCount = getExerciseCount(lesson);
-                return completedCount === totalCount && totalCount > 0;
-              }).length;
+              const completed = unitLessons.filter(lesson => isLessonComplete(lesson)).length;
               const total = unitLessons.length;
               const progress = Math.round((completed / total) * 100);
 

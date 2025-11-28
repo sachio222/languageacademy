@@ -4,6 +4,7 @@ import { useAuth } from "./useAuth";
 import { useSupabaseClient } from "./useSupabaseClient";
 import { logger } from "../utils/logger";
 import { lessons } from "../lessons/lessonData";
+import { getModuleCompletionFromSectionsDetail } from "../utils/moduleCompletion";
 
 /**
  * Enhanced analytics hook for report card system
@@ -244,8 +245,17 @@ export const useReportCardData = (userId = null, options = {}) => {
         ? Math.round((correctExercises / totalExercises) * 100)
         : 0;
 
-    // Count unique words learned from completed modules
-    const completedModules = modules.filter((m) => m.completed_at);
+    // Count unique words learned from completed modules using unified completion service
+    const completedModules = modules.filter((m) => {
+      // If module has sections_detail, use unified completion service
+      if (m.sections_detail) {
+        const lesson = lessons.find((l) => l.moduleKey === m.module_key);
+        const { isComplete } = getModuleCompletionFromSectionsDetail(m, lesson);
+        return isComplete;
+      }
+      // Fallback to old system for modules without sections_detail
+      return m.completed_at != null && m.completed_at !== "";
+    });
     const wordsLearned = countWordsLearned(completedModules);
 
     // Progress overview by unit
@@ -430,10 +440,18 @@ export const useReportCardData = (userId = null, options = {}) => {
         return lesson.id >= start && lesson.id <= end;
       });
 
-      // Count completed modules (completed_at is truthy if module is completed)
-      const completedCount = unitModules.filter(
-        (m) => m.completed_at != null && m.completed_at !== ""
-      ).length;
+      // Count completed modules using unified completion service
+      // Check sections_detail first (if available), then fall back to completed_at
+      const completedCount = unitModules.filter((m) => {
+        // If module has sections_detail, use unified completion service
+        if (m.sections_detail) {
+          const lesson = findLessonByModuleId(m.module_key);
+          const { isComplete } = getModuleCompletionFromSectionsDetail(m, lesson);
+          return isComplete;
+        }
+        // Fallback to old system for modules without sections_detail
+        return m.completed_at != null && m.completed_at !== "";
+      }).length;
 
       // Calculate total study time for this unit from unitModules
       const studyTime = unitModules.reduce(

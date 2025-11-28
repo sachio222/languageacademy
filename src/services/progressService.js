@@ -11,48 +11,7 @@
 import { logger } from "../utils/logger";
 import { lessons } from "../lessons/lessonData";
 import { generateDynamicUnitStructure } from "../lessons/unitStructureGenerator";
-
-// Passing score threshold (80%)
-const PASSING_SCORE = 80;
-
-// Sections that require passing scores to be considered complete
-const SECTIONS_WITH_SCORES = [
-  "speed-match",
-  "practice-exercises",
-  "exam-questions",
-  "module-exam",
-];
-
-/**
- * Check if a section is truly complete:
- * - For sections with scores: Must have completed_at AND score >= 80%
- * - For other sections: Just needs completed_at
- */
-const isSectionComplete = (sectionId, sectionData) => {
-  if (!sectionData?.completed_at) return false;
-
-  // Check if this section type requires a passing score
-  if (SECTIONS_WITH_SCORES.includes(sectionId)) {
-    // Extract score/accuracy from progress_data JSONB field
-    let percentage = 0;
-    if (sectionData.progress_data) {
-      const progressData =
-        typeof sectionData.progress_data === "string"
-          ? JSON.parse(sectionData.progress_data)
-          : sectionData.progress_data;
-      // Speed Match uses 'accuracy', exams might use 'score' or 'percentage'
-      percentage =
-        progressData?.accuracy ||
-        progressData?.percentage ||
-        progressData?.score ||
-        0;
-    }
-    return percentage >= PASSING_SCORE;
-  }
-
-  // Non-scored sections just need completed_at
-  return true;
-};
+import { isSectionComplete } from "../utils/moduleCompletion";
 
 export class ProgressService {
   constructor(supabaseClient) {

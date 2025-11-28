@@ -1217,11 +1217,24 @@ span.split-lesson-title {
 
 /* Lesson View */
 .lesson-view {
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
   animation: slideUpFadeIn 0.25s ease-out;
+}
+
+/* Container for header and content with overflow hidden */
+.lesson-view-container {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 60px - 1rem); /* Viewport minus app header and gap */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Phonics view needs visible overflow for sticky positioning */
@@ -1255,6 +1268,11 @@ span.split-lesson-title {
   align-items: center;
   gap: 1.5rem;
   border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  flex-shrink: 0; /* Prevent header from shrinking */
 }
 
 /* Mobile Simplified Header */
@@ -1266,6 +1284,11 @@ span.split-lesson-title {
   border-bottom: 1px solid #e2e8f0;
   align-items: center;
   gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  flex-shrink: 0; /* Prevent header from shrinking */
 }
 
 .btn-back-mobile {
@@ -2423,8 +2446,8 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 
 @media (max-width: 768px) {
   .app-main {
-    padding: 1.5rem 0.5rem;
-    padding-top: calc(0.5rem + 60px);
+    padding: 0.5rem;
+    /* padding-top: calc(0.5rem + 60px); */
     display: flex;
     flex-direction: column;
     min-height: 0;
@@ -2679,6 +2702,13 @@ body:has(.left-nav.collapsed) .navigation-buttons {
 
   .lesson-header-mobile {
     display: flex;
+  }
+
+  /* Adjust container height for mobile - account for relative app-header and padding */
+  .lesson-view-container {
+    height: calc(
+      100vh - 60px - 1rem - 1rem
+    ); /* Viewport minus app-header, gap, and app-main padding */
   }
 
   /* Exercise Pane Mobile */

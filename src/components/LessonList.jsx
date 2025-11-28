@@ -1,13 +1,14 @@
-import { calculateLessonProgress } from '../lessons/testRunner';
 import { unitStructure } from '../lessons/lessonData';
 import { Award, BookOpen, TextCursorInput, Sparkles, Grid3x3, List, ChevronDown, ChevronUp, BadgeCheck, X } from 'lucide-react';
 import DashboardHeader from './DashboardHeader';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { extractModuleId } from '../utils/progressSync';
+import { useSectionProgress } from '../hooks/useSectionProgress';
+import { getModuleCompletionStatus, getModuleCompletionPercentage, isModuleComplete, getExerciseCount } from '../utils/moduleCompletion';
 import React, { useState, useEffect, useMemo } from 'react';
 
 function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferenceModules, onShowVocabularyDashboard, onShowReportCard, showWordsLearned, isAdmin }) {
   const { moduleProgress } = useSupabaseProgress();
+  const { sectionProgress } = useSectionProgress();
   const [viewMode, setViewMode] = useState('split'); // 'grid' or 'split'
   const [selectedModuleId, setSelectedModuleId] = useState(null);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
@@ -24,32 +25,14 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
       }
     }
   };
-  // Helper to get exercise count for different module types
-  const getExerciseCount = (lesson) => {
-    if (lesson.isFillInTheBlank && lesson.sentences) {
-      return lesson.sentences.length;
-    }
-    if (lesson.isUnitExam && lesson.exerciseConfig?.items) {
-      return lesson.exerciseConfig.items.length;
-    }
-    if (lesson.isHelpModule) {
-      // Help modules are considered "1 exercise" for completion purposes
-      return 1;
-    }
-    return lesson.exercises?.length || 0;
+  // Calculate completion for a lesson using unified completion service
+  const getLessonCompletion = (lesson) => {
+    return getModuleCompletionPercentage(lesson, sectionProgress, moduleProgress);
   };
 
-  // Helper to get completed exercise count
-  const getCompletedCount = (lesson) => {
-    // For fill-in-blank, exams, and help modules, check module_progress table
-    if (lesson.isFillInTheBlank || lesson.isUnitExam || lesson.isHelpModule) {
-      const modId = extractModuleId(lesson);
-      const modProgress = moduleProgress?.[modId];
-      // If module is marked complete, return total count
-      return modProgress?.completed_at ? getExerciseCount(lesson) : 0;
-    }
-    // Normal modules: count individual exercises
-    return lesson.exercises?.filter(ex => completedExercises.has(ex.id)).length || 0;
+  // Check if lesson is complete using unified completion service
+  const isLessonComplete = (lesson) => {
+    return isModuleComplete(lesson, sectionProgress, moduleProgress);
   };
 
   // Group lessons by pedagogical unit
@@ -63,10 +46,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
     for (const unitInfo of unitStructure) {
       const unitLessons = getLessonsForUnit(unitInfo);
       for (const lesson of unitLessons) {
-        const completed = getCompletedCount(lesson);
-        const total = getExerciseCount(lesson);
-        const progress = calculateLessonProgress(completed, total);
-        if (progress < 100) {
+        if (!isLessonComplete(lesson)) {
           return lesson.id;
         }
       }
@@ -79,10 +59,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
     for (const unitInfo of unitStructure) {
       const unitLessons = getLessonsForUnit(unitInfo);
       for (const lesson of unitLessons) {
-        const completed = getCompletedCount(lesson);
-        const total = getExerciseCount(lesson);
-        const progress = calculateLessonProgress(completed, total);
-        if (progress < 100) {
+        if (!isLessonComplete(lesson)) {
           return unitInfo.id;
         }
       }
@@ -93,7 +70,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
   // Get the next lesson ID for highlighting (memoized to recalculate when progress changes)
   const nextLessonId = useMemo(() => {
     return findNextIncompleteLesson();
-  }, [moduleProgress, completedExercises, lessons]);
+  }, [moduleProgress, sectionProgress, lessons]);
 
   // Track which units have collapsed completed modules (by default, all are collapsed)
   const [collapsedCompletedInUnits, setCollapsedCompletedInUnits] = useState(
@@ -112,7 +89,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
       setCollapsedUnits(new Set(allUnitIds.filter(id => id !== currentUnitId)));
       setHasInitializedCollapse(true);
     }
-  }, [moduleProgress, completedExercises, hasInitializedCollapse]);
+  }, [moduleProgress, sectionProgress, hasInitializedCollapse]);
 
   // Track window size for mobile detection
   useEffect(() => {
@@ -167,11 +144,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
 
   const getUnitProgress = (unitInfo) => {
     const unitLessons = getLessonsForUnit(unitInfo);
-    const completedLessons = unitLessons.filter(lesson => {
-      const completed = getCompletedCount(lesson);
-      const total = getExerciseCount(lesson);
-      return completed === total && total > 0;
-    }).length;
+    const completedLessons = unitLessons.filter(lesson => isLessonComplete(lesson)).length;
     return { completed: completedLessons, total: unitLessons.length };
   };
 
@@ -262,10 +235,8 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
               {!isCollapsed && (
                 <div className="lessons-grid">
                   {unitLessons.map((lesson) => {
-                    const completed = getCompletedCount(lesson);
-                    const total = getExerciseCount(lesson);
-                    const progress = calculateLessonProgress(completed, total);
-                    const isComplete = progress === 100;
+                    const progress = getLessonCompletion(lesson);
+                    const isComplete = isLessonComplete(lesson);
                     const isNextLesson = lesson.id === nextLessonId;
 
                     return (
@@ -301,7 +272,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                             />
                           </div>
                           <span className="progress-text">
-                            {completed}/{total} exercises
+                            {progress}% complete
                           </span>
                         </div>
 
@@ -336,10 +307,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
               const completedLessons = [];
 
               unitLessons.forEach(lesson => {
-                const completedCount = getCompletedCount(lesson);
-                const totalCount = getExerciseCount(lesson);
-                const progress = calculateLessonProgress(completedCount, totalCount);
-                if (progress === 100) {
+                if (isLessonComplete(lesson)) {
                   completedLessons.push(lesson);
                 } else {
                   incompleteLessons.push(lesson);
@@ -358,9 +326,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
 
                   {/* Show incomplete lessons */}
                   {incompleteLessons.map((lesson) => {
-                    const completed = getCompletedCount(lesson);
-                    const total = getExerciseCount(lesson);
-                    const progress = calculateLessonProgress(completed, total);
+                    const progress = getLessonCompletion(lesson);
                     const isSelected = selectedModuleId === lesson.id;
 
                     return (
@@ -401,9 +367,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
 
                   {/* Show completed lessons if expanded */}
                   {showCompleted && completedLessons.map((lesson) => {
-                    const completed = getCompletedCount(lesson);
-                    const total = getExerciseCount(lesson);
-                    const progress = calculateLessonProgress(completed, total);
+                    const progress = getLessonCompletion(lesson);
                     const isSelected = selectedModuleId === lesson.id;
 
                     return (
@@ -453,10 +417,12 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                 const lesson = lessons.find(l => l.id === selectedModuleId);
                 if (!lesson) return null;
 
-                const completed = getCompletedCount(lesson);
-                const total = getExerciseCount(lesson);
-                const progress = calculateLessonProgress(completed, total);
-                const isComplete = progress === 100;
+                const completionStatus = getModuleCompletionStatus(lesson, sectionProgress, moduleProgress);
+                const progress = completionStatus.percentage;
+                const isComplete = completionStatus.isComplete;
+                // For display: show section completion counts, or fall back to exercise count
+                const completed = completionStatus.completedCount;
+                const total = completionStatus.totalCount || getExerciseCount(lesson);
 
                 return (
                   <div className="split-detail-content">
