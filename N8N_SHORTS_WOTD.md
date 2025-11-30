@@ -318,6 +318,254 @@ After generating HTML for each slide:
 
 ---
 
+## Node: Prepare Video Creation Inputs
+
+### For n8n "Prepare Video Inputs" Code node
+
+**Mode:** Run Once
+
+**Placement:** After "Convert HTML to Image" node (collects all slide images)
+
+**Purpose:** Prepares inputs for video creation script - collects slide image paths and slide content JSON
+
+```javascript
+// Collect all slide images from the HTML-to-image conversion
+// Slides are already in order: slide-1, slide-2, slide-3, slide-4, slide-5
+const slideImages = $input.all();
+
+// Sort by slide number extracted from filename (slide-1, slide-2, etc.)
+const sortedSlides = slideImages.sort((a, b) => {
+  const numA = parseInt(a.json.fileName?.match(/slide-(\d+)/)?.[1] || "0");
+  const numB = parseInt(b.json.fileName?.match(/slide-(\d+)/)?.[1] || "0");
+  return numA - numB;
+});
+
+// Get original slide data from "Prepare 5 Slides" node
+// This node returns an array of slides, each with json property containing slide data
+const prepareSlidesNode = $("Prepare 5 Slides");
+const allPreparedSlides = prepareSlidesNode.all();
+
+// Extract the actual slide objects (remove json wrapper)
+// These contain all the TTS text fields needed by the video script
+const slideObjects = allPreparedSlides.map((item) => item.json);
+
+// Sort slides by type order to ensure correct sequence: word, definition, examples, engagement, cta
+const slideTypeOrder = [
+  "word",
+  "definition",
+  "examples",
+  "quiz",
+  "challenge",
+  "opinion",
+  "mnemonic",
+  "mistake",
+  "cta",
+];
+const sortedSlideObjects = slideObjects.sort((a, b) => {
+  const indexA =
+    slideTypeOrder.indexOf(a.type) !== -1
+      ? slideTypeOrder.indexOf(a.type)
+      : 999;
+  const indexB =
+    slideTypeOrder.indexOf(b.type) !== -1
+      ? slideTypeOrder.indexOf(b.type)
+      : 999;
+  return indexA - indexB;
+});
+
+// Convert Docker paths to Mac paths
+// Docker: /shared/images/... → Mac: /Users/jupiter/dev/woodshed/images/...
+const convertToMacPath = (dockerPath) => {
+  if (!dockerPath) return null;
+  return dockerPath.replace(
+    /^\/shared\/images/,
+    "/Users/jupiter/dev/woodshed/images"
+  );
+};
+
+// Get slide paths in order (already sorted by slide number)
+const slide1 = convertToMacPath(sortedSlides[0]?.json?.filePath);
+const slide2 = convertToMacPath(sortedSlides[1]?.json?.filePath);
+const slide3 = convertToMacPath(sortedSlides[2]?.json?.filePath);
+const slide4 = convertToMacPath(sortedSlides[3]?.json?.filePath);
+const slide5 = convertToMacPath(sortedSlides[4]?.json?.filePath);
+
+// Get slide content JSON - this contains all TTS text fields needed by the script
+// The script expects: definition.translation, examples[].english/french, engagement.hook/connection/reinforcement
+const slideContentJson = JSON.stringify(sortedSlideObjects);
+
+// Extract date and word from slide content JSON (contains original word with accents)
+const slideData = sortedSlideObjects[0] || {};
+const date =
+  slideData._metadata?.date ||
+  sortedSlides[0]?.json?.date ||
+  new Date().toISOString().split("T")[0];
+const word = slideData.word || slideData._metadata?.word || "unknown";
+
+// Validate all required paths exist
+if (!slide1 || !slide2 || !slide3 || !slide4 || !slide5) {
+  console.error("Missing slide images:", {
+    slide1: !!slide1,
+    slide2: !!slide2,
+    slide3: !!slide3,
+    slide4: !!slide4,
+    slide5: !!slide5,
+    totalSlides: sortedSlides.length,
+  });
+  throw new Error(
+    `Missing required slide images for video creation. Found ${sortedSlides.length} slides, need 5.`
+  );
+}
+
+return {
+  json: {
+    date: date,
+    word: word,
+    slide1_path: slide1,
+    slide2_path: slide2,
+    slide3_path: slide3,
+    slide4_path: slide4,
+    slide5_path: slide5,
+    slide_content_json: slideContentJson,
+  },
+};
+```
+
+---
+
+## Node: Build Video Command
+
+### For n8n "Build Command" Code node
+
+**Mode:** Run Once
+
+**Placement:** After "Prepare Video Inputs"
+
+**Purpose:** Builds the SSH command with properly escaped JSON and environment variables
+
+```javascript
+const data = $input.first().json;
+
+// Escape single quotes in JSON by replacing ' with '\'' (end quote, escaped quote, start quote)
+// This allows us to wrap the JSON in single quotes safely
+const escapedJson = data.slide_content_json.replace(/'/g, "'\\''");
+
+// Build command parts
+// Use double quotes for simple arguments (date, word, paths)
+// Use single quotes for JSON (contains double quotes and & characters)
+const commandParts = [
+  "./create_multi_slide_video_hume.sh",
+  `"${data.date}"`,
+  `"${data.word}"`,
+  `"${data.slide1_path}"`,
+  `"${data.slide2_path}"`,
+  `"${data.slide3_path}"`,
+  `"${data.slide4_path}"`,
+  `"${data.slide5_path}"`,
+  `'${escapedJson}'`, // Single quotes protect JSON from shell interpretation
+  "--music",
+  "camillesaentsaens-aquarium.mp3",
+];
+
+const fullCommand = commandParts.join(" ");
+
+// Build SSH command with HUME_API_KEY passed directly
+// SSH from Docker to Mac doesn't inherit .env files, so we pass the key explicitly
+// No quotes needed on env vars since they contain no spaces or special characters
+let sshCommand = `cd /Users/jupiter/dev/woodshed/tts/piper && HUME_API_KEY=Vh8TQkLAmEdffJpHvbYK62qaSG2qoDwl3lZv4z5XSELRjGAL HUME_FRENCH_VOICE_ID=9e1f9e4f-691a-4bb0-b87c-e306a4c838ef HUME_ENGLISH_VOICE_ID=c7aa10be-57c1-4647-9306-7ac48dde3536 ${fullCommand}`;
+
+// Escape ALL double quotes in the entire command string
+// The Execute Command node wraps the command in double quotes, so all inner double quotes must be escaped
+// This escapes: quotes around arguments ("2025-11-29"), but NOT the JSON which is in single quotes
+// Single quotes inside JSON are already escaped as '\''
+sshCommand = sshCommand.replace(/"/g, '\\"');
+
+return {
+  json: {
+    ...data,
+    command: sshCommand,
+  },
+};
+```
+
+---
+
+## Node: Create YouTube Shorts Video with Music
+
+### For n8n "Execute Command" node
+
+**Type:** Execute Command  
+**Placement:** After "Build Video Command"  
+**Command:** SSH to host Mac and run video creation script
+
+**Command:**
+
+```bash
+ssh jupiter@host.docker.internal "{{ $json.command }}"
+```
+
+**Important:** The command MUST be wrapped in double quotes so SSH executes `cd ... && ...` as a single command. All double quotes inside the command string are already escaped (`\"`), so the shell will parse it correctly.
+
+**Alternative: Direct Command (sources .env file)**
+
+If you prefer to skip the Code node and use a direct command:
+
+```bash
+ssh jupiter@host.docker.internal "cd /Users/jupiter/dev/woodshed/tts/piper && HUME_API_KEY=\"Vh8TQkLAmEdffJpHvbYK62qaSG2qoDwl3lZv4z5XSELRjGAL\" HUME_FRENCH_VOICE_ID=\"9e1f9e4f-691a-4bb0-b87c-e306a4c838ef\" HUME_ENGLISH_VOICE_ID=\"c7aa10be-57c1-4647-9306-7ac48dde3536\" ./create_multi_slide_video_hume.sh \"{{ $json.date }}\" \"{{ $json.word }}\" \"{{ $json.slide1_path }}\" \"{{ $json.slide2_path }}\" \"{{ $json.slide3_path }}\" \"{{ $json.slide4_path }}\" \"{{ $json.slide5_path }}\" '{{ $json.slide_content_json }}' --music camillesaentsaens-aquarium.mp3"
+```
+
+**Without Music (Optional):**
+
+If you want to create videos without music, remove the `--music` parameter:
+
+```bash
+ssh jupiter@host.docker.internal "cd /Users/jupiter/dev/woodshed/tts/piper && HUME_API_KEY=\"Vh8TQkLAmEdffJpHvbYK62qaSG2qoDwl3lZv4z5XSELRjGAL\" HUME_FRENCH_VOICE_ID=\"9e1f9e4f-691a-4bb0-b87c-e306a4c838ef\" HUME_ENGLISH_VOICE_ID=\"c7aa10be-57c1-4647-9306-7ac48dde3536\" ./create_multi_slide_video_hume.sh \"{{ $json.date }}\" \"{{ $json.word }}\" \"{{ $json.slide1_path }}\" \"{{ $json.slide2_path }}\" \"{{ $json.slide3_path }}\" \"{{ $json.slide4_path }}\" \"{{ $json.slide5_path }}\" '{{ $json.slide_content_json }}'"
+```
+
+**Output:**
+
+The script outputs two file paths (if music is used):
+
+1. Video with music: `${DATE}-${WORD_SLUG}-complete-hume-with-music.mp4`
+2. Original video: `${DATE}-${WORD_SLUG}-complete-hume.mp4`
+
+If no music, outputs single path:
+
+- Video: `${DATE}-${WORD_SLUG}-complete-hume.mp4`
+
+**Note:**
+
+- The script receives `HUME_API_KEY` and voice IDs as environment variables in the SSH command
+- Filenames use slugged word (filesystem-safe), e.g., "résolution" → "resolution"
+- Videos are saved in: `/Users/jupiter/dev/woodshed/images/languageacademy/socials/${DATE}-${WORD_SLUG}/video/`
+- Video dimensions are auto-detected from slide images (portrait format for YouTube Shorts)
+
+---
+
+## Complete Workflow Order
+
+1. **Prepare 5 Slides** - Creates slide data structure
+2. **Create HTML for Current Slide** (Loop) - Generates HTML for each slide
+3. **Convert HTML to Image** (Loop) - Converts HTML to 1080x1920 images
+4. **Prepare Video Inputs** - Collects slide paths and prepares JSON
+5. **Build Video Command** (Optional) - Builds SSH command with escaped JSON
+6. **Create YouTube Shorts Video** - Executes video creation script with music
+7. **Upload to YouTube** (Future) - Upload the generated video
+
+**Note:** Step 5 is optional if you use the direct command approach in the Execute Command node.
+
+---
+
+## Music File Location
+
+The script expects the music file at:
+
+- `/Users/jupiter/dev/woodshed/tts/piper/camillesaentsaens-aquarium.mp3`
+
+To use a different music file, update the `--music` parameter in the Execute Command node.
+
+---
+
 ## Code: Preview All Slides
 
 ### For n8n "Preview Slides" node
