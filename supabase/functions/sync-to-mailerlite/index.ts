@@ -11,7 +11,8 @@ interface SyncRequest {
   email: string;
   name?: string;
   metadata?: {
-    group?: string;
+    group?: string; // Deprecated: use group_id instead
+    group_id?: number; // MailerLite group ID (numeric)
     modules_completed?: number;
     current_unit?: number;
     timezone?: string;
@@ -60,9 +61,22 @@ serve(async (req) => {
       subscriberData.fields.name = name;
     }
 
-    // Add to group if specified
-    if (metadata.group) {
-      subscriberData.groups = [metadata.group];
+    // Add to group if specified (MailerLite requires numeric group IDs)
+    // Handle both number and string formats to preserve precision for large IDs
+    if (metadata.group_id !== undefined) {
+      // Convert to number, but MailerLite API accepts it as-is in JSON
+      const groupId = typeof metadata.group_id === 'string' 
+        ? Number(metadata.group_id) 
+        : metadata.group_id;
+      subscriberData.groups = [groupId];
+    } else if (metadata.group) {
+      // Legacy support: try to parse group as number, otherwise log warning
+      const groupId = Number(metadata.group);
+      if (!isNaN(groupId)) {
+        subscriberData.groups = [groupId];
+      } else {
+        console.warn(`Group "${metadata.group}" is not a valid numeric ID. MailerLite requires numeric group IDs.`);
+      }
     }
 
     // Add or update subscriber in MailerLite

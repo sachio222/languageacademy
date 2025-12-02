@@ -51,40 +51,77 @@ export const useAuth = () => {
           }
 
           if (!existingProfile) {
-            // Create new user profile
+            // Create new user profile with idempotency
+            // Try insert first - if it fails due to race condition, fetch existing profile
+            const profileData = {
+              clerk_user_id: user.id,
+              email: user.emailAddresses?.[0]?.emailAddress,
+              first_name: user.firstName,
+              last_name: user.lastName,
+              preferred_name: user.firstName,
+            };
+
             const { data: newProfile, error: insertError } =
               await supabaseClient
                 .from("user_profiles")
-                .insert({
-                  clerk_user_id: user.id,
-                  email: user.emailAddresses?.[0]?.emailAddress,
-                  first_name: user.firstName,
-                  last_name: user.lastName,
-                  preferred_name: user.firstName,
-                })
+                .insert(profileData)
                 .select()
                 .single();
 
-            if (insertError) throw insertError;
-            setSupabaseUser(newProfile);
-            setProfile(newProfile);
+            let isNewProfile = true;
 
-            // Sync new user to MailerLite
-            try {
-              await supabaseClient.functions.invoke('sync-to-mailerlite', {
-                body: {
-                  event: 'signup',
-                  user_id: newProfile.id,
-                  email: user.emailAddresses?.[0]?.emailAddress,
-                  name: user.firstName,
-                  metadata: {
-                    group: 'All Users'
-                  }
+            if (insertError) {
+              // If it's a unique constraint violation, profile was created by another request (race condition)
+              if (insertError.code === '23505' || insertError.message?.includes('duplicate') || insertError.message?.includes('unique')) {
+                logger.log('Profile already exists (race condition), fetching existing profile', {
+                  clerk_user_id: user.id,
+                });
+                
+                const { data: existingProfileAfterRace, error: fetchAfterRaceError } =
+                  await supabaseClient
+                    .from("user_profiles")
+                    .select("*")
+                    .eq("clerk_user_id", user.id)
+                    .single();
+
+                if (fetchAfterRaceError) {
+                  throw fetchAfterRaceError;
                 }
-              });
-            } catch (syncError) {
-              logger.error('Error syncing to MailerLite:', syncError);
-              // Don't fail signup if MailerLite sync fails
+
+                setSupabaseUser(existingProfileAfterRace);
+                setProfile(existingProfileAfterRace);
+                // Don't trigger webhooks for existing profiles
+                isNewProfile = false;
+              } else {
+                // Some other error occurred
+                throw insertError;
+              }
+            } else {
+              // Insert succeeded - this is a new profile
+              setSupabaseUser(newProfile);
+              setProfile(newProfile);
+            }
+
+            // Only trigger webhooks if this is actually a new profile
+            if (isNewProfile && newProfile) {
+              // Sync new user to MailerLite via Edge Function
+              try {
+                const mailerLiteGroupId = import.meta.env.VITE_MAILERLITE_ALL_USERS_GROUP;
+                await supabaseClient.functions.invoke('sync-to-mailerlite', {
+                  body: {
+                    event: 'signup',
+                    user_id: newProfile.id,
+                    email: user.emailAddresses?.[0]?.emailAddress,
+                    name: user.firstName,
+                    metadata: {
+                      group_id: mailerLiteGroupId ? Number(mailerLiteGroupId) : undefined
+                    }
+                  }
+                });
+              } catch (syncError) {
+                logger.error('Error syncing to MailerLite:', syncError);
+                // Don't fail signup if MailerLite sync fails
+              }
             }
           } else {
             // Update existing profile with latest Clerk data
