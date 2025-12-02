@@ -6,6 +6,10 @@ This folder contains HTML email templates for Language Academy, designed followi
 
 ## 📧 Template Library
 
+### Onboarding
+- `welcome.html` - Welcome email with hero image and three key benefits
+- `welcome-PREVIEW.html` - Preview version with real content
+
 ### Word of the Day
 - `wotd-daily.html` - Daily Word of the Day email with quiz
 - `wotd-announcement.html` - Special announcement template for WOTD
@@ -59,6 +63,12 @@ All templates use Mustache-style `{{variable}}` syntax.
 {{first_name}}       - User's first name
 {{email}}            - User's email address
 {{user_id}}          - User ID for tracking
+```
+
+### Welcome Email
+```
+{{first_name}}       - User's first name
+No other variables - content is static for brand consistency
 ```
 
 ### Module Completion
