@@ -1450,10 +1450,21 @@ span.split-lesson-title {
   min-height: 600px;
 }
 
-/* Shrink grid when sidebar is collapsed (desktop only) */
-@media (min-width: 969px) {
+/* Shrink grid when sidebar is collapsed - tablet and desktop */
+@media (min-width: 769px) {
   .lesson-content:has(.right-pane.sidebar-collapsed) {
     grid-template-columns: 1fr minmax(auto, 100px);
+  }
+}
+
+/* Tablet-specific: narrower collapsed sidebar */
+@media (min-width: 769px) and (max-width: 968px) {
+  .lesson-content:has(.right-pane.sidebar-collapsed) {
+    grid-template-columns: 1fr minmax(auto, 70px);
+  }
+
+  .right-pane.sidebar-collapsed {
+    max-width: 70px;
   }
 }
 

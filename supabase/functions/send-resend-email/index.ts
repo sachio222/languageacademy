@@ -178,7 +178,7 @@ serve(async (req) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        from: "Language Academy <progress@send.languageacademy.io>",
+        from: "Language Academy <hello@send.languageacademy.io>",
         to: to, // String, not array
         subject: subject,
         html: html,

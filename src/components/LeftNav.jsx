@@ -329,7 +329,7 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
   const getLessonCompletion = (lesson) => {
     return getModuleCompletionPercentage(lesson, sectionProgress, moduleProgress);
   };
-  
+
   // Check if lesson is complete using unified completion service
   const isLessonComplete = (lesson) => {
     return getModuleCompletionStatus(lesson, sectionProgress, moduleProgress).isComplete;
@@ -548,7 +548,10 @@ function LeftNav({ lessons, currentLesson, onLessonSelect, completedExercises, i
                 <div
                   key={unit.id}
                   className="nav-collapsed-unit"
-                  onClick={onToggleCollapse}
+                  onClick={() => {
+                    onToggleCollapse();
+                    toggleUnit(unit.id);
+                  }}
                   title={`${unit.title}: ${completed}/${total} complete`}
                 >
                   <span className="collapsed-unit-icon">{unit.icon}</span>
