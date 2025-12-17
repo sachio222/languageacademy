@@ -305,7 +305,7 @@ function ExercisePane({
               </div>
             ) : canProceed ? (
               <span className="editor-status editor-status-success">
-                ✓ All tests passed
+                Passed!
               </span>
             ) : (
               <span className="editor-status editor-status-error">
@@ -400,7 +400,7 @@ function ExercisePane({
 
         {canProceed && (
           <div className="success-message">
-            <h4>🎉 Excellent! All tests passed!</h4>
+            <h4>Excellent, you passed!</h4>
             <p>You've successfully completed this exercise.</p>
           </div>
         )}

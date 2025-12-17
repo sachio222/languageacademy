@@ -21,28 +21,55 @@ interface SyncRequest {
 }
 
 serve(async (req) => {
+  // Handle CORS preflight
+  if (req.method === "OPTIONS") {
+    return new Response(null, {
+      status: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST",
+        "Access-Control-Allow-Headers":
+          "authorization, x-client-info, apikey, content-type",
+      },
+    });
+  }
+
   try {
     // Check if MailerLite is configured
     if (!MAILERLITE_API_KEY) {
       console.log("MAILERLITE_API_KEY not configured - skipping sync");
       return new Response(
-        JSON.stringify({ 
+        JSON.stringify({
           success: true,
           skipped: true,
-          reason: "mailerlite_not_configured" 
+          reason: "mailerlite_not_configured",
         }),
-        { headers: { "Content-Type": "application/json" } }
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
       );
     }
 
     if (req.method !== "POST") {
-      return new Response(
-        JSON.stringify({ error: "Method not allowed" }),
-        { status: 405, headers: { "Content-Type": "application/json" } }
-      );
+      return new Response(JSON.stringify({ error: "Method not allowed" }), {
+        status: 405,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
     }
 
-    const { event, user_id, email, name, metadata = {} }: SyncRequest = await req.json();
+    const {
+      event,
+      user_id,
+      email,
+      name,
+      metadata = {},
+    }: SyncRequest = await req.json();
 
     console.log(`Syncing user to MailerLite: ${email} (${event})`);
 
@@ -52,8 +79,8 @@ serve(async (req) => {
       fields: {
         user_id: user_id,
         last_event: event,
-        ...metadata
-      }
+        ...metadata,
+      },
     };
 
     // Add name if provided
@@ -65,9 +92,10 @@ serve(async (req) => {
     // Handle both number and string formats to preserve precision for large IDs
     if (metadata.group_id !== undefined) {
       // Convert to number, but MailerLite API accepts it as-is in JSON
-      const groupId = typeof metadata.group_id === 'string' 
-        ? Number(metadata.group_id) 
-        : metadata.group_id;
+      const groupId =
+        typeof metadata.group_id === "string"
+          ? Number(metadata.group_id)
+          : metadata.group_id;
       subscriberData.groups = [groupId];
     } else if (metadata.group) {
       // Legacy support: try to parse group as number, otherwise log warning
@@ -75,55 +103,75 @@ serve(async (req) => {
       if (!isNaN(groupId)) {
         subscriberData.groups = [groupId];
       } else {
-        console.warn(`Group "${metadata.group}" is not a valid numeric ID. MailerLite requires numeric group IDs.`);
+        console.warn(
+          `Group "${metadata.group}" is not a valid numeric ID. MailerLite requires numeric group IDs.`
+        );
       }
     }
 
     // Add or update subscriber in MailerLite
-    const response = await fetch("https://connect.mailerlite.com/api/subscribers", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${MAILERLITE_API_KEY}`,
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(subscriberData)
-    });
+    const response = await fetch(
+      "https://connect.mailerlite.com/api/subscribers",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${MAILERLITE_API_KEY}`,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(subscriberData),
+      }
+    );
 
     const result = await response.json();
 
     if (!response.ok) {
       console.error("MailerLite API error:", result);
       return new Response(
-        JSON.stringify({ 
-          success: false, 
+        JSON.stringify({
+          success: false,
           error: result,
-          status: response.status
+          status: response.status,
         }),
-        { status: response.status, headers: { "Content-Type": "application/json" } }
+        {
+          status: response.status,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
       );
     }
 
     console.log(`Successfully synced ${email} to MailerLite`);
 
     return new Response(
-      JSON.stringify({ 
+      JSON.stringify({
         success: true,
         subscriber_id: result.data?.id,
-        event: event
+        event: event,
       }),
-      { headers: { "Content-Type": "application/json" } }
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
     );
-
   } catch (error) {
     console.error("Error syncing to MailerLite:", error);
     return new Response(
-      JSON.stringify({ 
-        success: false, 
-        error: error.message 
+      JSON.stringify({
+        success: false,
+        error: error.message,
       }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
     );
   }
 });
-

@@ -2,10 +2,11 @@
  * Fill In The Blank - Typeform-style interactive sentence completion
  * Users fill in blanks one sentence at a time with a clean, centered UI
  */
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { checkAnswer } from '../linter/frenchLinter';
 import FrenchCharacterPicker from './FrenchCharacterPicker';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
+import { logger } from '../utils/logger';
 import '../styles/FillInTheBlank.css';
 
 function FillInTheBlank({ module, onComplete, onBack }) {
@@ -38,27 +39,30 @@ function FillInTheBlank({ module, onComplete, onBack }) {
   const [showResults, setShowResults] = useState(false);
   const [shakeKey, setShakeKey] = useState({}); // Track animation replays
   const inputRefs = useRef({});
+  const timeoutRef = useRef(null); // Track timeout for cleanup
 
   const sentences = module.sentences || [];
   const currentSentence = sentences[currentSentenceIndex];
   const isLastSentence = currentSentenceIndex === sentences.length - 1;
 
   // Helper to update sentence index in URL (0-based to 1-based)
-  const updateSentenceInUrl = (sentenceIndex) => {
+  const updateSentenceInUrl = useCallback((sentenceIndex) => {
     const url = new URL(window.location);
     const sentenceNum = sentenceIndex + 1; // Convert 0-based to 1-based
     url.searchParams.set('sentence', sentenceNum);
     window.history.pushState({}, '', url);
-  };
+  }, []);
 
   // Calculate score by sentence (not by blank)
-  const sentenceResults = sentences.map((sentence, idx) => {
-    // Check if ALL blanks in this sentence are correct
-    return sentence.blanks.every((blank, blankIdx) => {
-      const key = `${idx}-${blankIdx}`;
-      return isCorrect[key] === true;
+  const sentenceResults = useMemo(() => {
+    return sentences.map((sentence, idx) => {
+      // Check if ALL blanks in this sentence are correct
+      return sentence.blanks.every((blank, blankIdx) => {
+        const key = `${idx}-${blankIdx}`;
+        return isCorrect[key] === true;
+      });
     });
-  });
+  }, [sentences, isCorrect]);
 
   const correctCount = sentenceResults.filter(Boolean).length;
   const totalCount = sentences.length;
@@ -69,11 +73,21 @@ function FillInTheBlank({ module, onComplete, onBack }) {
     // Focus first blank when sentence loads
     if (currentSentence?.blanks?.[0]) {
       const firstBlankKey = `${currentSentenceIndex}-0`;
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         inputRefs.current[firstBlankKey]?.focus();
       }, 100);
+      return () => clearTimeout(timeoutId);
     }
   }, [currentSentenceIndex, currentSentence]);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   // Handle browser back/forward navigation
   useEffect(() => {
@@ -112,15 +126,22 @@ function FillInTheBlank({ module, onComplete, onBack }) {
       const key = `${currentSentenceIndex}-${idx}`;
       const userAnswer = answers[key] || '';
 
-      const result = checkAnswer(userAnswer, blank.answer);
+      try {
+        const result = checkAnswer(userAnswer, blank.answer);
 
-      newFeedback[key] = result.isMatch ? 'checked' : 'checked';
-      newIsCorrect[key] = result.isMatch;
+        newFeedback[key] = 'checked';
+        newIsCorrect[key] = result.isMatch;
 
-      if (!result.isMatch) {
+        if (!result.isMatch) {
+          allCorrect = false;
+          // Increment shake counter to replay animation
+          newShakeKey[key] = (shakeKey[key] || 0) + 1;
+        }
+      } catch (error) {
+        logger.error('Error checking answer:', error);
+        newFeedback[key] = 'checked';
+        newIsCorrect[key] = false;
         allCorrect = false;
-        // Increment shake counter to replay animation
-        newShakeKey[key] = (shakeKey[key] || 0) + 1;
       }
     });
 
@@ -128,20 +149,27 @@ function FillInTheBlank({ module, onComplete, onBack }) {
     setIsCorrect(prev => ({ ...prev, ...newIsCorrect }));
     setShakeKey(prev => ({ ...prev, ...newShakeKey }));
 
+    // Clear any existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
     // If all correct and not last sentence, auto-advance after short delay
     if (allCorrect && !isLastSentence) {
-      setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         const newIndex = currentSentenceIndex + 1;
         setCurrentSentenceIndex(newIndex);
         updateSentenceInUrl(newIndex);
+        timeoutRef.current = null;
       }, 1200);
     } else if (allCorrect && isLastSentence) {
       // Show results
-      setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         setShowResults(true);
+        timeoutRef.current = null;
       }, 1200);
     }
-  }, [currentSentence, currentSentenceIndex, answers, shakeKey, isLastSentence]);
+  }, [currentSentence, currentSentenceIndex, answers, shakeKey, isLastSentence, updateSentenceInUrl]);
 
   const handleNext = useCallback(() => {
     if (!currentSentence || currentSentenceIndex >= sentences.length - 1) return;
@@ -243,30 +271,39 @@ function FillInTheBlank({ module, onComplete, onBack }) {
     // Mark practice-exercises section complete if passed
     if (passed && module.moduleKey && completeSectionProgress) {
       try {
-        const correctCount = Object.values(isCorrect).filter(Boolean).length;
-        const totalBlanks = sentences.reduce((sum, s) => sum + s.blanks.length, 0);
-        const score = Math.round((correctCount / totalBlanks) * 100);
-        
+        // Use sentence-based scoring for consistency with the UI
+        const correctSentences = sentenceResults.filter(Boolean).length;
+        const totalSentences = sentences.length;
+        const score = totalSentences > 0 ? Math.round((correctSentences / totalSentences) * 100) : 0;
+
         await completeSectionProgress(module.moduleKey, 'practice-exercises', {
-          sentences_completed: sentences.length,
-          correct_answers: correctCount,
-          total_blanks: totalBlanks,
+          sentences_completed: totalSentences,
+          correct_answers: correctSentences,
+          total_blanks: sentences.reduce((sum, s) => sum + s.blanks.length, 0),
           score: score,
           completion_method: 'all_sentences_completed'
         });
-        
+
         logger.log('FillInTheBlank: Marked practice-exercises section complete');
       } catch (error) {
         logger.error('FillInTheBlank: Error marking section complete:', error);
+        // Continue with navigation even if progress save fails
       }
     }
-    
-    if (passed && onComplete) {
-      onComplete(passed);
-    } else if (!passed && onBack) {
-      onBack();
-    } else {
-      // Fallback: navigate back to modules if no handlers
+
+    // Always attempt navigation, even if progress save failed
+    try {
+      if (passed && onComplete) {
+        onComplete(passed);
+      } else if (!passed && onBack) {
+        onBack();
+      } else {
+        // Fallback: navigate back to modules if no handlers
+        window.history.back();
+      }
+    } catch (error) {
+      logger.error('FillInTheBlank: Error during navigation:', error);
+      // Final fallback
       window.history.back();
     }
   };
@@ -392,8 +429,8 @@ function FillInTheBlank({ module, onComplete, onBack }) {
   }
 
   // Calculate how many sentences are completed (all blanks correct)
-  const completedSentences = sentenceResults.filter(Boolean).length;
-  const progressPercentage = sentences.length > 0 ? (completedSentences / sentences.length) * 100 : 0;
+  const completedSentences = correctCount;
+  const progressPercentage = totalCount > 0 ? (completedSentences / totalCount) * 100 : 0;
 
   return (
     <div className="fill-in-blank-container">

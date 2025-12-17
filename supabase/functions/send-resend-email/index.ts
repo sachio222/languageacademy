@@ -17,13 +17,14 @@ interface EmailRequest {
 
 serve(async (req) => {
   // Handle CORS preflight
-  if (req.method === 'OPTIONS') {
+  if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 200,
       headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST',
-        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST",
+        "Access-Control-Allow-Headers":
+          "authorization, x-client-info, apikey, content-type",
       },
     });
   }
@@ -43,17 +44,30 @@ serve(async (req) => {
     } catch (parseError) {
       console.error("JSON parse error:", parseError);
       return new Response(
-        JSON.stringify({ success: false, error: "Invalid JSON in request body" }),
+        JSON.stringify({
+          success: false,
+          error: "Invalid JSON in request body",
+        }),
         { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
 
-    const { to, subject, html, email_type, user_id, metadata = {}, headers = {} } = requestData;
+    const {
+      to,
+      subject,
+      html,
+      email_type,
+      user_id,
+      metadata = {},
+      headers = {},
+    } = requestData;
 
     // GRACEFUL CHECK 1: Is Resend configured?
     if (!isResendConfigured) {
-      console.log(`Resend not configured - skipping ${email_type} email to ${to}`);
-      
+      console.log(
+        `Resend not configured - skipping ${email_type} email to ${to}`
+      );
+
       // Log the skip
       if (user_id) {
         await supabaseAdmin.from("email_logs").insert({
@@ -65,37 +79,48 @@ serve(async (req) => {
           status: "skipped",
           provider: "resend",
           failure_reason: "resend_not_configured",
-          metadata
+          metadata,
         });
       }
 
       return new Response(
-        JSON.stringify({ 
+        JSON.stringify({
           success: false,
           skipped: true,
-          reason: "resend_not_configured" 
+          reason: "resend_not_configured",
         }),
-        { 
-          headers: { 
+        {
+          headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*"
-          } 
+            "Access-Control-Allow-Origin": "*",
+          },
         }
       );
     }
 
     // GRACEFUL CHECK 2: Check user preferences (if user_id provided)
     if (user_id) {
-      const { data: prefs } = await supabaseAdmin
+      const { data: prefs, error: prefsError } = await supabaseAdmin
         .from("notification_preferences")
         .select("email_enabled, module_completion")
         .eq("user_id", user_id)
-        .single();
+        .maybeSingle(); // Use maybeSingle() to handle missing rows gracefully
+
+      // If query failed or no preferences exist, default to allowing emails
+      if (prefsError && prefsError.code !== "PGRST116") {
+        console.warn(
+          `Error fetching preferences for user ${user_id}:`,
+          prefsError
+        );
+        // Continue with email sending if it's not a "not found" error
+      }
 
       // Check master email toggle
       if (prefs && !prefs.email_enabled) {
-        console.log(`User ${user_id} has emails disabled - skipping ${email_type}`);
-        
+        console.log(
+          `User ${user_id} has emails disabled - skipping ${email_type}`
+        );
+
         await supabaseAdmin.from("email_logs").insert({
           user_id,
           email_type,
@@ -105,25 +130,31 @@ serve(async (req) => {
           status: "skipped",
           provider: "resend",
           failure_reason: "user_opted_out",
-          metadata
+          metadata,
         });
 
         return new Response(
           JSON.stringify({ success: false, reason: "user_opted_out" }),
-          { 
-            headers: { 
+          {
+            headers: {
               "Content-Type": "application/json",
-              "Access-Control-Allow-Origin": "*"
-            } 
+              "Access-Control-Allow-Origin": "*",
+            },
           }
         );
       }
 
       // Check specific preference for module completion emails
-      if ((email_type === "lesson_complete" || email_type === "module_completion") && 
-          prefs && prefs.module_completion === false) {
-        console.log(`User ${user_id} has module_completion disabled - skipping ${email_type}`);
-        
+      if (
+        (email_type === "lesson_complete" ||
+          email_type === "module_completion") &&
+        prefs &&
+        prefs.module_completion === false
+      ) {
+        console.log(
+          `User ${user_id} has module_completion disabled - skipping ${email_type}`
+        );
+
         await supabaseAdmin.from("email_logs").insert({
           user_id,
           email_type,
@@ -133,16 +164,19 @@ serve(async (req) => {
           status: "skipped",
           provider: "resend",
           failure_reason: "module_completion_disabled",
-          metadata
+          metadata,
         });
 
         return new Response(
-          JSON.stringify({ success: false, reason: "module_completion_disabled" }),
-          { 
-            headers: { 
+          JSON.stringify({
+            success: false,
+            reason: "module_completion_disabled",
+          }),
+          {
+            headers: {
               "Content-Type": "application/json",
-              "Access-Control-Allow-Origin": "*"
-            } 
+              "Access-Control-Allow-Origin": "*",
+            },
           }
         );
       }
@@ -153,11 +187,11 @@ serve(async (req) => {
       const baseUrl = "https://languageacademy.io";
       // Map email types to unsubscribe types
       const typeMap: Record<string, string> = {
-        "module_completion": "progress",
-        "lesson_complete": "progress",
-        "wotd": "wotd",
-        "weekly_summary": "weekly",
-        "lesson": "lesson"
+        module_completion: "progress",
+        lesson_complete: "progress",
+        wotd: "wotd",
+        weekly_summary: "weekly",
+        lesson: "lesson",
       };
       const unsubscribeType = typeMap[email_type] || "progress";
       return `${baseUrl}?unsubscribe&type=${unsubscribeType}`;
@@ -167,23 +201,23 @@ serve(async (req) => {
     const emailHeaders: Record<string, string> = {
       ...headers,
       "List-Unsubscribe": `<${getUnsubscribeUrl()}>`,
-      "List-Unsubscribe-Post": "List-Unsubscribe=One-Click"
+      "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
     };
 
     // SEND EMAIL via Resend
     const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${RESEND_API_KEY!}`,
-        "Content-Type": "application/json"
+        Authorization: `Bearer ${RESEND_API_KEY!}`,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         from: "Language Academy <hello@send.languageacademy.io>",
         to: to, // String, not array
         subject: subject,
         html: html,
-        headers: emailHeaders
-      })
+        headers: emailHeaders,
+      }),
     });
 
     const resendData = await resendResponse.json();
@@ -200,7 +234,7 @@ serve(async (req) => {
         provider: "resend",
         provider_response: resendData,
         failure_reason: resendResponse.ok ? null : "resend_api_error",
-        metadata
+        metadata,
       });
     }
 
@@ -209,52 +243,50 @@ serve(async (req) => {
       // Return 200 with success: false so n8n doesn't treat it as an error
       // This allows "Continue on Error" to work properly
       return new Response(
-        JSON.stringify({ 
-          success: false, 
+        JSON.stringify({
+          success: false,
           error: resendData,
           reason: "resend_api_error",
-          http_status: resendResponse.status // Include original status for reference
+          http_status: resendResponse.status, // Include original status for reference
         }),
-        { 
+        {
           status: 200, // Always return 200 so n8n doesn't stop the workflow
-          headers: { 
+          headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*"
-          } 
+            "Access-Control-Allow-Origin": "*",
+          },
         }
       );
     }
 
     return new Response(
-      JSON.stringify({ 
+      JSON.stringify({
         success: true,
-        email_id: resendData.id
+        email_id: resendData.id,
       }),
-      { 
-        headers: { 
+      {
+        headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
-        } 
+          "Access-Control-Allow-Origin": "*",
+        },
       }
     );
-
   } catch (error) {
     console.error("Error in send-resend-email:", error);
-    
+
     return new Response(
-      JSON.stringify({ 
-        success: false, 
+      JSON.stringify({
+        success: false,
         error: error.message,
-        reason: "unexpected_error"
+        reason: "unexpected_error",
       }),
-      { 
-        status: 500, 
-        headers: { 
+      {
+        status: 500,
+        headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
-        } 
+          "Access-Control-Allow-Origin": "*",
+        },
       }
     );
   }
 });
-

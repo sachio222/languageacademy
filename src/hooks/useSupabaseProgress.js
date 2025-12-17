@@ -2,7 +2,11 @@ import { useState, useEffect, useCallback } from "react";
 import { TABLES } from "../lib/supabase";
 import { useAuth } from "./useAuth";
 import { logger } from "../utils/logger";
-import { trackClarityEvent, setClarityTag, upgradeClaritySession } from "../utils/clarity";
+import {
+  trackClarityEvent,
+  setClarityTag,
+  upgradeClaritySession,
+} from "../utils/clarity";
 
 export const useSupabaseProgress = () => {
   const {
@@ -201,17 +205,17 @@ export const useSupabaseProgress = () => {
 
         // Track in Clarity
         if (correct) {
-          trackClarityEvent('exerciseCompleted');
-          setClarityTag('lastExerciseUnit', unitId);
-          setClarityTag('usedHint', hintUsed ? 'yes' : 'no');
-          
+          trackClarityEvent("exerciseCompleted");
+          setClarityTag("lastExerciseUnit", unitId);
+          setClarityTag("usedHint", hintUsed ? "yes" : "no");
+
           // Upgrade session for first-time completions
           if (attemptNumber === 1) {
-            upgradeClaritySession('first exercise completion');
+            upgradeClaritySession("first exercise completion");
           }
         } else {
-          trackClarityEvent('exerciseFailed');
-          setClarityTag('struggledWithExercise', exerciseId);
+          trackClarityEvent("exerciseFailed");
+          setClarityTag("struggledWithExercise", exerciseId);
         }
 
         // If incorrect, revert optimistic update
@@ -260,7 +264,7 @@ export const useSupabaseProgress = () => {
         // Build update object without time_spent_seconds (managed by useModuleTime)
         const updateData = {
           user_id: supabaseUser.id,
-                module_key: moduleId,
+          module_key: moduleId,
           unit_id: unitId,
           total_exercises: totalExercises,
           completed_exercises: completedCount,
@@ -272,7 +276,9 @@ export const useSupabaseProgress = () => {
         // Only include time_spent_seconds if it's provided (for backward compatibility)
         // The new useModuleTime hook manages time separately
         if (timeSpent > 0) {
-          logger.warn(`updateModuleProgress called with timeSpent=${timeSpent}. Time should be managed by useModuleTime hook.`);
+          logger.warn(
+            `updateModuleProgress called with timeSpent=${timeSpent}. Time should be managed by useModuleTime hook.`
+          );
           // Don't include time_spent_seconds - let useModuleTime handle it
         }
 
@@ -296,87 +302,91 @@ export const useSupabaseProgress = () => {
         if (data.completed_at) {
           try {
             const { data: userProfile } = await supabaseClient
-              .from('user_profiles')
-              .select('email, preferred_name, first_name')
-              .eq('id', supabaseUser.id)
+              .from("user_profiles")
+              .select("email, preferred_name, first_name")
+              .eq("id", supabaseUser.id)
               .single();
 
             if (userProfile) {
-              // Sync to MailerLite for segment management
-              try {
-                await supabaseClient.functions.invoke('sync-to-mailerlite', {
-                  body: {
-                    event: 'module_completed',
-                    user_id: supabaseUser.id,
-                    email: userProfile.email,
-                    name: userProfile.preferred_name || userProfile.first_name,
-                    metadata: {
-                      group: 'Module Completers',
-                      module_key: moduleId,
-                      modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1
-                    }
-                  }
-                });
-              } catch (syncError) {
-                logger.error('Error syncing to MailerLite:', syncError);
-                // Continue even if sync fails
-              }
+              // MailerLite sync disabled - not currently in use
+              // If you want to re-enable, uncomment the sync-to-mailerlite call below
 
               // Send congrats email via Resend (check preferences first)
               try {
-                // Check user's email preferences
-                const { data: emailPrefs } = await supabaseClient
-                  .from('notification_preferences')
-                  .select('email_enabled, module_completion')
-                  .eq('user_id', supabaseUser.id)
-                  .single();
+                // Check user's email preferences - handle missing row gracefully
+                const { data: emailPrefs, error: prefsError } =
+                  await supabaseClient
+                    .from("notification_preferences")
+                    .select("email_enabled, module_completion")
+                    .eq("user_id", supabaseUser.id)
+                    .maybeSingle(); // Use maybeSingle() instead of single() to handle missing rows
 
-                // Only send if user has emails enabled and module_completion preference is true
-                const shouldSendEmail = emailPrefs?.email_enabled !== false && 
-                                       emailPrefs?.module_completion !== false;
+                // If no preferences exist or query failed, default to allowing emails
+                // Only send if user has explicitly disabled emails or module_completion
+                const shouldSendEmail =
+                  !prefsError &&
+                  emailPrefs?.email_enabled !== false &&
+                  emailPrefs?.module_completion !== false;
 
                 if (shouldSendEmail) {
-                  const { emailTemplates } = await import('../utils/emailTemplates.js');
+                  const { emailTemplates } = await import(
+                    "../utils/emailTemplates.js"
+                  );
                   const template = emailTemplates.lessonComplete(
-                    userProfile.preferred_name || userProfile.first_name || 'there',
+                    userProfile.preferred_name ||
+                      userProfile.first_name ||
+                      "there",
                     `Module ${moduleId}`, // Could fetch actual title
                     moduleId
                   );
 
-                  await supabaseClient.functions.invoke('send-resend-email', {
+                  await supabaseClient.functions.invoke("send-resend-email", {
                     body: {
                       to: userProfile.email,
                       subject: template.subject,
                       html: template.html,
-                      email_type: 'lesson_complete',
+                      email_type: "lesson_complete",
                       user_id: supabaseUser.id,
-                      metadata: { module_key: moduleId }
-                    }
+                      metadata: { module_key: moduleId },
+                    },
                   });
                 } else {
-                  logger.log('Skipping module completion email - user preferences disabled', {
-                    email_enabled: emailPrefs?.email_enabled,
-                    module_completion: emailPrefs?.module_completion
-                  });
+                  logger.log(
+                    "Skipping module completion email - user preferences disabled",
+                    {
+                      email_enabled: emailPrefs?.email_enabled,
+                      module_completion: emailPrefs?.module_completion,
+                    }
+                  );
                 }
               } catch (emailError) {
-                logger.error('Error sending completion email:', emailError);
+                // Only log non-expected errors (not 400/401 which are config issues)
+                if (emailError?.status !== 400 && emailError?.status !== 401) {
+                  logger.error("Error sending completion email:", emailError);
+                } else {
+                  logger.log(
+                    "Email service not available or user preferences issue - skipping email"
+                  );
+                }
                 // Continue even if email fails
               }
 
               // Trigger n8n reengagement email workflow
               try {
-                const webhookUrl = import.meta.env.VITE_N8N_MODULE_COMPLETION_WEBHOOK;
-                
+                const webhookUrl = import.meta.env
+                  .VITE_N8N_MODULE_COMPLETION_WEBHOOK;
+
                 if (!webhookUrl) {
-                  logger.warn('VITE_N8N_MODULE_COMPLETION_WEBHOOK environment variable not set - skipping webhook');
+                  logger.warn(
+                    "VITE_N8N_MODULE_COMPLETION_WEBHOOK environment variable not set - skipping webhook"
+                  );
                   return; // Skip webhook if not configured
                 }
 
-                logger.log('Triggering n8n webhook for module completion', { 
-                  moduleId, 
+                logger.log("Triggering n8n webhook for module completion", {
+                  moduleId,
                   userId: supabaseUser.id,
-                  webhookUrl: webhookUrl.substring(0, 50) + '...' 
+                  webhookUrl: webhookUrl.substring(0, 50) + "...",
                 });
 
                 // Get email metadata directly from module files (same source as UI)
@@ -385,74 +395,122 @@ export const useSupabaseProgress = () => {
                 let emailMetadata = null;
                 let unitNumber = null;
                 let numericModuleId = null;
-                
+
                 try {
-                  const { getModuleId } = await import('../lessons/moduleIdResolver.js');
-                  const { getUnitForLesson } = await import('../utils/unitHelpers.js');
-                  const { lessons } = await import('../lessons/lessonData.js');
-                  const { getModuleConfigs } = await import('../lessons/unitConfigLoader.js');
-                  
+                  const { getModuleId } = await import(
+                    "../lessons/moduleIdResolver.js"
+                  );
+                  const { getUnitForLesson } = await import(
+                    "../utils/unitHelpers.js"
+                  );
+                  const { lessons } = await import("../lessons/lessonData.js");
+                  const { getModuleConfigs } = await import(
+                    "../lessons/unitConfigLoader.js"
+                  );
+
                   numericModuleId = getModuleId(moduleId);
-                  
-                  if (numericModuleId !== 'UNKNOWN') {
+
+                  if (numericModuleId !== "UNKNOWN") {
                     // Find current lesson in lessons array
-                    const currentLesson = lessons.find(l => l.id === numericModuleId);
-                    
+                    const currentLesson = lessons.find(
+                      (l) => l.id === numericModuleId
+                    );
+
                     // Get unit number from unit structure
                     const unit = getUnitForLesson(numericModuleId);
                     if (unit && unit.id) {
                       unitNumber = unit.id;
                     }
-                    
+
                     // Get emailMetadata from original module config (buildLesson doesn't copy it)
                     const moduleConfigs = getModuleConfigs();
                     const moduleConfig = moduleConfigs[numericModuleId - 1]; // Array is 0-indexed, IDs are 1-indexed
-                    
+
                     if (currentLesson && moduleConfig?.emailMetadata) {
                       // Strip "Module ##:" prefix from title for email (same as navigation)
-                      const emailTitle = currentLesson.title.replace(/^Module \d+:\s*/, '');
-                      
+                      const emailTitle = currentLesson.title.replace(
+                        /^Module \d+:\s*/,
+                        ""
+                      );
+
                       // Get next module config (if exists)
                       const nextModuleConfig = moduleConfigs[numericModuleId]; // Next index in array
-                      const nextLesson = lessons.find(l => l.id === numericModuleId + 1);
-                      const nextModuleMetadata = (nextModuleConfig?.emailMetadata && nextLesson) ? {
-                        title: nextLesson.title.replace(/^Module \d+:\s*/, ''),
-                        realWorldUse: nextModuleConfig.emailMetadata.realWorldUse,
-                        capabilities: nextModuleConfig.emailMetadata.capabilities || [],
-                      } : null;
-                      
+                      const nextLesson = lessons.find(
+                        (l) => l.id === numericModuleId + 1
+                      );
+                      const nextModuleMetadata =
+                        nextModuleConfig?.emailMetadata && nextLesson
+                          ? {
+                              title: nextLesson.title.replace(
+                                /^Module \d+:\s*/,
+                                ""
+                              ),
+                              realWorldUse:
+                                nextModuleConfig.emailMetadata.realWorldUse,
+                              capabilities:
+                                nextModuleConfig.emailMetadata.capabilities ||
+                                [],
+                            }
+                          : null;
+
                       emailMetadata = {
                         module: {
                           id: numericModuleId, // Add ID to match edge function structure
                           title: emailTitle,
-                          capabilities: moduleConfig.emailMetadata.capabilities || [],
-                          realWorldUse: moduleConfig.emailMetadata.realWorldUse || "continue learning French",
-                          milestone: moduleConfig.emailMetadata.milestone || null,
-                          utilityScore: moduleConfig.emailMetadata.utilityScore || 5,
-                          isUnitCompletion: moduleConfig.emailMetadata.isUnitCompletion || false,
-                          nextModuleTeaser: moduleConfig.emailMetadata.nextModuleTeaser || "Keep building your French skills",
+                          capabilities:
+                            moduleConfig.emailMetadata.capabilities || [],
+                          realWorldUse:
+                            moduleConfig.emailMetadata.realWorldUse ||
+                            "continue learning French",
+                          milestone:
+                            moduleConfig.emailMetadata.milestone || null,
+                          utilityScore:
+                            moduleConfig.emailMetadata.utilityScore || 5,
+                          isUnitCompletion:
+                            moduleConfig.emailMetadata.isUnitCompletion ||
+                            false,
+                          nextModuleTeaser:
+                            moduleConfig.emailMetadata.nextModuleTeaser ||
+                            "Keep building your French skills",
                           unitNumber: unitNumber,
                         },
                         nextModule: nextModuleMetadata,
                       };
-                      
-                      logger.log('Got email metadata from module files', { moduleId, numericModuleId, unitNumber, hasMetadata: !!moduleConfig.emailMetadata });
+
+                      logger.log("Got email metadata from module files", {
+                        moduleId,
+                        numericModuleId,
+                        unitNumber,
+                        hasMetadata: !!moduleConfig.emailMetadata,
+                      });
                     }
                   }
                 } catch (metadataError) {
-                  logger.warn('Failed to get email metadata from module files, continuing without it', metadataError);
+                  logger.warn(
+                    "Failed to get email metadata from module files, continuing without it",
+                    metadataError
+                  );
                   // Continue without metadata - don't fail the webhook
                 }
 
                 const webhookPayload = {
                   user_id: supabaseUser.id,
                   email: userProfile.email,
-                  name: userProfile.preferred_name || userProfile.first_name || 'Student',
+                  name:
+                    userProfile.preferred_name ||
+                    userProfile.first_name ||
+                    "Student",
                   module_key: moduleId,
-                  module_id: numericModuleId && numericModuleId !== 'UNKNOWN' ? numericModuleId : null, // Add numeric module ID for email template
+                  module_id:
+                    numericModuleId && numericModuleId !== "UNKNOWN"
+                      ? numericModuleId
+                      : null, // Add numeric module ID for email template
                   exam_score: examScore,
                   completed_at: data.completed_at,
-                  modules_completed: Object.keys(moduleProgress).filter(id => moduleProgress[id]?.completed_at).length + 1,
+                  modules_completed:
+                    Object.keys(moduleProgress).filter(
+                      (id) => moduleProgress[id]?.completed_at
+                    ).length + 1,
                   // Add email metadata if available (now from module files, not edge function)
                   ...(emailMetadata && {
                     module_metadata: {
@@ -465,53 +523,71 @@ export const useSupabaseProgress = () => {
                       nextModuleTeaser: emailMetadata.module?.nextModuleTeaser,
                       unitNumber: emailMetadata.module?.unitNumber, // From frontend unit structure
                     },
-                    next_module_metadata: emailMetadata.nextModule ? {
-                      title: emailMetadata.nextModule.title,
-                      realWorldUse: emailMetadata.nextModule.realWorldUse,
-                      capabilities: emailMetadata.nextModule.capabilities,
-                    } : null,
+                    next_module_metadata: emailMetadata.nextModule
+                      ? {
+                          title: emailMetadata.nextModule.title,
+                          realWorldUse: emailMetadata.nextModule.realWorldUse,
+                          capabilities: emailMetadata.nextModule.capabilities,
+                        }
+                      : null,
                   }),
                 };
 
                 const response = await fetch(webhookUrl, {
-                  method: 'POST',
+                  method: "POST",
                   headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json",
                   },
                   body: JSON.stringify(webhookPayload),
                   // Add timeout to prevent hanging
-                  signal: AbortSignal.timeout(10000) // 10 second timeout
+                  signal: AbortSignal.timeout(10000), // 10 second timeout
                 });
 
                 if (!response.ok) {
-                  const errorText = await response.text().catch(() => 'Unable to read error response');
-                  throw new Error(`Webhook failed: ${response.status} ${response.statusText} - ${errorText}`);
+                  const errorText = await response
+                    .text()
+                    .catch(() => "Unable to read error response");
+                  throw new Error(
+                    `Webhook failed: ${response.status} ${response.statusText} - ${errorText}`
+                  );
                 }
 
-                logger.log('Successfully triggered n8n module completion workflow', { 
-                  moduleId, 
-                  userId: supabaseUser.id,
-                  status: response.status 
-                });
-
+                logger.log(
+                  "Successfully triggered n8n module completion workflow",
+                  {
+                    moduleId,
+                    userId: supabaseUser.id,
+                    status: response.status,
+                  }
+                );
               } catch (webhookError) {
                 // More detailed error logging
-                if (webhookError.name === 'AbortError') {
-                  logger.error('n8n webhook timeout (10s) - check webhook URL and n8n instance', { moduleId });
-                } else if (webhookError.message?.includes('Failed to fetch')) {
-                  logger.error('n8n webhook network error - check URL and CORS settings', { 
-                    moduleId, 
-                    error: webhookError.message,
-                    webhookUrl: import.meta.env.VITE_N8N_MODULE_COMPLETION_WEBHOOK?.substring(0, 50) + '...'
-                  });
+                if (webhookError.name === "AbortError") {
+                  logger.error(
+                    "n8n webhook timeout (10s) - check webhook URL and n8n instance",
+                    { moduleId }
+                  );
+                } else if (webhookError.message?.includes("Failed to fetch")) {
+                  logger.error(
+                    "n8n webhook network error - check URL and CORS settings",
+                    {
+                      moduleId,
+                      error: webhookError.message,
+                      webhookUrl:
+                        import.meta.env.VITE_N8N_MODULE_COMPLETION_WEBHOOK?.substring(
+                          0,
+                          50
+                        ) + "...",
+                    }
+                  );
                 } else {
-                  logger.error('n8n webhook error:', webhookError);
+                  logger.error("n8n webhook error:", webhookError);
                 }
                 // Continue - don't let webhook errors break progress tracking
               }
             }
           } catch (error) {
-            logger.error('Error handling module completion:', error);
+            logger.error("Error handling module completion:", error);
             // Continue - don't let email errors break progress tracking
           }
         }
@@ -527,12 +603,26 @@ export const useSupabaseProgress = () => {
 
   // Unit progress is now calculated from module_progress - no separate table needed
   const updateUnitProgress = useCallback(
-    async (unitId, unitName, totalModules, completedCount, examScore = null, timeSpent = 0) => {
+    async (
+      unitId,
+      unitName,
+      totalModules,
+      completedCount,
+      examScore = null,
+      timeSpent = 0
+    ) => {
       // This function is now a no-op since unit progress is calculated dynamically
       // from module_progress data in the new ProgressService
-      logger.log(`updateUnitProgress called but skipped - unit progress now calculated from module_progress`, {
-        unitId, unitName, totalModules, completedCount, examScore
-      });
+      logger.log(
+        `updateUnitProgress called but skipped - unit progress now calculated from module_progress`,
+        {
+          unitId,
+          unitName,
+          totalModules,
+          completedCount,
+          examScore,
+        }
+      );
       return null;
     },
     []
