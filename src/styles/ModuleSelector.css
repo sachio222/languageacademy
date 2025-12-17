@@ -168,7 +168,7 @@
   }
 
   .module-selector-card {
-    aspect-ratio: 1.618;
+    aspect-ratio: 1.618 !important;
   }
 }
 
