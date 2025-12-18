@@ -243,9 +243,9 @@ body:has(.lesson-content-wrapper) .app-footer {
   display: none;
 }
 
-/* Add bottom padding to lesson content to prevent sticky nav from covering content */
-.lesson-content-wrapper {
-  padding-bottom: 5rem; /* Room for sticky navigation + safe area */
+/* Add bottom padding ONLY when lesson content has StudyMode (which has sticky nav) */
+.lesson-content-wrapper:has(.study-mode) {
+  padding-bottom: 5rem;
 }
 
 /* Adjust footer when sidebar is collapsed */

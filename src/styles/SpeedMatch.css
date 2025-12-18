@@ -1,7 +1,7 @@
 /* Speed Match Demo Styles */
 
 .speed-match-container {
-  min-height: 100vh;
+  min-height: 85vh;
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -136,7 +136,7 @@
   /* padding-top: 4rem; */
   margin-bottom: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid #f0f0f0;
+  /* border-bottom: 1px solid #f0f0f0; */
 }
 
 /* Remove fixed header styles - no longer needed */
