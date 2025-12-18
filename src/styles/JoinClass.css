@@ -1,0 +1,250 @@
+/* JoinClass - Following DESIGN_PRINCIPLES.md */
+
+.join-class-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.join-class-modal {
+  background: white;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  padding: 3rem;
+  animation: slideUp 0.25s ease-out;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.join-class-header {
+  margin-bottom: 2.5rem;
+}
+
+.join-class-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem auto;
+  background: #fafbfc;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+}
+
+.join-class-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.join-class-header p {
+  font-size: 0.9375rem;
+  color: #665665;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Form */
+.join-class-form {
+  margin-bottom: 2rem;
+}
+
+.join-code-input-group {
+  margin-bottom: 2rem;
+}
+
+.join-code-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  letter-spacing: 0.25em;
+  font-family: "SF Mono", "Monaco", "Consolas", monospace;
+  transition: border-color 0.15s ease;
+}
+
+.join-code-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.join-code-input::placeholder {
+  color: #999999;
+  letter-spacing: 0.1em;
+}
+
+.join-code-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Actions */
+.join-class-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.join-cancel-btn {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #665665;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.join-cancel-btn:hover:not(:disabled) {
+  background: #fafbfc;
+  color: #1a1a1a;
+}
+
+.join-cancel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.join-submit-btn {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  background: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.join-submit-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.join-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.join-done-btn {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.join-done-btn:hover {
+  opacity: 0.9;
+}
+
+/* Note */
+.join-class-note {
+  padding-top: 2rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.join-class-note p {
+  font-size: 0.875rem;
+  color: #999999;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Success state */
+.join-class-success {
+  margin-bottom: 2.5rem;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem auto;
+  background: #d1fae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #10b981;
+}
+
+.join-class-success h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.02em;
+}
+
+.join-class-success p {
+  font-size: 0.9375rem;
+  color: #665665;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.join-class-success strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .join-class-modal-overlay {
+    padding: 0;
+  }
+
+  .join-class-modal {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    padding: 2rem 1.5rem;
+  }
+
+  .join-code-input {
+    font-size: 1.25rem;
+  }
+}
