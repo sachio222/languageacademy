@@ -1,17 +1,25 @@
 import { unitStructure } from '../lessons/lessonData';
 import { Award, BookOpen, TextCursorInput, Sparkles, Grid3x3, List, ChevronDown, ChevronUp, BadgeCheck, X } from 'lucide-react';
 import DashboardHeader from './DashboardHeader';
+import JoinClassBanner from './JoinClassBanner';
+import JoinClass from './JoinClass';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useAuth } from '../hooks/useAuth';
+import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { getModuleCompletionStatus, getModuleCompletionPercentage, isModuleComplete, getExerciseCount } from '../utils/moduleCompletion';
 import React, { useState, useEffect, useMemo } from 'react';
 
 function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferenceModules, onShowVocabularyDashboard, onShowReportCard, onShowTeacherClasses, showWordsLearned, isAdmin }) {
   const { moduleProgress } = useSupabaseProgress();
   const { sectionProgress } = useSectionProgress();
+  const { profile } = useAuth();
+  const supabaseClient = useSupabaseClient();
   const [viewMode, setViewMode] = useState('split'); // 'grid' or 'split'
   const [selectedModuleId, setSelectedModuleId] = useState(null);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
+  const [showJoinClass, setShowJoinClass] = useState(false);
+  const [hasClasses, setHasClasses] = useState(null); // null = loading, true/false = result
 
 
   // Handle view mode change and auto-select next lesson
@@ -100,6 +108,46 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Check if student is in any classes (for banner display)
+  useEffect(() => {
+    const checkEnrollment = async () => {
+      if (!profile || !supabaseClient) {
+        return;
+      }
+
+      // TEMP: Force show banner for super_admin to preview
+      // Remove this block after testing
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('preview-banner') === 'true') {
+        setHasClasses(false); // Show banner
+        return;
+      }
+
+      // Don't show banner for teachers/admins
+      if (profile.role !== 'student') {
+        setHasClasses(true);
+        return;
+      }
+
+      try {
+        const { data, error } = await supabaseClient
+          .from('class_enrollments')
+          .select('id')
+          .eq('student_id', profile.id)
+          .eq('status', 'active')
+          .limit(1);
+
+        if (error) throw error;
+
+        setHasClasses(data && data.length > 0);
+      } catch (err) {
+        setHasClasses(true); // On error, don't show banner
+      }
+    };
+
+    checkEnrollment();
+  }, [profile, supabaseClient]);
+
   // Auto-select next lesson when in split view and no lesson is selected
   // Wait for progress data to be loaded before selecting
   // Skip auto-selection on mobile to avoid blocking the screen
@@ -150,6 +198,16 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
 
   return (
     <div className="lesson-list">
+      {/* Join class banner (only for students not in any class) */}
+      {hasClasses === false && (
+        <JoinClassBanner onJoinClass={() => setShowJoinClass(true)} />
+      )}
+
+      {/* Join class modal */}
+      {showJoinClass && (
+        <JoinClass onClose={() => setShowJoinClass(false)} />
+      )}
+
       {/* Dashboard Header */}
       <DashboardHeader
         completedExercises={completedExercises}

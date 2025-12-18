@@ -1,6 +1,6 @@
 import { SignIn, SignUp, UserButton, useUser } from '@clerk/clerk-react'
-import { useState, useEffect } from 'react'
-import { BookOpen, FileBarChart, Mail, BarChart3 } from 'lucide-react'
+import { useState, useEffect, lazy, Suspense } from 'react'
+import { BookOpen, FileBarChart, Mail, BarChart3, Users } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext'
 import { useAnalytics } from '../hooks/useAnalytics'
@@ -9,13 +9,16 @@ import WelcomePage from './WelcomePage'
 import NotificationSettings from './NotificationSettings'
 import '../styles/Landing.css'
 
+const JoinClass = lazy(() => import('./JoinClass'));
+
 function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReportCard }) {
-  const { isAuthenticated, loading, supabaseUser } = useAuth()
+  const { isAuthenticated, loading, supabaseUser, profile } = useAuth()
   const { markWelcomeAsSeen } = useSupabaseProgress()
   const analytics = useAnalytics() // Track sessions on all authenticated pages
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
+  const [showJoinClass, setShowJoinClass] = useState(false)
 
   // Handle direct login from landing page
   const handleLogin = () => {
@@ -236,6 +239,13 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
                   onClick={handleShowReportCard}
                 />
               )}
+              {profile?.role === 'student' && (
+                <UserButton.Action
+                  label="Join a Class"
+                  labelIcon={<Users size={16} />}
+                  onClick={() => setShowJoinClass(true)}
+                />
+              )}
               <UserButton.Action
                 label="Email Preferences"
                 labelIcon={<Mail size={16} />}
@@ -249,6 +259,11 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
         isOpen={showNotificationSettings}
         onClose={() => setShowNotificationSettings(false)}
       />
+      {showJoinClass && (
+        <Suspense fallback={null}>
+          <JoinClass onClose={() => setShowJoinClass(false)} />
+        </Suspense>
+      )}
       {children}
     </div>
   )
