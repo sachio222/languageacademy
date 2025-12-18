@@ -352,7 +352,7 @@
 }
 
 .status-badge::before {
-  content: '';
+  content: "";
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -689,6 +689,12 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  animation: none !important;
+  transform: none !important;
+  width: auto !important;
+  height: auto !important;
+  border: none !important;
+  border-radius: 0 !important;
 }
 
 .admin-loading .loading-spinner .spinner {
@@ -735,46 +741,46 @@
   .report-card-admin {
     padding: 1.5rem 1rem;
   }
-  
+
   .overview-stats {
     grid-template-columns: 1fr;
   }
-  
+
   .table-controls {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .search-box {
     max-width: 100%;
   }
-  
+
   .table-actions {
     justify-content: stretch;
   }
-  
+
   .action-button {
     flex: 1;
     justify-content: center;
   }
-  
+
   /* Convert table to cards on mobile */
   .students-table-container {
     border: none;
     background: transparent;
   }
-  
+
   .students-table thead {
     display: none;
   }
-  
+
   .students-table,
   .students-table tbody,
   .students-table tr,
   .students-table td {
     display: block;
   }
-  
+
   .students-table tr {
     background: white;
     border: 1px solid #f0f0f0;
@@ -782,7 +788,7 @@
     margin-bottom: 1rem;
     padding: 1rem;
   }
-  
+
   .students-table td {
     padding: 0.5rem 0;
     border: none;
@@ -790,27 +796,27 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .students-table td::before {
     content: attr(data-label);
     font-weight: 600;
     color: #665665;
     font-size: 0.875rem;
   }
-  
+
   .pagination {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .pagination-info {
     order: -1;
   }
-  
+
   .student-modal-overlay {
     padding: 0;
   }
-  
+
   .student-modal {
     max-width: 100%;
     width: 100%;
@@ -818,11 +824,11 @@
     max-height: 100vh;
     border-radius: 0;
   }
-  
+
   .modal-header {
     padding: 1.5rem 1rem;
   }
-  
+
   .modal-content .report-card {
     padding: 1rem;
   }
@@ -853,4 +859,3 @@
     display: none;
   }
 }
-
