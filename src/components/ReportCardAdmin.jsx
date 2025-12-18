@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import {
   Users,
   TrendingUp,
@@ -12,147 +12,99 @@ import {
   Mail,
   Copy,
   Download,
-  X
+  X,
+  Loader2
 } from 'lucide-react';
 import { useAllStudentsData } from '../hooks/useAllStudentsData';
-import { useReportCardData } from '../hooks/useReportCardData';
-import { calculateCommunicationInsights, calculateBatchInsights } from '../utils/communicationInsights';
+import { useSupabaseClient } from '../hooks/useSupabaseClient';
+import { useToast } from '../hooks/useToast';
+import Toast from './Toast';
 import ReportCard from './ReportCardEnhanced';
 import '../styles/ReportCardAdmin.css';
 
 function ReportCardAdmin({ onBack = null }) {
-  const { students, loading, error, pagination, nextPage, prevPage, goToPage } = useAllStudentsData();
-  
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortField, setSortField] = useState('created_at');
-  const [sortDirection, setSortDirection] = useState('desc');
+  const {
+    students,
+    loading,
+    error,
+    overviewStats,
+    filters,
+    pagination,
+    applyFilters,
+    nextPage,
+    prevPage,
+    goToPage,
+    fetchAllMatching
+  } = useAllStudentsData();
+
+  const supabaseClient = useSupabaseClient();
+  const { toasts, showToast, hideToast } = useToast();
+
+  // Local state for search input (debounced)
+  const [searchInput, setSearchInput] = useState('');
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [showInsights, setShowInsights] = useState(false);
-  const [filterStatus, setFilterStatus] = useState('all');
-  
-  // Filter and sort students
-  const filteredStudents = useMemo(() => {
-    let filtered = students;
-    
-    // Apply search filter
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(student => {
-        const name = `${student.first_name || ''} ${student.last_name || ''}`.toLowerCase();
-        const email = (student.email || '').toLowerCase();
-        return name.includes(query) || email.includes(query);
+  const [bulkActionLoading, setBulkActionLoading] = useState(false);
+
+  const searchTimeoutRef = useRef(null);
+
+  // Debounced search - apply filters after user stops typing
+  useEffect(() => {
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+    }
+
+    searchTimeoutRef.current = setTimeout(() => {
+      applyFilters({
+        ...filters,
+        searchQuery: searchInput
       });
-    }
-    
-    // Apply status filter
-    if (filterStatus !== 'all') {
-      filtered = filtered.filter(student => student.stats.engagementStatus === filterStatus);
-    }
-    
-    // Apply sort
-    filtered.sort((a, b) => {
-      let aVal, bVal;
-      
-      switch (sortField) {
-        case 'name':
-          aVal = (a.first_name || a.preferred_name || '').toLowerCase();
-          bVal = (b.first_name || b.preferred_name || '').toLowerCase();
-          break;
-        case 'email':
-          aVal = (a.email || '').toLowerCase();
-          bVal = (b.email || '').toLowerCase();
-          break;
-        case 'streak':
-          aVal = a.streak_days || 0;
-          bVal = b.streak_days || 0;
-          break;
-        case 'modules':
-          aVal = a.stats.modulesCompleted || 0;
-          bVal = b.stats.modulesCompleted || 0;
-          break;
-        case 'accuracy':
-          aVal = a.stats.accuracy || 0;
-          bVal = b.stats.accuracy || 0;
-          break;
-        case 'total_time':
-          aVal = a.total_study_time_seconds || 0;
-          bVal = b.total_study_time_seconds || 0;
-          break;
-        case 'last_active':
-          aVal = a.last_active_at ? new Date(a.last_active_at).getTime() : 0;
-          bVal = b.last_active_at ? new Date(b.last_active_at).getTime() : 0;
-          break;
-        case 'status':
-          // Sort by engagement status priority: active > recent > at-risk > inactive
-          const statusOrder = { active: 0, recent: 1, 'at-risk': 2, inactive: 3 };
-          aVal = statusOrder[a.stats.engagementStatus] ?? 4;
-          bVal = statusOrder[b.stats.engagementStatus] ?? 4;
-          break;
-        default:
-          aVal = a.created_at ? new Date(a.created_at).getTime() : 0;
-          bVal = b.created_at ? new Date(b.created_at).getTime() : 0;
+    }, 400); // 400ms debounce
+
+    return () => {
+      if (searchTimeoutRef.current) {
+        clearTimeout(searchTimeoutRef.current);
       }
-      
-      if (sortDirection === 'asc') {
-        return aVal > bVal ? 1 : -1;
-      } else {
-        return aVal < bVal ? 1 : -1;
-      }
-    });
-    
-    return filtered;
-  }, [students, searchQuery, sortField, sortDirection, filterStatus]);
-  
-  // Calculate overview stats
-  const overviewStats = useMemo(() => {
-    if (students.length === 0) {
-      return {
-        totalStudents: pagination.total || 0,
-        avgCompletionRate: 0,
-        avgStudyTime: 0,
-        totalModules: 0,
-        active: 0,
-        atRisk: 0,
-        inactive: 0
-      };
-    }
-    
-    const totalModules = students.reduce((sum, s) => sum + (s.stats.modulesCompleted || 0), 0);
-    const totalStudyTime = students.reduce((sum, s) => sum + (s.total_study_time_seconds || 0), 0);
-    
-    const engagementCounts = students.reduce((acc, student) => {
-      const status = student.stats.engagementStatus;
-      if (status === 'active' || status === 'recent') acc.active++;
-      else if (status === 'at-risk') acc.atRisk++;
-      else acc.inactive++;
-      return acc;
-    }, { active: 0, atRisk: 0, inactive: 0 });
-    
-    return {
-      totalStudents: pagination.total || 0,
-      avgCompletionRate: Math.round((totalModules / students.length) * 100) / 100,
-      avgStudyTime: Math.round(totalStudyTime / students.length),
-      totalModules,
-      ...engagementCounts
     };
-  }, [students, pagination.total]);
-  
+  }, [searchInput]);
+
+  // Close modal with Escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && selectedStudent) {
+        setSelectedStudent(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [selectedStudent]);
+
+  // Handle filter status change
+  const handleStatusFilter = useCallback((status) => {
+    const newStatus = filters.statusFilter === status ? 'all' : status;
+    applyFilters({
+      ...filters,
+      statusFilter: newStatus
+    });
+  }, [filters, applyFilters]);
+
   // Handle sort
-  const handleSort = (field) => {
-    if (sortField === field) {
-      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
-    } else {
-      setSortField(field);
-      setSortDirection('desc');
-    }
-  };
-  
+  const handleSort = useCallback((field) => {
+    const newDirection = filters.sortField === field && filters.sortDirection === 'desc' ? 'asc' : 'desc';
+    applyFilters({
+      ...filters,
+      sortField: field,
+      sortDirection: newDirection
+    });
+  }, [filters, applyFilters]);
+
   // Get sort icon
-  const getSortIcon = (field) => {
-    if (sortField !== field) return null;
-    return sortDirection === 'asc' ? <ChevronUp size={16} /> : <ChevronDown size={16} />;
-  };
-  
+  const getSortIcon = useCallback((field) => {
+    if (filters.sortField !== field) return null;
+    return filters.sortDirection === 'asc' ? <ChevronUp size={16} /> : <ChevronDown size={16} />;
+  }, [filters.sortField, filters.sortDirection]);
+
   // Format time
   const formatDuration = (seconds) => {
     if (seconds < 60) return `${seconds}s`;
@@ -163,22 +115,22 @@ function ReportCardAdmin({ onBack = null }) {
     const hours = Math.floor(seconds / 3600);
     return `${hours}h`;
   };
-  
+
   // Format relative time
   const formatRelativeTime = (dateString) => {
     if (!dateString) return 'Never';
-    
+
     const date = new Date(dateString);
     const now = new Date();
     const diffDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
-    
+
     if (diffDays === 0) return 'Today';
     if (diffDays === 1) return 'Yesterday';
     if (diffDays < 7) return `${diffDays}d ago`;
     if (diffDays < 30) return `${Math.floor(diffDays / 7)}w ago`;
     return `${Math.floor(diffDays / 30)}mo ago`;
   };
-  
+
   // Get status badge
   const getStatusBadge = (status) => {
     const badges = {
@@ -187,45 +139,131 @@ function ReportCardAdmin({ onBack = null }) {
       'at-risk': { label: 'At Risk', class: 'status-at-risk' },
       inactive: { label: 'Inactive', class: 'status-inactive' }
     };
-    
+
     const badge = badges[status] || badges.inactive;
     return <span className={`status-badge ${badge.class}`}>{badge.label}</span>;
   };
-  
-  // Copy email list to clipboard
-  const copyEmailList = (studentsList) => {
-    const emails = studentsList
-      .filter(s => s.email)
-      .map(s => s.email)
-      .join(', ');
-    
-    navigator.clipboard.writeText(emails);
-    alert(`Copied ${studentsList.length} email addresses to clipboard`);
+
+  // Copy email list to clipboard (ALL matching students, not just current page)
+  const copyEmailList = async () => {
+    try {
+      setBulkActionLoading(true);
+      const allStudents = await fetchAllMatching();
+
+      const emails = allStudents
+        .filter(s => s.email)
+        .map(s => s.email)
+        .join(', ');
+
+      await navigator.clipboard.writeText(emails);
+      showToast(`Copied ${allStudents.length} email addresses to clipboard`, 'success');
+    } catch (err) {
+      showToast('Failed to copy emails', 'error');
+    } finally {
+      setBulkActionLoading(false);
+    }
   };
-  
-  // Export to CSV
-  const exportToCSV = (studentsList) => {
-    const headers = ['Name', 'Email', 'Streak', 'Modules', 'Accuracy', 'Total Time', 'Status', 'Last Active'];
-    const rows = studentsList.map(s => [
-      `${s.first_name || ''} ${s.last_name || ''}`.trim() || s.preferred_name || '',
-      s.email || '',
-      s.streak_days || 0,
-      s.stats.modulesCompleted || 0,
-      `${s.stats.accuracy || 0}%`,
-      formatDuration(s.total_study_time_seconds || 0),
-      s.stats.engagementStatus,
-      formatRelativeTime(s.last_active_at)
-    ]);
-    
-    const csv = [headers, ...rows].map(row => row.join(',')).join('\n');
-    const blob = new Blob([csv], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `students-export-${new Date().toISOString().split('T')[0]}.csv`;
-    a.click();
+
+  // Escape CSV field (handles commas, quotes, newlines)
+  const escapeCsvField = (field) => {
+    if (field == null) return '';
+    const str = String(field);
+    // If field contains comma, quote, or newline, wrap in quotes and escape internal quotes
+    if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+      return `"${str.replace(/"/g, '""')}"`;
+    }
+    return str;
   };
-  
+
+  // Export to CSV (ALL matching students, not just current page)
+  const exportToCSV = async () => {
+    try {
+      setBulkActionLoading(true);
+      const allStudents = await fetchAllMatching();
+
+      if (allStudents.length === 0) {
+        showToast('No students to export', 'info');
+        return;
+      }
+
+      // Fetch stats for all students (batched)
+      const userIds = allStudents.map(s => s.id);
+
+      // Get modules and exercises for all students
+      const [modulesResult, exercisesResult] = await Promise.all([
+        supabaseClient.from('module_progress')
+          .select('user_id, completed_at')
+          .in('user_id', userIds)
+          .not('completed_at', 'is', null),
+        supabaseClient.from('exercise_completions')
+          .select('user_id, is_correct')
+          .in('user_id', userIds)
+      ]);
+
+      // Group by user
+      const modulesByUser = {};
+      const exercisesByUser = {};
+
+      (modulesResult.data || []).forEach(m => {
+        if (!modulesByUser[m.user_id]) modulesByUser[m.user_id] = [];
+        modulesByUser[m.user_id].push(m);
+      });
+
+      (exercisesResult.data || []).forEach(e => {
+        if (!exercisesByUser[e.user_id]) exercisesByUser[e.user_id] = [];
+        exercisesByUser[e.user_id].push(e);
+      });
+
+      // Build CSV
+      const headers = ['Name', 'Email', 'Streak', 'Modules', 'Accuracy', 'Total Time', 'Status', 'Last Active'];
+      const rows = allStudents.map(s => {
+        const modules = modulesByUser[s.id] || [];
+        const exercises = exercisesByUser[s.id] || [];
+        const correct = exercises.filter(e => e.is_correct).length;
+        const total = exercises.length;
+        const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+        const calculateEngagementStatus = (lastActiveAt) => {
+          if (!lastActiveAt) return 'inactive';
+          const hoursSince = (new Date() - new Date(lastActiveAt)) / (1000 * 60 * 60);
+          if (hoursSince < 24) return 'active';
+          if (hoursSince < 24 * 3) return 'recent';
+          if (hoursSince < 24 * 7) return 'at-risk';
+          return 'inactive';
+        };
+
+        return [
+          escapeCsvField(`${s.first_name || ''} ${s.last_name || ''}`.trim() || s.preferred_name || 'N/A'),
+          escapeCsvField(s.email || ''),
+          s.streak_days || 0,
+          modules.length,
+          `${accuracy}%`,
+          formatDuration(s.total_study_time_seconds || 0),
+          calculateEngagementStatus(s.last_active_at),
+          formatRelativeTime(s.last_active_at)
+        ];
+      });
+
+      const csv = [headers, ...rows]
+        .map(row => row.map(field => escapeCsvField(field)).join(','))
+        .join('\n');
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `students-export-${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+
+      showToast(`Exported ${allStudents.length} students to CSV`, 'success');
+    } catch (err) {
+      showToast('Failed to export CSV', 'error');
+    } finally {
+      setBulkActionLoading(false);
+    }
+  };
+
   if (loading && students.length === 0) {
     return (
       <div className="report-card-admin">
@@ -238,7 +276,7 @@ function ReportCardAdmin({ onBack = null }) {
       </div>
     );
   }
-  
+
   if (error) {
     return (
       <div className="report-card-admin">
@@ -248,9 +286,26 @@ function ReportCardAdmin({ onBack = null }) {
       </div>
     );
   }
-  
+
+  const hasActiveFilters = filters.searchQuery || filters.statusFilter !== 'all';
+  const showingCount = students.length;
+  const totalCount = pagination.total;
+
   return (
     <div className="report-card-admin">
+      {/* Toast Notifications */}
+      <div className="toast-container">
+        {toasts.map(toast => (
+          <Toast
+            key={toast.id}
+            message={toast.message}
+            type={toast.type}
+            duration={toast.duration}
+            onClose={() => hideToast(toast.id)}
+          />
+        ))}
+      </div>
+
       <div className="admin-header">
         {onBack && (
           <button className="report-card-back-btn" onClick={onBack}>
@@ -260,7 +315,7 @@ function ReportCardAdmin({ onBack = null }) {
         <h1>Student Report Cards</h1>
         <p className="admin-subtitle">Monitor progress and engagement across all students</p>
       </div>
-      
+
       {/* Overview Stats */}
       <div className="overview-stats">
         <div className="overview-card">
@@ -272,17 +327,17 @@ function ReportCardAdmin({ onBack = null }) {
             <div className="overview-label">Total Students</div>
           </div>
         </div>
-        
+
         <div className="overview-card">
           <div className="overview-icon">
             <BookOpen />
           </div>
           <div className="overview-content">
-            <div className="overview-value">{overviewStats.avgCompletionRate}</div>
+            <div className="overview-value">{overviewStats.avgModulesPerStudent}</div>
             <div className="overview-label">Avg Modules/Student</div>
           </div>
         </div>
-        
+
         <div className="overview-card">
           <div className="overview-icon">
             <Clock />
@@ -292,7 +347,7 @@ function ReportCardAdmin({ onBack = null }) {
             <div className="overview-label">Avg Study Time</div>
           </div>
         </div>
-        
+
         <div className="overview-card">
           <div className="overview-icon">
             <TrendingUp />
@@ -303,37 +358,37 @@ function ReportCardAdmin({ onBack = null }) {
           </div>
         </div>
       </div>
-      
+
       {/* Engagement Alerts */}
       <div className="engagement-alerts">
         <button
-          className={`alert-badge active ${filterStatus === 'active' || filterStatus === 'recent' ? 'selected' : ''}`}
-          onClick={() => setFilterStatus(filterStatus === 'active' ? 'all' : 'active')}
+          className={`alert-badge active ${filters.statusFilter === 'active' ? 'selected' : ''}`}
+          onClick={() => handleStatusFilter('active')}
         >
           <span className="alert-dot active"></span>
-          <span>{overviewStats.active} Active</span>
+          <span>{overviewStats.activeCount} Active</span>
         </button>
         <button
-          className={`alert-badge at-risk ${filterStatus === 'at-risk' ? 'selected' : ''}`}
-          onClick={() => setFilterStatus(filterStatus === 'at-risk' ? 'all' : 'at-risk')}
+          className={`alert-badge at-risk ${filters.statusFilter === 'at-risk' ? 'selected' : ''}`}
+          onClick={() => handleStatusFilter('at-risk')}
         >
           <span className="alert-dot at-risk"></span>
-          <span>{overviewStats.atRisk} At Risk</span>
+          <span>{overviewStats.atRiskCount} At Risk</span>
         </button>
         <button
-          className={`alert-badge inactive ${filterStatus === 'inactive' ? 'selected' : ''}`}
-          onClick={() => setFilterStatus(filterStatus === 'inactive' ? 'all' : 'inactive')}
+          className={`alert-badge inactive ${filters.statusFilter === 'inactive' ? 'selected' : ''}`}
+          onClick={() => handleStatusFilter('inactive')}
         >
           <span className="alert-dot inactive"></span>
-          <span>{overviewStats.inactive} Inactive</span>
+          <span>{overviewStats.inactiveCount} Inactive</span>
         </button>
-        {filterStatus !== 'all' && (
-          <button className="clear-filter" onClick={() => setFilterStatus('all')}>
+        {filters.statusFilter !== 'all' && (
+          <button className="clear-filter" onClick={() => handleStatusFilter('all')}>
             Clear Filter
           </button>
         )}
       </div>
-      
+
       {/* Search and Actions */}
       <div className="table-controls">
         <div className="search-box">
@@ -341,51 +396,47 @@ function ReportCardAdmin({ onBack = null }) {
           <input
             type="text"
             placeholder="Search by name or email..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
             aria-label="Search students"
           />
         </div>
-        
+
         <div className="table-actions">
           <button
             className="action-button"
-            onClick={() => copyEmailList(filteredStudents)}
-            disabled={filteredStudents.length === 0}
+            onClick={copyEmailList}
+            disabled={bulkActionLoading || totalCount === 0}
           >
-            <Copy size={18} />
-            <span>Copy Emails</span>
+            {bulkActionLoading ? <Loader2 size={18} className="spinning" /> : <Copy size={18} />}
+            <span>Copy Emails {hasActiveFilters && '(Filtered)'}</span>
           </button>
           <button
             className="action-button"
-            onClick={() => exportToCSV(filteredStudents)}
-            disabled={filteredStudents.length === 0}
+            onClick={exportToCSV}
+            disabled={bulkActionLoading || totalCount === 0}
           >
-            <Download size={18} />
-            <span>Export CSV</span>
+            {bulkActionLoading ? <Loader2 size={18} className="spinning" /> : <Download size={18} />}
+            <span>Export CSV {hasActiveFilters && '(Filtered)'}</span>
           </button>
           <button
             className="action-button primary"
-            onClick={() => {
-              const newValue = !showInsights;
-              setShowInsights(newValue);
-              // Scroll to panel when opening
-              if (newValue) {
-                setTimeout(() => {
-                  const panel = document.querySelector('.insights-panel');
-                  if (panel) {
-                    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }, 100);
-              }
-            }}
+            onClick={() => setShowInsights(!showInsights)}
           >
             <Mail size={18} />
             <span>Communication Insights</span>
           </button>
         </div>
       </div>
-      
+
+      {/* Results count */}
+      {hasActiveFilters && (
+        <div className="results-count">
+          Showing {showingCount} of {totalCount} students
+          {filters.searchQuery && ` matching "${filters.searchQuery}"`}
+        </div>
+      )}
+
       {/* Student Table */}
       <div className="students-table-container">
         <table className="students-table">
@@ -426,16 +477,16 @@ function ReportCardAdmin({ onBack = null }) {
             </tr>
           </thead>
           <tbody>
-            {filteredStudents.length === 0 ? (
+            {students.length === 0 ? (
               <tr>
                 <td colSpan="8" className="empty-row">
-                  {searchQuery || filterStatus !== 'all' 
+                  {hasActiveFilters
                     ? 'No students match your filters'
                     : 'No students enrolled yet'}
                 </td>
               </tr>
             ) : (
-              filteredStudents.map(student => (
+              students.map(student => (
                 <tr
                   key={student.id}
                   onClick={() => setSelectedStudent(student)}
@@ -458,7 +509,7 @@ function ReportCardAdmin({ onBack = null }) {
           </tbody>
         </table>
       </div>
-      
+
       {/* Pagination */}
       {pagination.totalPages > 1 && (
         <div className="pagination">
@@ -471,12 +522,12 @@ function ReportCardAdmin({ onBack = null }) {
             <ChevronLeft size={18} />
             <span>Previous</span>
           </button>
-          
+
           <div className="pagination-info">
             Page {pagination.currentPage} of {pagination.totalPages}
             <span className="pagination-count">({pagination.total} students)</span>
           </div>
-          
+
           <button
             onClick={nextPage}
             disabled={!pagination.hasNext}
@@ -488,7 +539,7 @@ function ReportCardAdmin({ onBack = null }) {
           </button>
         </div>
       )}
-      
+
       {/* Communication Insights Panel */}
       {showInsights && (
         <div className="insights-panel">
@@ -510,44 +561,44 @@ function ReportCardAdmin({ onBack = null }) {
               <div className="insight-card">
                 <h3>Re-engagement Needed</h3>
                 <p className="insight-count">
-                  {students.filter(s => s?.stats?.engagementStatus === 'inactive').length} students
+                  {overviewStats.inactiveCount} students
                 </p>
                 <button
                   className="insight-action"
                   onClick={() => {
-                    setFilterStatus('inactive');
+                    handleStatusFilter('inactive');
                     setShowInsights(false);
                   }}
                 >
                   View Students
                 </button>
               </div>
-              
+
               <div className="insight-card">
                 <h3>At Risk (3-7 days)</h3>
                 <p className="insight-count">
-                  {students.filter(s => s?.stats?.engagementStatus === 'at-risk').length} students
+                  {overviewStats.atRiskCount} students
                 </p>
                 <button
                   className="insight-action"
                   onClick={() => {
-                    setFilterStatus('at-risk');
+                    handleStatusFilter('at-risk');
                     setShowInsights(false);
                   }}
                 >
                   View Students
                 </button>
               </div>
-              
+
               <div className="insight-card">
                 <h3>Active & Engaged</h3>
                 <p className="insight-count">
-                  {students.filter(s => s?.stats?.engagementStatus === 'active' || s?.stats?.engagementStatus === 'recent').length} students
+                  {overviewStats.activeCount} students
                 </p>
                 <button
                   className="insight-action"
                   onClick={() => {
-                    setFilterStatus('active');
+                    handleStatusFilter('active');
                     setShowInsights(false);
                   }}
                 >
@@ -558,7 +609,7 @@ function ReportCardAdmin({ onBack = null }) {
           </div>
         </div>
       )}
-      
+
       {/* Student Detail Modal */}
       {selectedStudent && (
         <div className="student-modal-overlay" onClick={() => setSelectedStudent(null)}>
