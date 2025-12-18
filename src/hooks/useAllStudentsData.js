@@ -6,7 +6,8 @@ import { logger } from "../utils/logger";
 
 /**
  * Hook for fetching all students data (admin only)
- * Provides server-side filtered/sorted student list with accurate stats
+ * Uses materialized view for fast, scalable queries
+ * All filtering, sorting, and pagination happens database-side
  *
  * @returns {object} Students data with pagination and filters
  */
@@ -41,51 +42,45 @@ export const useAllStudentsData = () => {
     sortDirection: "desc",
   });
 
-  // Fetch overview stats (always from entire database, not paginated)
+  // Fetch overview stats from materialized view (fast aggregation)
   const fetchOverviewStats = useCallback(async () => {
     if (!isAdmin || !supabaseClient) return;
 
     try {
-      // Get total student count
-      const { count: totalCount } = await supabaseClient
-        .from(TABLES.USER_PROFILES)
-        .select("*", { count: "exact", head: true });
+      // Single query to get all stats from materialized view
+      const { data: allStudents, count } = await supabaseClient
+        .from("admin_student_dashboard")
+        .select(
+          "engagement_status, modules_completed, total_study_time_seconds",
+          { count: "exact" }
+        );
 
-      // Get all profiles for stats calculation (we need last_active_at)
-      const { data: allProfiles } = await supabaseClient
-        .from(TABLES.USER_PROFILES)
-        .select("id, last_active_at, total_study_time_seconds");
+      if (!allStudents) return;
 
-      // Get aggregate module stats
-      const { data: moduleStats } = await supabaseClient
-        .from(TABLES.MODULE_PROGRESS)
-        .select("user_id, completed_at")
-        .not("completed_at", "is", null);
-
-      // Calculate engagement counts
+      // Calculate aggregates from pre-calculated data
       const engagementCounts = { active: 0, atRisk: 0, inactive: 0 };
-      (allProfiles || []).forEach((profile) => {
-        const status = calculateEngagementStatus(profile.last_active_at);
+      allStudents.forEach((student) => {
+        const status = student.engagement_status;
         if (status === "active" || status === "recent")
           engagementCounts.active++;
         else if (status === "at-risk") engagementCounts.atRisk++;
         else engagementCounts.inactive++;
       });
 
-      const totalModules = (moduleStats || []).length;
-      const totalStudyTime = (allProfiles || []).reduce(
-        (sum, p) => sum + (p.total_study_time_seconds || 0),
+      const totalModules = allStudents.reduce(
+        (sum, s) => sum + (s.modules_completed || 0),
+        0
+      );
+      const totalStudyTime = allStudents.reduce(
+        (sum, s) => sum + (s.total_study_time_seconds || 0),
         0
       );
 
       setOverviewStats({
-        totalStudents: totalCount || 0,
+        totalStudents: count || 0,
         avgModulesPerStudent:
-          totalCount > 0
-            ? Math.round((totalModules / totalCount) * 100) / 100
-            : 0,
-        avgStudyTime:
-          totalCount > 0 ? Math.round(totalStudyTime / totalCount) : 0,
+          count > 0 ? Math.round((totalModules / count) * 100) / 100 : 0,
+        avgStudyTime: count > 0 ? Math.round(totalStudyTime / count) : 0,
         totalModules,
         activeCount: engagementCounts.active,
         atRiskCount: engagementCounts.atRisk,
@@ -96,7 +91,7 @@ export const useAllStudentsData = () => {
     }
   }, [isAdmin, supabaseClient]);
 
-  // Fetch students with server-side filtering
+  // Fetch students from materialized view (all filtering/sorting database-side)
   const fetchStudents = useCallback(
     async (page = 1, currentFilters = filters) => {
       if (!isAdmin || !supabaseClient) {
@@ -108,20 +103,29 @@ export const useAllStudentsData = () => {
         setLoading(true);
         setError(null);
 
-        // Build base query
+        // Build query from materialized view
         let query = supabaseClient
-          .from(TABLES.USER_PROFILES)
+          .from("admin_student_dashboard")
           .select("*", { count: "exact" });
 
-        // Apply search filter (server-side)
+        // Apply search filter (server-side using full-text search)
         if (currentFilters.searchQuery) {
-          const search = currentFilters.searchQuery.toLowerCase();
+          const search = currentFilters.searchQuery.trim();
           query = query.or(
             `first_name.ilike.%${search}%,last_name.ilike.%${search}%,preferred_name.ilike.%${search}%,email.ilike.%${search}%`
           );
         }
 
-        // Apply sorting
+        // Apply status filter (server-side - pre-calculated in view)
+        if (currentFilters.statusFilter !== "all") {
+          if (currentFilters.statusFilter === "active") {
+            query = query.in("engagement_status", ["active", "recent"]);
+          } else {
+            query = query.eq("engagement_status", currentFilters.statusFilter);
+          }
+        }
+
+        // Apply sorting (all fields available in view)
         const ascending = currentFilters.sortDirection === "asc";
         switch (currentFilters.sortField) {
           case "name":
@@ -130,8 +134,35 @@ export const useAllStudentsData = () => {
           case "email":
             query = query.order("email", { ascending, nullsFirst: false });
             break;
+          case "streak":
+            query = query.order("streak_days", {
+              ascending,
+              nullsFirst: false,
+            });
+            break;
+          case "modules":
+            query = query.order("modules_completed", {
+              ascending,
+              nullsFirst: false,
+            });
+            break;
+          case "accuracy":
+            query = query.order("accuracy", { ascending, nullsFirst: false });
+            break;
+          case "total_time":
+            query = query.order("total_study_time_seconds", {
+              ascending,
+              nullsFirst: false,
+            });
+            break;
           case "last_active":
             query = query.order("last_active_at", {
+              ascending,
+              nullsFirst: false,
+            });
+            break;
+          case "status":
+            query = query.order("engagement_status", {
               ascending,
               nullsFirst: false,
             });
@@ -146,83 +177,30 @@ export const useAllStudentsData = () => {
 
         // Execute query with pagination
         const {
-          data: profiles,
-          error: profilesError,
+          data: studentsData,
+          error: queryError,
           count,
         } = await query.range(from, to);
 
-        if (profilesError) throw profilesError;
+        if (queryError) throw queryError;
 
-        // Fetch summary stats for each student (optimized batch query)
-        const userIds = (profiles || []).map((p) => p.id);
-        const studentsWithStats = await fetchStudentsBatch(profiles, userIds);
+        // Transform to match expected format (add stats nested object for compatibility)
+        const transformedStudents = (studentsData || []).map((student) => ({
+          ...student,
+          stats: {
+            modulesCompleted: student.modules_completed,
+            accuracy: student.accuracy,
+            totalExercises: student.total_exercises,
+            engagementStatus: student.engagement_status,
+          },
+        }));
 
-        // Client-side status filter (can't easily do in SQL)
-        let filteredStudents = studentsWithStats;
-        if (currentFilters.statusFilter !== "all") {
-          filteredStudents = studentsWithStats.filter((s) => {
-            if (currentFilters.statusFilter === "active") {
-              return (
-                s.stats.engagementStatus === "active" ||
-                s.stats.engagementStatus === "recent"
-              );
-            }
-            return s.stats.engagementStatus === currentFilters.statusFilter;
-          });
-        }
-
-        // Client-side sort for fields that need stats
-        if (
-          ["streak", "modules", "accuracy", "total_time", "status"].includes(
-            currentFilters.sortField
-          )
-        ) {
-          filteredStudents.sort((a, b) => {
-            let aVal, bVal;
-            switch (currentFilters.sortField) {
-              case "streak":
-                aVal = a.streak_days || 0;
-                bVal = b.streak_days || 0;
-                break;
-              case "modules":
-                aVal = a.stats.modulesCompleted || 0;
-                bVal = b.stats.modulesCompleted || 0;
-                break;
-              case "accuracy":
-                aVal = a.stats.accuracy || 0;
-                bVal = b.stats.accuracy || 0;
-                break;
-              case "total_time":
-                aVal = a.total_study_time_seconds || 0;
-                bVal = b.total_study_time_seconds || 0;
-                break;
-              case "status":
-                const statusOrder = {
-                  active: 0,
-                  recent: 1,
-                  "at-risk": 2,
-                  inactive: 3,
-                };
-                aVal = statusOrder[a.stats.engagementStatus] ?? 4;
-                bVal = statusOrder[b.stats.engagementStatus] ?? 4;
-                break;
-            }
-            return currentFilters.sortDirection === "asc"
-              ? aVal > bVal
-                ? 1
-                : -1
-              : aVal < bVal
-              ? 1
-              : -1;
-          });
-        }
-
-        setStudents(filteredStudents);
+        setStudents(transformedStudents);
         setPagination((prev) => ({
           ...prev,
           currentPage: page,
           total: count || 0,
-          totalFiltered: filteredStudents.length,
+          totalFiltered: count || 0,
         }));
       } catch (err) {
         logger.error("Error fetching students data:", err);
@@ -234,73 +212,7 @@ export const useAllStudentsData = () => {
     [isAdmin, supabaseClient, pagination.perPage]
   );
 
-  // Fetch summary stats for batch of students (optimized to avoid N+1)
-  const fetchStudentsBatch = async (profiles, userIds) => {
-    if (!profiles || profiles.length === 0) return [];
-
-    try {
-      // Fetch all stats in parallel with batched queries
-      const [modulesResult, exercisesResult] = await Promise.all([
-        supabaseClient
-          .from(TABLES.MODULE_PROGRESS)
-          .select("user_id, completed_at")
-          .in("user_id", userIds)
-          .not("completed_at", "is", null),
-
-        supabaseClient
-          .from(TABLES.EXERCISE_COMPLETIONS)
-          .select("user_id, is_correct")
-          .in("user_id", userIds),
-      ]);
-
-      // Group by user_id for efficient lookup
-      const modulesByUser = {};
-      const exercisesByUser = {};
-
-      (modulesResult.data || []).forEach((m) => {
-        if (!modulesByUser[m.user_id]) modulesByUser[m.user_id] = [];
-        modulesByUser[m.user_id].push(m);
-      });
-
-      (exercisesResult.data || []).forEach((e) => {
-        if (!exercisesByUser[e.user_id]) exercisesByUser[e.user_id] = [];
-        exercisesByUser[e.user_id].push(e);
-      });
-
-      // Build student objects with stats
-      return profiles.map((profile) => {
-        const modules = modulesByUser[profile.id] || [];
-        const exercises = exercisesByUser[profile.id] || [];
-
-        const correct = exercises.filter((e) => e.is_correct).length;
-        const total = exercises.length;
-        const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
-
-        return {
-          ...profile,
-          stats: {
-            modulesCompleted: modules.length,
-            accuracy,
-            totalExercises: total,
-            engagementStatus: calculateEngagementStatus(profile.last_active_at),
-          },
-        };
-      });
-    } catch (err) {
-      logger.error("Error fetching batch student stats:", err);
-      return profiles.map((profile) => ({
-        ...profile,
-        stats: {
-          modulesCompleted: 0,
-          accuracy: 0,
-          totalExercises: 0,
-          engagementStatus: "unknown",
-        },
-      }));
-    }
-  };
-
-  // Calculate engagement status based on last active date
+  // Helper for engagement status (kept for fetchAllMatching compatibility)
   const calculateEngagementStatus = (lastActiveAt) => {
     if (!lastActiveAt) return "inactive";
 
@@ -320,47 +232,10 @@ export const useAllStudentsData = () => {
       fetchOverviewStats();
       fetchStudents(1);
     }
-  }, [isAdmin, supabaseClient]);
+  }, [isAdmin, supabaseClient, fetchOverviewStats, fetchStudents]);
 
-  // Real-time subscription for last_active_at updates
-  useEffect(() => {
-    if (!isAdmin || !supabaseClient) return;
-
-    const subscription = supabaseClient
-      .channel("user_profiles_updates")
-      .on(
-        "postgres_changes",
-        {
-          event: "UPDATE",
-          schema: "public",
-          table: TABLES.USER_PROFILES,
-        },
-        (payload) => {
-          // Update student in list
-          setStudents((prev) =>
-            prev.map((student) =>
-              student.id === payload.new.id
-                ? {
-                    ...student,
-                    ...payload.new,
-                    stats: {
-                      ...student.stats,
-                      engagementStatus: calculateEngagementStatus(
-                        payload.new.last_active_at
-                      ),
-                    },
-                  }
-                : student
-            )
-          );
-        }
-      )
-      .subscribe();
-
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, [isAdmin, supabaseClient]);
+  // Note: Real-time subscriptions removed - materialized view refreshes every 5 minutes
+  // This provides better performance at scale with acceptable staleness for admin dashboard
 
   // Apply filters (resets to page 1)
   const applyFilters = useCallback(
@@ -392,39 +267,37 @@ export const useAllStudentsData = () => {
     }
   }, [pagination, goToPage]);
 
-  // Fetch ALL matching students (for bulk operations)
+  // Fetch ALL matching students from materialized view (for bulk operations)
   const fetchAllMatching = useCallback(
     async (forFilters = filters) => {
       if (!isAdmin || !supabaseClient) return [];
 
       try {
         let query = supabaseClient
-          .from(TABLES.USER_PROFILES)
-          .select("id, email, first_name, last_name, preferred_name");
+          .from("admin_student_dashboard")
+          .select(
+            "id, email, first_name, last_name, preferred_name, last_active_at"
+          );
 
         // Apply same search filter
         if (forFilters.searchQuery) {
-          const search = forFilters.searchQuery.toLowerCase();
+          const search = forFilters.searchQuery.trim();
           query = query.or(
             `first_name.ilike.%${search}%,last_name.ilike.%${search}%,preferred_name.ilike.%${search}%,email.ilike.%${search}%`
           );
         }
 
-        const { data: profiles } = await query;
-
-        // Apply status filter if needed
+        // Apply status filter (server-side using pre-calculated field)
         if (forFilters.statusFilter !== "all") {
-          const filtered = (profiles || []).filter((p) => {
-            const status = calculateEngagementStatus(p.last_active_at);
-            if (forFilters.statusFilter === "active") {
-              return status === "active" || status === "recent";
-            }
-            return status === forFilters.statusFilter;
-          });
-          return filtered;
+          if (forFilters.statusFilter === "active") {
+            query = query.in("engagement_status", ["active", "recent"]);
+          } else {
+            query = query.eq("engagement_status", forFilters.statusFilter);
+          }
         }
 
-        return profiles || [];
+        const { data: students } = await query;
+        return students || [];
       } catch (err) {
         logger.error("Error fetching all matching students:", err);
         return [];
