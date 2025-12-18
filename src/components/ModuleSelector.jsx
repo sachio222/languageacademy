@@ -146,27 +146,26 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
         {lesson.vocabularyReference && lesson.vocabularyReference.length > 0 && (
           <div className="vocab-preview">
             <div className="vocab-preview-label">You'll learn:</div>
-            <div className="vocab-preview-words">
-              {lesson.vocabularyReference.slice(0, 3).map((word, idx) => (
-                <button
+            <div className="vocab-preview-grid">
+              {lesson.vocabularyReference.slice(0, 12).map((word, idx) => (
+                <div
                   key={idx}
-                  className="vocab-preview-item"
+                  className="vocab-preview-word"
                   onClick={() => onSectionSelect('intro')}
                 >
-                  <span className="vocab-preview-french">{word.french}</span>
-                  <span className="vocab-preview-dot">•</span>
-                  <span className="vocab-preview-english">{word.english}</span>
-                </button>
+                  <span className="vocab-word-french">{word.french}</span>
+                  <span className="vocab-word-english">{word.english}</span>
+                </div>
               ))}
-              {lesson.vocabularyReference.length > 3 && (
-                <button
-                  className="vocab-preview-more"
-                  onClick={() => onSectionSelect('intro')}
-                >
-                  See {lesson.vocabularyReference.length - 3} more...
-                </button>
-              )}
             </div>
+            {lesson.vocabularyReference.length > 12 && (
+              <button
+                className="vocab-preview-see-all"
+                onClick={() => onSectionSelect('intro')}
+              >
+                See all {lesson.vocabularyReference.length} words →
+              </button>
+            )}
           </div>
         )}
       </div>

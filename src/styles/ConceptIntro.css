@@ -123,32 +123,37 @@
 
 /* Vocabulary Table */
 .vocab-intro-table {
-  padding: 1.5rem 0 0 0;
+  background: #fafbfc;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
 }
 
 .vocab-intro-table table {
   width: 100%;
   border-collapse: collapse;
   background: transparent;
-  border-radius: 0;
-  overflow: visible;
-  border: none;
+}
+
+.vocab-intro-table thead {
+  background: #f0f0f0;
 }
 
 .vocab-intro-table th {
-  background: transparent;
-  color: #665665;
-  padding: 0 1.25rem 1rem 0.75rem;
+  padding: 0.75rem 1rem;
   text-align: left;
-  font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #665665;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 .vocab-intro-table td {
-  padding: 1.25rem 1.25rem 1.25rem 0.75rem;
+  padding: 0.875rem 1rem;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -157,8 +162,7 @@
 }
 
 .vocab-intro-table tbody tr {
-  transition: background-color 0.15s;
-  border-radius: 4px;
+  transition: background-color 0.15s ease;
 }
 
 .vocab-intro-table tbody tr.vocab-row-clickable {
@@ -166,7 +170,19 @@
 }
 
 .vocab-intro-table tbody tr:hover {
-  background: #fafbfc;
+  background: #ffffff;
+}
+
+/* Vocabulary section dividers */
+.vocab-intro-table tr.vocab-divider td {
+  padding: 0;
+  border: none;
+}
+
+.vocab-intro-table .vocab-section-break {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 0.5rem 0;
 }
 
 /* Show speaker button hover state when row is hovered */
@@ -179,7 +195,8 @@
 .vocab-french-intro {
   color: #2563eb;
   font-weight: 600;
-  font-size: 1.0625rem;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .vocab-french-intro.feminine {
@@ -202,7 +219,7 @@
 }
 
 .gender-separator {
-  color: #666;
+  color: #999999;
   font-weight: normal;
 }
 
@@ -214,12 +231,13 @@
 
 .vocab-english-intro {
   color: #1a1a1a;
-  font-size: 1rem;
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
 }
 
 .vocab-note-intro {
   color: #999999;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-style: italic;
 }
 
@@ -510,11 +528,28 @@
 
   .vocab-intro-table {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .vocab-intro-table th,
   .vocab-intro-table td {
-    padding-right: 1rem;
+    padding: 0.75rem 0.875rem;
+  }
+
+  .vocab-intro-table th {
+    font-size: 0.6875rem;
+  }
+
+  .vocab-french-intro {
+    font-size: 0.9375rem;
+  }
+
+  .vocab-english-intro {
+    font-size: 0.875rem;
+  }
+
+  .vocab-note-intro {
+    font-size: 0.8125rem;
   }
 
   .learning-tip {
@@ -582,8 +617,7 @@
 
   .vocab-intro-table th,
   .vocab-intro-table td {
-    padding-left: 0.5rem;
-    padding-right: 0.75rem;
+    padding: 0.625rem 0.75rem;
   }
 
   .learning-tip {
@@ -663,19 +697,19 @@
 
   .vocab-intro-table th,
   .vocab-intro-table td {
-    padding: 0.875rem 0.5rem 0.875rem 0.375rem;
+    padding: 0.625rem 0.75rem;
   }
 
   .vocab-french-intro {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .vocab-english-intro {
-    font-size: 0.9375rem;
+    font-size: 0.8125rem;
   }
 
   .vocab-note-intro {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   .learning-tip {
