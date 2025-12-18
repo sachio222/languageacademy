@@ -3,19 +3,29 @@
  * Optional enterprise feature - clean, minimal design
  */
 
-import { useState } from 'react';
-import { Plus, Users, ChevronRight, Copy, Check } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Plus, Users, ChevronRight, Copy, Check, ChevronLeft, HelpCircle } from 'lucide-react';
 import { useClasses } from '../hooks/useClasses';
 import { useToast } from '../hooks/useToast';
 import Toast from './Toast';
+import TeacherWelcomeModal from './TeacherWelcomeModal';
 import '../styles/TeacherClasses.css';
 
-function TeacherClasses({ onSelectClass }) {
+function TeacherClasses({ onSelectClass, onBack }) {
   const { classes, loading, createClass } = useClasses();
   const { toasts, showToast, hideToast } = useToast();
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [creating, setCreating] = useState(false);
   const [copiedCode, setCopiedCode] = useState(null);
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  // Show welcome modal on first visit
+  useEffect(() => {
+    const hasSeenWelcome = localStorage.getItem('teacher_welcome_seen');
+    if (!hasSeenWelcome && !loading) {
+      setShowWelcome(true);
+    }
+  }, [loading]);
 
   const handleCreateClass = async (e) => {
     e.preventDefault();
@@ -75,23 +85,42 @@ function TeacherClasses({ onSelectClass }) {
 
       {/* Header */}
       <div className="teacher-classes-header">
-        <div>
-          <h1>My Classes</h1>
-          <p className="teacher-classes-subtitle">
-            {classes.length === 0
-              ? 'Create your first class to get started'
-              : `${classes.length} ${classes.length === 1 ? 'class' : 'classes'}`
-            }
-          </p>
-        </div>
+        {onBack && (
+          <button className="teacher-back-btn" onClick={onBack}>
+            <ChevronLeft size={20} />
+            Back to Modules
+          </button>
+        )}
 
-        <button
-          className="create-class-btn"
-          onClick={() => setShowCreateModal(true)}
-        >
-          <Plus size={20} />
-          <span>New Class</span>
-        </button>
+        <div className="teacher-header-content">
+          <div className="teacher-title-section">
+            <h1>My Classes</h1>
+            <p className="teacher-classes-subtitle">
+              {classes.length === 0
+                ? 'Create your first class to get started'
+                : `${classes.length} ${classes.length === 1 ? 'class' : 'classes'}`
+              }
+            </p>
+          </div>
+
+          <div className="teacher-header-actions">
+            <button
+              className="help-btn"
+              onClick={() => setShowWelcome(true)}
+              title="How it works"
+            >
+              <HelpCircle size={20} />
+            </button>
+
+            <button
+              className="create-class-btn"
+              onClick={() => setShowCreateModal(true)}
+            >
+              <Plus size={20} />
+              <span>New Class</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Classes list */}
@@ -157,6 +186,12 @@ function TeacherClasses({ onSelectClass }) {
           ))}
         </div>
       )}
+
+      {/* Welcome modal */}
+      <TeacherWelcomeModal
+        isOpen={showWelcome}
+        onClose={() => setShowWelcome(false)}
+      />
 
       {/* Create class modal */}
       {showCreateModal && (

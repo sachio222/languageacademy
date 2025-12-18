@@ -7,7 +7,7 @@ import { useState } from 'react';
 import TeacherClasses from './TeacherClasses';
 import TeacherClassDetail from './TeacherClassDetail';
 
-function TeacherDashboard() {
+function TeacherDashboard({ onBack }) {
   const [selectedClass, setSelectedClass] = useState(null);
 
   if (selectedClass) {
@@ -15,6 +15,7 @@ function TeacherDashboard() {
       <TeacherClassDetail
         classData={selectedClass}
         onBack={() => setSelectedClass(null)}
+        onBackToModules={onBack}
       />
     );
   }
@@ -22,6 +23,7 @@ function TeacherDashboard() {
   return (
     <TeacherClasses
       onSelectClass={setSelectedClass}
+      onBack={onBack}
     />
   );
 }

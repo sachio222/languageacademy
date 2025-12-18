@@ -10,10 +10,35 @@
 
 /* Header */
 .teacher-classes-header {
+  margin-bottom: 2.5rem;
+}
+
+.teacher-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #665665;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-bottom: 1.5rem;
+}
+
+.teacher-back-btn:hover {
+  background: #fafbfc;
+  color: #1a1a1a;
+  border-color: #e0e0e0;
+}
+
+.teacher-header-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 2.5rem;
   gap: 2rem;
 }
 
@@ -29,6 +54,38 @@
   font-size: 0.9375rem;
   color: #665665;
   margin: 0;
+}
+
+.teacher-title-section {
+  flex: 1;
+}
+
+.teacher-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.help-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  color: #665665;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.help-btn:hover {
+  background: #fafbfc;
+  color: #3b82f6;
+  border-color: #3b82f6;
 }
 
 .create-class-btn {
@@ -381,12 +438,21 @@
     padding: 1.5rem 1rem;
   }
 
-  .teacher-classes-header {
+  .teacher-header-content {
     flex-direction: column;
     align-items: stretch;
   }
 
+  .teacher-header-actions {
+    width: 100%;
+  }
+
+  .help-btn {
+    flex: 0 0 auto;
+  }
+
   .create-class-btn {
+    flex: 1;
     justify-content: center;
   }
 

@@ -4,10 +4,11 @@
  */
 
 import { useState, useMemo, useEffect } from 'react';
-import { ChevronLeft, Users, Copy, Check, Settings } from 'lucide-react';
+import { ChevronLeft, Users, Copy, Check, HelpCircle } from 'lucide-react';
 import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { useToast } from '../hooks/useToast';
 import Toast from './Toast';
+import TeacherWelcomeModal from './TeacherWelcomeModal';
 import '../styles/TeacherClassDetail.css';
 
 function TeacherClassDetail({ classData, onBack }) {
@@ -17,6 +18,7 @@ function TeacherClassDetail({ classData, onBack }) {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [copiedCode, setCopiedCode] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(false);
 
   // Fetch students for this class
   useEffect(() => {
@@ -117,6 +119,12 @@ function TeacherClassDetail({ classData, onBack }) {
         ))}
       </div>
 
+      {/* Welcome modal */}
+      <TeacherWelcomeModal
+        isOpen={showWelcome}
+        onClose={() => setShowWelcome(false)}
+      />
+
       {/* Header */}
       <div className="class-detail-header">
         <button className="class-back-btn" onClick={onBack}>
@@ -133,6 +141,14 @@ function TeacherClassDetail({ classData, onBack }) {
         </div>
 
         <div className="class-actions">
+          <button
+            className="help-btn-small"
+            onClick={() => setShowWelcome(true)}
+            title="How it works"
+          >
+            <HelpCircle size={18} />
+          </button>
+
           <button className="join-code-btn" onClick={copyJoinCode}>
             {copiedCode ? <Check size={18} /> : <Copy size={18} />}
             <span>{copiedCode ? 'Copied!' : classData.join_code}</span>

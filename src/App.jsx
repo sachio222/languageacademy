@@ -20,6 +20,7 @@ const CookieSettingsModal = lazy(() => import('./components/CookieSettingsModal'
 const BetaNoticeModal = lazy(() => import('./components/BetaNoticeModal'));
 const ReportCardStudent = lazy(() => import('./components/ReportCardStudent'));
 const ReportCardAdmin = lazy(() => import('./components/ReportCardAdmin'));
+const TeacherDashboard = lazy(() => import('./components/TeacherDashboard'));
 const WordOfTheDay = lazy(() => import('./components/WordOfTheDay'));
 const WOTDHub = lazy(() => import('./components/WOTDHub'));
 const UnsubscribePage = lazy(() => import('./components/UnsubscribePage'));
@@ -409,6 +410,19 @@ function App() {
               💬
             </button>
           </div>
+        ) : navigation.currentLesson === 'teacher-classes' ? (
+          <div className="main-content-wrapper">
+            <Suspense fallback={<div className="loading-spinner">Loading teacher classes...</div>}>
+              <TeacherDashboard onBack={navigation.handleBack} />
+            </Suspense>
+            <button
+              className="feedback-fab"
+              onClick={() => navigation.setShowFeedbackForm(true)}
+              title="Give Early Feedback"
+            >
+              💬
+            </button>
+          </div>
         ) : navigation.currentLesson === 'reference' ? (
           <div className="main-content-wrapper">
             <Suspense fallback={<div className="loading-spinner">Loading reference modules...</div>}>
@@ -462,6 +476,7 @@ function App() {
               onShowReferenceModules={navigation.handleShowReferenceModules}
               onShowVocabularyDashboard={navigation.handleShowVocabularyDashboard}
               onShowReportCard={navigation.handleShowReportCard}
+              onShowTeacherClasses={navigation.handleShowTeacherClasses}
               showWordsLearned={showWordsLearned}
               isAdmin={admin.isAdmin}
             />

@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { lessons } from '../lessons/lessonData';
-import { Flame, CheckCircle, Clock, BookOpen, BookMarked } from 'lucide-react';
+import { Flame, CheckCircle, Clock, BookOpen, BookMarked, Users } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSectionProgress } from '../hooks/useSectionProgress';
 import { getModuleCompletionStatus, getExerciseCount } from '../utils/moduleCompletion';
 import '../styles/DashboardHeader.css';
 import { logger } from "../utils/logger";
 
-function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, onShowReportCard, showWordsLearned, isAdmin }) {
+function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceModules, onShowVocabularyDashboard, onShowReportCard, onShowTeacherClasses, showWordsLearned, isAdmin }) {
   const { supabaseUser, profile } = useAuth();
   const supabaseClient = useSupabaseClient();
   const { moduleProgress } = useSupabaseProgress();
@@ -314,6 +314,14 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
             <button className="reference-link" onClick={onShowReferenceModules}>
               <BookMarked size={18} strokeWidth={2} />
               <span>La Référence (alphabet, numbers, days, etc.) </span>
+            </button>
+          )}
+
+          {/* Teacher Classes Link (only for teachers) */}
+          {onShowTeacherClasses && profile?.role && ['teacher', 'school_admin', 'super_admin'].includes(profile.role) && (
+            <button className="reference-link" onClick={onShowTeacherClasses}>
+              <Users size={18} strokeWidth={2} />
+              <span>My Classes</span>
             </button>
           )}
         </div>

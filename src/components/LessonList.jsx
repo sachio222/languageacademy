@@ -6,7 +6,7 @@ import { useSectionProgress } from '../hooks/useSectionProgress';
 import { getModuleCompletionStatus, getModuleCompletionPercentage, isModuleComplete, getExerciseCount } from '../utils/moduleCompletion';
 import React, { useState, useEffect, useMemo } from 'react';
 
-function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferenceModules, onShowVocabularyDashboard, onShowReportCard, showWordsLearned, isAdmin }) {
+function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferenceModules, onShowVocabularyDashboard, onShowReportCard, onShowTeacherClasses, showWordsLearned, isAdmin }) {
   const { moduleProgress } = useSupabaseProgress();
   const { sectionProgress } = useSectionProgress();
   const [viewMode, setViewMode] = useState('split'); // 'grid' or 'split'
@@ -157,6 +157,7 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
         onShowReferenceModules={onShowReferenceModules}
         onShowVocabularyDashboard={onShowVocabularyDashboard}
         onShowReportCard={onShowReportCard}
+        onShowTeacherClasses={onShowTeacherClasses}
         showWordsLearned={showWordsLearned}
         isAdmin={isAdmin}
       />

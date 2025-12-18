@@ -1,9 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
-import { useUrlManager } from './useUrlManager';
+import { useState, useEffect, useCallback } from "react";
+import { useUrlManager } from "./useUrlManager";
 
 export const useNavigation = () => {
   const urlManager = useUrlManager();
-  const [currentLesson, setCurrentLesson] = useState(urlManager.getInitialLesson);
+  const [currentLesson, setCurrentLesson] = useState(
+    urlManager.getInitialLesson
+  );
   const [previousLesson, setPreviousLesson] = useState(null);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -11,11 +13,11 @@ export const useNavigation = () => {
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [showFeedbackAdmin, setShowFeedbackAdmin] = useState(() => {
     const params = new URLSearchParams(window.location.search);
-    return params.get('admin') === 'true';
+    return params.get("admin") === "true";
   });
   const [showCommunicationAdmin, setShowCommunicationAdmin] = useState(() => {
     const params = new URLSearchParams(window.location.search);
-    return params.get('communication-admin') === 'true';
+    return params.get("communication-admin") === "true";
   });
 
   // Handle browser back/forward buttons
@@ -24,16 +26,19 @@ export const useNavigation = () => {
       urlManager.handlePopState(setCurrentLesson, setShowFeedbackAdmin);
     };
 
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
   }, [urlManager]);
 
   // Navigation handlers
-  const handleLessonSelect = useCallback((lessonId) => {
-    setCurrentLesson(lessonId);
-    urlManager.setModule(lessonId);
-    window.scrollTo(0, 0);
-  }, [urlManager]);
+  const handleLessonSelect = useCallback(
+    (lessonId) => {
+      setCurrentLesson(lessonId);
+      urlManager.setModule(lessonId);
+      window.scrollTo(0, 0);
+    },
+    [urlManager]
+  );
 
   const handleBack = useCallback(() => {
     setCurrentLesson(null);
@@ -41,24 +46,35 @@ export const useNavigation = () => {
   }, [urlManager]);
 
   const handleShowReferenceModules = useCallback(() => {
-    setCurrentLesson('reference');
+    setCurrentLesson("reference");
     urlManager.setReference();
   }, [urlManager]);
 
   const handleShowVocabularyDashboard = useCallback(() => {
-    setCurrentLesson('vocabulary');
+    setCurrentLesson("vocabulary");
     urlManager.setVocabulary();
   }, [urlManager]);
 
   const handleShowReportCard = useCallback(() => {
-    setCurrentLesson('report-card');
+    setCurrentLesson("report-card");
     urlManager.setReportCard();
   }, [urlManager]);
 
   const handleShowReportCardAdmin = useCallback(() => {
-    setCurrentLesson('report-card-admin');
+    setCurrentLesson("report-card-admin");
     urlManager.setReportCardAdmin();
   }, [urlManager]);
+
+  const handleShowTeacherClasses = useCallback(() => {
+    setCurrentLesson("teacher-classes");
+    const params = new URLSearchParams(window.location.search);
+    params.set("view", "teacher-classes");
+    window.history.pushState(
+      {},
+      "",
+      `${window.location.pathname}?${params.toString()}`
+    );
+  }, []);
 
   const handleBackToLanding = useCallback(() => {
     setCurrentLesson(null);
@@ -67,10 +83,10 @@ export const useNavigation = () => {
 
   const handleOpenDictionary = useCallback(() => {
     // Store the current lesson before switching to dictionary
-    if (currentLesson !== 'dictionary') {
+    if (currentLesson !== "dictionary") {
       setPreviousLesson(currentLesson);
     }
-    setCurrentLesson('dictionary');
+    setCurrentLesson("dictionary");
     urlManager.setDictionary();
   }, [currentLesson, urlManager]);
 
@@ -94,16 +110,24 @@ export const useNavigation = () => {
   const handleShowCommunicationAdmin = useCallback(() => {
     setShowCommunicationAdmin(true);
     const params = new URLSearchParams(window.location.search);
-    params.set('communication-admin', 'true');
-    window.history.pushState({}, '', `${window.location.pathname}?${params.toString()}`);
+    params.set("communication-admin", "true");
+    window.history.pushState(
+      {},
+      "",
+      `${window.location.pathname}?${params.toString()}`
+    );
   }, []);
 
   const handleCloseCommunicationAdmin = useCallback(() => {
     setShowCommunicationAdmin(false);
     const params = new URLSearchParams(window.location.search);
-    params.delete('communication-admin');
+    params.delete("communication-admin");
     const newSearch = params.toString();
-    window.history.pushState({}, '', `${window.location.pathname}${newSearch ? '?' + newSearch : ''}`);
+    window.history.pushState(
+      {},
+      "",
+      `${window.location.pathname}${newSearch ? "?" + newSearch : ""}`
+    );
   }, []);
 
   return {
@@ -116,7 +140,7 @@ export const useNavigation = () => {
     showFeedbackForm,
     showFeedbackAdmin,
     showCommunicationAdmin,
-    
+
     // Setters
     setCurrentLesson,
     setSidebarCollapsed,
@@ -125,7 +149,7 @@ export const useNavigation = () => {
     setShowFeedbackForm,
     setShowFeedbackAdmin,
     setShowCommunicationAdmin,
-    
+
     // Handlers
     handleLessonSelect,
     handleBack,
@@ -133,6 +157,7 @@ export const useNavigation = () => {
     handleShowVocabularyDashboard,
     handleShowReportCard,
     handleShowReportCardAdmin,
+    handleShowTeacherClasses,
     handleBackToLanding,
     handleOpenDictionary,
     handleCloseDictionary,
@@ -140,8 +165,8 @@ export const useNavigation = () => {
     handleCloseAdmin,
     handleShowCommunicationAdmin,
     handleCloseCommunicationAdmin,
-    
+
     // URL Manager
-    urlManager
+    urlManager,
   };
 };

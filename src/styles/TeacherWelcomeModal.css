@@ -1,0 +1,216 @@
+/* TeacherWelcomeModal - Following DESIGN_PRINCIPLES.md */
+
+.teacher-welcome-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.teacher-welcome-modal {
+  background: white;
+  border-radius: 16px;
+  max-width: 650px;
+  width: 100%;
+  padding: 3rem;
+  position: relative;
+  animation: slideUp 0.25s ease-out;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.teacher-welcome-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #999999;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.15s ease;
+  display: flex;
+  align-items: center;
+}
+
+.teacher-welcome-close:hover {
+  color: #1a1a1a;
+}
+
+.teacher-welcome-content {
+  text-align: center;
+}
+
+.teacher-welcome-icon {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.5rem auto;
+  background: #fafbfc;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+}
+
+.teacher-welcome-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.025em;
+}
+
+.teacher-welcome-intro {
+  font-size: 1rem;
+  color: #665665;
+  line-height: 1.6;
+  margin: 0 0 2.5rem 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Steps */
+.teacher-welcome-steps {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.welcome-step {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.welcome-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+  padding-top: 0.25rem;
+}
+
+.step-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.015em;
+}
+
+.step-content p {
+  font-size: 0.9375rem;
+  color: #665665;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Note */
+.teacher-welcome-note {
+  background: #fafbfc;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.teacher-welcome-note p {
+  font-size: 0.875rem;
+  color: #665665;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.teacher-welcome-note strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Button */
+.teacher-welcome-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  letter-spacing: -0.01em;
+}
+
+.teacher-welcome-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .teacher-welcome-overlay {
+    padding: 0;
+  }
+
+  .teacher-welcome-modal {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    padding: 2rem 1.5rem;
+  }
+
+  .teacher-welcome-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .teacher-welcome-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .teacher-welcome-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}
