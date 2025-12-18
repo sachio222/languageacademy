@@ -110,6 +110,37 @@ function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, upda
   const handleNext = () => handleNavigate('next');
   const handlePrevious = () => handleNavigate('previous');
 
+  // Keyboard navigation for desktop power users
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      // Don't interfere with typing in input fields
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+        return;
+      }
+
+      switch (e.key) {
+        case 'ArrowRight':
+        case ' ': // Spacebar
+          e.preventDefault();
+          if (isRevealed) {
+            handleNext();
+          } else {
+            setIsRevealed(true);
+          }
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          handlePrevious();
+          break;
+        default:
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [isRevealed, handleNext, handlePrevious]);
+
   return (
     <div className="study-mode">
       <div className="study-header">
@@ -119,7 +150,10 @@ function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, upda
           </div>
         )}
         <h2>📚 Study Mode - Learn First!</h2>
-        <p className="study-description">Review all answers before testing yourself</p>
+        <p className="study-description">
+          Review all answers before testing yourself
+          <span className="keyboard-hint"> • Use arrow keys or spacebar to navigate</span>
+        </p>
         <div className="study-progress-container">
           <div className="study-progress-bar">
             <div className="study-progress-fill" style={{ width: `${progress}%` }} />
@@ -129,7 +163,7 @@ function StudyMode({ exercises, onFinishStudying, currentExerciseIndex = 0, upda
           </span>
         </div>
       </div>
-      <div className="flashcard">
+      <div className={`flashcard ${isRevealed ? 'revealed' : ''}`}>
         <div className="flashcard-front">
           <div className="flashcard-label">Question:</div>
           <div className="flashcard-content">

@@ -1,7 +1,7 @@
 /* Study Mode Styles */
 
 .study-container {
-  padding: 1rem;
+  padding: 0rem;
   max-width: 900px;
   margin: 0 auto;
   width: 100%;
@@ -62,7 +62,8 @@
   background: #ffffff;
   border-radius: 12px;
   padding: 3rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  padding-bottom: 5rem; /* Room for sticky navigation without excessive gap */
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); */
   border: none;
 }
 
@@ -118,6 +119,19 @@
   line-height: 1.6;
 }
 
+.keyboard-hint {
+  color: #b0b0b0;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+/* Hide keyboard hint on mobile since they can't use it */
+@media (max-width: 768px) {
+  .keyboard-hint {
+    display: none;
+  }
+}
+
 .study-progress-container {
   display: flex;
   align-items: center;
@@ -158,9 +172,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 3rem;
   border: none;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: padding 0.2s ease-out;
+}
+
+/* Reduce padding when answer is revealed to minimize vertical growth */
+.flashcard.revealed {
+  padding: 3rem 3rem;
 }
 
 .flashcard-front,
@@ -240,11 +259,32 @@
   align-items: center;
 }
 
-/* Study Navigation */
+/* Study Navigation - Always sticky for best UX */
 .study-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 320px; /* Account for sidebar */
+  right: 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.04);
+  z-index: 100;
+  margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Push buttons to edges */
   gap: 1rem;
+  transition: left 0.2s ease;
+
+  /* Safe area for notched phones */
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Adjust for collapsed sidebar */
+body:has(.left-nav.collapsed) .study-navigation {
+  left: 64px;
 }
 
 .study-navigation .btn-nav {
@@ -254,6 +294,27 @@
   border-radius: 8px;
   font-weight: 500;
   font-size: 0.9375rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* On mobile, sidebar becomes overlay so nav spans full width */
+@media (max-width: 768px) {
+  .study-navigation {
+    left: 0;
+    gap: 0.75rem;
+  }
+
+  .study-navigation .btn-nav {
+    max-width: none;
+  }
+
+  /* Override collapsed sidebar adjustment on mobile */
+  body:has(.left-nav.collapsed) .study-navigation {
+    left: 0;
+  }
 }
 
 .study-navigation .btn-nav:not(.btn-primary) {
@@ -429,17 +490,13 @@
     min-height: 320px;
   }
 
+  .flashcard.revealed {
+    padding: 2rem 1rem;
+  }
+
   .flashcard-content h2,
   .flashcard-answer h2 {
     font-size: 2.5rem;
-  }
-
-  .study-navigation {
-    flex-direction: column-reverse;
-  }
-
-  .study-navigation .btn-nav {
-    max-width: none;
   }
 }
 
@@ -469,7 +526,11 @@
   .flashcard {
     padding: 2.5rem 0.75rem;
     min-height: 300px;
-    margin-bottom: 2rem;
+    margin-bottom: 0; /* Remove margin since nav is sticky */
+  }
+
+  .flashcard.revealed {
+    padding: 1.75rem 0.75rem;
   }
 
   .flashcard-content h2,
@@ -534,8 +595,12 @@
   .flashcard {
     padding: 2rem 0.5rem;
     min-height: 280px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0; /* Remove margin since nav is sticky */
     border-radius: 12px;
+  }
+
+  .flashcard.revealed {
+    padding: 1.5rem 0.5rem;
   }
 
   .flashcard-content h2,
