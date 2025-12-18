@@ -30,7 +30,7 @@ function TeacherWelcomeModal({ isOpen, onClose }) {
             <Users size={48} />
           </div>
 
-          <h2>Welcome to Teacher Classes</h2>
+          <h2>Welcome to Classes</h2>
 
           <p className="teacher-welcome-intro">
             Manage your classes and track student progress, all while students keep full control of their learning journey.

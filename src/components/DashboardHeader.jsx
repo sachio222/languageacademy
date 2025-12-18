@@ -317,11 +317,11 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
             </button>
           )}
 
-          {/* Teacher Classes Link (only for teachers) */}
+          {/* Classes Link (only for teachers) */}
           {onShowTeacherClasses && profile?.role && ['teacher', 'school_admin', 'super_admin'].includes(profile.role) && (
             <button className="reference-link" onClick={onShowTeacherClasses}>
               <Users size={18} strokeWidth={2} />
-              <span>My Classes</span>
+              <span>Classes</span>
             </button>
           )}
         </div>

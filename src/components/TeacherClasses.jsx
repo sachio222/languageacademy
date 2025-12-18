@@ -94,7 +94,7 @@ function TeacherClasses({ onSelectClass, onBack }) {
 
         <div className="teacher-header-content">
           <div className="teacher-title-section">
-            <h1>My Classes</h1>
+            <h1>Classes</h1>
             <p className="teacher-classes-subtitle">
               {classes.length === 0
                 ? 'Create your first class to get started'
