@@ -27,6 +27,14 @@ function TeacherClasses({ onSelectClass, onBack }) {
     }
   }, [loading]);
 
+  // Extract unique terms and periods from existing classes
+  const suggestions = {
+    terms: [...new Set(classes.filter(c => c.term).map(c => c.term))],
+    periods: [...new Set(classes.filter(c => c.period).map(c => c.period))],
+    mostRecentTerm: classes[0]?.term || '',
+    mostRecentPeriod: classes[0]?.period || ''
+  };
+
   const handleCreateClass = async (e) => {
     e.preventDefault();
 
@@ -221,8 +229,20 @@ function TeacherClasses({ onSelectClass, onBack }) {
                     type="text"
                     id="term"
                     name="term"
-                    placeholder="e.g. Fall 2024"
+                    list="term-suggestions"
+                    placeholder={suggestions.mostRecentTerm || "e.g. Fall 2024"}
+                    defaultValue={suggestions.mostRecentTerm}
                   />
+                  {suggestions.terms.length > 0 && (
+                    <datalist id="term-suggestions">
+                      {suggestions.terms.map((term, i) => (
+                        <option key={i} value={term} />
+                      ))}
+                    </datalist>
+                  )}
+                  {suggestions.terms.length > 0 && (
+                    <p className="field-hint">Recently used: {suggestions.terms.slice(0, 2).join(', ')}</p>
+                  )}
                 </div>
 
                 <div className="form-group">
@@ -231,8 +251,20 @@ function TeacherClasses({ onSelectClass, onBack }) {
                     type="text"
                     id="period"
                     name="period"
-                    placeholder="e.g. Period 2"
+                    list="period-suggestions"
+                    placeholder={suggestions.mostRecentPeriod || "e.g. Period 2"}
+                    defaultValue={suggestions.mostRecentPeriod}
                   />
+                  {suggestions.periods.length > 0 && (
+                    <datalist id="period-suggestions">
+                      {suggestions.periods.map((period, i) => (
+                        <option key={i} value={period} />
+                      ))}
+                    </datalist>
+                  )}
+                  {suggestions.periods.length > 0 && (
+                    <p className="field-hint">Recently used: {suggestions.periods.slice(0, 2).join(', ')}</p>
+                  )}
                 </div>
               </div>
 
