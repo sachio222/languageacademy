@@ -41,6 +41,7 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
   const [focusMode, setFocusMode] = useState(null); // { syllable, index }
   const [audioLevel, setAudioLevel] = useState(0);
   const [isPlayingBack, setIsPlayingBack] = useState(false);
+  const [showMicModal, setShowMicModal] = useState(false);
 
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
@@ -86,6 +87,7 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
         result.stream.getTracks().forEach(track => track.stop());
       } else {
         setError(result.message);
+        setShowMicModal(true);
       }
     });
   }, []);
@@ -208,6 +210,7 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
     } catch (error) {
       logger.error('Error starting recording:', error);
       setError('Microphone access denied');
+      setShowMicModal(true);
     }
   };
 
@@ -341,8 +344,124 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
   const overallScore = assessmentResult?.scores?.pronunciation || null;
   const hasResults = assessmentResult && !isAssessing;
 
+  // Detect device/browser for mic instructions
+  const getMicInstructions = () => {
+    const ua = navigator.userAgent;
+    const isMac = /Mac/.test(ua);
+    const isWindows = /Win/.test(ua);
+    const isIOS = /iPhone|iPad|iPod/.test(ua);
+    const isAndroid = /Android/.test(ua);
+    const isChrome = /Chrome/.test(ua) && !/Edge/.test(ua);
+    const isSafari = /Safari/.test(ua) && !/Chrome/.test(ua);
+    const isFirefox = /Firefox/.test(ua);
+
+    if (isIOS) {
+      return {
+        device: 'iPhone/iPad',
+        steps: [
+          'Go to Settings > Safari > Camera & Microphone',
+          'Set to "Ask" or "Allow"',
+          'Reload this page and tap "Allow" when prompted'
+        ]
+      };
+    } else if (isAndroid) {
+      return {
+        device: 'Android',
+        steps: [
+          'Tap the lock/info icon in the address bar',
+          'Find "Microphone" permissions',
+          'Set to "Allow"',
+          'Reload this page'
+        ]
+      };
+    } else if (isSafari && isMac) {
+      return {
+        device: 'Safari on Mac',
+        steps: [
+          'Click Safari > Settings for This Website',
+          'Find "Microphone" and set to "Allow"',
+          'Or: System Settings > Privacy & Security > Microphone',
+          'Enable for Safari, then reload this page'
+        ]
+      };
+    } else if (isChrome) {
+      return {
+        device: 'Chrome',
+        steps: [
+          'Click the camera/microphone icon in the address bar',
+          'Select "Always allow"',
+          'Click "Done" and reload this page'
+        ]
+      };
+    } else if (isFirefox) {
+      return {
+        device: 'Firefox',
+        steps: [
+          'Click the microphone icon in the address bar',
+          'Select "Allow" from the dropdown',
+          'Reload this page'
+        ]
+      };
+    } else {
+      return {
+        device: 'Your Browser',
+        steps: [
+          'Look for a microphone or permissions icon in your address bar',
+          'Set microphone permissions to "Allow"',
+          'Reload this page'
+        ]
+      };
+    }
+  };
+
+  const micInstructions = getMicInstructions();
+
   return (
     <div className="pronunciation-container">
+      {/* Microphone Permission Modal */}
+      {showMicModal && (
+        <div className="modal-overlay" onClick={() => setShowMicModal(false)}>
+          <div className="modal-content mic-permission-modal" onClick={(e) => e.stopPropagation()}>
+            <h2>🎤 Microphone Access Required</h2>
+            <p>To practice pronunciation, we need access to your microphone.</p>
+
+            <div className="mic-instructions">
+              <h3>Enable Microphone on {micInstructions.device}:</h3>
+              <ol>
+                {micInstructions.steps.map((step, idx) => (
+                  <li key={idx}>{step}</li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="modal-actions">
+              <button
+                className="btn-primary"
+                onClick={() => {
+                  setShowMicModal(false);
+                  // Try again
+                  testMicrophone().then(result => {
+                    if (result.success) {
+                      setMicrophoneReady(true);
+                      setError(null);
+                      result.stream.getTracks().forEach(track => track.stop());
+                    }
+                  });
+                }}
+              >
+                Try Again
+              </button>
+              <button
+                className="btn-secondary"
+                onClick={() => setShowMicModal(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="pronunciation-mode">
         {/* Header */}
         <div className="pronunciation-header">
