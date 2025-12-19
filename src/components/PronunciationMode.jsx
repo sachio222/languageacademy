@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Mic, Square, Volume2, Play, RotateCcw, ChevronRight, AlertCircle } from 'lucide-react';
 import { usePageTime } from '../hooks/usePageTime';
+import { useSectionTime } from '../hooks/useSectionTime';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { extractModuleId } from '../utils/progressSync';
@@ -42,6 +43,7 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
   const [audioLevel, setAudioLevel] = useState(0);
   const [isPlayingBack, setIsPlayingBack] = useState(false);
   const [showMicModal, setShowMicModal] = useState(false);
+  const [passedWords, setPassedWords] = useState(new Set()); // Track words passed with high score
 
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
@@ -69,12 +71,18 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
   const moduleId = lesson ? extractModuleId(lesson) : null;
   const { modulePrefix } = lesson ? splitTitle(lesson.title) : { modulePrefix: null };
 
+  // Track section-specific time
+  useSectionTime(moduleId, 'pronunciation', true);
+
   // Get vocabulary list
   const vocabulary = lesson?.vocabularyReference || [];
   const currentWord = vocabulary[currentIndex];
 
   // Detect syllables for current word
   const syllables = currentWord ? detectSyllables(currentWord.french) : [];
+
+  // Check if current word is already passed
+  const isCurrentWordPassed = currentWord && passedWords.has(currentIndex);
 
   // Check if this is a multi-word phrase (has spaces)
   const isPhrase = currentWord?.french.includes(' ');
@@ -94,7 +102,7 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
 
   // Auto-complete section
   useEffect(() => {
-    const requiredRecordings = Math.ceil(vocabulary.length * 0.8);
+    const requiredRecordings = vocabulary.length; // Must practice ALL vocabulary
 
     if (recordingsCount >= requiredRecordings && !completionCalled.current && isAuthenticated && moduleId) {
       completionCalled.current = true;
@@ -102,7 +110,7 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
       completeSectionProgress(moduleId, 'pronunciation', {
         recordings_count: recordingsCount,
         total_vocabulary: vocabulary.length,
-        completion_method: 'practiced_80_percent'
+        completion_method: 'practiced_all_vocabulary'
       });
     }
   }, [recordingsCount, vocabulary.length, isAuthenticated, moduleId, completeSectionProgress]);
@@ -247,6 +255,12 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
         setRecordingsCount(prev => prev + 1);
         setAttemptCount(prev => prev + 1);
         setError(null); // Clear any previous errors
+
+        // If passed with high score (70+), mark as passed to prevent re-recording
+        if (result.scores?.pronunciation >= 70) {
+          setPassedWords(prev => new Set([...prev, currentIndex]));
+          logger.log('Word passed with high score, preventing re-recording to save API costs');
+        }
       } else {
         logger.warn('Assessment FAILED:', {
           error: result.error,
@@ -586,7 +600,7 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
           )}
 
           {/* Recording Button - Below Waveform */}
-          {!hasResults && (
+          {!hasResults && !isCurrentWordPassed && (
             <button
               className={`btn-record-hold ${isRecording ? 'recording' : ''}`}
               onMouseDown={startRecording}
@@ -638,10 +652,27 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
             </button>
           )}
 
+          {/* Word already passed message */}
+          {isCurrentWordPassed && !hasResults && (
+            <div className="word-passed-message">
+              ✓ Already mastered! Move to the next word.
+            </div>
+          )}
+
           {error && (
             <div className="error-message">
               <AlertCircle size={16} />
               {error}
+            </div>
+          )}
+
+          {/* Skip button for already passed words */}
+          {isCurrentWordPassed && !hasResults && (
+            <div className="result-main-action">
+              <button className="btn-next-main" onClick={handleNext}>
+                {currentIndex === vocabulary.length - 1 ? 'Finish' : 'Next Word'}
+                <ChevronRight size={20} />
+              </button>
             </div>
           )}
 
@@ -658,7 +689,9 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
               {/* Centered Next Button Second */}
               <div className="result-main-action">
                 <button className="btn-next-main" onClick={handleNext}>
-                  {overallScore >= 70 ? 'Next Word' : 'Skip Word'}
+                  {currentIndex === vocabulary.length - 1
+                    ? 'Finish'
+                    : overallScore >= 70 ? 'Next Word' : 'Skip Word'}
                   <ChevronRight size={20} />
                 </button>
               </div>

@@ -157,7 +157,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
           <div className="vocab-preview">
             <div className="vocab-preview-label">You'll learn:</div>
             <div className="vocab-preview-grid">
-              {lesson.vocabularyReference.slice(0, 12).map((word, idx) => (
+              {lesson.vocabularyReference.map((word, idx) => (
                 <div
                   key={idx}
                   className="vocab-preview-word"
@@ -168,14 +168,6 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                 </div>
               ))}
             </div>
-            {lesson.vocabularyReference.length > 12 && (
-              <button
-                className="vocab-preview-see-all"
-                onClick={() => onSectionSelect('intro')}
-              >
-                See all {lesson.vocabularyReference.length} words →
-              </button>
-            )}
           </div>
         )}
       </div>
