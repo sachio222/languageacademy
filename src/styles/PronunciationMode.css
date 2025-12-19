@@ -353,6 +353,11 @@
   border: none;
   cursor: pointer;
   transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
 }
 
 .btn-record-hold:disabled {
@@ -688,12 +693,11 @@
   }
 
   .syllable-text {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .syllable-card {
-    min-width: 100px;
-    padding: 1.25rem 0.875rem;
+    padding: 0;
   }
 }
 
@@ -707,7 +711,12 @@
   }
 
   .syllable-text {
-    font-size: 2rem;
+    font-size: 2.25rem;
+  }
+
+  /* Better touch target for tablets */
+  .btn-record-hold {
+    padding: 1.25rem 2.5rem;
   }
 
   .recording-area {
@@ -721,7 +730,20 @@
   }
 
   .syllable-text {
-    font-size: 1.75rem;
+    font-size: 2rem;
+  }
+
+  .syllable-card {
+    padding: 0;
+  }
+
+  /* Larger touch target for recording button on mobile */
+  .btn-record-hold {
+    padding: 1.5rem 3rem;
+  }
+
+  .record-label {
+    font-size: 1rem;
   }
 
   .waveform-container {

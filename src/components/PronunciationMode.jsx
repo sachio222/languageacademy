@@ -208,7 +208,16 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
   };
 
   // Start recording
-  const startRecording = async () => {
+  const startRecording = async (e) => {
+    // Prevent default touch behavior and mouse events on mobile
+    if (e && e.type === 'touchstart') {
+      e.preventDefault();
+      // Haptic feedback for mobile (if supported)
+      if (navigator.vibrate) {
+        navigator.vibrate(10); // Short vibration on start
+      }
+    }
+
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: {
@@ -291,7 +300,16 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
   };
 
   // Stop recording
-  const stopRecording = () => {
+  const stopRecording = (e) => {
+    // Prevent default touch behavior
+    if (e && (e.type === 'touchend' || e.type === 'touchcancel')) {
+      e.preventDefault();
+      // Haptic feedback for mobile (if supported)
+      if (navigator.vibrate && isRecording) {
+        navigator.vibrate(5); // Short vibration on stop
+      }
+    }
+
     if (mediaRecorderRef.current && isRecording) {
       mediaRecorderRef.current.stop();
       setIsRecording(false);
@@ -303,6 +321,26 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
       if (maxRecordingTimerRef.current) {
         clearTimeout(maxRecordingTimerRef.current);
       }
+    }
+  };
+
+  // Handle touch move - stop recording if finger leaves button
+  const handleTouchMove = (e) => {
+    if (!isRecording) return;
+
+    const touch = e.touches[0];
+    const target = e.currentTarget;
+    const rect = target.getBoundingClientRect();
+
+    // Check if touch is still within button bounds
+    const isInside =
+      touch.clientX >= rect.left &&
+      touch.clientX <= rect.right &&
+      touch.clientY >= rect.top &&
+      touch.clientY <= rect.bottom;
+
+    if (!isInside) {
+      stopRecording(e);
     }
   };
 
@@ -689,6 +727,8 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
               onMouseLeave={isRecording ? stopRecording : undefined}
               onTouchStart={startRecording}
               onTouchEnd={stopRecording}
+              onTouchCancel={stopRecording}
+              onTouchMove={handleTouchMove}
               disabled={!microphoneReady || isAssessing}
             >
               <div className="recording-circle-small">
