@@ -168,6 +168,12 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                 </div>
               ))}
             </div>
+            <button
+              className="vocab-preview-see-all"
+              onClick={() => onSectionSelect('intro')}
+            >
+              See all {lesson.vocabularyReference.length} words →
+            </button>
           </div>
         )}
       </div>
