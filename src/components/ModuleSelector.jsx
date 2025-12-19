@@ -51,9 +51,19 @@ const LazyImage = ({ src, alt, className, style }) => {
 // This allows for flexible section management and easy addition/removal
 
 function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgress, completedExercises }) {
-  const { isAuthenticated } = useSupabaseProgress();
+  const { isAuthenticated, profile } = useSupabaseProgress();
   const moduleId = extractModuleId(lesson);
   const { modulePrefix, mainTitle } = splitTitle(lesson.title);
+
+  // Check if user has premium access (super_admin gets premium)
+  const hasPremiumAccess = profile?.role === 'super_admin';
+
+  // Debug logging
+  logger.log('ModuleSelector premium access check:', {
+    profile,
+    role: profile?.role,
+    hasPremiumAccess
+  });
 
   // Get available sections for this lesson
   const availableSections = getActiveSections()
@@ -96,15 +106,15 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
   const currentSection = getCurrentSection();
 
   const handleSectionClick = (section) => {
-    // Prevent click on premium/coming soon sections
-    if (section.isPremium || section.comingSoon) {
-      logger.log(`Section ${section.id} is coming soon`);
+    // Prevent click on premium/coming soon sections (unless user has premium access)
+    if ((section.isPremium || section.comingSoon) && !hasPremiumAccess) {
+      logger.log(`Section ${section.id} is premium/coming soon`);
       return;
     }
 
     if (section.isSpecial) {
       const allComplete = availableSections
-        .filter(s => !s.isSpecial && !s.isPremium && !s.comingSoon)
+        .filter(s => !s.isSpecial && (!s.isPremium || hasPremiumAccess) && (!s.comingSoon || hasPremiumAccess))
         .every(s => getSectionStatusForLesson(s) === 'completed');
 
       if (!allComplete) {
@@ -178,7 +188,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
           const isDisabled = status === 'disabled' || status === 'locked';
           const isLocked = status === 'locked';
 
-          const isPremiumCard = section.isPremium || section.comingSoon;
+          const isPremiumCard = (section.isPremium || section.comingSoon) && !hasPremiumAccess;
 
           return (
             <button
@@ -191,7 +201,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
               }}
               title={
                 isPremiumCard
-                  ? 'Coming Soon - Premium Feature'
+                  ? 'Premium Feature'
                   : isLocked
                     ? 'Complete previous sections to unlock'
                     : ''
@@ -225,9 +235,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
                 <div className="module-selector-card-status">
                   {isPremiumCard ? (
                     <div className="premium-badges">
-                      {section.isPremium && (
-                        <div className="premium-badge">Premium</div>
-                      )}
+                      <div className="premium-badge">Premium</div>
                       {section.comingSoon && (
                         <div className="coming-soon-badge">Coming Soon</div>
                       )}

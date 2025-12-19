@@ -5,6 +5,7 @@ import ConceptPane from './ConceptPane';
 import ConceptIntro from './ConceptIntro';
 import StudyMode from './StudyMode';
 import SpeedMatch from './SpeedMatch';
+import PronunciationMode from './PronunciationMode';
 import VocabularyReference from './VocabularyReference';
 import RightSidebar from './RightSidebar';
 import ModuleExam from './ModuleExam';
@@ -958,9 +959,10 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
               lesson={lesson}
               onBack={handleBackToSelector}
             />
-            <div style={{ padding: '2rem', textAlign: 'center' }}>
-              <p>Pronunciation section coming soon!</p>
-            </div>
+            <PronunciationMode
+              lesson={lesson}
+              onFinishPronunciation={handleBackToSelector}
+            />
           </div>
         ) : currentSection === 'conversation' ? (
           <div>

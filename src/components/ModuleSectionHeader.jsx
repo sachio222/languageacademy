@@ -75,7 +75,7 @@ const SECTION_CONFIG = {
     id: 'pronunciation',
     label: 'Pronunciation',
     color: '#EF4444',
-    pexelsImage: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
+    pexelsImage: 'https://images.pexels.com/photos/164960/pexels-photo-164960.jpeg?auto=compress&cs=tinysrgb&w=1920&h=400&fit=crop',
     hasImage: true,
   },
   'conversation': {
@@ -89,17 +89,17 @@ const SECTION_CONFIG = {
 
 function ModuleSectionHeader({ sectionId, moduleId, lesson, onBack }) {
   const config = SECTION_CONFIG[sectionId] || SECTION_CONFIG['intro'];
-  
+
   // Get reactive state from hooks
   const { sectionProgress } = useSectionProgress();
   const { moduleProgress } = useSupabaseProgress();
-  
+
   // Calculate completion status (will re-render when state changes)
   const sectionRegistryId = config.id;
   const section = SECTION_REGISTRY[sectionRegistryId];
   const moduleSectionProgress = sectionProgress?.[moduleId] || {};
   const moduleProgressData = moduleProgress?.[moduleId];
-  
+
   // This calculation happens on every render, so it's reactive
   const isCompleted = section?.getCompletionStatus?.(
     moduleProgressData,
@@ -111,40 +111,31 @@ function ModuleSectionHeader({ sectionId, moduleId, lesson, onBack }) {
   const { modulePrefix } = lesson ? splitTitle(lesson.title) : { modulePrefix: null };
 
   return (
-    <div 
+    <div
       className="module-section-header"
-      style={{
-        '--section-color': config.color,
-      }}
+      style={{ '--section-color': config.color }}
     >
       {/* Background Image */}
-      {config.hasImage && config.pexelsImage ? (
-        <>
-          <LazyImage
-            src={config.pexelsImage}
-            alt={config.label}
-            className="module-section-header-image"
-            style={{
-              backgroundColor: config.color,
-            }}
-          />
-          <div className="module-section-header-scrim" />
-        </>
-      ) : (
-        <div 
+      {config.hasImage && config.pexelsImage && (
+        <LazyImage
+          src={config.pexelsImage}
+          alt={config.label}
           className="module-section-header-image"
           style={{
-            backgroundColor: config.color,
+            backgroundPosition: sectionId === 'pronunciation' ? 'center 0%' : 'center'
           }}
         />
       )}
-      
-      {/* Content */}
+
+      {/* Scrim Overlay for Text Readability */}
+      <div className="module-section-header-scrim" />
+
+      {/* Content Overlay */}
       <div className="module-section-header-content">
         <button className="module-section-header-back" onClick={onBack}>
-          ← Back to Menu
+          ← Back
         </button>
-        
+
         <div className="module-section-header-title-wrapper">
           {modulePrefix && (
             <div className="module-section-header-prefix">
@@ -155,12 +146,12 @@ function ModuleSectionHeader({ sectionId, moduleId, lesson, onBack }) {
             {config.label}
           </div>
         </div>
-        
+
         {/* Status Indicator */}
         <div className="module-section-header-status">
           {isCompleted && (
             <div className="status-checkmark">
-              <Check size={20} />
+              <Check size={16} />
             </div>
           )}
           {!isCompleted && (

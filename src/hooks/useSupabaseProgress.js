@@ -14,6 +14,7 @@ export const useSupabaseProgress = () => {
     supabaseClient,
     isAuthenticated,
     loading: authLoading,
+    profile,
   } = useAuth();
   const [completedExercises, setCompletedExercises] = useState(new Set());
   const [moduleProgress, setModuleProgress] = useState({});
@@ -769,5 +770,6 @@ export const useSupabaseProgress = () => {
     isAuthenticated,
     supabaseClient,
     supabaseUser,
+    profile,
   };
 };
