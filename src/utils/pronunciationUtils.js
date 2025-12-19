@@ -141,9 +141,10 @@ export const simplifyPhoneme = (phoneme) => {
 
 /**
  * Determine if a score needs improvement
+ * Passing threshold is 80
  */
 export const needsImprovement = (score) => {
-  return score < 70;
+  return score < 80;
 };
 
 /**
@@ -151,9 +152,9 @@ export const needsImprovement = (score) => {
  * Don't claim "perfect" if any syllable is struggling
  */
 export const getEncouragingMessage = (score, syllableResults, attempt = 1) => {
-  // Check if ANY syllable is below 70
+  // Check if ANY syllable is below 80 (passing threshold)
   const hasWeakSyllable = syllableResults.some(
-    (s) => s.score !== null && s.score < 70
+    (s) => s.score !== null && s.score < 80
   );
 
   // Messages for each tier with variations

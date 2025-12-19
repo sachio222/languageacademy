@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Mic, Square, Volume2, Play, RotateCcw, ChevronRight, AlertCircle } from 'lucide-react';
 import { usePageTime } from '../hooks/usePageTime';
 import { useSectionTime } from '../hooks/useSectionTime';
@@ -29,7 +29,25 @@ import '../styles/PronunciationMode.css';
  */
 
 function PronunciationMode({ lesson, onFinishPronunciation }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // Helper to get initial word index from URL (1-based to 0-based) with validation
+  const getInitialWordIndex = () => {
+    const params = new URLSearchParams(window.location.search);
+    const wordParam = params.get('word');
+    if (wordParam) {
+      const wordNum = parseInt(wordParam, 10);
+      if (!isNaN(wordNum) && wordNum >= 1) {
+        return wordNum - 1; // Convert 1-based to 0-based
+      } else {
+        // Invalid word parameter, remove it
+        const url = new URL(window.location);
+        url.searchParams.delete('word');
+        window.history.replaceState({}, '', url);
+      }
+    }
+    return 0;
+  };
+
+  const [currentIndex, setCurrentIndex] = useState(getInitialWordIndex);
   const [isRecording, setIsRecording] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
   const [assessmentResult, setAssessmentResult] = useState(null);
@@ -87,6 +105,15 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
   // Check if this is a multi-word phrase (has spaces)
   const isPhrase = currentWord?.french.includes(' ');
 
+  // Reset state for new word - defined early for use in navigation handlers
+  const resetForNewWord = useCallback(() => {
+    setAssessmentResult(null);
+    setUserAudioBlob(null);
+    setError(null);
+    setAttemptCount(0);
+    setFocusMode(null);
+  }, []);
+
   // Test microphone on mount
   useEffect(() => {
     testMicrophone().then(result => {
@@ -99,6 +126,47 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
       }
     });
   }, []);
+
+  // Validate initial word index once vocabulary is available
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const wordParam = params.get('word');
+    if (wordParam && vocabulary.length > 0) {
+      const wordNum = parseInt(wordParam, 10);
+      if (isNaN(wordNum) || wordNum < 1 || wordNum > vocabulary.length) {
+        // Invalid word index, remove it and reset to first word
+        const url = new URL(window.location);
+        url.searchParams.delete('word');
+        window.history.replaceState({}, '', url);
+      }
+    }
+  }, [vocabulary.length]);
+
+  // Handle browser back/forward navigation
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const wordParam = params.get('word');
+      if (wordParam) {
+        const wordNum = parseInt(wordParam, 10);
+        if (!isNaN(wordNum) && wordNum >= 1 && wordNum <= vocabulary.length) {
+          setCurrentIndex(wordNum - 1);
+          resetForNewWord();
+        } else {
+          // Invalid word index, remove it
+          const url = new URL(window.location);
+          url.searchParams.delete('word');
+          window.history.replaceState({}, '', url);
+        }
+      } else {
+        setCurrentIndex(0);
+        resetForNewWord();
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [vocabulary.length, resetForNewWord]);
 
   // Auto-complete section
   useEffect(() => {
@@ -256,10 +324,17 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
         setAttemptCount(prev => prev + 1);
         setError(null); // Clear any previous errors
 
-        // If passed with high score (70+), mark as passed to prevent re-recording
-        if (result.scores?.pronunciation >= 70) {
+        // Check if ALL syllables scored 80+
+        const syllableResults = result.phonemes
+          ? mapPhonemesToSyllables(result.phonemes, syllables, currentWord.french)
+          : [];
+        const allSyllablesPassed = syllableResults.length > 0 &&
+          syllableResults.every(s => s.score !== null && s.score >= 80);
+
+        // If all syllables passed with 80+, mark as passed to prevent re-recording
+        if (allSyllablesPassed) {
           setPassedWords(prev => new Set([...prev, currentIndex]));
-          logger.log('Word passed with high score, preventing re-recording to save API costs');
+          logger.log('All syllables scored 80+, word passed - preventing re-recording to save API costs');
         }
       } else {
         logger.warn('Assessment FAILED:', {
@@ -282,8 +357,13 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
   // Navigation
   const handleNext = () => {
     if (currentIndex < vocabulary.length - 1) {
-      setCurrentIndex(prev => prev + 1);
+      const newIndex = currentIndex + 1;
+      setCurrentIndex(newIndex);
       resetForNewWord();
+      // Update URL
+      const url = new URL(window.location);
+      url.searchParams.set('word', newIndex + 1);
+      window.history.pushState({}, '', url);
     } else {
       onFinishPronunciation();
     }
@@ -291,17 +371,14 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(prev => prev - 1);
+      const newIndex = currentIndex - 1;
+      setCurrentIndex(newIndex);
       resetForNewWord();
+      // Update URL
+      const url = new URL(window.location);
+      url.searchParams.set('word', newIndex + 1);
+      window.history.pushState({}, '', url);
     }
-  };
-
-  const resetForNewWord = () => {
-    setAssessmentResult(null);
-    setUserAudioBlob(null);
-    setError(null);
-    setAttemptCount(0);
-    setFocusMode(null);
   };
 
   const handleTryAgain = () => {
@@ -357,6 +434,10 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
 
   const overallScore = assessmentResult?.scores?.pronunciation || null;
   const hasResults = assessmentResult && !isAssessing;
+
+  // Check if current results show all syllables passed
+  const allSyllablesPassed = hasResults && syllableResults.length > 0 &&
+    syllableResults.every(s => s.score !== null && s.score >= 80);
 
   // Detect device/browser for mic instructions
   const getMicInstructions = () => {
@@ -589,8 +670,8 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
             </button>
           </div>
 
-          {/* Try Again - Only if any syllable is poor */}
-          {hasResults && syllableResults.some(s => s.score !== null && needsImprovement(s.score)) && (
+          {/* Try Again - Only if any syllable is poor AND not already passed */}
+          {hasResults && !allSyllablesPassed && syllableResults.some(s => s.score !== null && needsImprovement(s.score)) && (
             <div className="try-again-inline">
               <button className="btn-try-again-inline" onClick={handleTryAgain}>
                 <RotateCcw size={14} />
@@ -691,7 +772,7 @@ function PronunciationMode({ lesson, onFinishPronunciation }) {
                 <button className="btn-next-main" onClick={handleNext}>
                   {currentIndex === vocabulary.length - 1
                     ? 'Finish'
-                    : overallScore >= 70 ? 'Next Word' : 'Skip Word'}
+                    : allSyllablesPassed ? 'Next Word' : 'Skip Word'}
                   <ChevronRight size={20} />
                 </button>
               </div>
