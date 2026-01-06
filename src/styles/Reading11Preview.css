@@ -10,7 +10,7 @@
   margin-bottom: 2.5rem;
 }
 
-.preview-badge {
+.preview-header .preview-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: #f7f9fc;
@@ -21,6 +21,9 @@
   letter-spacing: 0.05em;
   border-radius: 6px;
   margin-bottom: 1rem;
+  position: static; /* Reset any absolute positioning from other styles */
+  top: auto;
+  right: auto;
 }
 
 .preview-header h3 {

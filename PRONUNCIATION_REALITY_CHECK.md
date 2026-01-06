@@ -100,3 +100,5 @@ The current Edge Function approach is broken and slow. The SDK works and is fast
 
 **Recommendation:** Use client-side SDK with rate limiting. Done.
 
+
+

@@ -52,3 +52,5 @@ The serverless function at `/api/pronunciation-assessment.js` will handle Azure 
 
 Your Azure credentials are now **never exposed to the client**. 🔒
 
+
+

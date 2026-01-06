@@ -77,3 +77,5 @@ Azure charges per request. Consider:
 - Usage tracking in Supabase
 - Free tier: 5 hours/month (~2,250 requests)
 
+
+

@@ -21,6 +21,9 @@
   letter-spacing: 0.05em;
   border-radius: 6px;
   margin-bottom: 1rem;
+  position: static; /* Reset any absolute positioning from other styles */
+  top: auto;
+  right: auto;
 }
 
 .exercise-preview-header h3 {
