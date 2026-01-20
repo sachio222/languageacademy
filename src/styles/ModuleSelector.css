@@ -214,16 +214,155 @@
   cursor: not-allowed;
 }
 
-/* Locked section styles */
-.module-selector-card.locked {
+/* Locked section styles (prerequisites not met AND not clickable for upgrade) */
+.module-selector-card.locked:not(.subscription-locked):not(.premium) {
   opacity: 0.4;
   cursor: not-allowed;
   filter: grayscale(0.5);
 }
 
-.module-selector-card.locked:hover {
+.module-selector-card.locked:not(.subscription-locked):not(.premium):hover {
   transform: none;
   box-shadow: none;
+}
+
+/* Subscription-locked and Premium sections (clickable to show upgrade modal) */
+.module-selector-card.subscription-locked,
+.module-selector-card.premium {
+  opacity: 0.7;
+  filter: grayscale(0.4);
+  cursor: pointer !important;
+}
+
+.module-selector-card.subscription-locked:hover,
+.module-selector-card.premium:hover {
+  opacity: 0.85;
+  filter: grayscale(0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Show premium badge on subscription-locked and premium sections */
+.module-selector-card.subscription-locked .premium-badges,
+.module-selector-card.premium .premium-badges {
+  opacity: 1;
+}
+
+/* Unlock Modal */
+.unlock-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.unlock-modal-content {
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.unlock-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(15, 23, 42, 0.06);
+  color: #64748b;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.unlock-modal-close:hover {
+  background: rgba(15, 23, 42, 0.1);
+  color: #0f172a;
+  transform: scale(1.05);
+}
+
+.unlock-modal-close:active {
+  transform: scale(0.95);
+}
+
+/* Make FeatureGate look good in modal */
+.unlock-modal-content .feature-gate {
+  min-height: auto;
+  background: white;
+  border-radius: 0;
+}
+
+.unlock-modal-content .feature-gate-overlay {
+  position: relative;
+  background: white;
+}
+
+.unlock-modal-content .feature-gate-content {
+  padding: 3.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .unlock-modal-overlay {
+    padding: 1rem;
+  }
+
+  .unlock-modal-content .feature-gate-content {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .unlock-modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
+  
+  .unlock-modal-content .feature-gate-info-box {
+    font-size: 0.875rem;
+  }
 }
 
 /* Active state (purple background) */
@@ -299,7 +438,8 @@
   margin-bottom: auto;
 }
 
-.module-selector-card.premium .module-selector-card-status {
+.module-selector-card.premium .module-selector-card-status,
+.module-selector-card.subscription-locked .module-selector-card-status {
   align-self: flex-start;
 }
 
@@ -420,17 +560,7 @@
   }
 }
 
-/* Premium Card Styles - Following DESIGN_PRINCIPLES.md */
-.module-selector-card.premium {
-  cursor: default;
-}
-
-.module-selector-card.premium:hover {
-  transform: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  opacity: 1;
-  filter: grayscale(0);
-}
+/* Premium card styles are now handled above with subscription-locked */
 
 /* Premium Badges Container - Hidden by default, shown on hover */
 .premium-badges {

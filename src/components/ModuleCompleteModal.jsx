@@ -1,12 +1,21 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/ModuleCompleteModal.css';
 import SpeakButton from './SpeakButton';
+import PricingModal from './PricingModal';
+import { useSubscription } from '../hooks/useSubscription';
 import { getTTSText, selectBestVoice } from '../utils/ttsUtils';
 import { createVocabRowClickHandler } from '../utils/vocabularyUtils';
 import { logger } from '../utils/logger';
 
 function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onClose, onTakeExam, onRetakeExercises, totalModules, hasNextModule, timeSpent = 0 }) {
+  const { isPaid, showPricingModal, pricingModalContext, showUpgradeModal, hideUpgradeModal } = useSubscription();
+  const [hasTriggeredUpgrade, setHasTriggeredUpgrade] = useState(false);
+  
   if (!lesson) return null;
+
+  // Check if this is the last lesson of Unit 1 (lesson 11)
+  const isUnit1Complete = lesson.id === 11;
+  const shouldShowUpgradePrompt = isUnit1Complete && !isPaid && !hasTriggeredUpgrade;
 
   // Use prop if provided, otherwise fallback to ID comparison
   const showNextButton = hasNextModule !== undefined ? hasNextModule : lesson.id < totalModules;
@@ -20,6 +29,23 @@ function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onClose, o
     const secs = seconds % 60;
     return secs > 0 ? `${minutes}m ${secs}s` : `${minutes}m`;
   };
+
+  // Trigger upgrade modal for Unit 1 completion (free users only)
+  useEffect(() => {
+    if (shouldShowUpgradePrompt) {
+      // Delay slightly to let completion modal show first
+      const timer = setTimeout(() => {
+        showUpgradeModal('unit-1-complete', {
+          hasCompletedUnit1: true,
+          wordsLearned: vocabularyItems.length,
+          timeSpent
+        });
+        setHasTriggeredUpgrade(true);
+      }, 1500); // 1.5 second delay for celebration to sink in
+      
+      return () => clearTimeout(timer);
+    }
+  }, [shouldShowUpgradePrompt, showUpgradeModal, vocabularyItems.length, timeSpent]);
 
   // Close on ESC key
   useEffect(() => {
@@ -146,19 +172,54 @@ function ModuleCompleteModal({ lesson, onNextModule, onBackToModules, onClose, o
         </div>
 
         <div className="modal-footer">
-          {showNextButton && (
-            <button className="btn-primary btn-large" onClick={onNextModule}>
-              Continue to Next Module →
-            </button>
+          {/* Show upgrade button for Unit 1 complete (free users) */}
+          {shouldShowUpgradePrompt ? (
+            <>
+              <button 
+                className="btn-primary btn-large"
+                onClick={() => showUpgradeModal('unit-1-complete', {
+                  hasCompletedUnit1: true,
+                  wordsLearned: vocabularyItems.length,
+                  timeSpent
+                })}
+                style={{
+                  background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                  border: 'none'
+                }}
+              >
+                🎉 Unlock All Units & Continue Learning →
+              </button>
+              <button
+                className="btn-secondary"
+                onClick={onBackToModules}
+              >
+                Back to Home
+              </button>
+            </>
+          ) : (
+            <>
+              {showNextButton && (
+                <button className="btn-primary btn-large" onClick={onNextModule}>
+                  Continue to Next Module →
+                </button>
+              )}
+              <button
+                className={showNextButton ? "btn-secondary" : "btn-primary"}
+                onClick={onBackToModules}
+              >
+                Back to Home
+              </button>
+            </>
           )}
-          <button
-            className={showNextButton ? "btn-secondary" : "btn-primary"}
-            onClick={onBackToModules}
-          >
-            Back to Home
-          </button>
         </div>
       </div>
+
+      {/* Pricing Modal (renders separately) */}
+      <PricingModal
+        isOpen={showPricingModal}
+        onClose={() => hideUpgradeModal(false, null)}
+        context={pricingModalContext}
+      />
     </div>
   );
 }

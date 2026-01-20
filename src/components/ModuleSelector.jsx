@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import { Check } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
+import { useSubscription } from '../hooks/useSubscription';
 import { extractModuleId } from '../utils/progressSync';
 import { logger } from '../utils/logger';
 import { splitTitle } from '../utils/moduleUtils';
@@ -11,6 +12,8 @@ import {
   getSectionStatus
 } from '../config/sectionRegistry';
 import '../styles/ModuleSelector.css';
+
+const FeatureGate = lazy(() => import('./FeatureGate'));
 
 // Lazy load images for performance
 const LazyImage = ({ src, alt, className, style }) => {
@@ -50,13 +53,23 @@ const LazyImage = ({ src, alt, className, style }) => {
 // Sections now loaded from centralized registry
 // This allows for flexible section management and easy addition/removal
 
-function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgress, completedExercises }) {
+function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgress, completedExercises, subscription }) {
   const { isAuthenticated, profile } = useSupabaseProgress();
+  // Use passed subscription or create fallback (for backward compatibility)
+  const fallbackSubscription = useSubscription();
+  const subscriptionHook = subscription || fallbackSubscription;
+  
   const moduleId = extractModuleId(lesson);
   const { modulePrefix, mainTitle } = splitTitle(lesson.title);
+  
+  const [showUnlockModal, setShowUnlockModal] = useState(false);
+  const [lockedSectionName, setLockedSectionName] = useState('');
 
   // Check if user has premium access (super_admin gets premium)
   const hasPremiumAccess = profile?.role === 'super_admin';
+
+  // Note: We keep the unlock modal open even when pricing modal opens
+  // This allows the user to return to the unlock screen after selecting a plan
 
   // Debug logging
   logger.log('ModuleSelector premium access check:', {
@@ -106,9 +119,15 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
   const currentSection = getCurrentSection();
 
   const handleSectionClick = (section) => {
-    // Prevent click on premium/coming soon sections (unless user has premium access)
-    if ((section.isPremium || section.comingSoon) && !hasPremiumAccess) {
-      logger.log(`Section ${section.id} is premium/coming soon`);
+    // Check subscription access first (pass lesson ID for unit-based access)
+    const hasSubscriptionAccess = subscriptionHook.canAccessSectionById(section.id, lesson.id);
+    
+    // If locked due to subscription OR premium/coming soon, show modal
+    if (!hasSubscriptionAccess || ((section.isPremium || section.comingSoon) && !hasPremiumAccess)) {
+      logger.log(`Section ${section.id} requires upgrade`);
+      const sectionName = section.label.replace('\n', ' ');
+      setLockedSectionName(section.comingSoon ? `${sectionName} (Coming Soon)` : sectionName);
+      setShowUnlockModal(true);
       return;
     }
 
@@ -183,23 +202,32 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
           const status = getSectionStatusForLesson(section);
           const isActive = currentSection?.id === section.id && status === 'active';
           const isCompleted = status === 'completed';
-          const isDisabled = status === 'disabled' || status === 'locked';
           const isLocked = status === 'locked';
 
+          // Check subscription access for this section (pass lesson ID for unit-based access)
+          const hasSubscriptionAccess = subscriptionHook.canAccessSectionById(section.id, lesson.id);
+          const isSubscriptionLocked = !hasSubscriptionAccess;
+
           const isPremiumCard = (section.isPremium || section.comingSoon) && !hasPremiumAccess;
+
+          // Disable logic:
+          // - Prerequisites not met + NOT subscription/premium issue: disabled
+          // - All subscription-locked and premium cards: NOT disabled (clickable to show modal)
+          const isDisabled = isLocked && !isSubscriptionLocked && !isPremiumCard;
 
           return (
             <button
               key={section.id}
-              className={`module-selector-card ${status} ${isActive ? 'active' : ''} ${(isLocked || isPremiumCard) ? 'locked' : ''} ${isPremiumCard ? 'premium' : ''}`}
+              className={`module-selector-card ${status} ${isActive ? 'active' : ''} ${(isLocked || isPremiumCard || isSubscriptionLocked) ? 'locked' : ''} ${isPremiumCard ? 'premium' : ''} ${isSubscriptionLocked ? 'subscription-locked' : ''}`}
               onClick={() => handleSectionClick(section)}
-              disabled={isDisabled || isPremiumCard}
+              disabled={isDisabled}
               style={{
                 '--section-color': section.color,
+                cursor: (isSubscriptionLocked || isPremiumCard) ? 'pointer' : undefined
               }}
               title={
-                isPremiumCard
-                  ? 'Premium Feature'
+                isSubscriptionLocked || isPremiumCard
+                  ? 'Click to upgrade'
                   : isLocked
                     ? 'Complete previous sections to unlock'
                     : ''
@@ -231,7 +259,7 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
               <div className="module-selector-card-content">
                 {/* Status Indicator - Top */}
                 <div className="module-selector-card-status">
-                  {isPremiumCard ? (
+                  {isSubscriptionLocked || isPremiumCard ? (
                     <div className="premium-badges">
                       <div className="premium-badge">Premium</div>
                       {section.comingSoon && (
@@ -263,6 +291,37 @@ function ModuleSelector({ lesson, onSectionSelect, moduleProgress, sectionProgre
           );
         })}
       </div>
+
+      {/* Unlock Modal */}
+      {showUnlockModal && (
+        <div className="unlock-modal-overlay" onClick={() => setShowUnlockModal(false)}>
+          <div className="unlock-modal-content" onClick={(e) => e.stopPropagation()}>
+            <Suspense fallback={<div>Loading...</div>}>
+              <FeatureGate
+                feature="all-sections"
+                touchpoint="section-lock"
+                title={`Unlock ${lockedSectionName}`}
+                description="Get full access to all sections in every module"
+                showPrompt={true}
+                subscriptionHook={subscriptionHook}
+                metadata={{
+                  sectionName: lockedSectionName,
+                  lessonId: lesson.id,
+                  lessonTitle: lesson.title,
+                  onUnlockModalClose: () => setShowUnlockModal(false)
+                }}
+              />
+            </Suspense>
+            <button 
+              className="unlock-modal-close"
+              onClick={() => setShowUnlockModal(false)}
+              aria-label="Close"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,740 @@
+/* ============================================================================
+   PRICING MODAL - Premium Design
+   Sophisticated, trustworthy, conversion-optimized
+   ============================================================================ */
+
+/* Modal Overlay */
+.pricing-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: overlayFadeIn 0.2s ease;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal Container */
+.pricing-modal {
+  background: #ffffff;
+  border-radius: 24px;
+  max-width: 1140px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(40px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Close Button */
+.pricing-modal-close {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.75rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  color: #64748b;
+}
+
+.pricing-modal-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #334155;
+}
+
+.pricing-modal-close:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Header Section */
+.pricing-modal-header {
+  text-align: center;
+  padding: 3.5rem 2.5rem 2.5rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.pricing-modal-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.875rem 0;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.pricing-modal-subtitle {
+  font-size: 1.0625rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Celebration Header Variant */
+.pricing-modal-header.celebration {
+  background: linear-gradient(180deg, #fef3c7 0%, #ffffff 100%);
+}
+
+.pricing-modal-header.celebration .pricing-modal-title::before {
+  content: '🎉 ';
+}
+
+/* Plans Grid */
+.pricing-modal-plans {
+  padding: 0 3rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+/* Plan Card */
+.plan-card {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem 1.75rem 1.75rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  cursor: pointer;
+  height: 100%;
+}
+
+.plan-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Recommended Plan */
+.plan-card-highlight {
+  border: 2px solid #6366f1;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 0 0 1px rgba(99, 102, 241, 0.05);
+  background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);
+}
+
+.plan-card-highlight:hover {
+  box-shadow: 0 20px 35px -5px rgba(99, 102, 241, 0.15), 0 0 0 1px rgba(99, 102, 241, 0.1);
+  transform: translateY(-4px);
+  border-color: #6366f1;
+}
+
+/* Current Plan */
+.plan-card-current {
+  border-color: #10b981;
+  background: #f8fafc;
+  opacity: 0.65;
+  cursor: default;
+  pointer-events: none;
+}
+
+.plan-card-current:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: #10b981;
+}
+
+/* Selected Plan - Subtle indicator */
+.plan-card-selected {
+  border-color: #16a34a;
+  border-width: 2px;
+}
+
+.plan-card-selected:hover {
+  border-color: #16a34a;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(22, 163, 74, 0.1);
+}
+
+/* Subtle checkmark indicator in top-right corner */
+.plan-card-selected-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 28px;
+  height: 28px;
+  background: #16a34a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+}
+
+/* Badge */
+.plan-card-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #6366f1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 24px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+.plan-card-current-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #10b981;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 24px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* Plan Header */
+.plan-card-header {
+  text-align: center;
+  min-height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.plan-card-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.plan-card-tagline {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Pricing */
+.plan-card-pricing {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 140px;
+}
+
+.plan-card-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.375rem;
+  margin-bottom: 0.875rem;
+}
+
+.plan-card-price-value {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #0f172a;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.plan-card-price-interval {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+.plan-card-weekly-cost {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 0.625rem;
+  min-height: 21px;
+}
+
+/* CTA Button */
+.plan-card-cta {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: -0.01em;
+}
+
+.plan-card-cta:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card-cta:active {
+  transform: translateY(0);
+}
+
+/* Highlighted CTA (for recommended plan) */
+.plan-card-cta-highlight {
+  background: #6366f1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.plan-card-cta-highlight:hover {
+  background: #5558e3;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(99, 102, 241, 0.25);
+}
+
+/* Disabled CTA */
+.plan-card-cta-disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.plan-card-cta-disabled:hover {
+  transform: none;
+  box-shadow: none;
+  background: #e2e8f0;
+}
+
+
+/* What's Included Section */
+.pricing-modal-benefits {
+  padding: 0 3rem 3rem;
+  text-align: center;
+}
+
+.pricing-modal-benefits-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pricing-modal-benefits-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pricing-modal-benefit {
+  font-size: 0.9375rem;
+  color: #475569;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricing-modal-benefit::before {
+  content: '✓';
+  color: #10b981;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+/* Testimonial */
+.pricing-modal-testimonial {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin: 0 3rem 2.5rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.pricing-modal-testimonial-text {
+  font-size: 1.0625rem;
+  font-style: italic;
+  color: #475569;
+  margin: 0 0 1rem 0;
+  line-height: 1.7;
+}
+
+.pricing-modal-testimonial-text::before {
+  content: '"';
+}
+
+.pricing-modal-testimonial-text::after {
+  content: '"';
+}
+
+.pricing-modal-testimonial-author {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Footer */
+.pricing-modal-footer {
+  padding: 2.5rem 3rem;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  margin: 0 3rem;
+}
+
+.pricing-modal-footer-text {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Loading Overlay */
+.pricing-modal-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  z-index: 100;
+}
+
+.pricing-modal-loading-content {
+  text-align: center;
+}
+
+.pricing-modal-loading-spinner {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.5rem;
+  border: 3px solid #e2e8f0;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.pricing-modal-loading-text {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+/* ============================================================================
+   UPGRADE BANNER
+   ============================================================================ */
+
+.upgrade-banner {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.2);
+  animation: bannerSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes bannerSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.upgrade-banner-content {
+  flex: 1;
+}
+
+.upgrade-banner-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.375rem 0;
+  letter-spacing: -0.015em;
+}
+
+.upgrade-banner-description {
+  font-size: 0.9375rem;
+  opacity: 0.95;
+  margin: 0;
+  font-weight: 400;
+}
+
+.upgrade-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.upgrade-banner-cta {
+  background: white;
+  color: #6366f1;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.upgrade-banner-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2);
+}
+
+.upgrade-banner-dismiss {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upgrade-banner-dismiss:hover {
+  opacity: 1;
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .pricing-modal-plans {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 0 2rem 2rem;
+  }
+
+  .plan-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .plan-card-header {
+    min-height: 70px;
+  }
+
+  .plan-card-pricing {
+    min-height: 135px;
+  }
+
+  .pricing-modal-benefits {
+    padding: 0 2rem 2.5rem;
+  }
+
+  .pricing-modal-testimonial {
+    margin: 0 2rem 2rem;
+  }
+
+  .pricing-modal-footer {
+    margin: 0 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .pricing-modal-overlay {
+    padding: 1rem;
+  }
+
+  .pricing-modal {
+    max-height: 95vh;
+    border-radius: 20px;
+  }
+
+  .pricing-modal-header {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .pricing-modal-title {
+    font-size: 1.75rem;
+  }
+
+  .pricing-modal-subtitle {
+    font-size: 1rem;
+  }
+
+  .pricing-modal-plans {
+    padding: 0 1.5rem 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .plan-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .plan-card-header {
+    min-height: 68px;
+  }
+
+  .plan-card-price-value {
+    font-size: 2.5rem;
+  }
+
+  .plan-card-pricing {
+    min-height: 130px;
+  }
+
+  .pricing-modal-benefits {
+    padding: 0 1.5rem 2rem;
+  }
+
+  .pricing-modal-benefits-grid {
+    flex-direction: column;
+    gap: 0.875rem;
+    align-items: center;
+  }
+
+  .pricing-modal-benefit {
+    font-size: 0.875rem;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .pricing-modal-testimonial {
+    margin: 0 1.5rem 2rem;
+    padding: 2rem;
+  }
+
+  .pricing-modal-footer {
+    padding: 2rem 1.5rem;
+    margin: 0 1.5rem;
+  }
+
+  .upgrade-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .upgrade-banner-actions {
+    width: 100%;
+  }
+
+  .upgrade-banner-cta {
+    flex: 1;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .pricing-modal-close {
+    width: 32px;
+    height: 32px;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .plan-card-header {
+    min-height: 64px;
+  }
+
+  .plan-card-name {
+    font-size: 1.125rem;
+  }
+
+  .plan-card-price-value {
+    font-size: 2.25rem;
+  }
+
+  .plan-card-pricing {
+    min-height: 120px;
+  }
+
+  .pricing-modal-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Scrollbar Styling */
+.pricing-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pricing-modal::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 24px;
+}
+
+.pricing-modal::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 24px;
+}
+
+.pricing-modal::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

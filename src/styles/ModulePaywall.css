@@ -1,0 +1,79 @@
+/* ============================================================================
+   MODULE PAYWALL - Locked special modules
+   Used for special modules (fill-in-blank, exams, help modules)
+   Matches the exact style of locked section cards in module menu
+   ============================================================================ */
+
+/* Container for locked special modules - matches .module-selector-card.subscription-locked */
+.module-paywall-locked {
+  opacity: 0.7;
+  filter: grayscale(0.4);
+  cursor: pointer !important;
+  transition: all 0.15s ease;
+  position: relative;
+  overflow: hidden; /* Prevent scrolling */
+  max-height: 100vh; /* Limit height to viewport */
+}
+
+/* Hover effect - matches section card hover */
+.module-paywall-locked:hover {
+  opacity: 0.85;
+  filter: grayscale(0.2);
+}
+
+/* Invisible overlay for click handling - blocks all scroll interactions */
+.module-paywall-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  cursor: pointer;
+  /* Block all pointer events from reaching content below */
+  pointer-events: auto;
+  /* Prevent any scroll events from propagating */
+  touch-action: none;
+  overscroll-behavior: contain;
+}
+
+/* Premium badge overlay - base styles */
+.module-paywall-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* White variant - for colored/dark backgrounds (fill-in-blank) */
+.module-paywall-badge-white {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Dark variant - for white/light backgrounds (reading, exams, help) */
+.module-paywall-badge-dark {
+  background: rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: #334155;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .module-paywall-badge {
+    padding: 0.3rem 0.625rem;
+    font-size: 0.6875rem;
+  }
+}

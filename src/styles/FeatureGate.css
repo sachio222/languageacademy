@@ -1,0 +1,286 @@
+/* ============================================================================
+   FEATURE GATE STYLES - Premium Design
+   Sophisticated lock screen for gated content
+   ============================================================================ */
+
+.feature-gate {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+/* When used in a modal context */
+.feature-gate.compact,
+.unlock-modal-content .feature-gate {
+  min-height: auto;
+  height: auto;
+}
+
+.feature-gate-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.feature-gate-content {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 480px;
+  animation: featureGateFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes featureGateFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icon */
+.feature-gate-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 2rem;
+  background: #0f172a;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+/* Text */
+.feature-gate-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Price - Prominent */
+.feature-gate-price {
+  font-size: 1.125rem;
+  color: #0f172a;
+  margin: 0 0 2rem 0;
+  font-weight: 500;
+}
+
+/* Info Box - Bumble style */
+.feature-gate-info-box {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  width: 100%;
+  max-width: 440px;
+}
+
+.feature-gate-info-text {
+  font-size: 0.9375rem;
+  color: #475569;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.feature-gate-billing-note {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.feature-gate-billing-note strong {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* CTA Button - Bumble style */
+.feature-gate-cta {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.125rem 2rem;
+  background: #0f172a;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.feature-gate-cta:hover:not(:disabled) {
+  background: #1e293b;
+  transform: scale(1.02);
+}
+
+.feature-gate-cta:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.feature-gate-cta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Secondary Link - Bumble style */
+.feature-gate-secondary-link {
+  background: none;
+  border: none;
+  color: #0f172a;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.feature-gate-secondary-link:hover:not(:disabled) {
+  opacity: 0.7;
+}
+
+.feature-gate-secondary-link:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Footer note - muted */
+.feature-gate-footer-note {
+  font-size: 0.8125rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Blurred preview */
+.feature-gate-preview {
+  position: relative;
+  z-index: 1;
+  filter: blur(8px);
+  opacity: 0.4;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+
+@media (max-width: 640px) {
+  .feature-gate {
+    min-height: 400px;
+  }
+
+  .feature-gate-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .feature-gate-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-gate-title {
+    font-size: 1.5rem;
+  }
+
+  .feature-gate-price {
+    font-size: 1rem;
+  }
+
+  .feature-gate-info-box {
+    padding: 1.25rem;
+  }
+
+  .feature-gate-info-text {
+    font-size: 0.875rem;
+  }
+
+  .feature-gate-billing-note {
+    font-size: 0.8125rem;
+  }
+
+  .feature-gate-cta {
+    padding: 1rem 2rem;
+    font-size: 0.9375rem;
+  }
+}
+
+/* ============================================================================
+   VARIANTS
+   ============================================================================ */
+
+/* Compact variant (for smaller gates) */
+.feature-gate.compact {
+  min-height: 250px;
+}
+
+.feature-gate.compact .feature-gate-content {
+  padding: 24px 16px;
+}
+
+.feature-gate.compact .feature-gate-icon-bg {
+  width: 56px;
+  height: 56px;
+}
+
+.feature-gate.compact .feature-gate-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.feature-gate.compact .feature-gate-description {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* Inline variant (for inline feature locks) */
+.feature-gate.inline {
+  min-height: auto;
+  border-radius: 8px;
+  border: 2px dashed #e2e8f0;
+  background: #f8fafc;
+}
+
+.feature-gate.inline .feature-gate-overlay {
+  position: relative;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.feature-gate.inline .feature-gate-content {
+  padding: 20px;
+}
+
+.feature-gate.inline .feature-gate-icon {
+  margin-bottom: 12px;
+}
+
+.feature-gate.inline .feature-gate-icon-bg {
+  width: 48px;
+  height: 48px;
+}
+
+.feature-gate.inline .feature-gate-preview {
+  display: none;
+}

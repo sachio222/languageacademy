@@ -262,7 +262,9 @@ function LessonList({ lessons, onLessonSelect, completedExercises, onShowReferen
                 <div className="unit-icon">{unitInfo.icon}</div>
                 <div className="unit-content">
                   <div className="unit-title-row">
-                    <h3 className="unit-title">{unitInfo.title}</h3>
+                    <h3 className="unit-title">
+                      {unitInfo.title}
+                    </h3>
                     {unitComplete && (
                       <span className="unit-badge-complete">
                         <BadgeCheck size={16} strokeWidth={2} />

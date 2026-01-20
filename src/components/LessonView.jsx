@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useReducer, useMemo } from 'react';
+import { useState, useEffect, useRef, useReducer, useMemo, Suspense, lazy } from 'react';
 import { Home } from 'lucide-react';
 import ExercisePane from './ExercisePane';
 import ConceptPane from './ConceptPane';
@@ -31,6 +31,9 @@ import { getSectionStatus, getActiveSections, isSectionAvailable } from '../conf
 import { logger } from "../utils/logger";
 import { splitTitle } from '../utils/moduleUtils';
 import { trackClarityEvent, setClarityTag } from '../utils/clarity';
+import '../styles/ModulePaywall.css';
+
+const FeatureGate = lazy(() => import('./FeatureGate'));
 
 // View state types
 const VIEW_STATES = {
@@ -178,7 +181,7 @@ const urlUtils = {
   }
 };
 
-function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules }) {
+function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseComplete, onModuleComplete, totalModules, subscription }) {
   // Memoize module ID to avoid duplicate calls
   const moduleId = useMemo(() => extractModuleId(lesson), [lesson]);
 
@@ -247,6 +250,10 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
   const [moduleCompleted, setModuleCompleted] = useState(false);
   const [resetting, setResetting] = useState(false);
   const [moduleTimeSpent, setModuleTimeSpent] = useState(0);
+  const [showUnlockModal, setShowUnlockModal] = useState(false);
+
+  // Note: We keep the unlock modal open even when pricing modal opens
+  // This allows the user to return to the unlock screen after selecting a plan
 
   // Track page time for study time analytics (global total)
   const pageId = `lesson-${lesson.id}`;
@@ -836,35 +843,89 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
         </div>
 
         {lesson.isHelpModule ? (
-          lesson.moduleKey?.includes('liaison-help') ? (
-            <LiaisonHelp
-              onComplete={handleNextModule}
-              moduleId={lesson.id}
-              lesson={lesson}
-              onModuleComplete={onModuleComplete}
-            />
-          ) : lesson.moduleKey?.includes('cognates-help') ? (
-            <CognatesHelp
-              onComplete={handleNextModule}
-              moduleId={lesson.id}
-              lesson={lesson}
-              onModuleComplete={onModuleComplete}
-            />
-          ) : lesson.moduleKey?.includes('questions-help') ? (
-            <QuestionsHelp
-              onComplete={handleNextModule}
-              moduleId={lesson.id}
-              lesson={lesson}
-              onModuleComplete={onModuleComplete}
-            />
-          ) : (
-            <VerbPatternHelp
-              onComplete={handleNextModule}
-              moduleId={lesson.id}
-              lesson={lesson}
-              onModuleComplete={onModuleComplete}
-            />
-          )
+          <>
+            {(() => {
+              const isLocked = !subscription.canAccessSpecialModuleById(lesson.id, 'help-module');
+              return (
+                <div 
+                  className={isLocked ? 'module-paywall-locked' : ''}
+                  style={{ position: 'relative' }}
+                >
+                  {lesson.moduleKey?.includes('liaison-help') ? (
+                    <LiaisonHelp
+                      onComplete={handleNextModule}
+                      moduleId={lesson.id}
+                      lesson={lesson}
+                      onModuleComplete={onModuleComplete}
+                    />
+                  ) : lesson.moduleKey?.includes('cognates-help') ? (
+                    <CognatesHelp
+                      onComplete={handleNextModule}
+                      moduleId={lesson.id}
+                      lesson={lesson}
+                      onModuleComplete={onModuleComplete}
+                    />
+                  ) : lesson.moduleKey?.includes('questions-help') ? (
+                    <QuestionsHelp
+                      onComplete={handleNextModule}
+                      moduleId={lesson.id}
+                      lesson={lesson}
+                      onModuleComplete={onModuleComplete}
+                    />
+                  ) : (
+                    <VerbPatternHelp
+                      onComplete={handleNextModule}
+                      moduleId={lesson.id}
+                      lesson={lesson}
+                      onModuleComplete={onModuleComplete}
+                    />
+                  )}
+                  {/* Premium badge when locked - dark variant for white background */}
+                  {isLocked && (
+                    <div className="module-paywall-badge module-paywall-badge-dark">Premium</div>
+                  )}
+                  {/* Invisible overlay for click handling */}
+                  {isLocked && (
+                    <div 
+                      className="module-paywall-overlay"
+                      onClick={() => setShowUnlockModal(true)}
+                    />
+                  )}
+                </div>
+              );
+            })()}
+            
+            {/* Unlock Modal */}
+            {showUnlockModal && (
+              <div className="unlock-modal-overlay" onClick={() => setShowUnlockModal(false)}>
+                <div className="unlock-modal-content" onClick={(e) => e.stopPropagation()}>
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <FeatureGate
+                      feature="all-sections"
+                      touchpoint="help-module-lock"
+                      title={`Unlock Help Module`}
+                      description="Get full access to all help modules and learning resources"
+                      showPrompt={true}
+                      subscriptionHook={subscription}
+                      metadata={{
+                        lessonId: lesson.id,
+                        lessonTitle: lesson.title,
+                        moduleType: 'help-module',
+                        onUnlockModalClose: () => setShowUnlockModal(false)
+                      }}
+                    />
+                  </Suspense>
+                  <button 
+                    className="unlock-modal-close"
+                    onClick={() => setShowUnlockModal(false)}
+                    aria-label="Close"
+                  >
+                    ×
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
         ) : lesson.isPhonicsReference ? (
           <PhonicsView />
         ) : showSelector && !getModuleTypeFlags.isReading && !getModuleTypeFlags.isUnitExam && !getModuleTypeFlags.isFillInBlank ? (
@@ -874,6 +935,7 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
             moduleProgress={moduleProgress || {}}
             sectionProgress={sectionProgress}
             completedExercises={completedExercises}
+            subscription={subscription}
           />
         ) : showIntro && !getModuleTypeFlags.isReading && !getModuleTypeFlags.isUnitExam && !getModuleTypeFlags.isFillInBlank ? (
           <>
@@ -891,27 +953,131 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
             </div>
           </>
         ) : lesson.isFillInTheBlank ? (
-          <div className="fill-in-blank-container">
-            <FillInTheBlank
-              module={lesson}
-              onComplete={(passed) => {
-                if (passed) {
-                  handleNextModule();
-                }
-                // User can select another module from sidebar
-              }}
-              onBack={onBack}
-            />
-          </div>
+          <>
+            {(() => {
+              const isLocked = !subscription.canAccessSpecialModuleById(lesson.id, 'fill-in-blank');
+              return (
+                <div 
+                  className={`fill-in-blank-container ${isLocked ? 'module-paywall-locked' : ''}`}
+                  style={{ position: 'relative' }}
+                >
+                  <FillInTheBlank
+                    module={lesson}
+                    onComplete={(passed) => {
+                      if (passed) {
+                        handleNextModule();
+                      }
+                      // User can select another module from sidebar
+                    }}
+                    onBack={onBack}
+                  />
+                  {/* Premium badge when locked - white variant for colored background */}
+                  {isLocked && (
+                    <div className="module-paywall-badge module-paywall-badge-white">Premium</div>
+                  )}
+                  {/* Invisible overlay for click handling */}
+                  {isLocked && (
+                    <div 
+                      className="module-paywall-overlay"
+                      onClick={() => setShowUnlockModal(true)}
+                    />
+                  )}
+                </div>
+              );
+            })()}
+            
+            {/* Unlock Modal */}
+            {showUnlockModal && (
+              <div className="unlock-modal-overlay" onClick={() => setShowUnlockModal(false)}>
+                <div className="unlock-modal-content" onClick={(e) => e.stopPropagation()}>
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <FeatureGate
+                      feature="all-sections"
+                      touchpoint="fill-in-blank-lock"
+                      title={`Unlock Fill-in-the-Blank`}
+                      description="Get full access to all practice exercises"
+                      showPrompt={true}
+                      subscriptionHook={subscription}
+                      metadata={{
+                        lessonId: lesson.id,
+                        lessonTitle: lesson.title,
+                        moduleType: 'fill-in-blank',
+                        onUnlockModalClose: () => setShowUnlockModal(false)
+                      }}
+                    />
+                  </Suspense>
+                  <button 
+                    className="unlock-modal-close"
+                    onClick={() => setShowUnlockModal(false)}
+                    aria-label="Close"
+                  >
+                    ×
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
         ) : lesson.isUnitExam ? (
-          <div className="unit-exam-container">
-            <UnitExam
-              lesson={lesson}
-              unitNumber={lesson.unitNumber}
-              onPassExam={() => handleNextModule()}
-              onRetryUnit={onBack}
-            />
-          </div>
+          <>
+            {(() => {
+              const isLocked = !subscription.canAccessSpecialModuleById(lesson.id, 'unit-exam');
+              return (
+                <div 
+                  className={`unit-exam-container ${isLocked ? 'module-paywall-locked' : ''}`}
+                  style={{ position: 'relative' }}
+                >
+                  <UnitExam
+                    lesson={lesson}
+                    unitNumber={lesson.unitNumber}
+                    onPassExam={() => handleNextModule()}
+                    onRetryUnit={onBack}
+                  />
+                  {/* Premium badge when locked - dark variant for white background */}
+                  {isLocked && (
+                    <div className="module-paywall-badge module-paywall-badge-dark">Premium</div>
+                  )}
+                  {/* Invisible overlay for click handling */}
+                  {isLocked && (
+                    <div 
+                      className="module-paywall-overlay"
+                      onClick={() => setShowUnlockModal(true)}
+                    />
+                  )}
+                </div>
+              );
+            })()}
+            
+            {/* Unlock Modal */}
+            {showUnlockModal && (
+              <div className="unlock-modal-overlay" onClick={() => setShowUnlockModal(false)}>
+                <div className="unlock-modal-content" onClick={(e) => e.stopPropagation()}>
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <FeatureGate
+                      feature="all-sections"
+                      touchpoint="unit-exam-lock"
+                      title={`Unlock Unit Exam`}
+                      description="Get full access to all unit exams and assessments"
+                      showPrompt={true}
+                      subscriptionHook={subscription}
+                      metadata={{
+                        lessonId: lesson.id,
+                        lessonTitle: lesson.title,
+                        moduleType: 'unit-exam',
+                        onUnlockModalClose: () => setShowUnlockModal(false)
+                      }}
+                    />
+                  </Suspense>
+                  <button 
+                    className="unlock-modal-close"
+                    onClick={() => setShowUnlockModal(false)}
+                    aria-label="Close"
+                  >
+                    ×
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
         ) : showExam ? (
           <ModuleExam
             lesson={lesson}
@@ -977,23 +1143,75 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
             </div>
           </div>
         ) : lesson.isReadingComprehension ? (
-          <div className="reading-module-layout">
-            <ExercisePane
-              exercise={currentExercise}
-              onNext={handleNext}
-              onPrevious={handlePrevious}
-              isFirstExercise={currentExerciseIndex === 0}
-              isLastExercise={isLastExercise}
-              isCompleted={completedExercises.has(currentExercise.id)}
-              onComplete={handleExerciseCompleteWrapper}
-              studyCompleted={studyCompleted}
-              readingPassage={lesson.readingPassage}
-              onBackToLesson={getModuleTypeFlags.isReading ? null : handleBackToLesson}
-              moduleId={moduleId}
-              displayModuleId={lesson.id}
-              unitId={extractUnitId(unitInfo)}
-            />
-          </div>
+          <>
+            {(() => {
+              const isLocked = !subscription.canAccessSpecialModuleById(lesson.id, 'reading-comprehension');
+              return (
+                <div 
+                  className={`reading-module-layout ${isLocked ? 'module-paywall-locked' : ''}`}
+                  style={{ position: 'relative' }}
+                >
+                  <ExercisePane
+                    exercise={currentExercise}
+                    onNext={handleNext}
+                    onPrevious={handlePrevious}
+                    isFirstExercise={currentExerciseIndex === 0}
+                    isLastExercise={isLastExercise}
+                    isCompleted={completedExercises.has(currentExercise.id)}
+                    onComplete={handleExerciseCompleteWrapper}
+                    studyCompleted={studyCompleted}
+                    readingPassage={lesson.readingPassage}
+                    onBackToLesson={getModuleTypeFlags.isReading ? null : handleBackToLesson}
+                    moduleId={moduleId}
+                    displayModuleId={lesson.id}
+                    unitId={extractUnitId(unitInfo)}
+                  />
+                  {/* Premium badge when locked - dark variant for white background */}
+                  {isLocked && (
+                    <div className="module-paywall-badge module-paywall-badge-dark">Premium</div>
+                  )}
+                  {/* Invisible overlay for click handling */}
+                  {isLocked && (
+                    <div 
+                      className="module-paywall-overlay"
+                      onClick={() => setShowUnlockModal(true)}
+                    />
+                  )}
+                </div>
+              );
+            })()}
+            
+            {/* Unlock Modal */}
+            {showUnlockModal && (
+              <div className="unlock-modal-overlay" onClick={() => setShowUnlockModal(false)}>
+                <div className="unlock-modal-content" onClick={(e) => e.stopPropagation()}>
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <FeatureGate
+                      feature="all-sections"
+                      touchpoint="reading-comprehension-lock"
+                      title={`Unlock Reading Comprehension`}
+                      description="Get full access to all reading comprehension modules"
+                      showPrompt={true}
+                      subscriptionHook={subscription}
+                      metadata={{
+                        lessonId: lesson.id,
+                        lessonTitle: lesson.title,
+                        moduleType: 'reading-comprehension',
+                        onUnlockModalClose: () => setShowUnlockModal(false)
+                      }}
+                    />
+                  </Suspense>
+                  <button 
+                    className="unlock-modal-close"
+                    onClick={() => setShowUnlockModal(false)}
+                    aria-label="Close"
+                  >
+                    ×
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
         ) : (
           <>
             <ModuleSectionHeader

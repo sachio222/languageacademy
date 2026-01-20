@@ -13,6 +13,7 @@ import AdminButtons from './components/AdminButtons';
 const ReferenceModules = lazy(() => import('./components/ReferenceModules'));
 const VocabularyDashboard = lazy(() => import('./components/VocabularyDashboard'));
 const DictionaryModal = lazy(() => import('./components/DictionaryModal'));
+const FeatureGate = lazy(() => import('./components/FeatureGate'));
 const FeedbackForm = lazy(() => import('./components/FeedbackForm'));
 const FeedbackAdmin = lazy(() => import('./components/FeedbackAdmin'));
 const CommunicationAdmin = lazy(() => import('./components/CommunicationAdmin'));
@@ -29,6 +30,7 @@ const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./components/TermsOfService'));
 const DataDeletionPage = lazy(() => import('./components/DataDeletionPage'));
 const AbsurdLibrary = lazy(() => import('./components/AbsurdLibrary'));
+const PricingModal = lazy(() => import('./components/PricingModal'));
 import { initializeClarity, identifyClarityUser, setClarityTag, trackClarityEvent, upgradeClaritySession } from './utils/clarity';
 import { useSupabaseProgress } from './contexts/SupabaseProgressContext';
 import { useOfflineSync } from './hooks/useOfflineSync';
@@ -37,6 +39,7 @@ import { useSupabaseClient } from './hooks/useSupabaseClient';
 import { useNavigation } from './hooks/useNavigation';
 import { useAdmin } from './hooks/useAdmin';
 import { useModuleCompletion } from './hooks/useModuleCompletion';
+import { useSubscription } from './hooks/useSubscription';
 import { lessons } from './lessons/lessonData';
 import { markBetaWelcomeAsSeen } from './utils/betaWelcomeTracking';
 import { resetWelcomeFlags } from './utils/resetWelcomeFlags';
@@ -132,6 +135,7 @@ function App() {
   const navigation = useNavigation();
   const admin = useAdmin();
   const moduleCompletion = useModuleCompletion();
+  const subscription = useSubscription();
 
   // Identify user in Clarity when authenticated
   useEffect(() => {
@@ -442,7 +446,13 @@ function App() {
         ) : navigation.currentLesson === 'vocabulary' ? (
           <div className="main-content-wrapper">
             <Suspense fallback={<div className="loading-spinner">Loading vocabulary dashboard...</div>}>
-              <VocabularyDashboard completedExercises={completedExercises} />
+              <FeatureGate
+                feature="vocabulary-dashboard"
+                touchpoint="vocabulary-lock"
+                subscriptionHook={subscription}
+              >
+                <VocabularyDashboard completedExercises={completedExercises} />
+              </FeatureGate>
             </Suspense>
             <button
               className="feedback-fab"
@@ -511,6 +521,10 @@ function App() {
               );
             }
             const unitInfo = moduleCompletion.getUnitForLesson(lesson.id);
+            
+            // NOTE: All modules are now accessible - sections are gated instead
+            // (vocabulary-intro is free, other sections require subscription)
+            
             return (
               <div className="lesson-content-wrapper">
                 <LessonView
@@ -522,6 +536,7 @@ function App() {
                   onExerciseComplete={handleExerciseComplete}
                   onModuleComplete={handleModuleComplete}
                   totalModules={lessons.length}
+                  subscription={subscription}
                 />
                 <button
                   className="feedback-fab"
@@ -736,6 +751,15 @@ function App() {
           />
         </Suspense>
       )}
+
+      {/* Pricing Modal - Global */}
+      <Suspense fallback={null}>
+        <PricingModal
+          isOpen={subscription.showPricingModal}
+          onClose={() => subscription.hideUpgradeModal(false, null)}
+          context={subscription.pricingModalContext}
+        />
+      </Suspense>
     </div>
   );
 

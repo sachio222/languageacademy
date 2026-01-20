@@ -1,13 +1,16 @@
 import { SignIn, SignUp, UserButton, useUser } from '@clerk/clerk-react'
 import { useState, useEffect, lazy, Suspense } from 'react'
-import { BookOpen, FileBarChart, Mail, BarChart3, Users } from 'lucide-react'
+import { BookOpen, FileBarChart, Mail, BarChart3, Users, Crown, CreditCard } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext'
 import { useAnalytics } from '../hooks/useAnalytics'
+import { useSubscription } from '../hooks/useSubscription'
 import LandingPage from './LandingPage'
 import WelcomePage from './WelcomePage'
 import NotificationSettings from './NotificationSettings'
 import '../styles/Landing.css'
+
+const PricingModal = lazy(() => import('./PricingModal'))
 
 const JoinClass = lazy(() => import('./JoinClass'));
 
@@ -15,6 +18,17 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
   const { isAuthenticated, loading, supabaseUser, profile } = useAuth()
   const { markWelcomeAsSeen } = useSupabaseProgress()
   const analytics = useAnalytics() // Track sessions on all authenticated pages
+  const { 
+    tier, 
+    getTierDisplayName, 
+    isPaid, 
+    isLifetime, 
+    isBeta, 
+    showUpgradeModal,
+    showPricingModal,
+    pricingModalContext,
+    hideUpgradeModal
+  } = useSubscription()
   const [showSignUp, setShowSignUp] = useState(false)
   const [showAuthForms, setShowAuthForms] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
@@ -211,6 +225,55 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
     }
   }
 
+  // Handle opening customer portal
+  const handleManageSubscription = async () => {
+    try {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseClient = window.supabase;
+      
+      if (!supabaseClient) {
+        throw new Error('Supabase client not initialized');
+      }
+
+      const { data: { session } } = await supabaseClient.auth.getSession();
+      if (!session) {
+        throw new Error('Not authenticated');
+      }
+
+      const functionUrl = `${supabaseUrl}/functions/v1/stripe-portal`;
+      
+      const response = await fetch(functionUrl, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`,
+        },
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to open customer portal');
+      }
+
+      if (data.url) {
+        window.location.href = data.url;
+      }
+    } catch (error) {
+      console.error('Error opening customer portal:', error);
+      alert(`Error: ${error.message}`);
+    }
+  }
+
+  // Get tier badge icon and color
+  const getTierBadge = () => {
+    if (isBeta) return { icon: <Crown size={14} />, color: '#f59e0b', label: 'Beta Tester' };
+    if (isLifetime) return { icon: <Crown size={14} />, color: '#8b5cf6', label: 'Lifetime' };
+    if (isPaid) return { icon: <CreditCard size={14} />, color: '#10b981', label: getTierDisplayName() };
+    return { icon: null, color: '#64748b', label: 'Free' };
+  };
+  
+  const tierBadge = getTierBadge();
+
   return (
     <div className="authenticated-app">
       <div className="auth-header-container">
@@ -232,6 +295,63 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
             fallbackRedirectUrl="/"
           >
             <UserButton.MenuItems>
+              {/* Subscription Status Display */}
+              <UserButton.Action
+                label={
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    width: '100%',
+                    padding: '8px 0',
+                    borderBottom: '1px solid #e2e8f0',
+                    pointerEvents: 'none',
+                    opacity: 0.9
+                  }}>
+                    <span style={{ 
+                      fontSize: '13px', 
+                      fontWeight: 600,
+                      color: '#64748b'
+                    }}>
+                      Subscription
+                    </span>
+                    <span style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      padding: '4px 10px',
+                      background: `${tierBadge.color}15`,
+                      color: tierBadge.color,
+                      borderRadius: '12px',
+                      fontSize: '12px',
+                      fontWeight: 700
+                    }}>
+                      {tierBadge.icon}
+                      {tierBadge.label}
+                    </span>
+                  </div>
+                }
+                onClick={() => {}}
+              />
+              
+              {/* Manage Subscription (for paid users, not beta or lifetime) */}
+              {isPaid && !isBeta && !isLifetime && (
+                <UserButton.Action
+                  label="Manage Subscription"
+                  labelIcon={<CreditCard size={16} />}
+                  onClick={handleManageSubscription}
+                />
+              )}
+
+              {/* Upgrade Button (for free users) */}
+              {!isPaid && !isBeta && (
+                <UserButton.Action
+                  label="Upgrade to Premium"
+                  labelIcon={<Crown size={16} />}
+                  onClick={() => showUpgradeModal('user-menu')}
+                />
+              )}
+
               {onShowReportCard && (
                 <UserButton.Action
                   label="My Report Card"
@@ -262,6 +382,15 @@ function AuthWrapper({ children, onBackToLanding, onOpenDictionary, onShowReport
       {showJoinClass && (
         <Suspense fallback={null}>
           <JoinClass onClose={() => setShowJoinClass(false)} />
+        </Suspense>
+      )}
+      {showPricingModal && (
+        <Suspense fallback={null}>
+          <PricingModal
+            isOpen={showPricingModal}
+            onClose={() => hideUpgradeModal(false)}
+            context={pricingModalContext}
+          />
         </Suspense>
       )}
       {children}
