@@ -77,6 +77,16 @@ Microsoft Clarity is initialized in `src/main.jsx` / `src/App.jsx`, consent-gate
 
 A plan is approved and active for fixing mid-funnel drop-off (users complete 1–3 modules then don't return). Read the plan at `~/.claude/plans/i-never-had-sign-cheerful-anchor.md` before touching anything in these areas:
 
+**Project management:** tickets live in Linear, workspace `academia-linguistica` (team `ACA`):
+
+- **[Retention-first recovery](https://linear.app/academia-linguistica/project/retention-first-recovery)** — ACA-5 through ACA-20 (execution)
+- **[Strategy sprint — retention diagnosis](https://linear.app/academia-linguistica/project/strategy-sprint-retention-diagnosis)** — ACA-21 through ACA-27 (gates execution — start here)
+- **Blocker:** ACA-24 (`/lean-startup` gate in the strategy sprint) blocks ACA-5 (retention-plan baseline). Don't start execution tickets until the sprint's fatal-assumption ranking passes.
+
+Linear access via MCP is wired at user scope (`~/.claude.json`); API key is in `.env` as `LINEAR_API_KEY` (gitignored). For vault-side strategy context, see the sibling vault at `~/Agents/Workspaces/Development/LanguageAcademy/`.
+
+Areas affected by the retention plan:
+
 - `src/components/AuthWrapper.jsx`, `src/components/WelcomePage.jsx` — onboarding flow gets new survey + level-check components inserted ahead of WelcomePage
 - `src/utils/emailTemplates.js` + Supabase cron — dormant emails (lessonComplete, moduleNudge, WOTD, weeklySummary) get activated
 - `src/services/clarity.js` — new funnel events get added (`onboarding_started`, `first_module_completed`, `returning_day_7`, etc.)
