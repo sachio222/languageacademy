@@ -11,7 +11,7 @@ export const SECTION_REGISTRY = {
     view: "intro",
     color: "#8B5CF6",
     pexelsImage:
-      "https://images.pexels.com/photos/5905708/pexels-photo-5905708.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/pexels-photo-5905708-62c127.jpeg",
     hasImage: true,
     order: 1,
     enabled: true,
@@ -47,7 +47,7 @@ export const SECTION_REGISTRY = {
     view: "study",
     color: "#3B82F6",
     pexelsImage:
-      "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/books-bookstore-book-reading-159711-f6495b.jpeg",
     hasImage: true,
     order: 2,
     enabled: true,
@@ -72,7 +72,7 @@ export const SECTION_REGISTRY = {
     view: "speedmatch",
     color: "#10B981",
     pexelsImage:
-      "https://images.pexels.com/photos/13633156/pexels-photo-13633156.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/pexels-photo-13633156-c19534.jpeg",
     hasImage: true,
     order: 3,
     enabled: true,
@@ -105,7 +105,7 @@ export const SECTION_REGISTRY = {
     view: "practice",
     color: "#F59E0B",
     pexelsImage:
-      "https://images.pexels.com/photos/210661/pexels-photo-210661.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/pexels-photo-210661-5db55b.jpeg",
     hasImage: true,
     order: 4,
     enabled: true,
@@ -130,7 +130,7 @@ export const SECTION_REGISTRY = {
     view: "pronunciation",
     color: "#EF4444",
     pexelsImage:
-      "https://images.pexels.com/photos/164960/pexels-photo-164960.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/pexels-photo-164960-36e006.jpeg",
     hasImage: true,
     order: 5,
     enabled: true,
@@ -166,7 +166,7 @@ export const SECTION_REGISTRY = {
     view: "conversation",
     color: "#06B6D4",
     pexelsImage:
-      "https://images.pexels.com/photos/3886091/pexels-photo-3886091.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/pexels-photo-3886091-d399ac.jpeg",
     hasImage: true,
     order: 6,
     enabled: true,
@@ -202,7 +202,7 @@ export const SECTION_REGISTRY = {
     view: "practice",
     color: "#F59E0B",
     pexelsImage:
-      "https://images.pexels.com/photos/210661/pexels-photo-210661.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/pexels-photo-210661-5db55b.jpeg",
     hasImage: true,
     order: 1,
     enabled: true,
@@ -229,7 +229,7 @@ export const SECTION_REGISTRY = {
     view: "exam",
     color: "#EF4444",
     pexelsImage:
-      "https://images.pexels.com/photos/5905708/pexels-photo-5905708.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/pexels-photo-5905708-62c127.jpeg",
     hasImage: true,
     order: 1,
     enabled: true,
@@ -256,7 +256,7 @@ export const SECTION_REGISTRY = {
     view: "help",
     color: "#8B5CF6",
     pexelsImage:
-      "https://images.pexels.com/photos/5905708/pexels-photo-5905708.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/pexels-photo-5905708-62c127.jpeg",
     hasImage: true,
     order: 1,
     enabled: true,
@@ -283,7 +283,7 @@ export const SECTION_REGISTRY = {
     view: "reading",
     color: "#10B981",
     pexelsImage:
-      "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/books-bookstore-book-reading-159711-f6495b.jpeg",
     hasImage: true,
     order: 1,
     enabled: true,
@@ -316,7 +316,7 @@ export const SECTION_REGISTRY = {
     view: "reference",
     color: "#6366F1",
     pexelsImage:
-      "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      "/img/external/books-bookstore-book-reading-159711-f6495b.jpeg",
     hasImage: true,
     order: 1,
     enabled: true,
@@ -340,7 +340,7 @@ export const SECTION_REGISTRY = {
     view: "next",
     color: "#6B7280",
     pexelsImage:
-      "https://images.pexels.com/photos/442584/pexels-photo-442584.jpeg",
+      "/img/external/pexels-photo-442584-4a523c.jpeg",
     hasImage: true,
     order: 999,
     enabled: true,

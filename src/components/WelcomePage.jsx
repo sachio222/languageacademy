@@ -20,7 +20,7 @@ function WelcomePage({ onContinue }) {
         <div className="welcome-container">
           <div className="art-container">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/960px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg"
+              src="/img/welcome/liberty-leading-the-people.jpg"
               alt="Liberty Leading the People by Eugène Delacroix"
               className="art-image"
             />
@@ -63,7 +63,7 @@ function WelcomePage({ onContinue }) {
                     className="image-link"
                   >
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Square_House_Roman_Temple_at_Nimes%2C_France_%287179063926%29.jpg/2560px-Square_House_Roman_Temple_at_Nimes%2C_France_%287179063926%29.jpg"
+                      src="/img/welcome/maison-carree-nimes.jpg"
                       alt="Maison Carrée, Roman Temple at Nîmes, France"
                       className="roman-temple-image"
                     />
@@ -98,7 +98,7 @@ function WelcomePage({ onContinue }) {
                     className="map-link"
                   >
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Map-Francophone_World.svg/580px-Map-Francophone_World.svg.png"
+                      src="/img/welcome/francophone-world-map.png"
                       alt="Map of French-speaking regions worldwide"
                       className="map-image"
                     />
@@ -138,7 +138,7 @@ function WelcomePage({ onContinue }) {
                     className="image-link"
                   >
                     <img
-                      src="https://www.academie-francaise.fr/sites/academie-francaise.fr/files/styles/af_slideshow/public/g_blot_rmn_04b_0.jpg?itok=FdYsLF-8"
+                      src="/img/welcome/academie-francaise.jpg"
                       alt="L'Académie française building"
                       className="academie-image"
                     />
@@ -239,7 +239,7 @@ function WelcomePage({ onContinue }) {
               <div className="feature-note-with-image">
                 <div className="feature-note-image">
                   <img
-                    src="https://images.pexels.com/photos/7412042/pexels-photo-7412042.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+                    src="/img/welcome/clock-vintage.jpg"
                     alt="Vintage clock illustration"
                     className="robot-clock-image"
                     loading="lazy"
@@ -424,7 +424,7 @@ function WelcomePage({ onContinue }) {
         <div className="welcome-container">
           <div className="art-container">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Mus%C3%A9e_d%27Orsay_RF_2739_%28derivative_work_-_AutoContrast_edit_in_LCH_space%29.jpg/960px-Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Mus%C3%A9e_d%27Orsay_RF_2739_%28derivative_work_-_AutoContrast_edit_in_LCH_space%29.jpg"
+              src="/img/welcome/bal-du-moulin-de-la-galette.jpg"
               alt="Bal du moulin de la Galette by Auguste Renoir"
               className="art-image"
               loading="lazy"

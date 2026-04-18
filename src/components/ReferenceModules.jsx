@@ -23,18 +23,18 @@ const getIconForModule = (lesson) => {
 // Helper function to get image for each reference module
 const getImageForModule = (lesson) => {
   const title = lesson.title.toLowerCase();
-  if (title.includes('alphabet')) return "https://images.unsplash.com/photo-1645897938945-7b1b53239ea6?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('nombre')) return "https://images.unsplash.com/photo-1603290989627-5155a7f83dac?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('jours') || title.includes('mois')) return "https://images.unsplash.com/photo-1540317700647-ec69694d70d0?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('fête')) return "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('couleur')) return "https://images.unsplash.com/photo-1558470598-a5dda9640f68?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('francophonie')) return "https://images.unsplash.com/photo-1662009868204-4128942c9835?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('chiffre')) return "https://images.unsplash.com/photo-1642516303080-431f6681f864?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('spelling') || title.includes('pattern')) return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('cognate') || title.includes('share many words')) return "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('liaison') || title.includes('flow')) return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  if (title.includes('verb pattern') || title.includes('understanding verb')) return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80";
-  return "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center&auto=format&q=80"; // default
+  if (title.includes('alphabet')) return "/img/external/photo-1645897938945-7b1b53239ea6-d51c6c.jpg";
+  if (title.includes('nombre')) return "/img/external/photo-1603290989627-5155a7f83dac-c39b10.jpg";
+  if (title.includes('jours') || title.includes('mois')) return "/img/external/photo-1540317700647-ec69694d70d0-449283.jpg";
+  if (title.includes('fête')) return "/img/external/photo-1511795409834-ef04bbd61622-795811.jpg";
+  if (title.includes('couleur')) return "/img/external/photo-1558470598-a5dda9640f68-2dece1.jpg";
+  if (title.includes('francophonie')) return "/img/external/photo-1662009868204-4128942c9835-8f1396.jpg";
+  if (title.includes('chiffre')) return "/img/external/photo-1642516303080-431f6681f864-ee0d42.jpg";
+  if (title.includes('spelling') || title.includes('pattern')) return "/img/external/photo-1481627834876-b7833e8f5570-8ebbac.jpg";
+  if (title.includes('cognate') || title.includes('share many words')) return "/img/external/photo-1456513080510-7bf3a84b82f8-71ac97.jpg";
+  if (title.includes('liaison') || title.includes('flow')) return "/img/external/photo-1481627834876-b7833e8f5570-8ebbac.jpg";
+  if (title.includes('verb pattern') || title.includes('understanding verb')) return "/img/external/photo-1481627834876-b7833e8f5570-8ebbac.jpg";
+  return "/img/external/photo-1481627834876-b7833e8f5570-8ebbac.jpg"; // default
 };
 
 // Helper function to get category for each reference module

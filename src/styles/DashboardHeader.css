@@ -43,7 +43,7 @@
   flex-direction: column;
   gap: 0.75rem;
   overflow: hidden;
-  background-image: url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80"),
+  background-image: url("/img/external/photo-1502602898657-3e91760cbb34-6e8b1f.jpg"),
     url("/img/eiffel-tower-paris.jpg");
   background-size: cover;
   background-position: center;

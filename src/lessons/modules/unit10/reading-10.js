@@ -183,7 +183,7 @@ Like Marc said: you have to try! If we don't do anything, we'll never know. And 
         description:
           "Capital and largest city of France, known as the City of Light",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/300px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
+          "/img/external/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques__Paris_ao_t_2014__2_-085432.jpg",
         url: "https://en.wikipedia.org/wiki/Paris",
       },
     },
@@ -195,7 +195,7 @@ Like Marc said: you have to try! If we don't do anything, we'll never know. And 
         description:
           "Medieval Catholic cathedral built 1163-1345, Gothic architecture masterpiece on Île de la Cité",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Notre_Dame_de_Paris_DSC_0846w.jpg/300px-Notre_Dame_de_Paris_DSC_0846w.jpg",
+          "/img/wikipedia/Notre-Dame_de_Paris__4_October_2017-b92c2e.jpg",
         url: "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
       },
     },
@@ -207,7 +207,7 @@ Like Marc said: you have to try! If we don't do anything, we'll never know. And 
         description:
           "Historic hilltop neighborhood famous for artists, Sacré-Cœur Basilica, and bohemian culture since 1800s",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Montmartre_-_Basilique_du_Sacr%C3%A9-C%C5%93ur.jpg/300px-Montmartre_-_Basilique_du_Sacr%C3%A9-C%C5%93ur.jpg",
+          "/img/external/sacre-coeur-montmartre.jpg",
         url: "https://en.wikipedia.org/wiki/Montmartre",
       },
     },
@@ -219,7 +219,7 @@ Like Marc said: you have to try! If we don't do anything, we'll never know. And 
         description:
           "Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Castle_Hill%2C_Nice%2C_France.jpg/300px-Castle_Hill%2C_Nice%2C_France.jpg",
+          "/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png",
         url: "https://en.wikipedia.org/wiki/Nice",
       },
     },
@@ -231,7 +231,7 @@ Like Marc said: you have to try! If we don't do anything, we'll never know. And 
         description:
           "Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bordeaux_place_de_la_bourse_de_nuit.jpg/300px-Bordeaux_place_de_la_bourse_de_nuit.jpg",
+          "/img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg",
         url: "https://en.wikipedia.org/wiki/Bordeaux",
       },
     },
@@ -243,7 +243,7 @@ Like Marc said: you have to try! If we don't do anything, we'll never know. And 
         description:
           "World's largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg",
+          "/img/external/Louvre_Museum_Wikimedia_Commons-1851e9.jpg",
         url: "https://en.wikipedia.org/wiki/Louvre",
       },
     },
@@ -255,7 +255,7 @@ Like Marc said: you have to try! If we don't do anything, we'll never know. And 
         description:
           "777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city's history",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg",
+          "/img/external/Paris_-_Eiffelturm_und_Marsfeld2-4d8187.jpg",
         url: "https://en.wikipedia.org/wiki/Seine",
       },
     },
@@ -267,7 +267,7 @@ Like Marc said: you have to try! If we don't do anything, we'll never know. And 
         description:
           "Iron lattice tower built 1887-1889, 330m tall, symbol of Paris, 7 million visitors per year",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/240px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg",
+          "/img/external/Tour_Eiffel_Wikimedia_Commons__cropped_-302994.jpg",
         url: "https://en.wikipedia.org/wiki/Eiffel_Tower",
       },
     },

@@ -13,7 +13,7 @@ export const wikipediaEntries = {
     description:
       "Historical region in northern France, famous for D-Day landings and Norman architecture",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Falaises_Etretat_2012.jpg/500px-Falaises_Etretat_2012.jpg",
+      "/img/wikipedia/Falaises_Etretat_2012-e705ad.jpg",
     url: "https://en.wikipedia.org/wiki/Normandy",
   },
   normandie: {
@@ -21,7 +21,7 @@ export const wikipediaEntries = {
     description:
       "Historical region in northern France, famous for D-Day landings and Norman architecture",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Falaises_Etretat_2012.jpg/500px-Falaises_Etretat_2012.jpg",
+      "/img/wikipedia/Falaises_Etretat_2012-e705ad.jpg",
     url: "https://en.wikipedia.org/wiki/Normandy",
   },
   Caen: {
@@ -29,7 +29,7 @@ export const wikipediaEntries = {
     description:
       "Historic capital of Lower Normandy, home to medieval castles and abbeys",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Mairie_de_Caen_7.JPG/960px-Mairie_de_Caen_7.JPG",
+      "/img/wikipedia/Mairie_de_Caen_7-a3ec04.jpg",
     url: "https://en.wikipedia.org/wiki/Caen",
   },
   caen: {
@@ -37,7 +37,7 @@ export const wikipediaEntries = {
     description:
       "Historic capital of Lower Normandy, home to medieval castles and abbeys",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Mairie_de_Caen_7.JPG/960px-Mairie_de_Caen_7.JPG",
+      "/img/wikipedia/Mairie_de_Caen_7-a3ec04.jpg",
     url: "https://en.wikipedia.org/wiki/Caen",
   },
   Honfleur: {
@@ -45,7 +45,7 @@ export const wikipediaEntries = {
     description:
       "Picturesque port town famous for its old harbor and historic wooden church",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/PShonfleur4326tonemapped.jpg/960px-PShonfleur4326tonemapped.jpg",
+      "/img/wikipedia/PShonfleur4326tonemapped-1a0feb.jpg",
     url: "https://en.wikipedia.org/wiki/Honfleur",
   },
   honfleur: {
@@ -53,7 +53,7 @@ export const wikipediaEntries = {
     description:
       "Picturesque port town famous for its old harbor and historic wooden church",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/PShonfleur4326tonemapped.jpg/960px-PShonfleur4326tonemapped.jpg",
+      "/img/wikipedia/PShonfleur4326tonemapped-1a0feb.jpg",
     url: "https://en.wikipedia.org/wiki/Honfleur",
   },
   Bayeux: {
@@ -61,7 +61,7 @@ export const wikipediaEntries = {
     description:
       "Medieval town famous for the Bayeux Tapestry depicting the Norman Conquest of 1066",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bayeux_centre.jpg/960px-Bayeux_centre.jpg",
+      "/img/wikipedia/Bayeux_centre-3e2cb0.jpg",
     url: "https://en.wikipedia.org/wiki/Bayeux",
   },
   bayeux: {
@@ -69,7 +69,7 @@ export const wikipediaEntries = {
     description:
       "Medieval town famous for the Bayeux Tapestry depicting the Norman Conquest of 1066",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bayeux_centre.jpg/960px-Bayeux_centre.jpg",
+      "/img/wikipedia/Bayeux_centre-3e2cb0.jpg",
     url: "https://en.wikipedia.org/wiki/Bayeux",
   },
   "mont-saint-michel": {
@@ -77,7 +77,7 @@ export const wikipediaEntries = {
     description:
       "Iconic tidal island abbey, UNESCO World Heritage site and medieval marvel",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mont-Saint-Michel_vu_du_ciel.jpg/960px-Mont-Saint-Michel_vu_du_ciel.jpg",
+      "/img/wikipedia/Mont-Saint-Michel_vu_du_ciel-33739b.jpg",
     url: "https://en.wikipedia.org/wiki/Mont-Saint-Michel",
   },
   "Mont-Saint-Michel": {
@@ -85,7 +85,7 @@ export const wikipediaEntries = {
     description:
       "Iconic tidal island abbey, UNESCO World Heritage site and medieval marvel",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mont-Saint-Michel_vu_du_ciel.jpg/960px-Mont-Saint-Michel_vu_du_ciel.jpg",
+      "/img/wikipedia/Mont-Saint-Michel_vu_du_ciel-33739b.jpg",
     url: "https://en.wikipedia.org/wiki/Mont-Saint-Michel",
   },
   Rouen: {
@@ -93,7 +93,7 @@ export const wikipediaEntries = {
     description:
       "Historic capital of Upper Normandy, famous for its Gothic cathedral and Joan of Arc history",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cath%C3%A9drale_de_Rouen_vue_de_l%27Op%C3%A9ra.JPG/500px-Cath%C3%A9drale_de_Rouen_vue_de_l%27Op%C3%A9ra.JPG",
+      "/img/wikipedia/Cath_drale_de_Rouen_vue_de_l_Op_ra-6feac2.jpg",
     url: "https://en.wikipedia.org/wiki/Rouen",
   },
   rouen: {
@@ -101,7 +101,7 @@ export const wikipediaEntries = {
     description:
       "Historic capital of Upper Normandy, famous for its Gothic cathedral and Joan of Arc history",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cath%C3%A9drale_de_Rouen_vue_de_l%27Op%C3%A9ra.JPG/500px-Cath%C3%A9drale_de_Rouen_vue_de_l%27Op%C3%A9ra.JPG",
+      "/img/wikipedia/Cath_drale_de_Rouen_vue_de_l_Op_ra-6feac2.jpg",
     url: "https://en.wikipedia.org/wiki/Rouen",
   },
 
@@ -110,14 +110,14 @@ export const wikipediaEntries = {
     name: "La Tour Eiffel",
     description: "Wrought-iron lattice tower, built 1887-1889, 330m tall",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/2013_Fireworks_on_Eiffel_Tower_11.jpg/500px-2013_Fireworks_on_Eiffel_Tower_11.jpg",
+      "/img/wikipedia/2013_Fireworks_on_Eiffel_Tower_11-b7f385.jpg",
     url: "https://en.wikipedia.org/wiki/Eiffel_Tower",
   },
   "Tour Eiffel": {
     name: "Tour Eiffel",
     description: "Wrought-iron lattice tower, built 1887-1889, 330m tall",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/2013_Fireworks_on_Eiffel_Tower_11.jpg/500px-2013_Fireworks_on_Eiffel_Tower_11.jpg",
+      "/img/wikipedia/2013_Fireworks_on_Eiffel_Tower_11-b7f385.jpg",
     url: "https://en.wikipedia.org/wiki/Eiffel_Tower",
   },
   socrate: {
@@ -125,7 +125,7 @@ export const wikipediaEntries = {
     description:
       "Ancient Greek philosopher (470-399 BC), father of Western philosophy, famous for Socratic method of questioning",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Socrates_Louvre.jpg/260px-Socrates_Louvre.jpg",
+      "/img/wikipedia/Socrates_Louvre-4c682f.jpg",
     url: "https://en.wikipedia.org/wiki/Socrates",
   },
   Socrate: {
@@ -133,7 +133,7 @@ export const wikipediaEntries = {
     description:
       "Ancient Greek philosopher (470-399 BC), father of Western philosophy, famous for Socratic method of questioning",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Socrates_Louvre.jpg/260px-Socrates_Louvre.jpg",
+      "/img/wikipedia/Socrates_Louvre-4c682f.jpg",
     url: "https://en.wikipedia.org/wiki/Socrates",
   },
   "la sorbonne": {
@@ -141,7 +141,7 @@ export const wikipediaEntries = {
     description:
       "Historic university in Paris, founded 1257, one of the world's oldest and most prestigious universities",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Front_of_the_Sorbonne.jpg/500px-Front_of_the_Sorbonne.jpg",
+      "/img/wikipedia/Front_of_the_Sorbonne-659153.jpg",
     url: "https://en.wikipedia.org/wiki/University_of_Paris",
   },
   "La Sorbonne": {
@@ -149,7 +149,7 @@ export const wikipediaEntries = {
     description:
       "Historic university in Paris, founded 1257, one of the world's oldest and most prestigious universities",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Front_of_the_Sorbonne.jpg/500px-Front_of_the_Sorbonne.jpg",
+      "/img/wikipedia/Front_of_the_Sorbonne-659153.jpg",
     url: "https://en.wikipedia.org/wiki/University_of_Paris",
   },
   Sorbonne: {
@@ -157,7 +157,7 @@ export const wikipediaEntries = {
     description:
       "Historic university in Paris, founded 1257, one of the world's oldest and most prestigious universities",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Front_of_the_Sorbonne.jpg/500px-Front_of_the_Sorbonne.jpg",
+      "/img/wikipedia/Front_of_the_Sorbonne-659153.jpg",
     url: "https://en.wikipedia.org/wiki/University_of_Paris",
   },
   "Jardin des Tuileries": {
@@ -165,7 +165,7 @@ export const wikipediaEntries = {
     description:
       "Historic public garden in Paris, created in 1564, located between the Louvre and Place de la Concorde",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/320px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg",
+      "/img/wikipedia/Crowd_in_the_Jardin_des_Tuileries__Paris_July_2014-fb97b0.jpg",
     url: "https://en.wikipedia.org/wiki/Tuileries_Garden",
   },
   "le Jardin des Tuileries": {
@@ -173,7 +173,7 @@ export const wikipediaEntries = {
     description:
       "Historic public garden in Paris, created in 1564, located between the Louvre and Place de la Concorde",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/320px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg",
+      "/img/wikipedia/Crowd_in_the_Jardin_des_Tuileries__Paris_July_2014-fb97b0.jpg",
     url: "https://en.wikipedia.org/wiki/Tuileries_Garden",
   },
   "Jardin des Tuileries": {
@@ -181,7 +181,7 @@ export const wikipediaEntries = {
     description:
       "Historic public garden in Paris, created in 1564, located between the Louvre and Place de la Concorde",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/320px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg",
+      "/img/wikipedia/Crowd_in_the_Jardin_des_Tuileries__Paris_July_2014-fb97b0.jpg",
     url: "https://en.wikipedia.org/wiki/Tuileries_Garden",
   },
   "jardin du luxembourg": {
@@ -189,7 +189,7 @@ export const wikipediaEntries = {
     description:
       "Second largest public park in Paris, created in 1612, featuring formal gardens, palace, and fountains",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Palais_du_Luxembourg_October_21%2C_2010.jpg/960px-Palais_du_Luxembourg_October_21%2C_2010.jpg",
+      "/img/wikipedia/Palais_du_Luxembourg_October_21__2010-640e6d.jpg",
     url: "https://en.wikipedia.org/wiki/Luxembourg_Gardens",
   },
   "Jardin du Luxembourg": {
@@ -197,7 +197,7 @@ export const wikipediaEntries = {
     description:
       "Second largest public park in Paris, created in 1612, featuring formal gardens, palace, and fountains",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Palais_du_Luxembourg_October_21%2C_2010.jpg/960px-Palais_du_Luxembourg_October_21%2C_2010.jpg",
+      "/img/wikipedia/Palais_du_Luxembourg_October_21__2010-640e6d.jpg",
     url: "https://en.wikipedia.org/wiki/Luxembourg_Gardens",
   },
   "Jardin du Luxembourg": {
@@ -205,7 +205,7 @@ export const wikipediaEntries = {
     description:
       "Second largest public park in Paris, created in 1612, featuring formal gardens, palace, and fountains",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Palais_du_Luxembourg_October_21%2C_2010.jpg/960px-Palais_du_Luxembourg_October_21%2C_2010.jpg",
+      "/img/wikipedia/Palais_du_Luxembourg_October_21__2010-640e6d.jpg",
     url: "https://en.wikipedia.org/wiki/Luxembourg_Gardens",
   },
   "l'Odéon": {
@@ -213,7 +213,7 @@ export const wikipediaEntries = {
     description:
       "A historiccal theater in Saint-Germaine with avant garde performances.",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Th%C3%A9%C3%A2tre_de_l%27Od%C3%A9on%2C_Paris_6e_140402_1.jpg/960px-Th%C3%A9%C3%A2tre_de_l%27Od%C3%A9on%2C_Paris_6e_140402_1.jpg",
+      "/img/wikipedia/Th_tre_de_l_Od_on__Paris_6e_140402_1-07164a.jpg",
     url: "https://en.wikipedia.org/wiki/Od%C3%A9on-Th%C3%A9%C3%A2tre_de_l%27Europe",
   },
   "Café de Flore": {
@@ -221,7 +221,7 @@ export const wikipediaEntries = {
     description:
       "Historic café in Paris, opened 1887, famous meeting place for intellectuals like Sartre and Simone de Beauvoir",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg/500px-Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg",
+      "/img/wikipedia/Caf__de_Flore__172_boulevard_Saint-Germain__Paris_6e-41d297.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_de_Flore",
   },
   "au Café de Flore": {
@@ -229,7 +229,7 @@ export const wikipediaEntries = {
     description:
       "Historic café in Paris, opened 1887, famous meeting place for intellectuals like Sartre and Simone de Beauvoir",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg/500px-Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg",
+      "/img/wikipedia/Caf__de_Flore__172_boulevard_Saint-Germain__Paris_6e-41d297.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_de_Flore",
   },
   lyon: {
@@ -237,7 +237,7 @@ export const wikipediaEntries = {
     description:
       "Third largest city in France, historic capital of gastronomy, UNESCO World Heritage site",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Lyon-part-dieu-2023.jpg/960px-Lyon-part-dieu-2023.jpg",
+      "/img/wikipedia/Lyon-part-dieu-2023-aa8d22.jpg",
     url: "https://en.wikipedia.org/wiki/Lyon",
   },
   Lyon: {
@@ -245,7 +245,7 @@ export const wikipediaEntries = {
     description:
       "Third largest city in France, historic capital of gastronomy, UNESCO World Heritage site",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Lyon-part-dieu-2023.jpg/960px-Lyon-part-dieu-2023.jpg",
+      "/img/wikipedia/Lyon-part-dieu-2023-aa8d22.jpg",
     url: "https://en.wikipedia.org/wiki/Lyon",
   },
   "Lyon.": {
@@ -253,7 +253,7 @@ export const wikipediaEntries = {
     description:
       "Third largest city in France, historic capital of gastronomy, UNESCO World Heritage site",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Lyon-part-dieu-2023.jpg/960px-Lyon-part-dieu-2023.jpg",
+      "/img/wikipedia/Lyon-part-dieu-2023-aa8d22.jpg",
     url: "https://en.wikipedia.org/wiki/Lyon",
   },
   "à Lyon": {
@@ -261,35 +261,35 @@ export const wikipediaEntries = {
     description:
       "Third largest city in France, historic capital of gastronomy, UNESCO World Heritage site",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Lyon-part-dieu-2023.jpg/960px-Lyon-part-dieu-2023.jpg",
+      "/img/wikipedia/Lyon-part-dieu-2023-aa8d22.jpg",
     url: "https://en.wikipedia.org/wiki/Lyon",
   },
   amélie: {
     name: "Le Fabuleux Destin d'Amélie Poulain (Amélie)",
     description:
       "Beloved 2001 French romantic comedy film directed by Jean-Pierre Jeunet, set in Montmartre, Paris",
-    image: "https://upload.wikimedia.org/wikipedia/en/5/53/Amelie_poster.jpg",
+    image: "/img/wikipedia/Amelie_poster-fda86e.jpg",
     url: "https://en.wikipedia.org/wiki/Am%C3%A9lie",
   },
   Amélie: {
     name: "Le Fabuleux Destin d'Amélie Poulain (Amélie)",
     description:
       "Beloved 2001 French romantic comedy film directed by Jean-Pierre Jeunet, set in Montmartre, Paris",
-    image: "https://upload.wikimedia.org/wikipedia/en/5/53/Amelie_poster.jpg",
+    image: "/img/wikipedia/Amelie_poster-fda86e.jpg",
     url: "https://en.wikipedia.org/wiki/Am%C3%A9lie",
   },
   '"Amélie"': {
     name: "Le Fabuleux Destin d'Amélie Poulain (Amélie)",
     description:
       "Beloved 2001 French romantic comedy film directed by Jean-Pierre Jeunet, set in Montmartre, Paris",
-    image: "https://upload.wikimedia.org/wikipedia/en/5/53/Amelie_poster.jpg",
+    image: "/img/wikipedia/Amelie_poster-fda86e.jpg",
     url: "https://en.wikipedia.org/wiki/Am%C3%A9lie",
   },
   "Amélie.": {
     name: "Le Fabuleux Destin d'Amélie Poulain (Amélie)",
     description:
       "Beloved 2001 French romantic comedy film directed by Jean-Pierre Jeunet, set in Montmartre, Paris",
-    image: "https://upload.wikimedia.org/wikipedia/en/5/53/Amelie_poster.jpg",
+    image: "/img/wikipedia/Amelie_poster-fda86e.jpg",
     url: "https://en.wikipedia.org/wiki/Am%C3%A9lie",
   },
   "le procope": {
@@ -297,7 +297,7 @@ export const wikipediaEntries = {
     description:
       "Oldest café in Paris, opened 1686, historic meeting place for Voltaire, Rousseau, Victor Hugo, and many writers",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Le_Procope_1%2C_Paris_2010.jpg/500px-Le_Procope_1%2C_Paris_2010.jpg",
+      "/img/wikipedia/Le_Procope_1__Paris_2010-386ef2.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Procope",
   },
   "Le Procope": {
@@ -305,7 +305,7 @@ export const wikipediaEntries = {
     description:
       "Oldest café in Paris, opened 1686, historic meeting place for Voltaire, Rousseau, Victor Hugo, and many writers",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Le_Procope_1%2C_Paris_2010.jpg/500px-Le_Procope_1%2C_Paris_2010.jpg",
+      "/img/wikipedia/Le_Procope_1__Paris_2010-386ef2.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Procope",
   },
   "Restaurant Le Procope": {
@@ -313,7 +313,7 @@ export const wikipediaEntries = {
     description:
       "Oldest café in Paris, opened 1686, historic meeting place for Voltaire, Rousseau, Victor Hugo, and many writers",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Le_Procope_1%2C_Paris_2010.jpg/500px-Le_Procope_1%2C_Paris_2010.jpg",
+      "/img/wikipedia/Le_Procope_1__Paris_2010-386ef2.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Procope",
   },
   "au Restaurant Le Procope": {
@@ -321,7 +321,7 @@ export const wikipediaEntries = {
     description:
       "Oldest café in Paris, opened 1686, historic meeting place for Voltaire, Rousseau, Victor Hugo, and many writers",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Le_Procope_1%2C_Paris_2010.jpg/500px-Le_Procope_1%2C_Paris_2010.jpg",
+      "/img/wikipedia/Le_Procope_1__Paris_2010-386ef2.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Procope",
   },
   "notre-dame": {
@@ -329,7 +329,7 @@ export const wikipediaEntries = {
     description:
       "Medieval Catholic cathedral built 1163-1345, Gothic architecture masterpiece on Île de la Cité",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg/500px-Notre-Dame_de_Paris%2C_4_October_2017.jpg",
+      "/img/wikipedia/Notre-Dame_de_Paris__4_October_2017-b92c2e.jpg",
     url: "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
   },
   "Notre-Dame": {
@@ -337,7 +337,7 @@ export const wikipediaEntries = {
     description:
       "Medieval Catholic cathedral built 1163-1345, Gothic architecture masterpiece on Île de la Cité",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg/500px-Notre-Dame_de_Paris%2C_4_October_2017.jpg",
+      "/img/wikipedia/Notre-Dame_de_Paris__4_October_2017-b92c2e.jpg",
     url: "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
   },
   Montmartre: {
@@ -345,7 +345,7 @@ export const wikipediaEntries = {
     description:
       "Historic hilltop neighborhood famous for artists, Sacré-Cœur Basilica, and bohemian culture since 1800s",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg",
+      "/img/wikipedia/View_from_Notre-Dame_de_Paris__24_June_2014_004-ab0bc0.jpg",
     url: "https://en.wikipedia.org/wiki/Montmartre",
   },
   "à Montmartre": {
@@ -353,7 +353,7 @@ export const wikipediaEntries = {
     description:
       "Historic hilltop neighborhood famous for artists, Sacré-Cœur Basilica, and bohemian culture since 1800s",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg/500px-View_from_Notre-Dame_de_Paris%2C_24_June_2014_004.jpg",
+      "/img/wikipedia/View_from_Notre-Dame_de_Paris__24_June_2014_004-ab0bc0.jpg",
     url: "https://en.wikipedia.org/wiki/Montmartre",
   },
   nice: {
@@ -361,7 +361,7 @@ export const wikipediaEntries = {
     description:
       "Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CollineDuChateau_NiceFrance2022.png/500px-CollineDuChateau_NiceFrance2022.png",
+      "/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png",
     url: "https://en.wikipedia.org/wiki/Nice",
   },
   Nice: {
@@ -369,7 +369,7 @@ export const wikipediaEntries = {
     description:
       "Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CollineDuChateau_NiceFrance2022.png/500px-CollineDuChateau_NiceFrance2022.png",
+      "/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png",
     url: "https://en.wikipedia.org/wiki/Nice",
   },
   "à Nice": {
@@ -377,7 +377,7 @@ export const wikipediaEntries = {
     description:
       "Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CollineDuChateau_NiceFrance2022.png/500px-CollineDuChateau_NiceFrance2022.png",
+      "/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png",
     url: "https://en.wikipedia.org/wiki/Nice",
   },
   bordeaux: {
@@ -385,7 +385,7 @@ export const wikipediaEntries = {
     description:
       "Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Bordeaux_Place_de_la_Bourse_de_nuit.jpg/960px-Bordeaux_Place_de_la_Bourse_de_nuit.jpg",
+      "/img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg",
     url: "https://en.wikipedia.org/wiki/Bordeaux",
   },
   Bordeaux: {
@@ -393,7 +393,7 @@ export const wikipediaEntries = {
     description:
       "Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Bordeaux_Place_de_la_Bourse_de_nuit.jpg/960px-Bordeaux_Place_de_la_Bourse_de_nuit.jpg",
+      "/img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg",
     url: "https://en.wikipedia.org/wiki/Bordeaux",
   },
   "à Bordeaux": {
@@ -401,7 +401,7 @@ export const wikipediaEntries = {
     description:
       "Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Bordeaux_Place_de_la_Bourse_de_nuit.jpg/960px-Bordeaux_Place_de_la_Bourse_de_nuit.jpg",
+      "/img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg",
     url: "https://en.wikipedia.org/wiki/Bordeaux",
   },
   louvre: {
@@ -409,7 +409,7 @@ export const wikipediaEntries = {
     description:
       "World's largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg",
+      "/img/wikipedia/Louvre_Museum_Wikimedia_Commons-1851e9.jpg",
     url: "https://en.wikipedia.org/wiki/Louvre",
   },
   Louvre: {
@@ -417,7 +417,7 @@ export const wikipediaEntries = {
     description:
       "World's largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg",
+      "/img/wikipedia/Louvre_Museum_Wikimedia_Commons-1851e9.jpg",
     url: "https://en.wikipedia.org/wiki/Louvre",
   },
   "le Louvre": {
@@ -425,7 +425,7 @@ export const wikipediaEntries = {
     description:
       "World's largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg",
+      "/img/wikipedia/Louvre_Museum_Wikimedia_Commons-1851e9.jpg",
     url: "https://en.wikipedia.org/wiki/Louvre",
   },
   "au Louvre": {
@@ -433,7 +433,7 @@ export const wikipediaEntries = {
     description:
       "World's largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg",
+      "/img/wikipedia/Louvre_Museum_Wikimedia_Commons-1851e9.jpg",
     url: "https://en.wikipedia.org/wiki/Louvre",
   },
   seine: {
@@ -441,7 +441,7 @@ export const wikipediaEntries = {
     description:
       "777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city's history",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Seine_by_Eiffel.jpg/500px-Seine_by_Eiffel.jpg",
+      "/img/wikipedia/Seine_by_Eiffel-092ce3.jpg",
     url: "https://en.wikipedia.org/wiki/Seine",
   },
   Seine: {
@@ -449,7 +449,7 @@ export const wikipediaEntries = {
     description:
       "777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city's history",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Seine_by_Eiffel.jpg/500px-Seine_by_Eiffel.jpg",
+      "/img/wikipedia/Seine_by_Eiffel-092ce3.jpg",
     url: "https://en.wikipedia.org/wiki/Seine",
   },
   "la Seine": {
@@ -457,7 +457,7 @@ export const wikipediaEntries = {
     description:
       "777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city's history",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Seine_by_Eiffel.jpg/500px-Seine_by_Eiffel.jpg",
+      "/img/wikipedia/Seine_by_Eiffel-092ce3.jpg",
     url: "https://en.wikipedia.org/wiki/Seine",
   },
   "vers la Seine": {
@@ -465,7 +465,7 @@ export const wikipediaEntries = {
     description:
       "777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city's history",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Seine_by_Eiffel.jpg/500px-Seine_by_Eiffel.jpg",
+      "/img/wikipedia/Seine_by_Eiffel-092ce3.jpg",
     url: "https://en.wikipedia.org/wiki/Seine",
   },
   marseille: {
@@ -473,7 +473,7 @@ export const wikipediaEntries = {
     description:
       "France's second-largest city, major Mediterranean port, founded by Greeks 600 BC, cultural capital of Europe 2013",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Marseille-corniche.jpg/500px-Marseille-corniche.jpg",
+      "/img/wikipedia/Marseille-corniche-a44377.jpg",
     url: "https://en.wikipedia.org/wiki/Marseille",
   },
   Marseille: {
@@ -481,7 +481,7 @@ export const wikipediaEntries = {
     description:
       "France's second-largest city, major Mediterranean port, founded by Greeks 600 BC, cultural capital of Europe 2013",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Marseille-corniche.jpg/500px-Marseille-corniche.jpg",
+      "/img/wikipedia/Marseille-corniche-a44377.jpg",
     url: "https://en.wikipedia.org/wiki/Marseille",
   },
   monet: {
@@ -489,7 +489,7 @@ export const wikipediaEntries = {
     description:
       "French Impressionist painter (1840-1926), founder of Impressionism, famous for Water Lilies and Rouen Cathedral series",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Monet_-_Seerosen5.jpg/500px-Monet_-_Seerosen5.jpg",
+      "/img/wikipedia/Monet_-_Seerosen5-ac58ec.jpg",
     url: "https://en.wikipedia.org/wiki/Claude_Monet",
   },
   Monet: {
@@ -497,7 +497,7 @@ export const wikipediaEntries = {
     description:
       "French Impressionist painter (1840-1926), founder of Impressionism, famous for Water Lilies and Rouen Cathedral series",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Monet_-_Seerosen5.jpg/500px-Monet_-_Seerosen5.jpg",
+      "/img/wikipedia/Monet_-_Seerosen5-ac58ec.jpg",
     url: "https://en.wikipedia.org/wiki/Claude_Monet",
   },
   "Claude Monet": {
@@ -505,7 +505,7 @@ export const wikipediaEntries = {
     description:
       "French Impressionist painter (1840-1926), founder of Impressionism, famous for Water Lilies and Rouen Cathedral series",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Monet_-_Seerosen5.jpg/500px-Monet_-_Seerosen5.jpg",
+      "/img/wikipedia/Monet_-_Seerosen5-ac58ec.jpg",
     url: "https://en.wikipedia.org/wiki/Claude_Monet",
   },
   "van gogh": {
@@ -513,7 +513,7 @@ export const wikipediaEntries = {
     description:
       "Dutch Post-Impressionist painter (1853-1890), lived in France, famous for Starry Night and Sunflowers",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/260px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg",
+      "/img/wikipedia/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project__454045_-3a53ca.jpg",
     url: "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
   },
   "Van Gogh": {
@@ -521,7 +521,7 @@ export const wikipediaEntries = {
     description:
       "Dutch Post-Impressionist painter (1853-1890), lived in France, famous for Starry Night and Sunflowers",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/260px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg",
+      "/img/wikipedia/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project__454045_-3a53ca.jpg",
     url: "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
   },
   "Vincent van Gogh": {
@@ -529,7 +529,7 @@ export const wikipediaEntries = {
     description:
       "Dutch Post-Impressionist painter (1853-1890), lived in France, famous for Starry Night and Sunflowers",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/260px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg",
+      "/img/wikipedia/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project__454045_-3a53ca.jpg",
     url: "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
   },
   renoir: {
@@ -537,7 +537,7 @@ export const wikipediaEntries = {
     description:
       "French Impressionist painter (1841-1919), famous for vibrant light and saturated color, painted people in intimate settings",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pierre-Auguste_Renoir%2C_uncropped_image.jpg/260px-Pierre-Auguste_Renoir%2C_uncropped_image.jpg",
+      "/img/wikipedia/Renoir_Pierre-Auguste_by_Dornac.jpg",
     url: "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir",
   },
   Renoir: {
@@ -545,7 +545,7 @@ export const wikipediaEntries = {
     description:
       "French Impressionist painter (1841-1919), famous for vibrant light and saturated color, painted people in intimate settings",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pierre-Auguste_Renoir%2C_uncropped_image.jpg/260px-Pierre-Auguste_Renoir%2C_uncropped_image.jpg",
+      "/img/wikipedia/Renoir_Pierre-Auguste_by_Dornac.jpg",
     url: "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir",
   },
   "moulin rouge": {
@@ -553,7 +553,7 @@ export const wikipediaEntries = {
     description:
       "Famous cabaret built 1889 in Montmartre, birthplace of modern can-can dance, iconic red windmill",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Moulin_Rouge%2C_17_April_2011.jpg/960px-Moulin_Rouge%2C_17_April_2011.jpg",
+      "/img/wikipedia/Moulin_Rouge__17_April_2011-a4619c.jpg",
     url: "https://en.wikipedia.org/wiki/Moulin_Rouge",
   },
   "Moulin Rouge": {
@@ -561,7 +561,7 @@ export const wikipediaEntries = {
     description:
       "Famous cabaret built 1889 in Montmartre, birthplace of modern can-can dance, iconic red windmill",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Moulin_Rouge%2C_17_April_2011.jpg/960px-Moulin_Rouge%2C_17_April_2011.jpg",
+      "/img/wikipedia/Moulin_Rouge__17_April_2011-a4619c.jpg",
     url: "https://en.wikipedia.org/wiki/Moulin_Rouge",
   },
   "champs-élysées": {
@@ -569,7 +569,7 @@ export const wikipediaEntries = {
     description:
       "Most famous avenue in Paris, 1.9km long, connects Arc de Triomphe to Place de la Concorde",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg/960px-Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg",
+      "/img/wikipedia/Avenue_des_Champs-_lys_es_July_24__2009_N1-9a8b51.jpg",
     url: "https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es",
   },
   "Champs-Élysées": {
@@ -577,7 +577,7 @@ export const wikipediaEntries = {
     description:
       "Most famous avenue in Paris, 1.9km long, connects Arc de Triomphe to Place de la Concorde",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg/960px-Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg",
+      "/img/wikipedia/Avenue_des_Champs-_lys_es_July_24__2009_N1-9a8b51.jpg",
     url: "https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es",
   },
   France: {
@@ -585,7 +585,7 @@ export const wikipediaEntries = {
     description:
       "Country in Western Europe, known for its culture, history, and cuisine",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/500px-Flag_of_France.svg.png",
+      "/img/wikipedia/Flag_of_France.svg-c1c812.png",
     url: "https://en.wikipedia.org/wiki/France",
   },
   Europe: {
@@ -593,14 +593,14 @@ export const wikipediaEntries = {
     description:
       "Continent in the Northern Hemisphere, known for its culture, history, and cuisine",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Lascaux_painting.jpg/250px-Lascaux_painting.jpg",
+      "/img/wikipedia/Lascaux_painting-0a6f5e.jpg",
   },
   versailles: {
     name: "Palace of Versailles",
     description:
       "Royal château 12 miles southwest of Paris, symbol of absolute monarchy, Hall of Mirrors, UNESCO World Heritage",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg",
+      "/img/wikipedia/Chateau_Versailles_Galerie_des_Glaces-9f3707.jpg",
     url: "https://en.wikipedia.org/wiki/Palace_of_Versailles",
   },
   Versailles: {
@@ -608,7 +608,7 @@ export const wikipediaEntries = {
     description:
       "Royal château 12 miles southwest of Paris, symbol of absolute monarchy, Hall of Mirrors, UNESCO World Heritage",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg",
+      "/img/wikipedia/Chateau_Versailles_Galerie_des_Glaces-9f3707.jpg",
     url: "https://en.wikipedia.org/wiki/Palace_of_Versailles",
   },
   "coq au vin": {
@@ -616,7 +616,7 @@ export const wikipediaEntries = {
     description:
       "Classic French dish of chicken braised in wine, traditionally Burgundy wine, with mushrooms and onions",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Coq_au_vin_at_The_Swan_at_the_Globe%2C_London.jpg/500px-Coq_au_vin_at_The_Swan_at_the_Globe%2C_London.jpg",
+      "/img/wikipedia/Coq_au_vin_at_The_Swan_at_the_Globe__London-7db5dd.jpg",
     url: "https://en.wikipedia.org/wiki/Coq_au_vin",
   },
   ratatouille: {
@@ -624,7 +624,7 @@ export const wikipediaEntries = {
     description:
       "Traditional French vegetable stew from Provence, made with tomatoes, eggplant, zucchini, peppers, and herbs",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Confit_byaldi_2.jpg/500px-Confit_byaldi_2.jpg",
+      "/img/wikipedia/Confit_byaldi_2-12e02a.jpg",
     url: "https://en.wikipedia.org/wiki/Ratatouille",
   },
   bouillabaisse: {
@@ -632,7 +632,7 @@ export const wikipediaEntries = {
     description:
       "Traditional fish stew from Marseille, made with Mediterranean fish, saffron, and served with rouille sauce",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Bullabessa.jpg/500px-Bullabessa.jpg",
+      "/img/wikipedia/Bullabessa-bd5598.jpg",
     url: "https://en.wikipedia.org/wiki/Bouillabaisse",
   },
   "bouillabaisse de marseille": {
@@ -640,7 +640,7 @@ export const wikipediaEntries = {
     description:
       "Traditional fish stew from Marseille, made with Mediterranean fish, saffron, and served with rouille sauce",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Bullabessa.jpg/500px-Bullabessa.jpg",
+      "/img/wikipedia/Bullabessa-bd5598.jpg",
     url: "https://en.wikipedia.org/wiki/Bouillabaisse",
   },
   "arc de triomphe": {
@@ -648,7 +648,7 @@ export const wikipediaEntries = {
     description:
       "Triumphal arch built 1806-1836, honors French military victories, tomb of unknown soldier, center of Place Charles de Gaulle",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arc_de_Triomphe%2C_Paris_21_October_2010.jpg/300px-Arc_de_Triomphe%2C_Paris_21_October_2010.jpg",
+      "/img/wikipedia/Arc_de_Triomphe__Paris_21_October_2010-eda058.jpg",
     url: "https://en.wikipedia.org/wiki/Arc_de_Triomphe",
   },
   "Arc de Triomphe": {
@@ -656,7 +656,7 @@ export const wikipediaEntries = {
     description:
       "Triumphal arch built 1806-1836, honors French military victories, tomb of unknown soldier, center of Place Charles de Gaulle",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arc_de_Triomphe%2C_Paris_21_October_2010.jpg/300px-Arc_de_Triomphe%2C_Paris_21_October_2010.jpg",
+      "/img/wikipedia/Arc_de_Triomphe__Paris_21_October_2010-eda058.jpg",
     url: "https://en.wikipedia.org/wiki/Arc_de_Triomphe",
   },
   "l'Arc de Triomphe": {
@@ -664,7 +664,7 @@ export const wikipediaEntries = {
     description:
       "Triumphal arch built 1806-1836, honors French military victories, tomb of unknown soldier, center of Place Charles de Gaulle",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arc_de_Triomphe%2C_Paris_21_October_2010.jpg/300px-Arc_de_Triomphe%2C_Paris_21_October_2010.jpg",
+      "/img/wikipedia/Arc_de_Triomphe__Paris_21_October_2010-eda058.jpg",
     url: "https://en.wikipedia.org/wiki/Arc_de_Triomphe",
   },
   "auguste renoir": {
@@ -672,7 +672,7 @@ export const wikipediaEntries = {
     description:
       "French Impressionist painter (1841-1919), famous for vibrant light and saturated color, painted people in intimate settings",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg/500px-Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg",
+      "/img/wikipedia/Pierre-Auguste_Renoir__Le_Moulin_de_la_Galette-2067c0.jpg",
     url: "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir",
   },
   "Auguste Renoir": {
@@ -680,7 +680,7 @@ export const wikipediaEntries = {
     description:
       "French Impressionist painter (1841-1919), famous for vibrant light and saturated color, painted people in intimate settings",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg/500px-Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg",
+      "/img/wikipedia/Pierre-Auguste_Renoir__Le_Moulin_de_la_Galette-2067c0.jpg",
     url: "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir",
   },
   méditerranée: {
@@ -688,7 +688,7 @@ export const wikipediaEntries = {
     description:
       "Sea between Europe, Africa and Asia, 2.5 million km², cradle of Western civilization, connects to Atlantic via Gibraltar",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ionian_sea_islands%2C_pic1.JPG/500px-Ionian_sea_islands%2C_pic1.JPG",
+      "/img/wikipedia/Ionian_sea_islands__pic1-be4656.jpg",
     url: "https://en.wikipedia.org/wiki/Mediterranean_Sea",
   },
   Méditerranée: {
@@ -696,7 +696,7 @@ export const wikipediaEntries = {
     description:
       "Sea between Europe, Africa and Asia, 2.5 million km², cradle of Western civilization, connects to Atlantic via Gibraltar",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ionian_sea_islands%2C_pic1.JPG/500px-Ionian_sea_islands%2C_pic1.JPG",
+      "/img/wikipedia/Ionian_sea_islands__pic1-be4656.jpg",
     url: "https://en.wikipedia.org/wiki/Mediterranean_Sea",
   },
   "mer Méditerranée": {
@@ -704,7 +704,7 @@ export const wikipediaEntries = {
     description:
       "Sea between Europe, Africa and Asia, 2.5 million km², cradle of Western civilization, connects to Atlantic via Gibraltar",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ionian_sea_islands%2C_pic1.JPG/500px-Ionian_sea_islands%2C_pic1.JPG",
+      "/img/wikipedia/Ionian_sea_islands__pic1-be4656.jpg",
     url: "https://en.wikipedia.org/wiki/Mediterranean_Sea",
   },
   cannes: {
@@ -712,7 +712,7 @@ export const wikipediaEntries = {
     description:
       "Resort city on French Riviera, famous for Cannes Film Festival since 1946, luxury shopping and beaches",
     image:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG/500px-H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG",
+      "/img/wikipedia/H_tel_Martinez__Cannes__2014_-5d751d.jpg",
     url: "https://en.wikipedia.org/wiki/Cannes",
   },
   Cannes: {
@@ -720,7 +720,7 @@ export const wikipediaEntries = {
     description:
       "Resort city on French Riviera, famous for Cannes Film Festival since 1946, luxury shopping and beaches",
     image:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG/500px-H%C3%B4tel_Martinez%2C_Cannes_%282014%29.JPG",
+      "/img/wikipedia/H_tel_Martinez__Cannes__2014_-5d751d.jpg",
     url: "https://en.wikipedia.org/wiki/Cannes",
   },
 
@@ -729,7 +729,7 @@ export const wikipediaEntries = {
     description:
       "Royal château built for Louis XIV, symbol of absolute monarchy, Hall of Mirrors, 2,300 rooms, UNESCO World Heritage Site",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg",
+      "/img/wikipedia/Chateau_Versailles_Galerie_des_Glaces-9f3707.jpg",
     url: "https://en.wikipedia.org/wiki/Palace_of_Versailles",
   },
   "Château de Versailles": {
@@ -737,7 +737,7 @@ export const wikipediaEntries = {
     description:
       "Royal château built for Louis XIV, symbol of absolute monarchy, Hall of Mirrors, 2,300 rooms, UNESCO World Heritage Site",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/960px-Chateau_Versailles_Galerie_des_Glaces.jpg",
+      "/img/wikipedia/Chateau_Versailles_Galerie_des_Glaces-9f3707.jpg",
     url: "https://en.wikipedia.org/wiki/Palace_of_Versailles",
   },
   "Café de la Paix": {
@@ -745,7 +745,7 @@ export const wikipediaEntries = {
     description:
       "Historic café in Paris, located on Place de l'Opéra, famous for its elegant interior and historic significance",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Constant_Korovine_Caf%C3%A9_de_la_paix.jpg",
+      "/img/wikipedia/Constant_Korovine_Caf__de_la_paix-91f6ee.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_de_la_Paix",
   },
   "café de la Paix": {
@@ -753,7 +753,7 @@ export const wikipediaEntries = {
     description:
       "Historic café in Paris, located on Place de l'Opéra, famous for its elegant interior and historic significance",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Constant_Korovine_Caf%C3%A9_de_la_paix.jpg",
+      "/img/wikipedia/Constant_Korovine_Caf__de_la_paix-91f6ee.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_de_la_Paix",
   },
   "Comte de Monte-Cristo": {
@@ -761,7 +761,7 @@ export const wikipediaEntries = {
     description:
       "Famous French novel by Alexandre Dumas, published 1844-1846, about revenge and justice",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/CC_No_03_Count_of_Monte_Cristo.jpg/500px-CC_No_03_Count_of_Monte_Cristo.jpg",
+      "/img/wikipedia/CC_No_03_Count_of_Monte_Cristo-cda720.jpg",
     url: "https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo",
   },
   "comte de Monte-Cristo": {
@@ -769,7 +769,7 @@ export const wikipediaEntries = {
     description:
       "Famous French novel by Alexandre Dumas, published 1844-1846, about revenge and justice",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/CC_No_03_Count_of_Monte_Cristo.jpg/500px-CC_No_03_Count_of_Monte_Cristo.jpg",
+      "/img/wikipedia/CC_No_03_Count_of_Monte_Cristo-cda720.jpg",
     url: "https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo",
   },
   "Jules Verne": {
@@ -777,7 +777,7 @@ export const wikipediaEntries = {
     description:
       "French novelist, poet, and playwright (1828-1905), pioneer of science fiction literature",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jules_Verne_by_%C3%89tienne_Carjat.jpg/500px-Jules_Verne_by_%C3%89tienne_Carjat.jpg",
+      "/img/wikipedia/Jules_Verne_by__tienne_Carjat-a8f781.jpg",
     url: "https://en.wikipedia.org/wiki/Jules_Verne",
   },
   "Vingt mille lieues sous les mers": {
@@ -785,7 +785,7 @@ export const wikipediaEntries = {
     description:
       "Classic science fiction novel by Jules Verne (1870), featuring Captain Nemo and the submarine Nautilus",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Houghton_FC8_V5946_869ve_-_Verne%2C_frontispiece.jpg/500px-Houghton_FC8_V5946_869ve_-_Verne%2C_frontispiece.jpg",
+      "/img/wikipedia/Houghton_FC8_V5946_869ve_-_Verne__frontispiece-75caee.jpg",
     url: "https://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Seas",
   },
   Paris: {
@@ -793,7 +793,7 @@ export const wikipediaEntries = {
     description:
       'Capital and largest city of France, known as the "City of Light" and cultural capital of Europe',
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/960px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
+      "/img/wikipedia/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques__Paris_ao_t_2014__2_-32b9a0.jpg",
     url: "https://en.wikipedia.org/wiki/Paris",
   },
   paris: {
@@ -801,7 +801,7 @@ export const wikipediaEntries = {
     description:
       'Capital and largest city of France, known as the "City of Light" and cultural capital of Europe',
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/960px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
+      "/img/wikipedia/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques__Paris_ao_t_2014__2_-32b9a0.jpg",
     url: "https://en.wikipedia.org/wiki/Paris",
   },
   "Belle Époque": {
@@ -809,7 +809,7 @@ export const wikipediaEntries = {
     description:
       "Period of French history from 1871-1914, characterized by peace, prosperity, and cultural flourishing",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg/500px-Le_Chateau_d%27eau_and_plaza%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg",
+      "/img/wikipedia/Le_Chateau_d_eau_and_plaza__Exposition_Universal__1900__Paris__France-5d1b5c.jpg",
     url: "https://en.wikipedia.org/wiki/Belle_%C3%89poque",
   },
   "Saint-Germain": {
@@ -817,7 +817,7 @@ export const wikipediaEntries = {
     description:
       "Historic Left Bank neighborhood in Paris, famous for its cafés, jazz clubs, and intellectual culture since the 1940s",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Abbaye_de_Saint-Germain-des-Pr%C3%A9s_140131_1.jpg/500px-Abbaye_de_Saint-Germain-des-Pr%C3%A9s_140131_1.jpg",
+      "/img/wikipedia/Abbaye_de_Saint-Germain-des-Pr_s_140131_1-33a188.jpg",
     url: "https://en.wikipedia.org/wiki/Saint-Germain-des-Pr%C3%A9s",
   },
   "saint-germain": {
@@ -825,7 +825,7 @@ export const wikipediaEntries = {
     description:
       "Historic Left Bank neighborhood in Paris, famous for its cafés, jazz clubs, and intellectual culture since the 1940s",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg/500px-Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg",
+      "/img/wikipedia/Abbaye_de_Saint-Germain-des-Pr_s_140131_1-33a188.jpg",
     url: "https://en.wikipedia.org/wiki/Saint-Germain-des-Pr%C3%A9s",
   },
   "à Saint-Germain": {
@@ -833,7 +833,7 @@ export const wikipediaEntries = {
     description:
       "Historic Left Bank neighborhood in Paris, famous for its cafés, jazz clubs, and intellectual culture since the 1940s",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg/500px-Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg",
+      "/img/wikipedia/Abbaye_de_Saint-Germain-des-Pr_s_140131_1-33a188.jpg",
     url: "https://en.wikipedia.org/wiki/Saint-Germain-des-Pr%C3%A9s",
   },
   "à saint-germain": {
@@ -841,7 +841,7 @@ export const wikipediaEntries = {
     description:
       "Historic Left Bank neighborhood in Paris, famous for its cafés, jazz clubs, and intellectual culture since the 1940s",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg/500px-Church_of_Saint-Germain-des-Pr%C3%A9s%2C_Paris_6e_140402_1.jpg",
+      "/img/wikipedia/Abbaye_de_Saint-Germain-des-Pr_s_140131_1-33a188.jpg",
     url: "https://en.wikipedia.org/wiki/Saint-Germain-des-Pr%C3%A9s",
   },
   "Paul Gauguin": {
@@ -849,7 +849,7 @@ export const wikipediaEntries = {
     description:
       "French Post-Impressionist painter (1848-1903), friend of Van Gogh, famous for his paintings of Tahiti and use of bold colors",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Paul_Gauguin_1891.png/500px-Paul_Gauguin_1891.png",
+      "/img/wikipedia/Paul_Gauguin_1891-000c43.png",
     url: "https://en.wikipedia.org/wiki/Paul_Gauguin",
   },
   "paul gauguin": {
@@ -857,7 +857,7 @@ export const wikipediaEntries = {
     description:
       "French Post-Impressionist painter (1848-1903), friend of Van Gogh, famous for his paintings of Tahiti and use of bold colors",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Paul_Gauguin_1891.png/500px-Paul_Gauguin_1891.png",
+      "/img/wikipedia/Paul_Gauguin_1891-000c43.png",
     url: "https://en.wikipedia.org/wiki/Paul_Gauguin",
   },
   Arles: {
@@ -865,7 +865,7 @@ export const wikipediaEntries = {
     description:
       "City in southern France, UNESCO World Heritage site, famous for Roman ruins and where Vincent van Gogh painted many masterpieces",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/FranceArlesArenes_07-2010.jpg/330px-FranceArlesArenes_07-2010.jpg",
+      "/img/wikipedia/FranceArlesArenes_07-2010-1a4863.jpg",
     url: "https://en.wikipedia.org/wiki/Arles",
   },
   arles: {
@@ -873,7 +873,7 @@ export const wikipediaEntries = {
     description:
       "City in southern France, UNESCO World Heritage site, famous for Roman ruins and where Vincent van Gogh painted many masterpieces",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/FranceArlesArenes_07-2010.jpg/330px-FranceArlesArenes_07-2010.jpg",
+      "/img/wikipedia/FranceArlesArenes_07-2010-1a4863.jpg",
     url: "https://en.wikipedia.org/wiki/Arles",
   },
   "à Arles": {
@@ -881,7 +881,7 @@ export const wikipediaEntries = {
     description:
       "City in southern France, UNESCO World Heritage site, famous for Roman ruins and where Vincent van Gogh painted many masterpieces",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/FranceArlesArenes_07-2010.jpg/330px-FranceArlesArenes_07-2010.jpg",
+      "/img/wikipedia/FranceArlesArenes_07-2010-1a4863.jpg",
     url: "https://en.wikipedia.org/wiki/Arles",
   },
   absinthe: {
@@ -889,7 +889,7 @@ export const wikipediaEntries = {
     description:
       "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+      "/img/wikipedia/Absinthe-glass-5ea26a.jpg",
     url: "https://en.wikipedia.org/wiki/Absinthe",
   },
   Absinthe: {
@@ -897,7 +897,7 @@ export const wikipediaEntries = {
     description:
       "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+      "/img/wikipedia/Absinthe-glass-5ea26a.jpg",
     url: "https://en.wikipedia.org/wiki/Absinthe",
   },
   absinthes: {
@@ -905,7 +905,7 @@ export const wikipediaEntries = {
     description:
       "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+      "/img/wikipedia/Absinthe-glass-5ea26a.jpg",
     url: "https://en.wikipedia.org/wiki/Absinthe",
   },
   absinthe: {
@@ -913,7 +913,7 @@ export const wikipediaEntries = {
     description:
       "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+      "/img/wikipedia/Absinthe-glass-5ea26a.jpg",
     url: "https://en.wikipedia.org/wiki/Absinthe",
   },
   "l'absinthe": {
@@ -921,7 +921,7 @@ export const wikipediaEntries = {
     description:
       "Anise-flavored spirit, popular with artists in 19th century France, known for its green color and association with bohemian culture",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Absinthe-glass.jpg",
+      "/img/wikipedia/Absinthe-glass-5ea26a.jpg",
     url: "https://en.wikipedia.org/wiki/Absinthe",
   },
   "Terrasse du café le soir": {
@@ -929,7 +929,7 @@ export const wikipediaEntries = {
     description:
       "Famous 1888 painting by Vincent van Gogh, depicting a café terrace in Arles at night with stars and warm yellow lights",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg/500px-Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg",
+      "/img/wikipedia/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night__Yorck_-9311d1.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night",
   },
   "terrasse du café le soir": {
@@ -937,7 +937,7 @@ export const wikipediaEntries = {
     description:
       "Famous 1888 painting by Vincent van Gogh, depicting a café terrace in Arles at night with stars and warm yellow lights",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg/500px-Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg",
+      "/img/wikipedia/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night__Yorck_-9311d1.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night",
   },
   "la Terrasse du café le soir": {
@@ -945,7 +945,7 @@ export const wikipediaEntries = {
     description:
       "Famous 1888 painting by Vincent van Gogh, depicting a café terrace in Arles at night with stars and warm yellow lights",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg/500px-Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg",
+      "/img/wikipedia/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night__Yorck_-9311d1.jpg",
     url: "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night",
   },
 };

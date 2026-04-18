@@ -66,7 +66,7 @@ function Reading11Preview() {
             <div className="tooltip-example-card wiki front" style={{ top: '3rem', right: '0' }}>
               <div className="wiki-tooltip-demo">
                 <div className="wiki-tooltip-image">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/300px-Paris_-_Eiffelturm_und_Marsfeld2.jpg" alt="Tour Eiffel" />
+                  <img src="/img/eiffel-tower-paris.jpg" alt="Tour Eiffel" />
                 </div>
                 <div className="wiki-tooltip-content">
                   <div className="wiki-tooltip-title">Tour Eiffel</div>
@@ -87,7 +87,7 @@ function Reading11Preview() {
             <div className="tooltip-example-card wiki back" style={{ top: '2rem', right: '2.5rem' }}>
               <div className="wiki-tooltip-demo partial">
                 <div className="wiki-tooltip-image">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg" alt="Louvre Museum" />
+                  <img src="/img/louvre.jpg" alt="Louvre Museum" />
                 </div>
                 <div className="wiki-tooltip-content">
                   <div className="wiki-tooltip-title">Louvre Museum</div>
