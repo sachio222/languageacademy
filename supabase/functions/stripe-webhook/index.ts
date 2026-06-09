@@ -269,10 +269,12 @@ async function handlePaymentFailed(
 }
 
 // Helper to determine plan from price ID
+// Must stay in sync with src/config/stripe.config.js STRIPE_CONFIG.prices
+// and supabase/functions/stripe-checkout/index.ts getPlanFromPriceId.
 function getPlanFromPriceId(priceId: string): string {
-  if (priceId.includes('1SX6UqL8WdA5h9TH5M4ZSani')) return 'weekly'
-  if (priceId.includes('1SrOsHL8WdA5h9THCCzIiwu8')) return 'monthly'
-  if (priceId.includes('1SrOscL8WdA5h9THMfzBylno')) return 'annual'
-  if (priceId.includes('1SrOctL8WdA5h9THjwD86YVw')) return 'lifetime'
+  if (priceId.includes('1SrQtlEyhpMckjNRtFU3KUZ2')) return 'weekly'
+  if (priceId.includes('1SrQtlEyhpMckjNRyeDVHpPI')) return 'monthly'
+  if (priceId.includes('1SrQtlEyhpMckjNRBfTUGJ2d')) return 'annual'
+  if (priceId.includes('1SrQqxEyhpMckjNRGAeW1CTm')) return 'lifetime'
   return 'unknown'
 }

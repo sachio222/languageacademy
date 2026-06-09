@@ -1,11 +1,11 @@
 /**
  * Stripe Configuration for Language Academy
- * 
- * Manages subscription tiers, pricing, and feature gates
- * Uses real Stripe product and price IDs
- * 
- * NOTE: Paywall is currently DISABLED in App.jsx (all users have full access)
- * To enable: Uncomment the access check in App.jsx around line 522
+ *
+ * Manages subscription tiers, pricing, and feature gates.
+ * Uses real Stripe product and price IDs.
+ *
+ * The paywall is active. Free users get Unit 1 + reference + vocabulary-intro;
+ * everything else is gated through useSubscription / FeatureGate.
  */
 
 // Import unit structure for dynamic Unit 1 range (authoritative source)
