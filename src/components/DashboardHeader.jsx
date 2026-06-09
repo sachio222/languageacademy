@@ -4,7 +4,7 @@ import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { lessons } from '../lessons/lessonData';
 import { Flame, CheckCircle, Clock, BookOpen, BookMarked, Users } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { getModuleCompletionStatus, getExerciseCount } from '../utils/moduleCompletion';
 import '../styles/DashboardHeader.css';
 import { logger } from "../utils/logger";

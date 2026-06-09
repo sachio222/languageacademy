@@ -93,8 +93,9 @@ export const useSupabaseProgress = () => {
   useEffect(() => {
     if (authLoading || !isAuthenticated || !supabaseUser) return;
 
+    const runId = Math.random().toString(36).slice(2, 10);
     const exerciseSubscription = supabaseClient
-      .channel(`exercise_completions:${supabaseUser.id}`)
+      .channel(`exercise_completions:${supabaseUser.id}:${runId}`)
       .on(
         "postgres_changes",
         {
@@ -114,7 +115,7 @@ export const useSupabaseProgress = () => {
       .subscribe();
 
     const moduleSubscription = supabaseClient
-      .channel(`module_progress:${supabaseUser.id}`)
+      .channel(`module_progress:${supabaseUser.id}:${runId}`)
       .on(
         "postgres_changes",
         {

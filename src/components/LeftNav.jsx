@@ -6,7 +6,7 @@ import { unitStructure } from '../lessons/lessonData';
 const { List } = ReactWindow;
 import SpeakButton from './SpeakButton';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { getModuleCompletionStatus, getModuleCompletionPercentage, getExerciseCount } from '../utils/moduleCompletion';
 import { getTTSText, selectBestVoice } from '../utils/ttsUtils';
 import '../styles/LeftNav.css';

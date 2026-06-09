@@ -4,7 +4,7 @@ import DashboardHeader from './DashboardHeader';
 import JoinClassBanner from './JoinClassBanner';
 import JoinClass from './JoinClass';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
-import { useSectionProgress } from '../hooks/useSectionProgress';
+import { useSectionProgress } from '../contexts/SectionProgressContext';
 import { useAuth } from '../hooks/useAuth';
 import { useSupabaseClient } from '../hooks/useSupabaseClient';
 import { getModuleCompletionStatus, getModuleCompletionPercentage, isModuleComplete, getExerciseCount } from '../utils/moduleCompletion';

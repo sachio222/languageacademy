@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { LocalStorageManager, isOnline } from '../utils/progressSync'
-import { useSupabaseProgress } from './useSupabaseProgress'
+import { useSupabaseProgress } from '../contexts/SupabaseProgressContext'
 import { logger } from "../utils/logger";
 
 /**

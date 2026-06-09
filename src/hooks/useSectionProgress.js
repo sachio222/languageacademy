@@ -166,8 +166,9 @@ export const useSectionProgress = () => {
   useEffect(() => {
     if (!isAuthenticated || !supabaseUser) return;
 
+    const channelId = `section_progress_changes:${supabaseUser.id}:${Math.random().toString(36).slice(2, 10)}`;
     const subscription = supabaseClient
-      .channel(`section_progress_changes:${supabaseUser.id}`)
+      .channel(channelId)
       .on(
         'postgres_changes',
         {
