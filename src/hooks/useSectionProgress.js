@@ -167,7 +167,7 @@ export const useSectionProgress = () => {
     if (!isAuthenticated || !supabaseUser) return;
 
     const subscription = supabaseClient
-      .channel('section_progress_changes')
+      .channel(`section_progress_changes:${supabaseUser.id}`)
       .on(
         'postgres_changes',
         {
@@ -208,7 +208,7 @@ export const useSectionProgress = () => {
       .subscribe();
 
     return () => {
-      subscription.unsubscribe();
+      supabaseClient.removeChannel(subscription);
     };
   }, [isAuthenticated, supabaseUser, supabaseClient]);
 

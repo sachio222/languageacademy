@@ -94,7 +94,7 @@ export const useSupabaseProgress = () => {
     if (authLoading || !isAuthenticated || !supabaseUser) return;
 
     const exerciseSubscription = supabaseClient
-      .channel("exercise_completions")
+      .channel(`exercise_completions:${supabaseUser.id}`)
       .on(
         "postgres_changes",
         {
@@ -114,7 +114,7 @@ export const useSupabaseProgress = () => {
       .subscribe();
 
     const moduleSubscription = supabaseClient
-      .channel("module_progress")
+      .channel(`module_progress:${supabaseUser.id}`)
       .on(
         "postgres_changes",
         {
@@ -138,8 +138,8 @@ export const useSupabaseProgress = () => {
       .subscribe();
 
     return () => {
-      exerciseSubscription.unsubscribe();
-      moduleSubscription.unsubscribe();
+      supabaseClient.removeChannel(exerciseSubscription);
+      supabaseClient.removeChannel(moduleSubscription);
     };
   }, [isAuthenticated, supabaseUser, supabaseClient, authLoading]);
 
