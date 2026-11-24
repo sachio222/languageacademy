@@ -264,3 +264,19 @@ test('taught-before issues carry the reason, the later position and the sentence
   assert.equal(nowhere.taughtLaterAt, null);
   assert.equal(nowhere.text, 'Je vais au marché et je mange du pain.');
 });
+
+test('strict text keeps où and ou apart when deduping a module', () => {
+  const hw = (id, lemma, pos) => ({ id, lemma, pos, paradigms: [], senses: [], dictionaryId: null, cefr: null, cefrSource: null });
+  const headwords = [...base.headwords, hw('fr:lex:ou.adverb', 'où', 'adverb')];
+  const ctx = setup({ m5: { teachesWords: ['fr:lex:ou', 'fr:lex:ou.adverb'] } },
+    [mod(1, [item('où'), item('ou')]), mod(5, [])], { headwords });
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-word');
+  assert.deepEqual(hits.map((i) => i.surface).sort(), ['ou', 'où']);
+});
+
+test('an accepted answer typed without accents is the same word as the accented text', () => {
+  const ctx = setup({ m5: { teachesWords: ['fr:lex:cafe'] } },
+    [mod(1, [item(['café'], { lenient: ['cafe'] }), item(['café'])]), mod(5, [])]);
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-word');
+  assert.deepEqual(hits.map((i) => i.surface), ['café']);
+});

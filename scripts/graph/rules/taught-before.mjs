@@ -1,5 +1,5 @@
 import { tokenize, fold, restoreElisions } from '../fr/tokenize.mjs';
-import { lookupToken, lookupTokenStrict, lookupKey } from '../fr/forms.mjs';
+import { lookupToken, lookupTokenStrict, lookupKey, strictKey } from '../fr/forms.mjs';
 import { detectConstructions } from '../fr/detect.mjs';
 import { issue } from '../issues.mjs';
 
@@ -80,7 +80,18 @@ export function ruleTaughtBefore(ctx) {
   const at = (position) => (position == null ? null : { position, title: titleAt.get(position) ?? 'unknown module' });
 
   for (const m of ctx.course) {
-    const seen = new Set();
+    // One line per word per module. Strict text keeps accents, so où and ou are two words; a lenient answer
+    // (often typed without accents) is the same word as any text with the same letters.
+    const seenStrict = new Set();
+    const seenLenient = new Set();
+    const seenFold = new Set();
+    const seenWord = (a, t, lk) => (a.strict ? seenStrict.has(strictKey(t)) || seenLenient.has(lk) : seenFold.has(lk));
+    const markWord = (a, t, lk) => {
+      seenFold.add(lk);
+      if (a.strict) seenStrict.add(strictKey(t));
+      else seenLenient.add(lk);
+    };
+    const seenCx = new Set();
     for (const it of m.items) {
       const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
@@ -90,11 +101,10 @@ export function ruleTaughtBefore(ctx) {
           const rs = a.readings[i];
           if (ignore.has(lk) || ignore.has(t.fold)
             || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
-          const key = `${m.moduleKey}|${lk}`;
-          if (seen.has(key)) return;
+          if (seenWord(a, t, lk)) return;
           const base = { moduleKey: m.moduleKey, position: m.position, itemRef: it.ref, surface: t.surface };
           if (rs.length === 0) {
-            seen.add(key);
+            markWord(a, t, lk);
             issues.push(issue({
               ...base, rule: 'unknown-word',
               message: `"${t.surface}" is not in the graph (${it.ref}: ${a.text})`,
@@ -103,7 +113,7 @@ export function ruleTaughtBefore(ctx) {
             return;
           }
           if (rs.some((r) => timeline.isReadingAvailable(r, m.position))) return;
-          seen.add(key);
+          markWord(a, t, lk);
           const heads = [...new Set(rs.map((r) => r.headwordId))];
           const laters = heads.map((h) => laterNote(h, m.position)).filter((x) => x !== null);
           const taughtEarlier = heads.some((h) => timeline.isAvailable(h, m.position));
@@ -136,9 +146,8 @@ export function ruleTaughtBefore(ctx) {
           }));
         });
         for (const id of a.constructions) {
-          const key = `${m.moduleKey}|${id}`;
-          if (seen.has(key) || ignore.has(id) || timeline.isAvailable(id, m.position)) continue;
-          seen.add(key);
+          if (seenCx.has(id) || ignore.has(id) || timeline.isAvailable(id, m.position)) continue;
+          seenCx.add(id);
           const later = laterNote(id, m.position);
           issues.push(issue({
             rule: 'untaught-construction', moduleKey: m.moduleKey, position: m.position,
