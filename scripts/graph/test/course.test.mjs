@@ -142,3 +142,18 @@ test('real Fr-to-En exam item keeps its French prompt in french', () => {
   assert.ok(it);
   assert.equal(it.englishPrompt, null);
 });
+
+test('item refs are unique across the course and start with the module key', () => {
+  const all = course.flatMap((m) => m.items.map((i) => ({ m, ref: i.ref })));
+  assert.equal(new Set(all.map((x) => x.ref)).size, all.length);
+  for (const { m, ref } of all) assert.ok(ref.startsWith(`${m.moduleKey}#`), `${ref} in ${m.moduleKey}`);
+});
+
+test('config item refs are module key, #, then the config path', () => {
+  const m = readModule({
+    moduleKey: 'k1', title: 'T',
+    exerciseConfig: { items: [{ expectedAnswer: 'je suis' }] },
+    readingPassage: { text: 'Bonjour.' },
+  }, 1, 'u');
+  assert.deepEqual(m.items.map((i) => i.ref), ['k1#exerciseConfig.items[0]', 'k1#readingPassage']);
+});

@@ -96,13 +96,13 @@ function answerItem(ref, source, it) {
   };
 }
 
-function readConfigItems(cfg, key, unread, items) {
+function readConfigItems(cfg, key, mk, unread, items) {
   if (!Array.isArray(cfg.items)) {
     unread.push(`${key}.items`);
     return;
   }
   cfg.items.forEach((it, i) => {
-    const ref = `${key}.items[${i}]`;
+    const ref = `${mk}#${key}.items[${i}]`;
     if (it && typeof it.expectedAnswer === 'string') {
       items.push(answerItem(ref, 'items', it));
     } else if (it && typeof it.key === 'string' && (it.conjugations ?? cfg.conjugations)?.[it.key]?.combined) {
@@ -114,14 +114,14 @@ function readConfigItems(cfg, key, unread, items) {
         instruction: typeof it.context === 'string' ? it.context : null,
       });
     } else {
-      unread.push(`${ref}:unreadable`);
+      unread.push(`${ref.slice(ref.indexOf('#') + 1)}:unreadable`);
     }
   });
 }
 
 function readExercises(list, key, unread, items, fills) {
   list.forEach((ex, i) => {
-    const ref = `${key}.exercises[${i}]`;
+    const ref = `${key}#exercises[${i}]`;
     if (ex?.type === 'fillblank' && typeof ex.prompt === 'string' && typeof ex.answer === 'string') {
       const { text, english } = splitPrompt(ex.prompt);
       fills.set(fold(text), ex.answer);
@@ -148,7 +148,7 @@ function readSentences(list, key, unread, items) {
       out = out.slice(0, b.position) + b.answer + out.slice(b.position);
     });
     items.push({
-      ref: `${key}.sentences[${i}]`, source: 'sentences', french: [tidy(out)], lenient: [],
+      ref: `${key}#sentences[${i}]`, source: 'sentences', french: [tidy(out)], lenient: [],
       englishPrompt: quoted(s.instruction),
       instruction: typeof s.instruction === 'string' ? s.instruction : null,
     });
@@ -166,7 +166,7 @@ function readFib(list, key, unread, items, fills) {
     const { text, english } = splitPrompt(s);
     const answer = fills.get(fold(text)) ?? '';
     items.push({
-      ref: `${key}.fillInBlanksSentences[${i}]`, source: 'fib', french: [fillBlanks(text, answer)],
+      ref: `${key}#fillInBlanksSentences[${i}]`, source: 'fib', french: [fillBlanks(text, answer)],
       lenient: [], englishPrompt: english, instruction: null,
     });
   });
@@ -181,7 +181,7 @@ export function readModule(mod, position, unitId, unitTitle = null) {
 
   if (mod.exerciseConfig) {
     const before = items.length;
-    readConfigItems(mod.exerciseConfig, 'exerciseConfig', unread, items);
+    readConfigItems(mod.exerciseConfig, 'exerciseConfig', key, unread, items);
     if (items.length > before) shapes.add('items');
   }
   if (Array.isArray(mod.exercises) && mod.exercises.length) {
@@ -199,7 +199,7 @@ export function readModule(mod, position, unitId, unitTitle = null) {
   if (typeof mod.readingPassage?.text === 'string') {
     shapes.add('passage');
     items.push({
-      ref: `${key}.readingPassage`, source: 'passage', french: [stripPassage(mod.readingPassage.text)],
+      ref: `${key}#readingPassage`, source: 'passage', french: [stripPassage(mod.readingPassage.text)],
       lenient: [], englishPrompt: null, instruction: null,
     });
   }

@@ -183,3 +183,19 @@ test('analyzeItems marks strict entries and firstUse uses the same readings', ()
   assert.equal(first.get('ou').moduleKey, 'm1');
   assert.equal(first.get('fr:lex:ou').moduleKey, 'm1');
 });
+
+test('items at the same config path in two modules are analyzed and attributed separately', () => {
+  const at = (key, french) => ({
+    ref: `${key}#exerciseConfig.items[0]`, source: 'items', french: [french],
+    lenient: [], englishPrompt: '', instruction: '',
+  });
+  const course = [
+    makeModule({ position: 1, moduleKey: 'm1', items: [at('m1', 'Je parle.')] }),
+    makeModule({ position: 2, moduleKey: 'm2', items: [at('m2', 'nous travaillons')] }),
+  ];
+  const ctx = setup({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:parler'], teachesConstructions: ['fr:cx:verb.er.present'] } }, course);
+  assert.equal(analyzeItems(ctx).size, 2);
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-word' && i.surface === 'travaillons');
+  assert.equal(hits.length, 1);
+  assert.equal(hits[0].moduleKey, 'm2');
+});
