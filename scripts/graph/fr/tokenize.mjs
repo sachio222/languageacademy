@@ -11,7 +11,9 @@ const CLITICS = [
   '-tu', '-il', '-on', '-ce', '-le', '-la', '-en', '-y',
 ];
 // A word run: letters joined by apostrophes or hyphens, with an optional final apostrophe (a bare elision). Digits, underscores and punctuation fall outside.
-const RUN_RE = /\p{L}+(?:['’ʼ‘-]\p{L}+)*['’ʼ‘]?/gu;
+// An hour written as digits + h (7h, 7h30, 18h) is matched first so its h is not read as a word; such runs are skipped.
+const HOUR = /^\d/;
+const RUN_RE = /\d+h\d*(?!\p{L})|\p{L}+(?:['’ʼ‘-]\p{L}+)*['’ʼ‘]?/gu;
 
 function make(surface, clitic = false) {
   return { surface, norm: norm(surface), fold: fold(surface), clitic };
@@ -45,6 +47,7 @@ export function tokenize(text, opts = {}) {
   const isWord = opts.isWord ?? (() => false);
   const tokens = [];
   for (const [run] of String(text).normalize('NFC').matchAll(RUN_RE)) {
+    if (HOUR.test(run)) continue;
     let rest = run;
     let m;
     while ((m = ELISION_RE.exec(rest))) {

@@ -100,3 +100,12 @@ test('a bare elision prefix stays an elided token', () => {
   assert.deepEqual(folds("jusqu'"), ["jusqu'"]);
   assert.deepEqual(folds("J'ai mangé."), ["j'", 'ai', 'mange']);
 });
+
+test('hour notation (7h, 7h30, 18h) is a time, not the letter h', () => {
+  const surfaces = (s) => tokenize(s).map((t) => t.surface);
+  assert.deepEqual(surfaces('tu te réveilles à 7h'), ['tu', 'te', 'réveilles', 'à']);
+  assert.deepEqual(surfaces('Je pars à 7h30, il arrive à 18h.'), ['Je', 'pars', 'à', 'il', 'arrive', 'à']);
+  // a word written after a number is still a word
+  assert.deepEqual(surfaces('à 8 heures'), ['à', 'heures']);
+  assert.deepEqual(surfaces('8heures'), ['heures']);
+});

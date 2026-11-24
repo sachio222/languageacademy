@@ -1,6 +1,6 @@
 # French course fix list
 
-2724 errors, 793 warnings, 146 modules with errors.
+2718 errors, 793 warnings, 146 modules with errors.
 
 ## How to read this
 
@@ -494,7 +494,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 ### 95. Morning Routine - se réveiller, se lever
 
 - "sept" (fr:lex:sept): not taught anywhere in the course; teach in a lesson before Unit 6 Practice - Fill in the Blanks (position 76). Sentence: "je me réveille à sept heures"
-- "h" (fr:lex:h): taught later, at position 145 (Social Situations - Wait, Arrive, Stay); teach in this module. Sentence: "je me réveille à 7h"
 - "tôt" (fr:lex:tot): not taught anywhere in the course; teach in this module. Sentence: "tu te réveilles tôt"
 - "huit" (fr:lex:huit): not taught anywhere in the course; teach in this module. Sentence: "elle se lève à huit heures"
 
@@ -540,7 +539,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 ### 106. Unit 8 Final Exam - Daily Life & Actions
 
 - "sept" (fr:lex:sept): not taught anywhere in the course; teach in a lesson before Unit 6 Practice - Fill in the Blanks (position 76). Sentence: "tu te réveilles à sept heures"
-- "h" (fr:lex:h): taught later, at position 145 (Social Situations - Wait, Arrive, Stay); teach in Morning Routine - se réveiller, se lever (position 95). Sentence: "tu te réveilles à 7h"
 - "tôt" (fr:lex:tot): not taught anywhere in the course; teach in Morning Routine - se réveiller, se lever (position 95). Sentence: "on se lève tôt"
 
 ## Unit 9: Discourse & Past Tense
@@ -650,7 +648,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "venus" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in this module. Sentence: "Ils sont venus hier"
 - "partis" (fr:lex:partir): the word partir is taught at position 32, but this form is not; teach in this module. Sentence: "Êtes vous partis en vacances?"
 - "vacances" (fr:lex:vacances): not taught anywhere in the course; teach in this module. Sentence: "Êtes vous partis en vacances?"
-- "h" (fr:lex:h): taught later, at position 145 (Social Situations - Wait, Arrive, Stay); teach in Morning Routine - se réveiller, se lever (position 95). Sentence: "On est arrivé à 8h"
 - "venue" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in this module. Sentence: "Elle ne est pas venue"
 
 ### 114. Past Participle Agreement with être
@@ -664,7 +661,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "marché" (fr:lex:marcher): taught later, at position 131 (En mangeant... - While Doing Phrases); teach in More Spatial Relations - Distance & Proximity (position 109). Sentence: "Ma mère est allée au marché"
 - "garçons" (fr:lex:garçon): not taught anywhere in the course; teach in this module. Sentence: "Les garçons sont rentrés tard"
 - "tard" (fr:lex:tard): taught later, at position 133 (Avant que... - Before Phrases); teach in a lesson before Reading Comprehension 5 - La fée verte (The Green Fairy) (position 63). Sentence: "Les garçons sont rentrés tard"
-- "h" (fr:lex:h): taught later, at position 145 (Social Situations - Wait, Arrive, Stay); teach in Morning Routine - se réveiller, se lever (position 95). Sentence: "Ils sont arrivés à 8h"
 
 ### 115. Imparfait Formation - All Verbs (was doing, used to do)
 
@@ -687,7 +683,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "foot" (fr:lex:foot): not taught anywhere in the course; teach in Imparfait Formation - All Verbs (was doing, used to do) (position 115). Sentence: "Quand j'étais jeune, je jouais au foot"
 - "content" (fr:lex:content): taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in être - Past Tense (was / were) (position 58). Sentence: "J'étais content hier"
 - "beaucoup" (fr:lex:beaucoup): not taught anywhere in the course; teach in a lesson before Unit 4 Final Exam - Expression (position 52). Sentence: "Il y avait beaucoup de gens"
-- "h" (fr:lex:h): taught later, at position 145 (Social Situations - Wait, Arrive, Stay); teach in Morning Routine - se réveiller, se lever (position 95). Sentence: "À 8h, j'ai mangé"
 - "mangeais" (fr:lex:manger): the word manger is taught at position 61, but this form is not; teach in this module. Sentence: "Pendant que je mangeais, tu as appelé"
 - "habitaient" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Sentence: "Ils habitaient dans un grand appartement"
 - "appartement" (fr:lex:appartement): not taught anywhere in the course; teach in Imparfait Formation - All Verbs (was doing, used to do) (position 115). Sentence: "Ils habitaient dans un grand appartement"
@@ -718,7 +713,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "Jardin" (fr:lex:jardin): not taught anywhere in the course; teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Sentence: "au Jardin du Luxembourg"
 - "banc" (fr:lex:banc): not taught anywhere in the course; teach in a lesson before this module. Sentence: "sur un banc"
 - "cinéma" (fr:lex:cinema): not taught anywhere in the course; teach in More Spatial Relations - Distance & Proximity (position 109). Sentence: "au cinéma"
-- "h" (fr:lex:h): taught later, at position 145 (Social Situations - Wait, Arrive, Stay); teach in Morning Routine - se réveiller, se lever (position 95). Sentence: "10h"
 - "dix" (fr:lex:dix): not taught anywhere in the course; teach in a lesson before Unit 6 Practice - Fill in the Blanks (position 76). Sentence: "dix heures"
 - "vers" (fr:lex:vers): not taught anywhere in the course; teach in a lesson before this module. Sentence: "vers 10h"
 - "samedi" (fr:lex:samedi): not taught anywhere in the course; teach in Imparfait Formation - All Verbs (was doing, used to do) (position 115). Sentence: "Hier, c'était samedi et il faisait très beau à Paris. J'étais content parce que…"
@@ -1690,7 +1684,7 @@ First 20:
 
 # 6. Level labels
 
-- 612 taught word or construction nodes have no cefr level
+- 611 taught word or construction nodes have no cefr level
 
 # 7. Exercises in a nonstandard format
 
