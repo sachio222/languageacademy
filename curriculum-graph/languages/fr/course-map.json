@@ -1969,6 +1969,9 @@
     ]
   },
   "2024-02-16-unit-11-practice": {
+    "contentNotes": [
+      "the gap-fill \"Je ___ mes amis au café\" with answer \"attends\" reads \"Je attends\"; French elides it to \"J'attends\"."
+    ],
     "itemKinds": {
       "2024-02-16-unit-11-practice#sentences[0]": "other",
       "2024-02-16-unit-11-practice#sentences[10]": "other",
@@ -4945,6 +4948,9 @@
     ]
   },
   "2024-05-27-imparfait-all-verbs": {
+    "contentNotes": [
+      "the gap-fill \"Je ___ au café quand tu m'as appelé\" with answer \"allais\" reads \"Je allais\"; French elides it to \"J'allais\"."
+    ],
     "excludeWords": [
       "fr:lex:le.pronoun",
       "fr:form:le.pronoun.f",
@@ -5202,6 +5208,9 @@
     ]
   },
   "2024-05-31-passe-compose-etre": {
+    "contentNotes": [
+      "the gap-fill \"Elle ne ___ pas ___\" with answer \"est pas venue\" reads \"Elle ne est pas venue\" once filled; French elides it to \"Elle n'est pas venue\"."
+    ],
     "itemKinds": {
       "2024-05-31-passe-compose-etre#exercises[0]": "other",
       "2024-05-31-passe-compose-etre#exercises[10]": "other",
@@ -5409,6 +5418,9 @@
     ]
   },
   "2024-06-03-past-tense-composition": {
+    "contentNotes": [
+      "the gap-fill \"Pendant que je ___, on a parlé pendant une heure\" with answer \"étais\" reads \"je étais\"; French elides it to \"j'étais\" (and \"While I was there\" needs \"là\": \"Pendant que j'étais là\")."
+    ],
     "itemKinds": {
       "2024-06-03-past-tense-composition#exercises[0]": "other",
       "2024-06-03-past-tense-composition#exercises[10]": "other",
