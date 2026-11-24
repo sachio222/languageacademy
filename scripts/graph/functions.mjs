@@ -5,6 +5,9 @@ import { issue } from './issues.mjs';
 // discourse and communication repair.
 export const GROUPS = ['information', 'attitudes', 'suasion', 'socialising', 'discourse', 'repair'];
 
+// CEFR levels a function may carry.
+export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+
 // A function (core/functions.json) is something a learner does with the language, such as asking the time. An
 // exponent (languages/<lang>/exponents.json) is one set of nodes that together perform it; several exponents of
 // one function are alternatives. A function is available at the earliest position where every node of one of its

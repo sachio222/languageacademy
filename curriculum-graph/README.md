@@ -13,7 +13,7 @@ Run the checker after you change a lesson. Once it finds no errors, the course c
 - **Node ID**: the code that names a headword (`fr:lex:`), an irregular form (`fr:form:`), a construction (`fr:cx:`), a name (`fr:name:`) or a function (`fn:`). An ID never changes once it is committed.
 - **Item ref**: the address of one exercise, written `<moduleKey>#<path in the module file>`, for example `2024-01-01-famous-words#exerciseConfig.items[5]`. The path is `exerciseConfig.items[N]`, `exercises[N]`, `sentences[N]`, `fillInBlanksSentences[N]` or `readingPassage`. French a learner reads around the exercises has a ref of the same kind, ending in the path of its field: `concepts[2].example`, `exerciseConfig.items[5].hint`, `vocabularyReference[3].note`, or `screen[4]` for the fifth French string on a help screen (counting from 0).
 - **Help screen**: a help module whose page is written into a React component in `src/components/` instead of its lesson file. The course has four: liaison, cognates, questions and verb patterns.
-- **Function**: something a learner does with the language, such as asking the time or apologising. One list of functions serves every language. An **exponent** is one way to perform a function in one language: the words and patterns that together do it, such as quelle, heure and the inversion question for "Quelle heure est-il ?".
+- **Function**: something a learner does with the language, such as asking the time or apologising. One list of functions serves every language. An **exponent** is one way to perform a function in one language: the words and patterns that together do it, such as quelle, heure and the question word order est-il for "Quelle heure est-il ?".
 - **CEFR level**: a level of the Common European Framework of Reference for Languages, which grades learners from A1 (beginner) through A2, B1, B2 and C1 to C2.
 - **Cognate**: a French word that a speaker of the learner's native language reads correctly without a lesson, such as restaurant for an English speaker. A **false friend** looks like a word of that language but means something else: librairie is a bookshop, not a library.
 
@@ -157,7 +157,7 @@ A detector is a list of steps, one for each word it matches, read left to right 
 
 ## Functions and exponents
 
-`core/functions.json` lists what a learner can do with a language. Each entry looks like this:
+`core/functions.json` lists what a learner can do with a language. Each entry looks like this (the file keeps the keys of each entry in alphabetical order):
 
 ```json
 { "id": "fn:tell-the-time", "group": "information", "cefr": "A1", "label": "Ask and tell the time", "canDo": "Can ask what time it is and understand or give the answer.", "notions": ["time"] }
@@ -179,11 +179,11 @@ The list follows the A1, A2 and B1 functions of the Eaquals core inventory for F
 
 - `nodes` lists the headwords, irregular forms and constructions the learner needs. For a regular form, list its headword and its pattern: `fr:lex:travailler` and `fr:cx:verb.er.present` for je travaille.
 - `note` is a short French example that we write ourselves.
-- Several entries for one function are alternatives.
+- Several entries for one function are alternatives. Give each way of doing the function its own entry, so the function counts as soon as the learner has any one of them. Asking the way ("Où est la gare ?") and giving directions ("Tournez à droite") are two entries, not one.
 
 A function is available at a position once every node of one of its exponents is available there. Names do not count: an exponent with a name in it is available as soon as its other nodes are. A word that only the Reference unit teaches is never available, because that unit has no position.
 
-To add a function, add it to `core/functions.json`, keeping the list in order of level and then group, and give it at least one exponent. An exponent may name a headword that no lesson teaches yet; the function then stays unavailable until a lesson teaches it. If the word list lacks a word the function needs, add the headword first (see Adding a headword). Then run `pnpm graph:check`. It warns `function-no-exponent` for a function with no French exponent, and reports `function-bad-group` for an unknown group, `exponent-empty` for an exponent with no nodes, and `dangling-ref` for an exponent that names a function or node the graph does not have.
+To add a function, add it to `core/functions.json`, keeping the list in order of level and then group, and give it at least one exponent. An exponent may name a headword that no lesson teaches yet; the function then stays unavailable until a lesson teaches it. If the word list lacks a word the function needs, add the headword first (see Adding a headword). Then run `pnpm graph:check`. It warns `function-no-exponent` for a function with no French exponent, and reports `function-bad-group` for an unknown group, `function-bad-level` for a level that is not A1 to C2, `exponent-empty` for an exponent with no nodes, and `dangling-ref` for an exponent that names a function or node the graph does not have.
 
 ## Build scripts
 

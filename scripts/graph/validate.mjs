@@ -2,7 +2,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { issue } from './issues.mjs';
 import { parseId } from './ids.mjs';
-import { GROUPS } from './functions.mjs';
+import { GROUPS, LEVELS } from './functions.mjs';
 
 // opts.course and opts.repoRoot turn on the help screen checks: every help module names its screen component in
 // the course map, and that file exists. opts.course also checks that the language pair's cognates lesson is in the
@@ -50,15 +50,22 @@ export function validateGraph(graph, opts = {}) {
     }
   }
 
-  // Functions and exponents: each function is in one of the six groups; each exponent names a function and at
-  // least one language node, all of them in the graph.
+  // Functions and exponents: each function has one of the six groups and a CEFR level; each exponent names a
+  // function and at least one language node, all of them in the graph.
   const functionIds = new Set((graph.functions ?? []).map((f) => f.id));
   for (const f of graph.functions ?? []) {
-    if (GROUPS.includes(f.group)) continue;
-    out.push(issue({
-      rule: 'function-bad-group', nodeId: f.id,
-      message: `${f.id} has group ${JSON.stringify(f.group)}, which is not one of ${GROUPS.join(', ')}`,
-    }));
+    if (!GROUPS.includes(f.group)) {
+      out.push(issue({
+        rule: 'function-bad-group', nodeId: f.id,
+        message: `${f.id} has group ${JSON.stringify(f.group)}, which is not one of ${GROUPS.join(', ')}`,
+      }));
+    }
+    if (!LEVELS.includes(f.cefr)) {
+      out.push(issue({
+        rule: 'function-bad-level', nodeId: f.id,
+        message: `${f.id} has level ${JSON.stringify(f.cefr)}, which is not one of ${LEVELS.join(', ')}`,
+      }));
+    }
   }
   (graph.exponents ?? []).forEach((e, index) => {
     const from = `exponents[${index}]`;

@@ -54,7 +54,7 @@
     ]
   },
   {
-    "canDo": "Can count, and give and understand numbers such as ages, prices and phone numbers.",
+    "canDo": "Can count and use numbers to say how many people or things there are.",
     "cefr": "A1",
     "group": "information",
     "id": "fn:count",
@@ -74,14 +74,14 @@
     ]
   },
   {
-    "canDo": "Can say what someone looks like and what they are like, in short sentences.",
+    "canDo": "Can ask what someone is like and say what they look like and what they are like, in short sentences.",
     "cefr": "A1",
     "group": "information",
     "id": "fn:describe-people",
     "label": "Ask about and describe people"
   },
   {
-    "canDo": "Can say what a place is like and what there is in it.",
+    "canDo": "Can ask what a place is like and say what it is like and what there is in it.",
     "cefr": "A1",
     "group": "information",
     "id": "fn:describe-places",
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "canDo": "Can say what an object is like, such as its size or age.",
+    "canDo": "Can ask what an object is like and say what it is like, such as its size or age.",
     "cefr": "A1",
     "group": "information",
     "id": "fn:describe-things",
@@ -105,14 +105,14 @@
     "label": "Ask for information"
   },
   {
-    "canDo": "Can ask how to get somewhere and follow or give simple directions.",
+    "canDo": "Can ask where a place is, and give or follow simple directions.",
     "cefr": "A1",
     "domains": [
       "travel"
     ],
     "group": "information",
     "id": "fn:ask-the-way",
-    "label": "Ask for and give directions",
+    "label": "Ask the way or give directions",
     "notions": [
       "place"
     ]
@@ -128,11 +128,38 @@
     "label": "Talk about and use transport"
   },
   {
+    "canDo": "Can ask what the weather is like and say whether it is fine, hot, cold or raining.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:talk-about-the-weather",
+    "label": "Talk about the weather",
+    "notions": [
+      "weather"
+    ]
+  },
+  {
+    "canDo": "Can say who is in their family and how people are related.",
+    "cefr": "A1",
+    "domains": [
+      "family"
+    ],
+    "group": "information",
+    "id": "fn:talk-about-your-family",
+    "label": "Talk about your family"
+  },
+  {
     "canDo": "Can say what they like and do not like doing.",
     "cefr": "A1",
     "group": "attitudes",
     "id": "fn:say-what-you-like",
     "label": "Say what you like and dislike"
+  },
+  {
+    "canDo": "Can say which of two things they prefer and ask others what they prefer.",
+    "cefr": "A1",
+    "group": "attitudes",
+    "id": "fn:say-what-you-prefer",
+    "label": "Say what you prefer"
   },
   {
     "canDo": "Can say what they want or would like.",
@@ -171,6 +198,13 @@
     "group": "suasion",
     "id": "fn:ask-for-something",
     "label": "Approach someone and ask for something"
+  },
+  {
+    "canDo": "Can ask politely whether they may do something.",
+    "cefr": "A1",
+    "group": "suasion",
+    "id": "fn:ask-permission",
+    "label": "Ask permission"
   },
   {
     "canDo": "Can invite someone to do something and offer them food or drink.",
@@ -251,11 +285,11 @@
     "label": "Say sorry"
   },
   {
-    "canDo": "Can ask how someone is, say how they are, and ask after someone else.",
+    "canDo": "Can ask how someone is, answer the same question, and ask after someone else.",
     "cefr": "A1",
     "group": "socialising",
     "id": "fn:ask-how-someone-is",
-    "label": "Ask how someone is and pass on news"
+    "label": "Ask how someone is"
   },
   {
     "canDo": "Can say their name and something simple about themselves.",
@@ -300,11 +334,18 @@
     "label": "Say you did not understand"
   },
   {
-    "canDo": "Can ask what a word or phrase means.",
+    "canDo": "Can ask what a word means, or what someone means by what they said.",
     "cefr": "A1",
     "group": "repair",
-    "id": "fn:ask-what-a-word-means",
-    "label": "Ask what a word means"
+    "id": "fn:ask-what-something-means",
+    "label": "Ask what a word or a remark means"
+  },
+  {
+    "canDo": "Can ask how to say a word or phrase in French.",
+    "cefr": "A1",
+    "group": "repair",
+    "id": "fn:ask-how-to-say",
+    "label": "Ask how to say something in French"
   },
   {
     "canDo": "Can ask someone to spell a word, and spell their own name.",
@@ -371,11 +412,11 @@
     "label": "Compare people and things"
   },
   {
-    "canDo": "Can give a few facts about a person's life and say how people are related.",
+    "canDo": "Can give a few facts about a person's life, such as when and where they were born and where they lived.",
     "cefr": "A2",
     "group": "information",
     "id": "fn:describe-someones-life",
-    "label": "Describe someone's life and family ties"
+    "label": "Tell the story of someone's life"
   },
   {
     "canDo": "Can say that someone is right, or that something is not true.",
@@ -399,7 +440,7 @@
     "label": "Give a reason"
   },
   {
-    "canDo": "Can say they are not sure, or that they are against an idea.",
+    "canDo": "Can say they are not sure, or that they do not agree with an idea.",
     "cefr": "A2",
     "group": "attitudes",
     "id": "fn:express-reservations",
@@ -483,25 +524,11 @@
     "label": "Put events in order"
   },
   {
-    "canDo": "Can ask what someone means and ask for more detail.",
-    "cefr": "A2",
-    "group": "repair",
-    "id": "fn:ask-for-clarification",
-    "label": "Ask someone to explain"
-  },
-  {
-    "canDo": "Can check whether the other person has understood.",
+    "canDo": "Can check whether the other person has understood what they said.",
     "cefr": "A2",
     "group": "repair",
     "id": "fn:check-understanding",
     "label": "Check that you are understood"
-  },
-  {
-    "canDo": "Can interrupt politely to say they missed something.",
-    "cefr": "A2",
-    "group": "repair",
-    "id": "fn:interrupt-politely",
-    "label": "Interrupt politely to ask again"
   },
   {
     "canDo": "Can pass on what someone else said or asked.",
@@ -535,11 +562,11 @@
     "label": "Talk about feelings"
   },
   {
-    "canDo": "Can say what they wish for, hope for and intend to do.",
+    "canDo": "Can say what they wish for and what they would like to happen.",
     "cefr": "B1",
     "group": "attitudes",
     "id": "fn:express-hopes-and-wishes",
-    "label": "Talk about hopes, wishes and plans for the future",
+    "label": "Talk about hopes and wishes",
     "notions": [
       "future"
     ]
@@ -566,7 +593,7 @@
     "label": "Give your view of a film or book"
   },
   {
-    "canDo": "Can say they are satisfied or unhappy with something and complain politely.",
+    "canDo": "Can say politely that they are unhappy with something and explain what is wrong.",
     "cefr": "B1",
     "domains": [
       "shopping",
@@ -574,7 +601,7 @@
     ],
     "group": "attitudes",
     "id": "fn:complain",
-    "label": "Say you are pleased or make a complaint"
+    "label": "Make a complaint"
   },
   {
     "canDo": "Can describe a problem and suggest what to do about it.",
@@ -584,7 +611,7 @@
     "label": "Raise a problem and suggest a solution"
   },
   {
-    "canDo": "Can ask and answer prepared questions in an interview, for example for a job.",
+    "canDo": "Can answer prepared questions in an interview, for example for a job, and ask a few in return.",
     "cefr": "B1",
     "domains": [
       "work"
@@ -622,7 +649,7 @@
     "label": "Join a discussion and change the subject"
   },
   {
-    "canDo": "Can point back to something said earlier with words like the first, the last, the next.",
+    "canDo": "Can point back to something said earlier in the conversation.",
     "cefr": "B1",
     "group": "discourse",
     "id": "fn:refer-back",
@@ -636,7 +663,7 @@
     "label": "Wrap up what you are saying"
   },
   {
-    "canDo": "Can put something another way to make it clearer.",
+    "canDo": "Can put what they have just said another way to make it clearer.",
     "cefr": "B1",
     "group": "repair",
     "id": "fn:rephrase",

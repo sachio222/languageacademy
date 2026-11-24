@@ -143,46 +143,51 @@
   {
     "function": "fn:describe-people",
     "nodes": [
+      "fr:lex:comment",
       "fr:form:etre.prs.3sg",
       "fr:lex:grand",
       "fr:lex:jeune",
       "fr:cx:adj.agreement"
     ],
-    "note": "Il est grand et jeune."
+    "note": "Il est comment ? Il est grand et jeune."
   },
   {
     "function": "fn:describe-people",
     "nodes": [
+      "fr:lex:comment",
       "fr:form:etre.prs.3sg",
       "fr:lex:gentil",
       "fr:cx:adj.agreement"
     ],
-    "note": "Elle est gentille."
+    "note": "Elle est comment ? Elle est gentille."
   },
   {
     "function": "fn:describe-places",
     "nodes": [
+      "fr:lex:comment",
       "fr:lex:ville",
       "fr:form:beau.f",
       "fr:cx:il-y-a",
       "fr:lex:parc"
     ],
-    "note": "La ville est belle. Il y a un parc."
+    "note": "La ville est comment ? Elle est belle. Il y a un parc."
   },
   {
     "function": "fn:describe-places",
     "nodes": [
+      "fr:lex:comment",
       "fr:cx:cest",
       "fr:lex:grand",
       "fr:cx:adj.agreement",
       "fr:cx:adj.placement",
       "fr:lex:ville"
     ],
-    "note": "C'est une grande ville."
+    "note": "C'est comment, Lyon ? C'est une grande ville."
   },
   {
     "function": "fn:describe-things",
     "nodes": [
+      "fr:lex:comment",
       "fr:cx:cest",
       "fr:cx:article.indefinite",
       "fr:lex:petit",
@@ -190,7 +195,7 @@
       "fr:cx:adj.placement",
       "fr:lex:voiture"
     ],
-    "note": "C'est une petite voiture."
+    "note": "C'est comment ? C'est une petite voiture."
   },
   {
     "function": "fn:ask-for-information",
@@ -216,7 +221,13 @@
     "nodes": [
       "fr:lex:ou.adverb",
       "fr:form:etre.prs.3sg",
-      "fr:lex:rue",
+      "fr:lex:rue"
+    ],
+    "note": "Pardon, où est la rue Lepic ?"
+  },
+  {
+    "function": "fn:ask-the-way",
+    "nodes": [
       "fr:lex:tourner",
       "fr:lex:continuer",
       "fr:cx:imperative.vous",
@@ -224,7 +235,7 @@
       "fr:lex:puis",
       "fr:lex:droit"
     ],
-    "note": "Où est la rue Lepic ? Tournez à droite, puis continuez tout droit."
+    "note": "Tournez à droite, puis continuez tout droit."
   },
   {
     "function": "fn:use-transport",
@@ -246,6 +257,54 @@
     "note": "Je vais à Lyon en train."
   },
   {
+    "function": "fn:talk-about-the-weather",
+    "nodes": [
+      "fr:form:faire.prs.3sg",
+      "fr:lex:beau",
+      "fr:lex:aujourd-hui"
+    ],
+    "note": "Il fait beau aujourd'hui."
+  },
+  {
+    "function": "fn:talk-about-the-weather",
+    "nodes": [
+      "fr:lex:quel",
+      "fr:lex:temps",
+      "fr:form:faire.prs.3sg",
+      "fr:cx:q.inversion",
+      "fr:lex:froid"
+    ],
+    "note": "Quel temps fait-il ? Il fait froid."
+  },
+  {
+    "function": "fn:talk-about-the-weather",
+    "nodes": [
+      "fr:form:pleuvoir.prs.3sg"
+    ],
+    "note": "Il pleut."
+  },
+  {
+    "function": "fn:talk-about-your-family",
+    "nodes": [
+      "fr:form:avoir.prs.1sg",
+      "fr:cx:article.indefinite",
+      "fr:lex:frere",
+      "fr:lex:sœur"
+    ],
+    "note": "J'ai un frère et une sœur."
+  },
+  {
+    "function": "fn:talk-about-your-family",
+    "nodes": [
+      "fr:cx:cest",
+      "fr:lex:sœur",
+      "fr:lex:de",
+      "fr:cx:possessive.adjective",
+      "fr:lex:pere"
+    ],
+    "note": "C'est la sœur de mon père."
+  },
+  {
     "function": "fn:say-what-you-like",
     "nodes": [
       "fr:lex:aimer",
@@ -262,6 +321,25 @@
       "fr:cx:frame.aimer-infinitive"
     ],
     "note": "J'aime nager."
+  },
+  {
+    "function": "fn:say-what-you-prefer",
+    "nodes": [
+      "fr:lex:preferer",
+      "fr:form:preferer.prs.2sg",
+      "fr:form:preferer.prs.1sg",
+      "fr:lex:ou"
+    ],
+    "note": "Tu préfères le thé ou le café ? Je préfère le thé."
+  },
+  {
+    "function": "fn:say-what-you-prefer",
+    "nodes": [
+      "fr:lex:aimer",
+      "fr:cx:verb.er.present",
+      "fr:lex:mieux"
+    ],
+    "note": "J'aime mieux le café."
   },
   {
     "function": "fn:say-what-you-want",
@@ -328,6 +406,27 @@
       "fr:lex:aider"
     ],
     "note": "Pardon, vous pouvez m'aider ?"
+  },
+  {
+    "function": "fn:ask-permission",
+    "nodes": [
+      "fr:form:pouvoir.prs.1sg",
+      "fr:cx:frame.modal-infinitive",
+      "fr:cx:q.intonation",
+      "fr:lex:voir"
+    ],
+    "note": "Je peux voir ?"
+  },
+  {
+    "function": "fn:ask-permission",
+    "nodes": [
+      "fr:cx:q.est-ce-que",
+      "fr:form:pouvoir.prs.1sg",
+      "fr:cx:frame.modal-infinitive",
+      "fr:lex:avoir",
+      "fr:lex:eau"
+    ],
+    "note": "Est-ce que je peux avoir de l'eau ?"
   },
   {
     "function": "fn:invite-or-offer",
@@ -506,9 +605,12 @@
     "nodes": [
       "fr:lex:comment",
       "fr:form:aller.prs.2pl",
-      "fr:cx:q.inversion"
+      "fr:cx:q.inversion",
+      "fr:form:aller.prs.1sg",
+      "fr:lex:bien",
+      "fr:lex:merci"
     ],
-    "note": "Comment allez-vous ?"
+    "note": "Comment allez-vous ? Je vais bien, merci."
   },
   {
     "function": "fn:ask-how-someone-is",
@@ -516,9 +618,10 @@
       "fr:lex:comment",
       "fr:form:aller.prs.3sg",
       "fr:cx:possessive.adjective",
-      "fr:lex:mere"
+      "fr:lex:mere",
+      "fr:lex:bien"
     ],
-    "note": "Comment va ta mère ?"
+    "note": "Comment va ta mère ? Elle va bien."
   },
   {
     "function": "fn:introduce-yourself",
@@ -636,6 +739,16 @@
   {
     "function": "fn:ask-to-repeat",
     "nodes": [
+      "fr:lex:pardon",
+      "fr:cx:passe-compose.avoir",
+      "fr:form:comprendre.ptcp",
+      "fr:cx:neg.ne-pas"
+    ],
+    "note": "Pardon, je n'ai pas compris."
+  },
+  {
+    "function": "fn:ask-to-repeat",
+    "nodes": [
       "fr:lex:plus",
       "fr:lex:lentement",
       "fr:cx:chunk.sil-vous-plait"
@@ -643,7 +756,7 @@
     "note": "Plus lentement, s'il vous plaît."
   },
   {
-    "function": "fn:ask-what-a-word-means",
+    "function": "fn:ask-what-something-means",
     "nodes": [
       "fr:cx:q.quest-ce-que",
       "fr:lex:ca",
@@ -651,6 +764,38 @@
       "fr:lex:dire"
     ],
     "note": "Qu'est-ce que ça veut dire ?"
+  },
+  {
+    "function": "fn:ask-what-something-means",
+    "nodes": [
+      "fr:cx:q.quest-ce-que",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:dire"
+    ],
+    "note": "Qu'est-ce que tu veux dire ?"
+  },
+  {
+    "function": "fn:ask-how-to-say",
+    "nodes": [
+      "fr:lex:comment",
+      "fr:form:dire.prs.3sg",
+      "fr:cx:pronoun.on",
+      "fr:cx:q.inversion",
+      "fr:lex:en",
+      "fr:lex:francais"
+    ],
+    "note": "Comment dit-on « thank you » en français ?"
+  },
+  {
+    "function": "fn:ask-how-to-say",
+    "nodes": [
+      "fr:lex:comment",
+      "fr:cx:pronoun.on",
+      "fr:form:dire.prs.3sg",
+      "fr:lex:en",
+      "fr:lex:francais"
+    ],
+    "note": "Comment on dit « thank you » en français ?"
   },
   {
     "function": "fn:talk-about-work",
@@ -676,11 +821,18 @@
     "function": "fn:narrate-past-event",
     "nodes": [
       "fr:lex:hier",
-      "fr:cx:passe-compose.etre",
       "fr:cx:passe-compose.avoir",
       "fr:cx:ptcp.er"
     ],
-    "note": "Hier, je suis allé au parc et j'ai mangé une glace."
+    "note": "Hier, j'ai mangé au café."
+  },
+  {
+    "function": "fn:narrate-past-event",
+    "nodes": [
+      "fr:lex:hier",
+      "fr:cx:passe-compose.etre"
+    ],
+    "note": "Hier, je suis allé au parc."
   },
   {
     "function": "fn:describe-the-past",
@@ -757,11 +909,9 @@
       "fr:lex:naitre",
       "fr:form:naitre.ptcp.f",
       "fr:cx:passe-compose.etre",
-      "fr:lex:sœur",
-      "fr:cx:possessive.adjective",
-      "fr:lex:pere"
+      "fr:lex:en"
     ],
-    "note": "Elle est née en 1990. C'est la sœur de mon père."
+    "note": "Elle est née en 1990, à Lyon."
   },
   {
     "function": "fn:agree-or-disagree",
@@ -823,11 +973,10 @@
   {
     "function": "fn:express-reservations",
     "nodes": [
-      "fr:lex:oui",
-      "fr:lex:mais",
-      "fr:lex:cher"
+      "fr:form:croire.prs.1sg",
+      "fr:cx:neg.ne-pas"
     ],
-    "note": "Oui, mais c'est cher."
+    "note": "Je ne crois pas."
   },
   {
     "function": "fn:say-what-you-enjoyed",
@@ -983,15 +1132,6 @@
     "note": "D'abord, je me lève. Ensuite, je mange. Enfin, je pars."
   },
   {
-    "function": "fn:ask-for-clarification",
-    "nodes": [
-      "fr:cx:q.quest-ce-que",
-      "fr:form:vouloir.prs.2sg",
-      "fr:lex:dire"
-    ],
-    "note": "Qu'est-ce que tu veux dire ?"
-  },
-  {
     "function": "fn:check-understanding",
     "nodes": [
       "fr:form:comprendre.prs.2sg"
@@ -1005,16 +1145,6 @@
       "fr:lex:clair"
     ],
     "note": "C'est clair ?"
-  },
-  {
-    "function": "fn:interrupt-politely",
-    "nodes": [
-      "fr:lex:pardon",
-      "fr:cx:passe-compose.avoir",
-      "fr:form:comprendre.ptcp",
-      "fr:cx:neg.ne-pas"
-    ],
-    "note": "Pardon, je n'ai pas compris."
   },
   {
     "function": "fn:report-what-someone-said",
@@ -1044,13 +1174,18 @@
   {
     "function": "fn:tell-a-memory",
     "nodes": [
-      "fr:lex:se-souvenir",
-      "fr:form:se-souvenir.prs.1sg",
       "fr:cx:imparfait",
-      "fr:cx:passe-compose.etre",
-      "fr:cx:chunk.tout-a-coup"
+      "fr:cx:passe-compose.avoir"
     ],
-    "note": "Je me souviens : il pleuvait, et tout à coup, il est arrivé."
+    "note": "Il faisait beau, et nous avons mangé dehors."
+  },
+  {
+    "function": "fn:tell-a-memory",
+    "nodes": [
+      "fr:cx:imparfait",
+      "fr:cx:passe-compose.etre"
+    ],
+    "note": "Il pleuvait quand il est arrivé."
   },
   {
     "function": "fn:express-feelings",
@@ -1073,10 +1208,16 @@
     "nodes": [
       "fr:lex:aimer",
       "fr:cx:conditionnel-present",
-      "fr:lex:voyager",
+      "fr:lex:aller"
+    ],
+    "note": "J'aimerais aller en France."
+  },
+  {
+    "function": "fn:express-hopes-and-wishes",
+    "nodes": [
       "fr:cx:subj.vouloir-que"
     ],
-    "note": "J'aimerais voyager. Je veux que tu viennes avec moi."
+    "note": "Je veux que tu viennes avec moi."
   },
   {
     "function": "fn:justify-an-opinion",
@@ -1163,7 +1304,10 @@
       "fr:form:vouloir.prs.2pl",
       "fr:cx:q.inversion",
       "fr:lex:travail",
-      "fr:cx:chunk.parce-que"
+      "fr:cx:chunk.parce-que",
+      "fr:lex:aimer",
+      "fr:cx:frame.aimer-infinitive",
+      "fr:lex:enseigner"
     ],
     "note": "Pourquoi voulez-vous ce travail ? Parce que j'aime enseigner."
   },
@@ -1219,10 +1363,21 @@
   {
     "function": "fn:refer-back",
     "nodes": [
-      "fr:lex:premier",
-      "fr:lex:dernier"
+      "fr:lex:comme",
+      "fr:cx:passe-compose.avoir",
+      "fr:form:dire.ptcp",
+      "fr:cx:pronoun.direct-object"
     ],
-    "note": "Le premier exemple est simple, le dernier est difficile."
+    "note": "Comme je l'ai dit, c'est trop cher."
+  },
+  {
+    "function": "fn:refer-back",
+    "nodes": [
+      "fr:cx:relative.ce-que",
+      "fr:cx:imparfait",
+      "fr:lex:dire"
+    ],
+    "note": "Ce que je disais, c'est que le train part tôt."
   },
   {
     "function": "fn:conclude",
@@ -1245,7 +1400,7 @@
     "nodes": [
       "fr:cx:chunk.cest-a-dire"
     ],
-    "note": "C'est-à-dire que je ne viens pas ce soir."
+    "note": "Je suis fatigué, c'est-à-dire que je reste à la maison ce soir."
   },
   {
     "function": "fn:repeat-to-check",

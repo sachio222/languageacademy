@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { functionAvailability, ruleFunctionExponents, GROUPS } from '../functions.mjs';
+import { runCheck } from '../check.mjs';
 import { makeModule, makeCtx } from './helpers.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -106,6 +107,17 @@ test('validateGraph flags a function with an unknown group', () => {
   assert.deepEqual(issues.map((i) => i.nodeId), ['fn:shout']);
 });
 
+test('validateGraph flags a function with an unknown or missing level', () => {
+  const bad = [
+    { id: 'fn:shout', group: 'socialising', label: 'Shout', canDo: 'Can shout.', cefr: 'D1' },
+    { id: 'fn:mumble', group: 'socialising', label: 'Mumble', canDo: 'Can mumble.' },
+  ];
+  const g = { ...base, functions: [...base.functions, ...bad], nodes: new Map([...base.nodes, ...bad.map((f) => [f.id, f])]) };
+  const issues = validateGraph(g).filter((i) => i.rule === 'function-bad-level');
+  assert.deepEqual(issues.map((i) => i.nodeId), ['fn:shout', 'fn:mumble']);
+  assert.ok(issues.every((i) => i.severity === 'error'));
+});
+
 test('the fixture still validates', () => {
   assert.deepEqual(validateGraph(base), []);
 });
@@ -136,5 +148,31 @@ test('every real exponent has nodes and a French example', () => {
   for (const e of real.exponents) {
     assert.ok(Array.isArray(e.nodes) && e.nodes.length > 0, `${e.function} nodes`);
     assert.ok(typeof e.note === 'string' && e.note.length > 0, `${e.function} note`);
+  }
+});
+
+test('the real course gives credit for asking the way before it teaches directions', async () => {
+  const { ctx } = await runCheck({ repoRoot, lang: 'fr' });
+  const a = functionAvailability(ctx.graph, ctx.timeline);
+  const directions = ctx.course.find((m) => m.title.startsWith('Directions')).position;
+  assert.ok(a.get('fn:ask-the-way').position < directions, `ask-the-way at ${a.get('fn:ask-the-way').position}`);
+});
+
+test('the real function list has the staple A1 functions and distinct repair acts', () => {
+  const ids = new Set(real.functions.map((f) => f.id));
+  for (const id of ['fn:talk-about-the-weather', 'fn:say-what-you-prefer', 'fn:ask-permission', 'fn:ask-how-to-say', 'fn:talk-about-your-family']) {
+    assert.ok(ids.has(id), id);
+    assert.ok(real.exponents.some((e) => e.function === id), `${id} has an exponent`);
+  }
+  assert.ok(!ids.has('fn:interrupt-politely'));
+  assert.ok(!ids.has('fn:ask-for-clarification'));
+});
+
+test('no two exponents of a real function list the same nodes', () => {
+  const seen = new Set();
+  for (const e of real.exponents) {
+    const key = `${e.function} ${[...e.nodes].sort().join(' ')}`;
+    assert.ok(!seen.has(key), key);
+    seen.add(key);
   }
 });
