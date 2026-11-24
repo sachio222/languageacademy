@@ -237,6 +237,9 @@
     ]
   },
   "2024-01-13-ca-survival": {
+    "contentNotes": [
+      "the vocabulary note \"ça + va (être)\" names the wrong verb: \"va\" comes from aller, so the note should read \"ça + va (aller)\"."
+    ],
     "overrides": {
       "2024-01-13-ca-survival#exerciseConfig.items[4].hint": {
         "ignore": [

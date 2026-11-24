@@ -204,6 +204,7 @@ export const PRONOUN_NOTES = {
 // Lesson text to fix (Plan 2), shown at the top of the fix list: errors the checker's rules cannot see.
 // [position, note]
 export const CONTENT_NOTES = [
+  [15, 'the vocabulary note "ça + va (être)" names the wrong verb: "va" comes from aller, so the note should read "ça + va (aller)".'],
   [64, 'the concept cards teach "plus bon que" and "c\'est plus bon", which are wrong French; the comparative of bon is "meilleur" ("meilleur que", "c\'est meilleur").'],
   [65, 'the concept cards teach "plus bon que (better than)" and "c\'est plus bon", which are wrong French; the comparative of bon is "meilleur" ("meilleur que", "c\'est meilleur").'],
   [107, 'the gap-fill "Je suis en retard ___ le traffic" with answer "à cause du" reads "à cause du le traffic" once filled; drop "le" from the prompt. "traffic" is the English spelling: French writes "trafic" (also in the à cause de concept card and a feedback line).'],

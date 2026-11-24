@@ -18,6 +18,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ## Lesson text to fix
 
+- 15. ça - Survival Phrases: the vocabulary note "ça + va (être)" names the wrong verb: "va" comes from aller, so the note should read "ça + va (aller)".
 - 64. Unit 5 Practice - Fill in the Blanks: the concept cards teach "plus bon que" and "c'est plus bon", which are wrong French; the comparative of bon is "meilleur" ("meilleur que", "c'est meilleur").
 - 65. Unit 5 Final Exam - Sophistication: the concept cards teach "plus bon que (better than)" and "c'est plus bon", which are wrong French; the comparative of bon is "meilleur" ("meilleur que", "c'est meilleur").
 - 107. Causal & Reason Words - Explaining Why: the gap-fill "Je suis en retard ___ le traffic" with answer "à cause du" reads "à cause du le traffic" once filled; drop "le" from the prompt. "traffic" is the English spelling: French writes "trafic" (also in the à cause de concept card and a feedback line).
