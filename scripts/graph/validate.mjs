@@ -2,6 +2,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { issue } from './issues.mjs';
 import { parseId } from './ids.mjs';
+import { GROUPS } from './functions.mjs';
 
 // opts.course and opts.repoRoot turn on the help screen checks: every help module names its screen component in
 // the course map, and that file exists. opts.course also checks that the language pair's cognates lesson is in the
@@ -48,6 +49,37 @@ export function validateGraph(graph, opts = {}) {
       for (const t of o?.ignore || []) if (String(t).includes(':')) ref(from, `overrides[${itemRef}].ignore`, String(t));
     }
   }
+
+  // Functions and exponents: each function is in one of the six groups; each exponent names a function and at
+  // least one language node, all of them in the graph.
+  const functionIds = new Set((graph.functions ?? []).map((f) => f.id));
+  for (const f of graph.functions ?? []) {
+    if (GROUPS.includes(f.group)) continue;
+    out.push(issue({
+      rule: 'function-bad-group', nodeId: f.id,
+      message: `${f.id} has group ${JSON.stringify(f.group)}, which is not one of ${GROUPS.join(', ')}`,
+    }));
+  }
+  (graph.exponents ?? []).forEach((e, index) => {
+    const from = `exponents[${index}]`;
+    if (!functionIds.has(e.function)) {
+      out.push(issue({
+        rule: 'dangling-ref', nodeId: from,
+        message: `${from}.function points at missing function ${e.function}`, fix: { kind: 'add-to-graph' },
+      }));
+    }
+    if (!Array.isArray(e.nodes) || e.nodes.length === 0) {
+      out.push(issue({ rule: 'exponent-empty', nodeId: from, message: `${from} (${e.function}) lists no nodes` }));
+    }
+    for (const t of e.nodes ?? []) {
+      if (functionIds.has(t)) {
+        out.push(issue({
+          rule: 'dangling-ref', nodeId: from,
+          message: `${from}.nodes names the function ${t}; an exponent lists language nodes only`,
+        }));
+      } else ref(from, 'nodes', t);
+    }
+  });
 
   // The language pair: every cognate and false friend is a node, none is both, and the cognates lesson is in the course.
   const pair = graph.pair;

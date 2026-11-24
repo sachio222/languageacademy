@@ -1,1 +1,652 @@
-[]
+[
+  {
+    "canDo": "Can ask who a person is or what a thing is and answer with c'est.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:ask-who-or-what",
+    "label": "Ask who someone is or what something is",
+    "notions": [
+      "identity"
+    ]
+  },
+  {
+    "canDo": "Can ask for and give their age, nationality, address and where they live.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:give-personal-details",
+    "label": "Ask for and give personal details",
+    "notions": [
+      "identity"
+    ]
+  },
+  {
+    "canDo": "Can say what they usually do and when, and ask others about their day.",
+    "cefr": "A1",
+    "domains": [
+      "daily-life"
+    ],
+    "group": "information",
+    "id": "fn:talk-about-daily-routine",
+    "label": "Talk about your day and your timetable",
+    "notions": [
+      "time",
+      "frequency"
+    ]
+  },
+  {
+    "canDo": "Can ask what time it is and understand or give the answer.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:tell-the-time",
+    "label": "Ask and tell the time",
+    "notions": [
+      "time"
+    ]
+  },
+  {
+    "canDo": "Can say what day and date it is and when something happens.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:give-the-date",
+    "label": "Say the day and the date",
+    "notions": [
+      "time"
+    ]
+  },
+  {
+    "canDo": "Can count, and give and understand numbers such as ages, prices and phone numbers.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:count",
+    "label": "Count and use numbers",
+    "notions": [
+      "quantity"
+    ]
+  },
+  {
+    "canDo": "Can say roughly how much of something there is, or that there is too much.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:express-quantity",
+    "label": "Say how much or how many",
+    "notions": [
+      "quantity"
+    ]
+  },
+  {
+    "canDo": "Can say what someone looks like and what they are like, in short sentences.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:describe-people",
+    "label": "Ask about and describe people"
+  },
+  {
+    "canDo": "Can say what a place is like and what there is in it.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:describe-places",
+    "label": "Ask about and describe places",
+    "notions": [
+      "place"
+    ]
+  },
+  {
+    "canDo": "Can say what an object is like, such as its size or age.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:describe-things",
+    "label": "Ask about and describe things"
+  },
+  {
+    "canDo": "Can ask simple questions to find out where something is or whether it exists.",
+    "cefr": "A1",
+    "group": "information",
+    "id": "fn:ask-for-information",
+    "label": "Ask for information"
+  },
+  {
+    "canDo": "Can ask how to get somewhere and follow or give simple directions.",
+    "cefr": "A1",
+    "domains": [
+      "travel"
+    ],
+    "group": "information",
+    "id": "fn:ask-the-way",
+    "label": "Ask for and give directions",
+    "notions": [
+      "place"
+    ]
+  },
+  {
+    "canDo": "Can say how they travel and where they are going.",
+    "cefr": "A1",
+    "domains": [
+      "travel"
+    ],
+    "group": "information",
+    "id": "fn:use-transport",
+    "label": "Talk about and use transport"
+  },
+  {
+    "canDo": "Can say what they like and do not like doing.",
+    "cefr": "A1",
+    "group": "attitudes",
+    "id": "fn:say-what-you-like",
+    "label": "Say what you like and dislike"
+  },
+  {
+    "canDo": "Can say what they want or would like.",
+    "cefr": "A1",
+    "group": "attitudes",
+    "id": "fn:say-what-you-want",
+    "label": "Say what you want"
+  },
+  {
+    "canDo": "Can say what they are able to do and what they know how to do.",
+    "cefr": "A1",
+    "group": "attitudes",
+    "id": "fn:say-what-you-can-do",
+    "label": "Say what you can and cannot do"
+  },
+  {
+    "canDo": "Can say what they are going to do soon.",
+    "cefr": "A1",
+    "group": "attitudes",
+    "id": "fn:talk-about-plans",
+    "label": "Talk about plans",
+    "notions": [
+      "future"
+    ]
+  },
+  {
+    "canDo": "Can say they do not know something.",
+    "cefr": "A1",
+    "group": "attitudes",
+    "id": "fn:say-you-do-not-know",
+    "label": "Say you do not know"
+  },
+  {
+    "canDo": "Can catch a stranger's attention politely and ask them for something.",
+    "cefr": "A1",
+    "group": "suasion",
+    "id": "fn:ask-for-something",
+    "label": "Approach someone and ask for something"
+  },
+  {
+    "canDo": "Can invite someone to do something and offer them food or drink.",
+    "cefr": "A1",
+    "group": "suasion",
+    "id": "fn:invite-or-offer",
+    "label": "Invite someone or offer something"
+  },
+  {
+    "canDo": "Can tell someone to do something and follow short instructions.",
+    "cefr": "A1",
+    "group": "suasion",
+    "id": "fn:give-instructions",
+    "label": "Give and follow simple instructions"
+  },
+  {
+    "canDo": "Can ask for what they want in a shop, ask the price and pay.",
+    "cefr": "A1",
+    "domains": [
+      "shopping"
+    ],
+    "group": "suasion",
+    "id": "fn:buy-things",
+    "label": "Buy things and ask the price",
+    "notions": [
+      "quantity"
+    ]
+  },
+  {
+    "canDo": "Can order food and drink and ask for the bill.",
+    "cefr": "A1",
+    "domains": [
+      "restaurant"
+    ],
+    "group": "suasion",
+    "id": "fn:order-food-and-drink",
+    "label": "Order in a café or restaurant"
+  },
+  {
+    "canDo": "Can book a table for a number of people at a given time.",
+    "cefr": "A1",
+    "domains": [
+      "restaurant"
+    ],
+    "group": "suasion",
+    "id": "fn:book-a-table",
+    "label": "Book a table or a room"
+  },
+  {
+    "canDo": "Can set a time to meet, and move or cancel it.",
+    "cefr": "A1",
+    "group": "suasion",
+    "id": "fn:make-an-appointment",
+    "label": "Make, move or cancel an appointment",
+    "notions": [
+      "time"
+    ]
+  },
+  {
+    "canDo": "Can say hello and goodbye in a way that fits the time of day and the person.",
+    "cefr": "A1",
+    "group": "socialising",
+    "id": "fn:greet-and-say-goodbye",
+    "label": "Greet people and say goodbye"
+  },
+  {
+    "canDo": "Can thank someone for something.",
+    "cefr": "A1",
+    "group": "socialising",
+    "id": "fn:thank",
+    "label": "Say thank you"
+  },
+  {
+    "canDo": "Can say sorry for a small mistake.",
+    "cefr": "A1",
+    "group": "socialising",
+    "id": "fn:apologise",
+    "label": "Say sorry"
+  },
+  {
+    "canDo": "Can ask how someone is, say how they are, and ask after someone else.",
+    "cefr": "A1",
+    "group": "socialising",
+    "id": "fn:ask-how-someone-is",
+    "label": "Ask how someone is and pass on news"
+  },
+  {
+    "canDo": "Can say their name and something simple about themselves.",
+    "cefr": "A1",
+    "group": "socialising",
+    "id": "fn:introduce-yourself",
+    "label": "Introduce yourself"
+  },
+  {
+    "canDo": "Can introduce a friend or a family member to someone else.",
+    "cefr": "A1",
+    "group": "socialising",
+    "id": "fn:introduce-someone",
+    "label": "Introduce someone"
+  },
+  {
+    "canDo": "Can wish someone a good day or a happy birthday and pay a simple compliment.",
+    "cefr": "A1",
+    "group": "socialising",
+    "id": "fn:congratulate-and-wish",
+    "label": "Give good wishes and compliments"
+  },
+  {
+    "canDo": "Can say yes to an invitation, or say no politely and give a short reason.",
+    "cefr": "A1",
+    "group": "socialising",
+    "id": "fn:accept-or-decline",
+    "label": "Accept or turn down an invitation"
+  },
+  {
+    "canDo": "Can link words and short sentences with et, mais, ou and alors.",
+    "cefr": "A1",
+    "group": "discourse",
+    "id": "fn:link-ideas",
+    "label": "Join simple ideas"
+  },
+  {
+    "canDo": "Can say they did not understand and ask someone to repeat or speak more slowly.",
+    "cefr": "A1",
+    "group": "repair",
+    "id": "fn:ask-to-repeat",
+    "label": "Say you did not understand"
+  },
+  {
+    "canDo": "Can ask what a word or phrase means.",
+    "cefr": "A1",
+    "group": "repair",
+    "id": "fn:ask-what-a-word-means",
+    "label": "Ask what a word means"
+  },
+  {
+    "canDo": "Can ask someone to spell a word, and spell their own name.",
+    "cefr": "A1",
+    "group": "repair",
+    "id": "fn:ask-how-to-spell",
+    "label": "Ask how a word is spelled"
+  },
+  {
+    "canDo": "Can say what job they do, where, and what their work involves.",
+    "cefr": "A2",
+    "domains": [
+      "work"
+    ],
+    "group": "information",
+    "id": "fn:talk-about-work",
+    "label": "Talk about your work"
+  },
+  {
+    "canDo": "Can tell what they did and what happened, in order, with the passé composé.",
+    "cefr": "A2",
+    "group": "information",
+    "id": "fn:narrate-past-event",
+    "label": "Tell what happened",
+    "notions": [
+      "past"
+    ]
+  },
+  {
+    "canDo": "Can describe people, places and habits in the past.",
+    "cefr": "A2",
+    "group": "information",
+    "id": "fn:describe-the-past",
+    "label": "Describe how things used to be",
+    "notions": [
+      "past"
+    ]
+  },
+  {
+    "canDo": "Can say a few things about a town or country and the people who live there.",
+    "cefr": "A2",
+    "group": "information",
+    "id": "fn:present-a-place",
+    "label": "Present a town or a country",
+    "notions": [
+      "place"
+    ]
+  },
+  {
+    "canDo": "Can say they are hungry, cold, tired or in pain.",
+    "cefr": "A2",
+    "domains": [
+      "health"
+    ],
+    "group": "information",
+    "id": "fn:describe-how-you-feel",
+    "label": "Say how you feel physically"
+  },
+  {
+    "canDo": "Can say that one thing is bigger, better or more expensive than another.",
+    "cefr": "A2",
+    "group": "information",
+    "id": "fn:compare",
+    "label": "Compare people and things"
+  },
+  {
+    "canDo": "Can give a few facts about a person's life and say how people are related.",
+    "cefr": "A2",
+    "group": "information",
+    "id": "fn:describe-someones-life",
+    "label": "Describe someone's life and family ties"
+  },
+  {
+    "canDo": "Can say that someone is right, or that something is not true.",
+    "cefr": "A2",
+    "group": "attitudes",
+    "id": "fn:agree-or-disagree",
+    "label": "Agree or disagree"
+  },
+  {
+    "canDo": "Can say what they think about something in a simple sentence.",
+    "cefr": "A2",
+    "group": "attitudes",
+    "id": "fn:give-an-opinion",
+    "label": "Give an opinion"
+  },
+  {
+    "canDo": "Can explain why they do something or why they chose it.",
+    "cefr": "A2",
+    "group": "attitudes",
+    "id": "fn:give-a-reason",
+    "label": "Give a reason"
+  },
+  {
+    "canDo": "Can say they are not sure, or that they are against an idea.",
+    "cefr": "A2",
+    "group": "attitudes",
+    "id": "fn:express-reservations",
+    "label": "Express doubt or objection"
+  },
+  {
+    "canDo": "Can say whether they liked a film, a meal or an outing.",
+    "cefr": "A2",
+    "group": "attitudes",
+    "id": "fn:say-what-you-enjoyed",
+    "label": "Say what you enjoyed or did not enjoy"
+  },
+  {
+    "canDo": "Can say that something interests them, or that they do not mind.",
+    "cefr": "A2",
+    "group": "attitudes",
+    "id": "fn:express-interest",
+    "label": "Show interest or indifference"
+  },
+  {
+    "canDo": "Can say what is necessary or what someone must do.",
+    "cefr": "A2",
+    "group": "attitudes",
+    "id": "fn:express-obligation",
+    "label": "Say what someone has to do"
+  },
+  {
+    "canDo": "Can ask someone for help, and offer to help someone else.",
+    "cefr": "A2",
+    "group": "suasion",
+    "id": "fn:ask-for-or-offer-help",
+    "label": "Ask for help or offer it"
+  },
+  {
+    "canDo": "Can suggest an outing and respond to someone else's suggestion.",
+    "cefr": "A2",
+    "group": "suasion",
+    "id": "fn:suggest-something",
+    "label": "Suggest something to do"
+  },
+  {
+    "canDo": "Can agree with others on what has to be done and who does it.",
+    "cefr": "A2",
+    "group": "suasion",
+    "id": "fn:plan-together",
+    "label": "Plan something together"
+  },
+  {
+    "canDo": "Can ask what to do and tell someone what they should do.",
+    "cefr": "A2",
+    "group": "suasion",
+    "id": "fn:give-advice",
+    "label": "Ask for and give advice"
+  },
+  {
+    "canDo": "Can warn someone of a danger or tell them to be careful.",
+    "cefr": "A2",
+    "group": "suasion",
+    "id": "fn:warn",
+    "label": "Warn someone"
+  },
+  {
+    "canDo": "Can open a short conversation with someone and close it politely.",
+    "cefr": "A2",
+    "group": "socialising",
+    "id": "fn:start-and-end-a-conversation",
+    "label": "Start and end a conversation"
+  },
+  {
+    "canDo": "Can answer the phone, say who is calling and ask for someone.",
+    "cefr": "A2",
+    "group": "socialising",
+    "id": "fn:talk-on-the-phone",
+    "label": "Make a simple phone call"
+  },
+  {
+    "canDo": "Can tell events in order with first, then, after that and finally.",
+    "cefr": "A2",
+    "group": "discourse",
+    "id": "fn:order-events",
+    "label": "Put events in order"
+  },
+  {
+    "canDo": "Can ask what someone means and ask for more detail.",
+    "cefr": "A2",
+    "group": "repair",
+    "id": "fn:ask-for-clarification",
+    "label": "Ask someone to explain"
+  },
+  {
+    "canDo": "Can check whether the other person has understood.",
+    "cefr": "A2",
+    "group": "repair",
+    "id": "fn:check-understanding",
+    "label": "Check that you are understood"
+  },
+  {
+    "canDo": "Can interrupt politely to say they missed something.",
+    "cefr": "A2",
+    "group": "repair",
+    "id": "fn:interrupt-politely",
+    "label": "Interrupt politely to ask again"
+  },
+  {
+    "canDo": "Can pass on what someone else said or asked.",
+    "cefr": "B1",
+    "group": "information",
+    "id": "fn:report-what-someone-said",
+    "label": "Report what someone said"
+  },
+  {
+    "canDo": "Can say what they would do if things were different.",
+    "cefr": "B1",
+    "group": "information",
+    "id": "fn:describe-a-hypothetical",
+    "label": "Talk about an imagined situation"
+  },
+  {
+    "canDo": "Can tell a memory or story, setting the scene and then saying what happened.",
+    "cefr": "B1",
+    "group": "information",
+    "id": "fn:tell-a-memory",
+    "label": "Tell a memory or a story",
+    "notions": [
+      "past"
+    ]
+  },
+  {
+    "canDo": "Can say how they feel about something and ask about others' feelings.",
+    "cefr": "B1",
+    "group": "attitudes",
+    "id": "fn:express-feelings",
+    "label": "Talk about feelings"
+  },
+  {
+    "canDo": "Can say what they wish for, hope for and intend to do.",
+    "cefr": "B1",
+    "group": "attitudes",
+    "id": "fn:express-hopes-and-wishes",
+    "label": "Talk about hopes, wishes and plans for the future",
+    "notions": [
+      "future"
+    ]
+  },
+  {
+    "canDo": "Can give their view and back it up with a reason or an example.",
+    "cefr": "B1",
+    "group": "attitudes",
+    "id": "fn:justify-an-opinion",
+    "label": "Give and support an opinion"
+  },
+  {
+    "canDo": "Can say what is possible or likely and make simple guesses.",
+    "cefr": "B1",
+    "group": "attitudes",
+    "id": "fn:speculate",
+    "label": "Make a guess about what is true"
+  },
+  {
+    "canDo": "Can say what they thought of a film, book or show and why.",
+    "cefr": "B1",
+    "group": "attitudes",
+    "id": "fn:review-a-film-or-book",
+    "label": "Give your view of a film or book"
+  },
+  {
+    "canDo": "Can say they are satisfied or unhappy with something and complain politely.",
+    "cefr": "B1",
+    "domains": [
+      "shopping",
+      "restaurant"
+    ],
+    "group": "attitudes",
+    "id": "fn:complain",
+    "label": "Say you are pleased or make a complaint"
+  },
+  {
+    "canDo": "Can describe a problem and suggest what to do about it.",
+    "cefr": "B1",
+    "group": "suasion",
+    "id": "fn:propose-a-solution",
+    "label": "Raise a problem and suggest a solution"
+  },
+  {
+    "canDo": "Can ask and answer prepared questions in an interview, for example for a job.",
+    "cefr": "B1",
+    "domains": [
+      "work"
+    ],
+    "group": "socialising",
+    "id": "fn:interview-someone",
+    "label": "Take part in an interview"
+  },
+  {
+    "canDo": "Can give a short, prepared talk about a topic or a project.",
+    "cefr": "B1",
+    "group": "discourse",
+    "id": "fn:present-a-topic",
+    "label": "Give a short talk on a topic"
+  },
+  {
+    "canDo": "Can tell the main points of a story or an article and say what they think of it.",
+    "cefr": "B1",
+    "group": "discourse",
+    "id": "fn:sum-up-a-story",
+    "label": "Sum up a story and comment on it"
+  },
+  {
+    "canDo": "Can say why something happened and what it led to.",
+    "cefr": "B1",
+    "group": "discourse",
+    "id": "fn:explain-cause-and-effect",
+    "label": "Explain cause and effect"
+  },
+  {
+    "canDo": "Can say they want to speak, join in a discussion and bring up a new point.",
+    "cefr": "B1",
+    "group": "discourse",
+    "id": "fn:take-the-floor",
+    "label": "Join a discussion and change the subject"
+  },
+  {
+    "canDo": "Can point back to something said earlier with words like the first, the last, the next.",
+    "cefr": "B1",
+    "group": "discourse",
+    "id": "fn:refer-back",
+    "label": "Refer back to something already said"
+  },
+  {
+    "canDo": "Can bring a talk or discussion to an end.",
+    "cefr": "B1",
+    "group": "discourse",
+    "id": "fn:conclude",
+    "label": "Wrap up what you are saying"
+  },
+  {
+    "canDo": "Can put something another way to make it clearer.",
+    "cefr": "B1",
+    "group": "repair",
+    "id": "fn:rephrase",
+    "label": "Say something again in other words"
+  },
+  {
+    "canDo": "Can repeat back what someone said to make sure they understood it.",
+    "cefr": "B1",
+    "group": "repair",
+    "id": "fn:repeat-to-check",
+    "label": "Repeat what someone said to check it"
+  }
+]

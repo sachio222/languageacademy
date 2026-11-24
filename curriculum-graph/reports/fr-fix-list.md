@@ -1,6 +1,6 @@
 # French course fix list
 
-2757 errors, 672 warnings, 154 modules with errors.
+2757 errors, 673 warnings, 154 modules with errors.
 
 ## How to read this
 
@@ -1708,6 +1708,7 @@ First 20:
 
 # 9. Other problems
 
+- function-no-exponent (warning): fn:ask-how-to-spell (A1, "Ask how a word is spelled"): languages/fr/exponents.json gives no way to do this, so no lesson can teach it yet
 - blank-misplaced (error) [12. Unit 1 Practice - Fill in the Blanks]: 2024-01-10-unit1-practice#sentences[10]: the blank for "aussi" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [26. Unit 2 Practice - Fill in the Blanks]: 2024-01-23-unit2-practice#sentences[6]: the blank for "moi" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [26. Unit 2 Practice - Fill in the Blanks]: 2024-01-23-unit2-practice#sentences[11]: the blank for "voiture" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark

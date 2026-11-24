@@ -10,9 +10,11 @@ Run the checker after you change a lesson. Once it finds no errors, the course c
 - **Teaching module**: lessons and help pages teach through their vocabulary table and concept cards. Practice sets, readings and exams never teach; their concept cards count as reminders.
 - **Headword**: one entry in the course word list, such as `fr:lex:livre`. Its **forms** are the other ways it is written: livres, or parle and parlons for parler.
 - **Construction**: a grammar pattern or fixed phrase, such as `fr:cx:neg.ne-pas` (ne … pas) or `fr:cx:chunk.ca-va` (ça va). Each one has a **detector**, a pattern that finds it in a French sentence.
-- **Node ID**: the code that names a headword (`fr:lex:`), an irregular form (`fr:form:`), a construction (`fr:cx:`) or a name (`fr:name:`). An ID never changes once it is committed.
+- **Node ID**: the code that names a headword (`fr:lex:`), an irregular form (`fr:form:`), a construction (`fr:cx:`), a name (`fr:name:`) or a function (`fn:`). An ID never changes once it is committed.
 - **Item ref**: the address of one exercise, written `<moduleKey>#<path in the module file>`, for example `2024-01-01-famous-words#exerciseConfig.items[5]`. The path is `exerciseConfig.items[N]`, `exercises[N]`, `sentences[N]`, `fillInBlanksSentences[N]` or `readingPassage`. French a learner reads around the exercises has a ref of the same kind, ending in the path of its field: `concepts[2].example`, `exerciseConfig.items[5].hint`, `vocabularyReference[3].note`, or `screen[4]` for the fifth French string on a help screen (counting from 0).
 - **Help screen**: a help module whose page is written into a React component in `src/components/` instead of its lesson file. The course has four: liaison, cognates, questions and verb patterns.
+- **Function**: something a learner does with the language, such as asking the time or apologising. One list of functions serves every language. An **exponent** is one way to perform a function in one language: the words and patterns that together do it, such as quelle, heure and the inversion question for "Quelle heure est-il ?".
+- **CEFR level**: a level of the Common European Framework of Reference for Languages, which grades learners from A1 (beginner) through A2, B1, B2 and C1 to C2.
 - **Cognate**: a French word that a speaker of the learner's native language reads correctly without a lesson, such as restaurant for an English speaker. A **false friend** looks like a word of that language but means something else: librairie is a bookshop, not a library.
 
 A word is available at a position once a teaching module at or before it has taught it. A regular form such as parlons is available once both its headword and its pattern (`fr:cx:verb.er.present`) are taught. An irregular form such as vais must be taught itself. Names (Paris, Marie) are always available; a capital letter alone does not make a word a name.
@@ -51,11 +53,13 @@ A help screen teaches only what its course-map entry credits. Its French is chec
 
 | File | What it holds | How it changes |
 |---|---|---|
+| `core/functions.json` | What a learner can do with a language, shared by every language | By hand |
 | `core/settings.json` | Reuse windows, the last unit allowed English-to-French translation prompts, the default native language and where cognates are allowed | By hand |
 | `pairs/en-fr/cognates.json` | Cognates and false friends for English speakers learning French | By hand |
 | `languages/fr/headwords.json` | Course word list | By hand |
 | `languages/fr/forms.json` | Irregular forms | By hand |
 | `languages/fr/paradigms.json` | Regular patterns that generate forms (present tense of -er verbs, plural in -s) | By hand |
+| `languages/fr/exponents.json` | The French words and patterns that perform each function | By hand |
 | `languages/fr/constructions.json` | Grammar patterns with their detectors and example sentences | Written by `scripts/graph/fr/build/constructions.mjs` |
 | `languages/fr/names.json` | People, places and brands that need no teaching | By hand |
 | `languages/fr/course-map.json` | For each module: what it teaches and tests, and corrections to how the checker reads it | `teachesWords` by `pnpm graph:extract`, every other field by hand |
@@ -150,6 +154,36 @@ A detector is a list of steps, one for each word it matches, read left to right 
 - `any`: the word matches at least one of the listed steps.
 - `skip: n`: up to n other words may sit between the previous step's word and this one.
 - `optional: true`: the step may match no word.
+
+## Functions and exponents
+
+`core/functions.json` lists what a learner can do with a language. Each entry looks like this:
+
+```json
+{ "id": "fn:tell-the-time", "group": "information", "cefr": "A1", "label": "Ask and tell the time", "canDo": "Can ask what time it is and understand or give the answer.", "notions": ["time"] }
+```
+
+- `id` is `fn:` plus a short key in lowercase with hyphens. Every language uses the same ID.
+- `group` is one of the six groups of the Threshold Level, a Council of Europe specification of what learners do with a language (van Ek and Trim, 1990): `information` (giving and asking for facts), `attitudes` (saying what you like, want, know, think or feel), `suasion` (getting someone to do something), `socialising` (greeting, thanking, inviting), `discourse` (ordering and linking what you say) and `repair` (sorting out a misunderstanding).
+- `cefr` is the level where a learner first needs the function: `A1`, `A2` or `B1`.
+- `label` names the function in a few words. `canDo` says what a learner at that level can do and starts with "Can".
+- `notions` (ideas such as time, place or quantity) and `domains` (settings such as restaurant or travel) are optional and free text for now.
+
+The list follows the A1, A2 and B1 functions of the Eaquals core inventory for French (2015). The labels and can-do lines are our own wording. The inventory is copyright, so never paste its text or examples into these files.
+
+`languages/fr/exponents.json` lists the French exponents:
+
+```json
+{ "function": "fn:tell-the-time", "nodes": ["fr:form:quel.f", "fr:lex:heure", "fr:form:etre.prs.3sg", "fr:cx:q.inversion", "fr:lex:huit"], "note": "Quelle heure est-il ? Il est huit heures." }
+```
+
+- `nodes` lists the headwords, irregular forms and constructions the learner needs. For a regular form, list its headword and its pattern: `fr:lex:travailler` and `fr:cx:verb.er.present` for je travaille.
+- `note` is a short French example that we write ourselves.
+- Several entries for one function are alternatives.
+
+A function is available at a position once every node of one of its exponents is available there. Names do not count: an exponent with a name in it is available as soon as its other nodes are. A word that only the Reference unit teaches is never available, because that unit has no position.
+
+To add a function, add it to `core/functions.json`, keeping the list in order of level and then group, and give it at least one exponent. An exponent may name a headword that no lesson teaches yet; the function then stays unavailable until a lesson teaches it. If the word list lacks a word the function needs, add the headword first (see Adding a headword). Then run `pnpm graph:check`. It warns `function-no-exponent` for a function with no French exponent, and reports `function-bad-group` for an unknown group, `exponent-empty` for an exponent with no nodes, and `dangling-ref` for an exponent that names a function or node the graph does not have.
 
 ## Build scripts
 

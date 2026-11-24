@@ -42,6 +42,8 @@ export function loadGraph(graphDir, lang, opts = {}) {
   const constructions = readJson(join(langDir, 'constructions.json'));
   const nameList = readJson(join(langDir, 'names.json'));
   const courseMap = readJson(join(langDir, 'course-map.json'));
+  // How this language performs the shared functions; see functions.mjs.
+  const exponents = readJson(join(langDir, 'exponents.json'));
 
   const nodes = new Map();
   const duplicates = [];
@@ -54,5 +56,5 @@ export function loadGraph(graphDir, lang, opts = {}) {
   }
 
   const names = new Set(nameList.map((n) => fold(n.surface)));
-  return { lang, native, pair, settings, functions, nodes, duplicates, headwords, forms, paradigms, constructions, names, courseMap };
+  return { lang, native, pair, settings, functions, exponents, nodes, duplicates, headwords, forms, paradigms, constructions, names, courseMap };
 }

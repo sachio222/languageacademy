@@ -1,0 +1,6 @@
+[
+  { "function": "fn:greet", "nodes": ["fr:lex:bonjour"], "note": "Bonjour !" },
+  { "function": "fn:say-what-you-do", "nodes": ["fr:lex:travailler", "fr:cx:verb.er.present", "fr:lex:je"], "note": "Je travaille." },
+  { "function": "fn:say-what-you-do", "nodes": ["fr:lex:parler", "fr:lex:je"], "note": "Je parle." },
+  { "function": "fn:ask-a-question", "nodes": ["fr:cx:q.inversion", "fr:lex:vous"], "note": "Parlez-vous ?" }
+]

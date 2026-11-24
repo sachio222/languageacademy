@@ -1,0 +1,1259 @@
+[
+  {
+    "function": "fn:ask-who-or-what",
+    "nodes": [
+      "fr:cx:chunk.quest-ce-que-cest",
+      "fr:cx:cest"
+    ],
+    "note": "Qu'est-ce que c'est ? C'est un livre."
+  },
+  {
+    "function": "fn:ask-who-or-what",
+    "nodes": [
+      "fr:lex:qui",
+      "fr:cx:q.words",
+      "fr:cx:cest"
+    ],
+    "note": "Qui est-ce ? C'est Marie."
+  },
+  {
+    "function": "fn:give-personal-details",
+    "nodes": [
+      "fr:cx:age.avoir-ans",
+      "fr:lex:vingt",
+      "fr:lex:habiter",
+      "fr:lex:a.preposition"
+    ],
+    "note": "J'ai vingt ans. J'habite à Lyon."
+  },
+  {
+    "function": "fn:give-personal-details",
+    "nodes": [
+      "fr:form:avoir.prs.2sg",
+      "fr:lex:quel",
+      "fr:lex:age",
+      "fr:cx:age.avoir-ans",
+      "fr:lex:vingt"
+    ],
+    "note": "Tu as quel âge ? J'ai vingt ans."
+  },
+  {
+    "function": "fn:give-personal-details",
+    "nodes": [
+      "fr:form:etre.prs.1sg",
+      "fr:lex:francais"
+    ],
+    "note": "Je suis français."
+  },
+  {
+    "function": "fn:give-personal-details",
+    "nodes": [
+      "fr:form:quel.f",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:votre.noun",
+      "fr:lex:adresse"
+    ],
+    "note": "Quelle est votre adresse ?"
+  },
+  {
+    "function": "fn:talk-about-daily-routine",
+    "nodes": [
+      "fr:lex:lever",
+      "fr:form:lever.prs.1sg",
+      "fr:cx:pronoun.reflexive",
+      "fr:lex:sept",
+      "fr:lex:heure"
+    ],
+    "note": "Je me lève à sept heures."
+  },
+  {
+    "function": "fn:talk-about-daily-routine",
+    "nodes": [
+      "fr:lex:matin",
+      "fr:lex:soir",
+      "fr:lex:travailler",
+      "fr:lex:regarder",
+      "fr:cx:verb.er.present"
+    ],
+    "note": "Le matin, je travaille. Le soir, je regarde la télé."
+  },
+  {
+    "function": "fn:talk-about-daily-routine",
+    "nodes": [
+      "fr:lex:manger",
+      "fr:cx:verb.er.present",
+      "fr:lex:souvent",
+      "fr:cx:contraction.a",
+      "fr:lex:cafe"
+    ],
+    "note": "Je mange souvent au café."
+  },
+  {
+    "function": "fn:tell-the-time",
+    "nodes": [
+      "fr:form:quel.f",
+      "fr:lex:heure",
+      "fr:form:etre.prs.3sg",
+      "fr:cx:q.inversion",
+      "fr:lex:huit"
+    ],
+    "note": "Quelle heure est-il ? Il est huit heures."
+  },
+  {
+    "function": "fn:give-the-date",
+    "nodes": [
+      "fr:lex:lundi",
+      "fr:lex:trois",
+      "fr:lex:mai",
+      "fr:form:etre.prs.1pl"
+    ],
+    "note": "Nous sommes lundi. C'est le trois mai."
+  },
+  {
+    "function": "fn:count",
+    "nodes": [
+      "fr:lex:deux",
+      "fr:lex:trois",
+      "fr:lex:frere",
+      "fr:cx:noun.plural"
+    ],
+    "note": "J'ai deux frères et trois sœurs."
+  },
+  {
+    "function": "fn:express-quantity",
+    "nodes": [
+      "fr:lex:peu",
+      "fr:lex:beaucoup",
+      "fr:lex:de",
+      "fr:lex:sucre",
+      "fr:lex:lait"
+    ],
+    "note": "Un peu de sucre, beaucoup de lait."
+  },
+  {
+    "function": "fn:express-quantity",
+    "nodes": [
+      "fr:cx:il-y-a",
+      "fr:lex:trop",
+      "fr:lex:de",
+      "fr:lex:sel"
+    ],
+    "note": "Il y a trop de sel."
+  },
+  {
+    "function": "fn:describe-people",
+    "nodes": [
+      "fr:form:etre.prs.3sg",
+      "fr:lex:grand",
+      "fr:lex:jeune",
+      "fr:cx:adj.agreement"
+    ],
+    "note": "Il est grand et jeune."
+  },
+  {
+    "function": "fn:describe-people",
+    "nodes": [
+      "fr:form:etre.prs.3sg",
+      "fr:lex:gentil",
+      "fr:cx:adj.agreement"
+    ],
+    "note": "Elle est gentille."
+  },
+  {
+    "function": "fn:describe-places",
+    "nodes": [
+      "fr:lex:ville",
+      "fr:form:beau.f",
+      "fr:cx:il-y-a",
+      "fr:lex:parc"
+    ],
+    "note": "La ville est belle. Il y a un parc."
+  },
+  {
+    "function": "fn:describe-places",
+    "nodes": [
+      "fr:cx:cest",
+      "fr:lex:grand",
+      "fr:cx:adj.agreement",
+      "fr:cx:adj.placement",
+      "fr:lex:ville"
+    ],
+    "note": "C'est une grande ville."
+  },
+  {
+    "function": "fn:describe-things",
+    "nodes": [
+      "fr:cx:cest",
+      "fr:cx:article.indefinite",
+      "fr:lex:petit",
+      "fr:cx:adj.agreement",
+      "fr:cx:adj.placement",
+      "fr:lex:voiture"
+    ],
+    "note": "C'est une petite voiture."
+  },
+  {
+    "function": "fn:ask-for-information",
+    "nodes": [
+      "fr:cx:q.est-ce-que",
+      "fr:cx:il-y-a",
+      "fr:lex:pres",
+      "fr:lex:ici"
+    ],
+    "note": "Est-ce qu'il y a un café près d'ici ?"
+  },
+  {
+    "function": "fn:ask-for-information",
+    "nodes": [
+      "fr:lex:ou.adverb",
+      "fr:form:etre.prs.3pl",
+      "fr:lex:toilettes"
+    ],
+    "note": "Où sont les toilettes ?"
+  },
+  {
+    "function": "fn:ask-the-way",
+    "nodes": [
+      "fr:lex:ou.adverb",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:rue",
+      "fr:lex:tourner",
+      "fr:lex:continuer",
+      "fr:cx:imperative.vous",
+      "fr:lex:droite",
+      "fr:lex:puis",
+      "fr:lex:droit"
+    ],
+    "note": "Où est la rue Lepic ? Tournez à droite, puis continuez tout droit."
+  },
+  {
+    "function": "fn:use-transport",
+    "nodes": [
+      "fr:lex:prendre",
+      "fr:form:prendre.prs.1sg",
+      "fr:lex:bus"
+    ],
+    "note": "Je prends le bus."
+  },
+  {
+    "function": "fn:use-transport",
+    "nodes": [
+      "fr:lex:aller",
+      "fr:form:aller.prs.1sg",
+      "fr:lex:en",
+      "fr:lex:train"
+    ],
+    "note": "Je vais à Lyon en train."
+  },
+  {
+    "function": "fn:say-what-you-like",
+    "nodes": [
+      "fr:lex:aimer",
+      "fr:cx:verb.er.present",
+      "fr:cx:neg.ne-pas",
+      "fr:cx:article.definite"
+    ],
+    "note": "J'aime le chocolat, mais je n'aime pas le thé."
+  },
+  {
+    "function": "fn:say-what-you-like",
+    "nodes": [
+      "fr:lex:aimer",
+      "fr:cx:frame.aimer-infinitive"
+    ],
+    "note": "J'aime nager."
+  },
+  {
+    "function": "fn:say-what-you-want",
+    "nodes": [
+      "fr:form:vouloir.prs.1sg",
+      "fr:cx:frame.modal-infinitive"
+    ],
+    "note": "Je veux partir."
+  },
+  {
+    "function": "fn:say-what-you-want",
+    "nodes": [
+      "fr:cx:chunk.je-voudrais"
+    ],
+    "note": "Je voudrais un café."
+  },
+  {
+    "function": "fn:say-what-you-can-do",
+    "nodes": [
+      "fr:form:pouvoir.prs.1sg",
+      "fr:cx:frame.modal-infinitive"
+    ],
+    "note": "Je peux venir."
+  },
+  {
+    "function": "fn:say-what-you-can-do",
+    "nodes": [
+      "fr:form:savoir.verb.prs.1sg",
+      "fr:cx:frame.savoir-infinitive"
+    ],
+    "note": "Je sais nager."
+  },
+  {
+    "function": "fn:talk-about-plans",
+    "nodes": [
+      "fr:cx:frame.aller-infinitive",
+      "fr:form:aller.prs.1sg",
+      "fr:lex:demain"
+    ],
+    "note": "Demain, je vais visiter Paris."
+  },
+  {
+    "function": "fn:say-you-do-not-know",
+    "nodes": [
+      "fr:cx:chunk.je-ne-sais-pas"
+    ],
+    "note": "Je ne sais pas."
+  },
+  {
+    "function": "fn:ask-for-something",
+    "nodes": [
+      "fr:cx:chunk.excusez-moi",
+      "fr:cx:chunk.je-voudrais",
+      "fr:cx:chunk.sil-vous-plait"
+    ],
+    "note": "Excusez-moi, je voudrais un renseignement, s'il vous plaît."
+  },
+  {
+    "function": "fn:ask-for-something",
+    "nodes": [
+      "fr:lex:pardon",
+      "fr:form:pouvoir.prs.2pl",
+      "fr:lex:me",
+      "fr:lex:aider"
+    ],
+    "note": "Pardon, vous pouvez m'aider ?"
+  },
+  {
+    "function": "fn:invite-or-offer",
+    "nodes": [
+      "fr:form:vouloir.prs.2sg",
+      "fr:cx:frame.modal-infinitive",
+      "fr:lex:venir",
+      "fr:cx:contraction.a",
+      "fr:lex:cinema"
+    ],
+    "note": "Tu veux venir au cinéma ?"
+  },
+  {
+    "function": "fn:invite-or-offer",
+    "nodes": [
+      "fr:form:vouloir.prs.2sg",
+      "fr:cx:article.indefinite",
+      "fr:lex:cafe"
+    ],
+    "note": "Tu veux un café ?"
+  },
+  {
+    "function": "fn:give-instructions",
+    "nodes": [
+      "fr:cx:imperative.vous",
+      "fr:lex:ecouter",
+      "fr:lex:regarder"
+    ],
+    "note": "Écoutez et regardez."
+  },
+  {
+    "function": "fn:give-instructions",
+    "nodes": [
+      "fr:cx:imperative.tu",
+      "fr:lex:regarder",
+      "fr:lex:ca"
+    ],
+    "note": "Regarde ça !"
+  },
+  {
+    "function": "fn:buy-things",
+    "nodes": [
+      "fr:cx:chunk.je-voudrais",
+      "fr:cx:chunk.sil-vous-plait",
+      "fr:lex:combien",
+      "fr:lex:ca",
+      "fr:lex:couter"
+    ],
+    "note": "Je voudrais une baguette, s'il vous plaît. Combien ça coûte ?"
+  },
+  {
+    "function": "fn:order-food-and-drink",
+    "nodes": [
+      "fr:cx:chunk.je-voudrais",
+      "fr:cx:chunk.sil-vous-plait",
+      "fr:lex:addition"
+    ],
+    "note": "Je voudrais un café, s'il vous plaît. L'addition, s'il vous plaît."
+  },
+  {
+    "function": "fn:order-food-and-drink",
+    "nodes": [
+      "fr:cx:frame.aller-infinitive",
+      "fr:lex:prendre",
+      "fr:lex:poulet"
+    ],
+    "note": "Je vais prendre le poulet."
+  },
+  {
+    "function": "fn:book-a-table",
+    "nodes": [
+      "fr:cx:chunk.je-voudrais",
+      "fr:lex:table",
+      "fr:lex:pour",
+      "fr:lex:deux",
+      "fr:lex:personne",
+      "fr:lex:huit",
+      "fr:lex:heure"
+    ],
+    "note": "Je voudrais une table pour deux personnes, à huit heures."
+  },
+  {
+    "function": "fn:make-an-appointment",
+    "nodes": [
+      "fr:cx:pronoun.on",
+      "fr:cx:reciprocal",
+      "fr:form:voir.prs.3sg",
+      "fr:lex:demain",
+      "fr:form:quel.f",
+      "fr:lex:heure"
+    ],
+    "note": "On se voit demain ? À quelle heure ?"
+  },
+  {
+    "function": "fn:make-an-appointment",
+    "nodes": [
+      "fr:cx:pronoun.on",
+      "fr:cx:reciprocal",
+      "fr:form:voir.prs.3sg",
+      "fr:lex:lundi",
+      "fr:lex:dix",
+      "fr:lex:heure"
+    ],
+    "note": "On se voit lundi à dix heures ?"
+  },
+  {
+    "function": "fn:make-an-appointment",
+    "nodes": [
+      "fr:form:devoir.prs.1sg",
+      "fr:cx:frame.modal-infinitive",
+      "fr:lex:annuler"
+    ],
+    "note": "Je dois annuler."
+  },
+  {
+    "function": "fn:greet-and-say-goodbye",
+    "nodes": [
+      "fr:lex:bonjour",
+      "fr:cx:chunk.au-revoir"
+    ],
+    "note": "Bonjour ! … Au revoir !"
+  },
+  {
+    "function": "fn:greet-and-say-goodbye",
+    "nodes": [
+      "fr:lex:salut"
+    ],
+    "note": "Salut !"
+  },
+  {
+    "function": "fn:greet-and-say-goodbye",
+    "nodes": [
+      "fr:lex:bonsoir"
+    ],
+    "note": "Bonsoir, madame."
+  },
+  {
+    "function": "fn:thank",
+    "nodes": [
+      "fr:lex:merci"
+    ],
+    "note": "Merci !"
+  },
+  {
+    "function": "fn:apologise",
+    "nodes": [
+      "fr:lex:pardon"
+    ],
+    "note": "Pardon !"
+  },
+  {
+    "function": "fn:apologise",
+    "nodes": [
+      "fr:cx:chunk.excusez-moi"
+    ],
+    "note": "Excusez-moi !"
+  },
+  {
+    "function": "fn:apologise",
+    "nodes": [
+      "fr:lex:desole",
+      "fr:form:etre.prs.1sg"
+    ],
+    "note": "Je suis désolé."
+  },
+  {
+    "function": "fn:ask-how-someone-is",
+    "nodes": [
+      "fr:cx:chunk.ca-va",
+      "fr:lex:bien"
+    ],
+    "note": "Ça va ? Ça va bien."
+  },
+  {
+    "function": "fn:ask-how-someone-is",
+    "nodes": [
+      "fr:lex:comment",
+      "fr:form:aller.prs.2pl",
+      "fr:cx:q.inversion"
+    ],
+    "note": "Comment allez-vous ?"
+  },
+  {
+    "function": "fn:ask-how-someone-is",
+    "nodes": [
+      "fr:lex:comment",
+      "fr:form:aller.prs.3sg",
+      "fr:cx:possessive.adjective",
+      "fr:lex:mere"
+    ],
+    "note": "Comment va ta mère ?"
+  },
+  {
+    "function": "fn:introduce-yourself",
+    "nodes": [
+      "fr:lex:appeler",
+      "fr:form:appeler.prs.1sg",
+      "fr:cx:pronoun.reflexive"
+    ],
+    "note": "Je m'appelle Paul."
+  },
+  {
+    "function": "fn:introduce-yourself",
+    "nodes": [
+      "fr:lex:bonjour",
+      "fr:form:etre.prs.1sg"
+    ],
+    "note": "Bonjour, je suis Paul."
+  },
+  {
+    "function": "fn:introduce-someone",
+    "nodes": [
+      "fr:lex:voici",
+      "fr:cx:possessive.adjective",
+      "fr:lex:amie"
+    ],
+    "note": "Voici mon amie Claire."
+  },
+  {
+    "function": "fn:introduce-someone",
+    "nodes": [
+      "fr:cx:cest",
+      "fr:cx:possessive.adjective",
+      "fr:lex:ami"
+    ],
+    "note": "C'est mon ami Paul."
+  },
+  {
+    "function": "fn:congratulate-and-wish",
+    "nodes": [
+      "fr:lex:bon",
+      "fr:cx:adj.agreement",
+      "fr:lex:journee"
+    ],
+    "note": "Bonne journée !"
+  },
+  {
+    "function": "fn:congratulate-and-wish",
+    "nodes": [
+      "fr:lex:bon",
+      "fr:lex:anniversaire"
+    ],
+    "note": "Bon anniversaire !"
+  },
+  {
+    "function": "fn:congratulate-and-wish",
+    "nodes": [
+      "fr:cx:cest",
+      "fr:lex:tres",
+      "fr:lex:beau"
+    ],
+    "note": "C'est très beau !"
+  },
+  {
+    "function": "fn:accept-or-decline",
+    "nodes": [
+      "fr:lex:oui",
+      "fr:lex:plaisir",
+      "fr:lex:merci",
+      "fr:cx:neg.ne-pas",
+      "fr:form:pouvoir.prs.1sg"
+    ],
+    "note": "Oui, avec plaisir ! … Non merci, je ne peux pas."
+  },
+  {
+    "function": "fn:accept-or-decline",
+    "nodes": [
+      "fr:lex:oui",
+      "fr:form:vouloir.prs.1sg",
+      "fr:lex:bien",
+      "fr:lex:merci",
+      "fr:cx:neg.ne-pas",
+      "fr:form:pouvoir.prs.1sg"
+    ],
+    "note": "Oui, je veux bien ! … Non merci, je ne peux pas."
+  },
+  {
+    "function": "fn:accept-or-decline",
+    "nodes": [
+      "fr:lex:oui",
+      "fr:cx:chunk.bien-sur",
+      "fr:lex:merci",
+      "fr:cx:neg.ne-pas",
+      "fr:form:pouvoir.prs.1sg"
+    ],
+    "note": "Oui, bien sûr ! … Non merci, je ne peux pas."
+  },
+  {
+    "function": "fn:link-ideas",
+    "nodes": [
+      "fr:lex:et",
+      "fr:lex:mais",
+      "fr:lex:ou"
+    ],
+    "note": "Paul et Marie sont là, mais pas Luc. Tu viens ou tu restes ?"
+  },
+  {
+    "function": "fn:ask-to-repeat",
+    "nodes": [
+      "fr:lex:pardon",
+      "fr:form:comprendre.prs.1sg",
+      "fr:cx:neg.ne-pas"
+    ],
+    "note": "Pardon ? Je ne comprends pas."
+  },
+  {
+    "function": "fn:ask-to-repeat",
+    "nodes": [
+      "fr:lex:plus",
+      "fr:lex:lentement",
+      "fr:cx:chunk.sil-vous-plait"
+    ],
+    "note": "Plus lentement, s'il vous plaît."
+  },
+  {
+    "function": "fn:ask-what-a-word-means",
+    "nodes": [
+      "fr:cx:q.quest-ce-que",
+      "fr:lex:ca",
+      "fr:form:vouloir.prs.3sg",
+      "fr:lex:dire"
+    ],
+    "note": "Qu'est-ce que ça veut dire ?"
+  },
+  {
+    "function": "fn:talk-about-work",
+    "nodes": [
+      "fr:lex:travailler",
+      "fr:cx:verb.er.present",
+      "fr:lex:dans",
+      "fr:lex:banque"
+    ],
+    "note": "Je travaille dans une banque."
+  },
+  {
+    "function": "fn:talk-about-work",
+    "nodes": [
+      "fr:form:etre.prs.1sg",
+      "fr:lex:professeur",
+      "fr:lex:travailler",
+      "fr:cx:verb.er.present"
+    ],
+    "note": "Je suis professeur. Je travaille à Paris."
+  },
+  {
+    "function": "fn:narrate-past-event",
+    "nodes": [
+      "fr:lex:hier",
+      "fr:cx:passe-compose.etre",
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:ptcp.er"
+    ],
+    "note": "Hier, je suis allé au parc et j'ai mangé une glace."
+  },
+  {
+    "function": "fn:describe-the-past",
+    "nodes": [
+      "fr:lex:quand",
+      "fr:form:etre.impf.1sg",
+      "fr:cx:imparfait",
+      "fr:lex:petit"
+    ],
+    "note": "Quand j'étais petit, j'habitais à la campagne."
+  },
+  {
+    "function": "fn:present-a-place",
+    "nodes": [
+      "fr:lex:ville",
+      "fr:lex:grand",
+      "fr:cx:adj.agreement",
+      "fr:cx:il-y-a",
+      "fr:lex:beaucoup",
+      "fr:lex:restaurant"
+    ],
+    "note": "Lyon est une grande ville. Il y a beaucoup de restaurants."
+  },
+  {
+    "function": "fn:present-a-place",
+    "nodes": [
+      "fr:cx:cest",
+      "fr:lex:grand",
+      "fr:lex:ville",
+      "fr:lex:gens",
+      "fr:lex:gentil",
+      "fr:cx:adj.agreement"
+    ],
+    "note": "C'est une grande ville. Les gens sont gentils."
+  },
+  {
+    "function": "fn:describe-how-you-feel",
+    "nodes": [
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:faim"
+    ],
+    "note": "J'ai faim."
+  },
+  {
+    "function": "fn:describe-how-you-feel",
+    "nodes": [
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:mal",
+      "fr:cx:contraction.a",
+      "fr:lex:tete"
+    ],
+    "note": "J'ai mal à la tête."
+  },
+  {
+    "function": "fn:compare",
+    "nodes": [
+      "fr:cx:comparative",
+      "fr:lex:plus",
+      "fr:lex:grand"
+    ],
+    "note": "Paris est plus grand que Lyon."
+  },
+  {
+    "function": "fn:compare",
+    "nodes": [
+      "fr:cx:comparative.irregular",
+      "fr:lex:meilleur"
+    ],
+    "note": "C'est meilleur !"
+  },
+  {
+    "function": "fn:describe-someones-life",
+    "nodes": [
+      "fr:lex:naitre",
+      "fr:form:naitre.ptcp.f",
+      "fr:cx:passe-compose.etre",
+      "fr:lex:sœur",
+      "fr:cx:possessive.adjective",
+      "fr:lex:pere"
+    ],
+    "note": "Elle est née en 1990. C'est la sœur de mon père."
+  },
+  {
+    "function": "fn:agree-or-disagree",
+    "nodes": [
+      "fr:form:avoir.prs.2sg",
+      "fr:lex:raison",
+      "fr:cx:neg.ne-pas"
+    ],
+    "note": "Tu as raison. … Non, tu n'as pas raison."
+  },
+  {
+    "function": "fn:agree-or-disagree",
+    "nodes": [
+      "fr:form:avoir.prs.2sg",
+      "fr:lex:raison",
+      "fr:cx:cest",
+      "fr:cx:neg.ne-pas",
+      "fr:lex:vrai"
+    ],
+    "note": "Tu as raison. … Non, ce n'est pas vrai."
+  },
+  {
+    "function": "fn:give-an-opinion",
+    "nodes": [
+      "fr:lex:penser",
+      "fr:cx:verb.er.present",
+      "fr:cx:frame.verb-que-clause",
+      "fr:lex:idee"
+    ],
+    "note": "Je pense que c'est une bonne idée."
+  },
+  {
+    "function": "fn:give-an-opinion",
+    "nodes": [
+      "fr:lex:trouver",
+      "fr:cx:verb.er.present",
+      "fr:lex:ca",
+      "fr:lex:genial"
+    ],
+    "note": "Je trouve ça génial."
+  },
+  {
+    "function": "fn:give-a-reason",
+    "nodes": [
+      "fr:lex:pourquoi",
+      "fr:cx:chunk.parce-que"
+    ],
+    "note": "Pourquoi ? Parce que j'ai faim."
+  },
+  {
+    "function": "fn:express-reservations",
+    "nodes": [
+      "fr:form:etre.prs.1sg",
+      "fr:cx:neg.ne-pas",
+      "fr:lex:sur"
+    ],
+    "note": "Je ne suis pas sûr."
+  },
+  {
+    "function": "fn:express-reservations",
+    "nodes": [
+      "fr:lex:oui",
+      "fr:lex:mais",
+      "fr:lex:cher"
+    ],
+    "note": "Oui, mais c'est cher."
+  },
+  {
+    "function": "fn:say-what-you-enjoyed",
+    "nodes": [
+      "fr:lex:aimer",
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:ptcp.er",
+      "fr:lex:film"
+    ],
+    "note": "J'ai aimé le film."
+  },
+  {
+    "function": "fn:say-what-you-enjoyed",
+    "nodes": [
+      "fr:lex:plaire",
+      "fr:form:plaire.ptcp",
+      "fr:cx:passe-compose.avoir",
+      "fr:lex:me"
+    ],
+    "note": "Le film m'a plu."
+  },
+  {
+    "function": "fn:express-interest",
+    "nodes": [
+      "fr:cx:cest",
+      "fr:lex:interessant"
+    ],
+    "note": "C'est intéressant !"
+  },
+  {
+    "function": "fn:express-obligation",
+    "nodes": [
+      "fr:form:devoir.prs.1sg",
+      "fr:cx:frame.modal-infinitive"
+    ],
+    "note": "Je dois travailler."
+  },
+  {
+    "function": "fn:express-obligation",
+    "nodes": [
+      "fr:cx:frame.il-faut-infinitive"
+    ],
+    "note": "Il faut partir."
+  },
+  {
+    "function": "fn:ask-for-or-offer-help",
+    "nodes": [
+      "fr:cx:frame.avoir-besoin-de",
+      "fr:lex:aide",
+      "fr:form:pouvoir.prs.1sg",
+      "fr:lex:vous.pronoun",
+      "fr:lex:aider"
+    ],
+    "note": "J'ai besoin d'aide. … Je peux vous aider ?"
+  },
+  {
+    "function": "fn:ask-for-or-offer-help",
+    "nodes": [
+      "fr:cx:frame.avoir-besoin-de",
+      "fr:lex:aide",
+      "fr:form:pouvoir.prs.1sg",
+      "fr:lex:faire",
+      "fr:cx:chunk.quelque-chose"
+    ],
+    "note": "J'ai besoin d'aide. … Je peux faire quelque chose ?"
+  },
+  {
+    "function": "fn:suggest-something",
+    "nodes": [
+      "fr:cx:pronoun.on",
+      "fr:form:aller.prs.3sg",
+      "fr:cx:contraction.a",
+      "fr:cx:chunk.on-y-va"
+    ],
+    "note": "On va au café ? … On y va !"
+  },
+  {
+    "function": "fn:suggest-something",
+    "nodes": [
+      "fr:cx:imperative.nous"
+    ],
+    "note": "Allons au parc !"
+  },
+  {
+    "function": "fn:plan-together",
+    "nodes": [
+      "fr:cx:frame.il-faut-infinitive",
+      "fr:lex:acheter",
+      "fr:cx:article.partitive",
+      "fr:lex:prendre"
+    ],
+    "note": "Il faut acheter du pain. Toi, tu prends le vin."
+  },
+  {
+    "function": "fn:plan-together",
+    "nodes": [
+      "fr:cx:frame.il-faut-infinitive",
+      "fr:lex:preparer",
+      "fr:lex:prendre",
+      "fr:form:prendre.prs.2sg"
+    ],
+    "note": "Il faut préparer le repas. Toi, tu prends le vin."
+  },
+  {
+    "function": "fn:give-advice",
+    "nodes": [
+      "fr:cx:q.quest-ce-que",
+      "fr:form:devoir.prs.1sg",
+      "fr:lex:faire",
+      "fr:form:devoir.cond.2sg",
+      "fr:cx:frame.modal-infinitive"
+    ],
+    "note": "Qu'est-ce que je dois faire ? … Tu devrais dormir."
+  },
+  {
+    "function": "fn:warn",
+    "nodes": [
+      "fr:lex:attention",
+      "fr:lex:faire",
+      "fr:cx:imperative.tu"
+    ],
+    "note": "Attention ! Fais attention à la voiture."
+  },
+  {
+    "function": "fn:start-and-end-a-conversation",
+    "nodes": [
+      "fr:cx:chunk.excusez-moi",
+      "fr:form:devoir.prs.1sg",
+      "fr:lex:partir",
+      "fr:cx:chunk.au-revoir"
+    ],
+    "note": "Excusez-moi, madame… Bon, je dois partir. Au revoir !"
+  },
+  {
+    "function": "fn:talk-on-the-phone",
+    "nodes": [
+      "fr:cx:cest",
+      "fr:cx:chunk.je-voudrais",
+      "fr:lex:parler",
+      "fr:lex:a.preposition",
+      "fr:cx:chunk.sil-vous-plait"
+    ],
+    "note": "C'est Marie. Je voudrais parler à Paul, s'il vous plaît."
+  },
+  {
+    "function": "fn:order-events",
+    "nodes": [
+      "fr:lex:abord",
+      "fr:lex:ensuite",
+      "fr:lex:puis",
+      "fr:lex:enfin"
+    ],
+    "note": "D'abord, je me lève. Ensuite, je mange. Enfin, je pars."
+  },
+  {
+    "function": "fn:ask-for-clarification",
+    "nodes": [
+      "fr:cx:q.quest-ce-que",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:dire"
+    ],
+    "note": "Qu'est-ce que tu veux dire ?"
+  },
+  {
+    "function": "fn:check-understanding",
+    "nodes": [
+      "fr:form:comprendre.prs.2sg"
+    ],
+    "note": "Tu comprends ?"
+  },
+  {
+    "function": "fn:check-understanding",
+    "nodes": [
+      "fr:cx:cest",
+      "fr:lex:clair"
+    ],
+    "note": "C'est clair ?"
+  },
+  {
+    "function": "fn:interrupt-politely",
+    "nodes": [
+      "fr:lex:pardon",
+      "fr:cx:passe-compose.avoir",
+      "fr:form:comprendre.ptcp",
+      "fr:cx:neg.ne-pas"
+    ],
+    "note": "Pardon, je n'ai pas compris."
+  },
+  {
+    "function": "fn:report-what-someone-said",
+    "nodes": [
+      "fr:form:dire.prs.3sg",
+      "fr:cx:frame.verb-que-clause"
+    ],
+    "note": "Il dit qu'il vient demain."
+  },
+  {
+    "function": "fn:report-what-someone-said",
+    "nodes": [
+      "fr:lex:demander",
+      "fr:cx:verb.er.present",
+      "fr:cx:q.embedded"
+    ],
+    "note": "Elle demande si tu viens."
+  },
+  {
+    "function": "fn:describe-a-hypothetical",
+    "nodes": [
+      "fr:cx:si.imparfait-conditionnel",
+      "fr:lex:riche"
+    ],
+    "note": "Si j'étais riche, je voyagerais."
+  },
+  {
+    "function": "fn:tell-a-memory",
+    "nodes": [
+      "fr:lex:se-souvenir",
+      "fr:form:se-souvenir.prs.1sg",
+      "fr:cx:imparfait",
+      "fr:cx:passe-compose.etre",
+      "fr:cx:chunk.tout-a-coup"
+    ],
+    "note": "Je me souviens : il pleuvait, et tout à coup, il est arrivé."
+  },
+  {
+    "function": "fn:express-feelings",
+    "nodes": [
+      "fr:cx:subj.emotion-que",
+      "fr:lex:content"
+    ],
+    "note": "Je suis content que tu sois là."
+  },
+  {
+    "function": "fn:express-feelings",
+    "nodes": [
+      "fr:cx:subj.emotion-que",
+      "fr:lex:peur"
+    ],
+    "note": "J'ai peur qu'il parte."
+  },
+  {
+    "function": "fn:express-hopes-and-wishes",
+    "nodes": [
+      "fr:lex:aimer",
+      "fr:cx:conditionnel-present",
+      "fr:lex:voyager",
+      "fr:cx:subj.vouloir-que"
+    ],
+    "note": "J'aimerais voyager. Je veux que tu viennes avec moi."
+  },
+  {
+    "function": "fn:justify-an-opinion",
+    "nodes": [
+      "fr:lex:penser",
+      "fr:cx:frame.verb-que-clause",
+      "fr:lex:important",
+      "fr:cx:chunk.parce-que"
+    ],
+    "note": "Je pense que c'est important, parce que tout le monde en parle."
+  },
+  {
+    "function": "fn:justify-an-opinion",
+    "nodes": [
+      "fr:lex:croire",
+      "fr:form:croire.prs.1sg",
+      "fr:cx:frame.verb-que-clause",
+      "fr:lex:vrai",
+      "fr:cx:chunk.parce-que"
+    ],
+    "note": "Je crois que c'est vrai, parce que je l'ai vu."
+  },
+  {
+    "function": "fn:speculate",
+    "nodes": [
+      "fr:lex:peut-etre",
+      "fr:cx:subj.possible-que"
+    ],
+    "note": "Il est peut-être malade. Il est possible qu'il vienne demain."
+  },
+  {
+    "function": "fn:speculate",
+    "nodes": [
+      "fr:lex:probablement"
+    ],
+    "note": "Il est probablement à la maison."
+  },
+  {
+    "function": "fn:review-a-film-or-book",
+    "nodes": [
+      "fr:cx:superlative",
+      "fr:lex:meilleur",
+      "fr:lex:film",
+      "fr:lex:annee"
+    ],
+    "note": "C'est le meilleur film de l'année."
+  },
+  {
+    "function": "fn:complain",
+    "nodes": [
+      "fr:lex:content",
+      "fr:cx:neg.ne-pas",
+      "fr:cx:il-y-a",
+      "fr:lex:probleme",
+      "fr:lex:chambre"
+    ],
+    "note": "Je ne suis pas content : il y a un problème avec la chambre."
+  },
+  {
+    "function": "fn:complain",
+    "nodes": [
+      "fr:cx:chunk.excusez-moi",
+      "fr:cx:il-y-a",
+      "fr:lex:probleme",
+      "fr:lex:froid"
+    ],
+    "note": "Excusez-moi, il y a un problème : le plat est froid."
+  },
+  {
+    "function": "fn:propose-a-solution",
+    "nodes": [
+      "fr:cx:il-y-a",
+      "fr:lex:probleme",
+      "fr:cx:neg.ne-pas-infinitive",
+      "fr:lex:essayer",
+      "fr:lex:autre"
+    ],
+    "note": "Il y a un problème. Pourquoi ne pas essayer autre chose ?"
+  },
+  {
+    "function": "fn:interview-someone",
+    "nodes": [
+      "fr:lex:pourquoi",
+      "fr:form:vouloir.prs.2pl",
+      "fr:cx:q.inversion",
+      "fr:lex:travail",
+      "fr:cx:chunk.parce-que"
+    ],
+    "note": "Pourquoi voulez-vous ce travail ? Parce que j'aime enseigner."
+  },
+  {
+    "function": "fn:present-a-topic",
+    "nodes": [
+      "fr:cx:frame.aller-infinitive",
+      "fr:lex:parler",
+      "fr:lex:de",
+      "fr:lex:abord",
+      "fr:lex:ensuite",
+      "fr:lex:enfin"
+    ],
+    "note": "Je vais vous parler de Paris. D'abord… ensuite… enfin…"
+  },
+  {
+    "function": "fn:sum-up-a-story",
+    "nodes": [
+      "fr:cx:chunk.en-fait",
+      "fr:lex:histoire",
+      "fr:lex:finalement",
+      "fr:cx:frame.verb-que-clause"
+    ],
+    "note": "En fait, l'histoire parle d'une famille. Finalement, tout finit bien. Je pense que c'est beau."
+  },
+  {
+    "function": "fn:explain-cause-and-effect",
+    "nodes": [
+      "fr:lex:donc",
+      "fr:cx:chunk.a-cause-de"
+    ],
+    "note": "Il pleut, donc je reste. Je reste à cause de la pluie."
+  },
+  {
+    "function": "fn:explain-cause-and-effect",
+    "nodes": [
+      "fr:cx:chunk.grace-a",
+      "fr:lex:reussir",
+      "fr:cx:passe-compose.avoir"
+    ],
+    "note": "Grâce à toi, j'ai réussi."
+  },
+  {
+    "function": "fn:take-the-floor",
+    "nodes": [
+      "fr:cx:chunk.excusez-moi",
+      "fr:form:pouvoir.prs.1sg",
+      "fr:lex:dire",
+      "fr:cx:chunk.quelque-chose"
+    ],
+    "note": "Excusez-moi, je peux dire quelque chose ?"
+  },
+  {
+    "function": "fn:refer-back",
+    "nodes": [
+      "fr:lex:premier",
+      "fr:lex:dernier"
+    ],
+    "note": "Le premier exemple est simple, le dernier est difficile."
+  },
+  {
+    "function": "fn:conclude",
+    "nodes": [
+      "fr:lex:finalement"
+    ],
+    "note": "Finalement, c'est une bonne idée."
+  },
+  {
+    "function": "fn:conclude",
+    "nodes": [
+      "fr:lex:enfin",
+      "fr:lex:pour",
+      "fr:lex:finir"
+    ],
+    "note": "Enfin, pour finir, c'est une bonne idée."
+  },
+  {
+    "function": "fn:rephrase",
+    "nodes": [
+      "fr:cx:chunk.cest-a-dire"
+    ],
+    "note": "C'est-à-dire que je ne viens pas ce soir."
+  },
+  {
+    "function": "fn:repeat-to-check",
+    "nodes": [
+      "fr:form:dire.prs.2pl",
+      "fr:cx:frame.verb-que-clause",
+      "fr:cx:chunk.cest-ca"
+    ],
+    "note": "Vous dites que le train part à huit heures, c'est ça ?"
+  }
+]

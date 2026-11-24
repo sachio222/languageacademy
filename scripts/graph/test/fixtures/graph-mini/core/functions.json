@@ -1,1 +1,6 @@
-[]
+[
+  { "id": "fn:greet", "group": "socialising", "label": "Greet someone", "canDo": "Can say hello.", "cefr": "A1" },
+  { "id": "fn:say-what-you-do", "group": "information", "label": "Say what you do", "canDo": "Can say what work they do.", "cefr": "A1", "notions": ["activity"], "domains": ["work"] },
+  { "id": "fn:ask-a-question", "group": "information", "label": "Ask a yes or no question", "canDo": "Can ask a simple yes or no question.", "cefr": "A1" },
+  { "id": "fn:apologise", "group": "socialising", "label": "Apologise", "canDo": "Can say sorry.", "cefr": "A1" }
+]

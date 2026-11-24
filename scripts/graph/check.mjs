@@ -15,10 +15,12 @@ import { ruleUnread } from './rules/unread.mjs';
 import { ruleShapes } from './rules/shapes.mjs';
 import { ruleBlanks } from './rules/blanks.mjs';
 import { ruleCourseMapKeys, ruleCourseMapItems } from './rules/course-map.mjs';
+import { ruleFunctionExponents } from './functions.mjs';
 
 const RULES = [
   ruleTaughtBefore, ruleReuse, ruleTranslation, ruleClaims,
   ruleDuplicates, ruleLevels, ruleUnread, ruleShapes, ruleBlanks, ruleCourseMapKeys, ruleCourseMapItems,
+  ruleFunctionExponents,
 ];
 
 // native: the learner's native language, which picks the language pair; settings.defaultNative when left out.

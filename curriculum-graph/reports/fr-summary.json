@@ -2,6 +2,7 @@
   "byRule": {
     "blank-misplaced": 58,
     "claim-untaught": 27,
+    "function-no-exponent": 1,
     "level-data-missing": 1,
     "nonstandard-shape": 41,
     "reuse-missed": 492,
@@ -15,5 +16,5 @@
   "errors": 2757,
   "modulesWithErrors": 154,
   "native": "en",
-  "warnings": 672
+  "warnings": 673
 }
