@@ -50,7 +50,7 @@ async function main() {
   mkdirSync(dir, { recursive: true });
   const { levels, functions } = writeReportData(dir, lang, ctx);
   writeFileSync(join(dir, `${lang}-fix-list.md`), renderFixList(issues, ctx.course, ctx.graph.courseMap, {
-    pair: ctx.graph.pair, levels, functions, graph: ctx.graph, referenceOpenFrom: ctx.timeline.openFrom, referenceOpenTitles: ctx.referenceOpenTitles,
+    pair: ctx.graph.pair, cognatesAllowIn: ctx.graph.settings?.cognates?.allowIn, levels, functions, graph: ctx.graph, referenceOpenFrom: ctx.timeline.openFrom, referenceOpenTitles: ctx.referenceOpenTitles,
   }));
   writeSortedJson(join(dir, `${lang}-summary.json`), summary);
   console.log(`wrote ${lang}-fix-list.md, ${lang}-summary.json, ${lang}-levels.json and ${lang}-functions.json: `

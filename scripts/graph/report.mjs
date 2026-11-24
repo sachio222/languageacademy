@@ -163,12 +163,19 @@ const SOURCE_LABEL = {
   feedback: 'Feedback', title: 'Module title', description: 'Module description', screen: 'Help screen',
 };
 
-// The how-to-read paragraph on cognates, for the native language the list was checked for.
-function cognatesParagraph(pair) {
+// The how-to-read paragraph on cognates, for the native language the list was checked for. allowIn:
+// settings.cognates.allowIn, 'shown' (cognates count as known only in French the learner reads or hears) or 'all'.
+function cognatesParagraph(pair, allowIn = 'shown') {
   const lang = languageName(pair.native);
   if (!pair.words?.length) {
     return `This list was checked for ${lang} speakers. No cognate list exists for ${lang} speakers, so every untaught word `
       + 'counts, however close it is to a word they know.';
+  }
+  const file = `curriculum-graph/pairs/${pair.native}-${pair.target ?? 'fr'}/cognates.json`;
+  if (allowIn === 'all') {
+    return `This list was checked for ${lang} speakers. A cognate is a French word they read correctly without a lesson, `
+      + 'such as restaurant. From the cognates lesson on, every cognate counts as known, in French the learner types as well '
+      + `as French they read or hear, so Section 1 does not list it. The cognates come from ${file}.`;
   }
   return `This list was checked for ${lang} speakers, so a cognate (a French word they read correctly without a lesson, `
     + 'such as restaurant) may appear in French the learner reads or hears from the cognates lesson on, before a lesson '
@@ -363,7 +370,8 @@ function renderFunctions(out, byPosition, opts) {
   }
 }
 
-// opts.pair: the language pair the issues were checked with (graph.pair); it sets the cognates paragraph.
+// opts.pair: the language pair the issues were checked with (graph.pair); it sets the cognates paragraph, together
+// with opts.cognatesAllowIn (settings.cognates.allowIn).
 // opts.levels and opts.functions: levelReport and functionReport for Sections 6 and 7; opts.graph names their nodes.
 export function renderFixList(issues, course, courseMap = {}, opts = {}) {
   const speakers = `${languageName(opts.pair?.native ?? 'en')} speakers`;
@@ -378,7 +386,7 @@ export function renderFixList(issues, course, courseMap = {}, opts = {}) {
   out.push(`${s.errors} errors, ${s.warnings} warnings, ${s.modulesWithErrors} modules with errors.`, '');
   out.push('## How to read this', '');
   for (const para of [openingParagraph(opts.referenceOpenFrom, opts.referenceOpenTitles), ...HOW_TO_READ]) out.push(para, '');
-  if (opts.pair) out.push(cognatesParagraph(opts.pair), '');
+  if (opts.pair) out.push(cognatesParagraph(opts.pair, opts.cognatesAllowIn), '');
   const notes = course.flatMap((m) => (courseMap[m.moduleKey]?.contentNotes ?? []).map((n) => `- ${m.position}. ${m.title}: ${n}`));
   if (notes.length) out.push('## Lesson text to fix', '', ...notes, '');
 

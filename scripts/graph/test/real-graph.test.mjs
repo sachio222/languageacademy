@@ -37,3 +37,8 @@ test('the letter y the Reference opens does not hide the pronoun y at position 2
   assert.equal(y.length, 1);
   assert.equal(y[0].nodeId, 'fr:lex:y.pronoun');
 });
+
+test('the real settings count cognates as known in typed and shown French', () => {
+  const graph = loadGraph(join(repoRoot, 'curriculum-graph'), 'fr');
+  assert.equal(graph.settings.cognates.allowIn, 'all');
+});

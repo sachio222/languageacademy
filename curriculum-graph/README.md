@@ -21,9 +21,9 @@ A word is available at a position once a teaching module at or before it has tau
 
 ## Cognates and the learner's native language
 
-The cognates lesson (`2024-10-21-cognates-help`, position 6) tells learners that many French words look like English ones. From that lesson on, the checker lets a cognate appear before a lesson teaches it, in French the learner reads or hears: a prompt, a reading passage, a concept card, or the rest of a fill-in-the-blank sentence. French the learner types still needs the word taught. Section 1 of the fix list keeps a typed cognate, says it is a cognate and names the module where the learner first types it: teach the word there, or let the learner read it instead of typing it. The cognates screen shows its words but does not teach them, so no line names it as the place to fix a typed cognate. Before position 6 a cognate is an ordinary untaught word, and a false friend never gets this allowance.
+The cognates lesson (`2024-10-21-cognates-help`, position 6) tells learners that many French words look like English ones. From that lesson on, every cognate counts as known, in French the learner types as well as French the learner reads or hears, so Section 1 of the fix list does not list it. Before position 6 a cognate is an ordinary untaught word, and a false friend never counts as known this way. The cognates screen shows its words but does not teach them, so the words still count as untaught in the level reports.
 
-Which words count depends on the learner's native language, so the list lives in a language pair folder, `pairs/<native>-<target>/`, and not in the French word list. `pairs/en-fr/cognates.json` holds the English-French list:
+Which words count depends on the learner's native language, so the list belongs to the language pair and lives in a pair folder, `pairs/<native>-<target>/`, not in the French word list. Each pair has its own list: Spanish or Italian speakers learning French would have their own lists, larger than the English one, because their languages share far more words with French. `pairs/en-fr/cognates.json` holds the English-French list:
 
 ```json
 {
@@ -39,7 +39,7 @@ Which words count depends on the learner's native language, so the list lives in
 
 Judge a cognate by meaning, not spelling. Pour, ville and raté look like English words (pour, villa, rate) and mean something else. Every ID must be a headword in `headwords.json`; add the headword first if it is missing. Keep both lists sorted by `id`.
 
-A native language with no pair folder has no cognates: `pnpm graph:check --native ja` counts every cognate as an untaught word. `core/settings.json` holds the default native language (`defaultNative`) and where cognates are allowed (`cognates.allowIn`): `"shown"` for French the learner reads or hears, or `"all"` to allow typed French too.
+A native language with no pair folder has no cognates: `pnpm graph:check --native ja` counts every cognate as an untaught word. `core/settings.json` holds the default native language (`defaultNative`) and where cognates count as known (`cognates.allowIn`). The course uses `"all"`: typed and shown French alike. With `"shown"`, cognates count as known only in French the learner reads or hears, and Section 1 lists a typed cognate with the module where the learner first types it.
 
 ## The Reference unit
 

@@ -1,6 +1,6 @@
 # French course fix list
 
-2674 errors, 705 warnings, 152 modules with errors.
+2592 errors, 705 warnings, 152 modules with errors.
 
 ## How to read this
 
@@ -18,7 +18,7 @@ Section 7 lists what a learner can do with French at each level, such as asking 
 
 Section 9 lists words missing from the course word list. Most are typos, English words, or accepted answers typed without accents or apostrophes. Section 10 lists everything else, including fill-in-the-blank sentences whose blank sits inside a word, on a punctuation mark that the app then hides, or after the full stop.
 
-This list was checked for English speakers, so a cognate (a French word they read correctly without a lesson, such as restaurant) may appear in French the learner reads or hears from the cognates lesson on, before a lesson teaches it. The cognates come from curriculum-graph/pairs/en-fr/cognates.json, and Section 1 still lists a cognate the learner has to type. That line names the module where the learner first types it: teach the word there, or let the learner read it instead of typing it.
+This list was checked for English speakers. A cognate is a French word they read correctly without a lesson, such as restaurant. From the cognates lesson on, every cognate counts as known, in French the learner types as well as French they read or hear, so Section 1 does not list it. The cognates come from curriculum-graph/pairs/en-fr/cognates.json.
 
 ## Lesson text to fix
 
@@ -92,7 +92,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 18. Essential Verb - pouvoir (can)
 
-- "artiste" (fr:lex:artiste): *artiste* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "elle peut être artiste"
 - "te" (fr:lex:te): taught later, at position 33 (Object Pronouns - Him, Her, It, Them); teach in Essential Verb - vouloir (to want) (position 17). Sentence: "je peux avoir ça s'il te plaît"
 - fr:cx:chunk.sil-te-plait: taught later, at position 40 (Survival Phrases - Real-World Essentials); teach in Essential Verb - vouloir (to want) (position 17). Sentence: "je peux avoir ça s'il te plaît"
 - fr:cx:q.inversion: taught later, at position 20 (Question Words - Ask Anything!); teach in Essential Verb - vouloir (to want) (position 17). Concept card: "Peux-tu être un ami?"
@@ -120,7 +119,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 23. Prepositions - Spatial & Relational Words
 
-- "table" (fr:lex:table): *table* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 49 (Everyday Nouns - Life & World); teach in this module, or let the learner read it instead of typing it. Sentence: "le chat est sous la table"
 - "porte" (fr:lex:porte): taught later, at position 49 (Everyday Nouns - Life & World); teach in this module. Sentence: "le livre est derrière la porte"
 
 ### 25. Reading Comprehension 2 - Rendez-vous en Normandie
@@ -155,7 +153,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "son" (fr:lex:son): taught later, at position 34 (Possessive Adjectives - My, Your, His, Her); teach in a lesson before Reading Comprehension 2 - Rendez-vous en Normandie (position 25). Sentence: "il vient avec son chat"
 - fr:cx:q.qui-est-ce-qui: taught later, at position 156 (qui est-ce qui vs qui est-ce que - Master 'Who' Questions); teach in this module. Sentence: "qui est-ce qui vient?"
 - "d'" (fr:lex:de): the word de is taught at position 23, but this form is not; teach in this module. Sentence: "d'où viens-tu?"
-- "hôtel" (fr:lex:hotel): *hôtel* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "je peux venir à l'hôtel"
 - "te" (fr:lex:te): taught later, at position 33 (Object Pronouns - Him, Her, It, Them); teach in Essential Verb - vouloir (to want) (position 17). Sentence: "je viens te voir"
 - "me" (fr:lex:me): taught later, at position 33 (Object Pronouns - Him, Her, It, Them); teach in this module. Sentence: "pourquoi viens-tu me voir?"
 
@@ -179,7 +176,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 - "Paix" (fr:lex:paix): not taught anywhere in the course; teach in a lesson before this module. Sentence: "Café de la Paix"
 - "Comte" (fr:lex:comte): not taught anywhere in the course; teach in a lesson before this module. Sentence: "Le Comte de Monte-Cristo"
-- "Oh" (fr:lex:oh): *Oh* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "Oh pour moi merci"
 - "lieues" (fr:lex:lieue): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…livre de Jules Verne, Vingt mille lieues sous les mers. Il est nouveau. Tu…"
 - "aujourd'hui" (fr:lex:aujourd-hui): taught later, at position 46 (Time & Frequency - now, always, never, today); teach in a lesson before this module. Sentence: "…Il a son jeune enfant aujourd'hui et il le voit à la maison. C'est…"
 - fr:cx:chunk.sil-te-plait: taught later, at position 40 (Survival Phrases - Real-World Essentials); teach in Essential Verb - vouloir (to want) (position 17). Sentence: "Paris, {1871}, Belle Époque Bonjour Marc ! Tu viens au Café de la Paix avec moi…"
@@ -202,7 +198,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 - fr:cx:causative.faire: taught later, at position 132 (Je me fais couper... - Service Phrases); teach in this module. Sentence: "nous lui faisons voir notre maison"
 - fr:cx:pronoun.indirect-object: taught later, at position 141 (donner - To Give); teach in this module. Sentence: "nous lui faisons voir notre maison"
-- "sport" (fr:lex:sport): *sport* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "je fais du sport"
 - "gâteau" (fr:lex:gateau): taught later, at position 60 (Everyday Food Nouns); teach in this module. Sentence: "elle fait un gâteau"
 - "devoirs" (fr:lex:devoir.noun): taught later, at position 42 (Essential Verb - devoir (must)); teach in this module. Sentence: "nous faisons nos devoirs"
 - "froid" (fr:lex:froid): taught later, at position 135 (Bien que... - Although Phrases); teach in this module. Sentence: "il fait froid"
@@ -236,7 +231,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "travailler" (fr:lex:travailler): taught later, at position 110 (Passé Composé - Regular -ER Verbs (I spoke, I ate)); teach in this module. Sentence: "je dois travailler"
 - "vit" (fr:lex:vivre): taught later, at position 142 (Daily Life Essentials - Sleep, Work, Live); teach in this module. Sentence: "elle vit dans la ville"
 - "habite" (fr:lex:habiter): not taught anywhere in the course; teach in this module. Sentence: "elle habite dans la ville"
-- "payer" (fr:lex:payer): *payer* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "je veux payer avec la carte de crédit"
 
 ### 50. Reading Comprehension 4 - La nouvelle époque de Marie
 
@@ -292,7 +286,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 - "travailler" (fr:lex:travailler): taught later, at position 110 (Passé Composé - Regular -ER Verbs (I spoke, I ate)); teach in Everyday Nouns - Life & World (position 49). Sentence: "il devrait travailler"
 - "m'" (fr:lex:me): the word me is taught at position 33, but this form is not; teach in this module. Sentence: "est-ce que tu pourrais m'aider"
-- "aider" (fr:lex:aider): *aider* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "est-ce que tu pourrais m'aider"
 
 ### 57. aimer - To Like / To Love
 
@@ -301,10 +294,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 58. être - Past Tense (was / were)
 
-- "content" (fr:lex:content): *content* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in this module, or let the learner read it instead of typing it. Sentence: "j'étais content"
-- "contente" (fr:lex:content): *contente* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in this module, or let the learner read it instead of typing it. Sentence: "j'étais contente"
-- "contents" (fr:lex:content): *contents* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in this module, or let the learner read it instead of typing it. Sentence: "nous étions contents"
-- "contentes" (fr:lex:content): *contentes* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in this module, or let the learner read it instead of typing it. Sentence: "elles étaient contentes"
 - "heureux" (fr:lex:heureux): not taught anywhere in the course; teach in Essential Verb - être (to be) (position 3). Concept card: "j'étais heureux"
 
 ### 59. avoir - Past Tense (had)
@@ -324,12 +313,9 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 63. Reading Comprehension 5 - La fée verte (The Green Fairy)
 
-- "absinthe" (fr:lex:absinthe): *absinthe* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "absinthe"
 - "soir" (fr:lex:soir): not taught anywhere in the course; teach in The Power to Ask Anything (position 21). Sentence: "le soir"
-- "hôtel" (fr:lex:hotel): *hôtel* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Essential Verb - venir (to come) (position 29), or let the learner read it instead of typing it. Sentence: "hôtel"
 - "étoiles" (fr:lex:etoile): not taught anywhere in the course; teach in a lesson before this module. Sentence: "étoiles"
 - "gens" (fr:lex:gens): taught later, at position 78 (Talking About People in General); teach in a lesson before this module. Sentence: "les gens"
-- "artiste" (fr:lex:artiste): *artiste* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Essential Verb - pouvoir (can) (position 18), or let the learner read it instead of typing it. Sentence: "Tu es un grand artiste"
 - "dit" (fr:lex:dire): taught later, at position 67 (dire - To Say / To Tell); teach in a lesson before this module. Sentence: "« Salut Vincent ! » dit Paul. « Salut Paul, mon ami ! » dit Vincent. « Comment…"
 - "demande" (fr:lex:demande): taught later, at position 71 (demander - To Ask); teach in a lesson before this module. Sentence: "…» dit Vincent. « Comment ça va ? » demande Paul. « Bien, et toi ? » « Très…"
 - "regarde" (fr:lex:regarder): taught later, at position 100 (Commands - tu form (Informal)); teach in a lesson before this module. Sentence: "…l'absinthe, » dit Paul. Vincent regarde autour du café. « Ce café est très…"
@@ -362,10 +348,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 ### 65. Unit 5 Final Exam - Sophistication
 
 - "cher" (fr:lex:cher): not taught anywhere in the course; teach in Comparisons & Intensity (position 53). Sentence: "trop cher"
-- "contents" (fr:lex:content): *contents* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in être - Past Tense (was / were) (position 58), or let the learner read it instead of typing it. Sentence: "ils étaient contents"
-- "restaurant" (fr:lex:restaurant): *restaurant* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "nous avons bu du vin au restaurant"
-- "content" (fr:lex:content): *content* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in être - Past Tense (was / were) (position 58), or let the learner read it instead of typing it. Sentence: "j'étais très content hier"
-- "contente" (fr:lex:content): *contente* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in être - Past Tense (was / were) (position 58), or let the learner read it instead of typing it. Sentence: "j'étais très contente hier"
 - "ensemble" (fr:lex:ensemble): taught later, at position 124 (Je veux que... - Expressing Wishes); teach in Essential Verb - parler (to speak) (position 43). Sentence: "nous mangeons ensemble"
 - fr:cx:si.present: not taught anywhere in the course; teach in a lesson before this module. Concept card: "j'aime le pain, c'est plus bon, si tu veux, j'ai mangé, nous avons bu, hier,…"
 - "venu" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in a lesson before Unit 5 Practice - Fill in the Blanks (position 64). Concept card: "il est venu"
@@ -401,7 +383,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "ensemble" (fr:lex:ensemble): taught later, at position 124 (Je veux que... - Expressing Wishes); teach in Essential Verb - parler (to speak) (position 43). Sentence: "nous apprenons ensemble"
 - "comprend" (fr:lex:comprendre): the word comprendre is taught at position 68, but this form is not; teach in this module. Sentence: "il comprend le français"
 - "comprenons" (fr:lex:comprendre): the word comprendre is taught at position 68, but this form is not; teach in this module. Sentence: "nous comprenons la question"
-- "question" (fr:lex:question): *question* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 74 (Essential Vocabulary - Time, People & Ideas); teach in this module, or let the learner read it instead of typing it. Sentence: "nous comprenons la question"
 - "comprennent" (fr:lex:comprendre): the word comprendre is taught at position 68, but this form is not; teach in this module. Sentence: "ils ne comprennent pas"
 - "pris" (fr:lex:prendre): the word prendre is taught at position 68, but this form is not; teach in this module. Sentence: "j'ai pris le bus"
 - "beaucoup" (fr:lex:beaucoup): not taught anywhere in the course; teach in a lesson before Unit 4 Practice - Fill in the Blanks (position 51). Sentence: "j'ai beaucoup appris"
@@ -419,7 +400,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 70. mettre - To Put / To Set
 
-- "sac" (fr:lex:sac): *sac* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "elle met son sac dans la voiture"
 - "chemise" (fr:lex:chemise): not taught anywhere in the course; teach in this module. Sentence: "il met une chemise"
 - "chaussures" (fr:lex:chaussure): not taught anywhere in the course; teach in this module. Sentence: "nous mettons nos chaussures"
 - "heures" (fr:lex:heure): taught later, at position 74 (Essential Vocabulary - Time, People & Ideas); teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Sentence: "ça met deux heures"
@@ -432,17 +412,12 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "père" (fr:lex:pere): taught later, at position 74 (Essential Vocabulary - Time, People & Ideas); teach in this module. Sentence: "tu demandes à ton père"
 - "mère" (fr:lex:mere): taught later, at position 74 (Essential Vocabulary - Time, People & Ideas); teach in aimer - To Like / To Love (position 57). Sentence: "il demande à sa mère"
 - "attendre" (fr:lex:attendre): taught later, at position 145 (Social Situations - Wait, Arrive, Stay); teach in this module. Sentence: "elle nous demande d'attendre"
-- "aider" (fr:lex:aider): *aider* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Should & Could - Advice and Possibility (position 55), or let the learner read it instead of typing it. Sentence: "ils te demandent d'aider"
 - "m'" (fr:lex:me): the word me is taught at position 33, but this form is not; teach in Should & Could - Advice and Possibility (position 55). Sentence: "tu m'as demandé"
 - fr:cx:q.embedded: taught later, at position 158 (Embedded Questions - Polite Indirect Questions); teach in this module. Concept card: "tu demandes pourquoi?"
 
 ### 72. commander - To Order
 
-- "steak" (fr:lex:steak): *steak* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "il commande un steak"
-- "menu" (fr:lex:menu): *menu* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "nous commandons le menu"
-- "dessert" (fr:lex:dessert): *dessert* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "ils commandent le dessert"
 - "par" (fr:lex:par): taught later, at position 144 (Perception Verbs - écouter, regarder); teach in this module. Sentence: "nous commandons par téléphone"
-- "téléphone" (fr:lex:telephone): *téléphone* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "nous commandons par téléphone"
 
 ### 73. avoir besoin de - To Need
 
@@ -491,7 +466,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 - "étudier" (fr:lex:etudier): taught later, at position 79 (Studying & Reviewing - étudier & réviser); teach in Essential Verb - être (to be) (position 3). Sentence: "on doit étudier"
 - "apprend" (fr:lex:apprendre): the word apprendre is taught at position 68, but this form is not; teach in prendre - To Take (position 68). Sentence: "on apprend en pratiquant"
-- "pratiquant" (fr:lex:pratiquer): *pratiquant* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 131 (En mangeant... - While Doing Phrases); teach in this module, or let the learner read it instead of typing it. Sentence: "on apprend en pratiquant"
 - fr:cx:gerondif: taught later, at position 131 (En mangeant... - While Doing Phrases); teach in this module. Sentence: "on apprend en pratiquant"
 - "croire" (fr:lex:croire): taught later, at position 85 (croire - To Believe); teach in this module. Sentence: "on doit croire"
 - "gentils" (fr:lex:gentil): taught later, at position 102 (Irregular Commands - être, avoir, aller, faire); teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Concept card: "les gens sont gentils"
@@ -500,8 +474,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 79. Studying & Reviewing - étudier & réviser
 
-- "université" (fr:lex:universite): *université* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 86 (Knowledge & Learning - Essential Nouns); teach in this module, or let the learner read it instead of typing it. Sentence: "tu étudies à l'université"
-- "examen" (fr:lex:examen): *examen* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "elle révise pour l'examen"
 - "ensemble" (fr:lex:ensemble): taught later, at position 124 (Je veux que... - Expressing Wishes); teach in Essential Verb - parler (to speak) (position 43). Sentence: "nous étudions ensemble"
 - "sais" (fr:lex:savoir.verb): the word savoir is taught at position 78, but this form is not; teach in a lesson before Unit 4 Practice - Fill in the Blanks (position 51). Concept card: "je sais"
 - "pendant" (fr:lex:pendant): taught later, at position 92 (Temporal & Sequential Words - Time & Order); teach in this module. Concept card: "j'étudie pendant 2 heures"
@@ -513,7 +485,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "m'" (fr:lex:me): the word me is taught at position 33, but this form is not; teach in Should & Could - Advice and Possibility (position 55). Sentence: "tu m'enseignes"
 - "anglais" (fr:lex:anglais): not taught anywhere in the course; teach in prendre - To Take (position 68). Sentence: "il apprend l'anglais"
 - "ensemble" (fr:lex:ensemble): taught later, at position 124 (Je veux que... - Expressing Wishes); teach in Essential Verb - parler (to speak) (position 43). Sentence: "nous apprenons ensemble"
-- "université" (fr:lex:universite): *université* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 86 (Knowledge & Learning - Essential Nouns); teach in Studying & Reviewing - étudier & réviser (position 79), or let the learner read it instead of typing it. Sentence: "ils enseignent à l'université"
 - "sais" (fr:lex:savoir.verb): the word savoir is taught at position 78, but this form is not; teach in a lesson before Unit 4 Practice - Fill in the Blanks (position 51). Concept card: "je sais"
 - "nager" (fr:lex:nager): taught later, at position 151 (Movement Verbs - Actions in Nature); teach in this module. Concept card: "j'apprends à nager"
 
@@ -528,7 +499,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 87. Discourse Markers - Sound Like a Native
 
-- "commence" (fr:lex:commencer): *commence* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 129 (J'avais déjà... - Had Already Done Phrases); teach in this module, or let the learner read it instead of typing it. Sentence: "bon, on commence"
 - "prêt" (fr:lex:pret): not taught anywhere in the course; teach in The Power to Ask Anything (position 21). Sentence: "je suis presque prêt"
 
 ### 89. Reading 7 - L'Art d'Apprendre
@@ -536,8 +506,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "poser" (fr:lex:poser): not taught anywhere in the course; teach in a lesson before this module. Sentence: "poser des questions"
 - "mieux" (fr:lex:mieux): not taught anywhere in the course; teach in a lesson before this module. Sentence: "on comprend mieux"
 - "soi" (fr:lex:soi): not taught anywhere in the course; teach in a lesson before this module. Sentence: "soi"
-- "méthode" (fr:lex:methode): *méthode* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "c'est une question de méthode"
-- "voyage" (fr:lex:voyager): *voyage* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 127 (Si j'étais... - Daydreaming & Hypotheticals); teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "un voyage"
 - fr:cx:imperative.vous: taught later, at position 101 (Commands - vous form (Formal/Plural)); teach in a lesson before this module. Sentence: "comprenez mes idées"
 - "pendant" (fr:lex:pendant): taught later, at position 92 (Temporal & Sequential Words - Time & Order); teach in Studying & Reviewing - étudier & réviser (position 79). Sentence: "…qu'apprendre. Je peux étudier pendant des heures, mais si je ne comprends…"
 - "vraiment" (fr:lex:vraiment): taught later, at position 130 (vraiment, sérieusement... - Common Adverbs); teach in a lesson before this module. Sentence: "…comprends pas, je n'apprends pas vraiment. L'apprentissage, c'est quand je…"
@@ -563,10 +531,8 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 91. Unit 7 Final Exam - Knowledge & Learning
 
-- "restaurant" (fr:lex:restaurant): *restaurant* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before Unit 5 Final Exam - Sophistication (position 65), or let the learner read it instead of typing it. Sentence: "tu connais ce restaurant"
 - "soi" (fr:lex:soi): not taught anywhere in the course; teach in a lesson before Reading 7 - L'Art d'Apprendre (position 89). Sentence: "on doit croire en soi"
 - "parce" (fr:lex:parce): taught later, at position 107 (Causal & Reason Words - Explaining Why); teach in a lesson before this module. Sentence: "je révise mes leçons parce que j'ai un examen"
-- "examen" (fr:lex:examen): *examen* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Studying & Reviewing - étudier & réviser (position 79), or let the learner read it instead of typing it. Sentence: "je révise mes leçons parce que j'ai un examen"
 - fr:cx:chunk.parce-que: taught later, at position 107 (Causal & Reason Words - Explaining Why); teach in a lesson before this module. Sentence: "je révise mes leçons parce que j'ai un examen"
 - "étudiant" (fr:lex:etudier): the word étudier is taught at position 79, but this form is not; teach in Essential Verb - être (to be) (position 3). Concept card: "étudiant"
 - "anglais" (fr:lex:anglais): not taught anywhere in the course; teach in prendre - To Take (position 68). Concept card: "anglais"
@@ -602,7 +568,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 102. Irregular Commands - être, avoir, aller, faire
 
-- "courage" (fr:lex:courage): *courage* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "aie courage"
 - fr:cx:imperative.pronouns: taught later, at position 103 (Commands with Pronouns); teach in prendre - To Take (position 68). Sentence: "vas-y"
 - "Soyons" (fr:lex:etre): the word être is taught at position 3, but this form is not; teach in this module. Concept card: "tu: Sois! vous: Soyez! nous: Soyons!"
 - "sage" (fr:lex:sage): taught later, at position 123 (Il faut que... - Saying What's Necessary); teach in this module. Concept card: "Sois sage!"
@@ -617,11 +582,8 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 - "beaucoup" (fr:lex:beaucoup): not taught anywhere in the course; teach in a lesson before Unit 4 Practice - Fill in the Blanks (position 51). Sentence: "maintenant elle sait beaucoup de choses"
 - "étudiants" (fr:lex:etudiant): not taught anywhere in the course; teach in Essential Verb - être (to be) (position 3). Sentence: "les étudiants s'aident"
-- "aident" (fr:lex:aider): *aident* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Should & Could - Advice and Possibility (position 55), or let the learner read it instead of typing it. Sentence: "les étudiants s'aident"
 - fr:cx:relative.ce-que: not taught anywhere in the course; teach in a lesson before this module. Sentence: "Je me souviens de tout ce qu'on apprend"
-- "magnifique" (fr:lex:magnifique): *magnifique* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "C'est magnifique, quoi!"
 - "rentre" (fr:lex:rentrer): taught later, at position 113 (être Verbs - DR & MRS VANDERTRAMP (went, came, left)); teach in a lesson before this module. Sentence: "elle rentre contente et pense au lendemain"
-- "contente" (fr:lex:content): *contente* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in être - Past Tense (was / were) (position 58), or let the learner read it instead of typing it. Sentence: "elle rentre contente et pense au lendemain"
 - "lendemain" (fr:lex:lendemain): not taught anywhere in the course; teach in a lesson before this module. Sentence: "elle rentre contente et pense au lendemain"
 - "Voici" (fr:lex:voici): not taught anywhere in the course; teach in a lesson before Reading 7 - L'Art d'Apprendre (position 89). Sentence: "Je m'appelle Marie. Voici ma journée typique. D'abord, je me réveille à sept…"
 - "suite" (fr:lex:suite): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…heures. Je ne me lève pas tout de suite. Je pense à ma journée pendant…"
@@ -712,7 +674,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 110. Passé Composé - Regular -ER Verbs (I spoke, I ate)
 
-- "voyagé" (fr:lex:voyager): *voyagé* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 127 (Si j'étais... - Daydreaming & Hypotheticals); teach in a lesson before Reading 7 - L'Art d'Apprendre (position 89), or let the learner read it instead of typing it. Sentence: "Nous avons voyagé à Paris"
 - "clés" (fr:lex:cle): taught later, at position 143 (Search & Find - chercher, trouver); teach in Essential Verbs - chercher & trouver (position 44). Sentence: "Vous avez cherché mes clés?"
 - "télé" (fr:lex:tele): taught later, at position 144 (Perception Verbs - écouter, regarder); teach in this module. Sentence: "On a regardé la télé hier soir"
 - "soir" (fr:lex:soir): not taught anywhere in the course; teach in The Power to Ask Anything (position 21). Sentence: "On a regardé la télé hier soir"
@@ -730,7 +691,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "soir" (fr:lex:soir): not taught anywhere in the course; teach in The Power to Ask Anything (position 21). Sentence: "Nous sommes arrivés hier soir"
 - "sortis" (fr:lex:sortir): the word sortir is taught at position 113, but this form is not; teach in this module. Sentence: "Vous êtes sortis hier?"
 - "tard" (fr:lex:tard): taught later, at position 133 (Avant que... - Before Phrases); teach in a lesson before Reading Comprehension 5 - La fée verte (The Green Fairy) (position 63). Sentence: "On est rentré tard"
-- "descendue" (fr:lex:descendre): *descendue* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; the word descendre is taught at position 113, but this form is not; teach in this module, or let the learner read it instead of typing it. Sentence: "Elle est descendue du train"
 - "venus" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in this module. Sentence: "Ils sont venus hier"
 - "partis" (fr:lex:partir): the word partir is taught at position 32, but this form is not; teach in this module. Sentence: "Êtes vous partis en vacances?"
 - "vacances" (fr:lex:vacances): not taught anywhere in the course; teach in this module. Sentence: "Êtes vous partis en vacances?"
@@ -793,10 +753,8 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 118. Reading 9 - Une Histoire du Passé
 
-- "parc" (fr:lex:parc): *parc* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "au parc"
 - "Jardin" (fr:lex:jardin): not taught anywhere in the course; teach in Possessive Adjectives - My, Your, His, Her (position 34). Sentence: "au Jardin du Luxembourg"
 - "banc" (fr:lex:banc): not taught anywhere in the course; teach in a lesson before this module. Sentence: "sur un banc"
-- "cinéma" (fr:lex:cinema): *cinéma* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "au cinéma"
 - "vers" (fr:lex:vers): not taught anywhere in the course; teach in a lesson before this module. Sentence: "vers 10h"
 - "tard" (fr:lex:tard): taught later, at position 133 (Avant que... - Before Phrases); teach in a lesson before Reading Comprehension 5 - La fée verte (The Green Fairy) (position 63). Sentence: "…à 8h. D'habitude, je me levais plus tard le samedi, mais ce jour-là, j'ai…"
 - "tôt" (fr:lex:tot): not taught anywhere in the course; teach in Morning Routine - se réveiller, se lever (position 95). Sentence: "…mais ce jour-là, j'ai voulu sortir tôt parce que le temps était si beau.…"
@@ -842,7 +800,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "chaises" (fr:lex:chaise): not taught anywhere in the course; teach in Spatial Prepositions - Position & Location (position 108). Sentence: "Le chat est entre les deux chaises."
 - "habite" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Sentence: "Elle habite près du parc."
 - "lu" (fr:lex:lire): not taught anywhere in the course; teach in Spatial Prepositions - Position & Location (position 108). Sentence: "Hier, j'ai lu un livre."
-- "fini" (fr:lex:finir): *fini* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 129 (J'avais déjà... - Had Already Done Phrases); teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "Tu as fini ton travail?"
 - "venus" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in être Verbs - DR & MRS VANDERTRAMP (went, came, left) (position 113). Sentence: "Ils sont venus de France."
 - "jouais" (fr:lex:jouer): not taught anywhere in the course; teach in Imparfait Formation - All Verbs (was doing, used to do) (position 115). Sentence: "Quand j'étais petit, je jouais beaucoup."
 - "beaucoup" (fr:lex:beaucoup): not taught anywhere in the course; teach in a lesson before Unit 4 Practice - Fill in the Blanks (position 51). Sentence: "Quand j'étais petit, je jouais beaucoup."
@@ -862,7 +819,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 ### 120. Unit 9 Final Exam - Discourse & Past Tense
 
 - "venus" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in être Verbs - DR & MRS VANDERTRAMP (went, came, left) (position 113). Sentence: "ils sont venus"
-- "finissiez" (fr:lex:finir): *finissiez* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 129 (J'avais déjà... - Had Already Done Phrases); teach in a lesson before Unit 9 Practice - Fill in the Blanks (position 119), or let the learner read it instead of typing it. Sentence: "vous finissiez"
 - "lisais" (fr:lex:lire): not taught anywhere in the course; teach in Spatial Prepositions - Position & Location (position 108). Sentence: "lisais"
 - "acheté" (fr:lex:acheter): not taught anywhere in the course; teach in a lesson before this module. Sentence: "ai acheté"
 - "marchait" (fr:lex:marcher): taught later, at position 131 (En mangeant... - While Doing Phrases); teach in More Spatial Relations - Distance & Proximity (position 109). Sentence: "marchait"
@@ -905,7 +861,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 130. vraiment, sérieusement... - Common Adverbs
 
-- "fatigué" (fr:lex:fatigue): *fatigué* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 135 (Bien que... - Although Phrases); teach in this module, or let the learner read it instead of typing it. Sentence: "sérieusement fatigué"
 - "courir" (fr:lex:courir): taught later, at position 151 (Movement Verbs - Actions in Nature); teach in Knowledge & Learning - Essential Nouns (position 86). Sentence: "courir rapidement"
 - "court" (fr:lex:courir): taught later, at position 151 (Movement Verbs - Actions in Nature); teach in Knowledge & Learning - Essential Nouns (position 86). Sentence: "court rapidement"
 
@@ -920,11 +875,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 ### 137. Reading 10 - Mes Rêves et Mes Espoirs
 
 - "dame" (fr:lex:dame): not taught anywhere in the course; teach in a lesson before this module. Sentence: "notre dame"
-- "différente" (fr:lex:different): *différente* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "que sa vie soit différente"
-- "artiste" (fr:lex:artiste): *artiste* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Essential Verb - pouvoir (can) (position 18), or let the learner read it instead of typing it. Sentence: "être artiste"
-- "professeur" (fr:lex:professeur): *professeur* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 144 (Perception Verbs - écouter, regarder); teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "professeur de français"
 - "essayé" (fr:lex:essayer): taught later, at position 159 (Rhetorical & Negative Questions - Advanced Style); teach in a lesson before this module. Sentence: "elle avait essayé"
-- "aider" (fr:lex:aider): *aider* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Should & Could - Advice and Possibility (position 55), or let the learner read it instead of typing it. Sentence: "aider l'un l'autre"
 - "vers" (fr:lex:vers): not taught anywhere in the course; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Sentence: "vers la Seine"
 - "habite" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Sentence: "Je m'appelle Sophie et j'habite à Paris depuis cinq ans. J'adore cette ville!…"
 - "rêve" (fr:lex:reve): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…ville! Mais j'ai toujours un grand rêve: je veux que ma vie soit différente.…"
@@ -997,20 +948,14 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "réussisse" (fr:lex:reussir): the word réussir is taught at position 128, but this form is not; teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137). Sentence: "je veux qu'on réussisse"
 - "heureux" (fr:lex:heureux): not taught anywhere in the course; teach in Essential Verb - être (to be) (position 3). Sentence: "je suis heureux que tu sois là"
 - "heureuse" (fr:lex:heureux): not taught anywhere in the course; teach in Essential Verb - être (to be) (position 3). Sentence: "je suis heureuse que tu sois là"
-- "surprise" (fr:lex:surpris): *surprise* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; the word surpris is taught at position 125, but this form is not; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "je suis surprise que tu saches ça"
 - "marcherait" (fr:lex:marcher): the word marcher is taught at position 131, but this form is not; teach in a lesson before this module. Sentence: "si on avait le temps, on marcherait"
 - "marcherions" (fr:lex:marcher): the word marcher is taught at position 131, but this form is not; teach in a lesson before this module. Sentence: "si nous avions le temps, nous marcherions"
 - fr:cx:conditionnel-passe.etre: not taught anywhere in the course; teach in Si j'avais su... - Past Regret Phrases (position 128). Sentence: "si j'avais su, je serais venu"
 - "venue" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in être Verbs - DR & MRS VANDERTRAMP (went, came, left) (position 113). Sentence: "si j'avais su, je serais venue"
-- "aidé" (fr:lex:aider): *aidé* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Should & Could - Advice and Possibility (position 55), or let the learner read it instead of typing it. Sentence: "si j'avais eu le temps, j'aurais aidé"
 - fr:cx:conditionnel-passe.avoir: not taught anywhere in the course; teach in Si j'avais su... - Past Regret Phrases (position 128). Sentence: "si j'avais eu le temps, j'aurais aidé"
 - fr:cx:plus-que-parfait.etre: not taught anywhere in the course; teach in a lesson before Unit 9 Final Exam - Discourse & Past Tense (position 120). Sentence: "elle était déjà partie"
-- "explique" (fr:lex:expliquer): *explique* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "j'explique pour que tu comprennes"
-- "difficile" (fr:lex:difficile): *difficile* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "bien que ce soit difficile, je continue"
-- "continue" (fr:lex:continuer): *continue* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 146 (Directions & Navigation); teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "bien que ce soit difficile, je continue"
 - "soyons" (fr:lex:etre): the word être is taught at position 3, but this form is not; teach in Irregular Commands - être, avoir, aller, faire (position 102). Sentence: "je suis vraiment content que nous soyons amis"
 - "saura" (fr:lex:savoir.verb): the word savoir is taught at position 78, but this form is not; teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137). Sentence: "saura"
-- "différente" (fr:lex:different): *différente* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137), or let the learner read it instead of typing it. Sentence: "soit différente"
 - "perdu" (fr:lex:perdre): not taught anywhere in the course; teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137). Sentence: "perdu espoir"
 - "espoir" (fr:lex:espoir): not taught anywhere in the course; teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137). Sentence: "perdu espoir"
 - "essayé" (fr:lex:essayer): taught later, at position 159 (Rhetorical & Negative Questions - Advanced Style); teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137). Sentence: "essayé"
@@ -1029,44 +974,22 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 ### 141. donner - To Give
 
-- "numéro" (fr:lex:numero): *numéro* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "tu peux me donner ton numéro"
 - "cadeau" (fr:lex:cadeau): not taught anywhere in the course; teach in this module. Concept card: "Je donne un cadeau"
 
 ### 142. Daily Life Essentials - Sleep, Work, Live
 
 - "centre" (fr:lex:centre): not taught anywhere in the course; teach in this module. Concept card: "Je vis à Paris, je travaille au centre-ville, et je dors bien"
 
-### 143. Search & Find - chercher, trouver
-
-- "téléphone" (fr:lex:telephone): *téléphone* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in commander - To Order (position 72), or let the learner read it instead of typing it. Sentence: "tu as trouvé ton téléphone?"
-
-### 144. Perception Verbs - écouter, regarder
-
-- "télévision" (fr:lex:television): *télévision* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "je regarde la télévision"
-- "intéressant" (fr:lex:interessant): *intéressant* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "je trouve que c'est intéressant"
-
 ### 146. Directions & Navigation
 
 - "gare" (fr:lex:gare): taught later, at position 158 (Embedded Questions - Polite Indirect Questions); teach in More Spatial Relations - Distance & Proximity (position 109). Sentence: "où est la gare?"
-- "musée" (fr:lex:musee): *musée* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "excusez-moi, comment aller au musée?"
 
 ### 147. Reading 11 - La France Moderne
 
 - "habitants" (fr:lex:habitant): not taught anywhere in the course; teach in a lesson before this module. Sentence: "soixante-huit millions d'habitants"
-- "directions" (fr:lex:direction): *directions* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "directions"
-- "agriculture" (fr:lex:agriculture): *agriculture* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "l'agriculture"
-- "services" (fr:lex:service): *services* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "les services"
-- "industrie" (fr:lex:industrie): *industrie* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "l'industrie"
 - "vers" (fr:lex:vers): not taught anywhere in the course; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Sentence: "vers le sud"
-- "téléphones" (fr:lex:telephone): *téléphones* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in commander - To Order (position 72), or let the learner read it instead of typing it. Sentence: "téléphones"
-- "téléphone" (fr:lex:telephone): *téléphone* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in commander - To Order (position 72), or let the learner read it instead of typing it. Sentence: "téléphone"
-- "via" (fr:lex:via): *via* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "via leurs téléphones"
-- "protéger" (fr:lex:proteger): *protéger* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "protéger"
-- "environnement" (fr:lex:environnement): *environnement* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "protéger l'environnement"
 - "homologues" (fr:lex:homologue): not taught anywhere in the course; teach in a lesson before this module. Sentence: "homologues"
 - "étrangers" (fr:lex:etranger): not taught anywhere in the course; teach in a lesson before this module. Sentence: "homologues étrangers"
-- "innovation" (fr:lex:innovation): *innovation* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "innovation"
-- "tradition" (fr:lex:tradition): *tradition* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "tradition et innovation"
 - "compte" (fr:lex:compte): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…dans le monde. Paris, sa capitale, compte plus de deux millions de personnes.…"
 - "attire" (fr:lex:attirer): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…personnes. Cette ville magnifique attire des millions de visiteurs chaque…"
 - "célèbres" (fr:lex:celebre): not taught anywhere in the course; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Sentence: "…Ils viennent admirer ses monuments célèbres comme la Tour Eiffel, Notre-Dame,…"
@@ -1127,7 +1050,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "jusqu'" (fr:lex:jusque): not taught anywhere in the course; teach in a lesson before this module. Sentence: "Je reste ici jusqu'à demain."
 - "gare" (fr:lex:gare): taught later, at position 158 (Embedded Questions - Polite Indirect Questions); teach in More Spatial Relations - Distance & Proximity (position 109). Sentence: "Excusez-moi, où est la gare? J'ai un rendez-vous là-bas à trois heures."
 - "vers" (fr:lex:vers): not taught anywhere in the course; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Sentence: "Je attends mes amis au café. Ils arrivent généralement vers huit heures."
-- "évolue" (fr:lex:evoluer): *évolue* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "La France évolue rapidement. Ses habitants vivent dans des villes modernes."
 - "habitants" (fr:lex:habitant): not taught anywhere in the course; teach in a lesson before Reading 11 - La France Moderne (position 147). Sentence: "La France évolue rapidement. Ses habitants vivent dans des villes modernes."
 - "seras" (fr:lex:etre): the word être is taught at position 3, but this form is not; teach in a lesson before this module. Concept card: "tu seras"
 - "aura" (fr:lex:avoir): the word avoir is taught at position 4, but this form is not; teach in a lesson before this module. Concept card: "il aura fait"
@@ -1141,18 +1063,9 @@ This list was checked for English speakers, so a cognate (a French word they rea
 ### 149. Unit 11 Final Exam - Daily Essentials & Practical Communication
 
 - "française" (fr:lex:francais): the word français is taught at position 68, but this form is not; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Sentence: "j'écoute de la musique française"
-- "musée" (fr:lex:musee): *musée* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Directions & Navigation (position 146), or let the learner read it instead of typing it. Sentence: "où est le musée?"
 - "gare" (fr:lex:gare): taught later, at position 158 (Embedded Questions - Polite Indirect Questions); teach in More Spatial Relations - Distance & Proximity (position 109). Sentence: "excusez-moi, où est la gare?"
 - "habitants" (fr:lex:habitant): not taught anywhere in the course; teach in a lesson before Reading 11 - La France Moderne (position 147). Sentence: "la France a soixante-huit millions d'habitants"
-- "touristes" (fr:lex:touriste): *touristes* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "les touristes cherchent des directions pour trouver les monuments"
-- "directions" (fr:lex:direction): *directions* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before Reading 11 - La France Moderne (position 147), or let the learner read it instead of typing it. Sentence: "les touristes cherchent des directions pour trouver les monuments"
-- "monuments" (fr:lex:monument): *monuments* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "les touristes cherchent des directions pour trouver les monuments"
-- "artistes" (fr:lex:artiste): *artistes* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in Essential Verb - pouvoir (can) (position 18), or let the learner read it instead of typing it. Sentence: "les artistes français vivent souvent dans des quartiers comme Montmartre"
 - "quartiers" (fr:lex:quartier): not taught anywhere in the course; teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137). Sentence: "les artistes français vivent souvent dans des quartiers comme Montmartre"
-- "moderne" (fr:lex:moderne): *moderne* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "la France moderne combine tradition et innovation"
-- "combine" (fr:lex:combiner): *combine* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before this module, or let the learner read it instead of typing it. Sentence: "la France moderne combine tradition et innovation"
-- "tradition" (fr:lex:tradition): *tradition* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before Reading 11 - La France Moderne (position 147), or let the learner read it instead of typing it. Sentence: "la France moderne combine tradition et innovation"
-- "innovation" (fr:lex:innovation): *innovation* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before Reading 11 - La France Moderne (position 147), or let the learner read it instead of typing it. Sentence: "la France moderne combine tradition et innovation"
 - "viendrai" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in a lesson before Unit 11 Practice - Fill in the Blanks (position 148). Concept card: "je viendrai"
 - "seras" (fr:lex:etre): the word être is taught at position 3, but this form is not; teach in a lesson before Unit 11 Practice - Fill in the Blanks (position 148). Concept card: "tu seras"
 - "aura" (fr:lex:avoir): the word avoir is taught at position 4, but this form is not; teach in a lesson before Unit 11 Practice - Fill in the Blanks (position 148). Concept card: "il aura fait"
@@ -1191,10 +1104,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 ### 156. qui est-ce qui vs qui est-ce que - Master 'Who' Questions
 
 - "rencontré" (fr:lex:rencontrer): not taught anywhere in the course; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Sentence: "qui est-ce que tu as rencontré?"
-
-### 159. Rhetorical & Negative Questions - Advanced Style
-
-- "magnifique" (fr:lex:magnifique): *magnifique* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in a lesson before Reading 8 - Ma Journée (position 104), or let the learner read it instead of typing it. Sentence: "n'est-ce pas magnifique?"
 
 # 2. Exam topics not taught
 

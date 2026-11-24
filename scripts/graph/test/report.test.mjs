@@ -212,3 +212,13 @@ test('How to read this says cognate allowances apply to English speakers and com
   assert.match(ja, /Japanese speakers/);
   assert.match(ja, /no cognate list exists/i);
 });
+
+test('with cognates allowed in all French, How to read says cognates count as known from the cognates lesson on, typed or read', () => {
+  const pair = { native: 'en', file: 'curriculum-graph/pairs/en-fr/cognates.json', words: [{}] };
+  const md = renderFixList([], course, {}, { pair, cognatesAllowIn: 'all' });
+  const how = md.slice(md.indexOf('## How to read this'), md.indexOf('# 1. Untaught words and patterns'));
+  assert.match(how, /From the cognates lesson on, every cognate counts as known, in French the learner types as well as French they read or hear, so Section 1 does not list it\./);
+  assert.match(how, /curriculum-graph\/pairs\/en-fr\/cognates\.json/);
+  assert.doesNotMatch(how, /first types it|has to type|instead of typing/);
+  assert.ok(!/[–—]/.test(how), 'no en or em dashes');
+});

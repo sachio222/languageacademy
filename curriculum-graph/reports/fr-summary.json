@@ -11,9 +11,9 @@
     "translate-item": 1761,
     "unknown-word": 34,
     "untaught-construction": 109,
-    "untaught-word": 685
+    "untaught-word": 603
   },
-  "cognatesAllowed": 490,
+  "cognatesAllowed": 638,
   "coverage": {
     "A1": {
       "availableWords": 422,
@@ -70,7 +70,7 @@
       "taughtWords": 22
     }
   },
-  "errors": 2674,
+  "errors": 2592,
   "functionsPossible": {
     "A1": {
       "possible": 40,
