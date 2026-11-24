@@ -17885,6 +17885,18 @@
   {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
+    "dictionaryId": "montre-fr",
+    "id": "fr:lex:montre",
+    "lemma": "montre",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": "A1",
+    "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "montrer-fr",
     "id": "fr:lex:montrer",
     "lemma": "montrer",

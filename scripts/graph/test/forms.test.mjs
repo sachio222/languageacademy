@@ -6,6 +6,7 @@ import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { buildFormIndex, lookupToken, lookupTokenStrict, strictKey } from '../fr/forms.mjs';
 import { tokenize } from '../fr/tokenize.mjs';
+import { fold } from '../fold.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const graph = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
@@ -98,4 +99,25 @@ test('strictKey strips a leading hyphen and t- from norm', () => {
 test('clitic -tu still resolves strictly to tu', () => {
   const toks = tokenize('vas-tu');
   assert.ok(lookupTokenStrict(index, toks[1]).some((r) => r.headwordId === 'fr:lex:tu'));
+});
+
+// The committed French graph: verbs added for the core lists spell their forms like manger, commencer, appeler and
+// lever, through irregular forms that override the plain -er patterns.
+const fr = loadGraph(join(here, '../../../curriculum-graph'), 'fr');
+const frIndex = buildFormIndex(fr);
+const strictReadings = (surface, headwordId) => (frIndex.get(fold(surface)) ?? [])
+  .filter((r) => r.surface === surface && r.headwordId === headwordId).map((r) => r.cell).sort();
+
+test('new -ger, -cer, -eter, -eler, e and é verbs spell their stem changes', () => {
+  assert.deepEqual(strictReadings('rangeons', 'fr:lex:ranger'), ['prs.1pl']);
+  assert.deepEqual(strictReadings('rangeait', 'fr:lex:ranger'), ['impf.3sg']);
+  assert.deepEqual(strictReadings('rangons', 'fr:lex:ranger'), []);
+  assert.deepEqual(strictReadings('avançons', 'fr:lex:avancer'), ['prs.1pl']);
+  assert.deepEqual(strictReadings('jette', 'fr:lex:jeter'), ['prs.1sg', 'prs.3sg', 'sbjv.1sg', 'sbjv.3sg']);
+  assert.deepEqual(strictReadings('jetons', 'fr:lex:jeter'), ['prs.1pl']);
+  assert.deepEqual(strictReadings('rappellera', 'fr:lex:rappeler'), ['fut.3sg']);
+  assert.deepEqual(strictReadings('mène', 'fr:lex:mener'), ['prs.1sg', 'prs.3sg', 'sbjv.1sg', 'sbjv.3sg']);
+  assert.deepEqual(strictReadings('espère', 'fr:lex:esperer'), ['prs.1sg', 'prs.3sg', 'sbjv.1sg', 'sbjv.3sg']);
+  assert.deepEqual(strictReadings('espérerai', 'fr:lex:esperer'), ['fut.1sg']);
+  assert.deepEqual(strictReadings('neigeait', 'fr:lex:neiger'), ['impf.3sg']);
 });

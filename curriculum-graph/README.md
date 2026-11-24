@@ -227,7 +227,7 @@ The core lists in `core/levels/` name what a learner must have to reach a level.
 
 The word list holds the words the course uses and about 1,400 more that a learner needs at A1, A2 or B1 and that no lesson uses yet, such as écrire, fermer, avion and noir. They came from the 3,000 most frequent lemmas in Lexique and the Eaquals vocabulary themes, each placed by hand, and `scripts/graph/fr/build/core-words.mjs` records them. A core word that no lesson teaches is expected: it is a gap the coverage report shows.
 
-The lists hold 732 words at A1, 681 at A2 and 841 at B1, so 1,413 words through A2 and 2,254 through B1. Milton and Alexiou (2009) measured French learners knowing about 1,160 lemmas at A1, 1,650 at A2 and 2,420 at B1, out of the 5,000 most frequent. The A1 list sits below that A1 figure and the A2 and B1 totals sit just below theirs, because a core list holds what every learner must know at a level, not every word a learner at that level happens to know.
+The lists hold 733 words at A1, 681 at A2 and 841 at B1, so 1,414 words through A2 and 2,255 through B1. Milton and Alexiou (2009) measured French learners knowing about 1,160 lemmas at A1, 1,650 at A2 and 2,420 at B1, out of the 5,000 most frequent. The A1 list sits below that A1 figure and the A2 and B1 totals sit just below theirs, because a core list holds what every learner must know at a level, not every word a learner at that level happens to know.
 
 The team approves the lists before coverage is measured against them as a fixed target. After that, change them by hand, only when the team changes the target. If you change the level of a word or construction in a list, move it to the list of its new level or take it out. `pnpm graph:test` fails when a headword, construction or paradigm has no level or source, and when a list names a node of another level.
 
@@ -238,7 +238,7 @@ The team approves the lists before coverage is measured against them as a fixed 
 - `constructions.mjs` writes `constructions.json` and stays its source of truth.
 - `course-map.mjs` and `course-map-data.mjs` wrote the hand-edited course-map fields, `names.json` and a few headword changes; `course-map-data.mjs` records why each entry exists. The JSON files are now the source of truth, so edit them directly. Running `course-map.mjs` again would overwrite those edits.
 - `add-words.mjs` records the words added after the first full check. Running it again changes nothing.
-- `core-words.mjs` records the words added for the core lists, with their levels, and why some frequent words were left out (a spelling the checker already reads as another word, or an English word in course labels). Running it again changes nothing.
+- `core-words.mjs` records the words added for the core lists, with their levels and the irregular forms for their spelling changes (rangeons, jette, mène), and why some frequent words were left out (a spelling the checker already reads as another word, or an English word in course labels). Running it again changes nothing.
 - `constructions.mjs` takes construction levels from `construction-levels.mjs`.
 - `levels-propose.mjs` proposed the first headword levels from Lexique and FLELex files kept outside the repository, in a table that stays outside it too. It is not part of the build. The levels in `headwords.json` were decided from that table and are now edited by hand.
 
