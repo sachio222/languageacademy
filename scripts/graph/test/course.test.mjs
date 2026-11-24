@@ -104,7 +104,11 @@ test('a blank on either space of a gap stays a separate word, and elisions and h
     'Je vais au café.', "J'ai mangé une baguette hier.", "J'avais faim.", "Nous n'avons pas l'argent.",
     'Où travaillez-vous?', 'Tu comprends?', "Qu'est-ce que c'est ? c'est un livre.",
   ]);
-  assert.deepEqual(r.blankProblems, []);
+  // The app shows a blank in place of the character at its position, so a blank on a mark drops the mark.
+  assert.deepEqual(r.blankProblems, [
+    { ref: 'x#sentences[4]', answer: 'travaillez', word: null, mark: '-' },
+    { ref: 'x#sentences[5]', answer: 'comprends', word: null, mark: '?' },
+  ]);
 });
 
 test('a blank inside a word is reported and filled at the nearest free gap', () => {

@@ -237,6 +237,7 @@ test('a misplaced blank gives blank-misplaced naming the answer and where it sit
     makeModule({ position: 1, blankProblems: [
       { ref: 'm1#sentences[2]', answer: 'au', word: 'restaurant' },
       { ref: 'm1#sentences[4]', answer: 'hier', word: null },
+      { ref: 'm1#sentences[5]', answer: 'travaillez', word: null, mark: '-' },
     ] }),
     makeModule({ position: 2 }),
   ]);
@@ -244,9 +245,11 @@ test('a misplaced blank gives blank-misplaced naming the answer and where it sit
   assert.deepEqual(issues.map((i) => [i.rule, i.severity, i.moduleKey, i.itemRef]), [
     ['blank-misplaced', 'error', 'm1', 'm1#sentences[2]'],
     ['blank-misplaced', 'error', 'm1', 'm1#sentences[4]'],
+    ['blank-misplaced', 'error', 'm1', 'm1#sentences[5]'],
   ]);
   assert.match(issues[0].message, /"au".*inside the word "restaurant"/);
   assert.match(issues[1].message, /"hier".*after the end of the sentence/);
+  assert.match(issues[2].message, /"travaillez" sits on the mark "-", so the app drops it/);
 });
 
 // course-map item keys

@@ -1,6 +1,6 @@
 # French course fix list
 
-2718 errors, 693 warnings, 146 modules with errors.
+2749 errors, 693 warnings, 148 modules with errors.
 
 ## How to read this
 
@@ -1643,28 +1643,59 @@ First 20:
 
 # 9. Other problems
 
+- blank-misplaced (error) [12. Unit 1 Practice - Fill in the Blanks]: 2024-01-10-unit1-practice#sentences[10]: the blank for "aussi" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [26. Unit 2 Practice - Fill in the Blanks]: 2024-01-23-unit2-practice#sentences[6]: the blank for "moi" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [26. Unit 2 Practice - Fill in the Blanks]: 2024-01-23-unit2-practice#sentences[11]: the blank for "voiture" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [51. Unit 4 Practice - Fill in the Blanks]: 2024-04-03-unit-4-practice#sentences[6]: the blank for "demain" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [51. Unit 4 Practice - Fill in the Blanks]: 2024-04-03-unit-4-practice#sentences[7]: the blank for "hier" sits after the end of the sentence, so learners see it after the full stop; move it to where the answer belongs
+- blank-misplaced (error) [51. Unit 4 Practice - Fill in the Blanks]: 2024-04-03-unit-4-practice#sentences[8]: the blank for "ici" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [51. Unit 4 Practice - Fill in the Blanks]: 2024-04-03-unit-4-practice#sentences[9]: the blank for "là" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [51. Unit 4 Practice - Fill in the Blanks]: 2024-04-03-unit-4-practice#sentences[14]: the blank for "ici" sits after the end of the sentence, so learners see it after the full stop; move it to where the answer belongs
+- blank-misplaced (error) [51. Unit 4 Practice - Fill in the Blanks]: 2024-04-03-unit-4-practice#sentences[18]: the blank for "demain" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [51. Unit 4 Practice - Fill in the Blanks]: 2024-04-03-unit-4-practice#sentences[19]: the blank for "ici" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [64. Unit 5 Practice - Fill in the Blanks]: 2024-04-15-unit-5-practice#sentences[27]: the blank for "baguette" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [64. Unit 5 Practice - Fill in the Blanks]: 2024-04-15-unit-5-practice#sentences[28]: the blank for "express" sits on the mark ",", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [64. Unit 5 Practice - Fill in the Blanks]: 2024-04-15-unit-5-practice#sentences[29]: the blank for "génial" sits on the mark "!", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [64. Unit 5 Practice - Fill in the Blanks]: 2024-04-15-unit-5-practice#sentences[30]: the blank for "top" sits on the mark "!", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [64. Unit 5 Practice - Fill in the Blanks]: 2024-04-15-unit-5-practice#sentences[31]: the blank for "au" sits inside the word "restaurant", so learners see the word cut in two; move it to where the answer belongs
 - blank-misplaced (error) [64. Unit 5 Practice - Fill in the Blanks]: 2024-04-15-unit-5-practice#sentences[32]: the blank for "manger" sits inside the word "maintenant", so learners see the word cut in two; move it to where the answer belongs
 - blank-misplaced (error) [76. Unit 6 Practice - Fill in the Blanks]: 2024-04-27-unit-6-practice#sentences[28]: the blank for "besoin" sits inside the word "de", so learners see the word cut in two; move it to where the answer belongs
+- blank-misplaced (error) [76. Unit 6 Practice - Fill in the Blanks]: 2024-04-27-unit-6-practice#sentences[35]: the blank for "question" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [76. Unit 6 Practice - Fill in the Blanks]: 2024-04-27-unit-6-practice#sentences[36]: the blank for "fois" sits after the end of the sentence, so learners see it after the full stop; move it to where the answer belongs
+- blank-misplaced (error) [76. Unit 6 Practice - Fill in the Blanks]: 2024-04-27-unit-6-practice#sentences[38]: the blank for "moment" sits on the mark ",", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [76. Unit 6 Practice - Fill in the Blanks]: 2024-04-27-unit-6-practice#sentences[40]: the blank for "ville" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [76. Unit 6 Practice - Fill in the Blanks]: 2024-04-27-unit-6-practice#sentences[44]: the blank for "prendre" sits inside the word "train", so learners see the word cut in two; move it to where the answer belongs
+- blank-misplaced (error) [90. Unit 7 Practice - Fill in the Blanks]: 2024-05-11-unit-7-practice#sentences[6]: the blank for "comprends" sits on the mark "?", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [90. Unit 7 Practice - Fill in the Blanks]: 2024-05-11-unit-7-practice#sentences[12]: the blank for "penses" sits on the mark "?", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [90. Unit 7 Practice - Fill in the Blanks]: 2024-05-11-unit-7-practice#sentences[15]: the blank for "connais" sits inside the word "pas", so learners see the word cut in two; move it to where the answer belongs
+- blank-misplaced (error) [90. Unit 7 Practice - Fill in the Blanks]: 2024-05-11-unit-7-practice#sentences[17]: the blank for "en fait" sits on the mark ",", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [90. Unit 7 Practice - Fill in the Blanks]: 2024-05-11-unit-7-practice#sentences[18]: the blank for "question" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [90. Unit 7 Practice - Fill in the Blanks]: 2024-05-11-unit-7-practice#sentences[19]: the blank for "idée" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [90. Unit 7 Practice - Fill in the Blanks]: 2024-05-11-unit-7-practice#sentences[22]: the blank for "mal" sits after the end of the sentence, so learners see it after the full stop; move it to where the answer belongs
 - blank-misplaced (error) [90. Unit 7 Practice - Fill in the Blanks]: 2024-05-11-unit-7-practice#sentences[23]: the blank for "apprendre" sits after the end of the sentence, so learners see it after the full stop; move it to where the answer belongs
+- blank-misplaced (error) [105. Unit 8 Practice - Fill in the Blanks]: 2024-05-25-unit-8-practice#sentences[0]: the blank for "d'abord" sits on the mark ",", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [105. Unit 8 Practice - Fill in the Blanks]: 2024-05-25-unit-8-practice#sentences[0]: the blank for "ensuite" sits inside the word "je", so learners see the word cut in two; move it to where the answer belongs
+- blank-misplaced (error) [105. Unit 8 Practice - Fill in the Blanks]: 2024-05-25-unit-8-practice#sentences[4]: the blank for "t'appelles" sits on the mark "?", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [105. Unit 8 Practice - Fill in the Blanks]: 2024-05-25-unit-8-practice#sentences[6]: the blank for "me lève" sits after the end of the sentence, so learners see it after the full stop; move it to where the answer belongs
+- blank-misplaced (error) [105. Unit 8 Practice - Fill in the Blanks]: 2024-05-25-unit-8-practice#sentences[7]: the blank for "me lave" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [105. Unit 8 Practice - Fill in the Blanks]: 2024-05-25-unit-8-practice#sentences[17]: the blank for "écoute" sits on the mark "!", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [105. Unit 8 Practice - Fill in the Blanks]: 2024-05-25-unit-8-practice#sentences[20]: the blank for "m'habille" sits after the end of the sentence, so learners see it after the full stop; move it to where the answer belongs
 - blank-misplaced (error) [119. Unit 9 Practice - Fill in the Blanks]: 2024-06-10-unit-9-practice#sentences[15]: the blank for "es arrivé" sits after the end of the sentence, so learners see it after the full stop; move it to where the answer belongs
 - blank-misplaced (error) [119. Unit 9 Practice - Fill in the Blanks]: 2024-06-10-unit-9-practice#sentences[16]: the blank for "a marché" sits after the end of the sentence, so learners see it after the full stop; move it to where the answer belongs
+- blank-misplaced (error) [119. Unit 9 Practice - Fill in the Blanks]: 2024-06-10-unit-9-practice#sentences[17]: the blank for "cuisinais" sits on the mark ",", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [119. Unit 9 Practice - Fill in the Blanks]: 2024-06-10-unit-9-practice#sentences[17]: the blank for "ai entendu" sits inside the word "bruit", so learners see the word cut in two; move it to where the answer belongs
 - blank-misplaced (error) [119. Unit 9 Practice - Fill in the Blanks]: 2024-06-10-unit-9-practice#sentences[18]: the blank for "sommes restés" sits inside the word "maison", so learners see the word cut in two; move it to where the answer belongs
 - blank-misplaced (error) [119. Unit 9 Practice - Fill in the Blanks]: 2024-06-10-unit-9-practice#sentences[20]: the blank for "pour que" sits inside the word "ne", so learners see the word cut in two; move it to where the answer belongs
+- blank-misplaced (error) [138. Unit 10 Practice - Fill in the Blanks]: 2024-02-05-unit-10-practice#sentences[5]: the blank for "parte" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [138. Unit 10 Practice - Fill in the Blanks]: 2024-02-05-unit-10-practice#sentences[7]: the blank for "voyagerais" sits inside the word "plus", so learners see the word cut in two; move it to where the answer belongs
+- blank-misplaced (error) [138. Unit 10 Practice - Fill in the Blanks]: 2024-02-05-unit-10-practice#sentences[10]: the blank for "vient" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [138. Unit 10 Practice - Fill in the Blanks]: 2024-02-05-unit-10-practice#sentences[11]: the blank for "vienne" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [138. Unit 10 Practice - Fill in the Blanks]: 2024-02-05-unit-10-practice#sentences[17]: the blank for "couper" sits inside the word "les", so learners see the word cut in two; move it to where the answer belongs
 - blank-misplaced (error) [138. Unit 10 Practice - Fill in the Blanks]: 2024-02-05-unit-10-practice#sentences[19]: the blank for "voudrais" sits inside the word "je", so learners see the word cut in two; move it to where the answer belongs
 - blank-misplaced (error) [138. Unit 10 Practice - Fill in the Blanks]: 2024-02-05-unit-10-practice#sentences[19]: the blank for "suives" sits inside the word "rêves", so learners see the word cut in two; move it to where the answer belongs
+- blank-misplaced (error) [148. Unit 11 Practice - Fill in the Blanks]: 2024-02-16-unit-11-practice#sentences[5]: the blank for "travaillez" sits on the mark "-", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [148. Unit 11 Practice - Fill in the Blanks]: 2024-02-16-unit-11-practice#sentences[8]: the blank for "trouvé" sits on the mark "!", so the app drops it; put the blank on a space and keep the mark
+- blank-misplaced (error) [148. Unit 11 Practice - Fill in the Blanks]: 2024-02-16-unit-11-practice#sentences[14]: the blank for "à gauche" sits on the mark ",", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [148. Unit 11 Practice - Fill in the Blanks]: 2024-02-16-unit-11-practice#sentences[16]: the blank for "un" sits inside the word "rendez", so learners see the word cut in two; move it to where the answer belongs
 - blank-misplaced (error) [148. Unit 11 Practice - Fill in the Blanks]: 2024-02-16-unit-11-practice#sentences[17]: the blank for "arrivent" sits inside the word "vers", so learners see the word cut in two; move it to where the answer belongs
 - blank-misplaced (error) [148. Unit 11 Practice - Fill in the Blanks]: 2024-02-16-unit-11-practice#sentences[18]: the blank for "vivent" sits inside the word "dans", so learners see the word cut in two; move it to where the answer belongs

@@ -1,6 +1,6 @@
 {
   "byRule": {
-    "blank-misplaced": 27,
+    "blank-misplaced": 58,
     "claim-untaught": 27,
     "level-data-missing": 1,
     "nonstandard-shape": 41,
@@ -11,7 +11,7 @@
     "untaught-construction": 70,
     "untaught-word": 824
   },
-  "errors": 2718,
-  "modulesWithErrors": 146,
+  "errors": 2749,
+  "modulesWithErrors": 148,
   "warnings": 693
 }

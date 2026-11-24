@@ -164,15 +164,17 @@ function fillSentence(text, blanks) {
   const runs = [...text.matchAll(/\s{2,}/g)].map((m) => ({ start: m.index, end: m.index + m[0].length, used: false }));
   const placed = [];
   const misplaced = [];
+  const problems = [];
   for (const b of [...blanks].sort((x, y) => x.position - y.position)) {
     const p = b.position;
     if (p < text.length && !LETTER.test(text[p])) {
       const run = runs.find((r) => p >= r.start && p < r.end);
       if (run) run.used = true;
+      // On a mark (- ? ' …) instead of a space: the checker reads the answer before the mark, the app drops it.
+      if (!SPACE.test(text[p])) problems.push({ answer: b.answer, word: null, mark: text[p] });
       placed.push({ b, at: p, skip: SPACE.test(text[p]) });
     } else misplaced.push(b);
   }
-  const problems = [];
   for (const b of misplaced) {
     const p = b.position;
     problems.push({ answer: b.answer, word: p < text.length ? wordAt(text, p) : null });
