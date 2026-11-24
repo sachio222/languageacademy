@@ -271,5 +271,15 @@
     "dictionaryId": "to-fr",
     "cefr": null,
     "cefrSource": null
+  },
+  {
+    "id": "fr:lex:librairie",
+    "lemma": "librairie",
+    "pos": "noun",
+    "paradigms": [],
+    "senses": [],
+    "dictionaryId": null,
+    "cefr": null,
+    "cefrSource": null
   }
 ]

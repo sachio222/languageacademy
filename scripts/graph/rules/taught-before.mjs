@@ -2,6 +2,7 @@ import { tokenize, fold, restoreElisions } from '../fr/tokenize.mjs';
 import { lookupToken, lookupTokenStrict, lookupKey, strictKey } from '../fr/forms.mjs';
 import { detectConstructions } from '../fr/detect.mjs';
 import { issue } from '../issues.mjs';
+import { languageName } from '../pairs.mjs';
 
 const memo = new WeakMap();
 
@@ -66,9 +67,66 @@ const suppressions = (ctx, moduleKey, itemRef) => {
   return new Set(list.map((x) => (String(x).includes(':') ? String(x) : fold(String(x)))));
 };
 
+// The cognate allowance from the language pair (graph.pair). From the cognates lesson on, a cognate may appear before
+// it is taught in French the learner reads or hears. In French the learner types it keeps its issue, with reason
+// 'cognate', unless settings.cognates.allowIn is 'all'. A false friend never gets the allowance; an irregular form of
+// a cognate does not either, only the headword and its regular forms.
+function cognateTest(ctx) {
+  const { graph } = ctx;
+  const pair = graph.pair ?? { words: [], falseFriends: [], lesson: null };
+  const cognates = new Set(pair.words.map((w) => w.id));
+  const falseFriends = new Set(pair.falseFriends.map((w) => w.id));
+  const lessonAt = pair.lesson ? ctx.course.find((m) => m.moduleKey === pair.lesson)?.position ?? null : null;
+  return {
+    allowTyped: graph.settings?.cognates?.allowIn === 'all',
+    speakers: `${languageName(pair.native ?? graph.native)} speakers`,
+    isCognate: (readings, position) => lessonAt !== null && position >= lessonAt
+      && !readings.some((r) => falseFriends.has(r.headwordId))
+      && readings.some((r) => cognates.has(r.headwordId) && r.via !== 'irregular'),
+  };
+}
+
+// For one analyzed text of an item: is the token at index i French the learner types? `french` and `lenient` are
+// typed and `shown` is not. In a blank sentence (an item with blankAnswers) only the words of the answers are typed:
+// the learner reads the rest of the sentence.
+function typedTest(it, a, isWord) {
+  const typed = new Set([...(it.french ?? []), ...(it.lenient ?? [])]);
+  if (!typed.has(a.text)) return () => false;
+  if (!Array.isArray(it.blankAnswers) || !(it.french ?? []).includes(a.text)) return () => true;
+  const folds = a.tokens.map((t) => t.fold);
+  const mask = folds.map(() => false);
+  for (const answer of it.blankAnswers) {
+    const want = tokenize(String(answer), { isWord }).map((t) => t.fold);
+    if (!want.length) continue;
+    // the answer's words where they sit in the sentence; if the filled sentence spells them differently, every token
+    // that matches one of them
+    const at = folds.findIndex((_, j) => want.every((f, k) => folds[j + k] === f && !mask[j + k]));
+    if (at >= 0) want.forEach((_, k) => { mask[at + k] = true; });
+    else folds.forEach((f, j) => { if (want.includes(f)) mask[j] = true; });
+  }
+  return (i) => mask[i];
+}
+
+const results = new WeakMap();
+
 export function ruleTaughtBefore(ctx) {
-  const { graph, timeline } = ctx;
+  return run(ctx).issues;
+}
+
+// How many tokens the cognate allowance let through: cognates read or heard (or typed, with allowIn 'all') before
+// they are taught.
+export function cognatesAllowed(ctx) {
+  return run(ctx).cognatesAllowed;
+}
+
+function run(ctx) {
+  const done = results.get(ctx);
+  if (done) return done;
+  const { graph, timeline, index } = ctx;
   const analysis = analyzeItems(ctx);
+  const cognate = cognateTest(ctx);
+  const isWord = (f) => index.has(f) || graph.names.has(f);
+  let allowed = 0;
   const first = firstUse(ctx);
   const titleAt = new Map(ctx.course.map((m) => [m.position, m.title]));
   const issues = [];
@@ -96,12 +154,19 @@ export function ruleTaughtBefore(ctx) {
     for (const it of m.items) {
       const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
+        const typedAt = typedTest(it, a, isWord);
         a.tokens.forEach((t, i) => {
           const lk = lookupKey(t);
           if (graph.names.has(t.fold) || graph.names.has(lk)) return;
           const rs = a.readings[i];
           if (ignore.has(lk) || ignore.has(t.fold)
             || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
+          const untaughtCognate = rs.length > 0 && !rs.some((r) => timeline.isReadingAvailable(r, m.position))
+            && cognate.isCognate(rs, m.position);
+          if (untaughtCognate && (cognate.allowTyped || !typedAt(i))) {
+            allowed += 1;
+            return;
+          }
           if (seenWord(a, t, lk)) return;
           const base = { moduleKey: m.moduleKey, position: m.position, itemRef: it.ref, surface: t.surface };
           if (rs.length === 0) {
@@ -125,11 +190,16 @@ export function ruleTaughtBefore(ctx) {
           const soonest = heads.filter((h) => laters.length && laterNote(h, m.position) === Math.min(...laters));
           const earlier = heads.filter((h) => timeline.isAvailable(h, m.position));
           const named = pick(soonest.length ? soonest : earlier.length ? earlier : heads);
-          // reason: 'later' (taught after this module), 'form' (the word is taught earlier, this form is not), 'nowhere'
-          const reason = laters.length ? 'later' : taughtEarlier ? 'form' : 'nowhere';
+          // reason: 'later' (taught after this module), 'form' (the word is taught earlier, this form is not), 'nowhere',
+          // or 'cognate' (a cognate the learner types), which keeps the other reason as baseReason.
+          const baseReason = laters.length ? 'later' : taughtEarlier ? 'form' : 'nowhere';
+          const reason = untaughtCognate ? 'cognate' : baseReason;
           let tail = 'it is not taught anywhere in the course';
-          if (reason === 'later') tail = taughtClause(Math.min(...laters));
-          else if (reason === 'form') tail = 'the word is taught earlier, but this form is not';
+          if (baseReason === 'later') tail = taughtClause(Math.min(...laters));
+          else if (baseReason === 'form') tail = 'the word is taught earlier, but this form is not';
+          if (untaughtCognate) {
+            tail += `; ${t.surface} is a cognate, so ${cognate.speakers} may read it before it is taught, but they should not have to type it`;
+          }
           // A form gap on a word taught earlier is fixed where that form is first used, not the word.
           const formGap = !laters.length && taughtEarlier;
           const keys = formGap ? rs.filter((r) => r.via !== 'lemma').map((r) => r.nodeId) : heads;
@@ -138,8 +208,9 @@ export function ruleTaughtBefore(ctx) {
           issues.push(issue({
             ...base, rule: 'untaught-word', nodeId: named,
             reason,
-            taughtLaterAt: reason === 'later' ? at(Math.min(...laters)) : null,
-            taughtEarlierAt: reason === 'form' ? at(timeline.taughtAt.get(named)) : null,
+            ...(untaughtCognate ? { baseReason } : {}),
+            taughtLaterAt: baseReason === 'later' ? at(Math.min(...laters)) : null,
+            taughtEarlierAt: baseReason === 'form' ? at(timeline.taughtAt.get(named)) : null,
             lemma: graph.nodes.get(named)?.lemma ?? null,
             text: a.text,
             message: `"${t.surface}" is used before it is taught (${it.ref}: ${a.text}); ${tail}`,
@@ -163,5 +234,7 @@ export function ruleTaughtBefore(ctx) {
       }
     }
   }
-  return issues;
+  const out = { issues, cognatesAllowed: allowed };
+  results.set(ctx, out);
+  return out;
 }

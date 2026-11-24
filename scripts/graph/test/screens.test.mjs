@@ -26,7 +26,8 @@ test('readScreen never returns imports, class names, log text, table or column n
   }
 });
 
-const base = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
+// These courses have no cognates lesson, so the fixture's language pair is left out (pairs.test.mjs covers it).
+const base = { ...loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr'), pair: null };
 const helpCourse = [makeModule({ position: 1, moduleKey: 'h1', kind: 'help' })];
 
 test('validateGraph reports a help module with no screen', () => {

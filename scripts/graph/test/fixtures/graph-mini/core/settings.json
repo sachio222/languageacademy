@@ -8,5 +8,9 @@
     ]
   },
   "translateAllowedThroughUnit": 1,
-  "levelThreshold": 0.9
+  "levelThreshold": 0.9,
+  "defaultNative": "en",
+  "cognates": {
+    "allowIn": "shown"
+  }
 }

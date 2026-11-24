@@ -5,10 +5,11 @@ import { fileURLToPath } from 'node:url';
 import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { makeModule, makeCtx } from './helpers.mjs';
-import { ruleTaughtBefore, analyzeItems, firstUse } from '../rules/taught-before.mjs';
+import { ruleTaughtBefore, analyzeItems, firstUse, cognatesAllowed } from '../rules/taught-before.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const base = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
+const fixtureDir = join(here, 'fixtures', 'graph-mini');
+const base = loadGraph(fixtureDir, 'fr');
 
 const item = (french, extra = {}) => ({
   ref: 'm1#1', source: 'x', french: Array.isArray(french) ? french : [french],
@@ -291,4 +292,73 @@ test('an accepted answer typed without accents is the same word as the accented 
     [mod(1, [item(['café'], { lenient: ['cafe'] }), item(['café'])]), mod(5, [])]);
   const hits = ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-word');
   assert.deepEqual(hits.map((i) => i.surface), ['café']);
+});
+
+// Cognates. The fixture pair (pairs/en-fr/cognates.json) lists café and parc, with librairie as a false friend, and
+// names m3 as the cognates lesson. Nothing in these courses teaches café, parc or librairie.
+const cognateCourse = (...later) => [mod(1, [item('Je parle.')]), mod(3, [], { kind: 'help' }), ...later];
+const cognateMap = { m1: { teachesWords: ['fr:lex:je', 'fr:lex:parler'], teachesConstructions: ['fr:cx:verb.er.present'] } };
+const untaught = (ctx, surface) => ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-word' && i.surface === surface);
+
+test('a cognate in shown text after the cognates lesson gives no issue and counts as allowed', () => {
+  const ctx = setup(cognateMap, cognateCourse(mod(5, [item([], { shown: ['café'] })])));
+  assert.deepEqual(untaught(ctx, 'café'), []);
+  assert.equal(cognatesAllowed(ctx), 1);
+});
+
+test('a cognate the learner types keeps its issue, with reason cognate', () => {
+  const ctx = setup(cognateMap, cognateCourse(mod(5, [item('café')])));
+  const [hit, ...rest] = untaught(ctx, 'café');
+  assert.equal(rest.length, 0);
+  assert.equal(hit.reason, 'cognate');
+  assert.equal(hit.baseReason, 'nowhere');
+  assert.match(hit.message, /café is a cognate, so English speakers may read it before it is taught, but they should not have to type it/);
+  assert.equal(cognatesAllowed(ctx), 0);
+});
+
+test('in a blank sentence a cognate outside the blank is read, inside the blank it is typed', () => {
+  const outside = setup(cognateMap, cognateCourse(mod(5, [item('Je parle café.', { blankAnswers: ['parle'] })])));
+  assert.deepEqual(untaught(outside, 'café'), []);
+  assert.equal(cognatesAllowed(outside), 1);
+  const inside = setup(cognateMap, cognateCourse(mod(5, [item('Je parle café.', { blankAnswers: ['café'] })])));
+  assert.equal(untaught(inside, 'café')[0]?.reason, 'cognate');
+});
+
+test('a cognate before the cognates lesson is an ordinary untaught word', () => {
+  const ctx = setup(cognateMap, cognateCourse(mod(2, [item([], { shown: ['café'] })])));
+  const [hit] = untaught(ctx, 'café');
+  assert.equal(hit.reason, 'nowhere');
+  assert.equal(cognatesAllowed(ctx), 0);
+});
+
+test('with allowIn all, a typed cognate gives no issue', () => {
+  const settings = { ...base.settings, cognates: { allowIn: 'all' } };
+  const ctx = setup(cognateMap, cognateCourse(mod(5, [item('café'), item('Je parle café.', { blankAnswers: ['café'] })])), { settings });
+  assert.deepEqual(untaught(ctx, 'café'), []);
+  assert.equal(cognatesAllowed(ctx), 2);
+});
+
+test('for a native language with no pair file every cognate is an ordinary untaught word', () => {
+  const ja = loadGraph(fixtureDir, 'fr', { native: 'ja' });
+  const course = cognateCourse(mod(5, [item([], { shown: ['café'] }), item('parc'), item('Je parle café.', { blankAnswers: ['parle'] })]));
+  const ctx = makeCtx({ graph: { ...ja, courseMap: cognateMap }, course });
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-word');
+  assert.deepEqual(hits.map((i) => [i.surface, i.reason]), [['café', 'nowhere'], ['parc', 'nowhere']]);
+  assert.equal(cognatesAllowed(ctx), 0);
+});
+
+test('a false friend never gets the allowance, even when it is also listed as a cognate', () => {
+  const ctx = setup(cognateMap, cognateCourse(mod(5, [item([], { shown: ['librairie'] })])));
+  assert.equal(untaught(ctx, 'librairie')[0]?.reason, 'nowhere');
+  const pair = { ...base.pair, words: [...base.pair.words, { id: 'fr:lex:librairie', native: 'library', kind: 'close' }] };
+  const both = setup(cognateMap, cognateCourse(mod(5, [item([], { shown: ['librairie'] })])), { pair });
+  assert.equal(untaught(both, 'librairie')[0]?.reason, 'nowhere');
+  assert.equal(cognatesAllowed(both), 0);
+});
+
+test('a cognate verb covers its regular forms but not an irregular one', () => {
+  const pair = { ...base.pair, words: [{ id: 'fr:lex:travailler', native: 'travail', kind: 'close' }, { id: 'fr:lex:aller', native: 'go', kind: 'close' }] };
+  const ctx = setup({}, cognateCourse(mod(5, [item([], { shown: ['travaillons'] }), item([], { shown: ['vais'] })])), { pair });
+  assert.deepEqual(untaught(ctx, 'travaillons'), []);
+  assert.equal(untaught(ctx, 'vais').length, 1);
 });

@@ -42,7 +42,7 @@ test('loadGraph reads the fixture', () => {
   assert.equal(g.nodes.get('fr:lex:parler').lemma, 'parler');
   assert.ok(g.names.has('marie'));
   assert.equal(g.settings.levelThreshold, 0.9);
-  assert.equal(g.headwords.length, 22);
+  assert.equal(g.headwords.length, 23);
 });
 
 test('loadGraph throws with the path when a data file is missing', () => {

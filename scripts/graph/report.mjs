@@ -1,6 +1,8 @@
 // Turns the checker's issues into counts and a markdown fix list for the product owner.
+import { languageName } from './pairs.mjs';
 
-export function summarize(issues) {
+// stats (from runCheck): the native language checked for and how many tokens the cognate allowance let through.
+export function summarize(issues, stats = {}) {
   const byRule = {};
   let errors = 0;
   let warnings = 0;
@@ -12,7 +14,10 @@ export function summarize(issues) {
       if (i.moduleKey) modules.add(i.moduleKey);
     } else warnings += 1;
   }
-  return { byRule, errors, warnings, modulesWithErrors: modules.size };
+  const extra = {};
+  if (stats.native !== undefined) extra.native = stats.native;
+  if (stats.cognatesAllowed !== undefined) extra.cognatesAllowed = stats.cognatesAllowed;
+  return { byRule, errors, warnings, modulesWithErrors: modules.size, ...extra };
 }
 
 // Rules graph:check always prints, even at zero: a course that reads cleanly has none of them.
@@ -25,6 +30,8 @@ export function checkSummaryLines(summary) {
   return [
     ...rules.map((rule) => `${rule}: ${counts[rule]}`),
     `errors: ${summary.errors}, warnings: ${summary.warnings}, modules with errors: ${summary.modulesWithErrors}`,
+    ...(summary.native !== undefined ? [`native: ${summary.native}`] : []),
+    ...(summary.cognatesAllowed !== undefined ? [`cognatesAllowed: ${summary.cognatesAllowed}`] : []),
   ];
 }
 
@@ -48,8 +55,12 @@ function fixClause(i, byKey) {
   return base;
 }
 
-// Why a word or pattern counts as untaught, in plain words.
-function reasonClause(i) {
+// Why a word or pattern counts as untaught, in plain words. A typed cognate says so, then gives its other reason.
+function reasonClause(i, speakers) {
+  if (i.reason === 'cognate') {
+    const rest = reasonClause({ ...i, reason: i.baseReason }, speakers);
+    return `*${i.surface}* is a cognate, so ${speakers} may read it before it is taught, but they should not have to type it${rest ? `; ${rest}` : ''}`;
+  }
   if (i.reason === 'later' && i.taughtLaterAt) return `taught later, at position ${i.taughtLaterAt.position} (${i.taughtLaterAt.title})`;
   if (i.reason === 'form' && i.taughtEarlierAt) {
     return `the word ${i.lemma ?? i.nodeId} is taught at position ${i.taughtEarlierAt.position}, but this form is not`;
@@ -105,7 +116,22 @@ const SOURCE_LABEL = {
   feedback: 'Feedback', title: 'Module title', description: 'Module description', screen: 'Help screen',
 };
 
-export function renderFixList(issues, course, courseMap = {}) {
+// The how-to-read paragraph on cognates, for the native language the list was checked for.
+function cognatesParagraph(pair) {
+  const lang = languageName(pair.native);
+  if (!pair.words?.length) {
+    return `This list was checked for ${lang} speakers. No cognate list exists for ${lang} speakers, so every untaught word `
+      + 'counts, however close it is to a word they know.';
+  }
+  return `This list was checked for ${lang} speakers, so a cognate (a French word they read correctly without a lesson, `
+    + 'such as restaurant) may appear in French the learner reads or hears from the cognates lesson on, before a lesson '
+    + `teaches it. The cognates come from curriculum-graph/pairs/${pair.native}-${pair.target ?? 'fr'}/cognates.json, and `
+    + 'Section 1 still lists a cognate the learner has to type.';
+}
+
+// opts.pair: the language pair the issues were checked with (graph.pair); it sets the cognates paragraph.
+export function renderFixList(issues, course, courseMap = {}, opts = {}) {
+  const speakers = `${languageName(opts.pair?.native ?? 'en')} speakers`;
   const byKey = new Map(course.map((m) => [m.moduleKey, m]));
   const sourceOf = new Map(course.flatMap((m) => (m.items ?? []).map((it) => [it.ref, it.source])));
   const unitOf = (i) => byKey.get(i.moduleKey)?.unitTitle ?? 'Other';
@@ -116,6 +142,7 @@ export function renderFixList(issues, course, courseMap = {}) {
   out.push(`${s.errors} errors, ${s.warnings} warnings, ${s.modulesWithErrors} modules with errors.`, '');
   out.push('## How to read this', '');
   for (const para of HOW_TO_READ) out.push(para, '');
+  if (opts.pair) out.push(cognatesParagraph(opts.pair), '');
   const notes = course.flatMap((m) => (courseMap[m.moduleKey]?.contentNotes ?? []).map((n) => `- ${m.position}. ${m.title}: ${n}`));
   if (notes.length) out.push('## Lesson text to fix', '', ...notes, '');
 
@@ -144,7 +171,7 @@ export function renderFixList(issues, course, courseMap = {}) {
   out.push('# 1. Untaught words and patterns', '');
   grouped(of('untaught-word', 'untaught-construction'), (i) => {
     const what = i.surface ? `"${i.surface}" (${i.nodeId ?? 'no node'})` : i.nodeId;
-    const why = reasonClause(i);
+    const why = reasonClause(i, speakers);
     const label = SOURCE_LABEL[sourceOf.get(i.itemRef)] ?? 'Sentence';
     const sentence = i.text ? ` ${label}: "${excerpt(i.text, i.surface)}"` : '';
     return `- ${what}: ${why ? `${why}; ` : ''}${fixClause(i, byKey)}.${sentence}`;

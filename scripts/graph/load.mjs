@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fold } from './fold.mjs';
+import { loadPair, ALLOW_IN } from './pairs.mjs';
 
 function readJson(path) {
   let text;
@@ -20,10 +21,19 @@ const DEFAULT_SETTINGS = {
   reuse: { immediateWindow: 2, windows: [5, 12, 30] },
   translateAllowedThroughUnit: 1,
   levelThreshold: 0.9,
+  defaultNative: 'en',
+  cognates: { allowIn: 'shown' },
 };
 
-export function loadGraph(graphDir, lang) {
+// opts.native: the learner's native language, which picks the language pair (pairs.mjs); settings.defaultNative
+// when left out.
+export function loadGraph(graphDir, lang, opts = {}) {
   const settings = { ...DEFAULT_SETTINGS, ...readJson(join(graphDir, 'core', 'settings.json')) };
+  if (!ALLOW_IN.includes(settings.cognates?.allowIn)) {
+    throw new Error(`settings.json: cognates.allowIn must be one of ${ALLOW_IN.join(', ')}, not ${JSON.stringify(settings.cognates?.allowIn)}`);
+  }
+  const native = opts.native ?? settings.defaultNative;
+  const pair = loadPair(graphDir, native, lang);
   const functions = readJson(join(graphDir, 'core', 'functions.json'));
   const langDir = join(graphDir, 'languages', lang);
   const headwords = readJson(join(langDir, 'headwords.json'));
@@ -44,5 +54,5 @@ export function loadGraph(graphDir, lang) {
   }
 
   const names = new Set(nameList.map((n) => fold(n.surface)));
-  return { lang, settings, functions, nodes, duplicates, headwords, forms, paradigms, constructions, names, courseMap };
+  return { lang, native, pair, settings, functions, nodes, duplicates, headwords, forms, paradigms, constructions, names, courseMap };
 }

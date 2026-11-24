@@ -9,9 +9,11 @@
     "translate-item": 1761,
     "unknown-word": 63,
     "untaught-construction": 117,
-    "untaught-word": 1058
+    "untaught-word": 746
   },
-  "errors": 3084,
-  "modulesWithErrors": 156,
+  "cognatesAllowed": 506,
+  "errors": 2772,
+  "modulesWithErrors": 155,
+  "native": "en",
   "warnings": 672
 }

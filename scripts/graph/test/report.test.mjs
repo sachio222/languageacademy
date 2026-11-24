@@ -159,3 +159,39 @@ test('How to read this says the Reference unit is outside the course order', () 
   assert.match(how, /Reference unit/);
   assert.match(how, /concept cards, hints/);
 });
+
+test('graph:check prints the native language it checked for and the cognates it allowed', () => {
+  const s = summarize([{ rule: 'untaught-word', severity: 'error', moduleKey: 'm1' }], { native: 'en', cognatesAllowed: 7 });
+  assert.equal(s.native, 'en');
+  assert.equal(s.cognatesAllowed, 7);
+  assert.deepEqual(checkSummaryLines(s), [
+    'dangling-ref: 0',
+    'unread-items: 0',
+    'untaught-word: 1',
+    'errors: 1, warnings: 0, modules with errors: 1',
+    'native: en',
+    'cognatesAllowed: 7',
+  ]);
+});
+
+test('a typed cognate line says the learner may read it but should not have to type it', () => {
+  const md = renderFixList([
+    { rule: 'untaught-word', severity: 'error', moduleKey: 'm2', position: 2, surface: 'restaurant', nodeId: 'fr:lex:restaurant',
+      message: 'x', reason: 'cognate', baseReason: 'later', taughtLaterAt: { position: 3, title: 'Food' }, text: 'un restaurant',
+      fix: { kind: 'teach-earlier', moduleKey: 'm2' } },
+  ], course, {}, { pair: { native: 'en', file: 'curriculum-graph/pairs/en-fr/cognates.json', words: [{}] } });
+  const line = md.split('\n').find((l) => l.includes('"restaurant"'));
+  assert.match(line, /\*restaurant\* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 3 \(Food\); teach in this module\./);
+});
+
+test('How to read this says cognate allowances apply to English speakers and come from the pair file', () => {
+  const pair = { native: 'en', file: 'curriculum-graph/pairs/en-fr/cognates.json', words: [{}] };
+  const how = (md) => md.slice(md.indexOf('## How to read this'), md.indexOf('# 1. Untaught words and patterns'));
+  const en = how(renderFixList([], course, {}, { pair }));
+  assert.match(en, /English speakers/);
+  assert.match(en, /curriculum-graph\/pairs\/en-fr\/cognates\.json/);
+  assert.ok(!/[–—]/.test(en), 'no en or em dashes');
+  const ja = how(renderFixList([], course, {}, { pair: { native: 'ja', file: null, words: [] } }));
+  assert.match(ja, /Japanese speakers/);
+  assert.match(ja, /no cognate list exists/i);
+});

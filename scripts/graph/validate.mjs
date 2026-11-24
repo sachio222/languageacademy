@@ -4,7 +4,8 @@ import { issue } from './issues.mjs';
 import { parseId } from './ids.mjs';
 
 // opts.course and opts.repoRoot turn on the help screen checks: every help module names its screen component in
-// the course map, and that file exists.
+// the course map, and that file exists. opts.course also checks that the language pair's cognates lesson is in the
+// course.
 export function validateGraph(graph, opts = {}) {
   const out = [];
 
@@ -45,6 +46,27 @@ export function validateGraph(graph, opts = {}) {
     // An ignore entry is a node ID (has a colon) or a plain word; only node IDs can dangle.
     for (const [itemRef, o] of Object.entries(entry.overrides || {})) {
       for (const t of o?.ignore || []) if (String(t).includes(':')) ref(from, `overrides[${itemRef}].ignore`, String(t));
+    }
+  }
+
+  // The language pair: every cognate and false friend is a node, none is both, and the cognates lesson is in the course.
+  const pair = graph.pair;
+  if (pair) {
+    const from = `pair:${pair.native}-${pair.target ?? graph.lang}`;
+    for (const field of ['words', 'falseFriends']) for (const w of pair[field] ?? []) ref(from, field, w.id);
+    const falseFriends = new Set((pair.falseFriends ?? []).map((w) => w.id));
+    for (const w of pair.words ?? []) {
+      if (!falseFriends.has(w.id)) continue;
+      out.push(issue({
+        rule: 'cognate-conflict', nodeId: w.id,
+        message: `${from} lists ${w.id} both as a cognate and as a false friend; keep it in one list`,
+      }));
+    }
+    if (pair.lesson && opts.course && !opts.course.some((m) => m.moduleKey === pair.lesson)) {
+      out.push(issue({
+        rule: 'dangling-ref', nodeId: from,
+        message: `${from} names the cognates lesson ${pair.lesson}, which is not in the course`,
+      }));
     }
   }
 

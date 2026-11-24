@@ -5,7 +5,7 @@ import { readCourse } from './course.mjs';
 import { buildFormIndex } from './fr/forms.mjs';
 import { frenchWordTest } from './french-text.mjs';
 import { buildTimeline } from './timeline.mjs';
-import { ruleTaughtBefore } from './rules/taught-before.mjs';
+import { ruleTaughtBefore, cognatesAllowed } from './rules/taught-before.mjs';
 import { ruleReuse } from './rules/reuse.mjs';
 import { ruleTranslation } from './rules/translation.mjs';
 import { ruleClaims } from './rules/claims.mjs';
@@ -21,8 +21,9 @@ const RULES = [
   ruleDuplicates, ruleLevels, ruleUnread, ruleShapes, ruleBlanks, ruleCourseMapKeys, ruleCourseMapItems,
 ];
 
-export async function runCheck({ repoRoot, lang }) {
-  const graph = loadGraph(join(repoRoot, 'curriculum-graph'), lang);
+// native: the learner's native language, which picks the language pair; settings.defaultNative when left out.
+export async function runCheck({ repoRoot, lang, native }) {
+  const graph = loadGraph(join(repoRoot, 'curriculum-graph'), lang, { native });
   const index = buildFormIndex(graph);
   const course = await readCourse(repoRoot, { courseMap: graph.courseMap, isWord: frenchWordTest(graph, index) });
   const timeline = buildTimeline(graph, course);
@@ -32,5 +33,5 @@ export async function runCheck({ repoRoot, lang }) {
     ...timeline.issues,
     ...RULES.flatMap((rule) => rule(ctx)),
   ];
-  return { ctx, issues };
+  return { ctx, issues, stats: { native: graph.native, cognatesAllowed: cognatesAllowed(ctx) } };
 }

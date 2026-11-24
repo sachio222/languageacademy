@@ -13,8 +13,31 @@ Run the checker after you change a lesson. Once it finds no errors, the course c
 - **Node ID**: the code that names a headword (`fr:lex:`), an irregular form (`fr:form:`), a construction (`fr:cx:`) or a name (`fr:name:`). An ID never changes once it is committed.
 - **Item ref**: the address of one exercise, written `<moduleKey>#<path in the module file>`, for example `2024-01-01-famous-words#exerciseConfig.items[5]`. The path is `exerciseConfig.items[N]`, `exercises[N]`, `sentences[N]`, `fillInBlanksSentences[N]` or `readingPassage`. French a learner reads around the exercises has a ref of the same kind, ending in the path of its field: `concepts[2].example`, `exerciseConfig.items[5].hint`, `vocabularyReference[3].note`, or `screen[4]` for the fifth French string on a help screen (counting from 0).
 - **Help screen**: a help module whose page is written into a React component in `src/components/` instead of its lesson file. The course has four: liaison, cognates, questions and verb patterns.
+- **Cognate**: a French word that a speaker of the learner's native language reads correctly without a lesson, such as restaurant for an English speaker. A **false friend** looks like a word of that language but means something else: librairie is a bookshop, not a library.
 
 A word is available at a position once a teaching module at or before it has taught it. A regular form such as parlons is available once both its headword and its pattern (`fr:cx:verb.er.present`) are taught. An irregular form such as vais must be taught itself. Names (Paris, Marie) are always available; a capital letter alone does not make a word a name.
+
+## Cognates and the learner's native language
+
+The cognates lesson (`2024-10-21-cognates-help`, position 6) tells learners that many French words look like English ones. From that lesson on, the checker lets a cognate appear before a lesson teaches it, in French the learner reads or hears: a prompt, a reading passage, a concept card, or the rest of a fill-in-the-blank sentence. French the learner types still needs the word taught. Section 1 of the fix list keeps a typed cognate and says it is a cognate, so the fix can be to teach it or to stop asking for it to be typed. Before position 6 a cognate is an ordinary untaught word, and a false friend never gets this allowance.
+
+Which words count depends on the learner's native language, so the list lives in a language pair folder, `pairs/<native>-<target>/`, and not in the French word list. `pairs/en-fr/cognates.json` holds the English-French list:
+
+```json
+{
+  "lesson": "2024-10-21-cognates-help",
+  "words": [{ "id": "fr:lex:restaurant", "native": "restaurant", "kind": "exact" }],
+  "falseFriends": [{ "id": "fr:lex:librairie", "native": "library", "means": "bookshop" }]
+}
+```
+
+- `lesson` is the module that introduces cognates, or null for no allowance.
+- `words` lists each cognate by its headword ID, with the native word and how the spellings relate in `kind`: `exact` (same spelling), `accent` (only accents differ), `ending` (a regular ending swap: -ie/-y, -ique/-ic, -eur/-or, -iste/-ist, -ité/-ity, -el/-al, -aire/-ary, -eux/-ous, -isme/-ism, or -er/-e on verbs), or `close` (recognizable but irregular, such as musée and museum). For a verb or adjective, list the headword; the allowance covers its regular forms but not its irregular ones.
+- `falseFriends` lists look-alikes with the native word they resemble and what the French word means.
+
+Judge a cognate by meaning, not spelling. Pour, ville and raté look like English words (pour, villa, rate) and mean something else. Every ID must be a headword in `headwords.json`; add the headword first if it is missing. Keep both lists sorted by `id`.
+
+A native language with no pair folder has no cognates: `pnpm graph:check --native ja` counts every cognate as an untaught word. `core/settings.json` holds the default native language (`defaultNative`) and where cognates are allowed (`cognates.allowIn`): `"shown"` for French the learner reads or hears, or `"all"` to allow typed French too.
 
 ## What the checker reads
 
@@ -28,7 +51,8 @@ A help screen teaches only what its course-map entry credits. Its French is chec
 
 | File | What it holds | How it changes |
 |---|---|---|
-| `core/settings.json` | Reuse windows and the last unit allowed English-to-French translation prompts | By hand |
+| `core/settings.json` | Reuse windows, the last unit allowed English-to-French translation prompts, the default native language and where cognates are allowed | By hand |
+| `pairs/en-fr/cognates.json` | Cognates and false friends for English speakers learning French | By hand |
 | `languages/fr/headwords.json` | Course word list | By hand |
 | `languages/fr/forms.json` | Irregular forms | By hand |
 | `languages/fr/paradigms.json` | Regular patterns that generate forms (present tense of -er verbs, plural in -s) | By hand |
@@ -41,7 +65,7 @@ A help screen teaches only what its course-map entry credits. Its French is chec
 
 Run these from the repository root.
 
-- `pnpm graph:check` prints a count for each rule, then the number of errors and warnings. It exits with status 1 while any error remains, so expect a failing exit until the course can lock.
+- `pnpm graph:check` prints a count for each rule, then the number of errors and warnings, the native language it checked for (`native`) and how many uses of an untaught cognate it allowed (`cognatesAllowed`). It exits with status 1 while any error remains, so expect a failing exit until the course can lock. Add `--native <code>` to check for another native language, such as `--native ja`; `graph:report` takes the same option.
 - `pnpm graph:due <moduleKey|position>` lists the words and patterns the module at that position should use again. A taught word or pattern should come back within 2 modules, then within 5, 12 and 30 modules of each use. The list holds those with no use yet inside their current window, when that window ends at the next module or has already ended. Each line gives the ID, where it was taught, its last use and where its window ends.
 - `pnpm graph:report` writes the fix list (`reports/fr-fix-list.md`) and the counts (`reports/fr-summary.json`).
 - `pnpm graph:extract` rereads the vocabulary table of every teaching module and rewrites `teachesWords` in `course-map.json`. It prints each vocabulary word the course word list does not have.
@@ -73,6 +97,8 @@ Each entry in `course-map.json` is keyed by `moduleKey`. Only `teachesWords` is 
 | `screen` | For a help module, the component file of its help screen, such as `"src/components/CognatesHelp.jsx"`. The checker reads the French on that screen. |
 
 `pnpm graph:check` warns about an `itemKinds` or `overrides` key that names no exercise of its module, and reports any ID in these fields that is not in the graph. It reports an error `screen-missing` for a help module with no `screen`, and `dangling-ref` for a `screen` file that does not exist.
+
+For a pair file, it reports `dangling-ref` for a cognate or false friend that is not in the graph and for a `lesson` that is not in the course, and `cognate-conflict` for an ID listed both as a cognate and as a false friend. A pair file with a missing field or an unknown `kind` stops the checker with a message that names the file.
 
 ## Adding a headword
 

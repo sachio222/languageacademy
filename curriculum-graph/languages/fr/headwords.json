@@ -132,6 +132,16 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": null,
+    "id": "fr:lex:actuellement",
+    "lemma": "actuellement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "addition-fr",
     "id": "fr:lex:addition",
     "lemma": "addition",
@@ -635,6 +645,24 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": null,
+    "id": "fr:lex:assister",
+    "lemma": "assister",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "attendre-fr",
     "id": "fr:lex:attendre",
     "lemma": "attendre",
@@ -1006,6 +1034,24 @@
       "fr:cx:adj.regular"
     ],
     "pos": "adjective",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": null,
+    "id": "fr:lex:blesser",
+    "lemma": "blesser",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
     "senses": []
   },
   {
@@ -5566,6 +5612,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": null,
+    "id": "fr:lex:librairie",
+    "lemma": "librairie",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "lieux-fr",
     "id": "fr:lex:lieu",
     "lemma": "lieu",
@@ -9224,6 +9282,18 @@
     "lemma": "sens",
     "paradigms": [],
     "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": null,
+    "id": "fr:lex:sensible",
+    "lemma": "sensible",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
     "senses": []
   },
   {

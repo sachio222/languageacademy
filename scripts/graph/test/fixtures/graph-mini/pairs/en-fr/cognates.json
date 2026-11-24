@@ -1,0 +1,10 @@
+{
+  "lesson": "m3",
+  "words": [
+    { "id": "fr:lex:cafe", "native": "café", "kind": "exact" },
+    { "id": "fr:lex:parc", "native": "park", "kind": "close" }
+  ],
+  "falseFriends": [
+    { "id": "fr:lex:librairie", "native": "library", "means": "bookshop" }
+  ]
+}

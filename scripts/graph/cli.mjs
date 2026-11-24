@@ -8,14 +8,25 @@ import { writeSortedJson } from './write-json.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
+const USAGE = 'usage: cli.mjs <check|due|report> <lang> [arg] [--native <code>]';
+
 async function main() {
-  const [cmd, lang = 'fr', arg] = process.argv.slice(2);
+  const args = process.argv.slice(2);
+  // --native <code>: the learner's native language (settings.defaultNative when left out)
+  let native;
+  const flag = args.indexOf('--native');
+  if (flag >= 0) {
+    native = args[flag + 1];
+    if (!native || native.startsWith('--')) { console.error(USAGE); process.exit(2); }
+    args.splice(flag, 2);
+  }
+  const [cmd, lang = 'fr', arg] = args;
   if (!['check', 'due', 'report'].includes(cmd)) {
-    console.error('usage: cli.mjs <check|due|report> <lang> [arg]');
+    console.error(USAGE);
     process.exit(2);
   }
-  const { ctx, issues } = await runCheck({ repoRoot, lang });
-  const summary = summarize(issues);
+  const { ctx, issues, stats } = await runCheck({ repoRoot, lang, native });
+  const summary = summarize(issues, stats);
 
   if (cmd === 'check') {
     for (const line of checkSummaryLines(summary)) console.log(line);
@@ -36,7 +47,7 @@ async function main() {
 
   const dir = join(repoRoot, 'curriculum-graph/reports');
   mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, `${lang}-fix-list.md`), renderFixList(issues, ctx.course, ctx.graph.courseMap));
+  writeFileSync(join(dir, `${lang}-fix-list.md`), renderFixList(issues, ctx.course, ctx.graph.courseMap, { pair: ctx.graph.pair }));
   writeSortedJson(join(dir, `${lang}-summary.json`), summary);
   console.log(`wrote ${lang}-fix-list.md and ${lang}-summary.json: ${summary.errors} errors, ${summary.warnings} warnings`);
 }
