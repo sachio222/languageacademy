@@ -1,1 +1,873 @@
-[]
+[
+  {
+    "id": "fr:cx:adj.al",
+    "label": "Adjective agreement for adjectives in -al (international, internationale, internationaux, internationales)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "ale",
+        "cell": "f",
+        "strip": "al"
+      },
+      {
+        "add": "aux",
+        "cell": "pl",
+        "strip": "al"
+      },
+      {
+        "add": "ales",
+        "cell": "fpl",
+        "strip": "al"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:adj.double",
+    "label": "Adjective agreement that doubles the final consonant (bon, bonne; gentil, gentille; cruel, cruelle)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "nne",
+        "cell": "f",
+        "strip": "n"
+      },
+      {
+        "add": "ns",
+        "cell": "pl",
+        "strip": "n"
+      },
+      {
+        "add": "nnes",
+        "cell": "fpl",
+        "strip": "n"
+      },
+      {
+        "add": "lle",
+        "cell": "f",
+        "strip": "l"
+      },
+      {
+        "add": "ls",
+        "cell": "pl",
+        "strip": "l"
+      },
+      {
+        "add": "lles",
+        "cell": "fpl",
+        "strip": "l"
+      },
+      {
+        "add": "tte",
+        "cell": "f",
+        "strip": "t"
+      },
+      {
+        "add": "ts",
+        "cell": "pl",
+        "strip": "t"
+      },
+      {
+        "add": "ttes",
+        "cell": "fpl",
+        "strip": "t"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:adj.e",
+    "label": "Adjective agreement for adjectives ending in -e: same feminine, plural -s (jeune, jeunes)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "es",
+        "cell": "pl",
+        "strip": "e"
+      },
+      {
+        "add": "es",
+        "cell": "fpl",
+        "strip": "e"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:adj.er",
+    "label": "Adjective agreement for adjectives in -er (premier, première, premiers, premières)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "ère",
+        "cell": "f",
+        "strip": "er"
+      },
+      {
+        "add": "ers",
+        "cell": "pl",
+        "strip": "er"
+      },
+      {
+        "add": "ères",
+        "cell": "fpl",
+        "strip": "er"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:adj.eux",
+    "label": "Adjective agreement for adjectives in -eux (heureux, heureuse, heureuses)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "se",
+        "cell": "f",
+        "strip": "x"
+      },
+      {
+        "add": "ses",
+        "cell": "fpl",
+        "strip": "x"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:adj.if",
+    "label": "Adjective agreement for adjectives in -if (actif, active, actifs, actives)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "ve",
+        "cell": "f",
+        "strip": "f"
+      },
+      {
+        "add": "fs",
+        "cell": "pl",
+        "strip": "f"
+      },
+      {
+        "add": "ves",
+        "cell": "fpl",
+        "strip": "f"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:adj.regular",
+    "label": "Adjective agreement: feminine -e, plural -s, feminine plural -es (grand, grande, grands, grandes)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "e",
+        "cell": "f",
+        "strip": ""
+      },
+      {
+        "add": "s",
+        "cell": "pl",
+        "strip": ""
+      },
+      {
+        "add": "es",
+        "cell": "fpl",
+        "strip": ""
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:adj.s",
+    "label": "Adjective agreement for adjectives ending in -s: same masculine plural (français, française, françaises)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "se",
+        "cell": "f",
+        "strip": "s"
+      },
+      {
+        "add": "ses",
+        "cell": "fpl",
+        "strip": "s"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:noun.plural",
+    "label": "Noun plural with -s (livre, livres)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "s",
+        "cell": "pl",
+        "strip": ""
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:noun.plural.al",
+    "label": "Noun plural of nouns in -al with -aux (hôpital, hôpitaux)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "aux",
+        "cell": "pl",
+        "strip": "al"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:noun.plural.x",
+    "label": "Noun plural with -x for nouns in -eau, -au and -eu (gâteau, gâteaux)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "x",
+        "cell": "pl",
+        "strip": ""
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:prsptcp.er",
+    "label": "Present participle of -er verbs (parlant), used in the gerund en parlant",
+    "needs": [],
+    "rules": [
+      {
+        "add": "ant",
+        "cell": "prsptcp",
+        "strip": "er"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:prsptcp.ir",
+    "label": "Present participle of regular -ir verbs like finir (finissant)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "issant",
+        "cell": "prsptcp",
+        "strip": "ir"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:prsptcp.re",
+    "label": "Present participle of regular -re verbs (attendant)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "ant",
+        "cell": "prsptcp",
+        "strip": "re"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:ptcp.er",
+    "label": "Past participle of -er verbs, with its agreement forms (parlé, parlée, parlés, parlées)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "é",
+        "cell": "ptcp",
+        "strip": "er"
+      },
+      {
+        "add": "ée",
+        "cell": "ptcp.f",
+        "strip": "er"
+      },
+      {
+        "add": "és",
+        "cell": "ptcp.pl",
+        "strip": "er"
+      },
+      {
+        "add": "ées",
+        "cell": "ptcp.fpl",
+        "strip": "er"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:ptcp.ir",
+    "label": "Past participle of regular -ir verbs, with its agreement forms (fini, finie, finis, finies)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "i",
+        "cell": "ptcp",
+        "strip": "ir"
+      },
+      {
+        "add": "ie",
+        "cell": "ptcp.f",
+        "strip": "ir"
+      },
+      {
+        "add": "is",
+        "cell": "ptcp.pl",
+        "strip": "ir"
+      },
+      {
+        "add": "ies",
+        "cell": "ptcp.fpl",
+        "strip": "ir"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:ptcp.re",
+    "label": "Past participle of regular -re verbs, with its agreement forms (attendu, attendue, attendus, attendues)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "u",
+        "cell": "ptcp",
+        "strip": "re"
+      },
+      {
+        "add": "ue",
+        "cell": "ptcp.f",
+        "strip": "re"
+      },
+      {
+        "add": "us",
+        "cell": "ptcp.pl",
+        "strip": "re"
+      },
+      {
+        "add": "ues",
+        "cell": "ptcp.fpl",
+        "strip": "re"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.conditional",
+    "label": "Present conditional (conditionnel présent) built on the infinitive (je parlerais, j'attendrais)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "erais",
+        "cell": "cond.1sg",
+        "strip": "er"
+      },
+      {
+        "add": "erais",
+        "cell": "cond.2sg",
+        "strip": "er"
+      },
+      {
+        "add": "erait",
+        "cell": "cond.3sg",
+        "strip": "er"
+      },
+      {
+        "add": "erions",
+        "cell": "cond.1pl",
+        "strip": "er"
+      },
+      {
+        "add": "eriez",
+        "cell": "cond.2pl",
+        "strip": "er"
+      },
+      {
+        "add": "eraient",
+        "cell": "cond.3pl",
+        "strip": "er"
+      },
+      {
+        "add": "irais",
+        "cell": "cond.1sg",
+        "strip": "ir"
+      },
+      {
+        "add": "irais",
+        "cell": "cond.2sg",
+        "strip": "ir"
+      },
+      {
+        "add": "irait",
+        "cell": "cond.3sg",
+        "strip": "ir"
+      },
+      {
+        "add": "irions",
+        "cell": "cond.1pl",
+        "strip": "ir"
+      },
+      {
+        "add": "iriez",
+        "cell": "cond.2pl",
+        "strip": "ir"
+      },
+      {
+        "add": "iraient",
+        "cell": "cond.3pl",
+        "strip": "ir"
+      },
+      {
+        "add": "rais",
+        "cell": "cond.1sg",
+        "strip": "re"
+      },
+      {
+        "add": "rais",
+        "cell": "cond.2sg",
+        "strip": "re"
+      },
+      {
+        "add": "rait",
+        "cell": "cond.3sg",
+        "strip": "re"
+      },
+      {
+        "add": "rions",
+        "cell": "cond.1pl",
+        "strip": "re"
+      },
+      {
+        "add": "riez",
+        "cell": "cond.2pl",
+        "strip": "re"
+      },
+      {
+        "add": "raient",
+        "cell": "cond.3pl",
+        "strip": "re"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.er.impf",
+    "label": "Imperfect tense (imparfait) of regular -er verbs (je parlais)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "ais",
+        "cell": "impf.1sg",
+        "strip": "er"
+      },
+      {
+        "add": "ais",
+        "cell": "impf.2sg",
+        "strip": "er"
+      },
+      {
+        "add": "ait",
+        "cell": "impf.3sg",
+        "strip": "er"
+      },
+      {
+        "add": "ions",
+        "cell": "impf.1pl",
+        "strip": "er"
+      },
+      {
+        "add": "iez",
+        "cell": "impf.2pl",
+        "strip": "er"
+      },
+      {
+        "add": "aient",
+        "cell": "impf.3pl",
+        "strip": "er"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.er.present",
+    "label": "Present tense of regular -er verbs (parler: je parle, nous parlons)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "e",
+        "cell": "prs.1sg",
+        "strip": "er"
+      },
+      {
+        "add": "es",
+        "cell": "prs.2sg",
+        "strip": "er"
+      },
+      {
+        "add": "e",
+        "cell": "prs.3sg",
+        "strip": "er"
+      },
+      {
+        "add": "ons",
+        "cell": "prs.1pl",
+        "strip": "er"
+      },
+      {
+        "add": "ez",
+        "cell": "prs.2pl",
+        "strip": "er"
+      },
+      {
+        "add": "ent",
+        "cell": "prs.3pl",
+        "strip": "er"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.er.subjunctive",
+    "label": "Present subjunctive of regular -er verbs (que je parle, que nous parlions)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "e",
+        "cell": "sbjv.1sg",
+        "strip": "er"
+      },
+      {
+        "add": "es",
+        "cell": "sbjv.2sg",
+        "strip": "er"
+      },
+      {
+        "add": "e",
+        "cell": "sbjv.3sg",
+        "strip": "er"
+      },
+      {
+        "add": "ions",
+        "cell": "sbjv.1pl",
+        "strip": "er"
+      },
+      {
+        "add": "iez",
+        "cell": "sbjv.2pl",
+        "strip": "er"
+      },
+      {
+        "add": "ent",
+        "cell": "sbjv.3pl",
+        "strip": "er"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.future",
+    "label": "Future tense (futur simple) built on the infinitive (je parlerai, je finirai, j'attendrai)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "erai",
+        "cell": "fut.1sg",
+        "strip": "er"
+      },
+      {
+        "add": "eras",
+        "cell": "fut.2sg",
+        "strip": "er"
+      },
+      {
+        "add": "era",
+        "cell": "fut.3sg",
+        "strip": "er"
+      },
+      {
+        "add": "erons",
+        "cell": "fut.1pl",
+        "strip": "er"
+      },
+      {
+        "add": "erez",
+        "cell": "fut.2pl",
+        "strip": "er"
+      },
+      {
+        "add": "eront",
+        "cell": "fut.3pl",
+        "strip": "er"
+      },
+      {
+        "add": "irai",
+        "cell": "fut.1sg",
+        "strip": "ir"
+      },
+      {
+        "add": "iras",
+        "cell": "fut.2sg",
+        "strip": "ir"
+      },
+      {
+        "add": "ira",
+        "cell": "fut.3sg",
+        "strip": "ir"
+      },
+      {
+        "add": "irons",
+        "cell": "fut.1pl",
+        "strip": "ir"
+      },
+      {
+        "add": "irez",
+        "cell": "fut.2pl",
+        "strip": "ir"
+      },
+      {
+        "add": "iront",
+        "cell": "fut.3pl",
+        "strip": "ir"
+      },
+      {
+        "add": "rai",
+        "cell": "fut.1sg",
+        "strip": "re"
+      },
+      {
+        "add": "ras",
+        "cell": "fut.2sg",
+        "strip": "re"
+      },
+      {
+        "add": "ra",
+        "cell": "fut.3sg",
+        "strip": "re"
+      },
+      {
+        "add": "rons",
+        "cell": "fut.1pl",
+        "strip": "re"
+      },
+      {
+        "add": "rez",
+        "cell": "fut.2pl",
+        "strip": "re"
+      },
+      {
+        "add": "ront",
+        "cell": "fut.3pl",
+        "strip": "re"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.ir.impf",
+    "label": "Imperfect tense (imparfait) of regular -ir verbs like finir (je finissais)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "issais",
+        "cell": "impf.1sg",
+        "strip": "ir"
+      },
+      {
+        "add": "issais",
+        "cell": "impf.2sg",
+        "strip": "ir"
+      },
+      {
+        "add": "issait",
+        "cell": "impf.3sg",
+        "strip": "ir"
+      },
+      {
+        "add": "issions",
+        "cell": "impf.1pl",
+        "strip": "ir"
+      },
+      {
+        "add": "issiez",
+        "cell": "impf.2pl",
+        "strip": "ir"
+      },
+      {
+        "add": "issaient",
+        "cell": "impf.3pl",
+        "strip": "ir"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.ir.present",
+    "label": "Present tense of regular -ir verbs like finir (je finis, nous finissons)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "is",
+        "cell": "prs.1sg",
+        "strip": "ir"
+      },
+      {
+        "add": "is",
+        "cell": "prs.2sg",
+        "strip": "ir"
+      },
+      {
+        "add": "it",
+        "cell": "prs.3sg",
+        "strip": "ir"
+      },
+      {
+        "add": "issons",
+        "cell": "prs.1pl",
+        "strip": "ir"
+      },
+      {
+        "add": "issez",
+        "cell": "prs.2pl",
+        "strip": "ir"
+      },
+      {
+        "add": "issent",
+        "cell": "prs.3pl",
+        "strip": "ir"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.ir.subjunctive",
+    "label": "Present subjunctive of regular -ir verbs like finir (que je finisse)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "isse",
+        "cell": "sbjv.1sg",
+        "strip": "ir"
+      },
+      {
+        "add": "isses",
+        "cell": "sbjv.2sg",
+        "strip": "ir"
+      },
+      {
+        "add": "isse",
+        "cell": "sbjv.3sg",
+        "strip": "ir"
+      },
+      {
+        "add": "issions",
+        "cell": "sbjv.1pl",
+        "strip": "ir"
+      },
+      {
+        "add": "issiez",
+        "cell": "sbjv.2pl",
+        "strip": "ir"
+      },
+      {
+        "add": "issent",
+        "cell": "sbjv.3pl",
+        "strip": "ir"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.re.impf",
+    "label": "Imperfect tense (imparfait) of regular -re verbs (j'attendais)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "ais",
+        "cell": "impf.1sg",
+        "strip": "re"
+      },
+      {
+        "add": "ais",
+        "cell": "impf.2sg",
+        "strip": "re"
+      },
+      {
+        "add": "ait",
+        "cell": "impf.3sg",
+        "strip": "re"
+      },
+      {
+        "add": "ions",
+        "cell": "impf.1pl",
+        "strip": "re"
+      },
+      {
+        "add": "iez",
+        "cell": "impf.2pl",
+        "strip": "re"
+      },
+      {
+        "add": "aient",
+        "cell": "impf.3pl",
+        "strip": "re"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.re.present",
+    "label": "Present tense of regular -re verbs like attendre (j'attends, il attend)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "s",
+        "cell": "prs.1sg",
+        "strip": "re"
+      },
+      {
+        "add": "s",
+        "cell": "prs.2sg",
+        "strip": "re"
+      },
+      {
+        "add": "",
+        "cell": "prs.3sg",
+        "strip": "re"
+      },
+      {
+        "add": "ons",
+        "cell": "prs.1pl",
+        "strip": "re"
+      },
+      {
+        "add": "ez",
+        "cell": "prs.2pl",
+        "strip": "re"
+      },
+      {
+        "add": "ent",
+        "cell": "prs.3pl",
+        "strip": "re"
+      }
+    ]
+  },
+  {
+    "id": "fr:cx:verb.re.subjunctive",
+    "label": "Present subjunctive of regular -re verbs (que j'attende)",
+    "needs": [],
+    "rules": [
+      {
+        "add": "e",
+        "cell": "sbjv.1sg",
+        "strip": "re"
+      },
+      {
+        "add": "es",
+        "cell": "sbjv.2sg",
+        "strip": "re"
+      },
+      {
+        "add": "e",
+        "cell": "sbjv.3sg",
+        "strip": "re"
+      },
+      {
+        "add": "ions",
+        "cell": "sbjv.1pl",
+        "strip": "re"
+      },
+      {
+        "add": "iez",
+        "cell": "sbjv.2pl",
+        "strip": "re"
+      },
+      {
+        "add": "ent",
+        "cell": "sbjv.3pl",
+        "strip": "re"
+      }
+    ]
+  }
+]
