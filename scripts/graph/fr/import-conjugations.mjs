@@ -36,10 +36,18 @@ export function importConjugations(tables, graph) {
     if (!verbs.has(k) || h.pos === 'verb') verbs.set(k, h);
   }
   const out = new Map();
+  const skipped = [];
   for (const [name, table] of Object.entries(tables)) {
     const kind = classify(name);
-    const headword = kind && verbs.get(kind.lemmaKey);
-    if (!headword) continue;
+    if (!kind) {
+      skipped.push({ exportName: name, reason: 'unknown-suffix' });
+      continue;
+    }
+    const headword = verbs.get(kind.lemmaKey);
+    if (!headword) {
+      skipped.push({ exportName: name, reason: 'no-headword' });
+      continue;
+    }
     const key = parseId(headword.id).key;
     for (const [person, row] of Object.entries(table)) {
       const surface = row?.[kind.field];
@@ -53,7 +61,7 @@ export function importConjugations(tables, graph) {
       out.set(id, { id, of: headword.id, cell, surface });
     }
   }
-  return [...out.values()];
+  return { forms: [...out.values()], skipped };
 }
 
 async function main() {
@@ -62,10 +70,12 @@ async function main() {
   const file = join(graphDir, 'languages/fr/forms.json');
   const tables = await import(pathToFileURL(join(repoRoot, 'src/lessons/vocabulary/verbs/index.js')).href);
   const graph = loadGraph(graphDir, 'fr');
-  const added = importConjugations(tables, graph);
+  const { forms: added, skipped } = importConjugations(tables, graph);
+  const total = Object.keys(tables).length;
   const existing = JSON.parse(readFileSync(file, 'utf8'));
   writeSortedJson(file, [...existing, ...added]);
-  console.log(`import-conjugations: ${Object.keys(tables).length} tables, ${added.length} irregular forms added, ${existing.length + added.length} total`);
+  for (const s of skipped) console.log(`skipped\t${s.exportName}\t${s.reason}`);
+  console.log(`import-conjugations: ${total - skipped.length}/${total} tables matched, ${added.length} irregular forms added, ${existing.length + added.length} total`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) await main();

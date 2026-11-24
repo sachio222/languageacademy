@@ -17,7 +17,7 @@ const PARADIGMS_BY_ENDING = {
 export function headwordKey(lemma, pos, takenKeys) {
   const base = fold(lemma).replace(/[\s']+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
   if (!takenKeys.has(base)) return base;
-  const withPos = `${base}.${pos}`;
+  const withPos = `${base}.${String(pos).toLowerCase().replace(/\s+/g, '-')}`;
   if (!takenKeys.has(withPos)) return withPos;
   let n = 2;
   while (takenKeys.has(`${withPos}${n}`)) n++;

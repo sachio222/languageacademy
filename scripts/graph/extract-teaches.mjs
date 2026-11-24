@@ -1,6 +1,5 @@
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { readFileSync } from 'node:fs';
 import { loadGraph } from './load.mjs';
 import { readCourse } from './course.mjs';
 import { tokenize } from './fr/tokenize.mjs';

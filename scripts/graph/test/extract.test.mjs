@@ -39,7 +39,7 @@ test('extractTeaches keeps other course-map fields and reports unknown tokens', 
   assert.deepEqual(g.courseMap.a.teachesWords, ['stale'], 'input is not mutated');
 });
 
-test('extractTeaches prefers irregular over generated and lemma readings', () => {
+test('extractTeaches keeps every reading tied at the best rank', () => {
   // "va" is both aller.prs.3sg (irregular) and vouloir.sbjv.3sg (irregular): both kept.
   const course = [makeModule({ position: 1, moduleKey: 'a', vocab: ['va'] })];
   const { courseMap } = extractTeaches(graph, course, index);
@@ -123,6 +123,7 @@ test('headwordKey folds diacritics and joins spaces and apostrophes', () => {
   assert.equal(headwordKey('il y a', 'expression', new Set()), 'il-y-a');
   assert.equal(headwordKey("  l'  eau ", 'noun', new Set()), 'l-eau');
   assert.equal(headwordKey('est', 'noun', new Set(['est'])), 'est.noun');
+  assert.equal(headwordKey('est', 'Proper Noun', new Set(['est'])), 'est.proper-noun');
 });
 
 test('importConjugations adds only cells whose surface differs from the generated form', () => {
@@ -138,7 +139,7 @@ test('importConjugations adds only cells whose surface differs from the generate
     allerConjugations: { je: { conjugation: 'vais' } },
     inconnuConjugations: { je: { conjugation: 'x' } },
   };
-  const nodes = importConjugations(tables, graph);
+  const { forms: nodes } = importConjugations(tables, graph);
   const byId = Object.fromEntries(nodes.map((n) => [n.id, n]));
   assert.deepEqual(Object.keys(byId).sort(), [
     'fr:form:aller.cond.1sg', 'fr:form:aller.cond.3sg', 'fr:form:parler.prs.1pl',
@@ -149,12 +150,25 @@ test('importConjugations adds only cells whose surface differs from the generate
   assert.equal(byId['fr:form:parler.prs.1pl'].surface, 'parlâmes');
 });
 
+test('importConjugations reports skipped tables with a reason', () => {
+  const { forms, skipped } = importConjugations({
+    inconnuConjugations: { je: { conjugation: 'x' } },
+    parlerSubjonctif: { je: { conjugation: 'x' } },
+    parlerConjugations: { je: { conjugation: 'parle' } },
+  }, graph);
+  assert.deepEqual(forms, []);
+  assert.deepEqual(skipped, [
+    { exportName: 'inconnuConjugations', reason: 'no-headword' },
+    { exportName: 'parlerSubjonctif', reason: 'unknown-suffix' },
+  ]);
+});
+
 test('importConjugations reads imperfect and participle tables', () => {
   const tables = {
     etrePastConjugations: { je: { conjugation: 'étais' } },
     parlerPasseComposeConjugations: { je: { pastParticiple: 'parlé', auxiliary: 'ai' } },
   };
-  const nodes = importConjugations(tables, graph);
+  const { forms: nodes } = importConjugations(tables, graph);
   // the fixture's parler has no participle paradigm, so its participle is not generated
   assert.deepEqual(nodes.map((n) => n.id), ['fr:form:etre.impf.1sg', 'fr:form:parler.ptcp']);
   assert.equal(nodes[1].surface, 'parlé');
