@@ -166,7 +166,14 @@
         "surface": "la|l'"
       },
       {
-        "surface": "(?!(acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager)$).+"
+        "any": [
+          {
+            "pos": "noun"
+          },
+          {
+            "pos": "adjective"
+          }
+        ]
       }
     ],
     "examples": {
@@ -185,7 +192,7 @@
       ]
     },
     "id": "fr:cx:article.partitive",
-    "label": "Partitive article du, de la, de l' after a verb (some bread, some water)",
+    "label": "Partitive article du, de la, de l' after a verb, before a noun or adjective (some bread, some water)",
     "needs": [
       "fr:cx:article.definite",
       "fr:cx:contraction.de"
@@ -196,14 +203,19 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "faire|fais|faisaient|faisais|faisait|faisant|faisiez|faisions|faisons|fait|faite|faites|faits|fasse|fassent|fasses|fassiez|fassions|fera|ferai|feraient|ferais|ferait|feras|ferez|feriez|ferions|ferons|feront|font"
+        "any": [
+          {
+            "headword": "fr:lex:faire"
+          }
+        ]
       },
       {
         "optional": true,
         "surface": "pas|jamais"
       },
       {
-        "surface": "acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager"
+        "pos": "verb",
+        "via": "lemma"
       }
     ],
     "examples": {
@@ -938,7 +950,14 @@
         "surface": "plus|moins|aussi"
       },
       {
-        "surface": "argente|argentee|argentees|argentes|autre|autres|beau|beaux|beige|beiges|bel|belle|belles|blanc|blanche|blanches|blancs|bleu|bleue|bleues|bleus|bon|bonne|bonnes|bons|capot|celebre|celebres|certain|certaine|certaines|certains|chaque|chaud|chaude|chaudes|chauds|chelou|clair|claire|claires|clairs|collectif|collectifs|collective|collectives|content|contente|contentes|contents|cool|correct|correcte|correctes|corrects|culinaire|culinaires|culturel|culturelle|culturelles|culturels|delicieuse|delicieuses|delicieux|dernier|derniere|dernieres|derniers|desole|desolee|desolees|desoles|different|differente|differentes|differents|difficile|difficiles|dingue|dingues|dore|doree|dorees|dores|droit|droite|droites|droits|dur|dure|dures|durs|economique|economiques|ecœurant|ecœurante|ecœurantes|ecœurants|educatif|educatifs|educative|educatives|entier|entiere|entieres|entiers|essentiel|essentielle|essentielles|essentiels|etranger|etrangere|etrangeres|etrangers|europeen|europeenne|europeennes|europeens|excellent|excellente|excellentes|excellents|facilement|fatigue|fatiguee|fatiguees|fatigues|fonce|foncee|foncees|fonces|fort|forte|fortes|forts|francais|francaise|francaises|francophone|francophones|froid|froide|froides|froids|genial|geniale|geniales|geniaux|gentil|gentille|gentilles|gentils|glace|glacee|glacees|glaces|gnama|grand|grande|grandes|grands|grave|graves|heureuse|heureuses|heureux|historique|historiques|humide|humides|important|importante|importantes|importants|impressionniste|impressionnistes|inoubliable|inoubliables|international|internationale|internationales|internationaux|jaune|jaunes|jeune|jeunes|juste|justes|lent|lente|lentement|lentes|lents|loin|lointain|lointaine|lointaines|lointains|long|longs|longtemps|longue|longues|magnifique|magnifiques|malade|malades|marron|meme|memes|moderne|modernes|mondial|mondiale|mondiales|mondiaux|mortel|mortelle|mortelles|mortels|multicolore|multicolores|nouveau|nouveaux|nouvel|nouvelle|nouvelles|nul|nulle|nulles|nuls|occupe|occupee|occupees|occupes|orange|ouf|pale|pales|parfait|parfaite|parfaites|parfaits|petit|petite|petites|petits|plusieurs|poche|politique|politiques|populaire|populaires|possible|possibles|premier|premiere|premieres|premiers|pres|primaire|primaires|proche|proches|public|publics|publique|publiques|quelque|quelques|quotidien|quotidienne|quotidiennes|quotidiens|rapide|rapidement|rapides|reconnaissant|reconnaissante|reconnaissantes|reconnaissants|reconnu|reconnue|reconnues|reconnus|riche|riches|rose|roses|rouge|rouges|sage|sages|significatif|significatifs|significative|significatives|souvent|super|sur|sure|sures|surpris|surprise|surprises|surs|tard|top|tot|tous|tout|toute|toutes|traditionnel|traditionnelle|traditionnelles|traditionnels|triste|tristes|typique|typiques|unieme|uniemes|vert|verte|vertes|verts|vieil|vieille|vieilles|vieux|vite|vrai|vraie|vraies|vrais"
+        "any": [
+          {
+            "pos": "adjective"
+          },
+          {
+            "surface": "vite|souvent|tot|tard|lentement|rapidement|facilement|loin|pres|longtemps"
+          }
+        ]
       }
     ],
     "examples": {
@@ -988,7 +1007,8 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "aurais|aurait|aurions|auriez|auraient"
+        "cell": "cond.*",
+        "headword": "fr:lex:avoir"
       },
       {
         "clitic": true,
@@ -996,12 +1016,26 @@
         "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "cell": "ptcp*"
@@ -1029,7 +1063,8 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "serais|serait|serions|seriez|seraient"
+        "cell": "cond.*",
+        "headword": "fr:lex:etre"
       },
       {
         "clitic": true,
@@ -1037,12 +1072,26 @@
         "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "cell": "ptcp*",
@@ -1122,22 +1171,48 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "du"
-      }
+      [
+        {
+          "pos": "noun",
+          "surface": "(?!(est|fait|ete|es|part)$).+"
+        },
+        {
+          "surface": "du|des"
+        }
+      ],
+      [
+        {
+          "surface": "pres|loin|autour|lors|hors"
+        },
+        {
+          "surface": "du|des"
+        }
+      ],
+      [
+        {
+          "cell": "*.*",
+          "surface": "(vien|ven|sor|part|arriv|rentr|revien|reven|retourn|parl|pens|descend|depend|approch|souvien|occup|sort|rev|profit|chang)[a-z]*"
+        },
+        {
+          "surface": "du|des"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "C'est le livre du professeur.",
-        "Il vient du restaurant."
+        "Il vient du restaurant.",
+        "J'habite près du parc.",
+        "C'est la fin des vacances."
       ],
       "noMatch": [
-        "Je viens de la maison.",
+        "Je mange du pain.",
+        "J'ai des amis.",
         "C'est le livre de Marie."
       ]
     },
     "id": "fr:cx:contraction.de",
-    "label": "Contraction de + le = du (du chat, du café); de + les = des has the same form as the plural indefinite article and is not detected",
+    "label": "Contraction de + le = du and de + les = des after a noun, after près, loin or autour, or after a verb that takes de (le livre du professeur, près du parc, il vient du restaurant)",
     "needs": [
       "fr:cx:article.definite"
     ]
@@ -1199,7 +1274,17 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "adoraient|adorais|adorait|adorant|adore|adoree|adorees|adorent|adorer|adorera|adorerai|adoreraient|adorerais|adorerait|adoreras|adorerez|adoreriez|adorerions|adorerons|adoreront|adores|adorez|adoriez|adorions|adorons|aimaient|aimais|aimait|aimant|aime|aimee|aimees|aiment|aimer|aimera|aimerai|aimeraient|aimerais|aimerait|aimeras|aimerez|aimeriez|aimerions|aimerons|aimeront|aimes|aimez|aimiez|aimions|aimons|preferaient|preferais|preferait|preferant|prefere|preferee|preferees|preferent|preferer|preferera|prefererai|prefereraient|prefererais|prefererait|prefereras|prefererez|prefereriez|prefererions|prefererons|prefereront|preferes|preferez|preferiez|preferions|preferons"
+        "any": [
+          {
+            "headword": "fr:lex:aimer"
+          },
+          {
+            "headword": "fr:lex:adorer"
+          },
+          {
+            "headword": "fr:lex:preferer"
+          }
+        ]
       },
       {
         "clitic": true,
@@ -1215,7 +1300,8 @@
         "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
       },
       {
-        "surface": "acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager"
+        "pos": "verb",
+        "via": "lemma"
       }
     ],
     "examples": {
@@ -1238,7 +1324,16 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "allaient|allais|allait|allez|alliez|allions|allons|va|vais|vas|vont"
+        "any": [
+          {
+            "cell": "prs.*",
+            "headword": "fr:lex:aller"
+          },
+          {
+            "cell": "impf.*",
+            "headword": "fr:lex:aller"
+          }
+        ]
       },
       {
         "clitic": true,
@@ -1246,8 +1341,15 @@
         "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "optional": true,
@@ -1258,7 +1360,8 @@
         "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
       },
       {
-        "surface": "acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager"
+        "pos": "verb",
+        "via": "lemma"
       }
     ],
     "examples": {
@@ -1283,13 +1386,18 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "apprenaient|apprenais|apprenait|apprenant|apprend|apprendra|apprendrai|apprendraient|apprendrais|apprendrait|apprendras|apprendre|apprendrez|apprendriez|apprendrions|apprendrons|apprendront|apprends|apprenez|appreniez|apprenions|apprenne|apprennent|apprennes|apprenons|appris|apprise|apprises"
+        "any": [
+          {
+            "headword": "fr:lex:apprendre"
+          }
+        ]
       },
       {
         "surface": "a"
       },
       {
-        "surface": "acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager"
+        "pos": "verb",
+        "via": "lemma"
       }
     ],
     "examples": {
@@ -1349,7 +1457,11 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "demandaient|demandais|demandait|demandant|demande|demandee|demandees|demandent|demander|demandera|demanderai|demanderaient|demanderais|demanderait|demanderas|demanderez|demanderiez|demanderions|demanderons|demanderont|demandes|demandez|demandiez|demandions|demandons"
+        "any": [
+          {
+            "headword": "fr:lex:demander"
+          }
+        ]
       },
       {
         "surface": "de|d'"
@@ -1359,7 +1471,8 @@
         "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
       },
       {
-        "surface": "acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager"
+        "pos": "verb",
+        "via": "lemma"
       }
     ],
     "examples": {
@@ -1445,7 +1558,8 @@
         "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
       },
       {
-        "surface": "acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager"
+        "pos": "verb",
+        "via": "lemma"
       }
     ],
     "examples": {
@@ -1468,7 +1582,17 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "devaient|devais|devait|devant|devez|deviez|devions|devoir|devons|devra|devrai|devraient|devrais|devrait|devras|devrez|devriez|devrions|devrons|devront|dois|doit|doive|doivent|doives|due|dues|dus|peut|peuvent|peux|pourra|pourrai|pourraient|pourrais|pourrait|pourras|pourrez|pourriez|pourrions|pourrons|pourront|pouvaient|pouvais|pouvait|pouvant|pouvez|pouviez|pouvions|pouvoir|pouvons|pu|puisse|puissent|puisses|puissiez|puissions|veuille|veuillent|veuilles|veulent|veut|veux|voudra|voudrai|voudraient|voudrais|voudrait|voudras|voudrez|voudriez|voudrions|voudrons|voudront|voulaient|voulais|voulait|voulant|voulez|vouliez|voulions|vouloir|voulons|voulu|voulue|voulues|voulus"
+        "any": [
+          {
+            "headword": "fr:lex:pouvoir"
+          },
+          {
+            "headword": "fr:lex:vouloir"
+          },
+          {
+            "headword": "fr:lex:devoir"
+          }
+        ]
       },
       {
         "clitic": true,
@@ -1476,8 +1600,15 @@
         "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "optional": true,
@@ -1488,7 +1619,8 @@
         "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
       },
       {
-        "surface": "acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager"
+        "pos": "verb",
+        "via": "lemma"
       }
     ],
     "examples": {
@@ -1515,7 +1647,11 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "sachant|sache|sachent|saches|sachiez|sachions|sais|sait|saura|saurai|sauraient|saurais|saurait|sauras|saurez|sauriez|saurions|saurons|sauront|savaient|savais|savait|savent|savez|saviez|savions|savoir|savons|su|sue|sues|sus"
+        "any": [
+          {
+            "headword": "fr:lex:savoir.verb"
+          }
+        ]
       },
       {
         "clitic": true,
@@ -1531,7 +1667,8 @@
         "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
       },
       {
-        "surface": "acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager"
+        "pos": "verb",
+        "via": "lemma"
       }
     ],
     "examples": {
@@ -1556,7 +1693,23 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "croie|croient|croies|croira|croirai|croiraient|croirais|croirait|croiras|croire|croirez|croiriez|croirions|croirons|croiront|crois|croit|croyaient|croyais|croyait|croyant|croyez|croyiez|croyions|croyons|cru|crue|crues|crus|dira|dirai|diraient|dirais|dirait|diras|dire|direz|diriez|dirions|dirons|diront|dis|disaient|disais|disait|disant|dise|disent|dises|disiez|disions|disons|dit|dite|dites|dits|pensaient|pensais|pensait|pensant|pense|pensee|pensees|pensent|penser|pensera|penserai|penseraient|penserais|penserait|penseras|penserez|penseriez|penserions|penserons|penseront|penses|pensez|pensiez|pensions|pensons|sachant|sache|sachent|saches|sachiez|sachions|sais|sait|saura|saurai|sauraient|saurais|saurait|sauras|saurez|sauriez|saurions|saurons|sauront|savaient|savais|savait|savent|savez|saviez|savions|savoir|savons|su|sue|sues|sus|trouvaient|trouvais|trouvait|trouvant|trouve|trouvee|trouvees|trouvent|trouver|trouvera|trouverai|trouveraient|trouverais|trouverait|trouveras|trouverez|trouveriez|trouverions|trouverons|trouveront|trouves|trouvez|trouviez|trouvions|trouvons"
+        "any": [
+          {
+            "headword": "fr:lex:dire"
+          },
+          {
+            "headword": "fr:lex:penser"
+          },
+          {
+            "headword": "fr:lex:croire"
+          },
+          {
+            "headword": "fr:lex:savoir.verb"
+          },
+          {
+            "headword": "fr:lex:trouver"
+          }
+        ]
       },
       {
         "clitic": true,
@@ -1709,22 +1862,114 @@
   {
     "cefr": null,
     "contrastsWith": [],
-    "detect": null,
+    "detect": [
+      [
+        {
+          "any": [
+            {
+              "headword": "fr:lex:etre",
+              "surface": "sois|soyez|soyons"
+            },
+            {
+              "headword": "fr:lex:avoir",
+              "surface": "aie|ayez|ayons"
+            },
+            {
+              "headword": "fr:lex:savoir.verb",
+              "surface": "sache|sachons|sachez"
+            },
+            {
+              "surface": "veuillez"
+            }
+          ],
+          "start": true
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "va"
+        },
+        {
+          "surface": "(?!-(t-)?(tu|il|elle|on|nous|vous|ils|elles|ce)$).+"
+        }
+      ]
+    ],
     "examples": {
       "match": [
         "Sois gentil !",
         "Aie confiance !",
-        "Fais attention !"
+        "Soyez patients.",
+        "Va là-bas !"
       ],
       "noMatch": [
-        "Tu es gentil."
+        "Il faut que tu sois gentil.",
+        "Tu es gentil.",
+        "Va-t-il venir ?",
+        "Il va là-bas."
       ]
     },
     "id": "fr:cx:imperative.irregular",
-    "label": "Irregular imperatives of être, avoir, aller, faire (sois, soyez, aie, ayez, va, fais); sois and aie are also subjunctive forms and va, fais present forms, so only the missing subject shows the imperative",
+    "label": "Irregular imperatives of être, avoir, savoir, vouloir and aller (sois, soyez, soyons, aie, ayez, ayons, sache, sachez, veuillez, va), as the first word; va counts only when another word follows that is not an inverted subject (va là-bas, not va-t-il)",
     "needs": [
       "fr:cx:imperative.tu",
       "fr:cx:imperative.vous"
+    ]
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      [
+        {
+          "cell": "prs.1pl",
+          "pos": "verb",
+          "start": true
+        },
+        {
+          "surface": "(?!-(t-)?(tu|il|elle|on|nous|vous|ils|elles|ce)$).+"
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "cell": "prs.1pl",
+          "pos": "verb"
+        },
+        {
+          "surface": "pas|jamais|plus|rien"
+        }
+      ]
+    ],
+    "examples": {
+      "match": [
+        "Allons au café !",
+        "Mangeons ensemble.",
+        "Allons-y !",
+        "Ne parlons pas de ça."
+      ],
+      "noMatch": [
+        "Nous allons au café.",
+        "Allons-nous au café ?"
+      ]
+    },
+    "id": "fr:cx:imperative.nous",
+    "label": "Imperative, nous form: let us … (allons au café !, partons !, ne parlons pas !); counted when the verb is the first word and another word follows that is not an inverted subject",
+    "needs": [
+      "fr:cx:verb.er.present",
+      "fr:cx:verb.ir.present",
+      "fr:cx:verb.re.present"
     ]
   },
   {
@@ -1764,19 +2009,73 @@
   {
     "cefr": null,
     "contrastsWith": [],
-    "detect": null,
+    "detect": [
+      [
+        {
+          "any": [
+            {
+              "cell": "prs.2sg",
+              "pos": "verb"
+            },
+            {
+              "cell": "prs.1sg",
+              "pos": "verb"
+            }
+          ],
+          "start": true,
+          "surface": "(?!(excusez|excuse|faut|entre|ai|as|avons|avez|suis|es|sommes|etes|veux|peux|dois|voulons|voulez|pouvons|pouvez|devons|devez|sais|savons|savez)$).+"
+        },
+        {
+          "surface": "(?!-(t-)?(tu|il|elle|on|nous|vous|ils|elles|ce)$).+"
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "any": [
+            {
+              "cell": "prs.2sg",
+              "pos": "verb"
+            },
+            {
+              "cell": "prs.1sg",
+              "pos": "verb"
+            }
+          ]
+        },
+        {
+          "surface": "pas|jamais|plus|rien"
+        }
+      ]
+    ],
     "examples": {
       "match": [
-        "Mange !",
+        "Mange ta soupe !",
         "Viens ici !",
-        "Écoute !"
+        "Prends le bus.",
+        "Ne mange pas ça !"
       ],
       "noMatch": [
-        "Tu manges."
+        "Tu manges ta soupe.",
+        "Viens-tu ici ?",
+        "Est-ce que tu viens ?",
+        "Ne veux-tu pas venir ?",
+        "Entre toi et moi, c'est un secret."
       ]
     },
     "id": "fr:cx:imperative.tu",
-    "label": "Imperative, tu form: the tu present without the pronoun, -er verbs drop the -s (mange !, viens !); the form equals the present, and only the missing subject at the start of the sentence shows it, which detectors cannot see",
+    "label": "Imperative, tu form: the tu present without the pronoun, -er verbs drop the -s (mange !, viens ici !, ne mange pas !); counted when the verb is the first word and another word follows that is not an inverted subject; a one-word command (Mange !) is not detected, and avoir, être, pouvoir, vouloir, devoir and savoir present forms do not count, because answers that leave out the subject (ai acheté, veux voir) start the same way",
     "needs": [
       "fr:cx:verb.er.present",
       "fr:cx:verb.ir.present",
@@ -1786,18 +2085,55 @@
   {
     "cefr": null,
     "contrastsWith": [],
-    "detect": null,
+    "detect": [
+      [
+        {
+          "cell": "prs.2pl",
+          "pos": "verb",
+          "start": true,
+          "surface": "(?!(excusez|excuse|faut|entre|ai|as|avons|avez|suis|es|sommes|etes|veux|peux|dois|voulons|voulez|pouvons|pouvez|devons|devez|sais|savons|savez)$).+"
+        },
+        {
+          "surface": "(?!-(t-)?(tu|il|elle|on|nous|vous|ils|elles|ce)$).+"
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "cell": "prs.2pl",
+          "pos": "verb"
+        },
+        {
+          "surface": "pas|jamais|plus|rien"
+        }
+      ]
+    ],
     "examples": {
       "match": [
-        "Mangez !",
-        "Venez avec moi !"
+        "Venez avec moi !",
+        "Parlez plus lentement, s'il vous plaît.",
+        "Ne parlez pas !"
       ],
       "noMatch": [
-        "Vous mangez."
+        "Vous parlez français.",
+        "Parlez-vous français ?",
+        "Excusez-moi.",
+        "Êtes-vous partis en vacances ?"
       ]
     },
     "id": "fr:cx:imperative.vous",
-    "label": "Imperative, vous form: the vous present without the pronoun (mangez !, venez !); the form equals the present, and only the missing subject shows it",
+    "label": "Imperative, vous form: the vous present without the pronoun (mangez !, venez avec moi !, ne parlez pas !); counted when the verb is the first word and another word follows that is not an inverted subject; a one-word command (Mangez !) is not detected, and avoir, être, pouvoir, vouloir, devoir and savoir present forms do not count, because answers that leave out the subject start the same way",
     "needs": [
       "fr:cx:verb.er.present",
       "fr:cx:verb.ir.present",
@@ -1904,7 +2240,8 @@
         "surface": "pas"
       },
       {
-        "surface": "acheter|admirer|adorer|aider|aimer|aller|amuser|appeler|apprendre|arriver|asseoir|attendre|attirer|avoir|boire|briller|changer|chercher|commander|commencer|communiquer|comprendre|connaitre|connecter|construire|continuer|couper|courir|couter|creer|croire|decider|decouvrir|demander|depecher|dependre|deplacer|descendre|devenir|devoir|dire|donner|dormir|douter|economiser|ecouter|embrasser|encourager|enrichir|enseigner|entrer|essayer|etre|etudier|evoluer|examiner|excuser|exister|exporter|faire|falloir|finir|fleurir|fonctionner|grimper|habiller|habiter|jouer|laver|lever|manger|maquiller|marcher|mettre|monter|montrer|nager|naitre|nettoyer|parler|participer|partir|payer|penser|perdre|permettre|plaire|pleuvoir|poser|pousser|pouvoir|pratiquer|preferer|prendre|preparer|preserver|profiter|proteger|recycler|regarder|regretter|rencontrer|rendre|renoncer|rentrer|reparer|rester|retrouver|reussir|reveiller|revenir|rever|reviser|revoir|sauter|savoir|se souvenir|sortir|souffler|soutenir|souvenir|surprendre|tomber|tourner|travailler|trouver|utiliser|venir|visiter|vivre|voir|voler|vouloir|voyager"
+        "pos": "verb",
+        "via": "lemma"
       }
     ],
     "examples": {
@@ -1927,26 +2264,39 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "ne|n'"
-      },
-      {
-        "skip": 4,
-        "surface": "personne"
-      }
+      [
+        {
+          "surface": "ne|n'"
+        },
+        {
+          "skip": 4,
+          "surface": "personne"
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "personne"
+        },
+        {
+          "surface": "ne|n'"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "Je ne vois personne.",
-        "Il n'aime personne."
+        "Il n'aime personne.",
+        "Personne ne vient."
       ],
       "noMatch": [
         "Je vois une personne.",
-        "Je ne vois pas."
+        "Je ne vois pas.",
+        "Une personne ne parle pas."
       ]
     },
     "id": "fr:cx:neg.ne-personne",
-    "label": "Negation ne … personne (nobody)",
+    "label": "Negation ne … personne (nobody), also personne ne … at the start of a sentence",
     "needs": [
       "fr:cx:neg.ne-pas"
     ]
@@ -1983,18 +2333,30 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "ne|n'"
-      },
-      {
-        "skip": 4,
-        "surface": "rien"
-      }
+      [
+        {
+          "surface": "ne|n'"
+        },
+        {
+          "skip": 4,
+          "surface": "rien"
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "rien"
+        },
+        {
+          "surface": "ne|n'"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "Je ne vois rien.",
-        "Il ne donne rien."
+        "Il ne donne rien.",
+        "Rien ne marche."
       ],
       "noMatch": [
         "Je vois tout.",
@@ -2002,7 +2364,7 @@
       ]
     },
     "id": "fr:cx:neg.ne-rien",
-    "label": "Negation ne … rien (nothing)",
+    "label": "Negation ne … rien (nothing), also rien ne … at the start of a sentence",
     "needs": [
       "fr:cx:neg.ne-pas"
     ]
@@ -2038,12 +2400,26 @@
         "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "cell": "ptcp*"
@@ -2084,12 +2460,26 @@
         "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "cell": "ptcp*",
@@ -2118,43 +2508,154 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "me|te|se|m'|t'|s'"
-      },
-      {
-        "cell": "prs.*",
-        "headword": "fr:lex:etre"
-      },
-      {
-        "clitic": true,
-        "optional": true,
-        "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
-      },
-      {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
-      },
-      {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
-      },
-      {
-        "cell": "ptcp*"
-      }
+      [
+        {
+          "surface": "me|te|se|m'|t'|s'"
+        },
+        {
+          "cell": "prs.*",
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "cell": "ptcp*"
+        }
+      ],
+      [
+        {
+          "surface": "nous"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "surface": "nous"
+        },
+        {
+          "cell": "prs.*",
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "cell": "ptcp*"
+        }
+      ],
+      [
+        {
+          "surface": "vous"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "surface": "vous"
+        },
+        {
+          "cell": "prs.*",
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "cell": "ptcp*"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "Je me suis levé à sept heures.",
         "Elle s'est lavée.",
-        "Ils se sont amusés."
+        "Ils se sont amusés.",
+        "Nous nous sommes préparés.",
+        "Vous vous êtes levés tôt."
       ],
       "noMatch": [
         "Je me lève à sept heures.",
-        "Je suis allé au café."
+        "Je suis allé au café.",
+        "Nous sommes partis."
       ]
     },
     "id": "fr:cx:passe-compose.reflexive",
-    "label": "Passé composé of pronominal verbs with être (je me suis levé, elle s'est lavée); nous nous and vous vous are not detected, because nous and vous are also subjects",
+    "label": "Passé composé of pronominal verbs with être (je me suis levé, elle s'est lavée, nous nous sommes préparés, vous vous êtes amusés)",
     "needs": [
       "fr:cx:passe-compose.etre",
       "fr:cx:pronoun.reflexive"
@@ -2165,7 +2666,8 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "avais|avait|avions|aviez|avaient"
+        "cell": "impf.*",
+        "headword": "fr:lex:avoir"
       },
       {
         "clitic": true,
@@ -2173,12 +2675,26 @@
         "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "cell": "ptcp*"
@@ -2207,7 +2723,8 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "etais|etait|etions|etiez|etaient"
+        "cell": "impf.*",
+        "headword": "fr:lex:etre"
       },
       {
         "clitic": true,
@@ -2215,12 +2732,26 @@
         "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "cell": "ptcp*",
@@ -2248,15 +2779,26 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "mon|ma|mes|ton|ta|tes|son|sa|ses|notre|nos|votre|vos|leurs"
-      }
+      [
+        {
+          "surface": "mon|ma|mes|ton|ta|tes|son|sa|ses|notre|nos|votre|vos|leurs"
+        }
+      ],
+      [
+        {
+          "surface": "leur"
+        },
+        {
+          "pos": "noun"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "C'est mon livre.",
         "Sa maison est grande.",
-        "Nos amis sont là."
+        "Nos amis sont là.",
+        "C'est leur maison."
       ],
       "noMatch": [
         "C'est le livre de Marie.",
@@ -2264,7 +2806,7 @@
       ]
     },
     "id": "fr:cx:possessive.adjective",
-    "label": "Possessive adjectives mon, ma, mes, ton, ta, tes, son, sa, ses, notre, nos, votre, vos, leurs, agreeing with the thing owned; leur is left out because it is also the pronoun leur",
+    "label": "Possessive adjectives mon, ma, mes, ton, ta, tes, son, sa, ses, notre, nos, votre, vos, leur, leurs, agreeing with the thing owned; leur counts only before a noun, so the pronoun leur (je leur parle) does not",
     "needs": [
       "fr:cx:noun.gender"
     ]
@@ -2334,30 +2876,53 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|ne|n'|y"
-      },
-      {
-        "surface": "en"
-      },
-      {
-        "cell": "*.*"
-      }
+      [
+        {
+          "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|ne|n'|y|me|m'|te|t'|se|s'|lui|leur"
+        },
+        {
+          "surface": "en"
+        },
+        {
+          "cell": "*.*"
+        }
+      ],
+      [
+        {
+          "surface": "en"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "cell": "*.*"
+        },
+        {
+          "clitic": true,
+          "surface": "-en"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "J'en ai deux.",
         "Il y en a beaucoup.",
-        "Je n'en veux pas."
+        "Je n'en veux pas.",
+        "Je vais en acheter.",
+        "Prends-en !"
       ],
       "noMatch": [
         "Je vais en France.",
         "En fait, je ne sais pas.",
-        "Il est en train de manger."
+        "Il est en train de manger.",
+        "Je travaille en écoutant de la musique."
       ]
     },
     "id": "fr:cx:pronoun.en",
-    "label": "The pronoun en (some, of it) before the verb (j'en ai, il y en a, je n'en veux pas)",
+    "label": "The pronoun en (some, of it) before the verb or an infinitive, or attached to an imperative (j'en ai, il y en a, je vais en acheter, prends-en)",
     "needs": [
       "fr:cx:pronoun.direct-object",
       "fr:cx:article.partitive"
@@ -2426,26 +2991,148 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "se|s'"
-      },
-      {
-        "surface": "(?!(il|ils)$).+"
-      }
+      [
+        {
+          "surface": "se|s'"
+        },
+        {
+          "pos": "verb"
+        }
+      ],
+      [
+        {
+          "surface": "je"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "surface": "me|m'"
+        },
+        {
+          "pos": "verb"
+        }
+      ],
+      [
+        {
+          "surface": "tu"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "surface": "te|t'"
+        },
+        {
+          "pos": "verb"
+        }
+      ],
+      [
+        {
+          "surface": "nous"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "surface": "nous"
+        },
+        {
+          "pos": "verb"
+        }
+      ],
+      [
+        {
+          "surface": "vous"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "surface": "vous"
+        },
+        {
+          "pos": "verb"
+        }
+      ],
+      [
+        {
+          "surface": "je|j'"
+        },
+        {
+          "skip": 3,
+          "surface": "me|m'"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "surface": "tu"
+        },
+        {
+          "skip": 3,
+          "surface": "te|t'"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "surface": "nous"
+        },
+        {
+          "skip": 3,
+          "surface": "nous"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "surface": "vous"
+        },
+        {
+          "skip": 3,
+          "surface": "vous"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "Il se lève à sept heures.",
         "Elle s'appelle Marie.",
-        "Ils se lavent les mains."
+        "Je me lave.",
+        "Tu te lèves tôt.",
+        "Nous nous préparons.",
+        "Vous vous appelez comment ?",
+        "Je vais me lever."
       ],
       "noMatch": [
         "S'il te plaît.",
-        "Il lève la main."
+        "Il lève la main.",
+        "Il me voit.",
+        "Je te parle.",
+        "Tu me donnes le livre.",
+        "Je veux te voir."
       ]
     },
     "id": "fr:cx:pronoun.reflexive",
-    "label": "Reflexive pronouns with a pronominal verb (il se lève, elle s'appelle); only se and s' are detected, because je me, tu te, nous nous and vous vous share their forms with object pronouns",
+    "label": "Reflexive pronouns with a pronominal verb, the pronoun matching the subject (je me lève, tu te lèves, il se lève, nous nous levons, vous vous levez, ils s'appellent), also before an infinitive (je vais me lever)",
     "needs": [
       "fr:cx:pronoun.subject"
     ]
@@ -2454,23 +3141,65 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "moi|toi|eux"
-      }
+      [
+        {
+          "surface": "moi|toi|eux"
+        }
+      ],
+      [
+        {
+          "surface": "avec|chez|sans|entre|apres|avant|devant|derriere|vers|contre|selon|sauf"
+        },
+        {
+          "surface": "lui|elle|nous|vous|elles"
+        }
+      ],
+      [
+        {
+          "surface": "pour|a|de|d'"
+        },
+        {
+          "surface": "elle|elles"
+        }
+      ],
+      [
+        {
+          "surface": "c'"
+        },
+        {
+          "surface": "est|etait|sera|serait"
+        },
+        {
+          "surface": "lui|elle|nous|vous|elles"
+        }
+      ],
+      [
+        {
+          "surface": "lui|elle|nous|vous|elles"
+        },
+        {
+          "surface": "aussi|meme|non|seul|seule|seuls|seules"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "Tu viens avec moi ?",
         "Moi aussi.",
-        "C'est pour eux."
+        "C'est pour eux.",
+        "Je travaille avec lui.",
+        "C'est elle.",
+        "Lui aussi, il aime le café."
       ],
       "noMatch": [
         "Je viens.",
-        "Excusez-moi."
+        "Excusez-moi.",
+        "Je lui parle.",
+        "Nous allons au café."
       ]
     },
     "id": "fr:cx:pronoun.stressed",
-    "label": "Stressed pronouns moi, toi, eux after a preposition, for emphasis or alone (avec moi, et toi ?); lui, elle, nous, vous and elles are left out because they are also subject or object pronouns",
+    "label": "Stressed pronouns moi, toi, lui, elle, nous, vous, eux, elles after a preposition, after c'est, for emphasis or alone (avec moi, pour elle, c'est lui, lui aussi); lui, nous and vous count only in those positions, where they cannot be subject or object pronouns",
     "needs": [
       "fr:cx:pronoun.subject"
     ]
@@ -2520,18 +3249,31 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "y"
-      },
-      {
-        "surface": "(?!(a|avait|aura|aurait|ait|aient|avoir|en|-t-il)$).+"
-      }
+      [
+        {
+          "surface": "y"
+        },
+        {
+          "surface": "(?!(a|avait|aura|aurait|ait|aient|avoir|en|-t-il)$).+"
+        }
+      ],
+      [
+        {
+          "cell": "*.*"
+        },
+        {
+          "clitic": true,
+          "surface": "-y"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "J'y vais demain.",
         "On y va ?",
-        "Je n'y pense pas."
+        "Je n'y pense pas.",
+        "Vas-y !",
+        "Allons-y !"
       ],
       "noMatch": [
         "Il y a un chat.",
@@ -2540,7 +3282,7 @@
       ]
     },
     "id": "fr:cx:pronoun.y",
-    "label": "The pronoun y (there, about it) before the verb (j'y vais, on y va); y in il y a and in imperatives such as vas-y is not counted",
+    "label": "The pronoun y (there, about it) before the verb or attached to an imperative (j'y vais, on y va, vas-y); y in il y a is not counted",
     "needs": [
       "fr:cx:pronoun.direct-object"
     ]
@@ -2559,12 +3301,26 @@
         "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "cell": "ptcp.*",
@@ -2594,7 +3350,23 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "comprenaient|comprenais|comprenait|comprenant|comprend|comprendra|comprendrai|comprendraient|comprendrais|comprendrait|comprendras|comprendre|comprendrez|comprendriez|comprendrions|comprendrons|comprendront|comprends|comprenez|compreniez|comprenions|comprenne|comprennent|comprennes|comprenons|compris|comprise|comprises|demandaient|demandais|demandait|demandant|demande|demandee|demandees|demandent|demander|demandera|demanderai|demanderaient|demanderais|demanderait|demanderas|demanderez|demanderiez|demanderions|demanderons|demanderont|demandes|demandez|demandiez|demandions|demandons|dira|dirai|diraient|dirais|dirait|diras|dire|direz|diriez|dirions|dirons|diront|dis|disaient|disais|disait|disant|dise|disent|dises|disiez|disions|disons|dit|dite|dites|dits|explique|expliquent|expliquer|expliques|expliquez|expliquons|sachant|sache|sachent|saches|sachiez|sachions|sais|sait|saura|saurai|sauraient|saurais|saurait|sauras|saurez|sauriez|saurions|saurons|sauront|savaient|savais|savait|savent|savez|saviez|savions|savoir|savons|su|sue|sues|sus"
+        "any": [
+          {
+            "headword": "fr:lex:savoir.verb"
+          },
+          {
+            "headword": "fr:lex:demander"
+          },
+          {
+            "headword": "fr:lex:dire"
+          },
+          {
+            "headword": "fr:lex:comprendre"
+          },
+          {
+            "surface": "expliqu(e|es|ons|ez|ent|er)"
+          }
+        ]
       },
       {
         "clitic": true,
@@ -2894,23 +3666,83 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "comment|pourquoi|combien|quel|quelle|quels|quelles"
-      }
+      [
+        {
+          "surface": "comment|pourquoi|combien|quel|quelle|quels|quelles"
+        }
+      ],
+      [
+        {
+          "surface": "ou|quand|qui|que|qu'|quoi"
+        },
+        {
+          "surface": "est"
+        },
+        {
+          "clitic": true,
+          "surface": "-ce"
+        }
+      ],
+      [
+        {
+          "surface": "ou|quand|qui|que|qu'|quoi"
+        },
+        {
+          "cell": "*.*"
+        },
+        {
+          "clitic": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "ou|quand|qui|que"
+        },
+        {
+          "cell": "*.*"
+        }
+      ],
+      [
+        {
+          "cell": "*.*"
+        },
+        {
+          "any": [
+            {
+              "headword": "fr:lex:ou.adverb"
+            },
+            {
+              "surface": "qui|quoi"
+            }
+          ]
+        }
+      ]
     ],
     "examples": {
       "match": [
         "Comment tu t'appelles ?",
         "Pourquoi tu pars ?",
-        "Quel âge as-tu ?"
+        "Quel âge as-tu ?",
+        "Où est la gare ?",
+        "Tu vas où ?",
+        "Quand est-ce que tu pars ?",
+        "Que fais-tu ?",
+        "Tu fais quoi ?",
+        "Qui parle ?"
       ],
       "noMatch": [
         "Je vais au café.",
-        "Il mange comme un enfant."
+        "Il mange comme un enfant.",
+        "Tu veux du thé ou du café ?",
+        "Je mange quand j'ai faim.",
+        "Le chat qui dort est noir.",
+        "C'est bon, quoi."
       ]
     },
     "id": "fr:cx:q.words",
-    "label": "Question words comment, pourquoi, combien, quel (how, why, how much, which); où, quand, qui, que and quoi are left out because they are also \"or\", \"when\", relative pronouns and the filler quoi",
+    "label": "Question words comment, pourquoi, combien, quel, où, quand, qui, que, quoi (how, why, how much, which, where, when, who, what); où, quand, qui, que and quoi count before est-ce, before an inverted verb, at the start before a verb, or (où, qui, quoi) after a verb, so \"ou\" (or), quand (when), relative qui and que and the filler quoi do not",
     "needs": []
   },
   {
@@ -2924,7 +3756,56 @@
         "surface": "nous|vous|se|s'"
       },
       {
-        "surface": "aidaient|aidais|aidait|aide|aident|aidera|aiderai|aideraient|aiderais|aiderait|aideras|aiderez|aideriez|aiderions|aiderons|aideront|aides|aidez|aidiez|aidions|aidons|aimaient|aimais|aimait|aime|aiment|aimera|aimerai|aimeraient|aimerais|aimerait|aimeras|aimerez|aimeriez|aimerions|aimerons|aimeront|aimes|aimez|aimiez|aimions|aimons|comprenaient|comprenais|comprenait|comprend|comprendra|comprendrai|comprendraient|comprendrais|comprendrait|comprendras|comprendrez|comprendriez|comprendrions|comprendrons|comprendront|comprends|comprenez|compreniez|comprenions|comprennent|comprenons|connais|connaissaient|connaissais|connaissait|connaissent|connaissez|connaissiez|connaissions|connaissons|connait|connaitra|connaitrai|connaitraient|connaitrais|connaitrait|connaitras|connaitrez|connaitriez|connaitrions|connaitrons|connaitront|dira|dirai|diraient|dirais|dirait|diras|direz|diriez|dirions|dirons|diront|dis|disaient|disais|disait|disent|disiez|disions|disons|dit|dites|ecoutaient|ecoutais|ecoutait|ecoute|ecoutent|ecoutera|ecouterai|ecouteraient|ecouterais|ecouterait|ecouteras|ecouterez|ecouteriez|ecouterions|ecouterons|ecouteront|ecoutes|ecoutez|ecoutiez|ecoutions|ecoutons|embrassaient|embrassais|embrassait|embrasse|embrassent|embrassera|embrasserai|embrasseraient|embrasserais|embrasserait|embrasseras|embrasserez|embrasseriez|embrasserions|embrasserons|embrasseront|embrasses|embrassez|embrassiez|embrassions|embrassons|parlaient|parlais|parlait|parle|parlent|parlera|parlerai|parleraient|parlerais|parlerait|parleras|parlerez|parleriez|parlerions|parlerons|parleront|parles|parlez|parliez|parlions|parlons|regardaient|regardais|regardait|regarde|regardent|regardera|regarderai|regarderaient|regarderais|regarderait|regarderas|regarderez|regarderiez|regarderions|regarderons|regarderont|regardes|regardez|regardiez|regardions|regardons|rencontraient|rencontrais|rencontrait|rencontre|rencontrent|rencontrera|rencontrerai|rencontreraient|rencontrerais|rencontrerait|rencontreras|rencontrerez|rencontreriez|rencontrerions|rencontrerons|rencontreront|rencontres|rencontrez|rencontriez|rencontrions|rencontrons|retrouvaient|retrouvais|retrouvait|retrouve|retrouvent|retrouvera|retrouverai|retrouveraient|retrouverais|retrouverait|retrouveras|retrouverez|retrouveriez|retrouverions|retrouverons|retrouveront|retrouves|retrouvez|retrouviez|retrouvions|retrouvons|verra|verrai|verraient|verrais|verrait|verras|verrez|verriez|verrions|verrons|verront|voient|vois|voit|voyaient|voyais|voyait|voyez|voyiez|voyions|voyons"
+        "any": [
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:aimer"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:parler"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:voir"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:connaitre"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:comprendre"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:regarder"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:ecouter"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:aider"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:rencontrer"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:retrouver"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:dire"
+          },
+          {
+            "cell": "*.*",
+            "headword": "fr:lex:embrasser"
+          }
+        ]
       }
     ],
     "examples": {
@@ -3020,12 +3901,26 @@
         "surface": "avais|avait|avions|aviez|avaient|etais|etait|etions|etiez|etaient"
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
-        "optional": true,
-        "surface": "pas|jamais|plus|rien|deja|bien|mal|beaucoup|toujours|encore|souvent|vraiment|tout|trop|peu|enfin|finalement|aussi|meme|presque|assez|seulement|longtemps|vite|bientot|tellement|juste|completement|certainement|probablement"
+        "any": [
+          {
+            "pos": "adverb"
+          },
+          {
+            "surface": "rien|tout"
+          }
+        ],
+        "optional": true
       },
       {
         "cell": "ptcp*"
@@ -3145,7 +4040,35 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "content|contente|contentes|contents|decu|decue|decues|decus|desole|desolee|desolees|desoles|dommage|etonne|etonnee|etonnees|etonnes|fache|fachee|fachees|faches|fier|fiere|fieres|fiers|heureuse|heureuses|heureux|peur|ravi|ravie|ravies|ravis|reconnaissant|reconnaissante|reconnaissantes|reconnaissants|regrettaient|regrettais|regrettait|regrettant|regrette|regrettee|regrettees|regrettent|regretter|regrettera|regretterai|regretteraient|regretterais|regretterait|regretteras|regretterez|regretteriez|regretterions|regretterons|regretteront|regrettes|regrettez|regrettiez|regrettions|regrettons|surpris|surprise|surprises|triste|tristes"
+        "any": [
+          {
+            "headword": "fr:lex:content"
+          },
+          {
+            "headword": "fr:lex:heureux"
+          },
+          {
+            "headword": "fr:lex:triste"
+          },
+          {
+            "headword": "fr:lex:desole"
+          },
+          {
+            "headword": "fr:lex:surpris"
+          },
+          {
+            "headword": "fr:lex:reconnaissant"
+          },
+          {
+            "headword": "fr:lex:regretter"
+          },
+          {
+            "headword": "fr:lex:peur"
+          },
+          {
+            "surface": "(ravi|fier|fiere|decu|etonne|fache)(e|s|es)?|fieres?|dommage"
+          }
+        ]
       },
       {
         "surface": "que|qu'"
@@ -3225,7 +4148,24 @@
         "surface": "ne|n'"
       },
       {
-        "surface": "croient|crois|croit|croyaient|croyais|croyait|croyez|croyiez|croyions|croyons|pensaient|pensais|pensait|pense|pensent|penses|pensez|pensiez|pensions|pensons"
+        "any": [
+          {
+            "cell": "prs.*",
+            "headword": "fr:lex:penser"
+          },
+          {
+            "cell": "impf.*",
+            "headword": "fr:lex:penser"
+          },
+          {
+            "cell": "prs.*",
+            "headword": "fr:lex:croire"
+          },
+          {
+            "cell": "impf.*",
+            "headword": "fr:lex:croire"
+          }
+        ]
       },
       {
         "surface": "pas"
@@ -3317,7 +4257,21 @@
     "contrastsWith": [],
     "detect": [
       {
-        "surface": "aimeraient|aimerais|aimerait|aimeriez|aimerions|preferaient|preferais|preferait|preferant|prefere|preferee|preferees|preferent|preferer|preferera|prefererai|prefereraient|prefererais|prefererait|prefereras|prefererez|prefereriez|prefererions|prefererons|prefereront|preferes|preferez|preferiez|preferions|preferons|souhaite|souhaitent|souhaiterais|souhaiterait|souhaites|souhaitez|souhaitons|veuille|veuillent|veuilles|veulent|veut|veux|voudra|voudrai|voudraient|voudrais|voudrait|voudras|voudrez|voudriez|voudrions|voudrons|voudront|voulaient|voulais|voulait|voulant|voulez|vouliez|voulions|vouloir|voulons|voulu|voulue|voulues|voulus"
+        "any": [
+          {
+            "headword": "fr:lex:vouloir"
+          },
+          {
+            "headword": "fr:lex:preferer"
+          },
+          {
+            "cell": "cond.*",
+            "headword": "fr:lex:aimer"
+          },
+          {
+            "surface": "souhaite|souhaites|souhaitons|souhaitez|souhaitent|souhaiterais|souhaiterait"
+          }
+        ]
       },
       {
         "clitic": true,
