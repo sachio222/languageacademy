@@ -6,11 +6,11 @@
 
 A checker read every lesson, practice, reading and exam in course order and tested one thing for each French word and grammar pattern: was it taught before the learner meets it? Positions count the modules in course order, from 1 to 160. A code such as fr:lex:livre names the entry in the course word list, and a code starting fr:cx: names a grammar pattern.
 
-Section 1 lists words and patterns used before they are taught, module by module. The default fix is to teach the word earlier, in the module where it is first used; each line names that module. If the sentence does not need the word, remove it instead.
+Section 1 lists words and patterns used before they are taught, module by module. Each line gives the reason (taught in a later module, a form such as bonne of a word taught earlier as bon, or not taught anywhere) and quotes the sentence it came from. The default fix is to teach the word earlier, in the module where it is first used; each line names that module. If the sentence does not need the word, remove it instead.
 
-Section 2 lists exam and practice topics the course has not taught by that point. Section 3 counts, per module, exercises after Unit 1 that show an English prompt and ask for the French; these should become other exercise types. Section 4 lists words and patterns explained in more than one lesson: keep the explanation in the lesson named and turn the others into practice. Section 5 counts taught words that do not come back soon enough to stick. Section 6 lists level labels (A1 to C2) that do not match the words a module uses. Section 7 lists modules that store exercises in an older format.
+Section 2 lists exam and practice topics the course has not taught by that point. Section 3 counts, per module, exercises after Unit 1 that show an English prompt and ask for the French; these should become other exercise types. Section 4 lists words and patterns explained in more than one lesson: keep the explanation in the lesson named and turn the others into practice. A word counts as explained where it heads a vocabulary entry, not where it appears inside a longer phrase. Section 5 counts taught words that do not come back soon enough to stick. Section 6 will compare level labels (A1 to C2) with the words each module teaches; the course word list has no level data yet, so for now it reports how many entries lack a level. Section 7 lists modules that store exercises in an older format.
 
-Section 8 lists words missing from the course word list. Most are typos, English words, or accepted answers typed without accents or apostrophes. Section 9 lists everything else, including fill-in-the-blank sentences whose blank sits in the wrong place.
+Section 8 lists words missing from the course word list. Most are typos, English words, or accepted answers typed without accents or apostrophes. Section 9 lists everything else, including fill-in-the-blank sentences whose blank sits inside a word, on a punctuation mark that the app then hides, or after the full stop.
 
 ## Lesson text to fix
 
@@ -21,6 +21,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - 113. être Verbs - DR & MRS VANDERTRAMP (went, came, left): the gap-fill "Elle ne ___ pas ___" with answer "est pas venue" reads "Elle ne est pas venue" once filled; French elides it to "Elle n'est pas venue".
 - 115. Imparfait Formation - All Verbs (was doing, used to do): the gap-fill "Je ___ au café quand tu m'as appelé" with answer "allais" reads "Je allais"; French elides it to "J'allais".
 - 117. Past Tense Composition - Building Complete Stories: the gap-fill "Pendant que je ___, on a parlé pendant une heure" with answer "étais" reads "je étais"; French elides it to "j'étais" (and "While I was there" needs "là": "Pendant que j'étais là").
+- 119. Unit 9 Practice - Fill in the Blanks: the gap-fill "Il est fatigué ___ du travail" with answer "à cause de" reads "à cause de du travail" once filled; French says "à cause du travail": make the answer "à cause du" and drop "du" from the prompt.
 - 148. Unit 11 Practice - Fill in the Blanks: the gap-fill "Je ___ mes amis au café" with answer "attends" reads "Je attends"; French elides it to "J'attends".
 - 152. Natural Phenomena - How Nature Works: the vocabulary entry and concept card "rendre + adjective" have the English placeholder "adjective" where a French example belongs (for example "rendre heureux").
 
@@ -1584,7 +1585,7 @@ First 20:
 
 # 6. Level labels
 
-- 611 taught word or construction nodes have no cefr level
+- 611 taught words and grammar patterns have no level (A1 to C2) yet, so level labels cannot be checked
 
 # 7. Exercises in a nonstandard format
 

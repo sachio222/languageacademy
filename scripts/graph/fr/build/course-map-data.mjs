@@ -211,6 +211,7 @@ export const CONTENT_NOTES = [
   [113, 'the gap-fill "Elle ne ___ pas ___" with answer "est pas venue" reads "Elle ne est pas venue" once filled; French elides it to "Elle n\'est pas venue".'],
   [115, 'the gap-fill "Je ___ au café quand tu m\'as appelé" with answer "allais" reads "Je allais"; French elides it to "J\'allais".'],
   [117, 'the gap-fill "Pendant que je ___, on a parlé pendant une heure" with answer "étais" reads "je étais"; French elides it to "j\'étais" (and "While I was there" needs "là": "Pendant que j\'étais là").'],
+  [119, 'the gap-fill "Il est fatigué ___ du travail" with answer "à cause de" reads "à cause de du travail" once filled; French says "à cause du travail": make the answer "à cause du" and drop "du" from the prompt.'],
   [148, 'the gap-fill "Je ___ mes amis au café" with answer "attends" reads "Je attends"; French elides it to "J\'attends".'],
   [152, 'the vocabulary entry and concept card "rendre + adjective" have the English placeholder "adjective" where a French example belongs (for example "rendre heureux").'],
 ];

@@ -64,7 +64,7 @@ export function ruleLevels(ctx) {
     issues.push(issue({
       rule: 'level-data-missing',
       severity: 'warning',
-      message: `${missing} taught word or construction nodes have no cefr level`,
+      message: `${missing} taught words and grammar patterns have no level (A1 to C2) yet, so level labels cannot be checked`,
     }));
   }
   return issues;

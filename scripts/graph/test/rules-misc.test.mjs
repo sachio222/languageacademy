@@ -201,7 +201,7 @@ test('level-data-missing is one summary warning with the count, only when > 0', 
   const issues = ruleLevels(ctx);
   assert.equal(issues.length, 1);
   assert.equal(issues[0].rule, 'level-data-missing');
-  assert.match(issues[0].message, /2/);
+  assert.match(issues[0].message, /^2 taught words and grammar patterns have no level \(A1 to C2\) yet/);
   assert.deepEqual(ruleLevels(ctxOf([makeModule({ position: 1 })], {})), []);
 });
 

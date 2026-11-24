@@ -5751,6 +5751,9 @@
     ]
   },
   "2024-06-10-unit-9-practice": {
+    "contentNotes": [
+      "the gap-fill \"Il est fatigué ___ du travail\" with answer \"à cause de\" reads \"à cause de du travail\" once filled; French says \"à cause du travail\": make the answer \"à cause du\" and drop \"du\" from the prompt."
+    ],
     "itemKinds": {
       "2024-06-10-unit-9-practice#sentences[0]": "other",
       "2024-06-10-unit-9-practice#sentences[10]": "other",

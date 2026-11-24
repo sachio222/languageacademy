@@ -104,6 +104,10 @@ test('renderFixList opens with a plain how-to-read paragraph after the summary',
   const text = lines.slice(how + 1, lines.indexOf('# 1. Untaught words and patterns')).join(' ');
   assert.match(text, /teach the word earlier/);
   assert.match(text, /remove it/);
+  // Section 1 lines carry a reason and the sentence; Section 6 has no level data to compare yet
+  assert.match(text, /quotes the sentence/);
+  assert.match(text, /no level data yet/);
+  assert.doesNotMatch(text, /level labels \(A1 to C2\) that do not match/);
   assert.ok(!/[\u2013\u2014]/.test(text), 'no en or em dashes');
 });
 
