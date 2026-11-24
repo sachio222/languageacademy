@@ -268,9 +268,9 @@ function readShownText(mod, key, kind, isWord, screen, items) {
   add('title', 'title', mod.title, 'segments');
   add('description', 'description', mod.description, 'quoted');
   (mod.concepts ?? []).forEach((c, i) => {
-    add(`concepts[${i}].term`, 'concept', c?.term, 'quoted');
+    add(`concepts[${i}].term`, 'concept', c?.term, 'segments');
     add(`concepts[${i}].definition`, 'concept', c?.definition, 'quoted');
-    add(`concepts[${i}].example`, 'concept', c?.example, 'segments');
+    add(`concepts[${i}].example`, 'concept', c?.example, 'example');
   });
   (mod.vocabularyReference ?? []).forEach((v, i) => add(`vocabularyReference[${i}].note`, 'vocab-note', v?.note, 'quoted'));
   (Array.isArray(mod.exerciseConfig?.items) ? mod.exerciseConfig.items : [])

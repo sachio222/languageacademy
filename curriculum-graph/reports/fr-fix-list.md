@@ -1,6 +1,6 @@
 # French course fix list
 
-3038 errors, 672 warnings, 155 modules with errors.
+3084 errors, 672 warnings, 156 modules with errors.
 
 ## How to read this
 
@@ -47,6 +47,10 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "heureux" (fr:lex:heureux): not taught anywhere in the course; teach in this module. Concept card: "Je suis heureux"
 - "étudiant" (fr:lex:etudier): taught later, at position 79 (Studying & Reviewing - étudier & réviser); teach in this module. Concept card: "Je suis étudiant"
 - "à" (fr:lex:a.preposition): taught later, at position 23 (Prepositions - Spatial & Relational Words); teach in this module. Concept card: "Je suis à Paris"
+
+### 5. Articles - The, A, An
+
+- "an" (fr:lex:an): taught later, at position 140 (Age & Personal Information); teach in this module. Concept card: "an"
 
 ### 6. Cognates - French and English Share Many Words
 
@@ -122,6 +126,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 ### 13. Unit 1 Final Exam - Foundation
 
 - "bons" (fr:lex:bon): the word bon is taught at position 1, but this form is not; teach in a lesson before Reading Comprehension - First Paragraph! (position 11). Concept card: "je suis un homme, tu as une maison, nous avons les livres, ils sont très bons"
+- "express" (fr:lex:express): taught later, at position 60 (Everyday Food Nouns); teach in Essential Verb - être (to be) (position 3). Concept card: "express possession"
 - "c'" (fr:lex:ce.pronoun): taught later, at position 14 (Demonstratives - It, That, This); teach in Basic Nouns - People & Things (position 7). Concept card: "c'est..."
 - fr:cx:cest: taught later, at position 15 (ça - Survival Phrases); teach in Basic Nouns - People & Things (position 7). Concept card: "c'est..."
 
@@ -210,6 +215,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "viande" (fr:lex:viande): taught later, at position 60 (Everyday Food Nouns); teach in this module. Concept card: "de la viande"
 - "eau" (fr:lex:eau): taught later, at position 49 (Everyday Nouns - Life & World); teach in this module. Concept card: "de l'eau"
 - "école" (fr:lex:ecole): taught later, at position 86 (Knowledge & Learning - Essential Nouns); teach in this module. Concept card: "à l'école"
+- "l" (fr:lex:l): not taught anywhere in the course; teach in this module. Feedback: "de l"
 
 ### 29. Essential Verb - venir (to come)
 
@@ -241,6 +247,9 @@ Section 8 lists words missing from the course word list. Most are typos, English
 ### 36. Putting It Together - Who Has What?
 
 - "question" (fr:lex:question): taught later, at position 74 (Essential Vocabulary - Time, People & Ideas); teach in Question Words - Ask Anything! (position 20). Vocabulary note: "question"
+- "Combine" (fr:lex:combiner): not taught anywhere in the course; teach in ça - Survival Phrases (position 15). Hint: "Combine venir (M17) + avec (M14) + moi"
+- "M" (fr:lex:m): taught later, at position 86 (Knowledge & Learning - Essential Nouns); teach in this module. Hint: "Combine venir (M17) + avec (M14) + moi"
+- fr:cx:imperative.tu: taught later, at position 100 (Commands - tu form (Informal)); teach in ça - Survival Phrases (position 15). Hint: "Combine venir (M17) + avec (M14) + moi"
 - fr:cx:imperative.irregular: taught later, at position 102 (Irregular Commands - être, avoir, aller, faire); teach in this module. Feedback: "va partir"
 
 ### 37. Reading Comprehension 3 - La Première Page
@@ -257,6 +266,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "mers" (fr:lex:mer): taught later, at position 151 (Movement Verbs - Actions in Nature); teach in a lesson before this module. Sentence: "…Verne, Vingt mille lieues sous les mers. Il est nouveau. Tu veux le voir ?…"
 - "aujourd'hui" (fr:lex:aujourd-hui): taught later, at position 46 (Time & Frequency - now, always, never, today); teach in a lesson before this module. Sentence: "…Il a son jeune enfant aujourd'hui et il le voit à la maison. C'est…"
 - fr:cx:chunk.sil-te-plait: taught later, at position 40 (Survival Phrases - Real-World Essentials); teach in Essential Verb - vouloir (to want) (position 17). Sentence: "Paris, {1871}, Belle Époque Bonjour Marc ! Tu viens au Café de la Paix avec moi…"
+- "Première" (fr:lex:premier): not taught anywhere in the course; teach in a lesson before this module. Module title: "La Première Page"
 
 ### 38. Unit 3 Practice - Fill in the Blanks
 
@@ -444,6 +454,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "Terrasse" (fr:lex:terrasse): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…nuit à Arles. « Je l'appelle : Terrasse du café le soir, » dit Vincent.…"
 - "Fin" (fr:lex:fin): taught later, at position 74 (Essential Vocabulary - Time, People & Ideas); teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Sentence: "…nuit à Arles. « Je l'appelle : Terrasse du café le soir, » dit Vincent. Fin."
 - fr:cx:chunk.nest-ce-pas: taught later, at position 159 (Rhetorical & Negative Questions - Advanced Style); teach in a lesson before this module. Sentence: "« Salut Vincent ! » dit Paul. « Salut Paul, mon ami ! » dit Vincent. « Comment…"
+- "verte" (fr:lex:vert): taught later, at position 152 (Natural Phenomena - How Nature Works); teach in a lesson before this module. Module title: "La fée verte"
 - "retrouvent" (fr:lex:retrouver): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…van Gogh et Paul Gauguin se retrouvent à leur café préféré pour boire…"
 - "vertes" (fr:lex:vert): taught later, at position 152 (Natural Phenomena - How Nature Works); teach in a lesson before this module. Sentence: "…boisson favorite, l'absinthe. On dit parfois qu'elle fait voir des fées vertes."
 - fr:cx:causative.faire: taught later, at position 132 (Je me fais couper... - Service Phrases); teach in Essential Verb - faire (to do/make) (position 41). Sentence: "La ville d'Arles. Vincent van Gogh et Paul Gauguin se retrouvent à leur café…"
@@ -549,7 +560,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "dessert" (fr:lex:dessert): not taught anywhere in the course; teach in this module. Sentence: "ils commandent le dessert"
 - "par" (fr:lex:par): taught later, at position 144 (Perception Verbs - écouter, regarder); teach in this module. Sentence: "nous commandons par téléphone"
 - "téléphone" (fr:lex:telephone): not taught anywhere in the course; teach in Cognates - French and English Share Many Words (position 6). Sentence: "nous commandons par téléphone"
-- "restaurant" (fr:lex:restaurant): not taught anywhere in the course; teach in Cognates - French and English Share Many Words (position 6). Concept card: "restaurant"
+- "Restaurant" (fr:lex:restaurant): not taught anywhere in the course; teach in Cognates - French and English Share Many Words (position 6). Concept card: "Restaurant"
 
 ### 73. avoir besoin de - To Need
 
@@ -574,7 +585,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "sûr" (fr:lex:sur): taught later, at position 87 (Discourse Markers - Sound Like a Native); teach in a lesson before Reading Comprehension 2 - Rendez-vous en Normandie (position 25). Sentence: "…je peux prendre mon livre? Oui, bien sûr. Tu peux prendre trois livres. Marie,…"
 - "prix" (fr:lex:prix): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…fromage. J'ai besoin de demander le prix. Papa, qu'est-ce que tu me dis…"
 - "vrai" (fr:lex:vrai): taught later, at position 126 (Je pense que... - Opinion Phrases); teach in dire - To Say / To Tell (position 67). Sentence: "…la plus belle ville du monde!" C'est vrai! Tu vas voir la Tour Eiffel pour la…"
-- "première" (fr:lex:premier): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…Tu vas voir la Tour Eiffel pour la première fois! Je suis très contente! Mon…"
+- "première" (fr:lex:premier): not taught anywhere in the course; teach in a lesson before Reading Comprehension 3 - La Première Page (position 37). Sentence: "…Tu vas voir la Tour Eiffel pour la première fois! Je suis très contente! Mon…"
 - "contente" (fr:lex:content): taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in être - Past Tense (was / were) (position 58). Sentence: "…la première fois! Je suis très contente! Mon frère va venir aussi? Oui,…"
 - "bons" (fr:lex:bon): the word bon is taught at position 1, but this form is not; teach in a lesson before Reading Comprehension - First Paragraph! (position 11). Sentence: "…allons voir la ville, manger dans de bons restaurants, et parler français…"
 - "restaurants" (fr:lex:restaurant): not taught anywhere in the course; teach in Cognates - French and English Share Many Words (position 6). Sentence: "…la ville, manger dans de bons restaurants, et parler français beaucoup. J'ai…"
@@ -595,8 +606,8 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "prix" (fr:lex:prix): not taught anywhere in the course; teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75). Sentence: "Tu demandes le prix?"
 - "gentil" (fr:lex:gentil): taught later, at position 102 (Irregular Commands - être, avoir, aller, faire); teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Sentence: "Mon père est gentil."
 - "dix" (fr:lex:dix): not taught anywhere in the course; teach in a lesson before this module. Sentence: "Mon frère a dix ans."
-- "ans" (fr:lex:an): taught later, at position 140 (Age & Personal Information); teach in a lesson before this module. Sentence: "Mon frère a dix ans."
-- "première" (fr:lex:premier): not taught anywhere in the course; teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75). Sentence: "C'est la première fois."
+- "ans" (fr:lex:an): taught later, at position 140 (Age & Personal Information); teach in Articles - The, A, An (position 5). Sentence: "Mon frère a dix ans."
+- "première" (fr:lex:premier): not taught anywhere in the course; teach in a lesson before Reading Comprehension 3 - La Première Page (position 37). Sentence: "C'est la première fois."
 - "occupé" (fr:lex:occupe): taught later, at position 135 (Bien que... - Although Phrases); teach in a lesson before this module. Sentence: "En ce moment, je suis occupé."
 - "semaine" (fr:lex:semaine): not taught anywhere in the course; teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75). Sentence: "Une semaine a sept jours."
 - "sept" (fr:lex:sept): not taught anywhere in the course; teach in a lesson before this module. Sentence: "Une semaine a sept jours."
@@ -610,7 +621,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "mot" (fr:lex:mot): not taught anywhere in the course; teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75). Sentence: "le mot"
 - "comprend" (fr:lex:comprendre): the word comprendre is taught at position 68, but this form is not; teach in prendre - To Take (position 68). Sentence: "il ne comprend pas la question"
 - "trois" (fr:lex:trois): not taught anywhere in the course; teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75). Sentence: "ça prend trois heures"
-- "première" (fr:lex:premier): not taught anywhere in the course; teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75). Sentence: "la première fois"
+- "première" (fr:lex:premier): not taught anywhere in the course; teach in a lesson before Reading Comprehension 3 - La Première Page (position 37). Sentence: "la première fois"
 - "travailler" (fr:lex:travailler): taught later, at position 110 (Passé Composé - Regular -ER Verbs (I spoke, I ate)); teach in Everyday Nouns - Life & World (position 49). Concept card: "il est en train de travailler"
 - "restaurant" (fr:lex:restaurant): not taught anywhere in the course; teach in Cognates - French and English Share Many Words (position 6). Concept card: "restaurant, commande, serveur, client, besoin, problème, solution, travail,…"
 - "serveur" (fr:lex:serveur): not taught anywhere in the course; teach in a lesson before this module. Concept card: "restaurant, commande, serveur, client, besoin, problème, solution, travail,…"
@@ -628,7 +639,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "cinéma" (fr:lex:cinema): not taught anywhere in the course; teach in Cognates - French and English Share Many Words (position 6). Concept card: "on va au cinéma"
 - "gentils" (fr:lex:gentil): taught later, at position 102 (Irregular Commands - être, avoir, aller, faire); teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Concept card: "les gens sont gentils"
 - "faisant" (fr:lex:faire): the word faire is taught at position 41, but this form is not; teach in this module. Concept card: "On apprend en faisant des erreurs"
-- "savent" (fr:lex:savoir.verb): the word savoir is taught at position 78, but this form is not; teach in this module. Vocabulary note: "savent"
 
 ### 79. Studying & Reviewing - étudier & réviser
 
@@ -727,6 +737,10 @@ Section 8 lists words missing from the course word list. Most are typos, English
 ### 92. Temporal & Sequential Words - Time & Order
 
 - "arrive" (fr:lex:arriver): taught later, at position 113 (être Verbs - DR & MRS VANDERTRAMP (went, came, left)); teach in this module. Concept card: "D'abord, je mange. Ensuite, je pars. Finalement, j'arrive."
+
+### 93. Reflexive Pronouns - me, te, se, nous, vous
+
+- "Position" (fr:lex:position): taught later, at position 108 (Spatial Prepositions - Position & Location); teach in this module. Concept card: "Position"
 
 ### 94. s'appeler - To Be Called (Your Name!)
 
@@ -924,7 +938,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "partis" (fr:lex:partir): the word partir is taught at position 32, but this form is not; teach in this module. Sentence: "Êtes vous partis en vacances?"
 - "vacances" (fr:lex:vacances): not taught anywhere in the course; teach in this module. Sentence: "Êtes vous partis en vacances?"
 - "venue" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in this module. Sentence: "Elle ne est pas venue"
-- "Naître" (fr:lex:naitre): taught later, at position 140 (Age & Personal Information); teach in Negation Part 2 - I can't, I won't, I never (position 47). Concept card: "…Retourner, Sortir, Venir, Aller, Naître, Devenir, Entrer, Rentrer, Tomber,…"
+- "important" (fr:lex:important): not taught anywhere in the course; teach in this module. Concept card: "important!"
 
 ### 114. Past Participle Agreement with être
 
@@ -970,7 +984,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "matin" (fr:lex:matin): not taught anywhere in the course; teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Sentence: "Hier matin, j'ai pris le bus"
 - "retard" (fr:lex:retard): not taught anywhere in the course; teach in a lesson before Unit 8 Practice - Fill in the Blanks (position 105). Sentence: "Elle était toujours en retard"
 - "buvait" (fr:lex:boire): the word boire is taught at position 62, but this form is not; teach in this module. Sentence: "Il buvait du café quand je suis arrivé"
-- "ans" (fr:lex:an): taught later, at position 140 (Age & Personal Information); teach in a lesson before Unit 6 Practice - Fill in the Blanks (position 76). Concept card: "J'avais 20 ans"
+- "ans" (fr:lex:an): taught later, at position 140 (Age & Personal Information); teach in Articles - The, A, An (position 5). Concept card: "J'avais 20 ans"
 - "jouer" (fr:lex:jouer): not taught anywhere in the course; teach in Imparfait Formation - All Verbs (was doing, used to do) (position 115). Instruction: "jouer"
 - "habiter" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Instruction: "habiter"
 
@@ -1109,6 +1123,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 
 ### 123. Il faut que... - Saying What's Necessary
 
+- "Parent" (fr:lex:parent): not taught anywhere in the course; teach in this module. Concept card: "Parent"
 - "finisses" (fr:lex:finir): taught later, at position 129 (J'avais déjà... - Had Already Done Phrases); teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75). Concept card: "Il faut que tu finisses tes devoirs"
 
 ### 127. Si j'étais... - Daydreaming & Hypotheticals
@@ -1165,7 +1180,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "vers" (fr:lex:vers): not taught anywhere in the course; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Sentence: "vers la Seine"
 - "habite" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Sentence: "Je m'appelle Sophie et j'habite à Paris depuis cinq ans. J'adore cette ville!…"
 - "cinq" (fr:lex:cinq): taught later, at position 146 (Directions & Navigation); teach in a lesson before this module. Sentence: "…Sophie et j'habite à Paris depuis cinq ans. J'adore cette ville! Mais j'ai…"
-- "ans" (fr:lex:an): taught later, at position 140 (Age & Personal Information); teach in a lesson before Unit 6 Practice - Fill in the Blanks (position 76). Sentence: "…et j'habite à Paris depuis cinq ans. J'adore cette ville! Mais j'ai…"
+- "ans" (fr:lex:an): taught later, at position 140 (Age & Personal Information); teach in Articles - The, A, An (position 5). Sentence: "…et j'habite à Paris depuis cinq ans. J'adore cette ville! Mais j'ai…"
 - "adore" (fr:lex:adorer): not taught anywhere in the course; teach in a lesson before Reading Comprehension 5 - La fée verte (The Green Fairy) (position 63). Sentence: "…j'habite à Paris depuis cinq ans. J'adore cette ville! Mais j'ai toujours un…"
 - "rêve" (fr:lex:reve): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…ville! Mais j'ai toujours un grand rêve: je veux que ma vie soit différente.…"
 - "soir" (fr:lex:soir): not taught anywhere in the course; teach in The Power to Ask Anything (position 21). Sentence: "…que ma vie soit différente. Hier soir, j'étais assise dans un petit café…"
@@ -1214,8 +1229,8 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "Tour" (fr:lex:tour): not taught anywhere in the course; teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75). Sentence: "…était magnifique. Les lumières de la Tour Eiffel brillaient au loin. "Si on…"
 - "brillaient" (fr:lex:briller): taught later, at position 152 (Natural Phenomena - How Nature Works); teach in a lesson before this module. Sentence: "…Les lumières de la Tour Eiffel brillaient au loin. "Si on avait plus de…"
 - "pont" (fr:lex:pont): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…nous sommes dit au revoir près du pont. Avant de partir, Marc m'a dit…"
-- "important" (fr:lex:important): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…Marc m'a dit quelque chose d'important. "Sophie, il faut que tu saches une…"
-- "importants" (fr:lex:important): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…saches une chose: tes rêves sont importants. Je veux que tu continues à…"
+- "important" (fr:lex:important): not taught anywhere in the course; teach in être Verbs - DR & MRS VANDERTRAMP (went, came, left) (position 113). Sentence: "…Marc m'a dit quelque chose d'important. "Sophie, il faut que tu saches une…"
+- "importants" (fr:lex:important): not taught anywhere in the course; teach in être Verbs - DR & MRS VANDERTRAMP (went, came, left) (position 113). Sentence: "…saches une chose: tes rêves sont importants. Je veux que tu continues à…"
 - "continues" (fr:lex:continuer): taught later, at position 146 (Directions & Navigation); teach in a lesson before Reading Comprehension 5 - La fée verte (The Green Fairy) (position 63). Sentence: "…sont importants. Je veux que tu continues à essayer," il a dit. "Merci Marc.…"
 - "essayer" (fr:lex:essayer): taught later, at position 159 (Rhetorical & Negative Questions - Advanced Style); teach in a lesson before this module. Sentence: "…Je veux que tu continues à essayer," il a dit. "Merci Marc. Je suis…"
 - "reconnaissante" (fr:lex:reconnaissant): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…il a dit. "Merci Marc. Je suis reconnaissante que tu m'aies dit ça. Toi aussi,…"
@@ -1346,7 +1361,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "pays" (fr:lex:pays): not taught anywhere in the course; teach in a lesson before this module. Sentence: "La France d'aujourd'hui est un pays qui continue à évoluer rapidement. Avec ses…"
 - "évoluer" (fr:lex:evoluer): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…est un pays qui continue à évoluer rapidement. Avec ses soixante-huit…"
 - "nation" (fr:lex:nation): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…d'habitants, elle reste une nation importante en Europe et dans le…"
-- "importante" (fr:lex:important): not taught anywhere in the course; teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137). Sentence: "…elle reste une nation importante en Europe et dans le monde. Paris,…"
+- "importante" (fr:lex:important): not taught anywhere in the course; teach in être Verbs - DR & MRS VANDERTRAMP (went, came, left) (position 113). Sentence: "…elle reste une nation importante en Europe et dans le monde. Paris,…"
 - "capitale" (fr:lex:capitale): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…Europe et dans le monde. Paris, sa capitale, compte plus de deux millions de…"
 - "compte" (fr:lex:compte): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…dans le monde. Paris, sa capitale, compte plus de deux millions de personnes.…"
 - "deux" (fr:lex:deux): not taught anywhere in the course; teach in Prepositions - Spatial & Relational Words (position 23). Sentence: "…Paris, sa capitale, compte plus de deux millions de personnes. Cette ville…"
@@ -1413,7 +1428,7 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "dépend" (fr:lex:dependre): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…inoubliables. L'économie française dépend de plusieurs secteurs importants.…"
 - "plusieurs" (fr:lex:plusieurs): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…L'économie française dépend de plusieurs secteurs importants. Beaucoup de…"
 - "secteurs" (fr:lex:secteur): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…française dépend de plusieurs secteurs importants. Beaucoup de Français…"
-- "importants" (fr:lex:important): not taught anywhere in the course; teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137). Sentence: "…dépend de plusieurs secteurs importants. Beaucoup de Français travaillent…"
+- "importants" (fr:lex:important): not taught anywhere in the course; teach in être Verbs - DR & MRS VANDERTRAMP (went, came, left) (position 113). Sentence: "…dépend de plusieurs secteurs importants. Beaucoup de Français travaillent…"
 - "entreprises" (fr:lex:entreprise): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…ou l'agriculture. Les entreprises françaises exportent leurs…"
 - "françaises" (fr:lex:francais): the word français is taught at position 68, but this form is not; teach in a lesson before this module. Sentence: "…ou l'agriculture. Les entreprises françaises exportent leurs produits vers…"
 - "exportent" (fr:lex:exporter): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…Les entreprises françaises exportent leurs produits vers l'est, l'ouest,…"
@@ -1448,10 +1463,10 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "communiquent" (fr:lex:communiquer): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…des films sur internet, et communiquent avec leurs amis via leurs…"
 - "génération" (fr:lex:generation): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…amis via leurs téléphones. Cette génération vit différemment de leurs parents,…"
 - "différemment" (fr:lex:differemment): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…téléphones. Cette génération vit différemment de leurs parents, mais elle garde…"
-- "parents" (fr:lex:parent): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…vit différemment de leurs parents, mais elle garde les valeurs…"
+- "parents" (fr:lex:parent): not taught anywhere in the course; teach in Il faut que... - Saying What's Necessary (position 123). Sentence: "…vit différemment de leurs parents, mais elle garde les valeurs…"
 - "garde" (fr:lex:garde): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…de leurs parents, mais elle garde les valeurs françaises importantes.…"
 - "valeurs" (fr:lex:valeur): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…leurs parents, mais elle garde les valeurs françaises importantes. Aujourd'hui,…"
-- "importantes" (fr:lex:important): not taught anywhere in the course; teach in a lesson before Reading 10 - Mes Rêves et Mes Espoirs (position 137). Sentence: "…garde les valeurs françaises importantes. Aujourd'hui, la France travaille…"
+- "importantes" (fr:lex:important): not taught anywhere in the course; teach in être Verbs - DR & MRS VANDERTRAMP (went, came, left) (position 113). Sentence: "…garde les valeurs françaises importantes. Aujourd'hui, la France travaille…"
 - "activement" (fr:lex:activement): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…Aujourd'hui, la France travaille activement pour protéger l'environnement. Le…"
 - "gouvernement" (fr:lex:gouvernement): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…protéger l'environnement. Le gouvernement encourage les citoyens à utiliser…"
 - "encourage" (fr:lex:encourager): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…l'environnement. Le gouvernement encourage les citoyens à utiliser les…"
@@ -1596,6 +1611,11 @@ Section 8 lists words missing from the course word list. Most are typos, English
 ### 156. qui est-ce qui vs qui est-ce que - Master 'Who' Questions
 
 - "rencontré" (fr:lex:rencontrer): not taught anywhere in the course; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Sentence: "qui est-ce que tu as rencontré?"
+
+### 157. Inversion Questions - Formal Register
+
+- "t" (fr:lex:t): not taught anywhere in the course; teach in this module. Vocabulary note: "⭐ -t- liaison: va + elle"
+- "liaison" (fr:lex:liaison): not taught anywhere in the course; teach in French Flow - Liaison Help (position 9). Vocabulary note: "⭐ -t- liaison: va + elle"
 
 ### 159. Rhetorical & Negative Questions - Advanced Style
 
@@ -2016,24 +2036,43 @@ First 20:
 
 # 8. Unknown words
 
+- 1. Famous Words & Greetings: appétit
+- 7. Basic Nouns - People & Things: avocate
+- 13. Unit 1 Final Exam - Foundation: possession
+- 34. Possessive Adjectives - My, Your, His, Her: bureau, bagages
+- 37. Reading Comprehension 3 - La Première Page: Page
 - 50. Reading Comprehension 4 - La nouvelle époque de Marie: jamias
 - 52. Unit 4 Final Exam - Expression: aujourd, hui, solution
-- 54. Slang - Comparisons & Intensity: cest
-- 58. être - Past Tense (was / were): étè
-- 61. manger - To Eat (Present & Past): quest
-- 62. boire - To Drink (Present & Past): quest
-- 63. Reading Comprehension 5 - La fée verte (The Green Fairy): boisson, favorite, fées
+- 54. Slang - Comparisons & Intensity: cest, fou, louche
+- 61. manger - To Eat (Present & Past): quest, Passé, Composé
+- 62. boire - To Drink (Present & Past): quest, Passé, Composé
+- 63. Reading Comprehension 5 - La fée verte (The Green Fairy): fée, passé, composé, boisson, favorite, fées
+- 65. Unit 5 Final Exam - Sophistication: fou
+- 67. dire - To Say / To Tell: càd
 - 77. Unit 6 Final Exam - Communication: solution
 - 78. Talking About People in General: erreurs
-- 89. Reading 7 - L'Art d'Apprendre: comprendez
+- 87. Discourse Markers - Sound Like a Native: clarification
+- 89. Reading 7 - L'Art d'Apprendre: comprendez, usage
 - 91. Unit 7 Final Exam - Knowledge & Learning: mathématiques
-- 106. Unit 8 Final Exam - Daily Life & Actions: dîner, couches
+- 92. Temporal & Sequential Words - Time & Order: dîner
+- 102. Irregular Commands - être, avoir, aller, faire: patience
+- 104. Reading 8 - Ma Journée: coucher
+- 105. Unit 8 Practice - Fill in the Blanks: coucher
+- 106. Unit 8 Final Exam - Daily Life & Actions: dîner, couches, coucher, couche
 - 107. Causal & Reason Words - Explaining Why: traffic, maladie
-- 113. être Verbs - DR & MRS VANDERTRAMP (went, came, left): Mourir, Retourner
+- 108. Spatial Prepositions - Position & Location: niveau
+- 110. Passé Composé - Regular -ER Verbs (I spoke, I ate): Passé, Composé
+- 115. Imparfait Formation - All Verbs (was doing, used to do): parl
+- 116. Passé Composé vs Imparfait - The Golden Rule: Passé, Composé
 - 117. Past Tense Composition - Building Complete Stories: libre, soif
-- 118. Reading 9 - Une Histoire du Passé: weekend
+- 118. Reading 9 - Une Histoire du Passé: weekend, Passé
+- 119. Unit 9 Practice - Fill in the Blanks: ailleurs, semble
 - 120. Unit 9 Final Exam - Discourse & Past Tense: ailleurs, semble
+- 122. More Forms for 'il faut que' and 'je veux que' Phrases: Normal
+- 141. donner - To Give: cadeau
 - 142. Daily Life Essentials - Sleep, Work, Live: centre
+- 147. Reading 11 - La France Moderne: Mouvement
+- 149. Unit 11 Final Exam - Daily Essentials & Practical Communication: respecté
 - 159. Rhetorical & Negative Questions - Advanced Style: conditionnel
 
 # 9. Other problems

@@ -7,11 +7,11 @@
     "reuse-missed": 492,
     "taught-twice": 138,
     "translate-item": 1761,
-    "unknown-word": 28,
-    "untaught-construction": 116,
-    "untaught-word": 1048
+    "unknown-word": 63,
+    "untaught-construction": 117,
+    "untaught-word": 1058
   },
-  "errors": 3038,
-  "modulesWithErrors": 155,
+  "errors": 3084,
+  "modulesWithErrors": 156,
   "warnings": 672
 }
