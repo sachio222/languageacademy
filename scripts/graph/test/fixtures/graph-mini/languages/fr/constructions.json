@@ -1,0 +1,45 @@
+[
+  {
+    "id": "fr:cx:subject-pronouns",
+    "label": "Subject pronouns",
+    "needs": [],
+    "detect": null,
+    "examples": {
+      "match": [
+        "Je parle."
+      ],
+      "noMatch": [
+        "Parler."
+      ]
+    },
+    "contrastsWith": [],
+    "cefr": null
+  },
+  {
+    "id": "fr:cx:q.inversion",
+    "label": "Question by inversion",
+    "needs": [
+      "fr:cx:subject-pronouns"
+    ],
+    "detect": [
+      {
+        "headword": null,
+        "cell": null
+      },
+      {
+        "surface": "^-(t-)?(tu|il|elle|on|nous|vous|ils|elles)$",
+        "clitic": true
+      }
+    ],
+    "examples": {
+      "match": [
+        "Veux-tu du café ?"
+      ],
+      "noMatch": [
+        "Tu veux du café ?"
+      ]
+    },
+    "contrastsWith": [],
+    "cefr": null
+  }
+]

@@ -9,7 +9,8 @@
     "dev": "vite",
     "preview": "vite preview",
     "vocab:sort": "node scripts/alphabetize-vocabulary.js",
-    "vocab:validate": "node scripts/validate-vocabulary.js"
+    "vocab:validate": "node scripts/validate-vocabulary.js",
+    "graph:test": "node --test \"scripts/graph/test/**/*.test.mjs\""
   },
   "keywords": [
     "french",

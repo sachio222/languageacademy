@@ -1,0 +1,44 @@
+[
+  {
+    "id": "fr:form:aller.prs.1sg",
+    "of": "fr:lex:aller",
+    "cell": "prs.1sg",
+    "surface": "vais"
+  },
+  {
+    "id": "fr:form:aller.prs.2sg",
+    "of": "fr:lex:aller",
+    "cell": "prs.2sg",
+    "surface": "vas"
+  },
+  {
+    "id": "fr:form:aller.prs.3sg",
+    "of": "fr:lex:aller",
+    "cell": "prs.3sg",
+    "surface": "va"
+  },
+  {
+    "id": "fr:form:aller.prs.1pl",
+    "of": "fr:lex:aller",
+    "cell": "prs.1pl",
+    "surface": "allons"
+  },
+  {
+    "id": "fr:form:aller.prs.2pl",
+    "of": "fr:lex:aller",
+    "cell": "prs.2pl",
+    "surface": "allez"
+  },
+  {
+    "id": "fr:form:aller.prs.3pl",
+    "of": "fr:lex:aller",
+    "cell": "prs.3pl",
+    "surface": "vont"
+  },
+  {
+    "id": "fr:form:etre.prs.3sg",
+    "of": "fr:lex:etre",
+    "cell": "prs.3sg",
+    "surface": "est"
+  }
+]

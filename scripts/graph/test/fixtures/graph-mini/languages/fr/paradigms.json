@@ -1,0 +1,39 @@
+[
+  {
+    "id": "fr:cx:verb.er.present",
+    "label": "Present tense of -er verbs",
+    "needs": [],
+    "rules": [
+      {
+        "cell": "prs.1sg",
+        "strip": "er",
+        "add": "e"
+      },
+      {
+        "cell": "prs.2sg",
+        "strip": "er",
+        "add": "es"
+      },
+      {
+        "cell": "prs.3sg",
+        "strip": "er",
+        "add": "e"
+      },
+      {
+        "cell": "prs.1pl",
+        "strip": "er",
+        "add": "ons"
+      },
+      {
+        "cell": "prs.2pl",
+        "strip": "er",
+        "add": "ez"
+      },
+      {
+        "cell": "prs.3pl",
+        "strip": "er",
+        "add": "ent"
+      }
+    ]
+  }
+]

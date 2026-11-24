@@ -1,0 +1,160 @@
+[
+  {
+    "id": "fr:lex:je",
+    "lemma": "je",
+    "pos": "pronoun",
+    "paradigms": [],
+    "senses": [
+      "sense:je"
+    ],
+    "dictionaryId": "je-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:tu",
+    "lemma": "tu",
+    "pos": "pronoun",
+    "paradigms": [],
+    "senses": [
+      "sense:tu"
+    ],
+    "dictionaryId": "tu-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:il",
+    "lemma": "il",
+    "pos": "pronoun",
+    "paradigms": [],
+    "senses": [
+      "sense:il"
+    ],
+    "dictionaryId": "il-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:nous",
+    "lemma": "nous",
+    "pos": "pronoun",
+    "paradigms": [],
+    "senses": [
+      "sense:nous"
+    ],
+    "dictionaryId": "nous-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:vous",
+    "lemma": "vous",
+    "pos": "pronoun",
+    "paradigms": [],
+    "senses": [
+      "sense:vous"
+    ],
+    "dictionaryId": "vous-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:parler",
+    "lemma": "parler",
+    "pos": "verb",
+    "paradigms": [
+      "fr:cx:verb.er.present"
+    ],
+    "senses": [
+      "sense:speak"
+    ],
+    "dictionaryId": "parler-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:aller",
+    "lemma": "aller",
+    "pos": "verb",
+    "paradigms": [],
+    "senses": [
+      "sense:go.move"
+    ],
+    "dictionaryId": "aller-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:etre",
+    "lemma": "être",
+    "pos": "verb",
+    "paradigms": [],
+    "senses": [
+      "sense:be"
+    ],
+    "dictionaryId": "etre-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:avoir",
+    "lemma": "avoir",
+    "pos": "verb",
+    "paradigms": [],
+    "senses": [
+      "sense:have"
+    ],
+    "dictionaryId": "avoir-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:est",
+    "lemma": "est",
+    "pos": "noun",
+    "paradigms": [],
+    "senses": [
+      "sense:east"
+    ],
+    "dictionaryId": "est-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:cafe",
+    "lemma": "café",
+    "pos": "noun",
+    "paradigms": [],
+    "senses": [
+      "sense:coffee"
+    ],
+    "dictionaryId": "cafe-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:parc",
+    "lemma": "parc",
+    "pos": "noun",
+    "paradigms": [],
+    "senses": [
+      "sense:parc"
+    ],
+    "dictionaryId": "parc-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:hier",
+    "lemma": "hier",
+    "pos": "adverb",
+    "paradigms": [],
+    "senses": [
+      "sense:hier"
+    ],
+    "dictionaryId": "hier-fr",
+    "cefr": null,
+    "cefrSource": null
+  }
+]
