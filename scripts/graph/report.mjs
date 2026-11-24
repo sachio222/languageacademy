@@ -15,6 +15,19 @@ export function summarize(issues) {
   return { byRule, errors, warnings, modulesWithErrors: modules.size };
 }
 
+// Rules graph:check always prints, even at zero: a course that reads cleanly has none of them.
+const ALWAYS_PRINTED = ['dangling-ref', 'unread-items'];
+
+// The lines graph:check prints: one count per rule, sorted, then the totals.
+export function checkSummaryLines(summary) {
+  const counts = { ...Object.fromEntries(ALWAYS_PRINTED.map((r) => [r, 0])), ...summary.byRule };
+  const rules = Object.keys(counts).sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
+  return [
+    ...rules.map((rule) => `${rule}: ${counts[rule]}`),
+    `errors: ${summary.errors}, warnings: ${summary.warnings}, modules with errors: ${summary.modulesWithErrors}`,
+  ];
+}
+
 // Rules that sections 1 to 8 show; anything else lands in section 9.
 const HANDLED = new Set([
   'untaught-word', 'untaught-construction', 'claim-untaught', 'claims-unmapped', 'translate-item',

@@ -34,8 +34,14 @@ export function validateGraph(graph) {
     for (const t of n.contrastsWith || []) ref(n.id, 'contrastsWith', t);
   }
   for (const [moduleKey, entry] of Object.entries(graph.courseMap || {})) {
-    for (const t of entry.teachesConstructions || []) ref(`courseMap:${moduleKey}`, 'teachesConstructions', t);
-    for (const t of entry.excludeWords || []) ref(`courseMap:${moduleKey}`, 'excludeWords', t);
+    const from = `courseMap:${moduleKey}`;
+    for (const field of ['teachesConstructions', 'teachesWordsManual', 'excludeWords', 'tests', 'preTeach']) {
+      for (const t of entry[field] || []) ref(from, field, t);
+    }
+    // An ignore entry is a node ID (has a colon) or a plain word; only node IDs can dangle.
+    for (const [itemRef, o] of Object.entries(entry.overrides || {})) {
+      for (const t of o?.ignore || []) if (String(t).includes(':')) ref(from, `overrides[${itemRef}].ignore`, String(t));
+    }
   }
 
   for (const c of graph.constructions) {

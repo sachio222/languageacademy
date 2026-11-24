@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { renderFixList, summarize } from '../report.mjs';
+import { renderFixList, summarize, checkSummaryLines } from '../report.mjs';
 import { makeModule } from './helpers.mjs';
 
 const course = [
@@ -19,6 +19,20 @@ test('summarize counts errors, warnings and modules with errors', () => {
   assert.equal(s.warnings, 1);
   assert.equal(s.modulesWithErrors, 2);
   assert.deepEqual(s.byRule, { 'untaught-word': 1, 'unknown-word': 1, 'reuse-missed': 1 });
+});
+
+test('checkSummaryLines prints unread-items and dangling-ref even at zero, then the totals', () => {
+  const lines = checkSummaryLines(summarize([
+    { rule: 'untaught-word', severity: 'error', moduleKey: 'm1' },
+    { rule: 'reuse-missed', severity: 'warning', moduleKey: 'm1' },
+  ]));
+  assert.deepEqual(lines, [
+    'dangling-ref: 0',
+    'reuse-missed: 1',
+    'unread-items: 0',
+    'untaught-word: 1',
+    'errors: 1, warnings: 1, modules with errors: 1',
+  ]);
 });
 
 test('renderFixList puts an untaught word under its unit and module heading', () => {

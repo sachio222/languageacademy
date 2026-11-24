@@ -75,6 +75,24 @@ test('validateGraph flags a dangling excludeWords ref', () => {
   assert.ok(validateGraph(g).some((i) => i.rule === 'dangling-ref' && i.message.includes('excludeWords')));
 });
 
+test('validateGraph flags dangling tests, teachesWordsManual, preTeach and override ignore refs', () => {
+  const g = {
+    ...loadGraph(fixtureDir, 'fr'),
+    courseMap: {
+      m: {
+        tests: ['fr:cx:nope1'],
+        teachesWordsManual: ['fr:lex:nope2'],
+        preTeach: ['fr:lex:nope3'],
+        overrides: { 'm#items[0]': { ignore: ['fr:lex:nope4', 'parle', 'fr:lex:parler'] } },
+      },
+    },
+  };
+  const dangling = validateGraph(g).filter((i) => i.rule === 'dangling-ref');
+  assert.deepEqual(dangling.map((i) => i.message.match(/missing node (\S+)/)[1]).sort(),
+    ['fr:cx:nope1', 'fr:lex:nope2', 'fr:lex:nope3', 'fr:lex:nope4']);
+  assert.ok(dangling.some((i) => i.message.includes('overrides[m#items[0]].ignore')));
+});
+
 test('validateGraph flags a construction with no examples.match', () => {
   const g = loadMutated('constructions.json', (cs) => [...cs, { id: 'fr:cx:bare', label: 'Bare', needs: [], detect: null, examples: {}, contrastsWith: [], cefr: null }]);
   assert.ok(validateGraph(g).some((i) => i.rule === 'construction-no-examples' && i.nodeId === 'fr:cx:bare'));

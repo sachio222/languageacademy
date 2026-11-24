@@ -12,6 +12,7 @@ import { ruleLevels } from '../rules/levels.mjs';
 import { ruleUnread } from '../rules/unread.mjs';
 import { ruleShapes } from '../rules/shapes.mjs';
 import { ruleBlanks } from '../rules/blanks.mjs';
+import { ruleCourseMapItems } from '../rules/course-map.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const base = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
@@ -205,4 +206,22 @@ test('a misplaced blank gives blank-misplaced naming the answer and where it sit
   ]);
   assert.match(issues[0].message, /"au".*inside the word "restaurant"/);
   assert.match(issues[1].message, /"hier".*after the end of the sentence/);
+});
+
+// course-map item keys
+test('itemKinds and overrides keys that match no item give course-map-unknown-item', () => {
+  const course = [makeModule({ position: 1, items: [item('m1#items[0]')] })];
+  const issues = ruleCourseMapItems(ctxOf(course, {
+    m1: {
+      itemKinds: { 'm1#items[0]': 'situation', 'm1#items[9]': 'other' },
+      overrides: { 'm1#items[0]': { ignore: ['parle'] }, 'm1#gone': { ignore: ['x'] } },
+    },
+    elsewhere: { itemKinds: { 'elsewhere#items[0]': 'other' } }, // unknown modules are course-map-unknown-module
+  }));
+  assert.deepEqual(issues.map((i) => [i.rule, i.severity, i.moduleKey, i.itemRef]), [
+    ['course-map-unknown-item', 'warning', 'm1', 'm1#items[9]'],
+    ['course-map-unknown-item', 'warning', 'm1', 'm1#gone'],
+  ]);
+  assert.match(issues[0].message, /itemKinds/);
+  assert.match(issues[1].message, /overrides/);
 });
