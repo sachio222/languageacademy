@@ -302,7 +302,8 @@ function readShownText(mod, key, kind, isWord, screen, items) {
 }
 
 // opts.isWord: the word test for mixed text (frenchWordTest); without it, mixed text is judged by its English words
-// alone. opts.screen: the French strings of the module's help screen (readScreen).
+// alone. opts.screen: the French strings of the module's help screen (readScreen). opts.unitDescription: the unit's
+// description, which the app shows on the unit card and which may carry a level label (B2 Level Phrases).
 export function readModule(mod, position, unitId, unitTitle = null, opts = {}) {
   const key = mod.moduleKey;
   const items = [];
@@ -353,6 +354,7 @@ export function readModule(mod, position, unitId, unitTitle = null, opts = {}) {
     title: mod.title,
     unitId,
     unitTitle,
+    unitDescription: opts.unitDescription ?? null,
     kind,
     vocab: (mod.vocabularyReference ?? []).map((v) => v.french).filter((f) => typeof f === 'string'),
     conceptTerms: (mod.concepts ?? []).map((c) => c.term).filter((t) => typeof t === 'string'),
@@ -379,8 +381,21 @@ export async function readCourse(repoRoot, opts = {}) {
       const screenFile = opts.courseMap?.[mod.moduleKey]?.screen;
       const screenPath = typeof screenFile === 'string' ? path.join(repoRoot, screenFile) : null;
       const screen = screenPath && existsSync(screenPath) ? readScreen(readFileSync(screenPath, 'utf8'), { isWord }) : null;
-      out.push(readModule(mod, out.length + 1, unit.metadata.id, unit.metadata.title, { isWord, screen }));
+      out.push(readModule(mod, out.length + 1, unit.metadata.id, unit.metadata.title, {
+        isWord, screen, unitDescription: unit.metadata.description ?? null,
+      }));
     }
   }
   return out;
+}
+
+// The vocabulary tables of the Reference unit (alphabet, numbers, days and months, colors). The unit has no course
+// position, so it teaches nothing; the report names what only it shows.
+export async function readReferenceVocab(repoRoot) {
+  const file = path.join(repoRoot, 'src/lessons/unitConfigLoader.js');
+  const { unitConfigs } = await import(pathToFileURL(file).href);
+  return unitConfigs
+    .filter((unit) => String(unit.metadata.title).startsWith('Reference'))
+    .flatMap((unit) => unit.modules.flatMap((mod) => (mod.vocabularyReference ?? []).map((v) => v.french)))
+    .filter((f) => typeof f === 'string');
 }

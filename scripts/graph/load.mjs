@@ -1,7 +1,8 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fold } from './fold.mjs';
 import { loadPair, ALLOW_IN } from './pairs.mjs';
+import { readCoreLists } from './levels-data.mjs';
 
 function readJson(path) {
   let text;
@@ -44,6 +45,11 @@ export function loadGraph(graphDir, lang, opts = {}) {
   const courseMap = readJson(join(langDir, 'course-map.json'));
   // How this language performs the shared functions; see functions.mjs.
   const exponents = readJson(join(langDir, 'exponents.json'));
+  // Core lists per level (core/levels/<lang>-<level>.json) and headwords the checker cannot yet read in running
+  // text (reading-limits.json); a language may have neither.
+  const coreLists = readCoreLists(graphDir, lang);
+  const limitsPath = join(langDir, 'reading-limits.json');
+  const readingLimits = existsSync(limitsPath) ? readJson(limitsPath) : [];
 
   const nodes = new Map();
   const duplicates = [];
@@ -56,5 +62,5 @@ export function loadGraph(graphDir, lang, opts = {}) {
   }
 
   const names = new Set(nameList.map((n) => fold(n.surface)));
-  return { lang, native, pair, settings, functions, exponents, nodes, duplicates, headwords, forms, paradigms, constructions, names, courseMap };
+  return { lang, native, pair, settings, functions, exponents, coreLists, readingLimits, nodes, duplicates, headwords, forms, paradigms, constructions, names, courseMap };
 }

@@ -5,6 +5,7 @@ import { runCheck } from './check.mjs';
 import { renderFixList, summarize, checkSummaryLines } from './report.mjs';
 import { dueAt } from './rules/reuse.mjs';
 import { writeSortedJson } from './write-json.mjs';
+import { writeReportData } from './report-data.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
@@ -47,9 +48,13 @@ async function main() {
 
   const dir = join(repoRoot, 'curriculum-graph/reports');
   mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, `${lang}-fix-list.md`), renderFixList(issues, ctx.course, ctx.graph.courseMap, { pair: ctx.graph.pair }));
+  const { levels, functions } = writeReportData(dir, lang, ctx);
+  writeFileSync(join(dir, `${lang}-fix-list.md`), renderFixList(issues, ctx.course, ctx.graph.courseMap, {
+    pair: ctx.graph.pair, levels, functions, graph: ctx.graph,
+  }));
   writeSortedJson(join(dir, `${lang}-summary.json`), summary);
-  console.log(`wrote ${lang}-fix-list.md and ${lang}-summary.json: ${summary.errors} errors, ${summary.warnings} warnings`);
+  console.log(`wrote ${lang}-fix-list.md, ${lang}-summary.json, ${lang}-levels.json and ${lang}-functions.json: `
+    + `${summary.errors} errors, ${summary.warnings} warnings`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) await main();

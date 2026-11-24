@@ -3,18 +3,57 @@
     "blank-misplaced": 58,
     "claim-untaught": 27,
     "function-no-exponent": 1,
-    "level-data-missing": 1,
+    "function-unreachable": 6,
+    "level-label": 1,
+    "level-order": 32,
     "nonstandard-shape": 41,
     "reuse-missed": 492,
     "taught-twice": 138,
     "translate-item": 1761,
-    "unknown-word": 62,
+    "unknown-word": 34,
     "untaught-construction": 109,
-    "untaught-word": 740
+    "untaught-word": 778
   },
   "cognatesAllowed": 499,
-  "errors": 2757,
+  "coverage": {
+    "A1": {
+      "coreConstructions": 40,
+      "coreWords": 733,
+      "reachedAt": null,
+      "taughtConstructions": 37,
+      "taughtWords": 369
+    },
+    "A2": {
+      "coreConstructions": 23,
+      "coreWords": 681,
+      "reachedAt": null,
+      "taughtConstructions": 15,
+      "taughtWords": 86
+    },
+    "B1": {
+      "coreConstructions": 17,
+      "coreWords": 841,
+      "reachedAt": null,
+      "taughtConstructions": 13,
+      "taughtWords": 22
+    }
+  },
+  "errors": 2767,
+  "functionsPossible": {
+    "A1": {
+      "possible": 36,
+      "total": 42
+    },
+    "A2": {
+      "possible": 22,
+      "total": 23
+    },
+    "B1": {
+      "possible": 19,
+      "total": 19
+    }
+  },
   "modulesWithErrors": 154,
   "native": "en",
-  "warnings": 673
+  "warnings": 711
 }

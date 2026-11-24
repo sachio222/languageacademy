@@ -4,7 +4,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
-import { functionAvailability, ruleFunctionExponents, GROUPS } from '../functions.mjs';
+import { functionAvailability, ruleFunctionExponents, ruleFunctionUnreachable, functionReport, GROUPS } from '../functions.mjs';
 import { runCheck } from '../check.mjs';
 import { makeModule, makeCtx } from './helpers.mjs';
 
@@ -175,4 +175,45 @@ test('no two exponents of a real function list the same nodes', () => {
     assert.ok(!seen.has(key), key);
     seen.add(key);
   }
+});
+
+// Function coverage in the report data.
+function coverageCtx(courseMap, extra = {}) {
+  const graph = { ...base, courseMap, ...extra };
+  return makeCtx({ graph, course: course3 });
+}
+
+test('functionReport gives each function its position, exponent count and, when never possible, what its closest exponent lacks', () => {
+  const ctx = coverageCtx({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] }, m2: { teachesConstructions: ['fr:cx:q.inversion'] } });
+  ctx.reference = new Set(['fr:lex:vous']);
+  const { functions } = functionReport(ctx);
+  // Sorted by level, then group in GROUPS order, then ID.
+  assert.deepEqual(functions.map((f) => f.id), ['fn:ask-a-question', 'fn:say-what-you-do', 'fn:apologise', 'fn:greet']);
+  const byId = Object.fromEntries(functions.map((f) => [f.id, f]));
+  assert.deepEqual(byId['fn:greet'], {
+    id: 'fn:greet', group: 'socialising', cefr: 'A1', label: 'Greet someone', position: 1, exponentCount: 1, missing: [], referenceOnly: [],
+  });
+  // je parle lacks one node, je travaille two: the closest exponent is je parle.
+  assert.deepEqual(byId['fn:say-what-you-do'].missing, ['fr:lex:parler']);
+  assert.equal(byId['fn:say-what-you-do'].exponentCount, 2);
+  assert.equal(byId['fn:say-what-you-do'].position, null);
+  // A node only the Reference unit teaches is named as such.
+  assert.deepEqual(byId['fn:ask-a-question'].missing, ['fr:lex:vous']);
+  assert.deepEqual(byId['fn:ask-a-question'].referenceOnly, ['fr:lex:vous']);
+  assert.deepEqual(byId['fn:apologise'], {
+    id: 'fn:apologise', group: 'socialising', cefr: 'A1', label: 'Apologise', position: null, exponentCount: 0, missing: [], referenceOnly: [],
+  });
+});
+
+test('function-unreachable warns for an A1 or A2 function no exponent reaches, naming what is missing', () => {
+  const ctx = coverageCtx({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } });
+  const issues = ruleFunctionUnreachable(ctx);
+  // fn:apologise has no exponent at all, which function-no-exponent already reports.
+  assert.deepEqual(issues.map((i) => [i.rule, i.severity, i.nodeId]), [
+    ['function-unreachable', 'warning', 'fn:ask-a-question'],
+    ['function-unreachable', 'warning', 'fn:say-what-you-do'],
+  ]);
+  assert.match(issues[1].message, /fr:lex:parler/);
+  const b1 = coverageCtx({}, { functions: base.functions.map((f) => ({ ...f, cefr: 'B1' })) });
+  assert.deepEqual(ruleFunctionUnreachable(b1), []);
 });

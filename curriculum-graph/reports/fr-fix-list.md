@@ -1,6 +1,6 @@
 # French course fix list
 
-2757 errors, 673 warnings, 154 modules with errors.
+2767 errors, 711 warnings, 154 modules with errors.
 
 ## How to read this
 
@@ -10,9 +10,13 @@ Besides the exercises, the checker reads the French a learner sees on concept ca
 
 Section 1 lists words and patterns used before they are taught, module by module. Each line gives the reason (taught in a later module, a form such as bonne of a word taught earlier as bon, or not taught anywhere) and quotes the sentence it came from. The default fix is to teach the word earlier, in the module where it is first used; each line names that module. If the sentence does not need the word, remove it instead.
 
-Section 2 lists exam and practice topics the course has not taught by that point. Section 3 counts, per module, exercises after Unit 1 that show an English prompt and ask for the French; these should become other exercise types. Section 4 lists words and patterns explained in more than one lesson: keep the explanation in the lesson named and turn the others into practice. A word counts as explained where it heads a vocabulary entry, not where it appears inside a longer phrase. Section 5 counts taught words that do not come back soon enough to stick. Section 6 will compare level labels (A1 to C2) with the words each module teaches; the course word list has no level data yet, so for now it reports how many entries lack a level. Section 7 lists modules that store exercises in an older format.
+Section 2 lists exam and practice topics the course has not taught by that point. Section 3 counts, per module, exercises after Unit 1 that show an English prompt and ask for the French; these should become other exercise types. Section 4 lists words and patterns explained in more than one lesson: keep the explanation in the lesson named and turn the others into practice. A word counts as explained where it heads a vocabulary entry, not where it appears inside a longer phrase. Section 5 counts taught words that do not come back soon enough to stick.
 
-Section 8 lists words missing from the course word list. Most are typos, English words, or accepted answers typed without accents or apostrophes. Section 9 lists everything else, including fill-in-the-blank sentences whose blank sits inside a word, on a punctuation mark that the app then hides, or after the full stop.
+Section 6 measures the course against the CEFR levels, the scale of the Common European Framework of Reference that runs from A1 for beginners through A2 and B1 to C2. Each level has a core list: the words and grammar patterns a learner needs at that level. A level counts as reached once the course has taught 90% of its core words and every grammar pattern on its list. The level of each word and pattern is our own grading, informed by public sources: the Eaquals inventory of French grammar and functions by level, word frequencies from Lexique, and FLELex, which grades words by how often French textbooks use them at each level. A module's level is the highest level among the words and patterns it teaches. Section 6 also lists level labels that claim more than the modules teach, and modules that teach a word or pattern two or more levels above the highest level reached before them (counting from A1 until the course reaches a level).
+
+Section 7 lists what a learner can do with French at each level, such as asking the time, and the module where each becomes possible. Section 8 lists modules that store exercises in an older format.
+
+Section 9 lists words missing from the course word list. Most are typos, English words, or accepted answers typed without accents or apostrophes. Section 10 lists everything else, including fill-in-the-blank sentences whose blank sits inside a word, on a punctuation mark that the app then hides, or after the full stop.
 
 This list was checked for English speakers, so a cognate (a French word they read correctly without a lesson, such as restaurant) may appear in French the learner reads or hears from the cognates lesson on, before a lesson teaches it. The cognates come from curriculum-graph/pairs/en-fr/cognates.json, and Section 1 still lists a cognate the learner has to type. That line names the module where the learner first types it: teach the word there, or let the learner read it instead of typing it.
 
@@ -37,6 +41,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 ### 1. Famous Words & Greetings
 
 - "voyage" (fr:lex:voyager): taught later, at position 127 (Si j'étais... - Daydreaming & Hypotheticals); teach in this module. Hint: "bon voyage"
+- "appétit" (fr:lex:appetit): not taught anywhere in the course; teach in this module. Hint: "bon appétit"
 - "très" (fr:lex:tres): taught later, at position 10 (Basic Connectors - et, mais, ou, aussi, très); teach in this module. Hint: "très bien"
 
 ### 2. Core Pronouns - The Building Blocks
@@ -141,7 +146,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "deux" (fr:lex:deux): not taught anywhere in the course; teach in Prepositions - Spatial & Relational Words (position 23). Sentence: "…en un jour ? Non, mais nous avons deux jours. Un jour pour Mont-Saint-Michel…"
 - fr:cx:article.partitive: taught later, at position 28 (Contractions - du, au, de la, à la); teach in Cognates - French and English Share Many Words (position 6). Sentence: "Bonjour Sophie ! Comment ça va ? Ça va bien ! Je suis à Caen avec un ami Thomas.…"
 - fr:cx:il-y-a: taught later, at position 115 (Imparfait Formation - All Verbs (was doing, used to do)); teach in a lesson before this module. Sentence: "Bonjour Sophie ! Comment ça va ? Ça va bien ! Je suis à Caen avec un ami Thomas.…"
-- "Rendez" (fr:lex:rendre): taught later, at position 141 (donner - To Give); teach in a lesson before this module. Module title: "Rendez-vous en Normandie"
+- "Rendez-vous" (fr:lex:rendez-vous): taught later, at position 141 (donner - To Give); teach in a lesson before this module. Module title: "Rendez-vous en Normandie"
 - "venir" (fr:lex:venir): taught later, at position 29 (Essential Verb - venir (to come)); teach in The Power to Ask Anything (position 21). Concept card: "venir"
 - "partir" (fr:lex:partir): taught later, at position 32 (Essential Verb - partir (to leave)); teach in a lesson before this module. Concept card: "partir"
 
@@ -177,6 +182,8 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 - "frère" (fr:lex:frere): taught later, at position 74 (Essential Vocabulary - Time, People & Ideas); teach in this module. Concept card: "ton frère"
 - "sœur" (fr:lex:sœur): taught later, at position 74 (Essential Vocabulary - Time, People & Ideas); teach in this module. Concept card: "ta sœur"
+- "bureau" (fr:lex:bureau): not taught anywhere in the course; teach in this module. Concept card: "votre bureau"
+- "bagages" (fr:lex:bagage): not taught anywhere in the course; teach in this module. Concept card: "vos bagages"
 - "jardin" (fr:lex:jardin): not taught anywhere in the course; teach in this module. Concept card: "notre jardin"
 
 ### 37. Reading Comprehension 3 - La Première Page
@@ -193,6 +200,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "aujourd'hui" (fr:lex:aujourd-hui): taught later, at position 46 (Time & Frequency - now, always, never, today); teach in a lesson before this module. Sentence: "…Il a son jeune enfant aujourd'hui et il le voit à la maison. C'est…"
 - fr:cx:chunk.sil-te-plait: taught later, at position 40 (Survival Phrases - Real-World Essentials); teach in Essential Verb - vouloir (to want) (position 17). Sentence: "Paris, {1871}, Belle Époque Bonjour Marc ! Tu viens au Café de la Paix avec moi…"
 - "Première" (fr:lex:premier): not taught anywhere in the course; teach in a lesson before this module. Module title: "La Première Page"
+- "Page" (fr:lex:page): not taught anywhere in the course; teach in a lesson before this module. Module title: "La Première Page"
 
 ### 38. Unit 3 Practice - Fill in the Blanks
 
@@ -299,6 +307,10 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 - "cher" (fr:lex:cher): not taught anywhere in the course; teach in this module. Sentence: "c'est trop cher"
 
+### 54. Slang - Comparisons & Intensity
+
+- "fou" (fr:lex:fou): not taught anywhere in the course; teach in this module. Concept card: "fou"
+
 ### 55. Should & Could - Advice and Possibility
 
 - "travailler" (fr:lex:travailler): taught later, at position 110 (Passé Composé - Regular -ER Verbs (I spoke, I ate)); teach in Everyday Nouns - Life & World (position 49). Sentence: "il devrait travailler"
@@ -327,10 +339,12 @@ This list was checked for English speakers, so a cognate (a French word they rea
 
 - "ensemble" (fr:lex:ensemble): taught later, at position 124 (Je veux que... - Expressing Wishes); teach in Essential Verb - parler (to speak) (position 43). Sentence: "nous mangeons ensemble"
 - fr:cx:neg.de: not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Sentence: "je ne mange pas de viande"
+- "Passé" (fr:lex:passe): not taught anywhere in the course; teach in this module. Concept card: "Passé Composé"
 
 ### 62. boire - To Drink (Present & Past)
 
 - fr:cx:neg.de: not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Sentence: "je ne bois pas de café"
+- "Passé" (fr:lex:passe): not taught anywhere in the course; teach in manger - To Eat (Present & Past) (position 61). Concept card: "Passé Composé"
 
 ### 63. Reading Comprehension 5 - La fée verte (The Green Fairy)
 
@@ -357,6 +371,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "Fin" (fr:lex:fin): taught later, at position 74 (Essential Vocabulary - Time, People & Ideas); teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Sentence: "…nuit à Arles. « Je l'appelle : Terrasse du café le soir, » dit Vincent. Fin."
 - fr:cx:chunk.nest-ce-pas: taught later, at position 159 (Rhetorical & Negative Questions - Advanced Style); teach in a lesson before this module. Sentence: "« Salut Vincent ! » dit Paul. « Salut Paul, mon ami ! » dit Vincent. « Comment…"
 - "verte" (fr:lex:vert): taught later, at position 152 (Natural Phenomena - How Nature Works); teach in a lesson before this module. Module title: "La fée verte"
+- "passé" (fr:lex:passe): not taught anywhere in the course; teach in manger - To Eat (Present & Past) (position 61). Vocabulary note: "passé composé"
 - "retrouvent" (fr:lex:retrouver): not taught anywhere in the course; teach in a lesson before this module. Sentence: "…van Gogh et Paul Gauguin se retrouvent à leur café préféré pour boire…"
 - "vertes" (fr:lex:vert): taught later, at position 152 (Natural Phenomena - How Nature Works); teach in a lesson before this module. Sentence: "…boisson favorite, l'absinthe. On dit parfois qu'elle fait voir des fées vertes."
 - fr:cx:causative.faire: taught later, at position 132 (Je me fais couper... - Service Phrases); teach in Essential Verb - faire (to do/make) (position 41). Sentence: "La ville d'Arles. Vincent van Gogh et Paul Gauguin se retrouvent à leur café…"
@@ -385,6 +400,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - fr:cx:passe-compose.etre: taught later, at position 113 (être Verbs - DR & MRS VANDERTRAMP (went, came, left)); teach in a lesson before Unit 5 Practice - Fill in the Blanks (position 64). Concept card: "il est venu"
 - "matin" (fr:lex:matin): not taught anywhere in the course; teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Concept card: "matin"
 - "soir" (fr:lex:soir): not taught anywhere in the course; teach in The Power to Ask Anything (position 21). Concept card: "soir"
+- "fou" (fr:lex:fou): not taught anywhere in the course; teach in Slang - Comparisons & Intensity (position 54). Hint: "fou"
 
 ## Unit 6: Basic Fluency
 
@@ -518,6 +534,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "croire" (fr:lex:croire): taught later, at position 85 (croire - To Believe); teach in this module. Sentence: "on doit croire"
 - "gentils" (fr:lex:gentil): taught later, at position 102 (Irregular Commands - être, avoir, aller, faire); teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Concept card: "les gens sont gentils"
 - "faisant" (fr:lex:faire): the word faire is taught at position 41, but this form is not; teach in this module. Concept card: "On apprend en faisant des erreurs"
+- "erreurs" (fr:lex:erreur): not taught anywhere in the course; teach in this module. Concept card: "On apprend en faisant des erreurs"
 
 ### 79. Studying & Reviewing - étudier & réviser
 
@@ -593,8 +610,13 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "étudiant" (fr:lex:etudier): the word étudier is taught at position 79, but this form is not; teach in Essential Verb - être (to be) (position 3). Concept card: "étudiant"
 - "langue" (fr:lex:langue): not taught anywhere in the course; teach in a lesson before this module. Concept card: "langue"
 - "anglais" (fr:lex:anglais): not taught anywhere in the course; teach in prendre - To Take (position 68). Concept card: "anglais"
+- "mathématiques" (fr:lex:mathematiques): not taught anywhere in the course; teach in a lesson before this module. Concept card: "mathématiques"
 
 ## Unit 8: Daily Life & Actions
+
+### 92. Temporal & Sequential Words - Time & Order
+
+- "dîner" (fr:lex:diner): not taught anywhere in the course; teach in this module. Concept card: "après le dîner"
 
 ### 94. s'appeler - To Be Called (Your Name!)
 
@@ -627,10 +649,11 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "Soyons" (fr:lex:etre): the word être is taught at position 3, but this form is not; teach in this module. Concept card: "tu: Sois! vous: Soyez! nous: Soyons!"
 - "sage" (fr:lex:sage): taught later, at position 123 (Il faut que... - Saying What's Necessary); teach in this module. Concept card: "Sois sage!"
 - "Ayons" (fr:lex:avoir): the word avoir is taught at position 4, but this form is not; teach in this module. Concept card: "tu: Aie! vous: Ayez! nous: Ayons!"
+- "patience" (fr:lex:patience): not taught anywhere in the course; teach in this module. Concept card: "Ayez patience!"
 
 ### 103. Commands with Pronouns
 
-- "Montre" (fr:lex:montrer): not taught anywhere in the course; teach in this module. Concept card: "Montre-la-moi!"
+- "Montre" (fr:lex:montre): not taught anywhere in the course; teach in this module. Concept card: "Montre-la-moi!"
 
 ### 104. Reading 8 - Ma Journée
 
@@ -654,6 +677,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "pose" (fr:lex:poser): not taught anywhere in the course; teach in a lesson before Reading 7 - L'Art d'Apprendre (position 89). Sentence: "…on apprend des mots nouveaux. On se pose des questions. On s'amuse aussi. Les…"
 - "appris" (fr:lex:apprendre): the word apprendre is taught at position 68, but this form is not; teach in prendre - To Take (position 68). Sentence: "…Je pense: "Aujourd'hui, j'ai bien appris. Demain, je vais apprendre encore…"
 - fr:cx:chunk.parce-que: taught later, at position 107 (Causal & Reason Words - Explaining Why); teach in a lesson before Unit 7 Final Exam - Knowledge & Learning (position 91). Sentence: "Je m'appelle Marie. Voici ma journée typique. D'abord, je me réveille à sept…"
+- "coucher" (fr:lex:coucher): not taught anywhere in the course; teach in a lesson before this module. Concept card: "se coucher"
 - "habiter" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Concept card: "habiter"
 - "travailler" (fr:lex:travailler): taught later, at position 110 (Passé Composé - Regular -ER Verbs (I spoke, I ate)); teach in Everyday Nouns - Life & World (position 49). Concept card: "travailler"
 
@@ -665,11 +689,16 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - fr:cx:chunk.parce-que: taught later, at position 107 (Causal & Reason Words - Explaining Why); teach in a lesson before Unit 7 Final Exam - Knowledge & Learning (position 91). Sentence: "Je me dépêche parce que je suis en retard."
 - "matin" (fr:lex:matin): not taught anywhere in the course; teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Sentence: "Je me suis réveillé à sept heures ce matin."
 - "tard" (fr:lex:tard): taught later, at position 133 (Avant que... - Before Phrases); teach in a lesson before Reading Comprehension 5 - La fée verte (The Green Fairy) (position 63). Sentence: "Elle s'est levée tard."
+- "coucher" (fr:lex:coucher): not taught anywhere in the course; teach in a lesson before Reading 8 - Ma Journée (position 104). Concept card: "+ se coucher"
 
 ### 106. Unit 8 Final Exam - Daily Life & Actions
 
 - "sept" (fr:lex:sept): not taught anywhere in the course; teach in a lesson before Unit 6 Practice - Fill in the Blanks (position 76). Sentence: "tu te réveilles à sept heures"
 - "tôt" (fr:lex:tot): not taught anywhere in the course; teach in Morning Routine - se réveiller, se lever (position 95). Sentence: "on se lève tôt"
+- "dîner" (fr:lex:diner): not taught anywhere in the course; teach in Temporal & Sequential Words - Time & Order (position 92). Concept card: "après le dîner"
+- "couches" (fr:lex:coucher): not taught anywhere in the course; teach in a lesson before Reading 8 - Ma Journée (position 104). Concept card: "tu te couches"
+- "coucher" (fr:lex:coucher): not taught anywhere in the course; teach in a lesson before Reading 8 - Ma Journée (position 104). Concept card: "se coucher"
+- "couche" (fr:lex:coucher): not taught anywhere in the course; teach in a lesson before Reading 8 - Ma Journée (position 104). Concept card: "je me couche"
 - "habiter" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Concept card: "habiter"
 - "habite" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Concept card: "je habite"
 - "habites" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Concept card: "tu habites"
@@ -699,6 +728,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "dehors" (fr:lex:dehors): not taught anywhere in the course; teach in this module. Sentence: "il fait beau, on va dehors"
 - "gagné" (fr:lex:gagner): not taught anywhere in the course; teach in this module. Sentence: "Il est content il a gagné"
 - "vrai" (fr:lex:vrai): taught later, at position 126 (Je pense que... - Opinion Phrases); teach in dire - To Say / To Tell (position 67). Sentence: "c'est vrai, je te crois"
+- "maladie" (fr:lex:maladie): not taught anywhere in the course; teach in this module. Feedback: "à cause de la maladie"
 - fr:cx:il-y-a: taught later, at position 115 (Imparfait Formation - All Verbs (was doing, used to do)); teach in a lesson before Reading Comprehension 2 - Rendez-vous en Normandie (position 25). Feedback: "parce qu'il y a du traffic"
 
 ### 108. Spatial Prepositions - Position & Location
@@ -713,6 +743,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "dort" (fr:lex:dormir): taught later, at position 142 (Daily Life Essentials - Sleep, Work, Live); teach in avoir besoin de - To Need (position 73). Sentence: "Le chat dort sous mon lit"
 - "arbre" (fr:lex:arbre): taught later, at position 150 (Nature & Animals - Curiosity Vocabulary); teach in this module. Sentence: "Il y a un arbre devant ma fenêtre"
 - "fenêtre" (fr:lex:fenetre): taught later, at position 144 (Perception Verbs - écouter, regarder); teach in this module. Sentence: "Il y a un arbre devant ma fenêtre"
+- "niveau" (fr:lex:niveau): not taught anywhere in the course; teach in this module. Concept card: "Au-dessous du niveau"
 - "chaise" (fr:lex:chaise): not taught anywhere in the course; teach in this module. Concept card: "sous la chaise"
 
 ### 109. More Spatial Relations - Distance & Proximity
@@ -735,6 +766,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "télé" (fr:lex:tele): taught later, at position 144 (Perception Verbs - écouter, regarder); teach in this module. Sentence: "On a regardé la télé hier soir"
 - "soir" (fr:lex:soir): not taught anywhere in the course; teach in The Power to Ask Anything (position 21). Sentence: "On a regardé la télé hier soir"
 - "tard" (fr:lex:tard): taught later, at position 133 (Avant que... - Before Phrases); teach in a lesson before Reading Comprehension 5 - La fée verte (The Green Fairy) (position 63). Sentence: "On a travaillé tard hier"
+- "Passé" (fr:lex:passe): not taught anywhere in the course; teach in manger - To Eat (Present & Past) (position 61). Module title: "Passé Composé"
 
 ### 112. Irregular Past Participles - Set 2 (wanted, could, had to, said)
 
@@ -752,6 +784,9 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "partis" (fr:lex:partir): the word partir is taught at position 32, but this form is not; teach in this module. Sentence: "Êtes vous partis en vacances?"
 - "vacances" (fr:lex:vacances): not taught anywhere in the course; teach in this module. Sentence: "Êtes vous partis en vacances?"
 - "venue" (fr:lex:venir): the word venir is taught at position 29, but this form is not; teach in this module. Sentence: "Elle ne est pas venue"
+- "Mourir" (fr:lex:mourir): not taught anywhere in the course; teach in this module. Concept card: "Descendre, Revenir, Mourir, Retourner, Sortir, Venir, Aller, Naître, Devenir,…"
+- "Retourner" (fr:lex:retourner): not taught anywhere in the course; teach in this module. Concept card: "Descendre, Revenir, Mourir, Retourner, Sortir, Venir, Aller, Naître, Devenir,…"
+- "Naître" (fr:lex:naitre): taught later, at position 140 (Age & Personal Information); teach in Negation Part 2 - I can't, I won't, I never (position 47). Concept card: "…Retourner, Sortir, Venir, Aller, Naître, Devenir, Entrer, Rentrer, Tomber,…"
 
 ### 114. Past Participle Agreement with être
 
@@ -789,6 +824,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "matin" (fr:lex:matin): not taught anywhere in the course; teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50). Sentence: "Hier matin, j'ai pris le bus"
 - "retard" (fr:lex:retard): not taught anywhere in the course; teach in a lesson before Unit 8 Practice - Fill in the Blanks (position 105). Sentence: "Elle était toujours en retard"
 - "buvait" (fr:lex:boire): the word boire is taught at position 62, but this form is not; teach in this module. Sentence: "Il buvait du café quand je suis arrivé"
+- "Passé" (fr:lex:passe): not taught anywhere in the course; teach in manger - To Eat (Present & Past) (position 61). Concept card: "Passé Composé"
 - "ans" (fr:lex:an): taught later, at position 140 (Age & Personal Information); teach in Articles - The, A, An (position 5). Concept card: "J'avais 20 ans"
 - "jouer" (fr:lex:jouer): not taught anywhere in the course; teach in Imparfait Formation - All Verbs (was doing, used to do) (position 115). Instruction: "jouer"
 - "habiter" (fr:lex:habiter): not taught anywhere in the course; teach in Everyday Nouns - Life & World (position 49). Instruction: "habiter"
@@ -803,7 +839,9 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "télé" (fr:lex:tele): taught later, at position 144 (Perception Verbs - écouter, regarder); teach in Passé Composé - Regular -ER Verbs (I spoke, I ate) (position 110). Sentence: "J'ai fait mes devoirs ensuite j'ai regardé la télé"
 - "réussi" (fr:lex:reussir): taught later, at position 128 (Si j'avais su... - Past Regret Phrases); teach in Causal & Reason Words - Explaining Why (position 107). Sentence: "Grâce à toi, j'ai réussi"
 - "pluie" (fr:lex:pluie): taught later, at position 150 (Nature & Animals - Curiosity Vocabulary); teach in Causal & Reason Words - Explaining Why (position 107). Sentence: "À cause de la pluie, on est restés à la maison"
+- "libre" (fr:lex:libre): not taught anywhere in the course; teach in this module. Concept card: "…au parc près de chez moi. J'étais content parce que j'avais du temps libre."
 - "assis" (fr:lex:asseoir): not taught anywhere in the course; teach in Spatial Prepositions - Position & Location (position 108). Concept card: "…de l'école. Il y avait beaucoup de gens. Ils étaient assis autour des tables."
+- "soif" (fr:lex:soif): not taught anywhere in the course; teach in this module. Concept card: "…sorti. J'ai vu Marie donc on a parlé. On est allés au café car on avait soif."
 
 ### 118. Reading 9 - Une Histoire du Passé
 
@@ -852,6 +890,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - fr:cx:relative.que: not taught anywhere in the course; teach in a lesson before this module. Sentence: "Hier, c'était samedi et il faisait très beau à Paris. J'étais content parce que…"
 - fr:cx:relative.qui: not taught anywhere in the course; teach in a lesson before this module. Sentence: "Hier, c'était samedi et il faisait très beau à Paris. J'étais content parce que…"
 - fr:cx:subj.emotion-que: taught later, at position 125 (Je suis content que... - Emotion Phrases); teach in a lesson before this module. Sentence: "Hier, c'était samedi et il faisait très beau à Paris. J'étais content parce que…"
+- "Passé" (fr:lex:passe): not taught anywhere in the course; teach in manger - To Eat (Present & Past) (position 61). Module title: "Une Histoire du Passé"
 
 ### 119. Unit 9 Practice - Fill in the Blanks
 
@@ -877,6 +916,8 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "arbre" (fr:lex:arbre): taught later, at position 150 (Nature & Animals - Curiosity Vocabulary); teach in Spatial Prepositions - Position & Location (position 108). Sentence: "Elle s'est cachée derrière l'arbre pour que personne ne la voie."
 - "voie" (fr:lex:voir): the word voir is taught at position 19, but this form is not; teach in a lesson before this module. Sentence: "Elle s'est cachée derrière l'arbre pour que personne ne la voie."
 - fr:cx:subj.pour-que: taught later, at position 134 (Pour que... - So That Phrases); teach in a lesson before this module. Sentence: "Elle s'est cachée derrière l'arbre pour que personne ne la voie."
+- "ailleurs" (fr:lex:ailleurs): not taught anywhere in the course; teach in a lesson before this module. Concept card: "d'ailleurs"
+- "semble" (fr:lex:sembler): not taught anywhere in the course; teach in a lesson before this module. Concept card: "il semble"
 
 ### 120. Unit 9 Final Exam - Discourse & Past Tense
 
@@ -887,7 +928,10 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - "marchait" (fr:lex:marcher): taught later, at position 131 (En mangeant... - While Doing Phrases); teach in More Spatial Relations - Distance & Proximity (position 109). Sentence: "marchait"
 - "ouverte" (fr:lex:ouvrir): not taught anywhere in the course; teach in a lesson before this module. Sentence: "est ouverte"
 - "pleuvait" (fr:lex:pleuvoir): taught later, at position 152 (Natural Phenomena - How Nature Works); teach in Causal & Reason Words - Explaining Why (position 107). Sentence: "pleuvait"
+- "ailleurs" (fr:lex:ailleurs): not taught anywhere in the course; teach in a lesson before Unit 9 Practice - Fill in the Blanks (position 119). Concept card: "d'ailleurs"
+- "semble" (fr:lex:sembler): not taught anywhere in the course; teach in a lesson before Unit 9 Practice - Fill in the Blanks (position 119). Concept card: "il semble"
 - "faisaient" (fr:lex:faire): the word faire is taught at position 41, but this form is not; teach in a lesson before this module. Concept card: "ils faisaient"
+- "passé" (fr:lex:passe): not taught anywhere in the course; teach in manger - To Eat (Present & Past) (position 61). Concept card: "passé composé"
 - "mangeais" (fr:lex:manger): the word manger is taught at position 61, but this form is not; teach in Passé Composé vs Imparfait - The Golden Rule (position 116). Concept card: "je mangeais"
 - fr:cx:plus-que-parfait.avoir: taught later, at position 129 (J'avais déjà... - Had Already Done Phrases); teach in a lesson before this module. Concept card: "j'avais mangé"
 - fr:cx:plus-que-parfait.etre: not taught anywhere in the course; teach in a lesson before this module. Concept card: "tu étais venu"
@@ -1057,10 +1101,12 @@ This list was checked for English speakers, so a cognate (a French word they rea
 ### 141. donner - To Give
 
 - "numéro" (fr:lex:numero): *numéro* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; not taught anywhere in the course; teach in this module, or let the learner read it instead of typing it. Sentence: "tu peux me donner ton numéro"
+- "cadeau" (fr:lex:cadeau): not taught anywhere in the course; teach in this module. Concept card: "Je donne un cadeau"
 
 ### 142. Daily Life Essentials - Sleep, Work, Live
 
 - "huit" (fr:lex:huit): not taught anywhere in the course; teach in Morning Routine - se réveiller, se lever (position 95). Sentence: "je dors huit heures"
+- "centre" (fr:lex:centre): not taught anywhere in the course; teach in this module. Concept card: "Je vis à Paris, je travaille au centre-ville, et je dors bien"
 
 ### 143. Search & Find - chercher, trouver
 
@@ -1157,6 +1203,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - fr:cx:relative.qui: not taught anywhere in the course; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Sentence: "La France d'aujourd'hui est un pays qui continue à évoluer rapidement. Avec ses…"
 - "quels" (fr:lex:quel): the word quel is taught at position 20, but this form is not; teach in a lesson before this module. Instruction: "Dans quels secteurs travaillent les Français?"
 - "rencontrent" (fr:lex:rencontrer): not taught anywhere in the course; teach in a lesson before Reading 9 - Une Histoire du Passé (position 118). Instruction: "Avec qui les diplomates français rencontrent-ils?"
+- "Mouvement" (fr:lex:mouvement): not taught anywhere in the course; teach in a lesson before this module. Sentence: "Un Pays en Mouvement"
 
 ### 148. Unit 11 Practice - Fill in the Blanks
 
@@ -1209,6 +1256,7 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - fr:cx:passive: not taught anywhere in the course; teach in a lesson before Unit 11 Practice - Fill in the Blanks (position 148). Concept card: "je suis aimé"
 - "aurons" (fr:lex:avoir): the word avoir is taught at position 4, but this form is not; teach in a lesson before this module. Concept card: "nous aurons parlé"
 - "aurions" (fr:lex:avoir): the word avoir is taught at position 4, but this form is not; teach in a lesson before this module. Concept card: "nous aurions parlé"
+- "respecté" (fr:lex:respecter): not taught anywhere in the course; teach in a lesson before this module. Concept card: "tu es respecté"
 
 ## Unit 12: Curiosity & Questions
 
@@ -1618,11 +1666,223 @@ First 20:
 - fr:lex:on (taught at position 2) expected by position 4; last use at position 160
 - fr:cx:pronoun.tu-vous (taught at position 2) expected by position 4; never used again
 
-# 6. Level labels
+# 6. Levels
 
-- 611 taught words and grammar patterns have no level (A1 to C2) yet, so level labels cannot be checked
+Core words taught by the end of the course: A1: 50%, A2: 12%, B1: 2%.
 
-# 7. Exercises in a nonstandard format
+| Level | Core words taught | Core constructions taught | Reached at |
+|---|---|---|---|
+| A1 | 50% (369 of 733) | 37 of 40 | Not reached |
+| A2 | 12% (86 of 681) | 15 of 23 | Not reached |
+| B1 | 2% (22 of 841) | 13 of 17 | Not reached |
+
+## Core grammar patterns not taught
+
+- A1: de (d') instead of un, une, des or du after a negation (je n'ai pas de chat) (fr:cx:neg.de); Present tense of regular -ir verbs like finir (je finis, nous finissons) (fr:cx:verb.ir.present); Present tense of regular -re verbs like attendre (j'attends, il attend) (fr:cx:verb.re.present)
+- A2: Negation ne … plus (no longer, no more) (fr:cx:neg.ne-plus); Negation ne … rien (nothing), also rien ne … at the start of a sentence (fr:cx:neg.ne-rien); The pronoun en (some, of it) before the verb or an infinitive, or attached to an imperative (j'en ai, il y en a, je vais en acheter, prends-en) (fr:cx:pronoun.en); The pronoun y (there, about it) before the verb or attached to an imperative (j'y vais, on y va, vas-y); y in il y a is not counted (fr:cx:pronoun.y); Relative pronoun où after a noun of place or time, optionally followed by up to two adjectives (la ville où j'habite, le jour où il est venu, ce quartier célèbre où les artistes ont vécu); in lenient text où and ou (or) fold together (fr:cx:relative.ou); Relative pronoun que (qu') as the object of a relative clause after a noun (optionally followed by up to two adjectives), celui / celle / ceux / celles or a stressed pronoun (le livre que je cherche, le grand livre rouge que je cherche, celles qu'on aime, c'est toi que je vois); the subject after que must be a pronoun, so a noun subject (le livre que Paul cherche) is not counted; nouns that take a que clause (peur, idée, preuve, fait …) are left out, while a reported clause after a noun (il dit à sa mère que tu viens) still matches (fr:cx:relative.que); Relative pronoun qui as the subject of a relative clause after a noun (optionally followed by up to two adjectives), a pronoun or a name (la personne qui parle, le livre rouge qui est ici, c'est toi qui pars, le Café de Flore qui est en face); a reading passage is one text, so a name ending one sentence before a question starting with qui also matches (fr:cx:relative.qui); Real condition si + present tense (si tu veux, si j'ai le temps, je viens si tu veux); si after savoir, se demander, dire or a negation (je ne sais pas si) is an embedded question and does not count; s'il vous plaît and s'il te plaît are fixed phrases and do not count (fr:cx:si.present)
+- B1: Passive voice: être + past participle of a verb that is not an être verb (je suis aimé, la maison est construite, il a été compris); participles used as everyday adjectives (fatigué, occupé, surpris, marié, assis …) do not count; nous and vous count as subjects only at the start of a sentence, so the reflexive nous nous sommes levés is not read as passive (fr:cx:passive); Plus-que-parfait with être for the être verbs (j'étais déjà parti, elle était venue) (fr:cx:plus-que-parfait.etre); Headless relatives ce que (what, as object) and ce qui (what, as subject): je fais ce que je veux, ce qui est important (fr:cx:relative.ce-que); Relative pronoun dont (of which, whose, about which: la chose dont je parle) (fr:cx:relative.dont)
+
+## Core words not taught
+
+- A1, 361 words: accepter, accident, accord, acheter, adorer, aéroport, Ah, aider, allemand, allô, alphabet, américain, anglais, animal, anniversaire, annuler, août, appartement, appétit, après-midi, asseoir, assiette, automne, avion, avril, banque, bateau, beaucoup, bébé, belge, bibliothèque, bientôt, billet, blond, bouche, boulangerie, bouteille, bras, bravo, bureau, cacher, cadeau, cahier, campagne, canadien, canapé, carotte, centre, chaise, chambre, changer, chanter, chapeau, chaussette, chaussure, chemise, cher, chinois, choisir, cinéma, cinquante, citron, clair, client, confirmer, confiture, contre, conversation, copain, coucher, couleur, course, court, cousin, couteau, crayon, cuillère, cuisine, dame, danser, décembre, découvrir, déjeuner, délicieux, demi, demi-heure, dent, dernier, désirer, dessert, dessin, dessiner, détester, deux, deuxième, différent, difficile, dimanche, dîner, direction, discuter, dix, docteur, doigt, dos, douche, doucher, douze, écharpe, écrire, effort, église, élève, embrasser, enchanté, entendre, entrée, envoyer, épeler, espagnol, étage, été, étudiant, euro, exemple, exercice, exister, expliquer, facile, félicitations, féliciter, fermer, fête, février, foot, fourchette, fraise, gagner, garçon, gomme, grand-mère, grand-père, gris, gros, habiter, haut, heureux, hôpital, hôtel, huit, important, information, intelligent, intéressant, internet, inviter, italien, jambe, jambon, janvier, japonais, jardin, jaune, jeudi, joli, jouer, journal, juillet, juin, jupe, kilo, kilomètre, lampe, langue, lettre, libre, lire, lit, litre, longtemps, lumière, lundi, lunettes, lycée, machine, madame, mademoiselle, magasin, mai, maman, marché, mardi, mari, marron, mars, match, matin, mauvais, médecin, menu, mercredi, météo, métier, mètre, métro, midi, minuit, mois, monsieur, montagne, montre, montrer, mot, moto, musée, neige, nez, Noël, noir, novembre, numéro, octobre, offrir, oh, oignon, oncle, onze, ordinateur, oreille, oublier, ouvrir, papa, parc, parent, passer, payer, pays, perdre, permettre, petit-déjeuner, pharmacie, photo, phrase, pièce, piscine, plage, plaisir, plat, poire, pomme de terre, poser, poste, préféré, préférer, premier, prénom, présenter, prêt, printemps, prix, prochain, profiter, pull, quarante, quart, quartier, quatorze, quatrième, radio, raisin, refuser, remercier, rencontrer, repas, répéter, répondre, réserver, restaurant, retard, retrouver, rêve, rêver, rien, robe, rose, rouge, route, russe, sac, saison, salle, salon, samedi, sandwich, sans, secret, seize, semaine, sens, sept, septembre, serveur, service, seul, simple, six, soif, soir, soirée, soixante, sommeil, souhaiter, soupe, sourire, sport, station, steak, stylo, suisse, suivre, sujet, super, supermarché, surprise, sympa, tante, tasse, taxi, téléphone, télévision, tennis, théâtre, ticket, tôt, tour, touriste, transport, traverser, treize, trois, troisième, utiliser, vacances, valise, vélo, vendeur, vendredi, ventre, verre, veste, vêtement, village, violet, visiter, voici, volontiers, voyage, vue, week-end, yaourt, zéro
+- A2, 585 words: absent, absolument, accent, accompagner, acteur, activité, actrice, admirer, adolescent, adulte, affaire, âgé, agréable, aile, aimable, air, ajouter, alcool, allumer, ambulance, amener, amitié, amour, amoureux, amusant, ancien, appareil, appel, apporter, apprécier, arabe, armoire, arrêt, arrêter, arrivée, artiste, ascenseur, assez, assister, attacher, attirer, attraper, avance, avancer, avenir, aventure, avenue, avertir, avis, avocat, bagage, bague, baigner, bain, balcon, balle, ballon, banc, bar, barbe, bas, bâtiment, bavarder, beauté, beige, bête, bijou, bizarre, blague, blesser, bois, boîte, bol, bonbon, bonheur, bord, botte, boucherie, bouger, bougie, boulanger, boule, bouquet, boutique, bouton, britannique, brouillard, brun, caisse, calme, camarade, camion, canard, capitale, caractère, carnet, carrefour, casque, casquette, casser, cathédrale, cave, ceinture, célèbre, celui, centime, certain, chacun, chaîne, chaleur, champ, champagne, champion, changement, chanson, chanteur, charmant, château, chauffeur, chef, chemin, chèque, cheval, chiffre, choix, chou, cigarette, cirque, classique, club, cochon, coiffer, coiffeur, collègue, collier, comédie, comparer, complet, compliqué, compte, concert, conduire, congé, conseil, conseiller, contact, contacter, contraire, costume, cou, couloir, couple, cour, courage, courageux, courriel, courrier, couverture, cravate, créer, crème, crier, cuir, cuire, cuisiner, cuisinier, culture, curieux, danger, dangereux, danse, danseur, debout, décrire, décrocher, dedans, degré, dehors, déménager, départ, dépendre, dépenser, déplacer, déposer, déranger, destination, deviner, différence, directement, directeur, disputer, disque, dizaine, document, dommage, doucement, douleur, doux, drap, drapeau, drôle, échanger, écran, écriture, écrivain, émission, emmener, emploi, endormir, énergie, enfance, enlever, ennuyer, énorme, entier, entraîner, entreprise, épaule, épicerie, époque, équipe, erreur, escalier, espace, espérer, espoir, éteindre, étoile, étranger, européen, évidemment, exact, exactement, examen, excellent, excuse, expérience, explication, extraordinaire, fâcher, façon, facteur, fantastique, faute, fauteuil, faux, ferme, feu, feuille, fier, fièvre, fleuve, foncé, fonctionner, fond, forêt, forme, formidable, fou, frapper, fumer, gant, garage, garde, géant, général, généralement, genou, géographie, gorge, goût, goûter, gramme, grandir, grec, grippe, groupe, guerre, guide, guitare, habitant, heureusement, horrible, huile, identité, idiot, île, image, imaginer, immédiatement, immeuble, impossible, incroyable, indien, indiquer, infirmier, informatique, ingénieur, inquiet, inquiéter, inscrire, installer, instrument, interdire, international, inutile, inventer, invité, jeter, jeu, joie, joue, jouet, joueur, jour férié, journaliste, joyeux, jumeau, jusque, justement, là-haut, lac, laid, laisser, large, lecture, léger, librairie, lieu, lion, liste, louer, lourd, lune, magazine, magnifique, maîtresse, maladie, malheureusement, malheureux, manquer, marchand, mariage, marque, mathématiques, matière, matinée, méchant, médicament, mémoire, ménage, mentir, merveilleux, message, meuble, mieux, mignon, million, mince, miroir, moderne, moitié, monnaie, monument, morceau, mouchoir, mourir, moustache, mouton, mur, musicien, nécessaire, neveu, nièce, niveau, nombre, nombreux, nourriture, objet, océan, orage, oreiller, organiser, original, os, ouvert, ouvrier, page, paire, pâle, panier, panneau, papier, Pâques, paquet, parfait, parfaitement, parfum, parking, partager, participer, passager, passé, passeport, patron, pause, pauvre, paysage, peau, pêche, peindre, peinture, permis, piano, pilote, placard, plaisanter, plan, planète, plein, pleurer, plusieurs, plutôt, poids, police, policier, polonais, pont, port, portable, portefeuille, portugais, poubelle, poule, poupée, pratique, présent, preuve, prier, produit, professionnel, programme, projet, promenade, promener, promettre, prononcer, propos, proposer, propre, protéger, quai, qualité, quelquefois, queue, quitter, raccrocher, raconter, ramasser, randonnée, ranger, rappeler, rater, réalité, recevoir, recommander, recommencer, reconnaître, refaire, réfléchir, réfrigérateur, région, règle, reine, rejoindre, relation, remplacer, remplir, rencontre, renoncer, renseignement, renseigner, repartir, repos, reposer, reprendre, respirer, responsable, résultat, retour, retourner, réunion, réveil, rhume, rideau, rire, rivière, rock, roi, rôle, roman, rond, rouler, roux, sable, saint, salaire, sale, santé, scène, science, sec, seconde, secours, secrétaire, séjour, sembler, sensible, sentir, série, sérieux, serpent, serviette, servir, siècle, signer, signifier, silence, simplement, situation, ski, sofa, sonner, sortie, souris, soutenir, spécial, spectacle, stade, studio, stupide, suite, superbe, surprendre, surtout, système, taille, taper, tapis, tellement, température, tenir, tente, terminer, terrasse, terrible, test, texte, timide, tiroir, toit, tort, toucher, tradition, traduire, tranche, tranquille, tromper, trottoir, unique, usine, utile, vache, valeur, vendre, vérifier, vérité, vers, vide, vidéo, vider, visite, vitesse, voisin, vol
+- B1, 816 words: abandonner, abri, absence, accès, accorder, accrocher, accueillir, accuser, achever, acte, activement, actuellement, adieu, admettre, administration, adopter, affirmer, affreux, agence, agent, agir, ailleurs, aîné, allonger, ambition, amer, ange, angle, angoisse, animer, annonce, annoncer, apercevoir, apparaître, apparemment, apparence, appartenir, appliquer, approcher, appuyer, argenté, arme, armée, arranger, arrière, aspect, assistant, assurance, assurer, atelier, atmosphère, attaque, attaquer, atteindre, attente, attentif, aucun, augmenter, auprès, aussitôt, autant, auteur, autoriser, autorité, autrefois, autrement, avaler, avantage, aveugle, avouer, baisser, ballet, bande, base, bataille, bâtir, battre, bêtise, blessure, bloquer, boue, branche, bref, brillant, briser, brûler, brusquement, buffet, cabine, cadre, calmer, caméra, capable, carré, carrière, carton, cas, catastrophe, cauchemar, céder, centaine, central, cependant, cercle, cérémonie, certes, certitude, cerveau, cesser, chagrin, chapitre, charger, charme, chasse, chasser, chauffer, cheminée, chic, choc, chute, cimetière, circonstance, circuler, citer, citoyen, code, colère, collection, coller, colline, commerce, commun, communiquer, compagnie, compagnon, comptoir, concentrer, conclure, conclusion, concours, condition, conférence, confier, confondre, connecter, conscience, conséquence, conserver, considérer, consister, constater, consulter, contenir, contrat, contrôle, contrôler, convaincre, convenir, conviction, copie, corde, correspondre, coude, couler, coupable, courant, couvrir, craindre, crainte, creuser, cri, crime, crise, critique, croiser, croix, cruel, cueillir, cuisse, culturel, curiosité, davantage, débarrasser, débrouiller, décevoir, déchet, déchirer, décision, déclarer, décoller, décor, découverte, défaut, défendre, défense, définitif, délicat, démarrer, dépasser, dérouler, dès, désert, désir, désordre, désormais, destin, détail, détendre, détruire, dette, développer, différemment, difficulté, diriger, discours, discret, disparaître, distinguer, distribuer, divers, domaine, dont, doré, dossier, douceur, drame, drogue, durant, échange, échapper, échec, échouer, éclairer, éclater, économie, économique, économiser, écraser, éditeur, éducation, effacer, effet, égal, également, électrique, élégant, élément, élever, éliminer, éloigner, émotion, empêcher, employer, emporter, emprunter, enceinte, encourager, énerver, enfermer, enfuir, engager, ennemi, ennui, enquête, enregistrer, entièrement, entourer, entretien, envers, environ, environnement, envisager, épais, épouser, époux, épreuve, équilibre, esprit, essence, essentiel, essuyer, estimer, estomac, établir, étape, état, étendre, étonnant, étonner, étrange, étroit, événement, évidence, évident, éviter, évoluer, évoquer, exagérer, exception, exiger, existence, expert, exploser, explosion, exprimer, fabriquer, faible, fameux, familial, fantôme, faveur, fer, fiancé, fidèle, figure, fil, filmer, final, fixer, flamme, folie, fonction, fondre, fontaine, force, forcément, forcer, former, fortune, foule, fournir, fragile, franchement, franchir, francophone, fréquenter, front, frontière, fuir, fuite, fumée, furieux, gardien, gaz, geler, gendarme, gêner, génération, généreux, génie, genre, geste, glisser, goutte, gouvernement, gras, grève, guérir, habituel, habituer, haine, haïr, hasard, hauteur, héros, hésiter, historique, honnête, honte, horizon, horreur, hors, hôte, humain, humeur, hurler, idéal, identifier, ignorer, illusion, imagination, imiter, immense, immobile, importance, imposer, impression, impressionner, incapable, incendie, incident, inconnu, individu, influence, informer, innocent, inoubliable, inquiétude, insister, inspirer, instinct, instruction, intelligence, intention, intérêt, intérieur, interroger, interrompre, intervenir, jaloux, jeunesse, joindre, juge, jugement, juger, jurer, justice, justifier, lâcher, laine, lancer, langage, larme, légende, légèrement, lendemain, lequel, lèvre, libérer, liberté, lien, limite, linge, littérature, local, loger, logique, loi, lors, lorsque, loup, lumineux, lutter, luxe, maire, maître, malgré, malheur, malin, manche, manière, manifester, manque, marin, marquer, masque, matériel, maximum, médical, méfier, membre, menace, menacer, mener, mensonge, menteur, menton, mériter, merveille, mesure, mesurer, métal, méthode, meurtre, militaire, millier, ministre, minuscule, miracle, misère, mission, modèle, modeste, mondial, monstre, mont, moquer, moral, mordre, mort, moteur, mouche, mouvement, moyen, multicolore, murmurer, muscle, mystère, mystérieux, nation, national, naturel, naturellement, nécessité, nerf, nerveux, ni, nommer, nourrir, obéir, objectif, obliger, observer, obtenir, occasion, odeur, officiel, offre, ombre, ongle, opéra, opération, ordinaire, ordre, organisation, origine, oser, outil, ouverture, paix, palais, paradis, paraître, parcourir, pardonner, parier, parole, partenaire, parti, particulier, particulièrement, passage, passion, patience, patient, patrimoine, patte, paysan, peine, peintre, pénible, période, personnage, personnel, perte, photographie, physique, piège, pile, piquer, piste, pitié, plafond, plaindre, plastique, plateau, plier, plonger, poésie, poète, poignet, point, poitrine, politique, populaire, portrait, posséder, pot, pouce, poursuivre, pourtant, poussière, précaution, précédent, précieux, précis, préciser, présence, président, presse, presser, pression, prétendre, prétexte, prêtre, prévenir, prévoir, primaire, principal, principe, prison, prisonnier, privé, produire, progrès, prolonger, promesse, proposition, protection, protester, prouver, provoquer, prudent, public, publier, puissance, puissant, punir, pur, quotidien, raisonnable, ralentir, ramener, rang, rapport, rapporter, rare, raser, rassurer, rattraper, rayon, réaction, réagir, réaliser, réchauffer, recherche, rechercher, récit, réclamer, reconnaissant, reculer, récupérer, recycler, réduire, réel, réellement, réflexion, regard, régime, règlement, régler, régulier, régulièrement, rejeter, religieux, religion, remarquer, remettre, renverser, renvoyer, représenter, reprocher, réputation, résistance, résister, résoudre, respecter, responsabilité, ressentir, retenir, retirer, retraite, réunir, révéler, révision, révolution, revue, ridicule, risque, risquer, rocher, rompre, roue, ruine, rythme, sacré, sain, sang, satisfaction, sauf, sauvage, sauver, scientifique, séance, secouer, secteur, sécurité, selon, sentiment, séparer, serrer, sévère, siège, signaler, signe, silencieux, sincère, singe, sinon, situer, société, soi, soigner, soin, sol, soldat, solide, solitude, sombre, somme, sommet, songer, sort, sorte, souci, souffrance, souffrir, soulever, source, sourcil, sourd, statue, style, subir, succès, suffire, suffisamment, suggérer, supérieur, supporter, supposer, surface, surveiller, survivre, tabac, taire, talent, talon, tandis que, tant, technique, technologie, tel, témoin, tendresse, tenter, tenue, terme, terrain, théorie, tirer, tissu, titre, toile, total, totalement, toutefois, trace, traditionnel, trahir, trait, traitement, traiter, tranquillement, transformer, transmettre, transporter, travers, trembler, trésor, tristesse, trou, tuer, type, typique, uniforme, uniquement, univers, urgence, urgent, vallée, valoir, vaste, véhicule, veille, vente, venue, véritable, verser, victime, victoire, vieillir, vif, violence, violent, visiteur, vitre, vitrine, vivant, vœu, voie, voleur, volonté, voyageur, zone, œuvre
+
+## Verbs the checker cannot read yet
+
+The checker cannot yet tell these verbs from a noun or adjective with the same spelling: it reads il porte as the noun porte, not as the verb porter. They count in the core lists above, and when untaught they are listed here instead of with the core words not taught.
+
+- adresser (B1): not taught
+- causer (B1): not taught
+- compter (A1): not taught
+- durer (A2): not taught
+- fêter (A2): not taught
+- garder (A2): not taught
+- garer (A2): not taught
+- intéresser (A2): not taught
+- marier (A2): not taught
+- neiger (A1): not taught
+- occuper (A2): not taught
+- placer (B1): not taught
+- planter (A2): not taught
+- porter (A2): not taught
+- prêter (A2): not taught
+- téléphoner (A1): not taught
+
+## Units
+
+| Unit | Positions | Level label | Highest level taught |
+|---|---|---|---|
+| Unit 1: Essential Grammar | 1 to 13 | None | A2 |
+| Unit 2: Asking & Describing | 14 to 27 | None | A2 |
+| Unit 3: Movement & Possession | 28 to 39 | None | A2 |
+| Unit 4: Everyday Words | 40 to 52 | None | B2 |
+| Unit 5: Time & Taste | 53 to 65 | None | C1 |
+| Unit 6: Basic Fluency | 66 to 77 | None | B1 |
+| Unit 7: Knowledge & Learning | 78 to 91 | None | B2 |
+| Unit 8: Daily Life & Actions | 92 to 106 | None | A2 |
+| Unit 9: Discourse & Past Tense | 107 to 120 | None | B1 |
+| Unit 10: Mastery & Nuance | 121 to 139 | B2 | B2 |
+| Unit 11: Daily Essentials | 140 to 149 | None | A2 |
+| Unit 12: Curiosity & Questions | 150 to 160 | None | B1 |
+
+## Level labels
+
+- 2024-02-12-reading-11 is labelled B2 but teaches nothing, and by this position the course has reached no level yet
+
+## Modules that teach above the level reached
+
+The course reaches no level, so each module below teaches words or grammar patterns two or more levels above A1 (B1 or higher).
+
+- 48. Location Adverbs - here, there, everywhere: fr:cx:chunk.nulle-part (B2)
+- 54. Slang - Comparisons & Intensity: fr:lex:capot (C1), fr:lex:gnama (C1), fr:lex:chelou (B2), fr:lex:ben (B1), fr:lex:dingue (B1), fr:lex:ecœurant (B1), fr:lex:fun (B1), fr:lex:hyper (B1), fr:lex:mortel (B1), fr:lex:top (B1), fr:lex:vachement (B1)
+- 67. dire - To Say / To Tell: fr:cx:chunk.cest-a-dire (B1)
+- 71. demander - To Ask: fr:lex:permission (B1)
+- 78. Talking About People in General: fr:lex:peuple (B1), fr:lex:population (B1)
+- 79. Studying & Reviewing - étudier & réviser: fr:lex:reviser (B1)
+- 82. savoir - To Know (Facts/Skills): fr:lex:savoir (B1)
+- 86. Knowledge & Learning - Essential Nouns: fr:lex:apprentissage (B2), fr:lex:savoir (B1)
+- 87. Discourse Markers - Sound Like a Native: fr:lex:ainsi (B1), fr:lex:presque (B1)
+- 107. Causal & Reason Words - Explaining Why: fr:cx:chunk.grace-a (B1), fr:lex:car (B1), fr:lex:grace (B1), fr:lex:motif (B1), fr:lex:puisque (B1)
+- 108. Spatial Prepositions - Position & Location: fr:lex:parmi (B1)
+- 121. Forms Used After 'il faut que' and 'je veux que': fr:cx:subj.vouloir-que (B1)
+- 122. More Forms for 'il faut que' and 'je veux que' Phrases: fr:cx:subj.vouloir-que (B1)
+- 124. Je veux que... - Expressing Wishes: fr:cx:subj.vouloir-que (B1)
+- 125. Je suis content que... - Emotion Phrases: fr:cx:subj.emotion-que (B1)
+- 126. Je pense que... - Opinion Phrases: fr:cx:subj.douter-que (B1), fr:cx:subj.ne-pas-penser-que (B1), fr:lex:douter (B1)
+- 127. Si j'étais... - Daydreaming & Hypotheticals: fr:cx:si.imparfait-conditionnel (B1)
+- 128. Si j'avais su... - Past Regret Phrases: fr:cx:si.plus-que-parfait-conditionnel-passe (B2)
+- 129. J'avais déjà... - Had Already Done Phrases: fr:cx:plus-que-parfait.avoir (B1)
+- 130. vraiment, sérieusement... - Common Adverbs: fr:lex:serieusement (B1)
+- 131. En mangeant... - While Doing Phrases: fr:cx:gerondif (B1), fr:cx:prsptcp.er (B1)
+- 132. Je me fais couper... - Service Phrases: fr:cx:causative.faire (B1)
+- 133. Avant que... - Before Phrases: fr:cx:subj.avant-que (B1)
+- 134. Pour que... - So That Phrases: fr:cx:subj.pour-que (B1)
+- 135. Bien que... - Although Phrases: fr:cx:subj.bien-que (B1)
+- 136. Il est possible que... - Possibility Phrases: fr:cx:subj.possible-que (B1)
+- 150. Nature & Animals - Curiosity Vocabulary: fr:lex:abeille (B1), fr:lex:ecureuil (B1), fr:lex:papillon (B1), fr:lex:tortue (B1)
+- 152. Natural Phenomena - How Nature Works: fr:cx:rendre-adjective (B1), fr:lex:glace.adjective (B1)
+- 155. Complex comment Questions - Ask How Things Work: fr:lex:ecureuil (B1), fr:lex:tortue (B1)
+- 157. Inversion Questions - Formal Register: fr:lex:fleurir (B1), fr:lex:tortue (B1)
+- 158. Embedded Questions - Polite Indirect Questions: fr:cx:q.embedded (B1)
+- 159. Rhetorical & Negative Questions - Advanced Style: fr:cx:neg.ne-pas-infinitive (B1), fr:cx:q.negative-inversion (B1)
+
+# 7. What a learner can do
+
+A function is something a learner does with French, such as greeting someone or asking the time. It becomes possible at the first module by which the course has taught every word and grammar pattern of one French way to do it. Functions possible by the end of the course: A1 36 of 42, A2 22 of 23, B1 19 of 19.
+
+Some functions need words that appear only in the Reference unit (deux, huit, lundi, mai, trois). That unit has no position in the course, so it teaches nothing, and those functions never become possible. Their words are marked "Reference unit only" below.
+
+## A1
+
+Possible, with the module where each becomes possible:
+
+- 1. Famous Words & Greetings: Say sorry
+- 1. Famous Words & Greetings: Greet people and say goodbye
+- 1. Famous Words & Greetings: Say thank you
+- 3. Essential Verb - être (to be): Introduce yourself
+- 10. Basic Connectors - et, mais, ou, aussi, très: Join simple ideas
+- 15. ça - Survival Phrases: Ask how someone is
+- 17. Essential Verb - vouloir (to want): Invite someone or offer something
+- 17. Essential Verb - vouloir (to want): Say what you want
+- 18. Essential Verb - pouvoir (can): Say what you can and cannot do
+- 20. Question Words - Ask Anything!: Ask permission
+- 20. Question Words - Ask Anything!: Ask who someone is or what something is
+- 24. Common Adjectives - Describing Things: Give good wishes and compliments
+- 24. Common Adjectives - Describing Things: Ask about and describe people
+- 24. Common Adjectives - Describing Things: Ask about and describe things
+- 34. Possessive Adjectives - My, Your, His, Her: Introduce someone
+- 40. Survival Phrases - Real-World Essentials: Ask for information
+- 40. Survival Phrases - Real-World Essentials: Approach someone and ask for something
+- 40. Survival Phrases - Real-World Essentials: Buy things and ask the price
+- 40. Survival Phrases - Real-World Essentials: Order in a café or restaurant
+- 45. Negation - ne...pas (not): Accept or turn down an invitation
+- 46. Time & Frequency - now, always, never, today: Talk about plans
+- 46. Time & Frequency - now, always, never, today: Talk about the weather
+- 49. Everyday Nouns - Life & World: Ask the way or give directions
+- 49. Everyday Nouns - Life & World: Ask about and describe places
+- 57. aimer - To Like / To Love: Say what you like and dislike
+- 61. manger - To Eat (Present & Past): Talk about your day and your timetable
+- 66. Progressive & Future - Expressing Time: Talk about and use transport
+- 67. dire - To Say / To Tell: Ask what a word or a remark means
+- 68. prendre - To Take: Ask how to say something in French
+- 68. prendre - To Take: Say you did not understand
+- 68. prendre - To Take: Ask for and give personal details
+- 74. Essential Vocabulary - Time, People & Ideas: Talk about your family
+- 82. savoir - To Know (Facts/Skills): Say you do not know
+- 99. Reciprocal Reflexives - Each Other: Make, move or cancel an appointment
+- 100. Commands - tu form (Informal): Give and follow simple instructions
+- 115. Imparfait Formation - All Verbs (was doing, used to do): Say how much or how many
+
+Never possible in the course:
+
+- Count and use numbers: still needs fr:lex:deux (Reference unit only), fr:lex:trois (Reference unit only)
+- Say the day and the date: still needs fr:lex:lundi (Reference unit only), fr:lex:trois (Reference unit only), fr:lex:mai (Reference unit only)
+- Ask and tell the time: still needs fr:lex:huit (Reference unit only)
+- Say what you prefer: still needs fr:lex:mieux
+- Book a table or a room: still needs fr:lex:deux (Reference unit only), fr:lex:huit (Reference unit only)
+- Ask how a word is spelled: no French way to do it is listed yet
+
+## A2
+
+Possible, with the module where each becomes possible:
+
+- 42. Essential Verb - devoir (must): Say what someone has to do
+- 42. Essential Verb - devoir (must): Start and end a conversation
+- 43. Essential Verb - parler (to speak): Make a simple phone call
+- 53. Comparisons & Intensity: Compare people and things
+- 53. Comparisons & Intensity: Say how you feel physically
+- 54. Slang - Comparisons & Intensity: Give an opinion
+- 55. Should & Could - Advice and Possibility: Ask for and give advice
+- 58. être - Past Tense (was / were): Describe how things used to be
+- 59. avoir - Past Tense (had): Agree or disagree
+- 61. manger - To Eat (Present & Past): Tell what happened
+- 68. prendre - To Take: Check that you are understood
+- 73. avoir besoin de - To Need: Ask for help or offer it
+- 78. Talking About People in General: Suggest something to do
+- 85. croire - To Believe: Express doubt or objection
+- 92. Temporal & Sequential Words - Time & Order: Put events in order
+- 102. Irregular Commands - être, avoir, aller, faire: Present a town or a country
+- 102. Irregular Commands - être, avoir, aller, faire: Warn someone
+- 107. Causal & Reason Words - Explaining Why: Give a reason
+- 123. Il faut que... - Saying What's Necessary: Plan something together
+- 129. J'avais déjà... - Had Already Done Phrases: Say what you enjoyed or did not enjoy
+- 140. Age & Personal Information: Tell the story of someone's life
+- 144. Perception Verbs - écouter, regarder: Talk about your work
+
+Never possible in the course:
+
+- Show interest or indifference: still needs fr:lex:interessant
+
+## B1
+
+Possible, with the module where each becomes possible:
+
+- 57. aimer - To Like / To Love: Talk about hopes and wishes
+- 61. manger - To Eat (Present & Past): Tell a memory or a story
+- 67. dire - To Say / To Tell: Refer back to something already said
+- 67. dire - To Say / To Tell: Repeat what someone said to check it
+- 67. dire - To Say / To Tell: Say something again in other words
+- 67. dire - To Say / To Tell: Report what someone said
+- 67. dire - To Say / To Tell: Join a discussion and change the subject
+- 87. Discourse Markers - Sound Like a Native: Make a guess about what is true
+- 92. Temporal & Sequential Words - Time & Order: Wrap up what you are saying
+- 92. Temporal & Sequential Words - Time & Order: Give a short talk on a topic
+- 92. Temporal & Sequential Words - Time & Order: Sum up a story and comment on it
+- 107. Causal & Reason Words - Explaining Why: Explain cause and effect
+- 107. Causal & Reason Words - Explaining Why: Take part in an interview
+- 125. Je suis content que... - Emotion Phrases: Talk about feelings
+- 126. Je pense que... - Opinion Phrases: Give and support an opinion
+- 127. Si j'étais... - Daydreaming & Hypotheticals: Talk about an imagined situation
+- 129. J'avais déjà... - Had Already Done Phrases: Give your view of a film or book
+- 135. Bien que... - Although Phrases: Make a complaint
+- 159. Rhetorical & Negative Questions - Advanced Style: Raise a problem and suggest a solution
+
+Never possible in the course:
+
+None.
+
+# 8. Exercises in a nonstandard format
 
 - 2024-01-10-unit1-practice uses nonstandard exercise shapes: sentences
 - 2024-01-23-unit2-practice uses nonstandard exercise shapes: sentences
@@ -1666,49 +1926,31 @@ First 20:
 - 2024-02-05-unit-10-practice uses nonstandard exercise shapes: sentences
 - 2024-02-16-unit-11-practice uses nonstandard exercise shapes: sentences
 
-# 8. Unknown words
+# 9. Unknown words
 
-- 1. Famous Words & Greetings: appétit
 - 7. Basic Nouns - People & Things: avocate
-- 34. Possessive Adjectives - My, Your, His, Her: bureau, bagages
-- 37. Reading Comprehension 3 - La Première Page: Page
 - 50. Reading Comprehension 4 - La nouvelle époque de Marie: jamias
 - 52. Unit 4 Final Exam - Expression: aujourd, hui, solution
-- 54. Slang - Comparisons & Intensity: cest, fou, louche
-- 61. manger - To Eat (Present & Past): quest, Passé, Composé
-- 62. boire - To Drink (Present & Past): quest, Passé, Composé
-- 63. Reading Comprehension 5 - La fée verte (The Green Fairy): fée, passé, composé, boisson, favorite, fées
-- 65. Unit 5 Final Exam - Sophistication: fou
+- 54. Slang - Comparisons & Intensity: cest, louche
+- 61. manger - To Eat (Present & Past): quest, Composé
+- 62. boire - To Drink (Present & Past): quest, Composé
+- 63. Reading Comprehension 5 - La fée verte (The Green Fairy): fée, composé, boisson, favorite, fées
 - 67. dire - To Say / To Tell: càd
 - 77. Unit 6 Final Exam - Communication: solution
-- 78. Talking About People in General: erreurs
 - 87. Discourse Markers - Sound Like a Native: clarification
 - 89. Reading 7 - L'Art d'Apprendre: comprendez, usage
-- 91. Unit 7 Final Exam - Knowledge & Learning: mathématiques
-- 92. Temporal & Sequential Words - Time & Order: dîner
-- 102. Irregular Commands - être, avoir, aller, faire: patience
-- 104. Reading 8 - Ma Journée: coucher
-- 105. Unit 8 Practice - Fill in the Blanks: coucher
-- 106. Unit 8 Final Exam - Daily Life & Actions: dîner, couches, coucher, couche
-- 107. Causal & Reason Words - Explaining Why: traffic, maladie
-- 108. Spatial Prepositions - Position & Location: niveau
-- 110. Passé Composé - Regular -ER Verbs (I spoke, I ate): Passé, Composé
+- 107. Causal & Reason Words - Explaining Why: traffic
+- 110. Passé Composé - Regular -ER Verbs (I spoke, I ate): Composé
 - 115. Imparfait Formation - All Verbs (was doing, used to do): parl
-- 116. Passé Composé vs Imparfait - The Golden Rule: Passé, Composé
-- 117. Past Tense Composition - Building Complete Stories: libre, soif
-- 118. Reading 9 - Une Histoire du Passé: weekend, Passé
-- 119. Unit 9 Practice - Fill in the Blanks: ailleurs, semble
-- 120. Unit 9 Final Exam - Discourse & Past Tense: ailleurs, semble
+- 116. Passé Composé vs Imparfait - The Golden Rule: Composé, PC, reaction
+- 118. Reading 9 - Une Histoire du Passé: weekend, composé, contrast
+- 120. Unit 9 Final Exam - Discourse & Past Tense: composé
 - 122. More Forms for 'il faut que' and 'je veux que' Phrases: Normal
-- 141. donner - To Give: cadeau
-- 142. Daily Life Essentials - Sleep, Work, Live: centre
-- 147. Reading 11 - La France Moderne: Mouvement
-- 149. Unit 11 Final Exam - Daily Essentials & Practical Communication: respecté
+- 150. Nature & Animals - Curiosity Vocabulary: Elements
 - 159. Rhetorical & Negative Questions - Advanced Style: conditionnel
 
-# 9. Other problems
+# 10. Other problems
 
-- function-no-exponent (warning): fn:ask-how-to-spell (A1, "Ask how a word is spelled"): languages/fr/exponents.json gives no way to do this, so no lesson can teach it yet
 - blank-misplaced (error) [12. Unit 1 Practice - Fill in the Blanks]: 2024-01-10-unit1-practice#sentences[10]: the blank for "aussi" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [26. Unit 2 Practice - Fill in the Blanks]: 2024-01-23-unit2-practice#sentences[6]: the blank for "moi" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark
 - blank-misplaced (error) [26. Unit 2 Practice - Fill in the Blanks]: 2024-01-23-unit2-practice#sentences[11]: the blank for "voiture" sits on the mark ".", so the app drops it; put the blank on a space and keep the mark

@@ -43,7 +43,7 @@ A native language with no pair folder has no cognates: `pnpm graph:check --nativ
 
 ## What the checker reads
 
-The checker reads French the learner types (answers, blanks) and French the learner reads or hears (a French prompt, a reading passage), and checks both with their accents. It also reads the French on concept cards, hints, instructions, vocabulary notes, feedback on a wrong answer, module and passage titles, and help screens. Most of that text mixes English and French. The checker takes quoted French, such as 'bon voyage' in a hint. On concept examples, titles and help screens it also splits the text at parentheses, arrows, equals signs, slashes, colons and dashes, and keeps each part that reads as French. A concept example that lists short words or phrases between commas (eu, été, fait, vu) is read one entry at a time, so a grammar pattern never matches across two entries. A quoted span counts as French when it has no English word, so a French word missing from the course word list shows up in Section 8 of the fix list. A quoted span right after meaning or means, or after a word class and for (noun meaning 'car', stressed pronoun for 'me'), is an English gloss; after a word class and for, a subject pronoun such as 'tu' stays French. Course codes such as (M17) and word parts such as -t- are not words. An unquoted part also needs most of its words in the course word list, because English labels such as "Rising Tone" have no English word the checker can spot. English words are listed in `scripts/graph/french-text.mjs`; if Section 8 shows an English word from a hint or note, add it there. French written inside an English sentence without quotes is missed, so quote it. Where the checker still reads English as French, an `overrides` entry in `course-map.json` names the words or patterns to ignore in that item.
+The checker reads French the learner types (answers, blanks) and French the learner reads or hears (a French prompt, a reading passage), and checks both with their accents. It also reads the French on concept cards, hints, instructions, vocabulary notes, feedback on a wrong answer, module and passage titles, and help screens. Most of that text mixes English and French. The checker takes quoted French, such as 'bon voyage' in a hint. On concept examples, titles and help screens it also splits the text at parentheses, arrows, equals signs, slashes, colons and dashes, and keeps each part that reads as French. A concept example that lists short words or phrases between commas (eu, été, fait, vu) is read one entry at a time, so a grammar pattern never matches across two entries. A quoted span counts as French when it has no English word, so a French word missing from the course word list shows up in Section 9 of the fix list. A quoted span right after meaning or means, or after a word class and for (noun meaning 'car', stressed pronoun for 'me'), is an English gloss; after a word class and for, a subject pronoun such as 'tu' stays French. Course codes such as (M17) and word parts such as -t- are not words. An unquoted part also needs most of its words in the course word list, because English labels such as "Rising Tone" have no English word the checker can spot. English words are listed in `scripts/graph/french-text.mjs`; if Section 9 shows an English word from a hint or note, add it there. French written inside an English sentence without quotes is missed, so quote it. Where the checker still reads English as French, an `overrides` entry in `course-map.json` names the words or patterns to ignore in that item.
 
 A help screen teaches only what its course-map entry credits. Its French is checked like any other text.
 
@@ -61,18 +61,20 @@ A help screen teaches only what its course-map entry credits. Its French is chec
 | `languages/fr/forms.json` | Irregular forms | By hand |
 | `languages/fr/paradigms.json` | Regular patterns that generate forms (present tense of -er verbs, plural in -s) | By hand |
 | `languages/fr/exponents.json` | The French words and patterns that perform each function | By hand |
+| `languages/fr/reading-limits.json` | Verbs whose forms the checker cannot yet tell from a noun or adjective with the same spelling | By hand |
 | `languages/fr/constructions.json` | Grammar patterns with their detectors and example sentences | Written by `scripts/graph/fr/build/constructions.mjs` |
 | `languages/fr/names.json` | People, places and brands that need no teaching | By hand |
 | `languages/fr/course-map.json` | For each module: what it teaches and tests, and corrections to how the checker reads it | `teachesWords` by `pnpm graph:extract`, every other field by hand |
 | `reports/fr-fix-list.md`, `reports/fr-summary.json` | Latest fix list and counts | `pnpm graph:report` |
+| `reports/fr-levels.json`, `reports/fr-functions.json` | Level coverage and function coverage, as data for charts | `pnpm graph:report` |
 
 ## Commands
 
 Run these from the repository root.
 
-- `pnpm graph:check` prints a count for each rule, then the number of errors and warnings, the native language it checked for (`native`) and how many uses of an untaught cognate it allowed (`cognatesAllowed`). It exits with status 1 while any error remains, so expect a failing exit until the course can lock. Add `--native <code>` to check for another native language, such as `--native ja`; `graph:report` takes the same option.
+- `pnpm graph:check` prints a count for each rule, then the number of errors and warnings, the native language it checked for (`native`) and how many uses of an untaught cognate it allowed (`cognatesAllowed`). It ends with one line per level giving the share of core words and the core constructions taught by the end of the course and where the level is reached, then how many functions of each level become possible. It exits with status 1 while any error remains, so expect a failing exit until the course can lock. Add `--native <code>` to check for another native language, such as `--native ja`; `graph:report` takes the same option.
 - `pnpm graph:due <moduleKey|position>` lists the words and patterns the module at that position should use again. A taught word or pattern should come back within 2 modules, then within 5, 12 and 30 modules of each use. The list holds those with no use yet inside their current window, when that window ends at the next module or has already ended. Each line gives the ID, where it was taught, its last use and where its window ends.
-- `pnpm graph:report` writes the fix list (`reports/fr-fix-list.md`) and the counts (`reports/fr-summary.json`).
+- `pnpm graph:report` writes the fix list (`reports/fr-fix-list.md`), the counts (`reports/fr-summary.json`) and the level and function data (`reports/fr-levels.json`, `reports/fr-functions.json`; see Level and function reports). The same input always gives byte-identical files.
 - `pnpm graph:extract` rereads the vocabulary table of every teaching module and rewrites `teachesWords` in `course-map.json`. It prints each vocabulary word the course word list does not have.
 - `pnpm graph:test` runs the checker's tests, including the example sentences of every construction.
 
@@ -229,7 +231,36 @@ The word list holds the words the course uses and about 1,400 more that a learne
 
 The lists hold 733 words at A1, 681 at A2 and 841 at B1, so 1,414 words through A2 and 2,255 through B1. Milton and Alexiou (2009) measured French learners knowing about 1,160 lemmas at A1, 1,650 at A2 and 2,420 at B1, out of the 5,000 most frequent. The A1 list sits below that A1 figure and the A2 and B1 totals sit just below theirs, because a core list holds what every learner must know at a level, not every word a learner at that level happens to know.
 
-The team approves the lists before coverage is measured against them as a fixed target. After that, change them by hand, only when the team changes the target. If you change the level of a word or construction in a list, move it to the list of its new level or take it out. `pnpm graph:test` fails when a headword, construction or paradigm has no level or source, and when a list names a node of another level.
+The team approves the lists before coverage is measured against them as a fixed target. After that, change them by hand, only when the team changes the target. If you change the level of a word or construction in a list, move it to the list of its new level or take it out. `pnpm graph:test` fails when a headword, construction or paradigm has no level or source, and when a list names a node of another level. `pnpm graph:check` reports the same mismatch as the error `core-level-mismatch`, and a list entry that is not in the graph as `dangling-ref`.
+
+## Level and function reports
+
+The checker measures the course against the core lists. These are the terms the reports use:
+
+- A **module's level** is the highest level among the words, forms and constructions it teaches. A **unit's level** is the highest level of its modules.
+- A level is **reached** at the first position where the course has taught 90% of that level's core words and every one of its core constructions. Each level is measured on its own list, so A2 can be reached before A1.
+- **Coverage** is the share of a level's core words, and the number of its core constructions, taught by the end of the course or by a given position.
+
+The reports add three warnings:
+
+- `level-label`: a module title or concept card names a level above the module's level, or a unit title or unit description (B2 Level Phrases) names a level above the unit's level. A reading, practice set or exam teaches nothing, so its label is compared with the highest level the course has reached by its position instead.
+- `level-order`: a module teaches a word or pattern two or more levels above the highest level reached before it. Until the course reaches a level, the count starts from A1, so the warning names every B1 or higher node. One line per module lists the nodes. A form is left out when the same line already names its headword or the pattern that builds its tense.
+- `function-unreachable`: no exponent of an A1 or A2 function is fully taught by the end of the course. The line names what the closest exponent still needs, and marks words that only the Reference unit shows, such as the numbers in "Il est huit heures".
+
+`languages/fr/reading-limits.json` lists verbs the checker cannot yet tell from a noun or adjective with the same spelling. Their present, past participle and subjunctive forms were left out of the graph because they are spelled like an older entry: il porte reads as the noun porte, and j'ai téléphoné does not read as téléphoner. For intéresser only the present participle is left out, because intéressant is also an adjective. Each entry gives the headword and the cells left out:
+
+```json
+{ "cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:porter" }
+```
+
+These verbs stay in the core counts. The fix list and `fr-levels.json` list them on their own instead of with the core words not taught, because a lesson that uses them may not get credit for it. Take a verb out of the file once the checker can read its forms.
+
+`graph:report` writes the data behind Sections 6 and 7 of the fix list as two JSON files, with keys sorted at every depth:
+
+- `fr-levels.json` holds `levels` (per level: `coreWords`, `coreConstructions`, `taughtWords`, `taughtConstructions`, `reachedAt` as a position or null, and the IDs in `untaughtWords` and `untaughtConstructions`), `modules` (per module: `position`, `moduleKey`, `unitId`, `title`, the level its labels name in `label` and its level in `computed`), `units` (the same for each unit, with `firstPosition` and `lastPosition`), `curve` (per position, the core words and constructions of each level taught so far), `headwordsByLevel` and `constructionsByLevel` (how many the graph has at each level), `taughtByLevel` (how many of those the course teaches), `taughtCumulative` (headwords taught by level at the last position of each unit) and `readingLimits`.
+- `fr-functions.json` holds `functions`, sorted by level, then group, then ID. Each entry gives `id`, `group`, `cefr`, `label`, `position` (where the function becomes possible, or null), `exponentCount`, `missing` (for a function that never becomes possible, what its closest exponent still needs) and `referenceOnly` (the missing words that only the Reference unit shows).
+
+A share in the curve is its count divided by `coreWords` or `coreConstructions` in `levels`.
 
 ## Build scripts
 

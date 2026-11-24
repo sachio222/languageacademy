@@ -62,6 +62,16 @@ function formParts(graph, id, key) {
   return null;
 }
 
+// { headwordId, cell } of a form ID, regular or irregular, or null for any other ID.
+export function formOf(graph, id) {
+  try {
+    const parsed = parseId(id);
+    return parsed.kind === 'form' ? formParts(graph, id, parsed.key) : null;
+  } catch {
+    return null;
+  }
+}
+
 const storedLevel = (node) => (rank(node?.cefr) >= 0 ? node.cefr : null);
 
 // headwordId -> Map(cell -> written surface), from the same form index the checker reads with; built once per graph.

@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import { issue } from './issues.mjs';
 import { parseId } from './ids.mjs';
 import { GROUPS, LEVELS } from './functions.mjs';
+import { nodeLevel } from './levels-data.mjs';
 
 // opts.course and opts.repoRoot turn on the help screen checks: every help module names its screen component in
 // the course map, and that file exists. opts.course also checks that the language pair's cognates lesson is in the
@@ -87,6 +88,23 @@ export function validateGraph(graph, opts = {}) {
       } else ref(from, 'nodes', t);
     }
   });
+
+  // Core lists: every node is in the graph and has the list's level. Reading limits name headwords.
+  for (const list of graph.coreLists ?? []) {
+    const from = `core:${list.lang ?? graph.lang}-${list.level}`;
+    for (const field of ['words', 'constructions']) {
+      for (const id of list[field] ?? []) {
+        if (!graph.nodes.has(id)) { ref(from, field, id); continue; }
+        const level = nodeLevel(graph, id);
+        if (level === list.level) continue;
+        out.push(issue({
+          rule: 'core-level-mismatch', nodeId: id,
+          message: `${id} is in the ${list.level} core list but has level ${level ?? 'none'}; move it to the list of its level or change its level`,
+        }));
+      }
+    }
+  }
+  for (const r of graph.readingLimits ?? []) ref('readingLimits', 'id', r.id);
 
   // The language pair: every cognate and false friend is a node, none is both, and the cognates lesson is in the course.
   const pair = graph.pair;

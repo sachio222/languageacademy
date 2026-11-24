@@ -91,7 +91,7 @@ test('renderFixList lists rules the other sections do not show under Other probl
     { rule: 'unread-items', severity: 'error', moduleKey: 'm2', position: 2, message: 'm2 has content the reader could not read: x' },
     { rule: 'dangling-ref', severity: 'error', message: 'node fr:lex:a points at fr:lex:zz, which does not exist' },
   ], course);
-  const other = md.slice(md.indexOf('# 9. Other problems'));
+  const other = md.slice(md.indexOf('# 10. Other problems'));
   assert.ok(other.includes('unread-items (error) [2. Being]: m2 has content'));
   assert.ok(other.includes('dangling-ref (error): node fr:lex:a'));
 });
@@ -104,10 +104,11 @@ test('renderFixList opens with a plain how-to-read paragraph after the summary',
   const text = lines.slice(how + 1, lines.indexOf('# 1. Untaught words and patterns')).join(' ');
   assert.match(text, /teach the word earlier/);
   assert.match(text, /remove it/);
-  // Section 1 lines carry a reason and the sentence; Section 6 has no level data to compare yet
+  // Section 1 lines carry a reason and the sentence; Section 6 says where levels come from and when one is reached
   assert.match(text, /quotes the sentence/);
-  assert.match(text, /no level data yet/);
-  assert.doesNotMatch(text, /level labels \(A1 to C2\) that do not match/);
+  assert.match(text, /our own grading, informed by public sources/);
+  assert.match(text, /90% of its core words/);
+  assert.doesNotMatch(text, /no level data yet/);
   assert.ok(!/[\u2013\u2014]/.test(text), 'no en or em dashes');
 });
 

@@ -1,0 +1,5912 @@
+{
+  "constructionsByLevel": {
+    "A1": 68,
+    "A2": 51,
+    "B1": 25,
+    "B2": 5,
+    "C1": 0,
+    "C2": 0
+  },
+  "curve": [
+    {
+      "A1": {
+        "constructions": 0,
+        "words": 19
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 1
+    },
+    {
+      "A1": {
+        "constructions": 3,
+        "words": 28
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 2
+    },
+    {
+      "A1": {
+        "constructions": 3,
+        "words": 29
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 3
+    },
+    {
+      "A1": {
+        "constructions": 3,
+        "words": 30
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 4
+    },
+    {
+      "A1": {
+        "constructions": 6,
+        "words": 32
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 5
+    },
+    {
+      "A1": {
+        "constructions": 6,
+        "words": 32
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 6
+    },
+    {
+      "A1": {
+        "constructions": 6,
+        "words": 44
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 7
+    },
+    {
+      "A1": {
+        "constructions": 7,
+        "words": 45
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 8
+    },
+    {
+      "A1": {
+        "constructions": 7,
+        "words": 45
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 9
+    },
+    {
+      "A1": {
+        "constructions": 7,
+        "words": 50
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 10
+    },
+    {
+      "A1": {
+        "constructions": 7,
+        "words": 50
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 11
+    },
+    {
+      "A1": {
+        "constructions": 7,
+        "words": 50
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 12
+    },
+    {
+      "A1": {
+        "constructions": 7,
+        "words": 50
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 0
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 13
+    },
+    {
+      "A1": {
+        "constructions": 8,
+        "words": 54
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 1
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 14
+    },
+    {
+      "A1": {
+        "constructions": 9,
+        "words": 55
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 1
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 15
+    },
+    {
+      "A1": {
+        "constructions": 9,
+        "words": 55
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 1
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 16
+    },
+    {
+      "A1": {
+        "constructions": 10,
+        "words": 56
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 1
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 17
+    },
+    {
+      "A1": {
+        "constructions": 10,
+        "words": 57
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 1
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 18
+    },
+    {
+      "A1": {
+        "constructions": 10,
+        "words": 58
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 1
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 19
+    },
+    {
+      "A1": {
+        "constructions": 15,
+        "words": 68
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 1
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 20
+    },
+    {
+      "A1": {
+        "constructions": 15,
+        "words": 68
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 1
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 21
+    },
+    {
+      "A1": {
+        "constructions": 16,
+        "words": 74
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 22
+    },
+    {
+      "A1": {
+        "constructions": 16,
+        "words": 85
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 23
+    },
+    {
+      "A1": {
+        "constructions": 18,
+        "words": 92
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 24
+    },
+    {
+      "A1": {
+        "constructions": 18,
+        "words": 92
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 25
+    },
+    {
+      "A1": {
+        "constructions": 18,
+        "words": 92
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 26
+    },
+    {
+      "A1": {
+        "constructions": 18,
+        "words": 92
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 27
+    },
+    {
+      "A1": {
+        "constructions": 21,
+        "words": 94
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 28
+    },
+    {
+      "A1": {
+        "constructions": 21,
+        "words": 96
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 29
+    },
+    {
+      "A1": {
+        "constructions": 22,
+        "words": 96
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 30
+    },
+    {
+      "A1": {
+        "constructions": 22,
+        "words": 96
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 31
+    },
+    {
+      "A1": {
+        "constructions": 22,
+        "words": 97
+      },
+      "A2": {
+        "constructions": 0,
+        "words": 2
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 32
+    },
+    {
+      "A1": {
+        "constructions": 22,
+        "words": 99
+      },
+      "A2": {
+        "constructions": 1,
+        "words": 3
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 33
+    },
+    {
+      "A1": {
+        "constructions": 23,
+        "words": 105
+      },
+      "A2": {
+        "constructions": 1,
+        "words": 4
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 34
+    },
+    {
+      "A1": {
+        "constructions": 23,
+        "words": 105
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 9
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 35
+    },
+    {
+      "A1": {
+        "constructions": 23,
+        "words": 105
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 9
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 36
+    },
+    {
+      "A1": {
+        "constructions": 23,
+        "words": 105
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 9
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 37
+    },
+    {
+      "A1": {
+        "constructions": 23,
+        "words": 105
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 9
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 38
+    },
+    {
+      "A1": {
+        "constructions": 23,
+        "words": 105
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 9
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 39
+    },
+    {
+      "A1": {
+        "constructions": 24,
+        "words": 111
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 9
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 40
+    },
+    {
+      "A1": {
+        "constructions": 24,
+        "words": 112
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 9
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 41
+    },
+    {
+      "A1": {
+        "constructions": 24,
+        "words": 113
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 10
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 42
+    },
+    {
+      "A1": {
+        "constructions": 25,
+        "words": 114
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 10
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 43
+    },
+    {
+      "A1": {
+        "constructions": 25,
+        "words": 116
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 10
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 44
+    },
+    {
+      "A1": {
+        "constructions": 26,
+        "words": 118
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 10
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 45
+    },
+    {
+      "A1": {
+        "constructions": 26,
+        "words": 131
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 12
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 46
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 131
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 12
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 47
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 136
+      },
+      "A2": {
+        "constructions": 2,
+        "words": 14
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 48
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 155
+      },
+      "A2": {
+        "constructions": 3,
+        "words": 18
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 49
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 155
+      },
+      "A2": {
+        "constructions": 3,
+        "words": 18
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 50
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 155
+      },
+      "A2": {
+        "constructions": 3,
+        "words": 18
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 51
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 155
+      },
+      "A2": {
+        "constructions": 3,
+        "words": 18
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 52
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 160
+      },
+      "A2": {
+        "constructions": 6,
+        "words": 20
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 0
+      },
+      "position": 53
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 165
+      },
+      "A2": {
+        "constructions": 6,
+        "words": 22
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 54
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 165
+      },
+      "A2": {
+        "constructions": 7,
+        "words": 22
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 55
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 165
+      },
+      "A2": {
+        "constructions": 7,
+        "words": 22
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 56
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 166
+      },
+      "A2": {
+        "constructions": 7,
+        "words": 22
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 57
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 166
+      },
+      "A2": {
+        "constructions": 8,
+        "words": 22
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 58
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 168
+      },
+      "A2": {
+        "constructions": 8,
+        "words": 22
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 59
+    },
+    {
+      "A1": {
+        "constructions": 27,
+        "words": 198
+      },
+      "A2": {
+        "constructions": 8,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 60
+    },
+    {
+      "A1": {
+        "constructions": 28,
+        "words": 199
+      },
+      "A2": {
+        "constructions": 8,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 61
+    },
+    {
+      "A1": {
+        "constructions": 28,
+        "words": 200
+      },
+      "A2": {
+        "constructions": 8,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 62
+    },
+    {
+      "A1": {
+        "constructions": 28,
+        "words": 200
+      },
+      "A2": {
+        "constructions": 8,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 63
+    },
+    {
+      "A1": {
+        "constructions": 28,
+        "words": 200
+      },
+      "A2": {
+        "constructions": 8,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 64
+    },
+    {
+      "A1": {
+        "constructions": 28,
+        "words": 200
+      },
+      "A2": {
+        "constructions": 8,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 65
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 201
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 66
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 203
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 67
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 208
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 68
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 210
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 69
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 213
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 26
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 2
+      },
+      "position": 70
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 215
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 27
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 3
+      },
+      "position": 71
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 216
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 28
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 3
+      },
+      "position": 72
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 217
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 28
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 3
+      },
+      "position": 73
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 240
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 30
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 3
+      },
+      "position": 74
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 240
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 30
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 3
+      },
+      "position": 75
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 240
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 30
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 3
+      },
+      "position": 76
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 240
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 30
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 3
+      },
+      "position": 77
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 243
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 31
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 5
+      },
+      "position": 78
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 245
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 31
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 6
+      },
+      "position": 79
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 245
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 32
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 6
+      },
+      "position": 80
+    },
+    {
+      "A1": {
+        "constructions": 29,
+        "words": 245
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 32
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 6
+      },
+      "position": 81
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 245
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 32
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 7
+      },
+      "position": 82
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 246
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 32
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 7
+      },
+      "position": 83
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 246
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 32
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 7
+      },
+      "position": 84
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 246
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 33
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 7
+      },
+      "position": 85
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 250
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 37
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 7
+      },
+      "position": 86
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 254
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 41
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 87
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 255
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 41
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 88
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 255
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 41
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 89
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 255
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 41
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 90
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 255
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 41
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 91
+    },
+    {
+      "A1": {
+        "constructions": 30,
+        "words": 258
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 46
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 92
+    },
+    {
+      "A1": {
+        "constructions": 31,
+        "words": 261
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 46
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 93
+    },
+    {
+      "A1": {
+        "constructions": 31,
+        "words": 262
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 46
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 94
+    },
+    {
+      "A1": {
+        "constructions": 31,
+        "words": 263
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 46
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 95
+    },
+    {
+      "A1": {
+        "constructions": 31,
+        "words": 264
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 46
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 96
+    },
+    {
+      "A1": {
+        "constructions": 31,
+        "words": 266
+      },
+      "A2": {
+        "constructions": 9,
+        "words": 47
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 97
+    },
+    {
+      "A1": {
+        "constructions": 31,
+        "words": 266
+      },
+      "A2": {
+        "constructions": 10,
+        "words": 47
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 98
+    },
+    {
+      "A1": {
+        "constructions": 31,
+        "words": 266
+      },
+      "A2": {
+        "constructions": 10,
+        "words": 47
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 99
+    },
+    {
+      "A1": {
+        "constructions": 32,
+        "words": 268
+      },
+      "A2": {
+        "constructions": 10,
+        "words": 47
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 100
+    },
+    {
+      "A1": {
+        "constructions": 33,
+        "words": 268
+      },
+      "A2": {
+        "constructions": 10,
+        "words": 47
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 101
+    },
+    {
+      "A1": {
+        "constructions": 33,
+        "words": 270
+      },
+      "A2": {
+        "constructions": 12,
+        "words": 48
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 102
+    },
+    {
+      "A1": {
+        "constructions": 33,
+        "words": 270
+      },
+      "A2": {
+        "constructions": 12,
+        "words": 48
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 103
+    },
+    {
+      "A1": {
+        "constructions": 33,
+        "words": 270
+      },
+      "A2": {
+        "constructions": 12,
+        "words": 48
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 104
+    },
+    {
+      "A1": {
+        "constructions": 33,
+        "words": 270
+      },
+      "A2": {
+        "constructions": 12,
+        "words": 48
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 105
+    },
+    {
+      "A1": {
+        "constructions": 33,
+        "words": 270
+      },
+      "A2": {
+        "constructions": 12,
+        "words": 48
+      },
+      "B1": {
+        "constructions": 0,
+        "words": 9
+      },
+      "position": 106
+    },
+    {
+      "A1": {
+        "constructions": 34,
+        "words": 271
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 49
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 13
+      },
+      "position": 107
+    },
+    {
+      "A1": {
+        "constructions": 34,
+        "words": 272
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 52
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 108
+    },
+    {
+      "A1": {
+        "constructions": 34,
+        "words": 278
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 56
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 109
+    },
+    {
+      "A1": {
+        "constructions": 34,
+        "words": 279
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 56
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 110
+    },
+    {
+      "A1": {
+        "constructions": 34,
+        "words": 280
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 56
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 111
+    },
+    {
+      "A1": {
+        "constructions": 34,
+        "words": 280
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 56
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 112
+    },
+    {
+      "A1": {
+        "constructions": 35,
+        "words": 289
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 56
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 113
+    },
+    {
+      "A1": {
+        "constructions": 35,
+        "words": 289
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 56
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 114
+    },
+    {
+      "A1": {
+        "constructions": 36,
+        "words": 290
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 56
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 115
+    },
+    {
+      "A1": {
+        "constructions": 36,
+        "words": 291
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 58
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 116
+    },
+    {
+      "A1": {
+        "constructions": 36,
+        "words": 292
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 58
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 117
+    },
+    {
+      "A1": {
+        "constructions": 36,
+        "words": 292
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 58
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 118
+    },
+    {
+      "A1": {
+        "constructions": 36,
+        "words": 292
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 58
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 119
+    },
+    {
+      "A1": {
+        "constructions": 36,
+        "words": 292
+      },
+      "A2": {
+        "constructions": 13,
+        "words": 58
+      },
+      "B1": {
+        "constructions": 1,
+        "words": 14
+      },
+      "position": 120
+    },
+    {
+      "A1": {
+        "constructions": 36,
+        "words": 292
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 58
+      },
+      "B1": {
+        "constructions": 2,
+        "words": 14
+      },
+      "position": 121
+    },
+    {
+      "A1": {
+        "constructions": 36,
+        "words": 292
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 58
+      },
+      "B1": {
+        "constructions": 2,
+        "words": 14
+      },
+      "position": 122
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 293
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 59
+      },
+      "B1": {
+        "constructions": 2,
+        "words": 14
+      },
+      "position": 123
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 294
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 59
+      },
+      "B1": {
+        "constructions": 2,
+        "words": 14
+      },
+      "position": 124
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 299
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 60
+      },
+      "B1": {
+        "constructions": 3,
+        "words": 14
+      },
+      "position": 125
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 301
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 60
+      },
+      "B1": {
+        "constructions": 5,
+        "words": 15
+      },
+      "position": 126
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 302
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 61
+      },
+      "B1": {
+        "constructions": 6,
+        "words": 15
+      },
+      "position": 127
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 302
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 62
+      },
+      "B1": {
+        "constructions": 6,
+        "words": 15
+      },
+      "position": 128
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 305
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 62
+      },
+      "B1": {
+        "constructions": 7,
+        "words": 15
+      },
+      "position": 129
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 306
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 66
+      },
+      "B1": {
+        "constructions": 7,
+        "words": 16
+      },
+      "position": 130
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 307
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 67
+      },
+      "B1": {
+        "constructions": 8,
+        "words": 16
+      },
+      "position": 131
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 309
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 72
+      },
+      "B1": {
+        "constructions": 8,
+        "words": 16
+      },
+      "position": 132
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 310
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 72
+      },
+      "B1": {
+        "constructions": 9,
+        "words": 16
+      },
+      "position": 133
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 310
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 72
+      },
+      "B1": {
+        "constructions": 10,
+        "words": 16
+      },
+      "position": 134
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 313
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 73
+      },
+      "B1": {
+        "constructions": 11,
+        "words": 16
+      },
+      "position": 135
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 313
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 73
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 136
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 313
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 73
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 137
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 313
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 73
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 138
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 313
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 73
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 139
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 324
+      },
+      "A2": {
+        "constructions": 14,
+        "words": 74
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 140
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 325
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 74
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 141
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 328
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 74
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 142
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 329
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 74
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 143
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 334
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 74
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 144
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 335
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 74
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 145
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 343
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 78
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 146
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 343
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 78
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 147
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 343
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 78
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 148
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 343
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 78
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 16
+      },
+      "position": 149
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 349
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 82
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 20
+      },
+      "position": 150
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 355
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 83
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 20
+      },
+      "position": 151
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 361
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 86
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 21
+      },
+      "position": 152
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 362
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 86
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 21
+      },
+      "position": 153
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 366
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 86
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 21
+      },
+      "position": 154
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 366
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 86
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 21
+      },
+      "position": 155
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 366
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 86
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 21
+      },
+      "position": 156
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 367
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 86
+      },
+      "B1": {
+        "constructions": 12,
+        "words": 22
+      },
+      "position": 157
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 368
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 86
+      },
+      "B1": {
+        "constructions": 13,
+        "words": 22
+      },
+      "position": 158
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 369
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 86
+      },
+      "B1": {
+        "constructions": 13,
+        "words": 22
+      },
+      "position": 159
+    },
+    {
+      "A1": {
+        "constructions": 37,
+        "words": 369
+      },
+      "A2": {
+        "constructions": 15,
+        "words": 86
+      },
+      "B1": {
+        "constructions": 13,
+        "words": 22
+      },
+      "position": 160
+    }
+  ],
+  "headwordsByLevel": {
+    "A1": 759,
+    "A2": 698,
+    "B1": 857,
+    "B2": 21,
+    "C1": 7,
+    "C2": 0
+  },
+  "levels": {
+    "A1": {
+      "coreConstructions": 40,
+      "coreWords": 733,
+      "reachedAt": null,
+      "taughtConstructions": 37,
+      "taughtWords": 369,
+      "untaughtConstructions": [
+        "fr:cx:neg.de",
+        "fr:cx:verb.ir.present",
+        "fr:cx:verb.re.present"
+      ],
+      "untaughtWords": [
+        "fr:lex:accepter",
+        "fr:lex:accident",
+        "fr:lex:accord",
+        "fr:lex:acheter",
+        "fr:lex:adorer",
+        "fr:lex:aeroport",
+        "fr:lex:ah",
+        "fr:lex:aider",
+        "fr:lex:allemand",
+        "fr:lex:allo",
+        "fr:lex:alphabet",
+        "fr:lex:americain",
+        "fr:lex:anglais",
+        "fr:lex:animal",
+        "fr:lex:anniversaire",
+        "fr:lex:annuler",
+        "fr:lex:aout",
+        "fr:lex:appartement",
+        "fr:lex:appetit",
+        "fr:lex:apres-midi",
+        "fr:lex:asseoir",
+        "fr:lex:assiette",
+        "fr:lex:automne",
+        "fr:lex:avion",
+        "fr:lex:avril",
+        "fr:lex:banque",
+        "fr:lex:bateau",
+        "fr:lex:beaucoup",
+        "fr:lex:bebe",
+        "fr:lex:belge",
+        "fr:lex:bibliotheque",
+        "fr:lex:bientot",
+        "fr:lex:billet",
+        "fr:lex:blond",
+        "fr:lex:bouche",
+        "fr:lex:boulangerie",
+        "fr:lex:bouteille",
+        "fr:lex:bras",
+        "fr:lex:bravo",
+        "fr:lex:bureau",
+        "fr:lex:cacher",
+        "fr:lex:cadeau",
+        "fr:lex:cahier",
+        "fr:lex:campagne",
+        "fr:lex:canadien",
+        "fr:lex:canape",
+        "fr:lex:carotte",
+        "fr:lex:centre",
+        "fr:lex:chaise",
+        "fr:lex:chambre",
+        "fr:lex:changer",
+        "fr:lex:chanter",
+        "fr:lex:chapeau",
+        "fr:lex:chaussette",
+        "fr:lex:chaussure",
+        "fr:lex:chemise",
+        "fr:lex:cher",
+        "fr:lex:chinois",
+        "fr:lex:choisir",
+        "fr:lex:cinema",
+        "fr:lex:cinquante",
+        "fr:lex:citron",
+        "fr:lex:clair",
+        "fr:lex:client",
+        "fr:lex:confirmer",
+        "fr:lex:confiture",
+        "fr:lex:contre",
+        "fr:lex:conversation",
+        "fr:lex:copain",
+        "fr:lex:coucher",
+        "fr:lex:couleur",
+        "fr:lex:course",
+        "fr:lex:court",
+        "fr:lex:cousin",
+        "fr:lex:couteau",
+        "fr:lex:crayon",
+        "fr:lex:cuillere",
+        "fr:lex:cuisine",
+        "fr:lex:dame",
+        "fr:lex:danser",
+        "fr:lex:decembre",
+        "fr:lex:decouvrir",
+        "fr:lex:dejeuner",
+        "fr:lex:delicieux",
+        "fr:lex:demi",
+        "fr:lex:demi-heure",
+        "fr:lex:dent",
+        "fr:lex:dernier",
+        "fr:lex:desirer",
+        "fr:lex:dessert",
+        "fr:lex:dessin",
+        "fr:lex:dessiner",
+        "fr:lex:detester",
+        "fr:lex:deux",
+        "fr:lex:deuxieme",
+        "fr:lex:different",
+        "fr:lex:difficile",
+        "fr:lex:dimanche",
+        "fr:lex:diner",
+        "fr:lex:direction",
+        "fr:lex:discuter",
+        "fr:lex:dix",
+        "fr:lex:docteur",
+        "fr:lex:doigt",
+        "fr:lex:dos",
+        "fr:lex:douche",
+        "fr:lex:doucher",
+        "fr:lex:douze",
+        "fr:lex:echarpe",
+        "fr:lex:ecrire",
+        "fr:lex:effort",
+        "fr:lex:eglise",
+        "fr:lex:eleve",
+        "fr:lex:embrasser",
+        "fr:lex:enchante",
+        "fr:lex:entendre",
+        "fr:lex:entree",
+        "fr:lex:envoyer",
+        "fr:lex:epeler",
+        "fr:lex:espagnol",
+        "fr:lex:etage",
+        "fr:lex:ete",
+        "fr:lex:etudiant",
+        "fr:lex:euro",
+        "fr:lex:exemple",
+        "fr:lex:exercice",
+        "fr:lex:exister",
+        "fr:lex:expliquer",
+        "fr:lex:facile",
+        "fr:lex:felicitations",
+        "fr:lex:feliciter",
+        "fr:lex:fermer",
+        "fr:lex:fete",
+        "fr:lex:fevrier",
+        "fr:lex:foot",
+        "fr:lex:fourchette",
+        "fr:lex:fraise",
+        "fr:lex:gagner",
+        "fr:lex:garçon",
+        "fr:lex:gomme",
+        "fr:lex:grand-mere",
+        "fr:lex:grand-pere",
+        "fr:lex:gris",
+        "fr:lex:gros",
+        "fr:lex:habiter",
+        "fr:lex:haut",
+        "fr:lex:heureux",
+        "fr:lex:hopital",
+        "fr:lex:hotel",
+        "fr:lex:huit",
+        "fr:lex:important",
+        "fr:lex:information",
+        "fr:lex:intelligent",
+        "fr:lex:interessant",
+        "fr:lex:internet",
+        "fr:lex:inviter",
+        "fr:lex:italien",
+        "fr:lex:jambe",
+        "fr:lex:jambon",
+        "fr:lex:janvier",
+        "fr:lex:japonais",
+        "fr:lex:jardin",
+        "fr:lex:jaune",
+        "fr:lex:jeudi",
+        "fr:lex:joli",
+        "fr:lex:jouer",
+        "fr:lex:journal",
+        "fr:lex:juillet",
+        "fr:lex:juin",
+        "fr:lex:jupe",
+        "fr:lex:kilo",
+        "fr:lex:kilometre",
+        "fr:lex:lampe",
+        "fr:lex:langue",
+        "fr:lex:lettre",
+        "fr:lex:libre",
+        "fr:lex:lire",
+        "fr:lex:lit",
+        "fr:lex:litre",
+        "fr:lex:longtemps",
+        "fr:lex:lumiere",
+        "fr:lex:lundi",
+        "fr:lex:lunettes",
+        "fr:lex:lycee",
+        "fr:lex:machine",
+        "fr:lex:madame",
+        "fr:lex:mademoiselle",
+        "fr:lex:magasin",
+        "fr:lex:mai",
+        "fr:lex:maman",
+        "fr:lex:marche",
+        "fr:lex:mardi",
+        "fr:lex:mari",
+        "fr:lex:marron",
+        "fr:lex:mars",
+        "fr:lex:match",
+        "fr:lex:matin",
+        "fr:lex:mauvais",
+        "fr:lex:medecin",
+        "fr:lex:menu",
+        "fr:lex:mercredi",
+        "fr:lex:meteo",
+        "fr:lex:metier",
+        "fr:lex:metre",
+        "fr:lex:metro",
+        "fr:lex:midi",
+        "fr:lex:minuit",
+        "fr:lex:mois",
+        "fr:lex:monsieur",
+        "fr:lex:montagne",
+        "fr:lex:montre",
+        "fr:lex:montrer",
+        "fr:lex:mot",
+        "fr:lex:moto",
+        "fr:lex:musee",
+        "fr:lex:neige",
+        "fr:lex:nez",
+        "fr:lex:noel",
+        "fr:lex:noir",
+        "fr:lex:novembre",
+        "fr:lex:numero",
+        "fr:lex:octobre",
+        "fr:lex:offrir",
+        "fr:lex:oh",
+        "fr:lex:oignon",
+        "fr:lex:oncle",
+        "fr:lex:onze",
+        "fr:lex:ordinateur",
+        "fr:lex:oreille",
+        "fr:lex:oublier",
+        "fr:lex:ouvrir",
+        "fr:lex:papa",
+        "fr:lex:parc",
+        "fr:lex:parent",
+        "fr:lex:passer",
+        "fr:lex:payer",
+        "fr:lex:pays",
+        "fr:lex:perdre",
+        "fr:lex:permettre",
+        "fr:lex:petit-dejeuner",
+        "fr:lex:pharmacie",
+        "fr:lex:photo",
+        "fr:lex:phrase",
+        "fr:lex:piece",
+        "fr:lex:piscine",
+        "fr:lex:plage",
+        "fr:lex:plaisir",
+        "fr:lex:plat",
+        "fr:lex:poire",
+        "fr:lex:pomme-de-terre",
+        "fr:lex:poser",
+        "fr:lex:poste",
+        "fr:lex:prefere",
+        "fr:lex:preferer",
+        "fr:lex:premier",
+        "fr:lex:prenom",
+        "fr:lex:presenter",
+        "fr:lex:pret",
+        "fr:lex:printemps",
+        "fr:lex:prix",
+        "fr:lex:prochain",
+        "fr:lex:profiter",
+        "fr:lex:pull",
+        "fr:lex:quarante",
+        "fr:lex:quart",
+        "fr:lex:quartier",
+        "fr:lex:quatorze",
+        "fr:lex:quatrieme",
+        "fr:lex:radio",
+        "fr:lex:raisin",
+        "fr:lex:refuser",
+        "fr:lex:remercier",
+        "fr:lex:rencontrer",
+        "fr:lex:repas",
+        "fr:lex:repeter",
+        "fr:lex:repondre",
+        "fr:lex:reserver",
+        "fr:lex:restaurant",
+        "fr:lex:retard",
+        "fr:lex:retrouver",
+        "fr:lex:reve",
+        "fr:lex:rever",
+        "fr:lex:rien",
+        "fr:lex:robe",
+        "fr:lex:rose",
+        "fr:lex:rouge",
+        "fr:lex:route",
+        "fr:lex:russe",
+        "fr:lex:sac",
+        "fr:lex:saison",
+        "fr:lex:salle",
+        "fr:lex:salon",
+        "fr:lex:samedi",
+        "fr:lex:sandwich",
+        "fr:lex:sans",
+        "fr:lex:secret",
+        "fr:lex:seize",
+        "fr:lex:semaine",
+        "fr:lex:sens",
+        "fr:lex:sept",
+        "fr:lex:septembre",
+        "fr:lex:serveur",
+        "fr:lex:service",
+        "fr:lex:seul",
+        "fr:lex:simple",
+        "fr:lex:six",
+        "fr:lex:soif",
+        "fr:lex:soir",
+        "fr:lex:soiree",
+        "fr:lex:soixante",
+        "fr:lex:sommeil",
+        "fr:lex:souhaiter",
+        "fr:lex:soupe",
+        "fr:lex:sourire",
+        "fr:lex:sport",
+        "fr:lex:station",
+        "fr:lex:steak",
+        "fr:lex:stylo",
+        "fr:lex:suisse",
+        "fr:lex:suivre",
+        "fr:lex:sujet",
+        "fr:lex:super",
+        "fr:lex:supermarche",
+        "fr:lex:surprise",
+        "fr:lex:sympa",
+        "fr:lex:tante",
+        "fr:lex:tasse",
+        "fr:lex:taxi",
+        "fr:lex:telephone",
+        "fr:lex:television",
+        "fr:lex:tennis",
+        "fr:lex:theatre",
+        "fr:lex:ticket",
+        "fr:lex:tot",
+        "fr:lex:tour",
+        "fr:lex:touriste",
+        "fr:lex:transport",
+        "fr:lex:traverser",
+        "fr:lex:treize",
+        "fr:lex:trois",
+        "fr:lex:troisieme",
+        "fr:lex:utiliser",
+        "fr:lex:vacances",
+        "fr:lex:valise",
+        "fr:lex:velo",
+        "fr:lex:vendeur",
+        "fr:lex:vendredi",
+        "fr:lex:ventre",
+        "fr:lex:verre",
+        "fr:lex:veste",
+        "fr:lex:vetement",
+        "fr:lex:village",
+        "fr:lex:violet",
+        "fr:lex:visiter",
+        "fr:lex:voici",
+        "fr:lex:volontiers",
+        "fr:lex:voyage",
+        "fr:lex:vue",
+        "fr:lex:week-end",
+        "fr:lex:yaourt",
+        "fr:lex:zero"
+      ]
+    },
+    "A2": {
+      "coreConstructions": 23,
+      "coreWords": 681,
+      "reachedAt": null,
+      "taughtConstructions": 15,
+      "taughtWords": 86,
+      "untaughtConstructions": [
+        "fr:cx:neg.ne-plus",
+        "fr:cx:neg.ne-rien",
+        "fr:cx:pronoun.en",
+        "fr:cx:pronoun.y",
+        "fr:cx:relative.ou",
+        "fr:cx:relative.que",
+        "fr:cx:relative.qui",
+        "fr:cx:si.present"
+      ],
+      "untaughtWords": [
+        "fr:lex:absent",
+        "fr:lex:absolument",
+        "fr:lex:accent",
+        "fr:lex:accompagner",
+        "fr:lex:acteur",
+        "fr:lex:activite",
+        "fr:lex:actrice",
+        "fr:lex:admirer",
+        "fr:lex:adolescent",
+        "fr:lex:adulte",
+        "fr:lex:affaire",
+        "fr:lex:age.adjective",
+        "fr:lex:agreable",
+        "fr:lex:aile",
+        "fr:lex:aimable",
+        "fr:lex:air",
+        "fr:lex:ajouter",
+        "fr:lex:alcool",
+        "fr:lex:allumer",
+        "fr:lex:ambulance",
+        "fr:lex:amener",
+        "fr:lex:amitie",
+        "fr:lex:amour",
+        "fr:lex:amoureux",
+        "fr:lex:amusant",
+        "fr:lex:ancien",
+        "fr:lex:appareil",
+        "fr:lex:appel",
+        "fr:lex:apporter",
+        "fr:lex:apprecier",
+        "fr:lex:arabe",
+        "fr:lex:armoire",
+        "fr:lex:arret",
+        "fr:lex:arreter",
+        "fr:lex:arrivee",
+        "fr:lex:artiste",
+        "fr:lex:ascenseur",
+        "fr:lex:assez",
+        "fr:lex:assister",
+        "fr:lex:attacher",
+        "fr:lex:attirer",
+        "fr:lex:attraper",
+        "fr:lex:avance",
+        "fr:lex:avancer",
+        "fr:lex:avenir",
+        "fr:lex:aventure",
+        "fr:lex:avenue",
+        "fr:lex:avertir",
+        "fr:lex:avis",
+        "fr:lex:avocat",
+        "fr:lex:bagage",
+        "fr:lex:bague",
+        "fr:lex:baigner",
+        "fr:lex:bain",
+        "fr:lex:balcon",
+        "fr:lex:balle",
+        "fr:lex:ballon",
+        "fr:lex:banc",
+        "fr:lex:bar",
+        "fr:lex:barbe",
+        "fr:lex:bas",
+        "fr:lex:batiment",
+        "fr:lex:bavarder",
+        "fr:lex:beaute",
+        "fr:lex:beige",
+        "fr:lex:bete",
+        "fr:lex:bijou",
+        "fr:lex:bizarre",
+        "fr:lex:blague",
+        "fr:lex:blesser",
+        "fr:lex:bois",
+        "fr:lex:boite",
+        "fr:lex:bol",
+        "fr:lex:bonbon",
+        "fr:lex:bonheur",
+        "fr:lex:bord",
+        "fr:lex:botte",
+        "fr:lex:boucherie",
+        "fr:lex:bouger",
+        "fr:lex:bougie",
+        "fr:lex:boulanger",
+        "fr:lex:boule",
+        "fr:lex:bouquet",
+        "fr:lex:boutique",
+        "fr:lex:bouton",
+        "fr:lex:britannique",
+        "fr:lex:brouillard",
+        "fr:lex:brun",
+        "fr:lex:caisse",
+        "fr:lex:calme",
+        "fr:lex:camarade",
+        "fr:lex:camion",
+        "fr:lex:canard",
+        "fr:lex:capitale",
+        "fr:lex:caractere",
+        "fr:lex:carnet",
+        "fr:lex:carrefour",
+        "fr:lex:casque",
+        "fr:lex:casquette",
+        "fr:lex:casser",
+        "fr:lex:cathedrale",
+        "fr:lex:cave",
+        "fr:lex:ceinture",
+        "fr:lex:celebre",
+        "fr:lex:celui",
+        "fr:lex:centime",
+        "fr:lex:certain",
+        "fr:lex:chacun",
+        "fr:lex:chaine",
+        "fr:lex:chaleur",
+        "fr:lex:champ",
+        "fr:lex:champagne",
+        "fr:lex:champion",
+        "fr:lex:changement",
+        "fr:lex:chanson",
+        "fr:lex:chanteur",
+        "fr:lex:charmant",
+        "fr:lex:chateau",
+        "fr:lex:chauffeur",
+        "fr:lex:chef",
+        "fr:lex:chemin",
+        "fr:lex:cheque",
+        "fr:lex:cheval",
+        "fr:lex:chiffre",
+        "fr:lex:choix",
+        "fr:lex:chou",
+        "fr:lex:cigarette",
+        "fr:lex:cirque",
+        "fr:lex:classique",
+        "fr:lex:club",
+        "fr:lex:cochon",
+        "fr:lex:coiffer",
+        "fr:lex:coiffeur",
+        "fr:lex:collegue",
+        "fr:lex:collier",
+        "fr:lex:comedie",
+        "fr:lex:comparer",
+        "fr:lex:complet",
+        "fr:lex:complique",
+        "fr:lex:compte",
+        "fr:lex:concert",
+        "fr:lex:conduire",
+        "fr:lex:conge",
+        "fr:lex:conseil",
+        "fr:lex:conseiller",
+        "fr:lex:contact",
+        "fr:lex:contacter",
+        "fr:lex:contraire",
+        "fr:lex:costume",
+        "fr:lex:cou",
+        "fr:lex:couloir",
+        "fr:lex:couple",
+        "fr:lex:cour",
+        "fr:lex:courage",
+        "fr:lex:courageux",
+        "fr:lex:courriel",
+        "fr:lex:courrier",
+        "fr:lex:couverture",
+        "fr:lex:cravate",
+        "fr:lex:creer",
+        "fr:lex:creme",
+        "fr:lex:crier",
+        "fr:lex:cuir",
+        "fr:lex:cuire",
+        "fr:lex:cuisiner",
+        "fr:lex:cuisinier",
+        "fr:lex:culture",
+        "fr:lex:curieux",
+        "fr:lex:danger",
+        "fr:lex:dangereux",
+        "fr:lex:danse",
+        "fr:lex:danseur",
+        "fr:lex:debout",
+        "fr:lex:decrire",
+        "fr:lex:decrocher",
+        "fr:lex:dedans",
+        "fr:lex:degre",
+        "fr:lex:dehors",
+        "fr:lex:demenager",
+        "fr:lex:depart",
+        "fr:lex:dependre",
+        "fr:lex:depenser",
+        "fr:lex:deplacer",
+        "fr:lex:deposer",
+        "fr:lex:deranger",
+        "fr:lex:destination",
+        "fr:lex:deviner",
+        "fr:lex:difference",
+        "fr:lex:directement",
+        "fr:lex:directeur",
+        "fr:lex:disputer",
+        "fr:lex:disque",
+        "fr:lex:dizaine",
+        "fr:lex:document",
+        "fr:lex:dommage",
+        "fr:lex:doucement",
+        "fr:lex:douleur",
+        "fr:lex:doux",
+        "fr:lex:drap",
+        "fr:lex:drapeau",
+        "fr:lex:drole",
+        "fr:lex:echanger",
+        "fr:lex:ecran",
+        "fr:lex:ecriture",
+        "fr:lex:ecrivain",
+        "fr:lex:emission",
+        "fr:lex:emmener",
+        "fr:lex:emploi",
+        "fr:lex:endormir",
+        "fr:lex:energie",
+        "fr:lex:enfance",
+        "fr:lex:enlever",
+        "fr:lex:ennuyer",
+        "fr:lex:enorme",
+        "fr:lex:entier",
+        "fr:lex:entrainer",
+        "fr:lex:entreprise",
+        "fr:lex:epaule",
+        "fr:lex:epicerie",
+        "fr:lex:epoque",
+        "fr:lex:equipe",
+        "fr:lex:erreur",
+        "fr:lex:escalier",
+        "fr:lex:espace",
+        "fr:lex:esperer",
+        "fr:lex:espoir",
+        "fr:lex:eteindre",
+        "fr:lex:etoile",
+        "fr:lex:etranger",
+        "fr:lex:europeen",
+        "fr:lex:evidemment",
+        "fr:lex:exact",
+        "fr:lex:exactement",
+        "fr:lex:examen",
+        "fr:lex:excellent",
+        "fr:lex:excuse",
+        "fr:lex:experience",
+        "fr:lex:explication",
+        "fr:lex:extraordinaire",
+        "fr:lex:facher",
+        "fr:lex:facon",
+        "fr:lex:facteur",
+        "fr:lex:fantastique",
+        "fr:lex:faute",
+        "fr:lex:fauteuil",
+        "fr:lex:faux",
+        "fr:lex:ferme",
+        "fr:lex:feu",
+        "fr:lex:feuille",
+        "fr:lex:fier",
+        "fr:lex:fievre",
+        "fr:lex:fleuve",
+        "fr:lex:fonce",
+        "fr:lex:fonctionner",
+        "fr:lex:fond",
+        "fr:lex:foret",
+        "fr:lex:forme",
+        "fr:lex:formidable",
+        "fr:lex:fou",
+        "fr:lex:frapper",
+        "fr:lex:fumer",
+        "fr:lex:gant",
+        "fr:lex:garage",
+        "fr:lex:garde",
+        "fr:lex:geant",
+        "fr:lex:general",
+        "fr:lex:generalement",
+        "fr:lex:genou",
+        "fr:lex:geographie",
+        "fr:lex:gorge",
+        "fr:lex:gout",
+        "fr:lex:gouter",
+        "fr:lex:gramme",
+        "fr:lex:grandir",
+        "fr:lex:grec",
+        "fr:lex:grippe",
+        "fr:lex:groupe",
+        "fr:lex:guerre",
+        "fr:lex:guide",
+        "fr:lex:guitare",
+        "fr:lex:habitant",
+        "fr:lex:heureusement",
+        "fr:lex:horrible",
+        "fr:lex:huile",
+        "fr:lex:identite",
+        "fr:lex:idiot",
+        "fr:lex:ile",
+        "fr:lex:image",
+        "fr:lex:imaginer",
+        "fr:lex:immediatement",
+        "fr:lex:immeuble",
+        "fr:lex:impossible",
+        "fr:lex:incroyable",
+        "fr:lex:indien",
+        "fr:lex:indiquer",
+        "fr:lex:infirmier",
+        "fr:lex:informatique",
+        "fr:lex:ingenieur",
+        "fr:lex:inquiet",
+        "fr:lex:inquieter",
+        "fr:lex:inscrire",
+        "fr:lex:installer",
+        "fr:lex:instrument",
+        "fr:lex:interdire",
+        "fr:lex:international",
+        "fr:lex:inutile",
+        "fr:lex:inventer",
+        "fr:lex:invite",
+        "fr:lex:jeter",
+        "fr:lex:jeu",
+        "fr:lex:joie",
+        "fr:lex:joue",
+        "fr:lex:jouet",
+        "fr:lex:joueur",
+        "fr:lex:jour-ferie",
+        "fr:lex:journaliste",
+        "fr:lex:joyeux",
+        "fr:lex:jumeau",
+        "fr:lex:jusque",
+        "fr:lex:justement",
+        "fr:lex:la-haut",
+        "fr:lex:lac",
+        "fr:lex:laid",
+        "fr:lex:laisser",
+        "fr:lex:large",
+        "fr:lex:lecture",
+        "fr:lex:leger",
+        "fr:lex:librairie",
+        "fr:lex:lieu",
+        "fr:lex:lion",
+        "fr:lex:liste",
+        "fr:lex:louer",
+        "fr:lex:lourd",
+        "fr:lex:lune",
+        "fr:lex:magazine",
+        "fr:lex:magnifique",
+        "fr:lex:maitresse",
+        "fr:lex:maladie",
+        "fr:lex:malheureusement",
+        "fr:lex:malheureux",
+        "fr:lex:manquer",
+        "fr:lex:marchand",
+        "fr:lex:mariage",
+        "fr:lex:marque",
+        "fr:lex:mathematiques",
+        "fr:lex:matiere",
+        "fr:lex:matinee",
+        "fr:lex:mechant",
+        "fr:lex:medicament",
+        "fr:lex:memoire",
+        "fr:lex:menage",
+        "fr:lex:mentir",
+        "fr:lex:merveilleux",
+        "fr:lex:message",
+        "fr:lex:meuble",
+        "fr:lex:mieux",
+        "fr:lex:mignon",
+        "fr:lex:million",
+        "fr:lex:mince",
+        "fr:lex:miroir",
+        "fr:lex:moderne",
+        "fr:lex:moitie",
+        "fr:lex:monnaie",
+        "fr:lex:monument",
+        "fr:lex:morceau",
+        "fr:lex:mouchoir",
+        "fr:lex:mourir",
+        "fr:lex:moustache",
+        "fr:lex:mouton",
+        "fr:lex:mur",
+        "fr:lex:musicien",
+        "fr:lex:necessaire",
+        "fr:lex:neveu",
+        "fr:lex:niece",
+        "fr:lex:niveau",
+        "fr:lex:nombre",
+        "fr:lex:nombreux",
+        "fr:lex:nourriture",
+        "fr:lex:objet",
+        "fr:lex:ocean",
+        "fr:lex:orage",
+        "fr:lex:oreiller",
+        "fr:lex:organiser",
+        "fr:lex:original",
+        "fr:lex:os",
+        "fr:lex:ouvert",
+        "fr:lex:ouvrier",
+        "fr:lex:page",
+        "fr:lex:paire",
+        "fr:lex:pale",
+        "fr:lex:panier",
+        "fr:lex:panneau",
+        "fr:lex:papier",
+        "fr:lex:paques",
+        "fr:lex:paquet",
+        "fr:lex:parfait",
+        "fr:lex:parfaitement",
+        "fr:lex:parfum",
+        "fr:lex:parking",
+        "fr:lex:partager",
+        "fr:lex:participer",
+        "fr:lex:passager",
+        "fr:lex:passe",
+        "fr:lex:passeport",
+        "fr:lex:patron",
+        "fr:lex:pause",
+        "fr:lex:pauvre",
+        "fr:lex:paysage",
+        "fr:lex:peau",
+        "fr:lex:peche",
+        "fr:lex:peindre",
+        "fr:lex:peinture",
+        "fr:lex:permis",
+        "fr:lex:piano",
+        "fr:lex:pilote",
+        "fr:lex:placard",
+        "fr:lex:plaisanter",
+        "fr:lex:plan",
+        "fr:lex:planete",
+        "fr:lex:plein",
+        "fr:lex:pleurer",
+        "fr:lex:plusieurs",
+        "fr:lex:plutot",
+        "fr:lex:poids",
+        "fr:lex:police",
+        "fr:lex:policier",
+        "fr:lex:polonais",
+        "fr:lex:pont",
+        "fr:lex:port",
+        "fr:lex:portable",
+        "fr:lex:portefeuille",
+        "fr:lex:portugais",
+        "fr:lex:poubelle",
+        "fr:lex:poule",
+        "fr:lex:poupee",
+        "fr:lex:pratique",
+        "fr:lex:present",
+        "fr:lex:preuve",
+        "fr:lex:prier",
+        "fr:lex:produit",
+        "fr:lex:professionnel",
+        "fr:lex:programme",
+        "fr:lex:projet",
+        "fr:lex:promenade",
+        "fr:lex:promener",
+        "fr:lex:promettre",
+        "fr:lex:prononcer",
+        "fr:lex:propos",
+        "fr:lex:proposer",
+        "fr:lex:propre",
+        "fr:lex:proteger",
+        "fr:lex:quai",
+        "fr:lex:qualite",
+        "fr:lex:quelquefois",
+        "fr:lex:queue",
+        "fr:lex:quitter",
+        "fr:lex:raccrocher",
+        "fr:lex:raconter",
+        "fr:lex:ramasser",
+        "fr:lex:randonnee",
+        "fr:lex:ranger",
+        "fr:lex:rappeler",
+        "fr:lex:rater",
+        "fr:lex:realite",
+        "fr:lex:recevoir",
+        "fr:lex:recommander",
+        "fr:lex:recommencer",
+        "fr:lex:reconnaitre",
+        "fr:lex:refaire",
+        "fr:lex:reflechir",
+        "fr:lex:refrigerateur",
+        "fr:lex:region",
+        "fr:lex:regle",
+        "fr:lex:reine",
+        "fr:lex:rejoindre",
+        "fr:lex:relation",
+        "fr:lex:remplacer",
+        "fr:lex:remplir",
+        "fr:lex:rencontre",
+        "fr:lex:renoncer",
+        "fr:lex:renseignement",
+        "fr:lex:renseigner",
+        "fr:lex:repartir",
+        "fr:lex:repos",
+        "fr:lex:reposer",
+        "fr:lex:reprendre",
+        "fr:lex:respirer",
+        "fr:lex:responsable",
+        "fr:lex:resultat",
+        "fr:lex:retour",
+        "fr:lex:retourner",
+        "fr:lex:reunion",
+        "fr:lex:reveil",
+        "fr:lex:rhume",
+        "fr:lex:rideau",
+        "fr:lex:rire",
+        "fr:lex:riviere",
+        "fr:lex:rock",
+        "fr:lex:roi",
+        "fr:lex:role",
+        "fr:lex:roman",
+        "fr:lex:rond",
+        "fr:lex:rouler",
+        "fr:lex:roux",
+        "fr:lex:sable",
+        "fr:lex:saint",
+        "fr:lex:salaire",
+        "fr:lex:sale",
+        "fr:lex:sante",
+        "fr:lex:scene",
+        "fr:lex:science",
+        "fr:lex:sec",
+        "fr:lex:seconde",
+        "fr:lex:secours",
+        "fr:lex:secretaire",
+        "fr:lex:sejour",
+        "fr:lex:sembler",
+        "fr:lex:sensible",
+        "fr:lex:sentir",
+        "fr:lex:serie",
+        "fr:lex:serieux",
+        "fr:lex:serpent",
+        "fr:lex:serviette",
+        "fr:lex:servir",
+        "fr:lex:siecle",
+        "fr:lex:signer",
+        "fr:lex:signifier",
+        "fr:lex:silence",
+        "fr:lex:simplement",
+        "fr:lex:situation",
+        "fr:lex:ski",
+        "fr:lex:sofa",
+        "fr:lex:sonner",
+        "fr:lex:sortie",
+        "fr:lex:souris",
+        "fr:lex:soutenir",
+        "fr:lex:special",
+        "fr:lex:spectacle",
+        "fr:lex:stade",
+        "fr:lex:studio",
+        "fr:lex:stupide",
+        "fr:lex:suite",
+        "fr:lex:superbe",
+        "fr:lex:surprendre",
+        "fr:lex:surtout",
+        "fr:lex:systeme",
+        "fr:lex:taille",
+        "fr:lex:taper",
+        "fr:lex:tapis",
+        "fr:lex:tellement",
+        "fr:lex:temperature",
+        "fr:lex:tenir",
+        "fr:lex:tente",
+        "fr:lex:terminer",
+        "fr:lex:terrasse",
+        "fr:lex:terrible",
+        "fr:lex:test",
+        "fr:lex:texte",
+        "fr:lex:timide",
+        "fr:lex:tiroir",
+        "fr:lex:toit",
+        "fr:lex:tort",
+        "fr:lex:toucher",
+        "fr:lex:tradition",
+        "fr:lex:traduire",
+        "fr:lex:tranche",
+        "fr:lex:tranquille",
+        "fr:lex:tromper",
+        "fr:lex:trottoir",
+        "fr:lex:unique",
+        "fr:lex:usine",
+        "fr:lex:utile",
+        "fr:lex:vache",
+        "fr:lex:valeur",
+        "fr:lex:vendre",
+        "fr:lex:verifier",
+        "fr:lex:verite",
+        "fr:lex:vers",
+        "fr:lex:vide",
+        "fr:lex:video",
+        "fr:lex:vider",
+        "fr:lex:visite",
+        "fr:lex:vitesse",
+        "fr:lex:voisin",
+        "fr:lex:vol"
+      ]
+    },
+    "B1": {
+      "coreConstructions": 17,
+      "coreWords": 841,
+      "reachedAt": null,
+      "taughtConstructions": 13,
+      "taughtWords": 22,
+      "untaughtConstructions": [
+        "fr:cx:passive",
+        "fr:cx:plus-que-parfait.etre",
+        "fr:cx:relative.ce-que",
+        "fr:cx:relative.dont"
+      ],
+      "untaughtWords": [
+        "fr:lex:abandonner",
+        "fr:lex:abri",
+        "fr:lex:absence",
+        "fr:lex:acces",
+        "fr:lex:accorder",
+        "fr:lex:accrocher",
+        "fr:lex:accueillir",
+        "fr:lex:accuser",
+        "fr:lex:achever",
+        "fr:lex:acte",
+        "fr:lex:activement",
+        "fr:lex:actuellement",
+        "fr:lex:adieu",
+        "fr:lex:admettre",
+        "fr:lex:administration",
+        "fr:lex:adopter",
+        "fr:lex:affirmer",
+        "fr:lex:affreux",
+        "fr:lex:agence",
+        "fr:lex:agent",
+        "fr:lex:agir",
+        "fr:lex:ailleurs",
+        "fr:lex:aine",
+        "fr:lex:allonger",
+        "fr:lex:ambition",
+        "fr:lex:amer",
+        "fr:lex:ange",
+        "fr:lex:angle",
+        "fr:lex:angoisse",
+        "fr:lex:animer",
+        "fr:lex:annonce",
+        "fr:lex:annoncer",
+        "fr:lex:apercevoir",
+        "fr:lex:apparaitre",
+        "fr:lex:apparemment",
+        "fr:lex:apparence",
+        "fr:lex:appartenir",
+        "fr:lex:appliquer",
+        "fr:lex:approcher",
+        "fr:lex:appuyer",
+        "fr:lex:argente",
+        "fr:lex:arme",
+        "fr:lex:armee",
+        "fr:lex:arranger",
+        "fr:lex:arriere",
+        "fr:lex:aspect",
+        "fr:lex:assistant",
+        "fr:lex:assurance",
+        "fr:lex:assurer",
+        "fr:lex:atelier",
+        "fr:lex:atmosphere",
+        "fr:lex:attaque",
+        "fr:lex:attaquer",
+        "fr:lex:atteindre",
+        "fr:lex:attente",
+        "fr:lex:attentif",
+        "fr:lex:aucun",
+        "fr:lex:augmenter",
+        "fr:lex:aupres",
+        "fr:lex:aussitot",
+        "fr:lex:autant",
+        "fr:lex:auteur",
+        "fr:lex:autoriser",
+        "fr:lex:autorite",
+        "fr:lex:autrefois",
+        "fr:lex:autrement",
+        "fr:lex:avaler",
+        "fr:lex:avantage",
+        "fr:lex:aveugle",
+        "fr:lex:avouer",
+        "fr:lex:baisser",
+        "fr:lex:ballet",
+        "fr:lex:bande",
+        "fr:lex:base",
+        "fr:lex:bataille",
+        "fr:lex:batir",
+        "fr:lex:battre",
+        "fr:lex:betise",
+        "fr:lex:blessure",
+        "fr:lex:bloquer",
+        "fr:lex:boue",
+        "fr:lex:branche",
+        "fr:lex:bref",
+        "fr:lex:brillant",
+        "fr:lex:briser",
+        "fr:lex:bruler",
+        "fr:lex:brusquement",
+        "fr:lex:buffet",
+        "fr:lex:cabine",
+        "fr:lex:cadre",
+        "fr:lex:calmer",
+        "fr:lex:camera",
+        "fr:lex:capable",
+        "fr:lex:carre",
+        "fr:lex:carriere",
+        "fr:lex:carton",
+        "fr:lex:cas",
+        "fr:lex:catastrophe",
+        "fr:lex:cauchemar",
+        "fr:lex:ceder",
+        "fr:lex:centaine",
+        "fr:lex:central",
+        "fr:lex:cependant",
+        "fr:lex:cercle",
+        "fr:lex:ceremonie",
+        "fr:lex:certes",
+        "fr:lex:certitude",
+        "fr:lex:cerveau",
+        "fr:lex:cesser",
+        "fr:lex:chagrin",
+        "fr:lex:chapitre",
+        "fr:lex:charger",
+        "fr:lex:charme",
+        "fr:lex:chasse",
+        "fr:lex:chasser",
+        "fr:lex:chauffer",
+        "fr:lex:cheminee",
+        "fr:lex:chic",
+        "fr:lex:choc",
+        "fr:lex:chute",
+        "fr:lex:cimetiere",
+        "fr:lex:circonstance",
+        "fr:lex:circuler",
+        "fr:lex:citer",
+        "fr:lex:citoyen",
+        "fr:lex:code",
+        "fr:lex:colere",
+        "fr:lex:collection",
+        "fr:lex:coller",
+        "fr:lex:colline",
+        "fr:lex:commerce",
+        "fr:lex:commun",
+        "fr:lex:communiquer",
+        "fr:lex:compagnie",
+        "fr:lex:compagnon",
+        "fr:lex:comptoir",
+        "fr:lex:concentrer",
+        "fr:lex:conclure",
+        "fr:lex:conclusion",
+        "fr:lex:concours",
+        "fr:lex:condition",
+        "fr:lex:conference",
+        "fr:lex:confier",
+        "fr:lex:confondre",
+        "fr:lex:connecter",
+        "fr:lex:conscience",
+        "fr:lex:consequence",
+        "fr:lex:conserver",
+        "fr:lex:considerer",
+        "fr:lex:consister",
+        "fr:lex:constater",
+        "fr:lex:consulter",
+        "fr:lex:contenir",
+        "fr:lex:contrat",
+        "fr:lex:controle",
+        "fr:lex:controler",
+        "fr:lex:convaincre",
+        "fr:lex:convenir",
+        "fr:lex:conviction",
+        "fr:lex:copie",
+        "fr:lex:corde",
+        "fr:lex:correspondre",
+        "fr:lex:coude",
+        "fr:lex:couler",
+        "fr:lex:coupable",
+        "fr:lex:courant",
+        "fr:lex:couvrir",
+        "fr:lex:craindre",
+        "fr:lex:crainte",
+        "fr:lex:creuser",
+        "fr:lex:cri",
+        "fr:lex:crime",
+        "fr:lex:crise",
+        "fr:lex:critique",
+        "fr:lex:croiser",
+        "fr:lex:croix",
+        "fr:lex:cruel",
+        "fr:lex:cueillir",
+        "fr:lex:cuisse",
+        "fr:lex:culturel",
+        "fr:lex:curiosite",
+        "fr:lex:davantage",
+        "fr:lex:debarrasser",
+        "fr:lex:debrouiller",
+        "fr:lex:decevoir",
+        "fr:lex:dechet",
+        "fr:lex:dechirer",
+        "fr:lex:decision",
+        "fr:lex:declarer",
+        "fr:lex:decoller",
+        "fr:lex:decor",
+        "fr:lex:decouverte",
+        "fr:lex:defaut",
+        "fr:lex:defendre",
+        "fr:lex:defense",
+        "fr:lex:definitif",
+        "fr:lex:delicat",
+        "fr:lex:demarrer",
+        "fr:lex:depasser",
+        "fr:lex:derouler",
+        "fr:lex:des.preposition",
+        "fr:lex:desert",
+        "fr:lex:desir",
+        "fr:lex:desordre",
+        "fr:lex:desormais",
+        "fr:lex:destin",
+        "fr:lex:detail",
+        "fr:lex:detendre",
+        "fr:lex:detruire",
+        "fr:lex:dette",
+        "fr:lex:developper",
+        "fr:lex:differemment",
+        "fr:lex:difficulte",
+        "fr:lex:diriger",
+        "fr:lex:discours",
+        "fr:lex:discret",
+        "fr:lex:disparaitre",
+        "fr:lex:distinguer",
+        "fr:lex:distribuer",
+        "fr:lex:divers",
+        "fr:lex:domaine",
+        "fr:lex:dont",
+        "fr:lex:dore",
+        "fr:lex:dossier",
+        "fr:lex:douceur",
+        "fr:lex:drame",
+        "fr:lex:drogue",
+        "fr:lex:durant",
+        "fr:lex:echange",
+        "fr:lex:echapper",
+        "fr:lex:echec",
+        "fr:lex:echouer",
+        "fr:lex:eclairer",
+        "fr:lex:eclater",
+        "fr:lex:economie",
+        "fr:lex:economique",
+        "fr:lex:economiser",
+        "fr:lex:ecraser",
+        "fr:lex:editeur",
+        "fr:lex:education",
+        "fr:lex:effacer",
+        "fr:lex:effet",
+        "fr:lex:egal",
+        "fr:lex:egalement",
+        "fr:lex:electrique",
+        "fr:lex:elegant",
+        "fr:lex:element",
+        "fr:lex:elever",
+        "fr:lex:eliminer",
+        "fr:lex:eloigner",
+        "fr:lex:emotion",
+        "fr:lex:empecher",
+        "fr:lex:employer",
+        "fr:lex:emporter",
+        "fr:lex:emprunter",
+        "fr:lex:enceinte",
+        "fr:lex:encourager",
+        "fr:lex:enerver",
+        "fr:lex:enfermer",
+        "fr:lex:enfuir",
+        "fr:lex:engager",
+        "fr:lex:ennemi",
+        "fr:lex:ennui",
+        "fr:lex:enquete",
+        "fr:lex:enregistrer",
+        "fr:lex:entierement",
+        "fr:lex:entourer",
+        "fr:lex:entretien",
+        "fr:lex:envers",
+        "fr:lex:environ",
+        "fr:lex:environnement",
+        "fr:lex:envisager",
+        "fr:lex:epais",
+        "fr:lex:epouser",
+        "fr:lex:epoux",
+        "fr:lex:epreuve",
+        "fr:lex:equilibre",
+        "fr:lex:esprit",
+        "fr:lex:essence",
+        "fr:lex:essentiel",
+        "fr:lex:essuyer",
+        "fr:lex:estimer",
+        "fr:lex:estomac",
+        "fr:lex:etablir",
+        "fr:lex:etape",
+        "fr:lex:etat",
+        "fr:lex:etendre",
+        "fr:lex:etonnant",
+        "fr:lex:etonner",
+        "fr:lex:etrange",
+        "fr:lex:etroit",
+        "fr:lex:evenement",
+        "fr:lex:evidence",
+        "fr:lex:evident",
+        "fr:lex:eviter",
+        "fr:lex:evoluer",
+        "fr:lex:evoquer",
+        "fr:lex:exagerer",
+        "fr:lex:exception",
+        "fr:lex:exiger",
+        "fr:lex:existence",
+        "fr:lex:expert",
+        "fr:lex:exploser",
+        "fr:lex:explosion",
+        "fr:lex:exprimer",
+        "fr:lex:fabriquer",
+        "fr:lex:faible",
+        "fr:lex:fameux",
+        "fr:lex:familial",
+        "fr:lex:fantome",
+        "fr:lex:faveur",
+        "fr:lex:fer",
+        "fr:lex:fiance",
+        "fr:lex:fidele",
+        "fr:lex:figure",
+        "fr:lex:fil",
+        "fr:lex:filmer",
+        "fr:lex:final",
+        "fr:lex:fixer",
+        "fr:lex:flamme",
+        "fr:lex:folie",
+        "fr:lex:fonction",
+        "fr:lex:fondre",
+        "fr:lex:fontaine",
+        "fr:lex:force",
+        "fr:lex:forcement",
+        "fr:lex:forcer",
+        "fr:lex:former",
+        "fr:lex:fortune",
+        "fr:lex:foule",
+        "fr:lex:fournir",
+        "fr:lex:fragile",
+        "fr:lex:franchement",
+        "fr:lex:franchir",
+        "fr:lex:francophone",
+        "fr:lex:frequenter",
+        "fr:lex:front",
+        "fr:lex:frontiere",
+        "fr:lex:fuir",
+        "fr:lex:fuite",
+        "fr:lex:fumee",
+        "fr:lex:furieux",
+        "fr:lex:gardien",
+        "fr:lex:gaz",
+        "fr:lex:geler",
+        "fr:lex:gendarme",
+        "fr:lex:gener",
+        "fr:lex:generation",
+        "fr:lex:genereux",
+        "fr:lex:genie",
+        "fr:lex:genre",
+        "fr:lex:geste",
+        "fr:lex:glisser",
+        "fr:lex:goutte",
+        "fr:lex:gouvernement",
+        "fr:lex:gras",
+        "fr:lex:greve",
+        "fr:lex:guerir",
+        "fr:lex:habituel",
+        "fr:lex:habituer",
+        "fr:lex:haine",
+        "fr:lex:hair",
+        "fr:lex:hasard",
+        "fr:lex:hauteur",
+        "fr:lex:heros",
+        "fr:lex:hesiter",
+        "fr:lex:historique",
+        "fr:lex:honnete",
+        "fr:lex:honte",
+        "fr:lex:horizon",
+        "fr:lex:horreur",
+        "fr:lex:hors",
+        "fr:lex:hote",
+        "fr:lex:humain",
+        "fr:lex:humeur",
+        "fr:lex:hurler",
+        "fr:lex:ideal",
+        "fr:lex:identifier",
+        "fr:lex:ignorer",
+        "fr:lex:illusion",
+        "fr:lex:imagination",
+        "fr:lex:imiter",
+        "fr:lex:immense",
+        "fr:lex:immobile",
+        "fr:lex:importance",
+        "fr:lex:imposer",
+        "fr:lex:impression",
+        "fr:lex:impressionner",
+        "fr:lex:incapable",
+        "fr:lex:incendie",
+        "fr:lex:incident",
+        "fr:lex:inconnu",
+        "fr:lex:individu",
+        "fr:lex:influence",
+        "fr:lex:informer",
+        "fr:lex:innocent",
+        "fr:lex:inoubliable",
+        "fr:lex:inquietude",
+        "fr:lex:insister",
+        "fr:lex:inspirer",
+        "fr:lex:instinct",
+        "fr:lex:instruction",
+        "fr:lex:intelligence",
+        "fr:lex:intention",
+        "fr:lex:interet",
+        "fr:lex:interieur",
+        "fr:lex:interroger",
+        "fr:lex:interrompre",
+        "fr:lex:intervenir",
+        "fr:lex:jaloux",
+        "fr:lex:jeunesse",
+        "fr:lex:joindre",
+        "fr:lex:juge",
+        "fr:lex:jugement",
+        "fr:lex:juger",
+        "fr:lex:jurer",
+        "fr:lex:justice",
+        "fr:lex:justifier",
+        "fr:lex:lacher",
+        "fr:lex:laine",
+        "fr:lex:lancer",
+        "fr:lex:langage",
+        "fr:lex:larme",
+        "fr:lex:legende",
+        "fr:lex:legerement",
+        "fr:lex:lendemain",
+        "fr:lex:lequel",
+        "fr:lex:levre",
+        "fr:lex:liberer",
+        "fr:lex:liberte",
+        "fr:lex:lien",
+        "fr:lex:limite",
+        "fr:lex:linge",
+        "fr:lex:litterature",
+        "fr:lex:local",
+        "fr:lex:loger",
+        "fr:lex:logique",
+        "fr:lex:loi",
+        "fr:lex:lors",
+        "fr:lex:lorsque",
+        "fr:lex:loup",
+        "fr:lex:lumineux",
+        "fr:lex:lutter",
+        "fr:lex:luxe",
+        "fr:lex:maire",
+        "fr:lex:maitre",
+        "fr:lex:malgre",
+        "fr:lex:malheur",
+        "fr:lex:malin",
+        "fr:lex:manche",
+        "fr:lex:maniere",
+        "fr:lex:manifester",
+        "fr:lex:manque",
+        "fr:lex:marin",
+        "fr:lex:marquer",
+        "fr:lex:masque",
+        "fr:lex:materiel",
+        "fr:lex:maximum",
+        "fr:lex:medical",
+        "fr:lex:mefier",
+        "fr:lex:membre",
+        "fr:lex:menace",
+        "fr:lex:menacer",
+        "fr:lex:mener",
+        "fr:lex:mensonge",
+        "fr:lex:menteur",
+        "fr:lex:menton",
+        "fr:lex:meriter",
+        "fr:lex:merveille",
+        "fr:lex:mesure",
+        "fr:lex:mesurer",
+        "fr:lex:metal",
+        "fr:lex:methode",
+        "fr:lex:meurtre",
+        "fr:lex:militaire",
+        "fr:lex:millier",
+        "fr:lex:ministre",
+        "fr:lex:minuscule",
+        "fr:lex:miracle",
+        "fr:lex:misere",
+        "fr:lex:mission",
+        "fr:lex:modele",
+        "fr:lex:modeste",
+        "fr:lex:mondial",
+        "fr:lex:monstre",
+        "fr:lex:mont",
+        "fr:lex:moquer",
+        "fr:lex:moral",
+        "fr:lex:mordre",
+        "fr:lex:mort",
+        "fr:lex:moteur",
+        "fr:lex:mouche",
+        "fr:lex:mouvement",
+        "fr:lex:moyen",
+        "fr:lex:multicolore",
+        "fr:lex:murmurer",
+        "fr:lex:muscle",
+        "fr:lex:mystere",
+        "fr:lex:mysterieux",
+        "fr:lex:nation",
+        "fr:lex:national",
+        "fr:lex:naturel",
+        "fr:lex:naturellement",
+        "fr:lex:necessite",
+        "fr:lex:nerf",
+        "fr:lex:nerveux",
+        "fr:lex:ni",
+        "fr:lex:nommer",
+        "fr:lex:nourrir",
+        "fr:lex:obeir",
+        "fr:lex:objectif",
+        "fr:lex:obliger",
+        "fr:lex:observer",
+        "fr:lex:obtenir",
+        "fr:lex:occasion",
+        "fr:lex:odeur",
+        "fr:lex:officiel",
+        "fr:lex:offre",
+        "fr:lex:ombre",
+        "fr:lex:ongle",
+        "fr:lex:opera",
+        "fr:lex:operation",
+        "fr:lex:ordinaire",
+        "fr:lex:ordre",
+        "fr:lex:organisation",
+        "fr:lex:origine",
+        "fr:lex:oser",
+        "fr:lex:outil",
+        "fr:lex:ouverture",
+        "fr:lex:paix",
+        "fr:lex:palais",
+        "fr:lex:paradis",
+        "fr:lex:paraitre",
+        "fr:lex:parcourir",
+        "fr:lex:pardonner",
+        "fr:lex:parier",
+        "fr:lex:parole",
+        "fr:lex:partenaire",
+        "fr:lex:parti",
+        "fr:lex:particulier",
+        "fr:lex:particulierement",
+        "fr:lex:passage",
+        "fr:lex:passion",
+        "fr:lex:patience",
+        "fr:lex:patient",
+        "fr:lex:patrimoine",
+        "fr:lex:patte",
+        "fr:lex:paysan",
+        "fr:lex:peine",
+        "fr:lex:peintre",
+        "fr:lex:penible",
+        "fr:lex:periode",
+        "fr:lex:personnage",
+        "fr:lex:personnel",
+        "fr:lex:perte",
+        "fr:lex:photographie",
+        "fr:lex:physique",
+        "fr:lex:piege",
+        "fr:lex:pile",
+        "fr:lex:piquer",
+        "fr:lex:piste",
+        "fr:lex:pitie",
+        "fr:lex:plafond",
+        "fr:lex:plaindre",
+        "fr:lex:plastique",
+        "fr:lex:plateau",
+        "fr:lex:plier",
+        "fr:lex:plonger",
+        "fr:lex:poesie",
+        "fr:lex:poete",
+        "fr:lex:poignet",
+        "fr:lex:point",
+        "fr:lex:poitrine",
+        "fr:lex:politique",
+        "fr:lex:populaire",
+        "fr:lex:portrait",
+        "fr:lex:posseder",
+        "fr:lex:pot",
+        "fr:lex:pouce",
+        "fr:lex:poursuivre",
+        "fr:lex:pourtant",
+        "fr:lex:poussiere",
+        "fr:lex:precaution",
+        "fr:lex:precedent",
+        "fr:lex:precieux",
+        "fr:lex:precis",
+        "fr:lex:preciser",
+        "fr:lex:presence",
+        "fr:lex:president",
+        "fr:lex:presse",
+        "fr:lex:presser",
+        "fr:lex:pression",
+        "fr:lex:pretendre",
+        "fr:lex:pretexte",
+        "fr:lex:pretre",
+        "fr:lex:prevenir",
+        "fr:lex:prevoir",
+        "fr:lex:primaire",
+        "fr:lex:principal",
+        "fr:lex:principe",
+        "fr:lex:prison",
+        "fr:lex:prisonnier",
+        "fr:lex:prive",
+        "fr:lex:produire",
+        "fr:lex:progres",
+        "fr:lex:prolonger",
+        "fr:lex:promesse",
+        "fr:lex:proposition",
+        "fr:lex:protection",
+        "fr:lex:protester",
+        "fr:lex:prouver",
+        "fr:lex:provoquer",
+        "fr:lex:prudent",
+        "fr:lex:public",
+        "fr:lex:publier",
+        "fr:lex:puissance",
+        "fr:lex:puissant",
+        "fr:lex:punir",
+        "fr:lex:pur",
+        "fr:lex:quotidien",
+        "fr:lex:raisonnable",
+        "fr:lex:ralentir",
+        "fr:lex:ramener",
+        "fr:lex:rang",
+        "fr:lex:rapport",
+        "fr:lex:rapporter",
+        "fr:lex:rare",
+        "fr:lex:raser",
+        "fr:lex:rassurer",
+        "fr:lex:rattraper",
+        "fr:lex:rayon",
+        "fr:lex:reaction",
+        "fr:lex:reagir",
+        "fr:lex:realiser",
+        "fr:lex:rechauffer",
+        "fr:lex:recherche",
+        "fr:lex:rechercher",
+        "fr:lex:recit",
+        "fr:lex:reclamer",
+        "fr:lex:reconnaissant",
+        "fr:lex:reculer",
+        "fr:lex:recuperer",
+        "fr:lex:recycler",
+        "fr:lex:reduire",
+        "fr:lex:reel",
+        "fr:lex:reellement",
+        "fr:lex:reflexion",
+        "fr:lex:regard",
+        "fr:lex:regime",
+        "fr:lex:reglement",
+        "fr:lex:regler",
+        "fr:lex:regulier",
+        "fr:lex:regulierement",
+        "fr:lex:rejeter",
+        "fr:lex:religieux",
+        "fr:lex:religion",
+        "fr:lex:remarquer",
+        "fr:lex:remettre",
+        "fr:lex:renverser",
+        "fr:lex:renvoyer",
+        "fr:lex:representer",
+        "fr:lex:reprocher",
+        "fr:lex:reputation",
+        "fr:lex:resistance",
+        "fr:lex:resister",
+        "fr:lex:resoudre",
+        "fr:lex:respecter",
+        "fr:lex:responsabilite",
+        "fr:lex:ressentir",
+        "fr:lex:retenir",
+        "fr:lex:retirer",
+        "fr:lex:retraite",
+        "fr:lex:reunir",
+        "fr:lex:reveler",
+        "fr:lex:revision",
+        "fr:lex:revolution",
+        "fr:lex:revue",
+        "fr:lex:ridicule",
+        "fr:lex:risque",
+        "fr:lex:risquer",
+        "fr:lex:rocher",
+        "fr:lex:rompre",
+        "fr:lex:roue",
+        "fr:lex:ruine",
+        "fr:lex:rythme",
+        "fr:lex:sacre",
+        "fr:lex:sain",
+        "fr:lex:sang",
+        "fr:lex:satisfaction",
+        "fr:lex:sauf",
+        "fr:lex:sauvage",
+        "fr:lex:sauver",
+        "fr:lex:scientifique",
+        "fr:lex:seance",
+        "fr:lex:secouer",
+        "fr:lex:secteur",
+        "fr:lex:securite",
+        "fr:lex:selon",
+        "fr:lex:sentiment",
+        "fr:lex:separer",
+        "fr:lex:serrer",
+        "fr:lex:severe",
+        "fr:lex:siege",
+        "fr:lex:signaler",
+        "fr:lex:signe",
+        "fr:lex:silencieux",
+        "fr:lex:sincere",
+        "fr:lex:singe",
+        "fr:lex:sinon",
+        "fr:lex:situer",
+        "fr:lex:societe",
+        "fr:lex:soi",
+        "fr:lex:soigner",
+        "fr:lex:soin",
+        "fr:lex:sol",
+        "fr:lex:soldat",
+        "fr:lex:solide",
+        "fr:lex:solitude",
+        "fr:lex:sombre",
+        "fr:lex:somme",
+        "fr:lex:sommet",
+        "fr:lex:songer",
+        "fr:lex:sort",
+        "fr:lex:sorte",
+        "fr:lex:souci",
+        "fr:lex:souffrance",
+        "fr:lex:souffrir",
+        "fr:lex:soulever",
+        "fr:lex:source",
+        "fr:lex:sourcil",
+        "fr:lex:sourd",
+        "fr:lex:statue",
+        "fr:lex:style",
+        "fr:lex:subir",
+        "fr:lex:succes",
+        "fr:lex:suffire",
+        "fr:lex:suffisamment",
+        "fr:lex:suggerer",
+        "fr:lex:superieur",
+        "fr:lex:supporter",
+        "fr:lex:supposer",
+        "fr:lex:surface",
+        "fr:lex:surveiller",
+        "fr:lex:survivre",
+        "fr:lex:tabac",
+        "fr:lex:taire",
+        "fr:lex:talent",
+        "fr:lex:talon",
+        "fr:lex:tandis-que",
+        "fr:lex:tant",
+        "fr:lex:technique",
+        "fr:lex:technologie",
+        "fr:lex:tel",
+        "fr:lex:temoin",
+        "fr:lex:tendresse",
+        "fr:lex:tenter",
+        "fr:lex:tenue",
+        "fr:lex:terme",
+        "fr:lex:terrain",
+        "fr:lex:theorie",
+        "fr:lex:tirer",
+        "fr:lex:tissu",
+        "fr:lex:titre",
+        "fr:lex:toile",
+        "fr:lex:total",
+        "fr:lex:totalement",
+        "fr:lex:toutefois",
+        "fr:lex:trace",
+        "fr:lex:traditionnel",
+        "fr:lex:trahir",
+        "fr:lex:trait",
+        "fr:lex:traitement",
+        "fr:lex:traiter",
+        "fr:lex:tranquillement",
+        "fr:lex:transformer",
+        "fr:lex:transmettre",
+        "fr:lex:transporter",
+        "fr:lex:travers",
+        "fr:lex:trembler",
+        "fr:lex:tresor",
+        "fr:lex:tristesse",
+        "fr:lex:trou",
+        "fr:lex:tuer",
+        "fr:lex:type",
+        "fr:lex:typique",
+        "fr:lex:uniforme",
+        "fr:lex:uniquement",
+        "fr:lex:univers",
+        "fr:lex:urgence",
+        "fr:lex:urgent",
+        "fr:lex:vallee",
+        "fr:lex:valoir",
+        "fr:lex:vaste",
+        "fr:lex:vehicule",
+        "fr:lex:veille",
+        "fr:lex:vente",
+        "fr:lex:venue",
+        "fr:lex:veritable",
+        "fr:lex:verser",
+        "fr:lex:victime",
+        "fr:lex:victoire",
+        "fr:lex:vieillir",
+        "fr:lex:vif",
+        "fr:lex:violence",
+        "fr:lex:violent",
+        "fr:lex:visiteur",
+        "fr:lex:vitre",
+        "fr:lex:vitrine",
+        "fr:lex:vivant",
+        "fr:lex:voeu",
+        "fr:lex:voie",
+        "fr:lex:voleur",
+        "fr:lex:volonte",
+        "fr:lex:voyageur",
+        "fr:lex:zone",
+        "fr:lex:œuvre"
+      ]
+    }
+  },
+  "modules": [
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-01-famous-words",
+      "position": 1,
+      "title": "Famous Words & Greetings",
+      "unitId": 1
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-01-pronouns",
+      "position": 2,
+      "title": "Core Pronouns - The Building Blocks",
+      "unitId": 1
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-02-etre",
+      "position": 3,
+      "title": "Essential Verb - être (to be)",
+      "unitId": 1
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-04-avoir",
+      "position": 4,
+      "title": "Essential Verb - avoir (to have)",
+      "unitId": 1
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-05-articles",
+      "position": 5,
+      "title": "Articles - The, A, An",
+      "unitId": 1
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-10-21-cognates-help",
+      "position": 6,
+      "title": "Cognates - French and English Share Many Words",
+      "unitId": 1
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-01-06-basic-nouns",
+      "position": 7,
+      "title": "Basic Nouns - People & Things",
+      "unitId": 1
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-07-plurals",
+      "position": 8,
+      "title": "Plurals - More Than One",
+      "unitId": 1
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-10-20-liaison-help",
+      "position": 9,
+      "title": "French Flow - Liaison Help",
+      "unitId": 1
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-08-connectors",
+      "position": 10,
+      "title": "Basic Connectors - et, mais, ou, aussi, très",
+      "unitId": 1
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-01-09-reading1",
+      "position": 11,
+      "title": "Reading Comprehension - First Paragraph!",
+      "unitId": 1
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-01-10-unit1-practice",
+      "position": 12,
+      "title": "Unit 1 Practice - Fill in the Blanks",
+      "unitId": 1
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-01-11-unit1-exam",
+      "position": 13,
+      "title": "Unit 1 Final Exam - Foundation",
+      "unitId": 1
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-01-12-demonstratives",
+      "position": 14,
+      "title": "Demonstratives - It, That, This",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-13-ca-survival",
+      "position": 15,
+      "title": "ça - Survival Phrases",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-14-determiners-nouns",
+      "position": 16,
+      "title": "Determiners + Nouns - Building Phrases",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-15-vouloir",
+      "position": 17,
+      "title": "Essential Verb - vouloir (to want)",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-16-pouvoir",
+      "position": 18,
+      "title": "Essential Verb - pouvoir (can)",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-17-voir",
+      "position": 19,
+      "title": "Essential Verb - voir (to see)",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-18-questions",
+      "position": 20,
+      "title": "Question Words - Ask Anything!",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-19-questions-help",
+      "position": 21,
+      "title": "The Power to Ask Anything",
+      "unitId": 2
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-01-19-stressed-pronouns",
+      "position": 22,
+      "title": "Stressed Pronouns - moi, toi, lui...",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-20-prepositions",
+      "position": 23,
+      "title": "Prepositions - Spatial & Relational Words",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-21-adjectives",
+      "position": 24,
+      "title": "Common Adjectives - Describing Things",
+      "unitId": 2
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-01-22-reading2",
+      "position": 25,
+      "title": "Reading Comprehension 2 - Rendez-vous en Normandie",
+      "unitId": 2
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-01-23-unit2-practice",
+      "position": 26,
+      "title": "Unit 2 Practice - Fill in the Blanks",
+      "unitId": 2
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-01-24-unit2-exam",
+      "position": 27,
+      "title": "Unit 2 Final Exam - Composition",
+      "unitId": 2
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-25-contractions",
+      "position": 28,
+      "title": "Contractions - du, au, de la, à la",
+      "unitId": 3
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-26-venir",
+      "position": 29,
+      "title": "Essential Verb - venir (to come)",
+      "unitId": 3
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-27-aller",
+      "position": 30,
+      "title": "Essential Verb - aller (to go)",
+      "unitId": 3
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-01-28-verb-pattern-help",
+      "position": 31,
+      "title": "Understanding Verb Patterns",
+      "unitId": 3
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-01-29-partir",
+      "position": 32,
+      "title": "Essential Verb - partir (to leave)",
+      "unitId": 3
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-01-30-object-pronouns",
+      "position": 33,
+      "title": "Object Pronouns - Him, Her, It, Them",
+      "unitId": 3
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-01-31-possessive-adjectives",
+      "position": 34,
+      "title": "Possessive Adjectives - My, Your, His, Her",
+      "unitId": 3
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-02-01-possessive-pronouns",
+      "position": 35,
+      "title": "Possessive Pronouns - Mine, Yours, Theirs",
+      "unitId": 3
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-02-02-combining",
+      "position": 36,
+      "title": "Putting It Together - Who Has What?",
+      "unitId": 3
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-02-03-reading3",
+      "position": 37,
+      "title": "Reading Comprehension 3 - La Première Page",
+      "unitId": 3
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-02-04-unit3-practice",
+      "position": 38,
+      "title": "Unit 3 Practice - Fill in the Blanks",
+      "unitId": 3
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-02-05-unit3-exam",
+      "position": 39,
+      "title": "Unit 3 Final Exam - Movement & Possession",
+      "unitId": 3
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-03-31-survival-phrases",
+      "position": 40,
+      "title": "Survival Phrases - Real-World Essentials",
+      "unitId": 4
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-03-25-faire",
+      "position": 41,
+      "title": "Essential Verb - faire (to do/make)",
+      "unitId": 4
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-03-23-devoir",
+      "position": 42,
+      "title": "Essential Verb - devoir (must)",
+      "unitId": 4
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-03-29-parler",
+      "position": 43,
+      "title": "Essential Verb - parler (to speak)",
+      "unitId": 4
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-10-22-search-find",
+      "position": 44,
+      "title": "Essential Verbs - chercher & trouver",
+      "unitId": 4
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-03-28-negation",
+      "position": 45,
+      "title": "Negation - ne...pas (not)",
+      "unitId": 4
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-01-time-adverbs",
+      "position": 46,
+      "title": "Time & Frequency - now, always, never, today",
+      "unitId": 4
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-03-27-negation-2",
+      "position": 47,
+      "title": "Negation Part 2 - I can't, I won't, I never",
+      "unitId": 4
+    },
+    {
+      "computed": "B2",
+      "label": null,
+      "moduleKey": "2024-03-26-location-adverbs",
+      "position": 48,
+      "title": "Location Adverbs - here, there, everywhere",
+      "unitId": 4
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-03-24-everyday-nouns",
+      "position": 49,
+      "title": "Everyday Nouns - Life & World",
+      "unitId": 4
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-03-30-reading-4",
+      "position": 50,
+      "title": "Reading Comprehension 4 - La nouvelle époque de Marie",
+      "unitId": 4
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-04-03-unit-4-practice",
+      "position": 51,
+      "title": "Unit 4 Practice - Fill in the Blanks",
+      "unitId": 4
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-04-02-unit-4-exam",
+      "position": 52,
+      "title": "Unit 4 Final Exam - Expression",
+      "unitId": 4
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-08-comparisons",
+      "position": 53,
+      "title": "Comparisons & Intensity",
+      "unitId": 5
+    },
+    {
+      "computed": "C1",
+      "label": null,
+      "moduleKey": "2024-04-07-comparisons-slang",
+      "position": 54,
+      "title": "Slang - Comparisons & Intensity",
+      "unitId": 5
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-09-conditionals",
+      "position": 55,
+      "title": "Should & Could - Advice and Possibility",
+      "unitId": 5
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-16-would-conditionals",
+      "position": 56,
+      "title": "Would Forms - Hypotheticals and Desires",
+      "unitId": 5
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-04-04-aimer",
+      "position": 57,
+      "title": "aimer - To Like / To Love",
+      "unitId": 5
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-10-etre-past",
+      "position": 58,
+      "title": "être - Past Tense (was / were)",
+      "unitId": 5
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-05-avoir-past",
+      "position": 59,
+      "title": "avoir - Past Tense (had)",
+      "unitId": 5
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-11-food-nouns",
+      "position": 60,
+      "title": "Everyday Food Nouns",
+      "unitId": 5
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-04-12-manger",
+      "position": 61,
+      "title": "manger - To Eat (Present & Past)",
+      "unitId": 5
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-04-06-boire",
+      "position": 62,
+      "title": "boire - To Drink (Present & Past)",
+      "unitId": 5
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-04-13-reading-5",
+      "position": 63,
+      "title": "Reading Comprehension 5 - La fée verte (The Green Fairy)",
+      "unitId": 5
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-04-15-unit-5-practice",
+      "position": 64,
+      "title": "Unit 5 Practice - Fill in the Blanks",
+      "unitId": 5
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-04-14-unit-5-exam",
+      "position": 65,
+      "title": "Unit 5 Final Exam - Sophistication",
+      "unitId": 5
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-23-progressive-tenses",
+      "position": 66,
+      "title": "Progressive & Future - Expressing Time",
+      "unitId": 6
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-04-20-dire",
+      "position": 67,
+      "title": "dire - To Say / To Tell",
+      "unitId": 6
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-22-prendre",
+      "position": 68,
+      "title": "prendre - To Take",
+      "unitId": 6
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-10-22-donner",
+      "position": 69,
+      "title": "donner - To Give",
+      "unitId": 6
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-04-21-mettre",
+      "position": 70,
+      "title": "mettre - To Put / To Set",
+      "unitId": 6
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-04-19-demander",
+      "position": 71,
+      "title": "demander - To Ask",
+      "unitId": 6
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-18-commander",
+      "position": 72,
+      "title": "commander - To Order",
+      "unitId": 6
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-17-besoin",
+      "position": 73,
+      "title": "avoir besoin de - To Need",
+      "unitId": 6
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-25-top-200-nouns",
+      "position": 74,
+      "title": "Essential Vocabulary - Time, People & Ideas",
+      "unitId": 6
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-04-24-reading-6",
+      "position": 75,
+      "title": "Reading Comprehension 6 - Un Voyage en Famille",
+      "unitId": 6
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-04-27-unit-6-practice",
+      "position": 76,
+      "title": "Unit 6 Practice - Fill in the Blanks",
+      "unitId": 6
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-04-26-unit-6-exam",
+      "position": 77,
+      "title": "Unit 6 Final Exam - Communication",
+      "unitId": 6
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-05-05-on-and-people",
+      "position": 78,
+      "title": "Talking About People in General",
+      "unitId": 7
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-05-09-studying-verbs",
+      "position": 79,
+      "title": "Studying & Reviewing - étudier & réviser",
+      "unitId": 7
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-04-learning-verbs",
+      "position": 80,
+      "title": "Learning & Teaching - apprendre & enseigner",
+      "unitId": 7
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-04-29-comprendre",
+      "position": 81,
+      "title": "comprendre - To Understand",
+      "unitId": 7
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-05-08-savoir",
+      "position": 82,
+      "title": "savoir - To Know (Facts/Skills)",
+      "unitId": 7
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-04-30-connaitre",
+      "position": 83,
+      "title": "connaître - To Know (People/Places)",
+      "unitId": 7
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-06-penser",
+      "position": 84,
+      "title": "penser - To Think",
+      "unitId": 7
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-01-croire",
+      "position": 85,
+      "title": "croire - To Believe",
+      "unitId": 7
+    },
+    {
+      "computed": "B2",
+      "label": null,
+      "moduleKey": "2024-05-03-knowledge-nouns",
+      "position": 86,
+      "title": "Knowledge & Learning - Essential Nouns",
+      "unitId": 7
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-05-02-discourse-markers",
+      "position": 87,
+      "title": "Discourse Markers - Sound Like a Native",
+      "unitId": 7
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-04-28-comparison-modifiers",
+      "position": 88,
+      "title": "Modifiers - tout, même, mal",
+      "unitId": 7
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-05-07-reading-7",
+      "position": 89,
+      "title": "Reading 7 - L'Art d'Apprendre",
+      "unitId": 7
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-05-11-unit-7-practice",
+      "position": 90,
+      "title": "Unit 7 Practice - Fill in the Blanks",
+      "unitId": 7
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-05-10-unit-7-exam",
+      "position": 91,
+      "title": "Unit 7 Final Exam - Knowledge & Learning",
+      "unitId": 7
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-23-temporal-words",
+      "position": 92,
+      "title": "Temporal & Sequential Words - Time & Order",
+      "unitId": 8
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-05-21-reflexive-pronouns",
+      "position": 93,
+      "title": "Reflexive Pronouns - me, te, se, nous, vous",
+      "unitId": 8
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-05-22-s-appeler",
+      "position": 94,
+      "title": "s'appeler - To Be Called (Your Name!)",
+      "unitId": 8
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-05-19-morning-routine",
+      "position": 95,
+      "title": "Morning Routine - se réveiller, se lever",
+      "unitId": 8
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-05-17-getting-ready",
+      "position": 96,
+      "title": "Getting Ready - se laver, s'habiller, se préparer",
+      "unitId": 8
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-16-daily-reflexives",
+      "position": 97,
+      "title": "Daily Actions - se souvenir, s'amuser, se dépêcher",
+      "unitId": 8
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-06-07-reflexive-past",
+      "position": 98,
+      "title": "Reflexive Verbs in Past Tense",
+      "unitId": 8
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-06-06-reciprocal-reflexives",
+      "position": 99,
+      "title": "Reciprocal Reflexives - Each Other",
+      "unitId": 8
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-05-13-commands-tu",
+      "position": 100,
+      "title": "Commands - tu form (Informal)",
+      "unitId": 8
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-05-14-commands-vous",
+      "position": 101,
+      "title": "Commands - vous form (Formal/Plural)",
+      "unitId": 8
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-18-irregular-commands",
+      "position": 102,
+      "title": "Irregular Commands - être, avoir, aller, faire",
+      "unitId": 8
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-12-commands-pronouns",
+      "position": 103,
+      "title": "Commands with Pronouns",
+      "unitId": 8
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-05-20-reading-8",
+      "position": 104,
+      "title": "Reading 8 - Ma Journée",
+      "unitId": 8
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-05-25-unit-8-practice",
+      "position": 105,
+      "title": "Unit 8 Practice - Fill in the Blanks",
+      "unitId": 8
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-05-24-unit-8-exam",
+      "position": 106,
+      "title": "Unit 8 Final Exam - Daily Life & Actions",
+      "unitId": 8
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-05-26-causal-words",
+      "position": 107,
+      "title": "Causal & Reason Words - Explaining Why",
+      "unitId": 9
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-06-08-spatial-prepositions",
+      "position": 108,
+      "title": "Spatial Prepositions - Position & Location",
+      "unitId": 9
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-28-more-spatial-relations",
+      "position": 109,
+      "title": "More Spatial Relations - Distance & Proximity",
+      "unitId": 9
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-05-30-passe-compose-er",
+      "position": 110,
+      "title": "Passé Composé - Regular -ER Verbs (I spoke, I ate)",
+      "unitId": 9
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-06-01-passe-compose-irregular-1",
+      "position": 111,
+      "title": "Irregular Past Participles - Set 1 (had, was, did, saw)",
+      "unitId": 9
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-06-02-passe-compose-irregular-2",
+      "position": 112,
+      "title": "Irregular Past Participles - Set 2 (wanted, could, had to, said)",
+      "unitId": 9
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-31-passe-compose-etre",
+      "position": 113,
+      "title": "être Verbs - DR & MRS VANDERTRAMP (went, came, left)",
+      "unitId": 9
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-29-passe-compose-agreement",
+      "position": 114,
+      "title": "Past Participle Agreement with être",
+      "unitId": 9
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-05-27-imparfait-all-verbs",
+      "position": 115,
+      "title": "Imparfait Formation - All Verbs (was doing, used to do)",
+      "unitId": 9
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-06-04-pc-vs-imparfait",
+      "position": 116,
+      "title": "Passé Composé vs Imparfait - The Golden Rule",
+      "unitId": 9
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-06-03-past-tense-composition",
+      "position": 117,
+      "title": "Past Tense Composition - Building Complete Stories",
+      "unitId": 9
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-06-05-reading-9",
+      "position": 118,
+      "title": "Reading 9 - Une Histoire du Passé",
+      "unitId": 9
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-06-10-unit-9-practice",
+      "position": 119,
+      "title": "Unit 9 Practice - Fill in the Blanks",
+      "unitId": 9
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-06-09-unit-9-exam",
+      "position": 120,
+      "title": "Unit 9 Final Exam - Discourse & Past Tense",
+      "unitId": 9
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-23-common-special-forms-1",
+      "position": 121,
+      "title": "Forms Used After 'il faut que' and 'je veux que'",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-24-common-special-forms-2",
+      "position": 122,
+      "title": "More Forms for 'il faut que' and 'je veux que' Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-01-28-necessity-phrases",
+      "position": 123,
+      "title": "Il faut que... - Saying What's Necessary",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-02-07-wish-phrases",
+      "position": 124,
+      "title": "Je veux que... - Expressing Wishes",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-25-emotion-phrases",
+      "position": 125,
+      "title": "Je suis content que... - Emotion Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-29-opinion-phrases",
+      "position": 126,
+      "title": "Je pense que... - Opinion Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-27-hypothetical-phrases",
+      "position": 127,
+      "title": "Si j'étais... - Daydreaming & Hypotheticals",
+      "unitId": 10
+    },
+    {
+      "computed": "B2",
+      "label": null,
+      "moduleKey": "2024-01-30-past-regret-phrases",
+      "position": 128,
+      "title": "Si j'avais su... - Past Regret Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-26-had-already-phrases",
+      "position": 129,
+      "title": "J'avais déjà... - Had Already Done Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-22-common-adverbs",
+      "position": 130,
+      "title": "vraiment, sérieusement... - Common Adverbs",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-02-06-while-doing-phrases",
+      "position": 131,
+      "title": "En mangeant... - While Doing Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-02-02-service-phrases",
+      "position": 132,
+      "title": "Je me fais couper... - Service Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-21-before-phrases",
+      "position": 133,
+      "title": "Avant que... - Before Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-02-03-so-that-phrases",
+      "position": 134,
+      "title": "Pour que... - So That Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-20-although-phrases",
+      "position": 135,
+      "title": "Bien que... - Although Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-01-31-possibility-phrases",
+      "position": 136,
+      "title": "Il est possible que... - Possibility Phrases",
+      "unitId": 10
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-02-01-reading-10",
+      "position": 137,
+      "title": "Reading 10 - Mes Rêves et Mes Espoirs",
+      "unitId": 10
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-02-05-unit-10-practice",
+      "position": 138,
+      "title": "Unit 10 Practice - Fill in the Blanks",
+      "unitId": 10
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-02-04-unit-10-exam",
+      "position": 139,
+      "title": "Unit 10 Final Exam - Mastery & Nuance",
+      "unitId": 10
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-02-08-age-personal-info",
+      "position": 140,
+      "title": "Age & Personal Information",
+      "unitId": 11
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-02-10-donner",
+      "position": 141,
+      "title": "donner - To Give",
+      "unitId": 11
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-05-15-daily-actions-1",
+      "position": 142,
+      "title": "Daily Life Essentials - Sleep, Work, Live",
+      "unitId": 11
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-02-13-search-and-find",
+      "position": 143,
+      "title": "Search & Find - chercher, trouver",
+      "unitId": 11
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-02-11-perception-verbs",
+      "position": 144,
+      "title": "Perception Verbs - écouter, regarder",
+      "unitId": 11
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2024-02-14-social-situations",
+      "position": 145,
+      "title": "Social Situations - Wait, Arrive, Stay",
+      "unitId": 11
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-02-09-directions-navigation",
+      "position": 146,
+      "title": "Directions & Navigation",
+      "unitId": 11
+    },
+    {
+      "computed": null,
+      "label": "B2",
+      "moduleKey": "2024-02-12-reading-11",
+      "position": 147,
+      "title": "Reading 11 - La France Moderne",
+      "unitId": 11
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-02-16-unit-11-practice",
+      "position": 148,
+      "title": "Unit 11 Practice - Fill in the Blanks",
+      "unitId": 11
+    },
+    {
+      "computed": null,
+      "label": null,
+      "moduleKey": "2024-02-15-unit-11-exam",
+      "position": 149,
+      "title": "Unit 11 Final Exam - Daily Essentials & Practical Communication",
+      "unitId": 11
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-03-15-nature-animals",
+      "position": 150,
+      "title": "Nature & Animals - Curiosity Vocabulary",
+      "unitId": 12
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-03-16-movement-verbs",
+      "position": 151,
+      "title": "Movement Verbs - Actions in Nature",
+      "unitId": 12
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-03-17-natural-phenomena",
+      "position": 152,
+      "title": "Natural Phenomena - How Nature Works",
+      "unitId": 12
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-03-15-questce-qui-que",
+      "position": 153,
+      "title": "qu'est-ce qui vs qu'est-ce que - Master 'What' Questions",
+      "unitId": 12
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-03-19-pourquoi-complex",
+      "position": 154,
+      "title": "Complex pourquoi Questions - Ask Why About Anything",
+      "unitId": 12
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-03-20-comment-complex",
+      "position": 155,
+      "title": "Complex comment Questions - Ask How Things Work",
+      "unitId": 12
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-03-16-quiest-qui-que",
+      "position": 156,
+      "title": "qui est-ce qui vs qui est-ce que - Master 'Who' Questions",
+      "unitId": 12
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-03-22-inversion-questions",
+      "position": 157,
+      "title": "Inversion Questions - Formal Register",
+      "unitId": 12
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-03-23-embedded-questions",
+      "position": 158,
+      "title": "Embedded Questions - Polite Indirect Questions",
+      "unitId": 12
+    },
+    {
+      "computed": "B1",
+      "label": null,
+      "moduleKey": "2024-03-24-rhetorical-negative",
+      "position": 159,
+      "title": "Rhetorical & Negative Questions - Advanced Style",
+      "unitId": 12
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2024-03-25-multi-clause-questions",
+      "position": 160,
+      "title": "Multi-Clause Questions - Full Complexity",
+      "unitId": 12
+    }
+  ],
+  "readingLimits": [
+    {
+      "cefr": "B1",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:adresser",
+      "taughtAt": null
+    },
+    {
+      "cefr": "B1",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:causer",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A1",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:compter",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:durer",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:feter",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:garder",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:garer",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prsptcp"
+      ],
+      "id": "fr:lex:interesser",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:marier",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A1",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:neiger",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:occuper",
+      "taughtAt": null
+    },
+    {
+      "cefr": "B1",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:placer",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:planter",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:porter",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A2",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:preter",
+      "taughtAt": null
+    },
+    {
+      "cefr": "A1",
+      "cells": [
+        "prs",
+        "ptcp",
+        "sbjv"
+      ],
+      "id": "fr:lex:telephoner",
+      "taughtAt": null
+    }
+  ],
+  "taughtByLevel": {
+    "constructions": {
+      "A1": 55,
+      "A2": 39,
+      "B1": 19,
+      "B2": 2,
+      "C1": 0,
+      "C2": 0
+    },
+    "headwords": {
+      "A1": 373,
+      "A2": 92,
+      "B1": 28,
+      "B2": 2,
+      "C1": 2,
+      "C2": 0
+    }
+  },
+  "taughtCumulative": [
+    {
+      "A1": 50,
+      "A2": 2,
+      "B1": 0,
+      "B2": 0,
+      "C1": 0,
+      "C2": 0,
+      "position": 13,
+      "unitId": 1
+    },
+    {
+      "A1": 92,
+      "A2": 4,
+      "B1": 0,
+      "B2": 0,
+      "C1": 0,
+      "C2": 0,
+      "position": 27,
+      "unitId": 2
+    },
+    {
+      "A1": 105,
+      "A2": 11,
+      "B1": 0,
+      "B2": 0,
+      "C1": 0,
+      "C2": 0,
+      "position": 39,
+      "unitId": 3
+    },
+    {
+      "A1": 155,
+      "A2": 20,
+      "B1": 0,
+      "B2": 0,
+      "C1": 0,
+      "C2": 0,
+      "position": 52,
+      "unitId": 4
+    },
+    {
+      "A1": 200,
+      "A2": 31,
+      "B1": 8,
+      "B2": 1,
+      "C1": 2,
+      "C2": 0,
+      "position": 65,
+      "unitId": 5
+    },
+    {
+      "A1": 240,
+      "A2": 35,
+      "B1": 9,
+      "B2": 1,
+      "C1": 2,
+      "C2": 0,
+      "position": 77,
+      "unitId": 6
+    },
+    {
+      "A1": 258,
+      "A2": 47,
+      "B1": 15,
+      "B2": 2,
+      "C1": 2,
+      "C2": 0,
+      "position": 91,
+      "unitId": 7
+    },
+    {
+      "A1": 273,
+      "A2": 54,
+      "B1": 15,
+      "B2": 2,
+      "C1": 2,
+      "C2": 0,
+      "position": 106,
+      "unitId": 8
+    },
+    {
+      "A1": 296,
+      "A2": 64,
+      "B1": 20,
+      "B2": 2,
+      "C1": 2,
+      "C2": 0,
+      "position": 120,
+      "unitId": 9
+    },
+    {
+      "A1": 317,
+      "A2": 79,
+      "B1": 22,
+      "B2": 2,
+      "C1": 2,
+      "C2": 0,
+      "position": 139,
+      "unitId": 10
+    },
+    {
+      "A1": 347,
+      "A2": 84,
+      "B1": 22,
+      "B2": 2,
+      "C1": 2,
+      "C2": 0,
+      "position": 149,
+      "unitId": 11
+    },
+    {
+      "A1": 373,
+      "A2": 92,
+      "B1": 28,
+      "B2": 2,
+      "C1": 2,
+      "C2": 0,
+      "position": 160,
+      "unitId": 12
+    }
+  ],
+  "units": [
+    {
+      "computed": "A2",
+      "firstPosition": 1,
+      "label": null,
+      "lastPosition": 13,
+      "title": "Unit 1: Essential Grammar",
+      "unitId": 1
+    },
+    {
+      "computed": "A2",
+      "firstPosition": 14,
+      "label": null,
+      "lastPosition": 27,
+      "title": "Unit 2: Asking & Describing",
+      "unitId": 2
+    },
+    {
+      "computed": "A2",
+      "firstPosition": 28,
+      "label": null,
+      "lastPosition": 39,
+      "title": "Unit 3: Movement & Possession",
+      "unitId": 3
+    },
+    {
+      "computed": "B2",
+      "firstPosition": 40,
+      "label": null,
+      "lastPosition": 52,
+      "title": "Unit 4: Everyday Words",
+      "unitId": 4
+    },
+    {
+      "computed": "C1",
+      "firstPosition": 53,
+      "label": null,
+      "lastPosition": 65,
+      "title": "Unit 5: Time & Taste",
+      "unitId": 5
+    },
+    {
+      "computed": "B1",
+      "firstPosition": 66,
+      "label": null,
+      "lastPosition": 77,
+      "title": "Unit 6: Basic Fluency",
+      "unitId": 6
+    },
+    {
+      "computed": "B2",
+      "firstPosition": 78,
+      "label": null,
+      "lastPosition": 91,
+      "title": "Unit 7: Knowledge & Learning",
+      "unitId": 7
+    },
+    {
+      "computed": "A2",
+      "firstPosition": 92,
+      "label": null,
+      "lastPosition": 106,
+      "title": "Unit 8: Daily Life & Actions",
+      "unitId": 8
+    },
+    {
+      "computed": "B1",
+      "firstPosition": 107,
+      "label": null,
+      "lastPosition": 120,
+      "title": "Unit 9: Discourse & Past Tense",
+      "unitId": 9
+    },
+    {
+      "computed": "B2",
+      "firstPosition": 121,
+      "label": "B2",
+      "lastPosition": 139,
+      "title": "Unit 10: Mastery & Nuance",
+      "unitId": 10
+    },
+    {
+      "computed": "A2",
+      "firstPosition": 140,
+      "label": null,
+      "lastPosition": 149,
+      "title": "Unit 11: Daily Essentials",
+      "unitId": 11
+    },
+    {
+      "computed": "B1",
+      "firstPosition": 150,
+      "label": null,
+      "lastPosition": 160,
+      "title": "Unit 12: Curiosity & Questions",
+      "unitId": 12
+    }
+  ]
+}
