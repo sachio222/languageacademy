@@ -19,7 +19,8 @@
 // Eaquals vocabulary themes.
 // Usage: node scripts/graph/fr/build/levels-propose.mjs [--sources <dir>] [--out <file>]
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { join, resolve, sep } from 'node:path';
 import { loadGraph } from '../../load.mjs';
 import { LEVELS } from '../../functions.mjs';
 import { REPO } from './lib.mjs';
@@ -30,9 +31,10 @@ const arg = (name, fallback) => {
 };
 const WORKSPACE = join(REPO, '.superpowers/sdd/2026-11-24-language-graph-levels');
 const SOURCES = arg('--sources', join(WORKSPACE, 'sources'));
-const OUT = arg('--out', join(WORKSPACE, 'levels-proposal.tsv'));
-if (!OUT.includes('/.superpowers/') && !OUT.startsWith('/tmp') && !OUT.startsWith('/private/')) {
-  throw new Error(`levels-propose: write the proposal outside the repository's tracked files, not to ${OUT}`);
+const OUT = resolve(arg('--out', join(WORKSPACE, 'levels-proposal.tsv')));
+const inside = (dir) => OUT.startsWith(resolve(dir) + sep);
+if (!inside(WORKSPACE) && !inside(tmpdir())) {
+  throw new Error(`levels-propose: write the proposal into ${WORKSPACE} or ${tmpdir()}, not to ${OUT}`);
 }
 
 const graph = loadGraph(join(REPO, 'curriculum-graph'), 'fr');

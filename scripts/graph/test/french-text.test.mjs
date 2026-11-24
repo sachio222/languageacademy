@@ -36,17 +36,17 @@ test('with the real word list, English labels and glosses are not French', () =>
 
 test('a French word the word list lacks is reported as unknown, not dropped', () => {
   const mod = readModule({ moduleKey: 'x', title: 'x', exerciseConfig: { items: [
-    { instruction: 'Translate', prompt: 'enjoy your meal', expectedAnswer: 'bon appétit', hint: "Used in 'bon voyage', 'bon appétit'" },
+    { instruction: 'Translate', prompt: 'all the best', expectedAnswer: 'bonne continuation', hint: "Used in 'bon voyage', 'bonne continuation'" },
   ] } }, 1, 1, null, { isWord });
   const ctx = makeCtx({ graph: { ...graph, courseMap: {} }, course: [{ ...mod, vocab: [], conceptTerms: [] }] });
   const unknown = ruleTaughtBefore(ctx).filter((i) => i.rule === 'unknown-word').map((i) => [i.surface, i.itemRef]);
-  assert.deepEqual(unknown, [['appétit', 'x#exerciseConfig.items[0]']]);
+  assert.deepEqual(unknown, [['continuation', 'x#exerciseConfig.items[0]']]);
   // the hint is read too: with the typed answer removed, the hint alone reports the word
-  const hintOnly = readModule({ moduleKey: 'x', title: 'x', vocabularyReference: [{ french: 'bon', english: 'good', note: "as in 'bon appétit'" }] },
+  const hintOnly = readModule({ moduleKey: 'x', title: 'x', vocabularyReference: [{ french: 'bon', english: 'good', note: "as in 'bonne continuation'" }] },
     1, 1, null, { isWord });
   const ctx2 = makeCtx({ graph: { ...graph, courseMap: {} }, course: [hintOnly] });
   assert.deepEqual(ruleTaughtBefore(ctx2).filter((i) => i.rule === 'unknown-word').map((i) => [i.surface, i.itemRef]),
-    [['appétit', 'x#vocabularyReference[0].note']]);
+    [['continuation', 'x#vocabularyReference[0].note']]);
 });
 
 test('respellings, word parts and forms quoted as wrong are not read as French', () => {

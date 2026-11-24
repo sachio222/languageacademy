@@ -61,7 +61,7 @@ export const ENGLISH_ONLY = new Set(`
   completed homework specific repeated state order event events scene setting describe
   beginner friendly method softer advice directed directing necessity wishes
   cat cats dog dogs problem problems fact facts elision sequence stem command commands statement presence
-  pretty sure infinite causative
+  pretty sure infinite causative universal physical real general authentic ongoing fixed emotion
 `.split(/\s+/).filter(Boolean));
 
 // French words that only French text uses. Text with one of them is French even when some of its words are missing

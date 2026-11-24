@@ -8,6 +8,7 @@ import { join } from 'node:path';
 import { loadGraph } from '../../load.mjs';
 import { writeSortedJson } from '../../write-json.mjs';
 import { REPO } from './lib.mjs';
+import { levelOf, checkLevels } from './construction-levels.mjs';
 
 const STUB = process.argv.includes('--stub');
 const graph = loadGraph(join(REPO, 'curriculum-graph'), 'fr');
@@ -81,45 +82,6 @@ const NUMBER = S('un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douz
 const DE_VERB_STEMS = 'vien|ven|sor|par|arriv|rentr|revien|reven|retourn|parl|pens|decid|essai|essay|demand|fini|oubli|chois|refus|accept|propos|continu|rev|promet|permet|arret|excus|conseill|remerci|occup|souvien|chang|profit|descend|depend|approch|dis|dit|risqu|merit|agit|jou|sert|serv|suis|es|sont|somme|ete|etai|etio|seri|sera|soi|soy|moqu|tomb|sauv|eloign|separ|felicit|plai|souffr|habit|traite|pass';
 const RECIPROCAL_VERB = HW(['aimer', 'parler', 'voir', 'connaitre', 'comprendre', 'regarder', 'ecouter', 'aider', 'rencontrer', 'retrouver', 'dire', 'embrasser']
   .filter((v) => graph.nodes.has(`fr:lex:${v}`)), '*.*');
-
-// CEFR level of every construction and how it was decided (the cefrSource values are listed in
-// scripts/graph/levels-data.mjs). Eaquals grammar: the level where the Eaquals core inventory for French (2015) lists
-// the point as key. Judgment: our own call where the inventory says nothing direct, mostly fixed phrases (placed
-// where a learner needs them, which can be before the grammar inside them) and patterns the inventory folds into a
-// larger item. The conditionnel présent is A2: the inventory lists it for politeness at A1 and A2 and in full at B1,
-// and a learner needs voudrais, pourrais and devrais before B1; the si + imparfait hypothesis carries the B1 use.
-const EG = 'agent: Eaquals grammar';
-const JD = 'agent: judgment';
-const levels = (level, source, keys) => keys.split(/\s+/).filter(Boolean).map((k) => [k, { cefr: level, cefrSource: source }]);
-const LEVELS = new Map([
-  ...levels('A1', EG, `adj.agreement adj.placement article.definite article.indefinite article.partitive cest contraction.a
-    contraction.de demonstrative.adjective frame.aller-infinitive frame.etre-en-train-de frame.il-faut-infinitive
-    frame.modal-infinitive frame.savoir-infinitive il-y-a imperative.tu imperative.vous neg.ne-pas neg.ne-jamais neg.de
-    noun.gender passe-compose.avoir passe-compose.etre possessive.adjective pronoun.on pronoun.reflexive pronoun.stressed
-    pronoun.subject pronoun.tu-vous q.est-ce-que q.intonation q.quest-ce-que q.words chunk.quest-ce-que-cest
-    chunk.je-voudrais chunk.parce-que`),
-  ...levels('A1', JD, `age.avoir-ans elision frame.aimer-infinitive q.inversion chunk.au-revoir chunk.ca-va
-    chunk.comment-ca-va chunk.excusez-moi chunk.sil-vous-plait chunk.sil-te-plait chunk.je-ne-sais-pas chunk.bien-sur
-    chunk.cest-ca chunk.quelque-chose chunk.on-y-va`),
-  ...levels('A2', EG, `comparative comparative.irregular superlative futur-simple imparfait imperative.nous
-    imperative.irregular neg.ne-plus neg.ne-rien neg.ne-personne ptcp.agreement pronoun.direct-object
-    pronoun.indirect-object pronoun.en pronoun.y possessive.pronoun relative.qui relative.que relative.ou si.present
-    subj.il-faut-que frame.apprendre-a-infinitive frame.demander-de-infinitive chunk.a-cause-de chunk.tout-le-monde
-    chunk.de-temps-en-temps`),
-  ...levels('A2', JD, `conditionnel-present adverb.placement imperative.pronouns passe-compose.reflexive
-    frame.verb-que-clause frame.avoir-besoin-de reciprocal q.quest-ce-qui q.qui-est-ce-que q.qui-est-ce-qui chunk.allons-y
-    chunk.vas-y chunk.quelque-part chunk.en-fait chunk.pendant-que chunk.tout-a-coup chunk.nest-ce-pas`),
-  ...levels('B1', EG, `si.imparfait-conditionnel plus-que-parfait.avoir plus-que-parfait.etre subj.emotion-que
-    subj.vouloir-que subj.ne-pas-penser-que subj.possible-que subj.douter-que subj.pour-que subj.bien-que subj.avant-que
-    passive gerondif relative.dont relative.ce-que q.embedded chunk.grace-a`),
-  ...levels('B1', JD, `neg.ne-pas-infinitive causative.faire rendre-adjective q.negative-inversion chunk.cest-a-dire`),
-  ...levels('B2', EG, `conditionnel-passe.avoir conditionnel-passe.etre si.plus-que-parfait-conditionnel-passe
-    futur-anterieur chunk.nulle-part`),
-]);
-const levelOf = (id) => {
-  if (!LEVELS.has(id)) throw new Error(`constructions.mjs: no CEFR level for fr:cx:${id}; add it to LEVELS`);
-  return LEVELS.get(id);
-};
 
 const node = (id, label, needs, detect, match, noMatch) => ({
   id: `fr:cx:${id}`,
@@ -672,8 +634,7 @@ const C = [
     ['Je suis allé au café.', 'Je me suis lavé.', 'Nous nous sommes levés.', 'Je suis fatigué.', 'Elle a mangé.']),
 ];
 
-const unusedLevels = [...LEVELS.keys()].filter((k) => !C.some((c) => c.id === `fr:cx:${k}`));
-if (unusedLevels.length) throw new Error(`constructions.mjs: LEVELS names constructions that do not exist: ${unusedLevels.join(', ')}`);
+checkLevels(C.map((c) => c.id));
 const out = C.sort((a, b) => a.id.localeCompare(b.id));
 writeSortedJson(join(REPO, 'curriculum-graph/languages/fr/constructions.json'), out);
 console.log(`wrote ${out.length} constructions (${out.filter((c) => c.detect).length} with detectors)${STUB ? ' [STUB]' : ''}`);
