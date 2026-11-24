@@ -82,13 +82,16 @@ function quoted(instruction) {
 function answerItem(ref, source, it) {
   const lenientIn = Array.isArray(it.acceptableAnswers) ? it.acceptableAnswers : [];
   const french = [it.expectedAnswer].filter((s) => !isEnglish(s));
+  // French-to-English item: the answer is English, so the French prompt is the French the learner sees.
+  const frenchPrompt = !french.length && typeof it.prompt === 'string' && it.prompt.trim() && !isEnglish(it.prompt);
+  if (frenchPrompt) french.push(it.prompt.trim());
   const lenient = lenientIn.filter((s) => typeof s === 'string' && !isEnglish(s));
   return {
     ref,
     source,
     french,
     lenient,
-    englishPrompt: french.length && typeof it.prompt === 'string' ? it.prompt : null,
+    englishPrompt: !frenchPrompt && french.length && typeof it.prompt === 'string' ? it.prompt : null,
     instruction: typeof it.instruction === 'string' ? it.instruction : null,
   };
 }

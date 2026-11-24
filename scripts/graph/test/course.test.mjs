@@ -98,7 +98,8 @@ test('exam items drop English answers', () => {
     { instruction: 'Translate', prompt: 'I am', expectedAnswer: 'je suis', acceptableAnswers: ['moi je suis'] },
   ] } };
   const r = readModule(mod, 1, 1);
-  assert.deepEqual(r.items[0].french, []);
+  assert.deepEqual(r.items[0].french, ['en train de']);
+  assert.equal(r.items[0].englishPrompt, null);
   assert.deepEqual(r.items[1].french, ['je suis']);
   assert.deepEqual(r.items[1].lenient, ['moi je suis']);
   assert.equal(r.items[1].englishPrompt, 'I am');
@@ -133,4 +134,11 @@ test('stripPassage removes labels, images and emphasis', () => {
 test('mixed-type items carry their own conjugation table', () => {
   const m = course.find((x) => x.moduleKey === '2024-01-17-voir');
   assert.ok(frenchOf(m).includes('je vois'));
+});
+
+test('real Fr-to-En exam item keeps its French prompt in french', () => {
+  const m = course.find((x) => x.moduleKey === '2024-04-26-unit-6-exam');
+  const it = m.items.find((i) => i.french.includes('en train de'));
+  assert.ok(it);
+  assert.equal(it.englishPrompt, null);
 });
