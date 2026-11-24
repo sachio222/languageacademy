@@ -4,29 +4,25 @@
 // a unit's level the highest level of its modules. A level counts as reached at the first position where the course
 // has taught settings.levelThreshold (0.9) of that level's core words and every one of its core constructions.
 import { issue } from '../issues.mjs';
-import { LEVELS as ORDER } from '../functions.mjs';
-import { nodeLevel, formOf, cellConstruction, POLITE_CONDITIONALS, POLITE_CONSTRUCTION } from '../levels-data.mjs';
+import { moduleTeaches } from '../timeline.mjs';
+import { LEVELS as ORDER, CORE_LEVELS, nodeLevel, formOf, cellConstruction, POLITE_CONDITIONALS, POLITE_CONSTRUCTION } from '../levels-data.mjs';
 
 const rank = (c) => ORDER.indexOf(c);
 const LABEL = /\b(A1|A2|B1|B2|C1|C2)\+?/g;
-const TEACHING = new Set(['lesson', 'help']);
-const TEACH_FIELDS = ['teachesWords', 'teachesWordsManual', 'teachesConstructions'];
 
 const maxLevel = (levels) => levels.reduce((best, c) => (best === null || rank(c) > rank(best) ? c : best), null);
 const byId = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const zeroes = () => Object.fromEntries(ORDER.map((l) => [l, 0]));
 
-// Highest CEFR label found in the texts, or null.
-function labelLevel(texts) {
-  return maxLevel(texts.filter((t) => t != null).flatMap((t) => [...String(t).matchAll(LABEL)].map((m) => m[1])));
-}
-
-// Node IDs a module teaches, as the timeline credits them: lessons and help pages through their teaches fields,
-// readings through preTeach, other modules nothing.
-export function moduleTeaches(m, entry) {
-  if (!entry) return [];
-  const fields = TEACHING.has(m.kind) ? TEACH_FIELDS : m.kind === 'reading' ? ['preTeach'] : [];
-  return [...new Set(fields.flatMap((f) => entry[f] ?? []))];
+// Highest CEFR label found in the texts as { level, text }, where text keeps a trailing + (B2+), or null.
+function labelMatch(texts) {
+  let best = null;
+  for (const t of texts.filter((x) => x != null)) {
+    for (const m of String(t).matchAll(LABEL)) {
+      if (best === null || rank(m[1]) > rank(best.level)) best = { level: m[1], text: m[0] };
+    }
+  }
+  return best;
 }
 
 const CACHE = new WeakMap();
@@ -41,14 +37,17 @@ function analyse(ctx) {
 
   // Module and unit levels.
   const taughtNodes = new Map(); // position -> [{ id, level }]
+  const labelTexts = new Map(); // position or `unit:<id>` -> the label as written (B2+)
   const missing = new Set();
   const modules = course.map((m) => {
     const nodes = moduleTeaches(m, courseMap[m.moduleKey]).map((id) => ({ id, level: nodeLevel(graph, id) }));
     for (const n of nodes) if (!n.level && !n.id.includes(':name:')) missing.add(n.id);
     taughtNodes.set(m.position, nodes);
+    const label = labelMatch([m.title, ...(m.conceptTerms ?? [])]);
+    if (label) labelTexts.set(m.position, label.text);
     return {
       position: m.position, moduleKey: m.moduleKey, unitId: m.unitId, title: m.title,
-      label: labelLevel([m.title, ...(m.conceptTerms ?? [])]),
+      label: label?.level ?? null,
       computed: maxLevel(nodes.map((n) => n.level).filter(Boolean)),
     };
   });
@@ -56,8 +55,10 @@ function analyse(ctx) {
   for (const [i, m] of course.entries()) {
     let u = units.find((x) => x.unitId === m.unitId);
     if (!u) {
+      const label = labelMatch([m.unitTitle, m.unitDescription]);
+      if (label) labelTexts.set(`unit:${m.unitId}`, label.text);
       u = {
-        unitId: m.unitId, title: m.unitTitle ?? null, label: labelLevel([m.unitTitle, m.unitDescription]),
+        unitId: m.unitId, title: m.unitTitle ?? null, label: label?.level ?? null,
         computed: null, firstPosition: m.position, lastPosition: m.position,
       };
       units.push(u);
@@ -70,20 +71,37 @@ function analyse(ctx) {
   const threshold = graph.settings?.levelThreshold ?? 0.9;
   const limits = new Set((graph.readingLimits ?? []).map((r) => r.id));
   const countAt = (ids, p) => ids.reduce((n, id) => n + (taughtAt.has(id) && taughtAt.get(id) <= p ? 1 : 0), 0);
-  const levels = {};
-  const curve = positions.map((position) => ({ position }));
-  for (const list of graph.coreLists ?? []) {
-    const words = [...list.words].sort(byId);
-    const constructions = [...list.constructions].sort(byId);
+  const firstReached = (words, constructions, onPoint) => {
     let reachedAt = null;
     for (const point of curve) {
       const w = countAt(words, point.position);
       const c = countAt(constructions, point.position);
-      point[list.level] = { words: w, constructions: c };
+      onPoint?.(point, w, c);
       if (reachedAt === null && w >= threshold * words.length && c === constructions.length) reachedAt = point.position;
     }
-    const untaught = (ids) => ids.filter((id) => !taughtAt.has(id));
+    return reachedAt;
+  };
+  const untaught = (ids) => ids.filter((id) => !taughtAt.has(id));
+  const levels = {};
+  const curve = positions.map((position) => ({ position }));
+  // Lists in level order, so "through A2" adds the A1 list to the A2 one.
+  const lists = [...(graph.coreLists ?? [])].sort((a, b) => CORE_LEVELS.indexOf(a.level) - CORE_LEVELS.indexOf(b.level));
+  const below = { words: [], constructions: [] };
+  for (const list of lists) {
+    const words = [...list.words].sort(byId);
+    const constructions = [...list.constructions].sort(byId);
+    const reachedAt = firstReached(words, constructions, (point, w, c) => { point[list.level] = { words: w, constructions: c }; });
+    below.words.push(...words);
+    below.constructions.push(...constructions);
+    const cumulative = {
+      coreWords: below.words.length,
+      coreConstructions: below.constructions.length,
+      taughtWords: below.words.length - untaught(below.words).length,
+      taughtConstructions: below.constructions.length - untaught(below.constructions).length,
+      reachedAt: firstReached(below.words, below.constructions),
+    };
     levels[list.level] = {
+      cumulative,
       coreWords: words.length,
       coreConstructions: constructions.length,
       taughtWords: words.length - untaught(words).length,
@@ -128,15 +146,17 @@ function analyse(ctx) {
     taughtCumulative,
     readingLimits,
   };
-  const result = { report, taughtNodes, missing };
+  const result = { report, taughtNodes, missing, labelTexts };
   CACHE.set(ctx, result);
   return result;
 }
 
 // The fr-levels.json data: { levels: { A1: { coreWords, coreConstructions, taughtWords, taughtConstructions,
-// reachedAt, untaughtWords, untaughtConstructions } }, modules, units, curve, headwordsByLevel, constructionsByLevel,
+// reachedAt, untaughtWords, untaughtConstructions, cumulative } }, modules, units, curve, headwordsByLevel, constructionsByLevel,
 // taughtByLevel, taughtCumulative, readingLimits }. untaughtWords leaves out the reading limits, which stay in
-// coreWords and are listed in readingLimits.
+// coreWords and are listed in readingLimits. Each core list holds only the nodes new at its level; cumulative counts
+// the level together with the levels below it ({ coreWords, coreConstructions, taughtWords, taughtConstructions,
+// reachedAt }), so A2's cumulative block covers the A1 and A2 lists.
 export function levelReport(ctx) {
   return analyse(ctx).report;
 }
@@ -165,7 +185,8 @@ function withoutRepeatedForms(graph, nodes) {
 
 export function ruleLevels(ctx) {
   const issues = [];
-  const { report, taughtNodes, missing } = analyse(ctx);
+  const { report, taughtNodes, missing, labelTexts } = analyse(ctx);
+  const name = (m) => `${m.position}. ${m.title}`;
 
   for (const m of report.modules) {
     if (!m.label) continue;
@@ -175,7 +196,7 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: m.moduleKey,
         position: m.position,
-        message: `${m.moduleKey} is labelled ${m.label} but teaches at most ${m.computed}`,
+        message: `${name(m)} is labelled ${labelTexts.get(m.position)} but teaches at most ${m.computed}`,
       }));
     }
     // A module that teaches nothing (a reading, practice set or exam) has no level of its own, so its label is a
@@ -187,7 +208,7 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: m.moduleKey,
         position: m.position,
-        message: `${m.moduleKey} is labelled ${m.label} but teaches nothing, and by this position the course has `
+        message: `${name(m)} is labelled ${labelTexts.get(m.position)} but teaches nothing, and by this position the course has `
           + (reached ? `reached ${reached}` : 'reached no level yet'),
       }));
     }
@@ -200,7 +221,7 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: first.moduleKey,
         position: first.position,
-        message: `unit ${u.unitId} "${u.title}" is labelled ${u.label} but its modules teach at most ${u.computed}`,
+        message: `unit ${u.unitId} "${u.title}" is labelled ${labelTexts.get(`unit:${u.unitId}`)} but its modules teach at most ${u.computed}`,
       }));
     }
   }
@@ -225,7 +246,7 @@ export function ruleLevels(ctx) {
       position: m.position,
       nodes: ahead.map((n) => n.id),
       nodeLevels: ahead,
-      message: `${m.moduleKey} teaches ${ahead.length} word${s} or pattern${s} two or more levels above ${where}: `
+      message: `${name(m)} teaches ${ahead.length} word${s} or pattern${s} two or more levels above ${where}: `
         + ahead.map((n) => `${n.id} (${n.level})`).join(', '),
     }));
   }

@@ -1,12 +1,13 @@
 import { issue } from './issues.mjs';
+import { LEVELS } from './levels-data.mjs';
 
 // The six function groups of the Threshold Level (van Ek and Trim 1990): imparting and seeking factual
 // information, expressing and finding out attitudes, getting things done (suasion), socialising, structuring
 // discourse and communication repair.
 export const GROUPS = ['information', 'attitudes', 'suasion', 'socialising', 'discourse', 'repair'];
 
-// CEFR levels a function may carry.
-export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+// CEFR levels a function may carry (defined in levels-data.mjs).
+export { LEVELS };
 
 // The nodes a learner needs for one exponent, in its order: an irregular form also needs its headword, as a reading
 // of it does (timeline.isReadingAvailable). Names need no teaching and are left out.
@@ -62,8 +63,8 @@ const rankOf = (level) => LEVELS.indexOf(level);
 // { functions: [{ id, group, cefr, label, position, exponentCount, missing, referenceOnly }] }.
 // position: where the function becomes possible, or null. missing: for a function that never becomes possible, the
 // nodes its closest exponent (fewest untaught nodes, first in file order on a tie) still needs; [] otherwise.
-// referenceOnly: the missing nodes that only the Reference unit shows (ctx.reference, a Set of node IDs), which has
-// no course position and so never teaches them.
+// referenceOnly: the missing nodes that the Reference unit lists in a vocabulary table (ctx.reference, a Set of node
+// IDs). No lesson teaches them, and the Reference unit has no course position, so it teaches nothing either.
 export function functionReport(ctx) {
   const { graph, timeline } = ctx;
   const reference = ctx.reference ?? new Set();
@@ -102,7 +103,7 @@ export function ruleFunctionUnreachable(ctx) {
     .filter((f) => ['A1', 'A2'].includes(f.cefr) && f.position === null && f.exponentCount > 0)
     .map((f) => {
       const ref = new Set(f.referenceOnly);
-      const needs = f.missing.map((id) => (ref.has(id) ? `${id} (shown only in the Reference unit)` : id)).join(', ');
+      const needs = f.missing.map((id) => (ref.has(id) ? `${id} (no lesson teaches it; only the Reference unit lists it)` : id)).join(', ');
       return issue({
         rule: 'function-unreachable',
         severity: 'warning',

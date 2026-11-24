@@ -3,6 +3,14 @@ import { issue } from './issues.mjs';
 const TEACHING = new Set(['lesson', 'help']);
 const TEACH_FIELDS = ['teachesWords', 'teachesWordsManual', 'teachesConstructions'];
 
+// Node IDs a module teaches: lessons and help pages through their teaches fields, readings through preTeach, other
+// modules nothing. The timeline and the module levels both use this rule.
+export function moduleTeaches(m, entry) {
+  if (!entry) return [];
+  const fields = TEACHING.has(m.kind) ? TEACH_FIELDS : m.kind === 'reading' ? ['preTeach'] : [];
+  return [...new Set(fields.flatMap((f) => entry[f] ?? []))];
+}
+
 // Availability timeline: which node is taught at which course position.
 export function buildTimeline(graph, course) {
   const taughtAt = new Map();
@@ -16,9 +24,8 @@ export function buildTimeline(graph, course) {
   for (const m of course) {
     const entry = courseMap[m.moduleKey];
     if (!entry) continue;
-    if (TEACHING.has(m.kind)) {
-      for (const f of TEACH_FIELDS) for (const id of entry[f] ?? []) teach(id, m.position);
-    } else {
+    for (const id of moduleTeaches(m, entry)) teach(id, m.position);
+    if (!TEACHING.has(m.kind)) {
       const offending = TEACH_FIELDS.flatMap((f) => entry[f] ?? []);
       if (offending.length) {
         issues.push(issue({
@@ -29,7 +36,6 @@ export function buildTimeline(graph, course) {
           message: `${m.kind} module ${m.moduleKey} (position ${m.position}) lists teaches entries, which are ignored: ${offending.join(', ')}`,
         }));
       }
-      if (m.kind === 'reading') for (const id of entry.preTeach ?? []) teach(id, m.position);
     }
   }
 

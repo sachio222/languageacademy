@@ -104,7 +104,14 @@ export function validateGraph(graph, opts = {}) {
       }
     }
   }
-  for (const r of graph.readingLimits ?? []) ref('readingLimits', 'id', r.id);
+  for (const r of graph.readingLimits ?? []) {
+    if (!graph.nodes.has(r.id)) { ref('readingLimits', 'id', r.id); continue; }
+    if (parseId(r.id).kind === 'lex') continue;
+    out.push(issue({
+      rule: 'reading-limit-not-headword', nodeId: r.id,
+      message: `reading-limits.json names ${r.id}, which is not a headword; list the headword (fr:lex:...) whose forms the checker cannot read`,
+    }));
+  }
 
   // The language pair: every cognate and false friend is a node, none is both, and the cognates lesson is in the course.
   const pair = graph.pair;

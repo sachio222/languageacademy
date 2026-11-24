@@ -19,10 +19,11 @@ export function writeReportData(dir, lang, ctx) {
 export function reportStats(levels, functions) {
   const coverage = {};
   for (const [level, l] of Object.entries(levels.levels)) {
-    coverage[level] = {
-      coreWords: l.coreWords, taughtWords: l.taughtWords,
-      coreConstructions: l.coreConstructions, taughtConstructions: l.taughtConstructions, reachedAt: l.reachedAt,
-    };
+    const counts = (x) => ({
+      coreWords: x.coreWords, taughtWords: x.taughtWords,
+      coreConstructions: x.coreConstructions, taughtConstructions: x.taughtConstructions, reachedAt: x.reachedAt,
+    });
+    coverage[level] = { ...counts(l), cumulative: counts(l.cumulative) };
   }
   const functionsPossible = {};
   for (const level of CORE_LEVELS) {
@@ -32,7 +33,9 @@ export function reportStats(levels, functions) {
   return { coverage, functionsPossible };
 }
 
-// Share of core words taught, as a whole percent rounded down, so 100% means every word.
+// Share taught, as a whole percent rounded to the nearest; 100% only when every item is taught (99.9% shows 99%).
 export function percent(taught, core) {
-  return core === 0 ? 100 : Math.floor((100 * taught) / core);
+  if (core === 0) return 100;
+  const p = Math.round((100 * taught) / core);
+  return p === 100 && taught < core ? 99 : p;
 }

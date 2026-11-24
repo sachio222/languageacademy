@@ -25,9 +25,9 @@ const RULES = [
   ruleFunctionExponents, ruleFunctionUnreachable,
 ];
 
-// Headwords and forms the Reference unit's vocabulary tables show. The unit has no position, so it teaches none of
-// them; the report names them where a function needs one.
-function referenceNodes(index, vocab) {
+// Headwords and forms the Reference unit's vocabulary tables list. The unit has no position, so it teaches none of
+// them; the report names them where a function needs one that no lesson teaches.
+export function referenceNodes(index, vocab) {
   const isWord = (f) => index.has(f);
   const out = new Set();
   for (const text of vocab) {

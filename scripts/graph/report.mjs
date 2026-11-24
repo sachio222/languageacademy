@@ -1,6 +1,7 @@
 // Turns the checker's issues into counts and a markdown fix list for the product owner.
 import { languageName } from './pairs.mjs';
 import { percent } from './report-data.mjs';
+import { LEVELS } from './levels-data.mjs';
 
 // stats (from runCheck): the native language checked for and how many tokens the cognate allowance let through.
 export function summarize(issues, stats = {}) {
@@ -35,13 +36,23 @@ export function checkSummaryLines(summary) {
     `errors: ${summary.errors}, warnings: ${summary.warnings}, modules with errors: ${summary.modulesWithErrors}`,
     ...(summary.native !== undefined ? [`native: ${summary.native}`] : []),
     ...(summary.cognatesAllowed !== undefined ? [`cognatesAllowed: ${summary.cognatesAllowed}`] : []),
-    ...Object.entries(summary.coverage ?? {}).map(([level, c]) => `${level}: ${percent(c.taughtWords, c.coreWords)}% of core words `
-      + `(${c.taughtWords} of ${c.coreWords}), ${c.taughtConstructions} of ${c.coreConstructions} core constructions, `
-      + (c.reachedAt === null ? 'not reached' : `reached at position ${c.reachedAt}`)),
+    ...Object.entries(summary.coverage ?? {}).map(([level, c]) => {
+      const line = coverageClause(c, `${level}: `, `${level} core`);
+      const k = c.cumulative;
+      const same = !k || (k.coreWords === c.coreWords && k.coreConstructions === c.coreConstructions);
+      return same ? line : `${line}; ${coverageClause(k, `through ${level}: `, 'core')}`;
+    }),
     ...(summary.functionsPossible && Object.keys(summary.functionsPossible).length
       ? [`functions possible by the end: ${Object.entries(summary.functionsPossible).map(([level, f]) => `${level} ${f.possible} of ${f.total}`).join(', ')}`]
       : []),
   ];
+}
+
+// "A1: 50% of A1 core words (369 of 733), 37 of 40 A1 core constructions, not reached"
+function coverageClause(c, lead, noun) {
+  return `${lead}${percent(c.taughtWords, c.coreWords)}% of ${noun} words (${c.taughtWords} of ${c.coreWords}), `
+    + `${c.taughtConstructions} of ${c.coreConstructions} ${noun} constructions, `
+    + (c.reachedAt === null ? 'not reached' : `reached at position ${c.reachedAt}`);
 }
 
 // Rules that sections 1 to 9 show; anything else lands in section 10.
@@ -115,7 +126,7 @@ const HOW_TO_READ = [
     + 'counts as explained where it heads a vocabulary entry, not where it appears inside a longer phrase. Section 5 counts taught words '
     + 'that do not come back soon enough to stick.',
   'Section 6 measures the course against the CEFR levels, the scale of the Common European Framework of Reference that runs from A1 '
-    + 'for beginners through A2 and B1 to C2. Each level has a core list: the words and grammar patterns a learner needs at that level. '
+    + 'for beginners through A2 and B1 to C2. Each level has a core list: the words and grammar patterns new at that level, so a learner at A2 needs both the A1 and A2 lists. '
     + 'A level counts as reached once the course has taught 90% of its core words and every grammar pattern on its list. The level of '
     + 'each word and pattern is our own grading, informed by public sources: the Eaquals inventory of French grammar and functions by '
     + 'level, word frequencies from Lexique, and FLELex, which grades words by how often French textbooks use them at each level. A '
@@ -149,13 +160,18 @@ function cognatesParagraph(pair) {
     + 'teach the word there, or let the learner read it instead of typing it.';
 }
 
-const LEVEL_NAMES = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
 // A node's name for the report: a headword's lemma, a construction's label, or the ID itself.
 function nodeName(graph, id) {
   const n = graph?.nodes?.get(id);
   return n?.lemma ?? n?.label ?? id;
+}
+
+// A construction label for the report: the description before any checker note (the part after "; " or from
+// ", optionally" on, and "(optionally ...)" asides), which says how the detector reads text rather than what is taught.
+export function displayLabel(label) {
+  return String(label).split('; ')[0].split(', optionally')[0].replace(/\s*\(optionally[^)]*\)/g, '').trim();
 }
 
 // "12. Title" for a course position.
@@ -172,26 +188,43 @@ function renderLevels(out, of, byPosition, opts) {
   if (!levels.length) {
     out.push('No core lists yet, so coverage cannot be measured.', '');
   } else {
-    const shares = levels.map(([level, l]) => `${level}: ${percent(l.taughtWords, l.coreWords)}%`).join(', ');
-    out.push(`Core words taught by the end of the course: ${shares}.`, '');
+    const row = (name, c) => {
+      const reached = c.reachedAt === null ? 'Not reached' : moduleAt(byPosition, c.reachedAt);
+      return `| ${name} | ${percent(c.taughtWords, c.coreWords)}% (${c.taughtWords} of ${c.coreWords}) `
+        + `| ${c.taughtConstructions} of ${c.coreConstructions} | ${reached} |`;
+    };
+    const first = levels[0][0];
+    const next = levels[1]?.[0];
+    out.push('Each core list holds only the words and grammar patterns new at its level'
+      + (next ? `, so the ${next} figures count ${next} words alone. A learner at ${next} also needs the ${first} list, so the `
+        + 'second table counts each level together with the levels below it.' : '.')
+      + ' All percentages are rounded to the nearest whole number, and 100% means the whole list is taught.', '');
+    const alone = levels.map(([level, l]) => `${level} ${percent(l.taughtWords, l.coreWords)}%`).join(', ');
+    out.push(`Core words of each level alone taught by the end of the course: ${alone}.`, '');
+    const through = levels.map(([level, l]) => `through ${level} ${percent(l.cumulative.taughtWords, l.cumulative.coreWords)}%`).join(', ');
+    out.push(`Counting each level together with the levels below it: ${through}.`, '');
+    out.push('Each level on its own list:', '');
     out.push('| Level | Core words taught | Core constructions taught | Reached at |', '|---|---|---|---|');
-    for (const [level, l] of levels) {
-      const reached = l.reachedAt === null ? 'Not reached' : moduleAt(byPosition, l.reachedAt);
-      out.push(`| ${level} | ${percent(l.taughtWords, l.coreWords)}% (${l.taughtWords} of ${l.coreWords}) `
-        + `| ${l.taughtConstructions} of ${l.coreConstructions} | ${reached} |`);
-    }
+    for (const [level, l] of levels) out.push(row(level, l));
+    out.push('');
+    out.push('Each level together with the levels below it:', '');
+    out.push('| Levels | Core words taught | Core constructions taught | Reached at |', '|---|---|---|---|');
+    for (const [level, l] of levels) out.push(row(`Through ${level}`, l.cumulative));
     out.push('');
     out.push('## Core grammar patterns not taught', '');
     const cx = levels.filter(([, l]) => l.untaughtConstructions.length);
     if (!cx.length) out.push('None.');
     for (const [level, l] of cx) {
-      out.push(`- ${level}: ${l.untaughtConstructions.map((id) => `${nodeName(opts.graph, id)} (${id})`).join('; ')}`);
+      out.push(`- ${level}: ${l.untaughtConstructions.map((id) => `${displayLabel(nodeName(opts.graph, id))} (${id})`).join('; ')}`);
     }
     out.push('');
     out.push('## Core words not taught', '');
     for (const [level, l] of levels) {
       const names = l.untaughtWords.map((id) => nodeName(opts.graph, id));
-      out.push(`- ${level}, ${plural(names.length, 'word')}${names.length ? `: ${names.join(', ')}` : ''}`);
+      // Untaught core words left out of untaughtWords are reading limits, listed in their own section.
+      const limited = l.coreWords - l.taughtWords - names.length;
+      const plus = limited > 0 ? ` (plus ${limited} listed under Verbs the checker cannot read yet)` : '';
+      out.push(`- ${level}, ${plural(names.length, 'word')}${plus}${names.length ? `: ${names.join(', ')}` : ''}`);
     }
     out.push('');
     const limits = data.readingLimits ?? [];
@@ -246,7 +279,7 @@ function renderLevels(out, of, byPosition, opts) {
 function renderFunctions(out, byPosition, opts) {
   const fns = opts.functions?.functions ?? [];
   if (!fns.length) { out.push('No functions yet.', ''); return; }
-  const levels = LEVEL_NAMES.filter((l) => fns.some((f) => f.cefr === l));
+  const levels = LEVELS.filter((l) => fns.some((f) => f.cefr === l));
   const count = (level) => {
     const of = fns.filter((f) => f.cefr === level);
     return `${level} ${of.filter((f) => f.position !== null).length} of ${of.length}`;
@@ -256,9 +289,9 @@ function renderFunctions(out, byPosition, opts) {
     + `Functions possible by the end of the course: ${levels.map(count).join(', ')}.`, '');
   const referenceOnly = [...new Set(fns.flatMap((f) => f.referenceOnly))].sort();
   if (referenceOnly.length) {
-    out.push(`Some functions need words that appear only in the Reference unit (${referenceOnly.map((id) => nodeName(opts.graph, id)).join(', ')}). `
+    out.push(`Some functions need words that no lesson teaches and only the Reference unit lists (${referenceOnly.map((id) => nodeName(opts.graph, id)).join(', ')}). `
       + 'That unit has no position in the course, so it teaches nothing, and those functions never become possible. Their '
-      + 'words are marked "Reference unit only" below.', '');
+      + 'words are marked "taught by no lesson, listed only in the Reference unit" below.', '');
   }
   for (const level of levels) {
     out.push(`## ${level}`, '');
@@ -273,7 +306,7 @@ function renderFunctions(out, byPosition, opts) {
     if (!never.length) out.push('None.');
     for (const f of never) {
       const ref = new Set(f.referenceOnly);
-      const needs = f.missing.map((id) => (ref.has(id) ? `${id} (Reference unit only)` : id)).join(', ');
+      const needs = f.missing.map((id) => (ref.has(id) ? `${id} (taught by no lesson, listed only in the Reference unit)` : id)).join(', ');
       out.push(`- ${f.label}: ${f.exponentCount === 0 ? 'no French way to do it is listed yet' : `still needs ${needs}`}`);
     }
     out.push('');

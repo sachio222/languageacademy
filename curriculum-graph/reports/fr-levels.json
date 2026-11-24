@@ -2421,6 +2421,13 @@
     "A1": {
       "coreConstructions": 40,
       "coreWords": 733,
+      "cumulative": {
+        "coreConstructions": 40,
+        "coreWords": 733,
+        "reachedAt": null,
+        "taughtConstructions": 37,
+        "taughtWords": 369
+      },
       "reachedAt": null,
       "taughtConstructions": 37,
       "taughtWords": 369,
@@ -2796,6 +2803,13 @@
     "A2": {
       "coreConstructions": 23,
       "coreWords": 681,
+      "cumulative": {
+        "coreConstructions": 63,
+        "coreWords": 1414,
+        "reachedAt": null,
+        "taughtConstructions": 52,
+        "taughtWords": 455
+      },
       "reachedAt": null,
       "taughtConstructions": 15,
       "taughtWords": 86,
@@ -3400,6 +3414,13 @@
     "B1": {
       "coreConstructions": 17,
       "coreWords": 841,
+      "cumulative": {
+        "coreConstructions": 80,
+        "coreWords": 2255,
+        "reachedAt": null,
+        "taughtConstructions": 65,
+        "taughtWords": 477
+      },
       "reachedAt": null,
       "taughtConstructions": 13,
       "taughtWords": 22,

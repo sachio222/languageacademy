@@ -8,8 +8,10 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseId } from './ids.mjs';
-import { LEVELS } from './functions.mjs';
 import { buildFormIndex } from './fr/forms.mjs';
+
+// CEFR levels in order, A1 lowest. Every level list in the checker comes from here.
+export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
 // How a level was decided. Every level is our own grading; the sources only inform it.
 //   frequency + Eaquals: frequency rank in Lexique 3.83 and the vocabulary themes and functions the Eaquals

@@ -197,7 +197,7 @@ test('functionReport gives each function its position, exponent count and, when 
   assert.deepEqual(byId['fn:say-what-you-do'].missing, ['fr:lex:parler']);
   assert.equal(byId['fn:say-what-you-do'].exponentCount, 2);
   assert.equal(byId['fn:say-what-you-do'].position, null);
-  // A node only the Reference unit teaches is named as such.
+  // A missing node that the Reference unit lists is named as such.
   assert.deepEqual(byId['fn:ask-a-question'].missing, ['fr:lex:vous']);
   assert.deepEqual(byId['fn:ask-a-question'].referenceOnly, ['fr:lex:vous']);
   assert.deepEqual(byId['fn:apologise'], {
@@ -214,6 +214,11 @@ test('function-unreachable warns for an A1 or A2 function no exponent reaches, n
     ['function-unreachable', 'warning', 'fn:say-what-you-do'],
   ]);
   assert.match(issues[1].message, /fr:lex:parler/);
+  const ref = coverageCtx({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } });
+  ref.reference = new Set(['fr:lex:vous']);
+  const askMessage = ruleFunctionUnreachable(ref).find((i) => i.nodeId === 'fn:ask-a-question').message;
+  assert.match(askMessage, /fr:lex:vous \(no lesson teaches it; only the Reference unit lists it\)/);
+  assert.doesNotMatch(askMessage, /shown only/);
   const b1 = coverageCtx({}, { functions: base.functions.map((f) => ({ ...f, cefr: 'B1' })) });
   assert.deepEqual(ruleFunctionUnreachable(b1), []);
 });
