@@ -104,10 +104,10 @@ test('same word in two modules gives one issue per module, fixed at the first', 
 
 test('override ignore suppresses by fold, surface or construction id', () => {
   const course = [mod(2, [item('nous travaillons')])];
-  const ctx = setup({ m2: { teachesWords: ['fr:lex:nous'] } }, course, { overrides: { 'm2#1': { ignore: ['travaillons'] } } });
+  const ctx = setup({ m2: { teachesWords: ['fr:lex:nous'], overrides: { 'm2#1': { ignore: ['travaillons'] } } } }, course);
   assert.deepEqual(ruleTaughtBefore(ctx), []);
-  const cx = setup({ m3: { teachesWords: ['fr:lex:vouloir', 'fr:form:vouloir.prs.1sg', 'fr:lex:tu'] } }, [mod(3, [item('Veux-tu ?')])],
-    { overrides: { 'm3#1': { ignore: ['fr:cx:q.inversion'] } } });
+  const cx = setup({ m3: { teachesWords: ['fr:lex:vouloir', 'fr:form:vouloir.prs.1sg', 'fr:lex:tu'],
+    overrides: { 'm3#1': { ignore: ['fr:cx:q.inversion'] } } } }, [mod(3, [item('Veux-tu ?')])]);
   assert.deepEqual(ruleTaughtBefore(cx), []);
 });
 

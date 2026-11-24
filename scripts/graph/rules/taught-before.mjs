@@ -53,8 +53,8 @@ export function firstUse(ctx) {
   return first;
 }
 
-const suppressions = (ctx, itemRef) => {
-  const list = (ctx.overrides ?? ctx.graph.overrides ?? {})[itemRef]?.ignore ?? [];
+const suppressions = (ctx, moduleKey, itemRef) => {
+  const list = ctx.graph.courseMap?.[moduleKey]?.overrides?.[itemRef]?.ignore ?? [];
   return new Set(list.map((x) => (String(x).includes(':') ? String(x) : fold(String(x)))));
 };
 
@@ -74,7 +74,7 @@ export function ruleTaughtBefore(ctx) {
   for (const m of ctx.course) {
     const seen = new Set();
     for (const it of m.items) {
-      const ignore = suppressions(ctx, it.ref);
+      const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
         a.tokens.forEach((t, i) => {
           if (graph.names.has(t.fold) || ignore.has(t.fold)) return;
