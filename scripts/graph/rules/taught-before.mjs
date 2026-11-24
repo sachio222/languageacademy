@@ -33,33 +33,56 @@ export function analyzeItems(ctx) {
 }
 
 // Map<headwordId | form nodeId | fold | constructionId, { moduleKey, position }>: the first module that uses it.
+// A word or pattern that a course-map override ignores in an item is not a use of it there.
 export function firstUse(ctx) {
+  return uses(ctx).first;
+}
+
+// The same map for French the learner types: a typed cognate is fixed where the learner first types it.
+export function firstTypedUse(ctx) {
+  return uses(ctx).typed;
+}
+
+const usesMemo = new WeakMap();
+
+function uses(ctx) {
+  const done = usesMemo.get(ctx);
+  if (done) return done;
   const analysis = analyzeItems(ctx);
+  const isWord = (f) => ctx.index.has(f) || ctx.graph.names.has(f);
   const first = new Map();
-  const note = (key, m) => {
-    if (!first.has(key) || m.position < first.get(key).position) {
-      first.set(key, { moduleKey: m.moduleKey, position: m.position });
+  const typed = new Map();
+  const note = (map, key, m) => {
+    if (!map.has(key) || m.position < map.get(key).position) {
+      map.set(key, { moduleKey: m.moduleKey, position: m.position });
     }
   };
   for (const m of ctx.course) {
     for (const it of m.items) {
+      const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
+        const typedAt = typedTest(it, a, isWord);
         a.tokens.forEach((t, i) => {
           if (ctx.graph.names.has(t.fold)) return;
+          const lk = lookupKey(t);
           const rs = a.readings[i];
-          if (rs.length === 0) note(lookupKey(t), m);
-          else {
+          if (ignore.has(lk) || ignore.has(t.fold) || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
+          const maps = typedAt(i) ? [first, typed] : [first];
+          for (const map of maps) {
+            if (rs.length === 0) note(map, lk, m);
             for (const r of rs) {
-              note(r.headwordId, m);
-              if (r.via !== 'lemma') note(r.nodeId, m);
+              note(map, r.headwordId, m);
+              if (r.via !== 'lemma') note(map, r.nodeId, m);
             }
           }
         });
-        for (const id of a.constructions) note(id, m);
+        for (const id of a.constructions) if (!ignore.has(id)) note(first, id, m);
       }
     }
   }
-  return first;
+  const out = { first, typed };
+  usesMemo.set(ctx, out);
+  return out;
 }
 
 const suppressions = (ctx, moduleKey, itemRef) => {
@@ -128,6 +151,7 @@ function run(ctx) {
   const isWord = (f) => index.has(f) || graph.names.has(f);
   let allowed = 0;
   const first = firstUse(ctx);
+  const firstTyped = firstTypedUse(ctx);
   const titleAt = new Map(ctx.course.map((m) => [m.position, m.title]));
   const issues = [];
 
@@ -203,7 +227,9 @@ function run(ctx) {
           // A form gap on a word taught earlier is fixed where that form is first used, not the word.
           const formGap = !laters.length && taughtEarlier;
           const keys = formGap ? rs.filter((r) => r.via !== 'lemma').map((r) => r.nodeId) : heads;
-          const useAt = keys.map((k) => first.get(k)).filter(Boolean)
+          // A typed cognate is fixed where the learner first types it: a module that only reads it cannot act.
+          const from = untaughtCognate ? firstTyped : first;
+          const useAt = keys.map((k) => from.get(k)).filter(Boolean)
             .sort((x, y) => x.position - y.position)[0];
           issues.push(issue({
             ...base, rule: 'untaught-word', nodeId: named,

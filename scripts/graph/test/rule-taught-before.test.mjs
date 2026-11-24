@@ -362,3 +362,43 @@ test('a cognate verb covers its regular forms but not an irregular one', () => {
   assert.deepEqual(untaught(ctx, 'travaillons'), []);
   assert.equal(untaught(ctx, 'vais').length, 1);
 });
+
+test('a typed cognate is fixed where the learner first types it, never where it is only read', () => {
+  const ctx = setup(cognateMap, cognateCourse(
+    mod(4, [item([], { shown: ['café'] })]),
+    mod(5, [item('café')]),
+    mod(7, [item('un café')]),
+  ));
+  const hits = untaught(ctx, 'café');
+  assert.deepEqual(hits.map((i) => [i.moduleKey, i.reason, i.fix.moduleKey]), [['m5', 'cognate', 'm5'], ['m7', 'cognate', 'm5']]);
+});
+
+test('a cognate first read in a hint and typed much later is fixed in the module that types it', () => {
+  // the hint reads like English ("Combine café + lait"), and the checker reads café in it before the cognates lesson
+  const course = cognateCourse(
+    mod(30, [item([], { source: 'hint', shown: ['café'] })]),
+    mod(60, [item('Je parle.')]),
+    mod(149, [item('café')]),
+  );
+  course.splice(1, 0, mod(2, [item([], { source: 'hint', shown: ['café'] })]));
+  const ctx = setup(cognateMap, course);
+  const typed = untaught(ctx, 'café').find((i) => i.moduleKey === 'm149');
+  assert.equal(typed.reason, 'cognate');
+  assert.equal(typed.fix.moduleKey, 'm149');
+  // the hint before the cognates lesson is an ordinary untaught word, fixed where it is read
+  const early = untaught(ctx, 'café').find((i) => i.moduleKey === 'm2');
+  assert.deepEqual([early.reason, early.fix.moduleKey], ['nowhere', 'm2']);
+});
+
+test('a word or pattern an override ignores in an item is not a use of it there', () => {
+  const course = [
+    mod(1, [item('Je parle.')]),
+    mod(2, [item([], { shown: ['nous travaillons'] })]),
+    mod(4, [item('nous travaillons')]),
+  ];
+  const map = { ...cognateMap, m2: { overrides: { 'm2#1': { ignore: ['fr:lex:travailler', 'fr:cx:verb.er.present'] } } } };
+  const ctx = setup(map, course);
+  assert.equal(firstUse(ctx).get('fr:lex:travailler')?.moduleKey, 'm4');
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.surface === 'travaillons');
+  assert.deepEqual(hits.map((i) => [i.moduleKey, i.fix.moduleKey]), [['m4', 'm4']]);
+});

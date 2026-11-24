@@ -222,3 +222,18 @@ export const CHUNK_ONLY = [
   ['conditionnel-present', ['chunk.je-voudrais']], // je voudrais, taught at 40; the conditionnel at 55
   ['pronoun.y', ['chunk.on-y-va', 'chunk.vas-y', 'chunk.allons-y']], // on y va (78), vas-y and allons-y (102); the pronoun y is never taught
 ];
+
+// English text the checker reads as French and its rules cannot tell apart: each item ref with the node IDs (or
+// words) to ignore there (overrides written by build-map). [item ref, ignore, reason]
+export const MISREADS = [
+  ['2024-01-02-etre#concepts[0].example', ['fr:lex:express'], '"Express: I am, you are..." is an English instruction'],
+  ['2024-01-11-unit1-exam#concepts[2].example', ['fr:lex:express', 'possession'], '"express possession (j\'ai...)" is English'],
+  ['2024-01-13-ca-survival#exerciseConfig.items[4].hint', ['fr:lex:combiner', 'fr:cx:imperative.tu'], '"Combine avoir + ça" opens with the English verb combine'],
+  ['2024-01-13-ca-survival#exerciseConfig.items[5].hint', ['fr:lex:combiner', 'fr:cx:imperative.tu'], '"Combine avoir + ça" opens with the English verb combine'],
+  ['2024-01-13-ca-survival#vocabularyReference[2].note', ['fr:cx:frame.aller-infinitive'], '"ça + va (être)" labels va with (être); it shows no aller + infinitive'],
+  ['2024-01-19-stressed-pronouns#concepts[1].example', ['fr:lex:me'], '"Me?" is the English gloss of "Moi?"'],
+  ['2024-02-02-combining#exerciseConfig.items[10].hint', ['fr:lex:combiner', 'fr:cx:imperative.tu'], '"Combine venir + avec + moi" opens with the English verb combine'],
+  ['2024-02-02-combining#exerciseConfig.items[11].wrongAnswers[0].feedback', ['fr:cx:imperative.irregular'], '"Use \'va partir\'" quotes il va partir (aller + infinitive), not the command va'],
+  ['2024-02-02-service-phrases#title', ['fr:lex:service', 'fr:lex:phrase'], '"Service Phrases" is the English half of the title'],
+  ['2024-04-24-reading-6#vocabularyReference[32].note', ['fr:lex:question', 'fr:lex:phrase'], '"question phrase" is an English label'],
+];

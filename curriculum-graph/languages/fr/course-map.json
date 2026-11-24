@@ -59,6 +59,13 @@
     ]
   },
   "2024-01-02-etre": {
+    "overrides": {
+      "2024-01-02-etre#concepts[0].example": {
+        "ignore": [
+          "fr:lex:express"
+        ]
+      }
+    },
     "teachesWords": [
       "fr:lex:etre",
       "fr:lex:je",
@@ -198,6 +205,14 @@
     ]
   },
   "2024-01-11-unit1-exam": {
+    "overrides": {
+      "2024-01-11-unit1-exam#concepts[2].example": {
+        "ignore": [
+          "fr:lex:express",
+          "possession"
+        ]
+      }
+    },
     "tests": [
       "fr:cx:pronoun.subject",
       "fr:cx:article.indefinite",
@@ -222,6 +237,25 @@
     ]
   },
   "2024-01-13-ca-survival": {
+    "overrides": {
+      "2024-01-13-ca-survival#exerciseConfig.items[4].hint": {
+        "ignore": [
+          "fr:lex:combiner",
+          "fr:cx:imperative.tu"
+        ]
+      },
+      "2024-01-13-ca-survival#exerciseConfig.items[5].hint": {
+        "ignore": [
+          "fr:lex:combiner",
+          "fr:cx:imperative.tu"
+        ]
+      },
+      "2024-01-13-ca-survival#vocabularyReference[2].note": {
+        "ignore": [
+          "fr:cx:frame.aller-infinitive"
+        ]
+      }
+    },
     "teachesConstructions": [
       "fr:cx:cest",
       "fr:cx:chunk.cest-ca",
@@ -416,6 +450,13 @@
     "teachesWords": []
   },
   "2024-01-19-stressed-pronouns": {
+    "overrides": {
+      "2024-01-19-stressed-pronouns#concepts[1].example": {
+        "ignore": [
+          "fr:lex:me"
+        ]
+      }
+    },
     "teachesConstructions": [
       "fr:cx:pronoun.stressed"
     ],
@@ -1105,6 +1146,19 @@
     ]
   },
   "2024-02-02-combining": {
+    "overrides": {
+      "2024-02-02-combining#exerciseConfig.items[10].hint": {
+        "ignore": [
+          "fr:lex:combiner",
+          "fr:cx:imperative.tu"
+        ]
+      },
+      "2024-02-02-combining#exerciseConfig.items[11].wrongAnswers[0].feedback": {
+        "ignore": [
+          "fr:cx:imperative.irregular"
+        ]
+      }
+    },
     "teachesConstructions": [
       "fr:cx:pronoun.direct-object"
     ],
@@ -1154,6 +1208,14 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
+    "overrides": {
+      "2024-02-02-service-phrases#title": {
+        "ignore": [
+          "fr:lex:service",
+          "fr:lex:phrase"
+        ]
+      }
+    },
     "teachesConstructions": [
       "fr:cx:causative.faire"
     ],
@@ -3496,6 +3558,16 @@
       "fr:lex:faire",
       "fr:form:faire.fut.1sg"
     ]
+  },
+  "2024-04-24-reading-6": {
+    "overrides": {
+      "2024-04-24-reading-6#vocabularyReference[32].note": {
+        "ignore": [
+          "fr:lex:question",
+          "fr:lex:phrase"
+        ]
+      }
+    }
   },
   "2024-04-25-top-200-nouns": {
     "excludeWords": [

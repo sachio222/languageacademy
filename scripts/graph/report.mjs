@@ -43,7 +43,8 @@ const HANDLED = new Set([
 
 const TEACHING = new Set(['lesson', 'help']);
 
-// Exams, practice and reading modules cannot teach, so a fix aimed at one points to the lessons before it.
+// Exams, practice and reading modules cannot teach, so a fix aimed at one points to the lessons before it. A typed
+// cognate's fix is aimed at the module where the learner first types it, and it has a second fix.
 function fixClause(i, byKey) {
   const target = i.fix?.moduleKey;
   const m = target ? byKey.get(target) : null;
@@ -52,7 +53,7 @@ function fixClause(i, byKey) {
   if (!target || target === i.moduleKey) base = canTeach ? 'teach in this module' : 'teach in a lesson before this module';
   else if (!m) base = `teach in ${target}`;
   else base = `${canTeach ? 'teach in' : 'teach in a lesson before'} ${m.title} (position ${m.position})`;
-  return base;
+  return i.reason === 'cognate' ? `${base}, or let the learner read it instead of typing it` : base;
 }
 
 // Why a word or pattern counts as untaught, in plain words. A typed cognate says so, then gives its other reason.
@@ -126,7 +127,8 @@ function cognatesParagraph(pair) {
   return `This list was checked for ${lang} speakers, so a cognate (a French word they read correctly without a lesson, `
     + 'such as restaurant) may appear in French the learner reads or hears from the cognates lesson on, before a lesson '
     + `teaches it. The cognates come from curriculum-graph/pairs/${pair.native}-${pair.target ?? 'fr'}/cognates.json, and `
-    + 'Section 1 still lists a cognate the learner has to type.';
+    + 'Section 1 still lists a cognate the learner has to type. That line names the module where the learner first types it: '
+    + 'teach the word there, or let the learner read it instead of typing it.';
 }
 
 // opts.pair: the language pair the issues were checked with (graph.pair); it sets the cognates paragraph.

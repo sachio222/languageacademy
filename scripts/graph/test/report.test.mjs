@@ -181,7 +181,15 @@ test('a typed cognate line says the learner may read it but should not have to t
       fix: { kind: 'teach-earlier', moduleKey: 'm2' } },
   ], course, {}, { pair: { native: 'en', file: 'curriculum-graph/pairs/en-fr/cognates.json', words: [{}] } });
   const line = md.split('\n').find((l) => l.includes('"restaurant"'));
-  assert.match(line, /\*restaurant\* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 3 \(Food\); teach in this module\./);
+  assert.match(line, /\*restaurant\* is a cognate, so English speakers may read it before it is taught, but they should not have to type it; taught later, at position 3 \(Food\); teach in this module, or let the learner read it instead of typing it\./);
+});
+
+test('How to read this says where a typed cognate line aims its fix and offers both fixes', () => {
+  const pair = { native: 'en', file: 'curriculum-graph/pairs/en-fr/cognates.json', words: [{}] };
+  const md = renderFixList([], course, {}, { pair });
+  const how = md.slice(md.indexOf('## How to read this'), md.indexOf('# 1. Untaught words and patterns'));
+  assert.match(how, /first types it/);
+  assert.match(how, /read it instead of typing it/);
 });
 
 test('How to read this says cognate allowances apply to English speakers and come from the pair file', () => {

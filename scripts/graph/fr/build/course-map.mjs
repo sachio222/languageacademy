@@ -14,7 +14,7 @@ import { writeSortedJson } from '../../write-json.mjs';
 import { fold } from '../../fold.mjs';
 import { tokenize } from '../tokenize.mjs';
 import { lookupToken, lookupTokenStrict } from '../forms.mjs';
-import { TEACH, TESTS, HOMOGRAPHS, NAMES, NAME_HEADWORDS, PRONOUN_NOTES, CONTENT_NOTES, CHUNK_ONLY } from './course-map-data.mjs';
+import { TEACH, TESTS, HOMOGRAPHS, NAMES, NAME_HEADWORDS, PRONOUN_NOTES, CONTENT_NOTES, CHUNK_ONLY, MISREADS } from './course-map-data.mjs';
 import { matchPattern } from '../detect.mjs';
 import { classifyItem } from '../../rules/item-kinds.mjs';
 
@@ -126,6 +126,17 @@ for (const [general, chunks] of CHUNK_ONLY) {
       overrides.push(it.ref);
     }
   }
+}
+
+// overrides: English text the checker reads as French (MISREADS).
+const byKey = new Map(course.map((m) => [m.moduleKey, m]));
+for (const [ref, ignore] of MISREADS) {
+  const m = byKey.get(ref.slice(0, ref.indexOf('#')));
+  if (!m || !m.items.some((it) => it.ref === ref)) { problems.push(`MISREADS ${ref}: no such item`); continue; }
+  ignore.filter((id) => id.includes(':')).forEach((id) => need(id, `MISREADS ${ref}`));
+  const e = entry(m);
+  e.overrides = { ...(e.overrides ?? {}), [ref]: { ignore: [...new Set([...(e.overrides?.[ref]?.ignore ?? []), ...ignore])] } };
+  overrides.push(ref);
 }
 
 // contentNotes: lesson text to fix, listed at the top of the fix list.

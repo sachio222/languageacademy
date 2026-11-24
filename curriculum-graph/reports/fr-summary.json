@@ -7,13 +7,13 @@
     "reuse-missed": 492,
     "taught-twice": 138,
     "translate-item": 1761,
-    "unknown-word": 63,
-    "untaught-construction": 117,
-    "untaught-word": 746
+    "unknown-word": 62,
+    "untaught-construction": 109,
+    "untaught-word": 740
   },
-  "cognatesAllowed": 506,
-  "errors": 2772,
-  "modulesWithErrors": 155,
+  "cognatesAllowed": 499,
+  "errors": 2757,
+  "modulesWithErrors": 154,
   "native": "en",
   "warnings": 672
 }

@@ -114,7 +114,8 @@ function spansAt(text) {
   const out = [];
   const pairs = [/"([^"\n]+)"/g, /“([^”\n]+)”/g, /«([^»\n]+)»/g];
   for (const re of pairs) for (const m of t.matchAll(re)) out.push({ at: m.index, raw: m[1] });
-  const single = /(?<!\p{L})['‘]((?:[^'‘’\n]|(?<=\p{L})['’](?=\p{L}))+?)['’](?!\p{L})/gu;
+  // An apostrophe right before the closing quote is an elision ('de l''), not the end of the span.
+  const single = /(?<!\p{L})['‘]((?:[^'‘’\n]|(?<=\p{L})['’](?=\p{L})|(?<=\p{L})['’](?=['’](?!\p{L})))+?)['’](?![\p{L}'’])/gu;
   for (const m of t.matchAll(single)) out.push({ at: m.index, raw: m[1] });
   return out.sort((a, b) => a.at - b.at).map((s) => ({ ...s, text: trimSpan(s.raw) })).filter((s) => s.text);
 }
@@ -124,17 +125,40 @@ export function quotedSpans(text) {
 }
 
 // A span quotes something other than French words when it follows a pronunciation cue (sounds like 'krwa',
-// pronounced 'kom-pruh-non'), when it is a word part ('re-', 'buv-', 'tt'), or when it is quoted as wrong
-// (NOT 'buvé', never 'je ai'), like the wrong answers the checker never reads.
-// The cue and the span sit in one clause: "The 's' sound in 'ils sont'" and "Notice the 'z' sound? ... 'les'" quote French.
+// pronounced 'kom-pruh-non'), when it is a word part ('re-', 'buv-', 'tt'), when it is quoted as wrong
+// (NOT 'buvé', never 'je ai'), like the wrong answers the checker never reads, or when it is an English gloss
+// (noun meaning 'car', stressed pronoun for 'me').
+// The pronunciation cue and the span sit in one clause: "The 's' sound in 'ils sont'" and "Notice the 'z' sound? ...
+// 'les'" quote French. A gloss cue sits right before the span. After a word class and "for", a subject pronoun names
+// the person of a verb and is French (possessive pronoun for 'tu'); "for" after anything else quotes French as often
+// as English (look for 'que', tense for 'faire'), so it is no cue.
 const PRONUNCIATION_CUE = /\b(?:sounds? like|pronounced|rhymes? with|sound \()[^.!?;]*$/i;
 const WRONG_CUE = /\b(?:not|never)\s*$/i;
+const GLOSS_CUE = /\b(?:means?|meaning|meant)\s*$/i;
+const CLASS_FOR_CUE = /\b(?:pronouns?|nouns?|words?|adjectives?|adverbs?|prepositions?|connectors?|verbs?|infinitives?|articles?)\s+for\s*$/i;
+const SUBJECT_PRONOUN = /^(?:je|j'|tu|il|elle|on|nous|vous|ils|elles)$/i;
 const VOWEL = /[aeiouyàâäéèêëîïôöùûüÿœæ]/i;
 
 function quotesWords(text, s) {
   const before = text.slice(0, s.at);
-  if (PRONUNCIATION_CUE.test(before) || WRONG_CUE.test(before)) return false;
+  if (PRONUNCIATION_CUE.test(before) || WRONG_CUE.test(before) || GLOSS_CUE.test(before)) return false;
+  if (CLASS_FOR_CUE.test(before) && !SUBJECT_PRONOUN.test(s.text)) return false;
   return !/^\s*-|-\s*$/.test(s.raw) && VOWEL.test(s.text);
+}
+
+// Text that is never a word, dropped before reading: a course code such as (M17) or A1, and an unquoted word part
+// between hyphens such as -t- (a quoted one is caught by quotesWords). A hyphen inside a word (va-t-elle) stays.
+const NOT_WORDS = /\s*\(\s*[A-Z]\d+(?:\s*[-–,]\s*[A-Z]\d+)*\s*\)|(?<![\p{L}\d])[A-Z]\d+(?![\p{L}\d])|(?<![\p{L}'’‘-])-\p{L}{1,3}-(?!\p{L})/gu;
+
+// A concept example that lists short words or phrases between commas (eu, été, fait, vu) is read one entry at a time,
+// so a grammar pattern is never matched across two entries. A piece of more than LIST_WORDS words makes it a sentence.
+const LIST_WORDS = 3;
+
+function listEntries(seg, isWord) {
+  const pieces = seg.split(',').map((p) => trimSpan(p)).filter(Boolean);
+  if (pieces.length < 2) return null;
+  if (pieces.some((p) => tokenize(p, { isWord: isWord ?? undefined }).length > LIST_WORDS)) return null;
+  return pieces;
 }
 
 // Unquoted example text splits into segments between parentheses (usually an English gloss), →, =, " - ",
@@ -146,12 +170,15 @@ const uniq = (list) => [...new Set(list)];
 // The French in a mixed text, in order, without repeats.
 // - 'segments' (concept terms, titles, help screens): each segment that is French ('label' level), else the French
 //   quoted spans inside it. A segment that holds a quoted span is read through its spans only.
-// - 'example' (concept examples): the same, with segments judged at the 'example' level.
+// - 'example' (concept examples): the same, with segments judged at the 'example' level, and a segment that lists
+//   short entries between commas read one entry at a time (listEntries).
 // - 'quoted' (hints, instructions, notes, definitions): the whole text when it is French and quotes nothing, else
 //   its French quoted spans.
 // - 'spans': French quoted spans only.
-export function frenchIn(text, mode, isWord = null) {
-  if (typeof text !== 'string' || !text.trim()) return [];
+export function frenchIn(textIn, mode, isWord = null) {
+  if (typeof textIn !== 'string' || !textIn.trim()) return [];
+  const text = textIn.replace(NOT_WORDS, '');
+  if (!text.trim()) return [];
   const all = spansAt(text).filter((s) => quotesWords(text, s));
   const spans = (from, to) => all.filter((s) => s.at >= from && s.at < to && isFrenchText(s.text, isWord, { as: 'quoted' }))
     .map((s) => s.text);
@@ -163,7 +190,12 @@ export function frenchIn(text, mode, isWord = null) {
     for (const m of [...text.matchAll(SEGMENT_BREAK), { index: text.length, 0: '' }]) {
       const to = m.index;
       const seg = trimSpan(text.slice(from, to));
-      if (seg) out.push(...(!quotes(from, to) && isFrenchText(seg, isWord, { as }) ? [seg] : spans(from, to)));
+      const list = seg && mode === 'example' && !quotes(from, to) ? listEntries(seg, isWord) : null;
+      // A list that reads as French as a whole keeps every entry with no English word, so a French word missing from
+      // the word list still reaches the checker; otherwise each entry is judged alone.
+      const whole = list && isFrenchText(seg, isWord, { as });
+      if (list) out.push(...list.filter((p) => isFrenchText(p, isWord, { as: whole ? 'quoted' : as })));
+      else if (seg) out.push(...(!quotes(from, to) && isFrenchText(seg, isWord, { as }) ? [seg] : spans(from, to)));
       from = to + m[0].length;
     }
     return uniq(out);

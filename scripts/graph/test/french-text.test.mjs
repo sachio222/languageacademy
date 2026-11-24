@@ -23,7 +23,7 @@ test('with the real word list, French in a concept example stays French', () => 
   assert.deepEqual(frenchIn('Aie confiance! (Have confidence!), Ayez patience! (Have patience!)', 'example', isWord),
     ['Aie confiance!', 'Ayez patience!']);
   assert.deepEqual(frenchIn('se coucher (je me couche, tu te couches, il se couche)', 'example', isWord),
-    ['se coucher', 'je me couche, tu te couches, il se couche']);
+    ['se coucher', 'je me couche', 'tu te couches', 'il se couche']);
   assert.deepEqual(frenchIn('Reading Comprehension 3 - La Première Page', 'segments', isWord), ['La Première Page']);
 });
 
@@ -61,4 +61,40 @@ test('no English-only word is a word in the course word list', () => {
   const clash = [...ENGLISH_ONLY].filter((w) => graph.names.has(w)
     || (index.get(w) ?? []).some((r) => r.pos !== 'alphabet' && r.surface === w));
   assert.deepEqual(clash, []);
+});
+
+test('a quoted gloss after meaning, means or a word class with for is English', () => {
+  assert.deepEqual(frenchIn("noun meaning 'car'", 'quoted', isWord), []);
+  assert.deepEqual(frenchIn("stressed pronoun for 'me'", 'quoted', isWord), []);
+  assert.deepEqual(frenchIn("Which pronoun means 'me'?", 'quoted', isWord), []);
+  assert.deepEqual(frenchIn("Both mean 'me'", 'quoted', isWord), []);
+  // for after anything else, or a subject pronoun naming the person, quotes French
+  assert.deepEqual(frenchIn("Possessive pronoun for 'tu', masculine thing", 'quoted', isWord), ['tu']);
+  assert.deepEqual(frenchIn("Look for 'que'", 'quoted', isWord), ['que']);
+  assert.deepEqual(frenchIn("Choose correct tense for 'faire'", 'quoted', isWord), ['faire']);
+});
+
+test("an elided article keeps its apostrophe before the closing quote", () => {
+  assert.deepEqual(frenchIn("Before vowels, use 'de l'' not 'du'", 'quoted', isWord), ["de l'"]);
+});
+
+test('an unquoted word part and a module code are not words', () => {
+  assert.deepEqual(frenchIn('⭐ -t- liaison: va + elle', 'quoted', isWord).map((s) => s.replace(/\s+/g, ' ')), ['⭐ liaison: va + elle']);
+  assert.deepEqual(frenchIn('va-t-elle', 'quoted', isWord), ['va-t-elle']);
+  assert.deepEqual(frenchIn('Combine venir (M17) + avec (M14) + moi', 'quoted', isWord).map((s) => s.replace(/\s+/g, ' ')),
+    ['Combine venir + avec + moi']);
+});
+
+test('a concept example that lists short words or phrases between commas is read one entry at a time', () => {
+  assert.deepEqual(frenchIn('eu, été, fait, vu - practice these until automatic', 'example', isWord), ['eu', 'été', 'fait', 'vu']);
+  assert.deepEqual(frenchIn('parler → nous parlons, faire → nous faisons, aller → nous allons', 'example', isWord),
+    ['parler', 'nous parlons', 'faire', 'nous faisons', 'aller', 'nous allons']);
+  assert.deepEqual(frenchIn('action verbs (faire, devoir, parler)', 'example', isWord), ['faire', 'devoir', 'parler']);
+  // a piece longer than three words is a sentence: the example stays whole
+  assert.deepEqual(frenchIn("Bonjour, je m'appelle Marie", 'example', isWord), ["Bonjour, je m'appelle Marie"]);
+});
+
+test('a French word list keeps an entry the word list lacks, so it is reported as unknown', () => {
+  const out = frenchIn('école, université, professeur, mathématiques, histoire', 'example', isWord);
+  assert.ok(out.includes('mathématiques'), out.join(' | '));
 });
