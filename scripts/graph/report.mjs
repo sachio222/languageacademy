@@ -48,9 +48,11 @@ export function checkSummaryLines(summary) {
   ];
 }
 
-// "A1: 50% of A1 core words (369 of 733), 37 of 40 A1 core constructions, not reached"
+// "A1: 50% of A1 core words (369 of 733), 64 more open in the Reference unit, 37 of 40 A1 core constructions, not
+// reached". The Reference clause shows only when some core words are open there.
 function coverageClause(c, lead, noun) {
-  return `${lead}${percent(c.taughtWords, c.coreWords)}% of ${noun} words (${c.taughtWords} of ${c.coreWords}), `
+  const reference = c.referenceWords ? `${c.referenceWords} more open in the Reference unit, ` : '';
+  return `${lead}${percent(c.taughtWords, c.coreWords)}% of ${noun} words (${c.taughtWords} of ${c.coreWords}), ${reference}`
     + `${c.taughtConstructions} of ${c.coreConstructions} ${noun} constructions, `
     + (c.reachedAt === null ? 'not reached' : `reached at position ${c.reachedAt}`);
 }
@@ -107,12 +109,22 @@ export function excerpt(text, surface, max = 80) {
   return `${a > 0 ? '…' : ''}${t.slice(a, b).trim()}${b < t.length ? '…' : ''}`;
 }
 
-const HOW_TO_READ = [
-  'A checker read every lesson, practice, reading and exam in course order and tested one thing for each French word '
+// The opening paragraph of How to read this. openFrom: the position from which the Reference unit counts as open
+// (settings.reference.openFrom), or null when it stays closed.
+function openingParagraph(openFrom) {
+  const reference = openFrom == null
+    ? 'The Reference unit (alphabet, numbers, days and months, colors and similar pages) has no position, because learners can '
+      + 'open it at any time, so it teaches nothing at any point in the course.'
+    : 'The Reference unit (alphabet, numbers, days and months, colors and similar pages) has no position, because learners can '
+      + `open it at any time. Every word in its vocabulary tables counts as available from position ${openFrom} on, so a lesson may `
+      + 'use a number or a day without teaching it first. Sections 6 and 7 count those words apart from the words lessons teach.';
+  return 'A checker read every lesson, practice, reading and exam in course order and tested one thing for each French word '
     + 'and grammar pattern: was it taught before the learner meets it? Positions count the modules in course order, from 1 to 160. '
     + 'A code such as fr:lex:livre names the entry in the course word list, and a code starting fr:cx: names a grammar pattern. '
-    + 'The Reference unit (alphabet, numbers, days and months, colors and similar pages) has no position, because learners can '
-    + 'open it at any time, so it teaches nothing at any point in the course.',
+    + reference;
+}
+
+const HOW_TO_READ = [
   'Besides the exercises, the checker reads the French a learner sees on concept cards, hints, instructions, vocabulary notes, '
     + 'feedback on a wrong answer, module titles and the four help screens. A line that comes from one of these names it before '
     + 'the quote, for example Hint: or Help screen:, instead of Sentence:.',
@@ -127,7 +139,8 @@ const HOW_TO_READ = [
     + 'that do not come back soon enough to stick.',
   'Section 6 measures the course against the CEFR levels, the scale of the Common European Framework of Reference that runs from A1 '
     + 'for beginners through A2 and B1 to C2. Each level has a core list: the words and grammar patterns new at that level, so a learner at A2 needs both the A1 and A2 lists. '
-    + 'A level counts as reached once the course has taught 90% of its core words and every grammar pattern on its list. The level of '
+    + 'A level counts as reached once 90% of its core words are taught or open in the Reference unit and every grammar pattern on its '
+    + 'list is taught. The level of '
     + 'each word and pattern is our own grading, informed by public sources: the Eaquals inventory of French grammar and functions by '
     + 'level, word frequencies from Lexique, and FLELex, which grades words by how often French textbooks use them at each level. A '
     + 'module\'s level is the highest level among the words and patterns it teaches. Section 6 also lists level labels that claim more '
@@ -197,9 +210,13 @@ function renderLevels(out, of, byPosition, opts) {
   } else {
     const row = (name, c) => {
       const reached = c.reachedAt === null ? 'Not reached' : moduleAt(byPosition, c.reachedAt);
-      return `| ${name} | ${percent(c.taughtWords, c.coreWords)}% (${c.taughtWords} of ${c.coreWords}) `
+      const available = c.availableWords ?? c.taughtWords;
+      return `| ${name} | ${percent(c.taughtWords, c.coreWords)}% (${c.taughtWords} of ${c.coreWords}) | ${c.referenceWords ?? 0} `
+        + `| ${percent(available, c.coreWords)}% (${available} of ${c.coreWords}) `
         + `| ${c.taughtConstructions} of ${c.coreConstructions} | ${reached} |`;
     };
+    const head = (first) => `| ${first} | Core words taught | Open in the Reference unit | Core words available | Core constructions taught | Reached at |`;
+    const rule = '|---|---|---|---|---|---|';
     const first = levels[0][0];
     const next = levels[1]?.[0];
     out.push('Each core list holds only the words and grammar patterns new at its level'
@@ -210,12 +227,14 @@ function renderLevels(out, of, byPosition, opts) {
     out.push(`Core words of each level alone taught by the end of the course: ${alone}.`, '');
     const through = levels.map(([level, l]) => `through ${level} ${percent(l.cumulative.taughtWords, l.cumulative.coreWords)}%`).join(', ');
     out.push(`Counting each level together with the levels below it: ${through}.`, '');
+    out.push('Core words available are the words lessons teach plus the core words no lesson teaches but the Reference unit lists. '
+      + 'A learner can use both, so where a level is reached counts available words.', '');
     out.push('Each level on its own list:', '');
-    out.push('| Level | Core words taught | Core constructions taught | Reached at |', '|---|---|---|---|');
+    out.push(head('Level'), rule);
     for (const [level, l] of levels) out.push(row(level, l));
     out.push('');
     out.push('Each level together with the levels below it:', '');
-    out.push('| Levels | Core words taught | Core constructions taught | Reached at |', '|---|---|---|---|');
+    out.push(head('Levels'), rule);
     for (const [level, l] of levels) out.push(row(`Through ${level}`, l.cumulative));
     out.push('');
     out.push('## Core grammar patterns not taught', '');
@@ -227,7 +246,8 @@ function renderLevels(out, of, byPosition, opts) {
     out.push('');
     out.push('## Core words not taught', '');
     for (const [level, l] of levels) {
-      const names = l.untaughtWords.map((id) => nodeName(opts.graph, id));
+      const open = new Set(l.untaughtReferenceWords ?? []);
+      const names = l.untaughtWords.map((id) => `${nodeName(opts.graph, id)}${open.has(id) ? ' (open in the Reference unit)' : ''}`);
       // Untaught core words left out of untaughtWords are reading limits, listed in their own section.
       const limited = l.coreWords - l.taughtWords - names.length;
       const plus = limited > 0 ? ` (plus ${limited} listed under Verbs the checker cannot read yet)` : '';
@@ -290,7 +310,8 @@ function renderFunctions(out, byPosition, opts) {
   if (!fns.length) { out.push('No functions yet.', ''); return; }
   const levels = LEVELS.filter((l) => fns.some((f) => f.cefr === l));
   out.push('A function is something a learner does with French, such as greeting someone or asking the time. It becomes '
-    + 'possible at the first module by which the course has taught every word and grammar pattern of one French way to do it. '
+    + 'possible at the first module by which every word and grammar pattern of one French way to do it is taught or open in '
+    + 'the Reference unit. '
     + '"Possible" is a floor: the course has taught at least one short way to do the function, often a single phrase. That is '
     + 'not proof that a learner can do it at that level, so the table puts each level\'s count beside the share of that '
     + 'level\'s core words the course teaches.', '');
@@ -302,6 +323,12 @@ function renderFunctions(out, byPosition, opts) {
     out.push(`| ${level} | ${of.filter((f) => f.position !== null).length} of ${of.length} | ${words} |`);
   }
   out.push('');
+  const viaReference = [...new Set(fns.flatMap((f) => f.viaReferenceNodes ?? []).map((id) => shortName(opts.graph, id)))]
+    .sort((a, b) => a.localeCompare(b, 'fr'));
+  if (viaReference.length) {
+    out.push(`Some functions rely on words that no lesson teaches by then but the Reference unit lists (${viaReference.join(', ')}). `
+      + 'The Reference unit is always open, so those functions count as possible, and "(relies on the Reference unit)" marks them below.', '');
+  }
   const referenceOnly = [...new Set(fns.flatMap((f) => f.referenceOnly))].sort();
   if (referenceOnly.length) {
     out.push(`Some functions need words that no lesson teaches and only the Reference unit lists (${referenceOnly.map((id) => nodeName(opts.graph, id)).join(', ')}). `
@@ -315,7 +342,7 @@ function renderFunctions(out, byPosition, opts) {
     const never = fns.filter((f) => f.cefr === level && f.position === null);
     out.push('Possible, with the module where each becomes possible:', '');
     if (!possible.length) out.push('None.');
-    for (const f of possible) out.push(`- ${moduleAt(byPosition, f.position)}: ${f.label}`);
+    for (const f of possible) out.push(`- ${moduleAt(byPosition, f.position)}: ${f.label}${f.viaReference ? ' (relies on the Reference unit)' : ''}`);
     out.push('');
     out.push('Never possible in the course:', '');
     if (!never.length) out.push('None.');
@@ -342,7 +369,7 @@ export function renderFixList(issues, course, courseMap = {}, opts = {}) {
   const s = summarize(issues);
   out.push(`${s.errors} errors, ${s.warnings} warnings, ${s.modulesWithErrors} modules with errors.`, '');
   out.push('## How to read this', '');
-  for (const para of HOW_TO_READ) out.push(para, '');
+  for (const para of [openingParagraph(opts.referenceOpenFrom), ...HOW_TO_READ]) out.push(para, '');
   if (opts.pair) out.push(cognatesParagraph(opts.pair), '');
   const notes = course.flatMap((m) => (courseMap[m.moduleKey]?.contentNotes ?? []).map((n) => `- ${m.position}. ${m.title}: ${n}`));
   if (notes.length) out.push('## Lesson text to fix', '', ...notes, '');

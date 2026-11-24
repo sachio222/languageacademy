@@ -11,8 +11,19 @@ export function moduleTeaches(m, entry) {
   return [...new Set(fields.flatMap((f) => entry[f] ?? []))];
 }
 
-// Availability timeline: which node is taught at which course position.
-export function buildTimeline(graph, course) {
+// Availability timeline: which node is taught at which course position, and which the Reference unit opens.
+//
+// opts.reference: node IDs the Reference unit's vocabulary tables list (check.mjs referenceNodes). The unit has no
+// position, and learners can open it at any time, so its nodes count as available from opts.openFrom on
+// (settings.reference.openFrom). With no reference, or openFrom null, nothing is open.
+//
+// Returns { taughtAt, availableAt, openByReference, openFrom, isAvailable, isReadingAvailable, issues }:
+//   taughtAt: Map<nodeId, position>, lesson teaching only, the first position that teaches each node.
+//   availableAt: Map<nodeId, position>, the earlier of taughtAt and openFrom for a Reference node; a lesson that
+//     teaches a node at or before openFrom wins.
+//   openByReference: Set of the nodes the Reference unit opens before any lesson teaches them.
+//   isAvailable and isReadingAvailable read availableAt.
+export function buildTimeline(graph, course, opts = {}) {
   const taughtAt = new Map();
   const issues = [];
   const courseMap = graph.courseMap ?? {};
@@ -39,8 +50,19 @@ export function buildTimeline(graph, course) {
     }
   }
 
+  const openFrom = opts.reference && Number.isInteger(opts.openFrom) ? opts.openFrom : null;
+  const availableAt = new Map(taughtAt);
+  const openByReference = new Set();
+  if (openFrom !== null) {
+    for (const id of opts.reference) {
+      if (taughtAt.has(id) && taughtAt.get(id) <= openFrom) continue;
+      availableAt.set(id, openFrom);
+      openByReference.add(id);
+    }
+  }
+
   const isAvailable = (nodeId, position) => {
-    const at = taughtAt.get(nodeId);
+    const at = availableAt.get(nodeId);
     return at !== undefined && at <= position;
   };
 
@@ -55,5 +77,5 @@ export function buildTimeline(graph, course) {
     return false;
   };
 
-  return { taughtAt, isAvailable, isReadingAvailable, issues };
+  return { taughtAt, availableAt, openByReference, openFrom, isAvailable, isReadingAvailable, issues };
 }

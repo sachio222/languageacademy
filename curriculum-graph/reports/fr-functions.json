@@ -8,7 +8,9 @@
       "label": "Ask for information",
       "missing": [],
       "position": 40,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -17,8 +19,12 @@
       "id": "fn:ask-the-way",
       "label": "Ask the way or give directions",
       "missing": [],
-      "position": 49,
-      "referenceOnly": []
+      "position": 20,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:lex:rue"
+      ]
     },
     {
       "cefr": "A1",
@@ -28,7 +34,9 @@
       "label": "Ask who someone is or what something is",
       "missing": [],
       "position": 20,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -36,12 +44,11 @@
       "group": "information",
       "id": "fn:count",
       "label": "Count and use numbers",
-      "missing": [
-        "fr:lex:deux",
-        "fr:lex:trois"
-      ],
-      "position": null,
-      "referenceOnly": [
+      "missing": [],
+      "position": 74,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
         "fr:lex:deux",
         "fr:lex:trois"
       ]
@@ -54,7 +61,9 @@
       "label": "Ask about and describe people",
       "missing": [],
       "position": 24,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -64,7 +73,9 @@
       "label": "Ask about and describe places",
       "missing": [],
       "position": 49,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -74,7 +85,9 @@
       "label": "Ask about and describe things",
       "missing": [],
       "position": 24,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -84,7 +97,9 @@
       "label": "Say how much or how many",
       "missing": [],
       "position": 115,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -93,8 +108,14 @@
       "id": "fn:give-personal-details",
       "label": "Ask for and give personal details",
       "missing": [],
-      "position": 68,
-      "referenceOnly": []
+      "position": 1,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:form:etre.prs.1sg",
+        "fr:lex:etre",
+        "fr:lex:francais"
+      ]
     },
     {
       "cefr": "A1",
@@ -102,13 +123,11 @@
       "group": "information",
       "id": "fn:give-the-date",
       "label": "Say the day and the date",
-      "missing": [
-        "fr:lex:lundi",
-        "fr:lex:trois",
-        "fr:lex:mai"
-      ],
-      "position": null,
-      "referenceOnly": [
+      "missing": [],
+      "position": 3,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
         "fr:lex:lundi",
         "fr:lex:trois",
         "fr:lex:mai"
@@ -122,7 +141,9 @@
       "label": "Talk about your day and your timetable",
       "missing": [],
       "position": 61,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -131,8 +152,12 @@
       "id": "fn:talk-about-the-weather",
       "label": "Talk about the weather",
       "missing": [],
-      "position": 46,
-      "referenceOnly": []
+      "position": 41,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:lex:aujourd-hui"
+      ]
     },
     {
       "cefr": "A1",
@@ -142,7 +167,9 @@
       "label": "Talk about your family",
       "missing": [],
       "position": 74,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -150,11 +177,11 @@
       "group": "information",
       "id": "fn:tell-the-time",
       "label": "Ask and tell the time",
-      "missing": [
-        "fr:lex:huit"
-      ],
-      "position": null,
-      "referenceOnly": [
+      "missing": [],
+      "position": 74,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
         "fr:lex:huit"
       ]
     },
@@ -166,7 +193,9 @@
       "label": "Talk about and use transport",
       "missing": [],
       "position": 66,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -176,7 +205,9 @@
       "label": "Say what you can and cannot do",
       "missing": [],
       "position": 18,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -186,7 +217,9 @@
       "label": "Say what you like and dislike",
       "missing": [],
       "position": 57,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -198,7 +231,9 @@
         "fr:lex:mieux"
       ],
       "position": null,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -208,7 +243,9 @@
       "label": "Say what you want",
       "missing": [],
       "position": 17,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -218,7 +255,9 @@
       "label": "Say you do not know",
       "missing": [],
       "position": 82,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -227,8 +266,12 @@
       "id": "fn:talk-about-plans",
       "label": "Talk about plans",
       "missing": [],
-      "position": 46,
-      "referenceOnly": []
+      "position": 30,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:lex:demain"
+      ]
     },
     {
       "cefr": "A1",
@@ -238,7 +281,9 @@
       "label": "Approach someone and ask for something",
       "missing": [],
       "position": 40,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -248,7 +293,9 @@
       "label": "Ask permission",
       "missing": [],
       "position": 20,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -256,12 +303,11 @@
       "group": "suasion",
       "id": "fn:book-a-table",
       "label": "Book a table or a room",
-      "missing": [
-        "fr:lex:deux",
-        "fr:lex:huit"
-      ],
-      "position": null,
-      "referenceOnly": [
+      "missing": [],
+      "position": 74,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
         "fr:lex:deux",
         "fr:lex:huit"
       ]
@@ -274,7 +320,9 @@
       "label": "Buy things and ask the price",
       "missing": [],
       "position": 40,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -284,7 +332,9 @@
       "label": "Give and follow simple instructions",
       "missing": [],
       "position": 100,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -294,7 +344,9 @@
       "label": "Invite someone or offer something",
       "missing": [],
       "position": 17,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -304,7 +356,9 @@
       "label": "Make, move or cancel an appointment",
       "missing": [],
       "position": 99,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -314,7 +368,9 @@
       "label": "Order in a café or restaurant",
       "missing": [],
       "position": 40,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -324,7 +380,9 @@
       "label": "Accept or turn down an invitation",
       "missing": [],
       "position": 45,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -334,7 +392,9 @@
       "label": "Say sorry",
       "missing": [],
       "position": 1,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -344,7 +404,9 @@
       "label": "Ask how someone is",
       "missing": [],
       "position": 15,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -353,8 +415,12 @@
       "id": "fn:congratulate-and-wish",
       "label": "Give good wishes and compliments",
       "missing": [],
-      "position": 24,
-      "referenceOnly": []
+      "position": 1,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:lex:anniversaire"
+      ]
     },
     {
       "cefr": "A1",
@@ -364,7 +430,9 @@
       "label": "Greet people and say goodbye",
       "missing": [],
       "position": 1,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -374,7 +442,9 @@
       "label": "Introduce someone",
       "missing": [],
       "position": 34,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -383,8 +453,13 @@
       "id": "fn:introduce-yourself",
       "label": "Introduce yourself",
       "missing": [],
-      "position": 3,
-      "referenceOnly": []
+      "position": 1,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:form:etre.prs.1sg",
+        "fr:lex:etre"
+      ]
     },
     {
       "cefr": "A1",
@@ -394,7 +469,9 @@
       "label": "Say thank you",
       "missing": [],
       "position": 1,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -404,7 +481,9 @@
       "label": "Join simple ideas",
       "missing": [],
       "position": 10,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -413,8 +492,12 @@
       "id": "fn:ask-how-to-say",
       "label": "Ask how to say something in French",
       "missing": [],
-      "position": 68,
-      "referenceOnly": []
+      "position": 67,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:lex:francais"
+      ]
     },
     {
       "cefr": "A1",
@@ -422,11 +505,11 @@
       "group": "repair",
       "id": "fn:ask-how-to-spell",
       "label": "Ask how a word is spelled",
-      "missing": [
-        "fr:lex:epeler"
-      ],
-      "position": null,
-      "referenceOnly": [
+      "missing": [],
+      "position": 18,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
         "fr:lex:epeler"
       ]
     },
@@ -438,7 +521,9 @@
       "label": "Say you did not understand",
       "missing": [],
       "position": 68,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -448,7 +533,9 @@
       "label": "Ask what a word or a remark means",
       "missing": [],
       "position": 67,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -458,7 +545,9 @@
       "label": "Compare people and things",
       "missing": [],
       "position": 53,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -468,7 +557,9 @@
       "label": "Say how you feel physically",
       "missing": [],
       "position": 53,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -478,7 +569,9 @@
       "label": "Tell the story of someone's life",
       "missing": [],
       "position": 140,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -488,7 +581,9 @@
       "label": "Describe how things used to be",
       "missing": [],
       "position": 58,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -498,7 +593,9 @@
       "label": "Tell what happened",
       "missing": [],
       "position": 61,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -508,7 +605,9 @@
       "label": "Present a town or a country",
       "missing": [],
       "position": 102,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -518,7 +617,9 @@
       "label": "Talk about your work",
       "missing": [],
       "position": 144,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -528,7 +629,9 @@
       "label": "Agree or disagree",
       "missing": [],
       "position": 59,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -540,7 +643,9 @@
         "fr:lex:interessant"
       ],
       "position": null,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -550,7 +655,9 @@
       "label": "Say what someone has to do",
       "missing": [],
       "position": 42,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -560,7 +667,9 @@
       "label": "Express doubt or objection",
       "missing": [],
       "position": 85,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -570,7 +679,9 @@
       "label": "Give a reason",
       "missing": [],
       "position": 107,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -580,7 +691,9 @@
       "label": "Give an opinion",
       "missing": [],
       "position": 54,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -590,7 +703,9 @@
       "label": "Say what you enjoyed or did not enjoy",
       "missing": [],
       "position": 129,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -600,7 +715,9 @@
       "label": "Ask for help or offer it",
       "missing": [],
       "position": 73,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -610,7 +727,9 @@
       "label": "Ask for and give advice",
       "missing": [],
       "position": 55,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -620,7 +739,9 @@
       "label": "Plan something together",
       "missing": [],
       "position": 123,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -630,7 +751,9 @@
       "label": "Suggest something to do",
       "missing": [],
       "position": 78,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -640,7 +763,9 @@
       "label": "Warn someone",
       "missing": [],
       "position": 102,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -650,7 +775,9 @@
       "label": "Start and end a conversation",
       "missing": [],
       "position": 42,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -659,8 +786,12 @@
       "id": "fn:talk-on-the-phone",
       "label": "Make a simple phone call",
       "missing": [],
-      "position": 43,
-      "referenceOnly": []
+      "position": 40,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:lex:parler"
+      ]
     },
     {
       "cefr": "A2",
@@ -670,7 +801,9 @@
       "label": "Put events in order",
       "missing": [],
       "position": 92,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",
@@ -679,8 +812,12 @@
       "id": "fn:check-understanding",
       "label": "Check that you are understood",
       "missing": [],
-      "position": 68,
-      "referenceOnly": []
+      "position": 15,
+      "referenceOnly": [],
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:lex:clair"
+      ]
     },
     {
       "cefr": "B1",
@@ -690,7 +827,9 @@
       "label": "Talk about an imagined situation",
       "missing": [],
       "position": 127,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -700,7 +839,9 @@
       "label": "Report what someone said",
       "missing": [],
       "position": 67,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -710,7 +851,9 @@
       "label": "Tell a memory or a story",
       "missing": [],
       "position": 61,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -720,7 +863,9 @@
       "label": "Make a complaint",
       "missing": [],
       "position": 135,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -730,7 +875,9 @@
       "label": "Talk about feelings",
       "missing": [],
       "position": 125,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -740,7 +887,9 @@
       "label": "Talk about hopes and wishes",
       "missing": [],
       "position": 57,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -750,7 +899,9 @@
       "label": "Give and support an opinion",
       "missing": [],
       "position": 126,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -760,7 +911,9 @@
       "label": "Give your view of a film or book",
       "missing": [],
       "position": 129,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -770,7 +923,9 @@
       "label": "Make a guess about what is true",
       "missing": [],
       "position": 87,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -780,7 +935,9 @@
       "label": "Raise a problem and suggest a solution",
       "missing": [],
       "position": 159,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -790,7 +947,9 @@
       "label": "Take part in an interview",
       "missing": [],
       "position": 107,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -800,7 +959,9 @@
       "label": "Wrap up what you are saying",
       "missing": [],
       "position": 92,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -810,7 +971,9 @@
       "label": "Explain cause and effect",
       "missing": [],
       "position": 107,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -820,7 +983,9 @@
       "label": "Give a short talk on a topic",
       "missing": [],
       "position": 92,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -830,7 +995,9 @@
       "label": "Refer back to something already said",
       "missing": [],
       "position": 67,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -840,7 +1007,9 @@
       "label": "Sum up a story and comment on it",
       "missing": [],
       "position": 92,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -850,7 +1019,9 @@
       "label": "Join a discussion and change the subject",
       "missing": [],
       "position": 67,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -860,7 +1031,9 @@
       "label": "Repeat what someone said to check it",
       "missing": [],
       "position": 67,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "B1",
@@ -870,7 +1043,9 @@
       "label": "Say something again in other words",
       "missing": [],
       "position": 67,
-      "referenceOnly": []
+      "referenceOnly": [],
+      "viaReference": false,
+      "viaReferenceNodes": []
     }
   ]
 }

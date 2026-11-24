@@ -6,7 +6,7 @@ Run the checker after you change a lesson. Once it finds no errors, the course c
 
 ## Words used here
 
-- **Module**: one lesson, help page, practice set, reading or exam in `src/lessons/`. Its **position** is its place in course order, from 1 to 160. The Reference unit (alphabet, numbers, days) has no position.
+- **Module**: one lesson, help page, practice set, reading or exam in `src/lessons/`. Its **position** is its place in course order, from 1 to 160. The Reference unit (alphabet, numbers, days) has no position; see The Reference unit below.
 - **Teaching module**: lessons and help pages teach through their vocabulary table and concept cards. Practice sets, readings and exams never teach; their concept cards count as reminders.
 - **Headword**: one entry in the course word list, such as `fr:lex:livre`. Its **forms** are the other ways it is written: livres, or parle and parlons for parler.
 - **Construction**: a grammar pattern or fixed phrase, such as `fr:cx:neg.ne-pas` (ne … pas) or `fr:cx:chunk.ca-va` (ça va). Each one has a **detector**, a pattern that finds it in a French sentence.
@@ -17,7 +17,7 @@ Run the checker after you change a lesson. Once it finds no errors, the course c
 - **CEFR level**: a level of the Common European Framework of Reference for Languages, which grades learners from A1 (beginner) through A2, B1, B2 and C1 to C2.
 - **Cognate**: a French word that a speaker of the learner's native language reads correctly without a lesson, such as restaurant for an English speaker. A **false friend** looks like a word of that language but means something else: librairie is a bookshop, not a library.
 
-A word is available at a position once a teaching module at or before it has taught it. A regular form such as parlons is available once both its headword and its pattern (`fr:cx:verb.er.present`) are taught. An irregular form such as vais must be taught itself. Names (Paris, Marie) are always available; a capital letter alone does not make a word a name.
+A word is available at a position once a teaching module at or before it has taught it. A regular form such as parlons is available once both its headword and its pattern (`fr:cx:verb.er.present`) are taught. An irregular form such as vais must be taught itself. A word or form that the Reference unit lists is available from the position that `reference.openFrom` sets. Names (Paris, Marie) are always available; a capital letter alone does not make a word a name.
 
 ## Cognates and the learner's native language
 
@@ -41,6 +41,18 @@ Judge a cognate by meaning, not spelling. Pour, ville and raté look like Englis
 
 A native language with no pair folder has no cognates: `pnpm graph:check --native ja` counts every cognate as an untaught word. `core/settings.json` holds the default native language (`defaultNative`) and where cognates are allowed (`cognates.allowIn`): `"shown"` for French the learner reads or hears, or `"all"` to allow typed French too.
 
+## The Reference unit
+
+The Reference unit holds the alphabet, numbers, days and months, colors, countries, holidays and spelling patterns. It has no place in course order, and learners can open it at any time: a learner who needs a number in a sentence looks it up there. So the checker counts every headword and form in the unit's vocabulary tables as available from one course position on, which `reference.openFrom` in `core/settings.json` sets:
+
+```json
+"reference": { "openFrom": 1 }
+```
+
+With `openFrom` at 1, a lesson may use huit or lundi before any lesson teaches it, in French the learner types or reads, and Section 1 of the fix list does not list it. A lesson that teaches the same word earlier still counts as the place it is taught. The vocabulary tables also hold phrases such as je suis and parler français, so their common words (je, être, parler) count as available from `openFrom` on too. Set `openFrom` to null to keep the unit closed: a word that no lesson teaches is then untaught even when the Reference unit lists it. Any other value is an error when the graph loads.
+
+The level and function reports count Reference words apart from the words lessons teach; see Level and function reports.
+
 ## What the checker reads
 
 The checker reads French the learner types (answers, blanks) and French the learner reads or hears (a French prompt, a reading passage), and checks both with their accents. It also reads the French on concept cards, hints, instructions, vocabulary notes, feedback on a wrong answer, module and passage titles, and help screens. Most of that text mixes English and French. The checker takes quoted French, such as 'bon voyage' in a hint. On concept examples, titles and help screens it also splits the text at parentheses, arrows, equals signs, slashes, colons and dashes, and keeps each part that reads as French. A concept example that lists short words or phrases between commas (eu, été, fait, vu) is read one entry at a time, so a grammar pattern never matches across two entries. A quoted span counts as French when it has no English word, so a French word missing from the course word list shows up in Section 9 of the fix list. A quoted span right after meaning or means, or after a word class and for (noun meaning 'car', stressed pronoun for 'me'), is an English gloss; after a word class and for, a subject pronoun such as 'tu' stays French. Course codes such as (M17) and word parts such as -t- are not words. An unquoted part also needs most of its words in the course word list, because English labels such as "Rising Tone" have no English word the checker can spot. English words are listed in `scripts/graph/french-text.mjs`; if Section 9 shows an English word from a hint or note, add it there. French written inside an English sentence without quotes is missed, so quote it. Where the checker still reads English as French, an `overrides` entry in `course-map.json` names the words or patterns to ignore in that item.
@@ -55,7 +67,7 @@ A help screen teaches only what its course-map entry credits. Its French is chec
 |---|---|---|
 | `core/functions.json` | What a learner can do with a language, shared by every language | By hand |
 | `core/levels/fr-A1.json`, `fr-A2.json`, `fr-B1.json` | Core words and constructions a learner needs to reach each level (drafts until the team approves them) | By hand |
-| `core/settings.json` | Reuse windows, the last unit allowed English-to-French translation prompts, the default native language and where cognates are allowed | By hand |
+| `core/settings.json` | Reuse windows, the last unit allowed English-to-French translation prompts, the default native language, where cognates are allowed and the position from which the Reference unit is open | By hand |
 | `pairs/en-fr/cognates.json` | Cognates and false friends for English speakers learning French | By hand |
 | `languages/fr/headwords.json` | Course word list, plus the words the core lists need that no lesson uses yet | By hand |
 | `languages/fr/forms.json` | Irregular forms | By hand |
@@ -193,7 +205,7 @@ The list follows the A1, A2 and B1 functions of the Eaquals core inventory for F
 - `note` is a short French example that we write ourselves.
 - Several entries for one function are alternatives. Give each way of doing the function its own entry, so the function counts as soon as the learner has any one of them. Asking the way ("Où est la gare ?") and giving directions ("Tournez à droite") are two entries, not one.
 
-A function is available at a position once every node of one of its exponents is available there. Names do not count: an exponent with a name in it is available as soon as its other nodes are. A word that no lesson teaches is never available, even when the Reference unit lists it, because that unit has no position.
+A function is available at a position once every node of one of its exponents is available there. Names do not count: an exponent with a name in it is available as soon as its other nodes are. A word that the Reference unit lists is available from `reference.openFrom` on, so telling the time (Il est huit heures) is possible once lessons have taught the rest of the sentence, although no lesson teaches huit.
 
 To add a function, add it to `core/functions.json`, keeping the list in order of level and then group, and give it at least one exponent. An exponent may name a headword that no lesson teaches yet; the function then stays unavailable until a lesson teaches it. If the word list lacks a word the function needs, add the headword first (see Adding a headword). Then run `pnpm graph:check`. It warns `function-no-exponent` for a function with no French exponent, and reports `function-bad-group` for an unknown group, `function-bad-level` for a level that is not A1 to C2, `exponent-empty` for an exponent with no nodes, and `dangling-ref` for an exponent that names a function or node the graph does not have.
 
@@ -222,7 +234,7 @@ A form has no stored level. It takes the higher of its headword's level and the 
 
 `nodeLevel` in `scripts/graph/levels-data.mjs` computes a form's level, and `POLITE_CONDITIONALS` there lists the polite cells.
 
-The core lists in `core/levels/` name what a learner must have to reach a level. A level counts as reached once the course has taught 90% of its core words and every core construction (`levelThreshold` in `core/settings.json`). Each list looks like this, with its IDs sorted:
+The core lists in `core/levels/` name what a learner must have to reach a level. A level counts as reached once 90% of its core words are available, taught by a lesson or open in the Reference unit, and the course has taught every core construction (`levelThreshold` in `core/settings.json`). Each list looks like this, with its IDs sorted:
 
 ```json
 { "level": "A1", "lang": "fr", "status": "draft", "frozen": null, "words": ["fr:lex:accepter", "..."], "constructions": ["fr:cx:adj.agreement", "..."] }
@@ -244,17 +256,18 @@ The team approves the lists before coverage is measured against them as a fixed 
 The checker measures the course against the core lists. These are the terms the reports use:
 
 - A **module's level** is the highest level among the words, forms and constructions it teaches. A **unit's level** is the highest level of its modules, so a single word can set it. The Units table in the fix list gives, beside each unit's level, how many words, forms and constructions the unit teaches at that level.
-- A level is **reached** at the first position where the course has taught 90% of that level's core words and every one of its core constructions. Each level is measured on its own list, so A2 can be reached before A1.
+- A level is **reached** at the first position where 90% of that level's core words are available and the course has taught every one of its core constructions. Each level is measured on its own list, so A2 can be reached before A1.
+- **Available words** are the core words lessons teach plus the core words no lesson teaches but the Reference unit lists. A learner can use both, so where a level is reached counts available words. The fix list and the JSON keep the words lessons teach as their own count beside them.
 - **Coverage** is the share of a level's core words, and the number of its core constructions, taught by the end of the course or by a given position. Each core list holds only the nodes new at its level, so A2 coverage counts the A2 list alone.
 - **Cumulative coverage** counts a level together with the levels below it: through A2 means the A1 and A2 lists together, and it has its own reached position under the same 90% rule.
 - Percentages are rounded to the nearest whole number, except that 100% shows only when the whole list is taught.
-- A function is **possible** at the first position where the course has taught every node of one of its exponents. Possible is a floor: the course has taught at least one short way to do the function, often a single phrase such as c'est-à-dire. That is not proof that a learner can do the function at that level. Section 7 of the fix list prints each level's count of possible functions beside the share of that level's core words taught, so read the two together.
+- A function is **possible** at the first position where every node of one of its exponents is available: taught by a lesson or open in the Reference unit. Section 7 of the fix list marks a function that relies on the Reference unit, one that lessons alone would make possible later or never. Possible is a floor: the course has taught at least one short way to do the function, often a single phrase such as c'est-à-dire. That is not proof that a learner can do the function at that level. The fix list prints each level's count of possible functions beside the share of that level's core words taught, so read the two together.
 
 The reports add three warnings. Where they use the highest level the course has reached, a level counts only once the course has reached it together with the levels below it, so a course that covers the B1 list before the A1 list has not reached B1:
 
 - `level-label`: a module title or concept card names a level above the module's level, or a unit title or unit description (B2 Level Phrases) names a level above the unit's level. A reading, practice set or exam teaches nothing, so its label is compared with the highest level the course has reached by its position instead.
 - `level-order`: a module teaches a word or pattern two or more levels above the highest level reached before it. Until the course reaches a level, the count starts from A1, so the warning names every B1 or higher node. One line per module lists the nodes. A form is left out when the same line already names its headword or the pattern that builds its tense.
-- `function-unreachable`: no exponent of an A1 or A2 function is fully taught by the end of the course. The line names what the closest exponent still needs, and marks words that no lesson teaches and only the Reference unit lists in a vocabulary table, such as huit in "Il est huit heures". Such a word may still appear in lesson text; it is never taught.
+- `function-unreachable`: no exponent of an A1 or A2 function is fully taught by the end of the course. The line names what the closest exponent still needs. While the Reference unit is open its words are available, so they never appear there. With `reference.openFrom` set to null, the line marks words that no lesson teaches and only the Reference unit lists, such as huit in "Il est huit heures".
 
 `languages/fr/reading-limits.json` lists verbs the checker cannot yet tell from a noun or adjective with the same spelling. Their present, past participle and subjunctive forms were left out of the graph because they are spelled like an older entry: il porte reads as the noun porte, and j'ai téléphoné does not read as téléphoner. For intéresser only the present participle is left out, because intéressant is also an adjective. Each entry gives the headword and the cells left out:
 
@@ -266,8 +279,8 @@ These verbs stay in the core counts. The fix list and `fr-levels.json` list them
 
 `graph:report` writes the data behind Sections 6 and 7 of the fix list as two JSON files, with keys sorted at every depth:
 
-- `fr-levels.json` holds `levels` (per level: `coreWords`, `coreConstructions`, `taughtWords`, `taughtConstructions`, `reachedAt` as a position or null, the IDs in `untaughtWords` and `untaughtConstructions`, and a `cumulative` block with the same five counts for the level together with the levels below it), `modules` (per module: `position`, `moduleKey`, `unitId`, `title`, the level its labels name in `label` and its level in `computed`), `units` (the same for each unit, with `firstPosition`, `lastPosition` and `computedCount`, how many words, forms and constructions the unit teaches at its level), `curve` (per position, the core words and constructions of each level taught so far), `headwordsByLevel` and `constructionsByLevel` (how many the graph has at each level), `taughtByLevel` (how many of those the course teaches), `taughtCumulative` (headwords taught by level at the last position of each unit) and `readingLimits`.
-- `fr-functions.json` holds `functions`, sorted by level, then group, then ID. Each entry gives `id`, `group`, `cefr`, `label`, `position` (where the function becomes possible, or null), `exponentCount`, `missing` (for a function that never becomes possible, what its closest exponent still needs) and `referenceOnly` (the missing words that no lesson teaches and only the Reference unit lists).
+- `fr-levels.json` holds `levels` (per level: `coreWords`, `coreConstructions`, `taughtWords` and `taughtConstructions` as lessons teach them, `referenceWords` for core words no lesson teaches but the Reference unit lists, `availableWords` for taught and Reference words together, `reachedAt` as a position or null, read from available words, the IDs in `untaughtWords` (no lesson teaches them, Reference words included) and `untaughtConstructions`, `untaughtReferenceWords` for the untaught words the Reference unit lists, and a `cumulative` block with the same seven counts for the level together with the levels below it), `modules` (per module: `position`, `moduleKey`, `unitId`, `title`, the level its labels name in `label` and its level in `computed`), `units` (the same for each unit, with `firstPosition`, `lastPosition` and `computedCount`, how many words, forms and constructions the unit teaches at its level), `curve` (per position and level, the core `words` and `constructions` taught so far, with `referenceWords` and `availableWords` as in `levels`), `headwordsByLevel` and `constructionsByLevel` (how many the graph has at each level), `taughtByLevel` (how many of those the course teaches), `taughtCumulative` (headwords taught by level at the last position of each unit) and `readingLimits`.
+- `fr-functions.json` holds `functions`, sorted by level, then group, then ID. Each entry gives `id`, `group`, `cefr`, `label`, `position` (where the function becomes possible, or null), `exponentCount`, `missing` (for a function that never becomes possible, what its closest exponent still needs), `referenceOnly` (the missing words that only the Reference unit lists, empty while the unit is open), `viaReference` (true when the function is possible at its position only thanks to the Reference unit) and `viaReferenceNodes` (for such a function, the Reference words its exponent uses that no lesson has taught by then).
 
 A share in the curve is its count divided by `coreWords` or `coreConstructions` in `levels`.
 

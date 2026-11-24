@@ -19,6 +19,11 @@ export function makeModule(partial = {}) {
   };
 }
 
-export function makeCtx({ graph, course }) {
-  return { graph, course, index: buildFormIndex(graph), timeline: buildTimeline(graph, course) };
+// reference: node IDs the Reference unit lists, open from openFrom on (settings.reference.openFrom, else 1). With no
+// reference, or openFrom null, nothing is open.
+export function makeCtx({ graph, course, reference, openFrom }) {
+  const index = buildFormIndex(graph);
+  if (!reference) return { graph, course, index, timeline: buildTimeline(graph, course) };
+  const from = openFrom === undefined ? graph.settings?.reference?.openFrom ?? 1 : openFrom;
+  return { graph, course, index, reference, timeline: buildTimeline(graph, course, { reference, openFrom: from }) };
 }

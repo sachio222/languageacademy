@@ -25,8 +25,8 @@ const RULES = [
   ruleFunctionExponents, ruleFunctionUnreachable,
 ];
 
-// Headwords and forms the Reference unit's vocabulary tables list. The unit has no position, so it teaches none of
-// them; the report names them where a function needs one that no lesson teaches.
+// Headwords and forms the Reference unit's vocabulary tables list. The unit has no position and learners can open it
+// at any time, so the timeline counts these nodes as available from settings.reference.openFrom on.
 export function referenceNodes(index, vocab) {
   const isWord = (f) => index.has(f);
   const out = new Set();
@@ -46,8 +46,8 @@ export async function runCheck({ repoRoot, lang, native }) {
   const graph = loadGraph(join(repoRoot, 'curriculum-graph'), lang, { native });
   const index = buildFormIndex(graph);
   const course = await readCourse(repoRoot, { courseMap: graph.courseMap, isWord: frenchWordTest(graph, index) });
-  const timeline = buildTimeline(graph, course);
   const reference = referenceNodes(index, await readReferenceVocab(repoRoot));
+  const timeline = buildTimeline(graph, course, { reference, openFrom: graph.settings?.reference?.openFrom ?? null });
   const ctx = { graph, course, index, timeline, reference };
   const issues = [
     ...validateGraph(graph, { course, repoRoot }),

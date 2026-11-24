@@ -94,9 +94,11 @@ test('coverage counts core words and constructions taught by the end, and the po
   const { cumulative, ...a1 } = r.levels.A1;
   assert.deepEqual(a1, {
     coreWords: 4, coreConstructions: 1, taughtWords: 3, taughtConstructions: 1, reachedAt: 2,
-    untaughtWords: ['fr:lex:parler'], untaughtConstructions: [],
+    referenceWords: 0, availableWords: 3, untaughtWords: ['fr:lex:parler'], untaughtReferenceWords: [], untaughtConstructions: [],
   });
-  assert.deepEqual(cumulative, { coreWords: 4, coreConstructions: 1, taughtWords: 3, taughtConstructions: 1, reachedAt: 2 });
+  assert.deepEqual(cumulative, {
+    coreWords: 4, coreConstructions: 1, taughtWords: 3, taughtConstructions: 1, reachedAt: 2, referenceWords: 0, availableWords: 3,
+  });
   assert.equal(r.levels.A2.reachedAt, 4);
   assert.equal(r.levels.A2.taughtWords, 2);
   assert.equal(r.levels.B1.taughtWords, 3);
@@ -111,8 +113,12 @@ test('coverage counts core words and constructions taught by the end, and the po
 test('cumulative coverage counts each level together with the levels below it', () => {
   const r = levelReport(ctxOf());
   // Through A2: A1 and A2 lists, 6 words (5 taught, 4 of them by position 4) and 2 constructions.
-  assert.deepEqual(r.levels.A2.cumulative, { coreWords: 6, coreConstructions: 2, taughtWords: 5, taughtConstructions: 2, reachedAt: 4 });
-  assert.deepEqual(r.levels.B1.cumulative, { coreWords: 9, coreConstructions: 2, taughtWords: 8, taughtConstructions: 2, reachedAt: 4 });
+  assert.deepEqual(r.levels.A2.cumulative, {
+    coreWords: 6, coreConstructions: 2, taughtWords: 5, taughtConstructions: 2, reachedAt: 4, referenceWords: 0, availableWords: 5,
+  });
+  assert.deepEqual(r.levels.B1.cumulative, {
+    coreWords: 9, coreConstructions: 2, taughtWords: 8, taughtConstructions: 2, reachedAt: 4, referenceWords: 0, availableWords: 8,
+  });
   // Per-level fields are unchanged by the cumulative block.
   assert.equal(r.levels.A2.coreWords, 2);
 });
@@ -134,12 +140,13 @@ test('a level needs every core construction as well as the share of core words',
 
 test('the curve counts core words and constructions taught at each position', () => {
   const r = levelReport(ctxOf());
+  const taught = (words, constructions) => ({ words, constructions, referenceWords: 0, availableWords: words });
   assert.deepEqual(r.curve.map((c) => [c.position, c.A1, c.A2, c.B1]), [
-    [1, { words: 2, constructions: 1 }, { words: 0, constructions: 0 }, { words: 0, constructions: 0 }],
-    [2, { words: 3, constructions: 1 }, { words: 0, constructions: 0 }, { words: 1, constructions: 0 }],
-    [3, { words: 3, constructions: 1 }, { words: 0, constructions: 0 }, { words: 1, constructions: 0 }],
-    [4, { words: 3, constructions: 1 }, { words: 2, constructions: 1 }, { words: 2, constructions: 0 }],
-    [5, { words: 3, constructions: 1 }, { words: 2, constructions: 1 }, { words: 3, constructions: 0 }],
+    [1, taught(2, 1), taught(0, 0), taught(0, 0)],
+    [2, taught(3, 1), taught(0, 0), taught(1, 0)],
+    [3, taught(3, 1), taught(0, 0), taught(1, 0)],
+    [4, taught(3, 1), taught(2, 1), taught(2, 0)],
+    [5, taught(3, 1), taught(2, 1), taught(3, 0)],
   ]);
 });
 
@@ -304,8 +311,9 @@ test('the fix list shows level coverage, where each level is reached and the out
   assert.match(section, /Each core list holds only the words and grammar patterns new at its level/);
   assert.match(section, /Core words of each level alone taught by the end of the course: A1 75%, A2 100%, B1 100%\./);
   assert.match(section, /Counting each level together with the levels below it: through A1 75%, through A2 83%, through B1 89%\./);
-  assert.match(section, /\| A1 \| 75% \(3 of 4\) \| 1 of 1 \| 2\. Food \|/);
-  assert.match(section, /\| Through A2 \| 83% \(5 of 6\) \| 2 of 2 \| 4\. Going places \|/);
+  assert.match(section, /^\| Level \| Core words taught \| Open in the Reference unit \| Core words available \| Core constructions taught \| Reached at \|$/m);
+  assert.match(section, /\| A1 \| 75% \(3 of 4\) \| 0 \| 75% \(3 of 4\) \| 1 of 1 \| 2\. Food \|/);
+  assert.match(section, /\| Through A2 \| 83% \(5 of 6\) \| 0 \| 83% \(5 of 6\) \| 2 of 2 \| 4\. Going places \|/);
   assert.match(section, /percentages are rounded to the nearest whole number/i);
   assert.match(section, /fr:lex:travailler \(B1\)/);
   assert.match(section, /^\| Unit \| Positions \| Level label \| Highest level taught \| Taught at that level \|$/m);
@@ -374,15 +382,53 @@ test('the fix list counts reading-limit verbs beside the untaught words and prin
   assert.doesNotMatch(md, /is not counted/);
 });
 
-test('the fix list says a Reference-only word is taught by no lesson and only listed in the Reference unit', () => {
-  const ctx = makeCtx({ graph: levelGraph({ courseMap: { m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } } }), course: COURSE });
-  ctx.reference = new Set(['fr:lex:vous']);
+test('Section 7 names the functions that rely on the Reference unit, which is always open', () => {
+  const courseMap = { m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] }, m2: { teachesConstructions: ['fr:cx:q.inversion'] } };
+  const ctx = makeCtx({ graph: levelGraph({ courseMap }), course: COURSE, reference: new Set(['fr:lex:vous']) });
+  const md = renderFixList([], ctx.course, ctx.graph.courseMap, { levels: levelReport(ctx), functions: functionReport(ctx), graph: ctx.graph });
+  const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
+  assert.match(section, /Some functions rely on words that no lesson teaches by then but the Reference unit lists \(vous\)\. The Reference unit is always open/);
+  assert.match(section, /^- 2\. Food: Ask a yes or no question \(relies on the Reference unit\)$/m);
+  assert.match(section, /is taught or open in the Reference unit\./);
+  assert.doesNotMatch(section, /only the Reference unit lists|never become possible/);
+  assert.doesNotMatch(section, /fr:lex:vous/);
+});
+
+test('with the Reference unit closed, Section 7 still names the words only it lists', () => {
+  const ctx = makeCtx({ graph: levelGraph({ courseMap: { m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } } }), course: COURSE,
+    reference: new Set(['fr:lex:vous']), openFrom: null });
   const md = renderFixList([], ctx.course, ctx.graph.courseMap, { levels: levelReport(ctx), functions: functionReport(ctx), graph: ctx.graph });
   const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
   assert.match(section, /Some functions need words that no lesson teaches and only the Reference unit lists \(vous\)/);
   assert.match(section, /still needs Question by inversion, vous \(Reference unit\)$/m);
-  assert.doesNotMatch(section, /fr:lex:vous/);
-  assert.doesNotMatch(section, /appear only in the Reference unit|Reference unit only/);
+});
+
+test('core words the Reference unit lists count as available, apart from what lessons teach, and set where a level is reached', () => {
+  // parler (A1) is taught by no lesson; hier (A2) is taught at 4. Both are open from position 1.
+  const ctx = makeCtx({ graph: levelGraph({ courseMap: COURSE_MAP }), course: COURSE, reference: new Set(['fr:lex:parler', 'fr:lex:hier']) });
+  const r = levelReport(ctx);
+  const pick = (l) => [l.taughtWords, l.referenceWords, l.availableWords, l.reachedAt];
+  // A1 alone: 3 taught + parler; 3 of 4 available at position 1 reaches the 0.75 threshold there, not at 2.
+  assert.deepEqual(pick(r.levels.A1), [3, 1, 4, 1]);
+  assert.deepEqual(r.levels.A1.untaughtWords, ['fr:lex:parler']);
+  assert.deepEqual(r.levels.A1.untaughtReferenceWords, ['fr:lex:parler']);
+  // hier is taught by the end, so it is not a Reference word there.
+  assert.deepEqual(pick(r.levels.A2), [2, 0, 2, 4]);
+  assert.deepEqual(pick(r.levels.A2.cumulative), [5, 1, 6, 4]);
+  assert.deepEqual(pick(r.levels.B1.cumulative), [8, 1, 9, 4]);
+  // At position 1 hier is open only through the Reference.
+  assert.deepEqual(r.curve[0].A2, { words: 0, constructions: 0, referenceWords: 1, availableWords: 1 });
+  assert.deepEqual(r.curve[3].A2, { words: 2, constructions: 1, referenceWords: 0, availableWords: 2 });
+  const stats = reportStats(r, functionReport(ctx));
+  assert.equal(stats.coverage.A1.referenceWords, 1);
+  assert.equal(stats.coverage.A1.availableWords, 4);
+  assert.equal(stats.coverage.A2.cumulative.availableWords, 6);
+  const lines = checkSummaryLines(summarize([], stats));
+  assert.ok(lines.includes('A1: 75% of A1 core words (3 of 4), 1 more open in the Reference unit, 1 of 1 A1 core constructions, reached at position 1'), lines.join('\n'));
+  const md = renderFixList([], ctx.course, ctx.graph.courseMap, { levels: r, functions: functionReport(ctx), graph: ctx.graph });
+  const section = md.slice(md.indexOf('# 6. Levels'), md.indexOf('# 7. What a learner can do'));
+  assert.match(section, /\| A1 \| 75% \(3 of 4\) \| 1 \| 100% \(4 of 4\) \| 1 of 1 \| 1\. Hello \|/);
+  assert.match(section, /^- A1, 1 word: parler \(open in the Reference unit\)$/m);
 });
 
 test('Section 7 says possible is a floor and puts each level\'s function count beside its core word coverage', () => {
@@ -394,4 +440,13 @@ test('Section 7 says possible is a floor and puts each level\'s function count b
   assert.match(section, /^\| Level \| Functions possible by the end \| Core words of that level taught \|$/m);
   assert.match(section, /^\| A1 \| \d+ of \d+ \| 75% \(3 of 4\) \|$/m);
   assert.doesNotMatch(section, /Functions possible by the end of the course: A1/);
+});
+
+test('Section 7 names a Reference form by its spelling, not its ID', () => {
+  const exponents = [{ function: 'fn:greet', nodes: ['fr:form:aller.prs.1sg'], note: 'Je vais.' }];
+  const ctx = makeCtx({ graph: levelGraph({ courseMap: {}, exponents }), course: COURSE, reference: new Set(['fr:lex:aller', 'fr:form:aller.prs.1sg']) });
+  const md = renderFixList([], ctx.course, ctx.graph.courseMap, { levels: levelReport(ctx), functions: functionReport(ctx), graph: ctx.graph });
+  const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
+  assert.match(section, /the Reference unit lists \(aller, vais\)\./);
+  assert.doesNotMatch(section, /fr:form:/);
 });

@@ -14,13 +14,14 @@ export function writeReportData(dir, lang, ctx) {
   return { levels, functions };
 }
 
-// The counts graph:check prints and the summary JSON keeps: coverage of each core list by the end of the course,
-// and how many functions of each level become possible.
+// The counts graph:check prints and the summary JSON keeps: coverage of each core list by the end of the course
+// (taught by lessons, open in the Reference unit, and available, the two together), and how many functions of each
+// level become possible.
 export function reportStats(levels, functions) {
   const coverage = {};
   for (const [level, l] of Object.entries(levels.levels)) {
     const counts = (x) => ({
-      coreWords: x.coreWords, taughtWords: x.taughtWords,
+      coreWords: x.coreWords, taughtWords: x.taughtWords, referenceWords: x.referenceWords, availableWords: x.availableWords,
       coreConstructions: x.coreConstructions, taughtConstructions: x.taughtConstructions, reachedAt: x.reachedAt,
     });
     coverage[level] = { ...counts(l), cumulative: counts(l.cumulative) };

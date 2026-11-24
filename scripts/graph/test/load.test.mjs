@@ -119,3 +119,23 @@ test('fold lowercases, strips diacritics and straightens apostrophes', () => {
   assert.equal(fold('l’eau'), "l'eau");
   assert.equal(fold('L‘EAU'), "l'eau");
 });
+
+test('settings.json: reference.openFrom is a course position from 1, or null to keep the Reference unit closed', () => {
+  const withSettings = (reference) => {
+    const dir = mkdtempSync(join(tmpdir(), 'graph-mini-'));
+    try {
+      cpSync(fixtureDir, dir, { recursive: true });
+      const path = join(dir, 'core', 'settings.json');
+      writeFileSync(path, JSON.stringify({ ...JSON.parse(readFileSync(path, 'utf8')), reference }));
+      return loadGraph(dir, 'fr');
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  };
+  assert.equal(withSettings({ openFrom: 1 }).settings.reference.openFrom, 1);
+  assert.equal(withSettings({ openFrom: null }).settings.reference.openFrom, null);
+  for (const bad of [{ openFrom: 0 }, { openFrom: '1' }, { openFrom: 1.5 }, {}]) {
+    assert.throws(() => withSettings(bad), /reference\.openFrom/);
+  }
+  assert.equal(loadGraph(fixtureDir, 'fr').settings.reference, undefined);
+});

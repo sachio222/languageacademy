@@ -402,3 +402,15 @@ test('a word or pattern an override ignores in an item is not a use of it there'
   const hits = ruleTaughtBefore(ctx).filter((i) => i.surface === 'travaillons');
   assert.deepEqual(hits.map((i) => [i.moduleKey, i.fix.moduleKey]), [['m4', 'm4']]);
 });
+
+test('a word the Reference unit lists is not untaught from openFrom on, typed or shown', () => {
+  const course = [mod(1, [item('vous')]), mod(2, [item('vous'), item([], { shown: ['vous'] })]), mod(3, [item([], { shown: ['vous'] })])];
+  const graph = { ...base, courseMap: {} };
+  const reference = new Set(['fr:lex:vous']);
+  const open1 = makeCtx({ graph, course, reference, openFrom: 1 });
+  assert.deepEqual(ruleTaughtBefore(open1), []);
+  const open3 = makeCtx({ graph, course, reference, openFrom: 3 });
+  assert.deepEqual(ruleTaughtBefore(open3).map((i) => [i.rule, i.moduleKey]), [['untaught-word', 'm1'], ['untaught-word', 'm2']]);
+  const closed = makeCtx({ graph, course });
+  assert.equal(ruleTaughtBefore(closed).length, 3);
+});

@@ -22,22 +22,23 @@ function neededNodes(graph, exponent) {
 // A function (core/functions.json) is something a learner does with the language, such as asking the time. An
 // exponent (languages/<lang>/exponents.json) is one set of nodes that together perform it; several exponents of
 // one function are alternatives. A function is available at the earliest position where every node of one of its
-// exponents is available. An irregular form counts once both it and its headword are taught. Names need no
-// teaching, so they never delay an exponent.
+// exponents is available: taught by a lesson or open in the Reference unit (timeline.availableAt). An irregular form
+// counts once both it and its headword are available. Names need no teaching, so they never delay an exponent.
 //
 // Returns Map<fnId, { position, exponent }> in functions.json order: position is that course position or null,
 // exponent the index in graph.exponents of the exponent that gets there first (the first in file order on a tie),
-// or null.
-export function functionAvailability(graph, timeline) {
+// or null. opts.lessonsOnly reads timeline.taughtAt instead, leaving the Reference unit out.
+export function functionAvailability(graph, timeline, opts = {}) {
+  const at = opts.lessonsOnly ? timeline.taughtAt : timeline.availableAt ?? timeline.taughtAt;
   const best = new Map(graph.functions.map((f) => [f.id, { position: null, exponent: null }]));
   (graph.exponents ?? []).forEach((e, index) => {
     const current = best.get(e.function);
     if (!current) return;
     let position = 1;
     for (const id of neededNodes(graph, e)) {
-      const at = timeline.taughtAt.get(id);
-      if (at === undefined) { position = null; break; }
-      position = Math.max(position, at);
+      const from = at.get(id);
+      if (from === undefined) { position = null; break; }
+      position = Math.max(position, from);
     }
     if (position !== null && (current.position === null || position < current.position)) {
       best.set(e.function, { position, exponent: index });
@@ -60,15 +61,21 @@ export function ruleFunctionExponents(ctx) {
 const rankOf = (level) => LEVELS.indexOf(level);
 
 // Report data for every function, sorted by level, then group (GROUPS order), then ID:
-// { functions: [{ id, group, cefr, label, position, exponentCount, missing, referenceOnly }] }.
+// { functions: [{ id, group, cefr, label, position, exponentCount, missing, referenceOnly, viaReference,
+// viaReferenceNodes }] }.
 // position: where the function becomes possible, or null. missing: for a function that never becomes possible, the
-// nodes its closest exponent (fewest untaught nodes, first in file order on a tie) still needs; [] otherwise.
+// nodes its closest exponent (fewest unavailable nodes, first in file order on a tie) still needs; [] otherwise.
 // referenceOnly: the missing nodes that the Reference unit lists in a vocabulary table (ctx.reference, a Set of node
-// IDs). No lesson teaches them, and the Reference unit has no course position, so it teaches nothing either.
+// IDs). It is empty while the Reference unit is open (settings.reference.openFrom), because its nodes are then
+// available and never missing. viaReference: true when the function is possible only thanks to the Reference unit at
+// its position, that is, when lessons alone would make it possible later or never. viaReferenceNodes: for such a
+// function, the nodes of its first complete exponent that no lesson has taught by its position; [] otherwise.
 export function functionReport(ctx) {
   const { graph, timeline } = ctx;
   const reference = ctx.reference ?? new Set();
+  const available = timeline.availableAt ?? timeline.taughtAt;
   const availability = functionAvailability(graph, timeline);
+  const lessonsOnly = functionAvailability(graph, timeline, { lessonsOnly: true });
   const byFunction = new Map();
   for (const e of graph.exponents ?? []) {
     if (!byFunction.has(e.function)) byFunction.set(e.function, []);
@@ -81,14 +88,21 @@ export function functionReport(ctx) {
     if (position === null && exponents.length) {
       let best = null;
       for (const e of exponents) {
-        const lacking = neededNodes(graph, e).filter((id) => !timeline.taughtAt.has(id));
+        const lacking = neededNodes(graph, e).filter((id) => !available.has(id));
         if (best === null || lacking.length < best.length) best = lacking;
       }
       missing = best;
     }
+    const byLessons = lessonsOnly.get(f.id)?.position ?? null;
+    const viaReference = position !== null && (byLessons === null || byLessons > position);
+    const winner = availability.get(f.id)?.exponent;
+    const viaReferenceNodes = viaReference
+      ? neededNodes(graph, graph.exponents[winner]).filter((id) => !(timeline.taughtAt.get(id) <= position))
+      : [];
     return {
       id: f.id, group: f.group, cefr: f.cefr, label: f.label, position,
       exponentCount: exponents.length, missing, referenceOnly: missing.filter((id) => reference.has(id)),
+      viaReference, viaReferenceNodes,
     };
   });
   functions.sort((a, b) => rankOf(a.cefr) - rankOf(b.cefr) || GROUPS.indexOf(a.group) - GROUPS.indexOf(b.group)

@@ -155,10 +155,13 @@ test('a line from text the learner reads names where the text sits', () => {
   assert.match(lines.find((l) => l.includes('"pain"')), /Sentence: "un pain"$/);
 });
 
-test('How to read this says the Reference unit is outside the course order', () => {
-  const md = renderFixList([], course);
+test('How to read this says the Reference unit is always open and counts as available from its opening position', () => {
+  const md = renderFixList([], course, {}, { referenceOpenFrom: 1 });
   const how = md.slice(md.indexOf('## How to read this'), md.indexOf('# 1. Untaught words and patterns'));
   assert.match(how, /Reference unit/);
+  assert.match(how, /open it at any time/);
+  assert.match(how, /available from position 1 on/);
+  assert.doesNotMatch(how, /teaches nothing/);
   assert.match(how, /concept cards, hints/);
 });
 

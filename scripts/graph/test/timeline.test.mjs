@@ -113,3 +113,36 @@ test('course-map entries for modules outside the course are ignored', () => {
   assert.equal(timeline.taughtAt.size, 0);
   assert.deepEqual(timeline.issues, []);
 });
+
+test('the Reference unit opens its nodes from openFrom on, kept apart from lesson teaching', () => {
+  const graph = withMap({ m1: { teachesWords: ['fr:lex:je'] }, m3: { teachesWords: ['fr:lex:parler'] } });
+  const course = [1, 2, 3].map((position) => makeModule({ position }));
+  const reference = new Set(['fr:lex:vous', 'fr:lex:parler', 'fr:lex:je']);
+  const { timeline } = makeCtx({ graph, course, reference, openFrom: 2 });
+  // taughtAt keeps lesson teaching only.
+  assert.deepEqual([...timeline.taughtAt], [['fr:lex:je', 1], ['fr:lex:parler', 3]]);
+  assert.equal(timeline.isAvailable('fr:lex:vous', 1), false);
+  assert.equal(timeline.isAvailable('fr:lex:vous', 2), true);
+  // A lesson taught je earlier, so it wins; parler is open from 2 although a lesson teaches it at 3.
+  assert.equal(timeline.availableAt.get('fr:lex:je'), 1);
+  assert.equal(timeline.availableAt.get('fr:lex:parler'), 2);
+  assert.equal(timeline.isAvailable('fr:lex:parler', 2), true);
+  assert.deepEqual([...timeline.openByReference].sort(), ['fr:lex:parler', 'fr:lex:vous']);
+  assert.equal(timeline.openFrom, 2);
+});
+
+test('a form the Reference unit lists is readable from openFrom on', () => {
+  const graph = withMap({});
+  const course = [makeModule({ position: 1 })];
+  const reference = new Set(['fr:lex:aller', 'fr:form:aller.prs.1sg']);
+  const { timeline } = makeCtx({ graph, course, reference });
+  assert.equal(timeline.isReadingAvailable(reading('vais'), 1), true);
+});
+
+test('buildTimeline with no reference opens nothing', () => {
+  const graph = withMap({ m1: { teachesWords: ['fr:lex:je'] } });
+  const { timeline } = makeCtx({ graph, course: [makeModule({ position: 1 })] });
+  assert.equal(timeline.openByReference.size, 0);
+  assert.equal(timeline.openFrom, null);
+  assert.deepEqual([...timeline.availableAt], [['fr:lex:je', 1]]);
+});

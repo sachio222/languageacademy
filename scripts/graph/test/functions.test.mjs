@@ -185,31 +185,55 @@ test('no two exponents of a real function list the same nodes', () => {
 });
 
 // Function coverage in the report data.
-function coverageCtx(courseMap, extra = {}) {
+function coverageCtx(courseMap, extra = {}, opts = {}) {
   const graph = { ...base, courseMap, ...extra };
-  return makeCtx({ graph, course: course3 });
+  return makeCtx({ graph, course: course3, ...opts });
 }
 
 test('functionReport gives each function its position, exponent count and, when never possible, what its closest exponent lacks', () => {
-  const ctx = coverageCtx({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] }, m2: { teachesConstructions: ['fr:cx:q.inversion'] } });
-  ctx.reference = new Set(['fr:lex:vous']);
+  const ctx = coverageCtx({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } });
   const { functions } = functionReport(ctx);
   // Sorted by level, then group in GROUPS order, then ID.
   assert.deepEqual(functions.map((f) => f.id), ['fn:ask-a-question', 'fn:say-what-you-do', 'fn:apologise', 'fn:greet']);
   const byId = Object.fromEntries(functions.map((f) => [f.id, f]));
   assert.deepEqual(byId['fn:greet'], {
-    id: 'fn:greet', group: 'socialising', cefr: 'A1', label: 'Greet someone', position: 1, exponentCount: 1, missing: [], referenceOnly: [],
+    id: 'fn:greet', group: 'socialising', cefr: 'A1', label: 'Greet someone', position: 1, exponentCount: 1, missing: [],
+    referenceOnly: [], viaReference: false, viaReferenceNodes: [],
   });
   // je parle lacks one node, je travaille two: the closest exponent is je parle.
   assert.deepEqual(byId['fn:say-what-you-do'].missing, ['fr:lex:parler']);
   assert.equal(byId['fn:say-what-you-do'].exponentCount, 2);
   assert.equal(byId['fn:say-what-you-do'].position, null);
-  // A missing node that the Reference unit lists is named as such.
-  assert.deepEqual(byId['fn:ask-a-question'].missing, ['fr:lex:vous']);
-  assert.deepEqual(byId['fn:ask-a-question'].referenceOnly, ['fr:lex:vous']);
+  assert.deepEqual(byId['fn:ask-a-question'].missing, ['fr:cx:q.inversion', 'fr:lex:vous']);
   assert.deepEqual(byId['fn:apologise'], {
-    id: 'fn:apologise', group: 'socialising', cefr: 'A1', label: 'Apologise', position: null, exponentCount: 0, missing: [], referenceOnly: [],
+    id: 'fn:apologise', group: 'socialising', cefr: 'A1', label: 'Apologise', position: null, exponentCount: 0, missing: [],
+    referenceOnly: [], viaReference: false, viaReferenceNodes: [],
   });
+});
+
+test('a function whose exponent needs a Reference word is possible once the rest is taught, and says it relies on the Reference', () => {
+  const courseMap = { m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] }, m2: { teachesConstructions: ['fr:cx:q.inversion'] } };
+  const reference = new Set(['fr:lex:vous']);
+  const byId = (ctx) => Object.fromEntries(functionReport(ctx).functions.map((f) => [f.id, f]));
+  const open = byId(coverageCtx(courseMap, {}, { reference }));
+  assert.deepEqual(open['fn:ask-a-question'], {
+    id: 'fn:ask-a-question', group: 'information', cefr: 'A1', label: 'Ask a yes or no question', position: 2, exponentCount: 1,
+    missing: [], referenceOnly: [], viaReference: true, viaReferenceNodes: ['fr:lex:vous'],
+  });
+  assert.equal(open['fn:greet'].viaReference, false);
+  // A lesson that teaches vous by the function's position takes the credit back from the Reference.
+  const taught = byId(coverageCtx({ ...courseMap, m2: { teachesWords: ['fr:lex:vous'], teachesConstructions: ['fr:cx:q.inversion'] } }, {}, { reference }));
+  assert.equal(taught['fn:ask-a-question'].position, 2);
+  assert.equal(taught['fn:ask-a-question'].viaReference, false);
+  // Taught only later, vous still makes the function possible earlier through the Reference.
+  const later = byId(coverageCtx({ ...courseMap, m3: { teachesWords: ['fr:lex:vous'] } }, {}, { reference }));
+  assert.equal(later['fn:ask-a-question'].position, 2);
+  assert.equal(later['fn:ask-a-question'].viaReference, true);
+  // With the Reference closed (openFrom null), vous is missing and named as listed only there.
+  const closed = byId(coverageCtx(courseMap, {}, { reference, openFrom: null }));
+  assert.equal(closed['fn:ask-a-question'].position, null);
+  assert.deepEqual(closed['fn:ask-a-question'].referenceOnly, ['fr:lex:vous']);
+  assert.equal(closed['fn:ask-a-question'].viaReference, false);
 });
 
 test('function-unreachable warns for an A1 or A2 function no exponent reaches, naming what is missing', () => {
@@ -221,11 +245,15 @@ test('function-unreachable warns for an A1 or A2 function no exponent reaches, n
     ['function-unreachable', 'warning', 'fn:say-what-you-do'],
   ]);
   assert.match(issues[1].message, /fr:lex:parler/);
-  const ref = coverageCtx({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } });
-  ref.reference = new Set(['fr:lex:vous']);
-  const askMessage = ruleFunctionUnreachable(ref).find((i) => i.nodeId === 'fn:ask-a-question').message;
+  const reference = new Set(['fr:lex:vous']);
+  const closed = coverageCtx({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } }, {}, { reference, openFrom: null });
+  const askMessage = ruleFunctionUnreachable(closed).find((i) => i.nodeId === 'fn:ask-a-question').message;
   assert.match(askMessage, /fr:lex:vous \(no lesson teaches it; only the Reference unit lists it\)/);
   assert.doesNotMatch(askMessage, /shown only/);
+  // With the Reference open, vous is available, so only the untaught pattern is named.
+  const open = coverageCtx({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } }, {}, { reference });
+  const openMessage = ruleFunctionUnreachable(open).find((i) => i.nodeId === 'fn:ask-a-question').message;
+  assert.match(openMessage, /still needs fr:cx:q\.inversion$/);
   const b1 = coverageCtx({}, { functions: base.functions.map((f) => ({ ...f, cefr: 'B1' })) });
   assert.deepEqual(ruleFunctionUnreachable(b1), []);
 });

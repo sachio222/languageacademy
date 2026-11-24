@@ -2,7 +2,7 @@
   "byRule": {
     "blank-misplaced": 58,
     "claim-untaught": 27,
-    "function-unreachable": 7,
+    "function-unreachable": 2,
     "level-label": 1,
     "level-order": 31,
     "nonstandard-shape": 41,
@@ -11,57 +11,69 @@
     "translate-item": 1761,
     "unknown-word": 34,
     "untaught-construction": 109,
-    "untaught-word": 778
+    "untaught-word": 649
   },
-  "cognatesAllowed": 499,
+  "cognatesAllowed": 488,
   "coverage": {
     "A1": {
+      "availableWords": 425,
       "coreConstructions": 40,
       "coreWords": 733,
       "cumulative": {
+        "availableWords": 425,
         "coreConstructions": 40,
         "coreWords": 733,
         "reachedAt": null,
+        "referenceWords": 56,
         "taughtConstructions": 37,
         "taughtWords": 369
       },
       "reachedAt": null,
+      "referenceWords": 56,
       "taughtConstructions": 37,
       "taughtWords": 369
     },
     "A2": {
+      "availableWords": 98,
       "coreConstructions": 23,
       "coreWords": 681,
       "cumulative": {
+        "availableWords": 523,
         "coreConstructions": 63,
         "coreWords": 1414,
         "reachedAt": null,
+        "referenceWords": 68,
         "taughtConstructions": 52,
         "taughtWords": 455
       },
       "reachedAt": null,
+      "referenceWords": 12,
       "taughtConstructions": 15,
       "taughtWords": 86
     },
     "B1": {
+      "availableWords": 29,
       "coreConstructions": 17,
       "coreWords": 841,
       "cumulative": {
+        "availableWords": 552,
         "coreConstructions": 80,
         "coreWords": 2255,
         "reachedAt": null,
+        "referenceWords": 75,
         "taughtConstructions": 65,
         "taughtWords": 477
       },
       "reachedAt": null,
+      "referenceWords": 7,
       "taughtConstructions": 13,
       "taughtWords": 22
     }
   },
-  "errors": 2767,
+  "errors": 2638,
   "functionsPossible": {
     "A1": {
-      "possible": 36,
+      "possible": 41,
       "total": 42
     },
     "A2": {
@@ -73,7 +85,7 @@
       "total": 19
     }
   },
-  "modulesWithErrors": 154,
+  "modulesWithErrors": 152,
   "native": "en",
-  "warnings": 709
+  "warnings": 704
 }
