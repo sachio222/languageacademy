@@ -37,7 +37,7 @@ function splitHyphenated(word, isWord) {
 export function tokenize(text, opts = {}) {
   const isWord = opts.isWord ?? (() => false);
   const tokens = [];
-  for (const [run] of String(text).matchAll(RUN_RE)) {
+  for (const [run] of String(text).normalize('NFC').matchAll(RUN_RE)) {
     let rest = run;
     let m;
     while ((m = ELISION_RE.exec(rest)) && rest.length > m[0].length) {
