@@ -21,7 +21,7 @@ export function reportStats(levels, functions) {
   const coverage = {};
   for (const [level, l] of Object.entries(levels.levels)) {
     const counts = (x) => ({
-      coreWords: x.coreWords, taughtWords: x.taughtWords, referenceWords: x.referenceWords, availableWords: x.availableWords,
+      coreWords: x.coreWords, taughtWords: x.taughtWords, referenceWords: x.referenceWords, cognateWords: x.cognateWords, availableWords: x.availableWords,
       coreConstructions: x.coreConstructions, taughtConstructions: x.taughtConstructions, reachedAt: x.reachedAt,
     });
     coverage[level] = { ...counts(l), cumulative: counts(l.cumulative) };

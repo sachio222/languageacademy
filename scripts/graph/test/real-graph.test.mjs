@@ -42,3 +42,11 @@ test('the real settings count cognates as known in typed and shown French', () =
   const graph = loadGraph(join(repoRoot, 'curriculum-graph'), 'fr');
   assert.equal(graph.settings.cognates.allowIn, 'all');
 });
+
+test('the real level report counts cognates as available and keeps them apart from taught and Reference words', async () => {
+  const { ctx } = await runCheck({ repoRoot, lang: 'fr' });
+  const { levelReport } = await import('../rules/levels.mjs');
+  const a1 = levelReport(ctx).levels.A1;
+  assert.ok(a1.cognateWords > 0);
+  assert.equal(a1.availableWords, a1.taughtWords + a1.referenceWords + a1.cognateWords);
+});

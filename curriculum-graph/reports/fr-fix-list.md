@@ -1,6 +1,6 @@
 # French course fix list
 
-2592 errors, 705 warnings, 152 modules with errors.
+2592 errors, 704 warnings, 152 modules with errors.
 
 ## How to read this
 
@@ -12,7 +12,7 @@ Section 1 lists words and patterns used before they are taught, module by module
 
 Section 2 lists exam and practice topics the course has not taught by that point. Section 3 counts, per module, exercises after Unit 1 that show an English prompt and ask for the French; these should become other exercise types. Section 4 lists words and patterns explained in more than one lesson: keep the explanation in the lesson named and turn the others into practice. A word counts as explained where it heads a vocabulary entry, not where it appears inside a longer phrase. Section 5 counts taught words that do not come back soon enough to stick.
 
-Section 6 measures the course against the CEFR levels, the scale of the Common European Framework of Reference that runs from A1 for beginners through A2 and B1 to C2. Each level has a core list: the words and grammar patterns new at that level, so a learner at A2 needs both the A1 and A2 lists. A level counts as reached once 90% of its core words are taught or open in the Reference unit and every grammar pattern on its list is taught. The level of each word and pattern is our own grading, informed by public sources: the Eaquals inventory of French grammar and functions by level, word frequencies from Lexique, and FLELex, which grades words by how often French textbooks use them at each level. A module's level is the highest level among the words and patterns it teaches. Section 6 also lists level labels that claim more than the modules teach, and modules that teach a word or pattern two or more levels above the highest level reached before them (counting from A1 until the course reaches a level).
+Section 6 measures the course against the CEFR levels, the scale of the Common European Framework of Reference that runs from A1 for beginners through A2 and B1 to C2. Each level has a core list: the words and grammar patterns new at that level, so a learner at A2 needs both the A1 and A2 lists. A level counts as reached once 90% of its core words are taught, open in the Reference unit or cognates, and every grammar pattern on its list is taught. The level of each word and pattern is our own grading, informed by public sources: the Eaquals inventory of French grammar and functions by level, word frequencies from Lexique, and FLELex, which grades words by how often French textbooks use them at each level. A module's level is the highest level among the words and patterns it teaches. Section 6 also lists level labels that claim more than the modules teach, and modules that teach a word or pattern two or more levels above the highest level reached before them (counting from A1 until the course reaches a level).
 
 Section 7 lists what a learner can do with French at each level, such as asking the time, and the module where each becomes possible. Section 8 lists modules that store exercises in an older format.
 
@@ -1477,23 +1477,23 @@ Core words of each level alone taught by the end of the course: A1 50%, A2 13%, 
 
 Counting each level together with the levels below it: through A1 50%, through A2 32%, through B1 21%.
 
-Core words available are the words lessons teach plus the core words no lesson teaches but the Reference unit lists. A learner can use both, so where a level is reached counts available words.
+Core words available are the words lessons teach, plus the core words no lesson teaches that the Reference unit lists or that are cognates from the cognates lesson on. A learner can use all of them, so where a level is reached counts available words.
 
 Each level on its own list:
 
-| Level | Core words taught | Open in the Reference unit | Core words available | Core constructions taught | Reached at |
-|---|---|---|---|---|---|
-| A1 | 50% (369 of 733) | 53 | 58% (422 of 733) | 37 of 40 | Not reached |
-| A2 | 13% (86 of 681) | 10 | 14% (96 of 681) | 15 of 23 | Not reached |
-| B1 | 3% (22 of 841) | 7 | 3% (29 of 841) | 13 of 17 | Not reached |
+| Level | Core words taught | Open in the Reference unit | Cognates | Core words available | Core constructions taught | Reached at |
+|---|---|---|---|---|---|---|
+| A1 | 50% (369 of 733) | 53 | 63 | 66% (485 of 733) | 37 of 40 | Not reached |
+| A2 | 13% (86 of 681) | 10 | 51 | 22% (147 of 681) | 15 of 23 | Not reached |
+| B1 | 3% (22 of 841) | 7 | 38 | 8% (67 of 841) | 13 of 17 | Not reached |
 
 Each level together with the levels below it:
 
-| Levels | Core words taught | Open in the Reference unit | Core words available | Core constructions taught | Reached at |
-|---|---|---|---|---|---|
-| Through A1 | 50% (369 of 733) | 53 | 58% (422 of 733) | 37 of 40 | Not reached |
-| Through A2 | 32% (455 of 1414) | 63 | 37% (518 of 1414) | 52 of 63 | Not reached |
-| Through B1 | 21% (477 of 2255) | 70 | 24% (547 of 2255) | 65 of 80 | Not reached |
+| Levels | Core words taught | Open in the Reference unit | Cognates | Core words available | Core constructions taught | Reached at |
+|---|---|---|---|---|---|---|
+| Through A1 | 50% (369 of 733) | 53 | 63 | 66% (485 of 733) | 37 of 40 | Not reached |
+| Through A2 | 32% (455 of 1414) | 63 | 114 | 45% (632 of 1414) | 52 of 63 | Not reached |
+| Through B1 | 21% (477 of 2255) | 70 | 152 | 31% (699 of 2255) | 65 of 80 | Not reached |
 
 ## Core grammar patterns not taught
 
@@ -1589,15 +1589,17 @@ The course reaches no level, so each module below teaches words or grammar patte
 
 # 7. What a learner can do
 
-A function is something a learner does with French, such as greeting someone or asking the time. It becomes possible at the first module by which every word and grammar pattern of one French way to do it is taught or open in the Reference unit. "Possible" is a floor: the course has taught at least one short way to do the function, often a single phrase. That is not proof that a learner can do it at that level, so the table puts each level's count beside the share of that level's core words the course teaches.
+A function is something a learner does with French, such as greeting someone or asking the time. It becomes possible at the first module by which every word and grammar pattern of one French way to do it is taught, open in the Reference unit or a cognate. "Possible" is a floor: the course has taught at least one short way to do the function, often a single phrase. That is not proof that a learner can do it at that level, so the table puts each level's count beside the share of that level's core words the course teaches.
 
 | Level | Functions possible by the end | Core words of that level taught |
 |---|---|---|
 | A1 | 40 of 42 | 50% (369 of 733) |
-| A2 | 22 of 23 | 13% (86 of 681) |
+| A2 | 23 of 23 | 13% (86 of 681) |
 | B1 | 19 of 19 | 3% (22 of 841) |
 
-Some functions rely on words that no lesson teaches by then but the Reference unit lists (anniversaire, clair, deux, français, huit, lundi, mai, trois). The Reference unit is always open, so those functions count as possible, and "(relies on the Reference unit)" marks them below.
+Some functions rely on words that no lesson teaches by then but the Reference unit lists (année, anniversaire, clair, deux, français, huit, lundi, mai, trois). The Reference unit is always open, so those functions count as possible, and "(relies on the Reference unit)" marks them below.
+
+Some functions rely on cognates that no lesson teaches by then (aider, attention, banque, film, finalement, important, intéressant, sûr). From the cognates lesson on, cognates count as known, so those functions count as possible, and "(relies on cognates)" marks them below.
 
 Some functions need words that no lesson teaches and that the Reference unit lists without opening them (épeler). It opens only the nouns, adjectives, numbers and letters on its lookup pages, so those functions never become possible. Below, "(Reference unit)" marks those words.
 
@@ -1621,9 +1623,9 @@ Possible, with the module where each becomes possible:
 - 20. Question Words - Ask Anything!: Ask who someone is or what something is
 - 24. Common Adjectives - Describing Things: Ask about and describe people
 - 24. Common Adjectives - Describing Things: Ask about and describe things
+- 33. Object Pronouns - Him, Her, It, Them: Approach someone and ask for something (relies on cognates)
 - 34. Possessive Adjectives - My, Your, His, Her: Introduce someone
 - 40. Survival Phrases - Real-World Essentials: Ask for information
-- 40. Survival Phrases - Real-World Essentials: Approach someone and ask for something
 - 40. Survival Phrases - Real-World Essentials: Buy things and ask the price
 - 40. Survival Phrases - Real-World Essentials: Order in a café or restaurant
 - 45. Negation - ne...pas (not): Accept or turn down an invitation
@@ -1656,9 +1658,11 @@ Never possible in the course:
 Possible, with the module where each becomes possible:
 
 - 15. ça - Survival Phrases: Check that you are understood (relies on the Reference unit)
+- 15. ça - Survival Phrases: Show interest or indifference (relies on cognates)
 - 42. Essential Verb - devoir (must): Say what someone has to do
 - 42. Essential Verb - devoir (must): Start and end a conversation
 - 43. Essential Verb - parler (to speak): Make a simple phone call
+- 45. Negation - ne...pas (not): Express doubt or objection (relies on cognates)
 - 53. Comparisons & Intensity: Compare people and things
 - 53. Comparisons & Intensity: Say how you feel physically
 - 54. Slang - Comparisons & Intensity: Give an opinion
@@ -1666,26 +1670,27 @@ Possible, with the module where each becomes possible:
 - 58. être - Past Tense (was / were): Describe how things used to be
 - 59. avoir - Past Tense (had): Agree or disagree
 - 61. manger - To Eat (Present & Past): Tell what happened
+- 61. manger - To Eat (Present & Past): Say what you enjoyed or did not enjoy (relies on cognates)
 - 73. avoir besoin de - To Need: Ask for help or offer it
 - 78. Talking About People in General: Suggest something to do
-- 85. croire - To Believe: Express doubt or objection
 - 92. Temporal & Sequential Words - Time & Order: Put events in order
+- 100. Commands - tu form (Informal): Warn someone (relies on cognates)
 - 102. Irregular Commands - être, avoir, aller, faire: Present a town or a country
-- 102. Irregular Commands - être, avoir, aller, faire: Warn someone
 - 107. Causal & Reason Words - Explaining Why: Give a reason
+- 110. Passé Composé - Regular -ER Verbs (I spoke, I ate): Talk about your work (relies on cognates)
 - 123. Il faut que... - Saying What's Necessary: Plan something together
-- 129. J'avais déjà... - Had Already Done Phrases: Say what you enjoyed or did not enjoy
 - 140. Age & Personal Information: Tell the story of someone's life
-- 144. Perception Verbs - écouter, regarder: Talk about your work
 
 Never possible in the course:
 
-- Show interest or indifference: still needs intéressant
+None.
 
 ## B1
 
 Possible, with the module where each becomes possible:
 
+- 6. Cognates - French and English Share Many Words: Wrap up what you are saying (relies on cognates)
+- 53. Comparisons & Intensity: Give your view of a film or book (relies on the Reference unit; relies on cognates)
 - 57. aimer - To Like / To Love: Talk about hopes and wishes
 - 61. manger - To Eat (Present & Past): Tell a memory or a story
 - 67. dire - To Say / To Tell: Refer back to something already said
@@ -1694,15 +1699,13 @@ Possible, with the module where each becomes possible:
 - 67. dire - To Say / To Tell: Report what someone said
 - 67. dire - To Say / To Tell: Join a discussion and change the subject
 - 87. Discourse Markers - Sound Like a Native: Make a guess about what is true
-- 92. Temporal & Sequential Words - Time & Order: Wrap up what you are saying
+- 87. Discourse Markers - Sound Like a Native: Sum up a story and comment on it (relies on cognates)
 - 92. Temporal & Sequential Words - Time & Order: Give a short talk on a topic
-- 92. Temporal & Sequential Words - Time & Order: Sum up a story and comment on it
 - 107. Causal & Reason Words - Explaining Why: Explain cause and effect
 - 107. Causal & Reason Words - Explaining Why: Take part in an interview
+- 107. Causal & Reason Words - Explaining Why: Give and support an opinion (relies on cognates)
 - 125. Je suis content que... - Emotion Phrases: Talk about feelings
-- 126. Je pense que... - Opinion Phrases: Give and support an opinion
 - 127. Si j'étais... - Daydreaming & Hypotheticals: Talk about an imagined situation
-- 129. J'avais déjà... - Had Already Done Phrases: Give your view of a film or book
 - 135. Bien que... - Although Phrases: Make a complaint
 - 159. Rhetorical & Negative Questions - Advanced Style: Raise a problem and suggest a solution
 

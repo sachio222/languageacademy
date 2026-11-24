@@ -7,6 +7,7 @@ import { validateGraph } from '../validate.mjs';
 import { functionAvailability, ruleFunctionExponents, ruleFunctionUnreachable, functionReport, GROUPS } from '../functions.mjs';
 import { runCheck } from '../check.mjs';
 import { makeModule, makeCtx } from './helpers.mjs';
+import { renderFixList } from '../report.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(here, '../../..');
@@ -198,7 +199,7 @@ test('functionReport gives each function its position, exponent count and, when 
   const byId = Object.fromEntries(functions.map((f) => [f.id, f]));
   assert.deepEqual(byId['fn:greet'], {
     id: 'fn:greet', group: 'socialising', cefr: 'A1', label: 'Greet someone', position: 1, exponentCount: 1, missing: [],
-    referenceOnly: [], viaReference: false, viaReferenceNodes: [],
+    referenceOnly: [], viaReference: false, viaReferenceNodes: [], viaCognates: false, viaCognateNodes: [],
   });
   // je parle lacks one node, je travaille two: the closest exponent is je parle.
   assert.deepEqual(byId['fn:say-what-you-do'].missing, ['fr:lex:parler']);
@@ -207,7 +208,7 @@ test('functionReport gives each function its position, exponent count and, when 
   assert.deepEqual(byId['fn:ask-a-question'].missing, ['fr:cx:q.inversion', 'fr:lex:vous']);
   assert.deepEqual(byId['fn:apologise'], {
     id: 'fn:apologise', group: 'socialising', cefr: 'A1', label: 'Apologise', position: null, exponentCount: 0, missing: [],
-    referenceOnly: [], viaReference: false, viaReferenceNodes: [],
+    referenceOnly: [], viaReference: false, viaReferenceNodes: [], viaCognates: false, viaCognateNodes: [],
   });
 });
 
@@ -218,7 +219,7 @@ test('a function whose exponent needs a Reference word is possible once the rest
   const open = byId(coverageCtx(courseMap, {}, { reference }));
   assert.deepEqual(open['fn:ask-a-question'], {
     id: 'fn:ask-a-question', group: 'information', cefr: 'A1', label: 'Ask a yes or no question', position: 2, exponentCount: 1,
-    missing: [], referenceOnly: [], viaReference: true, viaReferenceNodes: ['fr:lex:vous'],
+    missing: [], referenceOnly: [], viaReference: true, viaReferenceNodes: ['fr:lex:vous'], viaCognates: false, viaCognateNodes: [],
   });
   assert.equal(open['fn:greet'].viaReference, false);
   // A lesson that teaches vous by the function's position takes the credit back from the Reference.
@@ -256,4 +257,30 @@ test('function-unreachable warns for an A1 or A2 function no exponent reaches, n
   assert.match(openMessage, /still needs fr:cx:q\.inversion$/);
   const b1 = coverageCtx({}, { functions: base.functions.map((f) => ({ ...f, cefr: 'B1' })) });
   assert.deepEqual(ruleFunctionUnreachable(b1), []);
+});
+
+test('with cognates allowed in all French, a cognate in an exponent counts from the cognates lesson on, and the function says it relies on cognates', () => {
+  const courseMap = { m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'], teachesConstructions: ['fr:cx:q.inversion'] } };
+  const pair = { ...base.pair, lesson: 'm2', words: [{ id: 'fr:lex:vous', native: 'vous', kind: 'exact' }] };
+  const byId = (allowIn, opts = {}) => Object.fromEntries(functionReport(coverageCtx(courseMap,
+    { pair, settings: { ...base.settings, cognates: { allowIn } } }, opts)).functions.map((f) => [f.id, f]));
+  const all = byId('all')['fn:ask-a-question'];
+  assert.deepEqual([all.position, all.viaCognates, all.viaCognateNodes, all.viaReference, all.missing], [2, true, ['fr:lex:vous'], false, []]);
+  assert.equal(byId('all')['fn:greet'].viaCognates, false);
+  // Allowed only in shown French, a cognate does not make a function possible.
+  const shown = byId('shown')['fn:ask-a-question'];
+  assert.deepEqual([shown.position, shown.viaCognates, shown.missing], [null, false, ['fr:lex:vous']]);
+  // Open in the Reference from position 1, vous counts there first: the function relies on the Reference, not on cognates.
+  const ref = byId('all', { reference: new Set(['fr:lex:vous']) })['fn:ask-a-question'];
+  assert.deepEqual([ref.position, ref.viaReference, ref.viaCognates], [1, true, false]);
+});
+
+test('Section 7 names the functions that rely on cognates', () => {
+  const courseMap = { m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'], teachesConstructions: ['fr:cx:q.inversion'] } };
+  const pair = { ...base.pair, lesson: 'm2', words: [{ id: 'fr:lex:vous', native: 'vous', kind: 'exact' }] };
+  const ctx = coverageCtx(courseMap, { pair, settings: { ...base.settings, cognates: { allowIn: 'all' } } });
+  const md = renderFixList([], ctx.course, courseMap, { functions: functionReport(ctx), graph: ctx.graph });
+  const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
+  assert.match(section, /Some functions rely on cognates that no lesson teaches by then \(vous\)\. From the cognates lesson on, cognates count as known, so those functions count as possible, and "\(relies on cognates\)" marks them below\./);
+  assert.match(section, /^- 2\. Module 2: Ask a yes or no question \(relies on cognates\)$/m);
 });

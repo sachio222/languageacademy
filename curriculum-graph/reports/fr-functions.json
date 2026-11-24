@@ -9,6 +9,8 @@
       "missing": [],
       "position": 40,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -21,6 +23,8 @@
       "missing": [],
       "position": 49,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -33,6 +37,8 @@
       "missing": [],
       "position": 20,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -45,6 +51,8 @@
       "missing": [],
       "position": 74,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": true,
       "viaReferenceNodes": [
         "fr:lex:deux",
@@ -60,6 +68,8 @@
       "missing": [],
       "position": 24,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -72,6 +82,8 @@
       "missing": [],
       "position": 49,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -84,6 +96,8 @@
       "missing": [],
       "position": 24,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -96,6 +110,8 @@
       "missing": [],
       "position": 115,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -108,6 +124,8 @@
       "missing": [],
       "position": 3,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": true,
       "viaReferenceNodes": [
         "fr:lex:francais"
@@ -122,6 +140,8 @@
       "missing": [],
       "position": 3,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": true,
       "viaReferenceNodes": [
         "fr:lex:lundi",
@@ -138,6 +158,8 @@
       "missing": [],
       "position": 61,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -150,6 +172,8 @@
       "missing": [],
       "position": 46,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -162,6 +186,8 @@
       "missing": [],
       "position": 74,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -174,6 +200,8 @@
       "missing": [],
       "position": 74,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": true,
       "viaReferenceNodes": [
         "fr:lex:huit"
@@ -188,6 +216,8 @@
       "missing": [],
       "position": 66,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -200,6 +230,8 @@
       "missing": [],
       "position": 18,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -212,6 +244,8 @@
       "missing": [],
       "position": 57,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -226,6 +260,8 @@
       ],
       "position": null,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -238,6 +274,8 @@
       "missing": [],
       "position": 17,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -250,6 +288,8 @@
       "missing": [],
       "position": 82,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -262,6 +302,8 @@
       "missing": [],
       "position": 46,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -272,8 +314,12 @@
       "id": "fn:ask-for-something",
       "label": "Approach someone and ask for something",
       "missing": [],
-      "position": 40,
+      "position": 33,
       "referenceOnly": [],
+      "viaCognateNodes": [
+        "fr:lex:aider"
+      ],
+      "viaCognates": true,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -286,6 +332,8 @@
       "missing": [],
       "position": 20,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -298,6 +346,8 @@
       "missing": [],
       "position": 74,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": true,
       "viaReferenceNodes": [
         "fr:lex:deux",
@@ -313,6 +363,8 @@
       "missing": [],
       "position": 40,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -325,6 +377,8 @@
       "missing": [],
       "position": 100,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -337,6 +391,8 @@
       "missing": [],
       "position": 17,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -349,6 +405,8 @@
       "missing": [],
       "position": 99,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -361,6 +419,8 @@
       "missing": [],
       "position": 40,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -373,6 +433,8 @@
       "missing": [],
       "position": 45,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -385,6 +447,8 @@
       "missing": [],
       "position": 1,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -397,6 +461,8 @@
       "missing": [],
       "position": 15,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -409,6 +475,8 @@
       "missing": [],
       "position": 1,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": true,
       "viaReferenceNodes": [
         "fr:lex:anniversaire"
@@ -423,6 +491,8 @@
       "missing": [],
       "position": 1,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -435,6 +505,8 @@
       "missing": [],
       "position": 34,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -447,6 +519,8 @@
       "missing": [],
       "position": 3,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -459,6 +533,8 @@
       "missing": [],
       "position": 1,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -471,6 +547,8 @@
       "missing": [],
       "position": 10,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -483,6 +561,8 @@
       "missing": [],
       "position": 67,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": true,
       "viaReferenceNodes": [
         "fr:lex:francais"
@@ -501,6 +581,8 @@
       "referenceOnly": [
         "fr:lex:epeler"
       ],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -513,6 +595,8 @@
       "missing": [],
       "position": 68,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -525,6 +609,8 @@
       "missing": [],
       "position": 67,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -537,6 +623,8 @@
       "missing": [],
       "position": 53,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -549,6 +637,8 @@
       "missing": [],
       "position": 53,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -561,6 +651,8 @@
       "missing": [],
       "position": 140,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -573,6 +665,8 @@
       "missing": [],
       "position": 58,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -585,6 +679,8 @@
       "missing": [],
       "position": 61,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -597,6 +693,8 @@
       "missing": [],
       "position": 102,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -607,8 +705,12 @@
       "id": "fn:talk-about-work",
       "label": "Talk about your work",
       "missing": [],
-      "position": 144,
+      "position": 110,
       "referenceOnly": [],
+      "viaCognateNodes": [
+        "fr:lex:banque"
+      ],
+      "viaCognates": true,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -621,6 +723,8 @@
       "missing": [],
       "position": 59,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -630,11 +734,13 @@
       "group": "attitudes",
       "id": "fn:express-interest",
       "label": "Show interest or indifference",
-      "missing": [
+      "missing": [],
+      "position": 15,
+      "referenceOnly": [],
+      "viaCognateNodes": [
         "fr:lex:interessant"
       ],
-      "position": null,
-      "referenceOnly": [],
+      "viaCognates": true,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -647,6 +753,8 @@
       "missing": [],
       "position": 42,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -657,8 +765,12 @@
       "id": "fn:express-reservations",
       "label": "Express doubt or objection",
       "missing": [],
-      "position": 85,
+      "position": 45,
       "referenceOnly": [],
+      "viaCognateNodes": [
+        "fr:lex:sur"
+      ],
+      "viaCognates": true,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -671,6 +783,8 @@
       "missing": [],
       "position": 107,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -683,6 +797,8 @@
       "missing": [],
       "position": 54,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -693,8 +809,12 @@
       "id": "fn:say-what-you-enjoyed",
       "label": "Say what you enjoyed or did not enjoy",
       "missing": [],
-      "position": 129,
+      "position": 61,
       "referenceOnly": [],
+      "viaCognateNodes": [
+        "fr:lex:film"
+      ],
+      "viaCognates": true,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -707,6 +827,8 @@
       "missing": [],
       "position": 73,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -719,6 +841,8 @@
       "missing": [],
       "position": 55,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -731,6 +855,8 @@
       "missing": [],
       "position": 123,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -743,6 +869,8 @@
       "missing": [],
       "position": 78,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -753,8 +881,12 @@
       "id": "fn:warn",
       "label": "Warn someone",
       "missing": [],
-      "position": 102,
+      "position": 100,
       "referenceOnly": [],
+      "viaCognateNodes": [
+        "fr:lex:attention"
+      ],
+      "viaCognates": true,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -767,6 +899,8 @@
       "missing": [],
       "position": 42,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -779,6 +913,8 @@
       "missing": [],
       "position": 43,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -791,6 +927,8 @@
       "missing": [],
       "position": 92,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -803,6 +941,8 @@
       "missing": [],
       "position": 15,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": true,
       "viaReferenceNodes": [
         "fr:lex:clair"
@@ -817,6 +957,8 @@
       "missing": [],
       "position": 127,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -829,6 +971,8 @@
       "missing": [],
       "position": 67,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -841,6 +985,8 @@
       "missing": [],
       "position": 61,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -853,6 +999,8 @@
       "missing": [],
       "position": 135,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -865,6 +1013,8 @@
       "missing": [],
       "position": 125,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -877,6 +1027,8 @@
       "missing": [],
       "position": 57,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -887,8 +1039,12 @@
       "id": "fn:justify-an-opinion",
       "label": "Give and support an opinion",
       "missing": [],
-      "position": 126,
+      "position": 107,
       "referenceOnly": [],
+      "viaCognateNodes": [
+        "fr:lex:important"
+      ],
+      "viaCognates": true,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -899,10 +1055,16 @@
       "id": "fn:review-a-film-or-book",
       "label": "Give your view of a film or book",
       "missing": [],
-      "position": 129,
+      "position": 53,
       "referenceOnly": [],
-      "viaReference": false,
-      "viaReferenceNodes": []
+      "viaCognateNodes": [
+        "fr:lex:film"
+      ],
+      "viaCognates": true,
+      "viaReference": true,
+      "viaReferenceNodes": [
+        "fr:lex:annee"
+      ]
     },
     {
       "cefr": "B1",
@@ -913,6 +1075,8 @@
       "missing": [],
       "position": 87,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -925,6 +1089,8 @@
       "missing": [],
       "position": 159,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -937,6 +1103,8 @@
       "missing": [],
       "position": 107,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -947,8 +1115,12 @@
       "id": "fn:conclude",
       "label": "Wrap up what you are saying",
       "missing": [],
-      "position": 92,
+      "position": 6,
       "referenceOnly": [],
+      "viaCognateNodes": [
+        "fr:lex:finalement"
+      ],
+      "viaCognates": true,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -961,6 +1133,8 @@
       "missing": [],
       "position": 107,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -973,6 +1147,8 @@
       "missing": [],
       "position": 92,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -985,6 +1161,8 @@
       "missing": [],
       "position": 67,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -995,8 +1173,12 @@
       "id": "fn:sum-up-a-story",
       "label": "Sum up a story and comment on it",
       "missing": [],
-      "position": 92,
+      "position": 87,
       "referenceOnly": [],
+      "viaCognateNodes": [
+        "fr:lex:finalement"
+      ],
+      "viaCognates": true,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -1009,6 +1191,8 @@
       "missing": [],
       "position": 67,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -1021,6 +1205,8 @@
       "missing": [],
       "position": 67,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     },
@@ -1033,6 +1219,8 @@
       "missing": [],
       "position": 67,
       "referenceOnly": [],
+      "viaCognateNodes": [],
+      "viaCognates": false,
       "viaReference": false,
       "viaReferenceNodes": []
     }

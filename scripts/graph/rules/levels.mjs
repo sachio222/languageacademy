@@ -3,9 +3,10 @@
 // A module's level is the highest level among the nodes it teaches (words, forms and constructions; nodeLevel), and
 // a unit's level the highest level of its modules. A level counts as reached at the first position where
 // settings.levelThreshold (0.9) of that level's core words and every one of its core constructions are available:
-// taught by a lesson or open in the Reference unit (timeline.availableAt), because a learner can use both.
+// taught by a lesson, open in the Reference unit (timeline.availableAt) or a cognate from the cognates lesson on
+// (cognateOpening), because a learner can use all three.
 import { issue } from '../issues.mjs';
-import { moduleTeaches } from '../timeline.mjs';
+import { moduleTeaches, cognateOpening } from '../timeline.mjs';
 import { LEVELS as ORDER, CORE_LEVELS, nodeLevel, formOf, cellConstruction, POLITE_CONDITIONALS, POLITE_CONSTRUCTION } from '../levels-data.mjs';
 
 const rank = (c) => ORDER.indexOf(c);
@@ -82,22 +83,33 @@ function analyse(ctx) {
   // Coverage of each core list, at every position and by the end.
   const threshold = graph.settings?.levelThreshold ?? 0.9;
   const limits = new Set((graph.readingLimits ?? []).map((r) => r.id));
-  const countIn = (at, ids, p) => ids.reduce((n, id) => n + (at.has(id) && at.get(id) <= p ? 1 : 0), 0);
-  // Reached counts what is available (taught or open in the Reference unit); onPoint also gets the taught counts.
+  const cognateAt = cognateOpening(graph, course);
+  const by = (at, id, p) => at.has(id) && at.get(id) <= p;
+  const countIn = (at, ids, p) => ids.reduce((n, id) => n + (by(at, id, p) ? 1 : 0), 0);
+  // How the words of a list are available at a position: taught by a lesson, else open in the Reference unit, else a
+  // cognate. availableWords is the sum.
+  const wordKinds = (ids, p) => {
+    const out = { words: 0, referenceWords: 0, cognateWords: 0 };
+    for (const id of ids) {
+      if (by(taughtAt, id, p)) out.words += 1;
+      else if (by(availableAt, id, p)) out.referenceWords += 1;
+      else if (by(cognateAt, id, p)) out.cognateWords += 1;
+    }
+    return { ...out, availableWords: out.words + out.referenceWords + out.cognateWords };
+  };
+  // Reached counts available words and constructions; onPoint gets the counts at each point.
   const firstReached = (words, constructions, onPoint) => {
     let reachedAt = null;
     for (const point of curve) {
-      const w = countIn(availableAt, words, point.position);
+      const kinds = wordKinds(words, point.position);
       const c = countIn(availableAt, constructions, point.position);
-      onPoint?.(point, { words: countIn(taughtAt, words, point.position), constructions: countIn(taughtAt, constructions, point.position), availableWords: w });
-      if (reachedAt === null && w >= threshold * words.length && c === constructions.length) reachedAt = point.position;
+      onPoint?.(point, { ...kinds, constructions: countIn(taughtAt, constructions, point.position) });
+      if (reachedAt === null && kinds.availableWords >= threshold * words.length && c === constructions.length) reachedAt = point.position;
     }
     return reachedAt;
   };
   const untaught = (ids) => ids.filter((id) => !taughtAt.has(id));
   const end = positions.length ? Math.max(...positions) : 0;
-  // Core words open only through the Reference unit by the end: available by then, taught by no lesson.
-  const referenceOnly = (ids) => ids.filter((id) => !taughtAt.has(id) && availableAt.has(id) && availableAt.get(id) <= end).length;
   const levels = {};
   const curve = positions.map((position) => ({ position }));
   // Lists in level order, so "through A2" adds the A1 list to the A2 one.
@@ -106,24 +118,24 @@ function analyse(ctx) {
   for (const list of lists) {
     const words = [...list.words].sort(byId);
     const constructions = [...list.constructions].sort(byId);
-    const reachedAt = firstReached(words, constructions, (point, taught) => {
+    const reachedAt = firstReached(words, constructions, (point, k) => {
       point[list.level] = {
-        words: taught.words, constructions: taught.constructions,
-        referenceWords: taught.availableWords - taught.words, availableWords: taught.availableWords,
+        words: k.words, constructions: k.constructions,
+        referenceWords: k.referenceWords, cognateWords: k.cognateWords, availableWords: k.availableWords,
       };
     });
     below.words.push(...words);
     below.constructions.push(...constructions);
     const counts = (ws, cs, reached) => {
-      const taughtWords = ws.length - untaught(ws).length;
-      const referenceWords = referenceOnly(ws);
+      const k = wordKinds(ws, end);
       return {
         coreWords: ws.length,
         coreConstructions: cs.length,
-        taughtWords,
+        taughtWords: k.words,
         taughtConstructions: cs.length - untaught(cs).length,
-        referenceWords,
-        availableWords: taughtWords + referenceWords,
+        referenceWords: k.referenceWords,
+        cognateWords: k.cognateWords,
+        availableWords: k.availableWords,
         reachedAt: reached,
       };
     };
@@ -180,12 +192,14 @@ function analyse(ctx) {
 // referenceWords, availableWords, reachedAt, untaughtWords, untaughtConstructions, cumulative } }, modules, units,
 // curve, headwordsByLevel, constructionsByLevel, taughtByLevel, taughtCumulative, readingLimits }. taughtWords and
 // taughtConstructions count what lessons teach by the end; referenceWords counts the core words taught by no lesson
-// but open in the Reference unit, and availableWords is their sum. reachedAt reads available words. untaughtWords
+// but open in the Reference unit; cognateWords the core words neither taught nor open in the Reference that are
+// cognates of the language pair (cognateOpening); availableWords is the sum of the three. reachedAt reads available words. untaughtWords
 // (taught by no lesson, Reference words included) leaves out the reading limits, which stay in coreWords and are
 // listed in readingLimits; untaughtReferenceWords names those of them open in the Reference unit. Each core list holds only the nodes new at its level; cumulative counts the level
 // together with the levels below it ({ coreWords, coreConstructions, taughtWords, taughtConstructions,
-// referenceWords, availableWords, reachedAt }), so A2's cumulative block covers the A1 and A2 lists. Each curve point
-// gives, per level, { words, constructions } taught by that position plus referenceWords and availableWords.
+// referenceWords, cognateWords, availableWords, reachedAt }), so A2's cumulative block covers the A1 and A2 lists.
+// Each curve point gives, per level, { words, constructions } taught by that position plus referenceWords,
+// cognateWords and availableWords.
 export function levelReport(ctx) {
   return analyse(ctx).report;
 }

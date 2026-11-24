@@ -2,7 +2,7 @@
   "byRule": {
     "blank-misplaced": 58,
     "claim-untaught": 27,
-    "function-unreachable": 3,
+    "function-unreachable": 2,
     "level-label": 1,
     "level-order": 31,
     "nonstandard-shape": 41,
@@ -16,11 +16,13 @@
   "cognatesAllowed": 638,
   "coverage": {
     "A1": {
-      "availableWords": 422,
+      "availableWords": 485,
+      "cognateWords": 63,
       "coreConstructions": 40,
       "coreWords": 733,
       "cumulative": {
-        "availableWords": 422,
+        "availableWords": 485,
+        "cognateWords": 63,
         "coreConstructions": 40,
         "coreWords": 733,
         "reachedAt": null,
@@ -34,11 +36,13 @@
       "taughtWords": 369
     },
     "A2": {
-      "availableWords": 96,
+      "availableWords": 147,
+      "cognateWords": 51,
       "coreConstructions": 23,
       "coreWords": 681,
       "cumulative": {
-        "availableWords": 518,
+        "availableWords": 632,
+        "cognateWords": 114,
         "coreConstructions": 63,
         "coreWords": 1414,
         "reachedAt": null,
@@ -52,11 +56,13 @@
       "taughtWords": 86
     },
     "B1": {
-      "availableWords": 29,
+      "availableWords": 67,
+      "cognateWords": 38,
       "coreConstructions": 17,
       "coreWords": 841,
       "cumulative": {
-        "availableWords": 547,
+        "availableWords": 699,
+        "cognateWords": 152,
         "coreConstructions": 80,
         "coreWords": 2255,
         "reachedAt": null,
@@ -77,7 +83,7 @@
       "total": 42
     },
     "A2": {
-      "possible": 22,
+      "possible": 23,
       "total": 23
     },
     "B1": {
@@ -87,5 +93,5 @@
   },
   "modulesWithErrors": 152,
   "native": "en",
-  "warnings": 705
+  "warnings": 704
 }

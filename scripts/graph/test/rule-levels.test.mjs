@@ -94,10 +94,10 @@ test('coverage counts core words and constructions taught by the end, and the po
   const { cumulative, ...a1 } = r.levels.A1;
   assert.deepEqual(a1, {
     coreWords: 4, coreConstructions: 1, taughtWords: 3, taughtConstructions: 1, reachedAt: 2,
-    referenceWords: 0, availableWords: 3, untaughtWords: ['fr:lex:parler'], untaughtReferenceWords: [], untaughtConstructions: [],
+    referenceWords: 0, cognateWords: 0, availableWords: 3, untaughtWords: ['fr:lex:parler'], untaughtReferenceWords: [], untaughtConstructions: [],
   });
   assert.deepEqual(cumulative, {
-    coreWords: 4, coreConstructions: 1, taughtWords: 3, taughtConstructions: 1, reachedAt: 2, referenceWords: 0, availableWords: 3,
+    coreWords: 4, coreConstructions: 1, taughtWords: 3, taughtConstructions: 1, reachedAt: 2, referenceWords: 0, cognateWords: 0, availableWords: 3,
   });
   assert.equal(r.levels.A2.reachedAt, 4);
   assert.equal(r.levels.A2.taughtWords, 2);
@@ -114,10 +114,10 @@ test('cumulative coverage counts each level together with the levels below it', 
   const r = levelReport(ctxOf());
   // Through A2: A1 and A2 lists, 6 words (5 taught, 4 of them by position 4) and 2 constructions.
   assert.deepEqual(r.levels.A2.cumulative, {
-    coreWords: 6, coreConstructions: 2, taughtWords: 5, taughtConstructions: 2, reachedAt: 4, referenceWords: 0, availableWords: 5,
+    coreWords: 6, coreConstructions: 2, taughtWords: 5, taughtConstructions: 2, reachedAt: 4, referenceWords: 0, cognateWords: 0, availableWords: 5,
   });
   assert.deepEqual(r.levels.B1.cumulative, {
-    coreWords: 9, coreConstructions: 2, taughtWords: 8, taughtConstructions: 2, reachedAt: 4, referenceWords: 0, availableWords: 8,
+    coreWords: 9, coreConstructions: 2, taughtWords: 8, taughtConstructions: 2, reachedAt: 4, referenceWords: 0, cognateWords: 0, availableWords: 8,
   });
   // Per-level fields are unchanged by the cumulative block.
   assert.equal(r.levels.A2.coreWords, 2);
@@ -140,7 +140,7 @@ test('a level needs every core construction as well as the share of core words',
 
 test('the curve counts core words and constructions taught at each position', () => {
   const r = levelReport(ctxOf());
-  const taught = (words, constructions) => ({ words, constructions, referenceWords: 0, availableWords: words });
+  const taught = (words, constructions) => ({ words, constructions, referenceWords: 0, cognateWords: 0, availableWords: words });
   assert.deepEqual(r.curve.map((c) => [c.position, c.A1, c.A2, c.B1]), [
     [1, taught(2, 1), taught(0, 0), taught(0, 0)],
     [2, taught(3, 1), taught(0, 0), taught(1, 0)],
@@ -311,9 +311,9 @@ test('the fix list shows level coverage, where each level is reached and the out
   assert.match(section, /Each core list holds only the words and grammar patterns new at its level/);
   assert.match(section, /Core words of each level alone taught by the end of the course: A1 75%, A2 100%, B1 100%\./);
   assert.match(section, /Counting each level together with the levels below it: through A1 75%, through A2 83%, through B1 89%\./);
-  assert.match(section, /^\| Level \| Core words taught \| Open in the Reference unit \| Core words available \| Core constructions taught \| Reached at \|$/m);
-  assert.match(section, /\| A1 \| 75% \(3 of 4\) \| 0 \| 75% \(3 of 4\) \| 1 of 1 \| 2\. Food \|/);
-  assert.match(section, /\| Through A2 \| 83% \(5 of 6\) \| 0 \| 83% \(5 of 6\) \| 2 of 2 \| 4\. Going places \|/);
+  assert.match(section, /^\| Level \| Core words taught \| Open in the Reference unit \| Cognates \| Core words available \| Core constructions taught \| Reached at \|$/m);
+  assert.match(section, /\| A1 \| 75% \(3 of 4\) \| 0 \| 0 \| 75% \(3 of 4\) \| 1 of 1 \| 2\. Food \|/);
+  assert.match(section, /\| Through A2 \| 83% \(5 of 6\) \| 0 \| 0 \| 83% \(5 of 6\) \| 2 of 2 \| 4\. Going places \|/);
   assert.match(section, /percentages are rounded to the nearest whole number/i);
   assert.match(section, /fr:lex:travailler \(B1\)/);
   assert.match(section, /^\| Unit \| Positions \| Level label \| Highest level taught \| Taught at that level \|$/m);
@@ -389,7 +389,7 @@ test('Section 7 names the functions that rely on the Reference unit, which is al
   const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
   assert.match(section, /Some functions rely on words that no lesson teaches by then but the Reference unit lists \(vous\)\. The Reference unit is always open/);
   assert.match(section, /^- 2\. Food: Ask a yes or no question \(relies on the Reference unit\)$/m);
-  assert.match(section, /is taught or open in the Reference unit\./);
+  assert.match(section, /is taught, open in the Reference unit or a cognate\./);
   assert.doesNotMatch(section, /only the Reference unit lists|never become possible/);
   assert.doesNotMatch(section, /fr:lex:vous/);
 });
@@ -417,8 +417,8 @@ test('core words the Reference unit lists count as available, apart from what le
   assert.deepEqual(pick(r.levels.A2.cumulative), [5, 1, 6, 4]);
   assert.deepEqual(pick(r.levels.B1.cumulative), [8, 1, 9, 4]);
   // At position 1 hier is open only through the Reference.
-  assert.deepEqual(r.curve[0].A2, { words: 0, constructions: 0, referenceWords: 1, availableWords: 1 });
-  assert.deepEqual(r.curve[3].A2, { words: 2, constructions: 1, referenceWords: 0, availableWords: 2 });
+  assert.deepEqual(r.curve[0].A2, { words: 0, constructions: 0, referenceWords: 1, cognateWords: 0, availableWords: 1 });
+  assert.deepEqual(r.curve[3].A2, { words: 2, constructions: 1, referenceWords: 0, cognateWords: 0, availableWords: 2 });
   const stats = reportStats(r, functionReport(ctx));
   assert.equal(stats.coverage.A1.referenceWords, 1);
   assert.equal(stats.coverage.A1.availableWords, 4);
@@ -427,7 +427,7 @@ test('core words the Reference unit lists count as available, apart from what le
   assert.ok(lines.includes('A1: 75% of A1 core words (3 of 4), 1 more open in the Reference unit, 1 of 1 A1 core constructions, reached at position 1'), lines.join('\n'));
   const md = renderFixList([], ctx.course, ctx.graph.courseMap, { levels: r, functions: functionReport(ctx), graph: ctx.graph });
   const section = md.slice(md.indexOf('# 6. Levels'), md.indexOf('# 7. What a learner can do'));
-  assert.match(section, /\| A1 \| 75% \(3 of 4\) \| 1 \| 100% \(4 of 4\) \| 1 of 1 \| 1\. Hello \|/);
+  assert.match(section, /\| A1 \| 75% \(3 of 4\) \| 1 \| 0 \| 100% \(4 of 4\) \| 1 of 1 \| 1\. Hello \|/);
   assert.match(section, /^- A1, 1 word: parler \(open in the Reference unit\)$/m);
 });
 
@@ -504,4 +504,36 @@ test('with the Reference unit open, Section 7 says a missing word is one the Ref
   const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
   assert.match(section, /Some functions need words that no lesson teaches and that the Reference unit lists without opening them \(vous\)\. It opens only the nouns, adjectives, numbers and letters on its lookup pages, so those functions never become possible\./);
   assert.doesNotMatch(section, /teaches nothing/);
+});
+
+// Cognates in the level counts. The fixture pair lists café and parc as cognates, with m3 as the cognates lesson.
+function cognateCtx(allowIn) {
+  const courseMap = { ...COURSE_MAP, m2: { teachesWords: ['fr:lex:manger'] } };
+  const graph = levelGraph({ courseMap, settings: { ...base.settings, levelThreshold: 0.75, cognates: { allowIn } } });
+  return makeCtx({ graph, course: COURSE });
+}
+
+test('with cognates allowed in all French, core cognates no lesson teaches count as available from the cognates lesson on', () => {
+  const r = levelReport(cognateCtx('all'));
+  const pick = (l) => [l.taughtWords, l.referenceWords, l.cognateWords, l.availableWords, l.reachedAt];
+  // A1: je and bonjour taught at 1; café is a cognate from position 3, so 3 of 4 reach the 0.75 threshold there.
+  assert.deepEqual(pick(r.levels.A1), [2, 0, 1, 3, 3]);
+  assert.deepEqual(pick(r.levels.A2.cumulative), [4, 0, 1, 5, 4]);
+  assert.deepEqual(r.curve[1].A1, { words: 2, constructions: 1, referenceWords: 0, cognateWords: 0, availableWords: 2 });
+  assert.deepEqual(r.curve[2].A1, { words: 2, constructions: 1, referenceWords: 0, cognateWords: 1, availableWords: 3 });
+  // café stays an untaught word: cognates count as available, not as taught.
+  assert.deepEqual(r.levels.A1.untaughtWords, ['fr:lex:cafe', 'fr:lex:parler']);
+  const stats = reportStats(r, functionReport(cognateCtx('all')));
+  assert.equal(stats.coverage.A1.cognateWords, 1);
+  const lines = checkSummaryLines(summarize([], stats));
+  assert.ok(lines.includes('A1: 50% of A1 core words (2 of 4), 1 more as cognates, 1 of 1 A1 core constructions, reached at position 3'), lines.join('\n'));
+  const md = renderFixList([], COURSE, {}, { levels: r, functions: functionReport(cognateCtx('all')) });
+  const section = md.slice(md.indexOf('# 6. Levels'), md.indexOf('# 7. What a learner can do'));
+  assert.match(section, /\| A1 \| 50% \(2 of 4\) \| 0 \| 1 \| 75% \(3 of 4\) \| 1 of 1 \| 3\. Practice \|/);
+  assert.match(section, /Core words available are the words lessons teach, plus the core words no lesson teaches that the Reference unit lists or that are cognates from the cognates lesson on\./);
+});
+
+test('with cognates allowed only in shown French, cognates do not count as available', () => {
+  const r = levelReport(cognateCtx('shown'));
+  assert.deepEqual([r.levels.A1.cognateWords, r.levels.A1.availableWords, r.levels.A1.reachedAt], [0, 2, null]);
 });

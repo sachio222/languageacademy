@@ -93,3 +93,16 @@ export function buildTimeline(graph, course, opts = {}) {
     taughtAt, availableAt, openByReference, openFrom, isTaught, isAvailable, isReadingAvailable, isTokenAvailable, issues,
   };
 }
+
+// Where each cognate of the active language pair (graph.pair) counts as known: Map<headwordId, position of the
+// cognates lesson>. Empty unless settings.cognates.allowIn is 'all' and the pair's cognates lesson is in the course,
+// because only then does a cognate count as known in French the learner types as well as reads. A false friend never
+// counts. The level and function reports read this; taught-before applies the same allowance token by token.
+export function cognateOpening(graph, course) {
+  const pair = graph.pair;
+  if (graph.settings?.cognates?.allowIn !== 'all' || !pair?.lesson) return new Map();
+  const at = course.find((m) => m.moduleKey === pair.lesson)?.position;
+  if (at === undefined) return new Map();
+  const falseFriends = new Set((pair.falseFriends ?? []).map((w) => w.id));
+  return new Map((pair.words ?? []).filter((w) => !falseFriends.has(w.id)).map((w) => [w.id, at]));
+}
