@@ -170,5 +170,56 @@
     "dictionaryId": "se-laver-fr",
     "cefr": null,
     "cefrSource": null
+  },
+  {
+    "id": "fr:lex:vouloir",
+    "lemma": "vouloir",
+    "pos": "verb",
+    "paradigms": [],
+    "senses": [
+      "sense:vouloir"
+    ],
+    "dictionaryId": "vouloir-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:manger",
+    "lemma": "manger",
+    "pos": "verb",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er"
+    ],
+    "senses": [
+      "sense:manger"
+    ],
+    "dictionaryId": "manger-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:ne",
+    "lemma": "ne",
+    "pos": "adverb",
+    "paradigms": [],
+    "senses": [
+      "sense:ne"
+    ],
+    "dictionaryId": "ne-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:pas",
+    "lemma": "pas",
+    "pos": "adverb",
+    "paradigms": [],
+    "senses": [
+      "sense:pas"
+    ],
+    "dictionaryId": "pas-fr",
+    "cefr": null,
+    "cefrSource": null
   }
 ]

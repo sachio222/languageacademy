@@ -35,5 +35,17 @@
         "add": "ent"
       }
     ]
+  },
+  {
+    "id": "fr:cx:ptcp.er",
+    "label": "Past participle of -er verbs",
+    "needs": [],
+    "rules": [
+      {
+        "cell": "ptcp",
+        "strip": "er",
+        "add": "é"
+      }
+    ]
   }
 ]
