@@ -4160,6 +4160,14 @@
         "surface": "(?!(demande|est)$).+"
       },
       {
+        "optional": true,
+        "pos": "adjective"
+      },
+      {
+        "optional": true,
+        "pos": "adjective"
+      },
+      {
         "headword": "fr:lex:ou.adverb"
       },
       {
@@ -4180,7 +4188,8 @@
       "match": [
         "La ville où j'habite est belle.",
         "C'est l'endroit où je vais.",
-        "Le jour où il est venu, il pleuvait."
+        "Le jour où il est venu, il pleuvait.",
+        "C'est ce quartier célèbre où les artistes ont vécu."
       ],
       "noMatch": [
         "Où vas-tu ?",
@@ -4189,90 +4198,153 @@
       ]
     },
     "id": "fr:cx:relative.ou",
-    "label": "Relative pronoun où after a noun of place or time (la ville où j'habite, le jour où il est venu); in lenient text où and ou (or) fold together",
+    "label": "Relative pronoun où after a noun of place or time, optionally followed by up to two adjectives (la ville où j'habite, le jour où il est venu, ce quartier célèbre où les artistes ont vécu); in lenient text où and ou (or) fold together",
     "needs": []
   },
   {
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "pos": "noun",
-        "surface": "(?!(parce|fait|temps|moment|peur|preuve|surprise|idee|impression|espoir|chance|dommage)$).+"
-      },
-      {
-        "surface": "que|qu'"
-      },
-      {
-        "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
-      }
+      [
+        {
+          "pos": "noun",
+          "surface": "(?!(est|parce|fait|temps|moment|peur|preuve|surprise|idee|impression|espoir|chance|dommage)$).+"
+        },
+        {
+          "optional": true,
+          "pos": "adjective"
+        },
+        {
+          "optional": true,
+          "pos": "adjective"
+        },
+        {
+          "surface": "que|qu'"
+        },
+        {
+          "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
+        }
+      ],
+      [
+        {
+          "surface": "celui|celle|ceux|celles|moi|toi|lui|eux"
+        },
+        {
+          "surface": "que|qu'"
+        },
+        {
+          "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "Le livre que je cherche est ici.",
         "La chose qu'il veut est chère.",
-        "C'est la ville que nous aimons."
+        "C'est la ville que nous aimons.",
+        "Ce sont celles qu'on aime.",
+        "Le grand livre rouge que je cherche est ici.",
+        "Les meilleures journées sont celles qu'on ne pense pas avoir."
       ],
       "noMatch": [
         "Je pense que tu viens.",
         "Il est plus grand que moi.",
         "Il faut que tu partes.",
-        "Qu'est-ce que tu veux ?"
+        "Qu'est-ce que tu veux ?",
+        "J'ai peur qu'il parte.",
+        "Il est possible qu'il vienne."
       ]
     },
     "id": "fr:cx:relative.que",
-    "label": "Relative pronoun que (qu') as the object of a relative clause after a noun (le livre que je cherche, la chose qu'il veut); the subject after que must be a pronoun, so a noun subject (le livre que Paul cherche) is not counted; nouns that take a que clause (peur, idée, preuve, fait …) are left out, while a reported clause after a noun (il dit à sa mère que tu viens) still matches",
+    "label": "Relative pronoun que (qu') as the object of a relative clause after a noun (optionally followed by up to two adjectives), celui / celle / ceux / celles or a stressed pronoun (le livre que je cherche, le grand livre rouge que je cherche, celles qu'on aime, c'est toi que je vois); the subject after que must be a pronoun, so a noun subject (le livre que Paul cherche) is not counted; nouns that take a que clause (peur, idée, preuve, fait …) are left out, while a reported clause after a noun (il dit à sa mère que tu viens) still matches",
     "needs": []
   },
   {
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "any": [
-          {
-            "pos": "noun"
-          },
-          {
-            "surface": "celui|celle|ceux|celles|quelqu'un|moi|toi|lui|elle|nous|vous|eux|elles"
-          }
-        ],
-        "surface": "(?!-?ce$).+"
-      },
-      {
-        "surface": "qui"
-      },
-      {
-        "optional": true,
-        "surface": "ne|n'"
-      },
-      {
-        "optional": true,
-        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
-      },
-      {
-        "optional": true,
-        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
-      },
-      {
-        "pos": "verb"
-      }
+      [
+        {
+          "pos": "noun",
+          "surface": "(?!(-?ce|est)$).+"
+        },
+        {
+          "optional": true,
+          "pos": "adjective"
+        },
+        {
+          "optional": true,
+          "pos": "adjective"
+        },
+        {
+          "surface": "qui"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "pos": "verb"
+        }
+      ],
+      [
+        {
+          "any": [
+            {
+              "surface": "celui|celle|ceux|celles|quelqu'un|moi|toi|lui|elle|nous|vous|eux|elles"
+            },
+            {
+              "surface": "marie|paul|pierre|sophie|marc|thomas|vincent|van|gogh|gauguin|jules|verne|amelie|socrate|claude|monet|auguste|renoir|paris|france|europe|normandie|rouen|caen|honfleur|bayeux|mont-saint-michel|montmartre|eiffel|luxembourg|sorbonne|notre-dame|louvre|champs-elysees|saint-germain|germain|odeon|versailles|arles|lyon|nice|bordeaux|marseille|cannes|seine|mediterranee|flore|procope|laduree|amazon|monte-cristo"
+            }
+          ]
+        },
+        {
+          "surface": "qui"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "pos": "verb"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "La personne qui parle est mon amie.",
         "C'est toi qui pars.",
-        "J'ai un ami qui habite à Paris."
+        "J'ai un ami qui habite à Paris.",
+        "Le livre rouge qui est ici est à moi.",
+        "Nous allons au Café de Flore qui est en face du jardin.",
+        "Le restaurant Le Procope qui est derrière le cinéma est vieux."
       ],
       "noMatch": [
         "Qui parle ?",
         "Qu'est-ce qui brille ?",
         "Qui est-ce qui vient ?",
-        "Avec qui ?"
+        "Avec qui ?",
+        "Qui est-ce que tu vois ?"
       ]
     },
     "id": "fr:cx:relative.qui",
-    "label": "Relative pronoun qui as the subject of a relative clause after a noun or pronoun (la personne qui parle, c'est toi qui pars); after a name the detector sees no noun, so c'est Marie qui parle is not counted",
+    "label": "Relative pronoun qui as the subject of a relative clause after a noun (optionally followed by up to two adjectives), a pronoun or a name (la personne qui parle, le livre rouge qui est ici, c'est toi qui pars, le Café de Flore qui est en face); a reading passage is one text, so a name ending one sentence before a question starting with qui also matches",
     "needs": []
   },
   {
