@@ -96,7 +96,7 @@ for (const it of byPos.get(1).items) {
 // general construction. Spans are the exact token ranges each detector matches.
 const exactSpans = (text, c, strict) => {
   const { tokens, readings } = analyze(text, strict);
-  const hit = (a, b) => matchPattern(tokens.slice(a, b), readings.slice(a, b), c.detect);
+  const hit = (a, b) => matchPattern(tokens.slice(a, b), readings.slice(a, b), c.detect, graph.names);
   const out = [];
   for (let a = 0; a < tokens.length; a++) {
     for (let b = a + 1; b <= tokens.length; b++) {

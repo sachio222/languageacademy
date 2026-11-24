@@ -4382,7 +4382,7 @@
               "surface": "celui|celle|ceux|celles|quelqu'un|moi|toi|lui|elle|nous|vous|eux|elles"
             },
             {
-              "surface": "marie|paul|pierre|sophie|marc|thomas|vincent|van|gogh|gauguin|jules|verne|amelie|socrate|claude|monet|auguste|renoir|paris|france|europe|normandie|rouen|caen|honfleur|bayeux|mont-saint-michel|montmartre|eiffel|luxembourg|sorbonne|notre-dame|louvre|champs-elysees|saint-germain|germain|odeon|versailles|arles|lyon|nice|bordeaux|marseille|cannes|seine|mediterranee|flore|procope|laduree|amazon|monte-cristo"
+              "name": true
             }
           ]
         },

@@ -14,7 +14,7 @@ const index = buildFormIndex(graph);
 function matches(detect, text) {
   const tokens = tokenize(text, { isWord: (f) => index.has(f) });
   const readings = tokens.map((t) => lookupToken(index, t));
-  return matchPattern(tokens, readings, detect);
+  return matchPattern(tokens, readings, detect, graph.names);
 }
 
 test('construction examples', async (t) => {

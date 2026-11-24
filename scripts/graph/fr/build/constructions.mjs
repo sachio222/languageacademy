@@ -46,8 +46,6 @@ const REL_PRONOUN = "celui|celle|ceux|celles|quelqu'un|moi|toi|lui|elle|nous|vou
 const QUE_CLAUSE_NOUNS = 'est|parce|fait|temps|moment|peur|preuve|surprise|idee|impression|espoir|chance|dommage';
 // an adjective after the antecedent noun; most words are both noun and adjective in the graph, so the step only needs an adjective reading
 const ADJ_STEP = { pos: 'adjective' };
-// a token that is a name in names.json (names have no readings, so the step matches the folded surface)
-const NAME_STEP = { surface: [...graph.names].map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') || '(?!)' };
 const ADJ_PTCP = 'fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete';
 const PASSIVE_PTCP = { cell: 'ptcp*', surface: '(?!(' + ETRE_VERB_PTCP.slice(1, ETRE_VERB_PTCP.indexOf(')')) + '|' + ADJ_PTCP + ')(e|s|es)?$).+' };
 const AUX_TAIL = [opt(CL_SUBJ), opt(ADV), opt(ADV)];
@@ -593,7 +591,7 @@ const C = [
   node('relative.qui', 'Relative pronoun qui as the subject of a relative clause after a noun (optionally followed by up to two adjectives), a pronoun or a name (la personne qui parle, le livre rouge qui est ici, c\'est toi qui pars, le Café de Flore qui est en face); a reading passage is one text, so a name ending one sentence before a question starting with qui also matches', [],
     [
       [{ pos: 'noun', surface: '(?!(-?ce|est)$).+' }, opt(ADJ_STEP), opt(ADJ_STEP), S('qui'), opt(NE), opt(OBJ), opt(OBJ), VERB],
-      [{ any: [S(REL_PRONOUN), NAME_STEP] }, S('qui'), opt(NE), opt(OBJ), opt(OBJ), VERB],
+      [{ any: [S(REL_PRONOUN), { name: true }] }, S('qui'), opt(NE), opt(OBJ), opt(OBJ), VERB],
     ],
     ['La personne qui parle est mon amie.', 'C\'est toi qui pars.', 'J\'ai un ami qui habite à Paris.', 'Le livre rouge qui est ici est à moi.',
       'Nous allons au Café de Flore qui est en face du jardin.', 'Le restaurant Le Procope qui est derrière le cinéma est vieux.'],

@@ -27,7 +27,7 @@ export async function load() {
   const detects = (text, c, strict = true) => {
     if (!c.detect) return false;
     const { tokens, readings } = analyze(text, strict);
-    return matchPattern(tokens, readings, c.detect);
+    return matchPattern(tokens, readings, c.detect, graph.names);
   };
   return { graph, index, course, raw, analyze, detects, isWord };
 }

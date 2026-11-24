@@ -145,3 +145,22 @@ test('detectConstructions accepts list and single-pattern detects', () => {
   const { tokens, readings } = prep('tu parles');
   assert.deepEqual(detectConstructions(tokens, readings, cs), ['a']);
 });
+
+test('a name step matches a token whose folded surface is in the names list', () => {
+  const p = [{ name: true }, { surface: 'qui' }];
+  const { tokens, readings } = prep('Le café Flore qui est en face');
+  assert.equal(matchPattern(tokens, readings, p, new Set(['flore'])), true);
+  assert.equal(matchPattern(tokens, readings, p, new Set(['marie'])), false);
+  // no names list: a name step never matches
+  assert.equal(matchPattern(tokens, readings, p), false);
+  // capitalization alone does not make a name
+  const other = prep('Le Café qui est en face');
+  assert.equal(matchPattern(other.tokens, other.readings, p, new Set(['flore'])), false);
+});
+
+test('detectConstructions passes the names list to the detectors', () => {
+  const cx = [{ id: 'fr:cx:x', detect: [{ name: true }, { surface: 'qui' }] }];
+  const { tokens, readings } = prep('Marie qui parle');
+  assert.deepEqual(detectConstructions(tokens, readings, cx, graph.names), ['fr:cx:x']);
+  assert.deepEqual(detectConstructions(tokens, readings, cx), []);
+});

@@ -21,7 +21,7 @@ export function analyzeItems(ctx) {
         const strict = strictTexts.has(text);
         const tokens = tokenize(strict ? text : restoreElisions(text), { isWord });
         const readings = tokens.map((t) => (strict ? lookupTokenStrict(index, t) : lookupToken(index, t)));
-        const constructions = detectConstructions(tokens, readings, graph.constructions ?? []);
+        const constructions = detectConstructions(tokens, readings, graph.constructions ?? [], graph.names);
         return { text, strict, tokens, readings, constructions };
       }));
     }
