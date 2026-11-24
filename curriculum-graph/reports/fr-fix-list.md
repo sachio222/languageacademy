@@ -1,6 +1,6 @@
 # French course fix list
 
-2718 errors, 793 warnings, 146 modules with errors.
+2718 errors, 693 warnings, 146 modules with errors.
 
 ## How to read this
 
@@ -1405,173 +1405,113 @@ Section 8 lists words missing from the course word list. Most are typos, English
 
 # 4. Taught twice
 
-- fr:lex:il is taught at positions 1, 2, 3, 4, 17, 18, 19, 29, 30, 32, 36, 40, 41, 42, 43, 44, 45, 47, 55, 56, 57, 58, 59, 61, 62, 66, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 93, 94, 95, 96, 97, 98, 111, 114, 115, 117, 121, 122, 123, 124, 125, 126, 129, 133, 134, 135, 136, 140, 141, 142, 143, 144, 145, 151, 152, 154, 155, 157, 158, 160; merge into Famous Words & Greetings
-- fr:lex:vous is taught at positions 1, 2, 3, 4, 17, 18, 19, 22, 29, 30, 32, 33, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 61, 62, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 93, 94, 95, 99, 114, 140, 141, 142, 143, 144, 145, 146, 151, 152; merge into Famous Words & Greetings
-- fr:lex:vous.pronoun is taught at positions 1, 2, 3, 4, 17, 18, 19, 22, 29, 30, 32, 33, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 61, 62, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 93, 94, 95, 99, 114, 140, 141, 142, 143, 144, 145, 146, 151, 152; merge into Famous Words & Greetings
-- fr:lex:je is taught at positions 2, 3, 4, 15, 16, 17, 18, 19, 29, 30, 32, 36, 40, 41, 42, 43, 44, 45, 47, 55, 56, 57, 58, 59, 61, 62, 66, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 87, 88, 93, 94, 95, 96, 97, 98, 110, 111, 112, 113, 115, 117, 121, 123, 124, 125, 126, 127, 128, 129, 132, 135, 140, 141, 142, 143, 144, 145, 151, 152, 156, 158, 160; merge into Core Pronouns - The Building Blocks
-- fr:lex:tu is taught at positions 2, 3, 4, 15, 16, 17, 18, 19, 20, 29, 30, 32, 36, 41, 42, 43, 44, 45, 47, 55, 56, 57, 58, 59, 61, 62, 66, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 87, 93, 94, 95, 96, 97, 98, 111, 121, 122, 123, 124, 125, 127, 133, 134, 135, 140, 141, 142, 143, 144, 145, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160; merge into Core Pronouns - The Building Blocks
-- fr:lex:elle is taught at positions 2, 3, 4, 16, 17, 18, 19, 22, 29, 30, 32, 36, 41, 42, 43, 44, 47, 55, 56, 57, 58, 59, 61, 62, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 94, 95, 98, 114, 121, 122, 123, 124, 126, 129, 133, 134, 135, 140, 141, 142, 143, 144, 145, 151, 157; merge into Core Pronouns - The Building Blocks
-- fr:lex:elle.pronoun is taught at positions 2, 3, 4, 16, 17, 18, 19, 22, 29, 30, 32, 36, 41, 42, 43, 44, 47, 55, 56, 57, 58, 59, 61, 62, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 94, 95, 98, 114, 121, 122, 123, 124, 126, 129, 133, 134, 135, 140, 141, 142, 143, 144, 145, 151, 157; merge into Core Pronouns - The Building Blocks
-- fr:lex:nous is taught at positions 2, 3, 4, 16, 17, 18, 19, 22, 29, 30, 32, 33, 41, 42, 43, 44, 47, 55, 56, 57, 58, 59, 61, 62, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 93, 94, 95, 98, 99, 111, 114, 115, 129, 141, 142, 143, 144, 145, 151, 152; merge into Core Pronouns - The Building Blocks
-- fr:lex:nous.pronoun is taught at positions 2, 3, 4, 16, 17, 18, 19, 22, 29, 30, 32, 33, 41, 42, 43, 44, 47, 55, 56, 57, 58, 59, 61, 62, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 93, 94, 95, 98, 99, 111, 114, 115, 129, 141, 142, 143, 144, 145, 151, 152; merge into Core Pronouns - The Building Blocks
-- fr:lex:ils is taught at positions 2, 3, 4, 16, 17, 18, 19, 29, 30, 32, 36, 41, 42, 43, 44, 47, 55, 56, 57, 58, 59, 61, 62, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 94, 98, 99, 111, 114, 141, 142, 143, 144, 145, 151, 152, 157; merge into Core Pronouns - The Building Blocks
-- fr:lex:elles is taught at positions 2, 3, 4, 17, 18, 19, 22, 29, 30, 32, 41, 42, 43, 44, 55, 56, 57, 58, 59, 61, 62, 67, 68, 69, 70, 71, 72, 73, 79, 80, 81, 82, 83, 84, 85, 94, 98, 114, 141, 142, 143, 144, 145, 151; merge into Core Pronouns - The Building Blocks
-- fr:lex:un is taught at positions 5, 7, 49, 60, 68, 70, 72, 74, 132, 144, 150, 155, 157; merge into Articles - The, A, An
 - fr:cx:noun.gender is taught at positions 5, 7; merge into Articles - The, A, An
-- fr:lex:le is taught at positions 5, 8, 16, 28, 33, 35, 36, 40, 45, 47, 49, 53, 54, 60, 68, 69, 70, 71, 74, 78, 79, 80, 86, 88, 103, 107, 108, 109, 111, 112, 115, 116, 127, 132, 140, 141, 144, 145, 146, 150, 151, 152, 153, 154, 155, 157, 158, 159, 160; merge into Articles - The, A, An
+- fr:lex:le is taught at positions 5, 8, 33, 35; merge into Articles - The, A, An
 - fr:cx:article.indefinite is taught at positions 5, 8; merge into Articles - The, A, An
 - fr:cx:article.definite is taught at positions 5, 8; merge into Articles - The, A, An
-- fr:lex:livre is taught at positions 7, 8, 16, 69; merge into Basic Nouns - People & Things
-- fr:lex:chat is taught at positions 7, 8, 16, 150; merge into Basic Nouns - People & Things
-- fr:lex:chien is taught at positions 7, 8, 16; merge into Basic Nouns - People & Things
+- fr:lex:livre is taught at positions 7, 8; merge into Basic Nouns - People & Things
+- fr:lex:chat is taught at positions 7, 8, 150; merge into Basic Nouns - People & Things
+- fr:lex:chien is taught at positions 7, 8; merge into Basic Nouns - People & Things
 - fr:lex:ami is taught at positions 7, 8; merge into Basic Nouns - People & Things
-- fr:lex:enfant is taught at positions 7, 8, 16; merge into Basic Nouns - People & Things
-- fr:lex:chose is taught at positions 7, 8, 49, 141; merge into Basic Nouns - People & Things
-- fr:lex:etre is taught at positions 3, 15, 16, 20, 36, 40, 45, 47, 54, 58, 66, 67, 70, 78, 84, 87, 98, 102, 111, 113, 114, 115, 117, 121, 123, 124, 125, 126, 127, 128, 129, 133, 134, 135, 136, 140, 143, 144, 146, 152, 153, 154, 155, 156, 157, 158, 159, 160; merge into Essential Verb - être (to be)
-- fr:lex:avoir is taught at positions 4, 15, 16, 36, 45, 59, 61, 62, 73, 78, 102, 110, 111, 112, 115, 117, 121, 125, 126, 127, 128, 129, 135, 140, 143, 152, 157, 159; merge into Essential Verb - avoir (to have)
-- fr:lex:ca is taught at positions 14, 15, 20, 40, 87, 125, 128, 143, 144, 154, 155, 156, 157, 158, 159, 160; merge into Demonstratives - It, That, This
-- fr:lex:ce.pronoun is taught at positions 14, 15, 16, 20, 36, 40, 54, 67, 70, 84, 87, 116, 117, 126, 129, 143, 144, 146, 152, 153, 154, 155, 156, 158, 159, 160; merge into Demonstratives - It, That, This
-- fr:lex:maison is taught at positions 7, 16, 132; merge into Basic Nouns - People & Things
-- fr:lex:homme is taught at positions 7, 16; merge into Basic Nouns - People & Things
-- fr:lex:ce is taught at positions 14, 16, 20, 36, 70, 84, 116, 126, 129, 143, 144, 152, 153, 154, 155, 156, 159, 160; merge into Demonstratives - It, That, This
+- fr:lex:enfant is taught at positions 7, 8; merge into Basic Nouns - People & Things
+- fr:lex:chose is taught at positions 7, 8; merge into Basic Nouns - People & Things
+- fr:lex:etre is taught at positions 3, 15, 16, 20, 36, 40, 54, 58, 66, 67, 70, 78, 84, 87, 98, 102, 113, 114, 115, 117, 121, 125, 127, 128, 129, 133, 134, 136, 140, 143, 144, 146, 152, 153, 156, 159, 160; merge into Essential Verb - être (to be)
+- fr:lex:avoir is taught at positions 4, 15, 16, 36, 45, 59, 61, 62, 73, 78, 102, 110, 111, 112, 117, 121, 125, 127, 128, 129, 140, 143, 152, 159; merge into Essential Verb - avoir (to have)
+- fr:lex:ca is taught at positions 14, 15; merge into Demonstratives - It, That, This
 - fr:cx:demonstrative.adjective is taught at positions 14, 16; merge into Demonstratives - It, That, This
 - fr:cx:frame.modal-infinitive is taught at positions 17, 18, 29, 42, 112; merge into Essential Verb - vouloir (to want)
-- fr:lex:aller is taught at positions 15, 20, 30, 36, 45, 47, 56, 66, 78, 86, 88, 102, 113, 114, 115, 121, 123, 124, 146, 157; merge into ça - Survival Phrases
+- fr:lex:aller is taught at positions 15, 20, 30, 36, 47, 56, 66, 78, 86, 88, 102, 115, 121, 146; merge into ça - Survival Phrases
 - fr:cx:chunk.ca-va is taught at positions 15, 20; merge into ça - Survival Phrases
-- fr:lex:vouloir is taught at positions 17, 20, 36, 40, 45, 47, 56, 72, 112, 115, 124, 159, 160; merge into Essential Verb - vouloir (to want)
-- fr:lex:pouvoir is taught at positions 18, 20, 47, 55, 66, 78, 112, 122, 125, 128, 134, 136, 158; merge into Essential Verb - pouvoir (can)
+- fr:lex:elle is taught at positions 2, 22; fr:lex:elle.pronoun at positions 2, 22; merge into Core Pronouns - The Building Blocks
+- fr:lex:nous is taught at positions 2, 22, 33, 93; fr:lex:nous.pronoun at positions 2, 22, 33, 93; merge into Core Pronouns - The Building Blocks
+- fr:lex:vous is taught at positions 2, 22, 33, 93; fr:lex:vous.pronoun at positions 2, 22, 33, 93; merge into Core Pronouns - The Building Blocks
+- fr:lex:elles is taught at positions 2, 22; merge into Core Pronouns - The Building Blocks
 - fr:lex:bon is taught at positions 1, 24, 40, 87; merge into Famous Words & Greetings
-- fr:lex:au is taught at positions 1, 28, 108, 109, 146; merge into Famous Words & Greetings
 - fr:cx:elision is taught at positions 4, 28, 45, 94; merge into Essential Verb - avoir (to have)
 - fr:lex:des is taught at positions 8, 28; merge into Plurals - More Than One
-- fr:lex:a.preposition is taught at positions 23, 28, 67, 69, 71, 84, 107, 109, 116, 140, 141, 142, 145, 146; merge into Prepositions - Spatial & Relational Words
-- fr:lex:de is taught at positions 23, 28, 46, 49, 60, 66, 71, 73, 92, 107, 108, 109, 116, 117, 127, 135, 140, 141, 144, 145, 146; merge into Prepositions - Spatial & Relational Words
-- fr:lex:leur is taught at positions 34, 35, 36; merge into Possessive Adjectives - My, Your, His, Her
-- fr:lex:leur.pronoun is taught at positions 34, 35, 36; merge into Possessive Adjectives - My, Your, His, Her
-- fr:lex:moi is taught at positions 22, 36, 40, 69, 88, 103, 146; merge into Stressed Pronouns - moi, toi, lui...
-- fr:lex:avec is taught at positions 23, 36; merge into Prepositions - Spatial & Relational Words
-- fr:lex:venir is taught at positions 29, 36, 100, 101, 113, 122, 123, 124, 125, 126, 128, 133, 134, 136; merge into Essential Verb - venir (to come)
-- fr:lex:partir is taught at positions 32, 36, 66, 100, 113, 122, 123, 124, 125, 129, 133, 136, 160; merge into Essential Verb - partir (to leave)
-- fr:lex:le.pronoun is taught at positions 33, 36, 45, 47, 68, 103, 160; merge into Object Pronouns - Him, Her, It, Them
+- fr:lex:a.preposition is taught at positions 23, 28; merge into Prepositions - Spatial & Relational Words
+- fr:lex:de is taught at positions 23, 28; merge into Prepositions - Spatial & Relational Words
+- fr:lex:vouloir is taught at positions 17, 36, 40, 56, 72, 115, 124; merge into Essential Verb - vouloir (to want)
+- fr:lex:venir is taught at positions 29, 36, 100, 101, 122, 133, 134; merge into Essential Verb - venir (to come)
 - fr:cx:pronoun.direct-object is taught at positions 33, 36; merge into Object Pronouns - Him, Her, It, Them
-- fr:lex:mien is taught at positions 35, 36; merge into Possessive Pronouns - Mine, Yours, Theirs
-- fr:lex:tien is taught at positions 35, 36; merge into Possessive Pronouns - Mine, Yours, Theirs
-- fr:lex:sien is taught at positions 35, 36; merge into Possessive Pronouns - Mine, Yours, Theirs
-- fr:lex:se is taught at positions 1, 40, 68, 93, 94, 95, 96, 97, 98, 99, 136; merge into Famous Words & Greetings
-- fr:lex:si is taught at positions 1, 40, 68, 94, 96, 97, 98, 127, 128, 155; merge into Famous Words & Greetings
-- fr:lex:plaire is taught at positions 1, 40, 68, 152; merge into Famous Words & Greetings
-- fr:lex:pardon is taught at positions 1, 40, 71; merge into Famous Words & Greetings
+- fr:lex:plaire is taught at positions 1, 40; merge into Famous Words & Greetings
+- fr:lex:pardon is taught at positions 1, 40; merge into Famous Words & Greetings
 - fr:cx:chunk.sil-vous-plait is taught at positions 1, 40; merge into Famous Words & Greetings
-- fr:lex:ou.adverb is taught at positions 20, 40, 142, 146, 157, 158; merge into Question Words - Ask Anything!
-- fr:lex:combien is taught at positions 20, 40, 145; merge into Question Words - Ask Anything!
-- fr:lex:te is taught at positions 33, 40, 57, 67, 68, 71, 93, 94, 95, 96, 97, 98, 141; merge into Object Pronouns - Him, Her, It, Them
-- fr:lex:voir is taught at positions 19, 45, 47, 78, 99, 111, 129, 146, 153, 156; merge into Essential Verb - voir (to see)
-- fr:lex:faire is taught at positions 41, 45, 47, 56, 66, 71, 78, 102, 103, 111, 115, 121, 123, 128, 132, 135, 153, 154, 155, 156, 157, 158, 160; merge into Essential Verb - faire (to do/make)
+- fr:lex:ou.adverb is taught at positions 20, 40, 142, 146, 157; merge into Question Words - Ask Anything!
+- fr:lex:combien is taught at positions 20, 40; merge into Question Words - Ask Anything!
 - fr:lex:tres is taught at positions 10, 46; merge into Basic Connectors - et, mais, ou, aussi, très
-- fr:lex:pour is taught at positions 23, 46, 134; merge into Prepositions - Spatial & Relational Words
-- fr:lex:ne is taught at positions 45, 47, 66, 68, 73, 81, 82, 85, 87, 103, 125, 126, 158, 159, 160; merge into Negation - ne...pas (not)
-- fr:lex:pas is taught at positions 45, 47, 66, 68, 73, 81, 82, 85, 87, 103, 125, 126, 136, 158, 159, 160; merge into Negation - ne...pas (not)
-- fr:lex:jamais is taught at positions 46, 47; merge into Time & Frequency - now, always, never, today
+- fr:lex:ne is taught at positions 45, 47, 66, 68, 81, 82, 85, 103, 126, 158, 159; merge into Negation - ne...pas (not)
 - fr:cx:adverb.placement is taught at positions 46, 48; merge into Time & Frequency - now, always, never, today
 - fr:lex:addition is taught at positions 40, 49; merge into Survival Phrases - Real-World Essentials
-- fr:lex:temps is taught at positions 46, 49, 70, 73, 127, 135, 145; merge into Time & Frequency - now, always, never, today
-- fr:lex:quelque is taught at positions 48, 49, 141; merge into Location Adverbs - here, there, everywhere
+- fr:lex:temps is taught at positions 46, 49; merge into Time & Frequency - now, always, never, today
+- fr:lex:quelque is taught at positions 48, 49; merge into Location Adverbs - here, there, everywhere
 - fr:lex:tout is taught at positions 49, 53, 78, 88, 115, 116, 146; merge into Everyday Nouns - Life & World
 - fr:cx:chunk.tout-le-monde is taught at positions 49, 53, 78, 88; merge into Everyday Nouns - Life & World
-- fr:lex:nul is taught at positions 48, 54; merge into Location Adverbs - here, there, everywhere
-- fr:lex:trop is taught at positions 53, 54, 133; merge into Comparisons & Intensity
-- fr:lex:devoir is taught at positions 42, 55, 66, 78, 112, 156, 160; merge into Essential Verb - devoir (must)
+- fr:lex:trop is taught at positions 53, 54; merge into Comparisons & Intensity
+- fr:lex:pouvoir is taught at positions 18, 55, 78, 122, 134, 136, 158; merge into Essential Verb - pouvoir (can)
+- fr:lex:devoir is taught at positions 42, 55, 78; merge into Essential Verb - devoir (must)
+- fr:lex:faire is taught at positions 41, 56, 78, 102, 115, 121, 132; merge into Essential Verb - faire (to do/make)
 - fr:cx:conditionnel-present is taught at positions 55, 56; merge into Should & Could - Advice and Possibility
-- fr:lex:bien is taught at positions 1, 57, 81, 87, 135, 142, 144; merge into Famous Words & Greetings
 - fr:cx:imparfait is taught at positions 58, 59, 115; merge into être - Past Tense (was / were)
-- fr:lex:cafe is taught at positions 1, 60, 68, 72; merge into Famous Words & Greetings
+- fr:lex:cafe is taught at positions 1, 60; merge into Famous Words & Greetings
 - fr:cx:article.partitive is taught at positions 28, 60; merge into Contractions - du, au, de la, à la
-- fr:lex:eau is taught at positions 49, 60, 152; merge into Everyday Nouns - Life & World
-- fr:lex:pain is taught at positions 49, 60, 145; merge into Everyday Nouns - Life & World
+- fr:lex:eau is taught at positions 49, 60; merge into Everyday Nouns - Life & World
+- fr:lex:pain is taught at positions 49, 60; merge into Everyday Nouns - Life & World
 - fr:cx:passe-compose.avoir is taught at positions 61, 62, 110, 111, 112; merge into manger - To Eat (Present & Past)
 - fr:cx:frame.aller-infinitive is taught at positions 30, 66; merge into Essential Verb - aller (to go)
-- fr:lex:parler is taught at positions 43, 66, 82, 99, 100, 101, 110, 115, 131, 156; merge into Essential Verb - parler (to speak)
-- fr:lex:en is taught at positions 46, 66, 72, 87, 109, 131, 140, 146, 157; merge into Time & Frequency - now, always, never, today
-- fr:lex:manger is taught at positions 61, 66, 100, 101, 110, 123, 129, 131, 153; merge into manger - To Eat (Present & Past)
-- fr:lex:on is taught at positions 2, 67, 78, 96, 97, 99, 115, 123, 124, 127, 133, 134, 135, 136, 145, 155, 157, 158, 160; merge into Core Pronouns - The Building Blocks
-- fr:lex:que is taught at positions 20, 67, 70, 84, 85, 107, 116, 123, 124, 125, 126, 133, 134, 135, 136, 143, 144, 152, 153, 154, 155, 156, 160; merge into Question Words - Ask Anything!
-- fr:lex:que.conjunction is taught at positions 20, 67, 70, 84, 85, 107, 116, 123, 124, 125, 126, 133, 134, 135, 136, 143, 144, 152, 153, 154, 155, 156, 160; merge into Question Words - Ask Anything!
-- fr:lex:me is taught at positions 33, 67, 71, 93, 94, 95, 96, 97, 98, 103, 132, 141, 158; merge into Object Pronouns - Him, Her, It, Them
-- fr:lex:quelqu-un is taught at positions 49, 67, 71, 141, 143, 145; merge into Everyday Nouns - Life & World
+- fr:lex:parler is taught at positions 43, 66, 99, 100, 101, 115, 131; merge into Essential Verb - parler (to speak)
+- fr:lex:manger is taught at positions 61, 66, 100, 101, 131; merge into manger - To Eat (Present & Past)
 - fr:cx:verb.er.present is taught at positions 43, 69; merge into Essential Verb - parler (to speak)
-- fr:lex:du is taught at positions 28, 70, 143, 145, 153; merge into Contractions - du, au, de la, à la
-- fr:lex:table is taught at positions 49, 70; merge into Everyday Nouns - Life & World
-- fr:lex:pizza is taught at positions 60, 72; merge into Everyday Food Nouns
-- fr:lex:argent is taught at positions 49, 73, 127, 141; merge into Everyday Nouns - Life & World
 - fr:lex:aide is taught at positions 71, 73, 141; merge into demander - To Ask
 - fr:lex:personne is taught at positions 49, 74, 78; merge into Everyday Nouns - Life & World
-- fr:lex:raison is taught at positions 59, 74, 107, 126, 141; merge into avoir - Past Tense (had)
+- fr:lex:on is taught at positions 2, 78; merge into Core Pronouns - The Building Blocks
 - fr:cx:pronoun.on is taught at positions 2, 78; merge into Core Pronouns - The Building Blocks
-- fr:lex:monde is taught at positions 49, 78, 88, 127; merge into Everyday Nouns - Life & World
-- fr:lex:dire is taught at positions 67, 78, 112, 158; merge into dire - To Say / To Tell
-- fr:lex:mon is taught at positions 34, 79, 132, 140, 143; merge into Possessive Adjectives - My, Your, His, Her
-- fr:lex:francais is taught at positions 68, 79, 80, 156; merge into prendre - To Take
-- fr:lex:apprendre is taught at positions 68, 80, 112; merge into prendre - To Take
-- fr:lex:comprendre is taught at positions 68, 81, 87, 88, 99, 112, 122, 124, 134, 158; merge into prendre - To Take
-- fr:lex:savoir.verb is taught at positions 78, 82, 86, 87, 122, 124, 125, 126, 128, 134, 158; merge into Talking About People in General
-- fr:lex:oui is taught at positions 1, 84, 85; merge into Famous Words & Greetings
-- fr:lex:non is taught at positions 1, 84; merge into Famous Words & Greetings
-- fr:lex:toi is taught at positions 22, 84, 97, 127; merge into Stressed Pronouns - moi, toi, lui...
-- fr:lex:toi.pronoun is taught at positions 22, 84, 97, 127; merge into Stressed Pronouns - moi, toi, lui...
+- fr:lex:voir is taught at positions 19, 78, 99, 146; merge into Essential Verb - voir (to see)
+- fr:lex:dire is taught at positions 67, 78; merge into dire - To Say / To Tell
+- fr:lex:apprendre is taught at positions 68, 80; merge into prendre - To Take
+- fr:lex:comprendre is taught at positions 68, 81, 87, 88, 99, 122, 134; merge into prendre - To Take
 - fr:cx:frame.verb-que-clause is taught at positions 67, 84, 85, 126, 143; merge into dire - To Say / To Tell
-- fr:lex:penser is taught at positions 78, 84, 87, 100, 126, 160; merge into Talking About People in General
 - fr:lex:question is taught at positions 74, 86; merge into Essential Vocabulary - Time, People & Ideas
-- fr:lex:y is taught at positions 78, 86, 102, 115, 117; merge into Talking About People in General
-- fr:lex:y.pronoun is taught at positions 78, 86, 102, 115, 117; merge into Talking About People in General
-- fr:lex:lecon is taught at positions 79, 86; merge into Studying & Reviewing - étudier & réviser
 - fr:lex:savoir is taught at positions 82, 86; merge into savoir - To Know (Facts/Skills)
-- fr:lex:quoi is taught at positions 20, 87, 143; merge into Question Words - Ask Anything!
-- fr:lex:comme is taught at positions 67, 87, 107, 154, 158, 160; merge into dire - To Say / To Tell
+- fr:lex:savoir.verb is taught at positions 82, 86, 122, 134, 158; merge into savoir - To Know (Facts/Skills)
+- fr:lex:bien is taught at positions 1, 87, 135, 142, 144; merge into Famous Words & Greetings
 - fr:lex:fait is taught at positions 74, 87; merge into Essential Vocabulary - Time, People & Ideas
-- fr:lex:petit is taught at positions 24, 88, 150; merge into Common Adjectives - Describing Things
+- fr:lex:penser is taught at positions 84, 87, 100, 126; merge into penser - To Think
 - fr:lex:meme is taught at positions 53, 88; merge into Comparisons & Intensity
 - fr:lex:mal is taught at positions 53, 88; merge into Comparisons & Intensity
-- fr:lex:avant is taught at positions 46, 92, 133; merge into Time & Frequency - now, always, never, today
-- fr:lex:aimer is taught at positions 57, 93, 99, 110, 124, 156, 159; merge into aimer - To Like / To Love
-- fr:lex:comment is taught at positions 20, 94, 143, 144, 146, 155, 157, 158, 159, 160; merge into Question Words - Ask Anything!
-- fr:lex:lever is taught at positions 93, 95, 98; merge into Reflexive Pronouns - me, te, se, nous, vous
-- fr:lex:laver is taught at positions 93, 96, 98; merge into Reflexive Pronouns - me, te, se, nous, vous
-- fr:lex:preparer is taught at positions 93, 96, 98; merge into Reflexive Pronouns - me, te, se, nous, vous
-- fr:lex:reveiller is taught at positions 95, 98; merge into Morning Routine - se réveiller, se lever
-- fr:lex:amuser is taught at positions 97, 98; merge into Daily Actions - se souvenir, s'amuser, se dépêcher
-- fr:lex:demain is taught at positions 46, 99, 136; merge into Time & Frequency - now, always, never, today
-- fr:lex:connaitre is taught at positions 83, 99, 156; merge into connaître - To Know (People/Places)
-- fr:lex:prendre is taught at positions 68, 100, 101, 112, 115; merge into prendre - To Take
-- fr:lex:ecouter is taught at positions 100, 101, 103, 110, 131, 144; merge into Commands - tu form (Informal)
-- fr:lex:regarder is taught at positions 100, 101, 103, 110, 144; merge into Commands - tu form (Informal)
+- fr:lex:me is taught at positions 33, 93; merge into Object Pronouns - Him, Her, It, Them
+- fr:lex:te is taught at positions 33, 93; merge into Object Pronouns - Him, Her, It, Them
+- fr:lex:aimer is taught at positions 57, 93, 99, 124; merge into aimer - To Like / To Love
+- fr:lex:comment is taught at positions 20, 94, 144, 146, 155, 157, 159, 160; merge into Question Words - Ask Anything!
+- fr:lex:lever is taught at positions 93, 95; merge into Reflexive Pronouns - me, te, se, nous, vous
+- fr:lex:laver is taught at positions 93, 96; merge into Reflexive Pronouns - me, te, se, nous, vous
+- fr:lex:preparer is taught at positions 93, 96; merge into Reflexive Pronouns - me, te, se, nous, vous
+- fr:lex:connaitre is taught at positions 83, 99; merge into connaître - To Know (People/Places)
+- fr:lex:partir is taught at positions 32, 100, 122, 133; merge into Essential Verb - partir (to leave)
+- fr:lex:prendre is taught at positions 68, 100, 101, 115; merge into prendre - To Take
+- fr:lex:ecouter is taught at positions 100, 101, 103, 131, 144; merge into Commands - tu form (Informal)
+- fr:lex:regarder is taught at positions 100, 101, 103, 144; merge into Commands - tu form (Informal)
 - fr:lex:donner is taught at positions 69, 103, 141; merge into donner - To Give
-- fr:lex:pourquoi is taught at positions 20, 107, 154, 157, 158, 159, 160; merge into Question Words - Ask Anything!
-- fr:lex:dans is taught at positions 23, 108, 151; merge into Prepositions - Spatial & Relational Words
+- fr:lex:pourquoi is taught at positions 20, 107, 154, 157, 159, 160; merge into Question Words - Ask Anything!
+- fr:lex:raison is taught at positions 74, 107; merge into Essential Vocabulary - Time, People & Ideas
+- fr:lex:dans is taught at positions 23, 108; merge into Prepositions - Spatial & Relational Words
 - fr:lex:sur.preposition is taught at positions 23, 108; merge into Prepositions - Spatial & Relational Words
 - fr:lex:sous is taught at positions 23, 108; merge into Prepositions - Spatial & Relational Words
 - fr:lex:derriere is taught at positions 23, 108; merge into Prepositions - Spatial & Relational Words
 - fr:lex:devant is taught at positions 23, 108; merge into Prepositions - Spatial & Relational Words
 - fr:lex:entre is taught at positions 23, 108; merge into Prepositions - Spatial & Relational Words
 - fr:lex:place is taught at positions 49, 108; merge into Everyday Nouns - Life & World
-- fr:lex:m is taught at positions 86, 108; merge into Knowledge & Learning - Essential Nouns
-- fr:lex:ici is taught at positions 48, 109, 127, 145, 146; merge into Location Adverbs - here, there, everywhere
+- fr:lex:ici is taught at positions 48, 109; merge into Location Adverbs - here, there, everywhere
 - fr:lex:cote is taught at positions 74, 109, 146; merge into Essential Vocabulary - Time, People & Ideas
-- fr:lex:chercher is taught at positions 44, 110, 143; merge into Essential Verbs - chercher & trouver
-- fr:lex:trouver is taught at positions 44, 110, 143, 144; merge into Essential Verbs - chercher & trouver
-- fr:lex:deja is taught at positions 46, 110, 129; merge into Time & Frequency - now, always, never, today
+- fr:lex:deja is taught at positions 46, 110; merge into Time & Frequency - now, always, never, today
 - fr:lex:hier is taught at positions 46, 110, 116; merge into Time & Frequency - now, always, never, today
 - fr:cx:ptcp.er is taught at positions 61, 110; merge into manger - To Eat (Present & Past)
-- fr:lex:demander is taught at positions 71, 110, 158; merge into demander - To Ask
-- fr:lex:etudier is taught at positions 79, 110, 128; merge into Studying & Reviewing - étudier & réviser
 - fr:lex:devoir.noun is taught at positions 42, 111; merge into Essential Verb - devoir (must)
-- fr:lex:mettre is taught at positions 70, 112; merge into mettre - To Put / To Set
-- fr:lex:manteau is taught at positions 70, 112; merge into mettre - To Put / To Set
 - fr:cx:ptcp.agreement is taught at positions 98, 113, 114; merge into Reflexive Verbs in Past Tense
-- fr:lex:e is taught at positions 109, 113, 152; merge into More Spatial Relations - Distance & Proximity
-- fr:lex:jour is taught at positions 7, 115, 116; merge into Basic Nouns - People & Things
+- fr:lex:y is taught at positions 78, 115, 117; merge into Talking About People in General
+- fr:lex:y.pronoun is taught at positions 78, 115, 117; merge into Talking About People in General
 - fr:lex:quand is taught at positions 20, 116, 157; merge into Question Words - Ask Anything!
 - fr:lex:toujours is taught at positions 46, 116; merge into Time & Frequency - now, always, never, today
-- fr:lex:la is taught at positions 48, 116, 124, 125, 146; merge into Location Adverbs - here, there, everywhere
 - fr:lex:moment is taught at positions 74, 116; merge into Essential Vocabulary - Time, People & Ideas
 - fr:lex:pendant is taught at positions 92, 116; merge into Temporal & Sequential Words - Time & Order
 - fr:lex:donc is taught at positions 87, 117; merge into Discourse Markers - Sound Like a Native
@@ -1579,70 +1519,30 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - fr:cx:il-y-a is taught at positions 115, 117; merge into Imparfait Formation - All Verbs (was doing, used to do)
 - fr:cx:subj.il-faut-que is taught at positions 121, 122, 123; merge into Forms Used After 'il faut que' and 'je veux que'
 - fr:cx:subj.vouloir-que is taught at positions 121, 122, 124; merge into Forms Used After 'il faut que' and 'je veux que'
-- fr:lex:attention is taught at positions 102, 123; merge into Irregular Commands - être, avoir, aller, faire
-- fr:lex:malade is taught at positions 54, 125, 135; merge into Slang - Comparisons & Intensity
-- fr:lex:croire is taught at positions 85, 126; merge into croire - To Believe
 - fr:lex:probablement is taught at positions 87, 130; merge into Discourse Markers - Sound Like a Native
-- fr:lex:travailler is taught at positions 110, 131, 142; merge into Passé Composé - Regular -ER Verbs (I spoke, I ate)
-- fr:lex:voiture is taught at positions 7, 132, 146; merge into Basic Nouns - People & Things
-- fr:lex:arriver is taught at positions 113, 133, 145; merge into être Verbs - DR & MRS VANDERTRAMP (went, came, left)
-- fr:lex:content is taught at positions 125, 134, 159; merge into Je suis content que... - Emotion Phrases
 - fr:lex:peut-etre is taught at positions 87, 136; merge into Discourse Markers - Sound Like a Native
-- fr:lex:possible is taught at positions 126, 136; merge into Je pense que... - Opinion Phrases
 - fr:cx:age.avoir-ans is taught at positions 4, 140; merge into Essential Verb - avoir (to have)
 - fr:lex:quel is taught at positions 20, 140; merge into Question Words - Ask Anything!
-- fr:lex:votre.noun is taught at positions 34, 140; merge into Possessive Adjectives - My, Your, His, Her
-- fr:lex:heure is taught at positions 74, 141; merge into Essential Vocabulary - Time, People & Ideas
-- fr:lex:son is taught at positions 34, 142; merge into Possessive Adjectives - My, Your, His, Her
-- fr:lex:vie is taught at positions 49, 142; merge into Everyday Nouns - Life & World
-- fr:lex:travail is taught at positions 49, 143; merge into Everyday Nouns - Life & World
-- fr:lex:film is taught at positions 129, 144; merge into J'avais déjà... - Had Already Done Phrases
-- fr:lex:train is taught at positions 66, 145; merge into Progressive & Future - Expressing Time
+- fr:lex:travailler is taught at positions 131, 142; merge into En mangeant... - While Doing Phrases
+- fr:lex:chercher is taught at positions 44, 143; merge into Essential Verbs - chercher & trouver
+- fr:lex:trouver is taught at positions 44, 143, 144; merge into Essential Verbs - chercher & trouver
 - fr:lex:bus is taught at positions 68, 145; merge into prendre - To Take
-- fr:lex:rester is taught at positions 113, 145; merge into être Verbs - DR & MRS VANDERTRAMP (went, came, left)
-- fr:lex:ensemble is taught at positions 124, 145; merge into Je veux que... - Expressing Wishes
+- fr:lex:arriver is taught at positions 133, 145; merge into Avant que... - Before Phrases
+- fr:lex:voiture is taught at positions 7, 146; merge into Basic Nouns - People & Things
 - fr:lex:excuser is taught at positions 40, 146; merge into Survival Phrases - Real-World Essentials
-- fr:lex:minute is taught at positions 74, 146; merge into Essential Vocabulary - Time, People & Ideas
 - fr:lex:pres is taught at positions 109, 146; merge into More Spatial Relations - Distance & Proximity
 - fr:lex:loin is taught at positions 109, 146; merge into More Spatial Relations - Distance & Proximity
 - fr:lex:face is taught at positions 109, 146; merge into More Spatial Relations - Distance & Proximity
-- fr:lex:par is taught at positions 144, 146; merge into Perception Verbs - écouter, regarder
+- fr:lex:petit is taught at positions 24, 150; merge into Common Adjectives - Describing Things
 - fr:lex:poisson is taught at positions 60, 150; merge into Everyday Food Nouns
-- fr:lex:lentement is taught at positions 130, 151; merge into vraiment, sérieusement... - Common Adverbs
-- fr:lex:marcher is taught at positions 131, 151, 158, 160; merge into En mangeant... - While Doing Phrases
-- fr:lex:qui is taught at positions 20, 152, 153, 156, 159, 160; merge into Question Words - Ask Anything!
-- fr:lex:terre is taught at positions 60, 152; merge into Everyday Food Nouns
-- fr:lex:tomber is taught at positions 113, 152, 153; merge into être Verbs - DR & MRS VANDERTRAMP (went, came, left)
-- fr:lex:froid is taught at positions 135, 152; merge into Bien que... - Although Phrases
-- fr:lex:rendre is taught at positions 141, 152, 153, 160; merge into donner - To Give
-- fr:lex:plante is taught at positions 150, 152, 154, 155, 157; merge into Nature & Animals - Curiosity Vocabulary
+- fr:lex:marcher is taught at positions 131, 151; merge into En mangeant... - While Doing Phrases
+- fr:lex:plante is taught at positions 150, 152; merge into Nature & Animals - Curiosity Vocabulary
 - fr:lex:vent is taught at positions 150, 152; merge into Nature & Animals - Curiosity Vocabulary
 - fr:lex:pluie is taught at positions 150, 152; merge into Nature & Animals - Curiosity Vocabulary
 - fr:cx:q.quest-ce-que is taught at positions 20, 153; merge into Question Words - Ask Anything!
-- fr:lex:oiseau is taught at positions 150, 153, 154, 155, 157; merge into Nature & Animals - Curiosity Vocabulary
-- fr:lex:briller is taught at positions 152, 153, 154; merge into Natural Phenomena - How Nature Works
-- fr:lex:soleil is taught at positions 152, 153, 154, 159; merge into Natural Phenomena - How Nature Works
-- fr:lex:herbe is taught at positions 152, 153, 154, 160; merge into Natural Phenomena - How Nature Works
-- fr:lex:vert is taught at positions 152, 153, 154, 160; merge into Natural Phenomena - How Nature Works
 - fr:cx:q.est-ce-que is taught at positions 20, 154, 155; merge into Question Words - Ask Anything!
-- fr:lex:voler is taught at positions 151, 154, 155; merge into Movement Verbs - Actions in Nature
-- fr:lex:courir is taught at positions 151, 154, 155, 157; merge into Movement Verbs - Actions in Nature
-- fr:lex:pousser is taught at positions 152, 154, 155; merge into Natural Phenomena - How Nature Works
-- fr:lex:pleuvoir is taught at positions 152, 154; merge into Natural Phenomena - How Nature Works
 - fr:cx:q.inversion is taught at positions 20, 155, 157; merge into Question Words - Ask Anything!
-- fr:lex:tortue is taught at positions 150, 155, 157; merge into Nature & Animals - Curiosity Vocabulary
-- fr:lex:ecureuil is taught at positions 150, 155; merge into Nature & Animals - Curiosity Vocabulary
-- fr:lex:lapin is taught at positions 150, 155; merge into Nature & Animals - Curiosity Vocabulary
-- fr:lex:nager is taught at positions 151, 155, 156, 157; merge into Movement Verbs - Actions in Nature
-- fr:lex:sauter is taught at positions 151, 155; merge into Movement Verbs - Actions in Nature
-- fr:lex:vite is taught at positions 151, 155; merge into Movement Verbs - Actions in Nature
-- fr:lex:appeler is taught at positions 94, 156; merge into s'appeler - To Be Called (Your Name!)
-- fr:lex:nuage is taught at positions 154, 157; merge into Complex pourquoi Questions - Ask Why About Anything
-- fr:lex:blanc is taught at positions 154, 157; merge into Complex pourquoi Questions - Ask Why About Anything
-- fr:lex:faim is taught at positions 59, 159; merge into avoir - Past Tense (had)
-- fr:lex:vrai is taught at positions 126, 159; merge into Je pense que... - Opinion Phrases
-- fr:lex:plus is taught at positions 53, 160; merge into Comparisons & Intensity
-- fr:lex:falloir is taught at positions 123, 160; merge into Il faut que... - Saying What's Necessary
+- fr:lex:demander is taught at positions 71, 158; merge into demander - To Ask
 
 # 5. Not reused
 

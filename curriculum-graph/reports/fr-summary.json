@@ -5,7 +5,7 @@
     "level-data-missing": 1,
     "nonstandard-shape": 41,
     "reuse-missed": 513,
-    "taught-twice": 238,
+    "taught-twice": 138,
     "translate-item": 1761,
     "unknown-word": 9,
     "untaught-construction": 70,
@@ -13,5 +13,5 @@
   },
   "errors": 2718,
   "modulesWithErrors": 146,
-  "warnings": 793
+  "warnings": 693
 }

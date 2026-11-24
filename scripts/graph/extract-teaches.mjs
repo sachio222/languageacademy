@@ -9,6 +9,19 @@ import { writeSortedJson } from './write-json.mjs';
 const RANK = { irregular: 0, generated: 1, lemma: 2 };
 const TEACHING_KINDS = new Set(['lesson', 'help']);
 
+// The readings extraction credits for each token of one vocabulary entry: exact accents first, folded match
+// only as a fallback, and of those only the best kind (irregular form, then generated form, then lemma).
+// Returns [{ token, readings }]; readings is [] for a token the graph does not know.
+export function entryReadings(text, index, isWord) {
+  return tokenize(text, { isWord }).map((token) => {
+    let readings = lookupTokenStrict(index, token);
+    if (!readings.length) readings = lookupToken(index, token);
+    if (!readings.length) return { token, readings };
+    const best = Math.min(...readings.map((r) => RANK[r.via]));
+    return { token, readings: readings.filter((x) => RANK[x.via] === best) };
+  });
+}
+
 // Words each lesson or help module teaches, read from its vocabulary table.
 // excludeWords lists over-taught homograph IDs to drop from the result.
 // Only teachesWords is rewritten; every other course-map field is kept.
@@ -21,16 +34,12 @@ export function extractTeaches(graph, course, index) {
     const ids = new Set();
     const missing = new Set();
     for (const text of mod.vocab ?? []) {
-      for (const token of tokenize(text, { isWord })) {
-        // Vocab tables are authored French: exact accents first, folded match only as a fallback.
-        let readings = lookupTokenStrict(index, token);
-        if (!readings.length) readings = lookupToken(index, token);
+      for (const { token, readings } of entryReadings(text, index, isWord)) {
         if (!readings.length) {
           if (!graph.names?.has(token.fold)) missing.add(token.surface);
           continue;
         }
-        const best = Math.min(...readings.map((r) => RANK[r.via]));
-        for (const r of readings.filter((x) => RANK[x.via] === best)) {
+        for (const r of readings) {
           ids.add(r.headwordId);
           if (r.via !== 'lemma') ids.add(r.nodeId);
         }

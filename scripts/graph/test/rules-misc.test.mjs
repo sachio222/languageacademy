@@ -91,21 +91,62 @@ test('taught claim passes; exam with conceptTerms and no tests warns claims-unma
 
 // duplicates
 test('lexeme taught in two lessons gives taught-twice on the later one', () => {
-  const course = Array.from({ length: 9 }, (_, i) => makeModule({ position: i + 1 }));
+  const course = Array.from({ length: 9 }, (_, i) => makeModule({ position: i + 1, vocab: i === 4 ? ['parler'] : [] }));
   const ctx = ctxOf(course, {
-    m5: { teachesWords: ['fr:lex:donner'] },
-    m9: { teachesWordsManual: ['fr:lex:donner'] },
+    m5: { teachesWords: ['fr:lex:parler'] },
+    m9: { teachesWordsManual: ['fr:lex:parler'] },
   });
   const issues = ruleDuplicates(ctx);
   assert.equal(issues.length, 1);
   assert.equal(issues[0].rule, 'taught-twice');
   assert.equal(issues[0].severity, 'warning');
-  assert.equal(issues[0].nodeId, 'fr:lex:donner');
+  assert.equal(issues[0].nodeId, 'fr:lex:parler');
   assert.equal(issues[0].moduleKey, 'm9');
   assert.equal(issues[0].position, 9);
   assert.match(issues[0].message, /5/);
   assert.match(issues[0].message, /9/);
   assert.deepEqual(issues[0].fix, { kind: 'merge-duplicate', moduleKey: 'm5' });
+});
+
+test('a word counts as re-taught only where it heads a vocabulary entry', () => {
+  const course = [
+    makeModule({ position: 1, vocab: ['je parle'] }), // teaches parler; je is incidental
+    makeModule({ position: 2, vocab: ['je'] }), // teaches je
+    makeModule({ position: 3, vocab: ['tu parles', "l'hôtel"] }), // parler again; tu incidental
+  ];
+  const ctx = ctxOf(course, {
+    m1: { teachesWords: ['fr:lex:je', 'fr:lex:parler'] },
+    m2: { teachesWords: ['fr:lex:je'] },
+    m3: { teachesWords: ['fr:lex:tu', 'fr:lex:parler'] },
+  });
+  const issues = ruleDuplicates(ctx);
+  assert.deepEqual(issues.map((i) => [i.nodeId, i.position]), [['fr:lex:parler', 3]]);
+  assert.match(issues[0].message, /positions 1, 3/);
+  // excluded from teachesWords: not counted even where it heads the entry
+  const excluded = ctxOf(course, {
+    m1: { teachesWords: ['fr:lex:je', 'fr:lex:parler'] },
+    m2: { teachesWords: ['fr:lex:je'] },
+    m3: { teachesWords: ['fr:lex:tu'] },
+  });
+  assert.deepEqual(ruleDuplicates(excluded), []);
+});
+
+test('twin headwords that share a lemma and part of speech are one line', () => {
+  const hw = (id, lemma, pos) => ({ id, lemma, pos, paradigms: [], senses: [], dictionaryId: null, cefr: null, cefrSource: null });
+  const headwords = [...base.headwords, hw('fr:lex:vous.pronoun', 'vous', 'pronoun')];
+  const nodes = new Map([...base.nodes, ['fr:lex:vous.pronoun', headwords.at(-1)]]);
+  const course = [1, 2, 3].map((position) => makeModule({ position, vocab: ['vous'] }));
+  const courseMap = {
+    m1: { teachesWords: ['fr:lex:vous', 'fr:lex:vous.pronoun'] },
+    m2: { teachesWords: ['fr:lex:vous'] },
+    m3: { teachesWords: ['fr:lex:vous', 'fr:lex:vous.pronoun'] },
+  };
+  const issues = ruleDuplicates(makeCtx({ graph: { ...base, headwords, nodes, courseMap }, course }));
+  assert.equal(issues.length, 1);
+  assert.deepEqual(issues[0].nodeIds, ['fr:lex:vous', 'fr:lex:vous.pronoun']);
+  assert.equal(issues[0].position, 2);
+  assert.equal(issues[0].message, 'fr:lex:vous is taught at positions 1, 2, 3; fr:lex:vous.pronoun at positions 1, 3');
+  assert.deepEqual(issues[0].fix, { kind: 'merge-duplicate', moduleKey: 'm1' });
 });
 
 test('forms and non-lesson modules do not count as duplicates', () => {
