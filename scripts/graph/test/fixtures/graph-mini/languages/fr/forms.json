@@ -40,5 +40,11 @@
     "of": "fr:lex:etre",
     "cell": "prs.3sg",
     "surface": "est"
+  },
+  {
+    "id": "fr:form:je.elided",
+    "of": "fr:lex:je",
+    "cell": "elided",
+    "surface": "j'"
   }
 ]

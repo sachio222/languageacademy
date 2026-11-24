@@ -1,0 +1,67 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { loadGraph } from '../load.mjs';
+import { validateGraph } from '../validate.mjs';
+import { buildFormIndex, lookupToken } from '../fr/forms.mjs';
+import { tokenize } from '../fr/tokenize.mjs';
+
+const here = dirname(fileURLToPath(import.meta.url));
+const graph = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
+const index = buildFormIndex(graph);
+const lookup = (s) => index.get(s) ?? [];
+
+test('fixture still validates', () => {
+  assert.deepEqual(validateGraph(graph), []);
+});
+
+test('parlons resolves to exactly one generated reading', () => {
+  assert.deepEqual(lookup('parlons'), [{
+    nodeId: 'fr:form:parler.prs.1pl',
+    headwordId: 'fr:lex:parler',
+    cell: 'prs.1pl',
+    via: 'generated',
+    paradigmId: 'fr:cx:verb.er.present',
+  }]);
+});
+
+test('irregular forms win over generation', () => {
+  assert.equal(lookup('vais')[0].via, 'irregular');
+  assert.equal(lookup('allons').length, 1);
+  assert.equal(lookup('allons')[0].via, 'irregular');
+});
+
+test('lemma readings are indexed by folded lemma', () => {
+  assert.ok(lookup('parler').some((r) => r.via === 'lemma' && r.headwordId === 'fr:lex:parler'));
+  assert.ok(lookup('cafe').some((r) => r.via === 'lemma' && r.headwordId === 'fr:lex:cafe'));
+});
+
+test('est keeps both the irregular form of etre and the noun lemma', () => {
+  const ids = lookup('est').map((r) => r.nodeId);
+  assert.ok(ids.includes('fr:form:etre.prs.3sg'));
+  assert.ok(ids.includes('fr:lex:est'));
+});
+
+test('clitic token resolves through its leading hyphen', () => {
+  const r = lookupToken(index, { fold: '-tu', clitic: true });
+  assert.ok(r.some((x) => x.headwordId === 'fr:lex:tu'));
+  const t = lookupToken(index, { fold: '-t-il', clitic: true });
+  assert.ok(t.some((x) => x.headwordId === 'fr:lex:il'));
+});
+
+test('reflexive lemma generates on the verb part', () => {
+  assert.ok(lookup('lavons').some((r) => r.headwordId === 'fr:lex:se-laver' && r.cell === 'prs.1pl'));
+  assert.ok(lookup('laver').some((r) => r.headwordId === 'fr:lex:se-laver' && r.via === 'lemma'));
+  assert.ok(lookup('se laver').some((r) => r.headwordId === 'fr:lex:se-laver' && r.via === 'lemma'));
+});
+
+test('elided j resolves to je', () => {
+  const [tok] = tokenize("j'ai");
+  assert.ok(lookupToken(index, tok).some((r) => r.headwordId === 'fr:lex:je'));
+});
+
+test('names are not indexed and unknown tokens are empty', () => {
+  assert.deepEqual(lookup('marie'), []);
+  assert.deepEqual(lookupToken(index, { fold: 'zzz', clitic: false }), []);
+});

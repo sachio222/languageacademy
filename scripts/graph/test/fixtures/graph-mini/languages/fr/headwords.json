@@ -156,5 +156,19 @@
     "dictionaryId": "hier-fr",
     "cefr": null,
     "cefrSource": null
+  },
+  {
+    "id": "fr:lex:se-laver",
+    "lemma": "se laver",
+    "pos": "verb",
+    "paradigms": [
+      "fr:cx:verb.er.present"
+    ],
+    "senses": [
+      "sense:wash"
+    ],
+    "dictionaryId": "se-laver-fr",
+    "cefr": null,
+    "cefrSource": null
   }
 ]
