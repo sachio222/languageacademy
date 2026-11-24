@@ -25,7 +25,7 @@ export function summarize(issues, stats = {}) {
 }
 
 // Rules graph:check always prints, even at zero: a course that reads cleanly has none of them.
-const ALWAYS_PRINTED = ['dangling-ref', 'unread-items'];
+const ALWAYS_PRINTED = ['dangling-ref', 'level-data-missing', 'unread-items'];
 
 // The lines graph:check prints: one count per rule, sorted, then the totals.
 export function checkSummaryLines(summary) {
@@ -168,6 +168,13 @@ function nodeName(graph, id) {
   return n?.lemma ?? n?.label ?? id;
 }
 
+// A short name for a node in a list: a headword's lemma, a form as written, a construction's label without checker
+// notes, or the ID itself.
+function shortName(graph, id) {
+  const n = graph?.nodes?.get(id);
+  return n?.lemma ?? n?.surface ?? (n?.label ? displayLabel(n.label) : id);
+}
+
 // A construction label for the report: the description before any checker note (the part after "; " or from
 // ", optionally" on, and "(optionally ...)" asides), which says how the detector reads text rather than what is taught.
 export function displayLabel(label) {
@@ -244,11 +251,13 @@ function renderLevels(out, of, byPosition, opts) {
   const units = data?.units ?? [];
   if (units.length) {
     out.push('## Units', '');
-    out.push('| Unit | Positions | Level label | Highest level taught |', '|---|---|---|---|');
+    out.push('| Unit | Positions | Level label | Highest level taught | Taught at that level |', '|---|---|---|---|---|');
     for (const u of units) {
-      out.push(`| ${u.title ?? u.unitId} | ${u.firstPosition} to ${u.lastPosition} | ${u.label ?? 'None'} | ${u.computed ?? 'None'} |`);
+      out.push(`| ${u.title ?? u.unitId} | ${u.firstPosition} to ${u.lastPosition} | ${u.label ?? 'None'} | ${u.computed ?? 'None'} `
+        + `| ${u.computed ? u.computedCount : 0} |`);
     }
-    out.push('');
+    out.push('', 'A single word or grammar pattern is enough to set a unit\'s highest level, so the last column gives how many '
+      + 'words, forms and grammar patterns the unit teaches at that level.', '');
   }
 
   out.push('## Level labels', '');
@@ -280,18 +289,24 @@ function renderFunctions(out, byPosition, opts) {
   const fns = opts.functions?.functions ?? [];
   if (!fns.length) { out.push('No functions yet.', ''); return; }
   const levels = LEVELS.filter((l) => fns.some((f) => f.cefr === l));
-  const count = (level) => {
-    const of = fns.filter((f) => f.cefr === level);
-    return `${level} ${of.filter((f) => f.position !== null).length} of ${of.length}`;
-  };
   out.push('A function is something a learner does with French, such as greeting someone or asking the time. It becomes '
     + 'possible at the first module by which the course has taught every word and grammar pattern of one French way to do it. '
-    + `Functions possible by the end of the course: ${levels.map(count).join(', ')}.`, '');
+    + '"Possible" is a floor: the course has taught at least one short way to do the function, often a single phrase. That is '
+    + 'not proof that a learner can do it at that level, so the table puts each level\'s count beside the share of that '
+    + 'level\'s core words the course teaches.', '');
+  out.push('| Level | Functions possible by the end | Core words of that level taught |', '|---|---|---|');
+  for (const level of levels) {
+    const of = fns.filter((f) => f.cefr === level);
+    const core = opts.levels?.levels?.[level];
+    const words = core ? `${percent(core.taughtWords, core.coreWords)}% (${core.taughtWords} of ${core.coreWords})` : 'No core list';
+    out.push(`| ${level} | ${of.filter((f) => f.position !== null).length} of ${of.length} | ${words} |`);
+  }
+  out.push('');
   const referenceOnly = [...new Set(fns.flatMap((f) => f.referenceOnly))].sort();
   if (referenceOnly.length) {
     out.push(`Some functions need words that no lesson teaches and only the Reference unit lists (${referenceOnly.map((id) => nodeName(opts.graph, id)).join(', ')}). `
-      + 'That unit has no position in the course, so it teaches nothing, and those functions never become possible. Their '
-      + 'words are marked "taught by no lesson, listed only in the Reference unit" below.', '');
+      + 'That unit has no position in the course, so it teaches nothing, and those functions never become possible. Below, '
+      + '"(Reference unit)" marks those words.', '');
   }
   for (const level of levels) {
     out.push(`## ${level}`, '');
@@ -306,7 +321,7 @@ function renderFunctions(out, byPosition, opts) {
     if (!never.length) out.push('None.');
     for (const f of never) {
       const ref = new Set(f.referenceOnly);
-      const needs = f.missing.map((id) => (ref.has(id) ? `${id} (taught by no lesson, listed only in the Reference unit)` : id)).join(', ');
+      const needs = f.missing.map((id) => `${shortName(opts.graph, id)}${ref.has(id) ? ' (Reference unit)' : ''}`).join(', ');
       out.push(`- ${f.label}: ${f.exponentCount === 0 ? 'no French way to do it is listed yet' : `still needs ${needs}`}`);
     }
     out.push('');

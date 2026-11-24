@@ -160,6 +160,8 @@ export const HOMOGRAPHS = [
     'vocab "donner de l\'aide": aide is the noun, not aider'],
   [74, { manual: ['fr:lex:fait', 'fr:lex:partie'], exclude: ['fr:lex:faire', 'fr:form:faire.prs.3sg', 'fr:form:faire.ptcp', 'fr:lex:partir'] },
     'vocab "le fait" = fact and "la partie" = part / game: nouns, not faire and partir forms'],
+  [82, { manual: [], exclude: ['fr:lex:savoir'] },
+    'vocab "savoir" here is the verb (savoir.verb); extraction also credited the noun le savoir, taught at 86'],
   [86, { manual: ['fr:lex:cours', 'fr:lex:pensee'], exclude: ['fr:lex:courir', 'fr:form:courir.prs.1sg', 'fr:form:courir.prs.2sg', 'fr:lex:penser'] },
     'vocab "le cours" = class and "la pensée" = thought: nouns, not courir and penser forms'],
   [87, { manual: ['fr:lex:fait'], exclude: ['fr:lex:faire', 'fr:form:faire.prs.3sg', 'fr:form:faire.ptcp'] },

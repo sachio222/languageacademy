@@ -2,13 +2,12 @@
   "byRule": {
     "blank-misplaced": 58,
     "claim-untaught": 27,
-    "function-no-exponent": 1,
-    "function-unreachable": 6,
+    "function-unreachable": 7,
     "level-label": 1,
-    "level-order": 32,
+    "level-order": 31,
     "nonstandard-shape": 41,
     "reuse-missed": 492,
-    "taught-twice": 138,
+    "taught-twice": 137,
     "translate-item": 1761,
     "unknown-word": 34,
     "untaught-construction": 109,
@@ -76,5 +75,5 @@
   },
   "modulesWithErrors": 154,
   "native": "en",
-  "warnings": 711
+  "warnings": 709
 }

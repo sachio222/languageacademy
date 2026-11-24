@@ -418,13 +418,17 @@
     },
     {
       "cefr": "A1",
-      "exponentCount": 0,
+      "exponentCount": 1,
       "group": "repair",
       "id": "fn:ask-how-to-spell",
       "label": "Ask how a word is spelled",
-      "missing": [],
+      "missing": [
+        "fr:lex:epeler"
+      ],
       "position": null,
-      "referenceOnly": []
+      "referenceOnly": [
+        "fr:lex:epeler"
+      ]
     },
     {
       "cefr": "A1",

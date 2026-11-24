@@ -13,12 +13,42 @@ import { buildFormIndex } from './fr/forms.mjs';
 // CEFR levels in order, A1 lowest. Every level list in the checker comes from here.
 export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
-// How a level was decided. Every level is our own grading; the sources only inform it.
+// How a level was decided. Every level is our own grading; the sources only inform it. Agents set the first levels
+// with one of these three values:
 //   frequency + Eaquals: frequency rank in Lexique 3.83 and the vocabulary themes and functions the Eaquals
 //     inventory lists for each level, with FLELex as a cross-check.
 //   Eaquals grammar: the level where the Eaquals inventory lists the grammar point as key.
 //   judgment: no source settles it (fixed phrases, course-specific patterns, words a source places oddly).
 export const CEFR_SOURCES = ['agent: frequency + Eaquals', 'agent: Eaquals grammar', 'agent: judgment'];
+
+// Prefixes a cefrSource may start with: `agent: ` for a level an agent set, `team: ` for a person's correction,
+// followed in both cases by free text.
+export const CEFR_SOURCE_PREFIXES = ['agent: ', 'team: '];
+
+// True when a cefrSource is a CEFR_SOURCE_PREFIXES prefix followed by some text.
+export function validCefrSource(source) {
+  if (typeof source !== 'string') return false;
+  return CEFR_SOURCE_PREFIXES.some((p) => source.startsWith(p) && source.slice(p.length).trim().length > 0);
+}
+
+// A core list is `draft` with `frozen: null` until the team approves it, then `approved` with the approval date in
+// `frozen` (YYYY-MM-DD). Returns what is wrong with a list's status and frozen fields, or null when they fit.
+export function coreListStatusProblem(list) {
+  const { status, frozen } = list ?? {};
+  if (status === 'draft') return frozen === null ? null : `is draft, so frozen must be null, not ${JSON.stringify(frozen)}`;
+  if (status === 'approved') {
+    if (isIsoDate(frozen)) return null;
+    return `is approved, so frozen must be the approval date as YYYY-MM-DD, not ${JSON.stringify(frozen ?? null)}`;
+  }
+  return `has status ${JSON.stringify(status ?? null)}; status must be draft or approved`;
+}
+
+// True for a real calendar date written YYYY-MM-DD.
+function isIsoDate(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const d = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === value;
+}
 
 // Levels with a core list.
 export const CORE_LEVELS = ['A1', 'A2', 'B1'];
@@ -77,6 +107,9 @@ export function formOf(graph, id) {
 const storedLevel = (node) => (rank(node?.cefr) >= 0 ? node.cefr : null);
 
 // headwordId -> Map(cell -> written surface), from the same form index the checker reads with; built once per graph.
+// The cache is keyed by the graph object and never rebuilt, so it goes stale if a caller adds or changes headwords
+// or forms after the first nodeLevel call on that graph. No caller does today: graphs are built whole by loadGraph
+// or a test and then only read. A caller that edits a graph in place must pass a new graph object.
 const SURFACES = new WeakMap();
 function cellSurfaces(graph) {
   let byHeadword = SURFACES.get(graph);
@@ -134,8 +167,8 @@ export function nodeLevel(graph, id) {
 }
 
 // The core lists of a language that exist, in CORE_LEVELS order:
-// [{ level, lang, status, frozen, words: [fr:lex:...], constructions: [fr:cx:...] }]; status is draft and frozen null
-// until the team approves a list.
+// [{ level, lang, status, frozen, words: [fr:lex:...], constructions: [fr:cx:...] }]; see coreListStatusProblem for
+// status and frozen.
 export function readCoreLists(graphDir, lang) {
   const out = [];
   for (const level of CORE_LEVELS) {

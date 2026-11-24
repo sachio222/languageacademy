@@ -56,6 +56,17 @@ test('loadGraph throws with the path when a data file is missing', () => {
   }
 });
 
+test('loadGraph reads a language with no exponents.json as having no exponents', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'graph-mini-'));
+  try {
+    cpSync(fixtureDir, dir, { recursive: true });
+    rmSync(join(dir, 'languages', 'fr', 'exponents.json'));
+    assert.deepEqual(loadGraph(dir, 'fr').exponents, []);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('validateGraph is clean on the fixture', () => {
   assert.deepEqual(validateGraph(loadGraph(fixtureDir, 'fr')), []);
 });

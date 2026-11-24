@@ -798,6 +798,16 @@
     "note": "Comment on dit « thank you » en français ?"
   },
   {
+    "function": "fn:ask-how-to-spell",
+    "nodes": [
+      "fr:lex:vous",
+      "fr:form:pouvoir.prs.2pl",
+      "fr:lex:epeler",
+      "fr:cx:chunk.sil-vous-plait"
+    ],
+    "note": "Vous pouvez épeler, s'il vous plaît ?"
+  },
+  {
     "function": "fn:talk-about-work",
     "nodes": [
       "fr:lex:travailler",

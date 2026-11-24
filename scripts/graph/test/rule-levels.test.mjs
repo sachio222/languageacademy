@@ -78,9 +78,10 @@ test('module level is the highest level among the words, forms and constructions
     [4, 'm4', 2, 'Going places', 'B1'],
     [5, 'm5', 2, 'Having', 'B1'],
   ]);
+  // computedCount: how many distinct nodes the unit teaches at its own level (manger; travailler and avoir).
   assert.deepEqual(r.units, [
-    { unitId: 1, title: 'Unit 1: Basics', label: null, computed: 'B1', firstPosition: 1, lastPosition: 2 },
-    { unitId: 2, title: 'Unit 2: A2 Moving', label: 'A2', computed: 'B1', firstPosition: 3, lastPosition: 5 },
+    { unitId: 1, title: 'Unit 1: Basics', label: null, computed: 'B1', computedCount: 1, firstPosition: 1, lastPosition: 2 },
+    { unitId: 2, title: 'Unit 2: A2 Moving', label: 'A2', computed: 'B1', computedCount: 2, firstPosition: 3, lastPosition: 5 },
   ]);
   // A form counts: the present of aller takes aller's level, A2.
   const formOnly = levelReport(ctxOf({}, [makeModule({ position: 1 })], { m1: { teachesWords: ['fr:form:aller.prs.1sg'] } }));
@@ -203,6 +204,60 @@ test('validate: a core list node of another level is core-level-mismatch, a miss
   assert.deepEqual(validateGraph(levelGraph()).filter((i) => i.rule === 'core-level-mismatch'), []);
 });
 
+test('validate: a level source must start agent: or team: and carry text after the prefix', () => {
+  const graph = levelGraph();
+  const set = (id, cefrSource) => graph.nodes.set(id, { ...graph.nodes.get(id), cefrSource });
+  set('fr:lex:parler', 'team: Jake, 2026-12');
+  set('fr:lex:aller', 'FLELex');
+  set('fr:lex:hier', 'team:');
+  set('fr:cx:q.inversion', null);
+  graph.headwords = graph.headwords.map((h) => graph.nodes.get(h.id));
+  graph.constructions = graph.constructions.map((c) => graph.nodes.get(c.id));
+  const bad = validateGraph(graph).filter((i) => i.rule === 'cefr-source-bad');
+  assert.deepEqual(bad.map((i) => [i.nodeId, i.severity]).sort(), [['fr:cx:q.inversion', 'error'], ['fr:lex:aller', 'error'], ['fr:lex:hier', 'error']]);
+  assert.match(bad.find((i) => i.nodeId === 'fr:lex:aller').message, /"FLELex".*agent: .*team: /);
+  // A node with neither a level nor a source is left to level-data-missing.
+  assert.deepEqual(validateGraph(levelGraph()).filter((i) => i.rule === 'cefr-source-bad'), []);
+});
+
+test('validate: a core list is draft with frozen null or approved with an approval date', () => {
+  const run = (a1) => validateGraph(levelGraph({ coreLists: [a1, CORE[1], CORE[2]] })).filter((i) => i.rule === 'core-list-status');
+  assert.deepEqual(run(CORE[0]), []);
+  assert.deepEqual(run({ ...CORE[0], status: 'approved', frozen: '2026-12-01' }), []);
+  for (const bad of [{ status: 'approved', frozen: null }, { status: 'draft', frozen: '2026-12-01' }, { status: 'frozen', frozen: '2026-12-01' }]) {
+    const issues = run({ ...CORE[0], ...bad });
+    assert.deepEqual(issues.map((i) => [i.nodeId, i.severity]), [['core:fr-A1', 'error']], JSON.stringify(bad));
+  }
+});
+
+test('a level counts as reached for the level warnings only once the levels below it are reached too', () => {
+  // m1 teaches the whole B1 list, so B1 alone is reached at position 1, while A1 and A2 are not reached at all.
+  const course = [
+    makeModule({ position: 1, title: 'B1 words' }),
+    makeModule({ position: 2, title: 'More B1 words' }),
+    makeModule({ position: 3, title: 'B1 Review', kind: 'practice' }),
+  ];
+  const courseMap = {
+    m1: { teachesWords: ['fr:lex:avoir', 'fr:lex:manger', 'fr:lex:travailler'] },
+    m2: { teachesWords: ['fr:lex:avoir'] },
+  };
+  const ctx = ctxOf({}, course, courseMap);
+  assert.equal(levelReport(ctx).levels.B1.reachedAt, 1);
+  assert.equal(levelReport(ctx).levels.B1.cumulative.reachedAt, null);
+  const issues = ruleLevels(ctx);
+  // Counted from A1, avoir at m2 is still two levels up, and the B1 review claims a level the course has not reached.
+  assert.deepEqual(issues.filter((i) => i.rule === 'level-order').map((i) => i.moduleKey), ['m1', 'm2']);
+  const label = issues.filter((i) => i.rule === 'level-label');
+  assert.deepEqual(label.map((i) => i.moduleKey), ['m3']);
+  assert.match(label[0].message, /reached no level yet/);
+});
+
+test('graph:check prints level-data-missing even at zero', () => {
+  const lines = checkSummaryLines(summarize([]));
+  assert.ok(lines.includes('level-data-missing: 0'), lines.join('\n'));
+  assert.ok(lines.includes('dangling-ref: 0'), lines.join('\n'));
+});
+
 test('validate: a reading limit must name a headword in the graph', () => {
   const issues = validateGraph(levelGraph({
     readingLimits: [{ id: 'fr:lex:parler', cells: ['prs'] }, { id: 'fr:lex:nope', cells: ['prs'] }, { id: 'fr:cx:q.inversion', cells: ['prs'] }],
@@ -253,6 +308,9 @@ test('the fix list shows level coverage, where each level is reached and the out
   assert.match(section, /\| Through A2 \| 83% \(5 of 6\) \| 2 of 2 \| 4\. Going places \|/);
   assert.match(section, /percentages are rounded to the nearest whole number/i);
   assert.match(section, /fr:lex:travailler \(B1\)/);
+  assert.match(section, /^\| Unit \| Positions \| Level label \| Highest level taught \| Taught at that level \|$/m);
+  assert.match(section, /^\| Unit 2: A2 Moving \| 3 to 5 \| A2 \| B1 \| 2 \|$/m);
+  assert.match(section, /single word or grammar pattern is enough to set a unit's highest level/);
   assert.match(md, /# 10\. Other problems/);
   assert.ok(!/[–—]/.test(md), 'no en or em dashes');
 });
@@ -322,6 +380,18 @@ test('the fix list says a Reference-only word is taught by no lesson and only li
   const md = renderFixList([], ctx.course, ctx.graph.courseMap, { levels: levelReport(ctx), functions: functionReport(ctx), graph: ctx.graph });
   const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
   assert.match(section, /Some functions need words that no lesson teaches and only the Reference unit lists \(vous\)/);
-  assert.match(section, /fr:lex:vous \(taught by no lesson, listed only in the Reference unit\)/);
+  assert.match(section, /still needs Question by inversion, vous \(Reference unit\)$/m);
+  assert.doesNotMatch(section, /fr:lex:vous/);
   assert.doesNotMatch(section, /appear only in the Reference unit|Reference unit only/);
+});
+
+test('Section 7 says possible is a floor and puts each level\'s function count beside its core word coverage', () => {
+  const ctx = ctxOf();
+  const md = renderFixList([], ctx.course, ctx.graph.courseMap, { levels: levelReport(ctx), functions: functionReport(ctx), graph: ctx.graph });
+  const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
+  assert.match(section, /"Possible" is a floor: the course has taught at least one short way to do the function, often a single phrase/);
+  assert.match(section, /not proof that a learner can do it at that level/);
+  assert.match(section, /^\| Level \| Functions possible by the end \| Core words of that level taught \|$/m);
+  assert.match(section, /^\| A1 \| \d+ of \d+ \| 75% \(3 of 4\) \|$/m);
+  assert.doesNotMatch(section, /Functions possible by the end of the course: A1/);
 });

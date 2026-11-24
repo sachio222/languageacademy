@@ -21,13 +21,14 @@ test('summarize counts errors, warnings and modules with errors', () => {
   assert.deepEqual(s.byRule, { 'untaught-word': 1, 'unknown-word': 1, 'reuse-missed': 1 });
 });
 
-test('checkSummaryLines prints unread-items and dangling-ref even at zero, then the totals', () => {
+test('checkSummaryLines prints dangling-ref, level-data-missing and unread-items even at zero, then the totals', () => {
   const lines = checkSummaryLines(summarize([
     { rule: 'untaught-word', severity: 'error', moduleKey: 'm1' },
     { rule: 'reuse-missed', severity: 'warning', moduleKey: 'm1' },
   ]));
   assert.deepEqual(lines, [
     'dangling-ref: 0',
+    'level-data-missing: 0',
     'reuse-missed: 1',
     'unread-items: 0',
     'untaught-word: 1',
@@ -167,6 +168,7 @@ test('graph:check prints the native language it checked for and the cognates it 
   assert.equal(s.cognatesAllowed, 7);
   assert.deepEqual(checkSummaryLines(s), [
     'dangling-ref: 0',
+    'level-data-missing: 0',
     'unread-items: 0',
     'untaught-word: 1',
     'errors: 1, warnings: 0, modules with errors: 1',

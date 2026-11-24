@@ -168,6 +168,13 @@ test('the real function list has the staple A1 functions and distinct repair act
   assert.ok(!ids.has('fn:ask-for-clarification'));
 });
 
+test('every real function has at least one French exponent, including asking how a word is spelled', () => {
+  const covered = new Set(real.exponents.map((e) => e.function));
+  assert.deepEqual(real.functions.filter((f) => !covered.has(f.id)).map((f) => f.id), []);
+  const spell = real.exponents.filter((e) => e.function === 'fn:ask-how-to-spell');
+  assert.ok(spell.some((e) => e.nodes.includes('fr:lex:epeler')), 'an exponent with épeler');
+});
+
 test('no two exponents of a real function list the same nodes', () => {
   const seen = new Set();
   for (const e of real.exponents) {

@@ -43,10 +43,11 @@ export function loadGraph(graphDir, lang, opts = {}) {
   const constructions = readJson(join(langDir, 'constructions.json'));
   const nameList = readJson(join(langDir, 'names.json'));
   const courseMap = readJson(join(langDir, 'course-map.json'));
-  // How this language performs the shared functions; see functions.mjs.
-  const exponents = readJson(join(langDir, 'exponents.json'));
-  // Core lists per level (core/levels/<lang>-<level>.json) and headwords the checker cannot yet read in running
-  // text (reading-limits.json); a language may have neither.
+  // How this language performs the shared functions (functions.mjs), core lists per level
+  // (core/levels/<lang>-<level>.json) and headwords the checker cannot yet read in running text
+  // (reading-limits.json). A language may have none of them yet.
+  const exponentsPath = join(langDir, 'exponents.json');
+  const exponents = existsSync(exponentsPath) ? readJson(exponentsPath) : [];
   const coreLists = readCoreLists(graphDir, lang);
   const limitsPath = join(langDir, 'reading-limits.json');
   const readingLimits = existsSync(limitsPath) ? readJson(limitsPath) : [];

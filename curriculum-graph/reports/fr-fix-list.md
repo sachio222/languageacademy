@@ -1,6 +1,6 @@
 # French course fix list
 
-2767 errors, 711 warnings, 154 modules with errors.
+2767 errors, 709 warnings, 154 modules with errors.
 
 ## How to read this
 
@@ -1556,7 +1556,6 @@ This list was checked for English speakers, so a cognate (a French word they rea
 - fr:lex:comprendre is taught at positions 68, 81, 87, 88, 99, 122, 134; merge into prendre - To Take
 - fr:cx:frame.verb-que-clause is taught at positions 67, 84, 85, 126, 143; merge into dire - To Say / To Tell
 - fr:lex:question is taught at positions 74, 86; merge into Essential Vocabulary - Time, People & Ideas
-- fr:lex:savoir is taught at positions 82, 86; merge into savoir - To Know (Facts/Skills)
 - fr:lex:savoir.verb is taught at positions 82, 86, 122, 134, 158; merge into savoir - To Know (Facts/Skills)
 - fr:lex:bien is taught at positions 1, 87, 135, 142, 144; merge into Famous Words & Greetings
 - fr:lex:fait is taught at positions 74, 87; merge into Essential Vocabulary - Time, People & Ideas
@@ -1725,20 +1724,22 @@ The checker cannot yet tell these verbs from a noun or adjective with the same s
 
 ## Units
 
-| Unit | Positions | Level label | Highest level taught |
-|---|---|---|---|
-| Unit 1: Essential Grammar | 1 to 13 | None | A2 |
-| Unit 2: Asking & Describing | 14 to 27 | None | A2 |
-| Unit 3: Movement & Possession | 28 to 39 | None | A2 |
-| Unit 4: Everyday Words | 40 to 52 | None | B2 |
-| Unit 5: Time & Taste | 53 to 65 | None | C1 |
-| Unit 6: Basic Fluency | 66 to 77 | None | B1 |
-| Unit 7: Knowledge & Learning | 78 to 91 | None | B2 |
-| Unit 8: Daily Life & Actions | 92 to 106 | None | A2 |
-| Unit 9: Discourse & Past Tense | 107 to 120 | None | B1 |
-| Unit 10: Mastery & Nuance | 121 to 139 | B2 | B2 |
-| Unit 11: Daily Essentials | 140 to 149 | None | A2 |
-| Unit 12: Curiosity & Questions | 150 to 160 | None | B1 |
+| Unit | Positions | Level label | Highest level taught | Taught at that level |
+|---|---|---|---|---|
+| Unit 1: Essential Grammar | 1 to 13 | None | A2 | 2 |
+| Unit 2: Asking & Describing | 14 to 27 | None | A2 | 2 |
+| Unit 3: Movement & Possession | 28 to 39 | None | A2 | 15 |
+| Unit 4: Everyday Words | 40 to 52 | None | B2 | 1 |
+| Unit 5: Time & Taste | 53 to 65 | None | C1 | 2 |
+| Unit 6: Basic Fluency | 66 to 77 | None | B1 | 2 |
+| Unit 7: Knowledge & Learning | 78 to 91 | None | B2 | 1 |
+| Unit 8: Daily Life & Actions | 92 to 106 | None | A2 | 28 |
+| Unit 9: Discourse & Past Tense | 107 to 120 | None | B1 | 6 |
+| Unit 10: Mastery & Nuance | 121 to 139 | B2 | B2 | 1 |
+| Unit 11: Daily Essentials | 140 to 149 | None | A2 | 7 |
+| Unit 12: Curiosity & Questions | 150 to 160 | None | B1 | 13 |
+
+A single word or grammar pattern is enough to set a unit's highest level, so the last column gives how many words, forms and grammar patterns the unit teaches at that level.
 
 ## Level labels
 
@@ -1754,7 +1755,6 @@ The course reaches no level, so each module below teaches words or grammar patte
 - 71. demander - To Ask: fr:lex:permission (B1)
 - 78. Talking About People in General: fr:lex:peuple (B1), fr:lex:population (B1)
 - 79. Studying & Reviewing - étudier & réviser: fr:lex:reviser (B1)
-- 82. savoir - To Know (Facts/Skills): fr:lex:savoir (B1)
 - 86. Knowledge & Learning - Essential Nouns: fr:lex:apprentissage (B2), fr:lex:savoir (B1)
 - 87. Discourse Markers - Sound Like a Native: fr:lex:ainsi (B1), fr:lex:presque (B1)
 - 107. Causal & Reason Words - Explaining Why: fr:cx:chunk.grace-a (B1), fr:lex:car (B1), fr:lex:grace (B1), fr:lex:motif (B1), fr:lex:puisque (B1)
@@ -1783,9 +1783,15 @@ The course reaches no level, so each module below teaches words or grammar patte
 
 # 7. What a learner can do
 
-A function is something a learner does with French, such as greeting someone or asking the time. It becomes possible at the first module by which the course has taught every word and grammar pattern of one French way to do it. Functions possible by the end of the course: A1 36 of 42, A2 22 of 23, B1 19 of 19.
+A function is something a learner does with French, such as greeting someone or asking the time. It becomes possible at the first module by which the course has taught every word and grammar pattern of one French way to do it. "Possible" is a floor: the course has taught at least one short way to do the function, often a single phrase. That is not proof that a learner can do it at that level, so the table puts each level's count beside the share of that level's core words the course teaches.
 
-Some functions need words that no lesson teaches and only the Reference unit lists (deux, huit, lundi, mai, trois). That unit has no position in the course, so it teaches nothing, and those functions never become possible. Their words are marked "taught by no lesson, listed only in the Reference unit" below.
+| Level | Functions possible by the end | Core words of that level taught |
+|---|---|---|
+| A1 | 36 of 42 | 50% (369 of 733) |
+| A2 | 22 of 23 | 13% (86 of 681) |
+| B1 | 19 of 19 | 3% (22 of 841) |
+
+Some functions need words that no lesson teaches and only the Reference unit lists (deux, épeler, huit, lundi, mai, trois). That unit has no position in the course, so it teaches nothing, and those functions never become possible. Below, "(Reference unit)" marks those words.
 
 ## A1
 
@@ -1830,12 +1836,12 @@ Possible, with the module where each becomes possible:
 
 Never possible in the course:
 
-- Count and use numbers: still needs fr:lex:deux (taught by no lesson, listed only in the Reference unit), fr:lex:trois (taught by no lesson, listed only in the Reference unit)
-- Say the day and the date: still needs fr:lex:lundi (taught by no lesson, listed only in the Reference unit), fr:lex:trois (taught by no lesson, listed only in the Reference unit), fr:lex:mai (taught by no lesson, listed only in the Reference unit)
-- Ask and tell the time: still needs fr:lex:huit (taught by no lesson, listed only in the Reference unit)
-- Say what you prefer: still needs fr:lex:mieux
-- Book a table or a room: still needs fr:lex:deux (taught by no lesson, listed only in the Reference unit), fr:lex:huit (taught by no lesson, listed only in the Reference unit)
-- Ask how a word is spelled: no French way to do it is listed yet
+- Count and use numbers: still needs deux (Reference unit), trois (Reference unit)
+- Say the day and the date: still needs lundi (Reference unit), trois (Reference unit), mai (Reference unit)
+- Ask and tell the time: still needs huit (Reference unit)
+- Say what you prefer: still needs mieux
+- Book a table or a room: still needs deux (Reference unit), huit (Reference unit)
+- Ask how a word is spelled: still needs épeler (Reference unit)
 
 ## A2
 
@@ -1866,7 +1872,7 @@ Possible, with the module where each becomes possible:
 
 Never possible in the course:
 
-- Show interest or indifference: still needs fr:lex:interessant
+- Show interest or indifference: still needs intéressant
 
 ## B1
 

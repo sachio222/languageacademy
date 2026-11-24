@@ -4000,12 +4000,14 @@
     ]
   },
   "2024-05-08-savoir": {
+    "excludeWords": [
+      "fr:lex:savoir"
+    ],
     "teachesConstructions": [
       "fr:cx:frame.savoir-infinitive",
       "fr:cx:chunk.je-ne-sais-pas"
     ],
     "teachesWords": [
-      "fr:lex:savoir",
       "fr:lex:savoir.verb",
       "fr:lex:je",
       "fr:form:savoir.verb.prs.1sg",

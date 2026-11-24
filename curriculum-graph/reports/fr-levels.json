@@ -1234,7 +1234,7 @@
       },
       "B1": {
         "constructions": 0,
-        "words": 7
+        "words": 6
       },
       "position": 82
     },
@@ -1249,7 +1249,7 @@
       },
       "B1": {
         "constructions": 0,
-        "words": 7
+        "words": 6
       },
       "position": 83
     },
@@ -1264,7 +1264,7 @@
       },
       "B1": {
         "constructions": 0,
-        "words": 7
+        "words": 6
       },
       "position": 84
     },
@@ -1279,7 +1279,7 @@
       },
       "B1": {
         "constructions": 0,
-        "words": 7
+        "words": 6
       },
       "position": 85
     },
@@ -4900,7 +4900,7 @@
       "unitId": 7
     },
     {
-      "computed": "B1",
+      "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-08-savoir",
       "position": 82,
@@ -5835,6 +5835,7 @@
   "units": [
     {
       "computed": "A2",
+      "computedCount": 2,
       "firstPosition": 1,
       "label": null,
       "lastPosition": 13,
@@ -5843,6 +5844,7 @@
     },
     {
       "computed": "A2",
+      "computedCount": 2,
       "firstPosition": 14,
       "label": null,
       "lastPosition": 27,
@@ -5851,6 +5853,7 @@
     },
     {
       "computed": "A2",
+      "computedCount": 15,
       "firstPosition": 28,
       "label": null,
       "lastPosition": 39,
@@ -5859,6 +5862,7 @@
     },
     {
       "computed": "B2",
+      "computedCount": 1,
       "firstPosition": 40,
       "label": null,
       "lastPosition": 52,
@@ -5867,6 +5871,7 @@
     },
     {
       "computed": "C1",
+      "computedCount": 2,
       "firstPosition": 53,
       "label": null,
       "lastPosition": 65,
@@ -5875,6 +5880,7 @@
     },
     {
       "computed": "B1",
+      "computedCount": 2,
       "firstPosition": 66,
       "label": null,
       "lastPosition": 77,
@@ -5883,6 +5889,7 @@
     },
     {
       "computed": "B2",
+      "computedCount": 1,
       "firstPosition": 78,
       "label": null,
       "lastPosition": 91,
@@ -5891,6 +5898,7 @@
     },
     {
       "computed": "A2",
+      "computedCount": 28,
       "firstPosition": 92,
       "label": null,
       "lastPosition": 106,
@@ -5899,6 +5907,7 @@
     },
     {
       "computed": "B1",
+      "computedCount": 6,
       "firstPosition": 107,
       "label": null,
       "lastPosition": 120,
@@ -5907,6 +5916,7 @@
     },
     {
       "computed": "B2",
+      "computedCount": 1,
       "firstPosition": 121,
       "label": "B2",
       "lastPosition": 139,
@@ -5915,6 +5925,7 @@
     },
     {
       "computed": "A2",
+      "computedCount": 7,
       "firstPosition": 140,
       "label": null,
       "lastPosition": 149,
@@ -5923,6 +5934,7 @@
     },
     {
       "computed": "B1",
+      "computedCount": 13,
       "firstPosition": 150,
       "label": null,
       "lastPosition": 160,

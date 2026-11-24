@@ -59,12 +59,22 @@ function analyse(ctx) {
       if (label) labelTexts.set(`unit:${m.unitId}`, label.text);
       u = {
         unitId: m.unitId, title: m.unitTitle ?? null, label: label?.level ?? null,
-        computed: null, firstPosition: m.position, lastPosition: m.position,
+        computed: null, computedCount: 0, firstPosition: m.position, lastPosition: m.position,
       };
       units.push(u);
     }
     u.lastPosition = m.position;
     u.computed = maxLevel([u.computed, modules[i].computed].filter(Boolean));
+  }
+  // How many distinct nodes each unit teaches at its own level: a single word can set a unit's level.
+  for (const u of units) {
+    if (!u.computed) continue;
+    const ids = new Set();
+    for (const m of course) {
+      if (m.unitId !== u.unitId) continue;
+      for (const n of taughtNodes.get(m.position)) if (n.level === u.computed) ids.add(n.id);
+    }
+    u.computedCount = ids.size;
   }
 
   // Coverage of each core list, at every position and by the end.
@@ -161,10 +171,12 @@ export function levelReport(ctx) {
   return analyse(ctx).report;
 }
 
-// The highest level reached before a position, or null.
+// The highest level reached before a position, or null. A level counts only once the course has reached it together
+// with the levels below it (its cumulative block), so a course that covers the B1 list before the A1 list has not
+// reached B1.
 function reachedBefore(levels, position) {
   return maxLevel(Object.entries(levels)
-    .filter(([, l]) => l.reachedAt !== null && l.reachedAt < position)
+    .filter(([, l]) => l.cumulative.reachedAt !== null && l.cumulative.reachedAt < position)
     .map(([level]) => level));
 }
 

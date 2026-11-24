@@ -6,7 +6,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadGraph } from '../load.mjs';
 import { LEVELS } from '../functions.mjs';
-import { nodeLevel, cellConstruction, CELL_CONSTRUCTIONS, CEFR_SOURCES, CORE_LEVELS, POLITE_CONDITIONALS, POLITE_CONSTRUCTION, readCoreLists } from '../levels-data.mjs';
+import { nodeLevel, cellConstruction, CELL_CONSTRUCTIONS, CEFR_SOURCES, CORE_LEVELS, POLITE_CONDITIONALS, POLITE_CONSTRUCTION, readCoreLists, validCefrSource, coreListStatusProblem } from '../levels-data.mjs';
 import { checkLevels } from '../fr/build/construction-levels.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
@@ -138,6 +138,29 @@ test('the construction level table rejects a construction without a level and a 
   assert.throws(() => checkLevels([], levels), /do not exist: neg\.ne-pas/);
 });
 
+test('a level source is agent: or team: followed by text; the agent values in use are all valid', () => {
+  for (const s of CEFR_SOURCES) assert.ok(validCefrSource(s), s);
+  for (const s of ['team: Jake, 2026-12', 'team: teacher review of Unit 4', 'agent: judgment']) assert.ok(validCefrSource(s), s);
+  for (const s of ['Eaquals', 'FLELex', 'team:', 'team: ', 'team:Jake', 'agent:judgment', 'Team: Jake', ' team: Jake', '', null, undefined, 3]) {
+    assert.equal(validCefrSource(s), false, JSON.stringify(s));
+  }
+});
+
+test('a core list is draft with frozen null, or approved with frozen as a YYYY-MM-DD date', () => {
+  assert.equal(coreListStatusProblem({ status: 'draft', frozen: null }), null);
+  assert.equal(coreListStatusProblem({ status: 'approved', frozen: '2026-12-01' }), null);
+  for (const bad of [
+    { status: 'approved', frozen: null },
+    { status: 'approved', frozen: '2026-13-01' },
+    { status: 'approved', frozen: '2026-02-30' },
+    { status: 'approved', frozen: '1 Dec 2026' },
+    { status: 'draft', frozen: '2026-12-01' },
+    { status: 'frozen', frozen: '2026-12-01' },
+    { frozen: null },
+    { status: 'draft' },
+  ]) assert.match(String(coreListStatusProblem(bad)), /draft|approved/, JSON.stringify(bad));
+});
+
 test('readCoreLists names the file when a core list is not valid JSON', () => {
   const dir = mkdtempSync(join(tmpdir(), 'core-lists-'));
   try {
@@ -157,7 +180,7 @@ const graph = loadGraph(graphDir, 'fr');
 
 test('every French headword, construction and paradigm has a level and a source', () => {
   const bad = [...graph.headwords, ...graph.constructions, ...graph.paradigms]
-    .filter((n) => !LEVELS.includes(n.cefr) || !CEFR_SOURCES.includes(n.cefrSource))
+    .filter((n) => !LEVELS.includes(n.cefr) || !validCefrSource(n.cefrSource))
     .map((n) => `${n.id} ${n.cefr} ${n.cefrSource}`);
   assert.deepEqual(bad, []);
 });
@@ -174,9 +197,8 @@ test('the French core lists exist, name graph nodes of the right kind, and match
   const seen = new Set();
   for (const list of lists) {
     assert.equal(list.lang, 'fr');
-    // Draft until the team approves the lists; frozen then gets the approval date.
-    assert.equal(list.status, 'draft');
-    assert.equal(list.frozen, null);
+    // draft with frozen null until the team approves a list, then approved with the approval date in frozen.
+    assert.equal(coreListStatusProblem(list), null, list.level);
     assert.ok(list.words.length > 0 && list.constructions.length > 0, list.level);
     assert.deepEqual(list.words, [...list.words].sort(), `${list.level} words sorted`);
     assert.deepEqual(list.constructions, [...list.constructions].sort(), `${list.level} constructions sorted`);
@@ -202,7 +224,9 @@ test('no French module reads above the level of its words and constructions beca
     const forms = ids.filter((id) => id.includes(':form:') && rankOf(nodeLevel(graph, id)) > rankOf(base));
     if (base && forms.length) raised.push(`${moduleKey} (${base}): ${forms.join(' ')}`);
   }
-  assert.deepEqual(raised, []);
+  assert.deepEqual(raised, [], 'These modules teach a form above the level of everything else they teach. If the lesson '
+    + 'explains the tense of that form, add the construction that builds it (fr:cx:subj.il-faut-que for a subjunctive form, '
+    + 'for example) to the module\'s teachesConstructions in course-map.json. Otherwise remove the form from its vocabulary table.');
 });
 
 test('the core lists include quand and non at A1 and leave out vulgar or slang words', () => {

@@ -72,7 +72,7 @@ A help screen teaches only what its course-map entry credits. Its French is chec
 
 Run these from the repository root.
 
-- `pnpm graph:check` prints a count for each rule, then the number of errors and warnings, the native language it checked for (`native`) and how many uses of an untaught cognate it allowed (`cognatesAllowed`). It ends with one line per level giving the share of that level's core words and the core constructions taught by the end of the course and where the level is reached, followed from A2 on by the same counts through that level (the level and the levels below it), then how many functions of each level become possible. It exits with status 1 while any error remains, so expect a failing exit until the course can lock. Add `--native <code>` to check for another native language, such as `--native ja`; `graph:report` takes the same option.
+- `pnpm graph:check` prints a count for each rule it found, plus `dangling-ref`, `level-data-missing` and `unread-items` even at 0, then the number of errors and warnings, the native language it checked for (`native`) and how many uses of an untaught cognate it allowed (`cognatesAllowed`). It ends with one line per level giving the share of that level's core words and the core constructions taught by the end of the course and where the level is reached, followed from A2 on by the same counts through that level (the level and the levels below it), then how many functions of each level become possible. It exits with status 1 while any error remains, so expect a failing exit until the course can lock. Add `--native <code>` to check for another native language, such as `--native ja`; `graph:report` takes the same option.
 - `pnpm graph:due <moduleKey|position>` lists the words and patterns the module at that position should use again. A taught word or pattern should come back within 2 modules, then within 5, 12 and 30 modules of each use. The list holds those with no use yet inside their current window, when that window ends at the next module or has already ended. Each line gives the ID, where it was taught, its last use and where its window ends.
 - `pnpm graph:report` writes the fix list (`reports/fr-fix-list.md`), the counts (`reports/fr-summary.json`) and the level and function data (`reports/fr-levels.json`, `reports/fr-functions.json`; see Level and function reports). The same input always gives byte-identical files.
 - `pnpm graph:extract` rereads the vocabulary table of every teaching module and rewrites `teachesWords` in `course-map.json`. It prints each vocabulary word the course word list does not have.
@@ -85,6 +85,10 @@ Run these from the repository root.
 3. In `course-map.json`, under the module's key, list in `teachesConstructions` the ID of each grammar pattern its concept cards explain. A pattern the graph does not have yet needs a construction first (see below).
 4. Run `pnpm graph:check`, then `pnpm graph:report`, and read the module's lines in the fix list.
 5. Before you write the next module, run `pnpm graph:due <its position>` and use what it lists in the new exercises.
+
+`pnpm graph:test` fails when a vocabulary table lists a form whose tense puts the module above the level of everything else it teaches, such as sois (a subjunctive form of être) in a lesson that credits no subjunctive. List the construction that builds that tense in `teachesConstructions`, here `fr:cx:subj.il-faut-que`, or take the form out of the table.
+
+Many of the verbs added for the core lists (see Levels and core lists) have only some of their forms. Verbs in -yer such as envoyer, appuyer and employer have only their imperfect, past participle and present participle, and irregular verbs such as écrire, offrir and conduire have only their future and conditional, so the checker reads j'envoie and j'écris as unknown words. Before a lesson teaches one of these verbs, add its missing forms to `forms.json` (see Adding an irregular form).
 
 ## Course-map fields
 
@@ -119,7 +123,9 @@ Add an object to `headwords.json` and keep the file sorted by `id`:
 - `pos` is the part of speech: noun, verb, adjective, adverb, pronoun, preposition, conjunction, article, determiner, interjection, interrogative, or alphabet for a letter.
 - `paradigms` lists the patterns in `paradigms.json` that generate the word's regular forms. A regular -er verb takes the same seven patterns as `fr:lex:parler`; a noun takes `fr:cx:noun.plural`; an adjective takes the `fr:cx:adj.*` pattern that fits its endings. An irregular verb lists only the patterns its regular cells follow and gets the rest as irregular forms.
 - `dictionaryId` is the word's key in `src/data/dictionary/`, or null.
-- `cefr` and `cefrSource` give the word's level and how it was decided (see Levels and core lists). Every headword needs both.
+- `cefr` and `cefrSource` give the word's level and how it was decided (see Levels and core lists). Every headword needs both. When you choose the level yourself, write `cefrSource` as `team: ` followed by a few words, such as `team: teacher review, 2026-12`.
+
+A new headword does not go into a core list, even at A1, A2 or B1. The core lists change only when the team changes a level's target (see Levels and core lists).
 
 Then run `pnpm graph:extract` and `pnpm graph:check`.
 
@@ -166,7 +172,7 @@ A detector is a list of steps, one for each word it matches, read left to right 
 `core/functions.json` lists what a learner can do with a language. Each entry looks like this (the file keeps the keys of each entry in alphabetical order):
 
 ```json
-{ "id": "fn:tell-the-time", "group": "information", "cefr": "A1", "label": "Ask and tell the time", "canDo": "Can ask what time it is and understand or give the answer.", "notions": ["time"] }
+{ "canDo": "Can ask what time it is and understand or give the answer.", "cefr": "A1", "group": "information", "id": "fn:tell-the-time", "label": "Ask and tell the time", "notions": ["time"] }
 ```
 
 - `id` is `fn:` plus a short key in lowercase with hyphens. Every language uses the same ID.
@@ -177,7 +183,7 @@ A detector is a list of steps, one for each word it matches, read left to right 
 
 The list follows the A1, A2 and B1 functions of the Eaquals core inventory for French (2015). The labels and can-do lines are our own wording. The inventory is copyright, so never paste its text or examples into these files.
 
-`languages/fr/exponents.json` lists the French exponents:
+`languages/fr/exponents.json` lists the French exponents. A language without this file has no exponents yet, so `pnpm graph:check` warns `function-no-exponent` for every function.
 
 ```json
 { "function": "fn:tell-the-time", "nodes": ["fr:form:quel.f", "fr:lex:heure", "fr:form:etre.prs.3sg", "fr:cx:q.inversion", "fr:lex:huit"], "note": "Quelle heure est-il ? Il est huit heures." }
@@ -199,7 +205,7 @@ Every headword, construction and paradigm has a CEFR level in `cefr`, and `cefrS
 - Lexique 3.83 (lexique.org) gives how often each word appears in French films and books.
 - FLELex (CENTAL, UCLouvain) gives how often each word appears in French textbooks at each level, and a level derived from those counts. Its license allows only non-commercial use, so we used it only to check our levels. For the words the course uses, it agrees with our level for about two words in three.
 
-`cefrSource` takes one of three values:
+`cefrSource` starts with `agent: ` when an agent set the level or `team: ` when a person on the team did, followed by a short note on how it was decided. Agents set every level so far, with one of three values:
 
 | Value | Meaning |
 |---|---|
@@ -207,7 +213,7 @@ Every headword, construction and paradigm has a CEFR level in `cefr`, and `cefrS
 | `agent: Eaquals grammar` | The level where the Eaquals inventory lists the grammar point as key: passé composé A1, imparfait A2, il faut que with the subjunctive A2, other uses of the subjunctive B1, conditionnel passé B2. A grammar word takes the level of its grammar point, so dont is B1 and donc is A2. |
 | `agent: judgment` | Our own call where the sources say nothing direct: fixed phrases, slang, grammar terms such as verbe, and words a frequency rank places too low or too high. |
 
-Agents set the first levels, hence the `agent:` prefix. Anyone may change a level; write a short source of your own when you do.
+Anyone on the team may change a level. Write `cefrSource` as `team: ` and a few words on why, such as `team: teacher review, 2026-12`. A source in any other form, or a level with no source, is the error `cefr-source-bad` in `pnpm graph:check` and fails `pnpm graph:test`.
 
 A form has no stored level. It takes the higher of its headword's level and the level of the construction that builds its tense: subjunctive forms take `fr:cx:subj.il-faut-que`, conditional forms `fr:cx:conditionnel-present`, future forms `fr:cx:futur-simple`, imperfect forms `fr:cx:imparfait` and present participles `fr:cx:gerondif`. Present-tense forms, past participles and agreement forms take the headword's level. Two exceptions keep beginner forms at their level:
 
@@ -222,28 +228,29 @@ The core lists in `core/levels/` name what a learner must have to reach a level.
 { "level": "A1", "lang": "fr", "status": "draft", "frozen": null, "words": ["fr:lex:accepter", "..."], "constructions": ["fr:cx:adj.agreement", "..."] }
 ```
 
-- `status` is `draft` until the team approves the list; `frozen` then holds the approval date.
+- `status` and `frozen` record approval. A list is `"status": "draft"` with `"frozen": null` until the team approves it, and `"status": "approved"` with the approval date in `frozen`, such as `"frozen": "2026-12-01"`, once it does. To approve a list, change those two fields and nothing else. `pnpm graph:check` reports any other pair as the error `core-list-status`.
 - `constructions` holds the grammar points the Eaquals inventory lists as key at that level, where the graph has a construction or paradigm for them. Paradigms appear only for the present tense of regular verbs and the plural of nouns; the construction for a tense, such as `fr:cx:imparfait`, stands for the paradigms that build it.
-- `words` holds every headword of that level except letters of the alphabet, interjections other than greetings, thanks, oui, non, ah, oh, allô and bravo, and words a learner does not need: slang, vulgar words, grammar terms such as verbe, and named dishes and landmarks the course happens to mention.
+- `words` was drafted from every headword of that level in the word list at the time, leaving out letters of the alphabet, interjections other than greetings, thanks, oui, non, ah, oh, allô and bravo, and words a learner does not need: slang, vulgar words, grammar terms such as verbe, and named dishes and landmarks the course happens to mention. It does not grow when the word list does.
 - Every node in a list has the list's level, and no node is in two lists.
 
 The word list holds the words the course uses and about 1,400 more that a learner needs at A1, A2 or B1 and that no lesson uses yet, such as écrire, fermer, avion and noir. They came from the 3,000 most frequent lemmas in Lexique and the Eaquals vocabulary themes, each placed by hand, and `scripts/graph/fr/build/core-words.mjs` records them. A core word that no lesson teaches is expected: it is a gap the coverage report shows.
 
 The lists hold 733 words at A1, 681 at A2 and 841 at B1, so 1,414 words through A2 and 2,255 through B1. Milton and Alexiou (2009) measured French learners knowing about 1,160 lemmas at A1, 1,650 at A2 and 2,420 at B1, out of the 5,000 most frequent. The A1 list sits below that A1 figure and the A2 and B1 totals sit just below theirs, because a core list holds what every learner must know at a level, not every word a learner at that level happens to know.
 
-The team approves the lists before coverage is measured against them as a fixed target. After that, change them by hand, only when the team changes the target. If you change the level of a word or construction in a list, move it to the list of its new level or take it out. `pnpm graph:test` fails when a headword, construction or paradigm has no level or source, and when a list names a node of another level. `pnpm graph:check` reports the same mismatch as the error `core-level-mismatch`, and a list entry that is not in the graph as `dangling-ref`.
+The team approves the lists before coverage is measured against them as a fixed target. A list changes only when the team changes a level's target, so adding a headword at A1 leaves the A1 list as it is. Any change to a list needs the team's approval: set the list back to `draft` with `frozen: null` when you edit it, and to `approved` with the new date once the team agrees. If you change the level of a word or construction in a list, move it to the list of its new level or take it out. `pnpm graph:test` fails when a headword, construction or paradigm has no level or a badly formed source, and when a list names a node of another level. `pnpm graph:check` reports the same mismatch as the error `core-level-mismatch`, and a list entry that is not in the graph as `dangling-ref`.
 
 ## Level and function reports
 
 The checker measures the course against the core lists. These are the terms the reports use:
 
-- A **module's level** is the highest level among the words, forms and constructions it teaches. A **unit's level** is the highest level of its modules.
+- A **module's level** is the highest level among the words, forms and constructions it teaches. A **unit's level** is the highest level of its modules, so a single word can set it. The Units table in the fix list gives, beside each unit's level, how many words, forms and constructions the unit teaches at that level.
 - A level is **reached** at the first position where the course has taught 90% of that level's core words and every one of its core constructions. Each level is measured on its own list, so A2 can be reached before A1.
 - **Coverage** is the share of a level's core words, and the number of its core constructions, taught by the end of the course or by a given position. Each core list holds only the nodes new at its level, so A2 coverage counts the A2 list alone.
 - **Cumulative coverage** counts a level together with the levels below it: through A2 means the A1 and A2 lists together, and it has its own reached position under the same 90% rule.
 - Percentages are rounded to the nearest whole number, except that 100% shows only when the whole list is taught.
+- A function is **possible** at the first position where the course has taught every node of one of its exponents. Possible is a floor: the course has taught at least one short way to do the function, often a single phrase such as c'est-à-dire. That is not proof that a learner can do the function at that level. Section 7 of the fix list prints each level's count of possible functions beside the share of that level's core words taught, so read the two together.
 
-The reports add three warnings:
+The reports add three warnings. Where they use the highest level the course has reached, a level counts only once the course has reached it together with the levels below it, so a course that covers the B1 list before the A1 list has not reached B1:
 
 - `level-label`: a module title or concept card names a level above the module's level, or a unit title or unit description (B2 Level Phrases) names a level above the unit's level. A reading, practice set or exam teaches nothing, so its label is compared with the highest level the course has reached by its position instead.
 - `level-order`: a module teaches a word or pattern two or more levels above the highest level reached before it. Until the course reaches a level, the count starts from A1, so the warning names every B1 or higher node. One line per module lists the nodes. A form is left out when the same line already names its headword or the pattern that builds its tense.
@@ -259,7 +266,7 @@ These verbs stay in the core counts. The fix list and `fr-levels.json` list them
 
 `graph:report` writes the data behind Sections 6 and 7 of the fix list as two JSON files, with keys sorted at every depth:
 
-- `fr-levels.json` holds `levels` (per level: `coreWords`, `coreConstructions`, `taughtWords`, `taughtConstructions`, `reachedAt` as a position or null, the IDs in `untaughtWords` and `untaughtConstructions`, and a `cumulative` block with the same five counts for the level together with the levels below it), `modules` (per module: `position`, `moduleKey`, `unitId`, `title`, the level its labels name in `label` and its level in `computed`), `units` (the same for each unit, with `firstPosition` and `lastPosition`), `curve` (per position, the core words and constructions of each level taught so far), `headwordsByLevel` and `constructionsByLevel` (how many the graph has at each level), `taughtByLevel` (how many of those the course teaches), `taughtCumulative` (headwords taught by level at the last position of each unit) and `readingLimits`.
+- `fr-levels.json` holds `levels` (per level: `coreWords`, `coreConstructions`, `taughtWords`, `taughtConstructions`, `reachedAt` as a position or null, the IDs in `untaughtWords` and `untaughtConstructions`, and a `cumulative` block with the same five counts for the level together with the levels below it), `modules` (per module: `position`, `moduleKey`, `unitId`, `title`, the level its labels name in `label` and its level in `computed`), `units` (the same for each unit, with `firstPosition`, `lastPosition` and `computedCount`, how many words, forms and constructions the unit teaches at its level), `curve` (per position, the core words and constructions of each level taught so far), `headwordsByLevel` and `constructionsByLevel` (how many the graph has at each level), `taughtByLevel` (how many of those the course teaches), `taughtCumulative` (headwords taught by level at the last position of each unit) and `readingLimits`.
 - `fr-functions.json` holds `functions`, sorted by level, then group, then ID. Each entry gives `id`, `group`, `cefr`, `label`, `position` (where the function becomes possible, or null), `exponentCount`, `missing` (for a function that never becomes possible, what its closest exponent still needs) and `referenceOnly` (the missing words that no lesson teaches and only the Reference unit lists).
 
 A share in the curve is its count divided by `coreWords` or `coreConstructions` in `levels`.

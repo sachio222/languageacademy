@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { issue } from './issues.mjs';
 import { parseId } from './ids.mjs';
 import { GROUPS, LEVELS } from './functions.mjs';
-import { nodeLevel } from './levels-data.mjs';
+import { nodeLevel, validCefrSource, coreListStatusProblem, CEFR_SOURCE_PREFIXES } from './levels-data.mjs';
 
 // opts.course and opts.repoRoot turn on the help screen checks: every help module names its screen component in
 // the course map, and that file exists. opts.course also checks that the language pair's cognates lesson is in the
@@ -89,9 +89,23 @@ export function validateGraph(graph, opts = {}) {
     }
   });
 
-  // Core lists: every node is in the graph and has the list's level. Reading limits name headwords.
+  // Level sources: a headword, construction or paradigm with a level or a source names how the level was decided
+  // (levels-data.mjs). A node with neither is left to level-data-missing.
+  for (const n of [...(graph.headwords ?? []), ...(graph.constructions ?? []), ...(graph.paradigms ?? [])]) {
+    if ((n.cefr == null && n.cefrSource == null) || validCefrSource(n.cefrSource)) continue;
+    out.push(issue({
+      rule: 'cefr-source-bad', nodeId: n.id,
+      message: `${n.id} has cefrSource ${JSON.stringify(n.cefrSource ?? null)}; it must start with `
+        + `${CEFR_SOURCE_PREFIXES.map((p) => JSON.stringify(p)).join(' or ')} followed by how the level was decided`,
+    }));
+  }
+
+  // Core lists: status and frozen fit together, every node is in the graph and has the list's level. Reading limits
+  // name headwords.
   for (const list of graph.coreLists ?? []) {
     const from = `core:${list.lang ?? graph.lang}-${list.level}`;
+    const statusProblem = coreListStatusProblem(list);
+    if (statusProblem) out.push(issue({ rule: 'core-list-status', nodeId: from, message: `${from} ${statusProblem}` }));
     for (const field of ['words', 'constructions']) {
       for (const id of list[field] ?? []) {
         if (!graph.nodes.has(id)) { ref(from, field, id); continue; }
