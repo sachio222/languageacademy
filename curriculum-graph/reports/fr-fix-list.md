@@ -1,6 +1,6 @@
 # French course fix list
 
-2805 errors, 790 warnings, 147 modules with errors.
+2724 errors, 793 warnings, 146 modules with errors.
 
 ## How to read this
 
@@ -71,15 +71,12 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "sa" (fr:lex:son): teach in a lesson before this module; taught later at position 34 (Possessive Adjectives - My, Your, His, Her)
 - "belles" (fr:lex:beau): teach in a lesson before this module
 - "en" (fr:lex:en): teach in a lesson before this module; taught later at position 46 (Time & Frequency - now, always, never, today)
-- "y" (fr:lex:y): teach in a lesson before this module; taught later at position 78 (Talking About People in General)
+- "y" (fr:lex:y.pronoun): teach in a lesson before this module; taught later at position 78 (Talking About People in General)
 - "vieilles" (fr:lex:vieux): teach in a lesson before this module
 - "ville" (fr:lex:ville): teach in a lesson before this module; taught later at position 49 (Everyday Nouns - Life & World)
 - "deux" (fr:lex:deux): teach in a lesson before this module
 - fr:cx:article.partitive: teach in Question Words - Ask Anything! (position 20); taught later at position 28 (Contractions - du, au, de la, à la)
 - fr:cx:il-y-a: teach in a lesson before this module; taught later at position 115 (Imparfait Formation - All Verbs (was doing, used to do))
-### 26. Unit 2 Practice - Fill in the Blanks
-
-- "c" (fr:lex:c): teach in a lesson before this module
 ## Unit 3: Movement & Possession
 
 ### 29. Essential Verb - venir (to come)
@@ -139,25 +136,17 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "ici" (fr:lex:ici): teach in Time & Frequency - now, always, never, today (position 46); taught later at position 48 (Location Adverbs - here, there, everywhere)
 ### 49. Everyday Nouns - Life & World
 
-- "l" (fr:lex:l): teach in this module
 - fr:cx:neg.de: teach in this module
-- "n" (fr:lex:n): teach in this module
-- "d" (fr:lex:d): teach in this module
 - "travailler" (fr:lex:travailler): teach in this module; taught later at position 110 (Passé Composé - Regular -ER Verbs (I spoke, I ate))
 - "vit" (fr:lex:vivre): teach in this module; taught later at position 142 (Daily Life Essentials - Sleep, Work, Live)
 - "habite" (fr:lex:habiter): teach in this module
-- fr:cx:neg.ne-personne: teach in this module
 - "payer" (fr:lex:payer): teach in this module
-- "j" (fr:lex:j): teach in this module
-- "s" (fr:lex:s): teach in this module
 ### 50. Reading Comprehension 4 - La nouvelle époque de Marie
 
 - "jardin" (fr:lex:jardin): teach in a lesson before this module
 - "paie" (fr:lex:payer): teach in Everyday Nouns - Life & World (position 49)
 - "Éditeurs" (fr:lex:editeur): teach in a lesson before this module
 - "carrefour" (fr:lex:carrefour): teach in a lesson before this module
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
-- fr:cx:neg.ne-personne: teach in Everyday Nouns - Life & World (position 49)
 - "aime" (fr:lex:aimer): teach in a lesson before this module; taught later at position 57 (aimer - To Like / To Love)
 - "saint" (fr:lex:saint): teach in a lesson before this module
 - "matin" (fr:lex:matin): teach in a lesson before this module
@@ -199,62 +188,31 @@ Section 8 lists words missing from the course word list. Most are typos, English
 ### 53. Comparisons & Intensity
 
 - "cher" (fr:lex:cher): teach in this module
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
-### 54. Slang - Comparisons & Intensity
-
-- "c" (fr:lex:c): teach in a lesson before Unit 2 Practice - Fill in the Blanks (position 26)
 ### 55. Should & Could - Advice and Possibility
 
 - "travailler" (fr:lex:travailler): teach in Everyday Nouns - Life & World (position 49); taught later at position 110 (Passé Composé - Regular -ER Verbs (I spoke, I ate))
 - "m'" (fr:lex:me): teach in this module
 - "aider" (fr:lex:aider): teach in this module
-- "m" (fr:lex:m): teach in this module; taught later at position 86 (Knowledge & Learning - Essential Nouns)
-### 56. Would Forms - Hypotheticals and Desires
-
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
 ### 57. aimer - To Like / To Love
 
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
 - "français" (fr:lex:francais): teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50); taught later at position 68 (prendre - To Take)
 - "travailler" (fr:lex:travailler): teach in Everyday Nouns - Life & World (position 49); taught later at position 110 (Passé Composé - Regular -ER Verbs (I spoke, I ate))
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
-- "t" (fr:lex:t): teach in this module
 ### 58. être - Past Tense (was / were)
 
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 - "content" (fr:lex:content): teach in this module; taught later at position 125 (Je suis content que... - Emotion Phrases)
 - "contente" (fr:lex:content): teach in this module; taught later at position 125 (Je suis content que... - Emotion Phrases)
-- "c" (fr:lex:c): teach in a lesson before Unit 2 Practice - Fill in the Blanks (position 26)
 - "contents" (fr:lex:content): teach in this module; taught later at position 125 (Je suis content que... - Emotion Phrases)
 - "contentes" (fr:lex:content): teach in this module; taught later at position 125 (Je suis content que... - Emotion Phrases)
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
 ### 59. avoir - Past Tense (had)
 
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
 - fr:cx:neg.de: teach in Everyday Nouns - Life & World (position 49)
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
-- "d" (fr:lex:d): teach in Everyday Nouns - Life & World (position 49)
-### 60. Everyday Food Nouns
-
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
 ### 61. manger - To Eat (Present & Past)
 
 - "ensemble" (fr:lex:ensemble): teach in this module; taught later at position 124 (Je veux que... - Expressing Wishes)
 - fr:cx:neg.de: teach in Everyday Nouns - Life & World (position 49)
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
 ### 62. boire - To Drink (Present & Past)
 
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
 - fr:cx:neg.de: teach in Everyday Nouns - Life & World (position 49)
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
 ### 63. Reading Comprehension 5 - La fée verte (The Green Fairy)
 
 - "absinthe" (fr:lex:absinthe): teach in a lesson before this module
@@ -296,21 +254,15 @@ Section 8 lists words missing from the course word list. Most are typos, English
 ### 65. Unit 5 Final Exam - Sophistication
 
 - "cher" (fr:lex:cher): teach in Comparisons & Intensity (position 53)
-- "c" (fr:lex:c): teach in a lesson before Unit 2 Practice - Fill in the Blanks (position 26)
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 - "contents" (fr:lex:content): teach in être - Past Tense (was / were) (position 58); taught later at position 125 (Je suis content que... - Emotion Phrases)
-- "t" (fr:lex:t): teach in aimer - To Like / To Love (position 57)
 - "restaurant" (fr:lex:restaurant): teach in a lesson before Unit 3 Practice - Fill in the Blanks (position 38)
 - "content" (fr:lex:content): teach in être - Past Tense (was / were) (position 58); taught later at position 125 (Je suis content que... - Emotion Phrases)
 - "contente" (fr:lex:content): teach in être - Past Tense (was / were) (position 58); taught later at position 125 (Je suis content que... - Emotion Phrases)
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
 - "ensemble" (fr:lex:ensemble): teach in manger - To Eat (Present & Past) (position 61); taught later at position 124 (Je veux que... - Expressing Wishes)
 ## Unit 6: Basic Fluency
 
 ### 66. Progressive & Future - Expressing Time
 
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 - "viendrons" (fr:lex:venir): teach in this module
 - "irai" (fr:lex:aller): teach in this module
 - "fera" (fr:lex:faire): teach in this module
@@ -320,18 +272,13 @@ Section 8 lists words missing from the course word list. Most are typos, English
 
 - "vérité" (fr:lex:verite): teach in this module
 - "histoire" (fr:lex:histoire): teach in this module; taught later at position 74 (Essential Vocabulary - Time, People & Ideas)
-- "c" (fr:lex:c): teach in a lesson before Unit 2 Practice - Fill in the Blanks (position 26)
 - "vrai" (fr:lex:vrai): teach in this module; taught later at position 126 (Je pense que... - Opinion Phrases)
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 - "m'" (fr:lex:me): teach in Should & Could - Advice and Possibility (position 55)
-- "m" (fr:lex:m): teach in Should & Could - Advice and Possibility (position 55); taught later at position 86 (Knowledge & Learning - Essential Nouns)
 ### 68. prendre - To Take
 
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 - "vite" (fr:lex:vite): teach in this module; taught later at position 151 (Movement Verbs - Actions in Nature)
 - "apprend" (fr:lex:apprendre): teach in this module
 - "anglais" (fr:lex:anglais): teach in this module
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
 - "apprenons" (fr:lex:apprendre): teach in this module
 - "ensemble" (fr:lex:ensemble): teach in manger - To Eat (Present & Past) (position 61); taught later at position 124 (Je veux que... - Expressing Wishes)
 - "comprend" (fr:lex:comprendre): teach in this module
@@ -357,18 +304,13 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "deux" (fr:lex:deux): teach in a lesson before Reading Comprehension 2 - Rendez-vous en Normandie (position 25)
 - "heures" (fr:lex:heure): teach in a lesson before Reading Comprehension 4 - La nouvelle époque de Marie (position 50); taught later at position 74 (Essential Vocabulary - Time, People & Ideas)
 - "mis" (fr:lex:mettre): teach in this module
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 ### 71. demander - To Ask
 
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
 - "père" (fr:lex:pere): teach in this module; taught later at position 74 (Essential Vocabulary - Time, People & Ideas)
 - "mère" (fr:lex:mere): teach in this module; taught later at position 74 (Essential Vocabulary - Time, People & Ideas)
 - "attendre" (fr:lex:attendre): teach in this module; taught later at position 145 (Social Situations - Wait, Arrive, Stay)
-- "d" (fr:lex:d): teach in Everyday Nouns - Life & World (position 49)
 - "aider" (fr:lex:aider): teach in Should & Could - Advice and Possibility (position 55)
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 - "m'" (fr:lex:me): teach in Should & Could - Advice and Possibility (position 55)
-- "m" (fr:lex:m): teach in Should & Could - Advice and Possibility (position 55); taught later at position 86 (Knowledge & Learning - Essential Nouns)
 ### 72. commander - To Order
 
 - "steak" (fr:lex:steak): teach in this module
@@ -376,21 +318,15 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "dessert" (fr:lex:dessert): teach in this module
 - "par" (fr:lex:par): teach in this module; taught later at position 144 (Perception Verbs - écouter, regarder)
 - "téléphone" (fr:lex:telephone): teach in this module
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 ### 73. avoir besoin de - To Need
 
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
-- "d" (fr:lex:d): teach in Everyday Nouns - Life & World (position 49)
 - "sommeil" (fr:lex:sommeil): teach in this module
 - "espace" (fr:lex:espace): teach in this module
 - "dormir" (fr:lex:dormir): teach in this module; taught later at position 142 (Daily Life Essentials - Sleep, Work, Live)
 - "travailler" (fr:lex:travailler): teach in Everyday Nouns - Life & World (position 49); taught later at position 110 (Passé Composé - Regular -ER Verbs (I spoke, I ate))
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
 ### 74. Essential Vocabulary - Time, People & Ideas
 
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 - "longue" (fr:lex:long): teach in this module; taught later at position 109 (More Spatial Relations - Distance & Proximity)
-- "c" (fr:lex:c): teach in a lesson before Unit 2 Practice - Fill in the Blanks (position 26)
 ### 75. Reading Comprehension 6 - Un Voyage en Famille
 
 - "trois" (fr:lex:trois): teach in a lesson before this module
@@ -428,12 +364,8 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "sept" (fr:lex:sept): teach in a lesson before this module
 ### 77. Unit 6 Final Exam - Communication
 
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 - fr:cx:imperative.pronouns: teach in prendre - To Take (position 68); taught later at position 103 (Commands with Pronouns)
 - fr:cx:imperative.tu: teach in prendre - To Take (position 68); taught later at position 100 (Commands - tu form (Informal))
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
-- "d" (fr:lex:d): teach in Everyday Nouns - Life & World (position 49)
-- "n" (fr:lex:n): teach in Everyday Nouns - Life & World (position 49)
 - "semaine" (fr:lex:semaine): teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75)
 - "mot" (fr:lex:mot): teach in a lesson before Reading Comprehension 6 - Un Voyage en Famille (position 75)
 - "comprend" (fr:lex:comprendre): teach in prendre - To Take (position 68)
@@ -443,7 +375,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 
 ### 78. Talking About People in General
 
-- fr:cx:pronoun.y: teach in this module
 - "étudier" (fr:lex:etudier): teach in this module; taught later at position 79 (Studying & Reviewing - étudier & réviser)
 - "apprend" (fr:lex:apprendre): teach in prendre - To Take (position 68)
 - "pratiquant" (fr:lex:pratiquer): teach in this module; taught later at position 131 (En mangeant... - While Doing Phrases)
@@ -496,15 +427,11 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - fr:cx:subj.ne-pas-penser-que: teach in a lesson before this module; taught later at position 126 (Je pense que... - Opinion Phrases)
 ### 90. Unit 7 Practice - Fill in the Blanks
 
-- fr:cx:pronoun.y: teach in Talking About People in General (position 78)
 - "soi" (fr:lex:soi): teach in a lesson before Reading 7 - L'Art d'Apprendre (position 89)
 ### 91. Unit 7 Final Exam - Knowledge & Learning
 
-- fr:cx:pronoun.y: teach in Talking About People in General (position 78)
 - "restaurant" (fr:lex:restaurant): teach in a lesson before Unit 3 Practice - Fill in the Blanks (position 38)
 - "soi" (fr:lex:soi): teach in a lesson before Reading 7 - L'Art d'Apprendre (position 89)
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
-- "l" (fr:lex:l): teach in Everyday Nouns - Life & World (position 49)
 - "parce" (fr:lex:parce): teach in a lesson before this module; taught later at position 107 (Causal & Reason Words - Explaining Why)
 - "examen" (fr:lex:examen): teach in Studying & Reviewing - étudier & réviser (position 79)
 - fr:cx:chunk.parce-que: teach in a lesson before this module; taught later at position 107 (Causal & Reason Words - Explaining Why)
@@ -519,18 +446,10 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "h" (fr:lex:h): teach in this module; taught later at position 145 (Social Situations - Wait, Arrive, Stay)
 - "tôt" (fr:lex:tot): teach in this module
 - "huit" (fr:lex:huit): teach in this module
-- "d" (fr:lex:d): teach in Everyday Nouns - Life & World (position 49)
-### 96. Getting Ready - se laver, s'habiller, se préparer
-
-- "d" (fr:lex:d): teach in Everyday Nouns - Life & World (position 49)
-### 98. Reflexive Verbs in Past Tense
-
-- "s" (fr:lex:s): teach in Everyday Nouns - Life & World (position 49)
 ### 102. Irregular Commands - être, avoir, aller, faire
 
 - "courage" (fr:lex:courage): teach in this module
 - fr:cx:imperative.pronouns: teach in prendre - To Take (position 68); taught later at position 103 (Commands with Pronouns)
-- fr:cx:pronoun.y: teach in Talking About People in General (position 78)
 ### 104. Reading 8 - Ma Journée
 
 - "beaucoup" (fr:lex:beaucoup): teach in a lesson before Unit 4 Final Exam - Expression (position 52)
@@ -565,13 +484,9 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - "tard" (fr:lex:tard): teach in a lesson before Reading Comprehension 5 - La fée verte (The Green Fairy) (position 63); taught later at position 133 (Avant que... - Before Phrases)
 ### 106. Unit 8 Final Exam - Daily Life & Actions
 
-- "d" (fr:lex:d): teach in Everyday Nouns - Life & World (position 49)
-- "j" (fr:lex:j): teach in Everyday Nouns - Life & World (position 49)
 - "sept" (fr:lex:sept): teach in a lesson before Unit 6 Practice - Fill in the Blanks (position 76)
 - "h" (fr:lex:h): teach in Morning Routine - se réveiller, se lever (position 95); taught later at position 145 (Social Situations - Wait, Arrive, Stay)
 - "tôt" (fr:lex:tot): teach in Morning Routine - se réveiller, se lever (position 95)
-- "s" (fr:lex:s): teach in Everyday Nouns - Life & World (position 49)
-- fr:cx:pronoun.y: teach in Talking About People in General (position 78)
 ## Unit 9: Discourse & Past Tense
 
 ### 107. Causal & Reason Words - Explaining Why
@@ -1258,7 +1173,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - practice 2024-02-05-unit-10-practice (position 138) tests fr:cx:relative.ou, which is not taught by then
 - practice 2024-02-05-unit-10-practice (position 138) tests fr:cx:relative.dont, which is not taught by then
 - practice 2024-02-05-unit-10-practice (position 138) tests fr:cx:relative.ce-que, which is not taught by then
-- practice 2024-02-05-unit-10-practice (position 138) tests fr:cx:neg.ne-personne, which is not taught by then
 - practice 2024-02-05-unit-10-practice (position 138) tests fr:cx:neg.ne-rien, which is not taught by then
 ### 139. Unit 10 Final Exam - Mastery & Nuance
 
@@ -1267,7 +1181,6 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - exam 2024-02-04-unit-10-exam (position 139) tests fr:cx:relative.ou, which is not taught by then
 - exam 2024-02-04-unit-10-exam (position 139) tests fr:cx:relative.dont, which is not taught by then
 - exam 2024-02-04-unit-10-exam (position 139) tests fr:cx:relative.ce-que, which is not taught by then
-- exam 2024-02-04-unit-10-exam (position 139) tests fr:cx:neg.ne-personne, which is not taught by then
 - exam 2024-02-04-unit-10-exam (position 139) tests fr:cx:neg.ne-rien, which is not taught by then
 ## Unit 11: Daily Essentials
 
@@ -1643,11 +1556,11 @@ Section 8 lists words missing from the course word list. Most are typos, English
 - Unit 1: Essential Grammar: 40
 - Unit 2: Asking & Describing: 46
 - Unit 3: Movement & Possession: 20
-- Unit 4: Everyday Words: 61
+- Unit 4: Everyday Words: 62
 - Unit 5: Time & Taste: 68
 - Unit 6: Basic Fluency: 49
 - Unit 7: Knowledge & Learning: 41
-- Unit 8: Daily Life & Actions: 27
+- Unit 8: Daily Life & Actions: 29
 - Unit 9: Discourse & Past Tense: 43
 - Unit 10: Mastery & Nuance: 54
 - Unit 11: Daily Essentials: 29
@@ -1678,7 +1591,7 @@ First 20:
 
 # 6. Level labels
 
-- 609 taught word or construction nodes have no cefr level
+- 612 taught word or construction nodes have no cefr level
 
 # 7. Exercises in a nonstandard format
 
@@ -1729,12 +1642,8 @@ First 20:
 - 50. Reading Comprehension 4 - La nouvelle époque de Marie: jamias
 - 52. Unit 4 Final Exam - Expression: aujourd, hui
 - 54. Slang - Comparisons & Intensity: cest
-- 61. manger - To Eat (Present & Past): qu, quest
-- 62. boire - To Drink (Present & Past): qu, quest
-- 67. dire - To Say / To Tell: qu
-- 70. mettre - To Put / To Set: qu
-- 72. commander - To Order: qu
-- 77. Unit 6 Final Exam - Communication: qu
+- 61. manger - To Eat (Present & Past): quest
+- 62. boire - To Drink (Present & Past): quest
 - 89. Reading 7 - L'Art d'Apprendre: comprendez
 - 107. Causal & Reason Words - Explaining Why: traffic
 - 118. Reading 9 - Une Histoire du Passé: weekend

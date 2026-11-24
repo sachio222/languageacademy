@@ -62,6 +62,26 @@ test('a homograph names the reading that is taught later, not the first one in t
   assert.match(hit.message, /taught later at position 5/);
 });
 
+test('lenient text reads a lone elided letter as its elided form; strict text is left as written', () => {
+  const ctx = setup({ m1: { teachesWords: ['fr:lex:je', 'fr:form:je.elided', 'fr:lex:aller', 'fr:form:aller.prs.1sg', 'fr:lex:etre', 'fr:form:etre.prs.3sg'] } },
+    [mod(1, [item(["j'est"], { lenient: ['j est'] }), item(['j est'])])]);
+  const a = analyzeItems(ctx);
+  assert.deepEqual(a.get('m1#1')[1].tokens.map((t) => t.surface), ["j'", 'est']);
+  assert.deepEqual(a.get('m1#2')[0].tokens.map((t) => t.surface), ['j', 'est']);
+});
+
+test('an untaught word is never named by its letter-of-the-alphabet reading when it has a word reading', () => {
+  const hw = (id, lemma, pos) => ({ id, lemma, pos, paradigms: [], senses: [], dictionaryId: null, cefr: null, cefrSource: null });
+  const headwords = [...base.headwords, hw('fr:lex:y', 'y', 'alphabet'), hw('fr:lex:y.pronoun', 'y', 'pronoun')];
+  const ctx = setup({}, [mod(1, [item('y')])], { headwords });
+  const [hit] = ruleTaughtBefore(ctx).filter((i) => i.surface === 'y');
+  assert.equal(hit.nodeId, 'fr:lex:y.pronoun');
+  // both readings credited by the same later vocabulary entry ("on y va")
+  const later = setup({ m5: { teachesWords: ['fr:lex:y', 'fr:lex:y.pronoun'] } }, [mod(1, [item('y')]), mod(5, [])], { headwords });
+  const [hit5] = ruleTaughtBefore(later).filter((i) => i.surface === 'y');
+  assert.equal(hit5.nodeId, 'fr:lex:y.pronoun');
+});
+
 test('names are exempt', () => {
   const ctx = setup({ m1: { teachesWords: ['fr:lex:parler'], teachesConstructions: ['fr:cx:verb.er.present'] } },
     [mod(1, [item('Marie parle')])]);

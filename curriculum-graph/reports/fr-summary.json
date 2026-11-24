@@ -1,17 +1,17 @@
 {
   "byRule": {
     "blank-misplaced": 27,
-    "claim-untaught": 29,
+    "claim-untaught": 27,
     "level-data-missing": 1,
     "nonstandard-shape": 41,
-    "reuse-missed": 510,
+    "reuse-missed": 513,
     "taught-twice": 238,
     "translate-item": 1761,
-    "unknown-word": 15,
-    "untaught-construction": 77,
-    "untaught-word": 896
+    "unknown-word": 9,
+    "untaught-construction": 70,
+    "untaught-word": 830
   },
-  "errors": 2805,
-  "modulesWithErrors": 147,
-  "warnings": 790
+  "errors": 2724,
+  "modulesWithErrors": 146,
+  "warnings": 793
 }

@@ -2621,7 +2621,8 @@
     ],
     "teachesConstructions": [
       "fr:cx:chunk.quelque-chose",
-      "fr:cx:chunk.tout-le-monde"
+      "fr:cx:chunk.tout-le-monde",
+      "fr:cx:neg.ne-personne"
     ],
     "teachesWords": [
       "fr:lex:le",
@@ -4238,6 +4239,13 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
+    "overrides": {
+      "2024-05-05-on-and-people#exercises[0]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
+    },
     "teachesConstructions": [
       "fr:cx:pronoun.on",
       "fr:cx:chunk.tout-le-monde",
@@ -4421,6 +4429,13 @@
     ]
   },
   "2024-05-10-unit-7-exam": {
+    "overrides": {
+      "2024-05-10-unit-7-exam#exerciseConfig.items[2]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
+    },
     "tests": [
       "fr:cx:pronoun.on"
     ]
@@ -4451,6 +4466,13 @@
       "2024-05-11-unit-7-practice#sentences[7]": "other",
       "2024-05-11-unit-7-practice#sentences[8]": "other",
       "2024-05-11-unit-7-practice#sentences[9]": "other"
+    },
+    "overrides": {
+      "2024-05-11-unit-7-practice#sentences[1]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
     },
     "tests": [
       "fr:cx:pronoun.on",
@@ -4670,9 +4692,23 @@
     ]
   },
   "2024-05-18-irregular-commands": {
+    "overrides": {
+      "2024-05-18-irregular-commands#exercises[3]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-18-irregular-commands#exercises[5]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
+    },
     "teachesConstructions": [
       "fr:cx:imperative.irregular",
-      "fr:cx:imperative.nous"
+      "fr:cx:imperative.nous",
+      "fr:cx:chunk.vas-y",
+      "fr:cx:chunk.allons-y"
     ],
     "teachesWords": [
       "fr:lex:etre",
@@ -4847,6 +4883,13 @@
       "2024-05-24-unit-8-exam#exerciseConfig.items[11]": "other",
       "2024-05-24-unit-8-exam#exerciseConfig.items[8]": "other",
       "2024-05-24-unit-8-exam#exerciseConfig.items[9]": "other"
+    },
+    "overrides": {
+      "2024-05-24-unit-8-exam#exerciseConfig.items[38]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
     },
     "tests": [
       "fr:cx:pronoun.reflexive",

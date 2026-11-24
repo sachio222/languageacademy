@@ -1,4 +1,4 @@
-import { tokenize, fold } from '../fr/tokenize.mjs';
+import { tokenize, fold, restoreElisions } from '../fr/tokenize.mjs';
 import { lookupToken, lookupTokenStrict, lookupKey } from '../fr/forms.mjs';
 import { detectConstructions } from '../fr/detect.mjs';
 import { issue } from '../issues.mjs';
@@ -19,7 +19,7 @@ export function analyzeItems(ctx) {
       const texts = [...new Set([...strictTexts, ...(it.lenient ?? [])])];
       out.set(it.ref, texts.map((text) => {
         const strict = strictTexts.has(text);
-        const tokens = tokenize(text, { isWord });
+        const tokens = tokenize(strict ? text : restoreElisions(text), { isWord });
         const readings = tokens.map((t) => (strict ? lookupTokenStrict(index, t) : lookupToken(index, t)));
         const constructions = detectConstructions(tokens, readings, graph.constructions ?? []);
         return { text, strict, tokens, readings, constructions };
@@ -107,8 +107,12 @@ export function ruleTaughtBefore(ctx) {
           const laters = heads.map((h) => laterNote(h, m.position)).filter((x) => x !== null);
           const taughtEarlier = heads.some((h) => timeline.isAvailable(h, m.position));
           // Name the reading the message is about: the one taught soonest after this module, else the one taught earlier.
-          const named = (laters.length && heads.find((h) => laterNote(h, m.position) === Math.min(...laters)))
-            || heads.find((h) => timeline.isAvailable(h, m.position)) || heads[0];
+          // A letter of the alphabet is named only when the token has no word reading.
+          const letters = new Set(rs.filter((r) => r.pos === 'alphabet').map((r) => r.headwordId));
+          const pick = (list) => list.find((h) => !letters.has(h)) ?? list[0];
+          const soonest = heads.filter((h) => laters.length && laterNote(h, m.position) === Math.min(...laters));
+          const earlier = heads.filter((h) => timeline.isAvailable(h, m.position));
+          const named = pick(soonest.length ? soonest : earlier.length ? earlier : heads);
           let tail = 'it is not taught anywhere in the course';
           if (laters.length) tail = taughtClause(Math.min(...laters));
           else if (taughtEarlier) tail = 'the word is taught earlier, but this form is not';

@@ -196,7 +196,7 @@ function fillSentence(text, blanks) {
     out += text.slice(last, Math.max(last, at));
     const lead = out === '' || /['’]$/.test(out) ? '' : ' ';
     last = Math.max(last, at + (skip ? 1 : 0));
-    const trail = /['’]$/.test(b.answer) || /^[-.,!?;:)]/.test(text[last] ?? '') ? '' : ' ';
+    const trail = /['’]$/.test(b.answer) || /^[-.,!?;:)'’]/.test(text[last] ?? '') ? '' : ' ';
     out += lead + b.answer + trail;
   }
   out += text.slice(last);

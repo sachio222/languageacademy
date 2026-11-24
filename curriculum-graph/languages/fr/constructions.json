@@ -305,6 +305,33 @@
     "contrastsWith": [],
     "detect": [
       {
+        "surface": "allons"
+      },
+      {
+        "clitic": true,
+        "surface": "-y"
+      }
+    ],
+    "examples": {
+      "match": [
+        "Allons-y, les enfants !",
+        "Bon, allons-y !"
+      ],
+      "noMatch": [
+        "Nous allons au parc.",
+        "Allons au café.",
+        "Vas-y !"
+      ]
+    },
+    "id": "fr:cx:chunk.allons-y",
+    "label": "Fixed phrase: allons-y ! (let's go!), taught as a phrase before the pronoun y",
+    "needs": []
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      {
         "surface": "au"
       },
       {
@@ -969,6 +996,33 @@
     },
     "id": "fr:cx:chunk.tout-le-monde",
     "label": "Fixed phrase: tout le monde (everyone), with a singular verb",
+    "needs": []
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      {
+        "surface": "vas"
+      },
+      {
+        "clitic": true,
+        "surface": "-y"
+      }
+    ],
+    "examples": {
+      "match": [
+        "Vas-y, mange !",
+        "Allez, vas-y !"
+      ],
+      "noMatch": [
+        "Tu vas à Paris.",
+        "On y va.",
+        "Va au parc."
+      ]
+    },
+    "id": "fr:cx:chunk.vas-y",
+    "label": "Fixed phrase: vas-y ! (go on!, go ahead!), taught as a phrase before the pronoun y",
     "needs": []
   },
   {

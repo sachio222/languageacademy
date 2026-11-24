@@ -98,10 +98,11 @@ test('a blank on either space of a gap stays a separate word, and elisions and h
     { text: "Nous  avons  l'argent.", blanks: [{ position: 5, answer: "n'" }, { position: 12, answer: 'pas' }] },
     { text: 'Où -vous?', blanks: [{ position: 3, answer: 'travaillez' }] },
     { text: 'Tu ?', blanks: [{ position: 3, answer: 'comprends' }] },
+    { text: "Qu'est-ce que c'est ? 'est un livre.", blanks: [{ position: 21, answer: 'c' }] },
   ] }, 1, 1);
   assert.deepEqual(r.items.map((i) => i.french[0]), [
     'Je vais au café.', "J'ai mangé une baguette hier.", "J'avais faim.", "Nous n'avons pas l'argent.",
-    'Où travaillez-vous?', 'Tu comprends?',
+    'Où travaillez-vous?', 'Tu comprends?', "Qu'est-ce que c'est ? c'est un livre.",
   ]);
   assert.deepEqual(r.blankProblems, []);
 });

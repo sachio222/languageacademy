@@ -32,6 +32,15 @@ function splitHyphenated(word, isWord) {
   return [...parts, ...clitics];
 }
 
+// Accepted answers are often typed without the apostrophe ("j ai", "l eau", "qu est-ce que"). A lone
+// elidable letter followed by a space and a vowel or h is read as the elided form. Only for lenient text:
+// strict French text is checked as written.
+const LONE_ELISION_RE = new RegExp(`(^|[^\\p{L}'’ʼ‘])(${ELISIONS.join('|')}) +(?=[aeiouyhàâäéèêëîïôöùûüœæ])`, 'giu');
+
+export function restoreElisions(text) {
+  return String(text).normalize('NFC').replace(LONE_ELISION_RE, "$1$2'");
+}
+
 export function tokenize(text, opts = {}) {
   const isWord = opts.isWord ?? (() => false);
   const tokens = [];

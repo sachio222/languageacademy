@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { tokenize, fold } from '../fr/tokenize.mjs';
+import { tokenize, fold, restoreElisions } from '../fr/tokenize.mjs';
 
 const folds = (text, opts) => tokenize(text, opts).map((t) => t.fold);
 
@@ -69,6 +69,17 @@ test('fold writes the oe and ae ligatures out, norm keeps them', () => {
   const [t] = tokenize('œuvre');
   assert.equal(t.norm, 'œuvre');
   assert.equal(t.fold, 'oeuvre');
+});
+
+test('restoreElisions puts back the apostrophe of a lone elided letter before a vowel or h', () => {
+  assert.equal(restoreElisions('j ai des espèces'), "j'ai des espèces");
+  assert.equal(restoreElisions('je veux de l eau'), "je veux de l'eau");
+  assert.equal(restoreElisions('qu est-ce que tu manges'), "qu'est-ce que tu manges");
+  assert.equal(restoreElisions('il dit qu il vient, c est ça, n y va pas'), "il dit qu'il vient, c'est ça, n'y va pas");
+  assert.equal(restoreElisions("l homme"), "l'homme");
+  assert.equal(restoreElisions('à 7h, je pars'), 'à 7h, je pars');
+  assert.equal(restoreElisions('t es là? d accord'), "t'es là? d'accord");
+  assert.equal(restoreElisions('je suis là'), 'je suis là');
 });
 
 test('stacked clitics split off one by one', () => {
