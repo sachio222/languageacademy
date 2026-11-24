@@ -65,3 +65,9 @@ test('norm keeps diacritics, fold strips them', () => {
 test('stacked clitics split off one by one', () => {
   assert.deepEqual(folds('dis-le-moi'), ['dis', '-le', '-moi']);
 });
+
+test('decomposed (NFD) input tokenizes like composed input', () => {
+  const t = tokenize('cafés mangé'.normalize('NFD'));
+  assert.deepEqual(t.map((x) => x.fold), ['cafes', 'mange']);
+  assert.equal(t[0].surface, 'cafés');
+});
