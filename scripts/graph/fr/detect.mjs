@@ -1,4 +1,5 @@
 // Construction detectors: match a step pattern against a tokenized sentence.
+// Note: surface regexes and form lookups run on accent-folded text, so "mange" and "mangé" share readings.
 //
 // Step = { surface?, headword?, cell?, clitic?, skip?, optional? }
 //  - absent key: no constraint

@@ -70,5 +70,11 @@
     "of": "fr:lex:ne",
     "cell": "elided",
     "surface": "n'"
+  },
+  {
+    "id": "fr:form:vouloir.sbjv.3sg",
+    "of": "fr:lex:vouloir",
+    "cell": "sbjv.3sg",
+    "surface": "va"
   }
 ]

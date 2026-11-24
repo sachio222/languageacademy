@@ -68,9 +68,19 @@ test('optional step may match nothing', () => {
 });
 
 test('headword and cell must hold for the same reading', () => {
-  // mange: manger prs.1sg and ptcp; ai: avoir prs.1sg
-  assert.equal(run([{ headword: 'fr:lex:manger', cell: 'ptcp' }], 'mangé'), true);
-  assert.equal(run([{ headword: 'fr:lex:avoir', cell: 'ptcp' }], 'ai'), false);
+  // fixture token "va": aller prs.3sg and vouloir sbjv.3sg (two readings)
+  const A = 'fr:lex:aller';
+  const B = 'fr:lex:vouloir';
+  assert.equal(run([{ headword: A, cell: 'prs.3sg' }], 'va'), true);
+  assert.equal(run([{ headword: B, cell: 'sbjv.3sg' }], 'va'), true);
+  assert.equal(run([{ headword: A, cell: 'sbjv.3sg' }], 'va'), false);
+  assert.equal(run([{ headword: B, cell: 'prs.3sg' }], 'va'), false);
+});
+
+test('cell glob matches any one of several readings', () => {
+  assert.equal(run([{ cell: '*bj*.3sg' }], 'va'), true);
+  assert.equal(run([{ cell: 'p*3sg' }], 'va'), true);
+  assert.equal(run([{ cell: '*ptcp*' }], 'va'), false);
 });
 
 test('tokens without readings never match reading constraints', () => {
