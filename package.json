@@ -10,6 +10,10 @@
     "preview": "vite preview",
     "vocab:sort": "node scripts/alphabetize-vocabulary.js",
     "vocab:validate": "node scripts/validate-vocabulary.js",
+    "graph:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/graph/cli.mjs check fr",
+    "graph:due": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/graph/cli.mjs due fr",
+    "graph:report": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/graph/cli.mjs report fr",
+    "graph:extract": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/graph/extract-teaches.mjs",
     "graph:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/graph/test/**/*.test.mjs\""
   },
   "keywords": [
