@@ -82,5 +82,11 @@
     "of": "fr:lex:avoir",
     "cell": "prs.3sg",
     "surface": "a"
+  },
+  {
+    "id": "fr:form:parler.imp.2sg",
+    "of": "fr:lex:parler",
+    "cell": "imp.2sg",
+    "surface": "parle"
   }
 ]

@@ -21,17 +21,19 @@ function add(index, key, reading) {
 export function buildFormIndex(graph) {
   const index = new Map();
   const irregular = new Set();
+  const posOf = new Map(graph.headwords.map((h) => [h.id, h.pos ?? null]));
 
   for (const f of graph.forms) {
     irregular.add(`${f.of}|${f.cell}`);
     add(index, fold(f.surface), {
       nodeId: f.id, headwordId: f.of, cell: f.cell, via: 'irregular', paradigmId: null, surface: norm(f.surface),
+      pos: posOf.get(f.of) ?? null,
     });
   }
 
   for (const h of graph.headwords) {
     const lemmaReading = (text) => ({
-      nodeId: h.id, headwordId: h.id, cell: null, via: 'lemma', paradigmId: null, surface: norm(text),
+      nodeId: h.id, headwordId: h.id, cell: null, via: 'lemma', paradigmId: null, surface: norm(text), pos: h.pos ?? null,
     });
     add(index, fold(h.lemma), lemmaReading(h.lemma));
     const base = verbPart(h.lemma);
@@ -53,6 +55,7 @@ export function buildFormIndex(graph) {
           via: 'generated',
           paradigmId: pid,
           surface: norm(surface),
+          pos: h.pos ?? null,
         });
       }
     }

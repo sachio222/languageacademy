@@ -100,3 +100,48 @@ test('detectConstructions skips null detect and returns matching ids', () => {
   const none = prep('Tu veux du café ?');
   assert.deepEqual(detectConstructions(none.tokens, none.readings, graph.constructions), []);
 });
+
+test('a list of alternative patterns matches when any one matches', () => {
+  const reflexive = [
+    [{ surface: '^je$' }, { surface: '^me$' }],
+    [{ surface: '^tu$' }, { surface: '^te$' }],
+  ];
+  assert.equal(run(reflexive, 'tu te lèves'), true);
+  assert.equal(run(reflexive, 'je me lève'), true);
+  assert.equal(run(reflexive, 'il se lève'), false);
+});
+
+test('start anchors a step to the first token', () => {
+  assert.equal(run([{ start: true, pos: 'verb', cell: 'imp.2sg' }], 'Parle !'), true);
+  assert.equal(run([{ start: true, surface: '^parle$' }], 'Je parle'), false);
+  assert.equal(run([{ start: true, surface: '^je$' }], 'Je parle'), true);
+});
+
+test('pos and via steps bind to the same reading', () => {
+  const futurProche = [{ headword: 'fr:lex:aller', cell: 'prs.*' }, { pos: 'verb', via: 'lemma' }];
+  assert.equal(run(futurProche, 'je vais parler'), true);
+  assert.equal(run(futurProche, 'je vais au parc'), false);
+  assert.equal(run([{ pos: 'verb', via: 'lemma' }], 'je parle'), false);
+  assert.equal(run([{ pos: 'noun', via: 'lemma' }], 'un café'), true);
+  // pos and cell must hold on one reading: "est" is a noun (no cell) and also a form of être
+  assert.equal(run([{ pos: 'noun', cell: 'prs.3sg' }], 'il est'), false);
+});
+
+test('any matches a token against alternative sub-steps', () => {
+  const p = [{ any: [{ surface: '^ou$' }, { surface: '^quand$' }] }];
+  assert.equal(run(p, 'quand veux-tu'), true);
+  assert.equal(run(p, 'où vas-tu'), true);
+  assert.equal(run(p, 'je parle'), false);
+  const grouped = [{ any: [{ headword: 'fr:lex:aller', cell: 'prs.1sg' }, { pos: 'noun', via: 'lemma' }] }, { surface: '^au$' }];
+  assert.equal(run(grouped, 'je vais au parc'), true);
+});
+
+test('detectConstructions accepts list and single-pattern detects', () => {
+  const cs = [
+    { id: 'a', detect: [[{ surface: '^je$' }], [{ surface: '^tu$' }]] },
+    { id: 'b', detect: [{ surface: '^il$' }] },
+    { id: 'c', detect: null },
+  ];
+  const { tokens, readings } = prep('tu parles');
+  assert.deepEqual(detectConstructions(tokens, readings, cs), ['a']);
+});

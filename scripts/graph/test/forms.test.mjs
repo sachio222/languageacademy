@@ -24,6 +24,7 @@ test('parlons resolves to exactly one generated reading', () => {
     via: 'generated',
     paradigmId: 'fr:cx:verb.er.present',
     surface: 'parlons',
+    pos: 'verb',
   }]);
 });
 

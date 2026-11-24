@@ -1,11 +1,16 @@
 // Construction detectors: match a step pattern against a tokenized sentence.
 // Note: surface regexes and form lookups run on accent-folded text, so "mange" and "mangé" share readings.
 //
-// Step = { surface?, headword?, cell?, clitic?, skip?, optional? }
+// A detect is null, a pattern (Step[]), or a list of alternative patterns (Step[][]).
+// Step = { surface?, headword?, cell?, pos?, via?, clitic?, start?, any?, skip?, optional? }
 //  - absent key: no constraint
 //  - surface: regex source tested (anchored) against token.fold
-//  - headword / cell: some single reading must satisfy both; null means "any value",
-//    so the token only needs at least one reading. cell is a glob (* = any run).
+//  - headword / cell / pos / via: some single reading must satisfy all that are present; null
+//    means "any value", so the token only needs at least one reading. cell is a glob (* = any run).
+//    pos is the headword's part of speech; via is 'lemma' | 'irregular' | 'generated'
+//    ({pos:'verb', via:'lemma'} is an infinitive).
+//  - start: the token must be token index 0 of the text
+//  - any: the token must also match at least one of the listed sub-steps (same keys, no skip/optional)
 //  - skip: allow 0..n arbitrary tokens between the previous matched token and this one
 //    (no effect before the first matched token)
 //  - optional: the step may match nothing
@@ -31,22 +36,29 @@ function surfaceRegExp(source) {
   return re;
 }
 
-function stepMatchesToken(step, token, readings) {
+// index: position of the token in the text (needed for the start anchor).
+function stepMatchesToken(step, token, readings, index) {
+  if (step.start && index !== 0) return false;
   if (step.surface != null && !surfaceRegExp(step.surface).test(token.fold)) return false;
   if (step.clitic !== undefined && Boolean(token.clitic) !== step.clitic) return false;
-  const wantsHeadword = step.headword !== undefined;
-  const wantsCell = step.cell !== undefined;
-  if (wantsHeadword || wantsCell) {
+  const wantsReading = step.headword !== undefined || step.cell !== undefined
+    || step.pos !== undefined || step.via !== undefined;
+  if (wantsReading) {
     const cellRe = typeof step.cell === 'string' ? globToRegExp(step.cell) : null;
     const ok = readings.some((r) =>
       (typeof step.headword !== 'string' || r.headwordId === step.headword)
-      && (!cellRe || (typeof r.cell === 'string' && cellRe.test(r.cell))));
+      && (!cellRe || (typeof r.cell === 'string' && cellRe.test(r.cell)))
+      && (typeof step.pos !== 'string' || r.pos === step.pos)
+      && (typeof step.via !== 'string' || r.via === step.via));
     if (!ok) return false;
   }
+  if (step.any && !step.any.some((sub) => stepMatchesToken(sub, token, readings, index))) return false;
   return true;
 }
 
 export function matchPattern(tokens, readings, pattern) {
+  // A list of patterns (first element is an array) matches when any one of them matches.
+  if (Array.isArray(pattern[0])) return pattern.some((alt) => matchPattern(tokens, readings, alt));
   // last: index of the previously matched token, or -1 when nothing matched yet.
   const attempt = (si, last) => {
     if (si === pattern.length) return true;
@@ -55,7 +67,7 @@ export function matchPattern(tokens, readings, pattern) {
     const from = first ? 0 : last + 1;
     const to = first ? tokens.length - 1 : Math.min(tokens.length - 1, last + 1 + (step.skip ?? 0));
     for (let p = from; p <= to; p++) {
-      if (stepMatchesToken(step, tokens[p], readings[p] ?? []) && attempt(si + 1, p)) return true;
+      if (stepMatchesToken(step, tokens[p], readings[p] ?? [], p) && attempt(si + 1, p)) return true;
     }
     return step.optional ? attempt(si + 1, last) : false;
   };
