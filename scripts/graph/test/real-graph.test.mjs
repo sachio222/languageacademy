@@ -18,3 +18,14 @@ test('the French check has no dangling refs, unread items or unknown course-map 
   const bad = issues.filter((i) => ['dangling-ref', 'unread-items', 'course-map-unknown-item', 'course-map-unknown-module'].includes(i.rule));
   assert.deepEqual(bad.map((i) => i.message), []);
 });
+
+test('the real check opens Reference words from the lookup modules only', async () => {
+  const { ctx } = await runCheck({ repoRoot, lang: 'fr' });
+  const open = ctx.timeline.openByReference;
+  for (const id of ['fr:lex:huit', 'fr:lex:lundi', 'fr:lex:ete', 'fr:lex:rouge', 'fr:lex:noel', 'fr:lex:b']) assert.ok(open.has(id), id);
+  for (const id of ['fr:lex:je', 'fr:lex:tu', 'fr:form:etre.prs.1sg', 'fr:form:etre.ptcp', 'fr:lex:le', 'fr:lex:de', 'fr:form:vivre.sbjv.1sg']) {
+    assert.ok(!open.has(id), id);
+  }
+  // The label set still covers every Reference module.
+  assert.ok(ctx.reference.size >= open.size);
+});

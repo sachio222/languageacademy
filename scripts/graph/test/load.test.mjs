@@ -132,10 +132,32 @@ test('settings.json: reference.openFrom is a course position from 1, or null to 
       rmSync(dir, { recursive: true, force: true });
     }
   };
-  assert.equal(withSettings({ openFrom: 1 }).settings.reference.openFrom, 1);
-  assert.equal(withSettings({ openFrom: null }).settings.reference.openFrom, null);
-  for (const bad of [{ openFrom: 0 }, { openFrom: '1' }, { openFrom: 1.5 }, {}]) {
+  assert.equal(withSettings({ openFrom: 1, modules: ['a'] }).settings.reference.openFrom, 1);
+  assert.equal(withSettings({ openFrom: null, modules: [] }).settings.reference.openFrom, null);
+  for (const bad of [{ openFrom: 0, modules: [] }, { openFrom: '1', modules: [] }, { openFrom: 1.5, modules: [] }, { modules: [] }]) {
     assert.throws(() => withSettings(bad), /reference\.openFrom/);
   }
+  for (const bad of [{ openFrom: 1 }, { openFrom: 1, modules: 'a' }, { openFrom: 1, modules: [1] }]) {
+    assert.throws(() => withSettings(bad), /reference\.modules/);
+  }
   assert.equal(loadGraph(fixtureDir, 'fr').settings.reference, undefined);
+});
+
+test('validate: reference.modules must name Reference modules, and openFrom must fall inside the course', () => {
+  const base = loadGraph(fixtureDir, 'fr');
+  const course = [{ position: 1, moduleKey: 'm1', kind: 'lesson', items: [] }, { position: 2, moduleKey: 'm2', kind: 'lesson', items: [] }];
+  const graph = (reference) => ({ ...base, settings: { ...base.settings, reference } });
+  const referenceModules = ['2024-04-02-numbers', '2024-04-07-language-stats'];
+  const rules = (reference) => validateGraph(graph(reference), { course, referenceModules })
+    .filter((i) => /reference/.test(i.message)).map((i) => [i.rule, i.severity]);
+  assert.deepEqual(rules({ openFrom: 1, modules: ['2024-04-02-numbers'] }), []);
+  const dangling = validateGraph(graph({ openFrom: 1, modules: ['2024-04-02-numbers', 'nope'] }), { course, referenceModules });
+  const hit = dangling.find((i) => i.rule === 'dangling-ref' && /nope/.test(i.message));
+  assert.equal(hit.severity, 'error');
+  assert.match(hit.message, /settings\.reference\.modules names nope, which is not a module of the Reference unit/);
+  const past = validateGraph(graph({ openFrom: 3, modules: [] }), { course, referenceModules });
+  const late = past.find((i) => i.rule === 'reference-open-from');
+  assert.equal(late.severity, 'error');
+  assert.match(late.message, /reference\.openFrom is 3, past the last course position \(2\)/);
+  assert.equal(validateGraph(graph({ openFrom: null, modules: [] }), { course, referenceModules }).some((i) => i.rule === 'reference-open-from'), false);
 });

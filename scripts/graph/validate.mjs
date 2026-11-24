@@ -7,7 +7,8 @@ import { nodeLevel, validCefrSource, coreListStatusProblem, CEFR_SOURCE_PREFIXES
 
 // opts.course and opts.repoRoot turn on the help screen checks: every help module names its screen component in
 // the course map, and that file exists. opts.course also checks that the language pair's cognates lesson is in the
-// course.
+// course, and that settings.reference.openFrom is not past its last position. opts.referenceModules (the module keys
+// of the Reference unit) checks settings.reference.modules.
 export function validateGraph(graph, opts = {}) {
   const out = [];
 
@@ -146,6 +147,26 @@ export function validateGraph(graph, opts = {}) {
         message: `${from} names the cognates lesson ${pair.lesson}, which is not in the course`,
       }));
     }
+  }
+
+  const reference = graph.settings?.reference;
+  if (reference && opts.referenceModules) {
+    const known = new Set(opts.referenceModules);
+    for (const key of reference.modules ?? []) {
+      if (known.has(key)) continue;
+      out.push(issue({
+        rule: 'dangling-ref', nodeId: 'settings:reference.modules',
+        message: `settings.reference.modules names ${key}, which is not a module of the Reference unit`,
+        fix: { kind: 'add-to-graph' },
+      }));
+    }
+  }
+  const last = (opts.course ?? []).reduce((max, m) => Math.max(max, m.position), 0);
+  if (reference && opts.course && Number.isInteger(reference.openFrom) && reference.openFrom > last) {
+    out.push(issue({
+      rule: 'reference-open-from', nodeId: 'settings:reference.openFrom',
+      message: `settings.reference.openFrom is ${reference.openFrom}, past the last course position (${last}), so the Reference unit never opens`,
+    }));
   }
 
   for (const m of opts.course ?? []) {

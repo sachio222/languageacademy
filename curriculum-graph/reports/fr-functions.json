@@ -19,12 +19,10 @@
       "id": "fn:ask-the-way",
       "label": "Ask the way or give directions",
       "missing": [],
-      "position": 20,
+      "position": 49,
       "referenceOnly": [],
-      "viaReference": true,
-      "viaReferenceNodes": [
-        "fr:lex:rue"
-      ]
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -108,12 +106,10 @@
       "id": "fn:give-personal-details",
       "label": "Ask for and give personal details",
       "missing": [],
-      "position": 1,
+      "position": 3,
       "referenceOnly": [],
       "viaReference": true,
       "viaReferenceNodes": [
-        "fr:form:etre.prs.1sg",
-        "fr:lex:etre",
         "fr:lex:francais"
       ]
     },
@@ -453,13 +449,10 @@
       "id": "fn:introduce-yourself",
       "label": "Introduce yourself",
       "missing": [],
-      "position": 1,
+      "position": 3,
       "referenceOnly": [],
-      "viaReference": true,
-      "viaReferenceNodes": [
-        "fr:form:etre.prs.1sg",
-        "fr:lex:etre"
-      ]
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",

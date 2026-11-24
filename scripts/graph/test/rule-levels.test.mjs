@@ -8,8 +8,8 @@ import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { ruleLevels, levelReport } from '../rules/levels.mjs';
 import { writeReportData, reportStats, percent } from '../report-data.mjs';
-import { referenceNodes } from '../check.mjs';
-import { readReferenceVocab } from '../course.mjs';
+import { referenceNodes, referenceOpenNodes } from '../check.mjs';
+import { readReferenceVocab, readReferenceModules } from '../course.mjs';
 import { buildFormIndex } from '../fr/forms.mjs';
 import { summarize, checkSummaryLines, renderFixList } from '../report.mjs';
 import { functionReport } from '../functions.mjs';
@@ -449,4 +449,56 @@ test('Section 7 names a Reference form by its spelling, not its ID', () => {
   const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
   assert.match(section, /the Reference unit lists \(aller, vais\)\./);
   assert.doesNotMatch(section, /fr:form:/);
+});
+
+const realGraph = loadGraph(join(here, '../../../curriculum-graph'), 'fr');
+const realIndex = buildFormIndex(realGraph);
+
+test('the Reference opens headwords and noun, adjective, number and letter readings, never a verb form or a function word', () => {
+  const open = referenceOpenNodes(realIndex, ["l'été", 'vif', 'vive', 'le printemps', 'je suis', 'parler français', 'cette semaine', 'Bonnes fêtes', 'dans', 'et']);
+  // été reads as the season, not the past participle of être. vive reads only as a subjunctive of vivre (the graph has
+  // no feminine form of vif), so it opens nothing.
+  for (const id of ['fr:lex:ete', 'fr:lex:printemps', 'fr:lex:vif', 'fr:lex:parler', 'fr:lex:francais', 'fr:lex:semaine',
+    'fr:lex:bon', 'fr:form:bon.fpl', 'fr:lex:fete', 'fr:form:fete.pl']) assert.ok(open.has(id), id);
+  for (const id of ['fr:form:etre.ptcp', 'fr:form:vivre.sbjv.1sg', 'fr:form:vivre.sbjv.3sg', 'fr:lex:vivre', 'fr:lex:le', 'fr:lex:je',
+    'fr:form:etre.prs.1sg', 'fr:lex:etre', 'fr:form:le.elided', 'fr:form:ce.f', 'fr:lex:ce', 'fr:lex:dans', 'fr:lex:et']) {
+    assert.ok(!open.has(id), id);
+  }
+});
+
+test('the days, months and seasons in the Reference unit all read as nouns', async () => {
+  const modules = await readReferenceModules(join(here, '../../..'));
+  const days = modules.find((m) => m.moduleKey === '2024-04-03-days-months');
+  const open = referenceOpenNodes(realIndex, days.vocab);
+  const want = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche', 'janvier', 'fevrier', 'mars', 'avril', 'mai',
+    'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre', 'printemps', 'ete', 'automne', 'hiver'].map((k) => `fr:lex:${k}`);
+  for (const id of want) {
+    assert.ok(open.has(id), id);
+    assert.equal(realGraph.nodes.get(id).pos, 'noun', id);
+  }
+  assert.ok(![...open].some((id) => id.startsWith('fr:form:etre')), 'no form of être');
+});
+
+test('readReferenceModules lists every Reference module with its vocabulary; only the lookup modules are open in settings', async () => {
+  const modules = await readReferenceModules(join(here, '../../..'));
+  const keys = modules.map((m) => m.moduleKey);
+  for (const k of ['2024-04-01-alphabet', '2024-04-07-language-stats', '2024-12-18-pronunciation-test']) assert.ok(keys.includes(k), k);
+  assert.ok(modules.find((m) => m.moduleKey === '2024-04-02-numbers').vocab.includes('huit'));
+  assert.deepEqual(realGraph.settings.reference, {
+    openFrom: 1,
+    modules: ['2024-04-01-alphabet', '2024-04-02-numbers', '2024-04-03-days-months', '2024-04-04-holidays', '2024-04-05-colors',
+      '2024-04-06-french-countries'],
+  });
+});
+
+test('with the Reference unit open, Section 7 says a missing word sits only on Reference pages that do not count as open', () => {
+  const ctx = makeCtx({ graph: levelGraph({ courseMap: { m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } } }), course: COURSE,
+    reference: new Set(), openFrom: 1 });
+  ctx.reference = new Set(['fr:lex:vous']);
+  const md = renderFixList([], ctx.course, ctx.graph.courseMap, {
+    levels: levelReport(ctx), functions: functionReport(ctx), graph: ctx.graph, referenceOpenFrom: 1,
+  });
+  const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
+  assert.match(section, /Some functions need words that no lesson teaches and that the Reference unit lists only on pages that do not count as open \(vous\)/);
+  assert.doesNotMatch(section, /teaches nothing/);
 });

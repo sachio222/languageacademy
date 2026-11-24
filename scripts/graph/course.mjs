@@ -389,13 +389,21 @@ export async function readCourse(repoRoot, opts = {}) {
   return out;
 }
 
-// The vocabulary tables of the Reference unit (alphabet, numbers, days and months, colors). The unit has no course
-// position, so it teaches nothing; the report names what only it shows.
-export async function readReferenceVocab(repoRoot) {
+// The modules of the Reference unit (alphabet, numbers, days and months, colors and more), each with the French of
+// its vocabulary table: [{ moduleKey, title, vocab }]. The unit has no course position.
+export async function readReferenceModules(repoRoot) {
   const file = path.join(repoRoot, 'src/lessons/unitConfigLoader.js');
   const { unitConfigs } = await import(pathToFileURL(file).href);
   return unitConfigs
     .filter((unit) => String(unit.metadata.title).startsWith('Reference'))
-    .flatMap((unit) => unit.modules.flatMap((mod) => (mod.vocabularyReference ?? []).map((v) => v.french)))
-    .filter((f) => typeof f === 'string');
+    .flatMap((unit) => unit.modules.map((mod) => ({
+      moduleKey: mod.moduleKey,
+      title: mod.title,
+      vocab: (mod.vocabularyReference ?? []).map((v) => v.french).filter((f) => typeof f === 'string'),
+    })));
+}
+
+// The French of every vocabulary table in the Reference unit.
+export async function readReferenceVocab(repoRoot) {
+  return (await readReferenceModules(repoRoot)).flatMap((m) => m.vocab);
 }

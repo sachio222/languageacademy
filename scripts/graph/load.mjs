@@ -34,11 +34,16 @@ export function loadGraph(graphDir, lang, opts = {}) {
     throw new Error(`settings.json: cognates.allowIn must be one of ${ALLOW_IN.join(', ')}, not ${JSON.stringify(settings.cognates?.allowIn)}`);
   }
   // reference.openFrom: the course position from which the Reference unit's words count as available, or null to keep
-  // the unit closed. With no reference block, the unit stays closed.
+  // the unit closed. reference.modules: the module keys of the Reference unit whose words open. With no reference
+  // block, the unit stays closed. validateGraph checks the keys and that openFrom falls inside the course.
   if (settings.reference !== undefined) {
     const from = settings.reference?.openFrom;
     if (from !== null && !(Number.isInteger(from) && from >= 1)) {
       throw new Error(`settings.json: reference.openFrom must be a course position (1 or more) or null, not ${from === undefined ? 'missing' : JSON.stringify(from)}`);
+    }
+    const modules = settings.reference?.modules;
+    if (!Array.isArray(modules) || !modules.every((k) => typeof k === 'string')) {
+      throw new Error(`settings.json: reference.modules must be a list of Reference module keys, not ${modules === undefined ? 'missing' : JSON.stringify(modules)}`);
     }
   }
   const native = opts.native ?? settings.defaultNative;

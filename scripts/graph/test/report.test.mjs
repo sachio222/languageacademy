@@ -156,11 +156,13 @@ test('a line from text the learner reads names where the text sits', () => {
 });
 
 test('How to read this says the Reference unit is always open and counts as available from its opening position', () => {
-  const md = renderFixList([], course, {}, { referenceOpenFrom: 1 });
+  const md = renderFixList([], course, {}, { referenceOpenFrom: 1, referenceOpenTitles: ['Les Nombres', 'Jours et Mois'] });
   const how = md.slice(md.indexOf('## How to read this'), md.indexOf('# 1. Untaught words and patterns'));
   assert.match(how, /Reference unit/);
   assert.match(how, /open it at any time/);
   assert.match(how, /available from position 1 on/);
+  assert.match(how, /The words on its pages Les Nombres and Jours et Mois count as available/);
+  assert.match(how, /Verb forms and grammar words such as le or je on those pages do not count/);
   assert.doesNotMatch(how, /teaches nothing/);
   assert.match(how, /concept cards, hints/);
 });

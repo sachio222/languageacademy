@@ -43,13 +43,18 @@ A native language with no pair folder has no cognates: `pnpm graph:check --nativ
 
 ## The Reference unit
 
-The Reference unit holds the alphabet, numbers, days and months, colors, countries, holidays and spelling patterns. It has no place in course order, and learners can open it at any time: a learner who needs a number in a sentence looks it up there. So the checker counts every headword and form in the unit's vocabulary tables as available from one course position on, which `reference.openFrom` in `core/settings.json` sets:
+The Reference unit holds the alphabet, numbers, days and months, holidays, colors, French-speaking countries, language facts, spelling patterns and a pronunciation test. It has no place in course order, and learners can open it at any time: a learner who needs a number in a sentence looks it up there. So the checker counts the words on its lookup pages as available from one course position on. `reference` in `core/settings.json` sets the position and the pages:
 
 ```json
-"reference": { "openFrom": 1 }
+"reference": { "openFrom": 1, "modules": ["2024-04-01-alphabet", "2024-04-02-numbers", "2024-04-03-days-months", "2024-04-04-holidays", "2024-04-05-colors", "2024-04-06-french-countries"] }
 ```
 
-With `openFrom` at 1, a lesson may use huit or lundi before any lesson teaches it, in French the learner types or reads, and Section 1 of the fix list does not list it. A lesson that teaches the same word earlier still counts as the place it is taught. The vocabulary tables also hold phrases such as je suis and parler français, so their common words (je, être, parler) count as available from `openFrom` on too. Set `openFrom` to null to keep the unit closed: a word that no lesson teaches is then untaught even when the Reference unit lists it. Any other value is an error when the graph loads.
+- `openFrom` is the course position from which those words count as available. Set it to null to keep the unit closed: a word that no lesson teaches is then untaught even when the Reference unit lists it.
+- `modules` lists the Reference pages whose vocabulary tables open, by module key. Language facts, spelling patterns and the pronunciation test are left out: they teach about French rather than words to look up.
+
+On those pages, every noun, adjective, number and letter opens with its forms, such as noire and vingts. Any other headword opens as its dictionary form only, such as épeler or demain, never as a verb form: je suis, cette and de on those pages open nothing, and a grammar word (pronoun, article, determiner, preposition, conjunction or question word) never opens. A word is read as the kind of word that may open, so l'été opens the season été, not the past participle of être.
+
+With `openFrom` at 1, a lesson may use huit or lundi before any lesson teaches it, in French the learner types or reads, and Section 1 of the fix list does not list it. A lesson that teaches the same word earlier still counts as the place it is taught. `pnpm graph:check` reports a module key that is not a Reference page as `dangling-ref`, and an `openFrom` past the last course position as `reference-open-from`. A value of the wrong kind is an error when the graph loads.
 
 The level and function reports count Reference words apart from the words lessons teach; see Level and function reports.
 

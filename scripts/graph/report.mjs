@@ -110,14 +110,16 @@ export function excerpt(text, surface, max = 80) {
 }
 
 // The opening paragraph of How to read this. openFrom: the position from which the Reference unit counts as open
-// (settings.reference.openFrom), or null when it stays closed.
-function openingParagraph(openFrom) {
+// (settings.reference.openFrom), or null when it stays closed. titles: the titles of the Reference pages that open.
+function openingParagraph(openFrom, titles = []) {
+  const pages = titles.length > 1 ? `${titles.slice(0, -1).join(', ')} and ${titles.at(-1)}` : titles[0];
   const reference = openFrom == null
     ? 'The Reference unit (alphabet, numbers, days and months, colors and similar pages) has no position, because learners can '
       + 'open it at any time, so it teaches nothing at any point in the course.'
     : 'The Reference unit (alphabet, numbers, days and months, colors and similar pages) has no position, because learners can '
-      + `open it at any time. Every word in its vocabulary tables counts as available from position ${openFrom} on, so a lesson may `
-      + 'use a number or a day without teaching it first. Sections 6 and 7 count those words apart from the words lessons teach.';
+      + `open it at any time. The words on ${pages ? `its pages ${pages}` : 'its lookup pages'} count as available from position ${openFrom} on, `
+      + 'so a lesson may use a number or a day without teaching it first. Verb forms and grammar words such as le or je on those '
+      + 'pages do not count. Sections 6 and 7 count Reference words apart from the words lessons teach.';
   return 'A checker read every lesson, practice, reading and exam in course order and tested one thing for each French word '
     + 'and grammar pattern: was it taught before the learner meets it? Positions count the modules in course order, from 1 to 160. '
     + 'A code such as fr:lex:livre names the entry in the course word list, and a code starting fr:cx: names a grammar pattern. '
@@ -331,9 +333,13 @@ function renderFunctions(out, byPosition, opts) {
   }
   const referenceOnly = [...new Set(fns.flatMap((f) => f.referenceOnly))].sort();
   if (referenceOnly.length) {
-    out.push(`Some functions need words that no lesson teaches and only the Reference unit lists (${referenceOnly.map((id) => nodeName(opts.graph, id)).join(', ')}). `
-      + 'That unit has no position in the course, so it teaches nothing, and those functions never become possible. Below, '
-      + '"(Reference unit)" marks those words.', '');
+    const names = referenceOnly.map((id) => nodeName(opts.graph, id)).join(', ');
+    out.push((opts.referenceOpenFrom == null
+      ? `Some functions need words that no lesson teaches and only the Reference unit lists (${names}). `
+        + 'That unit has no position in the course, so it teaches nothing, and those functions never become possible. '
+      : `Some functions need words that no lesson teaches and that the Reference unit lists only on pages that do not count as open (${names}), `
+        + 'so those functions never become possible. ')
+      + 'Below, "(Reference unit)" marks those words.', '');
   }
   for (const level of levels) {
     out.push(`## ${level}`, '');
@@ -369,7 +375,7 @@ export function renderFixList(issues, course, courseMap = {}, opts = {}) {
   const s = summarize(issues);
   out.push(`${s.errors} errors, ${s.warnings} warnings, ${s.modulesWithErrors} modules with errors.`, '');
   out.push('## How to read this', '');
-  for (const para of [openingParagraph(opts.referenceOpenFrom), ...HOW_TO_READ]) out.push(para, '');
+  for (const para of [openingParagraph(opts.referenceOpenFrom, opts.referenceOpenTitles), ...HOW_TO_READ]) out.push(para, '');
   if (opts.pair) out.push(cognatesParagraph(opts.pair), '');
   const notes = course.flatMap((m) => (courseMap[m.moduleKey]?.contentNotes ?? []).map((n) => `- ${m.position}. ${m.title}: ${n}`));
   if (notes.length) out.push('## Lesson text to fix', '', ...notes, '');
