@@ -70,6 +70,11 @@ test('validateGraph flags a dangling ref', () => {
   assert.ok(validateGraph(g).some((i) => i.rule === 'dangling-ref'));
 });
 
+test('validateGraph flags a dangling excludeWords ref', () => {
+  const g = { ...loadGraph(fixtureDir, 'fr'), courseMap: { m: { excludeWords: ['fr:lex:nope'] } } };
+  assert.ok(validateGraph(g).some((i) => i.rule === 'dangling-ref' && i.message.includes('excludeWords')));
+});
+
 test('validateGraph flags a construction with no examples.match', () => {
   const g = loadMutated('constructions.json', (cs) => [...cs, { id: 'fr:cx:bare', label: 'Bare', needs: [], detect: null, examples: {}, contrastsWith: [], cefr: null }]);
   assert.ok(validateGraph(g).some((i) => i.rule === 'construction-no-examples' && i.nodeId === 'fr:cx:bare'));

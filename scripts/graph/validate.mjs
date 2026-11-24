@@ -35,6 +35,7 @@ export function validateGraph(graph) {
   }
   for (const [moduleKey, entry] of Object.entries(graph.courseMap || {})) {
     for (const t of entry.teachesConstructions || []) ref(`courseMap:${moduleKey}`, 'teachesConstructions', t);
+    for (const t of entry.excludeWords || []) ref(`courseMap:${moduleKey}`, 'excludeWords', t);
   }
 
   for (const c of graph.constructions) {

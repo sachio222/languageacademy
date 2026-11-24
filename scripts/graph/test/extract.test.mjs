@@ -173,3 +173,20 @@ test('importConjugations reads imperfect and participle tables', () => {
   assert.deepEqual(nodes.map((n) => n.id), ['fr:form:etre.impf.1sg', 'fr:form:parler.ptcp']);
   assert.equal(nodes[1].surface, 'parlé');
 });
+
+test('extractTeaches drops excludeWords and keeps the field', () => {
+  const g = withMap({ a: { excludeWords: ['fr:lex:est'] } });
+  const course = [makeModule({ position: 1, moduleKey: 'a', vocab: ['il est'] })];
+  const { courseMap } = extractTeaches(g, course, index);
+  assert.ok(!courseMap.a.teachesWords.includes('fr:lex:est'));
+  assert.ok(courseMap.a.teachesWords.includes('fr:lex:etre'));
+  assert.deepEqual(courseMap.a.excludeWords, ['fr:lex:est']);
+});
+
+test('extractTeaches matches accents first so the preposition beats the avoir form', () => {
+  const run = (vocab) => extractTeaches(graph, [makeModule({ position: 1, moduleKey: 'a', vocab })], index).courseMap.a.teachesWords;
+  const prep = run(['à']);
+  assert.ok(prep.includes('fr:lex:a'));
+  assert.ok(!prep.includes('fr:form:avoir.prs.3sg'));
+  assert.ok(run(['il a']).includes('fr:form:avoir.prs.3sg'));
+});

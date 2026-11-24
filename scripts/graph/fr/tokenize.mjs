@@ -10,8 +10,8 @@ const CLITICS = [
   '-elles', '-nous', '-vous', '-leur', '-elle', '-ils', '-les', '-lui', '-moi', '-toi',
   '-tu', '-il', '-on', '-ce', '-le', '-la', '-en', '-y',
 ];
-// A word run: letters joined by apostrophes or hyphens. Digits, underscores and punctuation fall outside.
-const RUN_RE = /\p{L}+(?:['’ʼ‘-]\p{L}+)*/gu;
+// A word run: letters joined by apostrophes or hyphens, with an optional final apostrophe (a bare elision). Digits, underscores and punctuation fall outside.
+const RUN_RE = /\p{L}+(?:['’ʼ‘-]\p{L}+)*['’ʼ‘]?/gu;
 
 function make(surface, clitic = false) {
   return { surface, norm: norm(surface), fold: fold(surface), clitic };
@@ -38,11 +38,13 @@ export function tokenize(text, opts = {}) {
   for (const [run] of String(text).normalize('NFC').matchAll(RUN_RE)) {
     let rest = run;
     let m;
-    while ((m = ELISION_RE.exec(rest)) && rest.length > m[0].length) {
+    while ((m = ELISION_RE.exec(rest))) {
       tokens.push(make(m[0]));
       rest = rest.slice(m[0].length);
     }
-    tokens.push(...splitHyphenated(rest, isWord));
+    // A trailing apostrophe only means something after an elision prefix.
+    rest = rest.replace(/['’ʼ‘]$/, '');
+    if (rest) tokens.push(...splitHyphenated(rest, isWord));
   }
   return tokens;
 }

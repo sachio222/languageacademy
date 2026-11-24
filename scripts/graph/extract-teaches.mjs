@@ -3,13 +3,14 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadGraph } from './load.mjs';
 import { readCourse } from './course.mjs';
 import { tokenize } from './fr/tokenize.mjs';
-import { buildFormIndex, lookupToken } from './fr/forms.mjs';
+import { buildFormIndex, lookupToken, lookupTokenStrict } from './fr/forms.mjs';
 import { writeSortedJson } from './write-json.mjs';
 
 const RANK = { irregular: 0, generated: 1, lemma: 2 };
 const TEACHING_KINDS = new Set(['lesson', 'help']);
 
 // Words each lesson or help module teaches, read from its vocabulary table.
+// excludeWords lists over-taught homograph IDs to drop from the result.
 // Only teachesWords is rewritten; every other course-map field is kept.
 export function extractTeaches(graph, course, index) {
   const isWord = (f) => index.has(f);
@@ -21,7 +22,9 @@ export function extractTeaches(graph, course, index) {
     const missing = new Set();
     for (const text of mod.vocab ?? []) {
       for (const token of tokenize(text, { isWord })) {
-        const readings = lookupToken(index, token);
+        // Vocab tables are authored French: exact accents first, folded match only as a fallback.
+        let readings = lookupTokenStrict(index, token);
+        if (!readings.length) readings = lookupToken(index, token);
         if (!readings.length) {
           if (!graph.names?.has(token.fold)) missing.add(token.surface);
           continue;
@@ -34,6 +37,7 @@ export function extractTeaches(graph, course, index) {
       }
     }
     for (const surface of missing) unknown.push({ moduleKey: mod.moduleKey, surface });
+    for (const id of courseMap[mod.moduleKey]?.excludeWords ?? []) ids.delete(id);
     if (ids.size || courseMap[mod.moduleKey]) {
       courseMap[mod.moduleKey] = { ...courseMap[mod.moduleKey], teachesWords: [...ids] };
     }

@@ -71,3 +71,12 @@ test('decomposed (NFD) input tokenizes like composed input', () => {
   assert.deepEqual(t.map((x) => x.fold), ['cafes', 'mange']);
   assert.equal(t[0].surface, 'cafés');
 });
+
+test('a bare elision prefix stays an elided token', () => {
+  assert.deepEqual(folds("l'"), ["l'"]);
+  assert.deepEqual(folds('de l\''), ['de', "l'"]);
+  assert.deepEqual(folds('à l’'), ['a', "l'"]);
+  assert.deepEqual(folds("L'"), ["l'"]);
+  assert.deepEqual(folds("jusqu'"), ["jusqu'"]);
+  assert.deepEqual(folds("J'ai mangé."), ["j'", 'ai', 'mange']);
+});
