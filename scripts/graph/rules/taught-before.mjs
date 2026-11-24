@@ -1,12 +1,12 @@
 import { tokenize, fold } from '../fr/tokenize.mjs';
-import { lookupToken, lookupKey } from '../fr/forms.mjs';
+import { lookupToken, lookupTokenStrict, lookupKey } from '../fr/forms.mjs';
 import { detectConstructions } from '../fr/detect.mjs';
 import { issue } from '../issues.mjs';
 
 const memo = new WeakMap();
 
-// Per item: one entry for each text in french then lenient.
-// Returns Map<itemRef, Array<{ text, tokens, readings, constructions }>>.
+// Per item: one entry for each text in french (strict: accent-sensitive) then lenient (fold-based).
+// Returns Map<itemRef, Array<{ text, strict, tokens, readings, constructions }>>.
 export function analyzeItems(ctx) {
   const cached = memo.get(ctx);
   if (cached) return cached;
@@ -15,12 +15,14 @@ export function analyzeItems(ctx) {
   const out = new Map();
   for (const m of ctx.course) {
     for (const it of m.items) {
-      const texts = [...new Set([...(it.french ?? []), ...(it.lenient ?? [])])];
+      const strictTexts = new Set(it.french ?? []);
+      const texts = [...new Set([...strictTexts, ...(it.lenient ?? [])])];
       out.set(it.ref, texts.map((text) => {
+        const strict = strictTexts.has(text);
         const tokens = tokenize(text, { isWord });
-        const readings = tokens.map((t) => lookupToken(index, t));
+        const readings = tokens.map((t) => (strict ? lookupTokenStrict(index, t) : lookupToken(index, t)));
         const constructions = detectConstructions(tokens, readings, graph.constructions ?? []);
-        return { text, tokens, readings, constructions };
+        return { text, strict, tokens, readings, constructions };
       }));
     }
   }

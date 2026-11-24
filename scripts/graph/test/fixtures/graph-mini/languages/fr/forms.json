@@ -76,5 +76,11 @@
     "of": "fr:lex:vouloir",
     "cell": "sbjv.3sg",
     "surface": "va"
+  },
+  {
+    "id": "fr:form:avoir.prs.3sg",
+    "of": "fr:lex:avoir",
+    "cell": "prs.3sg",
+    "surface": "a"
   }
 ]

@@ -1,4 +1,4 @@
-import { fold } from './tokenize.mjs';
+import { fold, norm } from './tokenize.mjs';
 import { parseId } from '../ids.mjs';
 
 // Reflexive lemmas ("se lever", "s'appeler"): paradigms apply to the verb part.
@@ -25,15 +25,17 @@ export function buildFormIndex(graph) {
   for (const f of graph.forms) {
     irregular.add(`${f.of}|${f.cell}`);
     add(index, fold(f.surface), {
-      nodeId: f.id, headwordId: f.of, cell: f.cell, via: 'irregular', paradigmId: null,
+      nodeId: f.id, headwordId: f.of, cell: f.cell, via: 'irregular', paradigmId: null, surface: norm(f.surface),
     });
   }
 
   for (const h of graph.headwords) {
-    const lemmaReading = { nodeId: h.id, headwordId: h.id, cell: null, via: 'lemma', paradigmId: null };
-    add(index, fold(h.lemma), lemmaReading);
+    const lemmaReading = (text) => ({
+      nodeId: h.id, headwordId: h.id, cell: null, via: 'lemma', paradigmId: null, surface: norm(text),
+    });
+    add(index, fold(h.lemma), lemmaReading(h.lemma));
     const base = verbPart(h.lemma);
-    if (base) add(index, fold(base), lemmaReading);
+    if (base) add(index, fold(base), lemmaReading(base));
 
     const stem = base ?? h.lemma;
     const key = parseId(h.id).key;
@@ -50,6 +52,7 @@ export function buildFormIndex(graph) {
           cell: rule.cell,
           via: 'generated',
           paradigmId: pid,
+          surface: norm(surface),
         });
       }
     }
@@ -57,9 +60,7 @@ export function buildFormIndex(graph) {
   return index;
 }
 
-// Lookup key for a token: strip a leading hyphen and a euphonic "t-" (-t-il).
-export function lookupKey(token) {
-  let f = token.fold;
+function stripClitic(f) {
   if (f.startsWith('-')) {
     f = f.slice(1);
     if (f.startsWith('t-')) f = f.slice(2);
@@ -67,6 +68,22 @@ export function lookupKey(token) {
   return f;
 }
 
+// Lookup key for a token: strip a leading hyphen and a euphonic "t-" (-t-il).
+export function lookupKey(token) {
+  return stripClitic(token.fold);
+}
+
+// The same key with accents kept (from token.norm).
+export function strictKey(token) {
+  return stripClitic(token.norm);
+}
+
 export function lookupToken(index, token) {
   return index.get(lookupKey(token)) ?? [];
+}
+
+// Accent-sensitive lookup: only readings whose written surface equals the token's.
+export function lookupTokenStrict(index, token) {
+  const key = strictKey(token);
+  return lookupToken(index, token).filter((r) => r.surface === key);
 }

@@ -1,6 +1,6 @@
-import { fold } from '../fold.mjs';
+import { fold, norm } from '../fold.mjs';
 
-export { fold };
+export { fold, norm };
 
 const ELISIONS = ['jusqu', 'lorsqu', 'puisqu', 'qu', 'c', 'd', 'j', 'l', 'm', 'n', 's', 't'];
 const ELISION_RE = new RegExp(`^(${ELISIONS.join('|')})['’ʼ‘]`, 'i');
@@ -12,8 +12,6 @@ const CLITICS = [
 ];
 // A word run: letters joined by apostrophes or hyphens. Digits, underscores and punctuation fall outside.
 const RUN_RE = /\p{L}+(?:['’ʼ‘-]\p{L}+)*/gu;
-
-const norm = (s) => s.toLowerCase().replace(/[’ʼ‘]/g, "'").normalize('NFC');
 
 function make(surface, clitic = false) {
   return { surface, norm: norm(surface), fold: fold(surface), clitic };

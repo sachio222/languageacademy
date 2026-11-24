@@ -117,7 +117,7 @@ test('analyzeItems is memoized per ctx and keyed by item ref', () => {
   assert.equal(analyzeItems(ctx), a);
   const entries = a.get('m1#1');
   assert.equal(entries.length, 2);
-  assert.deepEqual(Object.keys(entries[0]).sort(), ['constructions', 'readings', 'text', 'tokens']);
+  assert.deepEqual(Object.keys(entries[0]).sort(), ['constructions', 'readings', 'strict', 'text', 'tokens']);
 });
 
 test('firstUse maps headwords, unreadable folds and constructions to first module', () => {
@@ -146,4 +146,40 @@ test('ignore accepts a headword id for word issues', () => {
   const ctx = setup({ m2: { teachesWords: ['fr:lex:nous'], overrides: { 'm2#1': { ignore: ['fr:lex:travailler'] } } } },
     [mod(2, [item('nous travaillons')])]);
   assert.deepEqual(ruleTaughtBefore(ctx), []);
+});
+
+test('strict text: a with avoir taught does not pass for a (preposition)', () => {
+  const ctx = setup({ m1: { teachesWords: ['fr:lex:avoir', 'fr:form:avoir.prs.3sg', 'fr:lex:il', 'fr:lex:aller'] } },
+    [mod(1, [item('Il va à Paris')])]);
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.surface === 'à');
+  assert.equal(hits.length, 1);
+  assert.equal(hits[0].rule, 'untaught-word');
+});
+
+test('strict text: Où with ou taught and no où headword is unknown', () => {
+  const ctx = setup({ m1: { teachesWords: ['fr:lex:ou', 'fr:lex:tu', 'fr:lex:aller'] } },
+    [mod(1, [item('Où vas-tu ?')])]);
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.surface === 'Où');
+  assert.equal(hits.length, 1);
+  assert.equal(hits[0].rule, 'unknown-word');
+});
+
+test('lenient text accepts missing accents', () => {
+  const cafe = setup({ m1: { teachesWords: ['fr:lex:cafe'] } },
+    [mod(1, [item([], { lenient: ['cafe'] })])]);
+  assert.deepEqual(ruleTaughtBefore(cafe), []);
+  const ou = setup({ m1: { teachesWords: ['fr:lex:ou', 'fr:lex:tu', 'fr:lex:aller'] } },
+    [mod(1, [item([], { lenient: ['ou vas-tu'] })])]);
+  assert.deepEqual(ruleTaughtBefore(ou).filter((i) => i.surface === 'ou'), []);
+});
+
+test('analyzeItems marks strict entries and firstUse uses the same readings', () => {
+  const ctx = setup({}, [mod(1, [item('où', { lenient: ['ou'] })])]);
+  const entries = analyzeItems(ctx).get('m1#1');
+  assert.deepEqual(entries.map((e) => [e.text, e.strict]), [['où', true], ['ou', false]]);
+  assert.deepEqual(entries[0].readings, [[]]);
+  assert.equal(entries[1].readings[0].length > 0, true);
+  const first = firstUse(ctx);
+  assert.equal(first.get('ou').moduleKey, 'm1');
+  assert.equal(first.get('fr:lex:ou').moduleKey, 'm1');
 });

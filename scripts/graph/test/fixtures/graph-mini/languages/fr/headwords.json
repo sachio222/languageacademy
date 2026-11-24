@@ -247,5 +247,29 @@
     "dictionaryId": "bonjour-fr",
     "cefr": null,
     "cefrSource": null
+  },
+  {
+    "id": "fr:lex:ou",
+    "lemma": "ou",
+    "pos": "conjunction",
+    "paradigms": [],
+    "senses": [
+      "sense:or"
+    ],
+    "dictionaryId": "or-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:a",
+    "lemma": "à",
+    "pos": "preposition",
+    "paradigms": [],
+    "senses": [
+      "sense:to"
+    ],
+    "dictionaryId": "to-fr",
+    "cefr": null,
+    "cefrSource": null
   }
 ]
