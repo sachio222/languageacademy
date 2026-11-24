@@ -34,8 +34,6 @@ const HANDLED = new Set([
   'taught-twice', 'reuse-missed', 'level-label', 'level-data-missing', 'nonstandard-shape', 'unknown-word',
 ]);
 
-const LATER = /taught later at position \d+ \(.*\)$/;
-
 const TEACHING = new Set(['lesson', 'help']);
 
 // Exams, practice and reading modules cannot teach, so a fix aimed at one points to the lessons before it.
@@ -47,8 +45,33 @@ function fixClause(i, byKey) {
   if (!target || target === i.moduleKey) base = canTeach ? 'teach in this module' : 'teach in a lesson before this module';
   else if (!m) base = `teach in ${target}`;
   else base = `${canTeach ? 'teach in' : 'teach in a lesson before'} ${m.title} (position ${m.position})`;
-  const later = LATER.exec(i.message ?? '');
-  return later ? `${base}; ${later[0]}` : base;
+  return base;
+}
+
+// Why a word or pattern counts as untaught, in plain words.
+function reasonClause(i) {
+  if (i.reason === 'later' && i.taughtLaterAt) return `taught later, at position ${i.taughtLaterAt.position} (${i.taughtLaterAt.title})`;
+  if (i.reason === 'form' && i.taughtEarlierAt) {
+    return `the word ${i.lemma ?? i.nodeId} is taught at position ${i.taughtEarlierAt.position}, but this form is not`;
+  }
+  if (i.reason === 'nowhere') return 'not taught anywhere in the course';
+  return null;
+}
+
+// The sentence around `surface`, cut at word breaks to about `max` characters, with … where text was cut.
+export function excerpt(text, surface, max = 80) {
+  const t = String(text ?? '').replace(/\s+/g, ' ').trim();
+  if (t.length <= max) return t;
+  // the surface as a whole word, so "a" does not match inside "maison"
+  const word = surface ? new RegExp(`(?<!\\p{L})${String(surface).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!\\p{L})`, 'iu') : null;
+  const hit = word ? t.search(word) : -1;
+  const centre = hit < 0 ? 0 : hit + String(surface).length / 2;
+  let a = Math.max(0, Math.round(centre - max / 2));
+  let b = Math.min(t.length, a + max);
+  a = Math.max(0, b - max);
+  if (a > 0) a = t.indexOf(' ', a) + 1 || a;
+  if (b < t.length) b = t.lastIndexOf(' ', b) > a ? t.lastIndexOf(' ', b) : b;
+  return `${a > 0 ? '…' : ''}${t.slice(a, b).trim()}${b < t.length ? '…' : ''}`;
 }
 
 const HOW_TO_READ = [
@@ -86,11 +109,13 @@ export function renderFixList(issues, course, courseMap = {}) {
     let pos = null;
     for (const i of sorted) {
       if (unitOf(i) !== unit) {
+        if (unit !== null) out.push('');
         unit = unitOf(i);
         pos = null;
         out.push(`## ${unit}`, '');
       }
       if (i.position !== pos) {
+        if (pos !== null) out.push('');
         pos = i.position;
         out.push(`### ${i.position ?? '?'}. ${byKey.get(i.moduleKey)?.title ?? i.moduleKey ?? 'course'}`, '');
       }
@@ -102,7 +127,9 @@ export function renderFixList(issues, course, courseMap = {}) {
   out.push('# 1. Untaught words and patterns', '');
   grouped(of('untaught-word', 'untaught-construction'), (i) => {
     const what = i.surface ? `"${i.surface}" (${i.nodeId ?? 'no node'})` : i.nodeId;
-    return `- ${what}: ${fixClause(i, byKey)}`;
+    const why = reasonClause(i);
+    const sentence = i.text ? ` Sentence: "${excerpt(i.text, i.surface)}"` : '';
+    return `- ${what}: ${why ? `${why}; ` : ''}${fixClause(i, byKey)}.${sentence}`;
   });
 
   out.push('# 2. Exam topics not taught', '');

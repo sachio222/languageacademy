@@ -77,6 +77,7 @@ export function ruleTaughtBefore(ctx) {
     return at !== undefined && at > position ? at : null;
   };
   const taughtClause = (at) => `taught later at position ${at} (${titleAt.get(at) ?? 'unknown module'})`;
+  const at = (position) => (position == null ? null : { position, title: titleAt.get(position) ?? 'unknown module' });
 
   for (const m of ctx.course) {
     const seen = new Set();
@@ -113,9 +114,11 @@ export function ruleTaughtBefore(ctx) {
           const soonest = heads.filter((h) => laters.length && laterNote(h, m.position) === Math.min(...laters));
           const earlier = heads.filter((h) => timeline.isAvailable(h, m.position));
           const named = pick(soonest.length ? soonest : earlier.length ? earlier : heads);
+          // reason: 'later' (taught after this module), 'form' (the word is taught earlier, this form is not), 'nowhere'
+          const reason = laters.length ? 'later' : taughtEarlier ? 'form' : 'nowhere';
           let tail = 'it is not taught anywhere in the course';
-          if (laters.length) tail = taughtClause(Math.min(...laters));
-          else if (taughtEarlier) tail = 'the word is taught earlier, but this form is not';
+          if (reason === 'later') tail = taughtClause(Math.min(...laters));
+          else if (reason === 'form') tail = 'the word is taught earlier, but this form is not';
           // A form gap on a word taught earlier is fixed where that form is first used, not the word.
           const formGap = !laters.length && taughtEarlier;
           const keys = formGap ? rs.filter((r) => r.via !== 'lemma').map((r) => r.nodeId) : heads;
@@ -123,6 +126,11 @@ export function ruleTaughtBefore(ctx) {
             .sort((x, y) => x.position - y.position)[0];
           issues.push(issue({
             ...base, rule: 'untaught-word', nodeId: named,
+            reason,
+            taughtLaterAt: reason === 'later' ? at(Math.min(...laters)) : null,
+            taughtEarlierAt: reason === 'form' ? at(timeline.taughtAt.get(named)) : null,
+            lemma: graph.nodes.get(named)?.lemma ?? null,
+            text: a.text,
             message: `"${t.surface}" is used before it is taught (${it.ref}: ${a.text}); ${tail}`,
             fix: { kind: 'teach-earlier', moduleKey: useAt?.moduleKey ?? m.moduleKey },
           }));
@@ -131,11 +139,14 @@ export function ruleTaughtBefore(ctx) {
           const key = `${m.moduleKey}|${id}`;
           if (seen.has(key) || ignore.has(id) || timeline.isAvailable(id, m.position)) continue;
           seen.add(key);
-          const at = laterNote(id, m.position);
+          const later = laterNote(id, m.position);
           issues.push(issue({
             rule: 'untaught-construction', moduleKey: m.moduleKey, position: m.position,
             itemRef: it.ref, nodeId: id,
-            message: `${id} is used before it is taught (${it.ref}: ${a.text}); ${at ? taughtClause(at) : 'it is not taught anywhere in the course'}`,
+            reason: later ? 'later' : 'nowhere',
+            taughtLaterAt: at(later),
+            text: a.text,
+            message: `${id} is used before it is taught (${it.ref}: ${a.text}); ${later ? taughtClause(later) : 'it is not taught anywhere in the course'}`,
             fix: { kind: 'teach-earlier', moduleKey: first.get(id)?.moduleKey ?? m.moduleKey },
           }));
         }

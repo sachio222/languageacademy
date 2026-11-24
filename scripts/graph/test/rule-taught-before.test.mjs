@@ -238,3 +238,29 @@ test('items at the same config path in two modules are analyzed and attributed s
   assert.equal(hits.length, 1);
   assert.equal(hits[0].moduleKey, 'm2');
 });
+
+test('taught-before issues carry the reason, the later position and the sentence', () => {
+  const course = [
+    mod(1, [item('Je parle.'), item('Je vais au marché et je mange du pain.')]),
+    mod(2, [item('tu vas')]),
+    mod(5, [item('travailler')]),
+  ];
+  const ctx = setup({
+    m1: { teachesWords: ['fr:lex:je', 'fr:lex:parler', 'fr:lex:aller', 'fr:form:aller.prs.1sg'], teachesConstructions: ['fr:cx:verb.er.present'] },
+    m5: { teachesWords: ['fr:lex:tu'] },
+  }, course);
+  const issues = ruleTaughtBefore(ctx);
+  const tu = issues.find((i) => i.surface === 'tu');
+  assert.equal(tu.reason, 'later');
+  assert.deepEqual(tu.taughtLaterAt, { position: 5, title: 'Module 5' });
+  assert.equal(tu.text, 'tu vas');
+  const vas = issues.find((i) => i.surface === 'vas');
+  assert.equal(vas.reason, 'form');
+  assert.equal(vas.taughtLaterAt, null);
+  assert.deepEqual(vas.taughtEarlierAt, { position: 1, title: 'Module 1' });
+  assert.equal(vas.lemma, 'aller');
+  const nowhere = issues.find((i) => i.rule === 'untaught-word' && i.reason === 'nowhere');
+  assert.ok(nowhere, 'a word taught nowhere has reason nowhere');
+  assert.equal(nowhere.taughtLaterAt, null);
+  assert.equal(nowhere.text, 'Je vais au marché et je mange du pain.');
+});

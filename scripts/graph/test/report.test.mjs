@@ -54,9 +54,36 @@ test('renderFixList puts an untaught word under its unit and module heading', ()
   assert.ok(unit >= 0 && mod > unit);
   const chat = lines.find((l) => l.includes('chat'));
   assert.ok(chat.includes('fr:lex:chat') && chat.includes('teach in this module'));
-  assert.ok(chat.includes('taught later at position 3 (Food)'));
   const pain = lines.find((l) => l.includes('pain'));
   assert.ok(pain.includes('teach in Food (position 3)'));
+});
+
+test('Section 1 lines state the reason plainly and show the sentence', () => {
+  const long = 'Aujourd\'hui je suis allé au marché avec mes amis, et nous avons acheté des pommes, du pain et des bons fromages pour le dîner de ce soir chez ma grand-mère, qui habite à la campagne.';
+  const md = renderFixList([
+    { rule: 'untaught-word', severity: 'error', moduleKey: 'm2', position: 2, surface: 'bons', nodeId: 'fr:lex:bon',
+      message: 'x', reason: 'form', lemma: 'bon', taughtEarlierAt: { position: 1, title: 'Hello' }, taughtLaterAt: null,
+      text: long, fix: { kind: 'teach-earlier', moduleKey: 'm2' } },
+    { rule: 'untaught-word', severity: 'error', moduleKey: 'm2', position: 2, surface: 'chat', nodeId: 'fr:lex:chat',
+      message: 'x', reason: 'later', taughtLaterAt: { position: 3, title: 'Food' }, text: 'Le chat dort.',
+      fix: { kind: 'teach-earlier', moduleKey: 'm2' } },
+    { rule: 'untaught-construction', severity: 'error', moduleKey: 'm2', position: 2, nodeId: 'fr:cx:cest',
+      message: 'x', reason: 'nowhere', taughtLaterAt: null, text: "C'est bon.", fix: { kind: 'teach-earlier', moduleKey: 'm2' } },
+  ], course);
+  const lines = md.split('\n');
+  const bons = lines.find((l) => l.includes('"bons"'));
+  assert.match(bons, /the word bon is taught at position 1, but this form is not/);
+  assert.match(bons, /teach in this module/);
+  const quoted = /Sentence: "(.*)"$/.exec(bons)[1];
+  assert.ok(quoted.includes('des bons fromages'), quoted);
+  assert.ok(quoted.length <= 84, `shortened: ${quoted.length}`);
+  assert.ok(quoted.startsWith('…') && quoted.endsWith('…'));
+  const chat = lines.find((l) => l.includes('"chat"'));
+  assert.match(chat, /taught later, at position 3 \(Food\)/);
+  assert.match(chat, /Sentence: "Le chat dort\."$/);
+  const cest = lines.find((l) => l.includes('fr:cx:cest'));
+  assert.match(cest, /not taught anywhere in the course/);
+  assert.match(cest, /Sentence: "C'est bon\."$/);
 });
 
 test('renderFixList lists rules the other sections do not show under Other problems', () => {
