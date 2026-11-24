@@ -175,12 +175,15 @@ test('importConjugations reads imperfect and participle tables', () => {
 });
 
 test('extractTeaches drops excludeWords and keeps the field', () => {
-  const g = withMap({ a: { excludeWords: ['fr:lex:est'] } });
   const course = [makeModule({ position: 1, moduleKey: 'a', vocab: ['il est'] })];
+  const before = extractTeaches(graph, course, index).courseMap.a.teachesWords;
+  assert.ok(before.includes('fr:form:etre.prs.3sg'), 'credited without the exclusion');
+  const g = withMap({ a: { excludeWords: ['fr:form:etre.prs.3sg'] } });
   const { courseMap } = extractTeaches(g, course, index);
-  assert.ok(!courseMap.a.teachesWords.includes('fr:lex:est'));
+  assert.ok(!courseMap.a.teachesWords.includes('fr:form:etre.prs.3sg'));
   assert.ok(courseMap.a.teachesWords.includes('fr:lex:etre'));
-  assert.deepEqual(courseMap.a.excludeWords, ['fr:lex:est']);
+  assert.ok(courseMap.a.teachesWords.includes('fr:lex:il'));
+  assert.deepEqual(courseMap.a.excludeWords, ['fr:form:etre.prs.3sg']);
 });
 
 test('extractTeaches matches accents first so the preposition beats the avoir form', () => {
