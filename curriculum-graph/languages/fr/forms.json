@@ -3457,6 +3457,12 @@
   },
   {
     "cell": "elided",
+    "id": "fr:form:jusque.elided",
+    "of": "fr:lex:jusque",
+    "surface": "jusqu'"
+  },
+  {
+    "cell": "elided",
     "id": "fr:form:le.elided",
     "of": "fr:lex:le",
     "surface": "l'"
@@ -3634,6 +3640,144 @@
     "id": "fr:form:lever.sbjv.3sg",
     "of": "fr:lex:lever",
     "surface": "lève"
+  },
+  {
+    "cell": "impf.1pl",
+    "id": "fr:form:lire.impf.1pl",
+    "of": "fr:lex:lire",
+    "surface": "lisions"
+  },
+  {
+    "cell": "impf.1sg",
+    "id": "fr:form:lire.impf.1sg",
+    "of": "fr:lex:lire",
+    "surface": "lisais"
+  },
+  {
+    "cell": "impf.2pl",
+    "id": "fr:form:lire.impf.2pl",
+    "of": "fr:lex:lire",
+    "surface": "lisiez"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:lire.impf.2sg",
+    "of": "fr:lex:lire",
+    "surface": "lisais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:lire.impf.3pl",
+    "of": "fr:lex:lire",
+    "surface": "lisaient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:lire.impf.3sg",
+    "of": "fr:lex:lire",
+    "surface": "lisait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:lire.prs.1pl",
+    "of": "fr:lex:lire",
+    "surface": "lisons"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:lire.prs.1sg",
+    "of": "fr:lex:lire",
+    "surface": "lis"
+  },
+  {
+    "cell": "prs.2pl",
+    "id": "fr:form:lire.prs.2pl",
+    "of": "fr:lex:lire",
+    "surface": "lisez"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:lire.prs.2sg",
+    "of": "fr:lex:lire",
+    "surface": "lis"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:lire.prs.3pl",
+    "of": "fr:lex:lire",
+    "surface": "lisent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:lire.prs.3sg",
+    "of": "fr:lex:lire",
+    "surface": "lit"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:lire.prsptcp",
+    "of": "fr:lex:lire",
+    "surface": "lisant"
+  },
+  {
+    "cell": "ptcp",
+    "id": "fr:form:lire.ptcp",
+    "of": "fr:lex:lire",
+    "surface": "lu"
+  },
+  {
+    "cell": "ptcp.f",
+    "id": "fr:form:lire.ptcp.f",
+    "of": "fr:lex:lire",
+    "surface": "lue"
+  },
+  {
+    "cell": "ptcp.fpl",
+    "id": "fr:form:lire.ptcp.fpl",
+    "of": "fr:lex:lire",
+    "surface": "lues"
+  },
+  {
+    "cell": "ptcp.pl",
+    "id": "fr:form:lire.ptcp.pl",
+    "of": "fr:lex:lire",
+    "surface": "lus"
+  },
+  {
+    "cell": "sbjv.1pl",
+    "id": "fr:form:lire.sbjv.1pl",
+    "of": "fr:lex:lire",
+    "surface": "lisions"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:lire.sbjv.1sg",
+    "of": "fr:lex:lire",
+    "surface": "lise"
+  },
+  {
+    "cell": "sbjv.2pl",
+    "id": "fr:form:lire.sbjv.2pl",
+    "of": "fr:lex:lire",
+    "surface": "lisiez"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:lire.sbjv.2sg",
+    "of": "fr:lex:lire",
+    "surface": "lises"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:lire.sbjv.3pl",
+    "of": "fr:lex:lire",
+    "surface": "lisent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:lire.sbjv.3sg",
+    "of": "fr:lex:lire",
+    "surface": "lise"
   },
   {
     "cell": "f",
@@ -4120,6 +4264,144 @@
     "id": "fr:form:nouveau.pl",
     "of": "fr:lex:nouveau",
     "surface": "nouveaux"
+  },
+  {
+    "cell": "impf.1pl",
+    "id": "fr:form:ouvrir.impf.1pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrions"
+  },
+  {
+    "cell": "impf.1sg",
+    "id": "fr:form:ouvrir.impf.1sg",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrais"
+  },
+  {
+    "cell": "impf.2pl",
+    "id": "fr:form:ouvrir.impf.2pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvriez"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:ouvrir.impf.2sg",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:ouvrir.impf.3pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvraient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:ouvrir.impf.3sg",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:ouvrir.prs.1pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrons"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:ouvrir.prs.1sg",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvre"
+  },
+  {
+    "cell": "prs.2pl",
+    "id": "fr:form:ouvrir.prs.2pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrez"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:ouvrir.prs.2sg",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvres"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:ouvrir.prs.3pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:ouvrir.prs.3sg",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvre"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:ouvrir.prsptcp",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrant"
+  },
+  {
+    "cell": "ptcp",
+    "id": "fr:form:ouvrir.ptcp",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvert"
+  },
+  {
+    "cell": "ptcp.f",
+    "id": "fr:form:ouvrir.ptcp.f",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouverte"
+  },
+  {
+    "cell": "ptcp.fpl",
+    "id": "fr:form:ouvrir.ptcp.fpl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvertes"
+  },
+  {
+    "cell": "ptcp.pl",
+    "id": "fr:form:ouvrir.ptcp.pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouverts"
+  },
+  {
+    "cell": "sbjv.1pl",
+    "id": "fr:form:ouvrir.sbjv.1pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrions"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:ouvrir.sbjv.1sg",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvre"
+  },
+  {
+    "cell": "sbjv.2pl",
+    "id": "fr:form:ouvrir.sbjv.2pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvriez"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:ouvrir.sbjv.2sg",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvres"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:ouvrir.sbjv.3pl",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvrent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:ouvrir.sbjv.3sg",
+    "of": "fr:lex:ouvrir",
+    "surface": "ouvre"
   },
   {
     "cell": "impf.1pl",
@@ -6138,6 +6420,126 @@
     "surface": "sorte"
   },
   {
+    "cell": "impf.1pl",
+    "id": "fr:form:sourire.impf.1pl",
+    "of": "fr:lex:sourire",
+    "surface": "souriions"
+  },
+  {
+    "cell": "impf.1sg",
+    "id": "fr:form:sourire.impf.1sg",
+    "of": "fr:lex:sourire",
+    "surface": "souriais"
+  },
+  {
+    "cell": "impf.2pl",
+    "id": "fr:form:sourire.impf.2pl",
+    "of": "fr:lex:sourire",
+    "surface": "souriiez"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:sourire.impf.2sg",
+    "of": "fr:lex:sourire",
+    "surface": "souriais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:sourire.impf.3pl",
+    "of": "fr:lex:sourire",
+    "surface": "souriaient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:sourire.impf.3sg",
+    "of": "fr:lex:sourire",
+    "surface": "souriait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:sourire.prs.1pl",
+    "of": "fr:lex:sourire",
+    "surface": "sourions"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:sourire.prs.1sg",
+    "of": "fr:lex:sourire",
+    "surface": "souris"
+  },
+  {
+    "cell": "prs.2pl",
+    "id": "fr:form:sourire.prs.2pl",
+    "of": "fr:lex:sourire",
+    "surface": "souriez"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:sourire.prs.2sg",
+    "of": "fr:lex:sourire",
+    "surface": "souris"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:sourire.prs.3pl",
+    "of": "fr:lex:sourire",
+    "surface": "sourient"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:sourire.prs.3sg",
+    "of": "fr:lex:sourire",
+    "surface": "sourit"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:sourire.prsptcp",
+    "of": "fr:lex:sourire",
+    "surface": "souriant"
+  },
+  {
+    "cell": "ptcp",
+    "id": "fr:form:sourire.ptcp",
+    "of": "fr:lex:sourire",
+    "surface": "souri"
+  },
+  {
+    "cell": "sbjv.1pl",
+    "id": "fr:form:sourire.sbjv.1pl",
+    "of": "fr:lex:sourire",
+    "surface": "souriions"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:sourire.sbjv.1sg",
+    "of": "fr:lex:sourire",
+    "surface": "sourie"
+  },
+  {
+    "cell": "sbjv.2pl",
+    "id": "fr:form:sourire.sbjv.2pl",
+    "of": "fr:lex:sourire",
+    "surface": "souriiez"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:sourire.sbjv.2sg",
+    "of": "fr:lex:sourire",
+    "surface": "souries"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:sourire.sbjv.3pl",
+    "of": "fr:lex:sourire",
+    "surface": "sourient"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:sourire.sbjv.3sg",
+    "of": "fr:lex:sourire",
+    "surface": "sourie"
+  },
+  {
     "cell": "cond.1pl",
     "id": "fr:form:soutenir.cond.1pl",
     "of": "fr:lex:soutenir",
@@ -6346,6 +6748,132 @@
     "id": "fr:form:soutenir.sbjv.3sg",
     "of": "fr:lex:soutenir",
     "surface": "soutienne"
+  },
+  {
+    "cell": "impf.1pl",
+    "id": "fr:form:suivre.impf.1pl",
+    "of": "fr:lex:suivre",
+    "surface": "suivions"
+  },
+  {
+    "cell": "impf.1sg",
+    "id": "fr:form:suivre.impf.1sg",
+    "of": "fr:lex:suivre",
+    "surface": "suivais"
+  },
+  {
+    "cell": "impf.2pl",
+    "id": "fr:form:suivre.impf.2pl",
+    "of": "fr:lex:suivre",
+    "surface": "suiviez"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:suivre.impf.2sg",
+    "of": "fr:lex:suivre",
+    "surface": "suivais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:suivre.impf.3pl",
+    "of": "fr:lex:suivre",
+    "surface": "suivaient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:suivre.impf.3sg",
+    "of": "fr:lex:suivre",
+    "surface": "suivait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:suivre.prs.1pl",
+    "of": "fr:lex:suivre",
+    "surface": "suivons"
+  },
+  {
+    "cell": "prs.2pl",
+    "id": "fr:form:suivre.prs.2pl",
+    "of": "fr:lex:suivre",
+    "surface": "suivez"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:suivre.prs.3pl",
+    "of": "fr:lex:suivre",
+    "surface": "suivent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:suivre.prs.3sg",
+    "of": "fr:lex:suivre",
+    "surface": "suit"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:suivre.prsptcp",
+    "of": "fr:lex:suivre",
+    "surface": "suivant"
+  },
+  {
+    "cell": "ptcp",
+    "id": "fr:form:suivre.ptcp",
+    "of": "fr:lex:suivre",
+    "surface": "suivi"
+  },
+  {
+    "cell": "ptcp.f",
+    "id": "fr:form:suivre.ptcp.f",
+    "of": "fr:lex:suivre",
+    "surface": "suivie"
+  },
+  {
+    "cell": "ptcp.fpl",
+    "id": "fr:form:suivre.ptcp.fpl",
+    "of": "fr:lex:suivre",
+    "surface": "suivies"
+  },
+  {
+    "cell": "ptcp.pl",
+    "id": "fr:form:suivre.ptcp.pl",
+    "of": "fr:lex:suivre",
+    "surface": "suivis"
+  },
+  {
+    "cell": "sbjv.1pl",
+    "id": "fr:form:suivre.sbjv.1pl",
+    "of": "fr:lex:suivre",
+    "surface": "suivions"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:suivre.sbjv.1sg",
+    "of": "fr:lex:suivre",
+    "surface": "suive"
+  },
+  {
+    "cell": "sbjv.2pl",
+    "id": "fr:form:suivre.sbjv.2pl",
+    "of": "fr:lex:suivre",
+    "surface": "suiviez"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:suivre.sbjv.2sg",
+    "of": "fr:lex:suivre",
+    "surface": "suives"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:suivre.sbjv.3pl",
+    "of": "fr:lex:suivre",
+    "surface": "suivent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:suivre.sbjv.3sg",
+    "of": "fr:lex:suivre",
+    "surface": "suive"
   },
   {
     "cell": "impf.1pl",

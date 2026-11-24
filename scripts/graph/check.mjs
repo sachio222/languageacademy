@@ -13,10 +13,11 @@ import { ruleDuplicates } from './rules/duplicates.mjs';
 import { ruleLevels } from './rules/levels.mjs';
 import { ruleUnread } from './rules/unread.mjs';
 import { ruleShapes } from './rules/shapes.mjs';
+import { ruleBlanks } from './rules/blanks.mjs';
 
 const RULES = [
   ruleTaughtBefore, ruleReuse, ruleTranslation, ruleClaims,
-  ruleDuplicates, ruleLevels, ruleUnread, ruleShapes,
+  ruleDuplicates, ruleLevels, ruleUnread, ruleShapes, ruleBlanks,
 ];
 
 function ruleCourseMapKeys(ctx) {

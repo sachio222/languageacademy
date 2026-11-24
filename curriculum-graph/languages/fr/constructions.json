@@ -607,6 +607,32 @@
     "contrastsWith": [],
     "detect": [
       {
+        "surface": "je"
+      },
+      {
+        "surface": "voudrais"
+      }
+    ],
+    "examples": {
+      "match": [
+        "Je voudrais un café, s'il vous plaît.",
+        "Bonjour, je voudrais un livre."
+      ],
+      "noMatch": [
+        "Je veux un café.",
+        "Tu voudrais du café ?",
+        "Je ne voudrais pas ça."
+      ]
+    },
+    "id": "fr:cx:chunk.je-voudrais",
+    "label": "Fixed phrase: je voudrais (I would like), the polite request taught as a phrase before the conditionnel",
+    "needs": []
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      {
         "surface": "n'"
       },
       {

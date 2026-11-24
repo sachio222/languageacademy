@@ -23,19 +23,37 @@ const HANDLED = new Set([
 
 const LATER = /taught later at position \d+ \(.*\)$/;
 
+const TEACHING = new Set(['lesson', 'help']);
+
+// Exams, practice and reading modules cannot teach, so a fix aimed at one points to the lessons before it.
 function fixClause(i, byKey) {
   const target = i.fix?.moduleKey;
-  const base = !target || target === i.moduleKey
-    ? 'teach in this module'
-    : (() => {
-      const m = byKey.get(target);
-      return m ? `teach in ${m.title} (position ${m.position})` : `teach in ${target}`;
-    })();
+  const m = target ? byKey.get(target) : null;
+  const canTeach = !m || TEACHING.has(m.kind ?? 'lesson');
+  let base;
+  if (!target || target === i.moduleKey) base = canTeach ? 'teach in this module' : 'teach in a lesson before this module';
+  else if (!m) base = `teach in ${target}`;
+  else base = `${canTeach ? 'teach in' : 'teach in a lesson before'} ${m.title} (position ${m.position})`;
   const later = LATER.exec(i.message ?? '');
   return later ? `${base}; ${later[0]}` : base;
 }
 
-export function renderFixList(issues, course) {
+const HOW_TO_READ = [
+  'A checker read every lesson, practice, reading and exam in course order and tested one thing for each French word '
+    + 'and grammar pattern: was it taught before the learner meets it? Positions count the modules in course order, from 1 to 160. '
+    + 'A code such as fr:lex:livre names the entry in the course word list, and a code starting fr:cx: names a grammar pattern.',
+  'Section 1 lists words and patterns used before they are taught, module by module. The default fix is to teach the word '
+    + 'earlier, in the module where it is first used; each line names that module. If the sentence does not need the word, remove it instead.',
+  'Section 2 lists exam and practice topics the course has not taught by that point. Section 3 counts, per module, exercises after '
+    + 'Unit 1 that show an English prompt and ask for the French; these should become other exercise types. Section 4 lists words and '
+    + 'patterns explained in more than one lesson: keep the explanation in the lesson named and turn the others into practice. '
+    + 'Section 5 counts taught words that do not come back soon enough to stick. Section 6 lists level labels (A1 to C2) that do not '
+    + 'match the words a module uses. Section 7 lists modules that store exercises in an older format.',
+  'Section 8 lists words missing from the course word list. Most are typos, English words, or accepted answers typed without '
+    + 'accents or apostrophes. Section 9 lists everything else, including fill-in-the-blank sentences whose blank sits in the wrong place.',
+];
+
+export function renderFixList(issues, course, courseMap = {}) {
   const byKey = new Map(course.map((m) => [m.moduleKey, m]));
   const unitOf = (i) => byKey.get(i.moduleKey)?.unitTitle ?? 'Other';
   const byPos = (a, b) => (a.position ?? 0) - (b.position ?? 0);
@@ -43,6 +61,10 @@ export function renderFixList(issues, course) {
   const out = ['# French course fix list', ''];
   const s = summarize(issues);
   out.push(`${s.errors} errors, ${s.warnings} warnings, ${s.modulesWithErrors} modules with errors.`, '');
+  out.push('## How to read this', '');
+  for (const para of HOW_TO_READ) out.push(para, '');
+  const notes = course.flatMap((m) => (courseMap[m.moduleKey]?.contentNotes ?? []).map((n) => `- ${m.position}. ${m.title}: ${n}`));
+  if (notes.length) out.push('## Lesson text to fix', '', ...notes, '');
 
   const grouped = (list, line) => {
     if (!list.length) { out.push('None.', ''); return; }

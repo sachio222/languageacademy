@@ -11,6 +11,7 @@ import { ruleDuplicates } from '../rules/duplicates.mjs';
 import { ruleLevels } from '../rules/levels.mjs';
 import { ruleUnread } from '../rules/unread.mjs';
 import { ruleShapes } from '../rules/shapes.mjs';
+import { ruleBlanks } from '../rules/blanks.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const base = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
@@ -186,4 +187,22 @@ test('nonstandard shapes give one warning per module; items and passage give not
   assert.equal(issues[0].severity, 'warning');
   assert.equal(issues[0].moduleKey, 'm1');
   assert.deepEqual(issues[0].fix, { kind: 'convert-item', note: 'exercises, fib' });
+});
+
+// blanks
+test('a misplaced blank gives blank-misplaced naming the answer and where it sits', () => {
+  const ctx = ctxOf([
+    makeModule({ position: 1, blankProblems: [
+      { ref: 'm1#sentences[2]', answer: 'au', word: 'restaurant' },
+      { ref: 'm1#sentences[4]', answer: 'hier', word: null },
+    ] }),
+    makeModule({ position: 2 }),
+  ]);
+  const issues = ruleBlanks(ctx);
+  assert.deepEqual(issues.map((i) => [i.rule, i.severity, i.moduleKey, i.itemRef]), [
+    ['blank-misplaced', 'error', 'm1', 'm1#sentences[2]'],
+    ['blank-misplaced', 'error', 'm1', 'm1#sentences[4]'],
+  ]);
+  assert.match(issues[0].message, /"au".*inside the word "restaurant"/);
+  assert.match(issues[1].message, /"hier".*after the end of the sentence/);
 });

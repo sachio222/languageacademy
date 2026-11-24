@@ -30,7 +30,7 @@ export function analyzeItems(ctx) {
   return out;
 }
 
-// Map<headwordId | fold | constructionId, { moduleKey, position }>: the first module that uses it.
+// Map<headwordId | form nodeId | fold | constructionId, { moduleKey, position }>: the first module that uses it.
 export function firstUse(ctx) {
   const analysis = analyzeItems(ctx);
   const first = new Map();
@@ -46,7 +46,12 @@ export function firstUse(ctx) {
           if (ctx.graph.names.has(t.fold)) return;
           const rs = a.readings[i];
           if (rs.length === 0) note(lookupKey(t), m);
-          else for (const r of rs) note(r.headwordId, m);
+          else {
+            for (const r of rs) {
+              note(r.headwordId, m);
+              if (r.via !== 'lemma') note(r.nodeId, m);
+            }
+          }
         });
         for (const id of a.constructions) note(id, m);
       }
@@ -101,13 +106,19 @@ export function ruleTaughtBefore(ctx) {
           const heads = [...new Set(rs.map((r) => r.headwordId))];
           const laters = heads.map((h) => laterNote(h, m.position)).filter((x) => x !== null);
           const taughtEarlier = heads.some((h) => timeline.isAvailable(h, m.position));
+          // Name the reading the message is about: the one taught soonest after this module, else the one taught earlier.
+          const named = (laters.length && heads.find((h) => laterNote(h, m.position) === Math.min(...laters)))
+            || heads.find((h) => timeline.isAvailable(h, m.position)) || heads[0];
           let tail = 'it is not taught anywhere in the course';
           if (laters.length) tail = taughtClause(Math.min(...laters));
           else if (taughtEarlier) tail = 'the word is taught earlier, but this form is not';
-          const useAt = heads.map((h) => first.get(h)).filter(Boolean)
+          // A form gap on a word taught earlier is fixed where that form is first used, not the word.
+          const formGap = !laters.length && taughtEarlier;
+          const keys = formGap ? rs.filter((r) => r.via !== 'lemma').map((r) => r.nodeId) : heads;
+          const useAt = keys.map((k) => first.get(k)).filter(Boolean)
             .sort((x, y) => x.position - y.position)[0];
           issues.push(issue({
-            ...base, rule: 'untaught-word', nodeId: heads[0],
+            ...base, rule: 'untaught-word', nodeId: named,
             message: `"${t.surface}" is used before it is taught (${it.ref}: ${a.text}); ${tail}`,
             fix: { kind: 'teach-earlier', moduleKey: useAt?.moduleKey ?? m.moduleKey },
           }));

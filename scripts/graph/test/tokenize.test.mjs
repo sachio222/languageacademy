@@ -62,6 +62,15 @@ test('norm keeps diacritics, fold strips them', () => {
   assert.equal(fold('Été'), 'ete');
 });
 
+test('fold writes the oe and ae ligatures out, norm keeps them', () => {
+  assert.equal(fold('Sœur'), 'soeur');
+  assert.equal(fold('cœur'), fold('coeur'));
+  assert.equal(fold('Lætitia'), 'laetitia');
+  const [t] = tokenize('œuvre');
+  assert.equal(t.norm, 'œuvre');
+  assert.equal(t.fold, 'oeuvre');
+});
+
 test('stacked clitics split off one by one', () => {
   assert.deepEqual(folds('dis-le-moi'), ['dis', '-le', '-moi']);
 });

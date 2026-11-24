@@ -2,18 +2,13 @@
   "2024-01-01-famous-words": {
     "itemKinds": {
       "2024-01-01-famous-words#exerciseConfig.items[0]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[10]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[11]": "situation",
       "2024-01-01-famous-words#exerciseConfig.items[12]": "situation",
       "2024-01-01-famous-words#exerciseConfig.items[1]": "situation",
       "2024-01-01-famous-words#exerciseConfig.items[2]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[3]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[4]": "situation",
       "2024-01-01-famous-words#exerciseConfig.items[5]": "situation",
       "2024-01-01-famous-words#exerciseConfig.items[6]": "situation",
       "2024-01-01-famous-words#exerciseConfig.items[7]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[8]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[9]": "situation"
+      "2024-01-01-famous-words#exerciseConfig.items[8]": "situation"
     },
     "overrides": {
       "2024-01-01-famous-words#exerciseConfig.items[5]": {
@@ -54,11 +49,7 @@
   },
   "2024-01-01-pronouns": {
     "itemKinds": {
-      "2024-01-01-pronouns#exerciseConfig.items[0]": "situation",
       "2024-01-01-pronouns#exerciseConfig.items[1]": "situation",
-      "2024-01-01-pronouns#exerciseConfig.items[2]": "situation",
-      "2024-01-01-pronouns#exerciseConfig.items[3]": "situation",
-      "2024-01-01-pronouns#exerciseConfig.items[4]": "situation",
       "2024-01-01-pronouns#exerciseConfig.items[5]": "situation",
       "2024-01-01-pronouns#exerciseConfig.items[6]": "situation",
       "2024-01-01-pronouns#exerciseConfig.items[7]": "situation",
@@ -429,13 +420,7 @@
   },
   "2024-01-18-questions": {
     "itemKinds": {
-      "2024-01-18-questions#exerciseConfig.items[0]": "situation",
       "2024-01-18-questions#exerciseConfig.items[10]": "other",
-      "2024-01-18-questions#exerciseConfig.items[1]": "situation",
-      "2024-01-18-questions#exerciseConfig.items[2]": "situation",
-      "2024-01-18-questions#exerciseConfig.items[3]": "situation",
-      "2024-01-18-questions#exerciseConfig.items[4]": "situation",
-      "2024-01-18-questions#exerciseConfig.items[5]": "situation",
       "2024-01-18-questions#exerciseConfig.items[7]": "situation",
       "2024-01-18-questions#exerciseConfig.items[8]": "situation",
       "2024-01-18-questions#exerciseConfig.items[9]": "situation"
@@ -2246,6 +2231,9 @@
     ]
   },
   "2024-03-17-natural-phenomena": {
+    "contentNotes": [
+      "the vocabulary entry and concept card \"rendre + adjective\" have the English placeholder \"adjective\" where a French example belongs (for example \"rendre heureux\")."
+    ],
     "excludeWords": [
       "fr:lex:le.pronoun",
       "fr:form:le.pronoun.f",
@@ -2963,10 +2951,23 @@
       "2024-03-31-survival-phrases#exerciseConfig.items[8]": "situation",
       "2024-03-31-survival-phrases#exerciseConfig.items[9]": "situation"
     },
+    "overrides": {
+      "2024-03-31-survival-phrases#exerciseConfig.items[0]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#exerciseConfig.items[1]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      }
+    },
     "teachesConstructions": [
       "fr:cx:chunk.sil-vous-plait",
       "fr:cx:chunk.sil-te-plait",
-      "fr:cx:chunk.excusez-moi"
+      "fr:cx:chunk.excusez-moi",
+      "fr:cx:chunk.je-voudrais"
     ],
     "teachesWords": [
       "fr:lex:je",
@@ -3038,6 +3039,18 @@
     ]
   },
   "2024-04-02-unit-4-exam": {
+    "overrides": {
+      "2024-04-02-unit-4-exam#exerciseConfig.items[0]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-04-02-unit-4-exam#exerciseConfig.items[39]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      }
+    },
     "tests": [
       "fr:cx:chunk.sil-vous-plait",
       "fr:cx:chunk.excusez-moi",
@@ -3069,6 +3082,13 @@
       "2024-04-03-unit-4-practice#sentences[7]": "other",
       "2024-04-03-unit-4-practice#sentences[8]": "other",
       "2024-04-03-unit-4-practice#sentences[9]": "other"
+    },
+    "overrides": {
+      "2024-04-03-unit-4-practice#sentences[0]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      }
     },
     "tests": [
       "fr:cx:chunk.sil-vous-plait",
@@ -3421,6 +3441,9 @@
     }
   },
   "2024-04-14-unit-5-exam": {
+    "contentNotes": [
+      "the concept cards teach \"plus bon que (better than)\" and \"c'est plus bon\", which are wrong French; the comparative of bon is \"meilleur\" (\"meilleur que\", \"c'est meilleur\")."
+    ],
     "tests": [
       "fr:cx:passe-compose.avoir",
       "fr:cx:passe-compose.etre",
@@ -3429,6 +3452,9 @@
     ]
   },
   "2024-04-15-unit-5-practice": {
+    "contentNotes": [
+      "the concept cards teach \"plus bon que\" and \"c'est plus bon\", which are wrong French; the comparative of bon is \"meilleur\" (\"meilleur que\", \"c'est meilleur\")."
+    ],
     "itemKinds": {
       "2024-04-15-unit-5-practice#sentences[0]": "other",
       "2024-04-15-unit-5-practice#sentences[10]": "other",
@@ -4392,12 +4418,6 @@
     ]
   },
   "2024-05-10-unit-7-exam": {
-    "itemKinds": {
-      "2024-05-10-unit-7-exam#exerciseConfig.items[18]": "other",
-      "2024-05-10-unit-7-exam#exerciseConfig.items[23]": "other",
-      "2024-05-10-unit-7-exam#exerciseConfig.items[43]": "other",
-      "2024-05-10-unit-7-exam#exerciseConfig.items[5]": "other"
-    },
     "tests": [
       "fr:cx:pronoun.on"
     ]
@@ -4862,6 +4882,9 @@
     ]
   },
   "2024-05-26-causal-words": {
+    "contentNotes": [
+      "the gap-fill \"Je suis en retard ___ le traffic\" with answer \"à cause du\" reads \"à cause du le traffic\" once filled; drop \"le\" from the prompt. \"traffic\" is the English spelling: French writes \"trafic\" (also in the à cause de concept card and a feedback line)."
+    ],
     "excludeWords": [
       "fr:lex:le.pronoun",
       "fr:form:le.pronoun.f",
@@ -5588,6 +5611,9 @@
     ]
   },
   "2024-06-08-spatial-prepositions": {
+    "contentNotes": [
+      "the gap-fill \"La lampe est ___ le lit\" with answer \"au-dessus du\" reads \"au-dessus du le lit\" once filled; drop \"le\" from the prompt. \"il-y-a\" in the parmi exercises is written \"il y a\", without hyphens."
+    ],
     "excludeWords": [
       "fr:lex:devoir",
       "fr:form:devoir.prsptcp",

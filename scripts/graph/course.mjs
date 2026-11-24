@@ -79,7 +79,14 @@ function quoted(instruction) {
   return m ? m[1] : null;
 }
 
+// "What does 'on' mean?": the answers are English, and the French the learner reads is the quoted term.
+const MEANING_QUESTION = /^(?:What does|When do you use) ['"‘“]([^'"’”]+)['"’”]/;
+
 function answerItem(ref, source, it) {
+  const meaning = MEANING_QUESTION.exec(it.instruction ?? '');
+  if (meaning) {
+    return { ref, source, french: [meaning[1]], lenient: [], englishPrompt: null, instruction: it.instruction };
+  }
   const lenientIn = Array.isArray(it.acceptableAnswers) ? it.acceptableAnswers : [];
   const french = [it.expectedAnswer].filter((s) => !isEnglish(s));
   // French-to-English item: the answer is English, so the French prompt is the French the learner sees.
@@ -137,18 +144,76 @@ function readExercises(list, key, unread, items, fills) {
   });
 }
 
-function readSentences(list, key, unread, items) {
+const LETTER = /\p{L}/u;
+const SPACE = /\s/;
+
+function wordAt(text, p) {
+  let a = p;
+  let b = p;
+  while (a > 0 && LETTER.test(text[a - 1])) a -= 1;
+  while (b < text.length && LETTER.test(text[b])) b += 1;
+  return text.slice(a, b);
+}
+
+// The app shows each blank in place of the character at its position (a placeholder space), in
+// position order. A blank on a letter, or after the end of the text, is misplaced: learners see a word
+// cut in two, or a blank after the full stop. Each misplaced blank is reported and filled at the nearest
+// free double-space gap (or before the final punctuation, or at the start of its word), so the checker
+// reads the sentence the author meant.
+function fillSentence(text, blanks) {
+  const runs = [...text.matchAll(/\s{2,}/g)].map((m) => ({ start: m.index, end: m.index + m[0].length, used: false }));
+  const placed = [];
+  const misplaced = [];
+  for (const b of [...blanks].sort((x, y) => x.position - y.position)) {
+    const p = b.position;
+    if (p < text.length && !LETTER.test(text[p])) {
+      const run = runs.find((r) => p >= r.start && p < r.end);
+      if (run) run.used = true;
+      placed.push({ b, at: p, skip: SPACE.test(text[p]) });
+    } else misplaced.push(b);
+  }
+  const problems = [];
+  for (const b of misplaced) {
+    const p = b.position;
+    problems.push({ answer: b.answer, word: p < text.length ? wordAt(text, p) : null });
+    const dist = (r) => (p < r.start ? r.start - p : Math.max(0, p - r.end + 1));
+    const free = runs.filter((r) => !r.used).sort((x, y) => dist(x) - dist(y))[0];
+    if (free) {
+      free.used = true;
+      placed.push({ b, at: free.start, skip: true });
+    } else if (p >= text.length) {
+      placed.push({ b, at: /[.!?…]*\s*$/.exec(text).index, skip: false });
+    } else {
+      let a = p;
+      while (a > 0 && LETTER.test(text[a - 1])) a -= 1;
+      placed.push({ b, at: a, skip: false });
+    }
+  }
+  placed.sort((x, y) => x.at - y.at);
+  let out = '';
+  let last = 0;
+  for (const { b, at, skip } of placed) {
+    out += text.slice(last, Math.max(last, at));
+    const lead = out === '' || /['’]$/.test(out) ? '' : ' ';
+    last = Math.max(last, at + (skip ? 1 : 0));
+    const trail = /['’]$/.test(b.answer) || /^[-.,!?;:)]/.test(text[last] ?? '') ? '' : ' ';
+    out += lead + b.answer + trail;
+  }
+  out += text.slice(last);
+  return { text: tidy(out).replace(/\s+([.,])/g, '$1'), problems };
+}
+
+function readSentences(list, key, unread, items, blankProblems) {
   list.forEach((s, i) => {
     if (typeof s?.text !== 'string' || !Array.isArray(s.blanks)) {
       unread.push(`sentences[${i}]:unreadable`);
       return;
     }
-    let out = s.text;
-    [...s.blanks].sort((a, b) => b.position - a.position).forEach((b) => {
-      out = out.slice(0, b.position) + b.answer + out.slice(b.position);
-    });
+    const ref = `${key}#sentences[${i}]`;
+    const { text, problems } = fillSentence(s.text, s.blanks);
+    for (const p of problems) blankProblems.push({ ref, ...p });
     items.push({
-      ref: `${key}#sentences[${i}]`, source: 'sentences', french: [tidy(out)], lenient: [],
+      ref, source: 'sentences', french: [text], lenient: [],
       englishPrompt: quoted(s.instruction),
       instruction: typeof s.instruction === 'string' ? s.instruction : null,
     });
@@ -178,6 +243,7 @@ export function readModule(mod, position, unitId, unitTitle = null) {
   const unread = [];
   const shapes = new Set();
   const fills = new Map();
+  const blankProblems = [];
 
   if (mod.exerciseConfig) {
     const before = items.length;
@@ -190,7 +256,7 @@ export function readModule(mod, position, unitId, unitTitle = null) {
   }
   if (Array.isArray(mod.sentences) && mod.sentences.length) {
     shapes.add('sentences');
-    readSentences(mod.sentences, key, unread, items);
+    readSentences(mod.sentences, key, unread, items, blankProblems);
   }
   if (Array.isArray(mod.fillInBlanksSentences) && mod.fillInBlanksSentences.length) {
     shapes.add('fib');
@@ -225,6 +291,7 @@ export function readModule(mod, position, unitId, unitTitle = null) {
     items,
     shapes: [...shapes],
     unreadShapes: unread,
+    blankProblems,
   };
 }
 

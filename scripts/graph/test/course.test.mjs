@@ -82,6 +82,76 @@ test('sentences insert blanks at their positions', () => {
   assert.deepEqual(r.unreadShapes, []);
 });
 
+test('two blanks at one position keep their order', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', sentences: [
+    { text: 'Il  la maison.', blanks: [{ position: 3, answer: 'peut' }, { position: 3, answer: 'voir' }] },
+  ] }, 1, 1);
+  assert.equal(r.items[0].french[0], 'Il peut voir la maison.');
+  assert.deepEqual(r.blankProblems, []);
+});
+
+test('a blank on either space of a gap stays a separate word, and elisions and hyphens stay attached', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', sentences: [
+    { text: 'Je vais  café.', blanks: [{ position: 7, answer: 'au' }] },
+    { text: "J'ai  une baguette hier.", blanks: [{ position: 4, answer: 'mangé' }] },
+    { text: "J'  faim.", blanks: [{ position: 2, answer: 'avais' }] },
+    { text: "Nous  avons  l'argent.", blanks: [{ position: 5, answer: "n'" }, { position: 12, answer: 'pas' }] },
+    { text: 'Où -vous?', blanks: [{ position: 3, answer: 'travaillez' }] },
+    { text: 'Tu ?', blanks: [{ position: 3, answer: 'comprends' }] },
+  ] }, 1, 1);
+  assert.deepEqual(r.items.map((i) => i.french[0]), [
+    'Je vais au café.', "J'ai mangé une baguette hier.", "J'avais faim.", "Nous n'avons pas l'argent.",
+    'Où travaillez-vous?', 'Tu comprends?',
+  ]);
+  assert.deepEqual(r.blankProblems, []);
+});
+
+test('a blank inside a word is reported and filled at the nearest free gap', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', sentences: [
+    { text: 'Nous  aller  restaurant.', blanks: [{ position: 5, answer: 'devrions' }, { position: 15, answer: 'au' }] },
+    { text: "Je m'appelle Marie,  trente ans, et je  à Lyon où je  comme professeur.",
+      blanks: [{ position: 20, answer: "j'ai" }, { position: 42, answer: 'vis' }, { position: 57, answer: 'travaille' }] },
+  ] }, 1, 1);
+  assert.equal(r.items[0].french[0], 'Nous devrions aller au restaurant.');
+  assert.equal(r.items[1].french[0], "Je m'appelle Marie, j'ai trente ans, et je vis à Lyon où je travaille comme professeur.");
+  assert.deepEqual(r.blankProblems, [
+    { ref: 'x#sentences[0]', answer: 'au', word: 'restaurant' },
+    { ref: 'x#sentences[1]', answer: 'vis', word: 'Lyon' },
+    { ref: 'x#sentences[1]', answer: 'travaille', word: 'comme' },
+  ]);
+});
+
+test('a blank after the end of the sentence is reported and filled before the full stop', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', sentences: [
+    { text: 'Tu as vu ça .', blanks: [{ position: 13, answer: 'hier' }] },
+    { text: 'Nous  français  .', blanks: [{ position: 5, answer: 'parlons' }, { position: 22, answer: 'ici' }] },
+  ] }, 1, 1);
+  assert.equal(r.items[0].french[0], 'Tu as vu ça hier.');
+  assert.equal(r.items[1].french[0], 'Nous parlons français ici.');
+  assert.deepEqual(r.blankProblems, [
+    { ref: 'x#sentences[0]', answer: 'hier', word: null },
+    { ref: 'x#sentences[1]', answer: 'ici', word: null },
+  ]);
+});
+
+test('course sentences read as the app shows them, with misplaced blanks reported', () => {
+  const at = (key, i) => course.find((m) => m.moduleKey === key).items.find((it) => it.ref === `${key}#sentences[${i}]`).french[0];
+  assert.equal(at('2024-01-23-unit2-practice', 13), 'Il peut voir la maison.');
+  assert.equal(at('2024-02-04-unit3-practice', 0), 'Je vais au café.');
+  assert.equal(at('2024-04-15-unit-5-practice', 31), 'Nous devrions aller au restaurant.');
+  const problems = course.flatMap((m) => m.blankProblems);
+  assert.ok(problems.some((p) => p.ref === '2024-02-16-unit-11-practice#sentences[19]' && p.answer === 'vis'));
+  assert.ok(!problems.some((p) => p.ref === '2024-01-23-unit2-practice#sentences[13]'));
+});
+
+test('a meaning question checks the quoted French term, not the English answer', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', isUnitExam: true, exerciseConfig: { items: [
+    { instruction: "What does 'on' mean?", prompt: 'on', expectedAnswer: 'we', acceptableAnswers: ['one', 'people'] },
+    { instruction: "When do you use 'savoir'?", prompt: 'savoir is for...', expectedAnswer: 'facts', acceptableAnswers: ['skills'] },
+  ] } }, 1, 1);
+  assert.deepEqual(r.items.map((i) => [i.french, i.lenient, i.englishPrompt]), [[['on'], [], null], [['savoir'], [], null]]);
+});
+
 test('multi-blank fillblank answers fill the whole span', () => {
   const mod = { moduleKey: 'x', title: 'x', exercises: [
     { type: 'fillblank', prompt: "Complete: Je n'___ pas ___ le film (I didn't like the movie) - Use 'aimer'", answer: 'ai pas aimé' },

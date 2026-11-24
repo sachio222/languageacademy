@@ -43,6 +43,25 @@ test('untaught word taught later names its position and fixes at first use', () 
   assert.match(hits[0].message, /Module 5/);
 });
 
+test('a form gap on a taught word fixes at the first use of the form, not of the word', () => {
+  const course = [mod(1, [item('je vais')]), mod(2, [item('tu vas')]), mod(3, [item('tu vas')])];
+  const ctx = setup({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:tu', 'fr:lex:aller', 'fr:form:aller.prs.1sg'] } }, course);
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.surface === 'vas');
+  assert.deepEqual(hits.map((i) => [i.moduleKey, i.fix.moduleKey]), [['m2', 'm2'], ['m3', 'm2']]);
+  assert.match(hits[0].message, /this form is not/);
+});
+
+test('a homograph names the reading that is taught later, not the first one in the index', () => {
+  const hw = (id, lemma, pos, paradigms) => ({ id, lemma, pos, paradigms, senses: [], dictionaryId: null, cefr: null, cefrSource: null });
+  // the noun comes first in the index, as fr:lex:marche does in the French graph
+  const headwords = [...base.headwords, hw('fr:lex:marche', 'marché', 'noun', []), hw('fr:lex:marcher', 'marcher', 'verb', ['fr:cx:ptcp.er'])];
+  const ctx = setup({ m5: { teachesWords: ['fr:lex:marcher'], teachesConstructions: ['fr:cx:ptcp.er'] } },
+    [mod(1, [item('marché')]), mod(5, [])], { headwords });
+  const [hit] = ruleTaughtBefore(ctx).filter((i) => i.surface === 'marché');
+  assert.equal(hit.nodeId, 'fr:lex:marcher');
+  assert.match(hit.message, /taught later at position 5/);
+});
+
 test('names are exempt', () => {
   const ctx = setup({ m1: { teachesWords: ['fr:lex:parler'], teachesConstructions: ['fr:cx:verb.er.present'] } },
     [mod(1, [item('Marie parle')])]);

@@ -268,6 +268,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "aile-fr",
+    "id": "fr:lex:aile",
+    "lemma": "aile",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "aimer-fr",
     "id": "fr:lex:aimer",
     "lemma": "aimer",
@@ -386,6 +398,16 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "anglais-fr",
+    "id": "fr:lex:anglais",
+    "lemma": "anglais",
+    "paradigms": [],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "année-fr",
     "id": "fr:lex:annee",
     "lemma": "année",
@@ -398,10 +420,52 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "anniversaire-fr",
+    "id": "fr:lex:anniversaire",
+    "lemma": "anniversaire",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "annuler-fr",
+    "id": "fr:lex:annuler",
+    "lemma": "annuler",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "août-fr",
     "id": "fr:lex:aout",
     "lemma": "août",
     "paradigms": [],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "appartement-fr",
+    "id": "fr:lex:appartement",
+    "lemma": "appartement",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
     "pos": "noun",
     "senses": []
   },
@@ -1112,6 +1176,24 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "cacher-fr",
+    "id": "fr:lex:cacher",
+    "lemma": "cacher",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "café-fr",
     "id": "fr:lex:cafe",
     "lemma": "café",
@@ -1334,6 +1416,30 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "chaise-fr",
+    "id": "fr:lex:chaise",
+    "lemma": "chaise",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "chambre-fr",
+    "id": "fr:lex:chambre",
+    "lemma": "chambre",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "chance-fr",
     "id": "fr:lex:chance",
     "lemma": "chance",
@@ -1434,10 +1540,46 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "chaussure-fr",
+    "id": "fr:lex:chaussure",
+    "lemma": "chaussure",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": null,
     "id": "fr:lex:chelou",
     "lemma": "chelou",
     "paradigms": [],
+    "pos": "adjective",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "chemise-fr",
+    "id": "fr:lex:chemise",
+    "lemma": "chemise",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "cher-fr",
+    "id": "fr:lex:cher",
+    "lemma": "cher",
+    "paradigms": [
+      "fr:cx:adj.er"
+    ],
     "pos": "adjective",
     "senses": []
   },
@@ -1612,6 +1754,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "classique-fr",
+    "id": "fr:lex:classique",
+    "lemma": "classique",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": null,
     "id": "fr:lex:cle",
     "lemma": "clé",
@@ -1665,6 +1819,24 @@
     "lemma": "combien",
     "paradigms": [],
     "pos": "adverb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "combiner-fr",
+    "id": "fr:lex:combiner",
+    "lemma": "combiner",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
     "senses": []
   },
   {
@@ -1935,6 +2107,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "contribution-fr",
+    "id": "fr:lex:contribution",
+    "lemma": "contribution",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "conversation-fr",
     "id": "fr:lex:conversation",
     "lemma": "conversation",
@@ -2006,6 +2190,18 @@
     "dictionaryId": "couleur-fr",
     "id": "fr:lex:couleur",
     "lemma": "couleur",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "couloir-fr",
+    "id": "fr:lex:couloir",
+    "lemma": "couloir",
     "paradigms": [
       "fr:cx:noun.plural"
     ],
@@ -2157,6 +2353,24 @@
       "fr:cx:noun.plural"
     ],
     "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "cuisiner-fr",
+    "id": "fr:lex:cuisiner",
+    "lemma": "cuisiner",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
     "senses": []
   },
   {
@@ -2537,6 +2751,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "dessert-fr",
+    "id": "fr:lex:dessert",
+    "lemma": "dessert",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": null,
     "id": "fr:lex:dessous",
     "lemma": "dessous",
@@ -2711,6 +2937,24 @@
       "fr:cx:noun.plural"
     ],
     "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "discuter-fr",
+    "id": "fr:lex:discuter",
+    "lemma": "discuter",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
     "senses": []
   },
   {
@@ -3232,6 +3476,24 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "entendre-fr",
+    "id": "fr:lex:entendre",
+    "lemma": "entendre",
+    "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
+    ],
+    "pos": "verb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "entier-fr",
     "id": "fr:lex:entier",
     "lemma": "entier",
@@ -3321,6 +3583,18 @@
     "dictionaryId": "époque-fr",
     "id": "fr:lex:epoque",
     "lemma": "époque",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "espace-fr",
+    "id": "fr:lex:espace",
+    "lemma": "espace",
     "paradigms": [
       "fr:cx:noun.plural"
     ],
@@ -3544,6 +3818,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "examen-fr",
+    "id": "fr:lex:examen",
+    "lemma": "examen",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": null,
     "id": "fr:lex:examiner",
     "lemma": "examiner",
@@ -3617,6 +3903,24 @@
       "fr:cx:noun.plural"
     ],
     "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "expliquer-fr",
+    "id": "fr:lex:expliquer",
+    "lemma": "expliquer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
     "senses": []
   },
   {
@@ -3962,6 +4266,30 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "fontaine-fr",
+    "id": "fr:lex:fontaine",
+    "lemma": "fontaine",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "foot-fr",
+    "id": "fr:lex:foot",
+    "lemma": "foot",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": null,
     "id": "fr:lex:fort",
     "lemma": "fort",
@@ -4078,6 +4406,24 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "gagner-fr",
+    "id": "fr:lex:gagner",
+    "lemma": "gagner",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "garage-fr",
     "id": "fr:lex:garage",
     "lemma": "garage",
@@ -4105,6 +4451,18 @@
     "dictionaryId": "gare-fr",
     "id": "fr:lex:gare",
     "lemma": "gare",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "garçon-fr",
+    "id": "fr:lex:garçon",
+    "lemma": "garçon",
     "paradigms": [
       "fr:cx:noun.plural"
     ],
@@ -4704,6 +5062,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "intéressant-fr",
+    "id": "fr:lex:interessant",
+    "lemma": "intéressant",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "international-fr",
     "id": "fr:lex:international",
     "lemma": "international",
@@ -4906,6 +5276,16 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "jusque-fr",
+    "id": "fr:lex:jusque",
+    "lemma": "jusque",
+    "paradigms": [],
+    "pos": "preposition",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": null,
     "id": "fr:lex:juste",
     "lemma": "juste",
@@ -4973,6 +5353,18 @@
     "dictionaryId": "lait-fr",
     "id": "fr:lex:lait",
     "lemma": "lait",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "lampe-fr",
+    "id": "fr:lex:lampe",
+    "lemma": "lampe",
     "paradigms": [
       "fr:cx:noun.plural"
     ],
@@ -5059,6 +5451,18 @@
     "dictionaryId": null,
     "id": "fr:lex:legume",
     "lemma": "légume",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "lendemain-fr",
+    "id": "fr:lex:lendemain",
+    "lemma": "lendemain",
     "paradigms": [
       "fr:cx:noun.plural"
     ],
@@ -5198,6 +5602,31 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "lire-fr",
+    "id": "fr:lex:lire",
+    "lemma": "lire",
+    "paradigms": [
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional"
+    ],
+    "pos": "verb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "lit-fr",
+    "id": "fr:lex:lit",
+    "lemma": "lit",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "littérature-fr",
     "id": "fr:lex:litterature",
     "lemma": "littérature",
@@ -5327,6 +5756,18 @@
     "dictionaryId": "madame-fr",
     "id": "fr:lex:madame",
     "lemma": "madame",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "magasin-fr",
+    "id": "fr:lex:magasin",
+    "lemma": "magasin",
     "paradigms": [
       "fr:cx:noun.plural"
     ],
@@ -5558,6 +5999,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "match-fr",
+    "id": "fr:lex:match",
+    "lemma": "match",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "matières-fr",
     "id": "fr:lex:matiere",
     "lemma": "matière",
@@ -5577,6 +6030,18 @@
       "fr:cx:noun.plural"
     ],
     "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "mauvais-fr",
+    "id": "fr:lex:mauvais",
+    "lemma": "mauvais",
+    "paradigms": [
+      "fr:cx:adj.s"
+    ],
+    "pos": "adjective",
     "senses": []
   },
   {
@@ -6323,6 +6788,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "numéro-fr",
+    "id": "fr:lex:numero",
+    "lemma": "numéro",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "o-fr",
     "id": "fr:lex:o",
     "lemma": "o",
@@ -6454,6 +6931,19 @@
     "lemma": "oui",
     "paradigms": [],
     "pos": "interjection",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "ouvrir-fr",
+    "id": "fr:lex:ouvrir",
+    "lemma": "ouvrir",
+    "paradigms": [
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional"
+    ],
+    "pos": "verb",
     "senses": []
   },
   {
@@ -6620,6 +7110,18 @@
     "lemma": "parfois",
     "paradigms": [],
     "pos": "adverb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "parking-fr",
+    "id": "fr:lex:parking",
+    "lemma": "parking",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
     "senses": []
   },
   {
@@ -6986,6 +7488,18 @@
     "dictionaryId": "phrase-fr",
     "id": "fr:lex:phrase",
     "lemma": "phrase",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "pièce-fr",
+    "id": "fr:lex:piece",
+    "lemma": "pièce",
     "paradigms": [
       "fr:cx:noun.plural"
     ],
@@ -7493,6 +8007,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "prêt-fr",
+    "id": "fr:lex:pret",
+    "lemma": "prêt",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "preuve-fr",
     "id": "fr:lex:preuve",
     "lemma": "preuve",
@@ -7923,6 +8449,24 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "rater-fr",
+    "id": "fr:lex:rater",
+    "lemma": "rater",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "réalité-fr",
     "id": "fr:lex:realite",
     "lemma": "réalité",
@@ -8191,6 +8735,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "retard-fr",
+    "id": "fr:lex:retard",
+    "lemma": "retard",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "retrouver-fr",
     "id": "fr:lex:retrouver",
     "lemma": "retrouver",
@@ -8347,6 +8903,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "rivière-fr",
+    "id": "fr:lex:riviere",
+    "lemma": "rivière",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "riz-fr",
     "id": "fr:lex:riz",
     "lemma": "riz",
@@ -8393,6 +8961,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "route-fr",
+    "id": "fr:lex:route",
+    "lemma": "route",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "rue-fr",
     "id": "fr:lex:rue",
     "lemma": "rue",
@@ -8410,6 +8990,18 @@
     "lemma": "s",
     "paradigms": [],
     "pos": "alphabet",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "sac-fr",
+    "id": "fr:lex:sac",
+    "lemma": "sac",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
     "senses": []
   },
   {
@@ -8574,6 +9166,18 @@
     "lemma": "se souvenir",
     "paradigms": [],
     "pos": "verb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "secret-fr",
+    "id": "fr:lex:secret",
+    "lemma": "secret",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
     "senses": []
   },
   {
@@ -8765,6 +9369,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "sofa-fr",
+    "id": "fr:lex:sofa",
+    "lemma": "sofa",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "soi-fr",
     "id": "fr:lex:soi",
     "lemma": "soi",
@@ -8812,6 +9428,18 @@
     "dictionaryId": "soleil-fr",
     "id": "fr:lex:soleil",
     "lemma": "soleil",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "sommeil-fr",
+    "id": "fr:lex:sommeil",
+    "lemma": "sommeil",
     "paradigms": [
       "fr:cx:noun.plural"
     ],
@@ -8885,6 +9513,19 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "sourire-fr",
+    "id": "fr:lex:sourire",
+    "lemma": "sourire",
+    "paradigms": [
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional"
+    ],
+    "pos": "verb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "sous-fr",
     "id": "fr:lex:sous",
     "lemma": "sous",
@@ -8915,9 +9556,33 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "sport-fr",
+    "id": "fr:lex:sport",
+    "lemma": "sport",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "station-fr",
     "id": "fr:lex:station",
     "lemma": "station",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "steak-fr",
+    "id": "fr:lex:steak",
+    "lemma": "steak",
     "paradigms": [
       "fr:cx:noun.plural"
     ],
@@ -8956,6 +9621,19 @@
       "fr:cx:noun.plural"
     ],
     "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "suivre-fr",
+    "id": "fr:lex:suivre",
+    "lemma": "suivre",
+    "paradigms": [
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional"
+    ],
+    "pos": "verb",
     "senses": []
   },
   {
@@ -9178,10 +9856,34 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "télévision-fr",
+    "id": "fr:lex:television",
+    "lemma": "télévision",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "temps-fr",
     "id": "fr:lex:temps",
     "lemma": "temps",
     "paradigms": [],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "terrasse-fr",
+    "id": "fr:lex:terrasse",
+    "lemma": "terrasse",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
     "pos": "noun",
     "senses": []
   },
@@ -9450,6 +10152,16 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "tranquillement-fr",
+    "id": "fr:lex:tranquillement",
+    "lemma": "tranquillement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "transport-fr",
     "id": "fr:lex:transport",
     "lemma": "transport",
@@ -9640,6 +10352,18 @@
   {
     "cefr": null,
     "cefrSource": null,
+    "dictionaryId": "utile-fr",
+    "id": "fr:lex:utile",
+    "lemma": "utile",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
     "dictionaryId": "utiliser-fr",
     "id": "fr:lex:utiliser",
     "lemma": "utiliser",
@@ -9700,18 +10424,6 @@
   {
     "cefr": null,
     "cefrSource": null,
-    "dictionaryId": "van-fr",
-    "id": "fr:lex:van",
-    "lemma": "van",
-    "paradigms": [
-      "fr:cx:noun.plural"
-    ],
-    "pos": "noun",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
     "dictionaryId": "vendredi-fr",
     "id": "fr:lex:vendredi",
     "lemma": "vendredi",
@@ -9761,6 +10473,18 @@
     "dictionaryId": "verbe-fr",
     "id": "fr:lex:verbe",
     "lemma": "verbe",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": []
+  },
+  {
+    "cefr": null,
+    "cefrSource": null,
+    "dictionaryId": "vérité-fr",
+    "id": "fr:lex:verite",
+    "lemma": "vérité",
     "paradigms": [
       "fr:cx:noun.plural"
     ],

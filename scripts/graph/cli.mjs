@@ -37,7 +37,7 @@ async function main() {
 
   const dir = join(repoRoot, 'curriculum-graph/reports');
   mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, `${lang}-fix-list.md`), renderFixList(issues, ctx.course));
+  writeFileSync(join(dir, `${lang}-fix-list.md`), renderFixList(issues, ctx.course, ctx.graph.courseMap));
   writeSortedJson(join(dir, `${lang}-summary.json`), summary);
   console.log(`wrote ${lang}-fix-list.md and ${lang}-summary.json: ${summary.errors} errors, ${summary.warnings} warnings`);
 }
