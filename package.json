@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "vocab:sort": "node scripts/alphabetize-vocabulary.js",
     "vocab:validate": "node scripts/validate-vocabulary.js",
-    "graph:test": "node --test \"scripts/graph/test/**/*.test.mjs\""
+    "graph:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/graph/test/**/*.test.mjs\""
   },
   "keywords": [
     "french",
