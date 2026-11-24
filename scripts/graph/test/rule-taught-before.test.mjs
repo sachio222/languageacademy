@@ -414,3 +414,14 @@ test('a word the Reference unit lists is not untaught from openFrom on, typed or
   const closed = makeCtx({ graph, course });
   assert.equal(ruleTaughtBefore(closed).length, 3);
 });
+
+test('a Reference noun spelled like a verb form does not hide the untaught verb form', () => {
+  const hw = (id, lemma, pos, paradigms) => ({ id, lemma, pos, paradigms, senses: [], dictionaryId: null, cefr: null, cefrSource: null });
+  const headwords = [...base.headwords, hw('fr:lex:marche', 'marché', 'noun', []), hw('fr:lex:marcher', 'marcher', 'verb', ['fr:cx:ptcp.er'])];
+  const graph = { ...base, headwords, courseMap: {} };
+  const course = [mod(1, [item('marché')]), mod(2, [item('café')])];
+  const ctx = makeCtx({ graph, course, reference: new Set(['fr:lex:marche', 'fr:lex:cafe']) });
+  // marché also reads as the past participle of marcher, which no lesson teaches; café has one reading.
+  // The Reference does not count for an ambiguous token at all, so the reason is that no lesson teaches it.
+  assert.deepEqual(ruleTaughtBefore(ctx).map((i) => [i.rule, i.surface, i.reason]), [['untaught-word', 'marché', 'nowhere']]);
+});

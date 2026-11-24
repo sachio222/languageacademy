@@ -185,7 +185,7 @@ function run(ctx) {
           const rs = a.readings[i];
           if (ignore.has(lk) || ignore.has(t.fold)
             || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
-          const untaughtCognate = rs.length > 0 && !rs.some((r) => timeline.isReadingAvailable(r, m.position))
+          const untaughtCognate = rs.length > 0 && !timeline.isTokenAvailable(rs, m.position)
             && cognate.isCognate(rs, m.position);
           if (untaughtCognate && (cognate.allowTyped || !typedAt(i))) {
             allowed += 1;
@@ -202,17 +202,20 @@ function run(ctx) {
             }));
             return;
           }
-          if (rs.some((r) => timeline.isReadingAvailable(r, m.position))) return;
+          if (timeline.isTokenAvailable(rs, m.position)) return;
           markWord(a, t, lk);
           const heads = [...new Set(rs.map((r) => r.headwordId))];
           const laters = heads.map((h) => laterNote(h, m.position)).filter((x) => x !== null);
-          const taughtEarlier = heads.some((h) => timeline.isAvailable(h, m.position));
+          // A headword open only through the Reference counts as taught earlier only when the token reads as no other
+          // word, as in timeline.isTokenAvailable.
+          const headEarlier = (h) => timeline.isTaught(h, m.position) || (heads.length === 1 && timeline.isAvailable(h, m.position));
+          const taughtEarlier = heads.some(headEarlier);
           // Name the reading the message is about: the one taught soonest after this module, else the one taught earlier.
           // A letter of the alphabet is named only when the token has no word reading.
           const letters = new Set(rs.filter((r) => r.pos === 'alphabet').map((r) => r.headwordId));
           const pick = (list) => list.find((h) => !letters.has(h)) ?? list[0];
           const soonest = heads.filter((h) => laters.length && laterNote(h, m.position) === Math.min(...laters));
-          const earlier = heads.filter((h) => timeline.isAvailable(h, m.position));
+          const earlier = heads.filter(headEarlier);
           const named = pick(soonest.length ? soonest : earlier.length ? earlier : heads);
           // reason: 'later' (taught after this module), 'form' (the word is taught earlier, this form is not), 'nowhere',
           // or 'cognate' (a cognate the learner types), which keeps the other reason as baseReason.

@@ -17,12 +17,17 @@ export function moduleTeaches(m, entry) {
 // position, and learners can open it at any time, so its nodes count as available from opts.openFrom on
 // (settings.reference.openFrom). With no reference, or openFrom null, nothing is open.
 //
-// Returns { taughtAt, availableAt, openByReference, openFrom, isAvailable, isReadingAvailable, issues }:
+// Returns { taughtAt, availableAt, openByReference, openFrom, isTaught, isAvailable, isReadingAvailable,
+// isTokenAvailable, issues }:
 //   taughtAt: Map<nodeId, position>, lesson teaching only, the first position that teaches each node.
 //   availableAt: Map<nodeId, position>, the earlier of taughtAt and openFrom for a Reference node; a lesson that
 //     teaches a node at or before openFrom wins.
 //   openByReference: Set of the nodes the Reference unit opens before any lesson teaches them.
-//   isAvailable and isReadingAvailable read availableAt.
+//   isAvailable and isReadingAvailable read availableAt; isTaught reads taughtAt.
+//   isTokenAvailable(readings, position): whether a token of lesson text counts as available. A reading a lesson has
+//     taught always counts. A reading open only through the Reference counts only when every reading of the token
+//     belongs to the same word, so the letter y never hides the pronoun y and the season été never hides the past
+//     participle of être.
 export function buildTimeline(graph, course, opts = {}) {
   const taughtAt = new Map();
   const issues = [];
@@ -61,21 +66,30 @@ export function buildTimeline(graph, course, opts = {}) {
     }
   }
 
-  const isAvailable = (nodeId, position) => {
-    const at = availableAt.get(nodeId);
-    return at !== undefined && at <= position;
+  const within = (at) => (nodeId, position) => {
+    const p = at.get(nodeId);
+    return p !== undefined && p <= position;
   };
+  const isAvailable = within(availableAt);
+  const isTaught = within(taughtAt);
 
-  const isReadingAvailable = (reading, position) => {
-    if (!isAvailable(reading.headwordId, position)) return false;
+  // A regular form needs its headword and either the form or its paradigm; an irregular form needs itself too.
+  const readingIn = (has) => (reading, position) => {
+    if (!has(reading.headwordId, position)) return false;
     if (reading.via === 'lemma') return true;
-    if (reading.via === 'irregular') return isAvailable(reading.nodeId, position);
+    if (reading.via === 'irregular') return has(reading.nodeId, position);
     if (reading.via === 'generated') {
-      return isAvailable(reading.nodeId, position)
-        || (reading.paradigmId != null && isAvailable(reading.paradigmId, position));
+      return has(reading.nodeId, position) || (reading.paradigmId != null && has(reading.paradigmId, position));
     }
     return false;
   };
+  const isReadingAvailable = readingIn(isAvailable);
+  const isReadingTaught = readingIn(isTaught);
 
-  return { taughtAt, availableAt, openByReference, openFrom, isAvailable, isReadingAvailable, issues };
+  const isTokenAvailable = (readings, position) => readings.some((r) => isReadingTaught(r, position)
+    || (isReadingAvailable(r, position) && readings.every((o) => o.headwordId === r.headwordId)));
+
+  return {
+    taughtAt, availableAt, openByReference, openFrom, isTaught, isAvailable, isReadingAvailable, isTokenAvailable, issues,
+  };
 }

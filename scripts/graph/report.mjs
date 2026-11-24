@@ -118,8 +118,10 @@ function openingParagraph(openFrom, titles = []) {
       + 'open it at any time, so it teaches nothing at any point in the course.'
     : 'The Reference unit (alphabet, numbers, days and months, colors and similar pages) has no position, because learners can '
       + `open it at any time. The words on ${pages ? `its pages ${pages}` : 'its lookup pages'} count as available from position ${openFrom} on, `
-      + 'so a lesson may use a number or a day without teaching it first. Verb forms and grammar words such as le or je on those '
-      + 'pages do not count. Sections 6 and 7 count Reference words apart from the words lessons teach.';
+      + 'so a lesson may use a number or a day without teaching it first. Only the nouns, adjectives, numbers and letters on those '
+      + 'pages count, with their forms; verbs and grammar words such as le or je do not. A Reference word spelled like another '
+      + 'word, such as the letter y and the pronoun y, counts only once a lesson teaches that spelling. Sections 6 and 7 count '
+      + 'Reference words apart from the words lessons teach.';
   return 'A checker read every lesson, practice, reading and exam in course order and tested one thing for each French word '
     + 'and grammar pattern: was it taught before the learner meets it? Positions count the modules in course order, from 1 to 160. '
     + 'A code such as fr:lex:livre names the entry in the course word list, and a code starting fr:cx: names a grammar pattern. '
@@ -337,8 +339,8 @@ function renderFunctions(out, byPosition, opts) {
     out.push((opts.referenceOpenFrom == null
       ? `Some functions need words that no lesson teaches and only the Reference unit lists (${names}). `
         + 'That unit has no position in the course, so it teaches nothing, and those functions never become possible. '
-      : `Some functions need words that no lesson teaches and that the Reference unit lists only on pages that do not count as open (${names}), `
-        + 'so those functions never become possible. ')
+      : `Some functions need words that no lesson teaches and that the Reference unit lists without opening them (${names}). `
+        + 'It opens only the nouns, adjectives, numbers and letters on its lookup pages, so those functions never become possible. ')
       + 'Below, "(Reference unit)" marks those words.', '');
   }
   for (const level of levels) {

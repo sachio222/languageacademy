@@ -22,10 +22,18 @@ test('the French check has no dangling refs, unread items or unknown course-map 
 test('the real check opens Reference words from the lookup modules only', async () => {
   const { ctx } = await runCheck({ repoRoot, lang: 'fr' });
   const open = ctx.timeline.openByReference;
-  for (const id of ['fr:lex:huit', 'fr:lex:lundi', 'fr:lex:ete', 'fr:lex:rouge', 'fr:lex:noel', 'fr:lex:b']) assert.ok(open.has(id), id);
-  for (const id of ['fr:lex:je', 'fr:lex:tu', 'fr:form:etre.prs.1sg', 'fr:form:etre.ptcp', 'fr:lex:le', 'fr:lex:de', 'fr:form:vivre.sbjv.1sg']) {
+  for (const id of ['fr:lex:huit', 'fr:lex:lundi', 'fr:lex:ete', 'fr:lex:rouge', 'fr:lex:noel', 'fr:lex:b', 'fr:form:vif.f']) assert.ok(open.has(id), id);
+  for (const id of ['fr:lex:je', 'fr:lex:tu', 'fr:form:etre.prs.1sg', 'fr:form:etre.ptcp', 'fr:lex:le', 'fr:lex:de', 'fr:form:vivre.sbjv.1sg',
+    'fr:lex:etre', 'fr:lex:avoir', 'fr:lex:voir', 'fr:lex:parler', 'fr:lex:rire', 'fr:lex:epeler']) {
     assert.ok(!open.has(id), id);
   }
   // The label set still covers every Reference module.
   assert.ok(ctx.reference.size >= open.size);
+});
+
+test('the letter y the Reference opens does not hide the pronoun y at position 25', async () => {
+  const { issues } = await runCheck({ repoRoot, lang: 'fr' });
+  const y = issues.filter((i) => i.rule === 'untaught-word' && i.position === 25 && i.surface.toLowerCase() === 'y');
+  assert.equal(y.length, 1);
+  assert.equal(y[0].nodeId, 'fr:lex:y.pronoun');
 });

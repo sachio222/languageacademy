@@ -162,7 +162,8 @@ test('How to read this says the Reference unit is always open and counts as avai
   assert.match(how, /open it at any time/);
   assert.match(how, /available from position 1 on/);
   assert.match(how, /The words on its pages Les Nombres and Jours et Mois count as available/);
-  assert.match(how, /Verb forms and grammar words such as le or je on those pages do not count/);
+  assert.match(how, /Only the nouns, adjectives, numbers and letters on those pages count, with their forms; verbs and grammar words such as le or je do not/);
+  assert.match(how, /A Reference word spelled like another word, such as the letter y and the pronoun y, counts only once a lesson teaches that spelling/);
   assert.doesNotMatch(how, /teaches nothing/);
   assert.match(how, /concept cards, hints/);
 });

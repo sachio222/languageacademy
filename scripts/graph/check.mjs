@@ -43,19 +43,14 @@ export function referenceNodes(index, vocab) {
   return out;
 }
 
-// Parts of speech whose headwords and forms the Reference unit opens: a learner looks up a number, a color or a
-// letter. A headword of any other part of speech opens too, as its lemma, except grammar words.
-const OPEN_ANY_READING = new Set(['noun', 'adjective', 'number', 'alphabet']);
-const NEVER_OPEN = new Set(['pronoun', 'determiner', 'article', 'preposition', 'conjunction', 'interrogative']);
+// Parts of speech the Reference unit opens, with their forms: a learner looks up a number, a color or a letter.
+// Verbs (infinitives included), adverbs and grammar words never open.
+const OPENS = new Set(['noun', 'adjective', 'number', 'alphabet']);
 const RANK = { irregular: 0, generated: 1, lemma: 2 };
 
-// True when the Reference unit may open this reading: any noun, adjective, number or letter reading, and the lemma
-// of a headword that is not a grammar word. A verb form or a pronoun never opens, so vive opens vif and not a
-// subjunctive of vivre.
-function opens(reading) {
-  if (OPEN_ANY_READING.has(reading.pos)) return true;
-  return reading.via === 'lemma' && !NEVER_OPEN.has(reading.pos);
-}
+// True when the Reference unit may open this reading: a noun, adjective, number or letter, or one of their forms.
+// So vive opens the feminine of vif and not a subjunctive of vivre.
+const opens = (reading) => OPENS.has(reading.pos);
 
 // The nodes the Reference unit opens from settings.reference.openFrom on: for each token of each entry, the readings
 // that may open (opens), exact accents first and a folded match only as a fallback, and of those the best kind

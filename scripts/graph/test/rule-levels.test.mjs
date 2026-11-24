@@ -454,14 +454,17 @@ test('Section 7 names a Reference form by its spelling, not its ID', () => {
 const realGraph = loadGraph(join(here, '../../../curriculum-graph'), 'fr');
 const realIndex = buildFormIndex(realGraph);
 
-test('the Reference opens headwords and noun, adjective, number and letter readings, never a verb form or a function word', () => {
-  const open = referenceOpenNodes(realIndex, ["l'été", 'vif', 'vive', 'le printemps', 'je suis', 'parler français', 'cette semaine', 'Bonnes fêtes', 'dans', 'et']);
-  // été reads as the season, not the past participle of être. vive reads only as a subjunctive of vivre (the graph has
-  // no feminine form of vif), so it opens nothing.
-  for (const id of ['fr:lex:ete', 'fr:lex:printemps', 'fr:lex:vif', 'fr:lex:parler', 'fr:lex:francais', 'fr:lex:semaine',
-    'fr:lex:bon', 'fr:form:bon.fpl', 'fr:lex:fete', 'fr:form:fete.pl']) assert.ok(open.has(id), id);
+test('the Reference opens only nouns, adjectives, numbers and letters with their forms, never a verb or a grammar word', () => {
+  const open = referenceOpenNodes(realIndex, ["l'été", 'vif', 'vive', 'le printemps', 'je suis', 'parler français', 'cette semaine', 'Bonnes fêtes',
+    'dans', 'et', 'épeler', 'être dans le rouge', 'voir la vie en rose', 'rire', 'aujourd\'hui', 'Comment ça s\'écrit ?', 'b']);
+  // été reads as the season, not the past participle of être; vive as the feminine of vif, not a subjunctive of vivre.
+  for (const id of ['fr:lex:ete', 'fr:lex:printemps', 'fr:lex:vif', 'fr:form:vif.f', 'fr:lex:francais', 'fr:lex:semaine',
+    'fr:lex:bon', 'fr:form:bon.fpl', 'fr:lex:fete', 'fr:form:fete.pl', 'fr:lex:rouge', 'fr:lex:vie', 'fr:lex:rose', 'fr:lex:b']) {
+    assert.ok(open.has(id), id);
+  }
   for (const id of ['fr:form:etre.ptcp', 'fr:form:vivre.sbjv.1sg', 'fr:form:vivre.sbjv.3sg', 'fr:lex:vivre', 'fr:lex:le', 'fr:lex:je',
-    'fr:form:etre.prs.1sg', 'fr:lex:etre', 'fr:form:le.elided', 'fr:form:ce.f', 'fr:lex:ce', 'fr:lex:dans', 'fr:lex:et']) {
+    'fr:form:etre.prs.1sg', 'fr:lex:etre', 'fr:form:le.elided', 'fr:form:ce.f', 'fr:lex:ce', 'fr:lex:dans', 'fr:lex:et',
+    'fr:lex:parler', 'fr:lex:epeler', 'fr:lex:voir', 'fr:lex:rire', 'fr:lex:aujourd-hui', 'fr:lex:comment', 'fr:lex:en']) {
     assert.ok(!open.has(id), id);
   }
 });
@@ -491,7 +494,7 @@ test('readReferenceModules lists every Reference module with its vocabulary; onl
   });
 });
 
-test('with the Reference unit open, Section 7 says a missing word sits only on Reference pages that do not count as open', () => {
+test('with the Reference unit open, Section 7 says a missing word is one the Reference unit lists without opening it', () => {
   const ctx = makeCtx({ graph: levelGraph({ courseMap: { m1: { teachesWords: ['fr:lex:je', 'fr:lex:bonjour'] } } }), course: COURSE,
     reference: new Set(), openFrom: 1 });
   ctx.reference = new Set(['fr:lex:vous']);
@@ -499,6 +502,6 @@ test('with the Reference unit open, Section 7 says a missing word sits only on R
     levels: levelReport(ctx), functions: functionReport(ctx), graph: ctx.graph, referenceOpenFrom: 1,
   });
   const section = md.slice(md.indexOf('# 7. What a learner can do'), md.indexOf('# 8.'));
-  assert.match(section, /Some functions need words that no lesson teaches and that the Reference unit lists only on pages that do not count as open \(vous\)/);
+  assert.match(section, /Some functions need words that no lesson teaches and that the Reference unit lists without opening them \(vous\)\. It opens only the nouns, adjectives, numbers and letters on its lookup pages, so those functions never become possible\./);
   assert.doesNotMatch(section, /teaches nothing/);
 });

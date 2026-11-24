@@ -10,15 +10,15 @@
   "curve": [
     {
       "A1": {
-        "availableWords": 113,
+        "availableWords": 103,
         "constructions": 0,
-        "referenceWords": 94,
+        "referenceWords": 84,
         "words": 19
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -31,15 +31,15 @@
     },
     {
       "A1": {
-        "availableWords": 122,
+        "availableWords": 112,
         "constructions": 3,
-        "referenceWords": 94,
+        "referenceWords": 84,
         "words": 28
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -52,15 +52,15 @@
     },
     {
       "A1": {
-        "availableWords": 122,
+        "availableWords": 113,
         "constructions": 3,
-        "referenceWords": 93,
+        "referenceWords": 84,
         "words": 29
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -73,15 +73,15 @@
     },
     {
       "A1": {
-        "availableWords": 122,
+        "availableWords": 114,
         "constructions": 3,
-        "referenceWords": 92,
+        "referenceWords": 84,
         "words": 30
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -94,15 +94,15 @@
     },
     {
       "A1": {
-        "availableWords": 124,
+        "availableWords": 116,
         "constructions": 6,
-        "referenceWords": 92,
+        "referenceWords": 84,
         "words": 32
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -115,15 +115,15 @@
     },
     {
       "A1": {
-        "availableWords": 124,
+        "availableWords": 116,
         "constructions": 6,
-        "referenceWords": 92,
+        "referenceWords": 84,
         "words": 32
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -136,15 +136,15 @@
     },
     {
       "A1": {
-        "availableWords": 135,
+        "availableWords": 127,
         "constructions": 6,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 44
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -157,15 +157,15 @@
     },
     {
       "A1": {
-        "availableWords": 136,
+        "availableWords": 128,
         "constructions": 7,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 45
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -178,15 +178,15 @@
     },
     {
       "A1": {
-        "availableWords": 136,
+        "availableWords": 128,
         "constructions": 7,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 45
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -199,15 +199,15 @@
     },
     {
       "A1": {
-        "availableWords": 141,
+        "availableWords": 133,
         "constructions": 7,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 50
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -220,15 +220,15 @@
     },
     {
       "A1": {
-        "availableWords": 141,
+        "availableWords": 133,
         "constructions": 7,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 50
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -241,15 +241,15 @@
     },
     {
       "A1": {
-        "availableWords": 141,
+        "availableWords": 133,
         "constructions": 7,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 50
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -262,15 +262,15 @@
     },
     {
       "A1": {
-        "availableWords": 141,
+        "availableWords": 133,
         "constructions": 7,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 50
       },
       "A2": {
-        "availableWords": 13,
+        "availableWords": 12,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 0
       },
       "B1": {
@@ -283,15 +283,15 @@
     },
     {
       "A1": {
-        "availableWords": 145,
+        "availableWords": 137,
         "constructions": 8,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 54
       },
       "A2": {
-        "availableWords": 14,
+        "availableWords": 13,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 1
       },
       "B1": {
@@ -304,15 +304,15 @@
     },
     {
       "A1": {
-        "availableWords": 146,
+        "availableWords": 138,
         "constructions": 9,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 55
       },
       "A2": {
-        "availableWords": 14,
+        "availableWords": 13,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 1
       },
       "B1": {
@@ -325,15 +325,15 @@
     },
     {
       "A1": {
-        "availableWords": 146,
+        "availableWords": 138,
         "constructions": 9,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 55
       },
       "A2": {
-        "availableWords": 14,
+        "availableWords": 13,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 1
       },
       "B1": {
@@ -346,15 +346,15 @@
     },
     {
       "A1": {
-        "availableWords": 147,
+        "availableWords": 139,
         "constructions": 10,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 56
       },
       "A2": {
-        "availableWords": 14,
+        "availableWords": 13,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 1
       },
       "B1": {
@@ -367,15 +367,15 @@
     },
     {
       "A1": {
-        "availableWords": 148,
+        "availableWords": 140,
         "constructions": 10,
-        "referenceWords": 91,
+        "referenceWords": 83,
         "words": 57
       },
       "A2": {
-        "availableWords": 14,
+        "availableWords": 13,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 1
       },
       "B1": {
@@ -388,15 +388,15 @@
     },
     {
       "A1": {
-        "availableWords": 148,
+        "availableWords": 141,
         "constructions": 10,
-        "referenceWords": 90,
+        "referenceWords": 83,
         "words": 58
       },
       "A2": {
-        "availableWords": 14,
+        "availableWords": 13,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 1
       },
       "B1": {
@@ -409,15 +409,15 @@
     },
     {
       "A1": {
-        "availableWords": 157,
+        "availableWords": 151,
         "constructions": 15,
-        "referenceWords": 89,
+        "referenceWords": 83,
         "words": 68
       },
       "A2": {
-        "availableWords": 14,
+        "availableWords": 13,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 1
       },
       "B1": {
@@ -430,15 +430,15 @@
     },
     {
       "A1": {
-        "availableWords": 157,
+        "availableWords": 151,
         "constructions": 15,
-        "referenceWords": 89,
+        "referenceWords": 83,
         "words": 68
       },
       "A2": {
-        "availableWords": 14,
+        "availableWords": 13,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 1
       },
       "B1": {
@@ -451,15 +451,15 @@
     },
     {
       "A1": {
-        "availableWords": 163,
+        "availableWords": 157,
         "constructions": 16,
-        "referenceWords": 89,
+        "referenceWords": 83,
         "words": 74
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -472,15 +472,15 @@
     },
     {
       "A1": {
-        "availableWords": 174,
+        "availableWords": 168,
         "constructions": 16,
-        "referenceWords": 89,
+        "referenceWords": 83,
         "words": 85
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -493,15 +493,15 @@
     },
     {
       "A1": {
-        "availableWords": 180,
+        "availableWords": 174,
         "constructions": 18,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 92
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -514,15 +514,15 @@
     },
     {
       "A1": {
-        "availableWords": 180,
+        "availableWords": 174,
         "constructions": 18,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 92
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -535,15 +535,15 @@
     },
     {
       "A1": {
-        "availableWords": 180,
+        "availableWords": 174,
         "constructions": 18,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 92
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -556,15 +556,15 @@
     },
     {
       "A1": {
-        "availableWords": 180,
+        "availableWords": 174,
         "constructions": 18,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 92
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -577,15 +577,15 @@
     },
     {
       "A1": {
-        "availableWords": 182,
+        "availableWords": 176,
         "constructions": 21,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 94
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -598,15 +598,15 @@
     },
     {
       "A1": {
-        "availableWords": 184,
+        "availableWords": 178,
         "constructions": 21,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 96
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -619,15 +619,15 @@
     },
     {
       "A1": {
-        "availableWords": 184,
+        "availableWords": 178,
         "constructions": 22,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 96
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -640,15 +640,15 @@
     },
     {
       "A1": {
-        "availableWords": 184,
+        "availableWords": 178,
         "constructions": 22,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 96
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -661,15 +661,15 @@
     },
     {
       "A1": {
-        "availableWords": 185,
+        "availableWords": 179,
         "constructions": 22,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 97
       },
       "A2": {
-        "availableWords": 15,
+        "availableWords": 14,
         "constructions": 0,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 2
       },
       "B1": {
@@ -682,15 +682,15 @@
     },
     {
       "A1": {
-        "availableWords": 187,
+        "availableWords": 181,
         "constructions": 22,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 99
       },
       "A2": {
-        "availableWords": 16,
+        "availableWords": 15,
         "constructions": 1,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 3
       },
       "B1": {
@@ -703,15 +703,15 @@
     },
     {
       "A1": {
-        "availableWords": 193,
+        "availableWords": 187,
         "constructions": 23,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 105
       },
       "A2": {
-        "availableWords": 17,
+        "availableWords": 16,
         "constructions": 1,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 4
       },
       "B1": {
@@ -724,15 +724,15 @@
     },
     {
       "A1": {
-        "availableWords": 193,
+        "availableWords": 187,
         "constructions": 23,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 105
       },
       "A2": {
-        "availableWords": 22,
+        "availableWords": 21,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 9
       },
       "B1": {
@@ -745,15 +745,15 @@
     },
     {
       "A1": {
-        "availableWords": 193,
+        "availableWords": 187,
         "constructions": 23,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 105
       },
       "A2": {
-        "availableWords": 22,
+        "availableWords": 21,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 9
       },
       "B1": {
@@ -766,15 +766,15 @@
     },
     {
       "A1": {
-        "availableWords": 193,
+        "availableWords": 187,
         "constructions": 23,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 105
       },
       "A2": {
-        "availableWords": 22,
+        "availableWords": 21,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 9
       },
       "B1": {
@@ -787,15 +787,15 @@
     },
     {
       "A1": {
-        "availableWords": 193,
+        "availableWords": 187,
         "constructions": 23,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 105
       },
       "A2": {
-        "availableWords": 22,
+        "availableWords": 21,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 9
       },
       "B1": {
@@ -808,15 +808,15 @@
     },
     {
       "A1": {
-        "availableWords": 193,
+        "availableWords": 187,
         "constructions": 23,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 105
       },
       "A2": {
-        "availableWords": 22,
+        "availableWords": 21,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 9
       },
       "B1": {
@@ -829,15 +829,15 @@
     },
     {
       "A1": {
-        "availableWords": 199,
+        "availableWords": 193,
         "constructions": 24,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 111
       },
       "A2": {
-        "availableWords": 22,
+        "availableWords": 21,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 9
       },
       "B1": {
@@ -850,15 +850,15 @@
     },
     {
       "A1": {
-        "availableWords": 200,
+        "availableWords": 194,
         "constructions": 24,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 112
       },
       "A2": {
-        "availableWords": 22,
+        "availableWords": 21,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 9
       },
       "B1": {
@@ -871,15 +871,15 @@
     },
     {
       "A1": {
-        "availableWords": 201,
+        "availableWords": 195,
         "constructions": 24,
-        "referenceWords": 88,
+        "referenceWords": 82,
         "words": 113
       },
       "A2": {
-        "availableWords": 23,
+        "availableWords": 22,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 10
       },
       "B1": {
@@ -892,15 +892,15 @@
     },
     {
       "A1": {
-        "availableWords": 201,
+        "availableWords": 196,
         "constructions": 25,
-        "referenceWords": 87,
+        "referenceWords": 82,
         "words": 114
       },
       "A2": {
-        "availableWords": 23,
+        "availableWords": 22,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 10
       },
       "B1": {
@@ -913,15 +913,15 @@
     },
     {
       "A1": {
-        "availableWords": 203,
+        "availableWords": 198,
         "constructions": 25,
-        "referenceWords": 87,
+        "referenceWords": 82,
         "words": 116
       },
       "A2": {
-        "availableWords": 23,
+        "availableWords": 22,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 10
       },
       "B1": {
@@ -934,15 +934,15 @@
     },
     {
       "A1": {
-        "availableWords": 205,
+        "availableWords": 200,
         "constructions": 26,
-        "referenceWords": 87,
+        "referenceWords": 82,
         "words": 118
       },
       "A2": {
-        "availableWords": 23,
+        "availableWords": 22,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 10
       },
       "B1": {
@@ -955,15 +955,15 @@
     },
     {
       "A1": {
-        "availableWords": 215,
+        "availableWords": 213,
         "constructions": 26,
-        "referenceWords": 84,
+        "referenceWords": 82,
         "words": 131
       },
       "A2": {
-        "availableWords": 25,
+        "availableWords": 24,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 12
       },
       "B1": {
@@ -976,15 +976,15 @@
     },
     {
       "A1": {
-        "availableWords": 215,
+        "availableWords": 213,
         "constructions": 27,
-        "referenceWords": 84,
+        "referenceWords": 82,
         "words": 131
       },
       "A2": {
-        "availableWords": 25,
+        "availableWords": 24,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 12
       },
       "B1": {
@@ -997,15 +997,15 @@
     },
     {
       "A1": {
-        "availableWords": 219,
+        "availableWords": 218,
         "constructions": 27,
-        "referenceWords": 83,
+        "referenceWords": 82,
         "words": 136
       },
       "A2": {
-        "availableWords": 27,
+        "availableWords": 26,
         "constructions": 2,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 14
       },
       "B1": {
@@ -1018,15 +1018,15 @@
     },
     {
       "A1": {
-        "availableWords": 236,
+        "availableWords": 235,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 155
       },
       "A2": {
-        "availableWords": 31,
+        "availableWords": 30,
         "constructions": 3,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 18
       },
       "B1": {
@@ -1039,15 +1039,15 @@
     },
     {
       "A1": {
-        "availableWords": 236,
+        "availableWords": 235,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 155
       },
       "A2": {
-        "availableWords": 31,
+        "availableWords": 30,
         "constructions": 3,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 18
       },
       "B1": {
@@ -1060,15 +1060,15 @@
     },
     {
       "A1": {
-        "availableWords": 236,
+        "availableWords": 235,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 155
       },
       "A2": {
-        "availableWords": 31,
+        "availableWords": 30,
         "constructions": 3,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 18
       },
       "B1": {
@@ -1081,15 +1081,15 @@
     },
     {
       "A1": {
-        "availableWords": 236,
+        "availableWords": 235,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 155
       },
       "A2": {
-        "availableWords": 31,
+        "availableWords": 30,
         "constructions": 3,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 18
       },
       "B1": {
@@ -1102,15 +1102,15 @@
     },
     {
       "A1": {
-        "availableWords": 241,
+        "availableWords": 240,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 160
       },
       "A2": {
-        "availableWords": 33,
+        "availableWords": 32,
         "constructions": 6,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 20
       },
       "B1": {
@@ -1123,15 +1123,15 @@
     },
     {
       "A1": {
-        "availableWords": 246,
+        "availableWords": 245,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 165
       },
       "A2": {
-        "availableWords": 35,
+        "availableWords": 34,
         "constructions": 6,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 22
       },
       "B1": {
@@ -1144,15 +1144,15 @@
     },
     {
       "A1": {
-        "availableWords": 246,
+        "availableWords": 245,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 165
       },
       "A2": {
-        "availableWords": 35,
+        "availableWords": 34,
         "constructions": 7,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 22
       },
       "B1": {
@@ -1165,15 +1165,15 @@
     },
     {
       "A1": {
-        "availableWords": 246,
+        "availableWords": 245,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 165
       },
       "A2": {
-        "availableWords": 35,
+        "availableWords": 34,
         "constructions": 7,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 22
       },
       "B1": {
@@ -1186,15 +1186,15 @@
     },
     {
       "A1": {
-        "availableWords": 247,
+        "availableWords": 246,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 166
       },
       "A2": {
-        "availableWords": 35,
+        "availableWords": 34,
         "constructions": 7,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 22
       },
       "B1": {
@@ -1207,15 +1207,15 @@
     },
     {
       "A1": {
-        "availableWords": 247,
+        "availableWords": 246,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 166
       },
       "A2": {
-        "availableWords": 35,
+        "availableWords": 34,
         "constructions": 8,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 22
       },
       "B1": {
@@ -1228,15 +1228,15 @@
     },
     {
       "A1": {
-        "availableWords": 249,
+        "availableWords": 248,
         "constructions": 27,
-        "referenceWords": 81,
+        "referenceWords": 80,
         "words": 168
       },
       "A2": {
-        "availableWords": 35,
+        "availableWords": 34,
         "constructions": 8,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 22
       },
       "B1": {
@@ -1249,15 +1249,15 @@
     },
     {
       "A1": {
-        "availableWords": 277,
+        "availableWords": 276,
         "constructions": 27,
-        "referenceWords": 79,
+        "referenceWords": 78,
         "words": 198
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 8,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1270,15 +1270,15 @@
     },
     {
       "A1": {
-        "availableWords": 278,
+        "availableWords": 277,
         "constructions": 28,
-        "referenceWords": 79,
+        "referenceWords": 78,
         "words": 199
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 8,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1291,15 +1291,15 @@
     },
     {
       "A1": {
-        "availableWords": 279,
+        "availableWords": 278,
         "constructions": 28,
-        "referenceWords": 79,
+        "referenceWords": 78,
         "words": 200
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 8,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1312,15 +1312,15 @@
     },
     {
       "A1": {
-        "availableWords": 279,
+        "availableWords": 278,
         "constructions": 28,
-        "referenceWords": 79,
+        "referenceWords": 78,
         "words": 200
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 8,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1333,15 +1333,15 @@
     },
     {
       "A1": {
-        "availableWords": 279,
+        "availableWords": 278,
         "constructions": 28,
-        "referenceWords": 79,
+        "referenceWords": 78,
         "words": 200
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 8,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1354,15 +1354,15 @@
     },
     {
       "A1": {
-        "availableWords": 279,
+        "availableWords": 278,
         "constructions": 28,
-        "referenceWords": 79,
+        "referenceWords": 78,
         "words": 200
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 8,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1375,15 +1375,15 @@
     },
     {
       "A1": {
-        "availableWords": 280,
+        "availableWords": 279,
         "constructions": 29,
-        "referenceWords": 79,
+        "referenceWords": 78,
         "words": 201
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1396,15 +1396,15 @@
     },
     {
       "A1": {
-        "availableWords": 282,
+        "availableWords": 281,
         "constructions": 29,
-        "referenceWords": 79,
+        "referenceWords": 78,
         "words": 203
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1417,15 +1417,15 @@
     },
     {
       "A1": {
-        "availableWords": 286,
+        "availableWords": 285,
         "constructions": 29,
-        "referenceWords": 78,
+        "referenceWords": 77,
         "words": 208
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1438,15 +1438,15 @@
     },
     {
       "A1": {
-        "availableWords": 288,
+        "availableWords": 287,
         "constructions": 29,
-        "referenceWords": 78,
+        "referenceWords": 77,
         "words": 210
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1459,15 +1459,15 @@
     },
     {
       "A1": {
-        "availableWords": 291,
+        "availableWords": 290,
         "constructions": 29,
-        "referenceWords": 78,
+        "referenceWords": 77,
         "words": 213
       },
       "A2": {
-        "availableWords": 39,
+        "availableWords": 38,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 26
       },
       "B1": {
@@ -1480,15 +1480,15 @@
     },
     {
       "A1": {
-        "availableWords": 293,
+        "availableWords": 292,
         "constructions": 29,
-        "referenceWords": 78,
+        "referenceWords": 77,
         "words": 215
       },
       "A2": {
-        "availableWords": 40,
+        "availableWords": 39,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 27
       },
       "B1": {
@@ -1501,15 +1501,15 @@
     },
     {
       "A1": {
-        "availableWords": 294,
+        "availableWords": 293,
         "constructions": 29,
-        "referenceWords": 78,
+        "referenceWords": 77,
         "words": 216
       },
       "A2": {
-        "availableWords": 41,
+        "availableWords": 40,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 28
       },
       "B1": {
@@ -1522,15 +1522,15 @@
     },
     {
       "A1": {
-        "availableWords": 295,
+        "availableWords": 294,
         "constructions": 29,
-        "referenceWords": 78,
+        "referenceWords": 77,
         "words": 217
       },
       "A2": {
-        "availableWords": 41,
+        "availableWords": 40,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 28
       },
       "B1": {
@@ -1543,15 +1543,15 @@
     },
     {
       "A1": {
-        "availableWords": 316,
+        "availableWords": 315,
         "constructions": 29,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 240
       },
       "A2": {
-        "availableWords": 43,
+        "availableWords": 42,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 30
       },
       "B1": {
@@ -1564,15 +1564,15 @@
     },
     {
       "A1": {
-        "availableWords": 316,
+        "availableWords": 315,
         "constructions": 29,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 240
       },
       "A2": {
-        "availableWords": 43,
+        "availableWords": 42,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 30
       },
       "B1": {
@@ -1585,15 +1585,15 @@
     },
     {
       "A1": {
-        "availableWords": 316,
+        "availableWords": 315,
         "constructions": 29,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 240
       },
       "A2": {
-        "availableWords": 43,
+        "availableWords": 42,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 30
       },
       "B1": {
@@ -1606,15 +1606,15 @@
     },
     {
       "A1": {
-        "availableWords": 316,
+        "availableWords": 315,
         "constructions": 29,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 240
       },
       "A2": {
-        "availableWords": 43,
+        "availableWords": 42,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 30
       },
       "B1": {
@@ -1627,15 +1627,15 @@
     },
     {
       "A1": {
-        "availableWords": 319,
+        "availableWords": 318,
         "constructions": 29,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 243
       },
       "A2": {
-        "availableWords": 44,
+        "availableWords": 43,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 31
       },
       "B1": {
@@ -1648,15 +1648,15 @@
     },
     {
       "A1": {
-        "availableWords": 321,
+        "availableWords": 320,
         "constructions": 29,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 245
       },
       "A2": {
-        "availableWords": 44,
+        "availableWords": 43,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 31
       },
       "B1": {
@@ -1669,15 +1669,15 @@
     },
     {
       "A1": {
-        "availableWords": 321,
+        "availableWords": 320,
         "constructions": 29,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 245
       },
       "A2": {
-        "availableWords": 45,
+        "availableWords": 44,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 32
       },
       "B1": {
@@ -1690,15 +1690,15 @@
     },
     {
       "A1": {
-        "availableWords": 321,
+        "availableWords": 320,
         "constructions": 29,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 245
       },
       "A2": {
-        "availableWords": 45,
+        "availableWords": 44,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 32
       },
       "B1": {
@@ -1711,15 +1711,15 @@
     },
     {
       "A1": {
-        "availableWords": 321,
+        "availableWords": 320,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 245
       },
       "A2": {
-        "availableWords": 45,
+        "availableWords": 44,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 32
       },
       "B1": {
@@ -1732,15 +1732,15 @@
     },
     {
       "A1": {
-        "availableWords": 322,
+        "availableWords": 321,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 246
       },
       "A2": {
-        "availableWords": 45,
+        "availableWords": 44,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 32
       },
       "B1": {
@@ -1753,15 +1753,15 @@
     },
     {
       "A1": {
-        "availableWords": 322,
+        "availableWords": 321,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 246
       },
       "A2": {
-        "availableWords": 45,
+        "availableWords": 44,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 32
       },
       "B1": {
@@ -1774,15 +1774,15 @@
     },
     {
       "A1": {
-        "availableWords": 322,
+        "availableWords": 321,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 246
       },
       "A2": {
-        "availableWords": 46,
+        "availableWords": 45,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 33
       },
       "B1": {
@@ -1795,15 +1795,15 @@
     },
     {
       "A1": {
-        "availableWords": 326,
+        "availableWords": 325,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 250
       },
       "A2": {
-        "availableWords": 50,
+        "availableWords": 49,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 37
       },
       "B1": {
@@ -1816,15 +1816,15 @@
     },
     {
       "A1": {
-        "availableWords": 330,
+        "availableWords": 329,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 254
       },
       "A2": {
-        "availableWords": 54,
+        "availableWords": 53,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 41
       },
       "B1": {
@@ -1837,15 +1837,15 @@
     },
     {
       "A1": {
-        "availableWords": 331,
+        "availableWords": 330,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 255
       },
       "A2": {
-        "availableWords": 54,
+        "availableWords": 53,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 41
       },
       "B1": {
@@ -1858,15 +1858,15 @@
     },
     {
       "A1": {
-        "availableWords": 331,
+        "availableWords": 330,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 255
       },
       "A2": {
-        "availableWords": 54,
+        "availableWords": 53,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 41
       },
       "B1": {
@@ -1879,15 +1879,15 @@
     },
     {
       "A1": {
-        "availableWords": 331,
+        "availableWords": 330,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 255
       },
       "A2": {
-        "availableWords": 54,
+        "availableWords": 53,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 41
       },
       "B1": {
@@ -1900,15 +1900,15 @@
     },
     {
       "A1": {
-        "availableWords": 331,
+        "availableWords": 330,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 255
       },
       "A2": {
-        "availableWords": 54,
+        "availableWords": 53,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 41
       },
       "B1": {
@@ -1921,15 +1921,15 @@
     },
     {
       "A1": {
-        "availableWords": 334,
+        "availableWords": 333,
         "constructions": 30,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 258
       },
       "A2": {
-        "availableWords": 59,
+        "availableWords": 58,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 46
       },
       "B1": {
@@ -1942,15 +1942,15 @@
     },
     {
       "A1": {
-        "availableWords": 337,
+        "availableWords": 336,
         "constructions": 31,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 261
       },
       "A2": {
-        "availableWords": 59,
+        "availableWords": 58,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 46
       },
       "B1": {
@@ -1963,15 +1963,15 @@
     },
     {
       "A1": {
-        "availableWords": 338,
+        "availableWords": 337,
         "constructions": 31,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 262
       },
       "A2": {
-        "availableWords": 59,
+        "availableWords": 58,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 46
       },
       "B1": {
@@ -1984,15 +1984,15 @@
     },
     {
       "A1": {
-        "availableWords": 339,
+        "availableWords": 338,
         "constructions": 31,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 263
       },
       "A2": {
-        "availableWords": 59,
+        "availableWords": 58,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 46
       },
       "B1": {
@@ -2005,15 +2005,15 @@
     },
     {
       "A1": {
-        "availableWords": 340,
+        "availableWords": 339,
         "constructions": 31,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 264
       },
       "A2": {
-        "availableWords": 59,
+        "availableWords": 58,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 46
       },
       "B1": {
@@ -2026,15 +2026,15 @@
     },
     {
       "A1": {
-        "availableWords": 342,
+        "availableWords": 341,
         "constructions": 31,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 266
       },
       "A2": {
-        "availableWords": 60,
+        "availableWords": 59,
         "constructions": 9,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 47
       },
       "B1": {
@@ -2047,15 +2047,15 @@
     },
     {
       "A1": {
-        "availableWords": 342,
+        "availableWords": 341,
         "constructions": 31,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 266
       },
       "A2": {
-        "availableWords": 60,
+        "availableWords": 59,
         "constructions": 10,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 47
       },
       "B1": {
@@ -2068,15 +2068,15 @@
     },
     {
       "A1": {
-        "availableWords": 342,
+        "availableWords": 341,
         "constructions": 31,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 266
       },
       "A2": {
-        "availableWords": 60,
+        "availableWords": 59,
         "constructions": 10,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 47
       },
       "B1": {
@@ -2089,15 +2089,15 @@
     },
     {
       "A1": {
-        "availableWords": 344,
+        "availableWords": 343,
         "constructions": 32,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 268
       },
       "A2": {
-        "availableWords": 60,
+        "availableWords": 59,
         "constructions": 10,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 47
       },
       "B1": {
@@ -2110,15 +2110,15 @@
     },
     {
       "A1": {
-        "availableWords": 344,
+        "availableWords": 343,
         "constructions": 33,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 268
       },
       "A2": {
-        "availableWords": 60,
+        "availableWords": 59,
         "constructions": 10,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 47
       },
       "B1": {
@@ -2131,15 +2131,15 @@
     },
     {
       "A1": {
-        "availableWords": 346,
+        "availableWords": 345,
         "constructions": 33,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 270
       },
       "A2": {
-        "availableWords": 61,
+        "availableWords": 60,
         "constructions": 12,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 48
       },
       "B1": {
@@ -2152,15 +2152,15 @@
     },
     {
       "A1": {
-        "availableWords": 346,
+        "availableWords": 345,
         "constructions": 33,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 270
       },
       "A2": {
-        "availableWords": 61,
+        "availableWords": 60,
         "constructions": 12,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 48
       },
       "B1": {
@@ -2173,15 +2173,15 @@
     },
     {
       "A1": {
-        "availableWords": 346,
+        "availableWords": 345,
         "constructions": 33,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 270
       },
       "A2": {
-        "availableWords": 61,
+        "availableWords": 60,
         "constructions": 12,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 48
       },
       "B1": {
@@ -2194,15 +2194,15 @@
     },
     {
       "A1": {
-        "availableWords": 346,
+        "availableWords": 345,
         "constructions": 33,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 270
       },
       "A2": {
-        "availableWords": 61,
+        "availableWords": 60,
         "constructions": 12,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 48
       },
       "B1": {
@@ -2215,15 +2215,15 @@
     },
     {
       "A1": {
-        "availableWords": 346,
+        "availableWords": 345,
         "constructions": 33,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 270
       },
       "A2": {
-        "availableWords": 61,
+        "availableWords": 60,
         "constructions": 12,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 48
       },
       "B1": {
@@ -2236,15 +2236,15 @@
     },
     {
       "A1": {
-        "availableWords": 347,
+        "availableWords": 346,
         "constructions": 34,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 271
       },
       "A2": {
-        "availableWords": 62,
+        "availableWords": 61,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 49
       },
       "B1": {
@@ -2257,15 +2257,15 @@
     },
     {
       "A1": {
-        "availableWords": 348,
+        "availableWords": 347,
         "constructions": 34,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 272
       },
       "A2": {
-        "availableWords": 65,
+        "availableWords": 64,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 52
       },
       "B1": {
@@ -2278,15 +2278,15 @@
     },
     {
       "A1": {
-        "availableWords": 354,
+        "availableWords": 353,
         "constructions": 34,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 278
       },
       "A2": {
-        "availableWords": 69,
+        "availableWords": 68,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 56
       },
       "B1": {
@@ -2299,15 +2299,15 @@
     },
     {
       "A1": {
-        "availableWords": 355,
+        "availableWords": 354,
         "constructions": 34,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 279
       },
       "A2": {
-        "availableWords": 69,
+        "availableWords": 68,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 56
       },
       "B1": {
@@ -2320,15 +2320,15 @@
     },
     {
       "A1": {
-        "availableWords": 356,
+        "availableWords": 355,
         "constructions": 34,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 280
       },
       "A2": {
-        "availableWords": 69,
+        "availableWords": 68,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 56
       },
       "B1": {
@@ -2341,15 +2341,15 @@
     },
     {
       "A1": {
-        "availableWords": 356,
+        "availableWords": 355,
         "constructions": 34,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 280
       },
       "A2": {
-        "availableWords": 69,
+        "availableWords": 68,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 56
       },
       "B1": {
@@ -2362,15 +2362,15 @@
     },
     {
       "A1": {
-        "availableWords": 365,
+        "availableWords": 364,
         "constructions": 35,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 289
       },
       "A2": {
-        "availableWords": 69,
+        "availableWords": 68,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 56
       },
       "B1": {
@@ -2383,15 +2383,15 @@
     },
     {
       "A1": {
-        "availableWords": 365,
+        "availableWords": 364,
         "constructions": 35,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 289
       },
       "A2": {
-        "availableWords": 69,
+        "availableWords": 68,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 56
       },
       "B1": {
@@ -2404,15 +2404,15 @@
     },
     {
       "A1": {
-        "availableWords": 366,
+        "availableWords": 365,
         "constructions": 36,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 290
       },
       "A2": {
-        "availableWords": 69,
+        "availableWords": 68,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 56
       },
       "B1": {
@@ -2425,15 +2425,15 @@
     },
     {
       "A1": {
-        "availableWords": 367,
+        "availableWords": 366,
         "constructions": 36,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 291
       },
       "A2": {
-        "availableWords": 71,
+        "availableWords": 70,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 58
       },
       "B1": {
@@ -2446,15 +2446,15 @@
     },
     {
       "A1": {
-        "availableWords": 368,
+        "availableWords": 367,
         "constructions": 36,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 292
       },
       "A2": {
-        "availableWords": 71,
+        "availableWords": 70,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 58
       },
       "B1": {
@@ -2467,15 +2467,15 @@
     },
     {
       "A1": {
-        "availableWords": 368,
+        "availableWords": 367,
         "constructions": 36,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 292
       },
       "A2": {
-        "availableWords": 71,
+        "availableWords": 70,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 58
       },
       "B1": {
@@ -2488,15 +2488,15 @@
     },
     {
       "A1": {
-        "availableWords": 368,
+        "availableWords": 367,
         "constructions": 36,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 292
       },
       "A2": {
-        "availableWords": 71,
+        "availableWords": 70,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 58
       },
       "B1": {
@@ -2509,15 +2509,15 @@
     },
     {
       "A1": {
-        "availableWords": 368,
+        "availableWords": 367,
         "constructions": 36,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 292
       },
       "A2": {
-        "availableWords": 71,
+        "availableWords": 70,
         "constructions": 13,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 58
       },
       "B1": {
@@ -2530,15 +2530,15 @@
     },
     {
       "A1": {
-        "availableWords": 368,
+        "availableWords": 367,
         "constructions": 36,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 292
       },
       "A2": {
-        "availableWords": 71,
+        "availableWords": 70,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 58
       },
       "B1": {
@@ -2551,15 +2551,15 @@
     },
     {
       "A1": {
-        "availableWords": 368,
+        "availableWords": 367,
         "constructions": 36,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 292
       },
       "A2": {
-        "availableWords": 71,
+        "availableWords": 70,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 58
       },
       "B1": {
@@ -2572,15 +2572,15 @@
     },
     {
       "A1": {
-        "availableWords": 369,
+        "availableWords": 368,
         "constructions": 37,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 293
       },
       "A2": {
-        "availableWords": 72,
+        "availableWords": 71,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 59
       },
       "B1": {
@@ -2593,15 +2593,15 @@
     },
     {
       "A1": {
-        "availableWords": 370,
+        "availableWords": 369,
         "constructions": 37,
-        "referenceWords": 76,
+        "referenceWords": 75,
         "words": 294
       },
       "A2": {
-        "availableWords": 72,
+        "availableWords": 71,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 59
       },
       "B1": {
@@ -2614,15 +2614,15 @@
     },
     {
       "A1": {
-        "availableWords": 374,
+        "availableWords": 373,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 299
       },
       "A2": {
-        "availableWords": 73,
+        "availableWords": 72,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 60
       },
       "B1": {
@@ -2635,15 +2635,15 @@
     },
     {
       "A1": {
-        "availableWords": 376,
+        "availableWords": 375,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 301
       },
       "A2": {
-        "availableWords": 73,
+        "availableWords": 72,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 60
       },
       "B1": {
@@ -2656,15 +2656,15 @@
     },
     {
       "A1": {
-        "availableWords": 377,
+        "availableWords": 376,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 302
       },
       "A2": {
-        "availableWords": 74,
+        "availableWords": 73,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 61
       },
       "B1": {
@@ -2677,15 +2677,15 @@
     },
     {
       "A1": {
-        "availableWords": 377,
+        "availableWords": 376,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 302
       },
       "A2": {
-        "availableWords": 75,
+        "availableWords": 74,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 62
       },
       "B1": {
@@ -2698,15 +2698,15 @@
     },
     {
       "A1": {
-        "availableWords": 380,
+        "availableWords": 379,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 305
       },
       "A2": {
-        "availableWords": 75,
+        "availableWords": 74,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 62
       },
       "B1": {
@@ -2719,15 +2719,15 @@
     },
     {
       "A1": {
-        "availableWords": 381,
+        "availableWords": 380,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 306
       },
       "A2": {
-        "availableWords": 79,
+        "availableWords": 78,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 66
       },
       "B1": {
@@ -2740,15 +2740,15 @@
     },
     {
       "A1": {
-        "availableWords": 382,
+        "availableWords": 381,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 307
       },
       "A2": {
-        "availableWords": 80,
+        "availableWords": 79,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 67
       },
       "B1": {
@@ -2761,15 +2761,15 @@
     },
     {
       "A1": {
-        "availableWords": 384,
+        "availableWords": 383,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 309
       },
       "A2": {
-        "availableWords": 85,
+        "availableWords": 84,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 72
       },
       "B1": {
@@ -2782,15 +2782,15 @@
     },
     {
       "A1": {
-        "availableWords": 385,
+        "availableWords": 384,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 310
       },
       "A2": {
-        "availableWords": 85,
+        "availableWords": 84,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 72
       },
       "B1": {
@@ -2803,15 +2803,15 @@
     },
     {
       "A1": {
-        "availableWords": 385,
+        "availableWords": 384,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 310
       },
       "A2": {
-        "availableWords": 85,
+        "availableWords": 84,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 72
       },
       "B1": {
@@ -2824,15 +2824,15 @@
     },
     {
       "A1": {
-        "availableWords": 388,
+        "availableWords": 387,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 313
       },
       "A2": {
-        "availableWords": 86,
+        "availableWords": 85,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 73
       },
       "B1": {
@@ -2845,15 +2845,15 @@
     },
     {
       "A1": {
-        "availableWords": 388,
+        "availableWords": 387,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 313
       },
       "A2": {
-        "availableWords": 86,
+        "availableWords": 85,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 73
       },
       "B1": {
@@ -2866,15 +2866,15 @@
     },
     {
       "A1": {
-        "availableWords": 388,
+        "availableWords": 387,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 313
       },
       "A2": {
-        "availableWords": 86,
+        "availableWords": 85,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 73
       },
       "B1": {
@@ -2887,15 +2887,15 @@
     },
     {
       "A1": {
-        "availableWords": 388,
+        "availableWords": 387,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 313
       },
       "A2": {
-        "availableWords": 86,
+        "availableWords": 85,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 73
       },
       "B1": {
@@ -2908,15 +2908,15 @@
     },
     {
       "A1": {
-        "availableWords": 388,
+        "availableWords": 387,
         "constructions": 37,
-        "referenceWords": 75,
+        "referenceWords": 74,
         "words": 313
       },
       "A2": {
-        "availableWords": 86,
+        "availableWords": 85,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 73
       },
       "B1": {
@@ -2929,15 +2929,15 @@
     },
     {
       "A1": {
-        "availableWords": 391,
+        "availableWords": 390,
         "constructions": 37,
-        "referenceWords": 67,
+        "referenceWords": 66,
         "words": 324
       },
       "A2": {
-        "availableWords": 87,
+        "availableWords": 86,
         "constructions": 14,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 74
       },
       "B1": {
@@ -2950,15 +2950,15 @@
     },
     {
       "A1": {
-        "availableWords": 392,
+        "availableWords": 391,
         "constructions": 37,
-        "referenceWords": 67,
+        "referenceWords": 66,
         "words": 325
       },
       "A2": {
-        "availableWords": 87,
+        "availableWords": 86,
         "constructions": 15,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 74
       },
       "B1": {
@@ -2971,15 +2971,15 @@
     },
     {
       "A1": {
-        "availableWords": 395,
+        "availableWords": 394,
         "constructions": 37,
-        "referenceWords": 67,
+        "referenceWords": 66,
         "words": 328
       },
       "A2": {
-        "availableWords": 87,
+        "availableWords": 86,
         "constructions": 15,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 74
       },
       "B1": {
@@ -2992,15 +2992,15 @@
     },
     {
       "A1": {
-        "availableWords": 396,
+        "availableWords": 395,
         "constructions": 37,
-        "referenceWords": 67,
+        "referenceWords": 66,
         "words": 329
       },
       "A2": {
-        "availableWords": 87,
+        "availableWords": 86,
         "constructions": 15,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 74
       },
       "B1": {
@@ -3013,15 +3013,15 @@
     },
     {
       "A1": {
-        "availableWords": 400,
+        "availableWords": 399,
         "constructions": 37,
-        "referenceWords": 66,
+        "referenceWords": 65,
         "words": 334
       },
       "A2": {
-        "availableWords": 87,
+        "availableWords": 86,
         "constructions": 15,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 74
       },
       "B1": {
@@ -3034,15 +3034,15 @@
     },
     {
       "A1": {
-        "availableWords": 401,
+        "availableWords": 400,
         "constructions": 37,
-        "referenceWords": 66,
+        "referenceWords": 65,
         "words": 335
       },
       "A2": {
-        "availableWords": 87,
+        "availableWords": 86,
         "constructions": 15,
-        "referenceWords": 13,
+        "referenceWords": 12,
         "words": 74
       },
       "B1": {
@@ -3055,15 +3055,15 @@
     },
     {
       "A1": {
-        "availableWords": 408,
+        "availableWords": 407,
         "constructions": 37,
-        "referenceWords": 65,
+        "referenceWords": 64,
         "words": 343
       },
       "A2": {
-        "availableWords": 89,
+        "availableWords": 88,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 78
       },
       "B1": {
@@ -3076,15 +3076,15 @@
     },
     {
       "A1": {
-        "availableWords": 408,
+        "availableWords": 407,
         "constructions": 37,
-        "referenceWords": 65,
+        "referenceWords": 64,
         "words": 343
       },
       "A2": {
-        "availableWords": 89,
+        "availableWords": 88,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 78
       },
       "B1": {
@@ -3097,15 +3097,15 @@
     },
     {
       "A1": {
-        "availableWords": 408,
+        "availableWords": 407,
         "constructions": 37,
-        "referenceWords": 65,
+        "referenceWords": 64,
         "words": 343
       },
       "A2": {
-        "availableWords": 89,
+        "availableWords": 88,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 78
       },
       "B1": {
@@ -3118,15 +3118,15 @@
     },
     {
       "A1": {
-        "availableWords": 408,
+        "availableWords": 407,
         "constructions": 37,
-        "referenceWords": 65,
+        "referenceWords": 64,
         "words": 343
       },
       "A2": {
-        "availableWords": 89,
+        "availableWords": 88,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 78
       },
       "B1": {
@@ -3139,15 +3139,15 @@
     },
     {
       "A1": {
-        "availableWords": 412,
+        "availableWords": 411,
         "constructions": 37,
-        "referenceWords": 63,
+        "referenceWords": 62,
         "words": 349
       },
       "A2": {
-        "availableWords": 93,
+        "availableWords": 92,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 82
       },
       "B1": {
@@ -3160,15 +3160,15 @@
     },
     {
       "A1": {
-        "availableWords": 417,
+        "availableWords": 416,
         "constructions": 37,
-        "referenceWords": 62,
+        "referenceWords": 61,
         "words": 355
       },
       "A2": {
-        "availableWords": 94,
+        "availableWords": 93,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 83
       },
       "B1": {
@@ -3181,15 +3181,15 @@
     },
     {
       "A1": {
-        "availableWords": 420,
+        "availableWords": 419,
         "constructions": 37,
-        "referenceWords": 59,
+        "referenceWords": 58,
         "words": 361
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 96,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 86
       },
       "B1": {
@@ -3202,15 +3202,15 @@
     },
     {
       "A1": {
-        "availableWords": 421,
+        "availableWords": 420,
         "constructions": 37,
-        "referenceWords": 59,
+        "referenceWords": 58,
         "words": 362
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 96,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 86
       },
       "B1": {
@@ -3223,15 +3223,15 @@
     },
     {
       "A1": {
-        "availableWords": 421,
+        "availableWords": 420,
         "constructions": 37,
-        "referenceWords": 55,
+        "referenceWords": 54,
         "words": 366
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 96,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 86
       },
       "B1": {
@@ -3244,15 +3244,15 @@
     },
     {
       "A1": {
-        "availableWords": 421,
+        "availableWords": 420,
         "constructions": 37,
-        "referenceWords": 55,
+        "referenceWords": 54,
         "words": 366
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 96,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 86
       },
       "B1": {
@@ -3265,15 +3265,15 @@
     },
     {
       "A1": {
-        "availableWords": 421,
+        "availableWords": 420,
         "constructions": 37,
-        "referenceWords": 55,
+        "referenceWords": 54,
         "words": 366
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 96,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 86
       },
       "B1": {
@@ -3286,15 +3286,15 @@
     },
     {
       "A1": {
-        "availableWords": 421,
+        "availableWords": 420,
         "constructions": 37,
-        "referenceWords": 54,
+        "referenceWords": 53,
         "words": 367
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 96,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 86
       },
       "B1": {
@@ -3307,15 +3307,15 @@
     },
     {
       "A1": {
-        "availableWords": 422,
+        "availableWords": 421,
         "constructions": 37,
-        "referenceWords": 54,
+        "referenceWords": 53,
         "words": 368
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 96,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 86
       },
       "B1": {
@@ -3328,15 +3328,15 @@
     },
     {
       "A1": {
-        "availableWords": 423,
+        "availableWords": 422,
         "constructions": 37,
-        "referenceWords": 54,
+        "referenceWords": 53,
         "words": 369
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 96,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 86
       },
       "B1": {
@@ -3349,15 +3349,15 @@
     },
     {
       "A1": {
-        "availableWords": 423,
+        "availableWords": 422,
         "constructions": 37,
-        "referenceWords": 54,
+        "referenceWords": 53,
         "words": 369
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 96,
         "constructions": 15,
-        "referenceWords": 11,
+        "referenceWords": 10,
         "words": 86
       },
       "B1": {
@@ -3379,20 +3379,20 @@
   },
   "levels": {
     "A1": {
-      "availableWords": 423,
+      "availableWords": 422,
       "coreConstructions": 40,
       "coreWords": 733,
       "cumulative": {
-        "availableWords": 423,
+        "availableWords": 422,
         "coreConstructions": 40,
         "coreWords": 733,
         "reachedAt": null,
-        "referenceWords": 54,
+        "referenceWords": 53,
         "taughtConstructions": 37,
         "taughtWords": 369
       },
       "reachedAt": null,
-      "referenceWords": 54,
+      "referenceWords": 53,
       "taughtConstructions": 37,
       "taughtWords": 369,
       "untaughtConstructions": [
@@ -3413,7 +3413,6 @@
         "fr:lex:deux",
         "fr:lex:dimanche",
         "fr:lex:dix",
-        "fr:lex:epeler",
         "fr:lex:ete",
         "fr:lex:fete",
         "fr:lex:fevrier",
@@ -3821,20 +3820,20 @@
       ]
     },
     "A2": {
-      "availableWords": 97,
+      "availableWords": 96,
       "coreConstructions": 23,
       "coreWords": 681,
       "cumulative": {
-        "availableWords": 520,
+        "availableWords": 518,
         "coreConstructions": 63,
         "coreWords": 1414,
         "reachedAt": null,
-        "referenceWords": 65,
+        "referenceWords": 63,
         "taughtConstructions": 52,
         "taughtWords": 455
       },
       "reachedAt": null,
-      "referenceWords": 11,
+      "referenceWords": 10,
       "taughtConstructions": 15,
       "taughtWords": 86,
       "untaughtConstructions": [
@@ -3856,7 +3855,6 @@
         "fr:lex:million",
         "fr:lex:pale",
         "fr:lex:paques",
-        "fr:lex:rire",
         "fr:lex:roi",
         "fr:lex:saint"
       ],
@@ -4453,11 +4451,11 @@
       "coreConstructions": 17,
       "coreWords": 841,
       "cumulative": {
-        "availableWords": 549,
+        "availableWords": 547,
         "coreConstructions": 80,
         "coreWords": 2255,
         "reachedAt": null,
-        "referenceWords": 72,
+        "referenceWords": 70,
         "taughtConstructions": 65,
         "taughtWords": 477
       },

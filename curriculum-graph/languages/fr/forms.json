@@ -10656,6 +10656,12 @@
     "surface": "vieil"
   },
   {
+    "cell": "f",
+    "id": "fr:form:vif.f",
+    "of": "fr:lex:vif",
+    "surface": "vive"
+  },
+  {
     "cell": "prs.1pl",
     "id": "fr:form:vivre.prs.1pl",
     "of": "fr:lex:vivre",

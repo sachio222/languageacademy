@@ -148,12 +148,10 @@
       "id": "fn:talk-about-the-weather",
       "label": "Talk about the weather",
       "missing": [],
-      "position": 41,
+      "position": 46,
       "referenceOnly": [],
-      "viaReference": true,
-      "viaReferenceNodes": [
-        "fr:lex:aujourd-hui"
-      ]
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -262,12 +260,10 @@
       "id": "fn:talk-about-plans",
       "label": "Talk about plans",
       "missing": [],
-      "position": 30,
+      "position": 46,
       "referenceOnly": [],
-      "viaReference": true,
-      "viaReferenceNodes": [
-        "fr:lex:demain"
-      ]
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -498,13 +494,15 @@
       "group": "repair",
       "id": "fn:ask-how-to-spell",
       "label": "Ask how a word is spelled",
-      "missing": [],
-      "position": 18,
-      "referenceOnly": [],
-      "viaReference": true,
-      "viaReferenceNodes": [
+      "missing": [
         "fr:lex:epeler"
-      ]
+      ],
+      "position": null,
+      "referenceOnly": [
+        "fr:lex:epeler"
+      ],
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A1",
@@ -779,12 +777,10 @@
       "id": "fn:talk-on-the-phone",
       "label": "Make a simple phone call",
       "missing": [],
-      "position": 40,
+      "position": 43,
       "referenceOnly": [],
-      "viaReference": true,
-      "viaReferenceNodes": [
-        "fr:lex:parler"
-      ]
+      "viaReference": false,
+      "viaReferenceNodes": []
     },
     {
       "cefr": "A2",

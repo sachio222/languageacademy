@@ -146,3 +146,23 @@ test('buildTimeline with no reference opens nothing', () => {
   assert.equal(timeline.openFrom, null);
   assert.deepEqual([...timeline.availableAt], [['fr:lex:je', 1]]);
 });
+
+test('a reading open only through the Reference counts for a token only when the token has no reading of another word', () => {
+  const graph = withMap({ m2: { teachesWords: ['fr:lex:parler'] } });
+  const course = [1, 2].map((position) => makeModule({ position }));
+  const reference = new Set(['fr:lex:cafe', 'fr:lex:x', 'fr:form:x.a', 'fr:form:x.b']);
+  const { timeline } = makeCtx({ graph, course, reference });
+  const lemma = (headwordId) => ({ nodeId: headwordId, headwordId, via: 'lemma', pos: 'noun' });
+  const form = (headwordId, nodeId) => ({ nodeId, headwordId, via: 'irregular', pos: 'noun' });
+  // One reading: the Reference opens it.
+  assert.equal(timeline.isTokenAvailable([lemma('fr:lex:cafe')], 1), true);
+  // Two readings of one word, both open: still one word.
+  assert.equal(timeline.isTokenAvailable([form('fr:lex:x', 'fr:form:x.a'), form('fr:lex:x', 'fr:form:x.b')], 1), true);
+  // A Reference noun spelled like another word does not hide it.
+  assert.equal(timeline.isTokenAvailable([lemma('fr:lex:cafe'), lemma('fr:lex:parler')], 1), false);
+  // Once a lesson teaches the other word, the token is available through that lesson.
+  assert.equal(timeline.isTokenAvailable([lemma('fr:lex:cafe'), lemma('fr:lex:parler')], 2), true);
+  // A word a lesson teaches counts whatever its homographs.
+  assert.equal(timeline.isTokenAvailable([lemma('fr:lex:parler'), lemma('fr:lex:cafe')], 2), true);
+  assert.equal(timeline.isTokenAvailable([], 2), false);
+});
