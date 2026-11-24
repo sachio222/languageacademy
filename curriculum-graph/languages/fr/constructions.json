@@ -1750,6 +1750,104 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
+      [
+        {
+          "cell": "fut.*",
+          "headword": "fr:lex:avoir"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "cell": "ptcp*"
+        }
+      ],
+      [
+        {
+          "cell": "fut.*",
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "cell": "ptcp*",
+          "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu)(e|s|es)?"
+        }
+      ]
+    ],
+    "examples": {
+      "match": [
+        "Il aura fini demain.",
+        "Nous aurons parlé avant le dîner.",
+        "Elle sera partie à midi."
+      ],
+      "noMatch": [
+        "Il aura faim.",
+        "Il a fini.",
+        "Elle sera contente."
+      ]
+    },
+    "id": "fr:cx:futur-anterieur",
+    "label": "Futur antérieur: avoir or être in the futur simple + past participle (il aura fait, nous aurons parlé, elle sera partie)",
+    "needs": [
+      "fr:cx:futur-simple",
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:passe-compose.etre"
+    ]
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
       {
         "cell": "fut.*"
       }
@@ -2668,6 +2766,161 @@
     "needs": [
       "fr:cx:passe-compose.etre",
       "fr:cx:pronoun.reflexive"
+    ]
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      [
+        {
+          "any": [
+            {
+              "surface": "je|j'|tu|il|elle|on|ils|elles"
+            },
+            {
+              "pos": "noun"
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "cell": "ptcp*",
+          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete)(e|s|es)?$).+"
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "nous|vous"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "cell": "ptcp*",
+          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete)(e|s|es)?$).+"
+        }
+      ],
+      [
+        {
+          "headword": "fr:lex:avoir"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "ete"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "cell": "ptcp*",
+          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete)(e|s|es)?$).+"
+        }
+      ]
+    ],
+    "examples": {
+      "match": [
+        "Je suis aimé.",
+        "La maison est construite par mon père.",
+        "Nous sommes aidés.",
+        "Il a été compris."
+      ],
+      "noMatch": [
+        "Je suis allé au café.",
+        "Je me suis lavé.",
+        "Nous nous sommes levés.",
+        "Je suis fatigué.",
+        "Elle a mangé."
+      ]
+    },
+    "id": "fr:cx:passive",
+    "label": "Passive voice: être + past participle of a verb that is not an être verb (je suis aimé, la maison est construite, il a été compris); participles used as everyday adjectives (fatigué, occupé, surpris, marié, assis …) do not count; nous and vous count as subjects only at the start of a sentence, so the reflexive nous nous sommes levés is not read as passive",
+    "needs": [
+      "fr:lex:etre",
+      "fr:cx:passe-compose.etre"
     ]
   },
   {
@@ -3852,6 +4105,179 @@
   {
     "cefr": null,
     "contrastsWith": [],
+    "detect": [
+      {
+        "surface": "ce"
+      },
+      {
+        "surface": "que|qu'|qui"
+      }
+    ],
+    "examples": {
+      "match": [
+        "Je fais ce que je veux.",
+        "Ce qui est important, c'est la famille.",
+        "Dis-moi ce qu'il fait."
+      ],
+      "noMatch": [
+        "Qu'est-ce que tu veux ?",
+        "Qu'est-ce qui brille ?",
+        "Ce livre est bon."
+      ]
+    },
+    "id": "fr:cx:relative.ce-que",
+    "label": "Headless relatives ce que (what, as object) and ce qui (what, as subject): je fais ce que je veux, ce qui est important",
+    "needs": []
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      {
+        "surface": "dont"
+      }
+    ],
+    "examples": {
+      "match": [
+        "La chose dont je parle est importante.",
+        "Le livre dont tu as besoin est ici."
+      ],
+      "noMatch": [
+        "Je parle de ça.",
+        "J'ai besoin de ce livre."
+      ]
+    },
+    "id": "fr:cx:relative.dont",
+    "label": "Relative pronoun dont (of which, whose, about which: la chose dont je parle)",
+    "needs": []
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      {
+        "pos": "noun",
+        "surface": "(?!(demande|est)$).+"
+      },
+      {
+        "headword": "fr:lex:ou.adverb"
+      },
+      {
+        "any": [
+          {
+            "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
+          },
+          {
+            "pos": "article"
+          },
+          {
+            "pos": "determiner"
+          }
+        ]
+      }
+    ],
+    "examples": {
+      "match": [
+        "La ville où j'habite est belle.",
+        "C'est l'endroit où je vais.",
+        "Le jour où il est venu, il pleuvait."
+      ],
+      "noMatch": [
+        "Où vas-tu ?",
+        "Tu es où ?",
+        "Le chat est où ?"
+      ]
+    },
+    "id": "fr:cx:relative.ou",
+    "label": "Relative pronoun où after a noun of place or time (la ville où j'habite, le jour où il est venu); in lenient text où and ou (or) fold together",
+    "needs": []
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      {
+        "pos": "noun",
+        "surface": "(?!(parce|fait|temps|moment|peur|preuve|surprise|idee|impression|espoir|chance|dommage)$).+"
+      },
+      {
+        "surface": "que|qu'"
+      },
+      {
+        "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
+      }
+    ],
+    "examples": {
+      "match": [
+        "Le livre que je cherche est ici.",
+        "La chose qu'il veut est chère.",
+        "C'est la ville que nous aimons."
+      ],
+      "noMatch": [
+        "Je pense que tu viens.",
+        "Il est plus grand que moi.",
+        "Il faut que tu partes.",
+        "Qu'est-ce que tu veux ?"
+      ]
+    },
+    "id": "fr:cx:relative.que",
+    "label": "Relative pronoun que (qu') as the object of a relative clause after a noun (le livre que je cherche, la chose qu'il veut); the subject after que must be a pronoun, so a noun subject (le livre que Paul cherche) is not counted; nouns that take a que clause (peur, idée, preuve, fait …) are left out, while a reported clause after a noun (il dit à sa mère que tu viens) still matches",
+    "needs": []
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      {
+        "any": [
+          {
+            "pos": "noun"
+          },
+          {
+            "surface": "celui|celle|ceux|celles|quelqu'un|moi|toi|lui|elle|nous|vous|eux|elles"
+          }
+        ],
+        "surface": "(?!-?ce$).+"
+      },
+      {
+        "surface": "qui"
+      },
+      {
+        "optional": true,
+        "surface": "ne|n'"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "pos": "verb"
+      }
+    ],
+    "examples": {
+      "match": [
+        "La personne qui parle est mon amie.",
+        "C'est toi qui pars.",
+        "J'ai un ami qui habite à Paris."
+      ],
+      "noMatch": [
+        "Qui parle ?",
+        "Qu'est-ce qui brille ?",
+        "Qui est-ce qui vient ?",
+        "Avec qui ?"
+      ]
+    },
+    "id": "fr:cx:relative.qui",
+    "label": "Relative pronoun qui as the subject of a relative clause after a noun or pronoun (la personne qui parle, c'est toi qui pars); after a name the detector sees no noun, so c'est Marie qui parle is not counted",
+    "needs": []
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
     "detect": null,
     "examples": {
       "match": [
@@ -4037,6 +4463,73 @@
       "fr:cx:plus-que-parfait.avoir",
       "fr:cx:conditionnel-passe.avoir"
     ]
+  },
+  {
+    "cefr": null,
+    "contrastsWith": [],
+    "detect": [
+      [
+        {
+          "start": true,
+          "surface": "si|s'"
+        },
+        {
+          "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|c'|ce"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "cell": "prs.*",
+          "surface": "(?!plait$).+"
+        }
+      ],
+      [
+        {
+          "surface": "(?!(sais|sait|savons|savez|savent|savoir|su|demande|demandes|demandons|demandez|demandent|demander|demandais|demandait|dis|dit|disons|dites|disent|dire|-moi|-nous|-lui|-leur|me|te|se|pas)$).+"
+        },
+        {
+          "surface": "si|s'"
+        },
+        {
+          "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|c'|ce"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "cell": "prs.*",
+          "surface": "(?!plait$).+"
+        }
+      ]
+    ],
+    "examples": {
+      "match": [
+        "Si tu veux, on y va.",
+        "Si j'ai le temps, je viens.",
+        "Je viens si tu veux.",
+        "Si c'est possible, je pars demain."
+      ],
+      "noMatch": [
+        "Si j'étais riche, je voyagerais.",
+        "Je ne sais pas si tu viens.",
+        "Je me demande s'il vient.",
+        "Il est si grand."
+      ]
+    },
+    "id": "fr:cx:si.present",
+    "label": "Real condition si + present tense (si tu veux, si j'ai le temps, je viens si tu veux); si after savoir, se demander, dire or a negation (je ne sais pas si) is an embedded question and does not count; s'il vous plaît and s'il te plaît are fixed phrases and do not count",
+    "needs": []
   },
   {
     "cefr": null,

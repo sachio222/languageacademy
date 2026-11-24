@@ -1004,16 +1004,6 @@
   {
     "cefr": null,
     "cefrSource": null,
-    "dictionaryId": "Bordeaux-fr",
-    "id": "fr:lex:bordeaux",
-    "lemma": "Bordeaux",
-    "paradigms": [],
-    "pos": "noun",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
     "dictionaryId": "bouillabaisse-fr",
     "id": "fr:lex:bouillabaisse",
     "lemma": "bouillabaisse",
@@ -3055,6 +3045,7 @@
     "dictionaryId": "elle-fr",
     "id": "fr:lex:elle",
     "lemma": "elle",
+    "note": "subject pronoun (elle parle)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -3065,6 +3056,7 @@
     "dictionaryId": "elle-fr-obj",
     "id": "fr:lex:elle.pronoun",
     "lemma": "elle",
+    "note": "stressed pronoun, after a preposition or c'est (avec elle, c'est elle)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -3515,6 +3507,7 @@
     "dictionaryId": "eux-fr",
     "id": "fr:lex:eux",
     "lemma": "eux",
+    "note": "stressed pronoun used alone or for emphasis (eux, ils partent ; eux aussi)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -3525,6 +3518,7 @@
     "dictionaryId": "eux-fr-obj",
     "id": "fr:lex:eux.pronoun",
     "lemma": "eux",
+    "note": "after a preposition or c'est (avec eux, chez eux, c'est eux)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -3923,18 +3917,6 @@
       "fr:cx:prsptcp.ir"
     ],
     "pos": "verb",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
-    "dictionaryId": "flore-fr",
-    "id": "fr:lex:flore",
-    "lemma": "flore",
-    "paradigms": [
-      "fr:cx:noun.plural"
-    ],
-    "pos": "noun",
     "senses": []
   },
   {
@@ -5277,6 +5259,7 @@
     "dictionaryId": "lui-fr",
     "id": "fr:lex:lui",
     "lemma": "lui",
+    "note": "stressed pronoun (c'est lui, avec lui, lui aussi)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -5287,6 +5270,7 @@
     "dictionaryId": "lui-fr-obj",
     "id": "fr:lex:lui.pronoun",
     "lemma": "lui",
+    "note": "indirect object pronoun before the verb (je lui parle)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -5500,16 +5484,6 @@
   {
     "cefr": null,
     "cefrSource": null,
-    "dictionaryId": "marc-fr",
-    "id": "fr:lex:marc",
-    "lemma": "marc",
-    "paradigms": [],
-    "pos": "noun",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
     "dictionaryId": "marché-fr",
     "id": "fr:lex:marche",
     "lemma": "marché",
@@ -5546,16 +5520,6 @@
     "paradigms": [
       "fr:cx:noun.plural"
     ],
-    "pos": "noun",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
-    "dictionaryId": "Marie-fr",
-    "id": "fr:lex:marie",
-    "lemma": "Marie",
-    "paradigms": [],
     "pos": "noun",
     "senses": []
   },
@@ -5623,16 +5587,6 @@
     "lemma": "me",
     "paradigms": [],
     "pos": "pronoun",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
-    "dictionaryId": "Méditerranée-fr",
-    "id": "fr:lex:mediterranee",
-    "lemma": "Méditerranée",
-    "paradigms": [],
-    "pos": "noun",
     "senses": []
   },
   {
@@ -6229,16 +6183,6 @@
   {
     "cefr": null,
     "cefrSource": null,
-    "dictionaryId": "nice-fr",
-    "id": "fr:lex:nice",
-    "lemma": "nice",
-    "paradigms": [],
-    "pos": "noun",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
     "dictionaryId": "Noël-fr",
     "id": "fr:lex:noel",
     "lemma": "Noël",
@@ -6304,6 +6248,7 @@
     "dictionaryId": "nous-fr",
     "id": "fr:lex:nous",
     "lemma": "nous",
+    "note": "subject pronoun (nous parlons)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -6314,6 +6259,7 @@
     "dictionaryId": "nous-fr-obj",
     "id": "fr:lex:nous.pronoun",
     "lemma": "nous",
+    "note": "object, reflexive or stressed pronoun (il nous voit, nous nous levons, avec nous)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -6674,16 +6620,6 @@
     "lemma": "parfois",
     "paradigms": [],
     "pos": "adverb",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
-    "dictionaryId": "Paris-fr",
-    "id": "fr:lex:paris",
-    "lemma": "Paris",
-    "paradigms": [],
-    "pos": "noun",
     "senses": []
   },
   {
@@ -7065,16 +7001,6 @@
     "paradigms": [
       "fr:cx:noun.plural"
     ],
-    "pos": "noun",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
-    "dictionaryId": "Pierre-fr",
-    "id": "fr:lex:pierre",
-    "lemma": "Pierre",
-    "paradigms": [],
     "pos": "noun",
     "senses": []
   },
@@ -8587,7 +8513,7 @@
   {
     "cefr": null,
     "cefrSource": null,
-    "dictionaryId": "savoir-fr",
+    "dictionaryId": null,
     "id": "fr:lex:savoir",
     "lemma": "savoir",
     "paradigms": [
@@ -8599,7 +8525,7 @@
   {
     "cefr": null,
     "cefrSource": null,
-    "dictionaryId": null,
+    "dictionaryId": "savoir-fr",
     "id": "fr:lex:savoir.verb",
     "lemma": "savoir",
     "paradigms": [],
@@ -8659,16 +8585,6 @@
     "paradigms": [
       "fr:cx:noun.plural"
     ],
-    "pos": "noun",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
-    "dictionaryId": "seine-fr",
-    "id": "fr:lex:seine",
-    "lemma": "seine",
-    "paradigms": [],
     "pos": "noun",
     "senses": []
   },
@@ -9333,6 +9249,7 @@
     "dictionaryId": "toi-fr",
     "id": "fr:lex:toi",
     "lemma": "toi",
+    "note": "stressed pronoun used alone or for emphasis (toi, tu viens ? ; toi aussi)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -9343,6 +9260,7 @@
     "dictionaryId": "toi-fr-obj",
     "id": "fr:lex:toi.pronoun",
     "lemma": "toi",
+    "note": "after a preposition or c'est, or attached to an imperative (avec toi, assieds-toi)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -9852,16 +9770,6 @@
   {
     "cefr": null,
     "cefrSource": null,
-    "dictionaryId": "verne-fr",
-    "id": "fr:lex:verne",
-    "lemma": "verne",
-    "paradigms": [],
-    "pos": "noun",
-    "senses": []
-  },
-  {
-    "cefr": null,
-    "cefrSource": null,
     "dictionaryId": "vers-fr",
     "id": "fr:lex:vers",
     "lemma": "vers",
@@ -10147,6 +10055,7 @@
     "dictionaryId": "vous-fr",
     "id": "fr:lex:vous",
     "lemma": "vous",
+    "note": "subject pronoun (vous parlez)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
@@ -10157,6 +10066,7 @@
     "dictionaryId": "vous-fr-obj",
     "id": "fr:lex:vous.pronoun",
     "lemma": "vous",
+    "note": "object, reflexive or stressed pronoun (je vous vois, vous vous levez, avec vous)",
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
