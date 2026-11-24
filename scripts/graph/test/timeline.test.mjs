@@ -1,0 +1,115 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { loadGraph } from '../load.mjs';
+import { validateGraph } from '../validate.mjs';
+import { buildFormIndex } from '../fr/forms.mjs';
+import { makeModule, makeCtx } from './helpers.mjs';
+
+const here = dirname(fileURLToPath(import.meta.url));
+const base = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
+const withMap = (courseMap) => ({ ...base, courseMap });
+const reading = (word) => buildFormIndex(base).get(word)[0];
+
+test('fixture still validates', () => {
+  assert.deepEqual(validateGraph(base), []);
+});
+
+test('generated reading needs headword, then form or paradigm', () => {
+  const graph = withMap({
+    m1: { teachesWords: ['fr:lex:parler'] },
+    m2: { teachesConstructions: ['fr:cx:verb.er.present'] },
+  });
+  const course = [makeModule({ position: 1 }), makeModule({ position: 2 })];
+  const { timeline } = makeCtx({ graph, course });
+  const r = reading('parlons');
+  assert.equal(timeline.isReadingAvailable(r, 1), false);
+  assert.equal(timeline.isReadingAvailable(r, 2), true);
+});
+
+test('irregular reading needs its form id, not just the headword', () => {
+  const graph = withMap({
+    m1: { teachesWords: ['fr:lex:aller'] },
+    m2: { teachesWords: ['fr:form:aller.prs.1sg'] },
+  });
+  const course = [makeModule({ position: 1 }), makeModule({ position: 2 })];
+  const { timeline } = makeCtx({ graph, course });
+  const r = reading('vais');
+  assert.equal(timeline.isReadingAvailable(r, 1), false);
+  assert.equal(timeline.isReadingAvailable(r, 2), true);
+});
+
+test('lemma reading needs only the headword', () => {
+  const graph = withMap({ m1: { teachesWords: ['fr:lex:parler'] } });
+  const { timeline } = makeCtx({ graph, course: [makeModule({ position: 1 })] });
+  const r = buildFormIndex(base).get('parler').find((x) => x.via === 'lemma');
+  assert.equal(timeline.isReadingAvailable(r, 1), true);
+});
+
+test('a node taught in module 3 is available to module 3 and not before', () => {
+  const graph = withMap({ m3: { teachesWords: ['fr:lex:parler'] } });
+  const course = [1, 2, 3].map((position) => makeModule({ position }));
+  const { timeline } = makeCtx({ graph, course });
+  assert.equal(timeline.taughtAt.get('fr:lex:parler'), 3);
+  assert.equal(timeline.isAvailable('fr:lex:parler', 2), false);
+  assert.equal(timeline.isAvailable('fr:lex:parler', 3), true);
+  assert.equal(timeline.isAvailable('fr:lex:never', 3), false);
+});
+
+test('taughtAt keeps the first position; manual words and constructions count', () => {
+  const graph = withMap({
+    m1: { teachesWordsManual: ['fr:lex:aller'], teachesConstructions: ['fr:cx:verb.er.present'] },
+    m2: { teachesWords: ['fr:lex:aller'] },
+  });
+  const course = [makeModule({ position: 1 }), makeModule({ position: 2 })];
+  const { timeline } = makeCtx({ graph, course });
+  assert.equal(timeline.taughtAt.get('fr:lex:aller'), 1);
+  assert.equal(timeline.taughtAt.get('fr:cx:verb.er.present'), 1);
+});
+
+test('help teaches; reading teaches only preTeach', () => {
+  const graph = withMap({
+    m1: { teachesWords: ['fr:lex:parler'] },
+    m2: { preTeach: ['fr:lex:aller'] },
+  });
+  const course = [makeModule({ position: 1, kind: 'help' }), makeModule({ position: 2, kind: 'reading' })];
+  const { timeline, } = makeCtx({ graph, course });
+  assert.equal(timeline.taughtAt.get('fr:lex:parler'), 1);
+  assert.equal(timeline.taughtAt.get('fr:lex:aller'), 2);
+  assert.deepEqual(timeline.issues, []);
+});
+
+test('teaches entries on exam, practice and reading modules are errors and are ignored', () => {
+  const graph = withMap({
+    m1: { teachesWords: ['fr:lex:parler'] },
+    m2: { teachesConstructions: ['fr:cx:verb.er.present'], teachesWordsManual: ['fr:lex:aller'] },
+    m3: { teachesWords: ['fr:lex:cafe'], preTeach: ['fr:lex:aller'] },
+  });
+  const course = [
+    makeModule({ position: 1, kind: 'exam' }),
+    makeModule({ position: 2, kind: 'practice' }),
+    makeModule({ position: 3, kind: 'reading' }),
+  ];
+  const { timeline } = makeCtx({ graph, course });
+  assert.equal(timeline.issues.length, 3);
+  for (const i of timeline.issues) {
+    assert.equal(i.rule, 'teaches-in-non-teaching-module');
+    assert.equal(i.severity, 'error');
+  }
+  assert.equal(timeline.issues[0].moduleKey, 'm1');
+  assert.equal(timeline.issues[0].position, 1);
+  assert.match(timeline.issues[0].message, /fr:lex:parler/);
+  assert.match(timeline.issues[1].message, /fr:cx:verb\.er\.present/);
+  assert.match(timeline.issues[1].message, /fr:lex:aller/);
+  assert.equal(timeline.isAvailable('fr:lex:parler', 160), false);
+  assert.equal(timeline.isAvailable('fr:lex:cafe', 160), false);
+  assert.equal(timeline.taughtAt.get('fr:lex:aller'), 3);
+});
+
+test('course-map entries for modules outside the course are ignored', () => {
+  const graph = withMap({ ghost: { teachesWords: ['fr:lex:parler'] } });
+  const { timeline } = makeCtx({ graph, course: [makeModule({ position: 1 })] });
+  assert.equal(timeline.taughtAt.size, 0);
+  assert.deepEqual(timeline.issues, []);
+});
