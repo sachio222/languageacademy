@@ -134,7 +134,7 @@ function readExercises(list, key, unread, items, fills) {
       fills.set(fold(text), ex.answer);
       items.push({
         ref, source: 'exercises', french: [fillBlanks(text, ex.answer)], lenient: [],
-        englishPrompt: english, instruction: null,
+        englishPrompt: english, instruction: null, gapFill: true,
       });
     } else if (ex && !ex.type && typeof ex.expectedAnswer === 'string') {
       items.push(answerItem(ref, 'exercises', ex));

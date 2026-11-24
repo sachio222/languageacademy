@@ -1,5 +1,5 @@
 // Writes the hand-curated fields of curriculum-graph/languages/fr/course-map.json (teachesConstructions, tests,
-// teachesWordsManual, excludeWords, itemKinds, overrides, contentNotes) from course-map-data.mjs, writes
+// teachesWordsManual, excludeWords, overrides, contentNotes; it clears itemKinds) from course-map-data.mjs, writes
 // names.json, and edits headwords.json (names removed, savoir dictionaryId, pronoun notes). teachesWords is
 // left to `pnpm graph:extract`: run it after this script.
 // Source of truth: course-map.json, names.json and headwords.json. This script reproduces them as committed and
@@ -16,7 +16,7 @@ import { tokenize } from '../tokenize.mjs';
 import { lookupToken, lookupTokenStrict } from '../forms.mjs';
 import { TEACH, TESTS, HOMOGRAPHS, NAMES, NAME_HEADWORDS, PRONOUN_NOTES, CONTENT_NOTES, CHUNK_ONLY } from './course-map-data.mjs';
 import { matchPattern } from '../detect.mjs';
-import { classify } from './item-kinds.mjs';
+import { classifyItem } from '../../rules/item-kinds.mjs';
 
 const REPORT = process.argv.includes('--report');
 const { graph, course, raw, index, detects, analyze } = await load();
@@ -134,20 +134,15 @@ for (const [pos, note] of CONTENT_NOTES) {
   entry(m).contentNotes = [...(entry(m).contentNotes ?? []), note];
 }
 
-// itemKinds: written only where the kind differs from the checker's default.
+// itemKinds: none written. The checker classifies every item itself (rules/item-kinds.mjs); an itemKinds entry
+// is only for an item the classifier gets wrong. --report prints the classifier's table.
 const counts = { situation: 0, translate: 0, other: 0 };
 const table = [];
 for (const m of course) {
-  const r = raw.get(m.moduleKey);
   for (const it of m.items) {
-    const path = it.ref.slice(it.ref.indexOf('#') + 1);
-    const ex = /^exercises\[(\d+)\]$/.exec(path);
-    const rawItem = ex ? r.exercises?.[Number(ex[1])] : null;
-    const [kind, why] = classify(m, it, rawItem);
-    const def = it.englishPrompt && it.french.length ? 'translate' : 'other';
+    const [kind, why] = classifyItem(m, it);
     counts[kind]++;
-    table.push({ pos: m.position, unit: m.unitId, ref: it.ref, kind, why, def, instruction: it.instruction, prompt: it.englishPrompt, french: it.french[0] });
-    if (kind !== def) entry(m).itemKinds = { ...(entry(m).itemKinds ?? {}), [it.ref]: kind };
+    table.push({ pos: m.position, unit: m.unitId, ref: it.ref, kind, why, instruction: it.instruction, prompt: it.englishPrompt, french: it.french[0] });
   }
 }
 
@@ -170,7 +165,6 @@ const summary = {
   modulesWithTests: Object.keys(TESTS).length,
   testEntries: Object.values(TESTS).reduce((n, l) => n + l.length, 0),
   itemKinds: counts,
-  itemKindsWritten: table.filter((t) => t.kind !== t.def).length,
   names: names.length,
   headwordsRemoved: headwords.length - kept.length,
   lePronounKeptAt: lePronounKept,
@@ -182,6 +176,7 @@ if (REPORT) {
   for (const row of table) console.log(JSON.stringify(row));
   process.exit(0);
 }
+for (const [key, e] of Object.entries(courseMap)) if (!Object.keys(e).length) delete courseMap[key]; // nothing left to say
 writeSortedJson(join(DIR, 'course-map.json'), courseMap);
 writeSortedJson(join(DIR, 'names.json'), names);
 writeSortedJson(join(DIR, 'headwords.json'), kept);

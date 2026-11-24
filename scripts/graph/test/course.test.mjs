@@ -33,7 +33,9 @@ test('verb-pattern-help appears once, at position 31', () => {
 
 test('passe-compose-er has the filled fillblank sentence', () => {
   const m = course.find((x) => x.moduleKey === '2024-05-30-passe-compose-er');
-  assert.ok(m.items.some((i) => i.french[0]?.includes("Hier, j'ai parlé français")));
+  const filled = m.items.find((i) => i.french[0]?.includes("Hier, j'ai parlé français"));
+  assert.ok(filled);
+  assert.equal(filled.gapFill, true); // a fillblank exercise, so never an English-to-French translation
   assert.ok(m.shapes.includes('exercises'));
   assert.ok(m.shapes.includes('fib'));
 });

@@ -55,6 +55,20 @@ test('itemKinds can force translate', () => {
   assert.equal(ruleTranslation(ctx).length, 1);
 });
 
+test('without an itemKinds entry, scenes, gap-fills, transformations and readings are not translations', () => {
+  const items = [
+    item('m1#1', { instruction: "You're at a bakery. Ask for two croissants.", englishPrompt: 'two croissants', french: ['deux croissants'] }),
+    item('m1#2', { source: 'exercises', gapFill: true, englishPrompt: 'I spoke French', french: ["J'ai parlé français"] }),
+    item('m1#3', { instruction: 'Negate this sentence', englishPrompt: 'I eat', french: ['Je ne mange pas'] }),
+    item('m1#4', { englishPrompt: 'I ___ French', french: ['Je parle français'] }),
+    item('m1#5', { instruction: "Translate: 'I speak'" }), // still a translation
+  ];
+  const issues = ruleTranslation(ctxOf([makeModule({ position: 1, unitId: 2, items })]));
+  assert.deepEqual(issues.map((i) => i.itemRef), ['m1#5']);
+  const reading = makeModule({ position: 1, unitId: 2, kind: 'reading', items: [item('m1#1')] });
+  assert.deepEqual(ruleTranslation(ctxOf([reading])), []);
+});
+
 // claims
 test('exam testing a concept taught later gives claim-untaught', () => {
   const course = Array.from({ length: 12 }, (_, i) => makeModule({

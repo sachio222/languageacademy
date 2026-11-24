@@ -1,9 +1,9 @@
 import { issue } from '../issues.mjs';
+import { classifyItem } from './item-kinds.mjs';
 
-export function itemKind(ctx, moduleKey, it) {
-  const set = ctx.graph.courseMap?.[moduleKey]?.itemKinds?.[it.ref];
-  if (set) return set;
-  return it.englishPrompt && (it.french ?? []).length > 0 ? 'translate' : 'other';
+// The item's kind: the course map's itemKinds entry when there is one, else the classifier's answer.
+export function itemKind(ctx, m, it) {
+  return ctx.graph.courseMap?.[m.moduleKey]?.itemKinds?.[it.ref] ?? classifyItem(m, it)[0];
 }
 
 export function ruleTranslation(ctx) {
@@ -12,7 +12,7 @@ export function ruleTranslation(ctx) {
   for (const m of ctx.course) {
     if (m.unitId <= allowed) continue;
     for (const it of m.items) {
-      if (itemKind(ctx, m.moduleKey, it) !== 'translate') continue;
+      if (itemKind(ctx, m, it) !== 'translate') continue;
       issues.push(issue({
         rule: 'translate-item',
         severity: 'error',

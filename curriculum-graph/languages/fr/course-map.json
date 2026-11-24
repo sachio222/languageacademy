@@ -1,15 +1,5 @@
 {
   "2024-01-01-famous-words": {
-    "itemKinds": {
-      "2024-01-01-famous-words#exerciseConfig.items[0]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[12]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[1]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[2]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[5]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[6]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[7]": "situation",
-      "2024-01-01-famous-words#exerciseConfig.items[8]": "situation"
-    },
     "overrides": {
       "2024-01-01-famous-words#exerciseConfig.items[5]": {
         "ignore": [
@@ -48,13 +38,6 @@
     ]
   },
   "2024-01-01-pronouns": {
-    "itemKinds": {
-      "2024-01-01-pronouns#exerciseConfig.items[1]": "situation",
-      "2024-01-01-pronouns#exerciseConfig.items[5]": "situation",
-      "2024-01-01-pronouns#exerciseConfig.items[6]": "situation",
-      "2024-01-01-pronouns#exerciseConfig.items[7]": "situation",
-      "2024-01-01-pronouns#exerciseConfig.items[8]": "situation"
-    },
     "teachesConstructions": [
       "fr:cx:pronoun.subject",
       "fr:cx:pronoun.tu-vous",
@@ -76,9 +59,6 @@
     ]
   },
   "2024-01-02-etre": {
-    "itemKinds": {
-      "2024-01-02-etre#exerciseConfig.items[0]": "situation"
-    },
     "teachesWords": [
       "fr:lex:etre",
       "fr:lex:je",
@@ -202,9 +182,6 @@
     ]
   },
   "2024-01-08-connectors": {
-    "itemKinds": {
-      "2024-01-08-connectors#exerciseConfig.items[0]": "other"
-    },
     "teachesWords": [
       "fr:lex:et",
       "fr:lex:mais",
@@ -213,34 +190,7 @@
       "fr:lex:tres"
     ]
   },
-  "2024-01-09-reading1": {
-    "itemKinds": {
-      "2024-01-09-reading1#exerciseConfig.items[0]": "other",
-      "2024-01-09-reading1#exerciseConfig.items[1]": "other",
-      "2024-01-09-reading1#exerciseConfig.items[2]": "other",
-      "2024-01-09-reading1#exerciseConfig.items[3]": "other",
-      "2024-01-09-reading1#exerciseConfig.items[4]": "other",
-      "2024-01-09-reading1#exerciseConfig.items[5]": "other",
-      "2024-01-09-reading1#exerciseConfig.items[6]": "other",
-      "2024-01-09-reading1#exerciseConfig.items[7]": "other",
-      "2024-01-09-reading1#exerciseConfig.items[8]": "other"
-    }
-  },
   "2024-01-10-unit1-practice": {
-    "itemKinds": {
-      "2024-01-10-unit1-practice#sentences[0]": "other",
-      "2024-01-10-unit1-practice#sentences[10]": "other",
-      "2024-01-10-unit1-practice#sentences[11]": "other",
-      "2024-01-10-unit1-practice#sentences[1]": "other",
-      "2024-01-10-unit1-practice#sentences[2]": "other",
-      "2024-01-10-unit1-practice#sentences[3]": "other",
-      "2024-01-10-unit1-practice#sentences[4]": "other",
-      "2024-01-10-unit1-practice#sentences[5]": "other",
-      "2024-01-10-unit1-practice#sentences[6]": "other",
-      "2024-01-10-unit1-practice#sentences[7]": "other",
-      "2024-01-10-unit1-practice#sentences[8]": "other",
-      "2024-01-10-unit1-practice#sentences[9]": "other"
-    },
     "tests": [
       "fr:cx:pronoun.subject",
       "fr:cx:article.indefinite",
@@ -272,10 +222,6 @@
     ]
   },
   "2024-01-13-ca-survival": {
-    "itemKinds": {
-      "2024-01-13-ca-survival#exerciseConfig.items[2]": "situation",
-      "2024-01-13-ca-survival#exerciseConfig.items[3]": "situation"
-    },
     "teachesConstructions": [
       "fr:cx:cest",
       "fr:cx:chunk.cest-ca",
@@ -419,12 +365,6 @@
     ]
   },
   "2024-01-18-questions": {
-    "itemKinds": {
-      "2024-01-18-questions#exerciseConfig.items[10]": "other",
-      "2024-01-18-questions#exerciseConfig.items[7]": "situation",
-      "2024-01-18-questions#exerciseConfig.items[8]": "situation",
-      "2024-01-18-questions#exerciseConfig.items[9]": "situation"
-    },
     "teachesConstructions": [
       "fr:cx:q.est-ce-que",
       "fr:cx:q.intonation",
@@ -623,22 +563,6 @@
       "fr:lex:probablement"
     ]
   },
-  "2024-01-22-reading2": {
-    "itemKinds": {
-      "2024-01-22-reading2#exerciseConfig.items[0]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[10]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[11]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[1]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[2]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[3]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[4]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[5]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[6]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[7]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[8]": "other",
-      "2024-01-22-reading2#exerciseConfig.items[9]": "other"
-    }
-  },
   "2024-01-23-common-special-forms-1": {
     "teachesConstructions": [
       "fr:cx:subj.il-faut-que",
@@ -668,28 +592,6 @@
     ]
   },
   "2024-01-23-unit2-practice": {
-    "itemKinds": {
-      "2024-01-23-unit2-practice#sentences[0]": "other",
-      "2024-01-23-unit2-practice#sentences[10]": "other",
-      "2024-01-23-unit2-practice#sentences[11]": "other",
-      "2024-01-23-unit2-practice#sentences[12]": "other",
-      "2024-01-23-unit2-practice#sentences[13]": "other",
-      "2024-01-23-unit2-practice#sentences[14]": "other",
-      "2024-01-23-unit2-practice#sentences[15]": "other",
-      "2024-01-23-unit2-practice#sentences[16]": "other",
-      "2024-01-23-unit2-practice#sentences[17]": "other",
-      "2024-01-23-unit2-practice#sentences[18]": "other",
-      "2024-01-23-unit2-practice#sentences[19]": "other",
-      "2024-01-23-unit2-practice#sentences[1]": "other",
-      "2024-01-23-unit2-practice#sentences[2]": "other",
-      "2024-01-23-unit2-practice#sentences[3]": "other",
-      "2024-01-23-unit2-practice#sentences[4]": "other",
-      "2024-01-23-unit2-practice#sentences[5]": "other",
-      "2024-01-23-unit2-practice#sentences[6]": "other",
-      "2024-01-23-unit2-practice#sentences[7]": "other",
-      "2024-01-23-unit2-practice#sentences[8]": "other",
-      "2024-01-23-unit2-practice#sentences[9]": "other"
-    },
     "tests": [
       "fr:cx:demonstrative.adjective",
       "fr:cx:chunk.ca-va",
@@ -752,15 +654,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
-    "itemKinds": {
-      "2024-01-25-contractions#exerciseConfig.items[0]": "other",
-      "2024-01-25-contractions#exerciseConfig.items[1]": "other",
-      "2024-01-25-contractions#exerciseConfig.items[2]": "other",
-      "2024-01-25-contractions#exerciseConfig.items[3]": "other",
-      "2024-01-25-contractions#exerciseConfig.items[4]": "other",
-      "2024-01-25-contractions#exerciseConfig.items[5]": "other",
-      "2024-01-25-contractions#exerciseConfig.items[6]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:contraction.de",
       "fr:cx:contraction.a",
@@ -967,12 +860,6 @@
     ]
   },
   "2024-01-28-necessity-phrases": {
-    "itemKinds": {
-      "2024-01-28-necessity-phrases#exerciseConfig.items[0]": "situation",
-      "2024-01-28-necessity-phrases#exerciseConfig.items[1]": "situation",
-      "2024-01-28-necessity-phrases#exerciseConfig.items[4]": "situation",
-      "2024-01-28-necessity-phrases#exerciseConfig.items[5]": "situation"
-    },
     "teachesConstructions": [
       "fr:cx:subj.il-faut-que",
       "fr:cx:frame.il-faut-infinitive"
@@ -1085,15 +972,6 @@
     ]
   },
   "2024-01-30-object-pronouns": {
-    "itemKinds": {
-      "2024-01-30-object-pronouns#exerciseConfig.items[0]": "other",
-      "2024-01-30-object-pronouns#exerciseConfig.items[1]": "other",
-      "2024-01-30-object-pronouns#exerciseConfig.items[2]": "other",
-      "2024-01-30-object-pronouns#exerciseConfig.items[3]": "other",
-      "2024-01-30-object-pronouns#exerciseConfig.items[4]": "other",
-      "2024-01-30-object-pronouns#exerciseConfig.items[5]": "other",
-      "2024-01-30-object-pronouns#exerciseConfig.items[6]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:pronoun.direct-object"
     ],
@@ -1145,23 +1023,6 @@
     ]
   },
   "2024-01-31-possessive-adjectives": {
-    "itemKinds": {
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[0]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[10]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[11]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[12]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[13]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[14]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[1]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[2]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[3]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[4]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[5]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[6]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[7]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[8]": "other",
-      "2024-01-31-possessive-adjectives#exerciseConfig.items[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:possessive.adjective"
     ],
@@ -1238,25 +1099,7 @@
       "fr:lex:leur.pronoun"
     ]
   },
-  "2024-02-01-reading-10": {
-    "itemKinds": {
-      "2024-02-01-reading-10#exerciseConfig.items[0]": "other",
-      "2024-02-01-reading-10#exerciseConfig.items[1]": "other",
-      "2024-02-01-reading-10#exerciseConfig.items[2]": "other",
-      "2024-02-01-reading-10#exerciseConfig.items[3]": "other",
-      "2024-02-01-reading-10#exerciseConfig.items[4]": "other",
-      "2024-02-01-reading-10#exerciseConfig.items[5]": "other",
-      "2024-02-01-reading-10#exerciseConfig.items[6]": "other",
-      "2024-02-01-reading-10#exerciseConfig.items[7]": "other",
-      "2024-02-01-reading-10#exerciseConfig.items[8]": "other",
-      "2024-02-01-reading-10#exerciseConfig.items[9]": "other"
-    }
-  },
   "2024-02-02-combining": {
-    "itemKinds": {
-      "2024-02-02-combining#exerciseConfig.items[0]": "situation",
-      "2024-02-02-combining#exerciseConfig.items[3]": "situation"
-    },
     "teachesConstructions": [
       "fr:cx:pronoun.direct-object"
     ],
@@ -1334,22 +1177,6 @@
       "fr:form:un.f"
     ]
   },
-  "2024-02-03-reading3": {
-    "itemKinds": {
-      "2024-02-03-reading3#exerciseConfig.items[0]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[10]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[11]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[1]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[2]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[3]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[4]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[5]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[6]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[7]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[8]": "other",
-      "2024-02-03-reading3#exerciseConfig.items[9]": "other"
-    }
-  },
   "2024-02-03-so-that-phrases": {
     "teachesConstructions": [
       "fr:cx:subj.pour-que"
@@ -1383,17 +1210,6 @@
     ]
   },
   "2024-02-04-unit-10-exam": {
-    "itemKinds": {
-      "2024-02-04-unit-10-exam#exerciseConfig.items[0]": "other",
-      "2024-02-04-unit-10-exam#exerciseConfig.items[1]": "other",
-      "2024-02-04-unit-10-exam#exerciseConfig.items[2]": "other",
-      "2024-02-04-unit-10-exam#exerciseConfig.items[36]": "other",
-      "2024-02-04-unit-10-exam#exerciseConfig.items[37]": "other",
-      "2024-02-04-unit-10-exam#exerciseConfig.items[38]": "other",
-      "2024-02-04-unit-10-exam#exerciseConfig.items[3]": "other",
-      "2024-02-04-unit-10-exam#exerciseConfig.items[4]": "other",
-      "2024-02-04-unit-10-exam#exerciseConfig.items[5]": "other"
-    },
     "tests": [
       "fr:cx:relative.qui",
       "fr:cx:relative.que",
@@ -1413,28 +1229,6 @@
     ]
   },
   "2024-02-04-unit3-practice": {
-    "itemKinds": {
-      "2024-02-04-unit3-practice#sentences[0]": "other",
-      "2024-02-04-unit3-practice#sentences[10]": "other",
-      "2024-02-04-unit3-practice#sentences[11]": "other",
-      "2024-02-04-unit3-practice#sentences[12]": "other",
-      "2024-02-04-unit3-practice#sentences[13]": "other",
-      "2024-02-04-unit3-practice#sentences[14]": "other",
-      "2024-02-04-unit3-practice#sentences[15]": "other",
-      "2024-02-04-unit3-practice#sentences[16]": "other",
-      "2024-02-04-unit3-practice#sentences[17]": "other",
-      "2024-02-04-unit3-practice#sentences[18]": "other",
-      "2024-02-04-unit3-practice#sentences[19]": "other",
-      "2024-02-04-unit3-practice#sentences[1]": "other",
-      "2024-02-04-unit3-practice#sentences[2]": "other",
-      "2024-02-04-unit3-practice#sentences[3]": "other",
-      "2024-02-04-unit3-practice#sentences[4]": "other",
-      "2024-02-04-unit3-practice#sentences[5]": "other",
-      "2024-02-04-unit3-practice#sentences[6]": "other",
-      "2024-02-04-unit3-practice#sentences[7]": "other",
-      "2024-02-04-unit3-practice#sentences[8]": "other",
-      "2024-02-04-unit3-practice#sentences[9]": "other"
-    },
     "tests": [
       "fr:cx:contraction.a",
       "fr:cx:pronoun.direct-object",
@@ -1443,28 +1237,6 @@
     ]
   },
   "2024-02-05-unit-10-practice": {
-    "itemKinds": {
-      "2024-02-05-unit-10-practice#sentences[0]": "other",
-      "2024-02-05-unit-10-practice#sentences[10]": "other",
-      "2024-02-05-unit-10-practice#sentences[11]": "other",
-      "2024-02-05-unit-10-practice#sentences[12]": "other",
-      "2024-02-05-unit-10-practice#sentences[13]": "other",
-      "2024-02-05-unit-10-practice#sentences[14]": "other",
-      "2024-02-05-unit-10-practice#sentences[15]": "other",
-      "2024-02-05-unit-10-practice#sentences[16]": "other",
-      "2024-02-05-unit-10-practice#sentences[17]": "other",
-      "2024-02-05-unit-10-practice#sentences[18]": "other",
-      "2024-02-05-unit-10-practice#sentences[19]": "other",
-      "2024-02-05-unit-10-practice#sentences[1]": "other",
-      "2024-02-05-unit-10-practice#sentences[2]": "other",
-      "2024-02-05-unit-10-practice#sentences[3]": "other",
-      "2024-02-05-unit-10-practice#sentences[4]": "other",
-      "2024-02-05-unit-10-practice#sentences[5]": "other",
-      "2024-02-05-unit-10-practice#sentences[6]": "other",
-      "2024-02-05-unit-10-practice#sentences[7]": "other",
-      "2024-02-05-unit-10-practice#sentences[8]": "other",
-      "2024-02-05-unit-10-practice#sentences[9]": "other"
-    },
     "tests": [
       "fr:cx:relative.qui",
       "fr:cx:relative.que",
@@ -1512,11 +1284,6 @@
     ]
   },
   "2024-02-07-wish-phrases": {
-    "itemKinds": {
-      "2024-02-07-wish-phrases#exerciseConfig.items[0]": "situation",
-      "2024-02-07-wish-phrases#exerciseConfig.items[2]": "situation",
-      "2024-02-07-wish-phrases#exerciseConfig.items[4]": "situation"
-    },
     "teachesConstructions": [
       "fr:cx:subj.vouloir-que"
     ],
@@ -1811,20 +1578,6 @@
       "fr:lex:bien"
     ]
   },
-  "2024-02-12-reading-11": {
-    "itemKinds": {
-      "2024-02-12-reading-11#exerciseConfig.items[0]": "other",
-      "2024-02-12-reading-11#exerciseConfig.items[1]": "other",
-      "2024-02-12-reading-11#exerciseConfig.items[2]": "other",
-      "2024-02-12-reading-11#exerciseConfig.items[3]": "other",
-      "2024-02-12-reading-11#exerciseConfig.items[4]": "other",
-      "2024-02-12-reading-11#exerciseConfig.items[5]": "other",
-      "2024-02-12-reading-11#exerciseConfig.items[6]": "other",
-      "2024-02-12-reading-11#exerciseConfig.items[7]": "other",
-      "2024-02-12-reading-11#exerciseConfig.items[8]": "other",
-      "2024-02-12-reading-11#exerciseConfig.items[9]": "other"
-    }
-  },
   "2024-02-13-search-and-find": {
     "teachesConstructions": [
       "fr:cx:frame.verb-que-clause"
@@ -1971,27 +1724,6 @@
     "contentNotes": [
       "the gap-fill \"Je ___ mes amis au café\" with answer \"attends\" reads \"Je attends\"; French elides it to \"J'attends\"."
     ],
-    "itemKinds": {
-      "2024-02-16-unit-11-practice#sentences[0]": "other",
-      "2024-02-16-unit-11-practice#sentences[10]": "other",
-      "2024-02-16-unit-11-practice#sentences[11]": "other",
-      "2024-02-16-unit-11-practice#sentences[12]": "other",
-      "2024-02-16-unit-11-practice#sentences[13]": "other",
-      "2024-02-16-unit-11-practice#sentences[14]": "other",
-      "2024-02-16-unit-11-practice#sentences[15]": "other",
-      "2024-02-16-unit-11-practice#sentences[16]": "other",
-      "2024-02-16-unit-11-practice#sentences[17]": "other",
-      "2024-02-16-unit-11-practice#sentences[18]": "other",
-      "2024-02-16-unit-11-practice#sentences[1]": "other",
-      "2024-02-16-unit-11-practice#sentences[2]": "other",
-      "2024-02-16-unit-11-practice#sentences[3]": "other",
-      "2024-02-16-unit-11-practice#sentences[4]": "other",
-      "2024-02-16-unit-11-practice#sentences[5]": "other",
-      "2024-02-16-unit-11-practice#sentences[6]": "other",
-      "2024-02-16-unit-11-practice#sentences[7]": "other",
-      "2024-02-16-unit-11-practice#sentences[8]": "other",
-      "2024-02-16-unit-11-practice#sentences[9]": "other"
-    },
     "tests": [
       "fr:cx:futur-simple",
       "fr:cx:futur-anterieur",
@@ -2846,16 +2578,6 @@
     ]
   },
   "2024-03-28-negation": {
-    "itemKinds": {
-      "2024-03-28-negation#exerciseConfig.items[0]": "other",
-      "2024-03-28-negation#exerciseConfig.items[1]": "other",
-      "2024-03-28-negation#exerciseConfig.items[2]": "other",
-      "2024-03-28-negation#exerciseConfig.items[3]": "other",
-      "2024-03-28-negation#exerciseConfig.items[4]": "other",
-      "2024-03-28-negation#exerciseConfig.items[5]": "other",
-      "2024-03-28-negation#exerciseConfig.items[6]": "other",
-      "2024-03-28-negation#exerciseConfig.items[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:neg.ne-pas",
       "fr:cx:elision"
@@ -2916,26 +2638,6 @@
       "fr:lex:elles"
     ]
   },
-  "2024-03-30-reading-4": {
-    "itemKinds": {
-      "2024-03-30-reading-4#exerciseConfig.items[0]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[10]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[11]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[12]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[13]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[14]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[15]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[1]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[2]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[3]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[4]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[5]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[6]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[7]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[8]": "other",
-      "2024-03-30-reading-4#exerciseConfig.items[9]": "other"
-    }
-  },
   "2024-03-31-survival-phrases": {
     "excludeWords": [
       "fr:lex:le.pronoun",
@@ -2943,17 +2645,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
-    "itemKinds": {
-      "2024-03-31-survival-phrases#exerciseConfig.items[0]": "situation",
-      "2024-03-31-survival-phrases#exerciseConfig.items[12]": "situation",
-      "2024-03-31-survival-phrases#exerciseConfig.items[13]": "situation",
-      "2024-03-31-survival-phrases#exerciseConfig.items[1]": "situation",
-      "2024-03-31-survival-phrases#exerciseConfig.items[3]": "situation",
-      "2024-03-31-survival-phrases#exerciseConfig.items[6]": "situation",
-      "2024-03-31-survival-phrases#exerciseConfig.items[7]": "situation",
-      "2024-03-31-survival-phrases#exerciseConfig.items[8]": "situation",
-      "2024-03-31-survival-phrases#exerciseConfig.items[9]": "situation"
-    },
     "overrides": {
       "2024-03-31-survival-phrases#exerciseConfig.items[0]": {
         "ignore": [
@@ -3064,28 +2755,6 @@
     ]
   },
   "2024-04-03-unit-4-practice": {
-    "itemKinds": {
-      "2024-04-03-unit-4-practice#sentences[0]": "other",
-      "2024-04-03-unit-4-practice#sentences[10]": "other",
-      "2024-04-03-unit-4-practice#sentences[11]": "other",
-      "2024-04-03-unit-4-practice#sentences[12]": "other",
-      "2024-04-03-unit-4-practice#sentences[13]": "other",
-      "2024-04-03-unit-4-practice#sentences[14]": "other",
-      "2024-04-03-unit-4-practice#sentences[15]": "other",
-      "2024-04-03-unit-4-practice#sentences[16]": "other",
-      "2024-04-03-unit-4-practice#sentences[17]": "other",
-      "2024-04-03-unit-4-practice#sentences[18]": "other",
-      "2024-04-03-unit-4-practice#sentences[19]": "other",
-      "2024-04-03-unit-4-practice#sentences[1]": "other",
-      "2024-04-03-unit-4-practice#sentences[2]": "other",
-      "2024-04-03-unit-4-practice#sentences[3]": "other",
-      "2024-04-03-unit-4-practice#sentences[4]": "other",
-      "2024-04-03-unit-4-practice#sentences[5]": "other",
-      "2024-04-03-unit-4-practice#sentences[6]": "other",
-      "2024-04-03-unit-4-practice#sentences[7]": "other",
-      "2024-04-03-unit-4-practice#sentences[8]": "other",
-      "2024-04-03-unit-4-practice#sentences[9]": "other"
-    },
     "overrides": {
       "2024-04-03-unit-4-practice#sentences[0]": {
         "ignore": [
@@ -3426,23 +3095,6 @@
       "fr:form:avoir.prs.3pl"
     ]
   },
-  "2024-04-13-reading-5": {
-    "itemKinds": {
-      "2024-04-13-reading-5#exerciseConfig.items[0]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[10]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[11]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[12]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[1]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[2]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[3]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[4]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[5]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[6]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[7]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[8]": "other",
-      "2024-04-13-reading-5#exerciseConfig.items[9]": "other"
-    }
-  },
   "2024-04-14-unit-5-exam": {
     "contentNotes": [
       "the concept cards teach \"plus bon que (better than)\" and \"c'est plus bon\", which are wrong French; the comparative of bon is \"meilleur\" (\"meilleur que\", \"c'est meilleur\")."
@@ -3458,45 +3110,6 @@
     "contentNotes": [
       "the concept cards teach \"plus bon que\" and \"c'est plus bon\", which are wrong French; the comparative of bon is \"meilleur\" (\"meilleur que\", \"c'est meilleur\")."
     ],
-    "itemKinds": {
-      "2024-04-15-unit-5-practice#sentences[0]": "other",
-      "2024-04-15-unit-5-practice#sentences[10]": "other",
-      "2024-04-15-unit-5-practice#sentences[11]": "other",
-      "2024-04-15-unit-5-practice#sentences[12]": "other",
-      "2024-04-15-unit-5-practice#sentences[13]": "other",
-      "2024-04-15-unit-5-practice#sentences[14]": "other",
-      "2024-04-15-unit-5-practice#sentences[15]": "other",
-      "2024-04-15-unit-5-practice#sentences[16]": "other",
-      "2024-04-15-unit-5-practice#sentences[17]": "other",
-      "2024-04-15-unit-5-practice#sentences[18]": "other",
-      "2024-04-15-unit-5-practice#sentences[19]": "other",
-      "2024-04-15-unit-5-practice#sentences[1]": "other",
-      "2024-04-15-unit-5-practice#sentences[20]": "other",
-      "2024-04-15-unit-5-practice#sentences[21]": "other",
-      "2024-04-15-unit-5-practice#sentences[22]": "other",
-      "2024-04-15-unit-5-practice#sentences[23]": "other",
-      "2024-04-15-unit-5-practice#sentences[24]": "other",
-      "2024-04-15-unit-5-practice#sentences[25]": "other",
-      "2024-04-15-unit-5-practice#sentences[26]": "other",
-      "2024-04-15-unit-5-practice#sentences[27]": "other",
-      "2024-04-15-unit-5-practice#sentences[28]": "other",
-      "2024-04-15-unit-5-practice#sentences[29]": "other",
-      "2024-04-15-unit-5-practice#sentences[2]": "other",
-      "2024-04-15-unit-5-practice#sentences[30]": "other",
-      "2024-04-15-unit-5-practice#sentences[31]": "other",
-      "2024-04-15-unit-5-practice#sentences[32]": "other",
-      "2024-04-15-unit-5-practice#sentences[33]": "other",
-      "2024-04-15-unit-5-practice#sentences[34]": "other",
-      "2024-04-15-unit-5-practice#sentences[35]": "other",
-      "2024-04-15-unit-5-practice#sentences[36]": "other",
-      "2024-04-15-unit-5-practice#sentences[3]": "other",
-      "2024-04-15-unit-5-practice#sentences[4]": "other",
-      "2024-04-15-unit-5-practice#sentences[5]": "other",
-      "2024-04-15-unit-5-practice#sentences[6]": "other",
-      "2024-04-15-unit-5-practice#sentences[7]": "other",
-      "2024-04-15-unit-5-practice#sentences[8]": "other",
-      "2024-04-15-unit-5-practice#sentences[9]": "other"
-    },
     "tests": [
       "fr:cx:passe-compose.avoir",
       "fr:cx:passe-compose.etre",
@@ -3854,20 +3467,6 @@
       "fr:form:faire.fut.1sg"
     ]
   },
-  "2024-04-24-reading-6": {
-    "itemKinds": {
-      "2024-04-24-reading-6#exerciseConfig.items[0]": "other",
-      "2024-04-24-reading-6#exerciseConfig.items[1]": "other",
-      "2024-04-24-reading-6#exerciseConfig.items[2]": "other",
-      "2024-04-24-reading-6#exerciseConfig.items[3]": "other",
-      "2024-04-24-reading-6#exerciseConfig.items[4]": "other",
-      "2024-04-24-reading-6#exerciseConfig.items[5]": "other",
-      "2024-04-24-reading-6#exerciseConfig.items[6]": "other",
-      "2024-04-24-reading-6#exerciseConfig.items[7]": "other",
-      "2024-04-24-reading-6#exerciseConfig.items[8]": "other",
-      "2024-04-24-reading-6#exerciseConfig.items[9]": "other"
-    }
-  },
   "2024-04-25-top-200-nouns": {
     "excludeWords": [
       "fr:lex:faire",
@@ -3926,58 +3525,6 @@
     ]
   },
   "2024-04-27-unit-6-practice": {
-    "itemKinds": {
-      "2024-04-27-unit-6-practice#sentences[0]": "other",
-      "2024-04-27-unit-6-practice#sentences[10]": "other",
-      "2024-04-27-unit-6-practice#sentences[11]": "other",
-      "2024-04-27-unit-6-practice#sentences[12]": "other",
-      "2024-04-27-unit-6-practice#sentences[13]": "other",
-      "2024-04-27-unit-6-practice#sentences[14]": "other",
-      "2024-04-27-unit-6-practice#sentences[15]": "other",
-      "2024-04-27-unit-6-practice#sentences[16]": "other",
-      "2024-04-27-unit-6-practice#sentences[17]": "other",
-      "2024-04-27-unit-6-practice#sentences[18]": "other",
-      "2024-04-27-unit-6-practice#sentences[19]": "other",
-      "2024-04-27-unit-6-practice#sentences[1]": "other",
-      "2024-04-27-unit-6-practice#sentences[20]": "other",
-      "2024-04-27-unit-6-practice#sentences[21]": "other",
-      "2024-04-27-unit-6-practice#sentences[22]": "other",
-      "2024-04-27-unit-6-practice#sentences[23]": "other",
-      "2024-04-27-unit-6-practice#sentences[24]": "other",
-      "2024-04-27-unit-6-practice#sentences[25]": "other",
-      "2024-04-27-unit-6-practice#sentences[26]": "other",
-      "2024-04-27-unit-6-practice#sentences[27]": "other",
-      "2024-04-27-unit-6-practice#sentences[28]": "other",
-      "2024-04-27-unit-6-practice#sentences[29]": "other",
-      "2024-04-27-unit-6-practice#sentences[2]": "other",
-      "2024-04-27-unit-6-practice#sentences[30]": "other",
-      "2024-04-27-unit-6-practice#sentences[31]": "other",
-      "2024-04-27-unit-6-practice#sentences[32]": "other",
-      "2024-04-27-unit-6-practice#sentences[33]": "other",
-      "2024-04-27-unit-6-practice#sentences[34]": "other",
-      "2024-04-27-unit-6-practice#sentences[35]": "other",
-      "2024-04-27-unit-6-practice#sentences[36]": "other",
-      "2024-04-27-unit-6-practice#sentences[37]": "other",
-      "2024-04-27-unit-6-practice#sentences[38]": "other",
-      "2024-04-27-unit-6-practice#sentences[39]": "other",
-      "2024-04-27-unit-6-practice#sentences[3]": "other",
-      "2024-04-27-unit-6-practice#sentences[40]": "other",
-      "2024-04-27-unit-6-practice#sentences[41]": "other",
-      "2024-04-27-unit-6-practice#sentences[42]": "other",
-      "2024-04-27-unit-6-practice#sentences[43]": "other",
-      "2024-04-27-unit-6-practice#sentences[44]": "other",
-      "2024-04-27-unit-6-practice#sentences[45]": "other",
-      "2024-04-27-unit-6-practice#sentences[46]": "other",
-      "2024-04-27-unit-6-practice#sentences[47]": "other",
-      "2024-04-27-unit-6-practice#sentences[48]": "other",
-      "2024-04-27-unit-6-practice#sentences[49]": "other",
-      "2024-04-27-unit-6-practice#sentences[4]": "other",
-      "2024-04-27-unit-6-practice#sentences[5]": "other",
-      "2024-04-27-unit-6-practice#sentences[6]": "other",
-      "2024-04-27-unit-6-practice#sentences[7]": "other",
-      "2024-04-27-unit-6-practice#sentences[8]": "other",
-      "2024-04-27-unit-6-practice#sentences[9]": "other"
-    },
     "tests": [
       "fr:cx:frame.etre-en-train-de",
       "fr:cx:frame.avoir-besoin-de"
@@ -4333,20 +3880,6 @@
       "fr:lex:toi.pronoun"
     ]
   },
-  "2024-05-07-reading-7": {
-    "itemKinds": {
-      "2024-05-07-reading-7#exerciseConfig.items[0]": "other",
-      "2024-05-07-reading-7#exerciseConfig.items[1]": "other",
-      "2024-05-07-reading-7#exerciseConfig.items[2]": "other",
-      "2024-05-07-reading-7#exerciseConfig.items[3]": "other",
-      "2024-05-07-reading-7#exerciseConfig.items[4]": "other",
-      "2024-05-07-reading-7#exerciseConfig.items[5]": "other",
-      "2024-05-07-reading-7#exerciseConfig.items[6]": "other",
-      "2024-05-07-reading-7#exerciseConfig.items[7]": "other",
-      "2024-05-07-reading-7#exerciseConfig.items[8]": "other",
-      "2024-05-07-reading-7#exerciseConfig.items[9]": "other"
-    }
-  },
   "2024-05-08-savoir": {
     "teachesConstructions": [
       "fr:cx:frame.savoir-infinitive",
@@ -4440,32 +3973,6 @@
     ]
   },
   "2024-05-11-unit-7-practice": {
-    "itemKinds": {
-      "2024-05-11-unit-7-practice#sentences[0]": "other",
-      "2024-05-11-unit-7-practice#sentences[10]": "other",
-      "2024-05-11-unit-7-practice#sentences[11]": "other",
-      "2024-05-11-unit-7-practice#sentences[12]": "other",
-      "2024-05-11-unit-7-practice#sentences[13]": "other",
-      "2024-05-11-unit-7-practice#sentences[14]": "other",
-      "2024-05-11-unit-7-practice#sentences[15]": "other",
-      "2024-05-11-unit-7-practice#sentences[16]": "other",
-      "2024-05-11-unit-7-practice#sentences[17]": "other",
-      "2024-05-11-unit-7-practice#sentences[18]": "other",
-      "2024-05-11-unit-7-practice#sentences[19]": "other",
-      "2024-05-11-unit-7-practice#sentences[1]": "other",
-      "2024-05-11-unit-7-practice#sentences[20]": "other",
-      "2024-05-11-unit-7-practice#sentences[21]": "other",
-      "2024-05-11-unit-7-practice#sentences[22]": "other",
-      "2024-05-11-unit-7-practice#sentences[23]": "other",
-      "2024-05-11-unit-7-practice#sentences[2]": "other",
-      "2024-05-11-unit-7-practice#sentences[3]": "other",
-      "2024-05-11-unit-7-practice#sentences[4]": "other",
-      "2024-05-11-unit-7-practice#sentences[5]": "other",
-      "2024-05-11-unit-7-practice#sentences[6]": "other",
-      "2024-05-11-unit-7-practice#sentences[7]": "other",
-      "2024-05-11-unit-7-practice#sentences[8]": "other",
-      "2024-05-11-unit-7-practice#sentences[9]": "other"
-    },
     "overrides": {
       "2024-05-11-unit-7-practice#sentences[1]": {
         "ignore": [
@@ -4768,30 +4275,7 @@
       "fr:form:lever.prs.2pl"
     ]
   },
-  "2024-05-20-reading-8": {
-    "itemKinds": {
-      "2024-05-20-reading-8#exerciseConfig.items[0]": "other",
-      "2024-05-20-reading-8#exerciseConfig.items[1]": "other",
-      "2024-05-20-reading-8#exerciseConfig.items[2]": "other",
-      "2024-05-20-reading-8#exerciseConfig.items[3]": "other",
-      "2024-05-20-reading-8#exerciseConfig.items[4]": "other",
-      "2024-05-20-reading-8#exerciseConfig.items[5]": "other",
-      "2024-05-20-reading-8#exerciseConfig.items[6]": "other",
-      "2024-05-20-reading-8#exerciseConfig.items[7]": "other",
-      "2024-05-20-reading-8#exerciseConfig.items[8]": "other",
-      "2024-05-20-reading-8#exerciseConfig.items[9]": "other"
-    }
-  },
   "2024-05-21-reflexive-pronouns": {
-    "itemKinds": {
-      "2024-05-21-reflexive-pronouns#exercises[0]": "other",
-      "2024-05-21-reflexive-pronouns#exercises[1]": "other",
-      "2024-05-21-reflexive-pronouns#exercises[2]": "other",
-      "2024-05-21-reflexive-pronouns#exercises[3]": "other",
-      "2024-05-21-reflexive-pronouns#exercises[4]": "other",
-      "2024-05-21-reflexive-pronouns#exercises[5]": "other",
-      "2024-05-21-reflexive-pronouns#exercises[6]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:pronoun.reflexive"
     ],
@@ -4877,12 +4361,6 @@
     ]
   },
   "2024-05-24-unit-8-exam": {
-    "itemKinds": {
-      "2024-05-24-unit-8-exam#exerciseConfig.items[10]": "other",
-      "2024-05-24-unit-8-exam#exerciseConfig.items[11]": "other",
-      "2024-05-24-unit-8-exam#exerciseConfig.items[8]": "other",
-      "2024-05-24-unit-8-exam#exerciseConfig.items[9]": "other"
-    },
     "overrides": {
       "2024-05-24-unit-8-exam#exerciseConfig.items[38]": {
         "ignore": [
@@ -4898,29 +4376,6 @@
     ]
   },
   "2024-05-25-unit-8-practice": {
-    "itemKinds": {
-      "2024-05-25-unit-8-practice#sentences[0]": "other",
-      "2024-05-25-unit-8-practice#sentences[10]": "other",
-      "2024-05-25-unit-8-practice#sentences[11]": "other",
-      "2024-05-25-unit-8-practice#sentences[12]": "other",
-      "2024-05-25-unit-8-practice#sentences[13]": "other",
-      "2024-05-25-unit-8-practice#sentences[14]": "other",
-      "2024-05-25-unit-8-practice#sentences[15]": "other",
-      "2024-05-25-unit-8-practice#sentences[16]": "other",
-      "2024-05-25-unit-8-practice#sentences[17]": "other",
-      "2024-05-25-unit-8-practice#sentences[18]": "other",
-      "2024-05-25-unit-8-practice#sentences[19]": "other",
-      "2024-05-25-unit-8-practice#sentences[1]": "other",
-      "2024-05-25-unit-8-practice#sentences[20]": "other",
-      "2024-05-25-unit-8-practice#sentences[2]": "other",
-      "2024-05-25-unit-8-practice#sentences[3]": "other",
-      "2024-05-25-unit-8-practice#sentences[4]": "other",
-      "2024-05-25-unit-8-practice#sentences[5]": "other",
-      "2024-05-25-unit-8-practice#sentences[6]": "other",
-      "2024-05-25-unit-8-practice#sentences[7]": "other",
-      "2024-05-25-unit-8-practice#sentences[8]": "other",
-      "2024-05-25-unit-8-practice#sentences[9]": "other"
-    },
     "tests": [
       "fr:cx:pronoun.reflexive",
       "fr:cx:reciprocal"
@@ -4936,36 +4391,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
-    "itemKinds": {
-      "2024-05-26-causal-words#exercises[0]": "other",
-      "2024-05-26-causal-words#exercises[10]": "other",
-      "2024-05-26-causal-words#exercises[11]": "other",
-      "2024-05-26-causal-words#exercises[12]": "other",
-      "2024-05-26-causal-words#exercises[13]": "other",
-      "2024-05-26-causal-words#exercises[14]": "other",
-      "2024-05-26-causal-words#exercises[15]": "other",
-      "2024-05-26-causal-words#exercises[16]": "other",
-      "2024-05-26-causal-words#exercises[17]": "other",
-      "2024-05-26-causal-words#exercises[1]": "other",
-      "2024-05-26-causal-words#exercises[2]": "other",
-      "2024-05-26-causal-words#exercises[3]": "other",
-      "2024-05-26-causal-words#exercises[4]": "other",
-      "2024-05-26-causal-words#exercises[5]": "other",
-      "2024-05-26-causal-words#exercises[6]": "other",
-      "2024-05-26-causal-words#exercises[7]": "other",
-      "2024-05-26-causal-words#exercises[8]": "other",
-      "2024-05-26-causal-words#exercises[9]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[0]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[1]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[2]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[3]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[4]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[5]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[6]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[7]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[8]": "other",
-      "2024-05-26-causal-words#fillInBlanksSentences[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:chunk.parce-que",
       "fr:cx:chunk.grace-a",
@@ -4999,36 +4424,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
-    "itemKinds": {
-      "2024-05-27-imparfait-all-verbs#exercises[0]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[10]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[11]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[12]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[13]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[14]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[15]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[16]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[17]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[1]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[2]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[3]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[4]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[5]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[6]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[7]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[8]": "other",
-      "2024-05-27-imparfait-all-verbs#exercises[9]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[0]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[1]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[2]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[3]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[4]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[5]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[6]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[7]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[8]": "other",
-      "2024-05-27-imparfait-all-verbs#fillInBlanksSentences[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:imparfait",
       "fr:cx:verb.er.impf",
@@ -5077,36 +4472,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
-    "itemKinds": {
-      "2024-05-28-more-spatial-relations#exercises[0]": "other",
-      "2024-05-28-more-spatial-relations#exercises[10]": "other",
-      "2024-05-28-more-spatial-relations#exercises[11]": "other",
-      "2024-05-28-more-spatial-relations#exercises[12]": "other",
-      "2024-05-28-more-spatial-relations#exercises[13]": "other",
-      "2024-05-28-more-spatial-relations#exercises[14]": "other",
-      "2024-05-28-more-spatial-relations#exercises[15]": "other",
-      "2024-05-28-more-spatial-relations#exercises[16]": "other",
-      "2024-05-28-more-spatial-relations#exercises[17]": "other",
-      "2024-05-28-more-spatial-relations#exercises[1]": "other",
-      "2024-05-28-more-spatial-relations#exercises[2]": "other",
-      "2024-05-28-more-spatial-relations#exercises[3]": "other",
-      "2024-05-28-more-spatial-relations#exercises[4]": "other",
-      "2024-05-28-more-spatial-relations#exercises[5]": "other",
-      "2024-05-28-more-spatial-relations#exercises[6]": "other",
-      "2024-05-28-more-spatial-relations#exercises[7]": "other",
-      "2024-05-28-more-spatial-relations#exercises[8]": "other",
-      "2024-05-28-more-spatial-relations#exercises[9]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[0]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[1]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[2]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[3]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[4]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[5]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[6]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[7]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[8]": "other",
-      "2024-05-28-more-spatial-relations#fillInBlanksSentences[9]": "other"
-    },
     "teachesWords": [
       "fr:lex:pres",
       "fr:lex:de",
@@ -5130,36 +4495,6 @@
     ]
   },
   "2024-05-29-passe-compose-agreement": {
-    "itemKinds": {
-      "2024-05-29-passe-compose-agreement#exercises[0]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[10]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[11]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[12]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[13]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[14]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[15]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[16]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[17]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[1]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[2]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[3]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[4]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[5]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[6]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[7]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[8]": "other",
-      "2024-05-29-passe-compose-agreement#exercises[9]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[0]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[1]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[2]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[3]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[4]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[5]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[6]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[7]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[8]": "other",
-      "2024-05-29-passe-compose-agreement#fillInBlanksSentences[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:ptcp.agreement"
     ],
@@ -5186,36 +4521,6 @@
     ]
   },
   "2024-05-30-passe-compose-er": {
-    "itemKinds": {
-      "2024-05-30-passe-compose-er#exercises[0]": "other",
-      "2024-05-30-passe-compose-er#exercises[10]": "other",
-      "2024-05-30-passe-compose-er#exercises[11]": "other",
-      "2024-05-30-passe-compose-er#exercises[12]": "other",
-      "2024-05-30-passe-compose-er#exercises[13]": "other",
-      "2024-05-30-passe-compose-er#exercises[14]": "other",
-      "2024-05-30-passe-compose-er#exercises[15]": "other",
-      "2024-05-30-passe-compose-er#exercises[16]": "other",
-      "2024-05-30-passe-compose-er#exercises[17]": "other",
-      "2024-05-30-passe-compose-er#exercises[1]": "other",
-      "2024-05-30-passe-compose-er#exercises[2]": "other",
-      "2024-05-30-passe-compose-er#exercises[3]": "other",
-      "2024-05-30-passe-compose-er#exercises[4]": "other",
-      "2024-05-30-passe-compose-er#exercises[5]": "other",
-      "2024-05-30-passe-compose-er#exercises[6]": "other",
-      "2024-05-30-passe-compose-er#exercises[7]": "other",
-      "2024-05-30-passe-compose-er#exercises[8]": "other",
-      "2024-05-30-passe-compose-er#exercises[9]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[0]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[1]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[2]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[3]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[4]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[5]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[6]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[7]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[8]": "other",
-      "2024-05-30-passe-compose-er#fillInBlanksSentences[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:passe-compose.avoir",
       "fr:cx:ptcp.er"
@@ -5253,36 +4558,6 @@
     "contentNotes": [
       "the gap-fill \"Elle ne ___ pas ___\" with answer \"est pas venue\" reads \"Elle ne est pas venue\" once filled; French elides it to \"Elle n'est pas venue\"."
     ],
-    "itemKinds": {
-      "2024-05-31-passe-compose-etre#exercises[0]": "other",
-      "2024-05-31-passe-compose-etre#exercises[10]": "other",
-      "2024-05-31-passe-compose-etre#exercises[11]": "other",
-      "2024-05-31-passe-compose-etre#exercises[12]": "other",
-      "2024-05-31-passe-compose-etre#exercises[13]": "other",
-      "2024-05-31-passe-compose-etre#exercises[14]": "other",
-      "2024-05-31-passe-compose-etre#exercises[15]": "other",
-      "2024-05-31-passe-compose-etre#exercises[16]": "other",
-      "2024-05-31-passe-compose-etre#exercises[17]": "other",
-      "2024-05-31-passe-compose-etre#exercises[1]": "other",
-      "2024-05-31-passe-compose-etre#exercises[2]": "other",
-      "2024-05-31-passe-compose-etre#exercises[3]": "other",
-      "2024-05-31-passe-compose-etre#exercises[4]": "other",
-      "2024-05-31-passe-compose-etre#exercises[5]": "other",
-      "2024-05-31-passe-compose-etre#exercises[6]": "other",
-      "2024-05-31-passe-compose-etre#exercises[7]": "other",
-      "2024-05-31-passe-compose-etre#exercises[8]": "other",
-      "2024-05-31-passe-compose-etre#exercises[9]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[0]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[1]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[2]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[3]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[4]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[5]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[6]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[7]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[8]": "other",
-      "2024-05-31-passe-compose-etre#fillInBlanksSentences[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:passe-compose.etre",
       "fr:cx:ptcp.agreement"
@@ -5325,36 +4600,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
-    "itemKinds": {
-      "2024-06-01-passe-compose-irregular-1#exercises[0]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[10]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[11]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[12]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[13]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[14]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[15]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[16]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[17]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[1]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[2]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[3]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[4]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[5]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[6]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[7]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[8]": "other",
-      "2024-06-01-passe-compose-irregular-1#exercises[9]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[0]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[1]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[2]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[3]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[4]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[5]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[6]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[7]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[8]": "other",
-      "2024-06-01-passe-compose-irregular-1#fillInBlanksSentences[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:passe-compose.avoir"
     ],
@@ -5395,36 +4640,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
-    "itemKinds": {
-      "2024-06-02-passe-compose-irregular-2#exercises[0]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[10]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[11]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[12]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[13]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[14]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[15]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[16]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[17]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[1]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[2]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[3]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[4]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[5]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[6]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[7]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[8]": "other",
-      "2024-06-02-passe-compose-irregular-2#exercises[9]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[0]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[1]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[2]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[3]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[4]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[5]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[6]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[7]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[8]": "other",
-      "2024-06-02-passe-compose-irregular-2#fillInBlanksSentences[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:passe-compose.avoir",
       "fr:cx:frame.modal-infinitive"
@@ -5463,33 +4678,6 @@
     "contentNotes": [
       "the gap-fill \"Pendant que je ___, on a parlé pendant une heure\" with answer \"étais\" reads \"je étais\"; French elides it to \"j'étais\" (and \"While I was there\" needs \"là\": \"Pendant que j'étais là\")."
     ],
-    "itemKinds": {
-      "2024-06-03-past-tense-composition#exercises[0]": "other",
-      "2024-06-03-past-tense-composition#exercises[10]": "other",
-      "2024-06-03-past-tense-composition#exercises[11]": "other",
-      "2024-06-03-past-tense-composition#exercises[12]": "other",
-      "2024-06-03-past-tense-composition#exercises[13]": "other",
-      "2024-06-03-past-tense-composition#exercises[14]": "other",
-      "2024-06-03-past-tense-composition#exercises[1]": "other",
-      "2024-06-03-past-tense-composition#exercises[2]": "other",
-      "2024-06-03-past-tense-composition#exercises[3]": "other",
-      "2024-06-03-past-tense-composition#exercises[4]": "other",
-      "2024-06-03-past-tense-composition#exercises[5]": "other",
-      "2024-06-03-past-tense-composition#exercises[6]": "other",
-      "2024-06-03-past-tense-composition#exercises[7]": "other",
-      "2024-06-03-past-tense-composition#exercises[8]": "other",
-      "2024-06-03-past-tense-composition#exercises[9]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[0]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[1]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[2]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[3]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[4]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[5]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[6]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[7]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[8]": "other",
-      "2024-06-03-past-tense-composition#fillInBlanksSentences[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:il-y-a"
     ],
@@ -5520,36 +4708,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
-    "itemKinds": {
-      "2024-06-04-pc-vs-imparfait#exercises[0]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[10]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[11]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[12]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[13]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[14]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[15]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[16]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[17]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[1]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[2]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[3]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[4]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[5]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[6]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[7]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[8]": "other",
-      "2024-06-04-pc-vs-imparfait#exercises[9]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[0]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[1]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[2]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[3]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[4]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[5]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[6]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[7]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[8]": "other",
-      "2024-06-04-pc-vs-imparfait#fillInBlanksSentences[9]": "other"
-    },
     "teachesConstructions": [
       "fr:cx:chunk.pendant-que",
       "fr:cx:chunk.tout-a-coup"
@@ -5578,20 +4736,6 @@
       "fr:lex:moment",
       "fr:lex:la"
     ]
-  },
-  "2024-06-05-reading-9": {
-    "itemKinds": {
-      "2024-06-05-reading-9#exerciseConfig.items[0]": "other",
-      "2024-06-05-reading-9#exerciseConfig.items[1]": "other",
-      "2024-06-05-reading-9#exerciseConfig.items[2]": "other",
-      "2024-06-05-reading-9#exerciseConfig.items[3]": "other",
-      "2024-06-05-reading-9#exerciseConfig.items[4]": "other",
-      "2024-06-05-reading-9#exerciseConfig.items[5]": "other",
-      "2024-06-05-reading-9#exerciseConfig.items[6]": "other",
-      "2024-06-05-reading-9#exerciseConfig.items[7]": "other",
-      "2024-06-05-reading-9#exerciseConfig.items[8]": "other",
-      "2024-06-05-reading-9#exerciseConfig.items[9]": "other"
-    }
   },
   "2024-06-06-reciprocal-reflexives": {
     "teachesConstructions": [
@@ -5677,36 +4821,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ],
-    "itemKinds": {
-      "2024-06-08-spatial-prepositions#exercises[0]": "other",
-      "2024-06-08-spatial-prepositions#exercises[10]": "other",
-      "2024-06-08-spatial-prepositions#exercises[11]": "other",
-      "2024-06-08-spatial-prepositions#exercises[12]": "other",
-      "2024-06-08-spatial-prepositions#exercises[13]": "other",
-      "2024-06-08-spatial-prepositions#exercises[14]": "other",
-      "2024-06-08-spatial-prepositions#exercises[15]": "other",
-      "2024-06-08-spatial-prepositions#exercises[16]": "other",
-      "2024-06-08-spatial-prepositions#exercises[17]": "other",
-      "2024-06-08-spatial-prepositions#exercises[1]": "other",
-      "2024-06-08-spatial-prepositions#exercises[2]": "other",
-      "2024-06-08-spatial-prepositions#exercises[3]": "other",
-      "2024-06-08-spatial-prepositions#exercises[4]": "other",
-      "2024-06-08-spatial-prepositions#exercises[5]": "other",
-      "2024-06-08-spatial-prepositions#exercises[6]": "other",
-      "2024-06-08-spatial-prepositions#exercises[7]": "other",
-      "2024-06-08-spatial-prepositions#exercises[8]": "other",
-      "2024-06-08-spatial-prepositions#exercises[9]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[0]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[1]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[2]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[3]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[4]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[5]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[6]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[7]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[8]": "other",
-      "2024-06-08-spatial-prepositions#fillInBlanksSentences[9]": "other"
-    },
     "teachesWords": [
       "fr:lex:derriere",
       "fr:form:entrer.prs.1sg",
@@ -5735,13 +4849,6 @@
     ]
   },
   "2024-06-09-unit-9-exam": {
-    "itemKinds": {
-      "2024-06-09-unit-9-exam#exerciseConfig.items[35]": "other",
-      "2024-06-09-unit-9-exam#exerciseConfig.items[36]": "other",
-      "2024-06-09-unit-9-exam#exerciseConfig.items[37]": "other",
-      "2024-06-09-unit-9-exam#exerciseConfig.items[38]": "other",
-      "2024-06-09-unit-9-exam#exerciseConfig.items[39]": "other"
-    },
     "tests": [
       "fr:cx:imparfait",
       "fr:cx:passe-compose.avoir",
@@ -5754,29 +4861,6 @@
     "contentNotes": [
       "the gap-fill \"Il est fatigué ___ du travail\" with answer \"à cause de\" reads \"à cause de du travail\" once filled; French says \"à cause du travail\": make the answer \"à cause du\" and drop \"du\" from the prompt."
     ],
-    "itemKinds": {
-      "2024-06-10-unit-9-practice#sentences[0]": "other",
-      "2024-06-10-unit-9-practice#sentences[10]": "other",
-      "2024-06-10-unit-9-practice#sentences[11]": "other",
-      "2024-06-10-unit-9-practice#sentences[12]": "other",
-      "2024-06-10-unit-9-practice#sentences[13]": "other",
-      "2024-06-10-unit-9-practice#sentences[14]": "other",
-      "2024-06-10-unit-9-practice#sentences[15]": "other",
-      "2024-06-10-unit-9-practice#sentences[16]": "other",
-      "2024-06-10-unit-9-practice#sentences[17]": "other",
-      "2024-06-10-unit-9-practice#sentences[18]": "other",
-      "2024-06-10-unit-9-practice#sentences[19]": "other",
-      "2024-06-10-unit-9-practice#sentences[1]": "other",
-      "2024-06-10-unit-9-practice#sentences[20]": "other",
-      "2024-06-10-unit-9-practice#sentences[2]": "other",
-      "2024-06-10-unit-9-practice#sentences[3]": "other",
-      "2024-06-10-unit-9-practice#sentences[4]": "other",
-      "2024-06-10-unit-9-practice#sentences[5]": "other",
-      "2024-06-10-unit-9-practice#sentences[6]": "other",
-      "2024-06-10-unit-9-practice#sentences[7]": "other",
-      "2024-06-10-unit-9-practice#sentences[8]": "other",
-      "2024-06-10-unit-9-practice#sentences[9]": "other"
-    },
     "tests": [
       "fr:cx:imparfait",
       "fr:cx:chunk.en-fait"
