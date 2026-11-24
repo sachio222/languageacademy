@@ -1,5 +1,5 @@
 import { tokenize, fold } from '../fr/tokenize.mjs';
-import { lookupToken } from '../fr/forms.mjs';
+import { lookupToken, lookupKey } from '../fr/forms.mjs';
 import { detectConstructions } from '../fr/detect.mjs';
 import { issue } from '../issues.mjs';
 
@@ -43,7 +43,7 @@ export function firstUse(ctx) {
         a.tokens.forEach((t, i) => {
           if (ctx.graph.names.has(t.fold)) return;
           const rs = a.readings[i];
-          if (rs.length === 0) note(t.fold, m);
+          if (rs.length === 0) note(lookupKey(t), m);
           else for (const r of rs) note(r.headwordId, m);
         });
         for (const id of a.constructions) note(id, m);
@@ -77,17 +77,20 @@ export function ruleTaughtBefore(ctx) {
       const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
         a.tokens.forEach((t, i) => {
-          if (graph.names.has(t.fold) || ignore.has(t.fold)) return;
-          const key = `${m.moduleKey}|${t.fold}`;
-          if (seen.has(key)) return;
+          const lk = lookupKey(t);
+          if (graph.names.has(t.fold) || graph.names.has(lk)) return;
           const rs = a.readings[i];
+          if (ignore.has(lk) || ignore.has(t.fold)
+            || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
+          const key = `${m.moduleKey}|${lk}`;
+          if (seen.has(key)) return;
           const base = { moduleKey: m.moduleKey, position: m.position, itemRef: it.ref, surface: t.surface };
           if (rs.length === 0) {
             seen.add(key);
             issues.push(issue({
               ...base, rule: 'unknown-word',
               message: `"${t.surface}" is not in the graph (${it.ref}: ${a.text})`,
-              fix: { kind: 'add-to-graph', moduleKey: first.get(t.fold)?.moduleKey ?? m.moduleKey },
+              fix: { kind: 'add-to-graph', moduleKey: first.get(lk)?.moduleKey ?? m.moduleKey },
             }));
             return;
           }

@@ -57,12 +57,16 @@ export function buildFormIndex(graph) {
   return index;
 }
 
-// Strip a leading hyphen and a euphonic "t-" (-t-il) before lookup.
-export function lookupToken(index, token) {
+// Lookup key for a token: strip a leading hyphen and a euphonic "t-" (-t-il).
+export function lookupKey(token) {
   let f = token.fold;
   if (f.startsWith('-')) {
     f = f.slice(1);
     if (f.startsWith('t-')) f = f.slice(2);
   }
-  return index.get(f) ?? [];
+  return f;
+}
+
+export function lookupToken(index, token) {
+  return index.get(lookupKey(token)) ?? [];
 }

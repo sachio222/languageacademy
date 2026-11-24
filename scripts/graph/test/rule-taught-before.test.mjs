@@ -127,3 +127,23 @@ test('firstUse maps headwords, unreadable folds and constructions to first modul
   assert.deepEqual(f.get('fr:lex:parler'), { moduleKey: 'm2', position: 2 });
   assert.deepEqual(f.get('fr:cx:q.inversion'), { moduleKey: 'm3', position: 3 });
 });
+
+test('a word and its clitic form give one issue, and ignore on the plain word covers both', () => {
+  const courseMap = { m1: { teachesWords: ['fr:lex:vouloir', 'fr:form:vouloir.prs.1sg', 'fr:lex:je'],
+    teachesConstructions: ['fr:cx:q.inversion'] } };
+  const ctx = setup(courseMap, [mod(1, [item('Tu veux.'), item('Veux-tu ?')])]);
+  const words = ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-word');
+  assert.equal(words.length, 1);
+  const ign = setup({ m1: { ...courseMap.m1, overrides: { 'm1#2': { ignore: ['tu'] }, 'm1#1': { ignore: ['tu'] } } } },
+    [mod(1, [item('Tu veux.'), item('Veux-tu ?')])]);
+  assert.deepEqual(ruleTaughtBefore(ign).filter((i) => i.rule === 'untaught-word'), []);
+  const onlyClitic = setup({ m1: { ...courseMap.m1, overrides: { 'm1#1': { ignore: ['tu'] } } } },
+    [mod(1, [item('Veux-tu ?')])]);
+  assert.deepEqual(ruleTaughtBefore(onlyClitic), []);
+});
+
+test('ignore accepts a headword id for word issues', () => {
+  const ctx = setup({ m2: { teachesWords: ['fr:lex:nous'], overrides: { 'm2#1': { ignore: ['fr:lex:travailler'] } } } },
+    [mod(2, [item('nous travaillons')])]);
+  assert.deepEqual(ruleTaughtBefore(ctx), []);
+});
