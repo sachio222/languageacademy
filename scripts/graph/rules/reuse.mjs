@@ -51,24 +51,28 @@ function reusableNodes(ctx) {
   return out;
 }
 
-// Walks the windows over uses before `limit`. Returns { pendingEnd, lastUse }:
-// pendingEnd is the end of the first unsatisfied window, or null when all are satisfied.
+// Walks the windows over uses before `limit`. A use inside a window starts the next window. A window with no use
+// is a miss: the next use after it, however late, stands in for that window and the schedule goes on from there.
+// Returns { firstMissEnd, pendingEnd, lastUse }: firstMissEnd is the end of the first missed window (null when
+// none; an open window that reaches past the course counts too, so callers compare it with the last position),
+// pendingEnd the end of the window still open at `limit` (null once every window is met), and lastUse the
+// last use before `limit`.
 function walk(windows, taught, uses, limit) {
+  const before = uses.filter((x) => x > taught && x < limit);
+  const lastUse = before.at(-1) ?? null;
   let s = taught;
-  let lastUse = null;
+  let firstMissEnd = null;
   for (const w of windows) {
-    const u = uses.find((x) => x > s && x <= s + w && x < limit);
-    if (u === undefined) return { pendingEnd: s + w, lastUse: lastUseBefore(uses, limit, taught) };
+    const end = s + w;
+    let u = before.find((x) => x > s && x <= end);
+    if (u === undefined) {
+      u = before.find((x) => x > end);
+      if (u === undefined) return { firstMissEnd: firstMissEnd ?? end, pendingEnd: end, lastUse };
+      firstMissEnd ??= end;
+    }
     s = u;
-    lastUse = u;
   }
-  return { pendingEnd: null, lastUse };
-}
-
-function lastUseBefore(uses, limit, taught) {
-  let last = null;
-  for (const u of uses) if (u > taught && u < limit) last = u;
-  return last;
+  return { firstMissEnd, pendingEnd: null, lastUse };
 }
 
 export function ruleReuse(ctx) {
@@ -78,8 +82,9 @@ export function ruleReuse(ctx) {
   const moduleAt = new Map(ctx.course.map((m) => [m.position, m]));
   const issues = [];
   for (const [nodeId, taught] of reusableNodes(ctx)) {
-    const { pendingEnd, lastUse } = walk(windows, taught, uses.get(nodeId) ?? [], Infinity);
-    if (pendingEnd === null || pendingEnd > last) continue;
+    // One warning per node, for its first missed window.
+    const { firstMissEnd, lastUse } = walk(windows, taught, uses.get(nodeId) ?? [], Infinity);
+    if (firstMissEnd === null || firstMissEnd > last) continue;
     const m = moduleAt.get(taught);
     issues.push(issue({
       rule: 'reuse-missed',
@@ -87,14 +92,15 @@ export function ruleReuse(ctx) {
       moduleKey: m?.moduleKey,
       position: taught,
       nodeId,
-      message: `${nodeId} (taught at position ${taught}) expected by position ${pendingEnd}; `
+      message: `${nodeId} (taught at position ${taught}) expected by position ${firstMissEnd}; `
         + (lastUse === null ? 'never used again' : `last use at position ${lastUse}`),
     }));
   }
   return issues;
 }
 
-// What the lesson at `position` should reuse: nodes still owed a use whose window ends by position + 1.
+// What the lesson at `position` should reuse: nodes with no use yet inside their current window, when that window
+// ends by position + 1 (or has already ended).
 export function dueAt(ctx, position) {
   const windows = windowsOf(ctx);
   const uses = usesByNode(ctx);

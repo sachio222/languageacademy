@@ -75,3 +75,29 @@ test('dueAt skips nodes whose window ends later and reports last use', () => {
   assert.deepEqual(dueAt(ctx, 6), [{ nodeId: PARLER, taughtAt: 1, lastUse: 2, windowEnd: 7 }]);
   assert.deepEqual(dueAt(ctx, 40), [{ nodeId: PARLER, taughtAt: 1, lastUse: 2, windowEnd: 7 }]);
 });
+
+// Regression: a missed window used to keep a node due for the rest of the course, even right after a use.
+test('after a miss, the schedule restarts from the next use', () => {
+  const uses = [50];
+  const ctx = makeCtx({
+    graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } },
+    course: Array.from({ length: 60 }, (_, i) => {
+      const position = i + 1;
+      const items = uses.includes(position)
+        ? [{ ref: `m${position}#1`, source: 'x', french: ['parler'], lenient: [], englishPrompt: '', instruction: '' }]
+        : [];
+      return makeModule({ position, items });
+    }),
+  });
+  // The miss is still reported once.
+  const issues = ruleReuse(ctx);
+  assert.equal(issues.length, 1);
+  assert.match(issues[0].message, /expected by position 3; last use at position 50/);
+  // Due before the use at 50 …
+  assert.deepEqual(dueAt(ctx, 40), [{ nodeId: PARLER, taughtAt: 1, lastUse: null, windowEnd: 3 }]);
+  // … not right after it …
+  assert.deepEqual(dueAt(ctx, 52), []);
+  // … and due again once the next window after 50 (5 modules, to 55) runs out.
+  assert.deepEqual(dueAt(ctx, 54), [{ nodeId: PARLER, taughtAt: 1, lastUse: 50, windowEnd: 55 }]);
+  assert.deepEqual(dueAt(ctx, 58), [{ nodeId: PARLER, taughtAt: 1, lastUse: 50, windowEnd: 55 }]);
+});
