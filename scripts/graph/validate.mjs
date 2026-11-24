@@ -1,7 +1,11 @@
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { issue } from './issues.mjs';
 import { parseId } from './ids.mjs';
 
-export function validateGraph(graph) {
+// opts.course and opts.repoRoot turn on the help screen checks: every help module names its screen component in
+// the course map, and that file exists.
+export function validateGraph(graph, opts = {}) {
   const out = [];
 
   for (const id of graph.duplicates || []) {
@@ -41,6 +45,23 @@ export function validateGraph(graph) {
     // An ignore entry is a node ID (has a colon) or a plain word; only node IDs can dangle.
     for (const [itemRef, o] of Object.entries(entry.overrides || {})) {
       for (const t of o?.ignore || []) if (String(t).includes(':')) ref(from, `overrides[${itemRef}].ignore`, String(t));
+    }
+  }
+
+  for (const m of opts.course ?? []) {
+    if (m.kind !== 'help' || typeof graph.courseMap?.[m.moduleKey]?.screen === 'string') continue;
+    out.push(issue({
+      rule: 'screen-missing', moduleKey: m.moduleKey, position: m.position,
+      message: `${m.moduleKey} is a help module, but course-map.json names no screen component for it`,
+    }));
+  }
+  if (opts.repoRoot) {
+    for (const [moduleKey, entry] of Object.entries(graph.courseMap || {})) {
+      if (typeof entry.screen !== 'string' || existsSync(join(opts.repoRoot, entry.screen))) continue;
+      out.push(issue({
+        rule: 'dangling-ref', nodeId: `courseMap:${moduleKey}`, moduleKey,
+        message: `courseMap:${moduleKey}.screen points at missing file ${entry.screen}`,
+      }));
     }
   }
 

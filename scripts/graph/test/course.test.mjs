@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { readCourse, readModule, isEnglish, stripPassage } from '../course.mjs';
+import { loadGraph } from '../load.mjs';
+import { buildFormIndex } from '../fr/forms.mjs';
+import { frenchWordTest } from '../french-text.mjs';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const course = await readCourse(repoRoot);
@@ -45,7 +48,8 @@ test('Unit 2 reading has a clean passage item', () => {
   assert.equal(m.kind, 'reading');
   const p = m.items.find((i) => i.source === 'passage');
   assert.ok(p);
-  const text = p.french.join('\n');
+  assert.deepEqual(p.french, []);
+  const text = p.shown.join('\n');
   assert.ok(text.length > 50);
   assert.ok(!text.includes('**'));
   assert.ok(!text.includes('!['));
@@ -156,7 +160,8 @@ test('a meaning question checks the quoted French term, not the English answer',
     { instruction: "What does 'on' mean?", prompt: 'on', expectedAnswer: 'we', acceptableAnswers: ['one', 'people'] },
     { instruction: "When do you use 'savoir'?", prompt: 'savoir is for...', expectedAnswer: 'facts', acceptableAnswers: ['skills'] },
   ] } }, 1, 1);
-  assert.deepEqual(r.items.map((i) => [i.french, i.lenient, i.englishPrompt]), [[['on'], [], null], [['savoir'], [], null]]);
+  assert.deepEqual(r.items.map((i) => [i.french, i.shown, i.lenient, i.englishPrompt]),
+    [[[], ['on'], [], null], [[], ['savoir'], [], null]]);
 });
 
 test('multi-blank fillblank answers fill the whole span', () => {
@@ -175,7 +180,8 @@ test('exam items drop English answers', () => {
     { instruction: 'Translate', prompt: 'I am', expectedAnswer: 'je suis', acceptableAnswers: ['moi je suis'] },
   ] } };
   const r = readModule(mod, 1, 1);
-  assert.deepEqual(r.items[0].french, ['en train de']);
+  assert.deepEqual(r.items[0].french, []);
+  assert.deepEqual(r.items[0].shown, ['en train de']);
   assert.equal(r.items[0].englishPrompt, null);
   assert.deepEqual(r.items[1].french, ['je suis']);
   assert.deepEqual(r.items[1].lenient, ['moi je suis']);
@@ -213,9 +219,10 @@ test('mixed-type items carry their own conjugation table', () => {
   assert.ok(frenchOf(m).includes('je vois'));
 });
 
-test('real Fr-to-En exam item keeps its French prompt in french', () => {
+test('real Fr-to-En exam item shows its French prompt; the learner types English', () => {
   const m = course.find((x) => x.moduleKey === '2024-04-26-unit-6-exam');
-  const it = m.items.find((i) => i.french.includes('en train de'));
+  const it = m.items.find((i) => i.shown.includes('en train de'));
+  assert.deepEqual(it.french, []);
   assert.ok(it);
   assert.equal(it.englishPrompt, null);
 });
@@ -233,4 +240,126 @@ test('config item refs are module key, #, then the config path', () => {
     readingPassage: { text: 'Bonjour.' },
   }, 1, 'u');
   assert.deepEqual(m.items.map((i) => i.ref), ['k1#exerciseConfig.items[0]', 'k1#readingPassage']);
+});
+
+test('a French-to-English item shows its French prompt and has nothing to type in French', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', exerciseConfig: { items: [
+    { instruction: 'Translate', prompt: 'ils sont', expectedAnswer: 'they are' },
+  ] } }, 1, 1);
+  assert.deepEqual(r.items[0].shown, ['ils sont']);
+  assert.deepEqual(r.items[0].french, []);
+});
+
+test('a fill-in sentence keeps the filled sentence in french and lists what goes in each blank', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', sentences: [
+    { text: ' suis un homme.', blanks: [{ position: 0, answer: 'je' }] },
+    { text: 'Nous  avons  argent.', blanks: [{ position: 5, answer: "n'" }, { position: 12, answer: 'pas' }] },
+  ], exercises: [
+    { type: 'fillblank', prompt: "Complete: Hier, j'___ français (Yesterday, I spoke French) - Use 'parler'", answer: 'ai parlé' },
+  ] }, 1, 1);
+  const at = (ref) => r.items.find((i) => i.ref === `x#${ref}`);
+  assert.deepEqual(at('sentences[0]').french, ['je suis un homme.']);
+  assert.deepEqual(at('sentences[0]').blankAnswers, ['je']);
+  assert.deepEqual(at('sentences[1]').blankAnswers, ["n'", 'pas']);
+  assert.deepEqual(at('exercises[0]').french, ["Hier, j'ai parlé français"]);
+  assert.deepEqual(at('exercises[0]').blankAnswers, ['ai parlé']);
+});
+
+test('a concept card shows the French segments of its example and the quoted French of its definition', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', concepts: [
+    { term: 'Être', definition: "The verb 'être' means to be", example: 'je suis (I am), tu es (you are)' },
+  ] }, 1, 1);
+  const at = (ref) => r.items.find((i) => i.ref === `x#${ref}`);
+  assert.deepEqual(at('concepts[0].example').shown, ['je suis', 'tu es']);
+  assert.deepEqual(at('concepts[0].definition').shown, ['être']);
+  assert.equal(at('concepts[0].example').source, 'concept');
+  assert.deepEqual(at('concepts[0].example').french, []);
+});
+
+test('a hint shows only its quoted French, unless the whole hint is French', () => {
+  const item = (hint) => ({ instruction: 'Translate', prompt: 'have a good trip', expectedAnswer: 'bon voyage', hint });
+  const r = readModule({ moduleKey: 'x', title: 'x', exerciseConfig: { items: [
+    item("Used in 'bon voyage', 'bon appétit'"),
+    item('Cognate - spelled almost the same, just add accent!'),
+    item("The word aujourd'hui means today"),
+    item("Say 'aujourd'hui'"),
+    item('je suis + ça'),
+  ] } }, 1, 1);
+  const hints = r.items.filter((i) => i.source === 'hint').map((i) => [i.ref, i.shown]);
+  assert.deepEqual(hints, [
+    ['x#exerciseConfig.items[0].hint', ['bon voyage', 'bon appétit']],
+    ['x#exerciseConfig.items[3].hint', ["aujourd'hui"]],
+    ['x#exerciseConfig.items[4].hint', ['je suis + ça']],
+  ]);
+});
+
+test('instructions, vocabulary notes, blank hints and wrong-answer feedback show their French', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x',
+    vocabularyReference: [{ french: 'bon', english: 'good', note: "masculine - feminine is 'bonne'" }, { french: 'oui', english: 'yes', note: 'answer' }],
+    exerciseConfig: { items: [{ instruction: "Negate this sentence: 'je suis'", prompt: 'I am not', expectedAnswer: 'je ne suis pas',
+      wrongAnswers: [{ answer: 'je pas suis', feedback: "Put 'ne' before the verb and 'pas' after: not 'je pas suis'" }] }] },
+    sentences: [{ text: ' suis.', instruction: "Complete: 'I am'", blanks: [{ position: 0, answer: 'je', hint: "pronoun for 'I', like 'moi'" }] }],
+  }, 1, 1);
+  const shown = Object.fromEntries(r.items.filter((i) => i.shown.length).map((i) => [i.ref.slice(2), [i.source, i.shown]]));
+  assert.deepEqual(shown, {
+    'vocabularyReference[0].note': ['vocab-note', ['bonne']],
+    'exerciseConfig.items[0].instruction': ['instruction', ['je suis']],
+    // feedback appears after the learner types the wrong answer; words from that answer are the learner's own
+    'exerciseConfig.items[0].wrongAnswers[0].feedback': ['feedback', ['ne']],
+    'sentences[0].blanks[0].hint': ['hint', ['moi']],
+  });
+});
+
+test('a fillblank prompt shows the quoted French after the sentence', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', exercises: [
+    { type: 'fillblank', prompt: "Complete: Hier, j'___ français (Yesterday, I spoke French) - Use 'parler'", answer: 'ai parlé' },
+  ] }, 1, 1);
+  const p = r.items.find((i) => i.ref === 'x#exercises[0].prompt');
+  assert.deepEqual([p.source, p.shown], ['instruction', ['parler']]);
+});
+
+test('an exam shows no instructions, so its instructions are not read', () => {
+  const r = readModule({ moduleKey: 'x', title: 'x', isUnitExam: true, exerciseConfig: { items: [
+    { instruction: "Negate this sentence: 'je suis'", prompt: 'I am not', expectedAnswer: 'je ne suis pas' },
+  ] } }, 1, 1);
+  assert.deepEqual(r.items.filter((i) => i.source === 'instruction'), []);
+});
+
+test('module title and description, and the passage title and subtitle, show their French', () => {
+  const r = readModule({ moduleKey: 'x', title: 'Essential Verb - voir (to see)', description: "Learn 'voir' and 'regarder'",
+    isReadingComprehension: true,
+    readingPassage: { title: 'Les Amis (The Friends)', subtitle: 'La ville de Paris.', text: 'Bonjour.', translation: 'Hello.' },
+  }, 1, 1);
+  const shown = Object.fromEntries(r.items.map((i) => [i.ref.slice(2), i.shown]));
+  assert.deepEqual(shown, {
+    readingPassage: ['Bonjour.'],
+    title: ['voir'],
+    description: ['voir', 'regarder'],
+    'readingPassage.title': ['Les Amis'],
+    'readingPassage.subtitle': ['La ville de Paris.'],
+  });
+});
+
+test('with the graph, English words the graph does not know are not French', () => {
+  const graph = loadGraph(path.join(repoRoot, 'curriculum-graph'), 'fr');
+  const isWord = frenchWordTest(graph, buildFormIndex(graph));
+  const r = readModule({ moduleKey: 'x', title: 'x', exerciseConfig: { items: [
+    { instruction: 'Translate', prompt: 'hello', expectedAnswer: 'bonjour', hint: "Famous greeting - literally 'good day', like 'salut'" },
+    { instruction: 'Translate', prompt: 'irregular', expectedAnswer: 'x', hint: 'Rising Tone' },
+  ] } }, 1, 1, null, { isWord });
+  assert.deepEqual(r.items.filter((i) => i.source === 'hint').map((i) => i.shown), [['salut']]);
+});
+
+test('readCourse reads each help screen named in the course map', async () => {
+  const graph = loadGraph(path.join(repoRoot, 'curriculum-graph'), 'fr');
+  const isWord = frenchWordTest(graph, buildFormIndex(graph));
+  const full = await readCourse(repoRoot, { courseMap: graph.courseMap, isWord });
+  const help = full.filter((m) => m.kind === 'help');
+  assert.equal(help.length, 4);
+  for (const m of help) assert.ok(m.items.some((i) => i.source === 'screen'), m.moduleKey);
+  const cognates = full.find((m) => m.moduleKey === '2024-10-21-cognates-help');
+  const screen = cognates.items.filter((i) => i.source === 'screen');
+  assert.equal(screen[0].ref, '2024-10-21-cognates-help#screen[0]');
+  assert.ok(screen.some((i) => i.shown.includes('un restaurant')));
+  assert.ok(screen.every((i) => i.french.length === 0));
 });

@@ -3,6 +3,7 @@ import { loadGraph } from './load.mjs';
 import { validateGraph } from './validate.mjs';
 import { readCourse } from './course.mjs';
 import { buildFormIndex } from './fr/forms.mjs';
+import { frenchWordTest } from './french-text.mjs';
 import { buildTimeline } from './timeline.mjs';
 import { ruleTaughtBefore } from './rules/taught-before.mjs';
 import { ruleReuse } from './rules/reuse.mjs';
@@ -22,12 +23,12 @@ const RULES = [
 
 export async function runCheck({ repoRoot, lang }) {
   const graph = loadGraph(join(repoRoot, 'curriculum-graph'), lang);
-  const course = await readCourse(repoRoot);
   const index = buildFormIndex(graph);
+  const course = await readCourse(repoRoot, { courseMap: graph.courseMap, isWord: frenchWordTest(graph, index) });
   const timeline = buildTimeline(graph, course);
   const ctx = { graph, course, index, timeline };
   const issues = [
-    ...validateGraph(graph),
+    ...validateGraph(graph, { course, repoRoot }),
     ...timeline.issues,
     ...RULES.flatMap((rule) => rule(ctx)),
   ];

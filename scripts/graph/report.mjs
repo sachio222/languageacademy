@@ -77,7 +77,12 @@ export function excerpt(text, surface, max = 80) {
 const HOW_TO_READ = [
   'A checker read every lesson, practice, reading and exam in course order and tested one thing for each French word '
     + 'and grammar pattern: was it taught before the learner meets it? Positions count the modules in course order, from 1 to 160. '
-    + 'A code such as fr:lex:livre names the entry in the course word list, and a code starting fr:cx: names a grammar pattern.',
+    + 'A code such as fr:lex:livre names the entry in the course word list, and a code starting fr:cx: names a grammar pattern. '
+    + 'The Reference unit (alphabet, numbers, days and months, colors and similar pages) has no position, because learners can '
+    + 'open it at any time, so it teaches nothing at any point in the course.',
+  'Besides the exercises, the checker reads the French a learner sees on concept cards, hints, instructions, vocabulary notes, '
+    + 'feedback on a wrong answer, module titles and the four help screens. A line that comes from one of these names it before '
+    + 'the quote, for example Hint: or Help screen:, instead of Sentence:.',
   'Section 1 lists words and patterns used before they are taught, module by module. Each line gives the reason (taught in a '
     + 'later module, a form such as bonne of a word taught earlier as bon, or not taught anywhere) and quotes the sentence it '
     + 'came from. The default fix is to teach the word earlier, in the module where it is first used; each line names that module. '
@@ -94,8 +99,15 @@ const HOW_TO_READ = [
     + 'on a punctuation mark that the app then hides, or after the full stop.',
 ];
 
+// The label before the quoted text of a Section 1 line, by the source of the item it came from.
+const SOURCE_LABEL = {
+  concept: 'Concept card', hint: 'Hint', instruction: 'Instruction', 'vocab-note': 'Vocabulary note',
+  feedback: 'Feedback', title: 'Module title', description: 'Module description', screen: 'Help screen',
+};
+
 export function renderFixList(issues, course, courseMap = {}) {
   const byKey = new Map(course.map((m) => [m.moduleKey, m]));
+  const sourceOf = new Map(course.flatMap((m) => (m.items ?? []).map((it) => [it.ref, it.source])));
   const unitOf = (i) => byKey.get(i.moduleKey)?.unitTitle ?? 'Other';
   const byPos = (a, b) => (a.position ?? 0) - (b.position ?? 0);
   const of = (...rules) => issues.filter((i) => rules.includes(i.rule)).sort(byPos);
@@ -133,7 +145,8 @@ export function renderFixList(issues, course, courseMap = {}) {
   grouped(of('untaught-word', 'untaught-construction'), (i) => {
     const what = i.surface ? `"${i.surface}" (${i.nodeId ?? 'no node'})` : i.nodeId;
     const why = reasonClause(i);
-    const sentence = i.text ? ` Sentence: "${excerpt(i.text, i.surface)}"` : '';
+    const label = SOURCE_LABEL[sourceOf.get(i.itemRef)] ?? 'Sentence';
+    const sentence = i.text ? ` ${label}: "${excerpt(i.text, i.surface)}"` : '';
     return `- ${what}: ${why ? `${why}; ` : ''}${fixClause(i, byKey)}.${sentence}`;
   });
 

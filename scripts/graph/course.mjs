@@ -1,24 +1,21 @@
 // Reads every lesson module of the course into one normalized shape.
-// Every exercise shape the course uses is turned into Items with a `french` list;
-// anything the reader does not understand lands in `unreadShapes` (never dropped).
+// Every exercise shape the course uses is turned into Items. An Item's `french` is French the learner types and
+// `shown` is French the learner reads or hears; both are checked as written (accents count). `lenient` holds
+// accepted answers, checked without accents. Anything the reader does not understand lands in `unreadShapes`
+// (never dropped).
 import path from 'node:path';
+import { existsSync, readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { fold } from './fold.mjs';
+import { isEnglish, frenchIn } from './french-text.mjs';
+import { tokenize } from './fr/tokenize.mjs';
+import { readScreen } from './screens.mjs';
 
-const ENGLISH_WORDS = new Set([
-  'the', 'a', 'an', 'is', 'are', 'i', 'you', 'he', 'she', 'we', 'they', 'to', 'of',
-  'and', 'in', 'it', 'do', 'does', 'did', 'not', 'was', 'were',
-]);
-const FRENCH_DIACRITICS = /[àâäçéèêëîïôöùûüÿœæ]/i;
+export { isEnglish };
+
 const ARRAYS_NOT_EXERCISES = new Set(['concepts', 'vocabularyReference', 'exercises', 'sentences', 'fillInBlanksSentences']);
 // Connectors that end a two-blank answer such as "ai fait ensuite".
 const TAIL_CONNECTOR = /^(.+?)\s+(parce que|pendant que|ensuite|donc|puis|car|mais|quand|alors)$/i;
-
-export function isEnglish(text) {
-  const tokens = String(text).toLowerCase().match(/[a-z']+/g) ?? [];
-  const hits = tokens.filter((t) => ENGLISH_WORDS.has(t)).length;
-  return hits >= 2 && !FRENCH_DIACRITICS.test(text);
-}
 
 export function stripPassage(markdown) {
   return String(markdown)
@@ -85,18 +82,19 @@ const MEANING_QUESTION = /^(?:What does|When do you use) ['"‘“]([^'"’”]+
 function answerItem(ref, source, it) {
   const meaning = MEANING_QUESTION.exec(it.instruction ?? '');
   if (meaning) {
-    return { ref, source, french: [meaning[1]], lenient: [], englishPrompt: null, instruction: it.instruction };
+    return { ref, source, french: [], shown: [meaning[1]], lenient: [], englishPrompt: null, instruction: it.instruction };
   }
   const lenientIn = Array.isArray(it.acceptableAnswers) ? it.acceptableAnswers : [];
   const french = [it.expectedAnswer].filter((s) => !isEnglish(s));
   // French-to-English item: the answer is English, so the French prompt is the French the learner sees.
   const frenchPrompt = !french.length && typeof it.prompt === 'string' && it.prompt.trim() && !isEnglish(it.prompt);
-  if (frenchPrompt) french.push(it.prompt.trim());
+  const shown = frenchPrompt ? [it.prompt.trim()] : [];
   const lenient = lenientIn.filter((s) => typeof s === 'string' && !isEnglish(s));
   return {
     ref,
     source,
     french,
+    shown,
     lenient,
     englishPrompt: !frenchPrompt && french.length && typeof it.prompt === 'string' ? it.prompt : null,
     instruction: typeof it.instruction === 'string' ? it.instruction : null,
@@ -116,7 +114,7 @@ function readConfigItems(cfg, key, mk, unread, items) {
       // the conjugation table sits on the config (type conjugation) or on each item (type mixed)
       const c = (it.conjugations ?? cfg.conjugations)[it.key];
       items.push({
-        ref, source: 'items', french: [c.combined], lenient: [],
+        ref, source: 'items', french: [c.combined], shown: [], lenient: [],
         englishPrompt: c.englishFull ?? c.english ?? null,
         instruction: typeof it.context === 'string' ? it.context : null,
       });
@@ -133,7 +131,7 @@ function readExercises(list, key, unread, items, fills) {
       const { text, english } = splitPrompt(ex.prompt);
       fills.set(fold(text), ex.answer);
       items.push({
-        ref, source: 'exercises', french: [fillBlanks(text, ex.answer)], lenient: [],
+        ref, source: 'exercises', french: [fillBlanks(text, ex.answer)], shown: [], lenient: [], blankAnswers: [ex.answer],
         englishPrompt: english, instruction: null, gapFill: true,
       });
     } else if (ex && !ex.type && typeof ex.expectedAnswer === 'string') {
@@ -215,7 +213,7 @@ function readSentences(list, key, unread, items, blankProblems) {
     const { text, problems } = fillSentence(s.text, s.blanks);
     for (const p of problems) blankProblems.push({ ref, ...p });
     items.push({
-      ref, source: 'sentences', french: [text], lenient: [],
+      ref, source: 'sentences', french: [text], shown: [], lenient: [], blankAnswers: s.blanks.map((b) => b.answer),
       englishPrompt: quoted(s.instruction),
       instruction: typeof s.instruction === 'string' ? s.instruction : null,
     });
@@ -233,13 +231,79 @@ function readFib(list, key, unread, items, fills) {
     const { text, english } = splitPrompt(s);
     const answer = fills.get(fold(text)) ?? '';
     items.push({
-      ref: `${key}#fillInBlanksSentences[${i}]`, source: 'fib', french: [fillBlanks(text, answer)],
-      lenient: [], englishPrompt: english, instruction: null,
+      ref: `${key}#fillInBlanksSentences[${i}]`, source: 'fib', french: [fillBlanks(text, answer)], shown: [],
+      lenient: [], blankAnswers: answer ? [answer] : [], englishPrompt: english, instruction: null,
     });
   });
 }
 
-export function readModule(mod, position, unitId, unitTitle = null) {
+// French the learner reads around the exercises: one item per field that holds some, with the field's path as
+// its ref and the French in `shown`. Which fields are read, and why the others are not, is in fields.mjs.
+function readShownText(mod, key, kind, isWord, screen, items) {
+  const add = (pathIn, source, text, mode, own = null) => {
+    let shown = frenchIn(text, mode, isWord);
+    // Feedback appears after the learner types a known wrong answer; words from that answer are the learner's own.
+    if (own) shown = shown.filter((s) => !tokenize(s).every((t) => own.has(t.fold)));
+    if (shown.length) {
+      items.push({ ref: `${key}#${pathIn}`, source, french: [], shown, lenient: [], englishPrompt: null, instruction: null });
+    }
+  };
+  // An exam screen (UnitExam.jsx) shows each question's prompt and hint only.
+  const exam = kind === 'exam';
+  const exercise = (it, at) => {
+    add(`${at}.hint`, 'hint', it.hint, 'quoted');
+    if (exam) return;
+    // a meaning question's quoted term is already read as the item's shown text
+    if (!MEANING_QUESTION.test(it.instruction ?? '')) add(`${at}.instruction`, 'instruction', it.instruction, 'quoted');
+    add(`${at}.context`, 'instruction', it.context, 'quoted');
+    for (const field of ['wrongAnswers', 'customWrongAnswers']) {
+      (Array.isArray(it[field]) ? it[field] : []).forEach((w, j) => {
+        if (!w || typeof w !== 'object') return;
+        const own = new Set(tokenize(w.answer ?? '').map((t) => t.fold));
+        add(`${at}.${field}[${j}].feedback`, 'feedback', w.feedback, 'quoted', own);
+      });
+    }
+  };
+
+  add('title', 'title', mod.title, 'segments');
+  add('description', 'description', mod.description, 'quoted');
+  (mod.concepts ?? []).forEach((c, i) => {
+    add(`concepts[${i}].term`, 'concept', c?.term, 'quoted');
+    add(`concepts[${i}].definition`, 'concept', c?.definition, 'quoted');
+    add(`concepts[${i}].example`, 'concept', c?.example, 'segments');
+  });
+  (mod.vocabularyReference ?? []).forEach((v, i) => add(`vocabularyReference[${i}].note`, 'vocab-note', v?.note, 'quoted'));
+  (Array.isArray(mod.exerciseConfig?.items) ? mod.exerciseConfig.items : [])
+    .forEach((it, i) => it && exercise(it, `exerciseConfig.items[${i}]`));
+  (Array.isArray(mod.exercises) ? mod.exercises : []).forEach((ex, i) => {
+    if (!ex) return;
+    exercise(ex, `exercises[${i}]`);
+    // "Complete: Hier, j'___ français (Yesterday, I spoke French) - Use 'parler'": the sentence is read already
+    if (ex.type === 'fillblank') add(`exercises[${i}].prompt`, 'instruction', ex.prompt, 'spans');
+  });
+  (Array.isArray(mod.sentences) ? mod.sentences : []).forEach((s, i) => {
+    if (!s) return;
+    add(`sentences[${i}].instruction`, 'instruction', s.instruction, 'quoted');
+    (Array.isArray(s.blanks) ? s.blanks : []).forEach((b, j) => add(`sentences[${i}].blanks[${j}].hint`, 'hint', b?.hint, 'quoted'));
+  });
+  const passage = mod.readingPassage;
+  if (passage) {
+    add('readingPassage.title', 'passage', passage.title, 'segments');
+    if (typeof passage.subtitle === 'string' && passage.subtitle.trim()) {
+      items.push({
+        ref: `${key}#readingPassage.subtitle`, source: 'passage', french: [], shown: [passage.subtitle.trim()],
+        lenient: [], englishPrompt: null, instruction: null,
+      });
+    }
+  }
+  (screen ?? []).forEach((text, i) => items.push({
+    ref: `${key}#screen[${i}]`, source: 'screen', french: [], shown: [text], lenient: [], englishPrompt: null, instruction: null,
+  }));
+}
+
+// opts.isWord: the word test for mixed text (frenchWordTest); without it, mixed text is judged by its English words
+// alone. opts.screen: the French strings of the module's help screen (readScreen).
+export function readModule(mod, position, unitId, unitTitle = null, opts = {}) {
   const key = mod.moduleKey;
   const items = [];
   const unread = [];
@@ -267,7 +331,7 @@ export function readModule(mod, position, unitId, unitTitle = null) {
   if (typeof mod.readingPassage?.text === 'string') {
     shapes.add('passage');
     items.push({
-      ref: `${key}#readingPassage`, source: 'passage', french: [stripPassage(mod.readingPassage.text)],
+      ref: `${key}#readingPassage`, source: 'passage', french: [], shown: [stripPassage(mod.readingPassage.text)],
       lenient: [], englishPrompt: null, instruction: null,
     });
   }
@@ -280,6 +344,8 @@ export function readModule(mod, position, unitId, unitTitle = null) {
   else if (mod.isFillInTheBlank) kind = 'practice';
   else if (mod.isReadingComprehension) kind = 'reading';
   else if (mod.isHelpModule) kind = 'help';
+
+  readShownText(mod, key, kind, opts.isWord ?? null, opts.screen, items);
 
   return {
     position,
@@ -297,9 +363,12 @@ export function readModule(mod, position, unitId, unitTitle = null) {
   };
 }
 
-export async function readCourse(repoRoot) {
+// opts.courseMap: a module's `screen` entry names the component file of its help screen, read with readScreen. A
+// missing file is skipped here; validateGraph reports it. opts.isWord: as for readModule.
+export async function readCourse(repoRoot, opts = {}) {
   const file = path.join(repoRoot, 'src/lessons/unitConfigLoader.js');
   const { unitConfigs } = await import(pathToFileURL(file).href);
+  const isWord = opts.isWord ?? null;
   const out = [];
   const seen = new Set();
   for (const unit of unitConfigs) {
@@ -307,7 +376,10 @@ export async function readCourse(repoRoot) {
     for (const mod of unit.modules) {
       if (seen.has(mod.moduleKey)) continue;
       seen.add(mod.moduleKey);
-      out.push(readModule(mod, out.length + 1, unit.metadata.id, unit.metadata.title));
+      const screenFile = opts.courseMap?.[mod.moduleKey]?.screen;
+      const screenPath = typeof screenFile === 'string' ? path.join(repoRoot, screenFile) : null;
+      const screen = screenPath && existsSync(screenPath) ? readScreen(readFileSync(screenPath, 'utf8'), { isWord }) : null;
+      out.push(readModule(mod, out.length + 1, unit.metadata.id, unit.metadata.title, { isWord, screen }));
     }
   }
   return out;

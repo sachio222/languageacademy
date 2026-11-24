@@ -407,6 +407,7 @@
     ]
   },
   "2024-01-19-questions-help": {
+    "screen": "src/components/QuestionsHelp.jsx",
     "teachesConstructions": [
       "fr:cx:q.est-ce-que",
       "fr:cx:q.intonation",
@@ -899,6 +900,10 @@
       "fr:form:venir.sbjv.1sg",
       "fr:form:venir.sbjv.3sg"
     ]
+  },
+  "2024-01-28-verb-pattern-help": {
+    "screen": "src/components/VerbPatternHelp.jsx",
+    "teachesWords": []
   },
   "2024-01-29-opinion-phrases": {
     "teachesConstructions": [
@@ -2646,12 +2651,37 @@
       "fr:form:le.pronoun.elided"
     ],
     "overrides": {
+      "2024-03-31-survival-phrases#concepts[0].definition": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#concepts[0].example": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
       "2024-03-31-survival-phrases#exerciseConfig.items[0]": {
         "ignore": [
           "fr:cx:conditionnel-present"
         ]
       },
+      "2024-03-31-survival-phrases#exerciseConfig.items[0].hint": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#exerciseConfig.items[0].wrongAnswers[0].feedback": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
       "2024-03-31-survival-phrases#exerciseConfig.items[1]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#exerciseConfig.items[1].hint": {
         "ignore": [
           "fr:cx:conditionnel-present"
         ]
@@ -3790,6 +3820,21 @@
         "ignore": [
           "fr:cx:pronoun.y"
         ]
+      },
+      "2024-05-05-on-and-people#exercises[0].hint": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-05-on-and-people#exercises[0].wrongAnswers[0].feedback": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-05-on-and-people#vocabularyReference[3].note": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
       }
     },
     "teachesConstructions": [
@@ -3963,6 +4008,11 @@
   "2024-05-10-unit-7-exam": {
     "overrides": {
       "2024-05-10-unit-7-exam#exerciseConfig.items[2]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-10-unit-7-exam#exerciseConfig.items[2].hint": {
         "ignore": [
           "fr:cx:pronoun.y"
         ]
@@ -4199,6 +4249,16 @@
   },
   "2024-05-18-irregular-commands": {
     "overrides": {
+      "2024-05-18-irregular-commands#concepts[1].example": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-18-irregular-commands#concepts[4].example": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
       "2024-05-18-irregular-commands#exercises[3]": {
         "ignore": [
           "fr:cx:pronoun.y"
@@ -4865,6 +4925,14 @@
       "fr:cx:imparfait",
       "fr:cx:chunk.en-fait"
     ]
+  },
+  "2024-10-20-liaison-help": {
+    "screen": "src/components/LiaisonHelp.jsx",
+    "teachesWords": []
+  },
+  "2024-10-21-cognates-help": {
+    "screen": "src/components/CognatesHelp.jsx",
+    "teachesWords": []
   },
   "2024-10-22-donner": {
     "excludeWords": [

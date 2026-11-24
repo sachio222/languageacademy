@@ -101,3 +101,12 @@ test('after a miss, the schedule restarts from the next use', () => {
   assert.deepEqual(dueAt(ctx, 54), [{ nodeId: PARLER, taughtAt: 1, lastUse: 50, windowEnd: 55 }]);
   assert.deepEqual(dueAt(ctx, 58), [{ nodeId: PARLER, taughtAt: 1, lastUse: 50, windowEnd: 55 }]);
 });
+
+test('a use in shown text counts for reuse like a typed one', () => {
+  const course = Array.from({ length: 3 }, (_, i) => makeModule({
+    position: i + 1,
+    items: i === 2 ? [{ ref: 'm3#1', source: 'concept', french: [], shown: ['parler'], lenient: [], englishPrompt: null, instruction: null }] : [],
+  }));
+  const ctx = makeCtx({ graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } }, course });
+  assert.deepEqual(usesByNode(ctx).get(PARLER), [3]);
+});

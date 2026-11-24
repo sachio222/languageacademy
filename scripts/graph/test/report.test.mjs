@@ -132,3 +132,30 @@ test('a fix aimed at a module that cannot teach points to the lessons before it'
   assert.ok(md.split('\n').some((l) => l.includes('"sept"') && l.includes('teach in a lesson before this module')));
   assert.ok(md.split('\n').some((l) => l.includes('"neuf"') && l.includes('teach in a lesson before Exam (position 4)')));
 });
+
+test('a line from text the learner reads names where the text sits', () => {
+  const withItems = course.map((m) => (m.position !== 2 ? m : { ...m, items: [
+    { ref: 'm2#exerciseConfig.items[0].hint', source: 'hint', french: [], shown: ['le chat'], lenient: [] },
+    { ref: 'm2#screen[3]', source: 'screen', french: [], shown: ['un chien'], lenient: [] },
+    { ref: 'm2#exerciseConfig.items[0]', source: 'items', french: ['un pain'], lenient: [] },
+  ] }));
+  const md = renderFixList([
+    { rule: 'untaught-word', severity: 'error', moduleKey: 'm2', position: 2, surface: 'chat', nodeId: 'fr:lex:chat',
+      itemRef: 'm2#exerciseConfig.items[0].hint', message: 'x', reason: 'nowhere', text: 'le chat', fix: { kind: 'teach-earlier', moduleKey: 'm2' } },
+    { rule: 'untaught-word', severity: 'error', moduleKey: 'm2', position: 2, surface: 'chien', nodeId: 'fr:lex:chien',
+      itemRef: 'm2#screen[3]', message: 'x', reason: 'nowhere', text: 'un chien', fix: { kind: 'teach-earlier', moduleKey: 'm2' } },
+    { rule: 'untaught-word', severity: 'error', moduleKey: 'm2', position: 2, surface: 'pain', nodeId: 'fr:lex:pain',
+      itemRef: 'm2#exerciseConfig.items[0]', message: 'x', reason: 'nowhere', text: 'un pain', fix: { kind: 'teach-earlier', moduleKey: 'm2' } },
+  ], withItems);
+  const lines = md.split('\n');
+  assert.match(lines.find((l) => l.includes('"chat"')), /Hint: "le chat"$/);
+  assert.match(lines.find((l) => l.includes('"chien"')), /Help screen: "un chien"$/);
+  assert.match(lines.find((l) => l.includes('"pain"')), /Sentence: "un pain"$/);
+});
+
+test('How to read this says the Reference unit is outside the course order', () => {
+  const md = renderFixList([], course);
+  const how = md.slice(md.indexOf('## How to read this'), md.indexOf('# 1. Untaught words and patterns'));
+  assert.match(how, /Reference unit/);
+  assert.match(how, /concept cards, hints/);
+});

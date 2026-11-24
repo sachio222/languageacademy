@@ -5,7 +5,8 @@ import { issue } from '../issues.mjs';
 
 const memo = new WeakMap();
 
-// Per item: one entry for each text in french (strict: accent-sensitive) then lenient (fold-based).
+// Per item: one entry for each text in french (typed) and shown (read or heard), both strict (accent-sensitive),
+// then lenient (fold-based).
 // Returns Map<itemRef, Array<{ text, strict, tokens, readings, constructions }>>.
 export function analyzeItems(ctx) {
   const cached = memo.get(ctx);
@@ -15,7 +16,7 @@ export function analyzeItems(ctx) {
   const out = new Map();
   for (const m of ctx.course) {
     for (const it of m.items) {
-      const strictTexts = new Set(it.french ?? []);
+      const strictTexts = new Set([...(it.french ?? []), ...(it.shown ?? [])]);
       const texts = [...new Set([...strictTexts, ...(it.lenient ?? [])])];
       out.set(it.ref, texts.map((text) => {
         const strict = strictTexts.has(text);

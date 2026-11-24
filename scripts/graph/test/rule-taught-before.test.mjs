@@ -107,6 +107,18 @@ test('word with no reading is unknown-word', () => {
   assert.equal(issues[0].fix.kind, 'add-to-graph');
 });
 
+test('shown text is checked strictly, like typed text', () => {
+  const ok = setup({ m1: { teachesWords: ['fr:lex:ou'] } }, [mod(1, [item([], { shown: ['ou'] })])]);
+  assert.deepEqual(ruleTaughtBefore(ok), []);
+  const accent = setup({ m1: { teachesWords: ['fr:lex:ou'] } }, [mod(1, [item([], { shown: ['où'] })])]);
+  assert.deepEqual(ruleTaughtBefore(accent).map((i) => [i.rule, i.surface]), [['unknown-word', 'où']]);
+  const later = setup({ m5: { teachesWords: ['fr:lex:je', 'fr:lex:parler'], teachesConstructions: ['fr:cx:verb.er.present'] } },
+    [mod(1, [item([], { shown: ['Je parle'] })]), mod(5, [])]);
+  assert.deepEqual(ruleTaughtBefore(later).map((i) => [i.rule, i.surface, i.reason]),
+    [['untaught-word', 'Je', 'later'], ['untaught-word', 'parle', 'later']]);
+  assert.deepEqual(analyzeItems(later).get('m1#1').map((a) => [a.text, a.strict]), [['Je parle', true]]);
+});
+
 test('lenient text is checked and accent-folded', () => {
   const ok = setup({ m1: { teachesWords: ['fr:lex:cafe'] } }, [mod(1, [item('café', { lenient: ['cafe'] })])]);
   assert.deepEqual(ruleTaughtBefore(ok), []);

@@ -85,7 +85,7 @@ for (const m of course) {
 // overrides: s'il vous plaît is a fixed phrase taught at position 1, before elision (4) and subject pronouns (2).
 const overrides = [];
 for (const it of byPos.get(1).items) {
-  if (it.french.some((t) => /s'il vous pla[iî]t/i.test(t))) {
+  if ([...it.french, ...(it.shown ?? [])].some((t) => /s'il vous pla[iî]t/i.test(t))) {
     entry(byPos.get(1)).overrides = { ...(entry(byPos.get(1)).overrides ?? {}), [it.ref]: { ignore: ['fr:cx:elision', 'fr:cx:pronoun.subject'] } };
     overrides.push(it.ref);
   }
@@ -113,7 +113,7 @@ for (const [general, chunks] of CHUNK_ONLY) {
   for (const m of course) {
     if (m.position >= until) break;
     for (const it of m.items) {
-      const texts = [...it.french.map((t) => [t, true]), ...it.lenient.map((t) => [t, false])];
+      const texts = [...[...it.french, ...(it.shown ?? [])].map((t) => [t, true]), ...it.lenient.map((t) => [t, false])];
       const uses = texts.filter(([t, strict]) => detects(t, G, strict));
       if (!uses.length) continue;
       const inside = uses.every(([t, strict]) => {

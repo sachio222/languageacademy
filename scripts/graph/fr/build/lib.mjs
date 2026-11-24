@@ -4,6 +4,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadGraph } from '../../load.mjs';
 import { readCourse } from '../../course.mjs';
+import { frenchWordTest } from '../../french-text.mjs';
 import { buildFormIndex, lookupToken, lookupTokenStrict } from '../forms.mjs';
 import { tokenize, restoreElisions } from '../tokenize.mjs';
 import { matchPattern } from '../detect.mjs';
@@ -14,7 +15,7 @@ export const FR_DIR = join(REPO, 'curriculum-graph/languages/fr');
 export async function load() {
   const graph = loadGraph(join(REPO, 'curriculum-graph'), 'fr');
   const index = buildFormIndex(graph);
-  const course = await readCourse(REPO);
+  const course = await readCourse(REPO, { courseMap: graph.courseMap, isWord: frenchWordTest(graph, index) });
   const { unitConfigs } = await import(pathToFileURL(join(REPO, 'src/lessons/unitConfigLoader.js')).href);
   const raw = new Map();
   for (const u of unitConfigs) for (const m of u.modules) if (!raw.has(m.moduleKey)) raw.set(m.moduleKey, m);
