@@ -18,7 +18,7 @@ async function main() {
   const summary = summarize(issues);
 
   if (cmd === 'check') {
-    for (const [rule, n] of Object.entries(summary.byRule).sort()) console.log(`${rule}: ${n}`);
+    for (const [rule, n] of Object.entries(summary.byRule).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))) console.log(`${rule}: ${n}`);
     console.log(`errors: ${summary.errors}, warnings: ${summary.warnings}, modules with errors: ${summary.modulesWithErrors}`);
     process.exit(summary.errors > 0 ? 1 : 0);
   }

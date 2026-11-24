@@ -15,6 +15,12 @@ export function summarize(issues) {
   return { byRule, errors, warnings, modulesWithErrors: modules.size };
 }
 
+// Rules that sections 1 to 8 show; anything else lands in section 9.
+const HANDLED = new Set([
+  'untaught-word', 'untaught-construction', 'claim-untaught', 'claims-unmapped', 'translate-item',
+  'taught-twice', 'reuse-missed', 'level-label', 'level-data-missing', 'nonstandard-shape', 'unknown-word',
+]);
+
 const LATER = /taught later at position \d+ \(.*\)$/;
 
 function fixClause(i, byKey) {
@@ -32,7 +38,8 @@ function fixClause(i, byKey) {
 export function renderFixList(issues, course) {
   const byKey = new Map(course.map((m) => [m.moduleKey, m]));
   const unitOf = (i) => byKey.get(i.moduleKey)?.unitTitle ?? 'Other';
-  const of = (...rules) => issues.filter((i) => rules.includes(i.rule));
+  const byPos = (a, b) => (a.position ?? 0) - (b.position ?? 0);
+  const of = (...rules) => issues.filter((i) => rules.includes(i.rule)).sort(byPos);
   const out = ['# French course fix list', ''];
   const s = summarize(issues);
   out.push(`${s.errors} errors, ${s.warnings} warnings, ${s.modulesWithErrors} modules with errors.`, '');
@@ -67,7 +74,7 @@ export function renderFixList(issues, course) {
   grouped(of('claim-untaught', 'claims-unmapped'), (i) => `- ${i.message}`);
 
   out.push('# 3. Translation prompts to convert', '');
-  const tr = new Map();
+  const tr = new Map(); // of() sorts by position, so modules appear in course order
   for (const i of of('translate-item')) tr.set(i.moduleKey, (tr.get(i.moduleKey) ?? 0) + 1);
   if (!tr.size) out.push('None.');
   for (const [key, n] of tr) {
@@ -117,6 +124,16 @@ export function renderFixList(issues, course) {
   for (const [key, set] of perModule) {
     const m = byKey.get(key);
     out.push(`- ${m ? `${m.position}. ${m.title}` : key}: ${[...set].join(', ')}`);
+  }
+  out.push('');
+
+  out.push('# 9. Other problems', '');
+  const other = issues.filter((i) => !HANDLED.has(i.rule)).sort(byPos);
+  if (!other.length) out.push('None.');
+  for (const i of other) {
+    const m = byKey.get(i.moduleKey);
+    const where = m ? ` [${m.position}. ${m.title}]` : (i.moduleKey ? ` [${i.moduleKey}]` : '');
+    out.push(`- ${i.rule} (${i.severity})${where}: ${i.message}`);
   }
   out.push('');
   return out.join('\n');

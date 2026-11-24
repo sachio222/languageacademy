@@ -44,3 +44,13 @@ test('renderFixList puts an untaught word under its unit and module heading', ()
   const pain = lines.find((l) => l.includes('pain'));
   assert.ok(pain.includes('teach in Food (position 3)'));
 });
+
+test('renderFixList lists rules the other sections do not show under Other problems', () => {
+  const md = renderFixList([
+    { rule: 'unread-items', severity: 'error', moduleKey: 'm2', position: 2, message: 'm2 has content the reader could not read: x' },
+    { rule: 'dangling-ref', severity: 'error', message: 'node fr:lex:a points at fr:lex:zz, which does not exist' },
+  ], course);
+  const other = md.slice(md.indexOf('# 9. Other problems'));
+  assert.ok(other.includes('unread-items (error) [2. Being]: m2 has content'));
+  assert.ok(other.includes('dangling-ref (error): node fr:lex:a'));
+});
