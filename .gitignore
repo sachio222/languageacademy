@@ -10,6 +10,8 @@ lerna-debug.log*
 dist/
 dist-ssr/
 build/
+# the French graph's data builders are source code, not build output
+!scripts/graph/fr/build/
 *.local
 
 # Environment variables
