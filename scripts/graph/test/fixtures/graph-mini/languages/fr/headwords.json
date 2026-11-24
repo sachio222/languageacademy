@@ -221,5 +221,31 @@
     "dictionaryId": "pas-fr",
     "cefr": null,
     "cefrSource": null
+  },
+  {
+    "id": "fr:lex:travailler",
+    "lemma": "travailler",
+    "pos": "verb",
+    "paradigms": [
+      "fr:cx:verb.er.present"
+    ],
+    "senses": [
+      "sense:travailler"
+    ],
+    "dictionaryId": "travailler-fr",
+    "cefr": null,
+    "cefrSource": null
+  },
+  {
+    "id": "fr:lex:bonjour",
+    "lemma": "bonjour",
+    "pos": "interjection",
+    "paradigms": [],
+    "senses": [
+      "sense:bonjour"
+    ],
+    "dictionaryId": "bonjour-fr",
+    "cefr": null,
+    "cefrSource": null
   }
 ]
