@@ -98,7 +98,9 @@
     },
     "id": "fr:cx:age.avoir-ans",
     "label": "Age with avoir: j'ai vingt ans (not être)",
-    "needs": []
+    "needs": [
+      "fr:lex:avoir"
+    ]
   },
   {
     "cefr": null,
@@ -266,6 +268,7 @@
     "id": "fr:cx:cest",
     "label": "c'est / ce sont (it is, that is), also c'était and ce n'est pas",
     "needs": [
+      "fr:lex:etre",
       "fr:cx:elision"
     ]
   },
@@ -1054,6 +1057,7 @@
     "id": "fr:cx:conditionnel-passe.avoir",
     "label": "Conditionnel passé with avoir: avoir in the conditionnel + past participle (j'aurais réussi, tu aurais dû)",
     "needs": [
+      "fr:lex:avoir",
       "fr:cx:passe-compose.avoir",
       "fr:cx:conditionnel-present"
     ]
@@ -1111,6 +1115,7 @@
     "id": "fr:cx:conditionnel-passe.etre",
     "label": "Conditionnel passé with être for the être verbs (je serais venu, elle serait partie)",
     "needs": [
+      "fr:lex:etre",
       "fr:cx:passe-compose.etre",
       "fr:cx:conditionnel-passe.avoir"
     ]
@@ -1378,7 +1383,7 @@
     "id": "fr:cx:frame.aller-infinitive",
     "label": "aller + infinitive: the near future (je vais manger, il allait partir)",
     "needs": [
-      "fr:cx:frame.modal-infinitive"
+      "fr:lex:aller"
     ]
   },
   {
@@ -1478,7 +1483,7 @@
     "examples": {
       "match": [
         "Il me demande de venir.",
-        "Je demande de partir."
+        "Elle nous demande de rester."
       ],
       "noMatch": [
         "Je demande de l'aide.",
@@ -1528,7 +1533,7 @@
     "id": "fr:cx:frame.etre-en-train-de",
     "label": "être en train de + infinitive: an action in progress (je suis en train de manger, j'étais en train de parler)",
     "needs": [
-      "fr:cx:frame.modal-infinitive"
+      "fr:lex:etre"
     ]
   },
   {
@@ -1830,7 +1835,9 @@
     },
     "id": "fr:cx:il-y-a",
     "label": "il y a (there is, there are), in any tense and negated (il y avait, il n'y a pas)",
-    "needs": []
+    "needs": [
+      "fr:lex:avoir"
+    ]
   },
   {
     "cefr": null,
@@ -2441,6 +2448,7 @@
     "id": "fr:cx:passe-compose.avoir",
     "label": "Passé composé with avoir: avoir in the present + past participle (j'ai mangé, tu n'as pas vu)",
     "needs": [
+      "fr:lex:avoir",
       "fr:cx:ptcp.er",
       "fr:cx:ptcp.ir",
       "fr:cx:ptcp.re"
@@ -2501,6 +2509,7 @@
     "id": "fr:cx:passe-compose.etre",
     "label": "Passé composé with être for the DR & MRS VANDERTRAMP verbs (je suis allé, elle est venue)",
     "needs": [
+      "fr:lex:etre",
       "fr:cx:passe-compose.avoir"
     ]
   },
@@ -2714,6 +2723,7 @@
     "id": "fr:cx:plus-que-parfait.avoir",
     "label": "Plus-que-parfait with avoir: avoir in the imparfait + past participle (j'avais déjà mangé)",
     "needs": [
+      "fr:lex:avoir",
       "fr:cx:passe-compose.avoir",
       "fr:cx:imparfait"
     ]
@@ -2771,6 +2781,7 @@
     "id": "fr:cx:plus-que-parfait.etre",
     "label": "Plus-que-parfait with être for the être verbs (j'étais déjà parti, elle était venue)",
     "needs": [
+      "fr:lex:etre",
       "fr:cx:passe-compose.etre",
       "fr:cx:plus-que-parfait.avoir"
     ]
@@ -3143,6 +3154,23 @@
     "detect": [
       [
         {
+          "start": true,
+          "surface": "moi|toi|eux"
+        }
+      ],
+      [
+        {
+          "surface": "avec|chez|sans|entre|apres|avant|devant|derriere|vers|contre|selon|sauf|pour|a|de|d'|sur|sous|par"
+        },
+        {
+          "surface": "moi|toi|eux|elle|elles"
+        }
+      ],
+      [
+        {
+          "surface": "et|ou|que|qu'|comme"
+        },
+        {
           "surface": "moi|toi|eux"
         }
       ],
@@ -3151,15 +3179,7 @@
           "surface": "avec|chez|sans|entre|apres|avant|devant|derriere|vers|contre|selon|sauf"
         },
         {
-          "surface": "lui|elle|nous|vous|elles"
-        }
-      ],
-      [
-        {
-          "surface": "pour|a|de|d'"
-        },
-        {
-          "surface": "elle|elles"
+          "surface": "lui|nous|vous"
         }
       ],
       [
@@ -3170,12 +3190,12 @@
           "surface": "est|etait|sera|serait"
         },
         {
-          "surface": "lui|elle|nous|vous|elles"
+          "surface": "moi|toi|lui|elle|nous|vous|eux|elles"
         }
       ],
       [
         {
-          "surface": "lui|elle|nous|vous|elles"
+          "surface": "moi|toi|lui|elle|nous|vous|eux|elles"
         },
         {
           "surface": "aussi|meme|non|seul|seule|seuls|seules"
@@ -3189,17 +3209,22 @@
         "C'est pour eux.",
         "Je travaille avec lui.",
         "C'est elle.",
-        "Lui aussi, il aime le café."
+        "Lui aussi, il aime le café.",
+        "Ça va, et toi ?",
+        "Il est plus grand que moi."
       ],
       "noMatch": [
         "Je viens.",
         "Excusez-moi.",
         "Je lui parle.",
-        "Nous allons au café."
+        "Nous allons au café.",
+        "Regarde moi.",
+        "Je pense qu'elle vient.",
+        "Il mange et elle boit."
       ]
     },
     "id": "fr:cx:pronoun.stressed",
-    "label": "Stressed pronouns moi, toi, lui, elle, nous, vous, eux, elles after a preposition, after c'est, for emphasis or alone (avec moi, pour elle, c'est lui, lui aussi); lui, nous and vous count only in those positions, where they cannot be subject or object pronouns",
+    "label": "Stressed pronouns moi, toi, lui, elle, nous, vous, eux, elles alone, after a preposition, et or que, after c'est, or before aussi, même, non or seul (moi ?, avec moi, et toi ?, pour elle, c'est lui, lui aussi); lui, nous and vous count only in positions where they cannot be subject or object pronouns, and a pronoun written after a verb without its hyphen (regarde moi) does not count",
     "needs": [
       "fr:cx:pronoun.subject"
     ]
@@ -3397,8 +3422,7 @@
     "id": "fr:cx:q.embedded",
     "label": "Embedded (indirect) question after savoir, se demander, dire or comprendre, with no est-ce que (je ne sais pas où il est, je me demande pourquoi)",
     "needs": [
-      "fr:cx:q.words",
-      "fr:cx:neg.ne-pas"
+      "fr:cx:q.words"
     ]
   },
   {
@@ -3846,38 +3870,107 @@
     "cefr": null,
     "contrastsWith": [],
     "detect": [
-      {
-        "surface": "si|s'"
-      },
-      {
-        "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
-      },
-      {
-        "optional": true,
-        "surface": "ne|n'"
-      },
-      {
-        "optional": true,
-        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
-      },
-      {
-        "cell": "impf.*"
-      }
+      [
+        {
+          "surface": "si|s'"
+        },
+        {
+          "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "cell": "impf.*",
+          "surface": "(?!(av|et)(ais|ait|ions|iez|aient)$).+"
+        }
+      ],
+      [
+        {
+          "surface": "si|s'"
+        },
+        {
+          "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "any": [
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:avoir"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:etre"
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "pas|plus|jamais"
+        },
+        {
+          "any": [
+            {
+              "pos": "noun"
+            },
+            {
+              "pos": "adjective"
+            },
+            {
+              "pos": "pronoun"
+            },
+            {
+              "pos": "determiner"
+            },
+            {
+              "pos": "article"
+            },
+            {
+              "pos": "preposition"
+            },
+            {
+              "surface": "ici|la|plus|moins|assez|tres|trop|si|aussi|un|une|des|du|de|d'"
+            }
+          ],
+          "surface": "(?!(ete|fait|vu|vue|dit|pu|su|eu)$).+"
+        }
+      ]
     ],
     "examples": {
       "match": [
         "Si j'étais riche, je voyagerais.",
         "Si on avait le temps, on pourrait marcher.",
-        "S'il faisait beau, j'irais à la plage."
+        "S'il faisait beau, j'irais à la plage.",
+        "Si j'étais toi, je ferais ça.",
+        "Si j'avais de l'argent, je voyagerais.",
+        "Si tu étais ici, je serais content."
       ],
       "noMatch": [
         "Si tu veux, on y va.",
         "Il s'appelait Paul.",
-        "J'étais riche."
+        "J'étais riche.",
+        "Si j'avais su, je serais venu.",
+        "Si j'avais étudié, j'aurais réussi.",
+        "Si elle m'avait dit, j'aurais compris.",
+        "Si j'avais déjà mangé, je ne viendrais pas.",
+        "Si j'avais été là, j'aurais aidé."
       ]
     },
     "id": "fr:cx:si.imparfait-conditionnel",
-    "label": "Hypothesis si + imparfait, with the result in the conditionnel (si j'étais riche, je voyagerais)",
+    "label": "Hypothesis si + imparfait, with the result in the conditionnel (si j'étais riche, je voyagerais); avais or étais followed by a past participle is the plus-que-parfait and does not count here",
     "needs": [
       "fr:cx:imparfait",
       "fr:cx:conditionnel-present"
