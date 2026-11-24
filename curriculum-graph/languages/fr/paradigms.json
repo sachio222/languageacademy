@@ -1,5 +1,7 @@
 [
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:adj.al",
     "label": "Adjective agreement for adjectives in -al (international, internationale, internationaux, internationales)",
     "needs": [],
@@ -22,6 +24,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:adj.double",
     "label": "Adjective agreement that doubles the final consonant (bon, bonne; gentil, gentille; cruel, cruelle)",
     "needs": [],
@@ -74,6 +78,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:adj.e",
     "label": "Adjective agreement for adjectives ending in -e: same feminine, plural -s (jeune, jeunes)",
     "needs": [],
@@ -91,6 +97,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:adj.er",
     "label": "Adjective agreement for adjectives in -er (premier, première, premiers, premières)",
     "needs": [],
@@ -113,6 +121,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:adj.eux",
     "label": "Adjective agreement for adjectives in -eux (heureux, heureuse, heureuses)",
     "needs": [],
@@ -130,6 +140,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:adj.if",
     "label": "Adjective agreement for adjectives in -if (actif, active, actifs, actives)",
     "needs": [],
@@ -152,6 +164,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:adj.regular",
     "label": "Adjective agreement: feminine -e, plural -s, feminine plural -es (grand, grande, grands, grandes)",
     "needs": [],
@@ -174,6 +188,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:adj.s",
     "label": "Adjective agreement for adjectives ending in -s: same masculine plural (français, française, françaises)",
     "needs": [],
@@ -191,6 +207,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:noun.plural",
     "label": "Noun plural with -s (livre, livres)",
     "needs": [],
@@ -203,6 +221,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:noun.plural.al",
     "label": "Noun plural of nouns in -al with -aux (hôpital, hôpitaux)",
     "needs": [],
@@ -215,6 +235,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:noun.plural.x",
     "label": "Noun plural with -x for nouns in -eau, -au and -eu (gâteau, gâteaux)",
     "needs": [],
@@ -227,6 +249,8 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:prsptcp.er",
     "label": "Present participle of -er verbs (parlant), used in the gerund en parlant",
     "needs": [],
@@ -239,6 +263,8 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:prsptcp.ir",
     "label": "Present participle of regular -ir verbs like finir (finissant)",
     "needs": [],
@@ -251,6 +277,8 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:prsptcp.re",
     "label": "Present participle of regular -re verbs (attendant)",
     "needs": [],
@@ -263,6 +291,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:ptcp.er",
     "label": "Past participle of -er verbs, with its agreement forms (parlé, parlée, parlés, parlées)",
     "needs": [],
@@ -290,6 +320,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:ptcp.ir",
     "label": "Past participle of regular -ir verbs, with its agreement forms (fini, finie, finis, finies)",
     "needs": [],
@@ -317,6 +349,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:ptcp.re",
     "label": "Past participle of regular -re verbs, with its agreement forms (attendu, attendue, attendus, attendues)",
     "needs": [],
@@ -344,6 +378,8 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "id": "fr:cx:verb.conditional",
     "label": "Present conditional (conditionnel présent) built on the infinitive (je parlerais, j'attendrais)",
     "needs": [],
@@ -441,6 +477,8 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.er.impf",
     "label": "Imperfect tense (imparfait) of regular -er verbs (je parlais)",
     "needs": [],
@@ -478,6 +516,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.er.present",
     "label": "Present tense of regular -er verbs (parler: je parle, nous parlons)",
     "needs": [],
@@ -515,6 +555,8 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.er.subjunctive",
     "label": "Present subjunctive of regular -er verbs (que je parle, que nous parlions)",
     "needs": [],
@@ -552,6 +594,8 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.future",
     "label": "Future tense (futur simple) built on the infinitive (je parlerai, je finirai, j'attendrai)",
     "needs": [],
@@ -649,6 +693,8 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.ir.impf",
     "label": "Imperfect tense (imparfait) of regular -ir verbs like finir (je finissais)",
     "needs": [],
@@ -686,6 +732,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.ir.present",
     "label": "Present tense of regular -ir verbs like finir (je finis, nous finissons)",
     "needs": [],
@@ -723,6 +771,8 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.ir.subjunctive",
     "label": "Present subjunctive of regular -ir verbs like finir (que je finisse)",
     "needs": [],
@@ -760,6 +810,8 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.re.impf",
     "label": "Imperfect tense (imparfait) of regular -re verbs (j'attendais)",
     "needs": [],
@@ -797,6 +849,8 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.re.present",
     "label": "Present tense of regular -re verbs like attendre (j'attends, il attend)",
     "needs": [],
@@ -834,6 +888,8 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
     "id": "fr:cx:verb.re.subjunctive",
     "label": "Present subjunctive of regular -re verbs (que j'attende)",
     "needs": [],

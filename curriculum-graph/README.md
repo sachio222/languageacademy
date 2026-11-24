@@ -54,6 +54,7 @@ A help screen teaches only what its course-map entry credits. Its French is chec
 | File | What it holds | How it changes |
 |---|---|---|
 | `core/functions.json` | What a learner can do with a language, shared by every language | By hand |
+| `core/levels/fr-A1.json`, `fr-A2.json`, `fr-B1.json` | Core words and constructions a learner needs to reach each level | By hand, frozen 2026-11-24 |
 | `core/settings.json` | Reuse windows, the last unit allowed English-to-French translation prompts, the default native language and where cognates are allowed | By hand |
 | `pairs/en-fr/cognates.json` | Cognates and false friends for English speakers learning French | By hand |
 | `languages/fr/headwords.json` | Course word list | By hand |
@@ -109,13 +110,14 @@ For a pair file, it reports `dangling-ref` for a cognate or false friend that is
 Add an object to `headwords.json` and keep the file sorted by `id`:
 
 ```json
-{ "id": "fr:lex:pomme", "lemma": "pomme", "pos": "noun", "paradigms": ["fr:cx:noun.plural"], "senses": [], "dictionaryId": "pomme-fr", "cefr": null, "cefrSource": null }
+{ "id": "fr:lex:pomme", "lemma": "pomme", "pos": "noun", "paradigms": ["fr:cx:noun.plural"], "senses": [], "dictionaryId": "pomme-fr", "cefr": "A1", "cefrSource": "agent: frequency + Eaquals" }
 ```
 
 - `id` is `fr:lex:` plus the lemma in lowercase without accents, with spaces and apostrophes written as hyphens (`fr:lex:pomme-de-terre`). When another headword already has that ID, add the part of speech: `fr:lex:savoir.verb`.
 - `pos` is the part of speech: noun, verb, adjective, adverb, pronoun, preposition, conjunction, article, determiner, interjection, interrogative, or alphabet for a letter.
 - `paradigms` lists the patterns in `paradigms.json` that generate the word's regular forms. A regular -er verb takes the same seven patterns as `fr:lex:parler`; a noun takes `fr:cx:noun.plural`; an adjective takes the `fr:cx:adj.*` pattern that fits its endings. An irregular verb lists only the patterns its regular cells follow and gets the rest as irregular forms.
 - `dictionaryId` is the word's key in `src/data/dictionary/`, or null.
+- `cefr` and `cefrSource` give the word's level and how it was decided (see Levels and core lists). Every headword needs both.
 
 Then run `pnpm graph:extract` and `pnpm graph:check`.
 
@@ -141,6 +143,8 @@ node('neg.ne-plus', 'Negation ne … plus (no longer, no more)', ['neg.ne-pas'],
 ```
 
 The arguments are the ID without `fr:cx:`, a label in plain words, the constructions it builds on, the detector, sentences it must match and sentences it must not match. Give at least two sentences that match and one that does not. A fixed phrase uses `chunk()` with its words, for example `chunk('ca-va', 'Fixed phrase: ça va …', ['ca', 'va'], [...], [...])`.
+
+Give the new construction a level in the `LEVELS` table near the top of the same script; the script stops with a message that names any construction without one.
 
 Then run `node scripts/graph/fr/build/constructions.mjs` and `pnpm graph:test`. The test fails when a detector misses one of its match sentences or matches one of its noMatch sentences. Finally, add the new ID to `teachesConstructions` of the lesson that explains it.
 
@@ -185,6 +189,40 @@ A function is available at a position once every node of one of its exponents is
 
 To add a function, add it to `core/functions.json`, keeping the list in order of level and then group, and give it at least one exponent. An exponent may name a headword that no lesson teaches yet; the function then stays unavailable until a lesson teaches it. If the word list lacks a word the function needs, add the headword first (see Adding a headword). Then run `pnpm graph:check`. It warns `function-no-exponent` for a function with no French exponent, and reports `function-bad-group` for an unknown group, `function-bad-level` for a level that is not A1 to C2, `exponent-empty` for an exponent with no nodes, and `dangling-ref` for an exponent that names a function or node the graph does not have.
 
+## Levels and core lists
+
+Every headword, construction and paradigm has a CEFR level in `cefr`, and `cefrSource` says how that level was decided. The levels are our own grading. Three public sources informed it, and none of their data is in this repository:
+
+- The Eaquals core inventory for French (2015) lists, for each level, the grammar points, functions and vocabulary themes that most French reference books agree on. It is copyright, so we read it and do not copy it.
+- Lexique 3.83 (lexique.org) gives how often each word appears in French films and books.
+- FLELex (CENTAL, UCLouvain) gives how often each word appears in French textbooks at each level, and a level derived from those counts. Its license allows only non-commercial use, so we used it only to check our levels. It agrees with our level for about two words in three.
+
+`cefrSource` takes one of three values:
+
+| Value | Meaning |
+|---|---|
+| `agent: frequency + Eaquals` | A word placed by an Eaquals vocabulary theme or function of that level (days, food and transport are A1), or else by its frequency rank in Lexique: top 1,000 lemmas A1, top 2,000 A2, top 4,000 B1, top 8,000 B2, rarer C1. |
+| `agent: Eaquals grammar` | The level where the Eaquals inventory lists the grammar point as key: passé composé A1, imparfait A2, il faut que with the subjunctive A2, other uses of the subjunctive B1, conditionnel passé B2. A grammar word takes the level of its grammar point, so dont is B1 and donc is A2. |
+| `agent: judgment` | Our own call where the sources say nothing direct: fixed phrases, slang, grammar terms such as verbe, and words a frequency rank places too low or too high. |
+
+Agents set the first levels, hence the `agent:` prefix. Anyone may change a level; write a short source of your own when you do.
+
+A form has no stored level. It takes the higher of its headword's level and the level of the construction that builds its tense: subjunctive forms take `fr:cx:subj.il-faut-que`, conditional forms `fr:cx:conditionnel-present`, future forms `fr:cx:futur-simple`, imperfect forms `fr:cx:imparfait` and present participles `fr:cx:gerondif`. Present-tense forms, past participles and agreement forms take the headword's level. `nodeLevel` in `scripts/graph/levels-data.mjs` computes it.
+
+The core lists in `core/levels/` name what a learner must have to reach a level. A level counts as reached once the course has taught 90% of its core words and every core construction (`levelThreshold` in `core/settings.json`). Each list looks like this, with its IDs sorted:
+
+```json
+{ "level": "A1", "lang": "fr", "frozen": "2026-11-24", "words": ["fr:lex:acheter", "..."], "constructions": ["fr:cx:adj.agreement", "..."] }
+```
+
+- `constructions` holds the grammar points the Eaquals inventory lists as key at that level, where the graph has a construction or paradigm for them.
+- `words` holds the headwords of that level that a function of that level needs, that rank in the top 1,500 lemmas, or that an Eaquals vocabulary theme of that level placed there. Letters of the alphabet are left out.
+- Every node in a list has the list's level, and no node is in two lists.
+
+A1 holds 550 words and A2 holds 136, 686 together. Milton and Alexiou (2009) measured French learners knowing about 1,160 lemmas at A1 and 1,650 at A2; a core list is smaller because it holds what every learner must know, not everything a learner happens to know. B1 holds 19 words, since the course word list has few B1 words. A list can name only headwords the graph has, so frequent words the course never uses, such as avion, are missing from it. To add one, add the headword with its level first.
+
+The lists were frozen on 2026-11-24 so that coverage is measured against a fixed target. Change them by hand, only when the team changes that target. If you change the level of a word or construction in a list, move it to the list of its new level or take it out. `pnpm graph:test` fails when a headword, construction or paradigm has no level or source, and when a list names a node of another level.
+
 ## Build scripts
 
 `scripts/graph/fr/build/` holds the scripts that built the French data. Running `add-words.mjs`, `constructions.mjs` and `course-map.mjs` with `node`, in that order, then `pnpm graph:extract`, reproduces every committed data file byte for byte.
@@ -192,5 +230,6 @@ To add a function, add it to `core/functions.json`, keeping the list in order of
 - `constructions.mjs` writes `constructions.json` and stays its source of truth.
 - `course-map.mjs` and `course-map-data.mjs` wrote the hand-edited course-map fields, `names.json` and a few headword changes; `course-map-data.mjs` records why each entry exists. The JSON files are now the source of truth, so edit them directly. Running `course-map.mjs` again would overwrite those edits.
 - `add-words.mjs` records the words added after the first full check. Running it again changes nothing.
+- `levels-propose.mjs` proposed the first headword levels from Lexique and FLELex files kept outside the repository, in a table that stays outside it too. It is not part of the build. The levels in `headwords.json` were decided from that table and are now edited by hand.
 
 `scripts/graph/fr/seed-headwords.mjs` and `scripts/graph/fr/import-conjugations.mjs` made the first word list and irregular forms from the lesson files. Do not run them against the committed data, which has been checked and corrected by hand since.

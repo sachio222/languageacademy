@@ -1,0 +1,42 @@
+{
+  "constructions": [
+    "fr:cx:chunk.grace-a",
+    "fr:cx:gerondif",
+    "fr:cx:passive",
+    "fr:cx:plus-que-parfait.avoir",
+    "fr:cx:plus-que-parfait.etre",
+    "fr:cx:q.embedded",
+    "fr:cx:relative.ce-que",
+    "fr:cx:relative.dont",
+    "fr:cx:si.imparfait-conditionnel",
+    "fr:cx:subj.bien-que",
+    "fr:cx:subj.emotion-que",
+    "fr:cx:subj.ne-pas-penser-que",
+    "fr:cx:subj.pour-que",
+    "fr:cx:subj.vouloir-que"
+  ],
+  "frozen": "2026-11-24",
+  "lang": "fr",
+  "level": "B1",
+  "words": [
+    "fr:lex:ainsi",
+    "fr:lex:car",
+    "fr:lex:dont",
+    "fr:lex:douter",
+    "fr:lex:egalement",
+    "fr:lex:gouvernement",
+    "fr:lex:grace",
+    "fr:lex:lendemain",
+    "fr:lex:lequel",
+    "fr:lex:nation",
+    "fr:lex:paix",
+    "fr:lex:parmi",
+    "fr:lex:peuple",
+    "fr:lex:politique",
+    "fr:lex:presque",
+    "fr:lex:public",
+    "fr:lex:puisque",
+    "fr:lex:soi",
+    "fr:lex:œuvre"
+  ]
+}
