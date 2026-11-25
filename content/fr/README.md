@@ -26,6 +26,8 @@ The course plan already has a file for every module it lists. Each one is a stub
 
 To write a module, open its stub, set `"status": "written"`, delete the `plan` block and add the fields its kind requires. Keep the file name and `module_key` exactly as they are.
 
+The checker expects every word and pattern a module teaches to come back within 2 modules, then within 5, 12 and 30 modules of each return; each of those spans is a reuse window. Before you write, run `pnpm graph:due <module_key>`; a stub works too. It lists the words and patterns taught earlier that are due for reuse by this module, each with where it was taught, where it was last used and where its reuse window ends. Use each one in the module where it fits, or the checker reports `reuse-missed` for it.
+
 Every written module needs `title` and `description`. A unit exam has no title of its own: the loader names it "Unit exam · <unit name>". Optional on every kind: `topic`, `can_do` (lines for "What you can do now"), `teaches` and `tests`.
 
 | Kind | Required fields | Notes |
@@ -64,7 +66,7 @@ English text that quotes French puts the French in braces: `Use {être} for how 
 Ids are permanent, because L stores progress against them.
 
 - **Module keys** never change. A new module that is not in the course plan takes a short slug (`city-transport`); a reading, practice set or exam that belongs to one unit takes `<unit_key>-reading`, `<unit_key>-practice` or `<unit_key>-exam`.
-- **Item ids** match `^[a-z0-9][a-z0-9-]*$` and are unique in their module. Make one from the answer (`i-je-suis-fatigue`). Once written, an item id stays with its question even when you correct the answer. A question that now asks something else needs a new id: reusing an id for a different answer fails `content:bundle --check` against the last release.
+- **Item ids** match `^[a-z0-9][a-z0-9-]*$` and are unique in their module. Make one from the answer (`i-je-suis-fatigue`). An item keeps its id when you correct its answer, as long as it still accepts an answer it accepted before; keep the old answer in `accept` when it is still right. An item that accepts none of its old answers asks something else and needs a new id: keeping the old one fails `content:bundle --check` against the last release (`item_id_reused`). `pnpm content:migrate` applies the same rule to a correction merged from `main`: it gives the item a new id and prints an `id_new_answer` line.
 - **Word ids** follow L's rule. The first meaning taught takes the dictionary id (`aller-fr`). A later new meaning of the same spelling takes a sense suffix (`le-fr.object-pronoun`). The same word met again keeps its id, with or without its article, capital or end mark. A word id already used for another word fails the load (`word_id_conflict`), and a spelling taught again under a new id without a sense suffix prints a warning.
 
 ## Editing a module converted from the live app
@@ -101,7 +103,9 @@ pnpm graph:check --budget      # the language-graph checker within its issue bud
 pnpm build
 ```
 
-CI runs the same checks on every push. The issue budget (`curriculum-graph/reports/issue-budget.json`) has two parts. Units 1 to 12 and the shelf keep the counts the conversion left, and those can only go down. Unit 13 onward is at zero for every rule, so a module written there must be clean.
+CI runs the same checks on every push. The issue budget (`curriculum-graph/reports/issue-budget.json`) has two parts. For Units 1 to 12 and the shelf, the counts the conversion left are a ceiling: a count above it fails, and `pnpm graph:check --lower-budget` writes down any count that fell, so the ceiling only moves down. Unit 13 onward is at zero for every rule, so a module written there must be clean.
+
+A count can rise even when you change no old module, because writing a stub makes the course longer. Reuse windows that used to end past the last written module now end inside it, and each one with no use is a `reuse-missed`. That issue counts in the unit where its window ends, not the unit that taught the word, and a window that ends at a stub is not counted until the stub is written. A unit's can-do lines in `course.json` are checked with its last written module, so writing the end of a unit moves the words in those lines to a later position too. Writing the end of Unit 12 can therefore raise the Units 1 to 12 counts: run `pnpm graph:due` on each module you write and reuse what it lists.
 
 `pnpm content:bundle` writes `dist-content/bundle.json`, the file prototype L reads; `--units unit1` writes a Unit 1 sample next to it. Neither file is committed.
 
