@@ -3039,7 +3039,7 @@
         },
         {
           "cell": "ptcp*",
-          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu)(e|s|es)?$).+"
+          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu|employe)(e|s|es)?$).+"
         }
       ],
       [
@@ -3083,7 +3083,7 @@
         },
         {
           "cell": "ptcp*",
-          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu)(e|s|es)?$).+"
+          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu|employe)(e|s|es)?$).+"
         }
       ],
       [
@@ -3117,7 +3117,7 @@
         },
         {
           "cell": "ptcp*",
-          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu)(e|s|es)?$).+"
+          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu|employe)(e|s|es)?$).+"
         }
       ]
     ],

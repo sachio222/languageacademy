@@ -261,7 +261,7 @@ test('the participle of an être verb after être reads as passé composé with 
 
 test('participles used as everyday adjectives after être do not read as passive', () => {
   for (const s of ['Je suis convaincu.', 'Il est endormi.', 'Je suis inscrite.', 'Je suis détendu.', 'La lumière est éteinte.',
-    'C\'est interdit.', 'Le ciel est couvert.', 'C\'est prévu.', 'Le problème est résolu.', 'Mon chat est disparu.']) {
+    'C\'est interdit.', 'Le ciel est couvert.', 'C\'est prévu.', 'Le problème est résolu.', 'Mon chat est disparu.', 'Je suis employé dans une banque.']) {
     assert.ok(!detected(s).includes('fr:cx:passive'), `${s} does not read as passive`);
   }
   // a real passive with a new verb still reads as passive

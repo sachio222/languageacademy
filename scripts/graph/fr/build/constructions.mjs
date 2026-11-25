@@ -50,7 +50,7 @@ const ADJ_STEP = { pos: 'adjective' };
 // Participles that after être normally describe a state, not a passive (je suis fatigué, c'est interdit, le ciel est
 // couvert). A participle belongs here only when "je suis X" or "c'est X" is usually read as a state.
 const ADJ_PTCP = 'fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete'
-  + '|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu';
+  + '|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu|employe';
 const PASSIVE_PTCP = { cell: 'ptcp*', surface: '(?!(' + ETRE_VERB_PTCP.slice(1, ETRE_VERB_PTCP.indexOf(')')) + '|' + ADJ_PTCP + ')(e|s|es)?$).+' };
 const AUX_TAIL = [opt(CL_SUBJ), opt(ADV), opt(ADV)];
 const ETRE_PRS = { headword: 'fr:lex:etre', cell: 'prs.*' };
