@@ -287,7 +287,7 @@ function comparePassage(live, conv, out, ctx) {
       if (ctx.stats) ctx.stats.fields += 1;
       if (i !== null && j !== null && a[i].s === b[j].s) continue;
       const d = { path: `readingPassage.${f}#sentence`, live: i === null ? null : a[i].s, converted: j === null ? null : b[j].s };
-      if (f === 'translation') d.fr = [...(i === null ? [] : liveFr(a[i].p.i)), ...(j === null ? [] : convFr(b[j].p.i))];
+      if (f === 'translation') Object.assign(d, { fr: [...(i === null ? [] : liveFr(a[i].p.i)), ...(j === null ? [] : convFr(b[j].p.i))], frConv: j === null ? [] : convFr(b[j].p.i) });
       out.push(d);
     }
     if (f === 'text') {
@@ -308,7 +308,7 @@ function comparePassage(live, conv, out, ctx) {
       if (ctx.stats) ctx.stats.fields += 1;
       if (i !== null && j !== null && lh[i].s === ch[j].s) continue;
       const d = { path: `readingPassage.${f}#scene`, live: i === null ? null : lh[i].s, converted: j === null ? null : ch[j].s };
-      if (f === 'translation') d.fr = [...(i === null ? [] : liveFr(lh[i].i)), ...(j === null ? [] : convFr(ch[j].i))];
+      if (f === 'translation') Object.assign(d, { fr: [...(i === null ? [] : liveFr(lh[i].i)), ...(j === null ? [] : convFr(ch[j].i))], frConv: j === null ? [] : convFr(ch[j].i) });
       out.push(d);
     }
     const ls = lp.filter((p) => p.label);
@@ -344,6 +344,8 @@ export function compareLesson(live, conv, ctx = {}) {
     if (m) d.sentence = { live: live.sentences?.[+m[1]], converted: conv.sentences?.[+m[1]] };
     m = /^guide\.sections\[(\d+)\]/.exec(d.path);
     if (m) d.section = { live: live.guide?.sections?.[+m[1]], converted: conv.guide?.sections?.[+m[1]] };
+    m = /^concepts\[(\d+)\]/.exec(d.path);
+    if (m) d.concept = conv.concepts?.[+m[1]];
     d.spans = ctx.spans;
   }
   return out;
@@ -498,17 +500,27 @@ export const RELATIONS = {
     const conv = d.cards.converted.find((c) => c.french === live.french && c.english === live.english);
     return !!conv && conv.note === [live.note, live.usage, live.agreement].filter(isStr).map((s) => s.trim()).join('; ');
   },
-  // A card listed twice: one card is left, and its note holds the note of every copy.
-  // A note a position word was fixed out of by hand counts as kept when the fix line quotes it.
+  // A card listed twice: one card is left, and its note is exactly every copy's note (with its usage and agreement)
+  // joined with "; ", as merge.mjs mergeVocabulary joins them, or the hand edit of exactly that joined note the
+  // report records ("feminine; from Unit 4 everyday-nouns" → "feminine", a position word fixed by hand).
   twin_card_exact: (d, l, lines = []) => {
     const i = firstIndex(d.path);
     const live = d.cards?.live?.[i];
     if (!RELATIONS.twin_card(d, l) || !live) return false;
     const copies = d.cards.live.filter((c) => c.french === live.french && c.english === live.english);
     const left = d.cards.converted.filter((c) => c.french === live.french && c.english === live.english);
-    const fixedOut = (note) => lines.some((x) => x.kind === 'position_word' && /\(fixed by hand\)$/.test(x.detail) && x.detail.includes(note));
-    return copies.length > 1 && left.length === 1 && copies.every((c) => !isStr(c.note) || String(left[0].note ?? '').includes(c.note.trim()) || fixedOut(c.note.trim()));
+    if (copies.length < 2 || left.length !== 1) return false;
+    const parts = [];
+    for (const c of copies) {
+      const n = [c.note, c.usage, c.agreement].filter(isStr).map((s) => s.trim()).join('; ');
+      if (n && !parts.includes(n)) parts.push(n);
+    }
+    const joined = parts.join('; ');
+    const note = left[0].note ?? '';
+    return note === joined || lines.some((x) => x.kind === 'hand_edit' && /\.note$/.test(x.path ?? '') && x.detail === `"${joined}" → "${note}"`);
   },
+  // Dropped, with the line quoting today's value: nothing took its place.
+  dropped_quoted: (d, l) => d.converted === undefined && RELATIONS.live_in_detail(d, l),
   // The negation guide's row notes, joined into the part's note: each of today's row notes (quotes around spans
   // dropped) is in the part's note, and the part's note is exactly them, joined with a space.
   row_notes_in_part_note: (d, l) => {
@@ -545,7 +557,7 @@ export const RELATIONS = {
 /**
  * Checks that pin an allowed difference to the source data it came from, for classes with `basis.data` or as a
  * class's relation. data = { liveIds (live-ids.json), course (loadCourse), lSources (l-sources.json), handFixes
- * (hand-fixes.json), rewrites (holds.mjs REWRITES), plain (span braces removed) }.
+ * (hand-fixes.json), rewrites (holds.mjs REWRITES), plain (span braces removed), adapt (module -> toLegacyLesson) }.
  * - concept_id_from_live_ids: a concept card's id is the one live-ids.json gives today's card index (the Task 8
  *   interface adds `id`); a card or module main lacks keeps the module's own id for that card.
  * - item_id_not_on_main: an exercise id names its own item: `<module_key>.<item_id>` for an item main has no exercise
@@ -556,25 +568,20 @@ export const RELATIONS = {
  * - unit_exam_title_outline: "Unit exam · <the outline's unit name>".
  * - savoir_pinned: the choice item as Jake ruled it (holds.mjs REWRITES), field by field.
  */
-export function goldenChecks({ liveIds = {}, course = null, lSources = null, handFixes = {}, rewrites = [], plain = (t) => t } = {}) {
+export function goldenChecks({ liveIds = {}, course = null, lSources = null, handFixes = {}, rewrites = [], plain = (t) => t, adapt = null } = {}) {
   const of = (key) => liveIds[key] ?? { items: {}, concepts: {} };
   const mod = (key) => course?.modules.get(key) ?? null;
   const storyOf = (key) => lSources?.stories?.find((s) => `reading${s.n}` === mod(key)?.story_id) ?? null;
-  const deepStrings = (v, out = new Set()) => {
-    if (isStr(v)) out.add(plain(v).trim());
-    else if (Array.isArray(v)) v.forEach((x) => deepStrings(x, out));
-    else if (isObj(v)) Object.values(v).forEach((x) => deepStrings(x, out));
-    return out;
-  };
   const noPrefix = (s) => (isStr(s) ? s.replace(/^(?:Module \d+|Reference [IVXL]+): /, '') : s);
   return {
     concept_id_from_live_ids: (d) => {
       const m = /^concepts\[(\d+)\]\.id$/.exec(d.path);
       if (!m || d.live !== undefined || !isStr(d.converted)) return false;
       const mapped = of(d.module_key).concepts;
-      // A module or card main does not have (the numbers lesson, the adjectives card) keeps its own concept id.
+      // A module or card main does not have (the numbers lesson, the adjectives card) keeps its own concept id: the
+      // id the converted module holds at that very index.
       if (liveIds[d.module_key] === undefined || mapped[m[1]] === undefined)
-        return !Object.values(mapped).includes(d.converted) && (mod(d.module_key)?.concepts || []).some((c) => c.id === d.converted);
+        return !Object.values(mapped).includes(d.converted) && mod(d.module_key)?.concepts?.[+m[1]]?.id === d.converted;
       return mapped[m[1]] === d.converted;
     },
     item_id_not_on_main: (d) => {
@@ -593,22 +600,49 @@ export function goldenChecks({ liveIds = {}, course = null, lSources = null, han
       const art = story.blocks.filter((b) => b.img).map((b) => b.img);
       return art.length === d.pictures.length && art.every((a, i) => a === d.pictures[i]) && (d.converted === null || art.includes(d.converted));
     },
+    // The English of its own block: the L block whose French is this paragraph's French.
     story_translation_l: (d, l) => {
       if (!RELATIONS.story_translation(d, l)) return false;
       if (d.converted === null) return true;
       const story = storyOf(d.module_key);
-      return !!story && story.blocks.some((b) => isStr(b.en) && sentences(b.en).includes(d.converted));
+      const fr = (d.frConv || []).join(' ');
+      const block = story?.blocks.find((b) => {
+        const t = b.fr ?? b.scene ?? b.end;
+        return isStr(t) && sentences(t).join(' ') === fr;
+      });
+      return !!fr && !!block && isStr(block.en) && sentences(block.en).includes(d.converted);
     },
+    // The hand-fixed value at the difference's own place: the field, the concept card (by id), the word card (by
+    // word_id) or the item (by id, drawn through the adapter as the live screen reads it).
     position_word_hand_fixed: (d, l) => {
       if (!RELATIONS.title_in_detail(d, l)) return false;
       const fixes = handFixes[d.module_key];
-      if (!fixes) return false;
-      if (d.converted === undefined) {
-        // A note dropped by hand ("Unit 5 verb"): the hand-fixed card has none.
-        const m = /^vocabularyReference\[\d+\]\.note$/.exec(d.path);
-        return !!m && Object.entries(fixes).some(([k, v]) => k.startsWith('vocabulary/') && v?.fr === d.card && v.note === undefined);
+      const m = mod(d.module_key);
+      if (!fixes || !m) return false;
+      const conv = d.converted === undefined ? undefined : String(noPrefix(d.converted)).trim();
+      const same = (v) => (v === undefined ? conv === undefined : isStr(v) && plain(v).trim() === conv);
+      let p;
+      if (d.path === 'title' || d.path === 'description') return d.path in fixes && same(fixes[d.path]);
+      if ((p = /^concepts\[\d+\]\.(term|definition|example)$/.exec(d.path))) {
+        const c = (fixes.concepts || []).find((x) => x.id === d.concept?.id);
+        return !!c && same(c[p[1]]);
       }
-      return deepStrings(fixes).has(String(noPrefix(d.converted)).trim());
+      if ((p = /^vocabularyReference\[(\d+)\]\.note$/.exec(d.path))) {
+        const card = d.cards?.live?.[+p[1]];
+        const w = (m.vocabulary || []).find((x) => x.fr === card?.french && x.gloss === card?.english);
+        const fix = w && fixes[`vocabulary/${w.word_id}`];
+        return !!fix && same(fix.note);
+      }
+      if ((p = /^exercises\[\d+\]\.(instruction|prompt|hint|wrongAnswers\[(\d+)\]\.feedback)$/.exec(d.path))) {
+        const n = d.exercise?.converted?.displayNumber;
+        const item = m.items?.[n - 1];
+        const fix = item && fixes[`items/${item.id}`];
+        if (!fix || !adapt) return false;
+        const ex = adapt({ ...m, items: m.items.map((it, k) => (k === n - 1 ? { ...fix, steps: it.steps } : it)) }).exercises[n - 1];
+        const v = p[2] === undefined ? ex[p[1]] : ex.wrongAnswers?.[+p[2]]?.feedback;
+        return same(v);
+      }
+      return false;
     },
     unit_exam_title_outline: (d, l) => {
       const m = mod(d.module_key);

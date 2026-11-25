@@ -23,7 +23,7 @@ const lSources = readJson(join(CONTENT_ROOT, 'legacy', 'l-sources.json'));
 const handFixes = readJson(join(CONTENT_ROOT, 'legacy', 'hand-fixes.json'));
 const report = parseReport(readFileSync(join(CONTENT_ROOT, 'migration-report.md'), 'utf8'));
 const course = loadCourse();
-const checks = goldenChecks({ liveIds, course, lSources, handFixes, rewrites: REWRITES, plain });
+const checks = goldenChecks({ liveIds, course, lSources, handFixes, rewrites: REWRITES, plain, adapt: (m) => toLegacyLesson(m, { liveIds, course }) });
 
 // Every span text in a module: today's quotes around one are dropped before comparing (golden.mjs sameText).
 function spansOf(mod) {
@@ -155,6 +155,24 @@ const PLANTED = [
   })],
   ['a story caption translation changed (story_translation)', only('2024-01-09-reading1', (c) => {
     c.readingPassage.translation = c.readingPassage.translation.replace('Paul, a cat and a dog.', 'Paul.');
+  })],
+  ["a position-word fix swapped for another card's fix (position_words_fixed, own path)", only('2024-01-06-basic-nouns', (c) => {
+    c.concepts[1].definition = 'Every exercise uses être or avoir - reinforcing what you learned!';
+  })],
+  ['a position-word hint set to a mistake answer of the module (position_words_fixed, own path)', only('2024-01-06-basic-nouns', (c) => {
+    c.exercises[0].hint = "j'ai le livre";
+  })],
+  ["a caption's English swapped for another block's (story_translation, own block)", only('2024-01-09-reading1', (c) => {
+    c.readingPassage.translation = c.readingPassage.translation.replace('Paul, a cat and a dog.', 'Thank you and goodbye!');
+  })],
+  ['two concept ids swapped in a module main lacks (concept_id_added)', only('2026-11-24-numbers', (c) => {
+    [c.concepts[0].id, c.concepts[1].id] = [c.concepts[1].id, c.concepts[0].id];
+  })],
+  ['a passage title added back (story_title_from_stories)', only('2024-01-09-reading1', (c) => {
+    c.readingPassage.title = 'junk';
+  })],
+  ['junk appended to a twin card note (vocabulary_card_listed_twice)', only('2024-05-23-temporal-words', (c) => {
+    c.vocabularyReference.find((x) => x.french === 'après').note += ' JUNK';
   })],
   ['two new item ids swapped (new_item_ids)', only('2026-11-24-numbers', (c) => {
     const ex = c.exercises.filter((e) => !/\.\d+$/.test(e.id));

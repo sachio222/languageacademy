@@ -368,7 +368,7 @@
         "report": "dropped_field",
         "path": "^readingPassage\\.title$",
         "detail": "the story's title comes from stories/",
-        "relation": "live_in_detail"
+        "relation": "dropped_quoted"
       },
       "paths": [
         "^readingPassage\\.title$"
