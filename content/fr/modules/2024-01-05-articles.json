@@ -10,6 +10,13 @@
     "Use 'a/an' (un, une) correctly based on gender",
     "Understand why French requires articles with every noun"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:article.indefinite",
+      "fr:cx:article.definite",
+      "fr:cx:noun.gender"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "un-fr",

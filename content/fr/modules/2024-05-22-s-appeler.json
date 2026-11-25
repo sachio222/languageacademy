@@ -10,6 +10,11 @@
     "Ask someone's name (What's your name?)",
     "Use the most important reflexive verb in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:elision"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "s-appeler-fr",

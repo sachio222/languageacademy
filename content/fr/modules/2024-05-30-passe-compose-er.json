@@ -10,6 +10,12 @@
     "Form past tense with regular -ER verbs",
     "Begin telling stories about what you did"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:ptcp.er"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "j-ai-parle-fr",

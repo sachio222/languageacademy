@@ -340,6 +340,22 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que",
+      "fr:cx:relative.ou",
+      "fr:cx:relative.dont",
+      "fr:cx:relative.ce-que",
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:subj.vouloir-que",
+      "fr:cx:subj.possible-que",
+      "fr:cx:subj.bien-que",
+      "fr:cx:subj.douter-que",
+      "fr:cx:subj.emotion-que",
+      "fr:cx:chunk.quelque-chose",
+      "fr:cx:neg.ne-personne",
+      "fr:cx:neg.ne-rien",
+      "fr:cx:si.imparfait-conditionnel"
+    ]
   }
 }

@@ -9,6 +9,23 @@
     "Say what you are not and what you do not have",
     "Say not anymore, nothing and never"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:neg.ne-pas",
+      "fr:cx:neg.de",
+      "fr:cx:neg.ne-plus",
+      "fr:cx:neg.ne-rien",
+      "fr:cx:neg.ne-jamais"
+    ],
+    "words": [
+      "fr:lex:ne",
+      "fr:form:ne.elided",
+      "fr:lex:pas",
+      "fr:lex:plus",
+      "fr:lex:rien",
+      "fr:lex:jamais"
+    ]
+  },
   "minutes": 3,
   "line": "Say not, no more, nothing and never with sentences you already know.",
   "parts": [

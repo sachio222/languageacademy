@@ -10,6 +10,11 @@
     "Talk about what you would have done differently",
     "Use past perfect conditional naturally"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:si.plus-que-parfait-conditionnel-passe"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "si-j-avais-su-fr",

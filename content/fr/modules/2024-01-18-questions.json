@@ -10,6 +10,18 @@
     "Say 'Where is the book?' or 'What do you want?'",
     "Have actual two-way conversations in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:q.est-ce-que",
+      "fr:cx:q.intonation",
+      "fr:cx:q.inversion",
+      "fr:cx:q.words",
+      "fr:cx:q.quest-ce-que",
+      "fr:cx:chunk.quest-ce-que-cest",
+      "fr:cx:chunk.comment-ca-va",
+      "fr:cx:chunk.ca-va"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "que-quoi-fr",

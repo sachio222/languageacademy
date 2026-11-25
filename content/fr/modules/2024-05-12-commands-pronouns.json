@@ -10,6 +10,11 @@
     "Use pronouns with affirmative and negative commands",
     "Form complex commands like 'Don't do it!' or 'Look at me!'"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:imperative.pronouns"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "donne-le-moi-fr",

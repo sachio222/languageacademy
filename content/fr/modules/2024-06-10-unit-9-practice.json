@@ -283,6 +283,9 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:imparfait",
+      "fr:cx:chunk.en-fait"
+    ]
   }
 }

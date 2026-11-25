@@ -10,6 +10,11 @@
     "Express ownership without repeating the noun",
     "Ask 'Is that yours?' or answer 'No, it's theirs'"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:possessive.pronoun"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "le-mien-fr",

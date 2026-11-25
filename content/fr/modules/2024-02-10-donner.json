@@ -10,6 +10,14 @@
     "Talk about gifts, help, and sharing",
     "Use one of the top 25 most common French words"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:pronoun.indirect-object"
+    ],
+    "words": [
+      "fr:lex:aide"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "donner-fr",

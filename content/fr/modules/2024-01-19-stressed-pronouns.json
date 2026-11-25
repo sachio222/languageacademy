@@ -10,6 +10,11 @@
     "Emphasize who you're talking about (c'est moi - it's me)",
     "Give short emphatic answers (Moi? - Me?)"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:pronoun.stressed"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "moi-fr",

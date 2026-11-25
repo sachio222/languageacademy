@@ -37,6 +37,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Fields with no place in a module file | 1956 |
 | Text written differently | 673 |
 | Notes | 10 |
+| Course map split | 41 |
 | Outline | 16 |
 
 ## Guide checks written by hand
@@ -3962,6 +3963,115 @@ Things the conversion keeps or drops on a ruling, listed so nothing changes unse
 - `vocabularyReference[5].wikipedia.image` image_without_credit: /img/external/Louvre_Museum_Wikimedia_Commons-1851e9.jpg ("Louvre Museum"): the picture's file states only copyright "CC-by-SA 4.0 unported"
 - `vocabularyReference[6].wikipedia.image` image_without_credit: /img/external/Paris_-_Eiffelturm_und_Marsfeld2-4d8187.jpg ("Seine River"): the picture's file states no author or licence
 - `vocabularyReference[7].wikipedia.image` image_without_credit: /img/external/Tour_Eiffel_Wikimedia_Commons__cropped_-302994.jpg ("Eiffel Tower"): the picture's file states no author or licence
+
+## Course map split
+
+What each module teaches and tests now sits in its module file (`teaches`, `tests`). `curriculum-graph/languages/fr/course-map.corrections.json` keeps the checker’s corrections, each under its module key and item id. These lines list every course-map entry that moved to a new key or has no place in either file.
+
+- `teachesWords` teaches_words_derived: 124 modules list extracted words, which are their vocabulary tables, so they are not written
+
+**2024-01-01-famous-words**
+
+- `2024-01-01-famous-words#exerciseConfig.items[5]` rekeyed: overrides now under 2024-01-01-famous-words#i-s-il-vous-plait
+
+**2024-01-02-etre**
+
+- `2024-01-02-etre#concepts[0].example` rekeyed: overrides now under 2024-01-02-etre#concepts/c-etre-to-be/example
+
+**2024-10-21-cognates-help**
+
+- `screen` screen_dropped: src/components/CognatesHelp.jsx; a guide's screen comes from its kind
+
+**2024-10-20-liaison-help**
+
+- `screen` screen_dropped: src/components/LiaisonHelp.jsx; a guide's screen comes from its kind
+
+**2024-01-11-unit1-exam**
+
+- `2024-01-11-unit1-exam#concepts[2].example` no_item_id: live-ids.json has no concept for concepts[2]; the override {"ignore":["fr:lex:express","possession"]} is kept nowhere
+
+**2026-11-24-negation-guide**
+
+- `2026-11-24-negation-guide#guide.sections[1].heading` no_item_id: live-ids.json gives no id for guide.sections[1].heading; the override {"ignore":["fr:lex:de"]} is kept nowhere
+- `2026-11-24-negation-guide#guide.sections[1].rule` no_item_id: live-ids.json gives no id for guide.sections[1].rule; the override {"ignore":["fr:lex:de"]} is kept nowhere
+- `2026-11-24-negation-guide#guide.sections[2].examples[0].french` no_item_id: live-ids.json gives no id for guide.sections[2].examples[0].french; the override {"ignore":["fr:cx:comparative"]} is kept nowhere
+
+**2024-01-13-ca-survival**
+
+- `2024-01-13-ca-survival#exerciseConfig.items[4].hint` rekeyed: overrides now under 2024-01-13-ca-survival#i-tu-as-ca/hint
+- `2024-01-13-ca-survival#exerciseConfig.items[5].hint` rekeyed: overrides now under 2024-01-13-ca-survival#i-il-a-ca/hint
+- `2024-01-13-ca-survival#vocabularyReference[2].note` no_item_id: live-ids.json gives no id for vocabularyReference[2].note; the override {"ignore":["fr:cx:frame.aller-infinitive"]} is kept nowhere
+
+**2024-01-19-questions-help**
+
+- `screen` screen_dropped: src/components/QuestionsHelp.jsx; a guide's screen comes from its kind
+
+**2024-01-19-stressed-pronouns**
+
+- `2024-01-19-stressed-pronouns#concepts[1].example` rekeyed: overrides now under 2024-01-19-stressed-pronouns#concepts/c-when-to-use-stressed/example
+
+**2024-01-28-verb-pattern-help**
+
+- `screen` screen_dropped: src/components/VerbPatternHelp.jsx; a guide's screen comes from its kind
+
+**2024-02-02-combining**
+
+- `2024-02-02-combining#exerciseConfig.items[10].hint` rekeyed: overrides now under 2024-02-02-combining#i-tu-viens-avec-moi/hint
+- `2024-02-02-combining#exerciseConfig.items[11].wrongAnswers[0].feedback` rekeyed: overrides now under 2024-02-02-combining#i-il-va-partir/mistakes/0/feedback
+
+**2024-03-31-survival-phrases**
+
+- `2024-03-31-survival-phrases#concepts[0].definition` rekeyed: overrides now under 2024-03-31-survival-phrases#concepts/c-polite-requests/definition
+- `2024-03-31-survival-phrases#concepts[0].example` rekeyed: overrides now under 2024-03-31-survival-phrases#concepts/c-polite-requests/example
+- `2024-03-31-survival-phrases#exerciseConfig.items[0]` rekeyed: overrides now under 2024-03-31-survival-phrases#i-je-voudrais-un-livre
+- `2024-03-31-survival-phrases#exerciseConfig.items[0].hint` rekeyed: overrides now under 2024-03-31-survival-phrases#i-je-voudrais-un-livre/hint
+- `2024-03-31-survival-phrases#exerciseConfig.items[0].wrongAnswers[0].feedback` rekeyed: overrides now under 2024-03-31-survival-phrases#i-je-voudrais-un-livre/mistakes/0/feedback
+- `2024-03-31-survival-phrases#exerciseConfig.items[1]` rekeyed: overrides now under 2024-03-31-survival-phrases#i-je-voudrais-un-cafe
+- `2024-03-31-survival-phrases#exerciseConfig.items[1].hint` rekeyed: overrides now under 2024-03-31-survival-phrases#i-je-voudrais-un-cafe/hint
+
+**2024-04-03-unit-4-practice**
+
+- `2024-04-03-unit-4-practice#sentences[0]` no_item_id: live-ids.json has no item for sentences[0] (live exercise 2024-04-03-unit-4-practice.1); the override {"ignore":["fr:cx:conditionnel-present"]} is kept nowhere
+
+**2024-04-02-unit-4-exam**
+
+- `2024-04-02-unit-4-exam#exerciseConfig.items[0]` rekeyed: overrides now under 2024-04-02-unit-4-exam#i-je-voudrais
+- `2024-04-02-unit-4-exam#exerciseConfig.items[39]` rekeyed: overrides now under 2024-04-02-unit-4-exam#i-je-voudrais-un-cafe
+
+**2024-04-24-reading-6**
+
+- `2024-04-24-reading-6#vocabularyReference[32].note` no_item_id: live-ids.json gives no id for vocabularyReference[32].note; the override {"ignore":["fr:lex:question","fr:lex:phrase"]} is kept nowhere
+
+**2024-05-05-on-and-people**
+
+- `2024-05-05-on-and-people#exercises[0]` rekeyed: overrides now under 2024-05-05-on-and-people#on-people-1
+- `2024-05-05-on-and-people#exercises[0].hint` rekeyed: overrides now under 2024-05-05-on-and-people#on-people-1/hint
+- `2024-05-05-on-and-people#exercises[0].wrongAnswers[0].feedback` rekeyed: overrides now under 2024-05-05-on-and-people#on-people-1/mistakes/0/feedback
+- `2024-05-05-on-and-people#vocabularyReference[3].note` no_item_id: live-ids.json gives no id for vocabularyReference[3].note; the override {"ignore":["fr:cx:pronoun.y"]} is kept nowhere
+
+**2024-05-11-unit-7-practice**
+
+- `2024-05-11-unit-7-practice#sentences[1]` no_item_id: live-ids.json has no item for sentences[1] (live exercise 2024-05-11-unit-7-practice.2); the override {"ignore":["fr:cx:pronoun.y"]} is kept nowhere
+
+**2024-05-10-unit-7-exam**
+
+- `2024-05-10-unit-7-exam#exerciseConfig.items[2]` rekeyed: overrides now under 2024-05-10-unit-7-exam#i-on-y-va
+- `2024-05-10-unit-7-exam#exerciseConfig.items[2].hint` rekeyed: overrides now under 2024-05-10-unit-7-exam#i-on-y-va/hint
+
+**2024-05-18-irregular-commands**
+
+- `2024-05-18-irregular-commands#concepts[1].example` rekeyed: overrides now under 2024-05-18-irregular-commands#concepts/c-must-memorize-these/example
+- `2024-05-18-irregular-commands#concepts[4].example` rekeyed: overrides now under 2024-05-18-irregular-commands#concepts/c-aller-commands/example
+- `2024-05-18-irregular-commands#exercises[3]` rekeyed: overrides now under 2024-05-18-irregular-commands#irreg-cmd-4
+- `2024-05-18-irregular-commands#exercises[5]` rekeyed: overrides now under 2024-05-18-irregular-commands#irreg-cmd-6
+
+**2024-05-24-unit-8-exam**
+
+- `2024-05-24-unit-8-exam#exerciseConfig.items[38]` rekeyed: overrides now under 2024-05-24-unit-8-exam#i-vas-y
+
+**2024-02-02-service-phrases**
+
+- `2024-02-02-service-phrases#title` rekeyed: overrides now under 2024-02-02-service-phrases#title
 
 ## Outline
 

@@ -10,6 +10,11 @@
     "Express sameness with même (the same thing)",
     "Describe how well or poorly you do things (mal, bien)"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:chunk.tout-le-monde"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "tout-fr",

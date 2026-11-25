@@ -10,6 +10,11 @@
     "Talk about responsibilities and duties",
     "Say 'I must go' or 'You have to see this' in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.modal-infinitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "devoir-fr",

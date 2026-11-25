@@ -5,6 +5,11 @@
   "status": "written",
   "title": "{Il est possible que...} - Possibility Phrases",
   "description": "Express possibilities and uncertainties! '{Il est possible qu'il vienne}' (It's possible he'll come), '{Peut-être qu'il viendra}' (Maybe he'll come). Useful for planning!",
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.possible-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "il-est-possible-qu-il-vienne-fr",

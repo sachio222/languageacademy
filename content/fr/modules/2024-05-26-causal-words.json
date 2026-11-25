@@ -10,6 +10,13 @@
     "Give reasons for your actions and decisions",
     "Connect cause and effect in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:chunk.parce-que",
+      "fr:cx:chunk.grace-a",
+      "fr:cx:chunk.a-cause-de"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "parce-que-fr",

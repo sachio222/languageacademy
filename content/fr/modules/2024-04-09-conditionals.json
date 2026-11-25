@@ -10,6 +10,11 @@
     "Express possibility with 'could' (je pourrais venir)",
     "Make suggestions and polite requests"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:conditionnel-present"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-devrais-fr",

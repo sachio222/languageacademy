@@ -297,6 +297,12 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:imparfait",
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:plus-que-parfait.etre",
+      "fr:cx:chunk.en-fait"
+    ]
   }
 }

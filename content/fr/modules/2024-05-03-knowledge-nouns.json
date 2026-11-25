@@ -10,6 +10,13 @@
     "Discuss learning and educational contexts",
     "Use knowledge nouns with cognitive verbs naturally"
   ],
+  "teaches": {
+    "constructions": [],
+    "words": [
+      "fr:lex:cours",
+      "fr:lex:pensee"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "la-connaissance-fr",

@@ -340,6 +340,13 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:chunk.sil-vous-plait",
+      "fr:cx:chunk.excusez-moi",
+      "fr:cx:chunk.je-ne-sais-pas",
+      "fr:cx:neg.ne-pas",
+      "fr:cx:neg.ne-jamais",
+      "fr:cx:adverb.placement"
+    ]
   }
 }

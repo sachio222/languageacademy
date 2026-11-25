@@ -307,6 +307,9 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:pronoun.on",
+      "fr:cx:frame.verb-que-clause"
+    ]
   }
 }

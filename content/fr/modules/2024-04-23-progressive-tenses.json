@@ -10,6 +10,14 @@
     "Talk about future plans (I'm going to go, we're going to eat)",
     "Use future tense for definite future actions"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.etre-en-train-de",
+      "fr:cx:frame.aller-infinitive",
+      "fr:cx:futur-simple",
+      "fr:cx:verb.future"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "etre-en-train-de-fr",

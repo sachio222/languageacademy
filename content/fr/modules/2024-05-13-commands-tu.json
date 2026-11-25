@@ -10,6 +10,11 @@
     "Tell someone to eat, speak, go, do something",
     "Use command form with -ER and -IR verbs"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:imperative.tu"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "mange-fr",

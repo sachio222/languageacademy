@@ -9,6 +9,13 @@
     "Turn any sentence into a question with {est-ce que}.",
     "Recognize a question made with a rising voice or a flipped verb, and know where each one fits."
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:q.est-ce-que",
+      "fr:cx:q.intonation",
+      "fr:cx:q.inversion"
+    ]
+  },
   "minutes": 5,
   "line": "Three ways to turn any sentence into a question, and when to use each one.",
   "parts": [

@@ -10,6 +10,12 @@
     "Use apprendre to talk about learning",
     "Use comprendre to express understanding"
   ],
+  "teaches": {
+    "constructions": [],
+    "words": [
+      "fr:lex:bus"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "prendre-fr",

@@ -10,6 +10,11 @@
     "Use subjunctive with wish expressions",
     "Communicate desires about other people's actions"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.vouloir-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-veux-que-tu-viennes-fr",

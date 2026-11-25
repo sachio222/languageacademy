@@ -10,6 +10,12 @@
     "Tell people what needs to happen",
     "Use '{il faut que}' with subjunctive forms naturally"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:frame.il-faut-infinitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "il-faut-que-tu-manges-fr",

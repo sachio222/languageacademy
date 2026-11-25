@@ -5,6 +5,11 @@
   "status": "written",
   "title": "{Je me fais couper...} - {Service Phrases}",
   "description": "Talk about services and appointments! '{Je me fais couper les cheveux}' (I'm getting my hair cut), '{Je fais réparer ma voiture}' (I'm having my car repaired). Adult life essentials!",
+  "teaches": {
+    "constructions": [
+      "fr:cx:causative.faire"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-me-fais-couper-les-cheveux-fr",

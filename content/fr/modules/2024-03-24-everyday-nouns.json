@@ -10,6 +10,13 @@
     "Use high-frequency nouns in conversation",
     "Express abstract and concrete concepts naturally"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:chunk.quelque-chose",
+      "fr:cx:chunk.tout-le-monde",
+      "fr:cx:neg.ne-personne"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "le-temps-fr",

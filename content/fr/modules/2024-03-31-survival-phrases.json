@@ -10,6 +10,14 @@
     "Ask essential questions (How much? Where is...?)",
     "Navigate shops, cafés, and France successfully"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:chunk.sil-vous-plait",
+      "fr:cx:chunk.sil-te-plait",
+      "fr:cx:chunk.excusez-moi",
+      "fr:cx:chunk.je-voudrais"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-voudrais-fr",

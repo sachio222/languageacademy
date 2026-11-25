@@ -10,6 +10,13 @@
     "Use subjunctive with negative opinions to show doubt",
     "Sound sophisticated when sharing viewpoints"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.ne-pas-penser-que",
+      "fr:cx:frame.verb-que-clause",
+      "fr:cx:subj.douter-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-pense-qu-il-vient-fr",

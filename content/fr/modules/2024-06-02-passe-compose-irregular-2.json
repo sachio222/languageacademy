@@ -10,6 +10,12 @@
     "Say 'I wanted to go', 'I could come', 'I had to work'",
     "Use irregular past forms for modal and -RE verbs"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:frame.modal-infinitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "j-ai-voulu-fr",

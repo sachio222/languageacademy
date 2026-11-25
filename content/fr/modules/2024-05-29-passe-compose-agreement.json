@@ -10,6 +10,11 @@
     "Understand when to add e, s, or es to past participles",
     "Use agreement rules correctly with être verbs"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:ptcp.agreement"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "il-est-alle-fr",

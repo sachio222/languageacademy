@@ -10,6 +10,15 @@
     "Describe ongoing past actions and habits",
     "Use the 'nous stem' rule to conjugate all verbs"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:imparfait",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.ir.impf",
+      "fr:cx:verb.re.impf",
+      "fr:cx:il-y-a"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-parlais-fr",

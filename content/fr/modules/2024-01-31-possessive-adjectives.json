@@ -10,6 +10,11 @@
     "Use possessive adjectives with correct gender agreement",
     "Say 'Where is my book?' or 'I want your car' in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:possessive.adjective"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "mon-fr",

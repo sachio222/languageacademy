@@ -10,6 +10,11 @@
     "Say 'I have a cat' or 'It's a book' in French",
     "Combine articles + nouns with être and avoir"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:noun.gender"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "un-livre-fr",

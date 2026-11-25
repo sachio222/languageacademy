@@ -10,6 +10,12 @@
     "Use être instead of avoir for motion verbs",
     "Master DR & MRS VANDERTRAMP verb patterns"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:passe-compose.etre",
+      "fr:cx:ptcp.agreement"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-suis-alle-e-fr",

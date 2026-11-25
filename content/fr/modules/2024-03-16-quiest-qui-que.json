@@ -5,6 +5,12 @@
   "status": "written",
   "title": "qui est-ce qui vs qui est-ce que - Master 'Who' Questions",
   "description": "Same pattern as WHAT questions, but for WHO! qui est-ce qui (who DOES - subject) vs qui est-ce que (who DO you - object). Transfer learning!",
+  "teaches": {
+    "constructions": [
+      "fr:cx:q.qui-est-ce-qui",
+      "fr:cx:q.qui-est-ce-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "qui-est-ce-qui-fr",

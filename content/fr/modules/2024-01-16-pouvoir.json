@@ -10,6 +10,11 @@
     "Ask for permission politely in French",
     "Combine with vouloir to say 'I can want' or 'Can you have?'"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.modal-infinitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "pouvoir-fr",

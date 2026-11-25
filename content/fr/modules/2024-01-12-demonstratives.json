@@ -10,6 +10,11 @@
     "Use ça (that/it) in everyday conversation",
     "Prepare to specify exactly which object you mean"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:demonstrative.adjective"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "ca-fr",

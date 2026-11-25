@@ -10,6 +10,12 @@
     "Tell complete stories mixing actions and descriptions",
     "Master the most important past tense distinction in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:chunk.pendant-que",
+      "fr:cx:chunk.tout-a-coup"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "quand-fr",

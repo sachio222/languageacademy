@@ -10,6 +10,11 @@
     "Talk about providing information and help",
     "Use donner with object pronouns (I give it to him)"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:verb.er.present"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "donner-fr",

@@ -10,6 +10,11 @@
     "Talk about bread, coffee, pastries, and meals",
     "Navigate French bakeries and cafés confidently"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:article.partitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "l-eau-fr",

@@ -10,6 +10,11 @@
     "Form more concise sentences (I want it vs. I want the book)",
     "Understand French word order with object pronouns"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:pronoun.direct-object"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "me-fr",

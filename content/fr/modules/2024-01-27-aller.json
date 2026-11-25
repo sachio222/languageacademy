@@ -10,6 +10,11 @@
     "Talk about future plans (I'm going to...)",
     "Say 'Where are you going?' or 'I'm going to Paris'"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.aller-infinitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "aller-fr",

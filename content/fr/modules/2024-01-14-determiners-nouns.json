@@ -10,6 +10,11 @@
     "Combine demonstratives with nouns like functions",
     "Form 3-4 word phrases with specific objects"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:demonstrative.adjective"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "j-ai-ce-livre-fr",

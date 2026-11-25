@@ -10,6 +10,13 @@
     "Express relationships (with me, for you, to Paris)",
     "Use stressed pronouns with prepositions naturally"
   ],
+  "teaches": {
+    "constructions": [],
+    "words": [
+      "fr:lex:devant",
+      "fr:lex:entre"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "avec-fr",

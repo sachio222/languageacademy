@@ -10,6 +10,12 @@
     "Express frequency (always, never, sometimes, often)",
     "Say 'I always go' or 'I never want that' in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:adverb.placement",
+      "fr:cx:chunk.de-temps-en-temps"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "toujours-fr",

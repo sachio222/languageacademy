@@ -10,6 +10,11 @@
     "Order drinks at cafés and restaurants",
     "Describe what you drank using past tense"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:passe-compose.avoir"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "boire-fr",

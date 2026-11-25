@@ -10,6 +10,12 @@
     "Use être with all reflexive verbs in past tense",
     "Tell stories about what you did in your daily routine"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:passe-compose.reflexive",
+      "fr:cx:ptcp.agreement"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-me-suis-reveille-fr",

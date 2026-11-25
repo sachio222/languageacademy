@@ -10,6 +10,11 @@
     "Describe past states and conditions",
     "Say 'I was happy' or 'We were in Paris' in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:imparfait"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "j-etais-fr",

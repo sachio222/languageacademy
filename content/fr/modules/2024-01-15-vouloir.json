@@ -10,6 +10,11 @@
     "Make polite requests and express desires",
     "Say 'I want this book' or 'Do you want that?' in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.modal-infinitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "vouloir-fr",

@@ -10,6 +10,12 @@
     "Negate any French sentence with ne...pas",
     "Express disagreement and refusal politely"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:neg.ne-pas",
+      "fr:cx:elision"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "ne-pas-fr",

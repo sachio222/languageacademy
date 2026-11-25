@@ -356,6 +356,11 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:pronoun.reflexive",
+      "fr:cx:reciprocal",
+      "fr:cx:imperative.tu",
+      "fr:cx:imperative.vous"
+    ]
   }
 }

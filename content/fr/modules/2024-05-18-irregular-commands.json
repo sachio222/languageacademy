@@ -10,6 +10,14 @@
     "Say common phrases like '{Vas-y!}' (Go for it!)",
     "Master the most frequently used command forms"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:imperative.irregular",
+      "fr:cx:imperative.nous",
+      "fr:cx:chunk.vas-y",
+      "fr:cx:chunk.allons-y"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "sois-fr",

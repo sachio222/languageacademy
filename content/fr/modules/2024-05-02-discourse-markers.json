@@ -10,6 +10,15 @@
     "Connect ideas naturally in conversation",
     "Add conversational flow markers that French people use constantly"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:chunk.en-fait",
+      "fr:cx:chunk.bien-sur"
+    ],
+    "words": [
+      "fr:lex:fait"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "donc-fr",

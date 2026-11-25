@@ -10,6 +10,13 @@
     "Give directions and explain positions",
     "Say 'The café is in front of the park' in French"
   ],
+  "teaches": {
+    "constructions": [],
+    "words": [
+      "fr:lex:devant",
+      "fr:lex:entre"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "devant-fr",

@@ -10,6 +10,12 @@
     "Talk about age and physical states in French",
     "Use both être and avoir to form different sentences"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:elision",
+      "fr:cx:age.avoir-ans"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "avoir-fr",

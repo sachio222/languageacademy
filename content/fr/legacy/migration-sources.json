@@ -21,6 +21,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "08818d4016db",
+        "out": "08818d4016db"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "4244a72597d2",
         "out": "4244a72597d2"
@@ -248,6 +256,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "db6dc66da30b",
+        "out": "db6dc66da30b"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "76ecc5974335",
         "out": "76ecc5974335"
@@ -415,6 +431,14 @@
         "src": "8153bcf8d6b2",
         "out": "89ce23a4a41e"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "2975548a5311",
         "out": "4e5196bb27ec"
@@ -574,6 +598,14 @@
       "tables": {
         "src": "c45a1d197314",
         "out": "ab24d1e3f8ee"
+      },
+      "teaches": {
+        "src": "799d58aa93cb",
+        "out": "799d58aa93cb"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "b679a6d3aceb",
@@ -735,6 +767,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "859ff50344da",
+        "out": "859ff50344da"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "1516ecb8e64e",
         "out": "1516ecb8e64e"
@@ -854,6 +894,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "7a668a376d55",
+        "out": "7a668a376d55"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -1099,6 +1147,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "04e5771c7b0a",
+        "out": "04e5771c7b0a"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "49bd9a798c29",
         "out": "49bd9a798c29"
@@ -1251,6 +1307,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "cec838f26de4",
         "out": "8682d3d6affc"
@@ -1388,6 +1452,14 @@
       "story_id": {
         "src": "356a192b7913",
         "out": "90d7e4e8af51"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "977cf897c232",
@@ -1564,6 +1636,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "c2c0da06652d",
+        "out": "c2c0da06652d"
+      },
       "title": {
         "src": "7b0e5bb5d9b3",
         "out": "7b0e5bb5d9b3"
@@ -1677,6 +1757,14 @@
       "tables": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "493de9f99f13",
+        "out": "493de9f99f13"
       },
       "title": {
         "src": "2be88ca4242c",
@@ -1876,6 +1964,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "4d3b6cb95f12",
+        "out": "4d3b6cb95f12"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "65b19b7d497d",
         "out": "65b19b7d497d"
@@ -2034,6 +2130,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "463df2ec865a",
+        "out": "463df2ec865a"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "1c510e37beb2",
         "out": "88e1bd7c4707"
@@ -2153,6 +2257,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "4d3b6cb95f12",
+        "out": "4d3b6cb95f12"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -2350,6 +2462,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "aa7c59b6bd98",
+        "out": "aa7c59b6bd98"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -2552,6 +2672,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "aa7c59b6bd98",
+        "out": "aa7c59b6bd98"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -2771,6 +2899,14 @@
         "src": "7bcb4f938a50",
         "out": "e400947c683f"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "ce322323bb36",
         "out": "bda943d93778"
@@ -2928,6 +3064,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "fd9d94e58995",
+        "out": "fd9d94e58995"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -3208,6 +3352,14 @@
         "src": "ac3478d69a3c",
         "out": "ac3478d69a3c"
       },
+      "teaches": {
+        "src": "833ecccb17c4",
+        "out": "833ecccb17c4"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "00622f5bf619",
         "out": "00622f5bf619"
@@ -3272,6 +3424,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2b140fe885ff",
+        "out": "2b140fe885ff"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -3455,6 +3615,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "8eeaf4eeb851",
+        "out": "8eeaf4eeb851"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "9249e51bfff4",
         "out": "a4b9db88f418"
@@ -3559,6 +3727,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "9c442d516dd1",
+        "out": "9c442d516dd1"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -3819,6 +3995,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "71ea43bdc22c",
+        "out": "71ea43bdc22c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -4088,6 +4272,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "5b60c7947561",
+        "out": "5b60c7947561"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "b107b37dff75",
         "out": "e57ea09308e1"
@@ -4192,6 +4384,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -4327,6 +4527,14 @@
       "story_id": {
         "src": "da4b9237bacc",
         "out": "bcb5d4bc1066"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "8324926d61b2",
@@ -4601,6 +4809,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "55623d9dd6f0",
+        "out": "55623d9dd6f0"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "1dd7d1fc0650",
         "out": "98a72fec933a"
@@ -4760,6 +4976,14 @@
       "tables": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "937369b8807e",
+        "out": "937369b8807e"
       },
       "title": {
         "src": "c3bcb80fb774",
@@ -4928,6 +5152,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "55623d9dd6f0",
+        "out": "55623d9dd6f0"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -5112,6 +5344,14 @@
       "tables": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "c8de4441ce48",
+        "out": "c8de4441ce48"
       },
       "title": {
         "src": "2be88ca4242c",
@@ -5374,6 +5614,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "f47f4ab68f74",
+        "out": "f47f4ab68f74"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "e85dfbbd557c",
         "out": "c0cf83f488e2"
@@ -5540,6 +5788,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "5891c623f3f0",
+        "out": "5891c623f3f0"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "0f23131560b4",
         "out": "ab7da46b0518"
@@ -5662,6 +5918,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "5583c24b9c5b",
+        "out": "5583c24b9c5b"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "d65b8ddfe83d",
         "out": "5c6f9a6b2194"
@@ -5781,6 +6045,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "aa7c59b6bd98",
+        "out": "aa7c59b6bd98"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -6114,6 +6386,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "8901b961a350",
+        "out": "8901b961a350"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "af1279748b66",
         "out": "2ae53cd1d119"
@@ -6358,6 +6638,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "428c58c5b77f",
+        "out": "428c58c5b77f"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "ec1710f4709a",
         "out": "e8f88996bd0d"
@@ -6477,6 +6765,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "e1de39653283",
+        "out": "e1de39653283"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -6617,6 +6913,14 @@
         "src": "c1dfd96eea8c",
         "out": "c1dfd96eea8c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "eea55065dcc6",
         "out": "eea55065dcc6"
@@ -6702,6 +7006,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "c1f81c51bc1d",
+        "out": "c1f81c51bc1d"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -6824,6 +7136,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -7071,6 +7391,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "f151303d862b",
+        "out": "f151303d862b"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "3147ff1ad482",
         "out": "3147ff1ad482"
@@ -7208,6 +7536,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "d66432b37cd6",
+        "out": "d66432b37cd6"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "ba4c8e0a05e0",
         "out": "b15df6c79f56"
@@ -7327,6 +7663,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "af587ccb73da",
+        "out": "af587ccb73da"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -7587,6 +7931,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "b63c72ef43f2",
+        "out": "b63c72ef43f2"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "d75a1d56f0f1",
         "out": "68e6c885942a"
@@ -7706,6 +8058,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "81c7abcd78c2",
+        "out": "81c7abcd78c2"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -7916,6 +8276,14 @@
       "story_id": {
         "src": "b1d5781111d8",
         "out": "c7230878be83"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "502d82fdaa48",
@@ -9179,6 +9547,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "f151303d862b",
+        "out": "f151303d862b"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "4ff5797f42d1",
         "out": "4ff5797f42d1"
@@ -9375,6 +9751,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "48ba5a65210a",
+        "out": "48ba5a65210a"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "0109d3fd7ddf",
         "out": "d1a8b2f111b5"
@@ -9492,6 +9876,14 @@
       "story_id": {
         "src": "77de68daecd8",
         "out": "f2def7fdf482"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "f4fd30ec2d5e",
@@ -9745,6 +10137,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "bdfdf8328312",
+        "out": "bdfdf8328312"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "8158ca895eeb",
         "out": "f769fda08ac6"
@@ -9851,6 +10251,14 @@
       "tables": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "40f6c0c647c2",
+        "out": "40f6c0c647c2"
       },
       "title": {
         "src": "2be88ca4242c",
@@ -10155,6 +10563,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "368f531a1682",
+        "out": "368f531a1682"
+      },
       "title": {
         "src": "3cb090aba97a",
         "out": "3cb090aba97a"
@@ -10325,6 +10741,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "7ca5827c60ed",
+        "out": "7ca5827c60ed"
+      },
       "title": {
         "src": "89bd002f8a28",
         "out": "89bd002f8a28"
@@ -10494,6 +10918,14 @@
       "tables": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "c6930c892473",
+        "out": "c6930c892473"
       },
       "title": {
         "src": "2be88ca4242c",
@@ -10707,6 +11139,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "257d82669f34",
+        "out": "257d82669f34"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "23c540105030",
         "out": "b010b8614eb9"
@@ -10829,6 +11269,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "5ae23cf2afcc",
+        "out": "5ae23cf2afcc"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "a7224eddc7a4",
         "out": "4012dbf86ecd"
@@ -10948,6 +11396,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "fcbb872b8081",
+        "out": "fcbb872b8081"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -11186,6 +11642,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "3061c864d579",
+        "out": "3061c864d579"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -11574,6 +12038,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "ef40c0afe5ea",
+        "out": "ef40c0afe5ea"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "26ca37580acf",
         "out": "7df09476ee06"
@@ -11817,6 +12289,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -12169,6 +12649,14 @@
       "story_id": {
         "src": "17ba0791499d",
         "out": "7b30df9dc9bf"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "dbbbe70430ca",
@@ -13530,6 +14018,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "d0cf31e3c0e9",
+        "out": "d0cf31e3c0e9"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "18758a1aa55f",
         "out": "e5dc85293072"
@@ -13881,6 +14377,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "03b197d4a63c",
+        "out": "03b197d4a63c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -14309,6 +14813,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "b62834312b3f",
+        "out": "b62834312b3f"
+      },
       "title": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
@@ -14661,6 +15173,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "b62834312b3f",
+        "out": "b62834312b3f"
+      },
       "title": {
         "src": "959df37438b3",
         "out": "959df37438b3"
@@ -14828,6 +15348,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -15128,6 +15656,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2ee64a61d342",
+        "out": "2ee64a61d342"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "c925e81a9a31",
         "out": "c925e81a9a31"
@@ -15349,6 +15885,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -15893,6 +16437,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "1b101f37a188",
+        "out": "1b101f37a188"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "81c23588371f",
         "out": "81c23588371f"
@@ -16107,6 +16659,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "cc6acd2c49b6",
+        "out": "cc6acd2c49b6"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -16607,6 +17167,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "467fa3ffaa52",
+        "out": "467fa3ffaa52"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "754bd3490130",
         "out": "754bd3490130"
@@ -16853,6 +17421,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "1f0ca7292387",
+        "out": "1f0ca7292387"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "43a557999c36",
         "out": "43a557999c36"
@@ -17077,6 +17653,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "f9047e21fc4f",
+        "out": "f9047e21fc4f"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "68bcd2e96adc",
         "out": "68bcd2e96adc"
@@ -17291,6 +17875,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "aa7c59b6bd98",
+        "out": "aa7c59b6bd98"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -17538,6 +18130,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "84056ae5f74a",
+        "out": "84056ae5f74a"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "247eb89216ac",
         "out": "247eb89216ac"
@@ -17744,6 +18344,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "fdc3314de332",
+        "out": "fdc3314de332"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -18148,6 +18756,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "8ad69c6e6145",
+        "out": "8ad69c6e6145"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "50d757384e2b",
         "out": "50d757384e2b"
@@ -18333,6 +18949,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -18580,6 +19204,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "8d7f283668c4",
         "out": "8d7f283668c4"
@@ -18782,6 +19414,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "8b7d4bc55192",
+        "out": "8b7d4bc55192"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "0b2139463364",
         "out": "0b2139463364"
@@ -18943,6 +19583,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "7d3966a6f109",
+        "out": "7d3966a6f109"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -19192,6 +19840,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "7f9f45632466",
+        "out": "7f9f45632466"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "f7a1616d481f",
         "out": "fb11e0efaedd"
@@ -19400,6 +20056,14 @@
         "src": "f6a4a39f04e6",
         "out": "252f0bb57ede"
       },
+      "teaches": {
+        "src": "31bade20303f",
+        "out": "31bade20303f"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "2f3838157823",
         "out": "cf57a396ecf2"
@@ -19555,6 +20219,14 @@
       "story_id": {
         "src": "1b6453892473",
         "out": "7a957259e695"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "c1e31b8c01d5",
@@ -20372,6 +21044,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "f0bfd816f7ca",
+        "out": "f0bfd816f7ca"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "c110fab47fa7",
         "out": "c110fab47fa7"
@@ -20587,6 +21267,10 @@
         "out": "707f62f4b4e5"
       },
       "screen": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -20937,6 +21621,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "63f2d794e597",
+        "out": "63f2d794e597"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "7b64f241cc79",
         "out": "7b64f241cc79"
@@ -21254,6 +21946,10 @@
         "out": "a2fc5d433c99"
       },
       "screen": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -21666,6 +22362,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "52edde0d688c",
+        "out": "52edde0d688c"
+      },
       "title": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
@@ -21975,6 +22679,10 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "78ed80278165",
         "out": "00a1624dea3e"
@@ -22261,6 +22969,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "c2616eb15935",
+        "out": "c2616eb15935"
+      },
       "title": {
         "src": "472b5700fc13",
         "out": "472b5700fc13"
@@ -22428,6 +23144,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "4c89cc48f822",
+        "out": "4c89cc48f822"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -22664,6 +23388,10 @@
         "out": "f4cb5f3d5c49"
       },
       "screen": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -22917,6 +23645,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "17f55695c69f",
+        "out": "17f55695c69f"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "9897e86ec0a1",
         "out": "fa8c8e57a752"
@@ -23142,6 +23878,10 @@
         "out": "8db2315c25cb"
       },
       "screen": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -23516,6 +24256,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "f92d48cdee98",
+        "out": "f92d48cdee98"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "18da592a62c3",
         "out": "bc9481ac6af0"
@@ -23840,6 +24588,10 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "1f55f0859b04",
         "out": "1f55f0859b04"
@@ -24115,6 +24867,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -24443,6 +25203,10 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "d70f8950abe4",
         "out": "7b072697f68d"
@@ -24721,6 +25485,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "e8d82b86dd84",
+        "out": "e8d82b86dd84"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "c1a3f38e54c5",
         "out": "c1a3f38e54c5"
@@ -24948,6 +25720,10 @@
         "out": "6812bc92f908"
       },
       "screen": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -25191,6 +25967,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2c34df98e934",
+        "out": "2c34df98e934"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -25462,6 +26246,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "17f55695c69f",
+        "out": "17f55695c69f"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "cb216ca56802",
         "out": "4a6d0a67c5e1"
@@ -25679,6 +26471,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "0e06c6bc4f27",
+        "out": "0e06c6bc4f27"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -26186,6 +26986,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "799f052e0c6c",
+        "out": "799f052e0c6c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "35eefc77b67a",
         "out": "e82ae2e29ddb"
@@ -26499,6 +27307,14 @@
       "story_id": {
         "src": "ac3478d69a3c",
         "out": "d6ab57dc2e9d"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "26334025dd44",
@@ -27198,6 +28014,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "0f92ed4e6d39",
+        "out": "0f92ed4e6d39"
+      },
       "title": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
@@ -27718,6 +28542,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "0f92ed4e6d39",
+        "out": "0f92ed4e6d39"
+      },
       "title": {
         "src": "7a161fc5a4e3",
         "out": "7a161fc5a4e3"
@@ -28004,6 +28836,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2c34df98e934",
+        "out": "2c34df98e934"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -28330,6 +29170,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "f608237d3a14",
+        "out": "f608237d3a14"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "5c768434dbcc",
         "out": "bfd5c7cc2489"
@@ -28619,6 +29467,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "d50d504153d2",
         "out": "1e4722569962"
@@ -28905,6 +29761,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "ae3cda91e7d4",
+        "out": "ae3cda91e7d4"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -29227,6 +30091,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2cd80375ed3d",
+        "out": "2cd80375ed3d"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "8de574fc5145",
         "out": "2ef19487d71a"
@@ -29525,6 +30397,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "c3e2f59544c2",
         "out": "d3ca334e1359"
@@ -29804,6 +30684,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "03b197d4a63c",
+        "out": "03b197d4a63c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -30157,6 +31045,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "f2f3962350cb",
+        "out": "f2f3962350cb"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "1e94ba41fdf7",
         "out": "1e94ba41fdf7"
@@ -30427,6 +31323,14 @@
       "story_id": {
         "src": "c1dfd96eea8c",
         "out": "86f20e916d60"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "82e965250efd",
@@ -31303,6 +32207,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "a027d9627cee",
+        "out": "a027d9627cee"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "ef7800f4b10b",
         "out": "ef7800f4b10b"
@@ -31789,6 +32701,14 @@
       "tables": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "1bb790969bef",
+        "out": "1bb790969bef"
       },
       "title": {
         "src": "2be88ca4242c",
@@ -32352,6 +33272,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "1bb790969bef",
+        "out": "1bb790969bef"
+      },
       "title": {
         "src": "bd44be7f1cec",
         "out": "bd44be7f1cec"
@@ -32732,6 +33660,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "26c008c3acf4",
+        "out": "26c008c3acf4"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "3e4af27e3dce",
         "out": "1c44c364d970"
@@ -32910,6 +33846,14 @@
         "src": "457b029cebd0",
         "out": "8c61e9333210"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "fb3b91e7cde0",
         "out": "56a2901156de"
@@ -33077,6 +34021,14 @@
       "tables": {
         "src": "3cc6a1088bda",
         "out": "f17080c4de82"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "9812431134b8",
@@ -33246,6 +34198,14 @@
         "src": "d0cf6fe9ea5f",
         "out": "a20559c6a5b8"
       },
+      "teaches": {
+        "src": "d0cf31e3c0e9",
+        "out": "d0cf31e3c0e9"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "f35c8bb99fed",
         "out": "7123b0d0e155"
@@ -33411,6 +34371,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "3f223fa390c6",
+        "out": "3f223fa390c6"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -33703,6 +34671,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "6c899f2fc70c",
+        "out": "6c899f2fc70c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "4dbc22f28853",
         "out": "4dbc22f28853"
@@ -33878,6 +34854,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "7c5bfee7f3cc",
+        "out": "7c5bfee7f3cc"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -34072,6 +35056,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "060e4e8f7a18",
+        "out": "060e4e8f7a18"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -34315,6 +35307,14 @@
         "src": "854a0ee2ce80",
         "out": "523699ebef09"
       },
+      "teaches": {
+        "src": "d0cf31e3c0e9",
+        "out": "d0cf31e3c0e9"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "b5a663308ecb",
         "out": "fa822e8cba9a"
@@ -34486,6 +35486,14 @@
       "story_id": {
         "src": "902ba3cda188",
         "out": "b68cb04c5b95"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "5247f681a108",
@@ -35329,6 +36337,14 @@
         "src": "81a64ade7709",
         "out": "2898816a1deb"
       },
+      "teaches": {
+        "src": "121256901a8a",
+        "out": "121256901a8a"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "90f47891d292",
         "out": "1f386609da92"
@@ -35494,6 +36510,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -35698,6 +36722,14 @@
       "tables": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "d9218adbe33a",
+        "out": "d9218adbe33a"
       },
       "title": {
         "src": "2be88ca4242c",
@@ -36163,6 +37195,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "9994bf364eb8",
+        "out": "9994bf364eb8"
+      },
       "title": {
         "src": "65c780fe70b3",
         "out": "65c780fe70b3"
@@ -36361,6 +37401,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "abf542cdb672",
+        "out": "abf542cdb672"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "0f5150d14972",
         "out": "0f5150d14972"
@@ -36465,6 +37513,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "a6eaea7f7b0a",
+        "out": "a6eaea7f7b0a"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -36606,6 +37662,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "d610493f64f1",
+        "out": "d610493f64f1"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "811d3bd20640",
         "out": "811d3bd20640"
@@ -36711,6 +37775,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -37115,6 +38187,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "0bb25ef51459",
         "out": "f77acc7845ba"
@@ -37285,6 +38365,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "87c9ceea5bea",
         "out": "04d8d6cf6648"
@@ -37444,6 +38532,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2b51588cc01f",
+        "out": "2b51588cc01f"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -37622,6 +38718,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -37806,6 +38910,14 @@
       "story_id": {
         "src": "fe5dbbcea5ce",
         "out": "d133032eade6"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "74d2c9425ab9",
@@ -38363,6 +39475,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "1f352b96e77b",
+        "out": "1f352b96e77b"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "1bd65da58a6e",
         "out": "2fce5dc3114d"
@@ -38520,6 +39640,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "4baa7fdabd02",
+        "out": "4baa7fdabd02"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -38682,6 +39810,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -38872,6 +40008,14 @@
       "tables": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "015bcdf02de2",
+        "out": "015bcdf02de2"
       },
       "title": {
         "src": "2be88ca4242c",
@@ -39190,6 +40334,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "3808f1da9c58",
+        "out": "3808f1da9c58"
+      },
       "title": {
         "src": "877ad1dc663e",
         "out": "877ad1dc663e"
@@ -39364,6 +40516,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "7194c562e2c5",
+        "out": "7194c562e2c5"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -39605,6 +40765,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "ecdcc7f58933",
+        "out": "ecdcc7f58933"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "f0e46bda5e8b",
         "out": "f0e46bda5e8b"
@@ -39832,6 +41000,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -40089,6 +41265,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "ee275b5b9a9d",
+        "out": "ee275b5b9a9d"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "e032144b2a8f",
         "out": "e032144b2a8f"
@@ -40324,6 +41508,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "799f052e0c6c",
+        "out": "799f052e0c6c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -40581,6 +41773,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "e3b4c28ce33f",
+        "out": "e3b4c28ce33f"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "6bbec7abf712",
         "out": "6bbec7abf712"
@@ -40835,6 +42035,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "f92d48cdee98",
+        "out": "f92d48cdee98"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "c598b53a5413",
         "out": "c598b53a5413"
@@ -41073,6 +42281,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "e8eb3b0e273e",
+        "out": "e8eb3b0e273e"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "36f7d41a561f",
         "out": "36f7d41a561f"
@@ -41303,6 +42519,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "847284c503f1",
+        "out": "847284c503f1"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "539cbbf70b9c",
         "out": "539cbbf70b9c"
@@ -41477,6 +42701,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "722be5daa192",
+        "out": "722be5daa192"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -41697,6 +42929,14 @@
       "story_id": {
         "src": "0ade7c2cf97f",
         "out": "fd9ddd324f00"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "d0c5c5493d87",
@@ -43444,6 +44684,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "b5af28fc2cce",
+        "out": "b5af28fc2cce"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "28514ae5b07f",
         "out": "28514ae5b07f"
@@ -43571,6 +44819,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "67df8f3bd389",
+        "out": "67df8f3bd389"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -43702,6 +44958,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "9c442d516dd1",
+        "out": "9c442d516dd1"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -43958,6 +45222,14 @@
       "tables": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "abe0468695f3",
+        "out": "abe0468695f3"
       },
       "title": {
         "src": "2be88ca4242c",
@@ -44269,6 +45541,14 @@
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "bbcda91c77e5",
+        "out": "bbcda91c77e5"
+      },
       "title": {
         "src": "976f107f8637",
         "out": "976f107f8637"
@@ -44446,6 +45726,14 @@
         "src": "1b6453892473",
         "out": "1b6453892473"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "d2e3b263a127",
         "out": "d2e3b263a127"
@@ -44520,6 +45808,14 @@
         "src": "1b6453892473",
         "out": "1b6453892473"
       },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "a999db16dc8c",
         "out": "a999db16dc8c"
@@ -44584,6 +45880,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "31bade20303f",
+        "out": "31bade20303f"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -44816,6 +46120,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
@@ -45052,6 +46364,10 @@
       "screen": {
         "src": "0bff1905a628",
         "out": "b3623279dbca"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "title": {
         "src": "555424461952",
@@ -45308,6 +46624,14 @@
         "src": "2be88ca4242c",
         "out": "77de68daecd8"
       },
+      "teaches": {
+        "src": "4b3179c4b262",
+        "out": "4b3179c4b262"
+      },
+      "tests": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "title": {
         "src": "cbc2514b2d1e",
         "out": "cbc2514b2d1e"
@@ -45358,6 +46682,14 @@
         "out": "2be88ca4242c"
       },
       "tables": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "teaches": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
+      "tests": {
         "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },

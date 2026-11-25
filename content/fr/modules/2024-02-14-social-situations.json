@@ -10,6 +10,12 @@
     "Talk about meetings and appointments",
     "Use essential social coordination verbs"
   ],
+  "teaches": {
+    "constructions": [],
+    "words": [
+      "fr:lex:bus"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "attendre-fr",

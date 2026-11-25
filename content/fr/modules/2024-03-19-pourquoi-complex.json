@@ -5,6 +5,11 @@
   "status": "written",
   "title": "Complex pourquoi Questions - Ask Why About Anything",
   "description": "Master asking 'why' about ANY process: Pourquoi est-ce que le ciel est bleu? Pourquoi est-ce que les oiseaux volent? Combine pourquoi with all tenses and structures!",
+  "teaches": {
+    "constructions": [
+      "fr:cx:q.est-ce-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "pourquoi-est-ce-que-fr",

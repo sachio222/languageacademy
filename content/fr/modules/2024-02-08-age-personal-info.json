@@ -10,6 +10,11 @@
     "Share personal information and birthdate",
     "Handle essential personal conversations"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:age.avoir-ans"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "j-ai-ans-fr",

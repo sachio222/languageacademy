@@ -10,6 +10,13 @@
     "Agree with people (c'est ça - that's right)",
     "Use ça in conversation (I have that, it's that)"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:cest",
+      "fr:cx:chunk.cest-ca",
+      "fr:cx:chunk.ca-va"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "ca-fr",

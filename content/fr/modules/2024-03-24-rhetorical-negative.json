@@ -5,6 +5,13 @@
   "status": "written",
   "title": "Rhetorical & Negative Questions - Advanced Style",
   "description": "Add native sophistication: N'est-ce pas vrai? (Isn't that true?), Comment ne pas aimer ça? (How can you not love that?), Qui ne voudrait pas ça? (Who wouldn't want that?)",
+  "teaches": {
+    "constructions": [
+      "fr:cx:q.negative-inversion",
+      "fr:cx:neg.ne-pas-infinitive",
+      "fr:cx:chunk.nest-ce-pas"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "n-est-ce-pas-vrai-fr",

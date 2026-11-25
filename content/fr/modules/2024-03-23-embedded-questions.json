@@ -5,6 +5,11 @@
   "status": "written",
   "title": "Embedded Questions - Polite Indirect Questions",
   "description": "Soften questions by embedding them: Je me demande pourquoi c'est comme ça. Je ne sais pas comment on fait ça. Natural conversation flow!",
+  "teaches": {
+    "constructions": [
+      "fr:cx:q.embedded"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-me-demande-fr",

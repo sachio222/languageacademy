@@ -10,6 +10,12 @@
     "Ask 'What does X?' vs 'What do you?' correctly",
     "Form perfect questions in any situation"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:q.quest-ce-qui",
+      "fr:cx:q.quest-ce-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "qu-est-ce-qui-fr",

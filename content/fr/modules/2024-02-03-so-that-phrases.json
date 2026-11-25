@@ -5,6 +5,11 @@
   "status": "written",
   "title": "{Pour que...} - So That Phrases",
   "description": "Explain your purpose! '{Pour que tu comprennes}' (So that you understand), '{Je t'explique pour que tu saches}' (I'm explaining so you know). Goal-oriented communication!",
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.pour-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "pour-que-tu-comprennes-fr",

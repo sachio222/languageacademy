@@ -10,6 +10,13 @@
     "Talk about people in general (people say, everyone knows)",
     "Sound more natural with on instead of nous"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:pronoun.on",
+      "fr:cx:chunk.tout-le-monde",
+      "fr:cx:chunk.on-y-va"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "on-fr",

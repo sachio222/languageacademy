@@ -10,6 +10,11 @@
     "Say 'I'm learning French' or 'Who teaches you?'",
     "Use apprendre (prendre pattern) and enseigner naturally"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.apprendre-a-infinitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "apprendre-fr",

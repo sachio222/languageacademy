@@ -10,6 +10,12 @@
     "Form the foundation for subjunctive expressions",
     "Prepare to express complex ideas at B2 level"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:subj.vouloir-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "tu-sois-fr",

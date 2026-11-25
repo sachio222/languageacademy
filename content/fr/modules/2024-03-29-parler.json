@@ -10,6 +10,11 @@
     "Discuss communication and conversation",
     "Master the regular -ER verb pattern used by most verbs"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:verb.er.present"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "parler-fr",

@@ -5,6 +5,11 @@
   "status": "written",
   "title": "{Bien que...} - Although Phrases",
   "description": "Express contrasts! '{Bien que je sois fatigué}' (Although I'm tired), '{Bien qu'il fasse froid}' (Even though it's cold). Sophisticated expression!",
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.bien-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "bien-que-je-sois-fatigue-fr",

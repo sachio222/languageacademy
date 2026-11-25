@@ -466,6 +466,11 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:passe-compose.etre",
+      "fr:cx:comparative",
+      "fr:cx:si.present"
+    ]
   }
 }

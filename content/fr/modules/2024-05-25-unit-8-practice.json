@@ -274,6 +274,9 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:pronoun.reflexive",
+      "fr:cx:reciprocal"
+    ]
   }
 }

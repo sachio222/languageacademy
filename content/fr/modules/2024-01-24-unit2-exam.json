@@ -249,6 +249,16 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:demonstrative.adjective",
+      "fr:cx:chunk.ca-va",
+      "fr:cx:frame.modal-infinitive",
+      "fr:cx:pronoun.stressed",
+      "fr:cx:q.words",
+      "fr:cx:chunk.comment-ca-va",
+      "fr:cx:chunk.quest-ce-que-cest",
+      "fr:cx:adj.agreement",
+      "fr:cx:adj.placement"
+    ]
   }
 }

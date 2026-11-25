@@ -10,6 +10,11 @@
     "Ask what others think (What do you think?)",
     "Use penser with que to share ideas"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.verb-que-clause"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "penser-fr",

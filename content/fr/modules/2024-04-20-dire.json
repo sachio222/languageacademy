@@ -10,6 +10,12 @@
     "Report speech and convey information",
     "Use dire with que to quote what people say"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.verb-que-clause",
+      "fr:cx:chunk.cest-a-dire"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "dire-fr",

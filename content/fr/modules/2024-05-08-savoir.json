@@ -10,6 +10,12 @@
     "Say what skills you have (I know how to speak French)",
     "Use the most common phrase in French (je ne sais pas)"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.savoir-infinitive",
+      "fr:cx:chunk.je-ne-sais-pas"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "savoir-fr",

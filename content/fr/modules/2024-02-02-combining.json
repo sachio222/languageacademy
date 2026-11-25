@@ -10,6 +10,11 @@
     "Say 'He has it', 'I want it', 'It's mine' naturally",
     "Form complex sentences with movement, possession, and objects"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:pronoun.direct-object"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "il-l-a-fr",

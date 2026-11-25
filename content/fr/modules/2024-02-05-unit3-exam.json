@@ -194,6 +194,13 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:contraction.a",
+      "fr:cx:contraction.de",
+      "fr:cx:elision",
+      "fr:cx:pronoun.direct-object",
+      "fr:cx:possessive.adjective",
+      "fr:cx:possessive.pronoun"
+    ]
   }
 }

@@ -10,6 +10,14 @@
     "Talk about needs and necessities in French",
     "Use avoir besoin de with nouns and verbs"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.avoir-besoin-de"
+    ],
+    "words": [
+      "fr:lex:aide"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "besoin-fr",

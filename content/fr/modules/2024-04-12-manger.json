@@ -10,6 +10,12 @@
     "Order food and discuss dietary preferences",
     "Use past tense to describe what you ate"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:ptcp.er"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "manger-fr",

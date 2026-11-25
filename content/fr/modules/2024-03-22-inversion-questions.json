@@ -5,6 +5,11 @@
   "status": "written",
   "title": "Inversion Questions - Formal Register",
   "description": "Master formal French questions with inversion: Pourquoi les nuages sont-ils blancs? Comment fait-on ça? Où vas-tu? Add stylistic range!",
+  "teaches": {
+    "constructions": [
+      "fr:cx:q.inversion"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "comment-fais-tu-ca-fr",

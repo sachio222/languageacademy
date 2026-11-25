@@ -10,6 +10,14 @@
     "Request information and assistance",
     "Use demander with à and de correctly"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.demander-de-infinitive"
+    ],
+    "words": [
+      "fr:lex:aide"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "demander-fr",

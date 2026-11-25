@@ -10,6 +10,13 @@
     "Use compass directions (north, south, east, west)",
     "Navigate France and help tourists confidently"
   ],
+  "teaches": {
+    "constructions": [],
+    "words": [
+      "fr:lex:droite",
+      "fr:lex:est"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "le-nord-fr",

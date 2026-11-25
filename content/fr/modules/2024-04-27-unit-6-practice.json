@@ -613,6 +613,9 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:frame.etre-en-train-de",
+      "fr:cx:frame.avoir-besoin-de"
+    ]
   }
 }

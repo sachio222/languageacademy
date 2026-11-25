@@ -5,6 +5,11 @@
   "status": "written",
   "title": "Natural Phenomena - How Nature Works",
   "description": "Learn how nature works: le soleil brille (the sun shines), les plantes poussent (plants grow), il pleut (it rains) + CAUSATIVE: rendre (to make/render)",
+  "teaches": {
+    "constructions": [
+      "fr:cx:rendre-adjective"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "briller-fr",

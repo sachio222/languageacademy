@@ -10,6 +10,14 @@
     "Use subjunctive with emotion expressions",
     "Communicate feelings about other people's actions"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.emotion-que"
+    ],
+    "words": [
+      "fr:lex:surpris"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-suis-content-que-tu-sois-la-fr",

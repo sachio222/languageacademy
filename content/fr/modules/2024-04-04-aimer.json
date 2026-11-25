@@ -10,6 +10,11 @@
     "Distinguish between liking and loving in French",
     "Use aimer with object pronouns (I love him/her)"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.aimer-infinitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "aimer-fr",

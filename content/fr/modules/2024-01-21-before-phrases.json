@@ -5,6 +5,11 @@
   "status": "written",
   "title": "{Avant que...} - Before Phrases",
   "description": "Talk about timing! '{Avant que tu partes}' (Before you leave), '{Appelle-moi avant qu'il arrive}' (Call me before he arrives). Sequence your actions!",
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.avant-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "avant-que-tu-partes-fr",

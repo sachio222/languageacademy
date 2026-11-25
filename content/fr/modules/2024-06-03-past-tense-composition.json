@@ -10,6 +10,11 @@
     "Combine scene-setting, events, reasons, and locations",
     "Tell rich, sophisticated stories in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:il-y-a"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "donc-fr",

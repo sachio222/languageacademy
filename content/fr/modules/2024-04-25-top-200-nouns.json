@@ -10,6 +10,13 @@
     "Discuss people and relationships (family, person)",
     "Express abstract concepts (heart, story, history)"
   ],
+  "teaches": {
+    "constructions": [],
+    "words": [
+      "fr:lex:fait",
+      "fr:lex:partie"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "l-annee-fr",

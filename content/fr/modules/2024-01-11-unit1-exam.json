@@ -180,6 +180,12 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:pronoun.subject",
+      "fr:cx:article.indefinite",
+      "fr:cx:article.definite",
+      "fr:cx:noun.plural",
+      "fr:cx:cest"
+    ]
   }
 }

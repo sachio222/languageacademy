@@ -10,6 +10,14 @@
     "Say 'some bread', 'at the café', 'of the book' in French",
     "Make your French flow smoothly with proper contractions"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:contraction.de",
+      "fr:cx:contraction.a",
+      "fr:cx:article.partitive",
+      "fr:cx:elision"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "du-fr",

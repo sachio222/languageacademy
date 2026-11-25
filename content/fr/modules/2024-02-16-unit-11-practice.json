@@ -268,6 +268,14 @@
     }
   ],
   "tests": {
-    "constructions": []
+    "constructions": [
+      "fr:cx:futur-simple",
+      "fr:cx:futur-anterieur",
+      "fr:cx:conditionnel-present",
+      "fr:cx:conditionnel-passe.avoir",
+      "fr:cx:passive",
+      "fr:cx:causative.faire",
+      "fr:cx:gerondif"
+    ]
   }
 }

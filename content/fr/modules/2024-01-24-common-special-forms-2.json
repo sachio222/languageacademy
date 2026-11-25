@@ -10,6 +10,12 @@
     "Express wishes with motion and modal verbs",
     "Complete your subjunctive verb repertoire"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:subj.vouloir-que"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "tu-viennes-fr",

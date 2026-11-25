@@ -10,6 +10,16 @@
     "Express presence across different places",
     "Say 'I'm here' or 'It's over there' in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:adverb.placement",
+      "fr:cx:chunk.quelque-part",
+      "fr:cx:chunk.nulle-part"
+    ],
+    "words": [
+      "fr:lex:part"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "ici-fr",

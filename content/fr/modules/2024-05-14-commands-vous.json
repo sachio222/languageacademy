@@ -10,6 +10,11 @@
     "Instruct groups or strangers (Eat! Speak! Listen!)",
     "Use vous command form in professional contexts"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:imperative.vous"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "mangez-fr",

@@ -10,6 +10,14 @@
     "Express intensity and quantity (too much, very, all)",
     "Say 'This is better than that' or 'It's the best' in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:comparative",
+      "fr:cx:comparative.irregular",
+      "fr:cx:superlative",
+      "fr:cx:chunk.tout-le-monde"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "plus-fr",

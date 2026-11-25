@@ -10,6 +10,14 @@
     "Use adjectives with correct gender agreement",
     "Say 'a good book' or 'a big house' in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:adj.agreement",
+      "fr:cx:adj.placement",
+      "fr:cx:adj.regular",
+      "fr:cx:adj.e"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "bon-bonne-fr",

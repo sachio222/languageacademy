@@ -10,6 +10,13 @@
     "Transform singular nouns to plural forms",
     "Say 'I have cats' or 'We have books' in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:noun.plural",
+      "fr:cx:article.definite",
+      "fr:cx:article.indefinite"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "des-fr",

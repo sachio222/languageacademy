@@ -10,6 +10,11 @@
     "Say 'I come from Paris' or 'Who is coming?'",
     "Use venir with vouloir and pouvoir"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.modal-infinitive"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "venir-fr",

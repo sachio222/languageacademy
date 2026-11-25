@@ -10,6 +10,11 @@
     "Express hypothetical actions (I would go, I would do)",
     "Sound more sophisticated and polite in French"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:conditionnel-present"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "je-voudrais-fr",

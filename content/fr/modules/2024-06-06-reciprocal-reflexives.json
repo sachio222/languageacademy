@@ -10,6 +10,11 @@
     "Talk about reciprocal relationships",
     "Use reflexive pronouns for 'each other' meanings"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:reciprocal"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "nous-nous-aimons-fr",

@@ -10,6 +10,11 @@
     "Sound more tentative than penser (I think)",
     "Use croire with que for softer assertions"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:frame.verb-que-clause"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "croire-fr",

@@ -10,6 +10,11 @@
     "Talk about daydreams and what-if scenarios",
     "Use conditional mood naturally"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:si.imparfait-conditionnel"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "si-j-etais-riche-fr",

@@ -10,6 +10,11 @@
     "Say 'I had time', 'It was good', 'I did it', 'I saw him'",
     "Form past tense with the most frequent verbs"
   ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:passe-compose.avoir"
+    ]
+  },
   "vocabulary": [
     {
       "word_id": "j-ai-eu-fr",
