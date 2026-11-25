@@ -50,3 +50,13 @@ test('the real level report counts cognates as available and keeps them apart fr
   assert.ok(a1.cognateWords > 0);
   assert.equal(a1.availableWords, a1.taughtWords + a1.referenceWords + a1.cognateWords);
 });
+
+test('the negation guide shows nothing untaught and teaches de only inside pas de', async () => {
+  const { ctx, issues } = await runCheck({ repoRoot, lang: 'fr' });
+  const key = '2026-11-24-negation-guide';
+  assert.deepEqual(issues.filter((i) => i.moduleKey === key && i.rule.startsWith('untaught-')).map((i) => i.message), []);
+  assert.ok(!(ctx.graph.courseMap[key].teachesWordsManual ?? []).includes('fr:lex:de'));
+  // the preposition de stays untaught until the prepositions lesson: "combien … de livres", "d'où viens-tu"
+  const de = issues.filter((i) => i.rule === 'untaught-word' && i.nodeId === 'fr:lex:de').map((i) => i.moduleKey);
+  for (const moduleKey of ['2024-01-18-questions', '2024-01-26-venir']) assert.ok(de.includes(moduleKey), moduleKey);
+});

@@ -6,7 +6,7 @@ import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { buildFormIndex, lookupToken } from '../fr/forms.mjs';
 import { tokenize } from '../fr/tokenize.mjs';
-import { matchPattern, detectConstructions } from '../fr/detect.mjs';
+import { matchPattern, matchSpans, detectConstructions } from '../fr/detect.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const graph = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
@@ -163,4 +163,13 @@ test('detectConstructions passes the names list to the detectors', () => {
   const { tokens, readings } = prep('Marie qui parle');
   assert.deepEqual(detectConstructions(tokens, readings, cx, graph.names), ['fr:cx:x']);
   assert.deepEqual(detectConstructions(tokens, readings, cx), []);
+});
+
+test('matchSpans returns the token indices of every match, one per start', () => {
+  const { tokens, readings } = prep("Je ne parle pas. Tu ne vas pas.");
+  assert.deepEqual(matchSpans(tokens, readings, negation), [[1, 3], [5, 7]]);
+  assert.deepEqual(matchSpans(tokens, readings, [{ surface: 'jamais' }]), []);
+  // an optional step that matches nothing adds no index
+  const p = [{ surface: 'je' }, { surface: 'ne', optional: true }, { surface: 'parle' }];
+  assert.deepEqual(matchSpans(prep('Je parle.').tokens, prep('Je parle.').readings, p), [[0, 1]]);
 });

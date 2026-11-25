@@ -172,6 +172,8 @@ node('neg.ne-plus', 'Negation ne … plus (no longer, no more)', ['neg.ne-pas'],
 
 The arguments are the ID without `fr:cx:`, a label in plain words, the constructions it builds on, the detector, sentences it must match and sentences it must not match. Give at least two sentences that match and one that does not. A fixed phrase uses `chunk()` with its words, for example `chunk('ca-va', 'Fixed phrase: ça va …', ['ca', 'va'], [...], [...])`.
 
+A seventh argument, `{ licenses: [headword IDs] }`, names the words the construction teaches inside its own match. `fr:cx:neg.de` licenses `fr:lex:de`: once a module teaches neg.de, the de of "je n'ai pas de chat" counts as taught from there, but the de of "combien de livres" or "d'où viens-tu" still waits for the lesson that teaches the preposition.
+
 Give the new construction a level in the `LEVELS` table in `scripts/graph/fr/build/construction-levels.mjs`; `constructions.mjs` stops with a message that names any construction without one.
 
 Then run `node scripts/graph/fr/build/constructions.mjs` and `pnpm graph:test`. The test fails when a detector misses one of its match sentences or matches one of its noMatch sentences. Finally, add the new ID to `teachesConstructions` of the lesson that explains it.

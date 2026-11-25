@@ -78,6 +78,31 @@ export function matchPattern(tokens, readings, pattern, names = NO_NAMES) {
   return pattern.length === 0 ? false : attempt(0, -1);
 }
 
+// Every match of a pattern, as the indices of the tokens its steps matched (an optional step that matched nothing adds
+// none): the first match from each start token, in order, so "je ne parle pas, tu ne vas pas" gives two spans.
+export function matchSpans(tokens, readings, pattern, names = NO_NAMES) {
+  if (pattern.length === 0) return [];
+  if (Array.isArray(pattern[0])) return pattern.flatMap((alt) => matchSpans(tokens, readings, alt, names));
+  const attempt = (si, last, at) => {
+    if (si === pattern.length) return at;
+    const step = pattern[si];
+    const to = Math.min(tokens.length - 1, last + 1 + (step.skip ?? 0));
+    for (let p = last + 1; p <= to; p++) {
+      if (!stepMatchesToken(step, tokens[p], readings[p] ?? [], p, names)) continue;
+      const done = attempt(si + 1, p, [...at, p]);
+      if (done) return done;
+    }
+    return step.optional ? attempt(si + 1, last, at) : null;
+  };
+  const out = [];
+  for (let start = 0; start < tokens.length; start++) {
+    if (!stepMatchesToken(pattern[0], tokens[start], readings[start] ?? [], start, names)) continue;
+    const span = attempt(1, start, [start]);
+    if (span) out.push(span);
+  }
+  return out;
+}
+
 export function detectConstructions(tokens, readings, constructions, names = NO_NAMES) {
   const found = [];
   for (const c of constructions) {

@@ -83,13 +83,15 @@ const DE_VERB_STEMS = 'vien|ven|sor|par|arriv|rentr|revien|reven|retourn|parl|pe
 const RECIPROCAL_VERB = HW(['aimer', 'parler', 'voir', 'connaitre', 'comprendre', 'regarder', 'ecouter', 'aider', 'rencontrer', 'retrouver', 'dire', 'embrasser']
   .filter((v) => graph.nodes.has(`fr:lex:${v}`)), '*.*');
 
-const node = (id, label, needs, detect, match, noMatch) => ({
+// opts.licenses: headword IDs the construction teaches inside its own match, such as the de of "pas de" (neg.de).
+const node = (id, label, needs, detect, match, noMatch, opts = {}) => ({
   id: `fr:cx:${id}`,
   label,
   needs: needs.map((n) => (n.startsWith('fr:') ? n : `fr:cx:${n}`)),
   detect: STUB && detect ? [{ surface: '(?!)' }] : detect,
   examples: { match, noMatch },
   contrastsWith: [],
+  ...(opts.licenses ? { licenses: opts.licenses } : {}),
   ...levelOf(id),
 });
 
@@ -128,7 +130,8 @@ const C = [
   node('neg.de', 'de (d\') instead of un, une, des or du after a negation (je n\'ai pas de chat)', ['neg.ne-pas', 'article.indefinite'],
     [NE, S('pas|plus|jamais', { skip: 4 }), DE],
     ['Je n\'ai pas de chat.', 'Il n\'y a plus de pain.', 'Je ne mange jamais de viande.'],
-    ['Je n\'ai pas le chat.', 'J\'ai du pain.', 'Je n\'ai pas besoin de ça.']),
+    ['Je n\'ai pas le chat.', 'J\'ai du pain.', 'Je n\'ai pas besoin de ça.'],
+    { licenses: ['fr:lex:de'] }),
   node('noun.gender', 'Noun gender: every noun is masculine or feminine (un livre, une maison); gender is a property of the noun, not visible as a pattern in the tokens', [],
     null,
     ['Le livre est sur la table.', 'Une maison et un jardin.'],

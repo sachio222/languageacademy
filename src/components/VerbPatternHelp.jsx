@@ -6,6 +6,7 @@ import IncompleteWarning from './IncompleteWarning';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useHelpModuleCompletion } from '../hooks/useHelpModuleCompletion';
 import { extractModuleId } from '../utils/progressSync';
+import { LEGACY_HELP_TERMS, loadUnderstoodByTerm, clearLegacyTerm } from '../utils/helpUnderstanding';
 import { selectBestVoice } from '../utils/ttsUtils';
 import { toggleSetItem } from '../utils/vocabularyUtils';
 import './VerbPatternHelp.css';
@@ -84,22 +85,9 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
       }
 
       try {
-        const { data, error } = await supabaseClient
-          .from('concept_understanding')
-          .select('concept_index, concept_term')
-          .eq('user_id', supabaseUser.id)
-          .eq('module_key', moduleId);
-
-        if (error) throw error;
-
-        // Filter for verb pattern sections and create a map of understood sections
-        const understoodSet = new Set();
-        data.forEach(item => {
-          if (item.concept_term && item.concept_term.startsWith('verb-pattern-')) {
-            // Use the concept_index (numeric) as the key, just like ConceptIntro
-            understoodSet.add(item.concept_index);
-          }
-        });
+        // Ticks are saved under the moduleKey; older ones sit under a past position number. Both carry the
+        // verb-pattern- term prefix, which only this screen writes.
+        const understoodSet = await loadUnderstoodByTerm(supabaseClient, supabaseUser.id, LEGACY_HELP_TERMS[lessonModuleId] ?? 'verb-pattern-');
         setUnderstoodSections(understoodSet);
         logger.log('VerbPatternHelp: Loaded understood sections:', understoodSet);
       } catch (error) {
@@ -110,7 +98,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
     };
 
     loadUnderstoodSections();
-  }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
+  }, [moduleId, lessonModuleId, isAuthenticated, supabaseUser, supabaseClient]);
 
   const toggleUnderstood = useCallback(async (sectionIndex) => {
     logger.log('VerbPatternHelp: toggleUnderstood called', sectionIndex);
@@ -129,13 +117,14 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
           return;
         }
         const termName = `verb-pattern-${section.id}`;
-        logger.log('VerbPatternHelp: Saving to Supabase...', { moduleId, sectionIndex, termName, newUnderstood });
+        logger.log('VerbPatternHelp: Saving to Supabase...', { lessonModuleId, sectionIndex, termName, newUnderstood });
         await updateConceptUnderstanding(
-          moduleId,
+          lessonModuleId,
           sectionIndex,
           termName,
           newUnderstood
         );
+        if (!newUnderstood) await clearLegacyTerm(supabaseClient, supabaseUser.id, lessonModuleId, termName);
         logger.log('VerbPatternHelp: Saved successfully');
       } catch (error) {
         logger.error('VerbPatternHelp: Error saving:', error);
@@ -143,7 +132,7 @@ const VerbPatternHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => 
         setUnderstoodSections(prev => toggleSetItem(prev, sectionIndex, isCurrentlyUnderstood));
       }
     }
-  }, [understoodSections, isAuthenticated, moduleId, updateConceptUnderstanding, verbPatternSections]);
+  }, [understoodSections, isAuthenticated, moduleId, lessonModuleId, supabaseClient, supabaseUser, updateConceptUnderstanding, verbPatternSections]);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);

@@ -39,6 +39,7 @@ export function validateGraph(graph, opts = {}) {
   for (const h of graph.headwords) for (const p of h.paradigms || []) ref(h.id, 'paradigms', p);
   for (const n of [...graph.paradigms, ...graph.constructions]) {
     for (const t of n.needs || []) ref(n.id, 'needs', t);
+    for (const t of n.licenses || []) ref(n.id, 'licenses', t);
     for (const t of n.contrastsWith || []) ref(n.id, 'contrastsWith', t);
   }
   for (const [moduleKey, entry] of Object.entries(graph.courseMap || {})) {

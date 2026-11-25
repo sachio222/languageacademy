@@ -21,6 +21,7 @@ import GuideScreen from './GuideScreen';
 import ModuleSelector from './ModuleSelector';
 import ModuleSectionHeader from './ModuleSectionHeader';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
+import { clearLegacyTerms } from '../utils/helpUnderstanding';
 import { RotateCcw, Award } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
@@ -635,6 +636,8 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
           .eq('module_key', moduleId);
 
         if (conceptError) throw conceptError;
+        // QuestionsHelp and VerbPatternHelp ticks saved under an old position number
+        await clearLegacyTerms(supabaseClient, supabaseUser.id, moduleId);
       }
 
       // Reload page to refresh state

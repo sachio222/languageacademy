@@ -169,7 +169,7 @@ test('analyzeItems is memoized per ctx and keyed by item ref', () => {
   assert.equal(analyzeItems(ctx), a);
   const entries = a.get('m1#1');
   assert.equal(entries.length, 2);
-  assert.deepEqual(Object.keys(entries[0]).sort(), ['constructions', 'readings', 'strict', 'text', 'tokens']);
+  assert.deepEqual(Object.keys(entries[0]).sort(), ['constructions', 'licenses', 'readings', 'strict', 'text', 'tokens']);
 });
 
 test('firstUse maps headwords, unreadable folds and constructions to first module', () => {
@@ -424,4 +424,33 @@ test('a Reference noun spelled like a verb form does not hide the untaught verb 
   // marché also reads as the past participle of marcher, which no lesson teaches; café has one reading.
   // The Reference does not count for an ambiguous token at all, so the reason is that no lesson teaches it.
   assert.deepEqual(ruleTaughtBefore(ctx).map((i) => [i.rule, i.surface, i.reason]), [['untaught-word', 'marché', 'nowhere']]);
+});
+
+// fr:cx:neg.de (je n'ai pas de café) licenses the de it matches: a module that teaches the construction teaches that
+// de, and no other use of the preposition.
+test('a taught construction licenses the words it lists only inside its own match', () => {
+  const hw = (id, lemma, pos) => ({ id, lemma, pos, paradigms: [], senses: [], dictionaryId: null, cefr: null, cefrSource: null });
+  const negDe = {
+    id: 'fr:cx:neg.de', label: 'de after a negation', needs: [], contrastsWith: [], cefr: null,
+    detect: [{ surface: "ne|n'" }, { skip: 4, surface: 'pas|plus|jamais' }, { surface: "de|d'" }],
+    licenses: ['fr:lex:de'], examples: { match: ['Je ne parle pas de café.'], noMatch: ['Je parle de café.'] },
+  };
+  const graph = { ...base, headwords: [...base.headwords, hw('fr:lex:de', 'de', 'preposition')], constructions: [...base.constructions, negDe] };
+  const course = [
+    mod(1, [item([], { shown: ['Je ne parle pas de café.'] })]),
+    mod(2, [item([], { shown: ['Je ne parle pas de café.'] }), item([], { shown: ['Je parle de café.'] })]),
+  ];
+  const courseMap = {
+    m1: { teachesWords: ['fr:lex:je', 'fr:lex:parler', 'fr:lex:ne', 'fr:lex:pas', 'fr:lex:cafe'], teachesConstructions: ['fr:cx:verb.er.present'] },
+    m2: { teachesConstructions: ['fr:cx:neg.de'] },
+  };
+  const ctx = makeCtx({ graph: { ...graph, courseMap }, course });
+  const hits = ruleTaughtBefore(ctx).map((i) => [i.rule, i.itemRef, i.surface ?? i.nodeId]);
+  assert.deepEqual(hits, [
+    // before the construction is taught, its de is an ordinary untaught word
+    ['untaught-word', 'm1#1', 'de'],
+    ['untaught-construction', 'm1#1', 'fr:cx:neg.de'],
+    // once it is taught, the de of "pas de" passes and the preposition de does not
+    ['untaught-word', 'm2#2', 'de'],
+  ]);
 });

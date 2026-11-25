@@ -1,6 +1,6 @@
 import { tokenize, fold, restoreElisions } from '../fr/tokenize.mjs';
 import { lookupToken, lookupTokenStrict, lookupKey, strictKey } from '../fr/forms.mjs';
-import { detectConstructions } from '../fr/detect.mjs';
+import { detectConstructions, matchSpans } from '../fr/detect.mjs';
 import { issue } from '../issues.mjs';
 import { languageName } from '../pairs.mjs';
 
@@ -8,7 +8,9 @@ const memo = new WeakMap();
 
 // Per item: one entry for each text in french (typed) and shown (read or heard), both strict (accent-sensitive),
 // then lenient (fold-based).
-// Returns Map<itemRef, Array<{ text, strict, tokens, readings, constructions }>>.
+// licenses: for each construction that lists `licenses` and matches the text, the headword IDs it licenses and the
+// token indices of each match ([{ id, heads, at: Set }]). fr:cx:neg.de licenses the de of "pas de" only.
+// Returns Map<itemRef, Array<{ text, strict, tokens, readings, constructions, licenses }>>.
 export function analyzeItems(ctx) {
   const cached = memo.get(ctx);
   if (cached) return cached;
@@ -24,7 +26,11 @@ export function analyzeItems(ctx) {
         const tokens = tokenize(strict ? text : restoreElisions(text), { isWord });
         const readings = tokens.map((t) => (strict ? lookupTokenStrict(index, t) : lookupToken(index, t)));
         const constructions = detectConstructions(tokens, readings, graph.constructions ?? [], graph.names);
-        return { text, strict, tokens, readings, constructions };
+        const licenses = (graph.constructions ?? [])
+          .filter((c) => c.detect && Array.isArray(c.licenses) && c.licenses.length && constructions.includes(c.id))
+          .flatMap((c) => matchSpans(tokens, readings, c.detect, graph.names)
+            .map((span) => ({ id: c.id, heads: new Set(c.licenses), at: new Set(span) })));
+        return { text, strict, tokens, readings, constructions, licenses };
       }));
     }
   }
@@ -203,6 +209,9 @@ function run(ctx) {
             return;
           }
           if (timeline.isTokenAvailable(rs, m.position)) return;
+          // a word a taught construction licenses inside its own match (the de of "pas de")
+          if ((a.licenses ?? []).some((l) => l.at.has(i) && timeline.isAvailable(l.id, m.position)
+            && rs.some((r) => l.heads.has(r.headwordId)))) return;
           markWord(a, t, lk);
           const heads = [...new Set(rs.map((r) => r.headwordId))];
           const laters = heads.map((h) => laterNote(h, m.position)).filter((x) => x !== null);

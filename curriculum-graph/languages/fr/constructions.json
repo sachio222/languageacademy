@@ -2420,6 +2420,9 @@
     },
     "id": "fr:cx:neg.de",
     "label": "de (d') instead of un, une, des or du after a negation (je n'ai pas de chat)",
+    "licenses": [
+      "fr:lex:de"
+    ],
     "needs": [
       "fr:cx:neg.ne-pas",
       "fr:cx:article.indefinite"

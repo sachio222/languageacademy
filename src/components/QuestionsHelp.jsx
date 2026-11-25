@@ -6,6 +6,7 @@ import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useHelpModuleCompletion } from '../hooks/useHelpModuleCompletion';
 import { useSpeech } from '../hooks/useSpeech';
 import { extractModuleId } from '../utils/progressSync';
+import { LEGACY_HELP_TERMS, loadUnderstoodByTerm, clearLegacyTerm } from '../utils/helpUnderstanding';
 import './QuestionsHelp.css';
 import { logger } from "../utils/logger";
 
@@ -50,21 +51,9 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
       }
 
       try {
-        const { data, error } = await supabaseClient
-          .from('concept_understanding')
-          .select('concept_index, concept_term')
-          .eq('user_id', supabaseUser.id)
-          .eq('module_key', moduleId);
-
-        if (error) throw error;
-
-        // Filter for question sections and create a map of understood sections
-        const understoodSet = new Set();
-        data.forEach(item => {
-          if (item.concept_term && item.concept_term.startsWith('questions-help-')) {
-            understoodSet.add(item.concept_index);
-          }
-        });
+        // Ticks are saved under the moduleKey; older ones sit under a past position number. Both carry the
+        // questions-help- term prefix, which only this screen writes.
+        const understoodSet = await loadUnderstoodByTerm(supabaseClient, supabaseUser.id, LEGACY_HELP_TERMS[lessonModuleId] ?? 'questions-help-');
         setUnderstoodSections(understoodSet);
         logger.log('QuestionsHelp: Loaded understood sections:', understoodSet);
       } catch (error) {
@@ -75,7 +64,7 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     };
 
     loadUnderstoodSections();
-  }, [moduleId, isAuthenticated, supabaseUser, supabaseClient]);
+  }, [moduleId, lessonModuleId, isAuthenticated, supabaseUser, supabaseClient]);
 
   // Use shared help module completion logic
   const { showIncompleteWarning, warningKey, getWarningMessage, handleComplete } = useHelpModuleCompletion(
@@ -102,13 +91,14 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           return;
         }
         const termName = `questions-help-${section.id}`;
-        logger.log('QuestionsHelp: Saving to Supabase...', { moduleId, sectionIndex, termName, newUnderstood });
+        logger.log('QuestionsHelp: Saving to Supabase...', { lessonModuleId, sectionIndex, termName, newUnderstood });
         await updateConceptUnderstanding(
-          moduleId,
+          lessonModuleId,
           sectionIndex,
           termName,
           newUnderstood
         );
+        if (!newUnderstood) await clearLegacyTerm(supabaseClient, supabaseUser.id, lessonModuleId, termName);
         logger.log('QuestionsHelp: Saved successfully');
       } catch (error) {
         logger.error('QuestionsHelp: Error saving:', error);
@@ -116,7 +106,7 @@ const QuestionsHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
         setUnderstoodSections(prev => toggleSetItem(prev, sectionIndex, isCurrentlyUnderstood));
       }
     }
-  }, [understoodSections, isAuthenticated, moduleId, updateConceptUnderstanding, questionSections]);
+  }, [understoodSections, isAuthenticated, moduleId, lessonModuleId, supabaseClient, supabaseUser, updateConceptUnderstanding, questionSections]);
 
   // Auto-completion effect removed - now handled by useHelpModuleCompletion hook
 

@@ -18,7 +18,7 @@ export const negationGuideModule = {
   emailMetadata: {
     capabilities: [
       "Say what you are not and what you do not have",
-      "Say no longer, nothing and never",
+      "Say not anymore, nothing and never",
     ],
     realWorldUse: "say no in French",
     nextModuleTeaser: "Point at things with this and that",
@@ -48,15 +48,11 @@ export const negationGuideModule = {
       },
       {
         heading: "Not any: “pas de”",
-        rule: "After “pas”, “un”, “une” and “des” become “de”, or “d'” before a vowel.",
+        rule: "After “pas”, the articles “un”, “une” and “des” become “de”, or “d'” before a vowel.",
         rows: [
           { french: "Je n'ai pas de chat.", english: "I don't have a cat." },
           { french: "Il n'a pas de voiture.", english: "He doesn't have a car." },
-          {
-            french: "Nous n'avons pas d'amis.",
-            english: "We don't have any friends.",
-            note: "Before a vowel, “de” becomes “d'”.",
-          },
+          { french: "Nous n'avons pas d'amis.", english: "We don't have any friends." },
           {
             french: "Je n'ai pas le livre.",
             english: "I don't have the book.",

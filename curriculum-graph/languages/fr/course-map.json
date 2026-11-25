@@ -5090,6 +5090,16 @@
   },
   "2026-11-24-negation-guide": {
     "overrides": {
+      "2026-11-24-negation-guide#guide.sections[1].heading": {
+        "ignore": [
+          "fr:lex:de"
+        ]
+      },
+      "2026-11-24-negation-guide#guide.sections[1].rule": {
+        "ignore": [
+          "fr:lex:de"
+        ]
+      },
       "2026-11-24-negation-guide#guide.sections[2].examples[0].french": {
         "ignore": [
           "fr:cx:comparative"
@@ -5108,8 +5118,6 @@
       "fr:lex:ne",
       "fr:form:ne.elided",
       "fr:lex:pas",
-      "fr:lex:de",
-      "fr:form:de.elided",
       "fr:lex:plus",
       "fr:lex:rien",
       "fr:lex:jamais"
