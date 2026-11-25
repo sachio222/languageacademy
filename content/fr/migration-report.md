@@ -36,6 +36,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Live ids with no converted item | 315 (0 real misses) |
 | Fields with no place in a module file | 1956 |
 | Text written differently | 673 |
+| Notes | 10 |
 | Outline | 16 |
 
 ## Guide checks written by hand
@@ -3941,6 +3942,26 @@ The same words, moved into a field of the new shape.
 **2024-12-18-pronunciation-test**
 
 - `screen` a word list to say aloud (exerciseConfig type "none"): screen pronunciation-test
+
+## Notes
+
+Things the conversion keeps or drops on a ruling, listed so nothing changes unseen (ledger ruling 2026-11-25 Task 8).
+
+**2024-03-30-reading-4**
+
+- `readingPassage.text` speaker_colour_dropped: "Paul[9]" is the speaker "Paul"; L has no colour mark
+- `readingPassage.text` speaker_colour_dropped: "Marie[8]" is the speaker "Marie"; L has no colour mark
+- `readingPassage.text` speaker_colour_dropped: "La femme[3]" is the speaker "La femme"; L has no colour mark
+
+**2024-02-01-reading-10**
+
+- `vocabularyReference[0].wikipedia.image` image_without_credit: /img/external/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques__Paris_ao_t_2014__2_-085432.jpg ("Paris"): the picture's file states only author "Yann Caradec" and copyright "Yann Caradec"
+- `vocabularyReference[1].wikipedia.image` image_without_credit: /img/wikipedia/Notre-Dame_de_Paris__4_October_2017-b92c2e.jpg ("Notre-Dame de Paris"): the picture's file states no author or licence
+- `vocabularyReference[3].wikipedia.image` image_without_credit: /img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png ("Nice"): the picture's file states no author or licence
+- `vocabularyReference[4].wikipedia.image` image_without_credit: /img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg ("Bordeaux"): the picture's file states no author or licence
+- `vocabularyReference[5].wikipedia.image` image_without_credit: /img/external/Louvre_Museum_Wikimedia_Commons-1851e9.jpg ("Louvre Museum"): the picture's file states only copyright "CC-by-SA 4.0 unported"
+- `vocabularyReference[6].wikipedia.image` image_without_credit: /img/external/Paris_-_Eiffelturm_und_Marsfeld2-4d8187.jpg ("Seine River"): the picture's file states no author or licence
+- `vocabularyReference[7].wikipedia.image` image_without_credit: /img/external/Tour_Eiffel_Wikimedia_Commons__cropped_-302994.jpg ("Eiffel Tower"): the picture's file states no author or licence
 
 ## Outline
 

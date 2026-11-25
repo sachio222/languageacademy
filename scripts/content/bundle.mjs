@@ -217,6 +217,7 @@ function lessonWords(m, dictionary) {
       note: w.note ?? null,
       part_of_speech: w.part_of_speech ?? entry?.part_of_speech ?? null,
     };
+    Object.defineProperty(word, 'info_card', { value: w.info_card ?? null, enumerable: false });
     return Object.defineProperty(word, 'dictionary', { value: entry, enumerable: false });
   });
 }
@@ -484,10 +485,13 @@ export function buildBundleWithReport(course, opts = {}) {
   const pages = course.shelf.pages.map((m, i) => ({ module_key: m.module_key, ordinal: i + 1, title: m.title, description: m.description, screen: m.screen ?? null }));
   for (const m of course.shelf.pages) content.push(contentOf(m, null, ctx));
 
-  // Every word taught or shown, once, in course order; the first card of a word_id names it.
+  // Every word taught or shown, once, in course order; the first card of a word_id names it. A reading card's info
+  // card (a place or a person the word names; L 20991bf BundleWord.info_card) goes on the word, so it shows wherever
+  // the word appears.
   const words = new Map();
   for (const c of content)
-    for (const w of c.words)
+    for (const w of c.words) {
+      if (w.info_card && words.has(w.word_id) && !words.get(w.word_id).info_card) words.get(w.word_id).info_card = structuredClone(w.info_card);
       if (!words.has(w.word_id))
         words.set(w.word_id, {
           word_id: w.word_id,
@@ -496,7 +500,9 @@ export function buildBundleWithReport(course, opts = {}) {
           part_of_speech: w.part_of_speech,
           dictionary_ref: w.dictionary?.id ?? null,
           sense_note: null,
+          ...(w.info_card ? { info_card: structuredClone(w.info_card) } : {}),
         });
+    }
 
   // Every key ever retired: the outline's, then any the previous bundle retired that the outline no longer lists.
   const retired = course.retired.map((r) => ({ module_key: r.module_key, reason: r.reason, replaced_by: r.replaced_by ?? null }));

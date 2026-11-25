@@ -15,42 +15,98 @@
     {
       "word_id": "paris-fr",
       "fr": "Paris",
-      "gloss": "Paris (capital of France)"
+      "gloss": "Paris (capital of France)",
+      "info_card": {
+        "name": "Paris",
+        "description": "Capital and largest city of France, known as the City of Light",
+        "image": "/img/external/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques__Paris_ao_t_2014__2_-085432.jpg",
+        "image_credit": null,
+        "url": "https://en.wikipedia.org/wiki/Paris"
+      }
     },
     {
       "word_id": "notre-dame-fr",
       "fr": "Notre-Dame",
-      "gloss": "Notre-Dame Cathedral (iconic medieval cathedral)"
+      "gloss": "Notre-Dame Cathedral (iconic medieval cathedral)",
+      "info_card": {
+        "name": "Notre-Dame de Paris",
+        "description": "Medieval Catholic cathedral built 1163-1345, Gothic architecture masterpiece on Île de la Cité",
+        "image": "/img/wikipedia/Notre-Dame_de_Paris__4_October_2017-b92c2e.jpg",
+        "image_credit": null,
+        "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
+      }
     },
     {
       "word_id": "montmartre-fr",
       "fr": "Montmartre",
-      "gloss": "Montmartre (historic artist district in Paris)"
+      "gloss": "Montmartre (historic artist district in Paris)",
+      "info_card": {
+        "name": "Montmartre",
+        "description": "Historic hilltop neighborhood famous for artists, Sacré-Cœur Basilica, and bohemian culture since 1800s",
+        "image": "/img/external/sacre-coeur-montmartre.jpg",
+        "image_credit": "Gio Terra (Terragio67, WikiCommons), CC BY-SA 4.0",
+        "url": "https://en.wikipedia.org/wiki/Montmartre"
+      }
     },
     {
       "word_id": "nice-fr",
       "fr": "Nice",
-      "gloss": "Nice (beautiful city on French Riviera)"
+      "gloss": "Nice (beautiful city on French Riviera)",
+      "info_card": {
+        "name": "Nice",
+        "description": "Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches",
+        "image": "/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png",
+        "image_credit": null,
+        "url": "https://en.wikipedia.org/wiki/Nice"
+      }
     },
     {
       "word_id": "bordeaux-fr",
       "fr": "Bordeaux",
-      "gloss": "Bordeaux (famous wine city in southwest France)"
+      "gloss": "Bordeaux (famous wine city in southwest France)",
+      "info_card": {
+        "name": "Bordeaux",
+        "description": "Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007",
+        "image": "/img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg",
+        "image_credit": null,
+        "url": "https://en.wikipedia.org/wiki/Bordeaux"
+      }
     },
     {
       "word_id": "le-louvre-fr",
       "fr": "le Louvre",
-      "gloss": "The Louvre (world's largest art museum)"
+      "gloss": "The Louvre (world's largest art museum)",
+      "info_card": {
+        "name": "Louvre Museum",
+        "description": "World's largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year",
+        "image": "/img/external/Louvre_Museum_Wikimedia_Commons-1851e9.jpg",
+        "image_credit": null,
+        "url": "https://en.wikipedia.org/wiki/Louvre"
+      }
     },
     {
       "word_id": "la-seine-fr",
       "fr": "la Seine",
-      "gloss": "The Seine (river flowing through Paris)"
+      "gloss": "The Seine (river flowing through Paris)",
+      "info_card": {
+        "name": "Seine River",
+        "description": "777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city's history",
+        "image": "/img/external/Paris_-_Eiffelturm_und_Marsfeld2-4d8187.jpg",
+        "image_credit": null,
+        "url": "https://en.wikipedia.org/wiki/Seine"
+      }
     },
     {
       "word_id": "la-tour-eiffel-fr",
       "fr": "la Tour Eiffel",
-      "gloss": "The Eiffel Tower (iconic Paris landmark)"
+      "gloss": "The Eiffel Tower (iconic Paris landmark)",
+      "info_card": {
+        "name": "Eiffel Tower",
+        "description": "Iron lattice tower built 1887-1889, 330m tall, symbol of Paris, 7 million visitors per year",
+        "image": "/img/external/Tour_Eiffel_Wikimedia_Commons__cropped_-302994.jpg",
+        "image_credit": null,
+        "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+      }
     },
     {
       "word_id": "sophie-fr",

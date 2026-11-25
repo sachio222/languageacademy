@@ -420,6 +420,55 @@
             "null"
           ],
           "description": "What separates this meaning from another with the same spelling."
+        },
+        "info_card": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "name",
+            "description",
+            "image",
+            "url"
+          ],
+          "additionalProperties": false,
+          "description": "A short card about a place or person the word names, shown on the word wherever it appears. Optional.",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            },
+            "image": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^/img/[A-Za-z0-9._%/-]+\\.(jpg|jpeg|png|webp)$",
+              "maxLength": 300,
+              "description": "Site path of the picture, served from the same static images as story art."
+            },
+            "image_credit": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 300,
+              "description": "Author and licence of the picture, such as Benh Lieu Song, CC BY-SA 3.0. Required in practice for Wikimedia pictures, whose licences ask for credit."
+            },
+            "url": {
+              "type": "string",
+              "pattern": "^https://",
+              "maxLength": 500,
+              "description": "Where Read more leads; opens in a new tab."
+            }
+          }
         }
       }
     },

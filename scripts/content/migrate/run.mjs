@@ -21,6 +21,10 @@
 //     --live-ref (default: the main commit last merged here, `git merge-base HEAD origin/main`), read from a temporary
 //     worktree. --check exits 1 if a file would change. --force converts from the source alone, then applies
 //     legacy/hand-fixes.json again. Guides and readings read prototype L's data from legacy/l-sources.json.
+//   node scripts/content/migrate/run.mjs golden [--check]
+//     scripts/content/test/fixtures/golden-lessons.json: today's lessons[] as this checkout's lessonData.js builds
+//     them, for the golden test (scripts/content/test/golden.test.mjs). Rewritten whenever it differs; --check exits
+//     1 if it would change.
 //   node scripts/content/migrate/run.mjs l-sources [--l <prototype L folder>] [--check]
 //     content/fr/legacy/l-sources.json: L's GUIDES (j-guides.js) and LA_STORIES (stories-data.js), evaluated in a vm
 //     with a stub window. Default folder: $LA_L_DIR, else the vault's prototypes/l/. --check exits 1 if it would change.
@@ -39,7 +43,7 @@ import { convertGuide } from './guide.mjs';
 import { readingFrom } from './reading.mjs';
 import { referenceFrom } from './reference.mjs';
 import { readLFolder, L_DIR, L_SOURCES_FILE } from './l-sources.mjs';
-import { todaysModules, readLSources, liaisonJsx, frenchPhonics, dictionaryForms, addGlosses } from './sources.mjs';
+import { todaysModules, readLSources, liaisonJsx, frenchPhonics, dictionaryForms, addGlosses, imageCredit } from './sources.mjs';
 import { liveIdMatch } from './live-ids.mjs';
 import { renderReport } from './report.mjs';
 import { proposeWordId } from '../word-ids.mjs';
@@ -288,7 +292,7 @@ async function modules(args, flags, kindWords = ['modules']) {
     if (kind === 'guide') return convertGuide(old, { ...common, lGuides: needL().guides, liaisonJsx: jsx, meanings: new Map(glosses) });
     if (kind === 'reading') {
       const story = needL().stories.find((s) => s.unit === unitInfo.index) ?? null;
-      return readingFrom(old, story, { ...common, dictionary, seenBySpelling, dictionaryForms: forms, names: graph.names, minted });
+      return readingFrom(old, story, { ...common, dictionary, seenBySpelling, dictionaryForms: forms, names: graph.names, minted, imageCredit });
     }
     if (kind === 'reference') return referenceFrom(old, { ...common, phonics, dictionary, seenBySpelling });
     return convertModule(old, { ...common, unitKey: unitInfo.key, dictionary, seenBySpelling });
@@ -410,9 +414,18 @@ async function lSourcesCommand(args, flags) {
   return writeFile(join(ROOT, L_SOURCES_FILE), json(data), { check: flags.check, force: true });
 }
 
-const COMMANDS = { outline, positions, 'l-sources': lSourcesCommand };
+// The golden snapshot: lessons[] from this checkout's lessonData.js, as JSON (undefined fields drop out, as they do
+// when the app stores or sends a lesson).
+const GOLDEN_FILE = join(REPO_ROOT, 'scripts/content/test/fixtures/golden-lessons.json');
+async function golden(args, flags) {
+  const { lessons } = await quietly(() => importFrom(REPO_ROOT, 'src/lessons/lessonData.js'));
+  console.log(`golden: ${lessons.length} lessons from src/lessons/lessonData.js`);
+  return writeFile(GOLDEN_FILE, json(lessons), { check: flags.check, force: true });
+}
+
+const COMMANDS = { outline, positions, 'l-sources': lSourcesCommand, golden };
 const USAGE =
-  'usage: node scripts/content/migrate/run.mjs [outline|positions|l-sources|modules|lessons|guides|readings|reference ...] [--ref <commit>] [--live-ref <commit>] [--l <dir>] [--tmp <dir>] [--check] [--force]';
+  'usage: node scripts/content/migrate/run.mjs [outline|positions|l-sources|golden|modules|lessons|guides|readings|reference ...] [--ref <commit>] [--live-ref <commit>] [--l <dir>] [--tmp <dir>] [--check] [--force]';
 
 const argv = process.argv.slice(2);
 // No command means `modules`: every kind. Kind words (modules, lessons, guides, readings, reference) may be combined.

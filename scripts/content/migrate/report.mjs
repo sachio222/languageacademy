@@ -23,6 +23,7 @@ const SECTIONS = [
   ['live_unmatched', 'Live ids with no converted item', 'The live app stores answers under these exercise ids and concept indexes, and no converted item, concept or section has the same content, so live-ids.json has no entry for them. Real misses come first: each needs a look. The other two groups are expected, since the new files hold nothing for those ids.'],
   ['dropped_field', 'Fields with no place in a module file', 'Today’s objects hold these, and the module schema has no field for them.'],
   ['text_changed', 'Text written differently', 'The same words, moved into a field of the new shape.'],
+  ['note', 'Notes', 'Things the conversion keeps or drops on a ruling, listed so nothing changes unseen (ledger ruling 2026-11-25 Task 8).'],
   ['outline', 'Outline', 'Changes the outline step made when it wrote course.json from today’s unit configs.'],
 ];
 

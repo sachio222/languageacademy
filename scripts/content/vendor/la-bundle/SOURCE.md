@@ -5,13 +5,13 @@ Copied from prototype L's build spec in the product vault, so `pnpm content:test
 | | |
 |---|---|
 | Source | `projects/product/mockups/2026-11-23-dashboard-revisions/prototypes/build-spec/` in the product vault |
-| L commit that last changed these files | `683ae82 2026-11-25T04:06:53-05:00` |
-| Vault HEAD when copied | `683ae82` |
+| L commit that last changed these files | `20991bf 2026-11-25T04:37:07-05:00` |
+| Vault HEAD when copied | `20991bf` |
 
 | File | SHA-256 |
 |---|---|
 | `check/check_bundle.py` | `e0e841126e70bdc901a142c2e41d5df86a4b0c643064fd313b7a8139210457f9` |
-| `contracts/curriculum.bundle.schema.json` | `1c2d0612be217e5793f18cc5838476f74e4c50adfef5da3bcdf58c16052c9dce` |
+| `contracts/curriculum.bundle.schema.json` | `a23ebfbaf26b13b21af310da6f7aebc0acf37257246fce6602e43611fb1a02c3` |
 | `contracts/common.openapi.json` | `ebddbba3470ade1e19242f97dc4a35a6acf5b0878690a5057d6483d73f034d4f` |
 | `contracts/curriculum.openapi.json` | `0cef3d8430ebc1eae52f9866ea3a5c6426c5e9a88b0de927c7e74ba934e40f65` |
 

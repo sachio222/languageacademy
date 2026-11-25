@@ -200,7 +200,7 @@ export function comprehensionFrom(it, { isWord = null, add = () => {}, ref } = {
  * @param old    today's module object (isReadingComprehension)
  * @param story  the L story for this reading (l-sources.json `stories`), or null
  * @param opts   { unitIndex, existing?, record?, handFixes?, isWord?, dictionary?: Map, seenBySpelling?: Map,
- *                 dictionaryForms?: Set, names?: Set, minted?: Set }
+ *                 dictionaryForms?: Set, names?: Set, minted?: Set, imageCredit?: (sitePath) => string | null }
  * @returns { mod, report, record, handFixes }
  */
 export function readingFrom(old, story, opts = {}) {
@@ -226,6 +226,11 @@ export function readingFrom(old, story, opts = {}) {
   if (old.unit !== undefined) add('unit', 'dropped_field', `${old.unit} (the outline places the module)`);
   if (isStr(old.readingPassage.title)) add('readingPassage.title', 'dropped_field', `"${old.readingPassage.title}" (the story's title comes from stories/)`);
 
+  // Today's speaker colour marks (**Paul[9]:**, ReadingPassage.jsx): L defines no inline markup, so the name is
+  // kept as the speaker and the colour goes (ledger ruling 2026-11-25 Task 8).
+  for (const mk of String(old.readingPassage.text ?? '').matchAll(/\*\*([^*]+?\[\d+\]):\*\*/g))
+    add('readingPassage.text', 'note', `speaker_colour_dropped: "${mk[1]}" is the speaker "${mk[1].replace(/\[\d+\]$/, '')}"; L has no colour mark`);
+
   fresh.story_id = story ? `reading${story.n}` : `reading${unitIndex ?? ''}`;
   let freshPassage;
   if (story) {
@@ -250,7 +255,7 @@ export function readingFrom(old, story, opts = {}) {
   if (m.ex?.teaches !== undefined) mod.teaches = clone(m.ex.teaches);
   mergeField(m, 'story_id', fresh.story_id, sources.story_id, { mod, outFields: fields });
 
-  const v = mergeVocabulary(m, old.vocabularyReference || [], { key, seenBySpelling: opts.seenBySpelling ?? new Map(), dictionary: opts.dictionary ?? new Map(), add, minted: opts.minted ?? null });
+  const v = mergeVocabulary(m, old.vocabularyReference || [], { key, seenBySpelling: opts.seenBySpelling ?? new Map(), dictionary: opts.dictionary ?? new Map(), add, minted: opts.minted ?? null, infoCards: opts.imageCredit ?? (() => ({ credit: null, stated: null })) });
   mod.vocabulary = v.vocab;
 
   const passage = mergeList(

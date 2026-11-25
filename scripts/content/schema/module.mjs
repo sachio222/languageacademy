@@ -103,6 +103,8 @@ const OBJ = (fields, required = []) => ({ t: 'obj', fields, required });
 const BLOCK = { t: 'block' };
 const OPTIONS = { t: 'options' };
 const ITEMS = { t: 'items' };
+const NULLABLE = (of) => ({ t: 'nullable', of }); // the value or null
+const MATCH = (re) => ({ t: 'match', re }); // a string no learner reads (a path, a link) matching re
 
 const CONSTRUCTIONS = OBJ({ constructions: LIST(KEY) }, ['constructions']);
 const COMMON_FIELDS = {
@@ -118,6 +120,20 @@ const WORD = OBJ(
   ['word_id', 'fr', 'gloss'],
 );
 const VOCABULARY = LIST(WORD, { unique: 'word_id' });
+// A reading's word card may carry an info card: the short card about a place or person the word names, which today's
+// reading shows from vocabularyReference `wikipedia` (L 20991bf BundleWord.info_card). image is a site path and
+// image_credit the picture's author and licence; either may be null (a picture with no credit in the source).
+const INFO_CARD = OBJ(
+  {
+    name: S('native'),
+    description: S('native'),
+    image: NULLABLE(MATCH(/^\/img\/[A-Za-z0-9._%/-]+\.(jpg|jpeg|png|webp)$/)),
+    image_credit: NULLABLE(S('native')),
+    url: MATCH(/^https:\/\//),
+  },
+  ['name', 'description', 'image', 'image_credit', 'url'],
+);
+const READING_VOCABULARY = LIST(OBJ({ ...WORD.fields, info_card: INFO_CARD }, WORD.required), { unique: 'word_id' });
 const ROW = OBJ({ fr: S('fr'), en: S('native'), note: S('native_fr') }, ['fr', 'en']);
 const TABLES = LIST(OBJ({ id: ID, title: S('native_fr'), rows: LIST(ROW, { nonEmpty: true }) }, ['id', 'title', 'rows']), { unique: 'id' });
 const CONCEPTS = LIST(
@@ -150,7 +166,7 @@ const KIND_SCHEMAS = {
   reading: {
     fields: {
       story_id: KEY,
-      vocabulary: VOCABULARY,
+      vocabulary: READING_VOCABULARY,
       passage: LIST(PASSAGE_BLOCK, { nonEmpty: true, unique: 'id' }),
       glossary: LIST(OBJ({ fr: S('fr'), en: S('native') }, ['fr', 'en'])),
       items: ITEMS,
@@ -186,6 +202,12 @@ function walk(node, v, path, cx, parent) {
       return;
     case 'id':
       if (typeof v !== 'string' || !ID_PATTERN.test(v)) bad(path, 'id_invalid', `${path} must match ${ID_PATTERN}`);
+      return;
+    case 'nullable':
+      if (v === null) return;
+      return walk(node.of, v, path, cx, parent);
+    case 'match':
+      if (typeof v !== 'string' || !node.re.test(v)) bad(path, 'field_type', `${path} must match ${node.re}`);
       return;
     case 'int':
       if (!Number.isInteger(v) || v < node.min) bad(path, 'field_type', `${path} must be a whole number of at least ${node.min}`);

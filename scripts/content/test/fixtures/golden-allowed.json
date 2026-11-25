@@ -1,0 +1,555 @@
+{
+  "about": "Differences between today's lessons (golden-lessons.json) and toLegacyLesson of the converted files that scripts/content/test/golden.test.mjs allows, by class. A class names the lesson paths it covers (anchored patterns), its basis (a line kind of content/fr/migration-report.md from Tasks 6 and 7, with the detail and path the line must have and how its values relate to the difference, a check against live-ids.json, or a ledger ruling with the modules it covers and, where it has one, a relation checked on the difference), and the exact count it holds. scripts/content/legacy/golden.mjs RELATIONS defines each relation.",
+  "classes": [
+    {
+      "class": "shelf_copy_removed",
+      "reason": "Three guides were listed twice today (in their unit and again as Reference X to XII); the outline lists each once and links guides on the shelf automatically (spec 5.1, spec 6).",
+      "basis": {
+        "report": "outline",
+        "course": true,
+        "detail": "taken off the shelf list",
+        "relation": "module_in_detail"
+      },
+      "paths": [
+        "^\\(shelf copy\\)$"
+      ],
+      "count": 3
+    },
+    {
+      "class": "concept_id_added",
+      "reason": "The Task 8 interface adds an id to each concept card, and it is the id live-ids.json gives today's card index (spec 8.3: concept ticks move to concept ids).",
+      "basis": {
+        "data": "concept_id_from_live_ids"
+      },
+      "paths": [
+        "^concepts\\[\\d+\\]\\.id$"
+      ],
+      "count": 591
+    },
+    {
+      "class": "new_item_ids",
+      "reason": "An item main has no exercise for takes the id <module_key>.<item_id>, and a matched item keeps main's live id where this branch numbers it differently (spec 8.3; live-ids.json matched by content in Task 6).",
+      "basis": {
+        "data": "item_id_not_on_main"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.id$"
+      ],
+      "count": 28
+    },
+    {
+      "class": "generic_instruction_dropped",
+      "reason": "An instruction that only says 'translate this prompt' (\"Translate to French\", Say \"<the prompt>\") has no field: the item type says it (Task 6, items.mjs isGenericInstruction).",
+      "basis": {
+        "report": "dropped_field",
+        "detail": "generic instruction",
+        "path": "\\.instruction$",
+        "relation": "generic_instruction"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.instruction$"
+      ],
+      "count": 1114
+    },
+    {
+      "class": "position_words_fixed",
+      "reason": "Learner text that named a module, unit or reading by number now names the subject (spec 5.2 position_word; fixed by hand in Tasks 6 and 7).",
+      "basis": {
+        "report": "position_word",
+        "detail": "\\(fixed by hand\\)$",
+        "relation": "title_in_detail"
+      },
+      "paths": [
+        "^title$",
+        "^description$",
+        "^concepts\\[\\d+\\]\\.(term|definition|example)$",
+        "^exercises\\[\\d+\\]\\.(instruction|prompt|hint)$",
+        "^exercises\\[\\d+\\]\\.wrongAnswers\\[\\d+\\]\\.feedback$",
+        "^vocabularyReference\\[\\d+\\]\\.note$"
+      ],
+      "count": 113
+    },
+    {
+      "class": "unit_exam_title_derived",
+      "reason": "A unit exam's title comes from the outline, \"Unit exam · <unit name>\" (spec 5.8; Task 3 carry: Unit 1 exam titles derived).",
+      "basis": {
+        "report": "dropped_field",
+        "path": "^title$",
+        "detail": "a unit exam's title comes from the outline",
+        "relation": "title_in_detail"
+      },
+      "paths": [
+        "^title$"
+      ],
+      "kinds": [
+        "unit_exam"
+      ],
+      "count": 11
+    },
+    {
+      "class": "guide_title_from_l",
+      "reason": "The hand-built guides take prototype L's title (spec 6: guides from L's rewritten content).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^title$",
+        "detail": "is L's title",
+        "relation": "title_in_detail"
+      },
+      "paths": [
+        "^title$"
+      ],
+      "kinds": [
+        "guide"
+      ],
+      "count": 2
+    },
+    {
+      "class": "test_modules_hold_no_concepts",
+      "reason": "Practice sets, unit exams and readings teach nothing, so their concept cards have no field (spec 5.7, 5.8).",
+      "basis": {
+        "report": "dropped_field",
+        "path": "^concepts\\[\\d+\\]$",
+        "relation": "concept_term"
+      },
+      "paths": [
+        "^concepts\\[\\d+\\]$"
+      ],
+      "kinds": [
+        "practice",
+        "unit_exam",
+        "reading"
+      ],
+      "count": 119
+    },
+    {
+      "class": "study_mode_lessons_only",
+      "reason": "skipStudyMode belongs to lessons only (options.study_mode); readings, practice sets and exams drop it (spec 6, Study Mode row).",
+      "basis": {
+        "report": "dropped_field",
+        "path": "^skipStudyMode$",
+        "detail": "Study Mode belongs to lessons only",
+        "relation": "live_in_detail"
+      },
+      "paths": [
+        "^skipStudyMode$"
+      ],
+      "count": 33
+    },
+    {
+      "class": "practice_instruction_as_gloss",
+      "reason": "A practice sentence's instruction (\"Complete: 'I am a man'\") is the item's gloss, with \"Complete:\" and the quotes dropped (Task 6).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^items\\[\\d+\\]\\.instruction$",
+        "detail": "^instruction written as the gloss",
+        "relation": "live_contains_converted"
+      },
+      "paths": [
+        "^sentences\\[\\d+\\]\\.instruction$"
+      ],
+      "count": 264
+    },
+    {
+      "class": "practice_blank_misplaced",
+      "reason": "A practice blank that cut a word, sat on a mark the app drops, or sat after the full stop is placed where the language-graph checker reads it (spec 6, practice sets row).",
+      "basis": {
+        "report": "blank_misplaced",
+        "relation": "same_index"
+      },
+      "paths": [
+        "^sentences\\[\\d+\\]\\.shown$"
+      ],
+      "count": 54
+    },
+    {
+      "class": "practice_blank_hints_joined",
+      "reason": "Several blank hints on one sentence became one item hint joined with \" / \" (Task 6); where a hint itself holds \" / \" the split back is ambiguous.",
+      "basis": {
+        "report": "text_changed",
+        "path": "^items\\[\\d+\\]\\.blanks$",
+        "detail": "blank hints joined into one hint",
+        "relation": "same_index"
+      },
+      "paths": [
+        "^sentences\\[\\d+\\]\\.blanks\\[\\d+\\]\\.hint$"
+      ],
+      "count": 2
+    },
+    {
+      "class": "fillblank_complete_prefix_dropped",
+      "reason": "A Unit 9 fill-blank prompt's \"Complete:\" prefix is dropped; the sentence is the gapfill text (spec 6, Unit 9 row; Task 6).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^items\\[\\d+\\]\\.prompt$",
+        "detail": "prefix dropped; the sentence is the text$",
+        "relation": "prefix_dropped"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.prompt$"
+      ],
+      "kinds": [
+        "lesson"
+      ],
+      "count": 54
+    },
+    {
+      "class": "fillblank_hand_edit",
+      "reason": "A Unit 9 fill-blank item whose gloss was corrected by hand and whose \"WRONG! Fix: …\" words were removed (Task 6 hand edits).",
+      "basis": {
+        "report": "hand_edit",
+        "path": "^items\\[\\d+\\]\\.gloss$",
+        "relation": "fillblank_hand_edit"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.prompt$"
+      ],
+      "kinds": [
+        "lesson"
+      ],
+      "count": 1
+    },
+    {
+      "class": "comprehension_prompt_dropped",
+      "reason": "A reading question's prompt that only says where the answer is (\"Find the answer in the passage above\") or repeats the question has no field (Task 7, reading.mjs comprehensionFrom).",
+      "basis": {
+        "report": "dropped_field",
+        "path": "^exerciseConfig\\.items\\[\\d+\\]\\.prompt$",
+        "detail": "\\((says only where the answer is|repeats the question)\\)$",
+        "relation": "live_in_detail_same_index"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.prompt$"
+      ],
+      "kinds": [
+        "reading",
+        "unit_exam"
+      ],
+      "count": 5
+    },
+    {
+      "class": "meaning_prompt_in_instruction",
+      "reason": "A meaning item whose instruction already asks the question shows only the French; the prompt's extra words are said by the instruction (Task 6, items.mjs convertTyped).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^items\\[\\d+\\]\\.prompt$",
+        "detail": "the instruction says it, and the French",
+        "relation": "live_in_detail_same_index"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.prompt$"
+      ],
+      "count": 1
+    },
+    {
+      "class": "savoir_connaitre_choice",
+      "reason": "Jake 2026-11-25: the two Unit 7 exam savoir/connaître items with English answers are choice items (ledger; report section \"Exercises rewritten as Jake ruled\").",
+      "basis": {
+        "report": "rewritten",
+        "relation": "same_index"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.(instruction|prompt|hint|expectedAnswer|accepts|wrongAnswers\\[\\d+\\])$"
+      ],
+      "kinds": [
+        "unit_exam"
+      ],
+      "count": 15
+    },
+    {
+      "class": "removed_by_hand",
+      "reason": "Jake 2026-11-25: the aller item's \"qu'est-ce que tu as?\" is a mistake, not an accept; the Unit 2 exam's Ladurée mistake is identical to an accept and stays removed (ledger, Task 6 fix round 1; report section \"Hand edits kept\").",
+      "basis": {
+        "report": "hand_edit",
+        "path": "^items\\[\\d+\\]\\.(accept|mistakes)$",
+        "relation": "removed_by_hand"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.accepts$",
+        "^exercises\\[\\d+\\]\\.wrongAnswers\\[\\d+\\]$"
+      ],
+      "count": 2
+    },
+    {
+      "class": "vocabulary_usage_into_note",
+      "reason": "A word card's usage and agreement notes join its note (spec 6, dropped-by-the-builder row).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^vocabularyReference\\[\\d+\\]\\.(usage|agreement)$",
+        "detail": "added to the note$",
+        "relation": "same_index"
+      },
+      "paths": [
+        "^vocabularyReference\\[\\d+\\]\\.(note|usage|agreement)$"
+      ],
+      "count": 26
+    },
+    {
+      "class": "vocabulary_speech_and_wikipedia_dropped",
+      "reason": "A word card's speech override has no field, and its Wikipedia entry is kept in the dictionary only (spec 6, dropped-by-the-builder row).",
+      "basis": {
+        "report": "dropped_field",
+        "path": "^vocabularyReference\\[\\d+\\]\\.(ttsText|wikipedia)$",
+        "relation": "same_index"
+      },
+      "paths": [
+        "^vocabularyReference\\[\\d+\\]\\.(ttsText|wikipedia)$"
+      ],
+      "count": 1
+    },
+    {
+      "class": "vocabulary_card_listed_twice",
+      "reason": "A word card listed twice (same French, same English) is one card with its notes joined (Tasks 6 and 7, merge.mjs mergeVocabulary).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^vocabularyReference\\[\\d+\\]$",
+        "detail": "is listed twice; one card, notes joined$",
+        "relation": "twin_card"
+      },
+      "paths": [
+        "^vocabularyReference\\[\\d+\\]$",
+        "^vocabularyReference\\[\\d+\\]\\.note$"
+      ],
+      "count": 5
+    },
+    {
+      "class": "story_sentences",
+      "reason": "A reading's passage is the approved story L shows; each French sentence that differs from today's readingPassage text (picture captions added, a colon dropped) has its own story line (spec 6, readings row; Task 7).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^passage$",
+        "relation": "story_sentence"
+      },
+      "paths": [
+        "^readingPassage\\.text#sentence$"
+      ],
+      "kinds": [
+        "reading"
+      ],
+      "count": 70
+    },
+    {
+      "class": "story_translation",
+      "reason": "The English of a story block whose French has a story line (a caption added, a line changed) changes with it (spec 6, readings row; Task 7).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^passage$",
+        "relation": "story_translation"
+      },
+      "paths": [
+        "^readingPassage\\.translation#sentence$"
+      ],
+      "kinds": [
+        "reading"
+      ],
+      "count": 70
+    },
+    {
+      "class": "story_speaker_in_french",
+      "reason": "A speaker is named once, in French, in the block's speaker field; today's English line named them in English (Task 7, reading.mjs blocksFromStory).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^passage\\[\\d+\\]\\.speaker$",
+        "relation": "speaker_names"
+      },
+      "paths": [
+        "^readingPassage\\.translation#speaker$"
+      ],
+      "kinds": [
+        "reading"
+      ],
+      "count": 12
+    },
+    {
+      "class": "story_title_from_stories",
+      "reason": "A reading's passage title comes from stories/ (L's story), not the module (Task 7).",
+      "basis": {
+        "report": "dropped_field",
+        "path": "^readingPassage\\.title$",
+        "detail": "the story's title comes from stories/",
+        "relation": "live_in_detail"
+      },
+      "paths": [
+        "^readingPassage\\.title$"
+      ],
+      "kinds": [
+        "reading"
+      ],
+      "count": 11
+    },
+    {
+      "class": "story_subtitle_in_passage",
+      "reason": "Reading 5's subtitle is a passage block in the story; its sentences are listed as story lines (Task 7).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^readingPassage\\.subtitle$",
+        "detail": "^the subtitle is a passage block in the story$"
+      },
+      "paths": [
+        "^readingPassage\\.subtitle$",
+        "^readingPassage\\.subtitleTranslation$"
+      ],
+      "kinds": [
+        "reading"
+      ],
+      "count": 2
+    },
+    {
+      "class": "negation_row_notes_joined",
+      "reason": "The negation guide's row notes join the part's note, since L's pairs and lines have no note cell (Task 7 fix round 1, guide.mjs guideFromSections).",
+      "basis": {
+        "report": "text_changed",
+        "path": "^guide\\.sections\\[\\d+\\]\\.rows$",
+        "detail": "row notes joined into the part's note",
+        "relation": "same_index"
+      },
+      "paths": [
+        "^guide\\.sections\\[\\d+\\]\\.rows\\[\\d+\\]\\.note$"
+      ],
+      "kinds": [
+        "guide"
+      ],
+      "count": 2
+    },
+    {
+      "class": "fillblank_suffix_now_hint_prompt",
+      "reason": "Ledger ruling 2026-11-25 Task 8 (1): a Unit 9 fill-blank prompt's words after the sentence (\"- Use 'parler'\") are the item's hint; the prompt keeps the sentence and its gloss. The relation checks today's prompt is the new prompt plus \" - <the new hint>\".",
+      "basis": {
+        "ruling": "ledger ruling 2026-11-25 Task 8",
+        "modules": [
+          "2024-05-27-imparfait-all-verbs",
+          "2024-05-29-passe-compose-agreement",
+          "2024-05-30-passe-compose-er",
+          "2024-05-31-passe-compose-etre",
+          "2024-06-01-passe-compose-irregular-1",
+          "2024-06-02-passe-compose-irregular-2",
+          "2024-06-03-past-tense-composition",
+          "2024-06-04-pc-vs-imparfait"
+        ],
+        "relation": "suffix_now_hint_prompt"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.prompt$"
+      ],
+      "kinds": [
+        "lesson"
+      ],
+      "count": 140
+    },
+    {
+      "class": "fillblank_suffix_now_hint_hint",
+      "reason": "Ledger ruling 2026-11-25 Task 8 (1): the same words, now shown as the hint. The relation checks today's prompt ended with \" - <the hint>\".",
+      "basis": {
+        "ruling": "ledger ruling 2026-11-25 Task 8",
+        "modules": [
+          "2024-05-27-imparfait-all-verbs",
+          "2024-05-29-passe-compose-agreement",
+          "2024-05-30-passe-compose-er",
+          "2024-05-31-passe-compose-etre",
+          "2024-06-01-passe-compose-irregular-1",
+          "2024-06-02-passe-compose-irregular-2",
+          "2024-06-03-past-tense-composition",
+          "2024-06-04-pc-vs-imparfait"
+        ],
+        "relation": "suffix_now_hint_hint"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.hint$"
+      ],
+      "kinds": [
+        "lesson"
+      ],
+      "count": 140
+    },
+    {
+      "class": "fillblank_answer_blank_words_only",
+      "reason": "Ledger ruling 2026-11-25 Task 8 (3): a Unit 9 multi-blank answer is the blanks' words joined with one space; the text between the blanks stays in the sentence. These are the items whose live answer also typed that text (\"ai pas aimé\" for \"n'___ pas ___\"); the relation checks that removing exactly the sentence's in-between text from today's answer gives the new answer.",
+      "basis": {
+        "ruling": "ledger ruling 2026-11-25 Task 8",
+        "modules": [
+          "2024-05-27-imparfait-all-verbs",
+          "2024-05-29-passe-compose-agreement",
+          "2024-05-30-passe-compose-er",
+          "2024-05-31-passe-compose-etre",
+          "2024-06-01-passe-compose-irregular-1",
+          "2024-06-02-passe-compose-irregular-2",
+          "2024-06-03-past-tense-composition",
+          "2024-06-04-pc-vs-imparfait"
+        ],
+        "relation": "blanks_without_between"
+      },
+      "paths": [
+        "^exercises\\[\\d+\\]\\.expectedAnswer$"
+      ],
+      "kinds": [
+        "lesson"
+      ],
+      "count": 11
+    },
+    {
+      "class": "story_pictures",
+      "reason": "Ledger ruling 2026-11-25 Task 8 (2): a reading's passage and art come from L's story (spec 5.7, Task 7), so L's pictures (img/reading<N>/…) replace today's images.",
+      "basis": {
+        "ruling": "ledger ruling 2026-11-25 Task 8",
+        "modules": [
+          "2024-01-09-reading1",
+          "2024-01-22-reading2",
+          "2024-02-03-reading3",
+          "2024-03-30-reading-4",
+          "2024-04-13-reading-5",
+          "2024-04-24-reading-6",
+          "2024-05-07-reading-7",
+          "2024-05-20-reading-8",
+          "2024-06-05-reading-9",
+          "2024-02-01-reading-10",
+          "2024-02-12-reading-11"
+        ],
+        "relation": "story_art"
+      },
+      "paths": [
+        "^readingPassage\\.text#picture$"
+      ],
+      "kinds": [
+        "reading"
+      ],
+      "count": 53
+    },
+    {
+      "class": "story_speaker_colour_dropped",
+      "reason": "Ledger ruling 2026-11-25 Task 8 (5): L defines no inline markup and colours speakers by order, so today's colour mark (**Paul[9]:**) goes and the name stays; reading.mjs writes a note line for each.",
+      "basis": {
+        "report": "note",
+        "path": "^readingPassage\\.text$",
+        "detail": "^speaker_colour_dropped: ",
+        "relation": "speaker_colour_note"
+      },
+      "paths": [
+        "^readingPassage\\.text#speaker_colour$"
+      ],
+      "kinds": [
+        "reading"
+      ],
+      "count": 3
+    },
+    {
+      "class": "story_english_typo_fixed",
+      "reason": "Ledger ruling 2026-11-25 Task 8 (6): L's story corrects a typo in Reading 4's live English, \"Goodbye Me!\" to \"Goodbye Marie!\" (the French is unchanged). A single named exception.",
+      "basis": {
+        "ruling": "ledger ruling 2026-11-25 Task 8",
+        "modules": [
+          "2024-03-30-reading-4"
+        ],
+        "values": {
+          "live": "Goodbye Me!",
+          "converted": "Goodbye Marie!"
+        }
+      },
+      "paths": [
+        "^readingPassage\\.translation#sentence$"
+      ],
+      "kinds": [
+        "reading"
+      ],
+      "count": 1
+    }
+  ]
+}

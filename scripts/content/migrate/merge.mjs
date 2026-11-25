@@ -187,9 +187,14 @@ function alternatives0(gloss) {
  * proposal. Ids are proposed in course order (`seenBySpelling`, kept across modules), and each written card joins the
  * walk as written.
  *
+ * infoCards: for a reading, a function (image path -> { credit, stated }, sources.mjs imageCredit). Each card keeps today's `wikipedia`
+ * object as `info_card` ({ name, description, image, image_credit, url }; L 20991bf, ledger ruling 2026-11-25
+ * Task 8). The credit is what the picture's own file states (its author and licence), never invented; a picture
+ * with none gets null and a note line (image_without_credit).
+ *
  * @returns { vocab, record } with record the per-card bases for migration-sources.json
  */
-export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, minted = null }) {
+export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, minted = null, infoCards = null }) {
   const { ex, rec, fixes, mergePart, noteFix, handEdits } = m;
   const fileVocab = Array.isArray(ex?.vocabulary) ? ex.vocabulary : [];
   const strip = (w) => (w ? Object.fromEntries(Object.entries(w).filter(([k]) => k !== 'word_id')) : null);
@@ -204,6 +209,22 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
     if (isStr(v.example)) add(`vocabularyReference[${i}].example`, 'text_changed', `"${v.example}" is example_fr`);
     if (isStr(v.ttsText)) add(`vocabularyReference[${i}].ttsText`, 'dropped_field', `"${v.ttsText}" (speech override; no field)`);
     if (isStr(v.wikipedia)) add(`vocabularyReference[${i}].wikipedia`, 'dropped_field', `"${v.wikipedia}" (kept in the dictionary only)`);
+    else if (v.wikipedia !== undefined && !(infoCards && isObj(v.wikipedia)))
+      add(`vocabularyReference[${i}].wikipedia`, 'dropped_field', `${JSON.stringify(v.wikipedia)} (kept in the dictionary only)`);
+    if (infoCards && isObj(v.wikipedia)) {
+      const wk = v.wikipedia;
+      const bad = Object.keys(wk).filter((k) => !['name', 'description', 'image', 'url'].includes(k));
+      if (bad.length) throw new Error(`${key} vocabularyReference[${i}].wikipedia: fields the conversion does not know: ${bad.join(', ')}`);
+      const image = isStr(wk.image) ? wk.image.trim() : null;
+      const credit = image ? infoCards(image) : { credit: null, stated: null };
+      w.info_card = { name: String(wk.name).trim(), description: String(wk.description).trim(), image, image_credit: credit.credit, url: String(wk.url).trim() };
+      if (image && credit.credit === null)
+        add(
+          `vocabularyReference[${i}].wikipedia.image`,
+          'note',
+          `image_without_credit: ${image} ("${w.info_card.name}"): the picture's file ${credit.stated ? `states only ${credit.stated}` : 'states no author or licence'}`,
+        );
+    }
     // The same card twice (same French, same gloss) is one card, its notes joined.
     const twin = freshCards.find((x) => x && x.fr === w.fr && x.gloss === w.gloss);
     if (twin) {

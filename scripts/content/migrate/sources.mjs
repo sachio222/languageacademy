@@ -58,6 +58,53 @@ export function addGlosses(glosses, mod) {
 export const liaisonJsx = () => readFileSync(join(REPO_ROOT, 'src/components/LiaisonHelp.jsx'), 'utf8');
 export const frenchPhonics = async () => (await importFrom('src/data/frenchPhonics.js')).frenchPhonics;
 
+/**
+ * The credit a site picture (/img/…, under public/) states about itself, from its EXIF Artist and Copyright tags (a
+ * JPEG's IFD0): { credit, stated }. credit is "<artist>, <licence>" only when the file names both an author and a
+ * licence (CC BY-SA and CC BY ask for both); otherwise null, with `stated` saying what the file does name (or null).
+ * Nothing is guessed from the file name (ledger ruling 2026-11-25 Task 8).
+ */
+const LICENCE = /\bCC[\s-]|creative ?commons|public domain|licen[cs]e|GFDL/i;
+export function imageCredit(sitePath) {
+  const tags = exifTags(sitePath);
+  const artist = tags?.artist || null;
+  const copyright = tags?.copyright || null;
+  const licence = copyright && copyright !== artist && LICENCE.test(copyright) ? copyright : null;
+  if (artist && licence) return { credit: `${artist}, ${licence}`, stated: null };
+  const stated = [artist && `author "${artist}"`, copyright && `copyright "${copyright}"`].filter(Boolean).join(' and ');
+  return { credit: null, stated: stated || null };
+}
+function exifTags(sitePath) {
+  const file = join(REPO_ROOT, 'public', sitePath);
+  if (!existsSync(file)) return null;
+  const b = readFileSync(file);
+  if (b[0] !== 0xff || b[1] !== 0xd8) return null;
+  for (let at = 2; at + 4 < b.length && b[at] === 0xff; ) {
+    const marker = b[at + 1];
+    const size = b.readUInt16BE(at + 2);
+    if (marker === 0xe1 && b.toString('latin1', at + 4, at + 10) === 'Exif\0\0') return exifCredit(b.subarray(at + 10, at + 2 + size));
+    if (marker === 0xda) break; // image data: no more headers
+    at += 2 + size;
+  }
+  return null;
+}
+function exifCredit(t) {
+  const le = t.toString('latin1', 0, 2) === 'II';
+  const u16 = (o) => (le ? t.readUInt16LE(o) : t.readUInt16BE(o));
+  const u32 = (o) => (le ? t.readUInt32LE(o) : t.readUInt32BE(o));
+  const ifd = u32(4);
+  const tags = {};
+  for (let i = 0, n = u16(ifd); i < n; i++) {
+    const e = ifd + 2 + i * 12;
+    const tag = u16(e);
+    if ((tag !== 0x013b && tag !== 0x8298) || u16(e + 2) !== 2) continue; // Artist, Copyright; ASCII
+    const count = u32(e + 4);
+    const off = count <= 4 ? e + 8 : u32(e + 8);
+    tags[tag] = t.toString('utf8', off, off + count).replace(/\0+$/, '').split('\0')[0].trim();
+  }
+  return { artist: tags[0x013b] || null, copyright: tags[0x8298] || null };
+}
+
 /** Every folded spelling and form the live dictionary (src/data/dictionary/words/cambridge) has a pop-up for. */
 export async function dictionaryForms() {
   const d = await importFrom('src/data/dictionary/words/cambridge/index.js');

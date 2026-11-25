@@ -156,3 +156,37 @@ test('rerun keeps hand edits to a passage block and an item', () => {
   const forced = readingFrom(old, storyOf(2), { ...opts, handFixes: second.handFixes });
   assert.deepEqual(forced.mod, edited);
 });
+
+// Task 8 (ledger ruling 2026-11-25, L 20991bf): Reading 10's place cards are kept as info_card, with a credit only
+// where the picture's own file states author and licence.
+test('reading word cards keep their info card, credited only from the picture file', async () => {
+  const { imageCredit } = await import('../migrate/sources.mjs');
+  assert.deepEqual(imageCredit('/img/external/sacre-coeur-montmartre.jpg'), { credit: 'Gio Terra (Terragio67, WikiCommons), CC BY-SA 4.0', stated: null });
+  // A licence with no author, or an author with no licence, is not a credit.
+  assert.equal(imageCredit('/img/external/Louvre_Museum_Wikimedia_Commons-1851e9.jpg').credit, null);
+  assert.equal(imageCredit('/img/external/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques__Paris_ao_t_2014__2_-085432.jpg').credit, null);
+  assert.deepEqual(imageCredit('/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png'), { credit: null, stated: null });
+
+  const old = configs.get('2024-02-01-reading-10');
+  const story = L.stories.find((s) => s.n === 10) ?? null;
+  const { mod, report } = readingFrom(old, story, { unitIndex: 10, imageCredit });
+  const cards = mod.vocabulary.filter((w) => w.info_card);
+  assert.equal(cards.length, 8);
+  assert.deepEqual(Object.keys(cards[0].info_card), ['name', 'description', 'image', 'image_credit', 'url']);
+  assert.equal(report.filter((l) => l.kind === 'note' && /^image_without_credit:/.test(l.detail)).length, 7);
+  assert.ok(!report.some((l) => /wikipedia/.test(l.path) && l.kind === 'dropped_field'));
+});
+
+test('an info card needs an https link and a site image path, or null', () => {
+  const card = (over) => ({ name: 'Paris', description: 'Capital of France', image: '/img/wikipedia/paris.jpg', image_credit: null, url: 'https://en.wikipedia.org/wiki/Paris', ...over });
+  const withCard = (c) => {
+    const m = clone(JSON.parse(JSON.stringify({ schema: 'la-module@1', module_key: 'r', kind: 'reading', status: 'written', title: 'R', description: 'D', story_id: 'reading1', passage: [{ id: 'b-1', fr: 'Paris.', en: 'Paris.' }], items: [] })));
+    m.vocabulary = [{ word_id: 'paris-fr', fr: 'Paris', gloss: 'Paris', info_card: c }];
+    return validateModule(m, { file: 'r.json', unitIndex: 1 }).filter((p) => /info_card/.test(p.path)).map((p) => p.path);
+  };
+  assert.deepEqual(withCard(card({})), []);
+  assert.deepEqual(withCard(card({ image: null, image_credit: null })), []);
+  assert.deepEqual(withCard(card({ url: 'http://example.org' })), ['vocabulary[0].info_card.url']);
+  assert.deepEqual(withCard(card({ image: 'img/paris.gif' })), ['vocabulary[0].info_card.image']);
+  assert.deepEqual(withCard({ name: 'Paris', description: 'x', url: 'https://x' }), ['vocabulary[0].info_card.image', 'vocabulary[0].info_card.image_credit']);
+});
