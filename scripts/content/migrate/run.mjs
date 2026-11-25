@@ -466,7 +466,7 @@ async function modules(args, flags, kindWords = ['modules']) {
     console.log(
       `course map: ${mods.filter((m) => m.teaches).length} modules declare teaches, ${mods.filter((m) => m.tests).length} declare tests, ` +
         `${code('pre_teach_row')} preTeach rows, ${code('already_in_table')} already_in_table, ${code('screen_dropped')} screens dropped, ` +
-        `${corrected.counts.rekeyed} corrections re-keyed, ${corrected.counts.dropped} with no item id or target (${rel(correctionsFile)})`,
+        `${corrected.counts.rekeyed} corrections re-keyed, ${corrected.counts.textDropped} about text no module holds, ${corrected.counts.dropped} with no item id or target (${rel(correctionsFile)})`,
     );
   } else console.log(`course map: split already (no teaching field in ${rel(join(graphDir, 'languages/fr/course-map.json'))}); teaches and tests kept as written`);
   console.log(`report: ${[...lineKinds].map(([kind, n]) => `${kind} ${n}`).join(', ')}`);

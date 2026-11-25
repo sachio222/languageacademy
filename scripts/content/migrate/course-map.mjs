@@ -16,9 +16,14 @@
 //   <module_key>#<item_id>                         an item
 //   <module_key>#<item_id>/hint                    text inside an item (hint, mistakes/<n>/feedback)
 //   <module_key>#concepts/<concept_id>/<field>     a concept card's term, definition or example
+//   <module_key>#vocabulary/<word_id>/note         a vocabulary card's note
+//   <module_key>#parts/<part_id>/<path>            a guide part's heading, text/0, or blocks/<b>/lines/<j>/0
 //   <module_key>#<field>                           a module field (title, description)
 // A live position is found through content/fr/legacy/live-ids.json (item `<module_key>.<N>` for the Nth live
-// exercise, concept card by index). A correction whose position has no id there is a report line and is kept nowhere.
+// exercise, concept card by index). A place the live app has no id for (a practice set's sentences[], a vocabulary
+// card, a guide section) is found through the migration record (legacy/migration-sources.json), which names what
+// each source place was converted into. A correction about text no module file holds (an exam's concept cards) needs
+// no key (text_dropped); any other correction with no id is a report line (no_item_id, no_target). Neither is kept.
 import { normText } from './items.mjs';
 import { tokenize } from '../../graph/fr/tokenize.mjs';
 
@@ -49,8 +54,9 @@ function checkFields(key, entry) {
 
 /**
  * What each module declares, from the course map and each module's kind.
- * @param kinds  Map<module_key, kind>, in course order
- * @returns { declarations: { [key]: { teaches?, tests?, pre_teach? } }, report }
+ * @param {object} courseMap  the parsed course map
+ * @param {Map<string, string>} kinds  module_key -> kind, in course order
+ * @returns {{ declarations: Object<string, { teaches?: object, tests?: object, pre_teach?: string[] }>, report: object[] }}
  */
 export function declarationsOf(courseMap, kinds) {
   const declarations = {};
@@ -88,9 +94,11 @@ export function declarationsOf(courseMap, kinds) {
 /**
  * Reading `vocabulary` rows for a reading's preTeach ids. A word already in the table needs no row
  * (already_in_table); a word missing from the passage is a line (pre_teach_not_in_passage).
- * @param mod  { passage: [{ fr }], vocabulary: [{ fr }] }
- * @param opts { wordOf(id) -> { fr, gloss } | null }
- * @returns { rows: [{ fr, gloss, node_id }], report }
+ * @param {string} key  the reading's module_key
+ * @param {string[]} ids  the course map's preTeach graph ids
+ * @param {{ passage?: Array<{ fr?: string }>, vocabulary?: Array<{ fr: string }> }} mod  the reading
+ * @param {{ wordOf: (id: string) => ({ fr: string, gloss: string | null } | null) }} opts
+ * @returns {{ rows: Array<{ fr: string, gloss: string, node_id: string }>, report: object[] }}
  */
 export function preTeachRows(key, ids, mod, { wordOf }) {
   const rows = [];
@@ -125,18 +133,24 @@ function rekey(key, ref, mod, { liveIds, sources, records }) {
   const ex = new RegExp(`^(${EXERCISE_LISTS.map((l) => l.replace('.', '\\.')).join('|')})\\[(\\d+)\\](.*)$`).exec(path);
   if (ex) {
     const [, list, n, rest] = ex;
-    const id = live.items?.[`${key}.${Number(n) + 1}`];
-    if (!id) return { reason: `no_item_id: live-ids.json has no item for ${list}[${n}] (live exercise ${key}.${Number(n) + 1})` };
-    const item = (mod?.items ?? []).find((it) => it.id === id);
-    if (!item) return { reason: `no_target: live-ids.json gives ${id}, which ${key} does not hold` };
-    // The live numbering follows the source array only when the builder shows that array: a module with
-    // exerciseConfig items never shows its exercises[], and the migration record names the source of each item.
     const old = sources?.get(key);
-    if (list === 'exercises' && Array.isArray(old?.exerciseConfig?.items))
-      return { reason: `no_item_id: today's builder shows exerciseConfig, not exercises[], so ${list}[${n}] has no live exercise` };
-    const madeFrom = records?.[key]?.items?.[id]?.ref;
-    if (madeFrom !== undefined && madeFrom !== `${list}[${n}]`)
-      return { reason: `no_target: live exercise ${key}.${Number(n) + 1} is ${id}, made from ${madeFrom}, not ${list}[${n}]` };
+    let id = live.items?.[`${key}.${Number(n) + 1}`];
+    if (id) {
+      // The live numbering follows the source array only when the builder shows that array: a module with
+      // exerciseConfig items never shows its exercises[], and the migration record names the source of each item.
+      if (list === 'exercises' && Array.isArray(old?.exerciseConfig?.items))
+        return { reason: `no_item_id: today's builder shows exerciseConfig, not exercises[], so ${list}[${n}] has no live exercise` };
+      const madeFrom = records?.[key]?.items?.[id]?.ref;
+      if (madeFrom !== undefined && madeFrom !== `${list}[${n}]`)
+        return { reason: `no_target: live exercise ${key}.${Number(n) + 1} is ${id}, made from ${madeFrom}, not ${list}[${n}]` };
+    } else {
+      // No live exercise (a practice set's sentences[]): the migration record names the item made from that place.
+      const made = Object.entries(records?.[key]?.items ?? {}).filter(([, b]) => b?.ref === `${list}[${n}]`);
+      if (made.length !== 1) return { reason: `no_item_id: neither live-ids.json nor the migration record names an item for ${list}[${n}]` };
+      id = made[0][0];
+    }
+    const item = (mod?.items ?? []).find((it) => it.id === id);
+    if (!item) return { reason: `no_target: ${id}, made from ${list}[${n}], is not in ${key}` };
     if (rest === '') return { ref: `${key}#${id}` };
     if (rest === '.hint') return item.hint === undefined ? { reason: `no_target: ${id} has no hint` } : { ref: `${key}#${id}/hint` };
     const wrong = /^\.(wrongAnswers|customWrongAnswers)\[(\d+)\]\.feedback$/.exec(rest);
@@ -151,11 +165,40 @@ function rekey(key, ref, mod, { liveIds, sources, records }) {
   }
   const concept = /^concepts\[(\d+)\]\.(term|definition|example)$/.exec(path);
   if (concept) {
+    // Practice sets, unit exams, readings and guides hold no concept cards: the text this correction was about is
+    // not in the module file, so no checker reads it and the correction needs no key.
+    if (mod && !['lesson', 'reference'].includes(mod.kind))
+      return { reason: `text_dropped: a ${mod.kind} holds no concept cards, so concepts[${concept[1]}].${concept[2]} is in no module file`, dropped: true };
     const id = live.concepts?.[concept[1]];
     if (!id) return { reason: `no_item_id: live-ids.json has no concept for concepts[${concept[1]}]` };
     const c = (mod?.concepts ?? []).find((x) => x.id === id);
     if (!c || c[concept[2]] === undefined) return { reason: `no_target: concept ${id} has no ${concept[2]}` };
     return { ref: `${key}#concepts/${id}/${concept[2]}` };
+  }
+  // A vocabulary card's note: the migration record names the card made from that source card.
+  const vocab = /^vocabularyReference\[(\d+)\]\.(note)$/.exec(path);
+  if (vocab) {
+    const made = (records?.[key]?.vocabulary ?? []).filter((v) => v?.at === Number(vocab[1]) && v.id);
+    if (made.length !== 1) return { reason: `no_item_id: the migration record names no card for vocabularyReference[${vocab[1]}]` };
+    const card = (mod?.vocabulary ?? []).find((w) => w.word_id === made[0].id);
+    if (!card || card[vocab[2]] === undefined) return { reason: `no_target: card ${made[0].id} has no ${vocab[2]}` };
+    return { ref: `${key}#vocabulary/${card.word_id}/${vocab[2]}` };
+  }
+  // A section of a guide written in today's guide.sections[] (guide.mjs guideFromSections): the record names the part;
+  // its heading is the part's heading, its rule the part's text, an example a cell of a lines block.
+  const section = /^guide\.sections\[(\d+)\]\.(heading|rule|examples\[(\d+)\]\.french)$/.exec(path);
+  if (section) {
+    const made = (records?.[key]?.lists?.parts ?? []).filter((p) => p?.at === Number(section[1]));
+    const part = made.length === 1 ? (mod?.parts ?? []).find((x) => x.id === made[0].id) : null;
+    if (!part) return { reason: `no_item_id: the migration record names no part for guide.sections[${section[1]}]` };
+    const at = `${key}#parts/${part.id}`;
+    if (section[2] === 'heading') return { ref: `${at}/heading` };
+    if (section[2] === 'rule') return part.text?.length ? { ref: `${at}/text/0` } : { reason: `no_target: part ${part.id} has no text` };
+    const french = sources?.get(key)?.guide?.sections?.[Number(section[1])]?.examples?.[Number(section[3])]?.french;
+    for (const [b, block] of (part.blocks ?? []).entries())
+      for (const [j, row] of (block.lines ?? []).entries())
+        if (french !== undefined && normText(row[0]) === normText(french)) return { ref: `${at}/blocks/${b}/lines/${j}/0` };
+    return { reason: `no_target: part ${part.id} has no line for guide.sections[${section[1]}].examples[${section[3]}]` };
   }
   if (MODULE_FIELDS.includes(path)) return mod?.[path] === undefined ? { reason: `no_target: ${key} has no ${path}` } : { ref: `${key}#${path}` };
   return { reason: `no_item_id: live-ids.json gives no id for ${path}` };
@@ -169,15 +212,17 @@ function sourceExercise(old, list, n) {
 
 /**
  * The corrections: per module, excludeWords and contentNotes as they are, overrides and itemKinds keyed by ids.
- * @param modules  Map<module_key, module>, in course order
- * @param opts     { liveIds: live-ids.json, sources?: Map<module_key, today's module> (for mistakes), records?:
- *                 legacy/migration-sources.json (each item's source array position, checked against the live number) }
- * @returns { corrections, report, counts: { rekeyed, dropped } }
+ * @param {object} courseMap  the parsed course map
+ * @param {Map<string, object>} modules  module_key -> converted module, in course order
+ * @param {{ liveIds?: object, sources?: Map<string, object> | null, records?: object | null }} [opts]
+ *   liveIds: live-ids.json. sources: today's modules (for mistakes and guide examples). records:
+ *   legacy/migration-sources.json, which names what each source place became (items, cards, guide parts).
+ * @returns {{ corrections: object, report: object[], counts: { rekeyed: number, dropped: number, textDropped: number } }}
  */
 export function correctionsOf(courseMap, modules, { liveIds = {}, sources = null, records = null } = {}) {
   const corrections = {};
   const report = [];
-  const counts = { rekeyed: 0, dropped: 0 };
+  const counts = { rekeyed: 0, dropped: 0, textDropped: 0 };
   const keys = [...modules.keys(), ...Object.keys(courseMap).filter((k) => !modules.has(k))];
   for (const key of keys) {
     const entry = courseMap[key];
@@ -190,7 +235,8 @@ export function correctionsOf(courseMap, modules, { liveIds = {}, sources = null
       for (const [ref, value] of Object.entries(entry[f] ?? {})) {
         const r = rekey(key, ref, modules.get(key), { liveIds, sources, records });
         if (r.reason) {
-          counts.dropped++;
+          if (r.dropped) counts.textDropped++;
+          else counts.dropped++;
           report.push(line(key, ref, `${r.reason}; the ${f === 'overrides' ? 'override' : 'item kind'} ${JSON.stringify(value)} is kept nowhere`));
           continue;
         }
@@ -211,7 +257,10 @@ export function correctionsOf(courseMap, modules, { liveIds = {}, sources = null
  * The whole split. `course` is loadCourse() output or a Map<module_key, module>.
  * opts: { liveIds, sources?, records?, wordOf?(id) -> { fr, gloss } | null }. A reading's preTeach words become `vocabulary`
  * rows judged against the module as given.
- * @returns { declarations: { [key]: { teaches?, tests?, vocabulary? } }, corrections, report }
+ * @param {object} courseMap  the parsed course map
+ * @param {Map<string, object> | { modules: Map<string, object> }} course
+ * @param {{ liveIds?: object, sources?: Map<string, object>, records?: object, wordOf?: Function }} [opts]
+ * @returns {{ declarations: Object<string, { teaches?: object, tests?: object, vocabulary?: object[] }>, corrections: object, report: object[] }}
  */
 export function splitCourseMap(courseMap, course, opts = {}) {
   const modules = course instanceof Map ? course : course.modules;

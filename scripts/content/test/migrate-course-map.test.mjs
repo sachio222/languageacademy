@@ -118,19 +118,68 @@ test('text inside an item, concept cards and module fields keep their correction
   assert.deepEqual(corrections['2024-05-18-irregular-commands'].itemKinds, { [`2024-05-18-irregular-commands#${item('2024-05-18-irregular-commands', 4)}`]: 'translate' });
 });
 
-test('a correction whose live position has no item id is reported and kept nowhere', () => {
+// The nine course-map corrections at places the live app has no id for. Each is keyed through the migration record by
+// the id it has in the converted module, except the exam's concept card, whose text no module file holds.
+test('corrections at places with no live id come through by the id the migration record gives', () => {
+  const NINE = [
+    ['2024-04-03-unit-4-practice', 'sentences[0]', 'i-je-voudrais'],
+    ['2024-05-11-unit-7-practice', 'sentences[1]', 'i-on-2'],
+    ['2024-01-13-ca-survival', 'vocabularyReference[2].note', 'vocabulary/ca-va-fr/note'],
+    ['2024-04-24-reading-6', 'vocabularyReference[32].note', 'vocabulary/qu-est-ce-que-fr/note'],
+    ['2024-05-05-on-and-people', 'vocabularyReference[3].note', 'vocabulary/on-va-fr/note'],
+    ['2026-11-24-negation-guide', 'guide.sections[1].heading', 'parts/p-not-any-pas-de/heading'],
+    ['2026-11-24-negation-guide', 'guide.sections[1].rule', 'parts/p-not-any-pas-de/text/0'],
+    ['2026-11-24-negation-guide', 'guide.sections[2].examples[0].french', 'parts/p-no-more-nothing-never/blocks/1/lines/0/0'],
+    ['2024-01-11-unit1-exam', 'concepts[2].example', null],
+  ];
+  // Every one of them is in the committed course map, with the override it carries there.
+  for (const [key, at] of NINE) assert.ok(COURSE_MAP[key].overrides[`${key}#${at}`], `${key}#${at} is in course-map.json`);
+  const { corrections, report } = split(COURSE_MAP);
+  for (const [key, at, now] of NINE) {
+    const was = COURSE_MAP[key].overrides[`${key}#${at}`];
+    if (now) assert.deepEqual(corrections[key].overrides[`${key}#${now}`], was, `${key}#${at} -> ${now}`);
+    else assert.match(report.find((l) => l.path === `${key}#${at}`).detail, /^text_dropped: a unit_exam holds no concept cards/);
+  }
+  // Each new key names text that is there, and the text the old place held.
+  const mod = (k) => course.modules.get(k);
+  assert.equal(mod('2024-01-13-ca-survival').vocabulary.find((w) => w.word_id === 'ca-va-fr').note, configs.get('2024-01-13-ca-survival').vocabularyReference[2].note);
+  const negation = mod('2026-11-24-negation-guide').parts.find((p) => p.id === 'p-no-more-nothing-never');
+  assert.equal(negation.blocks[1].lines[0][0], configs.get('2026-11-24-negation-guide').guide.sections[2].examples[0].french);
+  assert.ok(mod('2024-04-03-unit-4-practice').items.some((it) => it.id === 'i-je-voudrais'));
+  // Nothing in the committed course map is lost: every override is keyed, except the one about dropped text.
+  const before = Object.values(COURSE_MAP).reduce((n, e) => n + Object.keys(e.overrides ?? {}).length, 0);
+  const after = Object.values(corrections).reduce((n, e) => n + Object.keys(e.overrides ?? {}).length, 0);
+  assert.equal(after, before - 1);
+  assert.deepEqual(report.filter((l) => /^(no_item_id|no_target)/.test(l.detail)), []);
+});
+
+test('a correction at a place no id names is reported and kept nowhere', () => {
   const ig = { ignore: ['fr:cx:conditionnel-present'] };
   const { corrections, report } = split({
-    '2024-04-03-unit-4-practice': { overrides: { '2024-04-03-unit-4-practice#sentences[0]': ig }, tests: ['fr:cx:conditionnel-present'] },
-    '2024-01-13-ca-survival': { overrides: { '2024-01-13-ca-survival#vocabularyReference[2].note': ig } },
+    '2024-04-03-unit-4-practice': { overrides: { '2024-04-03-unit-4-practice#sentences[99]': ig } },
+    '2024-01-13-ca-survival': { overrides: { '2024-01-13-ca-survival#readingPassage.title': ig } },
   });
   assert.deepEqual(corrections, {});
-  const none = report.filter((l) => l.detail.startsWith('no_item_id'));
   // Lines come in course order.
-  assert.deepEqual(none.map((l) => [l.module_key, l.path]), [
-    ['2024-01-13-ca-survival', '2024-01-13-ca-survival#vocabularyReference[2].note'],
-    ['2024-04-03-unit-4-practice', '2024-04-03-unit-4-practice#sentences[0]'],
+  assert.deepEqual(report.filter((l) => l.detail.startsWith('no_item_id')).map((l) => [l.module_key, l.path]), [
+    ['2024-01-13-ca-survival', '2024-01-13-ca-survival#readingPassage.title'],
+    ['2024-04-03-unit-4-practice', '2024-04-03-unit-4-practice#sentences[99]'],
   ]);
+});
+
+test('splitCourseMap: one preTeach word in the passage gets a row, one outside it gets a line', () => {
+  const key = '2024-01-09-reading1';
+  const reading = course.modules.get(key);
+  const inPassage = { fr: 'chien', gloss: 'dog' };
+  const outside = { fr: 'ordinateur', gloss: 'computer' };
+  assert.ok(reading.passage.some((b) => /\bchien\b/.test(b.fr ?? '')) && !reading.vocabulary.some((w) => w.fr === 'chien'));
+  const run = (id, w) => splitCourseMap({ [key]: { preTeach: [id] } }, course, { liveIds: LIVE_IDS, sources: configs, records: RECORDS, wordOf: (x) => (x === id ? w : null) });
+  const a = run('fr:lex:chien', inPassage);
+  assert.deepEqual(a.declarations[key], { vocabulary: [{ fr: 'chien', gloss: 'dog', node_id: 'fr:lex:chien' }] });
+  assert.deepEqual(codes(a.report.filter((l) => l.module_key === key)), ['pre_teach_row']);
+  const b = run('fr:lex:ordinateur', outside);
+  assert.equal(b.declarations[key], undefined);
+  assert.deepEqual(codes(b.report.filter((l) => l.module_key === key)), ['pre_teach_not_in_passage']);
 });
 
 test('preTeach: a passage word becomes a vocabulary row, a table word needs none, any other word is a line', () => {
