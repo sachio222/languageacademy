@@ -157,15 +157,18 @@ test('rerun keeps hand edits to a passage block and an item', () => {
   assert.deepEqual(forced.mod, edited);
 });
 
-// Task 8 (ledger ruling 2026-11-25, L 20991bf): Reading 10's place cards are kept as info_card, with a credit only
-// where the picture's own file states author and licence.
-test('reading word cards keep their info card, credited only from the picture file', async () => {
+// Task 8 (L 20991bf) and C1: Reading 10's place cards are kept as info_card, credited from
+// content/fr/legacy/image-credits.json as "<author>, <licence>, via Wikimedia Commons".
+test('reading word cards keep their info card, credited from the credits file', async () => {
   const { imageCredit } = await import('../migrate/sources.mjs');
-  assert.deepEqual(imageCredit('/img/external/sacre-coeur-montmartre.jpg'), { credit: 'Gio Terra (Terragio67, WikiCommons), CC BY-SA 4.0', stated: null });
-  // A licence with no author, or an author with no licence, is not a credit.
-  assert.equal(imageCredit('/img/external/Louvre_Museum_Wikimedia_Commons-1851e9.jpg').credit, null);
-  assert.equal(imageCredit('/img/external/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques__Paris_ao_t_2014__2_-085432.jpg').credit, null);
-  assert.deepEqual(imageCredit('/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png'), { credit: null, stated: null });
+  assert.deepEqual(imageCredit('/img/external/sacre-coeur-montmartre.jpg'), { credit: 'Terragio67 (Gio Terra), CC BY-SA 4.0, via Wikimedia Commons', stated: null });
+  // CC0 and public domain read "public domain".
+  assert.equal(imageCredit('/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png').credit, '3602kiva, public domain, via Wikimedia Commons');
+  assert.equal(imageCredit('/img/wikipedia/Bordeaux_Place_de_la_Bourse_nuit_683778.jpg').credit, 'Mariette, public domain, via Wikimedia Commons');
+  // A picture with no entry, or an entry with no author or licence, has no credit.
+  assert.equal(imageCredit('/img/wikipedia/not-in-the-file.jpg').credit, null);
+  assert.equal(imageCredit('/img/x.jpg', { '/img/x.jpg': { author: 'A', licence: '' } }).credit, null);
+  assert.equal(imageCredit('/img/x.jpg', { '/img/x.jpg': { author: '', licence: 'CC BY 4.0' } }).credit, null);
 
   const old = configs.get('2024-02-01-reading-10');
   const story = L.stories.find((s) => s.n === 10) ?? null;
@@ -173,8 +176,14 @@ test('reading word cards keep their info card, credited only from the picture fi
   const cards = mod.vocabulary.filter((w) => w.info_card);
   assert.equal(cards.length, 8);
   assert.deepEqual(Object.keys(cards[0].info_card), ['name', 'description', 'image', 'image_credit', 'url']);
-  assert.equal(report.filter((l) => l.kind === 'note' && /^image_without_credit:/.test(l.detail)).length, 7);
+  for (const c of cards) assert.match(c.info_card.image_credit ?? '', /^.+, .+, via Wikimedia Commons$/, c.info_card.name);
+  assert.equal(report.filter((l) => l.kind === 'note' && /^image_without_credit:/.test(l.detail)).length, 0);
   assert.ok(!report.some((l) => /wikipedia/.test(l.path) && l.kind === 'dropped_field'));
+
+  // An image with no entry keeps null and gets a report line.
+  const none = readingFrom(old, story, { unitIndex: 10, imageCredit: (p) => imageCredit(p, {}) });
+  assert.equal(none.mod.vocabulary.filter((w) => w.info_card && w.info_card.image_credit === null).length, 8);
+  assert.equal(none.report.filter((l) => l.kind === 'note' && /^image_without_credit:/.test(l.detail)).length, 8);
 });
 
 test('an info card needs an https link and a site image path, or null', () => {

@@ -1,0 +1,74 @@
+{
+  "/img/external/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques__Paris_ao_t_2014__2_-085432.jpg": {
+    "commons_file": "File:La Tour Eiffel vue de la Tour Saint-Jacques, Paris août 2014 (2).jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques,_Paris_ao%C3%BBt_2014_(2).jpg",
+    "author": "Yann Caradec",
+    "licence": "CC BY-SA 2.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "match": "confirmed",
+    "note": "Local 300x187 (1.604) vs Commons 4592x2870 (1.600): same aspect, downscaled, no crop. Author agrees with local EXIF. ShareAlike applies to adaptations."
+  },
+  "/img/wikipedia/Notre-Dame_de_Paris__4_October_2017-b92c2e.jpg": {
+    "commons_file": "File:Notre-Dame de Paris, 4 October 2017.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_Paris,_4_October_2017.jpg",
+    "author": "Ali Sabbagh",
+    "licence": "CC0 1.0",
+    "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "match": "confirmed",
+    "note": "Local 500x330 (1.515) vs Commons 4938x3261 (1.514): downscaled, no crop. CC0, attribution not required (courtesy credit only)."
+  },
+  "/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png": {
+    "commons_file": "File:CollineDuChateau NiceFrance2022.png",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:CollineDuChateau_NiceFrance2022.png",
+    "author": "3602kiva",
+    "licence": "CC0 1.0",
+    "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "match": "confirmed",
+    "note": "The .png title resolves; the .jpg title does not exist. Local 500x376 (1.330) vs Commons 6784x5108 (1.328): downscaled, no crop. CC0, attribution not required (courtesy credit only)."
+  },
+  "/img/external/Louvre_Museum_Wikimedia_Commons-1851e9.jpg": {
+    "commons_file": "File:Louvre Museum Wikimedia Commons.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Louvre_Museum_Wikimedia_Commons.jpg",
+    "author": "Benh LIEU SONG",
+    "licence": "CC BY-SA 3.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "match": "confirmed",
+    "note": "Local 300x126 (2.381) vs Commons 6740x2832 (2.380): same picture, visually checked, no crop. Commons lists CC BY-SA 3.0; the local EXIF says 4.0, which is wrong for this file. Use 3.0. Commons Artist field reads 'Benh LIEU SONG (Flickr)'. ShareAlike applies."
+  },
+  "/img/external/Paris_-_Eiffelturm_und_Marsfeld2-4d8187.jpg": {
+    "commons_file": "File:Paris - Eiffelturm und Marsfeld2.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Paris_-_Eiffelturm_und_Marsfeld2.jpg",
+    "author": "Wladyslaw (Taxiarchos228)",
+    "licence": "CC BY 3.0",
+    "licence_url": "https://creativecommons.org/licenses/by/3.0",
+    "match": "confirmed",
+    "note": "Local 300x309 (0.971) vs Commons 4114x4235 (0.971): downscaled, no crop. Attribution required; no ShareAlike."
+  },
+  "/img/external/Tour_Eiffel_Wikimedia_Commons__cropped_-302994.jpg": {
+    "commons_file": "File:Tour Eiffel Wikimedia Commons (cropped).jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons_(cropped).jpg",
+    "author": "Benh LIEU SONG",
+    "licence": "CC BY-SA 3.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "match": "confirmed",
+    "note": "Local 240x400 (0.600) vs Commons 2900x4830 (0.600): downscaled. This file is itself a crop of File:Tour Eiffel Wikimedia Commons.jpg (same author). The API summary says 'Public domain', but the page's Licensed-PD template means: public domain for the tower (PD-old, Eiffel died 1923) and CC BY-SA 3.0 for the photograph. The photo licence is CC BY-SA 3.0, so credit and ShareAlike apply."
+  },
+  "/img/external/sacre-coeur-montmartre.jpg": {
+    "commons_file": "File:Basilique du Sacré-Cœur de Montmartre - Paris - GT-01 - 2024.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_-_Paris_-_GT-01_-_2024.jpg",
+    "author": "Terragio67 (Gio Terra)",
+    "licence": "CC BY-SA 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "match": "confirmed",
+    "note": "Local 500x500 vs Commons 9998x9998 square; visual comparison of a Commons 500px thumbnail matches. Sibling file GT-02 (10064x10008) looks near-identical but is not square, so GT-01 is the match. Local EXIF 'Gio Terra, CC BY-SA 4.0' agrees; Commons Artist field reads 'Terragio67'. ShareAlike applies."
+  },
+  "/img/wikipedia/Bordeaux_Place_de_la_Bourse_nuit_683778.jpg": {
+    "commons_file": "File:Bordeaux Place de la Bourse de nuit.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Bordeaux_Place_de_la_Bourse_de_nuit.jpg",
+    "author": "Mariette",
+    "licence": "PD-self",
+    "licence_url": "",
+    "match": "confirmed",
+    "note": "Replaces the earlier picture (unclear copyright) in the live fix 586a4ee. Public domain, released by the author (PD-self)."
+  }
+}
