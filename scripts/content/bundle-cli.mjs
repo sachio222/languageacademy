@@ -2,11 +2,14 @@
 //
 //   bundle [--root <dir>] [--out <file>] [--units unit1,...] [--previous <bundle.json>] [--check]
 //
-// Writes dist/content/bundle.json (with --units, dist/content/bundle-<units>.json) and prints its hash, byte size and
+// Writes dist-content/bundle.json (with --units, dist-content/bundle-<units>.json) and prints its hash, byte size and
 // counts. With --previous it also prints the module keys added, retired, moved and changed since that bundle, and runs
 // the release checks that need it. A content problem prints like `validate` and writes nothing; so does a release
 // problem. --check builds the bundle, runs the release checks and L's checker (vendored in vendor/la-bundle, Python
 // 3.9+) on it, and writes nothing.
+//
+// The bundles live in dist-content/, outside Vite's dist/. Vercel serves dist/, and a release bundle holds every answer
+// key and all Premium text, so it must never ship with the site. L's prototype adapter reads it from dist-content/.
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -18,8 +21,10 @@ import { buildBundleWithReport, bundleHash, canonicalJson } from './bundle.mjs';
 import { releaseProblems, diffBundles } from './release-checks.mjs';
 import { loadBundleSources, sourceCommit } from './bundle-sources.mjs';
 
-export const DEFAULT_OUT = join(REPO_ROOT, 'dist', 'content', 'bundle.json');
+export const OUT_DIR = join(REPO_ROOT, 'dist-content');
+export const DEFAULT_OUT = join(OUT_DIR, 'bundle.json');
 export const CHECKER = fileURLToPath(new URL('./vendor/la-bundle/check/check_bundle.py', import.meta.url));
+const BUNDLE_SCHEMA = fileURLToPath(new URL('./vendor/la-bundle/contracts/curriculum.bundle.schema.json', import.meta.url));
 
 const OPTIONS = { '--root': true, '--out': true, '--units': true, '--previous': true, '--check': false };
 
@@ -43,17 +48,53 @@ function parse(args) {
 const list = (label, keys) => `${label} ${keys.length}${keys.length ? `: ${keys.join(', ')}` : ''}`;
 const nowUtc = () => new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
 
-/** L's checker on a bundle: { ok, problems, output } or { error } when Python or the checker cannot run. */
-export function runChecker(bundle) {
+/**
+ * build.source_commit for a { commit, dirty } source: the commit, marked `-dirty` when the content tree has
+ * uncommitted changes. la-bundle@1 (ff1bc35) allows only a bare commit hash there, so until L's pattern accepts the
+ * mark the field keeps the bare hash and `warning` says the commit does not hold what was built.
+ */
+export function sourceCommitField({ commit, dirty }, schemaFile = BUNDLE_SCHEMA) {
+  if (!dirty) return { value: commit, warning: null };
+  const marked = `${commit}-dirty`;
+  const pattern = JSON.parse(readFileSync(schemaFile, 'utf8')).properties.build.properties.source_commit.pattern;
+  if (new RegExp(pattern).test(marked)) return { value: marked, warning: null };
+  return {
+    value: commit,
+    warning:
+      `the content has uncommitted changes, so commit ${commit.slice(0, 7)} does not hold what was built; ` +
+      `la-bundle@1 allows only a commit hash in build.source_commit (${pattern}), so it is not marked -dirty`,
+  };
+}
+
+/** The first thing a --previous file lacks to be read as a la-bundle@1 bundle, or null. */
+export function notABundle(b) {
+  if (!b || typeof b !== 'object' || Array.isArray(b)) return 'it is not a JSON object';
+  for (const k of ['entries', 'content', 'retired']) if (!Array.isArray(b[k])) return `it has no ${k} list`;
+  if (!Array.isArray(b.shelf?.pages)) return 'it has no shelf.pages list';
+  if (b.content.some((c) => !c || !Array.isArray(c.items))) return 'a content object has no items list';
+  return null;
+}
+
+/** L's checker on a bundle: { ok, status, problems }, or { error } when Python or the checker cannot run or report. */
+export function runChecker(bundle, checker = CHECKER) {
   const dir = mkdtempSync(join(tmpdir(), 'la-bundle-check-'));
   try {
     const file = join(dir, 'bundle.json');
     writeFileSync(file, canonicalJson(bundle) + '\n');
-    const r = spawnSync('python3', [CHECKER, file, '--json'], { encoding: 'utf8', maxBuffer: 256 << 20 });
+    const r = spawnSync('python3', [checker, file, '--json'], { encoding: 'utf8', maxBuffer: 256 << 20 });
     if (r.error) return { error: `python3 could not run: ${r.error.message}` };
     if (r.status === 2) return { error: `the checker could not read the bundle: ${r.stderr.trim()}` };
-    const report = JSON.parse(r.stdout);
-    return { ok: report.ok, problems: report.problems };
+    let report = null;
+    try {
+      report = JSON.parse(r.stdout);
+    } catch {
+      // empty or not JSON: reported below
+    }
+    if (!report || !Array.isArray(report.problems)) {
+      const why = r.stderr.trim() ? `: ${r.stderr.trim()}` : '';
+      return { error: `the checker gave no report (exit ${r.status}${r.signal ? `, ${r.signal}` : ''})${why}` };
+    }
+    return { ok: report.ok === true, status: r.status, problems: report.problems };
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -78,6 +119,11 @@ export async function bundleCommand(args, { usage, printWarnings, line, countByC
       console.error(`${opts['--previous']}: cannot read a bundle (${e.message})`);
       return 1;
     }
+    const lacks = notABundle(previous);
+    if (lacks) {
+      console.error(`${opts['--previous']}: not a la-bundle@1 bundle (${lacks})`);
+      return 1;
+    }
   }
 
   let course;
@@ -100,9 +146,12 @@ export async function bundleCommand(args, { usage, printWarnings, line, countByC
     return 2;
   }
 
-  const commit = sourceCommit(root);
-  const build = commit ? { source_commit: commit, built_at: nowUtc() } : null;
-  const { bundle, report } = buildBundleWithReport(course, { ...(await loadBundleSources({ root })), previous, units, build });
+  const source = sourceCommit(root);
+  const commit = source ? sourceCommitField(source) : null;
+  if (commit?.warning) console.log(`warning ${commit.warning}`);
+  const build = commit ? { source_commit: commit.value, built_at: nowUtc() } : null;
+  const sources = await loadBundleSources({ root });
+  const { bundle, report } = buildBundleWithReport(course, { ...sources, previous, units, build });
   const text = canonicalJson(bundle) + '\n';
   const items = bundle.content.reduce((n, c) => n + c.items.length, 0);
 
@@ -112,6 +161,9 @@ export async function bundleCommand(args, { usage, printWarnings, line, countByC
   if (report.units_stopped_at) console.log(`stopped before ${report.units_stopped_at}, which holds a planned module`);
   if (report.topic_defaulted.length) console.log(`topic defaulted to the unit name for ${report.topic_defaulted.length} entries`);
   for (const n of report.notes) console.log(`note ${n.code} ${n.detail}`);
+  // IPA refused for the dictionary owner: those phrases go out with no IPA.
+  for (const r of sources.dictionary.refused || [])
+    console.log(`note ipa_refused ${r.id} ${JSON.stringify(r.phonetic)} (${r.why}) ${r.file}:${r.line ?? '?'}`);
   if (previous) {
     const d = diffBundles(bundle, previous);
     for (const k of ['added', 'retired', 'moved', 'changed']) console.log(list(k, d[k]));

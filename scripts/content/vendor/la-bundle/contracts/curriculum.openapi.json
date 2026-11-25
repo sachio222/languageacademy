@@ -3999,6 +3999,28 @@
                 }
               }
             }
+          },
+          "mistakes": {
+            "type": "array",
+            "description": "Named wrong answers for the whole item, matched against every blank's answer joined with one space after normalization, such as je ne sais pas typed for ne ... pas. Per-blank mistakes stay on each blank. None of them may pass the checker.",
+            "items": {
+              "type": "object",
+              "required": [
+                "answer",
+                "feedback"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "feedback": {
+                  "type": "string",
+                  "description": "French marked with braces."
+                }
+              }
+            }
           }
         }
       },

@@ -13,6 +13,8 @@ import { STEPS_BY_KIND } from './schema/module.mjs';
 export const FORMAT = 'la-bundle@1';
 export const REFERENCE_PART = 'reference-content';
 export const FREE_STEP_OUTSIDE_UNIT1 = 'vocabulary-intro';
+// la-bundle@1 gives steps an access tier, never a Reference page's text (domains/curriculum.md, Reference shelf).
+const REFERENCE_HAS_NO_TIER = null;
 
 // L's step registry (domains/curriculum.md section 2) with prototype L's STEP_DEFS names. A guide's estimate is its
 // own `minutes`.
@@ -47,11 +49,10 @@ const sortKeys = (v) =>
 /** Every object's keys sorted; arrays keep their order. `indent` as JSON.stringify takes it. */
 export const canonicalJson = (value, indent = 0) => JSON.stringify(sortKeys(value), null, indent || undefined);
 
-/** SHA-256 hex of the canonical JSON, without build.built_at (the one field that changes between identical builds). */
+/** SHA-256 hex of the canonical JSON without `build`: the hash names the content, whatever commit or time built it. */
 export function bundleHash(bundle) {
-  const { build, ...rest } = bundle;
-  const stable = build ? { ...rest, build: { ...build, built_at: undefined } } : rest;
-  return createHash('sha256').update(canonicalJson(stable)).digest('hex');
+  const { build, ...content } = bundle;
+  return createHash('sha256').update(canonicalJson(content)).digest('hex');
 }
 
 /* ---------- small helpers ---------- */
@@ -66,6 +67,33 @@ export const withoutParentheses = (s) => s.replace(/\s*\([^)]*\)/g, '').replace(
 /* ---------- items ---------- */
 
 const mistakesOf = (item) => (item.mistakes || []).map((m) => ({ answer: m.answer, feedback: m.feedback }));
+
+// Words as a joined gap-fill answer is compared: lowercase, straight apostrophes, punctuation as spaces.
+const wordsOf = (s) => String(s).toLowerCase().normalize('NFC').replace(/[’ʼ‘`]/g, "'").split(/[\s,.!?;:…]+/).filter(Boolean);
+
+/**
+ * A gap-fill's item-level mistakes (L ff1bc35: BlanksAnswerKey.mistakes, matched against every blank's answer joined
+ * with one space). A mistake can match only when it has a word for every blank and none of its words is fixed text of
+ * the sentence outside the blanks: "a fait donc" can be typed into "il ___ beau ___", but "ai pas aimer" never can be
+ * typed into "Je n'___ pas ___", because "pas" is not a blank. Returns { matchable, unmatchable }; each unmatchable
+ * mistake carries `why`, for the writers.
+ */
+export function splitBlankMistakes(item) {
+  const fixed = new Set(wordsOf(item.text.replace(/_{3,}/g, ' ')));
+  const inBlanks = new Set(item.blanks.flatMap((b) => [b.answer, ...(b.accept || [])]).flatMap(wordsOf));
+  const right = wordsOf(item.blanks.map((b) => b.answer).join(' ')).join(' ');
+  const matchable = [];
+  const unmatchable = [];
+  for (const m of mistakesOf(item)) {
+    const ws = wordsOf(m.answer);
+    const outside = ws.filter((w) => fixed.has(w) && !inBlanks.has(w));
+    if (outside.length) unmatchable.push({ ...m, why: `${outside.map((w) => `"${w}"`).join(', ')} is fixed text, not a blank` });
+    else if (ws.length < item.blanks.length) unmatchable.push({ ...m, why: `fewer words than the ${item.blanks.length} blanks` });
+    else if (ws.join(' ') === right) unmatchable.push({ ...m, why: 'it is the right answer' });
+    else matchable.push(m);
+  }
+  return { matchable, unmatchable };
+}
 function typedKey(item, language = 'fr') {
   const key = { language, accept: dedupe([item.answer, ...(item.accept || [])]) };
   const mistakes = mistakesOf(item);
@@ -103,14 +131,21 @@ function bundleItem(item, note) {
       };
     case 'gapfill': {
       const blanks = item.blanks.map((b) => ({ accept: dedupe([b.answer, ...(b.accept || [])]) }));
+      const key = { language: 'fr', blanks };
       const mistakes = mistakesOf(item);
-      // A source mistake belongs to the item, L's to one blank: with one blank that is the same thing.
+      // A source mistake belongs to the item. With one blank it is that blank's; with several it is the item's, matched
+      // against the blanks joined, when it can ever match (splitBlankMistakes).
       if (mistakes.length && blanks.length === 1) blanks[0].mistakes = mistakes;
-      else if (mistakes.length) note('mistakes_dropped', `${item.id}: ${mistakes.length} named mistake(s) on a ${blanks.length}-blank gap-fill belong to no one blank`);
+      else if (mistakes.length) {
+        const { matchable, unmatchable } = splitBlankMistakes(item);
+        if (matchable.length) key.mistakes = matchable;
+        for (const m of unmatchable)
+          note('mistake_needs_rewrite', `${item.id}: "${m.answer}" can never match the ${blanks.length} blanks of "${item.text}" (${m.why})`);
+      }
       const text = `{${item.text}}`;
       const markers = (text.match(BLANK_MARKER) || []).length;
       if (markers !== blanks.length) note('blank_markers', `${item.id}: ${markers} ___ marker(s) for ${blanks.length} blank(s)`);
-      return { ...base, kind: 'typed', prompt: defined({ text, en: item.gloss, hint }), answer_key: { language: 'fr', blanks }, miss_text: MISS_TYPED };
+      return { ...base, kind: 'typed', prompt: defined({ text, en: item.gloss, hint }), answer_key: key, miss_text: MISS_TYPED };
     }
     case 'choice': {
       const { choices, answer_key } = choicesOf(item.id, item.options);
@@ -290,9 +325,12 @@ function entrySteps(m, unitKey) {
   });
 }
 
-/** The free preview a locked step carries: a guide's first part; a reading's preview blocks. Null when free. */
+/**
+ * The free preview a Premium step carries: a guide's first part; a reading's preview blocks. Null for a free step and
+ * for a Reference page's text, which has no tier in the bundle (`tier` null; curriculum's access manifest rules it).
+ */
 function previewOf(sectionId, tier, body) {
-  if (tier === 'free') return null;
+  if (tier !== 'premium') return null;
   if (sectionId === 'interactive-help') return body.parts[0];
   if (sectionId === 'reading-passage') {
     const ids = new Set(body.preview_blocks);
@@ -334,7 +372,8 @@ function contentOf(m, unitKey, { dictionary, storyOf, note }) {
   const sections = m.kind === 'reference' ? [REFERENCE_PART] : STEPS_BY_KIND[m.kind];
   const steps = sections.map((sid) => {
     const body = m.kind === 'reference' ? referenceBody(m) : (bodies[sid] ?? null);
-    const tier = m.kind === 'reference' ? 'free' : accessTier(unitKey, sid);
+    // The bundle carries no access tier for a Reference page's text, so it gets no preview either.
+    const tier = m.kind === 'reference' ? REFERENCE_HAS_NO_TIER : accessTier(unitKey, sid);
     return { section_id: sid, body, preview: body ? previewOf(sid, tier, body) : null, item_ids: placed[sid] || [] };
   });
   return {

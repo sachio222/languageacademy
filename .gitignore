@@ -9,6 +9,8 @@ lerna-debug.log*
 # Build outputs
 dist/
 dist-ssr/
+# release bundles for L (pnpm content:bundle); kept out of dist/, which Vercel serves
+dist-content/
 build/
 # the French graph's data builders are source code, not build output
 !scripts/graph/fr/build/

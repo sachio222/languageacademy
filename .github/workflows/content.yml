@@ -32,10 +32,11 @@ jobs:
       - run: pnpm content:bundle --check
       # The vendored checker matches the vault. CI has no vault, so here it only says the copy was not compared.
       - run: pnpm content:vendor-check --check
-      # The full bundle and the Unit 1 sample, written to dist/content/, each run through L's checker (exit 0 or fail).
+      # The full bundle and the Unit 1 sample, written to dist-content/ (never dist/, which the site serves), each run
+      # through L's checker (exit 0 or fail).
       - run: pnpm content:bundle && pnpm content:bundle --units unit1
-      - run: python3 scripts/content/vendor/la-bundle/check/check_bundle.py dist/content/bundle.json
-      - run: python3 scripts/content/vendor/la-bundle/check/check_bundle.py dist/content/bundle-unit1.json
+      - run: python3 scripts/content/vendor/la-bundle/check/check_bundle.py dist-content/bundle.json
+      - run: python3 scripts/content/vendor/la-bundle/check/check_bundle.py dist-content/bundle-unit1.json
       - run: node --test src/lessons/exerciseAnswers.test.mjs
       - run: pnpm graph:test
       # Task 10 replaces this with a blocking `pnpm graph:check --budget`.

@@ -64,8 +64,13 @@ function validate(args) {
   }
 }
 
+// process.exitCode, not process.exit(): stdout to a pipe is written asynchronously, and exiting at once can cut off
+// the end of a long report (hundreds of warnings, then the closing `ok` line) when the reader is slow.
 const [command, ...args] = process.argv.slice(2);
-if (command === 'validate') process.exit(validate(args));
-if (command === 'bundle') process.exit(await (await import('./bundle-cli.mjs')).bundleCommand(args, { usage: USAGE, printWarnings, line, countByCode, plural }));
-console.error(USAGE);
-process.exit(2);
+if (command === 'validate') process.exitCode = validate(args);
+else if (command === 'bundle')
+  process.exitCode = await (await import('./bundle-cli.mjs')).bundleCommand(args, { usage: USAGE, printWarnings, line, countByCode, plural });
+else {
+  console.error(USAGE);
+  process.exitCode = 2;
+}
