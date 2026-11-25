@@ -1,6 +1,6 @@
 // The issue budget (curriculum-graph/reports/issue-budget.json): the most issues of each rule the course may have.
-// `graph:check --budget` fails when any rule's count rises above its budget, and `--lower-budget` keeps every fall; a
-// rule the budget does not name has a budget of 0. `--lower-budget` writes each lower count back, never a higher one.
+// `graph:check --budget` fails when any rule's count rises above its budget; a rule the budget does not name has a
+// budget of 0. `--lower-budget` writes each lower count back, never a higher one.
 import { existsSync, readFileSync } from 'node:fs';
 import { writeSortedJson } from './write-json.mjs';
 

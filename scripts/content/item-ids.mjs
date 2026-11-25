@@ -68,7 +68,8 @@ export function makeTableId(title, taken) {
 }
 
 // What a learner may type or pick to be right, per blank: the strings content:bundle --check compares with the last
-// release (release-checks.mjs answersOf reads the same from a bundle item).
+// release (release-checks.mjs answersOf reads the same from a bundle item). A bundle's match items (answer_key.pairs)
+// are built from a lesson's speed_match words, never from a module item, so an item has no pairs to read.
 export function acceptedAnswers(item) {
   if (Array.isArray(item?.blanks)) return item.blanks.map((b) => [b?.answer, ...(b?.accept || [])]);
   if (Array.isArray(item?.options)) return [[item.options.find((o) => o?.right)?.text]];
