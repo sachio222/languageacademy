@@ -242,6 +242,14 @@ test('small plan: a stub whose key the map no longer holds is taken out of the o
   assert.equal(next.units.some((u) => u.entries.includes('pets-chien')), false);
 });
 
+test('small plan: a mapped key that is a Reference shelf page counts as written and gets no stub', () => {
+  const shelf = { module_key: 'pets-chien', kind: 'reference', status: 'written' };
+  const modules = new Map([...COURSE.units.flatMap((u) => u.modules.map((m) => [m.module_key, m])), ['pets-chien', shelf]]);
+  const r = planToStubs(PLAN, { ...COURSE, modules }, { graph: GRAPH, keys: KEYS });
+  assert.deepEqual(r.report.written, ['pets-chien']);
+  assert.equal(r.modules.some((m) => m.module_key === 'pets-chien'), false);
+});
+
 /* ---------- the committed key map and course ---------- */
 
 const course = loadCourse();
@@ -261,6 +269,11 @@ test('the key map: 194 short keys, unique, with no counter, each a planned stub 
   }
   const retired = new Set(course.retired.map((r) => r.module_key));
   for (const k of list) assert.equal(retired.has(k), false, k);
+  // Nor is any key a Reference shelf page, and every key is short.
+  const shelf = new Set(course.shelf.pages.map((m) => m.module_key));
+  assert.ok(shelf.size > 0);
+  for (const k of list) assert.equal(shelf.has(k), false, k);
+  for (const k of list) assert.ok(k.length <= 30, `${k} is ${k.length} characters`);
   // Every planned stub is in the map: none was named any other way.
   for (const m of planned) assert.ok(list.includes(m.module_key), m.module_key);
 });
@@ -282,9 +295,29 @@ test('stubs for every planned module', needsPlan, () => {
   for (const u of r.units) assert.deepEqual(course.units.find((x) => x.unit_key === u.unit_key).modules.map((m) => m.module_key).filter((k) => u.entries.includes(k)), u.entries, u.unit_key);
 });
 
+test("a vocabulary lesson's key names its first theme, its second theme when it has one, then its first word", needsPlan, () => {
+  const plan = JSON.parse(readFileSync(DEFAULT_PLAN_FILE, 'utf8'));
+  const fold = (t) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  let multi = 0;
+  for (const v of plan.versions.slice(0, 2))
+    for (const u of v.units)
+      for (const m of u.modules) {
+        if (m.kind !== 'lesson' || !m.themeIds?.length || m.adds?.length || m.title.startsWith('Verbs:') || m.themeIds[0] === 'gtd') continue;
+        const key = keys.versions[v.version][m.n];
+        if (m.themeIds.length > 1) multi += 1;
+        assert.equal(key, [...m.themeIds.slice(0, 2), fold(m.words[0].lemma)].join('-'), m.title);
+      }
+  assert.equal(multi, 20);
+});
+
 test('once every stub is written, a run adds nothing', needsPlan, () => {
   const plan = JSON.parse(readFileSync(DEFAULT_PLAN_FILE, 'utf8'));
-  const allWritten = { ...course, units: course.units.map((u) => ({ ...u, modules: u.modules.map((m) => ({ ...m, status: 'written' })) })) };
+  const written = (m) => ({ ...m, status: 'written' });
+  const allWritten = {
+    ...course,
+    units: course.units.map((u) => ({ ...u, modules: u.modules.map(written) })),
+    modules: new Map([...course.modules].map(([k, m]) => [k, written(m)])),
+  };
   const r = planToStubs(plan, allWritten, { graph: planGraph(), keys });
   assert.deepEqual(r.modules, []);
   assert.equal(r.report.written.length, 194);
@@ -310,6 +343,29 @@ test('--write refuses to overwrite a stub edited by hand, and --force overwrites
   assert.equal(main(['--check', '--root', root]), 1);
   assert.equal(main(['--write', '--force', '--root', root]), 0);
   assert.equal(readFileSync(file, 'utf8'), original);
+  // A key that leaves the map: an untouched stub under the old key is removed by --write; a stale stub edited by hand
+  // is kept unless --force.
+  const keyFile = join(root, 'plan-keys.json');
+  const map = JSON.parse(readFileSync(keyFile, 'utf8'));
+  const rename = (from, to) => {
+    for (const v of Object.values(map.versions)) for (const [n, k] of Object.entries(v)) if (k === from) v[n] = to;
+    writeFileSync(keyFile, JSON.stringify(map, null, 2) + '\n');
+  };
+  const moved = join(root, 'modules', 'home-repairs-at-home.json');
+  rename('home-repairs', 'home-repairs-at-home');
+  writeFileSync(file, edited);
+  assert.equal(main(['--write', '--root', root]), 1, 'an edited stale stub stops the run');
+  assert.equal(readFileSync(file, 'utf8'), edited);
+  assert.equal(existsSync(moved), false, 'nothing written');
+  writeFileSync(file, original);
+  assert.equal(main(['--write', '--root', root]), 0, 'an untouched stale stub is removed');
+  assert.equal(existsSync(file), false);
+  assert.equal(JSON.parse(readFileSync(moved, 'utf8')).title, JSON.parse(original).title);
+  rename('home-repairs-at-home', 'home-repairs-new');
+  writeFileSync(moved, edited.replace('"home-repairs"', '"home-repairs-at-home"'));
+  assert.equal(main(['--write', '--root', root]), 1, 'an edited stale stub stops the run again');
+  assert.equal(main(['--write', '--force', '--root', root]), 0, '--force removes an edited stale stub');
+  assert.equal(existsSync(moved), false);
 });
 
 test('slugs unique and dateless', () => {

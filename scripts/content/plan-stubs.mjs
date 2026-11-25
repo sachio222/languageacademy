@@ -108,7 +108,8 @@ function stubNote(kind, pm) {
  */
 export function planToStubs(plan, course, { graph = planGraph(), keys } = {}) {
   if (!keys) throw new Error('planToStubs needs the key map (plan-keys.json)');
-  const byKey = new Map(course.units.flatMap((u) => u.modules.map((m) => [m.module_key, m])));
+  // Every module the course has, Reference shelf pages included (loadCourse's modules; a plain list of units otherwise).
+  const byKey = course.modules instanceof Map ? course.modules : new Map(course.units.flatMap((u) => u.modules.map((m) => [m.module_key, m])));
   const retired = new Set((course.retired ?? []).map((r) => r.module_key));
   const unitByKey = new Map(course.units.map((u) => [u.unit_key, u]));
   const seen = new Set();
@@ -263,6 +264,11 @@ export function main(args) {
   const changed = [...files].filter(([f, text]) => !existsSync(f) || readFileSync(f, 'utf8') !== text).map(([f]) => f);
   // A stub already on disk that differs from what the plan gives was edited by hand (or the plan changed).
   const edited = changed.filter((f) => f !== outlineFile && existsSync(f));
+  // A stale stub (its key left the map) is unedited when it is some plan module's stub under its old key; any other
+  // stale stub holds a writer's edits and is not deleted without --force.
+  const keyless = (m) => JSON.stringify({ ...m, module_key: null });
+  const plain = new Set(modules.map(keyless));
+  const staleEdited = stale.filter((k) => !plain.has(keyless(JSON.parse(readFileSync(stubFile(k), 'utf8')))));
 
   for (const u of units) console.log(`${u.unit_key} ${u.existing ? '(in the course) ' : ''}${u.entries.length} ${u.name}`);
   console.log(`stubs ${modules.length}, written already ${report.written.length}`);
@@ -281,9 +287,10 @@ export function main(args) {
     console.log(`would write ${changed.length} files${stale.length ? `, remove ${stale.length} stale stubs` : ''}; rerun with --write`);
     return 0;
   }
-  if (edited.length && !flags.has('--force')) {
+  if ((edited.length || staleEdited.length) && !flags.has('--force')) {
     for (const f of edited) console.error(`${rel(f)} differs from what the plan gives (edited by hand?); it is kept`);
-    console.error('nothing written; rerun with --force to overwrite these stubs');
+    for (const k of staleEdited) console.error(`${rel(stubFile(k))} is a stub whose key ${KEYS_FILE} no longer holds, edited by hand; it is kept`);
+    console.error('nothing written; rerun with --force to overwrite or remove these stubs');
     return 1;
   }
   for (const f of changed) writeFileSync(f, files.get(f));
