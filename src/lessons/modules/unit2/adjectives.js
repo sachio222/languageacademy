@@ -50,7 +50,7 @@ export const adjectives = {
     {
       term: "Before a Vowel: bel, nouvel, vieil",
       definition:
-        "'Beau', 'bon', 'grand', 'petit', 'nouveau' and 'vieux' go before the noun. Before a masculine noun that starts with a vowel sound, 'beau', 'nouveau' and 'vieux' become 'bel', 'nouvel' and 'vieil'. Feminine forms do not change: 'une nouvelle amie'.",
+        "Before a masculine singular noun that starts with a vowel sound, 'beau', 'nouveau' and 'vieux' become 'bel', 'nouvel' and 'vieil'. Feminine forms do not change: 'une nouvelle amie'.",
       example: "un bel enfant, un nouvel ami, un vieil homme",
     },
   ],
@@ -98,7 +98,7 @@ export const adjectives = {
     },
     {
       french: "bel / nouvel / vieil",
-      english: "beautiful / new / old, before a vowel sound",
+      english: "beautiful / new / old, before a masculine singular noun with a vowel sound",
       note: "un bel enfant / un nouvel ami / un vieil homme",
     },
     {
