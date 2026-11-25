@@ -1,5 +1,6 @@
 // Pipeline CLI: `pnpm pipeline <command> [args]` (design §5, §6.3). One table of commands; each later task adds its
 // own entry. A command's run(args) returns the exit code: 0 done, 1 the command found a problem, 2 a usage error.
+import { realpathSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 /** @type {Record<string, { args: string, summary: string, run: (args: string[]) => number | Promise<number> }>} */
@@ -23,6 +24,16 @@ export async function main(argv) {
   return COMMANDS[command].run(args);
 }
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+/** True when this file is the program node was started with, also when started through a symlink to it. */
+function isEntryPoint(argv1) {
+  if (!argv1) return false;
+  try {
+    return realpathSync(fileURLToPath(import.meta.url)) === realpathSync(argv1);
+  } catch {
+    return false;
+  }
+}
+
+if (isEntryPoint(process.argv[1])) {
   process.exitCode = await main(process.argv.slice(2));
 }

@@ -6,7 +6,10 @@
 //   - a keyword is not one this validator implements, or an annotation ($schema, $id, description, title, examples);
 //   - a keyword's value has the wrong shape (a `type` name that does not exist, a pattern that does not compile,
 //     a negative length, a `format` other than date-time, ...);
-//   - a `$ref` does not resolve, an `$id` repeats, a file has no `$id`, or `$id` appears below the root.
+//   - a `$ref` does not resolve, an `$id` repeats, a file has no `$id`, or `$id` appears below the root;
+//   - a `$ref` points at something that is not a schema (`#/required`, `#/$defs`, a `type` value, an `enum` entry);
+//   - `$ref`, allOf/anyOf/oneOf and if/then/else form a cycle that returns to a schema without descending into the
+//     document (`a: { $ref: '#/$defs/a' }`), which would never end. Recursion through properties or items is fine.
 // Supported: $ref (`la-x@1`, `la-x@1#/$defs/y`, `#/...`), $defs, type (a name or a list; integer, number, string,
 // boolean, object, array, null), const, enum, pattern (Unicode), minLength, maxLength (code points), minimum,
 // maximum, minItems, maxItems, items, required, properties, additionalProperties (false or a schema),
@@ -95,10 +98,18 @@ export function createValidator(schemaDirs) {
 
   /* ---------- load-time checks: every keyword known, every value well formed, every $ref resolving ---------- */
 
+  /** Every place a schema sits, as `<rootId>#<json pointer>`, so a $ref can be checked to land on one. */
+  const schemaAt = new Map();
+  /** Every $ref, checked once all files are compiled (a $ref may point into a file compiled later). */
+  const refs = [];
+  const keyOf = (rootId, pointer) => `${rootId}#${pointer}`;
+  const failAt = (rootId, where, msg) => {
+    throw new Error(`${registry.get(rootId).file}: ${where || '(root)'}: ${msg}`);
+  };
+
   function compile(s, rootId, where, isRoot = false) {
-    const fail = (msg) => {
-      throw new Error(`${registry.get(rootId).file}: ${where || '(root)'}: ${msg}`);
-    };
+    const fail = (msg) => failAt(rootId, where, msg);
+    schemaAt.set(keyOf(rootId, where), { node: s, rootId, where });
     if (typeof s === 'boolean') return;
     if (!isObject(s)) fail('a schema must be an object or a boolean');
     for (const [kw, val] of Object.entries(s)) {
@@ -142,10 +153,48 @@ export function createValidator(schemaDirs) {
         } catch (e) {
           fail(`$ref ${val}: ${e.message}`);
         }
+        refs.push({ rootId, where, ref: val });
       }
     }
   }
   for (const [id, { schema }] of registry) compile(schema, id, '', true);
+
+  /** The schema-position key a $ref names. */
+  const targetKey = (ref, base) => {
+    const hash = ref.indexOf('#');
+    return hash === -1 ? keyOf(ref, '') : keyOf(ref.slice(0, hash) || base, ref.slice(hash + 1));
+  };
+  for (const { rootId, where, ref } of refs)
+    if (!schemaAt.has(targetKey(ref, rootId))) failAt(rootId, where, `$ref ${ref} points at a value that is not a schema`);
+
+  // Cycle check over the edges that apply a schema to the same value: $ref, allOf/anyOf/oneOf, if/then/else.
+  // properties, items, additionalProperties and propertyNames move to a part of the value, so a loop through them ends.
+  const sameValue = ({ node, rootId, where }) => {
+    if (typeof node !== 'object') return [];
+    const next = [];
+    if (node.$ref !== undefined) next.push(targetKey(node.$ref, rootId));
+    for (const kw of SCHEMA_LIST) (node[kw] ?? []).forEach((_, i) => next.push(keyOf(rootId, `${where}/${kw}/${i}`)));
+    for (const kw of ['if', 'then', 'else']) if (node[kw] !== undefined) next.push(keyOf(rootId, `${where}/${kw}`));
+    return next;
+  };
+  const done = new Set();
+  const path = [];
+  const onPath = new Set();
+  const visit = (key) => {
+    if (done.has(key)) return;
+    if (onPath.has(key)) {
+      const loop = [...path.slice(path.indexOf(key)), key];
+      const { rootId, where } = schemaAt.get(key);
+      failAt(rootId, where, `$ref cycle that never descends into the document: ${loop.join(' -> ')}`);
+    }
+    onPath.add(key);
+    path.push(key);
+    for (const next of sameValue(schemaAt.get(key))) visit(next);
+    path.pop();
+    onPath.delete(key);
+    done.add(key);
+  };
+  for (const key of schemaAt.keys()) visit(key);
 
   /* ---------- validation ---------- */
 

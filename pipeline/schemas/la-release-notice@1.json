@@ -20,7 +20,7 @@
       "properties": { "release": { "const": "ok" }, "l_checker": { "const": "ok" } } },
     "stopped_before": { "type": ["object", "null"], "description": "the first unit the bundle does not reach, and why (planned, story_missing)" },
     "story_handoffs": { "type": "array", "description": "approved readings whose story L has not made yet",
-      "items": { "type": "object", "required": ["story_id", "module_key", "blocks_sha256"], "properties": {
-        "story_id": { "type": "string" }, "module_key": { "type": "string" }, "blocks_sha256": { "type": "string" } } } }
+      "items": { "type": "object", "additionalProperties": false, "required": ["story_id", "module_key", "blocks_sha256"], "properties": {
+        "story_id": { "type": "string" }, "module_key": { "type": "string" }, "blocks_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" } } } }
   }
 }

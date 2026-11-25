@@ -7,7 +7,7 @@
     "schema": { "const": "la-pipeline-event@1" },
     "event_id": { "type": "string", "description": "ULID" },
     "seq": { "type": "integer", "minimum": 1, "description": "position in this log file, no gaps" },
-    "prev_sha256": { "type": "string", "description": "sha256 of the previous event, or 64 zeros for the first" },
+    "prev_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "sha256 of the previous event, or 64 zeros for the first" },
     "sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "over this event's canonical JSON without the sha256 field" },
     "ts": { "$ref": "la-pipeline-common@1#/$defs/time" },
     "tenant": { "type": "string", "pattern": "^[a-z]{2}-[a-z]{2}$" },

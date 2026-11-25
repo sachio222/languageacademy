@@ -61,13 +61,14 @@ export function normalizeNfc(value, at = '') {
  * The task id (design §4.1): first 24 hex of canonicalSha256 over subject (module key, or the header subject), role,
  * lens ('none' for roles other than review), round, input, prompt and engine configuration hashes, and the repair's
  * reviewer_source ('none' otherwise). Bad input throws: a missing field would vanish from the canonical JSON and let
- * two different tasks share an id.
+ * two different tasks share an id, and a lens on a draft, repair or header task would give one piece of work two ids.
  */
 export function taskIdFor({ subject, role, lens, round, input_sha256, prompt_sha256, engine_config_sha256, reviewer_source }) {
   const fields = { subject, role, lens: lens ?? 'none', round, input_sha256, prompt_sha256, engine_config_sha256, reviewer_source: reviewer_source ?? 'none' };
   if (typeof subject !== 'string' || subject === '') throw new TypeError('taskIdFor: subject must be a non-empty string');
   if (!ROLES.includes(role)) throw new TypeError(`taskIdFor: role ${JSON.stringify(role)} is not one of ${ROLES.join(', ')}`);
   if (!LENSES.includes(fields.lens)) throw new TypeError(`taskIdFor: lens ${JSON.stringify(lens)} is not one of ${LENSES.join(', ')}`);
+  if (role !== 'review' && fields.lens !== 'none') throw new TypeError(`taskIdFor: a ${role} task has no lens, not ${JSON.stringify(lens)}`);
   if (!Number.isInteger(round) || round < 1) throw new TypeError(`taskIdFor: round must be an integer of at least 1, not ${round}`);
   for (const k of ['input_sha256', 'prompt_sha256', 'engine_config_sha256'])
     if (typeof fields[k] !== 'string' || !SHA256.test(fields[k])) throw new TypeError(`taskIdFor: ${k} must be 64 lowercase hex characters`);

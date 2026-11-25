@@ -3,6 +3,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { canonicalJson } from '../../content/bundle.mjs';
 import { canonicalSha256, normalizeNfc, sha256Hex, taskIdFor, ulid } from '../hash.mjs';
 
@@ -38,12 +40,12 @@ test('canonicalSha256 ignores key order', () => {
 });
 
 test('canonicalSha256 does not normalize: NFD and NFC text hash differently', () => {
-  assert.notEqual(canonicalSha256({ fr: 'été' }), canonicalSha256({ fr: 'été' }));
+  assert.notEqual(canonicalSha256({ fr: 'e\u0301te\u0301' }), canonicalSha256({ fr: '\u00e9t\u00e9' }));
   assert.throws(() => canonicalSha256(undefined), TypeError);
 });
 
 test('normalizeNfc turns e + U+0301 into é everywhere in a nested value', () => {
-  const nfd = 'é';
+  const nfd = 'e\u0301';
   const input = {
     title: `l${nfd}t${nfd}`,
     items: [{ answer: `caf${nfd}`, accept: [`th${nfd}`, 'plain'], n: 3, ok: true, none: null }],
@@ -55,7 +57,7 @@ test('normalizeNfc turns e + U+0301 into é everywhere in a nested value', () =>
     items: [{ answer: 'café', accept: ['thé', 'plain'], n: 3, ok: true, none: null }],
     clé: { deep: [['é']] },
   });
-  assert.ok(!JSON.stringify(out).includes('́'), 'no combining accent left anywhere');
+  assert.ok(!JSON.stringify(out).includes('\u0301'), 'no combining accent left anywhere');
   // A deep copy: the input is untouched and shares no object with the output.
   assert.equal(input.items[0].answer, `caf${nfd}`);
   assert.notEqual(out.items, input.items);
@@ -65,12 +67,12 @@ test('normalizeNfc turns e + U+0301 into é everywhere in a nested value', () =>
 });
 
 test('normalizeNfc keeps a __proto__ key as data and refuses keys that collide after normalization', () => {
-  const parsed = JSON.parse('{"__proto__": {"x": "é"}, "a": 1}');
+  const parsed = JSON.parse('{"__proto__": {"x": "e\u0301"}, "a": 1}');
   const out = normalizeNfc(parsed);
   assert.equal(Object.getPrototypeOf(out), Object.prototype);
   assert.deepEqual(Object.keys(out), ['__proto__', 'a']);
   assert.equal(out.__proto__.x, 'é'); // eslint-disable-line no-proto
-  assert.throws(() => normalizeNfc({ 'é': 1, é: 2 }), /collide/);
+  assert.throws(() => normalizeNfc({ 'e\u0301': 1, '\u00e9': 2 }), /collide/);
   assert.throws(() => normalizeNfc({ when: new Date(0) }), TypeError);
   assert.throws(() => normalizeNfc({ f: () => 1 }), TypeError);
 });
@@ -108,6 +110,15 @@ test('taskIdFor refuses inputs that would hash to a silent collision', () => {
   assert.throws(() => taskIdFor({ ...BASE, reviewer_source: 'reviewer' }), TypeError);
 });
 
+test('taskIdFor refuses a lens on a role that has none', () => {
+  for (const role of ['draft', 'repair', 'header'])
+    for (const lens of ['primary', 'french', 'method'])
+      assert.throws(() => taskIdFor({ ...BASE, role, lens }), /lens/, `${role} with lens ${lens}`);
+  // 'none', null and a missing lens all mean no lens, and pass.
+  for (const lens of ['none', null, undefined]) assert.doesNotThrow(() => taskIdFor({ ...BASE, role: 'repair', lens }));
+  assert.doesNotThrow(() => taskIdFor({ ...BASE, role: 'review', lens: 'french' }));
+});
+
 test('ulid sorts by time', () => {
   const r = Buffer.alloc(10, 0xff);
   const ids = [0, 1, 999, 1000, 1469918176385, 1764165002551, 2 ** 48 - 1].map((ms) => ulid(ms, r));
@@ -129,4 +140,10 @@ test('ulid encodes the spec vector and refuses bad input', () => {
   assert.throws(() => ulid(1.5, Buffer.alloc(10)), TypeError);
   assert.throws(() => ulid(1, Buffer.alloc(9)), TypeError);
   assert.throws(() => ulid(1, 'random'), TypeError);
+});
+
+test('this file writes every combining mark as a \\u escape, so an editor cannot recompose an NFD string unseen', () => {
+  const source = readFileSync(fileURLToPath(import.meta.url), 'utf8');
+  const raw = [...source.matchAll(/\p{M}/gu)].map((m) => `U+${m[0].codePointAt(0).toString(16).toUpperCase().padStart(4, '0')} at offset ${m.index}`);
+  assert.deepEqual(raw, []);
 });

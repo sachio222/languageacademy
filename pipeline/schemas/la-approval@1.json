@@ -7,7 +7,12 @@
     "schema": { "const": "la-approval@1" },
     "subject": { "type": "object", "additionalProperties": false, "required": ["kind", "unit_key"],
       "properties": { "kind": { "enum": ["module", "unit_header"] }, "unit_key": { "$ref": "la-pipeline-common@1#/$defs/unitKey" },
-        "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" }, "header_phase": { "enum": ["interim", "final"] } } },
+        "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" }, "header_phase": { "enum": ["interim", "final"] } },
+      "allOf": [
+        { "if": { "required": ["kind"], "properties": { "kind": { "const": "module" } } },
+          "then": { "required": ["module_key"], "properties": { "header_phase": false } } },
+        { "if": { "required": ["kind"], "properties": { "kind": { "const": "unit_header" } } },
+          "then": { "required": ["header_phase"], "properties": { "module_key": false } } } ] },
     "content_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "the seal: canonical SHA-256 of the module file as written, or of the unit's header fields in course.json" },
     "round": { "type": "integer" },
     "mode": { "enum": ["auto", "human", "adopted"], "description": "adopted: a hand-written Unit 12 module that passed C6 (section 3.2)" },
