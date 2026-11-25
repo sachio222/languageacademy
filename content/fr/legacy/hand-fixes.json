@@ -315,6 +315,130 @@
       }
     ]
   },
+  "2024-01-28-verb-pattern-help": {
+    "checks": [
+      {
+        "id": "k1",
+        "ask": "Listen. Do {je veux} and {il veut} sound the same?",
+        "say": "je veux. il veut.",
+        "options": [
+          {
+            "text": "Yes",
+            "right": true
+          },
+          {
+            "text": "No"
+          }
+        ],
+        "why": "They sound the same. The x and the t at the end are both silent."
+      },
+      {
+        "id": "k2",
+        "ask": "Listen. In {ils veulent}, do you hear the -ent?",
+        "say": "ils veulent",
+        "options": [
+          {
+            "text": "Yes"
+          },
+          {
+            "text": "No, it is silent",
+            "right": true
+          }
+        ],
+        "why": "The -ent is written but not spoken."
+      },
+      {
+        "id": "k3",
+        "ask": "Which verb breaks the -ons ending for {nous}?",
+        "options": [
+          {
+            "text": "avoir",
+            "fr": true
+          },
+          {
+            "text": "aller",
+            "fr": true
+          },
+          {
+            "text": "être",
+            "fr": true,
+            "right": true
+          }
+        ],
+        "why": "{nous sommes}. {avoir} and {aller} keep it: {nous avons}, {nous allons}."
+      }
+    ],
+    "parts/p-the-silent-ent": {
+      "id": "p-the-silent-ent",
+      "heading": "The silent -ent",
+      "text": [
+        "For {ils} and {elles}, the verb ends in -ent."
+      ],
+      "note": "The -ent is written but not spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so {ils veulent} sounds a little different from {il veut}.",
+      "blocks": [
+        {
+          "verbs": [
+            {
+              "v": "vouloir",
+              "en": "to want",
+              "f": [
+                [
+                  "ils",
+                  "veulent"
+                ],
+                [
+                  "elles",
+                  "veulent"
+                ]
+              ]
+            },
+            {
+              "v": "pouvoir",
+              "en": "can",
+              "f": [
+                [
+                  "ils",
+                  "peuvent"
+                ],
+                [
+                  "elles",
+                  "peuvent"
+                ]
+              ]
+            },
+            {
+              "v": "venir",
+              "en": "to come",
+              "f": [
+                [
+                  "ils",
+                  "viennent"
+                ],
+                [
+                  "elles",
+                  "viennent"
+                ]
+              ]
+            },
+            {
+              "v": "voir",
+              "en": "to see",
+              "f": [
+                [
+                  "ils",
+                  "voient"
+                ],
+                [
+                  "elles",
+                  "voient"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
   "2024-02-01-reading-10": {
     "description": "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more",
     "title": "Reading - {Mes Rêves et Mes Espoirs}"

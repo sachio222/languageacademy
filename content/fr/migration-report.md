@@ -32,7 +32,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 825 |
 | Passage words with no pop-up | 10 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 858 |
+| Hand edits kept | 860 |
 | Live ids with no converted item | 315 (0 real misses) |
 | Fields with no place in a module file | 1956 |
 | Text written differently | 673 |
@@ -1817,6 +1817,11 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-01-27-aller**
 
 - `items[19].accept` "["qu'est-ce que tu as?"]" → "(removed)"
+
+**2024-01-28-verb-pattern-help**
+
+- `parts[3].note` "The -ent is written but never spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so ils veulent sounds a little different from il veut." → "The -ent is written but not spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so ils veulent sounds a little different from il veut."
+- `checks[1].why` "The -ent is written but never spoken." → "The -ent is written but not spoken."
 
 **2024-02-02-combining**
 

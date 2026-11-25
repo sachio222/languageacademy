@@ -159,7 +159,7 @@ test('a module written after the snapshot takes no live number and is not compar
   // Exactly the guides and the Reference page written after the snapshot, and any course plan module written since
   // (content/fr/plan-keys.json); any other new module joins this list by hand.
   const planned = new Set(planKeyList(readPlanKeys()));
-  assert.deepEqual(writtenAfter.filter((k) => !planned.has(k)), ['gender-endings-guide', 'which-past-guide', 'future-conditional-guide', 'y-en-guide', 'past-with-etre-guide', 'subjunctive-que-guide', 'pronoun-order-guide', 'who-what-questions-guide', 'phrasebook']);
+  assert.deepEqual(writtenAfter.filter((k) => !planned.has(k)), ['silent-ent-guide', 'gender-endings-guide', 'which-past-guide', 'future-conditional-guide', 'y-en-guide', 'past-with-etre-guide', 'subjunctive-que-guide', 'pronoun-order-guide', 'who-what-questions-guide', 'phrasebook']);
   for (const key of writtenAfter) assert.equal(liveIds[key], undefined, `${key} was converted from the live app`);
   // The reading after the guide keeps its live number.
   const key = '2024-03-30-reading-4';

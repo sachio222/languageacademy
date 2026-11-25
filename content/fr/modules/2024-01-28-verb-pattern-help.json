@@ -193,7 +193,7 @@
       "text": [
         "For {ils} and {elles}, the verb ends in -ent."
       ],
-      "note": "The -ent is written but never spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so {ils veulent} sounds a little different from {il veut}.",
+      "note": "The -ent is written but not spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so {ils veulent} sounds a little different from {il veut}.",
       "blocks": [
         {
           "verbs": [
@@ -489,7 +489,7 @@
           "right": true
         }
       ],
-      "why": "The -ent is written but never spoken."
+      "why": "The -ent is written but not spoken."
     },
     {
       "id": "k3",

@@ -1,0 +1,198 @@
+{
+  "schema": "la-module@1",
+  "module_key": "silent-ent-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "Silent Endings · The -ent of {ils veulent}",
+  "short_title": "Silent -ent",
+  "description": "Say the {ils} and {elles} form of a verb without its -ent, and see why it stays in writing.",
+  "can_do": [
+    "Say {ils veulent} and {elles veulent} without the -ent.",
+    "Tell {il veut} from {ils veulent} by the l you hear at the end.",
+    "Explain why the -ent stays in writing."
+  ],
+  "minutes": 3,
+  "line": "Why {ils veulent} ends in -ent on the page but not out loud.",
+  "parts": [
+    {
+      "id": "p-say-it-without",
+      "heading": "Say it without the -ent",
+      "text": [
+        "With {ils} and {elles}, most French verbs end in -ent. You write those three letters, but you do not say them.",
+        "Stop the word right before the -ent. {ils veulent} sounds like eel vuhl."
+      ],
+      "note": "The s of {ils} and {elles} is silent here as well, because {veulent} starts with a consonant. The t of -ent comes back only in a few linked phrases, such as some questions, which you will meet later.",
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "ils veulent",
+              "they want",
+              "eel vuhl"
+            ],
+            [
+              "elles veulent",
+              "they want (feminine)",
+              "el vuhl"
+            ]
+          ],
+          "heading": "Written -ent, said without it"
+        }
+      ]
+    },
+    {
+      "id": "p-one-or-more",
+      "heading": "One person or more",
+      "text": [
+        "Compare one person with more than one. In {veulent} you hear an l at the end. In {veut} you do not."
+      ],
+      "note": "In many verbs you will meet later, the two forms sound exactly alike. Then only the spelling shows that more than one person is doing it.",
+      "blocks": [
+        {
+          "cmp": {
+            "left": "One person",
+            "right": "More than one",
+            "rows": [
+              [
+                {
+                  "fr": "il veut",
+                  "en": "he wants",
+                  "sub": "eel vuh"
+                },
+                {
+                  "fr": "ils veulent",
+                  "en": "they want",
+                  "sub": "eel vuhl"
+                }
+              ],
+              [
+                {
+                  "fr": "elle veut",
+                  "en": "she wants",
+                  "sub": "el vuh"
+                },
+                {
+                  "fr": "elles veulent",
+                  "en": "they want (feminine)",
+                  "sub": "el vuhl"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-silent-but-written",
+      "heading": "Silent, but still written",
+      "text": [
+        "The -ent marks the plural, as the s does in {amis}. You see it on the page, but you do not hear it.",
+        "French children learn this rule at school when they are seven or eight."
+      ],
+      "note": "A few very common verbs end in -ont instead, such as {ils sont} and {ils ont}. In those, you do hear the vowel of the ending.",
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "ami",
+              "friend",
+              "a-mee"
+            ],
+            [
+              "amis",
+              "friends",
+              "a-mee"
+            ],
+            [
+              "ils veulent",
+              "they want",
+              "eel vuhl"
+            ]
+          ],
+          "heading": "Seen, not heard"
+        }
+      ]
+    },
+    {
+      "id": "p-how-it-went-quiet",
+      "heading": "How the ending went quiet",
+      "text": [
+        "People once said this ending out loud. It went quiet one sound at a time, over several hundred years, while the spelling stayed the same."
+      ],
+      "note": "Even in the 1700s, some older people in the French countryside still said the ending. Many French letters that are written but not said have a story like this one.",
+      "blocks": [
+        {
+          "list": [
+            "In Latin, the ending was spoken.",
+            "In the French of the Middle Ages, people still said it.",
+            "In the 1500s, grammar books said the n was no longer heard. Some speakers still said the t before a pause.",
+            "In the 1600s, the t went quiet too.",
+            "Today, the ending is written but not said."
+          ],
+          "heading": "A little at a time"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Listen. Which one did you hear?",
+      "say": "ils veulent",
+      "sound": "eel vuhl",
+      "options": [
+        {
+          "text": "il veut",
+          "fr": true
+        },
+        {
+          "text": "ils veulent",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "You heard an l at the end, so it was {ils veulent}. The -ent adds no sound."
+    },
+    {
+      "id": "k2",
+      "ask": "Listen. In {elles veulent}, which endings are silent?",
+      "say": "elles veulent",
+      "show": "elles veulent",
+      "sound": "el vuhl",
+      "options": [
+        {
+          "text": "The s and the -ent",
+          "right": true
+        },
+        {
+          "text": "Only the -ent"
+        },
+        {
+          "text": "Only the s"
+        }
+      ],
+      "why": "{veulent} starts with a consonant, so the s of {elles} stays silent. The -ent is silent too."
+    },
+    {
+      "id": "k3",
+      "ask": "Why is the -ent still written?",
+      "options": [
+        {
+          "text": "It shows that more than one person is doing it",
+          "right": true
+        },
+        {
+          "text": "It tells you to say a t at the end"
+        },
+        {
+          "text": "It shows that the action is in the past"
+        }
+      ],
+      "why": "The ending went quiet hundreds of years ago, but it stayed in the spelling. On the page it marks the plural, as the s does in {amis}."
+    }
+  ],
+  "more": {
+    "label": "Why some French letters are written but not said (Portland State University)",
+    "url": "https://content.library.pdx.edu/files/PDXScholar/sons-et-lettres/23/"
+  }
+}

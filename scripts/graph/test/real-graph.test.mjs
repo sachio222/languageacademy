@@ -31,9 +31,10 @@ test('the real check opens Reference words from the lookup modules only', async 
   assert.ok(ctx.reference.size >= open.size);
 });
 
-test('the letter y the Reference opens does not hide the pronoun y at position 27', async () => {
+test('the letter y the Reference opens does not hide the pronoun y in Reading 2', async () => {
   const { issues } = await runCheck({ repoRoot, lang: 'fr' });
-  const y = issues.filter((i) => i.rule === 'untaught-word' && i.position === 27 && i.surface.toLowerCase() === 'y');
+  // By module key, not position: a module inserted earlier in the course moves every position after it.
+  const y = issues.filter((i) => i.rule === 'untaught-word' && i.moduleKey === '2024-01-22-reading2' && i.surface.toLowerCase() === 'y');
   assert.equal(y.length, 1);
   assert.equal(y[0].nodeId, 'fr:lex:y.pronoun');
 });
