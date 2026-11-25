@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-review-verdict@1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "task_id", "module_key", "round", "draft_sha256", "rubric", "lens", "findings", "scores"],
+  "properties": {
+    "schema": { "const": "la-review-verdict@1" },
+    "task_id": { "$ref": "la-pipeline-common@1#/$defs/taskId" },
+    "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" },
+    "round": { "type": "integer" },
+    "draft_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+    "rubric": { "$ref": "la-pipeline-common@1#/$defs/promptRef" },
+    "lens": { "enum": ["primary", "french", "method"], "description": "primary reviews everything; a second review takes one lens" },
+    "findings": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "criterion", "severity", "path", "quote", "problem", "required_fix"],
+      "properties": {
+        "id": { "type": "string" },
+        "criterion": { "type": "string", "pattern": "^R[0-9]+$" },
+        "severity": { "enum": ["blocker", "major", "minor", "note"] },
+        "path": { "type": "string" },
+        "quote": { "type": "string", "description": "the exact text the finding is about" },
+        "problem": { "type": "string" },
+        "required_fix": { "type": "string" },
+        "suggested": { "type": ["string", "null"] } } } },
+    "scores": { "type": "object", "description": "1 to 4 per criterion, for calibration and metrics only", "additionalProperties": { "type": "integer", "minimum": 1, "maximum": 4 } },
+    "decision_reported": { "enum": ["pass", "changes_required", "reject"], "description": "stored only; the core computes the decision from severities" },
+    "provenance": { "$ref": "la-pipeline-common@1#/$defs/provenance" }
+  }
+}

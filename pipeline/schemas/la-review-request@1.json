@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-review-request@1",
+  "description": "Core to reviewer (design section 4.5): the module, the brief without the drafter's notes, the rubric, and the check results' metrics. The verdict must repeat draft_sha256.",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "task_id", "module_key", "round", "lens", "draft_sha256", "module", "brief", "rubric", "check_metrics"],
+  "properties": {
+    "schema": { "const": "la-review-request@1" },
+    "task_id": { "$ref": "la-pipeline-common@1#/$defs/taskId" },
+    "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" },
+    "round": { "type": "integer", "minimum": 1 },
+    "lens": { "enum": ["primary", "french", "method"] },
+    "draft_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+    "module": { "type": "object", "description": "the la-module@1 document under review" },
+    "brief": { "$ref": "la-brief@1", "description": "the brief the draft answered; la-brief@1 has no drafter_notes field, so none can be passed through" },
+    "rubric": { "$ref": "la-pipeline-common@1#/$defs/promptRef" },
+    "check_metrics": { "type": "object", "description": "each check's metrics object, keyed by check id; never its findings",
+      "propertyNames": { "pattern": "^[CU][0-9]+$" }, "additionalProperties": { "type": "object" } }
+  }
+}

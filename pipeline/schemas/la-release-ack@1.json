@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-release-ack@1",
+  "description": "L's acknowledgement of a delivered bundle (design section 4.8), matched on the SHA-256 of the bundle file's bytes.",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "bundle_file_sha256", "loaded_at", "by"],
+  "properties": {
+    "schema": { "const": "la-release-ack@1" },
+    "bundle_file_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+    "loaded_at": { "$ref": "la-pipeline-common@1#/$defs/time" },
+    "by": { "type": "string", "minLength": 1, "description": "who loaded it, e.g. the L target adapter that read l/content/README.md" }
+  }
+}

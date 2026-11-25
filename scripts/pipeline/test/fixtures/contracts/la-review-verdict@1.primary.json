@@ -1,0 +1,45 @@
+{
+  "schema": "la-review-verdict@1",
+  "task_id": "9c02c8490df418bc1cf7b506",
+  "module_key": "qui-and-que-after-a-noun",
+  "round": 1,
+  "draft_sha256": "71aa4c834e61bf1ee83ba110693cf65837ab138db94960cce22393f42e32a139",
+  "rubric": {
+    "id": "fr-review",
+    "version": 1,
+    "sha256": "d4e50b534512ac9cf0f14d6df4d3b10cbb1900be9ff648accd720b47f5d2c390"
+  },
+  "lens": "primary",
+  "findings": [
+    {
+      "id": "f1",
+      "criterion": "R3",
+      "severity": "major",
+      "path": "/items/4/accept",
+      "quote": "c'est le film que j'ai vu",
+      "problem": "A learner who writes the equally correct « voilà le film que j'ai vu » is marked wrong.",
+      "required_fix": "Add the voilà version to accept.",
+      "suggested": "voilà le film que j'ai vu"
+    },
+    {
+      "id": "f2",
+      "criterion": "R6",
+      "severity": "minor",
+      "path": "/items",
+      "quote": "",
+      "problem": "Nine of fifteen items are gap-fills on the same frame.",
+      "required_fix": "Turn three gap-fills into respond items with a real situation.",
+      "suggested": null
+    }
+  ],
+  "scores": {
+    "R1": 4,
+    "R2": 3,
+    "R3": 2,
+    "R4": 4,
+    "R5": 4,
+    "R6": 2,
+    "R9": 4
+  },
+  "decision_reported": "changes_required"
+}

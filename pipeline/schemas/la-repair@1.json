@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-repair@1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "module_key", "round", "reviewer_source", "previous_draft_sha256", "brief_sha256", "reasons", "rounds_left", "keep_item_ids"],
+  "properties": {
+    "schema": { "const": "la-repair@1" },
+    "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" },
+    "round": { "type": "integer", "minimum": 2 },
+    "reviewer_source": { "enum": ["checks", "review", "jake"], "description": "who asked for this repair; part of the task_id, so a repair Jake asks for never repeats an id (controller's call, 2026-11-25)" },
+    "previous_draft_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+    "brief_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "a fresh brief when the context changed, so the due list is current" },
+    "reasons": { "type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false, "required": ["source", "code", "path", "detail", "required_fix"],
+      "properties": {
+        "source": { "enum": ["check", "review", "jake"] },
+        "code": { "type": "string" }, "path": { "type": "string" },
+        "detail": { "type": "string" }, "required_fix": { "type": "string" } } } },
+    "rounds_left": { "type": "integer", "minimum": 0 },
+    "keep_item_ids": { "type": "boolean", "description": "true for a stale published module: ids stay unless an item no longer accepts any old answer" }
+  }
+}

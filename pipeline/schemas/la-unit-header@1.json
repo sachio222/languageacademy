@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-unit-header@1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "task_id", "unit_key", "phase", "brief_sha256", "header"],
+  "properties": {
+    "schema": { "const": "la-unit-header@1" },
+    "task_id": { "$ref": "la-pipeline-common@1#/$defs/taskId" },
+    "unit_key": { "$ref": "la-pipeline-common@1#/$defs/unitKey" },
+    "phase": { "enum": ["interim", "final"] },
+    "brief_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+    "header": { "type": "object", "additionalProperties": false,
+      "required": ["name", "description", "can_do", "can_do_short", "can_do_example_fr"],
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string", "description": "English, French in braces" },
+        "can_do": { "type": "string", "description": "completes 'You can now …'" },
+        "can_do_short": { "type": "string" },
+        "can_do_example_fr": { "type": "string", "description": "French; {name} marks the learner's name" },
+        "theme": { "type": "object", "additionalProperties": false, "properties": { "icon": { "type": "string" }, "color": { "type": "string", "pattern": "^#[0-9a-f]{6}$" } } } } },
+    "provenance": { "$ref": "la-pipeline-common@1#/$defs/provenance" }
+  }
+}

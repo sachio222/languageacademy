@@ -1,0 +1,107 @@
+{
+  "schema": "la-pipeline-config@1",
+  "tenant": {
+    "language": "fr",
+    "native": "en"
+  },
+  "branch": "pipeline/fr",
+  "managed_units": [
+    "unit13"
+  ],
+  "pilot_units": [
+    "unit13"
+  ],
+  "plan_source": {
+    "file": "plan.json",
+    "sha256": "b956ae7ce27036563556aca89e1385831ac3e492692ef17b354ec1ea4c7c2a3c"
+  },
+  "engines": {
+    "draft": {
+      "adapter": "agent",
+      "model": "opus",
+      "effort": "high"
+    },
+    "repair": {
+      "adapter": "agent",
+      "model": "opus",
+      "effort": "high"
+    },
+    "review": {
+      "adapter": "agent",
+      "model": "opus",
+      "effort": "high",
+      "second_review_for": [
+        "reading",
+        "guide",
+        "unit_exam"
+      ]
+    }
+  },
+  "api": {
+    "models": {
+      "draft": "claude-opus-5-5",
+      "review": "claude-opus-5-5"
+    },
+    "max_tokens": 64000,
+    "fallbacks": "default",
+    "batch_reviews": false,
+    "max_concurrency": 4,
+    "prices_usd_per_mtok": {
+      "claude-opus-5-5": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2
+      }
+    }
+  },
+  "limits": {
+    "rounds_per_module": 4,
+    "review_repairs": 2,
+    "attempts_per_round": 3,
+    "draft_window": 3,
+    "max_in_flight": 4,
+    "parks_per_unit_before_stop": 3,
+    "jake_queue_max": 15,
+    "jake_queue_oldest_hours": 72,
+    "units_ahead_of_published": 2
+  },
+  "timeouts": {
+    "draft_task_min": 30,
+    "review_task_min": 20,
+    "check_s": 120,
+    "lock_lease_min": 10,
+    "lock_heartbeat_s": 60
+  },
+  "budget": {
+    "applies_to": "api",
+    "usd_per_module": 5,
+    "usd_per_unit": 60,
+    "usd_per_day": 100,
+    "usd_total": 400
+  },
+  "units": {
+    "unit12": "standard",
+    "unit13": "standard",
+    "unit21": "completion",
+    "unit29": "completion"
+  },
+  "sampling": {
+    "normal": {
+      "rate": 0.25,
+      "min": 2
+    },
+    "reduced": {
+      "rate": 0.125,
+      "min": 1
+    }
+  },
+  "alerts": {
+    "desktop": true,
+    "github_issue": false
+  },
+  "l_target": {
+    "adapter": "prototype",
+    "autoload": false,
+    "root": null
+  }
+}

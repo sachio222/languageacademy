@@ -1,0 +1,36 @@
+{
+  "schema": "la-check-result@1",
+  "check": "C6",
+  "check_version": "1.0.0",
+  "module_key": "qui-and-que-after-a-noun",
+  "round": 1,
+  "draft_sha256": "71aa4c834e61bf1ee83ba110693cf65837ab138db94960cce22393f42e32a139",
+  "context_fingerprint": "c71dd67f3a4965ddf2a261ed0a371eae7c18c822dec1fb727a011269ac786ed9",
+  "status": "fail",
+  "duration_ms": 1388,
+  "findings": [
+    {
+      "code": "untaught-word",
+      "severity": "error",
+      "path": "/items/7/answer",
+      "node_id": "fr:lex:rencontrer",
+      "message": "fr:lex:rencontrer is not taught before position 173",
+      "fingerprint": "0f3cd88c1a260f474260f565ae18c7d01c26fd018b78768c15dedc98bb826303",
+      "repair_hint": "Use a verb taught before position 173, such as voir or connaître."
+    },
+    {
+      "code": "reuse-missed",
+      "severity": "warning",
+      "path": "",
+      "node_id": "fr:lex:arbre",
+      "message": "fr:lex:arbre (taught at position 124) expected by position 173; last use at position 158",
+      "fingerprint": "8d21de4ab969d308e772a36ca16886a371ecdfebcc45443b0b88fb836199807f",
+      "repair_hint": "Use arbre in one item."
+    }
+  ],
+  "metrics": {
+    "new_issues": 2,
+    "issues_before": 1489,
+    "issues_after": 1491
+  }
+}

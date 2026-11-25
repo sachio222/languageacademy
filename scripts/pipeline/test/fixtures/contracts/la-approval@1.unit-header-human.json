@@ -1,0 +1,27 @@
+{
+  "schema": "la-approval@1",
+  "subject": {
+    "kind": "unit_header",
+    "unit_key": "unit13",
+    "header_phase": "final"
+  },
+  "content_sha256": "eb08d5ea543c68a400fed67c99c7b699f85982541d2518f4aed0affe45cf76ae",
+  "round": 1,
+  "mode": "human",
+  "approver": "jake",
+  "via": "Claude Code session 3f9c: \"approve the Unit 13 header\"",
+  "sampling": {
+    "picked": true,
+    "reason": "unit_header",
+    "inspection_level": "full",
+    "seed": "908f1a31a48eef593302b82d3ebdd7db589c1db104b3d03635dec017c84f2ae0"
+  },
+  "checks": [
+    "1a507c937c1ccdcdbeee66fe7ed8ba724d951c767f4298c9e1cccfc7b3be599b"
+  ],
+  "verdicts": [
+    "48c8525515a13e8ad2827bb05e9b31a129ece2026ae5e895515475c17a8b4a8f"
+  ],
+  "approved_at": "2026-11-28T09:12:44.310Z",
+  "commit": "c0ffee0000000000000000000000000000000000"
+}

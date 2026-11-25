@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-prompts-lock@1",
+  "description": "pipeline/prompts.lock.json (design section 5.4): the id, version and SHA-256 of every prompt and rubric file.",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "files"],
+  "properties": {
+    "schema": { "const": "la-prompts-lock@1" },
+    "files": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["path", "id", "version", "sha256"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1, "description": "relative to the repository root" },
+        "id": { "type": "string", "minLength": 1 },
+        "version": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" } } } }
+  }
+}

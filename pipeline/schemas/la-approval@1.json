@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-approval@1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "subject", "content_sha256", "round", "mode", "approver", "sampling", "checks", "verdicts", "approved_at"],
+  "properties": {
+    "schema": { "const": "la-approval@1" },
+    "subject": { "type": "object", "additionalProperties": false, "required": ["kind", "unit_key"],
+      "properties": { "kind": { "enum": ["module", "unit_header"] }, "unit_key": { "$ref": "la-pipeline-common@1#/$defs/unitKey" },
+        "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" }, "header_phase": { "enum": ["interim", "final"] } } },
+    "content_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "the seal: canonical SHA-256 of the module file as written, or of the unit's header fields in course.json" },
+    "round": { "type": "integer" },
+    "mode": { "enum": ["auto", "human", "adopted"], "description": "adopted: a hand-written Unit 12 module that passed C6 (section 3.2)" },
+    "approver": { "type": "string", "description": "pipeline, or jake" },
+    "via": { "type": ["string", "null"], "description": "for a human approval: where Jake gave it, e.g. a Claude Code session id and his message" },
+    "sampling": { "type": "object", "additionalProperties": false, "required": ["picked", "reason", "inspection_level", "seed"],
+      "properties": { "picked": { "type": "boolean" },
+        "reason": { "enum": ["pilot", "reading", "guide", "unit_header", "new_prompt_version", "blocker_repaired", "plan_amended", "adopted", "random", "not_picked"] },
+        "inspection_level": { "enum": ["full", "tightened", "normal", "reduced"] }, "seed": { "type": "string" } } },
+    "checks": { "type": "array", "items": { "$ref": "la-pipeline-common@1#/$defs/sha256" } },
+    "verdicts": { "type": "array", "items": { "$ref": "la-pipeline-common@1#/$defs/sha256" } },
+    "approved_at": { "$ref": "la-pipeline-common@1#/$defs/time" },
+    "commit": { "type": ["string", "null"], "description": "filled by the approval.committed event" }
+  }
+}

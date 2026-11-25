@@ -1,0 +1,38 @@
+{
+  "schema": "la-approval@1",
+  "subject": {
+    "kind": "module",
+    "unit_key": "unit13",
+    "module_key": "qui-and-que-after-a-noun"
+  },
+  "content_sha256": "12423e734cb1f369cdbb9d44fb8a37911a0c1ff77c781b5744583d55460bb788",
+  "round": 2,
+  "mode": "auto",
+  "approver": "pipeline",
+  "via": null,
+  "sampling": {
+    "picked": false,
+    "reason": "not_picked",
+    "inspection_level": "normal",
+    "seed": "908f1a31a48eef593302b82d3ebdd7db589c1db104b3d03635dec017c84f2ae0"
+  },
+  "checks": [
+    "7659bde113d2e5b9d6d5a54cf834ccaba98646aa81423eac065aad324bc5f1e7",
+    "ac9bfdef48d9bd7f8681dc93a6f6c5d7cd56f446d7eb2752371e6445ecf1eef5",
+    "ad3cf1a6b3e66a22b66efc3d39b2b6085652cc59eba50962f0386198d7d3ebdb",
+    "8e47d7f507d7ba46569079b80e87d5f5754b56472b8949f25cff22f5be012317",
+    "d9fcec8be58ed84e9f27a26d99056ac436a9f545b27576491ec6aaf7d6ac1325",
+    "eb423c7952247dfaa807cbcbf6dfa1c7c0c8408c0c212ec20a5017bf6106bc39",
+    "ae769d4ca4f37298c634704b5d828d907b4b943008817f97cf12b07e7647b24d",
+    "086d0283b402594424703ae86f5d95951e212c49c8e4b49bbf4702f77dd636bb",
+    "338e2d82b13b4944e0243132418b82d0b4fdd7d9ec0c056b1e0d47dd921c1542",
+    "6453461de3fad4aa707283bb6797fc04c31e15068fd4c795dccdacc113b60ee7",
+    "ba3bea11be2488dade89179ea511dcdae93a107872d6a99bd1f712c312dafcb5",
+    "ef54a35a1af994a3ae2cfb12242f118502f64467376f77ccd796202da8cdfc5f"
+  ],
+  "verdicts": [
+    "8d57023545840339e6004dd19c26775d4916f83de442e026c37c79a940a27353"
+  ],
+  "approved_at": "2026-11-26T15:40:12.008Z",
+  "commit": null
+}

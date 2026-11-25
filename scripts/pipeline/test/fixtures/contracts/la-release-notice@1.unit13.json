@@ -1,0 +1,37 @@
+{
+  "schema": "la-release-notice@1",
+  "language": "fr",
+  "bundle_file_sha256": "c24e9cd2d78acf19a5ed80428147b160b91af7e10d097bcffdfdd011d7bdb0dd",
+  "bundle_hash": "e79575a62004031445efe3fe6ef7be1ea10ae8b94ffbc466248e434c24e71652",
+  "bundle_path": "dist-content/bundle.json",
+  "source_commit": "3fb453165a86e5b1ed1b133c34e763d01a7379b7",
+  "built_at": "2026-11-28T10:02:31.775Z",
+  "units": [
+    "unit13"
+  ],
+  "previous_release_sha256": "eeacdbd5e9e81ab345f656e0f0da1ffd87aeea2b13aba1896a053a9c75d5805e",
+  "diff": {
+    "added": [
+      "qui-and-que-after-a-noun",
+      "ou-after-a-place-or-a-time"
+    ],
+    "changed": [],
+    "moved": [],
+    "retired": []
+  },
+  "checks": {
+    "release": "ok",
+    "l_checker": "ok"
+  },
+  "stopped_before": {
+    "unit_key": "unit14",
+    "reason": "planned"
+  },
+  "story_handoffs": [
+    {
+      "story_id": "reading13",
+      "module_key": "reading-13",
+      "blocks_sha256": "99dd7a494d2953e5c5568d11374ba87198551629e7917e09bb843e3f18f47e31"
+    }
+  ]
+}

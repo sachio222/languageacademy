@@ -1,0 +1,77 @@
+{
+  "schema": "la-draft@1",
+  "task_id": "4be1c0a9d2f3e8a7b6c5d4e3",
+  "module_key": "qui-and-que-after-a-noun",
+  "brief_sha256": "e3b7a76fae01618e9cb718c25e7c8a23ef8a8379c37dba093d37230897849dd3",
+  "round": 1,
+  "outcome": "module",
+  "module": {
+    "schema": "la-module@1",
+    "module_key": "qui-and-que-after-a-noun",
+    "kind": "lesson",
+    "status": "written",
+    "title": "{qui} and {que} after a noun",
+    "description": "Join two sentences about one person or thing: {la fille qui parle}, {le livre que je lis}.",
+    "teaches": {
+      "constructions": [
+        "fr:cx:relative.qui",
+        "fr:cx:relative.que"
+      ]
+    },
+    "vocabulary": [
+      {
+        "word_id": "un-livre-fr",
+        "fr": "un livre",
+        "gloss": "a book",
+        "review": true
+      }
+    ],
+    "items": [
+      {
+        "id": "i-la-fille-qui-parle",
+        "type": "gapfill",
+        "text": "C'est la fille ___ parle français.",
+        "blanks": [
+          {
+            "answer": "qui"
+          }
+        ],
+        "gloss": "That's the girl who speaks French.",
+        "mistakes": [
+          {
+            "answer": "que",
+            "feedback": "The girl does the speaking, so use {qui}."
+          }
+        ]
+      }
+    ]
+  },
+  "drafter_notes": "Used n'est-ce pas, qui est-ce qui and arbre in respond items to meet the due list.",
+  "provenance": {
+    "engine": "agent",
+    "adapter": "pipeline-agent@1.0.0",
+    "model": {
+      "requested": "opus",
+      "reported": "claude-opus-5-5",
+      "attested": false
+    },
+    "prompt": {
+      "id": "drafter.lesson",
+      "version": 1,
+      "sha256": "0c9d804733741e99c7526b85c210d525a5978b569b0eb6f1a13591eed8b08386"
+    },
+    "brief_sha256": "e3b7a76fae01618e9cb718c25e7c8a23ef8a8379c37dba093d37230897849dd3",
+    "task_id": "4be1c0a9d2f3e8a7b6c5d4e3",
+    "issued_at": "2026-11-26T14:02:10.114Z",
+    "received_at": "2026-11-26T14:09:47.902Z",
+    "attempt": 1,
+    "usage": {
+      "input_tokens": null,
+      "cache_read_input_tokens": null,
+      "cache_creation_input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null
+    },
+    "self_checks": 2
+  }
+}
